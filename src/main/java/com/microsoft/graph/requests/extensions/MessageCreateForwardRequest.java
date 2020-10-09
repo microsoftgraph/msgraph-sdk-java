@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Message Create Forward Request.
  */
-public class MessageCreateForwardRequest extends BaseRequest {
+public class MessageCreateForwardRequest extends BaseRequest<Message> {
     protected final MessageCreateForwardBody body;
 
     /**
@@ -29,6 +29,7 @@ public class MessageCreateForwardRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public MessageCreateForwardRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Message.class);
         body = new MessageCreateForwardBody();
@@ -50,7 +51,7 @@ public class MessageCreateForwardRequest extends BaseRequest {
      */
     public MessageCreateForwardRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (MessageCreateForwardRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class MessageCreateForwardRequest extends BaseRequest {
      */
     public MessageCreateForwardRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (MessageCreateForwardRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class MessageCreateForwardRequest extends BaseRequest {
      */
     public MessageCreateForwardRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (MessageCreateForwardRequest)this;
+        return this;
     }
 
 }

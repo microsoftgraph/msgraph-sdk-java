@@ -28,6 +28,7 @@ import java.util.List;
 import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;
+import com.microsoft.graph.http.ICollectionResponse;
 import com.microsoft.graph.httpcore.middlewareoption.IShouldRedirect;
 import com.microsoft.graph.httpcore.middlewareoption.IShouldRetry;
 import com.microsoft.graph.options.FunctionOption;
@@ -57,7 +58,7 @@ public abstract class BaseCollectionRequest<T> implements IHttpRequest {
     /**
      * The class for the collection page
      */
-    private final Class<T2> collectionPageClass;
+    private final Class<? extends BaseCollectionPage<T, BaseCollectionRequest<T>>> collectionPageClass;
 
 
     /**
@@ -73,7 +74,7 @@ public abstract class BaseCollectionRequest<T> implements IHttpRequest {
                                  final IBaseClient client,
                                  final List<? extends Option> options,
                                  final Class<? extends ICollectionResponse<T>> responseClass,
-                                 final Class<T2> collectionPageClass) {
+                                 final Class<? extends BaseCollectionPage<T, BaseCollectionRequest<T>>> collectionPageClass) {
         this.responseClass = responseClass;
         this.collectionPageClass = collectionPageClass;
         baseRequest = new BaseRequest(requestUrl, client, options, responseClass) {
@@ -206,7 +207,7 @@ public abstract class BaseCollectionRequest<T> implements IHttpRequest {
      *
      * @return the class for the collection page
      */
-    public Class<T2> getCollectionPageClass() {
+    public Class<? extends BaseCollectionPage<T, BaseCollectionRequest<T>>> getCollectionPageClass() {
         return collectionPageClass;
     }
     

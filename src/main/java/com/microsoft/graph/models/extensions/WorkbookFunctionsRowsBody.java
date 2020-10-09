@@ -51,7 +51,7 @@ public class WorkbookFunctionsRowsBody {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

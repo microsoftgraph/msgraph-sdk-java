@@ -55,7 +55,8 @@ public class TokenMeetingInfo extends MeetingInfo implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

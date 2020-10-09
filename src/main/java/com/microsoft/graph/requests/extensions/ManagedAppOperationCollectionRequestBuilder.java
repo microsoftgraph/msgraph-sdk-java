@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Managed App Operation Collection Request Builder.
  */
-public class ManagedAppOperationCollectionRequestBuilder extends BaseRequestBuilder {
+public class ManagedAppOperationCollectionRequestBuilder extends BaseRequestBuilder<ManagedAppOperation> {
 
     /**
      * The request builder for this collection of ManagedAppRegistration

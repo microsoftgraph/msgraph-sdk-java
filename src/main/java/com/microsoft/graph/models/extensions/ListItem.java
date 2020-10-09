@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.ContentTypeInfo;
 import com.microsoft.graph.models.extensions.SharepointIds;
 import com.microsoft.graph.models.extensions.ItemAnalytics;
@@ -14,7 +15,6 @@ import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.FieldValueSet;
 import com.microsoft.graph.models.extensions.ListItemVersion;
 import com.microsoft.graph.models.extensions.BaseItem;
-import com.microsoft.graph.requests.extensions.ListItemVersionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -75,7 +75,7 @@ public class ListItem extends BaseItem implements IJsonBackedObject {
      */
     @SerializedName(value = "versions", alternate = {"Versions"})
     @Expose
-    public ListItemVersionCollectionPage versions;
+    public BaseCollectionPage<ListItemVersion> versions;
 
 
     /**
@@ -102,7 +102,8 @@ public class ListItem extends BaseItem implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -118,7 +119,7 @@ public class ListItem extends BaseItem implements IJsonBackedObject {
 
 
         if (json.has("versions")) {
-            versions = serializer.deserializeObject(json.get("versions").toString(), ListItemVersionCollectionPage.class);
+            versions = serializer.deserializeObject(json.get("versions").toString(), new BaseCollectionPage<ListItemVersion>(new java.util.ArrayList<ListItemVersion>(), null).getClass());
         }
     }
 }

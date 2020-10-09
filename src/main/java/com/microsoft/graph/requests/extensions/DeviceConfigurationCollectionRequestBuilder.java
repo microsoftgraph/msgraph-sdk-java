@@ -24,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device Configuration Collection Request Builder.
  */
-public class DeviceConfigurationCollectionRequestBuilder extends BaseRequestBuilder {
+public class DeviceConfigurationCollectionRequestBuilder extends BaseRequestBuilder<DeviceConfiguration> {
 
     /**
      * The request builder for this collection of DeviceManagement

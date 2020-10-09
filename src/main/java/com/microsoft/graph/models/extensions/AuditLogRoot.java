@@ -7,13 +7,11 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.DirectoryAudit;
 import com.microsoft.graph.models.extensions.RestrictedSignIn;
 import com.microsoft.graph.models.extensions.SignIn;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.DirectoryAuditCollectionPage;
-import com.microsoft.graph.requests.extensions.RestrictedSignInCollectionPage;
-import com.microsoft.graph.requests.extensions.SignInCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -34,7 +32,7 @@ public class AuditLogRoot extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "directoryAudits", alternate = {"DirectoryAudits"})
     @Expose
-    public DirectoryAuditCollectionPage directoryAudits;
+    public BaseCollectionPage<DirectoryAudit> directoryAudits;
 
     /**
      * The Restricted Sign Ins.
@@ -42,7 +40,7 @@ public class AuditLogRoot extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "restrictedSignIns", alternate = {"RestrictedSignIns"})
     @Expose
-    public RestrictedSignInCollectionPage restrictedSignIns;
+    public BaseCollectionPage<RestrictedSignIn> restrictedSignIns;
 
     /**
      * The Sign Ins.
@@ -50,7 +48,7 @@ public class AuditLogRoot extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "signIns", alternate = {"SignIns"})
     @Expose
-    public SignInCollectionPage signIns;
+    public BaseCollectionPage<SignIn> signIns;
 
 
     /**
@@ -77,7 +75,8 @@ public class AuditLogRoot extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -93,15 +92,15 @@ public class AuditLogRoot extends Entity implements IJsonBackedObject {
 
 
         if (json.has("directoryAudits")) {
-            directoryAudits = serializer.deserializeObject(json.get("directoryAudits").toString(), DirectoryAuditCollectionPage.class);
+            directoryAudits = serializer.deserializeObject(json.get("directoryAudits").toString(), new BaseCollectionPage<DirectoryAudit>(new java.util.ArrayList<DirectoryAudit>(), null).getClass());
         }
 
         if (json.has("restrictedSignIns")) {
-            restrictedSignIns = serializer.deserializeObject(json.get("restrictedSignIns").toString(), RestrictedSignInCollectionPage.class);
+            restrictedSignIns = serializer.deserializeObject(json.get("restrictedSignIns").toString(), new BaseCollectionPage<RestrictedSignIn>(new java.util.ArrayList<RestrictedSignIn>(), null).getClass());
         }
 
         if (json.has("signIns")) {
-            signIns = serializer.deserializeObject(json.get("signIns").toString(), SignInCollectionPage.class);
+            signIns = serializer.deserializeObject(json.get("signIns").toString(), new BaseCollectionPage<SignIn>(new java.util.ArrayList<SignIn>(), null).getClass());
         }
     }
 }

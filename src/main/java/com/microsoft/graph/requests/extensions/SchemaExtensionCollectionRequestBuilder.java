@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Schema Extension Collection Request Builder.
  */
-public class SchemaExtensionCollectionRequestBuilder extends BaseRequestBuilder {
+public class SchemaExtensionCollectionRequestBuilder extends BaseRequestBuilder<SchemaExtension> {
 
     /**
      * The request builder for this collection of SchemaExtension

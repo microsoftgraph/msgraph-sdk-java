@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Item At Request.
  */
-public class WorkbookTableItemAtRequest extends BaseRequest {
+public class WorkbookTableItemAtRequest extends BaseRequest<WorkbookTable> {
 
     /**
      * The request for this WorkbookTableItemAt
@@ -98,7 +98,7 @@ public class WorkbookTableItemAtRequest extends BaseRequest {
      */
     public WorkbookTableItemAtRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookTableItemAtRequest)this;
+        return this;
     }
 
     /**
@@ -109,7 +109,7 @@ public class WorkbookTableItemAtRequest extends BaseRequest {
      */
     public WorkbookTableItemAtRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookTableItemAtRequest)this;
+        return this;
     }
 
     /**
@@ -120,7 +120,7 @@ public class WorkbookTableItemAtRequest extends BaseRequest {
      */
     public WorkbookTableItemAtRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookTableItemAtRequest)this;
+        return this;
     }
 
     /**
@@ -131,7 +131,7 @@ public class WorkbookTableItemAtRequest extends BaseRequest {
      */
     public WorkbookTableItemAtRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookTableItemAtRequest)this;
+        return this;
     }
 
 }

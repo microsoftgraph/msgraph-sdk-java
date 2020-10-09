@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRange;
+import com.microsoft.graph.models.extensions.WorkbookTable;
 import com.microsoft.graph.requests.extensions.WorkbookTableHeaderRowRangeRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Header Row Range Request.
  */
-public class WorkbookTableHeaderRowRangeRequest extends BaseRequest {
+public class WorkbookTableHeaderRowRangeRequest extends BaseRequest<WorkbookRange> {
 
     /**
      * The request for this WorkbookTableHeaderRowRange
@@ -98,7 +99,7 @@ public class WorkbookTableHeaderRowRangeRequest extends BaseRequest {
      */
     public WorkbookTableHeaderRowRangeRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookTableHeaderRowRangeRequest)this;
+        return this;
     }
 
     /**
@@ -109,7 +110,7 @@ public class WorkbookTableHeaderRowRangeRequest extends BaseRequest {
      */
     public WorkbookTableHeaderRowRangeRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookTableHeaderRowRangeRequest)this;
+        return this;
     }
 
     /**
@@ -120,7 +121,7 @@ public class WorkbookTableHeaderRowRangeRequest extends BaseRequest {
      */
     public WorkbookTableHeaderRowRangeRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookTableHeaderRowRangeRequest)this;
+        return this;
     }
 
     /**
@@ -131,7 +132,7 @@ public class WorkbookTableHeaderRowRangeRequest extends BaseRequest {
      */
     public WorkbookTableHeaderRowRangeRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookTableHeaderRowRangeRequest)this;
+        return this;
     }
 
 }

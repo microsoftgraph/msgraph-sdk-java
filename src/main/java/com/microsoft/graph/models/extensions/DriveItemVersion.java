@@ -55,7 +55,8 @@ public class DriveItemVersion extends BaseItemVersion implements IJsonBackedObje
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

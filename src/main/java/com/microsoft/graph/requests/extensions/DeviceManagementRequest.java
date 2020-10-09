@@ -70,7 +70,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Management Request.
  */
-public class DeviceManagementRequest extends BaseRequest {
+public class DeviceManagementRequest extends BaseRequest<DeviceManagement> {
 	
     /**
      * The request for the DeviceManagement
@@ -191,7 +191,7 @@ public class DeviceManagementRequest extends BaseRequest {
      */
      public DeviceManagementRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceManagementRequest)this;
+         return this;
      }
 
     /**
@@ -202,7 +202,7 @@ public class DeviceManagementRequest extends BaseRequest {
      */
      public DeviceManagementRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementRequest)this;
+         return this;
      }
 
 }

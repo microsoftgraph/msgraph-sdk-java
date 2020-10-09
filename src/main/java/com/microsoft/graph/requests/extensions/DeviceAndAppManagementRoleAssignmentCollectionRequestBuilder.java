@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device And App Management Role Assignment Collection Request Builder.
  */
-public class DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder extends BaseRequestBuilder {
+public class DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder extends BaseRequestBuilder<DeviceAndAppManagementRoleAssignment> {
 
     /**
      * The request builder for this collection of DeviceManagement

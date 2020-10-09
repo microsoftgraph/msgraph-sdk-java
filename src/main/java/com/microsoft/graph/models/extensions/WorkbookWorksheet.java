@@ -7,16 +7,13 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.WorkbookChart;
 import com.microsoft.graph.models.extensions.WorkbookNamedItem;
 import com.microsoft.graph.models.extensions.WorkbookPivotTable;
 import com.microsoft.graph.models.extensions.WorkbookWorksheetProtection;
 import com.microsoft.graph.models.extensions.WorkbookTable;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.WorkbookChartCollectionPage;
-import com.microsoft.graph.requests.extensions.WorkbookNamedItemCollectionPage;
-import com.microsoft.graph.requests.extensions.WorkbookPivotTableCollectionPage;
-import com.microsoft.graph.requests.extensions.WorkbookTableCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -61,7 +58,7 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "charts", alternate = {"Charts"})
     @Expose
-    public WorkbookChartCollectionPage charts;
+    public BaseCollectionPage<WorkbookChart> charts;
 
     /**
      * The Names.
@@ -69,7 +66,7 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "names", alternate = {"Names"})
     @Expose
-    public WorkbookNamedItemCollectionPage names;
+    public BaseCollectionPage<WorkbookNamedItem> names;
 
     /**
      * The Pivot Tables.
@@ -77,7 +74,7 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "pivotTables", alternate = {"PivotTables"})
     @Expose
-    public WorkbookPivotTableCollectionPage pivotTables;
+    public BaseCollectionPage<WorkbookPivotTable> pivotTables;
 
     /**
      * The Protection.
@@ -93,7 +90,7 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "tables", alternate = {"Tables"})
     @Expose
-    public WorkbookTableCollectionPage tables;
+    public BaseCollectionPage<WorkbookTable> tables;
 
 
     /**
@@ -120,7 +117,8 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -136,19 +134,19 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
 
 
         if (json.has("charts")) {
-            charts = serializer.deserializeObject(json.get("charts").toString(), WorkbookChartCollectionPage.class);
+            charts = serializer.deserializeObject(json.get("charts").toString(), new BaseCollectionPage<WorkbookChart>(new java.util.ArrayList<WorkbookChart>(), null).getClass());
         }
 
         if (json.has("names")) {
-            names = serializer.deserializeObject(json.get("names").toString(), WorkbookNamedItemCollectionPage.class);
+            names = serializer.deserializeObject(json.get("names").toString(), new BaseCollectionPage<WorkbookNamedItem>(new java.util.ArrayList<WorkbookNamedItem>(), null).getClass());
         }
 
         if (json.has("pivotTables")) {
-            pivotTables = serializer.deserializeObject(json.get("pivotTables").toString(), WorkbookPivotTableCollectionPage.class);
+            pivotTables = serializer.deserializeObject(json.get("pivotTables").toString(), new BaseCollectionPage<WorkbookPivotTable>(new java.util.ArrayList<WorkbookPivotTable>(), null).getClass());
         }
 
         if (json.has("tables")) {
-            tables = serializer.deserializeObject(json.get("tables").toString(), WorkbookTableCollectionPage.class);
+            tables = serializer.deserializeObject(json.get("tables").toString(), new BaseCollectionPage<WorkbookTable>(new java.util.ArrayList<WorkbookTable>(), null).getClass());
         }
     }
 }

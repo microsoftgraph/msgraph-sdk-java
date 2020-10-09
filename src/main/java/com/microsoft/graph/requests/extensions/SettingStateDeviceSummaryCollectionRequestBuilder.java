@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Setting State Device Summary Collection Request Builder.
  */
-public class SettingStateDeviceSummaryCollectionRequestBuilder extends BaseRequestBuilder {
+public class SettingStateDeviceSummaryCollectionRequestBuilder extends BaseRequestBuilder<SettingStateDeviceSummary> {
 
     /**
      * The request builder for this collection of DeviceConfiguration

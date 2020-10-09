@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Android Managed App Protection Collection Request Builder.
  */
-public class AndroidManagedAppProtectionCollectionRequestBuilder extends BaseRequestBuilder {
+public class AndroidManagedAppProtectionCollectionRequestBuilder extends BaseRequestBuilder<AndroidManagedAppProtection> {
 
     /**
      * The request builder for this collection of DeviceAppManagement

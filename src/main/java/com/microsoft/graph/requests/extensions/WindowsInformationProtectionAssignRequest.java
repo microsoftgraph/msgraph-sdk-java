@@ -18,7 +18,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Windows Information Protection Assign Request.
  */
-public class WindowsInformationProtectionAssignRequest extends BaseRequest {
+public class WindowsInformationProtectionAssignRequest extends BaseRequest<Void> {
     protected final WindowsInformationProtectionAssignBody body;
 
     /**
@@ -28,6 +28,7 @@ public class WindowsInformationProtectionAssignRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WindowsInformationProtectionAssignRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new WindowsInformationProtectionAssignBody();
@@ -49,7 +50,7 @@ public class WindowsInformationProtectionAssignRequest extends BaseRequest {
      */
     public WindowsInformationProtectionAssignRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WindowsInformationProtectionAssignRequest)this;
+        return this;
     }
 
     /**
@@ -60,7 +61,7 @@ public class WindowsInformationProtectionAssignRequest extends BaseRequest {
      */
     public WindowsInformationProtectionAssignRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WindowsInformationProtectionAssignRequest)this;
+        return this;
     }
 
     /**
@@ -71,7 +72,7 @@ public class WindowsInformationProtectionAssignRequest extends BaseRequest {
      */
     public WindowsInformationProtectionAssignRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WindowsInformationProtectionAssignRequest)this;
+        return this;
     }
 
 }

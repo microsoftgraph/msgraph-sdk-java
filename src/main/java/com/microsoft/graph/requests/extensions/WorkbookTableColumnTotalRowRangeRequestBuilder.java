@@ -4,8 +4,8 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnTotalRowRangeRequest;
+import com.microsoft.graph.models.extensions.WorkbookTableColumn;
 import com.microsoft.graph.models.extensions.WorkbookRange;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Table Column Total Row Range Request Builder.
  */
-public class WorkbookTableColumnTotalRowRangeRequestBuilder extends BaseFunctionRequestBuilder {
+public class WorkbookTableColumnTotalRowRangeRequestBuilder extends BaseFunctionRequestBuilder<WorkbookRange> {
 
     /**
      * The request builder for this WorkbookTableColumnTotalRowRange

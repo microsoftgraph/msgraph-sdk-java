@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mac OSDevice Features Configuration Request.
  */
-public class MacOSDeviceFeaturesConfigurationRequest extends BaseRequest {
+public class MacOSDeviceFeaturesConfigurationRequest extends BaseRequest<MacOSDeviceFeaturesConfiguration> {
 	
     /**
      * The request for the MacOSDeviceFeaturesConfiguration
@@ -140,7 +140,7 @@ public class MacOSDeviceFeaturesConfigurationRequest extends BaseRequest {
      */
      public MacOSDeviceFeaturesConfigurationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MacOSDeviceFeaturesConfigurationRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class MacOSDeviceFeaturesConfigurationRequest extends BaseRequest {
      */
      public MacOSDeviceFeaturesConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MacOSDeviceFeaturesConfigurationRequest)this;
+         return this;
      }
 
 }

@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Section Group Collection Request Builder.
  */
-public class SectionGroupCollectionRequestBuilder extends BaseRequestBuilder {
+public class SectionGroupCollectionRequestBuilder extends BaseRequestBuilder<SectionGroup> {
 
     /**
      * The request builder for this collection of SectionGroup

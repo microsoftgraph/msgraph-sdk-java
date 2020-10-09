@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.CallSubscribeToToneRequest;
+import com.microsoft.graph.models.extensions.Call;
 import com.microsoft.graph.models.extensions.SubscribeToToneOperation;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Call Subscribe To Tone Request Builder.
  */
-public class CallSubscribeToToneRequestBuilder extends BaseActionRequestBuilder {
+public class CallSubscribeToToneRequestBuilder extends BaseActionRequestBuilder<SubscribeToToneOperation> {
 
     /**
      * The request builder for this CallSubscribeToTone

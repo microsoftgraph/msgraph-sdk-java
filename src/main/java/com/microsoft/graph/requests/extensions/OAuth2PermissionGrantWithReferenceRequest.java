@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the OAuth2Permission Grant With Reference Request.
  */
-public class OAuth2PermissionGrantWithReferenceRequest extends BaseRequest {
+public class OAuth2PermissionGrantWithReferenceRequest extends BaseWithReferenceRequest<OAuth2PermissionGrant> {
 
     /**
      * The request for the OAuth2PermissionGrant
@@ -35,43 +35,6 @@ public class OAuth2PermissionGrantWithReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, OAuth2PermissionGrant.class);
     }
 
-    public void post(final OAuth2PermissionGrant newOAuth2PermissionGrant, final IJsonBackedObject payload, final ICallback<? super OAuth2PermissionGrant> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    public OAuth2PermissionGrant post(final OAuth2PermissionGrant newOAuth2PermissionGrant, final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newOAuth2PermissionGrant;
-        }
-        return null;
-    }
-
-    public void get(final ICallback<? super OAuth2PermissionGrant> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    public OAuth2PermissionGrant get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(final ICallback<? super OAuth2PermissionGrant> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(final OAuth2PermissionGrant sourceOAuth2PermissionGrant, final ICallback<? super OAuth2PermissionGrant> callback) {
-		send(HttpMethod.PATCH, callback, sourceOAuth2PermissionGrant);
-	}
-
-	public OAuth2PermissionGrant patch(final OAuth2PermissionGrant sourceOAuth2PermissionGrant) throws ClientException {
-		return send(HttpMethod.PATCH, sourceOAuth2PermissionGrant);
-	}
-
-
     /**
      * Sets the select clause for the request
      *
@@ -80,7 +43,7 @@ public class OAuth2PermissionGrantWithReferenceRequest extends BaseRequest {
      */
     public OAuth2PermissionGrantWithReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (OAuth2PermissionGrantWithReferenceRequest)this;
+        return this;
     }
 
     /**
@@ -91,6 +54,6 @@ public class OAuth2PermissionGrantWithReferenceRequest extends BaseRequest {
      */
     public OAuth2PermissionGrantWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (OAuth2PermissionGrantWithReferenceRequest)this;
+        return this;
     }
 }

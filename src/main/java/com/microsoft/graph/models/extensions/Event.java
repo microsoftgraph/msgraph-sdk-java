@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.Attendee;
 import com.microsoft.graph.models.extensions.ItemBody;
 import com.microsoft.graph.models.extensions.DateTimeTimeZone;
@@ -27,11 +28,6 @@ import com.microsoft.graph.models.extensions.Event;
 import com.microsoft.graph.models.extensions.MultiValueLegacyExtendedProperty;
 import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
 import com.microsoft.graph.models.extensions.OutlookItem;
-import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
-import com.microsoft.graph.requests.extensions.ExtensionCollectionPage;
-import com.microsoft.graph.requests.extensions.EventCollectionPage;
-import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionPage;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -96,7 +92,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The ICal UId.
-     * A unique identifier that is shared by all instances of an event across different calendars. Read-only.
+     * A unique identifier for an event across calendars. This ID is different for each occurrence in a recurring series. Read-only.
      */
     @SerializedName(value = "iCalUId", alternate = {"ICalUId"})
     @Expose
@@ -125,6 +121,14 @@ public class Event extends OutlookItem implements IJsonBackedObject {
     @SerializedName(value = "isCancelled", alternate = {"IsCancelled"})
     @Expose
     public Boolean isCancelled;
+
+    /**
+     * The Is Draft.
+     * 
+     */
+    @SerializedName(value = "isDraft", alternate = {"IsDraft"})
+    @Expose
+    public Boolean isDraft;
 
     /**
      * The Is Online Meeting.
@@ -324,7 +328,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
      */
     @SerializedName(value = "attachments", alternate = {"Attachments"})
     @Expose
-    public AttachmentCollectionPage attachments;
+    public BaseCollectionPage<Attachment> attachments;
 
     /**
      * The Calendar.
@@ -340,7 +344,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
      */
     @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
-    public ExtensionCollectionPage extensions;
+    public BaseCollectionPage<Extension> extensions;
 
     /**
      * The Instances.
@@ -348,7 +352,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
      */
     @SerializedName(value = "instances", alternate = {"Instances"})
     @Expose
-    public EventCollectionPage instances;
+    public BaseCollectionPage<Event> instances;
 
     /**
      * The Multi Value Extended Properties.
@@ -356,7 +360,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
      */
     @SerializedName(value = "multiValueExtendedProperties", alternate = {"MultiValueExtendedProperties"})
     @Expose
-    public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
+    public BaseCollectionPage<MultiValueLegacyExtendedProperty> multiValueExtendedProperties;
 
     /**
      * The Single Value Extended Properties.
@@ -364,7 +368,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
      */
     @SerializedName(value = "singleValueExtendedProperties", alternate = {"SingleValueExtendedProperties"})
     @Expose
-    public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
+    public BaseCollectionPage<SingleValueLegacyExtendedProperty> singleValueExtendedProperties;
 
 
     /**
@@ -391,7 +395,8 @@ public class Event extends OutlookItem implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -407,23 +412,23 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
 
         if (json.has("attachments")) {
-            attachments = serializer.deserializeObject(json.get("attachments").toString(), AttachmentCollectionPage.class);
+            attachments = serializer.deserializeObject(json.get("attachments").toString(), new BaseCollectionPage<Attachment>(new java.util.ArrayList<Attachment>(), null).getClass());
         }
 
         if (json.has("extensions")) {
-            extensions = serializer.deserializeObject(json.get("extensions").toString(), ExtensionCollectionPage.class);
+            extensions = serializer.deserializeObject(json.get("extensions").toString(), new BaseCollectionPage<Extension>(new java.util.ArrayList<Extension>(), null).getClass());
         }
 
         if (json.has("instances")) {
-            instances = serializer.deserializeObject(json.get("instances").toString(), EventCollectionPage.class);
+            instances = serializer.deserializeObject(json.get("instances").toString(), new BaseCollectionPage<Event>(new java.util.ArrayList<Event>(), null).getClass());
         }
 
         if (json.has("multiValueExtendedProperties")) {
-            multiValueExtendedProperties = serializer.deserializeObject(json.get("multiValueExtendedProperties").toString(), MultiValueLegacyExtendedPropertyCollectionPage.class);
+            multiValueExtendedProperties = serializer.deserializeObject(json.get("multiValueExtendedProperties").toString(), new BaseCollectionPage<MultiValueLegacyExtendedProperty>(new java.util.ArrayList<MultiValueLegacyExtendedProperty>(), null).getClass());
         }
 
         if (json.has("singleValueExtendedProperties")) {
-            singleValueExtendedProperties = serializer.deserializeObject(json.get("singleValueExtendedProperties").toString(), SingleValueLegacyExtendedPropertyCollectionPage.class);
+            singleValueExtendedProperties = serializer.deserializeObject(json.get("singleValueExtendedProperties").toString(), new BaseCollectionPage<SingleValueLegacyExtendedProperty>(new java.util.ArrayList<SingleValueLegacyExtendedProperty>(), null).getClass());
         }
     }
 }

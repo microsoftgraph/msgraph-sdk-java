@@ -7,9 +7,9 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.WorkbookRangeView;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.WorkbookRangeViewCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -118,7 +118,7 @@ public class WorkbookRangeView extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "rows", alternate = {"Rows"})
     @Expose
-    public WorkbookRangeViewCollectionPage rows;
+    public BaseCollectionPage<WorkbookRangeView> rows;
 
 
     /**
@@ -145,7 +145,8 @@ public class WorkbookRangeView extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -161,7 +162,7 @@ public class WorkbookRangeView extends Entity implements IJsonBackedObject {
 
 
         if (json.has("rows")) {
-            rows = serializer.deserializeObject(json.get("rows").toString(), WorkbookRangeViewCollectionPage.class);
+            rows = serializer.deserializeObject(json.get("rows").toString(), new BaseCollectionPage<WorkbookRangeView>(new java.util.ArrayList<WorkbookRangeView>(), null).getClass());
         }
     }
 }

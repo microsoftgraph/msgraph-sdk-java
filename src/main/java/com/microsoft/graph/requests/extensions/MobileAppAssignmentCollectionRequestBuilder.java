@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Mobile App Assignment Collection Request Builder.
  */
-public class MobileAppAssignmentCollectionRequestBuilder extends BaseRequestBuilder {
+public class MobileAppAssignmentCollectionRequestBuilder extends BaseRequestBuilder<MobileAppAssignment> {
 
     /**
      * The request builder for this collection of MobileApp

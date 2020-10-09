@@ -5,7 +5,6 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.WorkbookRangeEntireColumnRequest;
 import com.microsoft.graph.models.extensions.WorkbookRange;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
@@ -15,7 +14,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Range Entire Column Request Builder.
  */
-public class WorkbookRangeEntireColumnRequestBuilder extends BaseFunctionRequestBuilder {
+public class WorkbookRangeEntireColumnRequestBuilder extends BaseFunctionRequestBuilder<WorkbookRange> {
 
     /**
      * The request builder for this WorkbookRangeEntireColumn

@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Remote Assistance Partner Request.
  */
-public class RemoteAssistancePartnerRequest extends BaseRequest {
+public class RemoteAssistancePartnerRequest extends BaseRequest<RemoteAssistancePartner> {
 	
     /**
      * The request for the RemoteAssistancePartner
@@ -140,7 +140,7 @@ public class RemoteAssistancePartnerRequest extends BaseRequest {
      */
      public RemoteAssistancePartnerRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (RemoteAssistancePartnerRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class RemoteAssistancePartnerRequest extends BaseRequest {
      */
      public RemoteAssistancePartnerRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (RemoteAssistancePartnerRequest)this;
+         return this;
      }
 
 }

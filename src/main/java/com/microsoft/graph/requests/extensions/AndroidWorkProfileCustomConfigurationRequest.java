@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android Work Profile Custom Configuration Request.
  */
-public class AndroidWorkProfileCustomConfigurationRequest extends BaseRequest {
+public class AndroidWorkProfileCustomConfigurationRequest extends BaseRequest<AndroidWorkProfileCustomConfiguration> {
 	
     /**
      * The request for the AndroidWorkProfileCustomConfiguration
@@ -140,7 +140,7 @@ public class AndroidWorkProfileCustomConfigurationRequest extends BaseRequest {
      */
      public AndroidWorkProfileCustomConfigurationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidWorkProfileCustomConfigurationRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class AndroidWorkProfileCustomConfigurationRequest extends BaseRequest {
      */
      public AndroidWorkProfileCustomConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidWorkProfileCustomConfigurationRequest)this;
+         return this;
      }
 
 }

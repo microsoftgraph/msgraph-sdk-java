@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Profile Photo Collection Request Builder.
  */
-public class ProfilePhotoCollectionRequestBuilder extends BaseRequestBuilder {
+public class ProfilePhotoCollectionRequestBuilder extends BaseRequestBuilder<ProfilePhoto> {
 
     /**
      * The request builder for this collection of Group

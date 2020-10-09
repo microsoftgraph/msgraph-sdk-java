@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.MobileAppContentFile;
 import com.microsoft.graph.requests.extensions.MobileAppContentFileRenewUploadRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -17,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mobile App Content File Renew Upload Request.
  */
-public class MobileAppContentFileRenewUploadRequest extends BaseRequest {
+public class MobileAppContentFileRenewUploadRequest extends BaseRequest<MobileAppContentFile> {
 
     /**
      * The request for this MobileAppContentFileRenewUpload
@@ -27,7 +28,7 @@ public class MobileAppContentFileRenewUploadRequest extends BaseRequest {
      * @param requestOptions the options for this request
      */
     public MobileAppContentFileRenewUploadRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Void.class);
+        super(requestUrl, client, requestOptions, MobileAppContentFile.class);
     }
 
     /**

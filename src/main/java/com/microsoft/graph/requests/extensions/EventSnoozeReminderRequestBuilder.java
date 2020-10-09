@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.EventSnoozeReminderRequest;
+import com.microsoft.graph.models.extensions.Event;
 import com.microsoft.graph.models.extensions.DateTimeTimeZone;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Event Snooze Reminder Request Builder.
  */
-public class EventSnoozeReminderRequestBuilder extends BaseActionRequestBuilder {
+public class EventSnoozeReminderRequestBuilder extends BaseActionRequestBuilder<Event> {
 
     /**
      * The request builder for this EventSnoozeReminder

@@ -7,9 +7,9 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.PermissionGrantConditionSet;
 import com.microsoft.graph.models.extensions.PolicyBase;
-import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -30,7 +30,7 @@ public class PermissionGrantPolicy extends PolicyBase implements IJsonBackedObje
      */
     @SerializedName(value = "excludes", alternate = {"Excludes"})
     @Expose
-    public PermissionGrantConditionSetCollectionPage excludes;
+    public BaseCollectionPage<PermissionGrantConditionSet> excludes;
 
     /**
      * The Includes.
@@ -38,7 +38,7 @@ public class PermissionGrantPolicy extends PolicyBase implements IJsonBackedObje
      */
     @SerializedName(value = "includes", alternate = {"Includes"})
     @Expose
-    public PermissionGrantConditionSetCollectionPage includes;
+    public BaseCollectionPage<PermissionGrantConditionSet> includes;
 
 
     /**
@@ -65,7 +65,8 @@ public class PermissionGrantPolicy extends PolicyBase implements IJsonBackedObje
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -81,11 +82,11 @@ public class PermissionGrantPolicy extends PolicyBase implements IJsonBackedObje
 
 
         if (json.has("excludes")) {
-            excludes = serializer.deserializeObject(json.get("excludes").toString(), PermissionGrantConditionSetCollectionPage.class);
+            excludes = serializer.deserializeObject(json.get("excludes").toString(), new BaseCollectionPage<PermissionGrantConditionSet>(new java.util.ArrayList<PermissionGrantConditionSet>(), null).getClass());
         }
 
         if (json.has("includes")) {
-            includes = serializer.deserializeObject(json.get("includes").toString(), PermissionGrantConditionSetCollectionPage.class);
+            includes = serializer.deserializeObject(json.get("includes").toString(), new BaseCollectionPage<PermissionGrantConditionSet>(new java.util.ArrayList<PermissionGrantConditionSet>(), null).getClass());
         }
     }
 }

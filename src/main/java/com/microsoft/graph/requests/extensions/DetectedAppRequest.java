@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Detected App Request.
  */
-public class DetectedAppRequest extends BaseRequest {
+public class DetectedAppRequest extends BaseRequest<DetectedApp> {
 	
     /**
      * The request for the DetectedApp
@@ -142,7 +142,7 @@ public class DetectedAppRequest extends BaseRequest {
      */
      public DetectedAppRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DetectedAppRequest)this;
+         return this;
      }
 
     /**
@@ -153,7 +153,7 @@ public class DetectedAppRequest extends BaseRequest {
      */
      public DetectedAppRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DetectedAppRequest)this;
+         return this;
      }
 
 }

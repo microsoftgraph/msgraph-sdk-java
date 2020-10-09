@@ -18,7 +18,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Team Clone Request.
  */
-public class TeamCloneRequest extends BaseRequest {
+public class TeamCloneRequest extends BaseRequest<Void> {
     protected final TeamCloneBody body;
 
     /**
@@ -28,6 +28,7 @@ public class TeamCloneRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public TeamCloneRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new TeamCloneBody();
@@ -49,7 +50,7 @@ public class TeamCloneRequest extends BaseRequest {
      */
     public TeamCloneRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (TeamCloneRequest)this;
+        return this;
     }
 
     /**
@@ -60,7 +61,7 @@ public class TeamCloneRequest extends BaseRequest {
      */
     public TeamCloneRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (TeamCloneRequest)this;
+        return this;
     }
 
     /**
@@ -71,7 +72,7 @@ public class TeamCloneRequest extends BaseRequest {
      */
     public TeamCloneRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (TeamCloneRequest)this;
+        return this;
     }
 
 }

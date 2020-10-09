@@ -22,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Mail Folder Delta Collection Request Builder.
  */
-public class MailFolderDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder {
+public class MailFolderDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder<MailFolder> {
 
     /**
      * The request builder for this collection of MailFolder

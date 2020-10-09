@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationTargetAppsRequest;
+import com.microsoft.graph.models.extensions.TargetedManagedAppConfiguration;
 import com.microsoft.graph.models.extensions.ManagedMobileApp;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Targeted Managed App Configuration Target Apps Request Builder.
  */
-public class TargetedManagedAppConfigurationTargetAppsRequestBuilder extends BaseActionRequestBuilder {
+public class TargetedManagedAppConfigurationTargetAppsRequestBuilder extends BaseActionRequestBuilder<TargetedManagedAppConfiguration> {
 
     /**
      * The request builder for this TargetedManagedAppConfigurationTargetApps

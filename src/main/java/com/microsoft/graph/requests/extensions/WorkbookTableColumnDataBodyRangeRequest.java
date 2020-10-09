@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRange;
+import com.microsoft.graph.models.extensions.WorkbookTableColumn;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnDataBodyRangeRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Column Data Body Range Request.
  */
-public class WorkbookTableColumnDataBodyRangeRequest extends BaseRequest {
+public class WorkbookTableColumnDataBodyRangeRequest extends BaseRequest<WorkbookRange> {
 
     /**
      * The request for this WorkbookTableColumnDataBodyRange
@@ -98,7 +99,7 @@ public class WorkbookTableColumnDataBodyRangeRequest extends BaseRequest {
      */
     public WorkbookTableColumnDataBodyRangeRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookTableColumnDataBodyRangeRequest)this;
+        return this;
     }
 
     /**
@@ -109,7 +110,7 @@ public class WorkbookTableColumnDataBodyRangeRequest extends BaseRequest {
      */
     public WorkbookTableColumnDataBodyRangeRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookTableColumnDataBodyRangeRequest)this;
+        return this;
     }
 
     /**
@@ -120,7 +121,7 @@ public class WorkbookTableColumnDataBodyRangeRequest extends BaseRequest {
      */
     public WorkbookTableColumnDataBodyRangeRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookTableColumnDataBodyRangeRequest)this;
+        return this;
     }
 
     /**
@@ -131,7 +132,7 @@ public class WorkbookTableColumnDataBodyRangeRequest extends BaseRequest {
      */
     public WorkbookTableColumnDataBodyRangeRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookTableColumnDataBodyRangeRequest)this;
+        return this;
     }
 
 }

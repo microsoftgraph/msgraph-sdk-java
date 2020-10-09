@@ -59,7 +59,7 @@ public class WorkbookFunctionsNorm_S_DistBody {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

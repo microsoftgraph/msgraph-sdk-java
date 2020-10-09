@@ -7,11 +7,11 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.ItemReference;
 import com.microsoft.graph.models.extensions.ContentTypeOrder;
 import com.microsoft.graph.models.extensions.ColumnLink;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ColumnLinkCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -104,7 +104,7 @@ public class ContentType extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "columnLinks", alternate = {"ColumnLinks"})
     @Expose
-    public ColumnLinkCollectionPage columnLinks;
+    public BaseCollectionPage<ColumnLink> columnLinks;
 
 
     /**
@@ -131,7 +131,8 @@ public class ContentType extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -147,7 +148,7 @@ public class ContentType extends Entity implements IJsonBackedObject {
 
 
         if (json.has("columnLinks")) {
-            columnLinks = serializer.deserializeObject(json.get("columnLinks").toString(), ColumnLinkCollectionPage.class);
+            columnLinks = serializer.deserializeObject(json.get("columnLinks").toString(), new BaseCollectionPage<ColumnLink>(new java.util.ArrayList<ColumnLink>(), null).getClass());
         }
     }
 }

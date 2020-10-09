@@ -7,9 +7,9 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.MobileAppContentFile;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.MobileAppContentFileCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -30,7 +30,7 @@ public class MobileAppContent extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "files", alternate = {"Files"})
     @Expose
-    public MobileAppContentFileCollectionPage files;
+    public BaseCollectionPage<MobileAppContentFile> files;
 
 
     /**
@@ -57,7 +57,8 @@ public class MobileAppContent extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -73,7 +74,7 @@ public class MobileAppContent extends Entity implements IJsonBackedObject {
 
 
         if (json.has("files")) {
-            files = serializer.deserializeObject(json.get("files").toString(), MobileAppContentFileCollectionPage.class);
+            files = serializer.deserializeObject(json.get("files").toString(), new BaseCollectionPage<MobileAppContentFile>(new java.util.ArrayList<MobileAppContentFile>(), null).getClass());
         }
     }
 }

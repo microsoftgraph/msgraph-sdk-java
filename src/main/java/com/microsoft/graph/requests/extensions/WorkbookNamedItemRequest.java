@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Named Item Request.
  */
-public class WorkbookNamedItemRequest extends BaseRequest {
+public class WorkbookNamedItemRequest extends BaseRequest<WorkbookNamedItem> {
 	
     /**
      * The request for the WorkbookNamedItem
@@ -142,7 +142,7 @@ public class WorkbookNamedItemRequest extends BaseRequest {
      */
      public WorkbookNamedItemRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookNamedItemRequest)this;
+         return this;
      }
 
     /**
@@ -153,7 +153,7 @@ public class WorkbookNamedItemRequest extends BaseRequest {
      */
      public WorkbookNamedItemRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookNamedItemRequest)this;
+         return this;
      }
 
 }

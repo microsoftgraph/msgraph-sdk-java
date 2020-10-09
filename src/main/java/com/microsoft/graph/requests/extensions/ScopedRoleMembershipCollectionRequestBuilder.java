@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Scoped Role Membership Collection Request Builder.
  */
-public class ScopedRoleMembershipCollectionRequestBuilder extends BaseRequestBuilder {
+public class ScopedRoleMembershipCollectionRequestBuilder extends BaseRequestBuilder<ScopedRoleMembership> {
 
     /**
      * The request builder for this collection of ScopedRoleMembership

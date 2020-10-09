@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -21,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Home Realm Discovery Policy Reference Request.
  */
-public class HomeRealmDiscoveryPolicyReferenceRequest extends BaseRequest {
+public class HomeRealmDiscoveryPolicyReferenceRequest extends BaseReferenceRequest<HomeRealmDiscoveryPolicy> {
 
     /**
      * The request for the HomeRealmDiscoveryPolicy
@@ -34,14 +34,6 @@ public class HomeRealmDiscoveryPolicyReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicy.class);
     }
 
-    public void delete(final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    public HomeRealmDiscoveryPolicy delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
-    }
-
     /**
      * Sets the select clause for the request
      *
@@ -50,7 +42,7 @@ public class HomeRealmDiscoveryPolicyReferenceRequest extends BaseRequest {
      */
     public HomeRealmDiscoveryPolicyReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (HomeRealmDiscoveryPolicyReferenceRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +53,7 @@ public class HomeRealmDiscoveryPolicyReferenceRequest extends BaseRequest {
      */
     public HomeRealmDiscoveryPolicyReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (HomeRealmDiscoveryPolicyReferenceRequest)this;
+        return this;
     }
     /**
      * Puts the HomeRealmDiscoveryPolicy

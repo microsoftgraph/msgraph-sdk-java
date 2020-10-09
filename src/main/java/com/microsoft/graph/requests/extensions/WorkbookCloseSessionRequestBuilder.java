@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.WorkbookCloseSessionRequest;
+import com.microsoft.graph.models.extensions.Workbook;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Close Session Request Builder.
  */
-public class WorkbookCloseSessionRequestBuilder extends BaseActionRequestBuilder {
+public class WorkbookCloseSessionRequestBuilder extends BaseActionRequestBuilder<Workbook> {
 
     /**
      * The request builder for this WorkbookCloseSession

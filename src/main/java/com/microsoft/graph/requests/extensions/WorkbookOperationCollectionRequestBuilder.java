@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Operation Collection Request Builder.
  */
-public class WorkbookOperationCollectionRequestBuilder extends BaseRequestBuilder {
+public class WorkbookOperationCollectionRequestBuilder extends BaseRequestBuilder<WorkbookOperation> {
 
     /**
      * The request builder for this collection of Workbook

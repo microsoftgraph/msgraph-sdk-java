@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Ios Update Device Status Request.
  */
-public class IosUpdateDeviceStatusRequest extends BaseRequest {
+public class IosUpdateDeviceStatusRequest extends BaseRequest<IosUpdateDeviceStatus> {
 	
     /**
      * The request for the IosUpdateDeviceStatus
@@ -140,7 +140,7 @@ public class IosUpdateDeviceStatusRequest extends BaseRequest {
      */
      public IosUpdateDeviceStatusRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (IosUpdateDeviceStatusRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class IosUpdateDeviceStatusRequest extends BaseRequest {
      */
      public IosUpdateDeviceStatusRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IosUpdateDeviceStatusRequest)this;
+         return this;
      }
 
 }

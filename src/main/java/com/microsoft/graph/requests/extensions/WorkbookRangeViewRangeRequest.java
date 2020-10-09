@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRange;
+import com.microsoft.graph.models.extensions.WorkbookRangeView;
 import com.microsoft.graph.requests.extensions.WorkbookRangeViewRangeRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range View Range Request.
  */
-public class WorkbookRangeViewRangeRequest extends BaseRequest {
+public class WorkbookRangeViewRangeRequest extends BaseRequest<WorkbookRange> {
 
     /**
      * The request for this WorkbookRangeViewRange
@@ -98,7 +99,7 @@ public class WorkbookRangeViewRangeRequest extends BaseRequest {
      */
     public WorkbookRangeViewRangeRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookRangeViewRangeRequest)this;
+        return this;
     }
 
     /**
@@ -109,7 +110,7 @@ public class WorkbookRangeViewRangeRequest extends BaseRequest {
      */
     public WorkbookRangeViewRangeRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookRangeViewRangeRequest)this;
+        return this;
     }
 
     /**
@@ -120,7 +121,7 @@ public class WorkbookRangeViewRangeRequest extends BaseRequest {
      */
     public WorkbookRangeViewRangeRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookRangeViewRangeRequest)this;
+        return this;
     }
 
     /**
@@ -131,7 +132,7 @@ public class WorkbookRangeViewRangeRequest extends BaseRequest {
      */
     public WorkbookRangeViewRangeRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookRangeViewRangeRequest)this;
+        return this;
     }
 
 }

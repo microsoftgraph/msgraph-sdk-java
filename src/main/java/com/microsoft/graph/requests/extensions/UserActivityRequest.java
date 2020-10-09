@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the User Activity Request.
  */
-public class UserActivityRequest extends BaseRequest {
+public class UserActivityRequest extends BaseRequest<UserActivity> {
 	
     /**
      * The request for the UserActivity
@@ -142,7 +142,7 @@ public class UserActivityRequest extends BaseRequest {
      */
      public UserActivityRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (UserActivityRequest)this;
+         return this;
      }
 
     /**
@@ -153,7 +153,7 @@ public class UserActivityRequest extends BaseRequest {
      */
      public UserActivityRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserActivityRequest)this;
+         return this;
      }
 
 }

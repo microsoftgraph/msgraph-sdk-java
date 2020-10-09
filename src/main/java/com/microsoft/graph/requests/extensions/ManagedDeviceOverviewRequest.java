@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Device Overview Request.
  */
-public class ManagedDeviceOverviewRequest extends BaseRequest {
+public class ManagedDeviceOverviewRequest extends BaseRequest<ManagedDeviceOverview> {
 	
     /**
      * The request for the ManagedDeviceOverview
@@ -140,7 +140,7 @@ public class ManagedDeviceOverviewRequest extends BaseRequest {
      */
      public ManagedDeviceOverviewRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ManagedDeviceOverviewRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class ManagedDeviceOverviewRequest extends BaseRequest {
      */
      public ManagedDeviceOverviewRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ManagedDeviceOverviewRequest)this;
+         return this;
      }
 
 }

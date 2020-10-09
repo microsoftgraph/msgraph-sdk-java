@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.WorkbookPivotTable;
 import com.microsoft.graph.requests.extensions.WorkbookPivotTableRefreshRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -17,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Pivot Table Refresh Request.
  */
-public class WorkbookPivotTableRefreshRequest extends BaseRequest {
+public class WorkbookPivotTableRefreshRequest extends BaseRequest<WorkbookPivotTable> {
 
     /**
      * The request for this WorkbookPivotTableRefresh
@@ -27,7 +28,7 @@ public class WorkbookPivotTableRefreshRequest extends BaseRequest {
      * @param requestOptions the options for this request
      */
     public WorkbookPivotTableRefreshRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Void.class);
+        super(requestUrl, client, requestOptions, WorkbookPivotTable.class);
     }
 
     /**

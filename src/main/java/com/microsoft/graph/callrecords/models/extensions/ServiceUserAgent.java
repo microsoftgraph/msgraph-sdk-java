@@ -56,7 +56,8 @@ public class ServiceUserAgent extends UserAgent implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

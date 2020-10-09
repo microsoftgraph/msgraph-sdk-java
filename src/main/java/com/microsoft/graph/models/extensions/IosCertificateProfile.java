@@ -47,7 +47,8 @@ public class IosCertificateProfile extends DeviceConfiguration implements IJsonB
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

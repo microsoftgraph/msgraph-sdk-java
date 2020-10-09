@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.requests.extensions.MessageSendRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -17,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Message Send Request.
  */
-public class MessageSendRequest extends BaseRequest {
+public class MessageSendRequest extends BaseRequest<Message> {
 
     /**
      * The request for this MessageSend
@@ -27,7 +28,7 @@ public class MessageSendRequest extends BaseRequest {
      * @param requestOptions the options for this request
      */
     public MessageSendRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Void.class);
+        super(requestUrl, client, requestOptions, Message.class);
     }
 
     /**

@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Conditional Access Policy Collection Request Builder.
  */
-public class ConditionalAccessPolicyCollectionRequestBuilder extends BaseRequestBuilder {
+public class ConditionalAccessPolicyCollectionRequestBuilder extends BaseRequestBuilder<ConditionalAccessPolicy> {
 
     /**
      * The request builder for this collection of PolicyRoot

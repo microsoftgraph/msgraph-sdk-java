@@ -6,7 +6,6 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.WorkbookNamedItemAddFormulaLocalRequest;
 import com.microsoft.graph.models.extensions.WorkbookNamedItem;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -15,7 +14,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Named Item Add Formula Local Request Builder.
  */
-public class WorkbookNamedItemAddFormulaLocalRequestBuilder extends BaseActionRequestBuilder {
+public class WorkbookNamedItemAddFormulaLocalRequestBuilder extends BaseActionRequestBuilder<WorkbookNamedItem> {
 
     /**
      * The request builder for this WorkbookNamedItemAddFormulaLocal

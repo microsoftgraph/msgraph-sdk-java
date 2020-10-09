@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Data Policy Operation Request.
  */
-public class DataPolicyOperationRequest extends BaseRequest {
+public class DataPolicyOperationRequest extends BaseRequest<DataPolicyOperation> {
 	
     /**
      * The request for the DataPolicyOperation
@@ -140,7 +140,7 @@ public class DataPolicyOperationRequest extends BaseRequest {
      */
      public DataPolicyOperationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DataPolicyOperationRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class DataPolicyOperationRequest extends BaseRequest {
      */
      public DataPolicyOperationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DataPolicyOperationRequest)this;
+         return this;
      }
 
 }

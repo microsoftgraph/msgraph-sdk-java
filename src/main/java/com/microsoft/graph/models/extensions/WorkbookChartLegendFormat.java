@@ -65,7 +65,8 @@ public class WorkbookChartLegendFormat extends Entity implements IJsonBackedObje
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

@@ -14,7 +14,7 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Org Contact Reference Request.
  */
-public class OrgContactReferenceRequest extends BaseRequest {
+public class OrgContactReferenceRequest extends BaseReferenceRequest<OrgContact> {
 
     /**
      * The request for the OrgContact
@@ -36,14 +36,6 @@ public class OrgContactReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, OrgContact.class);
     }
 
-    public void delete(final ICallback<? super OrgContact> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    public OrgContact delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
-    }
-
     /**
      * Sets the select clause for the request
      *
@@ -52,7 +44,7 @@ public class OrgContactReferenceRequest extends BaseRequest {
      */
     public OrgContactReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (OrgContactReferenceRequest)this;
+        return this;
     }
 
     /**
@@ -63,7 +55,7 @@ public class OrgContactReferenceRequest extends BaseRequest {
      */
     public OrgContactReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (OrgContactReferenceRequest)this;
+        return this;
     }
     /**
      * Puts the OrgContact

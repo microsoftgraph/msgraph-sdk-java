@@ -25,7 +25,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Message Collection Request Builder.
  */
-public class MessageCollectionRequestBuilder extends BaseRequestBuilder {
+public class MessageCollectionRequestBuilder extends BaseRequestBuilder<Message> {
 
     /**
      * The request builder for this collection of MailFolder

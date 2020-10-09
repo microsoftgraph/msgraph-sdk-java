@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
+import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.requests.extensions.ReportRootGetTeamsUserActivityUserCountsRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Teams User Activity User Counts Request.
  */
-public class ReportRootGetTeamsUserActivityUserCountsRequest extends BaseRequest {
+public class ReportRootGetTeamsUserActivityUserCountsRequest extends BaseRequest<Report> {
 
     /**
      * The request for this ReportRootGetTeamsUserActivityUserCounts
@@ -98,7 +99,7 @@ public class ReportRootGetTeamsUserActivityUserCountsRequest extends BaseRequest
      */
     public ReportRootGetTeamsUserActivityUserCountsRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ReportRootGetTeamsUserActivityUserCountsRequest)this;
+        return this;
     }
 
     /**
@@ -109,7 +110,7 @@ public class ReportRootGetTeamsUserActivityUserCountsRequest extends BaseRequest
      */
     public ReportRootGetTeamsUserActivityUserCountsRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ReportRootGetTeamsUserActivityUserCountsRequest)this;
+        return this;
     }
 
     /**
@@ -120,7 +121,7 @@ public class ReportRootGetTeamsUserActivityUserCountsRequest extends BaseRequest
      */
     public ReportRootGetTeamsUserActivityUserCountsRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ReportRootGetTeamsUserActivityUserCountsRequest)this;
+        return this;
     }
 
     /**
@@ -131,7 +132,7 @@ public class ReportRootGetTeamsUserActivityUserCountsRequest extends BaseRequest
      */
     public ReportRootGetTeamsUserActivityUserCountsRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ReportRootGetTeamsUserActivityUserCountsRequest)this;
+        return this;
     }
 
 }

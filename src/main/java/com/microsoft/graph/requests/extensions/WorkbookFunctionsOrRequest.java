@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Or Request.
  */
-public class WorkbookFunctionsOrRequest extends BaseRequest {
+public class WorkbookFunctionsOrRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsOrBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsOrRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsOrRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsOrBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsOrRequest extends BaseRequest {
      */
     public WorkbookFunctionsOrRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsOrRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsOrRequest extends BaseRequest {
      */
     public WorkbookFunctionsOrRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsOrRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsOrRequest extends BaseRequest {
      */
     public WorkbookFunctionsOrRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsOrRequest)this;
+        return this;
     }
 
 }

@@ -13,7 +13,7 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Directory Object Reference Request.
  */
-public class DirectoryObjectReferenceRequest extends BaseRequest {
+public class DirectoryObjectReferenceRequest extends BaseReferenceRequest<DirectoryObject> {
 
     /**
      * The request for the DirectoryObject
@@ -35,14 +35,6 @@ public class DirectoryObjectReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, DirectoryObject.class);
     }
 
-    public void delete(final ICallback<? super DirectoryObject> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    public DirectoryObject delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
-    }
-
     /**
      * Sets the select clause for the request
      *
@@ -51,7 +43,7 @@ public class DirectoryObjectReferenceRequest extends BaseRequest {
      */
     public DirectoryObjectReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (DirectoryObjectReferenceRequest)this;
+        return this;
     }
 
     /**
@@ -62,7 +54,7 @@ public class DirectoryObjectReferenceRequest extends BaseRequest {
      */
     public DirectoryObjectReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DirectoryObjectReferenceRequest)this;
+        return this;
     }
     /**
      * Puts the DirectoryObject

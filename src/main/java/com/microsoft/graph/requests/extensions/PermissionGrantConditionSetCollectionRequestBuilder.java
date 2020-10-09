@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Permission Grant Condition Set Collection Request Builder.
  */
-public class PermissionGrantConditionSetCollectionRequestBuilder extends BaseRequestBuilder {
+public class PermissionGrantConditionSetCollectionRequestBuilder extends BaseRequestBuilder<PermissionGrantConditionSet> {
 
     /**
      * The request builder for this collection of PermissionGrantPolicy

@@ -5,7 +5,6 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.SiteGetByPathRequest;
 import com.microsoft.graph.models.extensions.Site;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
@@ -15,7 +14,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Site Get By Path Request Builder.
  */
-public class SiteGetByPathRequestBuilder extends BaseFunctionRequestBuilder {
+public class SiteGetByPathRequestBuilder extends BaseFunctionRequestBuilder<Site> {
 
     /**
      * The request builder for this SiteGetByPath

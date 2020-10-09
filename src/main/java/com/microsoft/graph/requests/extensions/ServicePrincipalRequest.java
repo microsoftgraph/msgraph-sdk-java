@@ -37,7 +37,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Service Principal Request.
  */
-public class ServicePrincipalRequest extends BaseRequest {
+public class ServicePrincipalRequest extends BaseRequest<ServicePrincipal> {
 	
     /**
      * The request for the ServicePrincipal
@@ -158,7 +158,7 @@ public class ServicePrincipalRequest extends BaseRequest {
      */
      public ServicePrincipalRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ServicePrincipalRequest)this;
+         return this;
      }
 
     /**
@@ -169,7 +169,7 @@ public class ServicePrincipalRequest extends BaseRequest {
      */
      public ServicePrincipalRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ServicePrincipalRequest)this;
+         return this;
      }
 
 }

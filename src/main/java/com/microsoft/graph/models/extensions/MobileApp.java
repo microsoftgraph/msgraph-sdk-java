@@ -7,13 +7,12 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.MimeContent;
 import com.microsoft.graph.models.generated.MobileAppPublishingState;
 import com.microsoft.graph.models.extensions.MobileAppAssignment;
 import com.microsoft.graph.models.extensions.MobileAppCategory;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.MobileAppAssignmentCollectionPage;
-import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -138,13 +137,13 @@ public class MobileApp extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
-    public MobileAppAssignmentCollectionPage assignments;
+    public BaseCollectionPage<MobileAppAssignment> assignments;
 
     /**
      * The Categories.
      * The list of categories for this app.
      */
-    public MobileAppCategoryCollectionPage categories;
+    public BaseCollectionPage<MobileAppCategory> categories;
 
 
     /**
@@ -171,7 +170,8 @@ public class MobileApp extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -187,11 +187,11 @@ public class MobileApp extends Entity implements IJsonBackedObject {
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments").toString(), MobileAppAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments").toString(), new BaseCollectionPage<MobileAppAssignment>(new java.util.ArrayList<MobileAppAssignment>(), null).getClass());
         }
 
         if (json.has("categories")) {
-            categories = serializer.deserializeObject(json.get("categories").toString(), MobileAppCategoryCollectionPage.class);
+            categories = serializer.deserializeObject(json.get("categories").toString(), new BaseCollectionPage<MobileAppCategory>(new java.util.ArrayList<MobileAppCategory>(), null).getClass());
         }
     }
 }

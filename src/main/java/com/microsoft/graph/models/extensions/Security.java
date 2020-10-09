@@ -7,13 +7,11 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.Alert;
 import com.microsoft.graph.models.extensions.SecureScoreControlProfile;
 import com.microsoft.graph.models.extensions.SecureScore;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.AlertCollectionPage;
-import com.microsoft.graph.requests.extensions.SecureScoreControlProfileCollectionPage;
-import com.microsoft.graph.requests.extensions.SecureScoreCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -34,7 +32,7 @@ public class Security extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "alerts", alternate = {"Alerts"})
     @Expose
-    public AlertCollectionPage alerts;
+    public BaseCollectionPage<Alert> alerts;
 
     /**
      * The Secure Score Control Profiles.
@@ -42,7 +40,7 @@ public class Security extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "secureScoreControlProfiles", alternate = {"SecureScoreControlProfiles"})
     @Expose
-    public SecureScoreControlProfileCollectionPage secureScoreControlProfiles;
+    public BaseCollectionPage<SecureScoreControlProfile> secureScoreControlProfiles;
 
     /**
      * The Secure Scores.
@@ -50,7 +48,7 @@ public class Security extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "secureScores", alternate = {"SecureScores"})
     @Expose
-    public SecureScoreCollectionPage secureScores;
+    public BaseCollectionPage<SecureScore> secureScores;
 
 
     /**
@@ -77,7 +75,8 @@ public class Security extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -93,15 +92,15 @@ public class Security extends Entity implements IJsonBackedObject {
 
 
         if (json.has("alerts")) {
-            alerts = serializer.deserializeObject(json.get("alerts").toString(), AlertCollectionPage.class);
+            alerts = serializer.deserializeObject(json.get("alerts").toString(), new BaseCollectionPage<Alert>(new java.util.ArrayList<Alert>(), null).getClass());
         }
 
         if (json.has("secureScoreControlProfiles")) {
-            secureScoreControlProfiles = serializer.deserializeObject(json.get("secureScoreControlProfiles").toString(), SecureScoreControlProfileCollectionPage.class);
+            secureScoreControlProfiles = serializer.deserializeObject(json.get("secureScoreControlProfiles").toString(), new BaseCollectionPage<SecureScoreControlProfile>(new java.util.ArrayList<SecureScoreControlProfile>(), null).getClass());
         }
 
         if (json.has("secureScores")) {
-            secureScores = serializer.deserializeObject(json.get("secureScores").toString(), SecureScoreCollectionPage.class);
+            secureScores = serializer.deserializeObject(json.get("secureScores").toString(), new BaseCollectionPage<SecureScore>(new java.util.ArrayList<SecureScore>(), null).getClass());
         }
     }
 }

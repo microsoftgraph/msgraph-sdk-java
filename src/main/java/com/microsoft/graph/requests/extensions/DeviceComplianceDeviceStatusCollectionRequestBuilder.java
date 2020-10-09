@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device Compliance Device Status Collection Request Builder.
  */
-public class DeviceComplianceDeviceStatusCollectionRequestBuilder extends BaseRequestBuilder {
+public class DeviceComplianceDeviceStatusCollectionRequestBuilder extends BaseRequestBuilder<DeviceComplianceDeviceStatus> {
 
     /**
      * The request builder for this collection of DeviceCompliancePolicy

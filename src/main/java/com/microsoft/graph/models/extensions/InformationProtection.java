@@ -7,9 +7,9 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.ThreatAssessmentRequest;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -30,7 +30,7 @@ public class InformationProtection extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "threatAssessmentRequests", alternate = {"ThreatAssessmentRequests"})
     @Expose
-    public ThreatAssessmentRequestCollectionPage threatAssessmentRequests;
+    public BaseCollectionPage<ThreatAssessmentRequest> threatAssessmentRequests;
 
 
     /**
@@ -57,7 +57,8 @@ public class InformationProtection extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -73,7 +74,7 @@ public class InformationProtection extends Entity implements IJsonBackedObject {
 
 
         if (json.has("threatAssessmentRequests")) {
-            threatAssessmentRequests = serializer.deserializeObject(json.get("threatAssessmentRequests").toString(), ThreatAssessmentRequestCollectionPage.class);
+            threatAssessmentRequests = serializer.deserializeObject(json.get("threatAssessmentRequests").toString(), new BaseCollectionPage<ThreatAssessmentRequest>(new java.util.ArrayList<ThreatAssessmentRequest>(), null).getClass());
         }
     }
 }

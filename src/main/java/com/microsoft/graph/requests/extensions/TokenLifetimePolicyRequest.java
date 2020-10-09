@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Token Lifetime Policy Request.
  */
-public class TokenLifetimePolicyRequest extends BaseRequest {
+public class TokenLifetimePolicyRequest extends BaseRequest<TokenLifetimePolicy> {
 	
     /**
      * The request for the TokenLifetimePolicy
@@ -140,7 +140,7 @@ public class TokenLifetimePolicyRequest extends BaseRequest {
      */
      public TokenLifetimePolicyRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TokenLifetimePolicyRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class TokenLifetimePolicyRequest extends BaseRequest {
      */
      public TokenLifetimePolicyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TokenLifetimePolicyRequest)this;
+         return this;
      }
 
 }

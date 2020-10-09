@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.WorkbookApplicationCalculateRequest;
+import com.microsoft.graph.models.extensions.WorkbookApplication;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Application Calculate Request Builder.
  */
-public class WorkbookApplicationCalculateRequestBuilder extends BaseActionRequestBuilder {
+public class WorkbookApplicationCalculateRequestBuilder extends BaseActionRequestBuilder<WorkbookApplication> {
 
     /**
      * The request builder for this WorkbookApplicationCalculate

@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Decimal Request.
  */
-public class WorkbookFunctionsDecimalRequest extends BaseRequest {
+public class WorkbookFunctionsDecimalRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsDecimalBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsDecimalRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsDecimalRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsDecimalBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsDecimalRequest extends BaseRequest {
      */
     public WorkbookFunctionsDecimalRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsDecimalRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsDecimalRequest extends BaseRequest {
      */
     public WorkbookFunctionsDecimalRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsDecimalRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsDecimalRequest extends BaseRequest {
      */
     public WorkbookFunctionsDecimalRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsDecimalRequest)this;
+        return this;
     }
 
 }

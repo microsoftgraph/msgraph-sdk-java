@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Mobile Lob App Collection Request Builder.
  */
-public class MobileLobAppCollectionRequestBuilder extends BaseRequestBuilder {
+public class MobileLobAppCollectionRequestBuilder extends BaseRequestBuilder<MobileLobApp> {
 
     /**
      * The request builder for this collection of DeviceAppManagement

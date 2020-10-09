@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Telecom Expense Management Partner Collection Request Builder.
  */
-public class TelecomExpenseManagementPartnerCollectionRequestBuilder extends BaseRequestBuilder {
+public class TelecomExpenseManagementPartnerCollectionRequestBuilder extends BaseRequestBuilder<TelecomExpenseManagementPartner> {
 
     /**
      * The request builder for this collection of DeviceManagement

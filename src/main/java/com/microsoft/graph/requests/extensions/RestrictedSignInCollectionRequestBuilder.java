@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Restricted Sign In Collection Request Builder.
  */
-public class RestrictedSignInCollectionRequestBuilder extends BaseRequestBuilder {
+public class RestrictedSignInCollectionRequestBuilder extends BaseRequestBuilder<RestrictedSignIn> {
 
     /**
      * The request builder for this collection of AuditLogRoot

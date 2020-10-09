@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Mdm Windows Information Protection Policy Collection Request Builder.
  */
-public class MdmWindowsInformationProtectionPolicyCollectionRequestBuilder extends BaseRequestBuilder {
+public class MdmWindowsInformationProtectionPolicyCollectionRequestBuilder extends BaseRequestBuilder<MdmWindowsInformationProtectionPolicy> {
 
     /**
      * The request builder for this collection of DeviceAppManagement

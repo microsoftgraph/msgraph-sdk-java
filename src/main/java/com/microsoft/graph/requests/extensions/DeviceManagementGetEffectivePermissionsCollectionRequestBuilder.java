@@ -22,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Device Management Get Effective Permissions Collection Request Builder.
  */
-public class DeviceManagementGetEffectivePermissionsCollectionRequestBuilder extends BaseFunctionRequestBuilder {
+public class DeviceManagementGetEffectivePermissionsCollectionRequestBuilder extends BaseFunctionRequestBuilder<RolePermission> {
 
     /**
      * The request builder for this collection of DeviceManagement

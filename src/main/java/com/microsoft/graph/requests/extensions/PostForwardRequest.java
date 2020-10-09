@@ -18,7 +18,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Post Forward Request.
  */
-public class PostForwardRequest extends BaseRequest {
+public class PostForwardRequest extends BaseRequest<Void> {
     protected final PostForwardBody body;
 
     /**
@@ -28,6 +28,7 @@ public class PostForwardRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public PostForwardRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new PostForwardBody();
@@ -49,7 +50,7 @@ public class PostForwardRequest extends BaseRequest {
      */
     public PostForwardRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (PostForwardRequest)this;
+        return this;
     }
 
     /**
@@ -60,7 +61,7 @@ public class PostForwardRequest extends BaseRequest {
      */
     public PostForwardRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (PostForwardRequest)this;
+        return this;
     }
 
     /**
@@ -71,7 +72,7 @@ public class PostForwardRequest extends BaseRequest {
      */
     public PostForwardRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (PostForwardRequest)this;
+        return this;
     }
 
 }

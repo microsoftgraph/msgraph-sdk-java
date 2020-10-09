@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Terms And Conditions Assignment Collection Request Builder.
  */
-public class TermsAndConditionsAssignmentCollectionRequestBuilder extends BaseRequestBuilder {
+public class TermsAndConditionsAssignmentCollectionRequestBuilder extends BaseRequestBuilder<TermsAndConditionsAssignment> {
 
     /**
      * The request builder for this collection of TermsAndConditions

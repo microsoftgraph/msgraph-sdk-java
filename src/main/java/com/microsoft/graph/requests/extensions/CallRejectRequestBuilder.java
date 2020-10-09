@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.CallRejectRequest;
+import com.microsoft.graph.models.extensions.Call;
 import com.microsoft.graph.models.generated.RejectReason;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Call Reject Request Builder.
  */
-public class CallRejectRequestBuilder extends BaseActionRequestBuilder {
+public class CallRejectRequestBuilder extends BaseActionRequestBuilder<Call> {
 
     /**
      * The request builder for this CallReject

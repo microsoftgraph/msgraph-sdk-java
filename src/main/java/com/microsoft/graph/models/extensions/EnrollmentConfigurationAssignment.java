@@ -56,7 +56,8 @@ public class EnrollmentConfigurationAssignment extends Entity implements IJsonBa
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

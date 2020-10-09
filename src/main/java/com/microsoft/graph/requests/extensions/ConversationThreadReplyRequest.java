@@ -18,7 +18,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Conversation Thread Reply Request.
  */
-public class ConversationThreadReplyRequest extends BaseRequest {
+public class ConversationThreadReplyRequest extends BaseRequest<Void> {
     protected final ConversationThreadReplyBody body;
 
     /**
@@ -28,6 +28,7 @@ public class ConversationThreadReplyRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public ConversationThreadReplyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new ConversationThreadReplyBody();
@@ -49,7 +50,7 @@ public class ConversationThreadReplyRequest extends BaseRequest {
      */
     public ConversationThreadReplyRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ConversationThreadReplyRequest)this;
+        return this;
     }
 
     /**
@@ -60,7 +61,7 @@ public class ConversationThreadReplyRequest extends BaseRequest {
      */
     public ConversationThreadReplyRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (ConversationThreadReplyRequest)this;
+        return this;
     }
 
     /**
@@ -71,7 +72,7 @@ public class ConversationThreadReplyRequest extends BaseRequest {
      */
     public ConversationThreadReplyRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ConversationThreadReplyRequest)this;
+        return this;
     }
 
 }

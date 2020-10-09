@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Calendar;
+import com.microsoft.graph.models.extensions.CalendarSharingMessage;
 import com.microsoft.graph.requests.extensions.CalendarSharingMessageAcceptRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Calendar Sharing Message Accept Request.
  */
-public class CalendarSharingMessageAcceptRequest extends BaseRequest {
+public class CalendarSharingMessageAcceptRequest extends BaseRequest<Calendar> {
 
     /**
      * The request for this CalendarSharingMessageAccept
@@ -58,7 +59,7 @@ public class CalendarSharingMessageAcceptRequest extends BaseRequest {
      */
     public CalendarSharingMessageAcceptRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (CalendarSharingMessageAcceptRequest)this;
+        return this;
     }
 
     /**
@@ -69,7 +70,7 @@ public class CalendarSharingMessageAcceptRequest extends BaseRequest {
      */
     public CalendarSharingMessageAcceptRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (CalendarSharingMessageAcceptRequest)this;
+        return this;
     }
 
 }

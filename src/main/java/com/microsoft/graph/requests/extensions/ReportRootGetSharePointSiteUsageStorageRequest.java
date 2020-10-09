@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
+import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.requests.extensions.ReportRootGetSharePointSiteUsageStorageRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Share Point Site Usage Storage Request.
  */
-public class ReportRootGetSharePointSiteUsageStorageRequest extends BaseRequest {
+public class ReportRootGetSharePointSiteUsageStorageRequest extends BaseRequest<Report> {
 
     /**
      * The request for this ReportRootGetSharePointSiteUsageStorage
@@ -98,7 +99,7 @@ public class ReportRootGetSharePointSiteUsageStorageRequest extends BaseRequest 
      */
     public ReportRootGetSharePointSiteUsageStorageRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ReportRootGetSharePointSiteUsageStorageRequest)this;
+        return this;
     }
 
     /**
@@ -109,7 +110,7 @@ public class ReportRootGetSharePointSiteUsageStorageRequest extends BaseRequest 
      */
     public ReportRootGetSharePointSiteUsageStorageRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ReportRootGetSharePointSiteUsageStorageRequest)this;
+        return this;
     }
 
     /**
@@ -120,7 +121,7 @@ public class ReportRootGetSharePointSiteUsageStorageRequest extends BaseRequest 
      */
     public ReportRootGetSharePointSiteUsageStorageRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ReportRootGetSharePointSiteUsageStorageRequest)this;
+        return this;
     }
 
     /**
@@ -131,7 +132,7 @@ public class ReportRootGetSharePointSiteUsageStorageRequest extends BaseRequest 
      */
     public ReportRootGetSharePointSiteUsageStorageRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ReportRootGetSharePointSiteUsageStorageRequest)this;
+        return this;
     }
 
 }

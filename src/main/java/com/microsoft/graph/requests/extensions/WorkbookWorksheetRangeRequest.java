@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRange;
+import com.microsoft.graph.models.extensions.WorkbookWorksheet;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetRangeRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Worksheet Range Request.
  */
-public class WorkbookWorksheetRangeRequest extends BaseRequest {
+public class WorkbookWorksheetRangeRequest extends BaseRequest<WorkbookRange> {
 
     /**
      * The request for this WorkbookWorksheetRange
@@ -98,7 +99,7 @@ public class WorkbookWorksheetRangeRequest extends BaseRequest {
      */
     public WorkbookWorksheetRangeRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookWorksheetRangeRequest)this;
+        return this;
     }
 
     /**
@@ -109,7 +110,7 @@ public class WorkbookWorksheetRangeRequest extends BaseRequest {
      */
     public WorkbookWorksheetRangeRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookWorksheetRangeRequest)this;
+        return this;
     }
 
     /**
@@ -120,7 +121,7 @@ public class WorkbookWorksheetRangeRequest extends BaseRequest {
      */
     public WorkbookWorksheetRangeRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookWorksheetRangeRequest)this;
+        return this;
     }
 
     /**
@@ -131,7 +132,7 @@ public class WorkbookWorksheetRangeRequest extends BaseRequest {
      */
     public WorkbookWorksheetRangeRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookWorksheetRangeRequest)this;
+        return this;
     }
 
 }

@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRangeView;
+import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.requests.extensions.WorkbookRangeVisibleViewRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Visible View Request.
  */
-public class WorkbookRangeVisibleViewRequest extends BaseRequest {
+public class WorkbookRangeVisibleViewRequest extends BaseRequest<WorkbookRangeView> {
 
     /**
      * The request for this WorkbookRangeVisibleView
@@ -98,7 +99,7 @@ public class WorkbookRangeVisibleViewRequest extends BaseRequest {
      */
     public WorkbookRangeVisibleViewRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookRangeVisibleViewRequest)this;
+        return this;
     }
 
     /**
@@ -109,7 +110,7 @@ public class WorkbookRangeVisibleViewRequest extends BaseRequest {
      */
     public WorkbookRangeVisibleViewRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookRangeVisibleViewRequest)this;
+        return this;
     }
 
     /**
@@ -120,7 +121,7 @@ public class WorkbookRangeVisibleViewRequest extends BaseRequest {
      */
     public WorkbookRangeVisibleViewRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookRangeVisibleViewRequest)this;
+        return this;
     }
 
     /**
@@ -131,7 +132,7 @@ public class WorkbookRangeVisibleViewRequest extends BaseRequest {
      */
     public WorkbookRangeVisibleViewRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookRangeVisibleViewRequest)this;
+        return this;
     }
 
 }

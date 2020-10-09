@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Dollar De Request.
  */
-public class WorkbookFunctionsDollarDeRequest extends BaseRequest {
+public class WorkbookFunctionsDollarDeRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsDollarDeBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsDollarDeRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsDollarDeRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsDollarDeBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsDollarDeRequest extends BaseRequest {
      */
     public WorkbookFunctionsDollarDeRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsDollarDeRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsDollarDeRequest extends BaseRequest {
      */
     public WorkbookFunctionsDollarDeRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsDollarDeRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsDollarDeRequest extends BaseRequest {
      */
     public WorkbookFunctionsDollarDeRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsDollarDeRequest)this;
+        return this;
     }
 
 }

@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.WorkbookRangeFillClearRequest;
+import com.microsoft.graph.models.extensions.WorkbookRangeFill;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Range Fill Clear Request Builder.
  */
-public class WorkbookRangeFillClearRequestBuilder extends BaseActionRequestBuilder {
+public class WorkbookRangeFillClearRequestBuilder extends BaseActionRequestBuilder<WorkbookRangeFill> {
 
     /**
      * The request builder for this WorkbookRangeFillClear

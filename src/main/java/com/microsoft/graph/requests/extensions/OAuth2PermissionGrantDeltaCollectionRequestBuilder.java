@@ -22,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the OAuth2Permission Grant Delta Collection Request Builder.
  */
-public class OAuth2PermissionGrantDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder {
+public class OAuth2PermissionGrantDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder<OAuth2PermissionGrant> {
 
     /**
      * The request builder for this collection of OAuth2PermissionGrant

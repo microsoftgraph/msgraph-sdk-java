@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Compliance Management Partner Request.
  */
-public class ComplianceManagementPartnerRequest extends BaseRequest {
+public class ComplianceManagementPartnerRequest extends BaseRequest<ComplianceManagementPartner> {
 	
     /**
      * The request for the ComplianceManagementPartner
@@ -140,7 +140,7 @@ public class ComplianceManagementPartnerRequest extends BaseRequest {
      */
      public ComplianceManagementPartnerRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ComplianceManagementPartnerRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class ComplianceManagementPartnerRequest extends BaseRequest {
      */
      public ComplianceManagementPartnerRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ComplianceManagementPartnerRequest)this;
+         return this;
      }
 
 }

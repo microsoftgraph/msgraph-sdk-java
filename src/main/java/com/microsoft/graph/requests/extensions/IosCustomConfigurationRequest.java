@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Ios Custom Configuration Request.
  */
-public class IosCustomConfigurationRequest extends BaseRequest {
+public class IosCustomConfigurationRequest extends BaseRequest<IosCustomConfiguration> {
 	
     /**
      * The request for the IosCustomConfiguration
@@ -140,7 +140,7 @@ public class IosCustomConfigurationRequest extends BaseRequest {
      */
      public IosCustomConfigurationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (IosCustomConfigurationRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class IosCustomConfigurationRequest extends BaseRequest {
      */
      public IosCustomConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IosCustomConfigurationRequest)this;
+         return this;
      }
 
 }

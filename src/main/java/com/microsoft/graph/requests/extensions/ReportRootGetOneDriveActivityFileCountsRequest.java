@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
+import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.requests.extensions.ReportRootGetOneDriveActivityFileCountsRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get One Drive Activity File Counts Request.
  */
-public class ReportRootGetOneDriveActivityFileCountsRequest extends BaseRequest {
+public class ReportRootGetOneDriveActivityFileCountsRequest extends BaseRequest<Report> {
 
     /**
      * The request for this ReportRootGetOneDriveActivityFileCounts
@@ -98,7 +99,7 @@ public class ReportRootGetOneDriveActivityFileCountsRequest extends BaseRequest 
      */
     public ReportRootGetOneDriveActivityFileCountsRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ReportRootGetOneDriveActivityFileCountsRequest)this;
+        return this;
     }
 
     /**
@@ -109,7 +110,7 @@ public class ReportRootGetOneDriveActivityFileCountsRequest extends BaseRequest 
      */
     public ReportRootGetOneDriveActivityFileCountsRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ReportRootGetOneDriveActivityFileCountsRequest)this;
+        return this;
     }
 
     /**
@@ -120,7 +121,7 @@ public class ReportRootGetOneDriveActivityFileCountsRequest extends BaseRequest 
      */
     public ReportRootGetOneDriveActivityFileCountsRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ReportRootGetOneDriveActivityFileCountsRequest)this;
+        return this;
     }
 
     /**
@@ -131,7 +132,7 @@ public class ReportRootGetOneDriveActivityFileCountsRequest extends BaseRequest 
      */
     public ReportRootGetOneDriveActivityFileCountsRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ReportRootGetOneDriveActivityFileCountsRequest)this;
+        return this;
     }
 
 }

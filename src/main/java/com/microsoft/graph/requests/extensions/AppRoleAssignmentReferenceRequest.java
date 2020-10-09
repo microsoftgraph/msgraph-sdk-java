@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -21,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the App Role Assignment Reference Request.
  */
-public class AppRoleAssignmentReferenceRequest extends BaseRequest {
+public class AppRoleAssignmentReferenceRequest extends BaseReferenceRequest<AppRoleAssignment> {
 
     /**
      * The request for the AppRoleAssignment
@@ -34,14 +34,6 @@ public class AppRoleAssignmentReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, AppRoleAssignment.class);
     }
 
-    public void delete(final ICallback<? super AppRoleAssignment> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    public AppRoleAssignment delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
-    }
-
     /**
      * Sets the select clause for the request
      *
@@ -50,7 +42,7 @@ public class AppRoleAssignmentReferenceRequest extends BaseRequest {
      */
     public AppRoleAssignmentReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (AppRoleAssignmentReferenceRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +53,7 @@ public class AppRoleAssignmentReferenceRequest extends BaseRequest {
      */
     public AppRoleAssignmentReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (AppRoleAssignmentReferenceRequest)this;
+        return this;
     }
     /**
      * Puts the AppRoleAssignment

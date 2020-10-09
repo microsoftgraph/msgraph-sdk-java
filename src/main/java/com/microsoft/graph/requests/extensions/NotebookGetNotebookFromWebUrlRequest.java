@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Notebook Get Notebook From Web Url Request.
  */
-public class NotebookGetNotebookFromWebUrlRequest extends BaseRequest {
+public class NotebookGetNotebookFromWebUrlRequest extends BaseRequest<CopyNotebookModel> {
     protected final NotebookGetNotebookFromWebUrlBody body;
 
     /**
@@ -29,6 +29,7 @@ public class NotebookGetNotebookFromWebUrlRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public NotebookGetNotebookFromWebUrlRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CopyNotebookModel.class);
         body = new NotebookGetNotebookFromWebUrlBody();
@@ -50,7 +51,7 @@ public class NotebookGetNotebookFromWebUrlRequest extends BaseRequest {
      */
     public NotebookGetNotebookFromWebUrlRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (NotebookGetNotebookFromWebUrlRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class NotebookGetNotebookFromWebUrlRequest extends BaseRequest {
      */
     public NotebookGetNotebookFromWebUrlRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (NotebookGetNotebookFromWebUrlRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class NotebookGetNotebookFromWebUrlRequest extends BaseRequest {
      */
     public NotebookGetNotebookFromWebUrlRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (NotebookGetNotebookFromWebUrlRequest)this;
+        return this;
     }
 
 }

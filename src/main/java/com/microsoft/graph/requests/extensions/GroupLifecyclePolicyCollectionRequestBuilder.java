@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Group Lifecycle Policy Collection Request Builder.
  */
-public class GroupLifecyclePolicyCollectionRequestBuilder extends BaseRequestBuilder {
+public class GroupLifecyclePolicyCollectionRequestBuilder extends BaseRequestBuilder<GroupLifecyclePolicy> {
 
     /**
      * The request builder for this collection of GroupLifecyclePolicy

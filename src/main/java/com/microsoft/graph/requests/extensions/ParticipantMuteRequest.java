@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Participant Mute Request.
  */
-public class ParticipantMuteRequest extends BaseRequest {
+public class ParticipantMuteRequest extends BaseRequest<MuteParticipantOperation> {
     protected final ParticipantMuteBody body;
 
     /**
@@ -29,6 +29,7 @@ public class ParticipantMuteRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public ParticipantMuteRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MuteParticipantOperation.class);
         body = new ParticipantMuteBody();
@@ -50,7 +51,7 @@ public class ParticipantMuteRequest extends BaseRequest {
      */
     public ParticipantMuteRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ParticipantMuteRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class ParticipantMuteRequest extends BaseRequest {
      */
     public ParticipantMuteRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (ParticipantMuteRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class ParticipantMuteRequest extends BaseRequest {
      */
     public ParticipantMuteRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ParticipantMuteRequest)this;
+        return this;
     }
 
 }

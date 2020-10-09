@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Operation Request.
  */
-public class OperationRequest extends BaseRequest {
+public class OperationRequest extends BaseRequest<Operation> {
 	
     /**
      * The request for the Operation
@@ -155,7 +155,7 @@ public class OperationRequest extends BaseRequest {
      */
      public OperationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OperationRequest)this;
+         return this;
      }
 
     /**
@@ -166,7 +166,7 @@ public class OperationRequest extends BaseRequest {
      */
      public OperationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OperationRequest)this;
+         return this;
      }
 
 }

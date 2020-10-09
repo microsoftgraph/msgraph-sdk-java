@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device Install State Collection Request Builder.
  */
-public class DeviceInstallStateCollectionRequestBuilder extends BaseRequestBuilder {
+public class DeviceInstallStateCollectionRequestBuilder extends BaseRequestBuilder<DeviceInstallState> {
 
     /**
      * The request builder for this collection of UserInstallStateSummary

@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.ManagedAppPolicyDeploymentSummaryPerApp;
 import com.microsoft.graph.models.extensions.Entity;
 
@@ -88,7 +89,8 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements IJsonBa
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

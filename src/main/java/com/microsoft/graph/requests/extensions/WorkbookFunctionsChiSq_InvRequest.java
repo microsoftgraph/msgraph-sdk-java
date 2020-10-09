@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Chi Sq_Inv Request.
  */
-public class WorkbookFunctionsChiSq_InvRequest extends BaseRequest {
+public class WorkbookFunctionsChiSq_InvRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsChiSq_InvBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsChiSq_InvRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsChiSq_InvRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsChiSq_InvBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsChiSq_InvRequest extends BaseRequest {
      */
     public WorkbookFunctionsChiSq_InvRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsChiSq_InvRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsChiSq_InvRequest extends BaseRequest {
      */
     public WorkbookFunctionsChiSq_InvRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsChiSq_InvRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsChiSq_InvRequest extends BaseRequest {
      */
     public WorkbookFunctionsChiSq_InvRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsChiSq_InvRequest)this;
+        return this;
     }
 
 }

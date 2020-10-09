@@ -23,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Planner User Request.
  */
-public class PlannerUserRequest extends BaseRequest {
+public class PlannerUserRequest extends BaseRequest<PlannerUser> {
 	
     /**
      * The request for the PlannerUser
@@ -144,7 +144,7 @@ public class PlannerUserRequest extends BaseRequest {
      */
      public PlannerUserRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PlannerUserRequest)this;
+         return this;
      }
 
     /**
@@ -155,7 +155,7 @@ public class PlannerUserRequest extends BaseRequest {
      */
      public PlannerUserRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PlannerUserRequest)this;
+         return this;
      }
 
 }

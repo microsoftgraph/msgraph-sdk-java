@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Teams Tab Collection Request Builder.
  */
-public class TeamsTabCollectionRequestBuilder extends BaseRequestBuilder {
+public class TeamsTabCollectionRequestBuilder extends BaseRequestBuilder<TeamsTab> {
 
     /**
      * The request builder for this collection of Channel

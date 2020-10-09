@@ -25,7 +25,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device Compliance Policy Collection Request Builder.
  */
-public class DeviceCompliancePolicyCollectionRequestBuilder extends BaseRequestBuilder {
+public class DeviceCompliancePolicyCollectionRequestBuilder extends BaseRequestBuilder<DeviceCompliancePolicy> {
 
     /**
      * The request builder for this collection of DeviceManagement

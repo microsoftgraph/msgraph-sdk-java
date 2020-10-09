@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionDataRecoveryCertificate;
 import com.microsoft.graph.models.generated.WindowsInformationProtectionEnforcementLevel;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionResourceCollection;
@@ -16,8 +17,6 @@ import com.microsoft.graph.models.extensions.WindowsInformationProtectionApp;
 import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionAppLockerFile;
 import com.microsoft.graph.models.extensions.ManagedAppPolicy;
-import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentCollectionPage;
-import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -214,7 +213,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements IJ
      */
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
-    public TargetedManagedAppPolicyAssignmentCollectionPage assignments;
+    public BaseCollectionPage<TargetedManagedAppPolicyAssignment> assignments;
 
     /**
      * The Exempt App Locker Files.
@@ -222,7 +221,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements IJ
      */
     @SerializedName(value = "exemptAppLockerFiles", alternate = {"ExemptAppLockerFiles"})
     @Expose
-    public WindowsInformationProtectionAppLockerFileCollectionPage exemptAppLockerFiles;
+    public BaseCollectionPage<WindowsInformationProtectionAppLockerFile> exemptAppLockerFiles;
 
     /**
      * The Protected App Locker Files.
@@ -230,7 +229,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements IJ
      */
     @SerializedName(value = "protectedAppLockerFiles", alternate = {"ProtectedAppLockerFiles"})
     @Expose
-    public WindowsInformationProtectionAppLockerFileCollectionPage protectedAppLockerFiles;
+    public BaseCollectionPage<WindowsInformationProtectionAppLockerFile> protectedAppLockerFiles;
 
 
     /**
@@ -257,7 +256,8 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements IJ
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -273,15 +273,15 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements IJ
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments").toString(), TargetedManagedAppPolicyAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments").toString(), new BaseCollectionPage<TargetedManagedAppPolicyAssignment>(new java.util.ArrayList<TargetedManagedAppPolicyAssignment>(), null).getClass());
         }
 
         if (json.has("exemptAppLockerFiles")) {
-            exemptAppLockerFiles = serializer.deserializeObject(json.get("exemptAppLockerFiles").toString(), WindowsInformationProtectionAppLockerFileCollectionPage.class);
+            exemptAppLockerFiles = serializer.deserializeObject(json.get("exemptAppLockerFiles").toString(), new BaseCollectionPage<WindowsInformationProtectionAppLockerFile>(new java.util.ArrayList<WindowsInformationProtectionAppLockerFile>(), null).getClass());
         }
 
         if (json.has("protectedAppLockerFiles")) {
-            protectedAppLockerFiles = serializer.deserializeObject(json.get("protectedAppLockerFiles").toString(), WindowsInformationProtectionAppLockerFileCollectionPage.class);
+            protectedAppLockerFiles = serializer.deserializeObject(json.get("protectedAppLockerFiles").toString(), new BaseCollectionPage<WindowsInformationProtectionAppLockerFile>(new java.util.ArrayList<WindowsInformationProtectionAppLockerFile>(), null).getClass());
         }
     }
 }

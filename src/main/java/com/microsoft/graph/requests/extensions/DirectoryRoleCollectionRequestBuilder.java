@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Directory Role Collection Request Builder.
  */
-public class DirectoryRoleCollectionRequestBuilder extends BaseRequestBuilder {
+public class DirectoryRoleCollectionRequestBuilder extends BaseRequestBuilder<DirectoryRole> {
 
     /**
      * The request builder for this collection of DirectoryRole

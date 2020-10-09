@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Web App Request.
  */
-public class WebAppRequest extends BaseRequest {
+public class WebAppRequest extends BaseRequest<WebApp> {
 	
     /**
      * The request for the WebApp
@@ -140,7 +140,7 @@ public class WebAppRequest extends BaseRequest {
      */
      public WebAppRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WebAppRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class WebAppRequest extends BaseRequest {
      */
      public WebAppRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WebAppRequest)this;
+         return this;
      }
 
 }

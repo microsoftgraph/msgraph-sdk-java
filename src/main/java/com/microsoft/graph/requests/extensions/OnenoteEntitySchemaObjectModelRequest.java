@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Onenote Entity Schema Object Model Request.
  */
-public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest {
+public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest<OnenoteEntitySchemaObjectModel> {
 	
     /**
      * The request for the OnenoteEntitySchemaObjectModel
@@ -155,7 +155,7 @@ public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest {
      */
      public OnenoteEntitySchemaObjectModelRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OnenoteEntitySchemaObjectModelRequest)this;
+         return this;
      }
 
     /**
@@ -166,7 +166,7 @@ public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest {
      */
      public OnenoteEntitySchemaObjectModelRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OnenoteEntitySchemaObjectModelRequest)this;
+         return this;
      }
 
 }

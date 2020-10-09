@@ -5,8 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.PostReplyRequest;
 import com.microsoft.graph.models.extensions.Post;
+import com.microsoft.graph.models.extensions.Post;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Post Reply Request Builder.
  */
-public class PostReplyRequestBuilder extends BaseActionRequestBuilder {
+public class PostReplyRequestBuilder extends BaseActionRequestBuilder<Post> {
 
     /**
      * The request builder for this PostReply

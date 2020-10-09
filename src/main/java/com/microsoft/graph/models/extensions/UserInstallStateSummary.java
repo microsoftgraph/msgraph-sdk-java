@@ -7,9 +7,9 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.DeviceInstallState;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -62,7 +62,7 @@ public class UserInstallStateSummary extends Entity implements IJsonBackedObject
      */
     @SerializedName(value = "deviceStates", alternate = {"DeviceStates"})
     @Expose
-    public DeviceInstallStateCollectionPage deviceStates;
+    public BaseCollectionPage<DeviceInstallState> deviceStates;
 
 
     /**
@@ -89,7 +89,8 @@ public class UserInstallStateSummary extends Entity implements IJsonBackedObject
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -105,7 +106,7 @@ public class UserInstallStateSummary extends Entity implements IJsonBackedObject
 
 
         if (json.has("deviceStates")) {
-            deviceStates = serializer.deserializeObject(json.get("deviceStates").toString(), DeviceInstallStateCollectionPage.class);
+            deviceStates = serializer.deserializeObject(json.get("deviceStates").toString(), new BaseCollectionPage<DeviceInstallState>(new java.util.ArrayList<DeviceInstallState>(), null).getClass());
         }
     }
 }

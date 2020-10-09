@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android Work Profile Compliance Policy Request.
  */
-public class AndroidWorkProfileCompliancePolicyRequest extends BaseRequest {
+public class AndroidWorkProfileCompliancePolicyRequest extends BaseRequest<AndroidWorkProfileCompliancePolicy> {
 	
     /**
      * The request for the AndroidWorkProfileCompliancePolicy
@@ -140,7 +140,7 @@ public class AndroidWorkProfileCompliancePolicyRequest extends BaseRequest {
      */
      public AndroidWorkProfileCompliancePolicyRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidWorkProfileCompliancePolicyRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class AndroidWorkProfileCompliancePolicyRequest extends BaseRequest {
      */
      public AndroidWorkProfileCompliancePolicyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidWorkProfileCompliancePolicyRequest)this;
+         return this;
      }
 
 }

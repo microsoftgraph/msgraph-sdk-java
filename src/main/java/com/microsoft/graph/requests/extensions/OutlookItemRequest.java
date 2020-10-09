@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Outlook Item Request.
  */
-public class OutlookItemRequest extends BaseRequest {
+public class OutlookItemRequest extends BaseRequest<OutlookItem> {
 	
     /**
      * The request for the OutlookItem
@@ -155,7 +155,7 @@ public class OutlookItemRequest extends BaseRequest {
      */
      public OutlookItemRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OutlookItemRequest)this;
+         return this;
      }
 
     /**
@@ -166,7 +166,7 @@ public class OutlookItemRequest extends BaseRequest {
      */
      public OutlookItemRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OutlookItemRequest)this;
+         return this;
      }
 
 }

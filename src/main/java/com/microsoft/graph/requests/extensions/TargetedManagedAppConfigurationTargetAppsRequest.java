@@ -18,7 +18,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Targeted Managed App Configuration Target Apps Request.
  */
-public class TargetedManagedAppConfigurationTargetAppsRequest extends BaseRequest {
+public class TargetedManagedAppConfigurationTargetAppsRequest extends BaseRequest<Void> {
     protected final TargetedManagedAppConfigurationTargetAppsBody body;
 
     /**
@@ -28,6 +28,7 @@ public class TargetedManagedAppConfigurationTargetAppsRequest extends BaseReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public TargetedManagedAppConfigurationTargetAppsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new TargetedManagedAppConfigurationTargetAppsBody();
@@ -49,7 +50,7 @@ public class TargetedManagedAppConfigurationTargetAppsRequest extends BaseReques
      */
     public TargetedManagedAppConfigurationTargetAppsRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (TargetedManagedAppConfigurationTargetAppsRequest)this;
+        return this;
     }
 
     /**
@@ -60,7 +61,7 @@ public class TargetedManagedAppConfigurationTargetAppsRequest extends BaseReques
      */
     public TargetedManagedAppConfigurationTargetAppsRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (TargetedManagedAppConfigurationTargetAppsRequest)this;
+        return this;
     }
 
     /**
@@ -71,7 +72,7 @@ public class TargetedManagedAppConfigurationTargetAppsRequest extends BaseReques
      */
     public TargetedManagedAppConfigurationTargetAppsRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (TargetedManagedAppConfigurationTargetAppsRequest)this;
+        return this;
     }
 
 }

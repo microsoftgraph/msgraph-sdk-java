@@ -14,7 +14,7 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -24,7 +24,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Role Definition With Reference Request.
  */
-public class RoleDefinitionWithReferenceRequest extends BaseRequest {
+public class RoleDefinitionWithReferenceRequest extends BaseWithReferenceRequest<RoleDefinition> {
 
     /**
      * The request for the RoleDefinition
@@ -37,43 +37,6 @@ public class RoleDefinitionWithReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, RoleDefinition.class);
     }
 
-    public void post(final RoleDefinition newRoleDefinition, final IJsonBackedObject payload, final ICallback<? super RoleDefinition> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    public RoleDefinition post(final RoleDefinition newRoleDefinition, final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newRoleDefinition;
-        }
-        return null;
-    }
-
-    public void get(final ICallback<? super RoleDefinition> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    public RoleDefinition get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(final ICallback<? super RoleDefinition> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(final RoleDefinition sourceRoleDefinition, final ICallback<? super RoleDefinition> callback) {
-		send(HttpMethod.PATCH, callback, sourceRoleDefinition);
-	}
-
-	public RoleDefinition patch(final RoleDefinition sourceRoleDefinition) throws ClientException {
-		return send(HttpMethod.PATCH, sourceRoleDefinition);
-	}
-
-
     /**
      * Sets the select clause for the request
      *
@@ -82,7 +45,7 @@ public class RoleDefinitionWithReferenceRequest extends BaseRequest {
      */
     public RoleDefinitionWithReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (RoleDefinitionWithReferenceRequest)this;
+        return this;
     }
 
     /**
@@ -93,6 +56,6 @@ public class RoleDefinitionWithReferenceRequest extends BaseRequest {
      */
     public RoleDefinitionWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (RoleDefinitionWithReferenceRequest)this;
+        return this;
     }
 }

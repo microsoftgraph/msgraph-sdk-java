@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Group Assign License Request.
  */
-public class GroupAssignLicenseRequest extends BaseRequest {
+public class GroupAssignLicenseRequest extends BaseRequest<Group> {
     protected final GroupAssignLicenseBody body;
 
     /**
@@ -29,6 +29,7 @@ public class GroupAssignLicenseRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public GroupAssignLicenseRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Group.class);
         body = new GroupAssignLicenseBody();
@@ -50,7 +51,7 @@ public class GroupAssignLicenseRequest extends BaseRequest {
      */
     public GroupAssignLicenseRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (GroupAssignLicenseRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class GroupAssignLicenseRequest extends BaseRequest {
      */
     public GroupAssignLicenseRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (GroupAssignLicenseRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class GroupAssignLicenseRequest extends BaseRequest {
      */
     public GroupAssignLicenseRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (GroupAssignLicenseRequest)this;
+        return this;
     }
 
 }

@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Odd FYield Request.
  */
-public class WorkbookFunctionsOddFYieldRequest extends BaseRequest {
+public class WorkbookFunctionsOddFYieldRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsOddFYieldBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsOddFYieldRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsOddFYieldRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsOddFYieldBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsOddFYieldRequest extends BaseRequest {
      */
     public WorkbookFunctionsOddFYieldRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsOddFYieldRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsOddFYieldRequest extends BaseRequest {
      */
     public WorkbookFunctionsOddFYieldRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsOddFYieldRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsOddFYieldRequest extends BaseRequest {
      */
     public WorkbookFunctionsOddFYieldRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsOddFYieldRequest)this;
+        return this;
     }
 
 }

@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.ActivityBasedTimeoutPolicy;
 import com.microsoft.graph.models.extensions.ClaimsMappingPolicy;
 import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
@@ -16,13 +17,6 @@ import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
 import com.microsoft.graph.models.extensions.ConditionalAccessPolicy;
 import com.microsoft.graph.models.extensions.IdentitySecurityDefaultsEnforcementPolicy;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ActivityBasedTimeoutPolicyCollectionPage;
-import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionPage;
-import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionPage;
-import com.microsoft.graph.requests.extensions.PermissionGrantPolicyCollectionPage;
-import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionPage;
-import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionPage;
-import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -43,7 +37,7 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "activityBasedTimeoutPolicies", alternate = {"ActivityBasedTimeoutPolicies"})
     @Expose
-    public ActivityBasedTimeoutPolicyCollectionPage activityBasedTimeoutPolicies;
+    public BaseCollectionPage<ActivityBasedTimeoutPolicy> activityBasedTimeoutPolicies;
 
     /**
      * The Claims Mapping Policies.
@@ -51,7 +45,7 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "claimsMappingPolicies", alternate = {"ClaimsMappingPolicies"})
     @Expose
-    public ClaimsMappingPolicyCollectionPage claimsMappingPolicies;
+    public BaseCollectionPage<ClaimsMappingPolicy> claimsMappingPolicies;
 
     /**
      * The Home Realm Discovery Policies.
@@ -59,7 +53,7 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "homeRealmDiscoveryPolicies", alternate = {"HomeRealmDiscoveryPolicies"})
     @Expose
-    public HomeRealmDiscoveryPolicyCollectionPage homeRealmDiscoveryPolicies;
+    public BaseCollectionPage<HomeRealmDiscoveryPolicy> homeRealmDiscoveryPolicies;
 
     /**
      * The Permission Grant Policies.
@@ -67,7 +61,7 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "permissionGrantPolicies", alternate = {"PermissionGrantPolicies"})
     @Expose
-    public PermissionGrantPolicyCollectionPage permissionGrantPolicies;
+    public BaseCollectionPage<PermissionGrantPolicy> permissionGrantPolicies;
 
     /**
      * The Token Issuance Policies.
@@ -75,7 +69,7 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "tokenIssuancePolicies", alternate = {"TokenIssuancePolicies"})
     @Expose
-    public TokenIssuancePolicyCollectionPage tokenIssuancePolicies;
+    public BaseCollectionPage<TokenIssuancePolicy> tokenIssuancePolicies;
 
     /**
      * The Token Lifetime Policies.
@@ -83,7 +77,7 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "tokenLifetimePolicies", alternate = {"TokenLifetimePolicies"})
     @Expose
-    public TokenLifetimePolicyCollectionPage tokenLifetimePolicies;
+    public BaseCollectionPage<TokenLifetimePolicy> tokenLifetimePolicies;
 
     /**
      * The Conditional Access Policies.
@@ -91,7 +85,7 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "conditionalAccessPolicies", alternate = {"ConditionalAccessPolicies"})
     @Expose
-    public ConditionalAccessPolicyCollectionPage conditionalAccessPolicies;
+    public BaseCollectionPage<ConditionalAccessPolicy> conditionalAccessPolicies;
 
     /**
      * The Identity Security Defaults Enforcement Policy.
@@ -126,7 +120,8 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -142,31 +137,31 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
 
 
         if (json.has("activityBasedTimeoutPolicies")) {
-            activityBasedTimeoutPolicies = serializer.deserializeObject(json.get("activityBasedTimeoutPolicies").toString(), ActivityBasedTimeoutPolicyCollectionPage.class);
+            activityBasedTimeoutPolicies = serializer.deserializeObject(json.get("activityBasedTimeoutPolicies").toString(), new BaseCollectionPage<ActivityBasedTimeoutPolicy>(new java.util.ArrayList<ActivityBasedTimeoutPolicy>(), null).getClass());
         }
 
         if (json.has("claimsMappingPolicies")) {
-            claimsMappingPolicies = serializer.deserializeObject(json.get("claimsMappingPolicies").toString(), ClaimsMappingPolicyCollectionPage.class);
+            claimsMappingPolicies = serializer.deserializeObject(json.get("claimsMappingPolicies").toString(), new BaseCollectionPage<ClaimsMappingPolicy>(new java.util.ArrayList<ClaimsMappingPolicy>(), null).getClass());
         }
 
         if (json.has("homeRealmDiscoveryPolicies")) {
-            homeRealmDiscoveryPolicies = serializer.deserializeObject(json.get("homeRealmDiscoveryPolicies").toString(), HomeRealmDiscoveryPolicyCollectionPage.class);
+            homeRealmDiscoveryPolicies = serializer.deserializeObject(json.get("homeRealmDiscoveryPolicies").toString(), new BaseCollectionPage<HomeRealmDiscoveryPolicy>(new java.util.ArrayList<HomeRealmDiscoveryPolicy>(), null).getClass());
         }
 
         if (json.has("permissionGrantPolicies")) {
-            permissionGrantPolicies = serializer.deserializeObject(json.get("permissionGrantPolicies").toString(), PermissionGrantPolicyCollectionPage.class);
+            permissionGrantPolicies = serializer.deserializeObject(json.get("permissionGrantPolicies").toString(), new BaseCollectionPage<PermissionGrantPolicy>(new java.util.ArrayList<PermissionGrantPolicy>(), null).getClass());
         }
 
         if (json.has("tokenIssuancePolicies")) {
-            tokenIssuancePolicies = serializer.deserializeObject(json.get("tokenIssuancePolicies").toString(), TokenIssuancePolicyCollectionPage.class);
+            tokenIssuancePolicies = serializer.deserializeObject(json.get("tokenIssuancePolicies").toString(), new BaseCollectionPage<TokenIssuancePolicy>(new java.util.ArrayList<TokenIssuancePolicy>(), null).getClass());
         }
 
         if (json.has("tokenLifetimePolicies")) {
-            tokenLifetimePolicies = serializer.deserializeObject(json.get("tokenLifetimePolicies").toString(), TokenLifetimePolicyCollectionPage.class);
+            tokenLifetimePolicies = serializer.deserializeObject(json.get("tokenLifetimePolicies").toString(), new BaseCollectionPage<TokenLifetimePolicy>(new java.util.ArrayList<TokenLifetimePolicy>(), null).getClass());
         }
 
         if (json.has("conditionalAccessPolicies")) {
-            conditionalAccessPolicies = serializer.deserializeObject(json.get("conditionalAccessPolicies").toString(), ConditionalAccessPolicyCollectionPage.class);
+            conditionalAccessPolicies = serializer.deserializeObject(json.get("conditionalAccessPolicies").toString(), new BaseCollectionPage<ConditionalAccessPolicy>(new java.util.ArrayList<ConditionalAccessPolicy>(), null).getClass());
         }
     }
 }

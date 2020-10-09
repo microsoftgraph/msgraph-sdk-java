@@ -18,7 +18,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Managed Device Mobile App Configuration Assign Request.
  */
-public class ManagedDeviceMobileAppConfigurationAssignRequest extends BaseRequest {
+public class ManagedDeviceMobileAppConfigurationAssignRequest extends BaseRequest<Void> {
     protected final ManagedDeviceMobileAppConfigurationAssignBody body;
 
     /**
@@ -28,6 +28,7 @@ public class ManagedDeviceMobileAppConfigurationAssignRequest extends BaseReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public ManagedDeviceMobileAppConfigurationAssignRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new ManagedDeviceMobileAppConfigurationAssignBody();
@@ -49,7 +50,7 @@ public class ManagedDeviceMobileAppConfigurationAssignRequest extends BaseReques
      */
     public ManagedDeviceMobileAppConfigurationAssignRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ManagedDeviceMobileAppConfigurationAssignRequest)this;
+        return this;
     }
 
     /**
@@ -60,7 +61,7 @@ public class ManagedDeviceMobileAppConfigurationAssignRequest extends BaseReques
      */
     public ManagedDeviceMobileAppConfigurationAssignRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (ManagedDeviceMobileAppConfigurationAssignRequest)this;
+        return this;
     }
 
     /**
@@ -71,7 +72,7 @@ public class ManagedDeviceMobileAppConfigurationAssignRequest extends BaseReques
      */
     public ManagedDeviceMobileAppConfigurationAssignRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ManagedDeviceMobileAppConfigurationAssignRequest)this;
+        return this;
     }
 
 }

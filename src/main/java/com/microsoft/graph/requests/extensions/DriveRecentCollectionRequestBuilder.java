@@ -22,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Drive Recent Collection Request Builder.
  */
-public class DriveRecentCollectionRequestBuilder extends BaseFunctionRequestBuilder {
+public class DriveRecentCollectionRequestBuilder extends BaseFunctionRequestBuilder<DriveItem> {
 
     /**
      * The request builder for this collection of Drive

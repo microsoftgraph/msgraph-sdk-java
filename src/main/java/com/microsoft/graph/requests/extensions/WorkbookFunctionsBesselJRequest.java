@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Bessel JRequest.
  */
-public class WorkbookFunctionsBesselJRequest extends BaseRequest {
+public class WorkbookFunctionsBesselJRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsBesselJBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsBesselJRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsBesselJRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsBesselJBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsBesselJRequest extends BaseRequest {
      */
     public WorkbookFunctionsBesselJRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsBesselJRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsBesselJRequest extends BaseRequest {
      */
     public WorkbookFunctionsBesselJRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsBesselJRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsBesselJRequest extends BaseRequest {
      */
     public WorkbookFunctionsBesselJRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsBesselJRequest)this;
+        return this;
     }
 
 }

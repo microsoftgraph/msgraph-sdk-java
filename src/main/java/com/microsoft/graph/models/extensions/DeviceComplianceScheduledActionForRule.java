@@ -7,9 +7,9 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.DeviceComplianceActionItem;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.DeviceComplianceActionItemCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -38,7 +38,7 @@ public class DeviceComplianceScheduledActionForRule extends Entity implements IJ
      */
     @SerializedName(value = "scheduledActionConfigurations", alternate = {"ScheduledActionConfigurations"})
     @Expose
-    public DeviceComplianceActionItemCollectionPage scheduledActionConfigurations;
+    public BaseCollectionPage<DeviceComplianceActionItem> scheduledActionConfigurations;
 
 
     /**
@@ -65,7 +65,8 @@ public class DeviceComplianceScheduledActionForRule extends Entity implements IJ
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -81,7 +82,7 @@ public class DeviceComplianceScheduledActionForRule extends Entity implements IJ
 
 
         if (json.has("scheduledActionConfigurations")) {
-            scheduledActionConfigurations = serializer.deserializeObject(json.get("scheduledActionConfigurations").toString(), DeviceComplianceActionItemCollectionPage.class);
+            scheduledActionConfigurations = serializer.deserializeObject(json.get("scheduledActionConfigurations").toString(), new BaseCollectionPage<DeviceComplianceActionItem>(new java.util.ArrayList<DeviceComplianceActionItem>(), null).getClass());
         }
     }
 }

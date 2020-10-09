@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRange;
+import com.microsoft.graph.models.extensions.WorkbookTableColumn;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnRangeRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Column Range Request.
  */
-public class WorkbookTableColumnRangeRequest extends BaseRequest {
+public class WorkbookTableColumnRangeRequest extends BaseRequest<WorkbookRange> {
 
     /**
      * The request for this WorkbookTableColumnRange
@@ -98,7 +99,7 @@ public class WorkbookTableColumnRangeRequest extends BaseRequest {
      */
     public WorkbookTableColumnRangeRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookTableColumnRangeRequest)this;
+        return this;
     }
 
     /**
@@ -109,7 +110,7 @@ public class WorkbookTableColumnRangeRequest extends BaseRequest {
      */
     public WorkbookTableColumnRangeRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookTableColumnRangeRequest)this;
+        return this;
     }
 
     /**
@@ -120,7 +121,7 @@ public class WorkbookTableColumnRangeRequest extends BaseRequest {
      */
     public WorkbookTableColumnRangeRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookTableColumnRangeRequest)this;
+        return this;
     }
 
     /**
@@ -131,7 +132,7 @@ public class WorkbookTableColumnRangeRequest extends BaseRequest {
      */
     public WorkbookTableColumnRangeRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookTableColumnRangeRequest)this;
+        return this;
     }
 
 }

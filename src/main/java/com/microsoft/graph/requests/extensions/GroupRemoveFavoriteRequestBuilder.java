@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.GroupRemoveFavoriteRequest;
+import com.microsoft.graph.models.extensions.Group;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Group Remove Favorite Request Builder.
  */
-public class GroupRemoveFavoriteRequestBuilder extends BaseActionRequestBuilder {
+public class GroupRemoveFavoriteRequestBuilder extends BaseActionRequestBuilder<Group> {
 
     /**
      * The request builder for this GroupRemoveFavorite

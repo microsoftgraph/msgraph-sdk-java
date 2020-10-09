@@ -51,7 +51,7 @@ public class GroupLifecyclePolicyRemoveGroupBody {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

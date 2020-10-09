@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsIpmtRequest;
+import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Ipmt Request Builder.
  */
-public class WorkbookFunctionsIpmtRequestBuilder extends BaseActionRequestBuilder {
+public class WorkbookFunctionsIpmtRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
     /**
      * The request builder for this WorkbookFunctionsIpmt

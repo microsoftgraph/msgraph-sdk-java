@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Permission Grant Condition Set Request.
  */
-public class PermissionGrantConditionSetRequest extends BaseRequest {
+public class PermissionGrantConditionSetRequest extends BaseRequest<PermissionGrantConditionSet> {
 	
     /**
      * The request for the PermissionGrantConditionSet
@@ -140,7 +140,7 @@ public class PermissionGrantConditionSetRequest extends BaseRequest {
      */
      public PermissionGrantConditionSetRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PermissionGrantConditionSetRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class PermissionGrantConditionSetRequest extends BaseRequest {
      */
      public PermissionGrantConditionSetRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PermissionGrantConditionSetRequest)this;
+         return this;
      }
 
 }

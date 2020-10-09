@@ -22,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Administrative Unit Delta Collection Request Builder.
  */
-public class AdministrativeUnitDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder {
+public class AdministrativeUnitDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder<AdministrativeUnit> {
 
     /**
      * The request builder for this collection of AdministrativeUnit

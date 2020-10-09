@@ -67,7 +67,7 @@ public class WorkbookFunctionsFloor_MathBody {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

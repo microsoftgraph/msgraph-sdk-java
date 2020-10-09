@@ -7,11 +7,10 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.AdministrativeUnit;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.AdministrativeUnitCollectionPage;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -32,7 +31,7 @@ public class Directory extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "administrativeUnits", alternate = {"AdministrativeUnits"})
     @Expose
-    public AdministrativeUnitCollectionPage administrativeUnits;
+    public BaseCollectionPage<AdministrativeUnit> administrativeUnits;
 
     /**
      * The Deleted Items.
@@ -40,7 +39,7 @@ public class Directory extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "deletedItems", alternate = {"DeletedItems"})
     @Expose
-    public DirectoryObjectCollectionPage deletedItems;
+    public BaseCollectionPage<DirectoryObject> deletedItems;
 
 
     /**
@@ -67,7 +66,8 @@ public class Directory extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -83,11 +83,11 @@ public class Directory extends Entity implements IJsonBackedObject {
 
 
         if (json.has("administrativeUnits")) {
-            administrativeUnits = serializer.deserializeObject(json.get("administrativeUnits").toString(), AdministrativeUnitCollectionPage.class);
+            administrativeUnits = serializer.deserializeObject(json.get("administrativeUnits").toString(), new BaseCollectionPage<AdministrativeUnit>(new java.util.ArrayList<AdministrativeUnit>(), null).getClass());
         }
 
         if (json.has("deletedItems")) {
-            deletedItems = serializer.deserializeObject(json.get("deletedItems").toString(), DirectoryObjectCollectionPage.class);
+            deletedItems = serializer.deserializeObject(json.get("deletedItems").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
         }
     }
 }

@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.AssignedLabel;
 import com.microsoft.graph.models.extensions.AssignedLicense;
 import com.microsoft.graph.models.extensions.LicenseProcessingState;
@@ -26,17 +27,6 @@ import com.microsoft.graph.models.extensions.GroupLifecyclePolicy;
 import com.microsoft.graph.models.extensions.PlannerGroup;
 import com.microsoft.graph.models.extensions.Onenote;
 import com.microsoft.graph.models.extensions.Team;
-import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionPage;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
-import com.microsoft.graph.requests.extensions.GroupSettingCollectionPage;
-import com.microsoft.graph.requests.extensions.EventCollectionPage;
-import com.microsoft.graph.requests.extensions.ConversationCollectionPage;
-import com.microsoft.graph.requests.extensions.ProfilePhotoCollectionPage;
-import com.microsoft.graph.requests.extensions.ConversationThreadCollectionPage;
-import com.microsoft.graph.requests.extensions.DriveCollectionPage;
-import com.microsoft.graph.requests.extensions.SiteCollectionPage;
-import com.microsoft.graph.requests.extensions.ExtensionCollectionPage;
-import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -149,7 +139,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Mail Nickname.
-     * The mail alias for the group, unique in the organization. This property must be specified when a group is created. Returned by default. Supports $filter.
+     * The mail alias for the group, unique in the organization. This property must be specified when a group is created. These characters cannot be used in the mailNickName: @()/[]';:.&amp;lt;&amp;gt;,SPACE. Returned by default. Supports $filter.
      */
     @SerializedName(value = "mailNickname", alternate = {"MailNickname"})
     @Expose
@@ -353,7 +343,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "appRoleAssignments", alternate = {"AppRoleAssignments"})
     @Expose
-    public AppRoleAssignmentCollectionPage appRoleAssignments;
+    public BaseCollectionPage<AppRoleAssignment> appRoleAssignments;
 
     /**
      * The Created On Behalf Of.
@@ -367,25 +357,25 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
      * The Member Of.
      * Groups that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable.
      */
-    public DirectoryObjectCollectionPage memberOf;
+    public BaseCollectionPage<DirectoryObject> memberOf;
 
     /**
      * The Members.
      * Users and groups that are members of this group. HTTP Methods: GET (supported for all groups), POST (supported for Microsoft 365 groups, security groups and mail-enabled security groups), DELETE (supported for Microsoft 365 groups and security groups) Nullable.
      */
-    public DirectoryObjectCollectionPage members;
+    public BaseCollectionPage<DirectoryObject> members;
 
     /**
      * The Members With License Errors.
      * A list of group members with license errors from this group-based license assignment. Read-only.
      */
-    public DirectoryObjectCollectionPage membersWithLicenseErrors;
+    public BaseCollectionPage<DirectoryObject> membersWithLicenseErrors;
 
     /**
      * The Owners.
      * The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Limited to 100 owners. HTTP Methods: GET (supported for all groups), POST (supported for Microsoft 365 groups, security groups and mail-enabled security groups), DELETE (supported for Microsoft 365 groups and security groups). Nullable.
      */
-    public DirectoryObjectCollectionPage owners;
+    public BaseCollectionPage<DirectoryObject> owners;
 
     /**
      * The Settings.
@@ -393,19 +383,19 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
-    public GroupSettingCollectionPage settings;
+    public BaseCollectionPage<GroupSetting> settings;
 
     /**
      * The Transitive Member Of.
      * 
      */
-    public DirectoryObjectCollectionPage transitiveMemberOf;
+    public BaseCollectionPage<DirectoryObject> transitiveMemberOf;
 
     /**
      * The Transitive Members.
      * 
      */
-    public DirectoryObjectCollectionPage transitiveMembers;
+    public BaseCollectionPage<DirectoryObject> transitiveMembers;
 
     /**
      * The Accepted Senders.
@@ -413,7 +403,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "acceptedSenders", alternate = {"AcceptedSenders"})
     @Expose
-    public DirectoryObjectCollectionPage acceptedSenders;
+    public BaseCollectionPage<DirectoryObject> acceptedSenders;
 
     /**
      * The Calendar.
@@ -429,7 +419,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "calendarView", alternate = {"CalendarView"})
     @Expose
-    public EventCollectionPage calendarView;
+    public BaseCollectionPage<Event> calendarView;
 
     /**
      * The Conversations.
@@ -437,7 +427,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "conversations", alternate = {"Conversations"})
     @Expose
-    public ConversationCollectionPage conversations;
+    public BaseCollectionPage<Conversation> conversations;
 
     /**
      * The Events.
@@ -445,7 +435,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "events", alternate = {"Events"})
     @Expose
-    public EventCollectionPage events;
+    public BaseCollectionPage<Event> events;
 
     /**
      * The Photo.
@@ -461,7 +451,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "photos", alternate = {"Photos"})
     @Expose
-    public ProfilePhotoCollectionPage photos;
+    public BaseCollectionPage<ProfilePhoto> photos;
 
     /**
      * The Rejected Senders.
@@ -469,7 +459,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "rejectedSenders", alternate = {"RejectedSenders"})
     @Expose
-    public DirectoryObjectCollectionPage rejectedSenders;
+    public BaseCollectionPage<DirectoryObject> rejectedSenders;
 
     /**
      * The Threads.
@@ -477,7 +467,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "threads", alternate = {"Threads"})
     @Expose
-    public ConversationThreadCollectionPage threads;
+    public BaseCollectionPage<ConversationThread> threads;
 
     /**
      * The Drive.
@@ -493,7 +483,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "drives", alternate = {"Drives"})
     @Expose
-    public DriveCollectionPage drives;
+    public BaseCollectionPage<Drive> drives;
 
     /**
      * The Sites.
@@ -501,7 +491,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "sites", alternate = {"Sites"})
     @Expose
-    public SiteCollectionPage sites;
+    public BaseCollectionPage<Site> sites;
 
     /**
      * The Extensions.
@@ -509,7 +499,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
-    public ExtensionCollectionPage extensions;
+    public BaseCollectionPage<Extension> extensions;
 
     /**
      * The Group Lifecycle Policies.
@@ -517,7 +507,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "groupLifecyclePolicies", alternate = {"GroupLifecyclePolicies"})
     @Expose
-    public GroupLifecyclePolicyCollectionPage groupLifecyclePolicies;
+    public BaseCollectionPage<GroupLifecyclePolicy> groupLifecyclePolicies;
 
     /**
      * The Planner.
@@ -568,7 +558,8 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -584,79 +575,79 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
 
         if (json.has("appRoleAssignments")) {
-            appRoleAssignments = serializer.deserializeObject(json.get("appRoleAssignments").toString(), AppRoleAssignmentCollectionPage.class);
+            appRoleAssignments = serializer.deserializeObject(json.get("appRoleAssignments").toString(), new BaseCollectionPage<AppRoleAssignment>(new java.util.ArrayList<AppRoleAssignment>(), null).getClass());
         }
 
         if (json.has("memberOf")) {
-            memberOf = serializer.deserializeObject(json.get("memberOf").toString(), DirectoryObjectCollectionPage.class);
+            memberOf = serializer.deserializeObject(json.get("memberOf").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
         }
 
         if (json.has("members")) {
-            members = serializer.deserializeObject(json.get("members").toString(), DirectoryObjectCollectionPage.class);
+            members = serializer.deserializeObject(json.get("members").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
         }
 
         if (json.has("membersWithLicenseErrors")) {
-            membersWithLicenseErrors = serializer.deserializeObject(json.get("membersWithLicenseErrors").toString(), DirectoryObjectCollectionPage.class);
+            membersWithLicenseErrors = serializer.deserializeObject(json.get("membersWithLicenseErrors").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
         }
 
         if (json.has("owners")) {
-            owners = serializer.deserializeObject(json.get("owners").toString(), DirectoryObjectCollectionPage.class);
+            owners = serializer.deserializeObject(json.get("owners").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
         }
 
         if (json.has("settings")) {
-            settings = serializer.deserializeObject(json.get("settings").toString(), GroupSettingCollectionPage.class);
+            settings = serializer.deserializeObject(json.get("settings").toString(), new BaseCollectionPage<GroupSetting>(new java.util.ArrayList<GroupSetting>(), null).getClass());
         }
 
         if (json.has("transitiveMemberOf")) {
-            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf").toString(), DirectoryObjectCollectionPage.class);
+            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
         }
 
         if (json.has("transitiveMembers")) {
-            transitiveMembers = serializer.deserializeObject(json.get("transitiveMembers").toString(), DirectoryObjectCollectionPage.class);
+            transitiveMembers = serializer.deserializeObject(json.get("transitiveMembers").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
         }
 
         if (json.has("acceptedSenders")) {
-            acceptedSenders = serializer.deserializeObject(json.get("acceptedSenders").toString(), DirectoryObjectCollectionPage.class);
+            acceptedSenders = serializer.deserializeObject(json.get("acceptedSenders").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
         }
 
         if (json.has("calendarView")) {
-            calendarView = serializer.deserializeObject(json.get("calendarView").toString(), EventCollectionPage.class);
+            calendarView = serializer.deserializeObject(json.get("calendarView").toString(), new BaseCollectionPage<Event>(new java.util.ArrayList<Event>(), null).getClass());
         }
 
         if (json.has("conversations")) {
-            conversations = serializer.deserializeObject(json.get("conversations").toString(), ConversationCollectionPage.class);
+            conversations = serializer.deserializeObject(json.get("conversations").toString(), new BaseCollectionPage<Conversation>(new java.util.ArrayList<Conversation>(), null).getClass());
         }
 
         if (json.has("events")) {
-            events = serializer.deserializeObject(json.get("events").toString(), EventCollectionPage.class);
+            events = serializer.deserializeObject(json.get("events").toString(), new BaseCollectionPage<Event>(new java.util.ArrayList<Event>(), null).getClass());
         }
 
         if (json.has("photos")) {
-            photos = serializer.deserializeObject(json.get("photos").toString(), ProfilePhotoCollectionPage.class);
+            photos = serializer.deserializeObject(json.get("photos").toString(), new BaseCollectionPage<ProfilePhoto>(new java.util.ArrayList<ProfilePhoto>(), null).getClass());
         }
 
         if (json.has("rejectedSenders")) {
-            rejectedSenders = serializer.deserializeObject(json.get("rejectedSenders").toString(), DirectoryObjectCollectionPage.class);
+            rejectedSenders = serializer.deserializeObject(json.get("rejectedSenders").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
         }
 
         if (json.has("threads")) {
-            threads = serializer.deserializeObject(json.get("threads").toString(), ConversationThreadCollectionPage.class);
+            threads = serializer.deserializeObject(json.get("threads").toString(), new BaseCollectionPage<ConversationThread>(new java.util.ArrayList<ConversationThread>(), null).getClass());
         }
 
         if (json.has("drives")) {
-            drives = serializer.deserializeObject(json.get("drives").toString(), DriveCollectionPage.class);
+            drives = serializer.deserializeObject(json.get("drives").toString(), new BaseCollectionPage<Drive>(new java.util.ArrayList<Drive>(), null).getClass());
         }
 
         if (json.has("sites")) {
-            sites = serializer.deserializeObject(json.get("sites").toString(), SiteCollectionPage.class);
+            sites = serializer.deserializeObject(json.get("sites").toString(), new BaseCollectionPage<Site>(new java.util.ArrayList<Site>(), null).getClass());
         }
 
         if (json.has("extensions")) {
-            extensions = serializer.deserializeObject(json.get("extensions").toString(), ExtensionCollectionPage.class);
+            extensions = serializer.deserializeObject(json.get("extensions").toString(), new BaseCollectionPage<Extension>(new java.util.ArrayList<Extension>(), null).getClass());
         }
 
         if (json.has("groupLifecyclePolicies")) {
-            groupLifecyclePolicies = serializer.deserializeObject(json.get("groupLifecyclePolicies").toString(), GroupLifecyclePolicyCollectionPage.class);
+            groupLifecyclePolicies = serializer.deserializeObject(json.get("groupLifecyclePolicies").toString(), new BaseCollectionPage<GroupLifecyclePolicy>(new java.util.ArrayList<GroupLifecyclePolicy>(), null).getClass());
         }
     }
 }

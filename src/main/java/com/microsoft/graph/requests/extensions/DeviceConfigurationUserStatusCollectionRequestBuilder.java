@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device Configuration User Status Collection Request Builder.
  */
-public class DeviceConfigurationUserStatusCollectionRequestBuilder extends BaseRequestBuilder {
+public class DeviceConfigurationUserStatusCollectionRequestBuilder extends BaseRequestBuilder<DeviceConfigurationUserStatus> {
 
     /**
      * The request builder for this collection of DeviceConfiguration

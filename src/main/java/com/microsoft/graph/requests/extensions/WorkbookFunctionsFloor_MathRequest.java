@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Floor_Math Request.
  */
-public class WorkbookFunctionsFloor_MathRequest extends BaseRequest {
+public class WorkbookFunctionsFloor_MathRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsFloor_MathBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsFloor_MathRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsFloor_MathRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsFloor_MathBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsFloor_MathRequest extends BaseRequest {
      */
     public WorkbookFunctionsFloor_MathRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsFloor_MathRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsFloor_MathRequest extends BaseRequest {
      */
     public WorkbookFunctionsFloor_MathRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsFloor_MathRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsFloor_MathRequest extends BaseRequest {
      */
     public WorkbookFunctionsFloor_MathRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsFloor_MathRequest)this;
+        return this;
     }
 
 }

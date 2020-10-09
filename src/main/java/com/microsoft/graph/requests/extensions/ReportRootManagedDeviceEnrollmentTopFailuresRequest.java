@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
+import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.requests.extensions.ReportRootManagedDeviceEnrollmentTopFailuresRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Managed Device Enrollment Top Failures Request.
  */
-public class ReportRootManagedDeviceEnrollmentTopFailuresRequest extends BaseRequest {
+public class ReportRootManagedDeviceEnrollmentTopFailuresRequest extends BaseRequest<Report> {
 
     /**
      * The request for this ReportRootManagedDeviceEnrollmentTopFailures
@@ -58,7 +59,7 @@ public class ReportRootManagedDeviceEnrollmentTopFailuresRequest extends BaseReq
      */
     public ReportRootManagedDeviceEnrollmentTopFailuresRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ReportRootManagedDeviceEnrollmentTopFailuresRequest)this;
+        return this;
     }
 
     /**
@@ -69,7 +70,7 @@ public class ReportRootManagedDeviceEnrollmentTopFailuresRequest extends BaseReq
      */
     public ReportRootManagedDeviceEnrollmentTopFailuresRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ReportRootManagedDeviceEnrollmentTopFailuresRequest)this;
+        return this;
     }
 
     /**
@@ -80,7 +81,7 @@ public class ReportRootManagedDeviceEnrollmentTopFailuresRequest extends BaseReq
      */
     public ReportRootManagedDeviceEnrollmentTopFailuresRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ReportRootManagedDeviceEnrollmentTopFailuresRequest)this;
+        return this;
     }
 
     /**
@@ -91,7 +92,7 @@ public class ReportRootManagedDeviceEnrollmentTopFailuresRequest extends BaseReq
      */
     public ReportRootManagedDeviceEnrollmentTopFailuresRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ReportRootManagedDeviceEnrollmentTopFailuresRequest)this;
+        return this;
     }
 
 }

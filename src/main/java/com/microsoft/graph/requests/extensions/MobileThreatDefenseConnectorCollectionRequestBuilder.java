@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Mobile Threat Defense Connector Collection Request Builder.
  */
-public class MobileThreatDefenseConnectorCollectionRequestBuilder extends BaseRequestBuilder {
+public class MobileThreatDefenseConnectorCollectionRequestBuilder extends BaseRequestBuilder<MobileThreatDefenseConnector> {
 
     /**
      * The request builder for this collection of DeviceManagement

@@ -7,15 +7,13 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.generated.ChannelMembershipType;
 import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.ConversationMember;
 import com.microsoft.graph.models.extensions.ChatMessage;
 import com.microsoft.graph.models.extensions.TeamsTab;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ConversationMemberCollectionPage;
-import com.microsoft.graph.requests.extensions.ChatMessageCollectionPage;
-import com.microsoft.graph.requests.extensions.TeamsTabCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -64,7 +62,7 @@ public class Channel extends Entity implements IJsonBackedObject {
 
     /**
      * The Web Url.
-     * A hyperlink that will navigate to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.
+     * A hyperlink that will go to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.
      */
     @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose
@@ -84,7 +82,7 @@ public class Channel extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "members", alternate = {"Members"})
     @Expose
-    public ConversationMemberCollectionPage members;
+    public BaseCollectionPage<ConversationMember> members;
 
     /**
      * The Messages.
@@ -92,7 +90,7 @@ public class Channel extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "messages", alternate = {"Messages"})
     @Expose
-    public ChatMessageCollectionPage messages;
+    public BaseCollectionPage<ChatMessage> messages;
 
     /**
      * The Tabs.
@@ -100,7 +98,7 @@ public class Channel extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "tabs", alternate = {"Tabs"})
     @Expose
-    public TeamsTabCollectionPage tabs;
+    public BaseCollectionPage<TeamsTab> tabs;
 
 
     /**
@@ -127,7 +125,8 @@ public class Channel extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -143,15 +142,15 @@ public class Channel extends Entity implements IJsonBackedObject {
 
 
         if (json.has("members")) {
-            members = serializer.deserializeObject(json.get("members").toString(), ConversationMemberCollectionPage.class);
+            members = serializer.deserializeObject(json.get("members").toString(), new BaseCollectionPage<ConversationMember>(new java.util.ArrayList<ConversationMember>(), null).getClass());
         }
 
         if (json.has("messages")) {
-            messages = serializer.deserializeObject(json.get("messages").toString(), ChatMessageCollectionPage.class);
+            messages = serializer.deserializeObject(json.get("messages").toString(), new BaseCollectionPage<ChatMessage>(new java.util.ArrayList<ChatMessage>(), null).getClass());
         }
 
         if (json.has("tabs")) {
-            tabs = serializer.deserializeObject(json.get("tabs").toString(), TeamsTabCollectionPage.class);
+            tabs = serializer.deserializeObject(json.get("tabs").toString(), new BaseCollectionPage<TeamsTab>(new java.util.ArrayList<TeamsTab>(), null).getClass());
         }
     }
 }

@@ -22,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Contact Delta Collection Request Builder.
  */
-public class ContactDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder {
+public class ContactDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder<Contact> {
 
     /**
      * The request builder for this collection of Contact

@@ -4,8 +4,8 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.WorkbookChartSeriesCountRequest;
+import com.microsoft.graph.models.extensions.WorkbookChartSeries;
 
-import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Chart Series Count Request Builder.
  */
-public class WorkbookChartSeriesCountRequestBuilder extends BaseFunctionRequestBuilder {
+public class WorkbookChartSeriesCountRequestBuilder extends BaseFunctionRequestBuilder<Int32> {
 
     /**
      * The request builder for this WorkbookChartSeriesCount

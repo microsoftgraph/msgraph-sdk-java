@@ -20,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Data Labels Request.
  */
-public class WorkbookChartDataLabelsRequest extends BaseRequest {
+public class WorkbookChartDataLabelsRequest extends BaseRequest<WorkbookChartDataLabels> {
 	
     /**
      * The request for the WorkbookChartDataLabels
@@ -141,7 +141,7 @@ public class WorkbookChartDataLabelsRequest extends BaseRequest {
      */
      public WorkbookChartDataLabelsRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookChartDataLabelsRequest)this;
+         return this;
      }
 
     /**
@@ -152,7 +152,7 @@ public class WorkbookChartDataLabelsRequest extends BaseRequest {
      */
      public WorkbookChartDataLabelsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookChartDataLabelsRequest)this;
+         return this;
      }
 
 }

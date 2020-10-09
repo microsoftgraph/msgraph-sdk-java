@@ -22,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Drive Item Delta Collection Request Builder.
  */
-public class DriveItemDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder {
+public class DriveItemDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder<DriveItem> {
 
     /**
      * The request builder for this collection of DriveItem

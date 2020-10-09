@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Thumbnail Set Collection Request Builder.
  */
-public class ThumbnailSetCollectionRequestBuilder extends BaseRequestBuilder {
+public class ThumbnailSetCollectionRequestBuilder extends BaseRequestBuilder<ThumbnailSet> {
 
     /**
      * The request builder for this collection of DriveItem

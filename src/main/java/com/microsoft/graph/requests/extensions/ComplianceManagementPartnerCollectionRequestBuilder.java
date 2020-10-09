@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Compliance Management Partner Collection Request Builder.
  */
-public class ComplianceManagementPartnerCollectionRequestBuilder extends BaseRequestBuilder {
+public class ComplianceManagementPartnerCollectionRequestBuilder extends BaseRequestBuilder<ComplianceManagementPartner> {
 
     /**
      * The request builder for this collection of DeviceManagement

@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Outlook Category Collection Request Builder.
  */
-public class OutlookCategoryCollectionRequestBuilder extends BaseRequestBuilder {
+public class OutlookCategoryCollectionRequestBuilder extends BaseRequestBuilder<OutlookCategory> {
 
     /**
      * The request builder for this collection of OutlookUser

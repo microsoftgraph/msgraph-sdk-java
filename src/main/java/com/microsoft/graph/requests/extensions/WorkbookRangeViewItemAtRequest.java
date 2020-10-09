@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range View Item At Request.
  */
-public class WorkbookRangeViewItemAtRequest extends BaseRequest {
+public class WorkbookRangeViewItemAtRequest extends BaseRequest<WorkbookRangeView> {
 
     /**
      * The request for this WorkbookRangeViewItemAt
@@ -98,7 +98,7 @@ public class WorkbookRangeViewItemAtRequest extends BaseRequest {
      */
     public WorkbookRangeViewItemAtRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookRangeViewItemAtRequest)this;
+        return this;
     }
 
     /**
@@ -109,7 +109,7 @@ public class WorkbookRangeViewItemAtRequest extends BaseRequest {
      */
     public WorkbookRangeViewItemAtRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookRangeViewItemAtRequest)this;
+        return this;
     }
 
     /**
@@ -120,7 +120,7 @@ public class WorkbookRangeViewItemAtRequest extends BaseRequest {
      */
     public WorkbookRangeViewItemAtRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookRangeViewItemAtRequest)this;
+        return this;
     }
 
     /**
@@ -131,7 +131,7 @@ public class WorkbookRangeViewItemAtRequest extends BaseRequest {
      */
     public WorkbookRangeViewItemAtRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookRangeViewItemAtRequest)this;
+        return this;
     }
 
 }

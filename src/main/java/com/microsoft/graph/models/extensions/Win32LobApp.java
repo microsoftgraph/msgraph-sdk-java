@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.generated.WindowsArchitecture;
 import com.microsoft.graph.models.extensions.Win32LobAppInstallExperience;
 import com.microsoft.graph.models.extensions.Win32LobAppMsiInformation;
@@ -156,7 +157,8 @@ public class Win32LobApp extends MobileLobApp implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

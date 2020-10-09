@@ -20,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Teams Tab Request.
  */
-public class TeamsTabRequest extends BaseRequest {
+public class TeamsTabRequest extends BaseRequest<TeamsTab> {
 	
     /**
      * The request for the TeamsTab
@@ -141,7 +141,7 @@ public class TeamsTabRequest extends BaseRequest {
      */
      public TeamsTabRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TeamsTabRequest)this;
+         return this;
      }
 
     /**
@@ -152,7 +152,7 @@ public class TeamsTabRequest extends BaseRequest {
      */
      public TeamsTabRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TeamsTabRequest)this;
+         return this;
      }
 
 }

@@ -5,7 +5,6 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.WorkbookRangeViewItemAtRequest;
 import com.microsoft.graph.models.extensions.WorkbookRangeView;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
@@ -15,7 +14,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Range View Item At Request Builder.
  */
-public class WorkbookRangeViewItemAtRequestBuilder extends BaseFunctionRequestBuilder {
+public class WorkbookRangeViewItemAtRequestBuilder extends BaseFunctionRequestBuilder<WorkbookRangeView> {
 
     /**
      * The request builder for this WorkbookRangeViewItemAt

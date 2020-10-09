@@ -200,7 +200,8 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

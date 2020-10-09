@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
+import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.requests.extensions.ReportRootGetOffice365GroupsActivityDetailRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Office365Groups Activity Detail Request.
  */
-public class ReportRootGetOffice365GroupsActivityDetailRequest extends BaseRequest {
+public class ReportRootGetOffice365GroupsActivityDetailRequest extends BaseRequest<Report> {
 
     /**
      * The request for this ReportRootGetOffice365GroupsActivityDetail
@@ -98,7 +99,7 @@ public class ReportRootGetOffice365GroupsActivityDetailRequest extends BaseReque
      */
     public ReportRootGetOffice365GroupsActivityDetailRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ReportRootGetOffice365GroupsActivityDetailRequest)this;
+        return this;
     }
 
     /**
@@ -109,7 +110,7 @@ public class ReportRootGetOffice365GroupsActivityDetailRequest extends BaseReque
      */
     public ReportRootGetOffice365GroupsActivityDetailRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ReportRootGetOffice365GroupsActivityDetailRequest)this;
+        return this;
     }
 
     /**
@@ -120,7 +121,7 @@ public class ReportRootGetOffice365GroupsActivityDetailRequest extends BaseReque
      */
     public ReportRootGetOffice365GroupsActivityDetailRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ReportRootGetOffice365GroupsActivityDetailRequest)this;
+        return this;
     }
 
     /**
@@ -131,7 +132,7 @@ public class ReportRootGetOffice365GroupsActivityDetailRequest extends BaseReque
      */
     public ReportRootGetOffice365GroupsActivityDetailRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ReportRootGetOffice365GroupsActivityDetailRequest)this;
+        return this;
     }
 
 }

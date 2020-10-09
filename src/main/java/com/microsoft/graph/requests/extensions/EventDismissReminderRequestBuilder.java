@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.EventDismissReminderRequest;
+import com.microsoft.graph.models.extensions.Event;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Event Dismiss Reminder Request Builder.
  */
-public class EventDismissReminderRequestBuilder extends BaseActionRequestBuilder {
+public class EventDismissReminderRequestBuilder extends BaseActionRequestBuilder<Event> {
 
     /**
      * The request builder for this EventDismissReminder

@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android Compliance Policy Request.
  */
-public class AndroidCompliancePolicyRequest extends BaseRequest {
+public class AndroidCompliancePolicyRequest extends BaseRequest<AndroidCompliancePolicy> {
 	
     /**
      * The request for the AndroidCompliancePolicy
@@ -140,7 +140,7 @@ public class AndroidCompliancePolicyRequest extends BaseRequest {
      */
      public AndroidCompliancePolicyRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidCompliancePolicyRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class AndroidCompliancePolicyRequest extends BaseRequest {
      */
      public AndroidCompliancePolicyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidCompliancePolicyRequest)this;
+         return this;
      }
 
 }

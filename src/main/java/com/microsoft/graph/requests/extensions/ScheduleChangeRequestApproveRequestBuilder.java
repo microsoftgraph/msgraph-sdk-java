@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ScheduleChangeRequestApproveRequest;
+import com.microsoft.graph.models.extensions.ScheduleChangeRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Schedule Change Request Approve Request Builder.
  */
-public class ScheduleChangeRequestApproveRequestBuilder extends BaseActionRequestBuilder {
+public class ScheduleChangeRequestApproveRequestBuilder extends BaseActionRequestBuilder<ScheduleChangeRequest> {
 
     /**
      * The request builder for this ScheduleChangeRequestApprove

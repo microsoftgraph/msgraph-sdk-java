@@ -25,7 +25,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Range Border Collection Request Builder.
  */
-public class WorkbookRangeBorderCollectionRequestBuilder extends BaseRequestBuilder {
+public class WorkbookRangeBorderCollectionRequestBuilder extends BaseRequestBuilder<WorkbookRangeBorder> {
 
     /**
      * The request builder for this collection of WorkbookRangeFormat

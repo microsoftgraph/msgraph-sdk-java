@@ -59,7 +59,7 @@ public class WorkbookFunctionsBin2HexBody {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

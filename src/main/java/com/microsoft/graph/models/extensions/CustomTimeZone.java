@@ -73,7 +73,8 @@ public class CustomTimeZone extends TimeZoneBase implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

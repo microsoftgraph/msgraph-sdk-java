@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Standardize Request.
  */
-public class WorkbookFunctionsStandardizeRequest extends BaseRequest {
+public class WorkbookFunctionsStandardizeRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsStandardizeBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsStandardizeRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsStandardizeRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsStandardizeBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsStandardizeRequest extends BaseRequest {
      */
     public WorkbookFunctionsStandardizeRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsStandardizeRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsStandardizeRequest extends BaseRequest {
      */
     public WorkbookFunctionsStandardizeRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsStandardizeRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsStandardizeRequest extends BaseRequest {
      */
     public WorkbookFunctionsStandardizeRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsStandardizeRequest)this;
+        return this;
     }
 
 }

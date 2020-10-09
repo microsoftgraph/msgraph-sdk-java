@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.WorkbookRangeFormat;
 import com.microsoft.graph.requests.extensions.WorkbookRangeFormatAutofitRowsRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -17,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Format Autofit Rows Request.
  */
-public class WorkbookRangeFormatAutofitRowsRequest extends BaseRequest {
+public class WorkbookRangeFormatAutofitRowsRequest extends BaseRequest<WorkbookRangeFormat> {
 
     /**
      * The request for this WorkbookRangeFormatAutofitRows
@@ -27,7 +28,7 @@ public class WorkbookRangeFormatAutofitRowsRequest extends BaseRequest {
      * @param requestOptions the options for this request
      */
     public WorkbookRangeFormatAutofitRowsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Void.class);
+        super(requestUrl, client, requestOptions, WorkbookRangeFormat.class);
     }
 
     /**

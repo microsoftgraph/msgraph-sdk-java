@@ -23,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Domain Request.
  */
-public class DomainRequest extends BaseRequest {
+public class DomainRequest extends BaseRequest<Domain> {
 	
     /**
      * The request for the Domain
@@ -144,7 +144,7 @@ public class DomainRequest extends BaseRequest {
      */
      public DomainRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DomainRequest)this;
+         return this;
      }
 
     /**
@@ -155,7 +155,7 @@ public class DomainRequest extends BaseRequest {
      */
      public DomainRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DomainRequest)this;
+         return this;
      }
 
 }

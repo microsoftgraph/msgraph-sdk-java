@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device Management Troubleshooting Event Collection Request Builder.
  */
-public class DeviceManagementTroubleshootingEventCollectionRequestBuilder extends BaseRequestBuilder {
+public class DeviceManagementTroubleshootingEventCollectionRequestBuilder extends BaseRequestBuilder<DeviceManagementTroubleshootingEvent> {
 
     /**
      * The request builder for this collection of DeviceManagement

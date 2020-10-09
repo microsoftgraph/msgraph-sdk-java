@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Calendar Group Request.
  */
-public class CalendarGroupRequest extends BaseRequest {
+public class CalendarGroupRequest extends BaseRequest<CalendarGroup> {
 	
     /**
      * The request for the CalendarGroup
@@ -142,7 +142,7 @@ public class CalendarGroupRequest extends BaseRequest {
      */
      public CalendarGroupRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (CalendarGroupRequest)this;
+         return this;
      }
 
     /**
@@ -153,7 +153,7 @@ public class CalendarGroupRequest extends BaseRequest {
      */
      public CalendarGroupRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CalendarGroupRequest)this;
+         return this;
      }
 
 }

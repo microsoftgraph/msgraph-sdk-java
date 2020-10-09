@@ -7,15 +7,13 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.MimeContent;
 import com.microsoft.graph.models.extensions.ManagedEBookAssignment;
 import com.microsoft.graph.models.extensions.DeviceInstallState;
 import com.microsoft.graph.models.extensions.EBookInstallSummary;
 import com.microsoft.graph.models.extensions.UserInstallStateSummary;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ManagedEBookAssignmentCollectionPage;
-import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionPage;
-import com.microsoft.graph.requests.extensions.UserInstallStateSummaryCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -108,7 +106,7 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
-    public ManagedEBookAssignmentCollectionPage assignments;
+    public BaseCollectionPage<ManagedEBookAssignment> assignments;
 
     /**
      * The Device States.
@@ -116,7 +114,7 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "deviceStates", alternate = {"DeviceStates"})
     @Expose
-    public DeviceInstallStateCollectionPage deviceStates;
+    public BaseCollectionPage<DeviceInstallState> deviceStates;
 
     /**
      * The Install Summary.
@@ -132,7 +130,7 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "userStateSummary", alternate = {"UserStateSummary"})
     @Expose
-    public UserInstallStateSummaryCollectionPage userStateSummary;
+    public BaseCollectionPage<UserInstallStateSummary> userStateSummary;
 
 
     /**
@@ -159,7 +157,8 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -175,15 +174,15 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments").toString(), ManagedEBookAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments").toString(), new BaseCollectionPage<ManagedEBookAssignment>(new java.util.ArrayList<ManagedEBookAssignment>(), null).getClass());
         }
 
         if (json.has("deviceStates")) {
-            deviceStates = serializer.deserializeObject(json.get("deviceStates").toString(), DeviceInstallStateCollectionPage.class);
+            deviceStates = serializer.deserializeObject(json.get("deviceStates").toString(), new BaseCollectionPage<DeviceInstallState>(new java.util.ArrayList<DeviceInstallState>(), null).getClass());
         }
 
         if (json.has("userStateSummary")) {
-            userStateSummary = serializer.deserializeObject(json.get("userStateSummary").toString(), UserInstallStateSummaryCollectionPage.class);
+            userStateSummary = serializer.deserializeObject(json.get("userStateSummary").toString(), new BaseCollectionPage<UserInstallStateSummary>(new java.util.ArrayList<UserInstallStateSummary>(), null).getClass());
         }
     }
 }

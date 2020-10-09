@@ -18,7 +18,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Event Decline Request.
  */
-public class EventDeclineRequest extends BaseRequest {
+public class EventDeclineRequest extends BaseRequest<Void> {
     protected final EventDeclineBody body;
 
     /**
@@ -28,6 +28,7 @@ public class EventDeclineRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public EventDeclineRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new EventDeclineBody();
@@ -49,7 +50,7 @@ public class EventDeclineRequest extends BaseRequest {
      */
     public EventDeclineRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (EventDeclineRequest)this;
+        return this;
     }
 
     /**
@@ -60,7 +61,7 @@ public class EventDeclineRequest extends BaseRequest {
      */
     public EventDeclineRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (EventDeclineRequest)this;
+        return this;
     }
 
     /**
@@ -71,7 +72,7 @@ public class EventDeclineRequest extends BaseRequest {
      */
     public EventDeclineRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (EventDeclineRequest)this;
+        return this;
     }
 
 }

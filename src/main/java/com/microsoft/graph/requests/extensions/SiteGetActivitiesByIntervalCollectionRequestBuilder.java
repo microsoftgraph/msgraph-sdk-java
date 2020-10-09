@@ -22,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Site Get Activities By Interval Collection Request Builder.
  */
-public class SiteGetActivitiesByIntervalCollectionRequestBuilder extends BaseFunctionRequestBuilder {
+public class SiteGetActivitiesByIntervalCollectionRequestBuilder extends BaseFunctionRequestBuilder<ItemActivityStat> {
 
     /**
      * The request builder for this collection of Site

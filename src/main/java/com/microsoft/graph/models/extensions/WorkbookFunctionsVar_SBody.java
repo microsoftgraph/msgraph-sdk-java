@@ -51,7 +51,7 @@ public class WorkbookFunctionsVar_SBody {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mail Assessment Request Request.
  */
-public class MailAssessmentRequestRequest extends BaseRequest {
+public class MailAssessmentRequestRequest extends BaseRequest<MailAssessmentRequest> {
 	
     /**
      * The request for the MailAssessmentRequest
@@ -140,7 +140,7 @@ public class MailAssessmentRequestRequest extends BaseRequest {
      */
      public MailAssessmentRequestRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MailAssessmentRequestRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class MailAssessmentRequestRequest extends BaseRequest {
      */
      public MailAssessmentRequestRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MailAssessmentRequestRequest)this;
+         return this;
      }
 
 }

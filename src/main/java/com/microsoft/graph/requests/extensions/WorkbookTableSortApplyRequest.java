@@ -18,7 +18,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Table Sort Apply Request.
  */
-public class WorkbookTableSortApplyRequest extends BaseRequest {
+public class WorkbookTableSortApplyRequest extends BaseRequest<Void> {
     protected final WorkbookTableSortApplyBody body;
 
     /**
@@ -28,6 +28,7 @@ public class WorkbookTableSortApplyRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookTableSortApplyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new WorkbookTableSortApplyBody();
@@ -49,7 +50,7 @@ public class WorkbookTableSortApplyRequest extends BaseRequest {
      */
     public WorkbookTableSortApplyRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookTableSortApplyRequest)this;
+        return this;
     }
 
     /**
@@ -60,7 +61,7 @@ public class WorkbookTableSortApplyRequest extends BaseRequest {
      */
     public WorkbookTableSortApplyRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookTableSortApplyRequest)this;
+        return this;
     }
 
     /**
@@ -71,7 +72,7 @@ public class WorkbookTableSortApplyRequest extends BaseRequest {
      */
     public WorkbookTableSortApplyRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookTableSortApplyRequest)this;
+        return this;
     }
 
 }

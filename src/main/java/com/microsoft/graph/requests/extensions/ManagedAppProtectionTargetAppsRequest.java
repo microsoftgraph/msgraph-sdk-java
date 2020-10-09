@@ -18,7 +18,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Managed App Protection Target Apps Request.
  */
-public class ManagedAppProtectionTargetAppsRequest extends BaseRequest {
+public class ManagedAppProtectionTargetAppsRequest extends BaseRequest<Void> {
     protected final ManagedAppProtectionTargetAppsBody body;
 
     /**
@@ -28,6 +28,7 @@ public class ManagedAppProtectionTargetAppsRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public ManagedAppProtectionTargetAppsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new ManagedAppProtectionTargetAppsBody();
@@ -49,7 +50,7 @@ public class ManagedAppProtectionTargetAppsRequest extends BaseRequest {
      */
     public ManagedAppProtectionTargetAppsRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ManagedAppProtectionTargetAppsRequest)this;
+        return this;
     }
 
     /**
@@ -60,7 +61,7 @@ public class ManagedAppProtectionTargetAppsRequest extends BaseRequest {
      */
     public ManagedAppProtectionTargetAppsRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (ManagedAppProtectionTargetAppsRequest)this;
+        return this;
     }
 
     /**
@@ -71,7 +72,7 @@ public class ManagedAppProtectionTargetAppsRequest extends BaseRequest {
      */
     public ManagedAppProtectionTargetAppsRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ManagedAppProtectionTargetAppsRequest)this;
+        return this;
     }
 
 }

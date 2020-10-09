@@ -26,7 +26,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Named Item Collection Request Builder.
  */
-public class WorkbookNamedItemCollectionRequestBuilder extends BaseRequestBuilder {
+public class WorkbookNamedItemCollectionRequestBuilder extends BaseRequestBuilder<WorkbookNamedItem> {
 
     /**
      * The request builder for this collection of WorkbookWorksheet

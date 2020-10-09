@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Conversation Member Request.
  */
-public class ConversationMemberRequest extends BaseRequest {
+public class ConversationMemberRequest extends BaseRequest<ConversationMember> {
 	
     /**
      * The request for the ConversationMember
@@ -155,7 +155,7 @@ public class ConversationMemberRequest extends BaseRequest {
      */
      public ConversationMemberRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ConversationMemberRequest)this;
+         return this;
      }
 
     /**
@@ -166,7 +166,7 @@ public class ConversationMemberRequest extends BaseRequest {
      */
      public ConversationMemberRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ConversationMemberRequest)this;
+         return this;
      }
 
 }

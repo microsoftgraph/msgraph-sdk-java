@@ -39,7 +39,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Drive Item Request.
  */
-public class DriveItemRequest extends BaseRequest {
+public class DriveItemRequest extends BaseRequest<DriveItem> {
 	
     /**
      * The request for the DriveItem
@@ -160,7 +160,7 @@ public class DriveItemRequest extends BaseRequest {
      */
      public DriveItemRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DriveItemRequest)this;
+         return this;
      }
 
     /**
@@ -171,7 +171,7 @@ public class DriveItemRequest extends BaseRequest {
      */
      public DriveItemRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DriveItemRequest)this;
+         return this;
      }
 
 }

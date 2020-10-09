@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Calendar Permission Collection Request Builder.
  */
-public class CalendarPermissionCollectionRequestBuilder extends BaseRequestBuilder {
+public class CalendarPermissionCollectionRequestBuilder extends BaseRequestBuilder<CalendarPermission> {
 
     /**
      * The request builder for this collection of Calendar

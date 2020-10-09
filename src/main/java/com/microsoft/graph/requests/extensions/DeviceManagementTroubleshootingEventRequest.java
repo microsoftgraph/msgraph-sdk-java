@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Management Troubleshooting Event Request.
  */
-public class DeviceManagementTroubleshootingEventRequest extends BaseRequest {
+public class DeviceManagementTroubleshootingEventRequest extends BaseRequest<DeviceManagementTroubleshootingEvent> {
 	
     /**
      * The request for the DeviceManagementTroubleshootingEvent
@@ -155,7 +155,7 @@ public class DeviceManagementTroubleshootingEventRequest extends BaseRequest {
      */
      public DeviceManagementTroubleshootingEventRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceManagementTroubleshootingEventRequest)this;
+         return this;
      }
 
     /**
@@ -166,7 +166,7 @@ public class DeviceManagementTroubleshootingEventRequest extends BaseRequest {
      */
      public DeviceManagementTroubleshootingEventRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementTroubleshootingEventRequest)this;
+         return this;
      }
 
 }

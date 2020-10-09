@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.WorkbookTableSort;
 import com.microsoft.graph.requests.extensions.WorkbookTableSortClearRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -17,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Sort Clear Request.
  */
-public class WorkbookTableSortClearRequest extends BaseRequest {
+public class WorkbookTableSortClearRequest extends BaseRequest<WorkbookTableSort> {
 
     /**
      * The request for this WorkbookTableSortClear
@@ -27,7 +28,7 @@ public class WorkbookTableSortClearRequest extends BaseRequest {
      * @param requestOptions the options for this request
      */
     public WorkbookTableSortClearRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Void.class);
+        super(requestUrl, client, requestOptions, WorkbookTableSort.class);
     }
 
     /**

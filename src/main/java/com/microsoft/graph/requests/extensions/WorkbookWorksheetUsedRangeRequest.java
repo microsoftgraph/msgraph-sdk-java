@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRange;
+import com.microsoft.graph.models.extensions.WorkbookWorksheet;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetUsedRangeRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Worksheet Used Range Request.
  */
-public class WorkbookWorksheetUsedRangeRequest extends BaseRequest {
+public class WorkbookWorksheetUsedRangeRequest extends BaseRequest<WorkbookRange> {
 
     /**
      * The request for this WorkbookWorksheetUsedRange
@@ -98,7 +99,7 @@ public class WorkbookWorksheetUsedRangeRequest extends BaseRequest {
      */
     public WorkbookWorksheetUsedRangeRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookWorksheetUsedRangeRequest)this;
+        return this;
     }
 
     /**
@@ -109,7 +110,7 @@ public class WorkbookWorksheetUsedRangeRequest extends BaseRequest {
      */
     public WorkbookWorksheetUsedRangeRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookWorksheetUsedRangeRequest)this;
+        return this;
     }
 
     /**
@@ -120,7 +121,7 @@ public class WorkbookWorksheetUsedRangeRequest extends BaseRequest {
      */
     public WorkbookWorksheetUsedRangeRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookWorksheetUsedRangeRequest)this;
+        return this;
     }
 
     /**
@@ -131,7 +132,7 @@ public class WorkbookWorksheetUsedRangeRequest extends BaseRequest {
      */
     public WorkbookWorksheetUsedRangeRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookWorksheetUsedRangeRequest)this;
+        return this;
     }
 
 }

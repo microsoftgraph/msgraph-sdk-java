@@ -16,7 +16,7 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -25,7 +25,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device Reference Request.
  */
-public class DeviceReferenceRequest extends BaseRequest {
+public class DeviceReferenceRequest extends BaseReferenceRequest<Device> {
 
     /**
      * The request for the Device
@@ -38,14 +38,6 @@ public class DeviceReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, Device.class);
     }
 
-    public void delete(final ICallback<? super Device> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    public Device delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
-    }
-
     /**
      * Sets the select clause for the request
      *
@@ -54,7 +46,7 @@ public class DeviceReferenceRequest extends BaseRequest {
      */
     public DeviceReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (DeviceReferenceRequest)this;
+        return this;
     }
 
     /**
@@ -65,7 +57,7 @@ public class DeviceReferenceRequest extends BaseRequest {
      */
     public DeviceReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DeviceReferenceRequest)this;
+        return this;
     }
     /**
      * Puts the Device

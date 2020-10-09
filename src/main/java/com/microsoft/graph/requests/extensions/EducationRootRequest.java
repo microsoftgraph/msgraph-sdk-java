@@ -25,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Education Root Request.
  */
-public class EducationRootRequest extends BaseRequest {
+public class EducationRootRequest extends BaseRequest<EducationRoot> {
 	
     /**
      * The request for the EducationRoot
@@ -146,7 +146,7 @@ public class EducationRootRequest extends BaseRequest {
      */
      public EducationRootRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EducationRootRequest)this;
+         return this;
      }
 
     /**
@@ -157,7 +157,7 @@ public class EducationRootRequest extends BaseRequest {
      */
      public EducationRootRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EducationRootRequest)this;
+         return this;
      }
 
 }

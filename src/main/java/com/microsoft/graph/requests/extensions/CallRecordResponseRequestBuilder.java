@@ -4,10 +4,10 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.CallRecordResponseRequest;
+import com.microsoft.graph.models.extensions.Call;
 import com.microsoft.graph.models.extensions.Prompt;
 import com.microsoft.graph.models.extensions.RecordOperation;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -16,7 +16,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Call Record Response Request Builder.
  */
-public class CallRecordResponseRequestBuilder extends BaseActionRequestBuilder {
+public class CallRecordResponseRequestBuilder extends BaseActionRequestBuilder<RecordOperation> {
 
     /**
      * The request builder for this CallRecordResponse

@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.requests.extensions.ManagedDeviceLogoutSharedAppleDeviceActiveUserRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -17,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Device Logout Shared Apple Device Active User Request.
  */
-public class ManagedDeviceLogoutSharedAppleDeviceActiveUserRequest extends BaseRequest {
+public class ManagedDeviceLogoutSharedAppleDeviceActiveUserRequest extends BaseRequest<ManagedDevice> {
 
     /**
      * The request for this ManagedDeviceLogoutSharedAppleDeviceActiveUser
@@ -27,7 +28,7 @@ public class ManagedDeviceLogoutSharedAppleDeviceActiveUserRequest extends BaseR
      * @param requestOptions the options for this request
      */
     public ManagedDeviceLogoutSharedAppleDeviceActiveUserRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Void.class);
+        super(requestUrl, client, requestOptions, ManagedDevice.class);
     }
 
     /**

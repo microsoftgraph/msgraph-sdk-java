@@ -72,7 +72,8 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements IJson
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

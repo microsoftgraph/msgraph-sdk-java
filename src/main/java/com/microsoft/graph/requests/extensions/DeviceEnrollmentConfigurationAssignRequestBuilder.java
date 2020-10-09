@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.DeviceEnrollmentConfigurationAssignRequest;
+import com.microsoft.graph.models.extensions.DeviceEnrollmentConfiguration;
 import com.microsoft.graph.models.extensions.EnrollmentConfigurationAssignment;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Device Enrollment Configuration Assign Request Builder.
  */
-public class DeviceEnrollmentConfigurationAssignRequestBuilder extends BaseActionRequestBuilder {
+public class DeviceEnrollmentConfigurationAssignRequestBuilder extends BaseActionRequestBuilder<DeviceEnrollmentConfiguration> {
 
     /**
      * The request builder for this DeviceEnrollmentConfigurationAssign

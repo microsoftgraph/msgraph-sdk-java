@@ -25,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Office Graph Insights Request.
  */
-public class OfficeGraphInsightsRequest extends BaseRequest {
+public class OfficeGraphInsightsRequest extends BaseRequest<OfficeGraphInsights> {
 	
     /**
      * The request for the OfficeGraphInsights
@@ -146,7 +146,7 @@ public class OfficeGraphInsightsRequest extends BaseRequest {
      */
      public OfficeGraphInsightsRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OfficeGraphInsightsRequest)this;
+         return this;
      }
 
     /**
@@ -157,7 +157,7 @@ public class OfficeGraphInsightsRequest extends BaseRequest {
      */
      public OfficeGraphInsightsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OfficeGraphInsightsRequest)this;
+         return this;
      }
 
 }

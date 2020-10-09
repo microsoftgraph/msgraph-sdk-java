@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.WorkbookTable;
 import com.microsoft.graph.requests.extensions.WorkbookTableClearFiltersRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -17,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Clear Filters Request.
  */
-public class WorkbookTableClearFiltersRequest extends BaseRequest {
+public class WorkbookTableClearFiltersRequest extends BaseRequest<WorkbookTable> {
 
     /**
      * The request for this WorkbookTableClearFilters
@@ -27,7 +28,7 @@ public class WorkbookTableClearFiltersRequest extends BaseRequest {
      * @param requestOptions the options for this request
      */
     public WorkbookTableClearFiltersRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Void.class);
+        super(requestUrl, client, requestOptions, WorkbookTable.class);
     }
 
     /**

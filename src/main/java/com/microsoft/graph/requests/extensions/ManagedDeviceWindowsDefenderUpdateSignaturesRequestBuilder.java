@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ManagedDeviceWindowsDefenderUpdateSignaturesRequest;
+import com.microsoft.graph.models.extensions.ManagedDevice;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Managed Device Windows Defender Update Signatures Request Builder.
  */
-public class ManagedDeviceWindowsDefenderUpdateSignaturesRequestBuilder extends BaseActionRequestBuilder {
+public class ManagedDeviceWindowsDefenderUpdateSignaturesRequestBuilder extends BaseActionRequestBuilder<ManagedDevice> {
 
     /**
      * The request builder for this ManagedDeviceWindowsDefenderUpdateSignatures

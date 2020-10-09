@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Column Request.
  */
-public class WorkbookTableColumnRequest extends BaseRequest {
+public class WorkbookTableColumnRequest extends BaseRequest<WorkbookTableColumn> {
 	
     /**
      * The request for the WorkbookTableColumn
@@ -142,7 +142,7 @@ public class WorkbookTableColumnRequest extends BaseRequest {
      */
      public WorkbookTableColumnRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookTableColumnRequest)this;
+         return this;
      }
 
     /**
@@ -153,7 +153,7 @@ public class WorkbookTableColumnRequest extends BaseRequest {
      */
      public WorkbookTableColumnRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookTableColumnRequest)this;
+         return this;
      }
 
 }

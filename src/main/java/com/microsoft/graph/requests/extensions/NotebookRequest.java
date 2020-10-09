@@ -26,7 +26,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Notebook Request.
  */
-public class NotebookRequest extends BaseRequest {
+public class NotebookRequest extends BaseRequest<Notebook> {
 	
     /**
      * The request for the Notebook
@@ -147,7 +147,7 @@ public class NotebookRequest extends BaseRequest {
      */
      public NotebookRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (NotebookRequest)this;
+         return this;
      }
 
     /**
@@ -158,7 +158,7 @@ public class NotebookRequest extends BaseRequest {
      */
      public NotebookRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (NotebookRequest)this;
+         return this;
      }
 
 }

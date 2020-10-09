@@ -23,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Organization Request.
  */
-public class OrganizationRequest extends BaseRequest {
+public class OrganizationRequest extends BaseRequest<Organization> {
 	
     /**
      * The request for the Organization
@@ -144,7 +144,7 @@ public class OrganizationRequest extends BaseRequest {
      */
      public OrganizationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OrganizationRequest)this;
+         return this;
      }
 
     /**
@@ -155,7 +155,7 @@ public class OrganizationRequest extends BaseRequest {
      */
      public OrganizationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OrganizationRequest)this;
+         return this;
      }
 
 }

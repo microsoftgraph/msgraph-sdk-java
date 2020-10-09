@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Targeted Managed App Policy Assignment Request.
  */
-public class TargetedManagedAppPolicyAssignmentRequest extends BaseRequest {
+public class TargetedManagedAppPolicyAssignmentRequest extends BaseRequest<TargetedManagedAppPolicyAssignment> {
 	
     /**
      * The request for the TargetedManagedAppPolicyAssignment
@@ -140,7 +140,7 @@ public class TargetedManagedAppPolicyAssignmentRequest extends BaseRequest {
      */
      public TargetedManagedAppPolicyAssignmentRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TargetedManagedAppPolicyAssignmentRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class TargetedManagedAppPolicyAssignmentRequest extends BaseRequest {
      */
      public TargetedManagedAppPolicyAssignmentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TargetedManagedAppPolicyAssignmentRequest)this;
+         return this;
      }
 
 }

@@ -7,13 +7,12 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.WorkbookTableColumn;
 import com.microsoft.graph.models.extensions.WorkbookTableRow;
 import com.microsoft.graph.models.extensions.WorkbookTableSort;
 import com.microsoft.graph.models.extensions.WorkbookWorksheet;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.WorkbookTableColumnCollectionPage;
-import com.microsoft.graph.requests.extensions.WorkbookTableRowCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -114,7 +113,7 @@ public class WorkbookTable extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "columns", alternate = {"Columns"})
     @Expose
-    public WorkbookTableColumnCollectionPage columns;
+    public BaseCollectionPage<WorkbookTableColumn> columns;
 
     /**
      * The Rows.
@@ -122,7 +121,7 @@ public class WorkbookTable extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "rows", alternate = {"Rows"})
     @Expose
-    public WorkbookTableRowCollectionPage rows;
+    public BaseCollectionPage<WorkbookTableRow> rows;
 
     /**
      * The Sort.
@@ -165,7 +164,8 @@ public class WorkbookTable extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -181,11 +181,11 @@ public class WorkbookTable extends Entity implements IJsonBackedObject {
 
 
         if (json.has("columns")) {
-            columns = serializer.deserializeObject(json.get("columns").toString(), WorkbookTableColumnCollectionPage.class);
+            columns = serializer.deserializeObject(json.get("columns").toString(), new BaseCollectionPage<WorkbookTableColumn>(new java.util.ArrayList<WorkbookTableColumn>(), null).getClass());
         }
 
         if (json.has("rows")) {
-            rows = serializer.deserializeObject(json.get("rows").toString(), WorkbookTableRowCollectionPage.class);
+            rows = serializer.deserializeObject(json.get("rows").toString(), new BaseCollectionPage<WorkbookTableRow>(new java.util.ArrayList<WorkbookTableRow>(), null).getClass());
         }
     }
 }

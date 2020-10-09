@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Scheduling Group Collection Request Builder.
  */
-public class SchedulingGroupCollectionRequestBuilder extends BaseRequestBuilder {
+public class SchedulingGroupCollectionRequestBuilder extends BaseRequestBuilder<SchedulingGroup> {
 
     /**
      * The request builder for this collection of Schedule

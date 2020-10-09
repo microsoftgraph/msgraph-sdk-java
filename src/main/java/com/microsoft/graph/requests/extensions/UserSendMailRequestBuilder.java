@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.UserSendMailRequest;
+import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the User Send Mail Request Builder.
  */
-public class UserSendMailRequestBuilder extends BaseActionRequestBuilder {
+public class UserSendMailRequestBuilder extends BaseActionRequestBuilder<User> {
 
     /**
      * The request builder for this UserSendMail

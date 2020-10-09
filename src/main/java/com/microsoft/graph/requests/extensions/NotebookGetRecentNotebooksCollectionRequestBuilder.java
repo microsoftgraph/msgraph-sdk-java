@@ -22,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Notebook Get Recent Notebooks Collection Request Builder.
  */
-public class NotebookGetRecentNotebooksCollectionRequestBuilder extends BaseFunctionRequestBuilder {
+public class NotebookGetRecentNotebooksCollectionRequestBuilder extends BaseFunctionRequestBuilder<RecentNotebook> {
 
     /**
      * The request builder for this collection of Notebook

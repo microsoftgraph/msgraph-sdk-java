@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Rows Below Request.
  */
-public class WorkbookRangeRowsBelowRequest extends BaseRequest {
+public class WorkbookRangeRowsBelowRequest extends BaseRequest<WorkbookRange> {
 
     /**
      * The request for this WorkbookRangeRowsBelow
@@ -98,7 +98,7 @@ public class WorkbookRangeRowsBelowRequest extends BaseRequest {
      */
     public WorkbookRangeRowsBelowRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookRangeRowsBelowRequest)this;
+        return this;
     }
 
     /**
@@ -109,7 +109,7 @@ public class WorkbookRangeRowsBelowRequest extends BaseRequest {
      */
     public WorkbookRangeRowsBelowRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookRangeRowsBelowRequest)this;
+        return this;
     }
 
     /**
@@ -120,7 +120,7 @@ public class WorkbookRangeRowsBelowRequest extends BaseRequest {
      */
     public WorkbookRangeRowsBelowRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookRangeRowsBelowRequest)this;
+        return this;
     }
 
     /**
@@ -131,7 +131,7 @@ public class WorkbookRangeRowsBelowRequest extends BaseRequest {
      */
     public WorkbookRangeRowsBelowRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookRangeRowsBelowRequest)this;
+        return this;
     }
 
 }

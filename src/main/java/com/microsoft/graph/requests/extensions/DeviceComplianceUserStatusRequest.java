@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Compliance User Status Request.
  */
-public class DeviceComplianceUserStatusRequest extends BaseRequest {
+public class DeviceComplianceUserStatusRequest extends BaseRequest<DeviceComplianceUserStatus> {
 	
     /**
      * The request for the DeviceComplianceUserStatus
@@ -140,7 +140,7 @@ public class DeviceComplianceUserStatusRequest extends BaseRequest {
      */
      public DeviceComplianceUserStatusRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceComplianceUserStatusRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class DeviceComplianceUserStatusRequest extends BaseRequest {
      */
      public DeviceComplianceUserStatusRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceComplianceUserStatusRequest)this;
+         return this;
      }
 
 }

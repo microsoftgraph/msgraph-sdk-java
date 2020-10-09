@@ -18,7 +18,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device Enrollment Configuration Set Priority Request.
  */
-public class DeviceEnrollmentConfigurationSetPriorityRequest extends BaseRequest {
+public class DeviceEnrollmentConfigurationSetPriorityRequest extends BaseRequest<Void> {
     protected final DeviceEnrollmentConfigurationSetPriorityBody body;
 
     /**
@@ -28,6 +28,7 @@ public class DeviceEnrollmentConfigurationSetPriorityRequest extends BaseRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public DeviceEnrollmentConfigurationSetPriorityRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new DeviceEnrollmentConfigurationSetPriorityBody();
@@ -49,7 +50,7 @@ public class DeviceEnrollmentConfigurationSetPriorityRequest extends BaseRequest
      */
     public DeviceEnrollmentConfigurationSetPriorityRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (DeviceEnrollmentConfigurationSetPriorityRequest)this;
+        return this;
     }
 
     /**
@@ -60,7 +61,7 @@ public class DeviceEnrollmentConfigurationSetPriorityRequest extends BaseRequest
      */
     public DeviceEnrollmentConfigurationSetPriorityRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (DeviceEnrollmentConfigurationSetPriorityRequest)this;
+        return this;
     }
 
     /**
@@ -71,7 +72,7 @@ public class DeviceEnrollmentConfigurationSetPriorityRequest extends BaseRequest
      */
     public DeviceEnrollmentConfigurationSetPriorityRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DeviceEnrollmentConfigurationSetPriorityRequest)this;
+        return this;
     }
 
 }

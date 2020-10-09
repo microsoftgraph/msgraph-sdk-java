@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Chart Add Request.
  */
-public class WorkbookChartAddRequest extends BaseRequest {
+public class WorkbookChartAddRequest extends BaseRequest<WorkbookChart> {
     protected final WorkbookChartAddBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookChartAddRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookChartAddRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChart.class);
         body = new WorkbookChartAddBody();
@@ -50,7 +51,7 @@ public class WorkbookChartAddRequest extends BaseRequest {
      */
     public WorkbookChartAddRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookChartAddRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookChartAddRequest extends BaseRequest {
      */
     public WorkbookChartAddRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookChartAddRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookChartAddRequest extends BaseRequest {
      */
     public WorkbookChartAddRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookChartAddRequest)this;
+        return this;
     }
 
 }

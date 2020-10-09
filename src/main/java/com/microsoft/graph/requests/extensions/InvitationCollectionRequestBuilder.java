@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Invitation Collection Request Builder.
  */
-public class InvitationCollectionRequestBuilder extends BaseRequestBuilder {
+public class InvitationCollectionRequestBuilder extends BaseRequestBuilder<Invitation> {
 
     /**
      * The request builder for this collection of Invitation

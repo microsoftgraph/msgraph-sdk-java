@@ -18,7 +18,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Group Lifecycle Policy Add Group Request.
  */
-public class GroupLifecyclePolicyAddGroupRequest extends BaseRequest {
+public class GroupLifecyclePolicyAddGroupRequest extends BaseRequest<Boolean> {
     protected final GroupLifecyclePolicyAddGroupBody body;
 
     /**
@@ -28,6 +28,7 @@ public class GroupLifecyclePolicyAddGroupRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public GroupLifecyclePolicyAddGroupRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Boolean.class);
         body = new GroupLifecyclePolicyAddGroupBody();
@@ -49,7 +50,7 @@ public class GroupLifecyclePolicyAddGroupRequest extends BaseRequest {
      */
     public GroupLifecyclePolicyAddGroupRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (GroupLifecyclePolicyAddGroupRequest)this;
+        return this;
     }
 
     /**
@@ -60,7 +61,7 @@ public class GroupLifecyclePolicyAddGroupRequest extends BaseRequest {
      */
     public GroupLifecyclePolicyAddGroupRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (GroupLifecyclePolicyAddGroupRequest)this;
+        return this;
     }
 
     /**
@@ -71,7 +72,7 @@ public class GroupLifecyclePolicyAddGroupRequest extends BaseRequest {
      */
     public GroupLifecyclePolicyAddGroupRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (GroupLifecyclePolicyAddGroupRequest)this;
+        return this;
     }
 
 }

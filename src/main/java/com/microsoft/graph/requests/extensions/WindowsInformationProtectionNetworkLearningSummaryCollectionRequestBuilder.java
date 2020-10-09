@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Windows Information Protection Network Learning Summary Collection Request Builder.
  */
-public class WindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder extends BaseRequestBuilder {
+public class WindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder extends BaseRequestBuilder<WindowsInformationProtectionNetworkLearningSummary> {
 
     /**
      * The request builder for this collection of DeviceManagement

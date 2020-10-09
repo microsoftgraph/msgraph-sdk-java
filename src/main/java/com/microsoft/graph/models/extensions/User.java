@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.AssignedLicense;
 import com.microsoft.graph.models.extensions.AssignedPlan;
 import com.microsoft.graph.models.extensions.ObjectIdentity;
@@ -45,29 +46,7 @@ import com.microsoft.graph.models.extensions.Onenote;
 import com.microsoft.graph.models.extensions.UserActivity;
 import com.microsoft.graph.models.extensions.OnlineMeeting;
 import com.microsoft.graph.models.extensions.Team;
-import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionPage;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
-import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionPage;
-import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionPage;
-import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionPage;
-import com.microsoft.graph.requests.extensions.CalendarGroupCollectionPage;
-import com.microsoft.graph.requests.extensions.CalendarCollectionPage;
-import com.microsoft.graph.requests.extensions.EventCollectionPage;
-import com.microsoft.graph.requests.extensions.ContactFolderCollectionPage;
-import com.microsoft.graph.requests.extensions.ContactCollectionPage;
-import com.microsoft.graph.requests.extensions.MailFolderCollectionPage;
-import com.microsoft.graph.requests.extensions.MessageCollectionPage;
-import com.microsoft.graph.requests.extensions.PersonCollectionPage;
-import com.microsoft.graph.requests.extensions.ProfilePhotoCollectionPage;
-import com.microsoft.graph.requests.extensions.DriveCollectionPage;
-import com.microsoft.graph.requests.extensions.SiteCollectionPage;
-import com.microsoft.graph.requests.extensions.ExtensionCollectionPage;
-import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionPage;
-import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionPage;
-import com.microsoft.graph.requests.extensions.DeviceManagementTroubleshootingEventCollectionPage;
-import com.microsoft.graph.requests.extensions.UserActivityCollectionPage;
-import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionPage;
-import com.microsoft.graph.requests.extensions.TeamCollectionPage;
+import com.microsoft.graph.models.extensions.UserTeamwork;
 
 
 import com.google.gson.JsonObject;
@@ -616,19 +595,19 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "appRoleAssignments", alternate = {"AppRoleAssignments"})
     @Expose
-    public AppRoleAssignmentCollectionPage appRoleAssignments;
+    public BaseCollectionPage<AppRoleAssignment> appRoleAssignments;
 
     /**
      * The Created Objects.
      * Directory objects that were created by the user. Read-only. Nullable.
      */
-    public DirectoryObjectCollectionPage createdObjects;
+    public BaseCollectionPage<DirectoryObject> createdObjects;
 
     /**
      * The Direct Reports.
      * The users and contacts that report to the user. (The users and contacts that have their manager property set to this user.) Read-only. Nullable.
      */
-    public DirectoryObjectCollectionPage directReports;
+    public BaseCollectionPage<DirectoryObject> directReports;
 
     /**
      * The License Details.
@@ -636,7 +615,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "licenseDetails", alternate = {"LicenseDetails"})
     @Expose
-    public LicenseDetailsCollectionPage licenseDetails;
+    public BaseCollectionPage<LicenseDetails> licenseDetails;
 
     /**
      * The Manager.
@@ -650,31 +629,31 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Member Of.
      * The groups and directory roles that the user is a member of. Read-only. Nullable.
      */
-    public DirectoryObjectCollectionPage memberOf;
+    public BaseCollectionPage<DirectoryObject> memberOf;
 
     /**
      * The Oauth2Permission Grants.
      * 
      */
-    public OAuth2PermissionGrantCollectionPage oauth2PermissionGrants;
+    public BaseCollectionPage<OAuth2PermissionGrant> oauth2PermissionGrants;
 
     /**
      * The Owned Devices.
      * Devices that are owned by the user. Read-only. Nullable.
      */
-    public DirectoryObjectCollectionPage ownedDevices;
+    public BaseCollectionPage<DirectoryObject> ownedDevices;
 
     /**
      * The Owned Objects.
      * Directory objects that are owned by the user. Read-only. Nullable.
      */
-    public DirectoryObjectCollectionPage ownedObjects;
+    public BaseCollectionPage<DirectoryObject> ownedObjects;
 
     /**
      * The Registered Devices.
      * Devices that are registered for the user. Read-only. Nullable.
      */
-    public DirectoryObjectCollectionPage registeredDevices;
+    public BaseCollectionPage<DirectoryObject> registeredDevices;
 
     /**
      * The Scoped Role Member Of.
@@ -682,13 +661,13 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "scopedRoleMemberOf", alternate = {"ScopedRoleMemberOf"})
     @Expose
-    public ScopedRoleMembershipCollectionPage scopedRoleMemberOf;
+    public BaseCollectionPage<ScopedRoleMembership> scopedRoleMemberOf;
 
     /**
      * The Transitive Member Of.
      * 
      */
-    public DirectoryObjectCollectionPage transitiveMemberOf;
+    public BaseCollectionPage<DirectoryObject> transitiveMemberOf;
 
     /**
      * The Calendar.
@@ -704,7 +683,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "calendarGroups", alternate = {"CalendarGroups"})
     @Expose
-    public CalendarGroupCollectionPage calendarGroups;
+    public BaseCollectionPage<CalendarGroup> calendarGroups;
 
     /**
      * The Calendars.
@@ -712,7 +691,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "calendars", alternate = {"Calendars"})
     @Expose
-    public CalendarCollectionPage calendars;
+    public BaseCollectionPage<Calendar> calendars;
 
     /**
      * The Calendar View.
@@ -720,7 +699,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "calendarView", alternate = {"CalendarView"})
     @Expose
-    public EventCollectionPage calendarView;
+    public BaseCollectionPage<Event> calendarView;
 
     /**
      * The Contact Folders.
@@ -728,7 +707,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "contactFolders", alternate = {"ContactFolders"})
     @Expose
-    public ContactFolderCollectionPage contactFolders;
+    public BaseCollectionPage<ContactFolder> contactFolders;
 
     /**
      * The Contacts.
@@ -736,7 +715,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "contacts", alternate = {"Contacts"})
     @Expose
-    public ContactCollectionPage contacts;
+    public BaseCollectionPage<Contact> contacts;
 
     /**
      * The Events.
@@ -744,7 +723,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "events", alternate = {"Events"})
     @Expose
-    public EventCollectionPage events;
+    public BaseCollectionPage<Event> events;
 
     /**
      * The Inference Classification.
@@ -760,7 +739,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "mailFolders", alternate = {"MailFolders"})
     @Expose
-    public MailFolderCollectionPage mailFolders;
+    public BaseCollectionPage<MailFolder> mailFolders;
 
     /**
      * The Messages.
@@ -768,7 +747,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "messages", alternate = {"Messages"})
     @Expose
-    public MessageCollectionPage messages;
+    public BaseCollectionPage<Message> messages;
 
     /**
      * The Outlook.
@@ -784,7 +763,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "people", alternate = {"People"})
     @Expose
-    public PersonCollectionPage people;
+    public BaseCollectionPage<Person> people;
 
     /**
      * The Photo.
@@ -800,7 +779,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "photos", alternate = {"Photos"})
     @Expose
-    public ProfilePhotoCollectionPage photos;
+    public BaseCollectionPage<ProfilePhoto> photos;
 
     /**
      * The Drive.
@@ -816,13 +795,13 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "drives", alternate = {"Drives"})
     @Expose
-    public DriveCollectionPage drives;
+    public BaseCollectionPage<Drive> drives;
 
     /**
      * The Followed Sites.
      * 
      */
-    public SiteCollectionPage followedSites;
+    public BaseCollectionPage<Site> followedSites;
 
     /**
      * The Extensions.
@@ -830,7 +809,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
-    public ExtensionCollectionPage extensions;
+    public BaseCollectionPage<Extension> extensions;
 
     /**
      * The Managed Devices.
@@ -838,13 +817,13 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "managedDevices", alternate = {"ManagedDevices"})
     @Expose
-    public ManagedDeviceCollectionPage managedDevices;
+    public BaseCollectionPage<ManagedDevice> managedDevices;
 
     /**
      * The Managed App Registrations.
      * Zero or more managed app registrations that belong to the user.
      */
-    public ManagedAppRegistrationCollectionPage managedAppRegistrations;
+    public BaseCollectionPage<ManagedAppRegistration> managedAppRegistrations;
 
     /**
      * The Device Management Troubleshooting Events.
@@ -852,7 +831,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "deviceManagementTroubleshootingEvents", alternate = {"DeviceManagementTroubleshootingEvents"})
     @Expose
-    public DeviceManagementTroubleshootingEventCollectionPage deviceManagementTroubleshootingEvents;
+    public BaseCollectionPage<DeviceManagementTroubleshootingEvent> deviceManagementTroubleshootingEvents;
 
     /**
      * The Planner.
@@ -892,7 +871,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "activities", alternate = {"Activities"})
     @Expose
-    public UserActivityCollectionPage activities;
+    public BaseCollectionPage<UserActivity> activities;
 
     /**
      * The Online Meetings.
@@ -900,7 +879,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "onlineMeetings", alternate = {"OnlineMeetings"})
     @Expose
-    public OnlineMeetingCollectionPage onlineMeetings;
+    public BaseCollectionPage<OnlineMeeting> onlineMeetings;
 
     /**
      * The Joined Teams.
@@ -908,7 +887,15 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "joinedTeams", alternate = {"JoinedTeams"})
     @Expose
-    public TeamCollectionPage joinedTeams;
+    public BaseCollectionPage<Team> joinedTeams;
+
+    /**
+     * The Teamwork.
+     * 
+     */
+    @SerializedName(value = "teamwork", alternate = {"Teamwork"})
+    @Expose
+    public UserTeamwork teamwork;
 
 
     /**
@@ -935,7 +922,8 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -951,123 +939,123 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
 
         if (json.has("appRoleAssignments")) {
-            appRoleAssignments = serializer.deserializeObject(json.get("appRoleAssignments").toString(), AppRoleAssignmentCollectionPage.class);
+            appRoleAssignments = serializer.deserializeObject(json.get("appRoleAssignments").toString(), new BaseCollectionPage<AppRoleAssignment>(new java.util.ArrayList<AppRoleAssignment>(), null).getClass());
         }
 
         if (json.has("createdObjects")) {
-            createdObjects = serializer.deserializeObject(json.get("createdObjects").toString(), DirectoryObjectCollectionPage.class);
+            createdObjects = serializer.deserializeObject(json.get("createdObjects").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
         }
 
         if (json.has("directReports")) {
-            directReports = serializer.deserializeObject(json.get("directReports").toString(), DirectoryObjectCollectionPage.class);
+            directReports = serializer.deserializeObject(json.get("directReports").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
         }
 
         if (json.has("licenseDetails")) {
-            licenseDetails = serializer.deserializeObject(json.get("licenseDetails").toString(), LicenseDetailsCollectionPage.class);
+            licenseDetails = serializer.deserializeObject(json.get("licenseDetails").toString(), new BaseCollectionPage<LicenseDetails>(new java.util.ArrayList<LicenseDetails>(), null).getClass());
         }
 
         if (json.has("memberOf")) {
-            memberOf = serializer.deserializeObject(json.get("memberOf").toString(), DirectoryObjectCollectionPage.class);
+            memberOf = serializer.deserializeObject(json.get("memberOf").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
         }
 
         if (json.has("oauth2PermissionGrants")) {
-            oauth2PermissionGrants = serializer.deserializeObject(json.get("oauth2PermissionGrants").toString(), OAuth2PermissionGrantCollectionPage.class);
+            oauth2PermissionGrants = serializer.deserializeObject(json.get("oauth2PermissionGrants").toString(), new BaseCollectionPage<OAuth2PermissionGrant>(new java.util.ArrayList<OAuth2PermissionGrant>(), null).getClass());
         }
 
         if (json.has("ownedDevices")) {
-            ownedDevices = serializer.deserializeObject(json.get("ownedDevices").toString(), DirectoryObjectCollectionPage.class);
+            ownedDevices = serializer.deserializeObject(json.get("ownedDevices").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
         }
 
         if (json.has("ownedObjects")) {
-            ownedObjects = serializer.deserializeObject(json.get("ownedObjects").toString(), DirectoryObjectCollectionPage.class);
+            ownedObjects = serializer.deserializeObject(json.get("ownedObjects").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
         }
 
         if (json.has("registeredDevices")) {
-            registeredDevices = serializer.deserializeObject(json.get("registeredDevices").toString(), DirectoryObjectCollectionPage.class);
+            registeredDevices = serializer.deserializeObject(json.get("registeredDevices").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
         }
 
         if (json.has("scopedRoleMemberOf")) {
-            scopedRoleMemberOf = serializer.deserializeObject(json.get("scopedRoleMemberOf").toString(), ScopedRoleMembershipCollectionPage.class);
+            scopedRoleMemberOf = serializer.deserializeObject(json.get("scopedRoleMemberOf").toString(), new BaseCollectionPage<ScopedRoleMembership>(new java.util.ArrayList<ScopedRoleMembership>(), null).getClass());
         }
 
         if (json.has("transitiveMemberOf")) {
-            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf").toString(), DirectoryObjectCollectionPage.class);
+            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
         }
 
         if (json.has("calendarGroups")) {
-            calendarGroups = serializer.deserializeObject(json.get("calendarGroups").toString(), CalendarGroupCollectionPage.class);
+            calendarGroups = serializer.deserializeObject(json.get("calendarGroups").toString(), new BaseCollectionPage<CalendarGroup>(new java.util.ArrayList<CalendarGroup>(), null).getClass());
         }
 
         if (json.has("calendars")) {
-            calendars = serializer.deserializeObject(json.get("calendars").toString(), CalendarCollectionPage.class);
+            calendars = serializer.deserializeObject(json.get("calendars").toString(), new BaseCollectionPage<Calendar>(new java.util.ArrayList<Calendar>(), null).getClass());
         }
 
         if (json.has("calendarView")) {
-            calendarView = serializer.deserializeObject(json.get("calendarView").toString(), EventCollectionPage.class);
+            calendarView = serializer.deserializeObject(json.get("calendarView").toString(), new BaseCollectionPage<Event>(new java.util.ArrayList<Event>(), null).getClass());
         }
 
         if (json.has("contactFolders")) {
-            contactFolders = serializer.deserializeObject(json.get("contactFolders").toString(), ContactFolderCollectionPage.class);
+            contactFolders = serializer.deserializeObject(json.get("contactFolders").toString(), new BaseCollectionPage<ContactFolder>(new java.util.ArrayList<ContactFolder>(), null).getClass());
         }
 
         if (json.has("contacts")) {
-            contacts = serializer.deserializeObject(json.get("contacts").toString(), ContactCollectionPage.class);
+            contacts = serializer.deserializeObject(json.get("contacts").toString(), new BaseCollectionPage<Contact>(new java.util.ArrayList<Contact>(), null).getClass());
         }
 
         if (json.has("events")) {
-            events = serializer.deserializeObject(json.get("events").toString(), EventCollectionPage.class);
+            events = serializer.deserializeObject(json.get("events").toString(), new BaseCollectionPage<Event>(new java.util.ArrayList<Event>(), null).getClass());
         }
 
         if (json.has("mailFolders")) {
-            mailFolders = serializer.deserializeObject(json.get("mailFolders").toString(), MailFolderCollectionPage.class);
+            mailFolders = serializer.deserializeObject(json.get("mailFolders").toString(), new BaseCollectionPage<MailFolder>(new java.util.ArrayList<MailFolder>(), null).getClass());
         }
 
         if (json.has("messages")) {
-            messages = serializer.deserializeObject(json.get("messages").toString(), MessageCollectionPage.class);
+            messages = serializer.deserializeObject(json.get("messages").toString(), new BaseCollectionPage<Message>(new java.util.ArrayList<Message>(), null).getClass());
         }
 
         if (json.has("people")) {
-            people = serializer.deserializeObject(json.get("people").toString(), PersonCollectionPage.class);
+            people = serializer.deserializeObject(json.get("people").toString(), new BaseCollectionPage<Person>(new java.util.ArrayList<Person>(), null).getClass());
         }
 
         if (json.has("photos")) {
-            photos = serializer.deserializeObject(json.get("photos").toString(), ProfilePhotoCollectionPage.class);
+            photos = serializer.deserializeObject(json.get("photos").toString(), new BaseCollectionPage<ProfilePhoto>(new java.util.ArrayList<ProfilePhoto>(), null).getClass());
         }
 
         if (json.has("drives")) {
-            drives = serializer.deserializeObject(json.get("drives").toString(), DriveCollectionPage.class);
+            drives = serializer.deserializeObject(json.get("drives").toString(), new BaseCollectionPage<Drive>(new java.util.ArrayList<Drive>(), null).getClass());
         }
 
         if (json.has("followedSites")) {
-            followedSites = serializer.deserializeObject(json.get("followedSites").toString(), SiteCollectionPage.class);
+            followedSites = serializer.deserializeObject(json.get("followedSites").toString(), new BaseCollectionPage<Site>(new java.util.ArrayList<Site>(), null).getClass());
         }
 
         if (json.has("extensions")) {
-            extensions = serializer.deserializeObject(json.get("extensions").toString(), ExtensionCollectionPage.class);
+            extensions = serializer.deserializeObject(json.get("extensions").toString(), new BaseCollectionPage<Extension>(new java.util.ArrayList<Extension>(), null).getClass());
         }
 
         if (json.has("managedDevices")) {
-            managedDevices = serializer.deserializeObject(json.get("managedDevices").toString(), ManagedDeviceCollectionPage.class);
+            managedDevices = serializer.deserializeObject(json.get("managedDevices").toString(), new BaseCollectionPage<ManagedDevice>(new java.util.ArrayList<ManagedDevice>(), null).getClass());
         }
 
         if (json.has("managedAppRegistrations")) {
-            managedAppRegistrations = serializer.deserializeObject(json.get("managedAppRegistrations").toString(), ManagedAppRegistrationCollectionPage.class);
+            managedAppRegistrations = serializer.deserializeObject(json.get("managedAppRegistrations").toString(), new BaseCollectionPage<ManagedAppRegistration>(new java.util.ArrayList<ManagedAppRegistration>(), null).getClass());
         }
 
         if (json.has("deviceManagementTroubleshootingEvents")) {
-            deviceManagementTroubleshootingEvents = serializer.deserializeObject(json.get("deviceManagementTroubleshootingEvents").toString(), DeviceManagementTroubleshootingEventCollectionPage.class);
+            deviceManagementTroubleshootingEvents = serializer.deserializeObject(json.get("deviceManagementTroubleshootingEvents").toString(), new BaseCollectionPage<DeviceManagementTroubleshootingEvent>(new java.util.ArrayList<DeviceManagementTroubleshootingEvent>(), null).getClass());
         }
 
         if (json.has("activities")) {
-            activities = serializer.deserializeObject(json.get("activities").toString(), UserActivityCollectionPage.class);
+            activities = serializer.deserializeObject(json.get("activities").toString(), new BaseCollectionPage<UserActivity>(new java.util.ArrayList<UserActivity>(), null).getClass());
         }
 
         if (json.has("onlineMeetings")) {
-            onlineMeetings = serializer.deserializeObject(json.get("onlineMeetings").toString(), OnlineMeetingCollectionPage.class);
+            onlineMeetings = serializer.deserializeObject(json.get("onlineMeetings").toString(), new BaseCollectionPage<OnlineMeeting>(new java.util.ArrayList<OnlineMeeting>(), null).getClass());
         }
 
         if (json.has("joinedTeams")) {
-            joinedTeams = serializer.deserializeObject(json.get("joinedTeams").toString(), TeamCollectionPage.class);
+            joinedTeams = serializer.deserializeObject(json.get("joinedTeams").toString(), new BaseCollectionPage<Team>(new java.util.ArrayList<Team>(), null).getClass());
         }
     }
 }

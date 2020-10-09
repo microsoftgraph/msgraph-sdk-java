@@ -18,7 +18,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Event Accept Request.
  */
-public class EventAcceptRequest extends BaseRequest {
+public class EventAcceptRequest extends BaseRequest<Void> {
     protected final EventAcceptBody body;
 
     /**
@@ -28,6 +28,7 @@ public class EventAcceptRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public EventAcceptRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new EventAcceptBody();
@@ -49,7 +50,7 @@ public class EventAcceptRequest extends BaseRequest {
      */
     public EventAcceptRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (EventAcceptRequest)this;
+        return this;
     }
 
     /**
@@ -60,7 +61,7 @@ public class EventAcceptRequest extends BaseRequest {
      */
     public EventAcceptRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (EventAcceptRequest)this;
+        return this;
     }
 
     /**
@@ -71,7 +72,7 @@ public class EventAcceptRequest extends BaseRequest {
      */
     public EventAcceptRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (EventAcceptRequest)this;
+        return this;
     }
 
 }

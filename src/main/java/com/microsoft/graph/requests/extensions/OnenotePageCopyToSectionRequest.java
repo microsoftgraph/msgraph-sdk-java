@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Onenote Page Copy To Section Request.
  */
-public class OnenotePageCopyToSectionRequest extends BaseRequest {
+public class OnenotePageCopyToSectionRequest extends BaseRequest<OnenoteOperation> {
     protected final OnenotePageCopyToSectionBody body;
 
     /**
@@ -29,6 +29,7 @@ public class OnenotePageCopyToSectionRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public OnenotePageCopyToSectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OnenoteOperation.class);
         body = new OnenotePageCopyToSectionBody();
@@ -50,7 +51,7 @@ public class OnenotePageCopyToSectionRequest extends BaseRequest {
      */
     public OnenotePageCopyToSectionRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (OnenotePageCopyToSectionRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class OnenotePageCopyToSectionRequest extends BaseRequest {
      */
     public OnenotePageCopyToSectionRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (OnenotePageCopyToSectionRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class OnenotePageCopyToSectionRequest extends BaseRequest {
      */
     public OnenotePageCopyToSectionRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (OnenotePageCopyToSectionRequest)this;
+        return this;
     }
 
 }

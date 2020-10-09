@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Change Tracked Entity Request.
  */
-public class ChangeTrackedEntityRequest extends BaseRequest {
+public class ChangeTrackedEntityRequest extends BaseRequest<ChangeTrackedEntity> {
 	
     /**
      * The request for the ChangeTrackedEntity
@@ -155,7 +155,7 @@ public class ChangeTrackedEntityRequest extends BaseRequest {
      */
      public ChangeTrackedEntityRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ChangeTrackedEntityRequest)this;
+         return this;
      }
 
     /**
@@ -166,7 +166,7 @@ public class ChangeTrackedEntityRequest extends BaseRequest {
      */
      public ChangeTrackedEntityRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ChangeTrackedEntityRequest)this;
+         return this;
      }
 
 }

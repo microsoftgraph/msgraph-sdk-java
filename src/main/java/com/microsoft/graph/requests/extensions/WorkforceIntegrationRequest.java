@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workforce Integration Request.
  */
-public class WorkforceIntegrationRequest extends BaseRequest {
+public class WorkforceIntegrationRequest extends BaseRequest<WorkforceIntegration> {
 	
     /**
      * The request for the WorkforceIntegration
@@ -140,7 +140,7 @@ public class WorkforceIntegrationRequest extends BaseRequest {
      */
      public WorkforceIntegrationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkforceIntegrationRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class WorkforceIntegrationRequest extends BaseRequest {
      */
      public WorkforceIntegrationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkforceIntegrationRequest)this;
+         return this;
      }
 
 }

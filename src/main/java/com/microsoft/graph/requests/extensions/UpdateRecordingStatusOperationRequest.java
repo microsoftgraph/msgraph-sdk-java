@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Update Recording Status Operation Request.
  */
-public class UpdateRecordingStatusOperationRequest extends BaseRequest {
+public class UpdateRecordingStatusOperationRequest extends BaseRequest<UpdateRecordingStatusOperation> {
 	
     /**
      * The request for the UpdateRecordingStatusOperation
@@ -140,7 +140,7 @@ public class UpdateRecordingStatusOperationRequest extends BaseRequest {
      */
      public UpdateRecordingStatusOperationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (UpdateRecordingStatusOperationRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class UpdateRecordingStatusOperationRequest extends BaseRequest {
      */
      public UpdateRecordingStatusOperationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UpdateRecordingStatusOperationRequest)this;
+         return this;
      }
 
 }

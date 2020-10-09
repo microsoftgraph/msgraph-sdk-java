@@ -7,11 +7,11 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.ItemActionStat;
 import com.microsoft.graph.models.extensions.IncompleteData;
 import com.microsoft.graph.models.extensions.ItemActivity;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ItemActivityCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -104,7 +104,7 @@ public class ItemActivityStat extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "activities", alternate = {"Activities"})
     @Expose
-    public ItemActivityCollectionPage activities;
+    public BaseCollectionPage<ItemActivity> activities;
 
 
     /**
@@ -131,7 +131,8 @@ public class ItemActivityStat extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -147,7 +148,7 @@ public class ItemActivityStat extends Entity implements IJsonBackedObject {
 
 
         if (json.has("activities")) {
-            activities = serializer.deserializeObject(json.get("activities").toString(), ItemActivityCollectionPage.class);
+            activities = serializer.deserializeObject(json.get("activities").toString(), new BaseCollectionPage<ItemActivity>(new java.util.ArrayList<ItemActivity>(), null).getClass());
         }
     }
 }

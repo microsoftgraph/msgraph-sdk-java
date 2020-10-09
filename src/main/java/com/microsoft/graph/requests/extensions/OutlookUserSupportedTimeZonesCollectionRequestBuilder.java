@@ -23,7 +23,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Outlook User Supported Time Zones Collection Request Builder.
  */
-public class OutlookUserSupportedTimeZonesCollectionRequestBuilder extends BaseFunctionRequestBuilder {
+public class OutlookUserSupportedTimeZonesCollectionRequestBuilder extends BaseFunctionRequestBuilder<TimeZoneInformation> {
 
     /**
      * The request builder for this collection of OutlookUser

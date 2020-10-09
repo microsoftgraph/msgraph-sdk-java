@@ -55,7 +55,8 @@ public class OpenShiftItem extends ShiftItem implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

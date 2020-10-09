@@ -24,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Range View Collection Request Builder.
  */
-public class WorkbookRangeViewCollectionRequestBuilder extends BaseRequestBuilder {
+public class WorkbookRangeViewCollectionRequestBuilder extends BaseRequestBuilder<WorkbookRangeView> {
 
     /**
      * The request builder for this collection of WorkbookRangeView

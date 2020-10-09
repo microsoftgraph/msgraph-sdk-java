@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Im Csc Request.
  */
-public class WorkbookFunctionsImCscRequest extends BaseRequest {
+public class WorkbookFunctionsImCscRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsImCscBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsImCscRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsImCscRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsImCscBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsImCscRequest extends BaseRequest {
      */
     public WorkbookFunctionsImCscRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsImCscRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsImCscRequest extends BaseRequest {
      */
     public WorkbookFunctionsImCscRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsImCscRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsImCscRequest extends BaseRequest {
      */
     public WorkbookFunctionsImCscRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsImCscRequest)this;
+        return this;
     }
 
 }

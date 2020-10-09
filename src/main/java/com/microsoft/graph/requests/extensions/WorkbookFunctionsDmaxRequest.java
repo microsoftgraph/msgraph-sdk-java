@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Dmax Request.
  */
-public class WorkbookFunctionsDmaxRequest extends BaseRequest {
+public class WorkbookFunctionsDmaxRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsDmaxBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsDmaxRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsDmaxRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsDmaxBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsDmaxRequest extends BaseRequest {
      */
     public WorkbookFunctionsDmaxRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsDmaxRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsDmaxRequest extends BaseRequest {
      */
     public WorkbookFunctionsDmaxRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsDmaxRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsDmaxRequest extends BaseRequest {
      */
     public WorkbookFunctionsDmaxRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsDmaxRequest)this;
+        return this;
     }
 
 }

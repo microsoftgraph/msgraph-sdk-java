@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ParticipantMuteRequest;
+import com.microsoft.graph.models.extensions.Participant;
 import com.microsoft.graph.models.extensions.MuteParticipantOperation;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Participant Mute Request Builder.
  */
-public class ParticipantMuteRequestBuilder extends BaseActionRequestBuilder {
+public class ParticipantMuteRequestBuilder extends BaseActionRequestBuilder<MuteParticipantOperation> {
 
     /**
      * The request builder for this ParticipantMute

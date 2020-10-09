@@ -23,7 +23,7 @@ import com.microsoft.graph.core.BaseActionRequestBuilder;
 /**
  * The class for the User Translate Exchange Ids Collection Request Builder.
  */
-public class UserTranslateExchangeIdsCollectionRequestBuilder extends BaseActionRequestBuilder {
+public class UserTranslateExchangeIdsCollectionRequestBuilder extends BaseActionRequestBuilder<ConvertIdResult> {
 
     /**
      * The request builder for this collection of User

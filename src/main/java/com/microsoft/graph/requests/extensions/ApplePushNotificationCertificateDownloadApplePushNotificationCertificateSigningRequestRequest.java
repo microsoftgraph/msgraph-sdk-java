@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.ApplePushNotificationCertificate;
 import com.microsoft.graph.requests.extensions.ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -17,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Apple Push Notification Certificate Download Apple Push Notification Certificate Signing Request Request.
  */
-public class ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest extends BaseRequest {
+public class ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest extends BaseRequest<String> {
 
     /**
      * The request for this ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequest
@@ -57,7 +58,7 @@ public class ApplePushNotificationCertificateDownloadApplePushNotificationCertif
      */
     public ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest)this;
+        return this;
     }
 
     /**
@@ -68,7 +69,7 @@ public class ApplePushNotificationCertificateDownloadApplePushNotificationCertif
      */
     public ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest)this;
+        return this;
     }
 
     /**
@@ -79,7 +80,7 @@ public class ApplePushNotificationCertificateDownloadApplePushNotificationCertif
      */
     public ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest)this;
+        return this;
     }
 
     /**
@@ -90,7 +91,7 @@ public class ApplePushNotificationCertificateDownloadApplePushNotificationCertif
      */
     public ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest)this;
+        return this;
     }
 
 }

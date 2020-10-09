@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed IOSLob App Request.
  */
-public class ManagedIOSLobAppRequest extends BaseRequest {
+public class ManagedIOSLobAppRequest extends BaseRequest<ManagedIOSLobApp> {
 	
     /**
      * The request for the ManagedIOSLobApp
@@ -140,7 +140,7 @@ public class ManagedIOSLobAppRequest extends BaseRequest {
      */
      public ManagedIOSLobAppRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ManagedIOSLobAppRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class ManagedIOSLobAppRequest extends BaseRequest {
      */
      public ManagedIOSLobAppRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ManagedIOSLobAppRequest)this;
+         return this;
      }
 
 }

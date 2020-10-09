@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Enrollment Configuration Assignment Collection Request Builder.
  */
-public class EnrollmentConfigurationAssignmentCollectionRequestBuilder extends BaseRequestBuilder {
+public class EnrollmentConfigurationAssignmentCollectionRequestBuilder extends BaseRequestBuilder<EnrollmentConfigurationAssignment> {
 
     /**
      * The request builder for this collection of DeviceEnrollmentConfiguration

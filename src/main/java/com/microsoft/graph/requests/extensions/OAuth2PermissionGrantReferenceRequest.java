@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -21,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the OAuth2Permission Grant Reference Request.
  */
-public class OAuth2PermissionGrantReferenceRequest extends BaseRequest {
+public class OAuth2PermissionGrantReferenceRequest extends BaseReferenceRequest<OAuth2PermissionGrant> {
 
     /**
      * The request for the OAuth2PermissionGrant
@@ -34,14 +34,6 @@ public class OAuth2PermissionGrantReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, OAuth2PermissionGrant.class);
     }
 
-    public void delete(final ICallback<? super OAuth2PermissionGrant> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    public OAuth2PermissionGrant delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
-    }
-
     /**
      * Sets the select clause for the request
      *
@@ -50,7 +42,7 @@ public class OAuth2PermissionGrantReferenceRequest extends BaseRequest {
      */
     public OAuth2PermissionGrantReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (OAuth2PermissionGrantReferenceRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +53,7 @@ public class OAuth2PermissionGrantReferenceRequest extends BaseRequest {
      */
     public OAuth2PermissionGrantReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (OAuth2PermissionGrantReferenceRequest)this;
+        return this;
     }
     /**
      * Puts the OAuth2PermissionGrant

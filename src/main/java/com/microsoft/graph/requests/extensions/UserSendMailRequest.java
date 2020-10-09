@@ -18,7 +18,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the User Send Mail Request.
  */
-public class UserSendMailRequest extends BaseRequest {
+public class UserSendMailRequest extends BaseRequest<Void> {
     protected final UserSendMailBody body;
 
     /**
@@ -28,6 +28,7 @@ public class UserSendMailRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public UserSendMailRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new UserSendMailBody();
@@ -49,7 +50,7 @@ public class UserSendMailRequest extends BaseRequest {
      */
     public UserSendMailRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (UserSendMailRequest)this;
+        return this;
     }
 
     /**
@@ -60,7 +61,7 @@ public class UserSendMailRequest extends BaseRequest {
      */
     public UserSendMailRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (UserSendMailRequest)this;
+        return this;
     }
 
     /**
@@ -71,7 +72,7 @@ public class UserSendMailRequest extends BaseRequest {
      */
     public UserSendMailRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (UserSendMailRequest)this;
+        return this;
     }
 
 }

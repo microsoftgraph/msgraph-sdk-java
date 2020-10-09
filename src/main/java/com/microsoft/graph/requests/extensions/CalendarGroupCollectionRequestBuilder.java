@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Calendar Group Collection Request Builder.
  */
-public class CalendarGroupCollectionRequestBuilder extends BaseRequestBuilder {
+public class CalendarGroupCollectionRequestBuilder extends BaseRequestBuilder<CalendarGroup> {
 
     /**
      * The request builder for this collection of User

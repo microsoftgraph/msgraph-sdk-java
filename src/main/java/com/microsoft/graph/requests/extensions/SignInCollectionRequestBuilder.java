@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Sign In Collection Request Builder.
  */
-public class SignInCollectionRequestBuilder extends BaseRequestBuilder {
+public class SignInCollectionRequestBuilder extends BaseRequestBuilder<SignIn> {
 
     /**
      * The request builder for this collection of AuditLogRoot

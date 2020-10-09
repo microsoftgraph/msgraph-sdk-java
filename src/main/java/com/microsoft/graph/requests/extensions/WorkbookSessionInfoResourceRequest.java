@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookSessionInfo;
+import com.microsoft.graph.models.extensions.Workbook;
 import com.microsoft.graph.requests.extensions.WorkbookSessionInfoResourceRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Session Info Resource Request.
  */
-public class WorkbookSessionInfoResourceRequest extends BaseRequest {
+public class WorkbookSessionInfoResourceRequest extends BaseRequest<WorkbookSessionInfo> {
 
     /**
      * The request for this WorkbookSessionInfoResource
@@ -58,7 +59,7 @@ public class WorkbookSessionInfoResourceRequest extends BaseRequest {
      */
     public WorkbookSessionInfoResourceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookSessionInfoResourceRequest)this;
+        return this;
     }
 
     /**
@@ -69,7 +70,7 @@ public class WorkbookSessionInfoResourceRequest extends BaseRequest {
      */
     public WorkbookSessionInfoResourceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookSessionInfoResourceRequest)this;
+        return this;
     }
 
     /**
@@ -80,7 +81,7 @@ public class WorkbookSessionInfoResourceRequest extends BaseRequest {
      */
     public WorkbookSessionInfoResourceRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookSessionInfoResourceRequest)this;
+        return this;
     }
 
     /**
@@ -91,7 +92,7 @@ public class WorkbookSessionInfoResourceRequest extends BaseRequest {
      */
     public WorkbookSessionInfoResourceRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookSessionInfoResourceRequest)this;
+        return this;
     }
 
 }

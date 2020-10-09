@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Chi Sq_Inv_RTRequest.
  */
-public class WorkbookFunctionsChiSq_Inv_RTRequest extends BaseRequest {
+public class WorkbookFunctionsChiSq_Inv_RTRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsChiSq_Inv_RTBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsChiSq_Inv_RTRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsChiSq_Inv_RTRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsChiSq_Inv_RTBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsChiSq_Inv_RTRequest extends BaseRequest {
      */
     public WorkbookFunctionsChiSq_Inv_RTRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsChiSq_Inv_RTRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsChiSq_Inv_RTRequest extends BaseRequest {
      */
     public WorkbookFunctionsChiSq_Inv_RTRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsChiSq_Inv_RTRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsChiSq_Inv_RTRequest extends BaseRequest {
      */
     public WorkbookFunctionsChiSq_Inv_RTRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsChiSq_Inv_RTRequest)this;
+        return this;
     }
 
 }

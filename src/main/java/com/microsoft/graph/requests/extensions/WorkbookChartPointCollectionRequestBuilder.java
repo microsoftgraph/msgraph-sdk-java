@@ -25,7 +25,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Chart Point Collection Request Builder.
  */
-public class WorkbookChartPointCollectionRequestBuilder extends BaseRequestBuilder {
+public class WorkbookChartPointCollectionRequestBuilder extends BaseRequestBuilder<WorkbookChartPoint> {
 
     /**
      * The request builder for this collection of WorkbookChartSeries

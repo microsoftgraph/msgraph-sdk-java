@@ -6,7 +6,6 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.MailFolderMoveRequest;
 import com.microsoft.graph.models.extensions.MailFolder;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -15,7 +14,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Mail Folder Move Request Builder.
  */
-public class MailFolderMoveRequestBuilder extends BaseActionRequestBuilder {
+public class MailFolderMoveRequestBuilder extends BaseActionRequestBuilder<MailFolder> {
 
     /**
      * The request builder for this MailFolderMove

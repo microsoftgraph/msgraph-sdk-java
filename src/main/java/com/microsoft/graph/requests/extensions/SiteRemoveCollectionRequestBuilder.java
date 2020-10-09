@@ -22,7 +22,7 @@ import com.microsoft.graph.core.BaseActionRequestBuilder;
 /**
  * The class for the Site Remove Collection Request Builder.
  */
-public class SiteRemoveCollectionRequestBuilder extends BaseActionRequestBuilder {
+public class SiteRemoveCollectionRequestBuilder extends BaseActionRequestBuilder<Site> {
 
     /**
      * The request builder for this collection of Site

@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Compliance Policy Assignment Request.
  */
-public class DeviceCompliancePolicyAssignmentRequest extends BaseRequest {
+public class DeviceCompliancePolicyAssignmentRequest extends BaseRequest<DeviceCompliancePolicyAssignment> {
 	
     /**
      * The request for the DeviceCompliancePolicyAssignment
@@ -140,7 +140,7 @@ public class DeviceCompliancePolicyAssignmentRequest extends BaseRequest {
      */
      public DeviceCompliancePolicyAssignmentRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceCompliancePolicyAssignmentRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class DeviceCompliancePolicyAssignmentRequest extends BaseRequest {
      */
      public DeviceCompliancePolicyAssignmentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceCompliancePolicyAssignmentRequest)this;
+         return this;
      }
 
 }

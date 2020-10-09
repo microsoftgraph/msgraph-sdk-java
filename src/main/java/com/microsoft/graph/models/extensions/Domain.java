@@ -7,12 +7,11 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.DomainState;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.DomainDnsRecord;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
-import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -135,7 +134,7 @@ public class Domain extends Entity implements IJsonBackedObject {
      * The Domain Name References.
      * Read-only, Nullable
      */
-    public DirectoryObjectCollectionPage domainNameReferences;
+    public BaseCollectionPage<DirectoryObject> domainNameReferences;
 
     /**
      * The Service Configuration Records.
@@ -143,7 +142,7 @@ public class Domain extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "serviceConfigurationRecords", alternate = {"ServiceConfigurationRecords"})
     @Expose
-    public DomainDnsRecordCollectionPage serviceConfigurationRecords;
+    public BaseCollectionPage<DomainDnsRecord> serviceConfigurationRecords;
 
     /**
      * The Verification Dns Records.
@@ -151,7 +150,7 @@ public class Domain extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "verificationDnsRecords", alternate = {"VerificationDnsRecords"})
     @Expose
-    public DomainDnsRecordCollectionPage verificationDnsRecords;
+    public BaseCollectionPage<DomainDnsRecord> verificationDnsRecords;
 
 
     /**
@@ -178,7 +177,8 @@ public class Domain extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -194,15 +194,15 @@ public class Domain extends Entity implements IJsonBackedObject {
 
 
         if (json.has("domainNameReferences")) {
-            domainNameReferences = serializer.deserializeObject(json.get("domainNameReferences").toString(), DirectoryObjectCollectionPage.class);
+            domainNameReferences = serializer.deserializeObject(json.get("domainNameReferences").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
         }
 
         if (json.has("serviceConfigurationRecords")) {
-            serviceConfigurationRecords = serializer.deserializeObject(json.get("serviceConfigurationRecords").toString(), DomainDnsRecordCollectionPage.class);
+            serviceConfigurationRecords = serializer.deserializeObject(json.get("serviceConfigurationRecords").toString(), new BaseCollectionPage<DomainDnsRecord>(new java.util.ArrayList<DomainDnsRecord>(), null).getClass());
         }
 
         if (json.has("verificationDnsRecords")) {
-            verificationDnsRecords = serializer.deserializeObject(json.get("verificationDnsRecords").toString(), DomainDnsRecordCollectionPage.class);
+            verificationDnsRecords = serializer.deserializeObject(json.get("verificationDnsRecords").toString(), new BaseCollectionPage<DomainDnsRecord>(new java.util.ArrayList<DomainDnsRecord>(), null).getClass());
         }
     }
 }

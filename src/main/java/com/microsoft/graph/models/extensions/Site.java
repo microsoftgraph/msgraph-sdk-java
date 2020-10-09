@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.PublicError;
 import com.microsoft.graph.models.extensions.Root;
 import com.microsoft.graph.models.extensions.SharepointIds;
@@ -19,12 +20,6 @@ import com.microsoft.graph.models.extensions.BaseItem;
 import com.microsoft.graph.models.extensions.List;
 import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.models.extensions.Onenote;
-import com.microsoft.graph.requests.extensions.ColumnDefinitionCollectionPage;
-import com.microsoft.graph.requests.extensions.ContentTypeCollectionPage;
-import com.microsoft.graph.requests.extensions.DriveCollectionPage;
-import com.microsoft.graph.requests.extensions.BaseItemCollectionPage;
-import com.microsoft.graph.requests.extensions.ListCollectionPage;
-import com.microsoft.graph.requests.extensions.SiteCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -93,7 +88,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
      */
     @SerializedName(value = "columns", alternate = {"Columns"})
     @Expose
-    public ColumnDefinitionCollectionPage columns;
+    public BaseCollectionPage<ColumnDefinition> columns;
 
     /**
      * The Content Types.
@@ -101,7 +96,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
      */
     @SerializedName(value = "contentTypes", alternate = {"ContentTypes"})
     @Expose
-    public ContentTypeCollectionPage contentTypes;
+    public BaseCollectionPage<ContentType> contentTypes;
 
     /**
      * The Drive.
@@ -117,7 +112,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
      */
     @SerializedName(value = "drives", alternate = {"Drives"})
     @Expose
-    public DriveCollectionPage drives;
+    public BaseCollectionPage<Drive> drives;
 
     /**
      * The Items.
@@ -125,7 +120,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
      */
     @SerializedName(value = "items", alternate = {"Items"})
     @Expose
-    public BaseItemCollectionPage items;
+    public BaseCollectionPage<BaseItem> items;
 
     /**
      * The Lists.
@@ -133,7 +128,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
      */
     @SerializedName(value = "lists", alternate = {"Lists"})
     @Expose
-    public ListCollectionPage lists;
+    public BaseCollectionPage<List> lists;
 
     /**
      * The Sites.
@@ -141,7 +136,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
      */
     @SerializedName(value = "sites", alternate = {"Sites"})
     @Expose
-    public SiteCollectionPage sites;
+    public BaseCollectionPage<Site> sites;
 
     /**
      * The Onenote.
@@ -176,7 +171,8 @@ public class Site extends BaseItem implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -192,27 +188,27 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
 
         if (json.has("columns")) {
-            columns = serializer.deserializeObject(json.get("columns").toString(), ColumnDefinitionCollectionPage.class);
+            columns = serializer.deserializeObject(json.get("columns").toString(), new BaseCollectionPage<ColumnDefinition>(new java.util.ArrayList<ColumnDefinition>(), null).getClass());
         }
 
         if (json.has("contentTypes")) {
-            contentTypes = serializer.deserializeObject(json.get("contentTypes").toString(), ContentTypeCollectionPage.class);
+            contentTypes = serializer.deserializeObject(json.get("contentTypes").toString(), new BaseCollectionPage<ContentType>(new java.util.ArrayList<ContentType>(), null).getClass());
         }
 
         if (json.has("drives")) {
-            drives = serializer.deserializeObject(json.get("drives").toString(), DriveCollectionPage.class);
+            drives = serializer.deserializeObject(json.get("drives").toString(), new BaseCollectionPage<Drive>(new java.util.ArrayList<Drive>(), null).getClass());
         }
 
         if (json.has("items")) {
-            items = serializer.deserializeObject(json.get("items").toString(), BaseItemCollectionPage.class);
+            items = serializer.deserializeObject(json.get("items").toString(), new BaseCollectionPage<BaseItem>(new java.util.ArrayList<BaseItem>(), null).getClass());
         }
 
         if (json.has("lists")) {
-            lists = serializer.deserializeObject(json.get("lists").toString(), ListCollectionPage.class);
+            lists = serializer.deserializeObject(json.get("lists").toString(), new BaseCollectionPage<List>(new java.util.ArrayList<List>(), null).getClass());
         }
 
         if (json.has("sites")) {
-            sites = serializer.deserializeObject(json.get("sites").toString(), SiteCollectionPage.class);
+            sites = serializer.deserializeObject(json.get("sites").toString(), new BaseCollectionPage<Site>(new java.util.ArrayList<Site>(), null).getClass());
         }
     }
 }

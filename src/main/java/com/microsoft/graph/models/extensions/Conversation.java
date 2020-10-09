@@ -7,9 +7,9 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.ConversationThread;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ConversationThreadCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -70,7 +70,7 @@ public class Conversation extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "threads", alternate = {"Threads"})
     @Expose
-    public ConversationThreadCollectionPage threads;
+    public BaseCollectionPage<ConversationThread> threads;
 
 
     /**
@@ -97,7 +97,8 @@ public class Conversation extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -113,7 +114,7 @@ public class Conversation extends Entity implements IJsonBackedObject {
 
 
         if (json.has("threads")) {
-            threads = serializer.deserializeObject(json.get("threads").toString(), ConversationThreadCollectionPage.class);
+            threads = serializer.deserializeObject(json.get("threads").toString(), new BaseCollectionPage<ConversationThread>(new java.util.ArrayList<ConversationThread>(), null).getClass());
         }
     }
 }

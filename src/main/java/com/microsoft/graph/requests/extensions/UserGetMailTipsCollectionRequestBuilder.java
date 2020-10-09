@@ -24,7 +24,7 @@ import com.microsoft.graph.core.BaseActionRequestBuilder;
 /**
  * The class for the User Get Mail Tips Collection Request Builder.
  */
-public class UserGetMailTipsCollectionRequestBuilder extends BaseActionRequestBuilder {
+public class UserGetMailTipsCollectionRequestBuilder extends BaseActionRequestBuilder<MailTips> {
 
     /**
      * The request builder for this collection of User

@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Chat Message Hosted Content Collection Request Builder.
  */
-public class ChatMessageHostedContentCollectionRequestBuilder extends BaseRequestBuilder {
+public class ChatMessageHostedContentCollectionRequestBuilder extends BaseRequestBuilder<ChatMessageHostedContent> {
 
     /**
      * The request builder for this collection of ChatMessage

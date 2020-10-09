@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Cancel Media Processing Operation Request.
  */
-public class CancelMediaProcessingOperationRequest extends BaseRequest {
+public class CancelMediaProcessingOperationRequest extends BaseRequest<CancelMediaProcessingOperation> {
 	
     /**
      * The request for the CancelMediaProcessingOperation
@@ -140,7 +140,7 @@ public class CancelMediaProcessingOperationRequest extends BaseRequest {
      */
      public CancelMediaProcessingOperationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (CancelMediaProcessingOperationRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class CancelMediaProcessingOperationRequest extends BaseRequest {
      */
      public CancelMediaProcessingOperationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CancelMediaProcessingOperationRequest)this;
+         return this;
      }
 
 }

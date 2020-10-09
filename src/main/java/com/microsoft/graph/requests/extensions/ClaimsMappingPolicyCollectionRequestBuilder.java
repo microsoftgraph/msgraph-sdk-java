@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Claims Mapping Policy Collection Request Builder.
  */
-public class ClaimsMappingPolicyCollectionRequestBuilder extends BaseRequestBuilder {
+public class ClaimsMappingPolicyCollectionRequestBuilder extends BaseRequestBuilder<ClaimsMappingPolicy> {
 
     /**
      * The request builder for this collection of PolicyRoot

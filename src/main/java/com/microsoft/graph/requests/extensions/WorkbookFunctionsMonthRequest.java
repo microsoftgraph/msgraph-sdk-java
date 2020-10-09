@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Month Request.
  */
-public class WorkbookFunctionsMonthRequest extends BaseRequest {
+public class WorkbookFunctionsMonthRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsMonthBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsMonthRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsMonthRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsMonthBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsMonthRequest extends BaseRequest {
      */
     public WorkbookFunctionsMonthRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsMonthRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsMonthRequest extends BaseRequest {
      */
     public WorkbookFunctionsMonthRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsMonthRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsMonthRequest extends BaseRequest {
      */
     public WorkbookFunctionsMonthRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsMonthRequest)this;
+        return this;
     }
 
 }

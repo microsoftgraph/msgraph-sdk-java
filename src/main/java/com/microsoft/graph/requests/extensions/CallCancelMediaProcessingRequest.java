@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Call Cancel Media Processing Request.
  */
-public class CallCancelMediaProcessingRequest extends BaseRequest {
+public class CallCancelMediaProcessingRequest extends BaseRequest<CancelMediaProcessingOperation> {
     protected final CallCancelMediaProcessingBody body;
 
     /**
@@ -29,6 +29,7 @@ public class CallCancelMediaProcessingRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public CallCancelMediaProcessingRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CancelMediaProcessingOperation.class);
         body = new CallCancelMediaProcessingBody();
@@ -50,7 +51,7 @@ public class CallCancelMediaProcessingRequest extends BaseRequest {
      */
     public CallCancelMediaProcessingRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (CallCancelMediaProcessingRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class CallCancelMediaProcessingRequest extends BaseRequest {
      */
     public CallCancelMediaProcessingRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (CallCancelMediaProcessingRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class CallCancelMediaProcessingRequest extends BaseRequest {
      */
     public CallCancelMediaProcessingRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (CallCancelMediaProcessingRequest)this;
+        return this;
     }
 
 }

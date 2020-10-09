@@ -18,7 +18,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Message Reply Request.
  */
-public class MessageReplyRequest extends BaseRequest {
+public class MessageReplyRequest extends BaseRequest<Void> {
     protected final MessageReplyBody body;
 
     /**
@@ -28,6 +28,7 @@ public class MessageReplyRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public MessageReplyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new MessageReplyBody();
@@ -49,7 +50,7 @@ public class MessageReplyRequest extends BaseRequest {
      */
     public MessageReplyRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (MessageReplyRequest)this;
+        return this;
     }
 
     /**
@@ -60,7 +61,7 @@ public class MessageReplyRequest extends BaseRequest {
      */
     public MessageReplyRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (MessageReplyRequest)this;
+        return this;
     }
 
     /**
@@ -71,7 +72,7 @@ public class MessageReplyRequest extends BaseRequest {
      */
     public MessageReplyRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (MessageReplyRequest)this;
+        return this;
     }
 
 }

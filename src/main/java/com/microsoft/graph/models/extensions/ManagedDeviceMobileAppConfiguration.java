@@ -7,15 +7,13 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationAssignment;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationDeviceStatus;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationDeviceSummary;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationUserStatus;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationUserSummary;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationAssignmentCollectionPage;
-import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage;
-import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserStatusCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -84,7 +82,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements IJson
      */
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
-    public ManagedDeviceMobileAppConfigurationAssignmentCollectionPage assignments;
+    public BaseCollectionPage<ManagedDeviceMobileAppConfigurationAssignment> assignments;
 
     /**
      * The Device Statuses.
@@ -92,7 +90,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements IJson
      */
     @SerializedName(value = "deviceStatuses", alternate = {"DeviceStatuses"})
     @Expose
-    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage deviceStatuses;
+    public BaseCollectionPage<ManagedDeviceMobileAppConfigurationDeviceStatus> deviceStatuses;
 
     /**
      * The Device Status Summary.
@@ -108,7 +106,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements IJson
      */
     @SerializedName(value = "userStatuses", alternate = {"UserStatuses"})
     @Expose
-    public ManagedDeviceMobileAppConfigurationUserStatusCollectionPage userStatuses;
+    public BaseCollectionPage<ManagedDeviceMobileAppConfigurationUserStatus> userStatuses;
 
     /**
      * The User Status Summary.
@@ -143,7 +141,8 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements IJson
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -159,15 +158,15 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements IJson
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments").toString(), ManagedDeviceMobileAppConfigurationAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments").toString(), new BaseCollectionPage<ManagedDeviceMobileAppConfigurationAssignment>(new java.util.ArrayList<ManagedDeviceMobileAppConfigurationAssignment>(), null).getClass());
         }
 
         if (json.has("deviceStatuses")) {
-            deviceStatuses = serializer.deserializeObject(json.get("deviceStatuses").toString(), ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage.class);
+            deviceStatuses = serializer.deserializeObject(json.get("deviceStatuses").toString(), new BaseCollectionPage<ManagedDeviceMobileAppConfigurationDeviceStatus>(new java.util.ArrayList<ManagedDeviceMobileAppConfigurationDeviceStatus>(), null).getClass());
         }
 
         if (json.has("userStatuses")) {
-            userStatuses = serializer.deserializeObject(json.get("userStatuses").toString(), ManagedDeviceMobileAppConfigurationUserStatusCollectionPage.class);
+            userStatuses = serializer.deserializeObject(json.get("userStatuses").toString(), new BaseCollectionPage<ManagedDeviceMobileAppConfigurationUserStatus>(new java.util.ArrayList<ManagedDeviceMobileAppConfigurationUserStatus>(), null).getClass());
         }
     }
 }

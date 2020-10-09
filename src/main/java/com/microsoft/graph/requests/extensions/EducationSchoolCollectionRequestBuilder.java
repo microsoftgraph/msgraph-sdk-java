@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Education School Collection Request Builder.
  */
-public class EducationSchoolCollectionRequestBuilder extends BaseRequestBuilder {
+public class EducationSchoolCollectionRequestBuilder extends BaseRequestBuilder<EducationSchool> {
 
     /**
      * The request builder for this collection of EducationRoot

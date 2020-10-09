@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Identity Provider Collection Request Builder.
  */
-public class IdentityProviderCollectionRequestBuilder extends BaseRequestBuilder {
+public class IdentityProviderCollectionRequestBuilder extends BaseRequestBuilder<IdentityProvider> {
 
     /**
      * The request builder for this collection of IdentityProvider

@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.AddIn;
 import com.microsoft.graph.models.extensions.AppRole;
 import com.microsoft.graph.models.extensions.InformationalUrl;
@@ -22,14 +23,6 @@ import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
 import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
 import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
-import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionPage;
-import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionPage;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
-import com.microsoft.graph.requests.extensions.EndpointCollectionPage;
-import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionPage;
-import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionPage;
-import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionPage;
-import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -282,7 +275,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      */
     @SerializedName(value = "appRoleAssignedTo", alternate = {"AppRoleAssignedTo"})
     @Expose
-    public AppRoleAssignmentCollectionPage appRoleAssignedTo;
+    public BaseCollectionPage<AppRoleAssignment> appRoleAssignedTo;
 
     /**
      * The App Role Assignments.
@@ -290,19 +283,19 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      */
     @SerializedName(value = "appRoleAssignments", alternate = {"AppRoleAssignments"})
     @Expose
-    public AppRoleAssignmentCollectionPage appRoleAssignments;
+    public BaseCollectionPage<AppRoleAssignment> appRoleAssignments;
 
     /**
      * The Claims Mapping Policies.
      * The claimsMappingPolicies assigned to this service principal.
      */
-    public ClaimsMappingPolicyCollectionPage claimsMappingPolicies;
+    public BaseCollectionPage<ClaimsMappingPolicy> claimsMappingPolicies;
 
     /**
      * The Created Objects.
      * Directory objects created by this service principal. Read-only. Nullable.
      */
-    public DirectoryObjectCollectionPage createdObjects;
+    public BaseCollectionPage<DirectoryObject> createdObjects;
 
     /**
      * The Endpoints.
@@ -310,55 +303,55 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      */
     @SerializedName(value = "endpoints", alternate = {"Endpoints"})
     @Expose
-    public EndpointCollectionPage endpoints;
+    public BaseCollectionPage<Endpoint> endpoints;
 
     /**
      * The Home Realm Discovery Policies.
      * The homeRealmDiscoveryPolicies assigned to this service principal.
      */
-    public HomeRealmDiscoveryPolicyCollectionPage homeRealmDiscoveryPolicies;
+    public BaseCollectionPage<HomeRealmDiscoveryPolicy> homeRealmDiscoveryPolicies;
 
     /**
      * The Member Of.
      * Roles that this service principal is a member of. HTTP Methods: GET Read-only. Nullable.
      */
-    public DirectoryObjectCollectionPage memberOf;
+    public BaseCollectionPage<DirectoryObject> memberOf;
 
     /**
      * The Oauth2Permission Grants.
      * Delegated permission grants authorizing this service principal to access an API on behalf of a signed-in user. Read-only. Nullable.
      */
-    public OAuth2PermissionGrantCollectionPage oauth2PermissionGrants;
+    public BaseCollectionPage<OAuth2PermissionGrant> oauth2PermissionGrants;
 
     /**
      * The Owned Objects.
      * Directory objects that are owned by this service principal. Read-only. Nullable.
      */
-    public DirectoryObjectCollectionPage ownedObjects;
+    public BaseCollectionPage<DirectoryObject> ownedObjects;
 
     /**
      * The Owners.
      * Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable.
      */
-    public DirectoryObjectCollectionPage owners;
+    public BaseCollectionPage<DirectoryObject> owners;
 
     /**
      * The Token Issuance Policies.
      * The tokenIssuancePolicies assigned to this service principal.
      */
-    public TokenIssuancePolicyCollectionPage tokenIssuancePolicies;
+    public BaseCollectionPage<TokenIssuancePolicy> tokenIssuancePolicies;
 
     /**
      * The Token Lifetime Policies.
      * The tokenLifetimePolicies assigned to this service principal.
      */
-    public TokenLifetimePolicyCollectionPage tokenLifetimePolicies;
+    public BaseCollectionPage<TokenLifetimePolicy> tokenLifetimePolicies;
 
     /**
      * The Transitive Member Of.
      * 
      */
-    public DirectoryObjectCollectionPage transitiveMemberOf;
+    public BaseCollectionPage<DirectoryObject> transitiveMemberOf;
 
 
     /**
@@ -385,7 +378,8 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -401,55 +395,55 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
 
         if (json.has("appRoleAssignedTo")) {
-            appRoleAssignedTo = serializer.deserializeObject(json.get("appRoleAssignedTo").toString(), AppRoleAssignmentCollectionPage.class);
+            appRoleAssignedTo = serializer.deserializeObject(json.get("appRoleAssignedTo").toString(), new BaseCollectionPage<AppRoleAssignment>(new java.util.ArrayList<AppRoleAssignment>(), null).getClass());
         }
 
         if (json.has("appRoleAssignments")) {
-            appRoleAssignments = serializer.deserializeObject(json.get("appRoleAssignments").toString(), AppRoleAssignmentCollectionPage.class);
+            appRoleAssignments = serializer.deserializeObject(json.get("appRoleAssignments").toString(), new BaseCollectionPage<AppRoleAssignment>(new java.util.ArrayList<AppRoleAssignment>(), null).getClass());
         }
 
         if (json.has("claimsMappingPolicies")) {
-            claimsMappingPolicies = serializer.deserializeObject(json.get("claimsMappingPolicies").toString(), ClaimsMappingPolicyCollectionPage.class);
+            claimsMappingPolicies = serializer.deserializeObject(json.get("claimsMappingPolicies").toString(), new BaseCollectionPage<ClaimsMappingPolicy>(new java.util.ArrayList<ClaimsMappingPolicy>(), null).getClass());
         }
 
         if (json.has("createdObjects")) {
-            createdObjects = serializer.deserializeObject(json.get("createdObjects").toString(), DirectoryObjectCollectionPage.class);
+            createdObjects = serializer.deserializeObject(json.get("createdObjects").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
         }
 
         if (json.has("endpoints")) {
-            endpoints = serializer.deserializeObject(json.get("endpoints").toString(), EndpointCollectionPage.class);
+            endpoints = serializer.deserializeObject(json.get("endpoints").toString(), new BaseCollectionPage<Endpoint>(new java.util.ArrayList<Endpoint>(), null).getClass());
         }
 
         if (json.has("homeRealmDiscoveryPolicies")) {
-            homeRealmDiscoveryPolicies = serializer.deserializeObject(json.get("homeRealmDiscoveryPolicies").toString(), HomeRealmDiscoveryPolicyCollectionPage.class);
+            homeRealmDiscoveryPolicies = serializer.deserializeObject(json.get("homeRealmDiscoveryPolicies").toString(), new BaseCollectionPage<HomeRealmDiscoveryPolicy>(new java.util.ArrayList<HomeRealmDiscoveryPolicy>(), null).getClass());
         }
 
         if (json.has("memberOf")) {
-            memberOf = serializer.deserializeObject(json.get("memberOf").toString(), DirectoryObjectCollectionPage.class);
+            memberOf = serializer.deserializeObject(json.get("memberOf").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
         }
 
         if (json.has("oauth2PermissionGrants")) {
-            oauth2PermissionGrants = serializer.deserializeObject(json.get("oauth2PermissionGrants").toString(), OAuth2PermissionGrantCollectionPage.class);
+            oauth2PermissionGrants = serializer.deserializeObject(json.get("oauth2PermissionGrants").toString(), new BaseCollectionPage<OAuth2PermissionGrant>(new java.util.ArrayList<OAuth2PermissionGrant>(), null).getClass());
         }
 
         if (json.has("ownedObjects")) {
-            ownedObjects = serializer.deserializeObject(json.get("ownedObjects").toString(), DirectoryObjectCollectionPage.class);
+            ownedObjects = serializer.deserializeObject(json.get("ownedObjects").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
         }
 
         if (json.has("owners")) {
-            owners = serializer.deserializeObject(json.get("owners").toString(), DirectoryObjectCollectionPage.class);
+            owners = serializer.deserializeObject(json.get("owners").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
         }
 
         if (json.has("tokenIssuancePolicies")) {
-            tokenIssuancePolicies = serializer.deserializeObject(json.get("tokenIssuancePolicies").toString(), TokenIssuancePolicyCollectionPage.class);
+            tokenIssuancePolicies = serializer.deserializeObject(json.get("tokenIssuancePolicies").toString(), new BaseCollectionPage<TokenIssuancePolicy>(new java.util.ArrayList<TokenIssuancePolicy>(), null).getClass());
         }
 
         if (json.has("tokenLifetimePolicies")) {
-            tokenLifetimePolicies = serializer.deserializeObject(json.get("tokenLifetimePolicies").toString(), TokenLifetimePolicyCollectionPage.class);
+            tokenLifetimePolicies = serializer.deserializeObject(json.get("tokenLifetimePolicies").toString(), new BaseCollectionPage<TokenLifetimePolicy>(new java.util.ArrayList<TokenLifetimePolicy>(), null).getClass());
         }
 
         if (json.has("transitiveMemberOf")) {
-            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf").toString(), DirectoryObjectCollectionPage.class);
+            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
         }
     }
 }

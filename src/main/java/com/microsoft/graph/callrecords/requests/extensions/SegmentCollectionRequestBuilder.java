@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Segment Collection Request Builder.
  */
-public class SegmentCollectionRequestBuilder extends BaseRequestBuilder {
+public class SegmentCollectionRequestBuilder extends BaseRequestBuilder<Segment> {
 
     /**
      * The request builder for this collection of Session

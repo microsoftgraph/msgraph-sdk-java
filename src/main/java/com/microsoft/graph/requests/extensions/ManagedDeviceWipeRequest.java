@@ -18,7 +18,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Managed Device Wipe Request.
  */
-public class ManagedDeviceWipeRequest extends BaseRequest {
+public class ManagedDeviceWipeRequest extends BaseRequest<Void> {
     protected final ManagedDeviceWipeBody body;
 
     /**
@@ -28,6 +28,7 @@ public class ManagedDeviceWipeRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public ManagedDeviceWipeRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new ManagedDeviceWipeBody();
@@ -49,7 +50,7 @@ public class ManagedDeviceWipeRequest extends BaseRequest {
      */
     public ManagedDeviceWipeRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ManagedDeviceWipeRequest)this;
+        return this;
     }
 
     /**
@@ -60,7 +61,7 @@ public class ManagedDeviceWipeRequest extends BaseRequest {
      */
     public ManagedDeviceWipeRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (ManagedDeviceWipeRequest)this;
+        return this;
     }
 
     /**
@@ -71,7 +72,7 @@ public class ManagedDeviceWipeRequest extends BaseRequest {
      */
     public ManagedDeviceWipeRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ManagedDeviceWipeRequest)this;
+        return this;
     }
 
 }

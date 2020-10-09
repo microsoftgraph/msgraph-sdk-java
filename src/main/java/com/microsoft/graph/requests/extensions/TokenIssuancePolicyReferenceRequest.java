@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -21,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Token Issuance Policy Reference Request.
  */
-public class TokenIssuancePolicyReferenceRequest extends BaseRequest {
+public class TokenIssuancePolicyReferenceRequest extends BaseReferenceRequest<TokenIssuancePolicy> {
 
     /**
      * The request for the TokenIssuancePolicy
@@ -34,14 +34,6 @@ public class TokenIssuancePolicyReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, TokenIssuancePolicy.class);
     }
 
-    public void delete(final ICallback<? super TokenIssuancePolicy> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    public TokenIssuancePolicy delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
-    }
-
     /**
      * Sets the select clause for the request
      *
@@ -50,7 +42,7 @@ public class TokenIssuancePolicyReferenceRequest extends BaseRequest {
      */
     public TokenIssuancePolicyReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (TokenIssuancePolicyReferenceRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +53,7 @@ public class TokenIssuancePolicyReferenceRequest extends BaseRequest {
      */
     public TokenIssuancePolicyReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (TokenIssuancePolicyReferenceRequest)this;
+        return this;
     }
     /**
      * Puts the TokenIssuancePolicy

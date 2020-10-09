@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRange;
+import com.microsoft.graph.models.extensions.WorkbookTableColumn;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnHeaderRowRangeRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Column Header Row Range Request.
  */
-public class WorkbookTableColumnHeaderRowRangeRequest extends BaseRequest {
+public class WorkbookTableColumnHeaderRowRangeRequest extends BaseRequest<WorkbookRange> {
 
     /**
      * The request for this WorkbookTableColumnHeaderRowRange
@@ -98,7 +99,7 @@ public class WorkbookTableColumnHeaderRowRangeRequest extends BaseRequest {
      */
     public WorkbookTableColumnHeaderRowRangeRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookTableColumnHeaderRowRangeRequest)this;
+        return this;
     }
 
     /**
@@ -109,7 +110,7 @@ public class WorkbookTableColumnHeaderRowRangeRequest extends BaseRequest {
      */
     public WorkbookTableColumnHeaderRowRangeRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookTableColumnHeaderRowRangeRequest)this;
+        return this;
     }
 
     /**
@@ -120,7 +121,7 @@ public class WorkbookTableColumnHeaderRowRangeRequest extends BaseRequest {
      */
     public WorkbookTableColumnHeaderRowRangeRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookTableColumnHeaderRowRangeRequest)this;
+        return this;
     }
 
     /**
@@ -131,7 +132,7 @@ public class WorkbookTableColumnHeaderRowRangeRequest extends BaseRequest {
      */
     public WorkbookTableColumnHeaderRowRangeRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookTableColumnHeaderRowRangeRequest)this;
+        return this;
     }
 
 }

@@ -7,12 +7,12 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.callrecords.models.generated.Modality;
 import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.callrecords.models.generated.CallType;
 import com.microsoft.graph.callrecords.models.extensions.Session;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.callrecords.requests.extensions.SessionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -105,7 +105,7 @@ public class CallRecord extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "sessions", alternate = {"Sessions"})
     @Expose
-    public SessionCollectionPage sessions;
+    public BaseCollectionPage<Session> sessions;
 
 
     /**
@@ -132,7 +132,8 @@ public class CallRecord extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -148,7 +149,7 @@ public class CallRecord extends Entity implements IJsonBackedObject {
 
 
         if (json.has("sessions")) {
-            sessions = serializer.deserializeObject(json.get("sessions").toString(), SessionCollectionPage.class);
+            sessions = serializer.deserializeObject(json.get("sessions").toString(), new BaseCollectionPage<Session>(new java.util.ArrayList<Session>(), null).getClass());
         }
     }
 }

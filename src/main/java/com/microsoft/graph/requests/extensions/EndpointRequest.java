@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Endpoint Request.
  */
-public class EndpointRequest extends BaseRequest {
+public class EndpointRequest extends BaseRequest<Endpoint> {
 	
     /**
      * The request for the Endpoint
@@ -140,7 +140,7 @@ public class EndpointRequest extends BaseRequest {
      */
      public EndpointRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EndpointRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class EndpointRequest extends BaseRequest {
      */
      public EndpointRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EndpointRequest)this;
+         return this;
      }
 
 }

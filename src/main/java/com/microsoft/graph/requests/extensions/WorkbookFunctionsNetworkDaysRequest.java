@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Network Days Request.
  */
-public class WorkbookFunctionsNetworkDaysRequest extends BaseRequest {
+public class WorkbookFunctionsNetworkDaysRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsNetworkDaysBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsNetworkDaysRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsNetworkDaysRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsNetworkDaysBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsNetworkDaysRequest extends BaseRequest {
      */
     public WorkbookFunctionsNetworkDaysRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsNetworkDaysRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsNetworkDaysRequest extends BaseRequest {
      */
     public WorkbookFunctionsNetworkDaysRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsNetworkDaysRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsNetworkDaysRequest extends BaseRequest {
      */
     public WorkbookFunctionsNetworkDaysRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsNetworkDaysRequest)this;
+        return this;
     }
 
 }

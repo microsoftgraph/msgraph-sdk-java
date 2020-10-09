@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.AssignedLicense;
 import com.microsoft.graph.models.extensions.AssignedPlan;
 import com.microsoft.graph.models.extensions.IdentitySet;
@@ -21,8 +22,6 @@ import com.microsoft.graph.models.extensions.EducationClass;
 import com.microsoft.graph.models.extensions.EducationSchool;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.EducationClassCollectionPage;
-import com.microsoft.graph.requests.extensions.EducationSchoolCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -273,13 +272,13 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The Classes.
      * Classes to which the user belongs. Nullable.
      */
-    public EducationClassCollectionPage classes;
+    public BaseCollectionPage<EducationClass> classes;
 
     /**
      * The Schools.
      * Schools to which the user belongs. Nullable.
      */
-    public EducationSchoolCollectionPage schools;
+    public BaseCollectionPage<EducationSchool> schools;
 
     /**
      * The User.
@@ -314,7 +313,8 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -330,11 +330,11 @@ public class EducationUser extends Entity implements IJsonBackedObject {
 
 
         if (json.has("classes")) {
-            classes = serializer.deserializeObject(json.get("classes").toString(), EducationClassCollectionPage.class);
+            classes = serializer.deserializeObject(json.get("classes").toString(), new BaseCollectionPage<EducationClass>(new java.util.ArrayList<EducationClass>(), null).getClass());
         }
 
         if (json.has("schools")) {
-            schools = serializer.deserializeObject(json.get("schools").toString(), EducationSchoolCollectionPage.class);
+            schools = serializer.deserializeObject(json.get("schools").toString(), new BaseCollectionPage<EducationSchool>(new java.util.ArrayList<EducationSchool>(), null).getClass());
         }
     }
 }

@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -21,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Mobile App Category Reference Request.
  */
-public class MobileAppCategoryReferenceRequest extends BaseRequest {
+public class MobileAppCategoryReferenceRequest extends BaseReferenceRequest<MobileAppCategory> {
 
     /**
      * The request for the MobileAppCategory
@@ -34,14 +34,6 @@ public class MobileAppCategoryReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, MobileAppCategory.class);
     }
 
-    public void delete(final ICallback<? super MobileAppCategory> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    public MobileAppCategory delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
-    }
-
     /**
      * Sets the select clause for the request
      *
@@ -50,7 +42,7 @@ public class MobileAppCategoryReferenceRequest extends BaseRequest {
      */
     public MobileAppCategoryReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (MobileAppCategoryReferenceRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +53,7 @@ public class MobileAppCategoryReferenceRequest extends BaseRequest {
      */
     public MobileAppCategoryReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (MobileAppCategoryReferenceRequest)this;
+        return this;
     }
     /**
      * Puts the MobileAppCategory

@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Timevalue Request.
  */
-public class WorkbookFunctionsTimevalueRequest extends BaseRequest {
+public class WorkbookFunctionsTimevalueRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsTimevalueBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsTimevalueRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsTimevalueRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsTimevalueBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsTimevalueRequest extends BaseRequest {
      */
     public WorkbookFunctionsTimevalueRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsTimevalueRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsTimevalueRequest extends BaseRequest {
      */
     public WorkbookFunctionsTimevalueRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsTimevalueRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsTimevalueRequest extends BaseRequest {
      */
     public WorkbookFunctionsTimevalueRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsTimevalueRequest)this;
+        return this;
     }
 
 }

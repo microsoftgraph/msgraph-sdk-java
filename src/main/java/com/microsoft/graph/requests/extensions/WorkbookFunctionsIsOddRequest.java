@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Is Odd Request.
  */
-public class WorkbookFunctionsIsOddRequest extends BaseRequest {
+public class WorkbookFunctionsIsOddRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsIsOddBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsIsOddRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsIsOddRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsIsOddBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsIsOddRequest extends BaseRequest {
      */
     public WorkbookFunctionsIsOddRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsIsOddRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsIsOddRequest extends BaseRequest {
      */
     public WorkbookFunctionsIsOddRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsIsOddRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsIsOddRequest extends BaseRequest {
      */
     public WorkbookFunctionsIsOddRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsIsOddRequest)this;
+        return this;
     }
 
 }

@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Vlookup Request.
  */
-public class WorkbookFunctionsVlookupRequest extends BaseRequest {
+public class WorkbookFunctionsVlookupRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsVlookupBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsVlookupRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsVlookupRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsVlookupBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsVlookupRequest extends BaseRequest {
      */
     public WorkbookFunctionsVlookupRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsVlookupRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsVlookupRequest extends BaseRequest {
      */
     public WorkbookFunctionsVlookupRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsVlookupRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsVlookupRequest extends BaseRequest {
      */
     public WorkbookFunctionsVlookupRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsVlookupRequest)this;
+        return this;
     }
 
 }

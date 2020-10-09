@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Person Collection Request Builder.
  */
-public class PersonCollectionRequestBuilder extends BaseRequestBuilder {
+public class PersonCollectionRequestBuilder extends BaseRequestBuilder<Person> {
 
     /**
      * The request builder for this collection of User

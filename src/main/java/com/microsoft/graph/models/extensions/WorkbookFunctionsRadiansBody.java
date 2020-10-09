@@ -51,7 +51,7 @@ public class WorkbookFunctionsRadiansBody {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

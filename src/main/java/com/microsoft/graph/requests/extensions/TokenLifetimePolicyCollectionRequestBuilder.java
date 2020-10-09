@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Token Lifetime Policy Collection Request Builder.
  */
-public class TokenLifetimePolicyCollectionRequestBuilder extends BaseRequestBuilder {
+public class TokenLifetimePolicyCollectionRequestBuilder extends BaseRequestBuilder<TokenLifetimePolicy> {
 
     /**
      * The request builder for this collection of PolicyRoot

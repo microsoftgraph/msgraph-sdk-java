@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Iso Week Num Request.
  */
-public class WorkbookFunctionsIsoWeekNumRequest extends BaseRequest {
+public class WorkbookFunctionsIsoWeekNumRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsIsoWeekNumBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsIsoWeekNumRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsIsoWeekNumRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsIsoWeekNumBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsIsoWeekNumRequest extends BaseRequest {
      */
     public WorkbookFunctionsIsoWeekNumRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsIsoWeekNumRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsIsoWeekNumRequest extends BaseRequest {
      */
     public WorkbookFunctionsIsoWeekNumRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsIsoWeekNumRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsIsoWeekNumRequest extends BaseRequest {
      */
     public WorkbookFunctionsIsoWeekNumRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsIsoWeekNumRequest)this;
+        return this;
     }
 
 }

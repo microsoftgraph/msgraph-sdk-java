@@ -4,11 +4,11 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.TeamCloneRequest;
+import com.microsoft.graph.models.extensions.Team;
 import com.microsoft.graph.models.generated.TeamVisibilityType;
 import com.microsoft.graph.models.generated.ClonableTeamParts;
 import java.util.EnumSet;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -17,7 +17,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Team Clone Request Builder.
  */
-public class TeamCloneRequestBuilder extends BaseActionRequestBuilder {
+public class TeamCloneRequestBuilder extends BaseActionRequestBuilder<Team> {
 
     /**
      * The request builder for this TeamClone

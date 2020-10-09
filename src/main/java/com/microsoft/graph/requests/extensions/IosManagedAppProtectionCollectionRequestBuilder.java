@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Ios Managed App Protection Collection Request Builder.
  */
-public class IosManagedAppProtectionCollectionRequestBuilder extends BaseRequestBuilder {
+public class IosManagedAppProtectionCollectionRequestBuilder extends BaseRequestBuilder<IosManagedAppProtection> {
 
     /**
      * The request builder for this collection of DeviceAppManagement

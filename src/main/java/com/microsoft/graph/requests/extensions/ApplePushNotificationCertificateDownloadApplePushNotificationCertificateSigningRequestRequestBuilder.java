@@ -4,8 +4,8 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest;
+import com.microsoft.graph.models.extensions.ApplePushNotificationCertificate;
 
-import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Apple Push Notification Certificate Download Apple Push Notification Certificate Signing Request Request Builder.
  */
-public class ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequestBuilder extends BaseFunctionRequestBuilder {
+public class ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequestBuilder extends BaseFunctionRequestBuilder<String> {
 
     /**
      * The request builder for this ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequest

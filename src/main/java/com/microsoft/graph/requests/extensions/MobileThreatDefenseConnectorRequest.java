@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mobile Threat Defense Connector Request.
  */
-public class MobileThreatDefenseConnectorRequest extends BaseRequest {
+public class MobileThreatDefenseConnectorRequest extends BaseRequest<MobileThreatDefenseConnector> {
 	
     /**
      * The request for the MobileThreatDefenseConnector
@@ -140,7 +140,7 @@ public class MobileThreatDefenseConnectorRequest extends BaseRequest {
      */
      public MobileThreatDefenseConnectorRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MobileThreatDefenseConnectorRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class MobileThreatDefenseConnectorRequest extends BaseRequest {
      */
      public MobileThreatDefenseConnectorRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MobileThreatDefenseConnectorRequest)this;
+         return this;
      }
 
 }

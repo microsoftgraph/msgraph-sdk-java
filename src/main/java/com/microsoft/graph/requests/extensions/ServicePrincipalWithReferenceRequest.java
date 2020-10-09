@@ -30,7 +30,7 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -40,7 +40,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Service Principal With Reference Request.
  */
-public class ServicePrincipalWithReferenceRequest extends BaseRequest {
+public class ServicePrincipalWithReferenceRequest extends BaseWithReferenceRequest<ServicePrincipal> {
 
     /**
      * The request for the ServicePrincipal
@@ -53,43 +53,6 @@ public class ServicePrincipalWithReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, ServicePrincipal.class);
     }
 
-    public void post(final ServicePrincipal newServicePrincipal, final IJsonBackedObject payload, final ICallback<? super ServicePrincipal> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    public ServicePrincipal post(final ServicePrincipal newServicePrincipal, final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newServicePrincipal;
-        }
-        return null;
-    }
-
-    public void get(final ICallback<? super ServicePrincipal> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    public ServicePrincipal get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(final ICallback<? super ServicePrincipal> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(final ServicePrincipal sourceServicePrincipal, final ICallback<? super ServicePrincipal> callback) {
-		send(HttpMethod.PATCH, callback, sourceServicePrincipal);
-	}
-
-	public ServicePrincipal patch(final ServicePrincipal sourceServicePrincipal) throws ClientException {
-		return send(HttpMethod.PATCH, sourceServicePrincipal);
-	}
-
-
     /**
      * Sets the select clause for the request
      *
@@ -98,7 +61,7 @@ public class ServicePrincipalWithReferenceRequest extends BaseRequest {
      */
     public ServicePrincipalWithReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ServicePrincipalWithReferenceRequest)this;
+        return this;
     }
 
     /**
@@ -109,6 +72,6 @@ public class ServicePrincipalWithReferenceRequest extends BaseRequest {
      */
     public ServicePrincipalWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ServicePrincipalWithReferenceRequest)this;
+        return this;
     }
 }

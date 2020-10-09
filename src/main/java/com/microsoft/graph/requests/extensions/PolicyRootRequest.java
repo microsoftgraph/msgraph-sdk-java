@@ -34,7 +34,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Policy Root Request.
  */
-public class PolicyRootRequest extends BaseRequest {
+public class PolicyRootRequest extends BaseRequest<PolicyRoot> {
 	
     /**
      * The request for the PolicyRoot
@@ -155,7 +155,7 @@ public class PolicyRootRequest extends BaseRequest {
      */
      public PolicyRootRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PolicyRootRequest)this;
+         return this;
      }
 
     /**
@@ -166,7 +166,7 @@ public class PolicyRootRequest extends BaseRequest {
      */
      public PolicyRootRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PolicyRootRequest)this;
+         return this;
      }
 
 }

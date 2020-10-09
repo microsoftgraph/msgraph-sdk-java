@@ -4,8 +4,8 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ReportRootGetOffice365GroupsActivityFileCountsRequest;
+import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.models.extensions.Report;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Report Root Get Office365Groups Activity File Counts Request Builder.
  */
-public class ReportRootGetOffice365GroupsActivityFileCountsRequestBuilder extends BaseFunctionRequestBuilder {
+public class ReportRootGetOffice365GroupsActivityFileCountsRequestBuilder extends BaseFunctionRequestBuilder<Report> {
 
     /**
      * The request builder for this ReportRootGetOffice365GroupsActivityFileCounts

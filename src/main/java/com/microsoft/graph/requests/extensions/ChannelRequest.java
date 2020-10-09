@@ -26,7 +26,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Channel Request.
  */
-public class ChannelRequest extends BaseRequest {
+public class ChannelRequest extends BaseRequest<Channel> {
 	
     /**
      * The request for the Channel
@@ -147,7 +147,7 @@ public class ChannelRequest extends BaseRequest {
      */
      public ChannelRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ChannelRequest)this;
+         return this;
      }
 
     /**
@@ -158,7 +158,7 @@ public class ChannelRequest extends BaseRequest {
      */
      public ChannelRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ChannelRequest)this;
+         return this;
      }
 
 }

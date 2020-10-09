@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.WorkbookChartAxes;
 import com.microsoft.graph.models.extensions.WorkbookChartDataLabels;
 import com.microsoft.graph.models.extensions.WorkbookChartAreaFormat;
@@ -15,7 +16,6 @@ import com.microsoft.graph.models.extensions.WorkbookChartSeries;
 import com.microsoft.graph.models.extensions.WorkbookChartTitle;
 import com.microsoft.graph.models.extensions.WorkbookWorksheet;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.WorkbookChartSeriesCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -108,7 +108,7 @@ public class WorkbookChart extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "series", alternate = {"Series"})
     @Expose
-    public WorkbookChartSeriesCollectionPage series;
+    public BaseCollectionPage<WorkbookChartSeries> series;
 
     /**
      * The Title.
@@ -151,7 +151,8 @@ public class WorkbookChart extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -167,7 +168,7 @@ public class WorkbookChart extends Entity implements IJsonBackedObject {
 
 
         if (json.has("series")) {
-            series = serializer.deserializeObject(json.get("series").toString(), WorkbookChartSeriesCollectionPage.class);
+            series = serializer.deserializeObject(json.get("series").toString(), new BaseCollectionPage<WorkbookChartSeries>(new java.util.ArrayList<WorkbookChartSeries>(), null).getClass());
         }
     }
 }

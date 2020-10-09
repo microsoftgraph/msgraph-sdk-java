@@ -24,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Mobile App Content File Collection Request Builder.
  */
-public class MobileAppContentFileCollectionRequestBuilder extends BaseRequestBuilder {
+public class MobileAppContentFileCollectionRequestBuilder extends BaseRequestBuilder<MobileAppContentFile> {
 
     /**
      * The request builder for this collection of MobileAppContent

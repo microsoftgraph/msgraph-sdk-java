@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Teams Template Collection Request Builder.
  */
-public class TeamsTemplateCollectionRequestBuilder extends BaseRequestBuilder {
+public class TeamsTemplateCollectionRequestBuilder extends BaseRequestBuilder<TeamsTemplate> {
 
     /**
      * The request builder for this collection of TeamsTemplate

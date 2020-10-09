@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device Compliance Scheduled Action For Rule Collection Request Builder.
  */
-public class DeviceComplianceScheduledActionForRuleCollectionRequestBuilder extends BaseRequestBuilder {
+public class DeviceComplianceScheduledActionForRuleCollectionRequestBuilder extends BaseRequestBuilder<DeviceComplianceScheduledActionForRule> {
 
     /**
      * The request builder for this collection of DeviceCompliancePolicy

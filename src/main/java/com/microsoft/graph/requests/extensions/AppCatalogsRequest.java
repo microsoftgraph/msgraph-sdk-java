@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the App Catalogs Request.
  */
-public class AppCatalogsRequest extends BaseRequest {
+public class AppCatalogsRequest extends BaseRequest<AppCatalogs> {
 	
     /**
      * The request for the AppCatalogs
@@ -142,7 +142,7 @@ public class AppCatalogsRequest extends BaseRequest {
      */
      public AppCatalogsRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AppCatalogsRequest)this;
+         return this;
      }
 
     /**
@@ -153,7 +153,7 @@ public class AppCatalogsRequest extends BaseRequest {
      */
      public AppCatalogsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AppCatalogsRequest)this;
+         return this;
      }
 
 }

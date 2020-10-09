@@ -18,7 +18,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Post Reply Request.
  */
-public class PostReplyRequest extends BaseRequest {
+public class PostReplyRequest extends BaseRequest<Void> {
     protected final PostReplyBody body;
 
     /**
@@ -28,6 +28,7 @@ public class PostReplyRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public PostReplyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new PostReplyBody();
@@ -49,7 +50,7 @@ public class PostReplyRequest extends BaseRequest {
      */
     public PostReplyRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (PostReplyRequest)this;
+        return this;
     }
 
     /**
@@ -60,7 +61,7 @@ public class PostReplyRequest extends BaseRequest {
      */
     public PostReplyRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (PostReplyRequest)this;
+        return this;
     }
 
     /**
@@ -71,7 +72,7 @@ public class PostReplyRequest extends BaseRequest {
      */
     public PostReplyRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (PostReplyRequest)this;
+        return this;
     }
 
 }

@@ -26,7 +26,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Onenote Page Collection Request Builder.
  */
-public class OnenotePageCollectionRequestBuilder extends BaseRequestBuilder {
+public class OnenotePageCollectionRequestBuilder extends BaseRequestBuilder<OnenotePage> {
 
     /**
      * The request builder for this collection of OnenoteSection

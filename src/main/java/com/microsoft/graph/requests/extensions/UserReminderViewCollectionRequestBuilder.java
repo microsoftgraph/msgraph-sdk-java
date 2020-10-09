@@ -22,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the User Reminder View Collection Request Builder.
  */
-public class UserReminderViewCollectionRequestBuilder extends BaseFunctionRequestBuilder {
+public class UserReminderViewCollectionRequestBuilder extends BaseFunctionRequestBuilder<Reminder> {
 
     /**
      * The request builder for this collection of User

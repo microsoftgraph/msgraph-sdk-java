@@ -18,7 +18,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Worksheet Protection Protect Request.
  */
-public class WorkbookWorksheetProtectionProtectRequest extends BaseRequest {
+public class WorkbookWorksheetProtectionProtectRequest extends BaseRequest<Void> {
     protected final WorkbookWorksheetProtectionProtectBody body;
 
     /**
@@ -28,6 +28,7 @@ public class WorkbookWorksheetProtectionProtectRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookWorksheetProtectionProtectRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new WorkbookWorksheetProtectionProtectBody();
@@ -49,7 +50,7 @@ public class WorkbookWorksheetProtectionProtectRequest extends BaseRequest {
      */
     public WorkbookWorksheetProtectionProtectRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookWorksheetProtectionProtectRequest)this;
+        return this;
     }
 
     /**
@@ -60,7 +61,7 @@ public class WorkbookWorksheetProtectionProtectRequest extends BaseRequest {
      */
     public WorkbookWorksheetProtectionProtectRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookWorksheetProtectionProtectRequest)this;
+        return this;
     }
 
     /**
@@ -71,7 +72,7 @@ public class WorkbookWorksheetProtectionProtectRequest extends BaseRequest {
      */
     public WorkbookWorksheetProtectionProtectRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookWorksheetProtectionProtectRequest)this;
+        return this;
     }
 
 }

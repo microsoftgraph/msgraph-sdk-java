@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the User Reprocess License Assignment Request.
  */
-public class UserReprocessLicenseAssignmentRequest extends BaseRequest {
+public class UserReprocessLicenseAssignmentRequest extends BaseRequest<User> {
 
     /**
      * The request for this UserReprocessLicenseAssignment
@@ -58,7 +58,7 @@ public class UserReprocessLicenseAssignmentRequest extends BaseRequest {
      */
     public UserReprocessLicenseAssignmentRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (UserReprocessLicenseAssignmentRequest)this;
+        return this;
     }
 
     /**
@@ -69,7 +69,7 @@ public class UserReprocessLicenseAssignmentRequest extends BaseRequest {
      */
     public UserReprocessLicenseAssignmentRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (UserReprocessLicenseAssignmentRequest)this;
+        return this;
     }
 
 }

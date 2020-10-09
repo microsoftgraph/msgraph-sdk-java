@@ -58,7 +58,8 @@ public class PlannerAssignments extends HashMap<String, PlannerAssignment> imple
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

@@ -8,6 +8,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Event;
+import com.microsoft.graph.models.extensions.Recipient;
 import com.microsoft.graph.models.extensions.DateTimeTimeZone;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AttachmentRequestBuilder;
@@ -31,7 +32,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Event Request.
  */
-public class EventRequest extends BaseRequest {
+public class EventRequest extends BaseRequest<Event> {
 	
     /**
      * The request for the Event
@@ -152,7 +153,7 @@ public class EventRequest extends BaseRequest {
      */
      public EventRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EventRequest)this;
+         return this;
      }
 
     /**
@@ -163,7 +164,7 @@ public class EventRequest extends BaseRequest {
      */
      public EventRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EventRequest)this;
+         return this;
      }
 
 }

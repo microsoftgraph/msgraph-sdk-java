@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Teams App Definition With Reference Request.
  */
-public class TeamsAppDefinitionWithReferenceRequest extends BaseRequest {
+public class TeamsAppDefinitionWithReferenceRequest extends BaseWithReferenceRequest<TeamsAppDefinition> {
 
     /**
      * The request for the TeamsAppDefinition
@@ -35,43 +35,6 @@ public class TeamsAppDefinitionWithReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, TeamsAppDefinition.class);
     }
 
-    public void post(final TeamsAppDefinition newTeamsAppDefinition, final IJsonBackedObject payload, final ICallback<? super TeamsAppDefinition> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    public TeamsAppDefinition post(final TeamsAppDefinition newTeamsAppDefinition, final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newTeamsAppDefinition;
-        }
-        return null;
-    }
-
-    public void get(final ICallback<? super TeamsAppDefinition> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    public TeamsAppDefinition get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(final ICallback<? super TeamsAppDefinition> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(final TeamsAppDefinition sourceTeamsAppDefinition, final ICallback<? super TeamsAppDefinition> callback) {
-		send(HttpMethod.PATCH, callback, sourceTeamsAppDefinition);
-	}
-
-	public TeamsAppDefinition patch(final TeamsAppDefinition sourceTeamsAppDefinition) throws ClientException {
-		return send(HttpMethod.PATCH, sourceTeamsAppDefinition);
-	}
-
-
     /**
      * Sets the select clause for the request
      *
@@ -80,7 +43,7 @@ public class TeamsAppDefinitionWithReferenceRequest extends BaseRequest {
      */
     public TeamsAppDefinitionWithReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (TeamsAppDefinitionWithReferenceRequest)this;
+        return this;
     }
 
     /**
@@ -91,6 +54,6 @@ public class TeamsAppDefinitionWithReferenceRequest extends BaseRequest {
      */
     public TeamsAppDefinitionWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (TeamsAppDefinitionWithReferenceRequest)this;
+        return this;
     }
 }

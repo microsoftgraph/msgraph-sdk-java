@@ -22,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Message Delta Collection Request Builder.
  */
-public class MessageDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder {
+public class MessageDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder<Message> {
 
     /**
      * The request builder for this collection of Message

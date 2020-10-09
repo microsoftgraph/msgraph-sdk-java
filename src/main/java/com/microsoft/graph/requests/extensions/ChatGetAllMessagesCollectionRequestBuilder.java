@@ -22,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Chat Get All Messages Collection Request Builder.
  */
-public class ChatGetAllMessagesCollectionRequestBuilder extends BaseFunctionRequestBuilder {
+public class ChatGetAllMessagesCollectionRequestBuilder extends BaseFunctionRequestBuilder<ChatMessage> {
 
     /**
      * The request builder for this collection of Chat

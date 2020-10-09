@@ -37,7 +37,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Schedule Request.
  */
-public class ScheduleRequest extends BaseRequest {
+public class ScheduleRequest extends BaseRequest<Schedule> {
 	
     /**
      * The request for the Schedule
@@ -158,7 +158,7 @@ public class ScheduleRequest extends BaseRequest {
      */
      public ScheduleRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ScheduleRequest)this;
+         return this;
      }
 
     /**
@@ -169,7 +169,7 @@ public class ScheduleRequest extends BaseRequest {
      */
      public ScheduleRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ScheduleRequest)this;
+         return this;
      }
 
 }

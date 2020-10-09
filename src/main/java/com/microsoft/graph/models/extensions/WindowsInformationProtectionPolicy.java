@@ -144,7 +144,8 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

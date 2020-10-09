@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Notification Message Template Collection Request Builder.
  */
-public class NotificationMessageTemplateCollectionRequestBuilder extends BaseRequestBuilder {
+public class NotificationMessageTemplateCollectionRequestBuilder extends BaseRequestBuilder<NotificationMessageTemplate> {
 
     /**
      * The request builder for this collection of DeviceManagement

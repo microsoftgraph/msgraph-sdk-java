@@ -22,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Org Contact Delta Collection Request Builder.
  */
-public class OrgContactDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder {
+public class OrgContactDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder<OrgContact> {
 
     /**
      * The request builder for this collection of OrgContact

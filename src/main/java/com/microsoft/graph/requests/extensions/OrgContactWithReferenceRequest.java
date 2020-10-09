@@ -14,7 +14,7 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -24,7 +24,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Org Contact With Reference Request.
  */
-public class OrgContactWithReferenceRequest extends BaseRequest {
+public class OrgContactWithReferenceRequest extends BaseWithReferenceRequest<OrgContact> {
 
     /**
      * The request for the OrgContact
@@ -37,43 +37,6 @@ public class OrgContactWithReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, OrgContact.class);
     }
 
-    public void post(final OrgContact newOrgContact, final IJsonBackedObject payload, final ICallback<? super OrgContact> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    public OrgContact post(final OrgContact newOrgContact, final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newOrgContact;
-        }
-        return null;
-    }
-
-    public void get(final ICallback<? super OrgContact> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    public OrgContact get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(final ICallback<? super OrgContact> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(final OrgContact sourceOrgContact, final ICallback<? super OrgContact> callback) {
-		send(HttpMethod.PATCH, callback, sourceOrgContact);
-	}
-
-	public OrgContact patch(final OrgContact sourceOrgContact) throws ClientException {
-		return send(HttpMethod.PATCH, sourceOrgContact);
-	}
-
-
     /**
      * Sets the select clause for the request
      *
@@ -82,7 +45,7 @@ public class OrgContactWithReferenceRequest extends BaseRequest {
      */
     public OrgContactWithReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (OrgContactWithReferenceRequest)this;
+        return this;
     }
 
     /**
@@ -93,6 +56,6 @@ public class OrgContactWithReferenceRequest extends BaseRequest {
      */
     public OrgContactWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (OrgContactWithReferenceRequest)this;
+        return this;
     }
 }

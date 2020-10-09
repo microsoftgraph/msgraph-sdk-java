@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Role Definition Collection Request Builder.
  */
-public class RoleDefinitionCollectionRequestBuilder extends BaseRequestBuilder {
+public class RoleDefinitionCollectionRequestBuilder extends BaseRequestBuilder<RoleDefinition> {
 
     /**
      * The request builder for this collection of DeviceManagement

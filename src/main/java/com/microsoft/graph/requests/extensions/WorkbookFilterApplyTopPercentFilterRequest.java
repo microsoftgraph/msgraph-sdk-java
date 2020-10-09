@@ -18,7 +18,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Filter Apply Top Percent Filter Request.
  */
-public class WorkbookFilterApplyTopPercentFilterRequest extends BaseRequest {
+public class WorkbookFilterApplyTopPercentFilterRequest extends BaseRequest<Void> {
     protected final WorkbookFilterApplyTopPercentFilterBody body;
 
     /**
@@ -28,6 +28,7 @@ public class WorkbookFilterApplyTopPercentFilterRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFilterApplyTopPercentFilterRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new WorkbookFilterApplyTopPercentFilterBody();
@@ -49,7 +50,7 @@ public class WorkbookFilterApplyTopPercentFilterRequest extends BaseRequest {
      */
     public WorkbookFilterApplyTopPercentFilterRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFilterApplyTopPercentFilterRequest)this;
+        return this;
     }
 
     /**
@@ -60,7 +61,7 @@ public class WorkbookFilterApplyTopPercentFilterRequest extends BaseRequest {
      */
     public WorkbookFilterApplyTopPercentFilterRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFilterApplyTopPercentFilterRequest)this;
+        return this;
     }
 
     /**
@@ -71,7 +72,7 @@ public class WorkbookFilterApplyTopPercentFilterRequest extends BaseRequest {
      */
     public WorkbookFilterApplyTopPercentFilterRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFilterApplyTopPercentFilterRequest)this;
+        return this;
     }
 
 }

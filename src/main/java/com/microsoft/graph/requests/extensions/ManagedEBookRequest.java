@@ -27,7 +27,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed EBook Request.
  */
-public class ManagedEBookRequest extends BaseRequest {
+public class ManagedEBookRequest extends BaseRequest<ManagedEBook> {
 	
     /**
      * The request for the ManagedEBook
@@ -163,7 +163,7 @@ public class ManagedEBookRequest extends BaseRequest {
      */
      public ManagedEBookRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ManagedEBookRequest)this;
+         return this;
      }
 
     /**
@@ -174,7 +174,7 @@ public class ManagedEBookRequest extends BaseRequest {
      */
      public ManagedEBookRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ManagedEBookRequest)this;
+         return this;
      }
 
 }

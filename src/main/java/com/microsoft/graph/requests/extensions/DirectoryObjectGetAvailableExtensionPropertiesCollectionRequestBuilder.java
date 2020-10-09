@@ -22,7 +22,7 @@ import com.microsoft.graph.core.BaseActionRequestBuilder;
 /**
  * The class for the Directory Object Get Available Extension Properties Collection Request Builder.
  */
-public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder extends BaseActionRequestBuilder {
+public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder extends BaseActionRequestBuilder<ExtensionProperty> {
 
     /**
      * The request builder for this collection of DirectoryObject

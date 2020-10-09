@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Certificate Based Auth Configuration Collection Request Builder.
  */
-public class CertificateBasedAuthConfigurationCollectionRequestBuilder extends BaseRequestBuilder {
+public class CertificateBasedAuthConfigurationCollectionRequestBuilder extends BaseRequestBuilder<CertificateBasedAuthConfiguration> {
 
     /**
      * The request builder for this collection of CertificateBasedAuthConfiguration

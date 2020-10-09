@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Item Analytics Request.
  */
-public class ItemAnalyticsRequest extends BaseRequest {
+public class ItemAnalyticsRequest extends BaseRequest<ItemAnalytics> {
 	
     /**
      * The request for the ItemAnalytics
@@ -142,7 +142,7 @@ public class ItemAnalyticsRequest extends BaseRequest {
      */
      public ItemAnalyticsRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ItemAnalyticsRequest)this;
+         return this;
      }
 
     /**
@@ -153,7 +153,7 @@ public class ItemAnalyticsRequest extends BaseRequest {
      */
      public ItemAnalyticsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ItemAnalyticsRequest)this;
+         return this;
      }
 
 }

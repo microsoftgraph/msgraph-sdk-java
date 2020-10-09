@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Content Type Request.
  */
-public class ContentTypeRequest extends BaseRequest {
+public class ContentTypeRequest extends BaseRequest<ContentType> {
 	
     /**
      * The request for the ContentType
@@ -142,7 +142,7 @@ public class ContentTypeRequest extends BaseRequest {
      */
      public ContentTypeRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ContentTypeRequest)this;
+         return this;
      }
 
     /**
@@ -153,7 +153,7 @@ public class ContentTypeRequest extends BaseRequest {
      */
      public ContentTypeRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ContentTypeRequest)this;
+         return this;
      }
 
 }

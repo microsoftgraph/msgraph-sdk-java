@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRange;
+import com.microsoft.graph.models.extensions.WorkbookTable;
 import com.microsoft.graph.requests.extensions.WorkbookTableDataBodyRangeRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Data Body Range Request.
  */
-public class WorkbookTableDataBodyRangeRequest extends BaseRequest {
+public class WorkbookTableDataBodyRangeRequest extends BaseRequest<WorkbookRange> {
 
     /**
      * The request for this WorkbookTableDataBodyRange
@@ -98,7 +99,7 @@ public class WorkbookTableDataBodyRangeRequest extends BaseRequest {
      */
     public WorkbookTableDataBodyRangeRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookTableDataBodyRangeRequest)this;
+        return this;
     }
 
     /**
@@ -109,7 +110,7 @@ public class WorkbookTableDataBodyRangeRequest extends BaseRequest {
      */
     public WorkbookTableDataBodyRangeRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookTableDataBodyRangeRequest)this;
+        return this;
     }
 
     /**
@@ -120,7 +121,7 @@ public class WorkbookTableDataBodyRangeRequest extends BaseRequest {
      */
     public WorkbookTableDataBodyRangeRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookTableDataBodyRangeRequest)this;
+        return this;
     }
 
     /**
@@ -131,7 +132,7 @@ public class WorkbookTableDataBodyRangeRequest extends BaseRequest {
      */
     public WorkbookTableDataBodyRangeRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookTableDataBodyRangeRequest)this;
+        return this;
     }
 
 }

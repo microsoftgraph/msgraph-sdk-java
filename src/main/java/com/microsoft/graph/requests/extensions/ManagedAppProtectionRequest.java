@@ -20,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed App Protection Request.
  */
-public class ManagedAppProtectionRequest extends BaseRequest {
+public class ManagedAppProtectionRequest extends BaseRequest<ManagedAppProtection> {
 	
     /**
      * The request for the ManagedAppProtection
@@ -156,7 +156,7 @@ public class ManagedAppProtectionRequest extends BaseRequest {
      */
      public ManagedAppProtectionRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ManagedAppProtectionRequest)this;
+         return this;
      }
 
     /**
@@ -167,7 +167,7 @@ public class ManagedAppProtectionRequest extends BaseRequest {
      */
      public ManagedAppProtectionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ManagedAppProtectionRequest)this;
+         return this;
      }
 
 }

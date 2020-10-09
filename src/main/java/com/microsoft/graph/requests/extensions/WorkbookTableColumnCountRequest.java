@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.WorkbookTableColumn;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnCountRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -17,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Column Count Request.
  */
-public class WorkbookTableColumnCountRequest extends BaseRequest {
+public class WorkbookTableColumnCountRequest extends BaseRequest<Int32> {
 
     /**
      * The request for this WorkbookTableColumnCount
@@ -27,7 +28,7 @@ public class WorkbookTableColumnCountRequest extends BaseRequest {
      * @param requestOptions the options for this request
      */
     public WorkbookTableColumnCountRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Integer.class);
+        super(requestUrl, client, requestOptions, Int32.class);
     }
 
     /**
@@ -57,7 +58,7 @@ public class WorkbookTableColumnCountRequest extends BaseRequest {
      */
     public WorkbookTableColumnCountRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookTableColumnCountRequest)this;
+        return this;
     }
 
     /**
@@ -68,7 +69,7 @@ public class WorkbookTableColumnCountRequest extends BaseRequest {
      */
     public WorkbookTableColumnCountRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookTableColumnCountRequest)this;
+        return this;
     }
 
     /**
@@ -79,7 +80,7 @@ public class WorkbookTableColumnCountRequest extends BaseRequest {
      */
     public WorkbookTableColumnCountRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookTableColumnCountRequest)this;
+        return this;
     }
 
     /**
@@ -90,7 +91,7 @@ public class WorkbookTableColumnCountRequest extends BaseRequest {
      */
     public WorkbookTableColumnCountRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookTableColumnCountRequest)this;
+        return this;
     }
 
 }

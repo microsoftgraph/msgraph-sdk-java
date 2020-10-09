@@ -18,7 +18,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Event Tentatively Accept Request.
  */
-public class EventTentativelyAcceptRequest extends BaseRequest {
+public class EventTentativelyAcceptRequest extends BaseRequest<Void> {
     protected final EventTentativelyAcceptBody body;
 
     /**
@@ -28,6 +28,7 @@ public class EventTentativelyAcceptRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public EventTentativelyAcceptRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new EventTentativelyAcceptBody();
@@ -49,7 +50,7 @@ public class EventTentativelyAcceptRequest extends BaseRequest {
      */
     public EventTentativelyAcceptRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (EventTentativelyAcceptRequest)this;
+        return this;
     }
 
     /**
@@ -60,7 +61,7 @@ public class EventTentativelyAcceptRequest extends BaseRequest {
      */
     public EventTentativelyAcceptRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (EventTentativelyAcceptRequest)this;
+        return this;
     }
 
     /**
@@ -71,7 +72,7 @@ public class EventTentativelyAcceptRequest extends BaseRequest {
      */
     public EventTentativelyAcceptRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (EventTentativelyAcceptRequest)this;
+        return this;
     }
 
 }

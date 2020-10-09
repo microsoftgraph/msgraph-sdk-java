@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Endpoint Collection Request Builder.
  */
-public class EndpointCollectionRequestBuilder extends BaseRequestBuilder {
+public class EndpointCollectionRequestBuilder extends BaseRequestBuilder<Endpoint> {
 
     /**
      * The request builder for this collection of ServicePrincipal

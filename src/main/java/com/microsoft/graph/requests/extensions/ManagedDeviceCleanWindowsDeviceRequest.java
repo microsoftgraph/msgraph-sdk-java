@@ -18,7 +18,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Managed Device Clean Windows Device Request.
  */
-public class ManagedDeviceCleanWindowsDeviceRequest extends BaseRequest {
+public class ManagedDeviceCleanWindowsDeviceRequest extends BaseRequest<Void> {
     protected final ManagedDeviceCleanWindowsDeviceBody body;
 
     /**
@@ -28,6 +28,7 @@ public class ManagedDeviceCleanWindowsDeviceRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public ManagedDeviceCleanWindowsDeviceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new ManagedDeviceCleanWindowsDeviceBody();
@@ -49,7 +50,7 @@ public class ManagedDeviceCleanWindowsDeviceRequest extends BaseRequest {
      */
     public ManagedDeviceCleanWindowsDeviceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ManagedDeviceCleanWindowsDeviceRequest)this;
+        return this;
     }
 
     /**
@@ -60,7 +61,7 @@ public class ManagedDeviceCleanWindowsDeviceRequest extends BaseRequest {
      */
     public ManagedDeviceCleanWindowsDeviceRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (ManagedDeviceCleanWindowsDeviceRequest)this;
+        return this;
     }
 
     /**
@@ -71,7 +72,7 @@ public class ManagedDeviceCleanWindowsDeviceRequest extends BaseRequest {
      */
     public ManagedDeviceCleanWindowsDeviceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ManagedDeviceCleanWindowsDeviceRequest)this;
+        return this;
     }
 
 }

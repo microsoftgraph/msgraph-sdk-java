@@ -18,7 +18,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Service Principal Remove Key Request.
  */
-public class ServicePrincipalRemoveKeyRequest extends BaseRequest {
+public class ServicePrincipalRemoveKeyRequest extends BaseRequest<Void> {
     protected final ServicePrincipalRemoveKeyBody body;
 
     /**
@@ -28,6 +28,7 @@ public class ServicePrincipalRemoveKeyRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public ServicePrincipalRemoveKeyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new ServicePrincipalRemoveKeyBody();
@@ -49,7 +50,7 @@ public class ServicePrincipalRemoveKeyRequest extends BaseRequest {
      */
     public ServicePrincipalRemoveKeyRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ServicePrincipalRemoveKeyRequest)this;
+        return this;
     }
 
     /**
@@ -60,7 +61,7 @@ public class ServicePrincipalRemoveKeyRequest extends BaseRequest {
      */
     public ServicePrincipalRemoveKeyRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (ServicePrincipalRemoveKeyRequest)this;
+        return this;
     }
 
     /**
@@ -71,7 +72,7 @@ public class ServicePrincipalRemoveKeyRequest extends BaseRequest {
      */
     public ServicePrincipalRemoveKeyRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ServicePrincipalRemoveKeyRequest)this;
+        return this;
     }
 
 }

@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Shift Preferences Request.
  */
-public class ShiftPreferencesRequest extends BaseRequest {
+public class ShiftPreferencesRequest extends BaseRequest<ShiftPreferences> {
 	
     /**
      * The request for the ShiftPreferences
@@ -140,7 +140,7 @@ public class ShiftPreferencesRequest extends BaseRequest {
      */
      public ShiftPreferencesRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ShiftPreferencesRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class ShiftPreferencesRequest extends BaseRequest {
      */
      public ShiftPreferencesRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ShiftPreferencesRequest)this;
+         return this;
      }
 
 }

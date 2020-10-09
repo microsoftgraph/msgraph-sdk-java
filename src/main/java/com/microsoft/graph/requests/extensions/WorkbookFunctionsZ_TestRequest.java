@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Z_Test Request.
  */
-public class WorkbookFunctionsZ_TestRequest extends BaseRequest {
+public class WorkbookFunctionsZ_TestRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsZ_TestBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsZ_TestRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsZ_TestRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsZ_TestBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsZ_TestRequest extends BaseRequest {
      */
     public WorkbookFunctionsZ_TestRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsZ_TestRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsZ_TestRequest extends BaseRequest {
      */
     public WorkbookFunctionsZ_TestRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsZ_TestRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsZ_TestRequest extends BaseRequest {
      */
     public WorkbookFunctionsZ_TestRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsZ_TestRequest)this;
+        return this;
     }
 
 }

@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Unicode Request.
  */
-public class WorkbookFunctionsUnicodeRequest extends BaseRequest {
+public class WorkbookFunctionsUnicodeRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsUnicodeBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsUnicodeRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsUnicodeRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsUnicodeBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsUnicodeRequest extends BaseRequest {
      */
     public WorkbookFunctionsUnicodeRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsUnicodeRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsUnicodeRequest extends BaseRequest {
      */
     public WorkbookFunctionsUnicodeRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsUnicodeRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsUnicodeRequest extends BaseRequest {
      */
     public WorkbookFunctionsUnicodeRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsUnicodeRequest)this;
+        return this;
     }
 
 }

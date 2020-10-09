@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Endpoint With Reference Request.
  */
-public class EndpointWithReferenceRequest extends BaseRequest {
+public class EndpointWithReferenceRequest extends BaseWithReferenceRequest<Endpoint> {
 
     /**
      * The request for the Endpoint
@@ -35,43 +35,6 @@ public class EndpointWithReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, Endpoint.class);
     }
 
-    public void post(final Endpoint newEndpoint, final IJsonBackedObject payload, final ICallback<? super Endpoint> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    public Endpoint post(final Endpoint newEndpoint, final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newEndpoint;
-        }
-        return null;
-    }
-
-    public void get(final ICallback<? super Endpoint> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    public Endpoint get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(final ICallback<? super Endpoint> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(final Endpoint sourceEndpoint, final ICallback<? super Endpoint> callback) {
-		send(HttpMethod.PATCH, callback, sourceEndpoint);
-	}
-
-	public Endpoint patch(final Endpoint sourceEndpoint) throws ClientException {
-		return send(HttpMethod.PATCH, sourceEndpoint);
-	}
-
-
     /**
      * Sets the select clause for the request
      *
@@ -80,7 +43,7 @@ public class EndpointWithReferenceRequest extends BaseRequest {
      */
     public EndpointWithReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (EndpointWithReferenceRequest)this;
+        return this;
     }
 
     /**
@@ -91,6 +54,6 @@ public class EndpointWithReferenceRequest extends BaseRequest {
      */
     public EndpointWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (EndpointWithReferenceRequest)this;
+        return this;
     }
 }

@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Remote Assistance Partner Collection Request Builder.
  */
-public class RemoteAssistancePartnerCollectionRequestBuilder extends BaseRequestBuilder {
+public class RemoteAssistancePartnerCollectionRequestBuilder extends BaseRequestBuilder<RemoteAssistancePartner> {
 
     /**
      * The request builder for this collection of DeviceManagement

@@ -20,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Request.
  */
-public class ReportRootRequest extends BaseRequest {
+public class ReportRootRequest extends BaseRequest<ReportRoot> {
 	
     /**
      * The request for the ReportRoot
@@ -141,7 +141,7 @@ public class ReportRootRequest extends BaseRequest {
      */
      public ReportRootRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ReportRootRequest)this;
+         return this;
      }
 
     /**
@@ -152,7 +152,7 @@ public class ReportRootRequest extends BaseRequest {
      */
      public ReportRootRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ReportRootRequest)this;
+         return this;
      }
 
 }

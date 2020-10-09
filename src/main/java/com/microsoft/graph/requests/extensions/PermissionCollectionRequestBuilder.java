@@ -24,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Permission Collection Request Builder.
  */
-public class PermissionCollectionRequestBuilder extends BaseRequestBuilder {
+public class PermissionCollectionRequestBuilder extends BaseRequestBuilder<Permission> {
 
     /**
      * The request builder for this collection of DriveItem

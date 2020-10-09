@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Data Policy Operation Collection Request Builder.
  */
-public class DataPolicyOperationCollectionRequestBuilder extends BaseRequestBuilder {
+public class DataPolicyOperationCollectionRequestBuilder extends BaseRequestBuilder<DataPolicyOperation> {
 
     /**
      * The request builder for this collection of DataPolicyOperation

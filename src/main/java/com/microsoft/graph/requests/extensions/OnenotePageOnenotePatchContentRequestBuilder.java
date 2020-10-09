@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.OnenotePageOnenotePatchContentRequest;
+import com.microsoft.graph.models.extensions.OnenotePage;
 import com.microsoft.graph.models.extensions.OnenotePatchContentCommand;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Onenote Page Onenote Patch Content Request Builder.
  */
-public class OnenotePageOnenotePatchContentRequestBuilder extends BaseActionRequestBuilder {
+public class OnenotePageOnenotePatchContentRequestBuilder extends BaseActionRequestBuilder<OnenotePage> {
 
     /**
      * The request builder for this OnenotePageOnenotePatchContent

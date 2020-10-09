@@ -22,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Ios Managed App Protection Request.
  */
-public class IosManagedAppProtectionRequest extends BaseRequest {
+public class IosManagedAppProtectionRequest extends BaseRequest<IosManagedAppProtection> {
 	
     /**
      * The request for the IosManagedAppProtection
@@ -143,7 +143,7 @@ public class IosManagedAppProtectionRequest extends BaseRequest {
      */
      public IosManagedAppProtectionRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (IosManagedAppProtectionRequest)this;
+         return this;
      }
 
     /**
@@ -154,7 +154,7 @@ public class IosManagedAppProtectionRequest extends BaseRequest {
      */
      public IosManagedAppProtectionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IosManagedAppProtectionRequest)this;
+         return this;
      }
 
 }

@@ -25,7 +25,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Service Principal Collection Request Builder.
  */
-public class ServicePrincipalCollectionRequestBuilder extends BaseRequestBuilder {
+public class ServicePrincipalCollectionRequestBuilder extends BaseRequestBuilder<ServicePrincipal> {
 
     /**
      * The request builder for this collection of ServicePrincipal

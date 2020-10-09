@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Inference Classification Override Collection Request Builder.
  */
-public class InferenceClassificationOverrideCollectionRequestBuilder extends BaseRequestBuilder {
+public class InferenceClassificationOverrideCollectionRequestBuilder extends BaseRequestBuilder<InferenceClassificationOverride> {
 
     /**
      * The request builder for this collection of InferenceClassification

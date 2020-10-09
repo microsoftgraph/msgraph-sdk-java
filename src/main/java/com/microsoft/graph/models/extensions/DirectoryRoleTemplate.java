@@ -63,7 +63,8 @@ public class DirectoryRoleTemplate extends DirectoryObject implements IJsonBacke
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

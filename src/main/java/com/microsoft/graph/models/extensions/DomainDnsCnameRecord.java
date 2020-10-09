@@ -55,7 +55,8 @@ public class DomainDnsCnameRecord extends DomainDnsRecord implements IJsonBacked
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

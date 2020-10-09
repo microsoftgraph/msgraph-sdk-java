@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignment;
 import com.microsoft.graph.models.extensions.SettingStateDeviceSummary;
 import com.microsoft.graph.models.extensions.DeviceComplianceDeviceStatus;
@@ -15,11 +16,6 @@ import com.microsoft.graph.models.extensions.DeviceComplianceScheduledActionForR
 import com.microsoft.graph.models.extensions.DeviceComplianceUserStatus;
 import com.microsoft.graph.models.extensions.DeviceComplianceUserOverview;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignmentCollectionPage;
-import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionPage;
-import com.microsoft.graph.requests.extensions.DeviceComplianceDeviceStatusCollectionPage;
-import com.microsoft.graph.requests.extensions.DeviceComplianceScheduledActionForRuleCollectionPage;
-import com.microsoft.graph.requests.extensions.DeviceComplianceUserStatusCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -80,7 +76,7 @@ public class DeviceCompliancePolicy extends Entity implements IJsonBackedObject 
      */
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
-    public DeviceCompliancePolicyAssignmentCollectionPage assignments;
+    public BaseCollectionPage<DeviceCompliancePolicyAssignment> assignments;
 
     /**
      * The Device Setting State Summaries.
@@ -88,7 +84,7 @@ public class DeviceCompliancePolicy extends Entity implements IJsonBackedObject 
      */
     @SerializedName(value = "deviceSettingStateSummaries", alternate = {"DeviceSettingStateSummaries"})
     @Expose
-    public SettingStateDeviceSummaryCollectionPage deviceSettingStateSummaries;
+    public BaseCollectionPage<SettingStateDeviceSummary> deviceSettingStateSummaries;
 
     /**
      * The Device Statuses.
@@ -96,7 +92,7 @@ public class DeviceCompliancePolicy extends Entity implements IJsonBackedObject 
      */
     @SerializedName(value = "deviceStatuses", alternate = {"DeviceStatuses"})
     @Expose
-    public DeviceComplianceDeviceStatusCollectionPage deviceStatuses;
+    public BaseCollectionPage<DeviceComplianceDeviceStatus> deviceStatuses;
 
     /**
      * The Device Status Overview.
@@ -112,7 +108,7 @@ public class DeviceCompliancePolicy extends Entity implements IJsonBackedObject 
      */
     @SerializedName(value = "scheduledActionsForRule", alternate = {"ScheduledActionsForRule"})
     @Expose
-    public DeviceComplianceScheduledActionForRuleCollectionPage scheduledActionsForRule;
+    public BaseCollectionPage<DeviceComplianceScheduledActionForRule> scheduledActionsForRule;
 
     /**
      * The User Statuses.
@@ -120,7 +116,7 @@ public class DeviceCompliancePolicy extends Entity implements IJsonBackedObject 
      */
     @SerializedName(value = "userStatuses", alternate = {"UserStatuses"})
     @Expose
-    public DeviceComplianceUserStatusCollectionPage userStatuses;
+    public BaseCollectionPage<DeviceComplianceUserStatus> userStatuses;
 
     /**
      * The User Status Overview.
@@ -155,7 +151,8 @@ public class DeviceCompliancePolicy extends Entity implements IJsonBackedObject 
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -171,23 +168,23 @@ public class DeviceCompliancePolicy extends Entity implements IJsonBackedObject 
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments").toString(), DeviceCompliancePolicyAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments").toString(), new BaseCollectionPage<DeviceCompliancePolicyAssignment>(new java.util.ArrayList<DeviceCompliancePolicyAssignment>(), null).getClass());
         }
 
         if (json.has("deviceSettingStateSummaries")) {
-            deviceSettingStateSummaries = serializer.deserializeObject(json.get("deviceSettingStateSummaries").toString(), SettingStateDeviceSummaryCollectionPage.class);
+            deviceSettingStateSummaries = serializer.deserializeObject(json.get("deviceSettingStateSummaries").toString(), new BaseCollectionPage<SettingStateDeviceSummary>(new java.util.ArrayList<SettingStateDeviceSummary>(), null).getClass());
         }
 
         if (json.has("deviceStatuses")) {
-            deviceStatuses = serializer.deserializeObject(json.get("deviceStatuses").toString(), DeviceComplianceDeviceStatusCollectionPage.class);
+            deviceStatuses = serializer.deserializeObject(json.get("deviceStatuses").toString(), new BaseCollectionPage<DeviceComplianceDeviceStatus>(new java.util.ArrayList<DeviceComplianceDeviceStatus>(), null).getClass());
         }
 
         if (json.has("scheduledActionsForRule")) {
-            scheduledActionsForRule = serializer.deserializeObject(json.get("scheduledActionsForRule").toString(), DeviceComplianceScheduledActionForRuleCollectionPage.class);
+            scheduledActionsForRule = serializer.deserializeObject(json.get("scheduledActionsForRule").toString(), new BaseCollectionPage<DeviceComplianceScheduledActionForRule>(new java.util.ArrayList<DeviceComplianceScheduledActionForRule>(), null).getClass());
         }
 
         if (json.has("userStatuses")) {
-            userStatuses = serializer.deserializeObject(json.get("userStatuses").toString(), DeviceComplianceUserStatusCollectionPage.class);
+            userStatuses = serializer.deserializeObject(json.get("userStatuses").toString(), new BaseCollectionPage<DeviceComplianceUserStatus>(new java.util.ArrayList<DeviceComplianceUserStatus>(), null).getClass());
         }
     }
 }

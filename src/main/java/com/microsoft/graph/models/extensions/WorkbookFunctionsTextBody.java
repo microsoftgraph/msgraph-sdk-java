@@ -59,7 +59,7 @@ public class WorkbookFunctionsTextBody {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

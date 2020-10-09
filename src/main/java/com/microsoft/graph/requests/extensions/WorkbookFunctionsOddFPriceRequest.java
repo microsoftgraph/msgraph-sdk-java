@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Odd FPrice Request.
  */
-public class WorkbookFunctionsOddFPriceRequest extends BaseRequest {
+public class WorkbookFunctionsOddFPriceRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsOddFPriceBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsOddFPriceRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsOddFPriceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsOddFPriceBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsOddFPriceRequest extends BaseRequest {
      */
     public WorkbookFunctionsOddFPriceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsOddFPriceRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsOddFPriceRequest extends BaseRequest {
      */
     public WorkbookFunctionsOddFPriceRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsOddFPriceRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsOddFPriceRequest extends BaseRequest {
      */
     public WorkbookFunctionsOddFPriceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsOddFPriceRequest)this;
+        return this;
     }
 
 }

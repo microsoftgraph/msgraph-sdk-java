@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
+import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsTrueRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Functions True Request.
  */
-public class WorkbookFunctionsTrueRequest extends BaseRequest {
+public class WorkbookFunctionsTrueRequest extends BaseRequest<WorkbookFunctionResult> {
 
     /**
      * The request for this WorkbookFunctionsTrue
@@ -58,7 +59,7 @@ public class WorkbookFunctionsTrueRequest extends BaseRequest {
      */
     public WorkbookFunctionsTrueRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsTrueRequest)this;
+        return this;
     }
 
     /**
@@ -69,7 +70,7 @@ public class WorkbookFunctionsTrueRequest extends BaseRequest {
      */
     public WorkbookFunctionsTrueRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsTrueRequest)this;
+        return this;
     }
 
 }

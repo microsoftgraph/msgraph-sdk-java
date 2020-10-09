@@ -14,7 +14,7 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the User Activity Reference Request.
  */
-public class UserActivityReferenceRequest extends BaseRequest {
+public class UserActivityReferenceRequest extends BaseReferenceRequest<UserActivity> {
 
     /**
      * The request for the UserActivity
@@ -36,14 +36,6 @@ public class UserActivityReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, UserActivity.class);
     }
 
-    public void delete(final ICallback<? super UserActivity> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    public UserActivity delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
-    }
-
     /**
      * Sets the select clause for the request
      *
@@ -52,7 +44,7 @@ public class UserActivityReferenceRequest extends BaseRequest {
      */
     public UserActivityReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (UserActivityReferenceRequest)this;
+        return this;
     }
 
     /**
@@ -63,7 +55,7 @@ public class UserActivityReferenceRequest extends BaseRequest {
      */
     public UserActivityReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (UserActivityReferenceRequest)this;
+        return this;
     }
     /**
      * Puts the UserActivity

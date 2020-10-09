@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Group Setting Template Collection Request Builder.
  */
-public class GroupSettingTemplateCollectionRequestBuilder extends BaseRequestBuilder {
+public class GroupSettingTemplateCollectionRequestBuilder extends BaseRequestBuilder<GroupSettingTemplate> {
 
     /**
      * The request builder for this collection of GroupSettingTemplate

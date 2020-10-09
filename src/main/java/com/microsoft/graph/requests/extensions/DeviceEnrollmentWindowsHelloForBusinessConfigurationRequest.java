@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Enrollment Windows Hello For Business Configuration Request.
  */
-public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends BaseRequest {
+public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends BaseRequest<DeviceEnrollmentWindowsHelloForBusinessConfiguration> {
 	
     /**
      * The request for the DeviceEnrollmentWindowsHelloForBusinessConfiguration
@@ -140,7 +140,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends
      */
      public DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends
      */
      public DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest)this;
+         return this;
      }
 
 }

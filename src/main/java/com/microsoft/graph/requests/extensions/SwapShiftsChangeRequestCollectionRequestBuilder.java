@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Swap Shifts Change Request Collection Request Builder.
  */
-public class SwapShiftsChangeRequestCollectionRequestBuilder extends BaseRequestBuilder {
+public class SwapShiftsChangeRequestCollectionRequestBuilder extends BaseRequestBuilder<SwapShiftsChangeRequest> {
 
     /**
      * The request builder for this collection of Schedule

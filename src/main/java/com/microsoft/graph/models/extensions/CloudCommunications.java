@@ -7,13 +7,11 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.Call;
 import com.microsoft.graph.callrecords.models.extensions.CallRecord;
 import com.microsoft.graph.models.extensions.OnlineMeeting;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.CallCollectionPage;
-import com.microsoft.graph.callrecords.requests.extensions.CallRecordCollectionPage;
-import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -34,7 +32,7 @@ public class CloudCommunications extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "calls", alternate = {"Calls"})
     @Expose
-    public CallCollectionPage calls;
+    public BaseCollectionPage<Call> calls;
 
     /**
      * The Call Records.
@@ -42,7 +40,7 @@ public class CloudCommunications extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "callRecords", alternate = {"CallRecords"})
     @Expose
-    public CallRecordCollectionPage callRecords;
+    public BaseCollectionPage<CallRecord> callRecords;
 
     /**
      * The Online Meetings.
@@ -50,7 +48,7 @@ public class CloudCommunications extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "onlineMeetings", alternate = {"OnlineMeetings"})
     @Expose
-    public OnlineMeetingCollectionPage onlineMeetings;
+    public BaseCollectionPage<OnlineMeeting> onlineMeetings;
 
 
     /**
@@ -77,7 +75,8 @@ public class CloudCommunications extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -93,15 +92,15 @@ public class CloudCommunications extends Entity implements IJsonBackedObject {
 
 
         if (json.has("calls")) {
-            calls = serializer.deserializeObject(json.get("calls").toString(), CallCollectionPage.class);
+            calls = serializer.deserializeObject(json.get("calls").toString(), new BaseCollectionPage<Call>(new java.util.ArrayList<Call>(), null).getClass());
         }
 
         if (json.has("callRecords")) {
-            callRecords = serializer.deserializeObject(json.get("callRecords").toString(), CallRecordCollectionPage.class);
+            callRecords = serializer.deserializeObject(json.get("callRecords").toString(), new BaseCollectionPage<CallRecord>(new java.util.ArrayList<CallRecord>(), null).getClass());
         }
 
         if (json.has("onlineMeetings")) {
-            onlineMeetings = serializer.deserializeObject(json.get("onlineMeetings").toString(), OnlineMeetingCollectionPage.class);
+            onlineMeetings = serializer.deserializeObject(json.get("onlineMeetings").toString(), new BaseCollectionPage<OnlineMeeting>(new java.util.ArrayList<OnlineMeeting>(), null).getClass());
         }
     }
 }

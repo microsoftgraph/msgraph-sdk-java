@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Message Rule Collection Request Builder.
  */
-public class MessageRuleCollectionRequestBuilder extends BaseRequestBuilder {
+public class MessageRuleCollectionRequestBuilder extends BaseRequestBuilder<MessageRule> {
 
     /**
      * The request builder for this collection of MailFolder

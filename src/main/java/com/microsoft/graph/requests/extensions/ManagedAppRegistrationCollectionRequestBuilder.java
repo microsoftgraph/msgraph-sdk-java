@@ -24,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Managed App Registration Collection Request Builder.
  */
-public class ManagedAppRegistrationCollectionRequestBuilder extends BaseRequestBuilder {
+public class ManagedAppRegistrationCollectionRequestBuilder extends BaseRequestBuilder<ManagedAppRegistration> {
 
     /**
      * The request builder for this collection of DeviceAppManagement

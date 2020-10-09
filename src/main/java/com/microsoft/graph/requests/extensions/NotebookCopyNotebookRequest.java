@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Notebook Copy Notebook Request.
  */
-public class NotebookCopyNotebookRequest extends BaseRequest {
+public class NotebookCopyNotebookRequest extends BaseRequest<OnenoteOperation> {
     protected final NotebookCopyNotebookBody body;
 
     /**
@@ -29,6 +29,7 @@ public class NotebookCopyNotebookRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public NotebookCopyNotebookRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OnenoteOperation.class);
         body = new NotebookCopyNotebookBody();
@@ -50,7 +51,7 @@ public class NotebookCopyNotebookRequest extends BaseRequest {
      */
     public NotebookCopyNotebookRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (NotebookCopyNotebookRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class NotebookCopyNotebookRequest extends BaseRequest {
      */
     public NotebookCopyNotebookRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (NotebookCopyNotebookRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class NotebookCopyNotebookRequest extends BaseRequest {
      */
     public NotebookCopyNotebookRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (NotebookCopyNotebookRequest)this;
+        return this;
     }
 
 }

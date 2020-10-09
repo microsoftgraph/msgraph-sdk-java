@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Onenote Section Request.
  */
-public class OnenoteSectionRequest extends BaseRequest {
+public class OnenoteSectionRequest extends BaseRequest<OnenoteSection> {
 	
     /**
      * The request for the OnenoteSection
@@ -145,7 +145,7 @@ public class OnenoteSectionRequest extends BaseRequest {
      */
      public OnenoteSectionRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OnenoteSectionRequest)this;
+         return this;
      }
 
     /**
@@ -156,7 +156,7 @@ public class OnenoteSectionRequest extends BaseRequest {
      */
      public OnenoteSectionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OnenoteSectionRequest)this;
+         return this;
      }
 
 }

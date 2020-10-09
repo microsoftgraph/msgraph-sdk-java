@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Syd Request.
  */
-public class WorkbookFunctionsSydRequest extends BaseRequest {
+public class WorkbookFunctionsSydRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsSydBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsSydRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsSydRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsSydBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsSydRequest extends BaseRequest {
      */
     public WorkbookFunctionsSydRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsSydRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsSydRequest extends BaseRequest {
      */
     public WorkbookFunctionsSydRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsSydRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsSydRequest extends BaseRequest {
      */
     public WorkbookFunctionsSydRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsSydRequest)this;
+        return this;
     }
 
 }

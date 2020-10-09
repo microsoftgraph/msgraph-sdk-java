@@ -22,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Directory Role Delta Collection Request Builder.
  */
-public class DirectoryRoleDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder {
+public class DirectoryRoleDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder<DirectoryRole> {
 
     /**
      * The request builder for this collection of DirectoryRole

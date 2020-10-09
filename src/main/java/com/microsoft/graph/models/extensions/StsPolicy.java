@@ -7,9 +7,9 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.PolicyBase;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -44,7 +44,7 @@ public class StsPolicy extends PolicyBase implements IJsonBackedObject {
      * The Applies To.
      * 
      */
-    public DirectoryObjectCollectionPage appliesTo;
+    public BaseCollectionPage<DirectoryObject> appliesTo;
 
 
     /**
@@ -71,7 +71,8 @@ public class StsPolicy extends PolicyBase implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -87,7 +88,7 @@ public class StsPolicy extends PolicyBase implements IJsonBackedObject {
 
 
         if (json.has("appliesTo")) {
-            appliesTo = serializer.deserializeObject(json.get("appliesTo").toString(), DirectoryObjectCollectionPage.class);
+            appliesTo = serializer.deserializeObject(json.get("appliesTo").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
         }
     }
 }

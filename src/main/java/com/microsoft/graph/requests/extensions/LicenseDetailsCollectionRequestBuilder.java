@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the License Details Collection Request Builder.
  */
-public class LicenseDetailsCollectionRequestBuilder extends BaseRequestBuilder {
+public class LicenseDetailsCollectionRequestBuilder extends BaseRequestBuilder<LicenseDetails> {
 
     /**
      * The request builder for this collection of User

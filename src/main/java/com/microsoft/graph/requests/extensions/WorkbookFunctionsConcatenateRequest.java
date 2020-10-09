@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Concatenate Request.
  */
-public class WorkbookFunctionsConcatenateRequest extends BaseRequest {
+public class WorkbookFunctionsConcatenateRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsConcatenateBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsConcatenateRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsConcatenateRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsConcatenateBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsConcatenateRequest extends BaseRequest {
      */
     public WorkbookFunctionsConcatenateRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsConcatenateRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsConcatenateRequest extends BaseRequest {
      */
     public WorkbookFunctionsConcatenateRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsConcatenateRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsConcatenateRequest extends BaseRequest {
      */
     public WorkbookFunctionsConcatenateRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsConcatenateRequest)this;
+        return this;
     }
 
 }

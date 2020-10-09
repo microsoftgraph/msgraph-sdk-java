@@ -18,7 +18,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Filter Apply Bottom Items Filter Request.
  */
-public class WorkbookFilterApplyBottomItemsFilterRequest extends BaseRequest {
+public class WorkbookFilterApplyBottomItemsFilterRequest extends BaseRequest<Void> {
     protected final WorkbookFilterApplyBottomItemsFilterBody body;
 
     /**
@@ -28,6 +28,7 @@ public class WorkbookFilterApplyBottomItemsFilterRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFilterApplyBottomItemsFilterRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new WorkbookFilterApplyBottomItemsFilterBody();
@@ -49,7 +50,7 @@ public class WorkbookFilterApplyBottomItemsFilterRequest extends BaseRequest {
      */
     public WorkbookFilterApplyBottomItemsFilterRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFilterApplyBottomItemsFilterRequest)this;
+        return this;
     }
 
     /**
@@ -60,7 +61,7 @@ public class WorkbookFilterApplyBottomItemsFilterRequest extends BaseRequest {
      */
     public WorkbookFilterApplyBottomItemsFilterRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFilterApplyBottomItemsFilterRequest)this;
+        return this;
     }
 
     /**
@@ -71,7 +72,7 @@ public class WorkbookFilterApplyBottomItemsFilterRequest extends BaseRequest {
      */
     public WorkbookFilterApplyBottomItemsFilterRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFilterApplyBottomItemsFilterRequest)this;
+        return this;
     }
 
 }

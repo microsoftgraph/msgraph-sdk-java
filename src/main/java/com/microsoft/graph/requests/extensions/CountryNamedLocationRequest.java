@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Country Named Location Request.
  */
-public class CountryNamedLocationRequest extends BaseRequest {
+public class CountryNamedLocationRequest extends BaseRequest<CountryNamedLocation> {
 	
     /**
      * The request for the CountryNamedLocation
@@ -140,7 +140,7 @@ public class CountryNamedLocationRequest extends BaseRequest {
      */
      public CountryNamedLocationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (CountryNamedLocationRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class CountryNamedLocationRequest extends BaseRequest {
      */
      public CountryNamedLocationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CountryNamedLocationRequest)this;
+         return this;
      }
 
 }

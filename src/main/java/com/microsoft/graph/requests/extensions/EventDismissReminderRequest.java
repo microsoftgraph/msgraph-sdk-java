@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.Event;
 import com.microsoft.graph.requests.extensions.EventDismissReminderRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -17,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Event Dismiss Reminder Request.
  */
-public class EventDismissReminderRequest extends BaseRequest {
+public class EventDismissReminderRequest extends BaseRequest<Event> {
 
     /**
      * The request for this EventDismissReminder
@@ -27,7 +28,7 @@ public class EventDismissReminderRequest extends BaseRequest {
      * @param requestOptions the options for this request
      */
     public EventDismissReminderRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Void.class);
+        super(requestUrl, client, requestOptions, Event.class);
     }
 
     /**

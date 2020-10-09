@@ -26,7 +26,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Directory Object Collection Request Builder.
  */
-public class DirectoryObjectCollectionRequestBuilder extends BaseRequestBuilder {
+public class DirectoryObjectCollectionRequestBuilder extends BaseRequestBuilder<DirectoryObject> {
 
     /**
      * The request builder for this collection of DirectoryObject

@@ -67,7 +67,7 @@ public class WorkbookFunctionsConfidence_NormBody {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Threat Assessment Result Collection Request Builder.
  */
-public class ThreatAssessmentResultCollectionRequestBuilder extends BaseRequestBuilder {
+public class ThreatAssessmentResultCollectionRequestBuilder extends BaseRequestBuilder<ThreatAssessmentResult> {
 
     /**
      * The request builder for this collection of ThreatAssessmentRequest

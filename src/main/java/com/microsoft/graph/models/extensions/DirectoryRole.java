@@ -7,10 +7,9 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.ScopedRoleMembership;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
-import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -53,7 +52,7 @@ public class DirectoryRole extends DirectoryObject implements IJsonBackedObject 
      * The Members.
      * Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. Read-only. Nullable.
      */
-    public DirectoryObjectCollectionPage members;
+    public BaseCollectionPage<DirectoryObject> members;
 
     /**
      * The Scoped Members.
@@ -61,7 +60,7 @@ public class DirectoryRole extends DirectoryObject implements IJsonBackedObject 
      */
     @SerializedName(value = "scopedMembers", alternate = {"ScopedMembers"})
     @Expose
-    public ScopedRoleMembershipCollectionPage scopedMembers;
+    public BaseCollectionPage<ScopedRoleMembership> scopedMembers;
 
 
     /**
@@ -88,7 +87,8 @@ public class DirectoryRole extends DirectoryObject implements IJsonBackedObject 
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -104,11 +104,11 @@ public class DirectoryRole extends DirectoryObject implements IJsonBackedObject 
 
 
         if (json.has("members")) {
-            members = serializer.deserializeObject(json.get("members").toString(), DirectoryObjectCollectionPage.class);
+            members = serializer.deserializeObject(json.get("members").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
         }
 
         if (json.has("scopedMembers")) {
-            scopedMembers = serializer.deserializeObject(json.get("scopedMembers").toString(), ScopedRoleMembershipCollectionPage.class);
+            scopedMembers = serializer.deserializeObject(json.get("scopedMembers").toString(), new BaseCollectionPage<ScopedRoleMembership>(new java.util.ArrayList<ScopedRoleMembership>(), null).getClass());
         }
     }
 }

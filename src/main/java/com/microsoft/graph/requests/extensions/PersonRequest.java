@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Person Request.
  */
-public class PersonRequest extends BaseRequest {
+public class PersonRequest extends BaseRequest<Person> {
 	
     /**
      * The request for the Person
@@ -140,7 +140,7 @@ public class PersonRequest extends BaseRequest {
      */
      public PersonRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PersonRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class PersonRequest extends BaseRequest {
      */
      public PersonRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PersonRequest)this;
+         return this;
      }
 
 }

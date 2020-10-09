@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.NotificationMessageTemplate;
 import com.microsoft.graph.requests.extensions.NotificationMessageTemplateSendTestMessageRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -17,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Notification Message Template Send Test Message Request.
  */
-public class NotificationMessageTemplateSendTestMessageRequest extends BaseRequest {
+public class NotificationMessageTemplateSendTestMessageRequest extends BaseRequest<NotificationMessageTemplate> {
 
     /**
      * The request for this NotificationMessageTemplateSendTestMessage
@@ -27,7 +28,7 @@ public class NotificationMessageTemplateSendTestMessageRequest extends BaseReque
      * @param requestOptions the options for this request
      */
     public NotificationMessageTemplateSendTestMessageRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Void.class);
+        super(requestUrl, client, requestOptions, NotificationMessageTemplate.class);
     }
 
     /**

@@ -47,7 +47,8 @@ public class IosVppEBookAssignment extends ManagedEBookAssignment implements IJs
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

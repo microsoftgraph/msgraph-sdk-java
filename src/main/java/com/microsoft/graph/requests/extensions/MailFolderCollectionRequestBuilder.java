@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Mail Folder Collection Request Builder.
  */
-public class MailFolderCollectionRequestBuilder extends BaseRequestBuilder {
+public class MailFolderCollectionRequestBuilder extends BaseRequestBuilder<MailFolder> {
 
     /**
      * The request builder for this collection of MailFolder

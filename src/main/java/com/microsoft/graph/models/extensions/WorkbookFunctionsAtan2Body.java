@@ -59,7 +59,7 @@ public class WorkbookFunctionsAtan2Body {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

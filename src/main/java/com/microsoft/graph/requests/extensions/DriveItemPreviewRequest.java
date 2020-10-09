@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Drive Item Preview Request.
  */
-public class DriveItemPreviewRequest extends BaseRequest {
+public class DriveItemPreviewRequest extends BaseRequest<ItemPreviewInfo> {
     protected final DriveItemPreviewBody body;
 
     /**
@@ -29,6 +29,7 @@ public class DriveItemPreviewRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public DriveItemPreviewRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ItemPreviewInfo.class);
         body = new DriveItemPreviewBody();
@@ -50,7 +51,7 @@ public class DriveItemPreviewRequest extends BaseRequest {
      */
     public DriveItemPreviewRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (DriveItemPreviewRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class DriveItemPreviewRequest extends BaseRequest {
      */
     public DriveItemPreviewRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (DriveItemPreviewRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class DriveItemPreviewRequest extends BaseRequest {
      */
     public DriveItemPreviewRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DriveItemPreviewRequest)this;
+        return this;
     }
 
 }

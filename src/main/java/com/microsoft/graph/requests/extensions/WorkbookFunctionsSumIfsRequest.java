@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Sum Ifs Request.
  */
-public class WorkbookFunctionsSumIfsRequest extends BaseRequest {
+public class WorkbookFunctionsSumIfsRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsSumIfsBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsSumIfsRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsSumIfsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsSumIfsBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsSumIfsRequest extends BaseRequest {
      */
     public WorkbookFunctionsSumIfsRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsSumIfsRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsSumIfsRequest extends BaseRequest {
      */
     public WorkbookFunctionsSumIfsRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsSumIfsRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsSumIfsRequest extends BaseRequest {
      */
     public WorkbookFunctionsSumIfsRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsSumIfsRequest)this;
+        return this;
     }
 
 }

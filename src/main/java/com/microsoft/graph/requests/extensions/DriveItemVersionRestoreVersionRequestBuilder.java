@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.DriveItemVersionRestoreVersionRequest;
+import com.microsoft.graph.models.extensions.DriveItemVersion;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Drive Item Version Restore Version Request Builder.
  */
-public class DriveItemVersionRestoreVersionRequestBuilder extends BaseActionRequestBuilder {
+public class DriveItemVersionRestoreVersionRequestBuilder extends BaseActionRequestBuilder<DriveItemVersion> {
 
     /**
      * The request builder for this DriveItemVersionRestoreVersion

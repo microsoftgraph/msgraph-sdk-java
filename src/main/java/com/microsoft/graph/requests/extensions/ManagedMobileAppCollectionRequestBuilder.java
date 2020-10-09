@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Managed Mobile App Collection Request Builder.
  */
-public class ManagedMobileAppCollectionRequestBuilder extends BaseRequestBuilder {
+public class ManagedMobileAppCollectionRequestBuilder extends BaseRequestBuilder<ManagedMobileApp> {
 
     /**
      * The request builder for this collection of TargetedManagedAppConfiguration

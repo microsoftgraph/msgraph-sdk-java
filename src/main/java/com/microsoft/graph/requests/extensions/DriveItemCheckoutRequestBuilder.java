@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.DriveItemCheckoutRequest;
+import com.microsoft.graph.models.extensions.DriveItem;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Drive Item Checkout Request Builder.
  */
-public class DriveItemCheckoutRequestBuilder extends BaseActionRequestBuilder {
+public class DriveItemCheckoutRequestBuilder extends BaseActionRequestBuilder<DriveItem> {
 
     /**
      * The request builder for this DriveItemCheckout

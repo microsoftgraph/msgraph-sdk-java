@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ApplicationAddPasswordRequest;
+import com.microsoft.graph.models.extensions.Application;
 import com.microsoft.graph.models.extensions.PasswordCredential;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Application Add Password Request Builder.
  */
-public class ApplicationAddPasswordRequestBuilder extends BaseActionRequestBuilder {
+public class ApplicationAddPasswordRequestBuilder extends BaseActionRequestBuilder<PasswordCredential> {
 
     /**
      * The request builder for this ApplicationAddPassword

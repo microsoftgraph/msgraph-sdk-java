@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Event Message Request Request.
  */
-public class EventMessageRequestRequest extends BaseRequest {
+public class EventMessageRequestRequest extends BaseRequest<EventMessageRequest> {
 	
     /**
      * The request for the EventMessageRequest
@@ -140,7 +140,7 @@ public class EventMessageRequestRequest extends BaseRequest {
      */
      public EventMessageRequestRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EventMessageRequestRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class EventMessageRequestRequest extends BaseRequest {
      */
      public EventMessageRequestRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EventMessageRequestRequest)this;
+         return this;
      }
 
 }

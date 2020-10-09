@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Apple Push Notification Certificate Request.
  */
-public class ApplePushNotificationCertificateRequest extends BaseRequest {
+public class ApplePushNotificationCertificateRequest extends BaseRequest<ApplePushNotificationCertificate> {
 	
     /**
      * The request for the ApplePushNotificationCertificate
@@ -140,7 +140,7 @@ public class ApplePushNotificationCertificateRequest extends BaseRequest {
      */
      public ApplePushNotificationCertificateRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ApplePushNotificationCertificateRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class ApplePushNotificationCertificateRequest extends BaseRequest {
      */
      public ApplePushNotificationCertificateRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ApplePushNotificationCertificateRequest)this;
+         return this;
      }
 
 }

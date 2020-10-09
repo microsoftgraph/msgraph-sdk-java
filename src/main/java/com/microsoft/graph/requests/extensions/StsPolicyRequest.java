@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Sts Policy Request.
  */
-public class StsPolicyRequest extends BaseRequest {
+public class StsPolicyRequest extends BaseRequest<StsPolicy> {
 	
     /**
      * The request for the StsPolicy
@@ -157,7 +157,7 @@ public class StsPolicyRequest extends BaseRequest {
      */
      public StsPolicyRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (StsPolicyRequest)this;
+         return this;
      }
 
     /**
@@ -168,7 +168,7 @@ public class StsPolicyRequest extends BaseRequest {
      */
      public StsPolicyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (StsPolicyRequest)this;
+         return this;
      }
 
 }

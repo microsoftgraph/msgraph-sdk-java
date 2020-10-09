@@ -22,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Service Principal Delta Collection Request Builder.
  */
-public class ServicePrincipalDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder {
+public class ServicePrincipalDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder<ServicePrincipal> {
 
     /**
      * The request builder for this collection of ServicePrincipal

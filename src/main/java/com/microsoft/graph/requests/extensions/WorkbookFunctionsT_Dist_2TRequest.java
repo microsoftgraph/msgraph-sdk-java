@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions T_Dist_2TRequest.
  */
-public class WorkbookFunctionsT_Dist_2TRequest extends BaseRequest {
+public class WorkbookFunctionsT_Dist_2TRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsT_Dist_2TBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsT_Dist_2TRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsT_Dist_2TRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsT_Dist_2TBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsT_Dist_2TRequest extends BaseRequest {
      */
     public WorkbookFunctionsT_Dist_2TRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsT_Dist_2TRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsT_Dist_2TRequest extends BaseRequest {
      */
     public WorkbookFunctionsT_Dist_2TRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsT_Dist_2TRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsT_Dist_2TRequest extends BaseRequest {
      */
     public WorkbookFunctionsT_Dist_2TRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsT_Dist_2TRequest)this;
+        return this;
     }
 
 }

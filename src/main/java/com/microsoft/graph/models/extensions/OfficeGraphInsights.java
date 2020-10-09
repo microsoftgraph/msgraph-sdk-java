@@ -7,13 +7,11 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.SharedInsight;
 import com.microsoft.graph.models.extensions.Trending;
 import com.microsoft.graph.models.extensions.UsedInsight;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.SharedInsightCollectionPage;
-import com.microsoft.graph.requests.extensions.TrendingCollectionPage;
-import com.microsoft.graph.requests.extensions.UsedInsightCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -34,7 +32,7 @@ public class OfficeGraphInsights extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "shared", alternate = {"Shared"})
     @Expose
-    public SharedInsightCollectionPage shared;
+    public BaseCollectionPage<SharedInsight> shared;
 
     /**
      * The Trending.
@@ -42,7 +40,7 @@ public class OfficeGraphInsights extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "trending", alternate = {"Trending"})
     @Expose
-    public TrendingCollectionPage trending;
+    public BaseCollectionPage<Trending> trending;
 
     /**
      * The Used.
@@ -50,7 +48,7 @@ public class OfficeGraphInsights extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "used", alternate = {"Used"})
     @Expose
-    public UsedInsightCollectionPage used;
+    public BaseCollectionPage<UsedInsight> used;
 
 
     /**
@@ -77,7 +75,8 @@ public class OfficeGraphInsights extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -93,15 +92,15 @@ public class OfficeGraphInsights extends Entity implements IJsonBackedObject {
 
 
         if (json.has("shared")) {
-            shared = serializer.deserializeObject(json.get("shared").toString(), SharedInsightCollectionPage.class);
+            shared = serializer.deserializeObject(json.get("shared").toString(), new BaseCollectionPage<SharedInsight>(new java.util.ArrayList<SharedInsight>(), null).getClass());
         }
 
         if (json.has("trending")) {
-            trending = serializer.deserializeObject(json.get("trending").toString(), TrendingCollectionPage.class);
+            trending = serializer.deserializeObject(json.get("trending").toString(), new BaseCollectionPage<Trending>(new java.util.ArrayList<Trending>(), null).getClass());
         }
 
         if (json.has("used")) {
-            used = serializer.deserializeObject(json.get("used").toString(), UsedInsightCollectionPage.class);
+            used = serializer.deserializeObject(json.get("used").toString(), new BaseCollectionPage<UsedInsight>(new java.util.ArrayList<UsedInsight>(), null).getClass());
         }
     }
 }

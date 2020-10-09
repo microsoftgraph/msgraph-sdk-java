@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Home Realm Discovery Policy Collection Request Builder.
  */
-public class HomeRealmDiscoveryPolicyCollectionRequestBuilder extends BaseRequestBuilder {
+public class HomeRealmDiscoveryPolicyCollectionRequestBuilder extends BaseRequestBuilder<HomeRealmDiscoveryPolicy> {
 
     /**
      * The request builder for this collection of PolicyRoot

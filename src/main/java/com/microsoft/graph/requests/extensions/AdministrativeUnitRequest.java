@@ -25,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Administrative Unit Request.
  */
-public class AdministrativeUnitRequest extends BaseRequest {
+public class AdministrativeUnitRequest extends BaseRequest<AdministrativeUnit> {
 	
     /**
      * The request for the AdministrativeUnit
@@ -146,7 +146,7 @@ public class AdministrativeUnitRequest extends BaseRequest {
      */
      public AdministrativeUnitRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AdministrativeUnitRequest)this;
+         return this;
      }
 
     /**
@@ -157,7 +157,7 @@ public class AdministrativeUnitRequest extends BaseRequest {
      */
      public AdministrativeUnitRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AdministrativeUnitRequest)this;
+         return this;
      }
 
 }

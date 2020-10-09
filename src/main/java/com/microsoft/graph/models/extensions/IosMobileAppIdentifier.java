@@ -55,7 +55,8 @@ public class IosMobileAppIdentifier extends MobileAppIdentifier implements IJson
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

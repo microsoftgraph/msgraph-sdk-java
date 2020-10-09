@@ -51,7 +51,7 @@ public class WorkbookRangeDeleteBody {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

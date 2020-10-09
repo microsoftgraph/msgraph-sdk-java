@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Information Protection Request.
  */
-public class InformationProtectionRequest extends BaseRequest {
+public class InformationProtectionRequest extends BaseRequest<InformationProtection> {
 	
     /**
      * The request for the InformationProtection
@@ -142,7 +142,7 @@ public class InformationProtectionRequest extends BaseRequest {
      */
      public InformationProtectionRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (InformationProtectionRequest)this;
+         return this;
      }
 
     /**
@@ -153,7 +153,7 @@ public class InformationProtectionRequest extends BaseRequest {
      */
      public InformationProtectionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (InformationProtectionRequest)this;
+         return this;
      }
 
 }

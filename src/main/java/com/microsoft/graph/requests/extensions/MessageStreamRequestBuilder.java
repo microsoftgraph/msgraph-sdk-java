@@ -90,6 +90,10 @@ public class MessageStreamRequestBuilder extends BaseRequestBuilder {
 
 
 
+    public MessageForwardRequestBuilder forward(final java.util.List<Recipient> toRecipients, final Message message, final String comment) {
+        return new MessageForwardRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.forward"), getClient(), null, toRecipients, message, comment);
+    }
+
     public MessageCopyRequestBuilder copy(final String destinationId) {
         return new MessageCopyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copy"), getClient(), null, destinationId);
     }
@@ -108,10 +112,6 @@ public class MessageStreamRequestBuilder extends BaseRequestBuilder {
 
     public MessageCreateReplyAllRequestBuilder createReplyAll(final Message message, final String comment) {
         return new MessageCreateReplyAllRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createReplyAll"), getClient(), null, message, comment);
-    }
-
-    public MessageForwardRequestBuilder forward(final java.util.List<Recipient> toRecipients, final Message message, final String comment) {
-        return new MessageForwardRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.forward"), getClient(), null, toRecipients, message, comment);
     }
 
     public MessageReplyRequestBuilder reply(final Message message, final String comment) {

@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Update For Business Configuration Request.
  */
-public class WindowsUpdateForBusinessConfigurationRequest extends BaseRequest {
+public class WindowsUpdateForBusinessConfigurationRequest extends BaseRequest<WindowsUpdateForBusinessConfiguration> {
 	
     /**
      * The request for the WindowsUpdateForBusinessConfiguration
@@ -140,7 +140,7 @@ public class WindowsUpdateForBusinessConfigurationRequest extends BaseRequest {
      */
      public WindowsUpdateForBusinessConfigurationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsUpdateForBusinessConfigurationRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class WindowsUpdateForBusinessConfigurationRequest extends BaseRequest {
      */
      public WindowsUpdateForBusinessConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsUpdateForBusinessConfigurationRequest)this;
+         return this;
      }
 
 }

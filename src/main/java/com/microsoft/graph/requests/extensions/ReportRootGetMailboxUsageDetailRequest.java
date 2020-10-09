@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
+import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.requests.extensions.ReportRootGetMailboxUsageDetailRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Mailbox Usage Detail Request.
  */
-public class ReportRootGetMailboxUsageDetailRequest extends BaseRequest {
+public class ReportRootGetMailboxUsageDetailRequest extends BaseRequest<Report> {
 
     /**
      * The request for this ReportRootGetMailboxUsageDetail
@@ -98,7 +99,7 @@ public class ReportRootGetMailboxUsageDetailRequest extends BaseRequest {
      */
     public ReportRootGetMailboxUsageDetailRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ReportRootGetMailboxUsageDetailRequest)this;
+        return this;
     }
 
     /**
@@ -109,7 +110,7 @@ public class ReportRootGetMailboxUsageDetailRequest extends BaseRequest {
      */
     public ReportRootGetMailboxUsageDetailRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ReportRootGetMailboxUsageDetailRequest)this;
+        return this;
     }
 
     /**
@@ -120,7 +121,7 @@ public class ReportRootGetMailboxUsageDetailRequest extends BaseRequest {
      */
     public ReportRootGetMailboxUsageDetailRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ReportRootGetMailboxUsageDetailRequest)this;
+        return this;
     }
 
     /**
@@ -131,7 +132,7 @@ public class ReportRootGetMailboxUsageDetailRequest extends BaseRequest {
      */
     public ReportRootGetMailboxUsageDetailRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ReportRootGetMailboxUsageDetailRequest)this;
+        return this;
     }
 
 }

@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.requests.extensions.DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -17,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Management Verify Windows Enrollment Auto Discovery Request.
  */
-public class DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest extends BaseRequest {
+public class DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest extends BaseRequest<Boolean> {
 
     /**
      * The request for this DeviceManagementVerifyWindowsEnrollmentAutoDiscovery
@@ -57,7 +58,7 @@ public class DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest extends
      */
     public DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest)this;
+        return this;
     }
 
     /**
@@ -68,7 +69,7 @@ public class DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest extends
      */
     public DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest)this;
+        return this;
     }
 
     /**
@@ -79,7 +80,7 @@ public class DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest extends
      */
     public DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest)this;
+        return this;
     }
 
     /**
@@ -90,7 +91,7 @@ public class DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest extends
      */
     public DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest)this;
+        return this;
     }
 
 }

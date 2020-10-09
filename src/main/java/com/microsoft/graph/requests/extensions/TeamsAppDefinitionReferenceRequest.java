@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -21,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Teams App Definition Reference Request.
  */
-public class TeamsAppDefinitionReferenceRequest extends BaseRequest {
+public class TeamsAppDefinitionReferenceRequest extends BaseReferenceRequest<TeamsAppDefinition> {
 
     /**
      * The request for the TeamsAppDefinition
@@ -34,14 +34,6 @@ public class TeamsAppDefinitionReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, TeamsAppDefinition.class);
     }
 
-    public void delete(final ICallback<? super TeamsAppDefinition> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    public TeamsAppDefinition delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
-    }
-
     /**
      * Sets the select clause for the request
      *
@@ -50,7 +42,7 @@ public class TeamsAppDefinitionReferenceRequest extends BaseRequest {
      */
     public TeamsAppDefinitionReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (TeamsAppDefinitionReferenceRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +53,7 @@ public class TeamsAppDefinitionReferenceRequest extends BaseRequest {
      */
     public TeamsAppDefinitionReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (TeamsAppDefinitionReferenceRequest)this;
+        return this;
     }
     /**
      * Puts the TeamsAppDefinition

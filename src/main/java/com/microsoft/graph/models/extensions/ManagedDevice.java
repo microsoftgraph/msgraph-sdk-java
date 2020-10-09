@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.generated.ComplianceState;
 import com.microsoft.graph.models.extensions.ConfigurationManagerClientEnabledFeatures;
 import com.microsoft.graph.models.extensions.DeviceActionResult;
@@ -22,8 +23,6 @@ import com.microsoft.graph.models.extensions.DeviceCompliancePolicyState;
 import com.microsoft.graph.models.extensions.DeviceConfigurationState;
 import com.microsoft.graph.models.extensions.DeviceCategory;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyStateCollectionPage;
-import com.microsoft.graph.requests.extensions.DeviceConfigurationStateCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -412,7 +411,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "deviceCompliancePolicyStates", alternate = {"DeviceCompliancePolicyStates"})
     @Expose
-    public DeviceCompliancePolicyStateCollectionPage deviceCompliancePolicyStates;
+    public BaseCollectionPage<DeviceCompliancePolicyState> deviceCompliancePolicyStates;
 
     /**
      * The Device Configuration States.
@@ -420,7 +419,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "deviceConfigurationStates", alternate = {"DeviceConfigurationStates"})
     @Expose
-    public DeviceConfigurationStateCollectionPage deviceConfigurationStates;
+    public BaseCollectionPage<DeviceConfigurationState> deviceConfigurationStates;
 
     /**
      * The Device Category.
@@ -455,7 +454,8 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -471,11 +471,11 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
 
         if (json.has("deviceCompliancePolicyStates")) {
-            deviceCompliancePolicyStates = serializer.deserializeObject(json.get("deviceCompliancePolicyStates").toString(), DeviceCompliancePolicyStateCollectionPage.class);
+            deviceCompliancePolicyStates = serializer.deserializeObject(json.get("deviceCompliancePolicyStates").toString(), new BaseCollectionPage<DeviceCompliancePolicyState>(new java.util.ArrayList<DeviceCompliancePolicyState>(), null).getClass());
         }
 
         if (json.has("deviceConfigurationStates")) {
-            deviceConfigurationStates = serializer.deserializeObject(json.get("deviceConfigurationStates").toString(), DeviceConfigurationStateCollectionPage.class);
+            deviceConfigurationStates = serializer.deserializeObject(json.get("deviceConfigurationStates").toString(), new BaseCollectionPage<DeviceConfigurationState>(new java.util.ArrayList<DeviceConfigurationState>(), null).getClass());
         }
     }
 }

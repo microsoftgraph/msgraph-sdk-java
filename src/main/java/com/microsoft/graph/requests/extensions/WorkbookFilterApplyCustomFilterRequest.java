@@ -18,7 +18,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Filter Apply Custom Filter Request.
  */
-public class WorkbookFilterApplyCustomFilterRequest extends BaseRequest {
+public class WorkbookFilterApplyCustomFilterRequest extends BaseRequest<Void> {
     protected final WorkbookFilterApplyCustomFilterBody body;
 
     /**
@@ -28,6 +28,7 @@ public class WorkbookFilterApplyCustomFilterRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFilterApplyCustomFilterRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new WorkbookFilterApplyCustomFilterBody();
@@ -49,7 +50,7 @@ public class WorkbookFilterApplyCustomFilterRequest extends BaseRequest {
      */
     public WorkbookFilterApplyCustomFilterRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFilterApplyCustomFilterRequest)this;
+        return this;
     }
 
     /**
@@ -60,7 +61,7 @@ public class WorkbookFilterApplyCustomFilterRequest extends BaseRequest {
      */
     public WorkbookFilterApplyCustomFilterRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFilterApplyCustomFilterRequest)this;
+        return this;
     }
 
     /**
@@ -71,7 +72,7 @@ public class WorkbookFilterApplyCustomFilterRequest extends BaseRequest {
      */
     public WorkbookFilterApplyCustomFilterRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFilterApplyCustomFilterRequest)this;
+        return this;
     }
 
 }

@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Mobile MSIRequest.
  */
-public class WindowsMobileMSIRequest extends BaseRequest {
+public class WindowsMobileMSIRequest extends BaseRequest<WindowsMobileMSI> {
 	
     /**
      * The request for the WindowsMobileMSI
@@ -140,7 +140,7 @@ public class WindowsMobileMSIRequest extends BaseRequest {
      */
      public WindowsMobileMSIRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsMobileMSIRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class WindowsMobileMSIRequest extends BaseRequest {
      */
      public WindowsMobileMSIRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsMobileMSIRequest)this;
+         return this;
      }
 
 }

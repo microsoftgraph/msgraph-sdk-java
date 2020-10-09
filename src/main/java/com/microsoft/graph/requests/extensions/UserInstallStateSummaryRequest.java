@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the User Install State Summary Request.
  */
-public class UserInstallStateSummaryRequest extends BaseRequest {
+public class UserInstallStateSummaryRequest extends BaseRequest<UserInstallStateSummary> {
 	
     /**
      * The request for the UserInstallStateSummary
@@ -142,7 +142,7 @@ public class UserInstallStateSummaryRequest extends BaseRequest {
      */
      public UserInstallStateSummaryRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (UserInstallStateSummaryRequest)this;
+         return this;
      }
 
     /**
@@ -153,7 +153,7 @@ public class UserInstallStateSummaryRequest extends BaseRequest {
      */
      public UserInstallStateSummaryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserInstallStateSummaryRequest)this;
+         return this;
      }
 
 }

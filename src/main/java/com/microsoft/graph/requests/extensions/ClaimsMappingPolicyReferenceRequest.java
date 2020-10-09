@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -21,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Claims Mapping Policy Reference Request.
  */
-public class ClaimsMappingPolicyReferenceRequest extends BaseRequest {
+public class ClaimsMappingPolicyReferenceRequest extends BaseReferenceRequest<ClaimsMappingPolicy> {
 
     /**
      * The request for the ClaimsMappingPolicy
@@ -34,14 +34,6 @@ public class ClaimsMappingPolicyReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, ClaimsMappingPolicy.class);
     }
 
-    public void delete(final ICallback<? super ClaimsMappingPolicy> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    public ClaimsMappingPolicy delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
-    }
-
     /**
      * Sets the select clause for the request
      *
@@ -50,7 +42,7 @@ public class ClaimsMappingPolicyReferenceRequest extends BaseRequest {
      */
     public ClaimsMappingPolicyReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ClaimsMappingPolicyReferenceRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +53,7 @@ public class ClaimsMappingPolicyReferenceRequest extends BaseRequest {
      */
     public ClaimsMappingPolicyReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ClaimsMappingPolicyReferenceRequest)this;
+        return this;
     }
     /**
      * Puts the ClaimsMappingPolicy

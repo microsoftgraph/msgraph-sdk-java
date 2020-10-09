@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
+import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.requests.extensions.ReportRootGetSharePointActivityPagesRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Share Point Activity Pages Request.
  */
-public class ReportRootGetSharePointActivityPagesRequest extends BaseRequest {
+public class ReportRootGetSharePointActivityPagesRequest extends BaseRequest<Report> {
 
     /**
      * The request for this ReportRootGetSharePointActivityPages
@@ -98,7 +99,7 @@ public class ReportRootGetSharePointActivityPagesRequest extends BaseRequest {
      */
     public ReportRootGetSharePointActivityPagesRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ReportRootGetSharePointActivityPagesRequest)this;
+        return this;
     }
 
     /**
@@ -109,7 +110,7 @@ public class ReportRootGetSharePointActivityPagesRequest extends BaseRequest {
      */
     public ReportRootGetSharePointActivityPagesRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ReportRootGetSharePointActivityPagesRequest)this;
+        return this;
     }
 
     /**
@@ -120,7 +121,7 @@ public class ReportRootGetSharePointActivityPagesRequest extends BaseRequest {
      */
     public ReportRootGetSharePointActivityPagesRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ReportRootGetSharePointActivityPagesRequest)this;
+        return this;
     }
 
     /**
@@ -131,7 +132,7 @@ public class ReportRootGetSharePointActivityPagesRequest extends BaseRequest {
      */
     public ReportRootGetSharePointActivityPagesRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ReportRootGetSharePointActivityPagesRequest)this;
+        return this;
     }
 
 }

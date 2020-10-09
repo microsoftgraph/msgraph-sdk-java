@@ -9,6 +9,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.models.extensions.Event;
+import com.microsoft.graph.models.extensions.Recipient;
 import com.microsoft.graph.models.extensions.DateTimeTimeZone;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -25,7 +26,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Event Collection Request Builder.
  */
-public class EventCollectionRequestBuilder extends BaseRequestBuilder {
+public class EventCollectionRequestBuilder extends BaseRequestBuilder<Event> {
 
     /**
      * The request builder for this collection of Group

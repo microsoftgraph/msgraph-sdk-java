@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.WorkbookApplication;
 import com.microsoft.graph.models.extensions.WorkbookComment;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
@@ -15,11 +16,6 @@ import com.microsoft.graph.models.extensions.WorkbookOperation;
 import com.microsoft.graph.models.extensions.WorkbookTable;
 import com.microsoft.graph.models.extensions.WorkbookWorksheet;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.WorkbookCommentCollectionPage;
-import com.microsoft.graph.requests.extensions.WorkbookNamedItemCollectionPage;
-import com.microsoft.graph.requests.extensions.WorkbookOperationCollectionPage;
-import com.microsoft.graph.requests.extensions.WorkbookTableCollectionPage;
-import com.microsoft.graph.requests.extensions.WorkbookWorksheetCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -48,7 +44,7 @@ public class Workbook extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "comments", alternate = {"Comments"})
     @Expose
-    public WorkbookCommentCollectionPage comments;
+    public BaseCollectionPage<WorkbookComment> comments;
 
     /**
      * The Functions.
@@ -64,7 +60,7 @@ public class Workbook extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "names", alternate = {"Names"})
     @Expose
-    public WorkbookNamedItemCollectionPage names;
+    public BaseCollectionPage<WorkbookNamedItem> names;
 
     /**
      * The Operations.
@@ -72,7 +68,7 @@ public class Workbook extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
-    public WorkbookOperationCollectionPage operations;
+    public BaseCollectionPage<WorkbookOperation> operations;
 
     /**
      * The Tables.
@@ -80,7 +76,7 @@ public class Workbook extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "tables", alternate = {"Tables"})
     @Expose
-    public WorkbookTableCollectionPage tables;
+    public BaseCollectionPage<WorkbookTable> tables;
 
     /**
      * The Worksheets.
@@ -88,7 +84,7 @@ public class Workbook extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "worksheets", alternate = {"Worksheets"})
     @Expose
-    public WorkbookWorksheetCollectionPage worksheets;
+    public BaseCollectionPage<WorkbookWorksheet> worksheets;
 
 
     /**
@@ -115,7 +111,8 @@ public class Workbook extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -131,23 +128,23 @@ public class Workbook extends Entity implements IJsonBackedObject {
 
 
         if (json.has("comments")) {
-            comments = serializer.deserializeObject(json.get("comments").toString(), WorkbookCommentCollectionPage.class);
+            comments = serializer.deserializeObject(json.get("comments").toString(), new BaseCollectionPage<WorkbookComment>(new java.util.ArrayList<WorkbookComment>(), null).getClass());
         }
 
         if (json.has("names")) {
-            names = serializer.deserializeObject(json.get("names").toString(), WorkbookNamedItemCollectionPage.class);
+            names = serializer.deserializeObject(json.get("names").toString(), new BaseCollectionPage<WorkbookNamedItem>(new java.util.ArrayList<WorkbookNamedItem>(), null).getClass());
         }
 
         if (json.has("operations")) {
-            operations = serializer.deserializeObject(json.get("operations").toString(), WorkbookOperationCollectionPage.class);
+            operations = serializer.deserializeObject(json.get("operations").toString(), new BaseCollectionPage<WorkbookOperation>(new java.util.ArrayList<WorkbookOperation>(), null).getClass());
         }
 
         if (json.has("tables")) {
-            tables = serializer.deserializeObject(json.get("tables").toString(), WorkbookTableCollectionPage.class);
+            tables = serializer.deserializeObject(json.get("tables").toString(), new BaseCollectionPage<WorkbookTable>(new java.util.ArrayList<WorkbookTable>(), null).getClass());
         }
 
         if (json.has("worksheets")) {
-            worksheets = serializer.deserializeObject(json.get("worksheets").toString(), WorkbookWorksheetCollectionPage.class);
+            worksheets = serializer.deserializeObject(json.get("worksheets").toString(), new BaseCollectionPage<WorkbookWorksheet>(new java.util.ArrayList<WorkbookWorksheet>(), null).getClass());
         }
     }
 }

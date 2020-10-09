@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.TeamFunSettings;
 import com.microsoft.graph.models.extensions.TeamGuestSettings;
 import com.microsoft.graph.models.extensions.TeamMemberSettings;
@@ -21,10 +22,6 @@ import com.microsoft.graph.models.extensions.ConversationMember;
 import com.microsoft.graph.models.extensions.TeamsAsyncOperation;
 import com.microsoft.graph.models.extensions.TeamsTemplate;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ChannelCollectionPage;
-import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionPage;
-import com.microsoft.graph.requests.extensions.ConversationMemberCollectionPage;
-import com.microsoft.graph.requests.extensions.TeamsAsyncOperationCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -149,7 +146,7 @@ public class Team extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "channels", alternate = {"Channels"})
     @Expose
-    public ChannelCollectionPage channels;
+    public BaseCollectionPage<Channel> channels;
 
     /**
      * The Group.
@@ -165,7 +162,7 @@ public class Team extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "installedApps", alternate = {"InstalledApps"})
     @Expose
-    public TeamsAppInstallationCollectionPage installedApps;
+    public BaseCollectionPage<TeamsAppInstallation> installedApps;
 
     /**
      * The Members.
@@ -173,7 +170,7 @@ public class Team extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "members", alternate = {"Members"})
     @Expose
-    public ConversationMemberCollectionPage members;
+    public BaseCollectionPage<ConversationMember> members;
 
     /**
      * The Operations.
@@ -181,7 +178,7 @@ public class Team extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
-    public TeamsAsyncOperationCollectionPage operations;
+    public BaseCollectionPage<TeamsAsyncOperation> operations;
 
     /**
      * The Primary Channel.
@@ -224,7 +221,8 @@ public class Team extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -240,19 +238,19 @@ public class Team extends Entity implements IJsonBackedObject {
 
 
         if (json.has("channels")) {
-            channels = serializer.deserializeObject(json.get("channels").toString(), ChannelCollectionPage.class);
+            channels = serializer.deserializeObject(json.get("channels").toString(), new BaseCollectionPage<Channel>(new java.util.ArrayList<Channel>(), null).getClass());
         }
 
         if (json.has("installedApps")) {
-            installedApps = serializer.deserializeObject(json.get("installedApps").toString(), TeamsAppInstallationCollectionPage.class);
+            installedApps = serializer.deserializeObject(json.get("installedApps").toString(), new BaseCollectionPage<TeamsAppInstallation>(new java.util.ArrayList<TeamsAppInstallation>(), null).getClass());
         }
 
         if (json.has("members")) {
-            members = serializer.deserializeObject(json.get("members").toString(), ConversationMemberCollectionPage.class);
+            members = serializer.deserializeObject(json.get("members").toString(), new BaseCollectionPage<ConversationMember>(new java.util.ArrayList<ConversationMember>(), null).getClass());
         }
 
         if (json.has("operations")) {
-            operations = serializer.deserializeObject(json.get("operations").toString(), TeamsAsyncOperationCollectionPage.class);
+            operations = serializer.deserializeObject(json.get("operations").toString(), new BaseCollectionPage<TeamsAsyncOperation>(new java.util.ArrayList<TeamsAsyncOperation>(), null).getClass());
         }
     }
 }

@@ -55,7 +55,8 @@ public class AppHostedMediaConfig extends MediaConfig implements IJsonBackedObje
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

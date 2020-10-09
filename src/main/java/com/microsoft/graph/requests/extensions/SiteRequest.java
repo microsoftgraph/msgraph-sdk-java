@@ -34,7 +34,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Site Request.
  */
-public class SiteRequest extends BaseRequest {
+public class SiteRequest extends BaseRequest<Site> {
 	
     /**
      * The request for the Site
@@ -155,7 +155,7 @@ public class SiteRequest extends BaseRequest {
      */
      public SiteRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SiteRequest)this;
+         return this;
      }
 
     /**
@@ -166,7 +166,7 @@ public class SiteRequest extends BaseRequest {
      */
      public SiteRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SiteRequest)this;
+         return this;
      }
 
 }

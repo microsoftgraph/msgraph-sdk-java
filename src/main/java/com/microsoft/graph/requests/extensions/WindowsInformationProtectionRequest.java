@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Information Protection Request.
  */
-public class WindowsInformationProtectionRequest extends BaseRequest {
+public class WindowsInformationProtectionRequest extends BaseRequest<WindowsInformationProtection> {
 	
     /**
      * The request for the WindowsInformationProtection
@@ -160,7 +160,7 @@ public class WindowsInformationProtectionRequest extends BaseRequest {
      */
      public WindowsInformationProtectionRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsInformationProtectionRequest)this;
+         return this;
      }
 
     /**
@@ -171,7 +171,7 @@ public class WindowsInformationProtectionRequest extends BaseRequest {
      */
      public WindowsInformationProtectionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsInformationProtectionRequest)this;
+         return this;
      }
 
 }

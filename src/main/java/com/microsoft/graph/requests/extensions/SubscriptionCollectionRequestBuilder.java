@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Subscription Collection Request Builder.
  */
-public class SubscriptionCollectionRequestBuilder extends BaseRequestBuilder {
+public class SubscriptionCollectionRequestBuilder extends BaseRequestBuilder<Subscription> {
 
     /**
      * The request builder for this collection of Subscription

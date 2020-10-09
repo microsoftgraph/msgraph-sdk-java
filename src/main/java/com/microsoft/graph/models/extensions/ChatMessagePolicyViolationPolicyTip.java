@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -33,7 +34,7 @@ public class ChatMessagePolicyViolationPolicyTip implements IJsonBackedObject {
 
     /**
      * The Compliance Url.
-     * 
+     * The URL a user can visit to read about the data loss prevention policies for the organization. (ie, policies about what users shouldn't say in chats)
      */
     @SerializedName(value = "complianceUrl", alternate = {"ComplianceUrl"})
     @Expose
@@ -41,7 +42,7 @@ public class ChatMessagePolicyViolationPolicyTip implements IJsonBackedObject {
 
     /**
      * The General Text.
-     * 
+     * Explanatory text shown to the sender of the message.
      */
     @SerializedName(value = "generalText", alternate = {"GeneralText"})
     @Expose
@@ -49,7 +50,7 @@ public class ChatMessagePolicyViolationPolicyTip implements IJsonBackedObject {
 
     /**
      * The Matched Condition Descriptions.
-     * 
+     * The list of improper data in the message that was detected by the data loss prevention app. Each DLP app defines its own conditions, examples include 'Credit Card Number' and 'Social Security Number'.
      */
     @SerializedName(value = "matchedConditionDescriptions", alternate = {"MatchedConditionDescriptions"})
     @Expose
@@ -80,7 +81,8 @@ public class ChatMessagePolicyViolationPolicyTip implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

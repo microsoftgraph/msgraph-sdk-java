@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the On Premises Conditional Access Settings Request.
  */
-public class OnPremisesConditionalAccessSettingsRequest extends BaseRequest {
+public class OnPremisesConditionalAccessSettingsRequest extends BaseRequest<OnPremisesConditionalAccessSettings> {
 	
     /**
      * The request for the OnPremisesConditionalAccessSettings
@@ -140,7 +140,7 @@ public class OnPremisesConditionalAccessSettingsRequest extends BaseRequest {
      */
      public OnPremisesConditionalAccessSettingsRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OnPremisesConditionalAccessSettingsRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class OnPremisesConditionalAccessSettingsRequest extends BaseRequest {
      */
      public OnPremisesConditionalAccessSettingsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OnPremisesConditionalAccessSettingsRequest)this;
+         return this;
      }
 
 }

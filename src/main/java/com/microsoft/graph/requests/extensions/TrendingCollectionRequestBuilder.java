@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Trending Collection Request Builder.
  */
-public class TrendingCollectionRequestBuilder extends BaseRequestBuilder {
+public class TrendingCollectionRequestBuilder extends BaseRequestBuilder<Trending> {
 
     /**
      * The request builder for this collection of OfficeGraphInsights

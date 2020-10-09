@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows81Compliance Policy Request.
  */
-public class Windows81CompliancePolicyRequest extends BaseRequest {
+public class Windows81CompliancePolicyRequest extends BaseRequest<Windows81CompliancePolicy> {
 	
     /**
      * The request for the Windows81CompliancePolicy
@@ -140,7 +140,7 @@ public class Windows81CompliancePolicyRequest extends BaseRequest {
      */
      public Windows81CompliancePolicyRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (Windows81CompliancePolicyRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class Windows81CompliancePolicyRequest extends BaseRequest {
      */
      public Windows81CompliancePolicyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Windows81CompliancePolicyRequest)this;
+         return this;
      }
 
 }

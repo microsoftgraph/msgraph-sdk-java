@@ -24,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Managed Device Mobile App Configuration Collection Request Builder.
  */
-public class ManagedDeviceMobileAppConfigurationCollectionRequestBuilder extends BaseRequestBuilder {
+public class ManagedDeviceMobileAppConfigurationCollectionRequestBuilder extends BaseRequestBuilder<ManagedDeviceMobileAppConfiguration> {
 
     /**
      * The request builder for this collection of DeviceAppManagement

@@ -51,7 +51,7 @@ public class WorkbookFunctionsMaxBody {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

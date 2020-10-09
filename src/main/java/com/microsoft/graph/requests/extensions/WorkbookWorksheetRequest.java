@@ -29,7 +29,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Worksheet Request.
  */
-public class WorkbookWorksheetRequest extends BaseRequest {
+public class WorkbookWorksheetRequest extends BaseRequest<WorkbookWorksheet> {
 	
     /**
      * The request for the WorkbookWorksheet
@@ -150,7 +150,7 @@ public class WorkbookWorksheetRequest extends BaseRequest {
      */
      public WorkbookWorksheetRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookWorksheetRequest)this;
+         return this;
      }
 
     /**
@@ -161,7 +161,7 @@ public class WorkbookWorksheetRequest extends BaseRequest {
      */
      public WorkbookWorksheetRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookWorksheetRequest)this;
+         return this;
      }
 
 }

@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the App Role Assignment With Reference Request.
  */
-public class AppRoleAssignmentWithReferenceRequest extends BaseRequest {
+public class AppRoleAssignmentWithReferenceRequest extends BaseWithReferenceRequest<AppRoleAssignment> {
 
     /**
      * The request for the AppRoleAssignment
@@ -35,43 +35,6 @@ public class AppRoleAssignmentWithReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, AppRoleAssignment.class);
     }
 
-    public void post(final AppRoleAssignment newAppRoleAssignment, final IJsonBackedObject payload, final ICallback<? super AppRoleAssignment> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    public AppRoleAssignment post(final AppRoleAssignment newAppRoleAssignment, final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newAppRoleAssignment;
-        }
-        return null;
-    }
-
-    public void get(final ICallback<? super AppRoleAssignment> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    public AppRoleAssignment get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(final ICallback<? super AppRoleAssignment> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(final AppRoleAssignment sourceAppRoleAssignment, final ICallback<? super AppRoleAssignment> callback) {
-		send(HttpMethod.PATCH, callback, sourceAppRoleAssignment);
-	}
-
-	public AppRoleAssignment patch(final AppRoleAssignment sourceAppRoleAssignment) throws ClientException {
-		return send(HttpMethod.PATCH, sourceAppRoleAssignment);
-	}
-
-
     /**
      * Sets the select clause for the request
      *
@@ -80,7 +43,7 @@ public class AppRoleAssignmentWithReferenceRequest extends BaseRequest {
      */
     public AppRoleAssignmentWithReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (AppRoleAssignmentWithReferenceRequest)this;
+        return this;
     }
 
     /**
@@ -91,6 +54,6 @@ public class AppRoleAssignmentWithReferenceRequest extends BaseRequest {
      */
     public AppRoleAssignmentWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (AppRoleAssignmentWithReferenceRequest)this;
+        return this;
     }
 }

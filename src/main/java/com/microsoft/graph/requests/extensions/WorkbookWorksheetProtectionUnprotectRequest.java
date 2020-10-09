@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.WorkbookWorksheetProtection;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetProtectionUnprotectRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -17,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Worksheet Protection Unprotect Request.
  */
-public class WorkbookWorksheetProtectionUnprotectRequest extends BaseRequest {
+public class WorkbookWorksheetProtectionUnprotectRequest extends BaseRequest<WorkbookWorksheetProtection> {
 
     /**
      * The request for this WorkbookWorksheetProtectionUnprotect
@@ -27,7 +28,7 @@ public class WorkbookWorksheetProtectionUnprotectRequest extends BaseRequest {
      * @param requestOptions the options for this request
      */
     public WorkbookWorksheetProtectionUnprotectRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Void.class);
+        super(requestUrl, client, requestOptions, WorkbookWorksheetProtection.class);
     }
 
     /**

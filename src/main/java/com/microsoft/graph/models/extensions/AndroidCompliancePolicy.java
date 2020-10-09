@@ -217,7 +217,8 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements I
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

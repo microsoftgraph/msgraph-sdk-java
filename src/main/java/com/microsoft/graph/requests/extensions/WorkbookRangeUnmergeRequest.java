@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.requests.extensions.WorkbookRangeUnmergeRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -17,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Unmerge Request.
  */
-public class WorkbookRangeUnmergeRequest extends BaseRequest {
+public class WorkbookRangeUnmergeRequest extends BaseRequest<WorkbookRange> {
 
     /**
      * The request for this WorkbookRangeUnmerge
@@ -27,7 +28,7 @@ public class WorkbookRangeUnmergeRequest extends BaseRequest {
      * @param requestOptions the options for this request
      */
     public WorkbookRangeUnmergeRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Void.class);
+        super(requestUrl, client, requestOptions, WorkbookRange.class);
     }
 
     /**

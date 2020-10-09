@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.WorkbookRangeFormatAutofitRowsRequest;
+import com.microsoft.graph.models.extensions.WorkbookRangeFormat;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Range Format Autofit Rows Request Builder.
  */
-public class WorkbookRangeFormatAutofitRowsRequestBuilder extends BaseActionRequestBuilder {
+public class WorkbookRangeFormatAutofitRowsRequestBuilder extends BaseActionRequestBuilder<WorkbookRangeFormat> {
 
     /**
      * The request builder for this WorkbookRangeFormatAutofitRows

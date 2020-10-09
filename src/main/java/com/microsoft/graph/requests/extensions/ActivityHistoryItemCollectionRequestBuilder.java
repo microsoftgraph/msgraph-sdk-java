@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Activity History Item Collection Request Builder.
  */
-public class ActivityHistoryItemCollectionRequestBuilder extends BaseRequestBuilder {
+public class ActivityHistoryItemCollectionRequestBuilder extends BaseRequestBuilder<ActivityHistoryItem> {
 
     /**
      * The request builder for this collection of UserActivity

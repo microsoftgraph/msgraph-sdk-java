@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Terms And Conditions Collection Request Builder.
  */
-public class TermsAndConditionsCollectionRequestBuilder extends BaseRequestBuilder {
+public class TermsAndConditionsCollectionRequestBuilder extends BaseRequestBuilder<TermsAndConditions> {
 
     /**
      * The request builder for this collection of DeviceManagement

@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Onenote Section Copy To Section Group Request.
  */
-public class OnenoteSectionCopyToSectionGroupRequest extends BaseRequest {
+public class OnenoteSectionCopyToSectionGroupRequest extends BaseRequest<OnenoteOperation> {
     protected final OnenoteSectionCopyToSectionGroupBody body;
 
     /**
@@ -29,6 +29,7 @@ public class OnenoteSectionCopyToSectionGroupRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public OnenoteSectionCopyToSectionGroupRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OnenoteOperation.class);
         body = new OnenoteSectionCopyToSectionGroupBody();
@@ -50,7 +51,7 @@ public class OnenoteSectionCopyToSectionGroupRequest extends BaseRequest {
      */
     public OnenoteSectionCopyToSectionGroupRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (OnenoteSectionCopyToSectionGroupRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class OnenoteSectionCopyToSectionGroupRequest extends BaseRequest {
      */
     public OnenoteSectionCopyToSectionGroupRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (OnenoteSectionCopyToSectionGroupRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class OnenoteSectionCopyToSectionGroupRequest extends BaseRequest {
      */
     public OnenoteSectionCopyToSectionGroupRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (OnenoteSectionCopyToSectionGroupRequest)this;
+        return this;
     }
 
 }

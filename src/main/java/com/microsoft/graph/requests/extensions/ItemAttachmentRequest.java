@@ -20,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Item Attachment Request.
  */
-public class ItemAttachmentRequest extends BaseRequest {
+public class ItemAttachmentRequest extends BaseRequest<ItemAttachment> {
 	
     /**
      * The request for the ItemAttachment
@@ -141,7 +141,7 @@ public class ItemAttachmentRequest extends BaseRequest {
      */
      public ItemAttachmentRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ItemAttachmentRequest)this;
+         return this;
      }
 
     /**
@@ -152,7 +152,7 @@ public class ItemAttachmentRequest extends BaseRequest {
      */
      public ItemAttachmentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ItemAttachmentRequest)this;
+         return this;
      }
 
 }

@@ -24,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Conversation Thread Collection Request Builder.
  */
-public class ConversationThreadCollectionRequestBuilder extends BaseRequestBuilder {
+public class ConversationThreadCollectionRequestBuilder extends BaseRequestBuilder<ConversationThread> {
 
     /**
      * The request builder for this collection of Conversation

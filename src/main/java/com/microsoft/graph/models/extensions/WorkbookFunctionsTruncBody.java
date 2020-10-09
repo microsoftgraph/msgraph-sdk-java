@@ -59,7 +59,7 @@ public class WorkbookFunctionsTruncBody {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

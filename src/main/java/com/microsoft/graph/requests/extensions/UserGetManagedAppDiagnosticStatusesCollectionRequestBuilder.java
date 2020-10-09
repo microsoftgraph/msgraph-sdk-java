@@ -22,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the User Get Managed App Diagnostic Statuses Collection Request Builder.
  */
-public class UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder extends BaseFunctionRequestBuilder {
+public class UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder extends BaseFunctionRequestBuilder<ManagedAppDiagnosticStatus> {
 
     /**
      * The request builder for this collection of User

@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Vdb Request.
  */
-public class WorkbookFunctionsVdbRequest extends BaseRequest {
+public class WorkbookFunctionsVdbRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsVdbBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsVdbRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsVdbRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsVdbBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsVdbRequest extends BaseRequest {
      */
     public WorkbookFunctionsVdbRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsVdbRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsVdbRequest extends BaseRequest {
      */
     public WorkbookFunctionsVdbRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsVdbRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsVdbRequest extends BaseRequest {
      */
     public WorkbookFunctionsVdbRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsVdbRequest)this;
+        return this;
     }
 
 }

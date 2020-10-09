@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the OAuth2Permission Grant Collection Request Builder.
  */
-public class OAuth2PermissionGrantCollectionRequestBuilder extends BaseRequestBuilder {
+public class OAuth2PermissionGrantCollectionRequestBuilder extends BaseRequestBuilder<OAuth2PermissionGrant> {
 
     /**
      * The request builder for this collection of OAuth2PermissionGrant

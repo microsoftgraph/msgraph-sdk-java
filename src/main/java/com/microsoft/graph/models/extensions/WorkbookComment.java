@@ -7,9 +7,9 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.WorkbookCommentReply;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.WorkbookCommentReplyCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -46,7 +46,7 @@ public class WorkbookComment extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "replies", alternate = {"Replies"})
     @Expose
-    public WorkbookCommentReplyCollectionPage replies;
+    public BaseCollectionPage<WorkbookCommentReply> replies;
 
 
     /**
@@ -73,7 +73,8 @@ public class WorkbookComment extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -89,7 +90,7 @@ public class WorkbookComment extends Entity implements IJsonBackedObject {
 
 
         if (json.has("replies")) {
-            replies = serializer.deserializeObject(json.get("replies").toString(), WorkbookCommentReplyCollectionPage.class);
+            replies = serializer.deserializeObject(json.get("replies").toString(), new BaseCollectionPage<WorkbookCommentReply>(new java.util.ArrayList<WorkbookCommentReply>(), null).getClass());
         }
     }
 }

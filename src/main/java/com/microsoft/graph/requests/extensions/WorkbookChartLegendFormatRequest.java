@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Legend Format Request.
  */
-public class WorkbookChartLegendFormatRequest extends BaseRequest {
+public class WorkbookChartLegendFormatRequest extends BaseRequest<WorkbookChartLegendFormat> {
 	
     /**
      * The request for the WorkbookChartLegendFormat
@@ -142,7 +142,7 @@ public class WorkbookChartLegendFormatRequest extends BaseRequest {
      */
      public WorkbookChartLegendFormatRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookChartLegendFormatRequest)this;
+         return this;
      }
 
     /**
@@ -153,7 +153,7 @@ public class WorkbookChartLegendFormatRequest extends BaseRequest {
      */
      public WorkbookChartLegendFormatRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookChartLegendFormatRequest)this;
+         return this;
      }
 
 }

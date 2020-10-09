@@ -7,10 +7,10 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.generated.NotificationTemplateBrandingOptions;
 import com.microsoft.graph.models.extensions.LocalizedNotificationMessage;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.LocalizedNotificationMessageCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -63,7 +63,7 @@ public class NotificationMessageTemplate extends Entity implements IJsonBackedOb
      */
     @SerializedName(value = "localizedNotificationMessages", alternate = {"LocalizedNotificationMessages"})
     @Expose
-    public LocalizedNotificationMessageCollectionPage localizedNotificationMessages;
+    public BaseCollectionPage<LocalizedNotificationMessage> localizedNotificationMessages;
 
 
     /**
@@ -90,7 +90,8 @@ public class NotificationMessageTemplate extends Entity implements IJsonBackedOb
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -106,7 +107,7 @@ public class NotificationMessageTemplate extends Entity implements IJsonBackedOb
 
 
         if (json.has("localizedNotificationMessages")) {
-            localizedNotificationMessages = serializer.deserializeObject(json.get("localizedNotificationMessages").toString(), LocalizedNotificationMessageCollectionPage.class);
+            localizedNotificationMessages = serializer.deserializeObject(json.get("localizedNotificationMessages").toString(), new BaseCollectionPage<LocalizedNotificationMessage>(new java.util.ArrayList<LocalizedNotificationMessage>(), null).getClass());
         }
     }
 }

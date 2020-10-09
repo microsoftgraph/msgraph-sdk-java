@@ -93,7 +93,7 @@ public class OnlineMeetingCreateOrGetBody {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

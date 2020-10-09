@@ -209,7 +209,8 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

@@ -26,7 +26,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Attachment Collection Request Builder.
  */
-public class AttachmentCollectionRequestBuilder extends BaseRequestBuilder {
+public class AttachmentCollectionRequestBuilder extends BaseRequestBuilder<Attachment> {
 
     /**
      * The request builder for this collection of Post

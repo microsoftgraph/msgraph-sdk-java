@@ -27,7 +27,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Table Row Collection Request Builder.
  */
-public class WorkbookTableRowCollectionRequestBuilder extends BaseRequestBuilder {
+public class WorkbookTableRowCollectionRequestBuilder extends BaseRequestBuilder<WorkbookTableRow> {
 
     /**
      * The request builder for this collection of WorkbookTable

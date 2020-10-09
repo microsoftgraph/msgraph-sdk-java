@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Domain Dns Unavailable Record Request.
  */
-public class DomainDnsUnavailableRecordRequest extends BaseRequest {
+public class DomainDnsUnavailableRecordRequest extends BaseRequest<DomainDnsUnavailableRecord> {
 	
     /**
      * The request for the DomainDnsUnavailableRecord
@@ -140,7 +140,7 @@ public class DomainDnsUnavailableRecordRequest extends BaseRequest {
      */
      public DomainDnsUnavailableRecordRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DomainDnsUnavailableRecordRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class DomainDnsUnavailableRecordRequest extends BaseRequest {
      */
      public DomainDnsUnavailableRecordRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DomainDnsUnavailableRecordRequest)this;
+         return this;
      }
 
 }

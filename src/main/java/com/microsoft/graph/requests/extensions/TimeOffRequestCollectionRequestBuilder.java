@@ -24,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Time Off Request Collection Request Builder.
  */
-public class TimeOffRequestCollectionRequestBuilder extends BaseRequestBuilder {
+public class TimeOffRequestCollectionRequestBuilder extends BaseRequestBuilder<TimeOffRequest> {
 
     /**
      * The request builder for this collection of Schedule

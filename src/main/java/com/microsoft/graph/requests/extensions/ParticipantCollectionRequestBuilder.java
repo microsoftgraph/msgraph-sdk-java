@@ -27,7 +27,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Participant Collection Request Builder.
  */
-public class ParticipantCollectionRequestBuilder extends BaseRequestBuilder {
+public class ParticipantCollectionRequestBuilder extends BaseRequestBuilder<Participant> {
 
     /**
      * The request builder for this collection of Call

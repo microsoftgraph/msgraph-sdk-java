@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Telecom Expense Management Partner Request.
  */
-public class TelecomExpenseManagementPartnerRequest extends BaseRequest {
+public class TelecomExpenseManagementPartnerRequest extends BaseRequest<TelecomExpenseManagementPartner> {
 	
     /**
      * The request for the TelecomExpenseManagementPartner
@@ -140,7 +140,7 @@ public class TelecomExpenseManagementPartnerRequest extends BaseRequest {
      */
      public TelecomExpenseManagementPartnerRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TelecomExpenseManagementPartnerRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class TelecomExpenseManagementPartnerRequest extends BaseRequest {
      */
      public TelecomExpenseManagementPartnerRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TelecomExpenseManagementPartnerRequest)this;
+         return this;
      }
 
 }

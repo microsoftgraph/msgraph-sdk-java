@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Named Location Collection Request Builder.
  */
-public class NamedLocationCollectionRequestBuilder extends BaseRequestBuilder {
+public class NamedLocationCollectionRequestBuilder extends BaseRequestBuilder<NamedLocation> {
 
     /**
      * The request builder for this collection of ConditionalAccessRoot

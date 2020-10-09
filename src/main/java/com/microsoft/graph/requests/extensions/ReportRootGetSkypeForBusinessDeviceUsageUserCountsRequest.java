@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
+import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.requests.extensions.ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Skype For Business Device Usage User Counts Request.
  */
-public class ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequest extends BaseRequest {
+public class ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequest extends BaseRequest<Report> {
 
     /**
      * The request for this ReportRootGetSkypeForBusinessDeviceUsageUserCounts
@@ -98,7 +99,7 @@ public class ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequest extends B
      */
     public ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequest)this;
+        return this;
     }
 
     /**
@@ -109,7 +110,7 @@ public class ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequest extends B
      */
     public ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequest)this;
+        return this;
     }
 
     /**
@@ -120,7 +121,7 @@ public class ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequest extends B
      */
     public ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequest)this;
+        return this;
     }
 
     /**
@@ -131,7 +132,7 @@ public class ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequest extends B
      */
     public ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequest)this;
+        return this;
     }
 
 }

@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.Team;
 import com.microsoft.graph.requests.extensions.TeamUnarchiveRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -17,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Team Unarchive Request.
  */
-public class TeamUnarchiveRequest extends BaseRequest {
+public class TeamUnarchiveRequest extends BaseRequest<Team> {
 
     /**
      * The request for this TeamUnarchive
@@ -27,7 +28,7 @@ public class TeamUnarchiveRequest extends BaseRequest {
      * @param requestOptions the options for this request
      */
     public TeamUnarchiveRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Void.class);
+        super(requestUrl, client, requestOptions, Team.class);
     }
 
     /**

@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.requests.extensions.UserRemoveAllDevicesFromManagementRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -17,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the User Remove All Devices From Management Request.
  */
-public class UserRemoveAllDevicesFromManagementRequest extends BaseRequest {
+public class UserRemoveAllDevicesFromManagementRequest extends BaseRequest<User> {
 
     /**
      * The request for this UserRemoveAllDevicesFromManagement
@@ -27,7 +28,7 @@ public class UserRemoveAllDevicesFromManagementRequest extends BaseRequest {
      * @param requestOptions the options for this request
      */
     public UserRemoveAllDevicesFromManagementRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Void.class);
+        super(requestUrl, client, requestOptions, User.class);
     }
 
     /**

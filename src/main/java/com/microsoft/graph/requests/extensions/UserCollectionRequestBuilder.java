@@ -37,7 +37,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the User Collection Request Builder.
  */
-public class UserCollectionRequestBuilder extends BaseRequestBuilder {
+public class UserCollectionRequestBuilder extends BaseRequestBuilder<User> {
 
     /**
      * The request builder for this collection of User

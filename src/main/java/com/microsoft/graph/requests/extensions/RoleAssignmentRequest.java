@@ -20,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Role Assignment Request.
  */
-public class RoleAssignmentRequest extends BaseRequest {
+public class RoleAssignmentRequest extends BaseRequest<RoleAssignment> {
 	
     /**
      * The request for the RoleAssignment
@@ -156,7 +156,7 @@ public class RoleAssignmentRequest extends BaseRequest {
      */
      public RoleAssignmentRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (RoleAssignmentRequest)this;
+         return this;
      }
 
     /**
@@ -167,7 +167,7 @@ public class RoleAssignmentRequest extends BaseRequest {
      */
      public RoleAssignmentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (RoleAssignmentRequest)this;
+         return this;
      }
 
 }

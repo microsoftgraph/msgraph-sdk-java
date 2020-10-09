@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Comms Operation Collection Request Builder.
  */
-public class CommsOperationCollectionRequestBuilder extends BaseRequestBuilder {
+public class CommsOperationCollectionRequestBuilder extends BaseRequestBuilder<CommsOperation> {
 
     /**
      * The request builder for this collection of Call

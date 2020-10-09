@@ -72,7 +72,8 @@ public class ManagedAndroidStoreApp extends ManagedApp implements IJsonBackedObj
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Outlook User Request.
  */
-public class OutlookUserRequest extends BaseRequest {
+public class OutlookUserRequest extends BaseRequest<OutlookUser> {
 	
     /**
      * The request for the OutlookUser
@@ -145,7 +145,7 @@ public class OutlookUserRequest extends BaseRequest {
      */
      public OutlookUserRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OutlookUserRequest)this;
+         return this;
      }
 
     /**
@@ -156,7 +156,7 @@ public class OutlookUserRequest extends BaseRequest {
      */
      public OutlookUserRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OutlookUserRequest)this;
+         return this;
      }
 
 }

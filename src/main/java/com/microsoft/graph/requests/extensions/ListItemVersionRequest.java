@@ -20,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the List Item Version Request.
  */
-public class ListItemVersionRequest extends BaseRequest {
+public class ListItemVersionRequest extends BaseRequest<ListItemVersion> {
 	
     /**
      * The request for the ListItemVersion
@@ -141,7 +141,7 @@ public class ListItemVersionRequest extends BaseRequest {
      */
      public ListItemVersionRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ListItemVersionRequest)this;
+         return this;
      }
 
     /**
@@ -152,7 +152,7 @@ public class ListItemVersionRequest extends BaseRequest {
      */
      public ListItemVersionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ListItemVersionRequest)this;
+         return this;
      }
 
 }

@@ -28,7 +28,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Notebook Collection Request Builder.
  */
-public class NotebookCollectionRequestBuilder extends BaseRequestBuilder {
+public class NotebookCollectionRequestBuilder extends BaseRequestBuilder<Notebook> {
 
     /**
      * The request builder for this collection of Onenote

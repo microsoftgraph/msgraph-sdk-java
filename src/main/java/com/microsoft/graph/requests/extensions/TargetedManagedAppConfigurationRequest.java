@@ -26,7 +26,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Targeted Managed App Configuration Request.
  */
-public class TargetedManagedAppConfigurationRequest extends BaseRequest {
+public class TargetedManagedAppConfigurationRequest extends BaseRequest<TargetedManagedAppConfiguration> {
 	
     /**
      * The request for the TargetedManagedAppConfiguration
@@ -147,7 +147,7 @@ public class TargetedManagedAppConfigurationRequest extends BaseRequest {
      */
      public TargetedManagedAppConfigurationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TargetedManagedAppConfigurationRequest)this;
+         return this;
      }
 
     /**
@@ -158,7 +158,7 @@ public class TargetedManagedAppConfigurationRequest extends BaseRequest {
      */
      public TargetedManagedAppConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TargetedManagedAppConfigurationRequest)this;
+         return this;
      }
 
 }

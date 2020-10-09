@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.ListInfo;
 import com.microsoft.graph.models.extensions.SharepointIds;
 import com.microsoft.graph.models.extensions.SystemFacet;
@@ -16,10 +17,6 @@ import com.microsoft.graph.models.extensions.Drive;
 import com.microsoft.graph.models.extensions.ListItem;
 import com.microsoft.graph.models.extensions.Subscription;
 import com.microsoft.graph.models.extensions.BaseItem;
-import com.microsoft.graph.requests.extensions.ColumnDefinitionCollectionPage;
-import com.microsoft.graph.requests.extensions.ContentTypeCollectionPage;
-import com.microsoft.graph.requests.extensions.ListItemCollectionPage;
-import com.microsoft.graph.requests.extensions.SubscriptionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -72,7 +69,7 @@ public class List extends BaseItem implements IJsonBackedObject {
      */
     @SerializedName(value = "columns", alternate = {"Columns"})
     @Expose
-    public ColumnDefinitionCollectionPage columns;
+    public BaseCollectionPage<ColumnDefinition> columns;
 
     /**
      * The Content Types.
@@ -80,7 +77,7 @@ public class List extends BaseItem implements IJsonBackedObject {
      */
     @SerializedName(value = "contentTypes", alternate = {"ContentTypes"})
     @Expose
-    public ContentTypeCollectionPage contentTypes;
+    public BaseCollectionPage<ContentType> contentTypes;
 
     /**
      * The Drive.
@@ -96,7 +93,7 @@ public class List extends BaseItem implements IJsonBackedObject {
      */
     @SerializedName(value = "items", alternate = {"Items"})
     @Expose
-    public ListItemCollectionPage items;
+    public BaseCollectionPage<ListItem> items;
 
     /**
      * The Subscriptions.
@@ -104,7 +101,7 @@ public class List extends BaseItem implements IJsonBackedObject {
      */
     @SerializedName(value = "subscriptions", alternate = {"Subscriptions"})
     @Expose
-    public SubscriptionCollectionPage subscriptions;
+    public BaseCollectionPage<Subscription> subscriptions;
 
 
     /**
@@ -131,7 +128,8 @@ public class List extends BaseItem implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -147,19 +145,19 @@ public class List extends BaseItem implements IJsonBackedObject {
 
 
         if (json.has("columns")) {
-            columns = serializer.deserializeObject(json.get("columns").toString(), ColumnDefinitionCollectionPage.class);
+            columns = serializer.deserializeObject(json.get("columns").toString(), new BaseCollectionPage<ColumnDefinition>(new java.util.ArrayList<ColumnDefinition>(), null).getClass());
         }
 
         if (json.has("contentTypes")) {
-            contentTypes = serializer.deserializeObject(json.get("contentTypes").toString(), ContentTypeCollectionPage.class);
+            contentTypes = serializer.deserializeObject(json.get("contentTypes").toString(), new BaseCollectionPage<ContentType>(new java.util.ArrayList<ContentType>(), null).getClass());
         }
 
         if (json.has("items")) {
-            items = serializer.deserializeObject(json.get("items").toString(), ListItemCollectionPage.class);
+            items = serializer.deserializeObject(json.get("items").toString(), new BaseCollectionPage<ListItem>(new java.util.ArrayList<ListItem>(), null).getClass());
         }
 
         if (json.has("subscriptions")) {
-            subscriptions = serializer.deserializeObject(json.get("subscriptions").toString(), SubscriptionCollectionPage.class);
+            subscriptions = serializer.deserializeObject(json.get("subscriptions").toString(), new BaseCollectionPage<Subscription>(new java.util.ArrayList<Subscription>(), null).getClass());
         }
     }
 }

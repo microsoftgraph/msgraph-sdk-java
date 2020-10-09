@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.ManagedEBook;
 import com.microsoft.graph.models.extensions.MobileAppCategory;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfiguration;
@@ -22,20 +23,6 @@ import com.microsoft.graph.models.extensions.MdmWindowsInformationProtectionPoli
 import com.microsoft.graph.models.extensions.TargetedManagedAppConfiguration;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionPolicy;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ManagedEBookCollectionPage;
-import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionPage;
-import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationCollectionPage;
-import com.microsoft.graph.requests.extensions.MobileAppCollectionPage;
-import com.microsoft.graph.requests.extensions.VppTokenCollectionPage;
-import com.microsoft.graph.requests.extensions.AndroidManagedAppProtectionCollectionPage;
-import com.microsoft.graph.requests.extensions.DefaultManagedAppProtectionCollectionPage;
-import com.microsoft.graph.requests.extensions.IosManagedAppProtectionCollectionPage;
-import com.microsoft.graph.requests.extensions.ManagedAppPolicyCollectionPage;
-import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionPage;
-import com.microsoft.graph.requests.extensions.ManagedAppStatusCollectionPage;
-import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyCollectionPage;
-import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationCollectionPage;
-import com.microsoft.graph.requests.extensions.WindowsInformationProtectionPolicyCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -88,7 +75,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "managedEBooks", alternate = {"ManagedEBooks"})
     @Expose
-    public ManagedEBookCollectionPage managedEBooks;
+    public BaseCollectionPage<ManagedEBook> managedEBooks;
 
     /**
      * The Mobile App Categories.
@@ -96,7 +83,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "mobileAppCategories", alternate = {"MobileAppCategories"})
     @Expose
-    public MobileAppCategoryCollectionPage mobileAppCategories;
+    public BaseCollectionPage<MobileAppCategory> mobileAppCategories;
 
     /**
      * The Mobile App Configurations.
@@ -104,7 +91,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "mobileAppConfigurations", alternate = {"MobileAppConfigurations"})
     @Expose
-    public ManagedDeviceMobileAppConfigurationCollectionPage mobileAppConfigurations;
+    public BaseCollectionPage<ManagedDeviceMobileAppConfiguration> mobileAppConfigurations;
 
     /**
      * The Mobile Apps.
@@ -112,7 +99,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "mobileApps", alternate = {"MobileApps"})
     @Expose
-    public MobileAppCollectionPage mobileApps;
+    public BaseCollectionPage<MobileApp> mobileApps;
 
     /**
      * The Vpp Tokens.
@@ -120,7 +107,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "vppTokens", alternate = {"VppTokens"})
     @Expose
-    public VppTokenCollectionPage vppTokens;
+    public BaseCollectionPage<VppToken> vppTokens;
 
     /**
      * The Android Managed App Protections.
@@ -128,7 +115,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "androidManagedAppProtections", alternate = {"AndroidManagedAppProtections"})
     @Expose
-    public AndroidManagedAppProtectionCollectionPage androidManagedAppProtections;
+    public BaseCollectionPage<AndroidManagedAppProtection> androidManagedAppProtections;
 
     /**
      * The Default Managed App Protections.
@@ -136,7 +123,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "defaultManagedAppProtections", alternate = {"DefaultManagedAppProtections"})
     @Expose
-    public DefaultManagedAppProtectionCollectionPage defaultManagedAppProtections;
+    public BaseCollectionPage<DefaultManagedAppProtection> defaultManagedAppProtections;
 
     /**
      * The Ios Managed App Protections.
@@ -144,7 +131,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "iosManagedAppProtections", alternate = {"IosManagedAppProtections"})
     @Expose
-    public IosManagedAppProtectionCollectionPage iosManagedAppProtections;
+    public BaseCollectionPage<IosManagedAppProtection> iosManagedAppProtections;
 
     /**
      * The Managed App Policies.
@@ -152,7 +139,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "managedAppPolicies", alternate = {"ManagedAppPolicies"})
     @Expose
-    public ManagedAppPolicyCollectionPage managedAppPolicies;
+    public BaseCollectionPage<ManagedAppPolicy> managedAppPolicies;
 
     /**
      * The Managed App Registrations.
@@ -160,7 +147,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "managedAppRegistrations", alternate = {"ManagedAppRegistrations"})
     @Expose
-    public ManagedAppRegistrationCollectionPage managedAppRegistrations;
+    public BaseCollectionPage<ManagedAppRegistration> managedAppRegistrations;
 
     /**
      * The Managed App Statuses.
@@ -168,7 +155,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "managedAppStatuses", alternate = {"ManagedAppStatuses"})
     @Expose
-    public ManagedAppStatusCollectionPage managedAppStatuses;
+    public BaseCollectionPage<ManagedAppStatus> managedAppStatuses;
 
     /**
      * The Mdm Windows Information Protection Policies.
@@ -176,7 +163,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "mdmWindowsInformationProtectionPolicies", alternate = {"MdmWindowsInformationProtectionPolicies"})
     @Expose
-    public MdmWindowsInformationProtectionPolicyCollectionPage mdmWindowsInformationProtectionPolicies;
+    public BaseCollectionPage<MdmWindowsInformationProtectionPolicy> mdmWindowsInformationProtectionPolicies;
 
     /**
      * The Targeted Managed App Configurations.
@@ -184,7 +171,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "targetedManagedAppConfigurations", alternate = {"TargetedManagedAppConfigurations"})
     @Expose
-    public TargetedManagedAppConfigurationCollectionPage targetedManagedAppConfigurations;
+    public BaseCollectionPage<TargetedManagedAppConfiguration> targetedManagedAppConfigurations;
 
     /**
      * The Windows Information Protection Policies.
@@ -192,7 +179,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "windowsInformationProtectionPolicies", alternate = {"WindowsInformationProtectionPolicies"})
     @Expose
-    public WindowsInformationProtectionPolicyCollectionPage windowsInformationProtectionPolicies;
+    public BaseCollectionPage<WindowsInformationProtectionPolicy> windowsInformationProtectionPolicies;
 
 
     /**
@@ -219,7 +206,8 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -235,59 +223,59 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
 
 
         if (json.has("managedEBooks")) {
-            managedEBooks = serializer.deserializeObject(json.get("managedEBooks").toString(), ManagedEBookCollectionPage.class);
+            managedEBooks = serializer.deserializeObject(json.get("managedEBooks").toString(), new BaseCollectionPage<ManagedEBook>(new java.util.ArrayList<ManagedEBook>(), null).getClass());
         }
 
         if (json.has("mobileAppCategories")) {
-            mobileAppCategories = serializer.deserializeObject(json.get("mobileAppCategories").toString(), MobileAppCategoryCollectionPage.class);
+            mobileAppCategories = serializer.deserializeObject(json.get("mobileAppCategories").toString(), new BaseCollectionPage<MobileAppCategory>(new java.util.ArrayList<MobileAppCategory>(), null).getClass());
         }
 
         if (json.has("mobileAppConfigurations")) {
-            mobileAppConfigurations = serializer.deserializeObject(json.get("mobileAppConfigurations").toString(), ManagedDeviceMobileAppConfigurationCollectionPage.class);
+            mobileAppConfigurations = serializer.deserializeObject(json.get("mobileAppConfigurations").toString(), new BaseCollectionPage<ManagedDeviceMobileAppConfiguration>(new java.util.ArrayList<ManagedDeviceMobileAppConfiguration>(), null).getClass());
         }
 
         if (json.has("mobileApps")) {
-            mobileApps = serializer.deserializeObject(json.get("mobileApps").toString(), MobileAppCollectionPage.class);
+            mobileApps = serializer.deserializeObject(json.get("mobileApps").toString(), new BaseCollectionPage<MobileApp>(new java.util.ArrayList<MobileApp>(), null).getClass());
         }
 
         if (json.has("vppTokens")) {
-            vppTokens = serializer.deserializeObject(json.get("vppTokens").toString(), VppTokenCollectionPage.class);
+            vppTokens = serializer.deserializeObject(json.get("vppTokens").toString(), new BaseCollectionPage<VppToken>(new java.util.ArrayList<VppToken>(), null).getClass());
         }
 
         if (json.has("androidManagedAppProtections")) {
-            androidManagedAppProtections = serializer.deserializeObject(json.get("androidManagedAppProtections").toString(), AndroidManagedAppProtectionCollectionPage.class);
+            androidManagedAppProtections = serializer.deserializeObject(json.get("androidManagedAppProtections").toString(), new BaseCollectionPage<AndroidManagedAppProtection>(new java.util.ArrayList<AndroidManagedAppProtection>(), null).getClass());
         }
 
         if (json.has("defaultManagedAppProtections")) {
-            defaultManagedAppProtections = serializer.deserializeObject(json.get("defaultManagedAppProtections").toString(), DefaultManagedAppProtectionCollectionPage.class);
+            defaultManagedAppProtections = serializer.deserializeObject(json.get("defaultManagedAppProtections").toString(), new BaseCollectionPage<DefaultManagedAppProtection>(new java.util.ArrayList<DefaultManagedAppProtection>(), null).getClass());
         }
 
         if (json.has("iosManagedAppProtections")) {
-            iosManagedAppProtections = serializer.deserializeObject(json.get("iosManagedAppProtections").toString(), IosManagedAppProtectionCollectionPage.class);
+            iosManagedAppProtections = serializer.deserializeObject(json.get("iosManagedAppProtections").toString(), new BaseCollectionPage<IosManagedAppProtection>(new java.util.ArrayList<IosManagedAppProtection>(), null).getClass());
         }
 
         if (json.has("managedAppPolicies")) {
-            managedAppPolicies = serializer.deserializeObject(json.get("managedAppPolicies").toString(), ManagedAppPolicyCollectionPage.class);
+            managedAppPolicies = serializer.deserializeObject(json.get("managedAppPolicies").toString(), new BaseCollectionPage<ManagedAppPolicy>(new java.util.ArrayList<ManagedAppPolicy>(), null).getClass());
         }
 
         if (json.has("managedAppRegistrations")) {
-            managedAppRegistrations = serializer.deserializeObject(json.get("managedAppRegistrations").toString(), ManagedAppRegistrationCollectionPage.class);
+            managedAppRegistrations = serializer.deserializeObject(json.get("managedAppRegistrations").toString(), new BaseCollectionPage<ManagedAppRegistration>(new java.util.ArrayList<ManagedAppRegistration>(), null).getClass());
         }
 
         if (json.has("managedAppStatuses")) {
-            managedAppStatuses = serializer.deserializeObject(json.get("managedAppStatuses").toString(), ManagedAppStatusCollectionPage.class);
+            managedAppStatuses = serializer.deserializeObject(json.get("managedAppStatuses").toString(), new BaseCollectionPage<ManagedAppStatus>(new java.util.ArrayList<ManagedAppStatus>(), null).getClass());
         }
 
         if (json.has("mdmWindowsInformationProtectionPolicies")) {
-            mdmWindowsInformationProtectionPolicies = serializer.deserializeObject(json.get("mdmWindowsInformationProtectionPolicies").toString(), MdmWindowsInformationProtectionPolicyCollectionPage.class);
+            mdmWindowsInformationProtectionPolicies = serializer.deserializeObject(json.get("mdmWindowsInformationProtectionPolicies").toString(), new BaseCollectionPage<MdmWindowsInformationProtectionPolicy>(new java.util.ArrayList<MdmWindowsInformationProtectionPolicy>(), null).getClass());
         }
 
         if (json.has("targetedManagedAppConfigurations")) {
-            targetedManagedAppConfigurations = serializer.deserializeObject(json.get("targetedManagedAppConfigurations").toString(), TargetedManagedAppConfigurationCollectionPage.class);
+            targetedManagedAppConfigurations = serializer.deserializeObject(json.get("targetedManagedAppConfigurations").toString(), new BaseCollectionPage<TargetedManagedAppConfiguration>(new java.util.ArrayList<TargetedManagedAppConfiguration>(), null).getClass());
         }
 
         if (json.has("windowsInformationProtectionPolicies")) {
-            windowsInformationProtectionPolicies = serializer.deserializeObject(json.get("windowsInformationProtectionPolicies").toString(), WindowsInformationProtectionPolicyCollectionPage.class);
+            windowsInformationProtectionPolicies = serializer.deserializeObject(json.get("windowsInformationProtectionPolicies").toString(), new BaseCollectionPage<WindowsInformationProtectionPolicy>(new java.util.ArrayList<WindowsInformationProtectionPolicy>(), null).getClass());
         }
     }
 }

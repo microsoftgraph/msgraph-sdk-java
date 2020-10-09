@@ -22,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the User Activity Recent Collection Request Builder.
  */
-public class UserActivityRecentCollectionRequestBuilder extends BaseFunctionRequestBuilder {
+public class UserActivityRecentCollectionRequestBuilder extends BaseFunctionRequestBuilder<UserActivity> {
 
     /**
      * The request builder for this collection of UserActivity

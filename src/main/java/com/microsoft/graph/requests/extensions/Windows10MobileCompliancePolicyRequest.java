@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows10Mobile Compliance Policy Request.
  */
-public class Windows10MobileCompliancePolicyRequest extends BaseRequest {
+public class Windows10MobileCompliancePolicyRequest extends BaseRequest<Windows10MobileCompliancePolicy> {
 	
     /**
      * The request for the Windows10MobileCompliancePolicy
@@ -140,7 +140,7 @@ public class Windows10MobileCompliancePolicyRequest extends BaseRequest {
      */
      public Windows10MobileCompliancePolicyRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (Windows10MobileCompliancePolicyRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class Windows10MobileCompliancePolicyRequest extends BaseRequest {
      */
      public Windows10MobileCompliancePolicyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Windows10MobileCompliancePolicyRequest)this;
+         return this;
      }
 
 }

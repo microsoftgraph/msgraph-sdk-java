@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Activity Based Timeout Policy Collection Request Builder.
  */
-public class ActivityBasedTimeoutPolicyCollectionRequestBuilder extends BaseRequestBuilder {
+public class ActivityBasedTimeoutPolicyCollectionRequestBuilder extends BaseRequestBuilder<ActivityBasedTimeoutPolicy> {
 
     /**
      * The request builder for this collection of PolicyRoot

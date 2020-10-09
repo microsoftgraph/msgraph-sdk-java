@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Data Label Format Request.
  */
-public class WorkbookChartDataLabelFormatRequest extends BaseRequest {
+public class WorkbookChartDataLabelFormatRequest extends BaseRequest<WorkbookChartDataLabelFormat> {
 	
     /**
      * The request for the WorkbookChartDataLabelFormat
@@ -142,7 +142,7 @@ public class WorkbookChartDataLabelFormatRequest extends BaseRequest {
      */
      public WorkbookChartDataLabelFormatRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookChartDataLabelFormatRequest)this;
+         return this;
      }
 
     /**
@@ -153,7 +153,7 @@ public class WorkbookChartDataLabelFormatRequest extends BaseRequest {
      */
      public WorkbookChartDataLabelFormatRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookChartDataLabelFormatRequest)this;
+         return this;
      }
 
 }

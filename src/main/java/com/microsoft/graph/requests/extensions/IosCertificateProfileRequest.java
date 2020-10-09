@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Ios Certificate Profile Request.
  */
-public class IosCertificateProfileRequest extends BaseRequest {
+public class IosCertificateProfileRequest extends BaseRequest<IosCertificateProfile> {
 	
     /**
      * The request for the IosCertificateProfile
@@ -140,7 +140,7 @@ public class IosCertificateProfileRequest extends BaseRequest {
      */
      public IosCertificateProfileRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (IosCertificateProfileRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class IosCertificateProfileRequest extends BaseRequest {
      */
      public IosCertificateProfileRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IosCertificateProfileRequest)this;
+         return this;
      }
 
 }

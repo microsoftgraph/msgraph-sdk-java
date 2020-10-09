@@ -18,7 +18,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device Enrollment Configuration Assign Request.
  */
-public class DeviceEnrollmentConfigurationAssignRequest extends BaseRequest {
+public class DeviceEnrollmentConfigurationAssignRequest extends BaseRequest<Void> {
     protected final DeviceEnrollmentConfigurationAssignBody body;
 
     /**
@@ -28,6 +28,7 @@ public class DeviceEnrollmentConfigurationAssignRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public DeviceEnrollmentConfigurationAssignRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new DeviceEnrollmentConfigurationAssignBody();
@@ -49,7 +50,7 @@ public class DeviceEnrollmentConfigurationAssignRequest extends BaseRequest {
      */
     public DeviceEnrollmentConfigurationAssignRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (DeviceEnrollmentConfigurationAssignRequest)this;
+        return this;
     }
 
     /**
@@ -60,7 +61,7 @@ public class DeviceEnrollmentConfigurationAssignRequest extends BaseRequest {
      */
     public DeviceEnrollmentConfigurationAssignRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (DeviceEnrollmentConfigurationAssignRequest)this;
+        return this;
     }
 
     /**
@@ -71,7 +72,7 @@ public class DeviceEnrollmentConfigurationAssignRequest extends BaseRequest {
      */
     public DeviceEnrollmentConfigurationAssignRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DeviceEnrollmentConfigurationAssignRequest)this;
+        return this;
     }
 
 }

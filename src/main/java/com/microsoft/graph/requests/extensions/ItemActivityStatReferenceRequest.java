@@ -14,7 +14,7 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Item Activity Stat Reference Request.
  */
-public class ItemActivityStatReferenceRequest extends BaseRequest {
+public class ItemActivityStatReferenceRequest extends BaseReferenceRequest<ItemActivityStat> {
 
     /**
      * The request for the ItemActivityStat
@@ -36,14 +36,6 @@ public class ItemActivityStatReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, ItemActivityStat.class);
     }
 
-    public void delete(final ICallback<? super ItemActivityStat> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    public ItemActivityStat delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
-    }
-
     /**
      * Sets the select clause for the request
      *
@@ -52,7 +44,7 @@ public class ItemActivityStatReferenceRequest extends BaseRequest {
      */
     public ItemActivityStatReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ItemActivityStatReferenceRequest)this;
+        return this;
     }
 
     /**
@@ -63,7 +55,7 @@ public class ItemActivityStatReferenceRequest extends BaseRequest {
      */
     public ItemActivityStatReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ItemActivityStatReferenceRequest)this;
+        return this;
     }
     /**
      * Puts the ItemActivityStat

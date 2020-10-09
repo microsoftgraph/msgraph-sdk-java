@@ -22,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Outlook User Supported Languages Collection Request Builder.
  */
-public class OutlookUserSupportedLanguagesCollectionRequestBuilder extends BaseFunctionRequestBuilder {
+public class OutlookUserSupportedLanguagesCollectionRequestBuilder extends BaseFunctionRequestBuilder<LocaleInfo> {
 
     /**
      * The request builder for this collection of OutlookUser

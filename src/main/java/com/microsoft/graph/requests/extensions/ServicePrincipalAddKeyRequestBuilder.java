@@ -4,10 +4,10 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ServicePrincipalAddKeyRequest;
+import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.PasswordCredential;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -16,7 +16,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Service Principal Add Key Request Builder.
  */
-public class ServicePrincipalAddKeyRequestBuilder extends BaseActionRequestBuilder {
+public class ServicePrincipalAddKeyRequestBuilder extends BaseActionRequestBuilder<KeyCredential> {
 
     /**
      * The request builder for this ServicePrincipalAddKey

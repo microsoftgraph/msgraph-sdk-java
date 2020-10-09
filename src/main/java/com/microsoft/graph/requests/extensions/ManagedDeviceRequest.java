@@ -25,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Device Request.
  */
-public class ManagedDeviceRequest extends BaseRequest {
+public class ManagedDeviceRequest extends BaseRequest<ManagedDevice> {
 	
     /**
      * The request for the ManagedDevice
@@ -146,7 +146,7 @@ public class ManagedDeviceRequest extends BaseRequest {
      */
      public ManagedDeviceRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ManagedDeviceRequest)this;
+         return this;
      }
 
     /**
@@ -157,7 +157,7 @@ public class ManagedDeviceRequest extends BaseRequest {
      */
      public ManagedDeviceRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ManagedDeviceRequest)this;
+         return this;
      }
 
 }

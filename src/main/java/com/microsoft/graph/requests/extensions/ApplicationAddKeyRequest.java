@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Application Add Key Request.
  */
-public class ApplicationAddKeyRequest extends BaseRequest {
+public class ApplicationAddKeyRequest extends BaseRequest<KeyCredential> {
     protected final ApplicationAddKeyBody body;
 
     /**
@@ -29,6 +29,7 @@ public class ApplicationAddKeyRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public ApplicationAddKeyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, KeyCredential.class);
         body = new ApplicationAddKeyBody();
@@ -50,7 +51,7 @@ public class ApplicationAddKeyRequest extends BaseRequest {
      */
     public ApplicationAddKeyRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ApplicationAddKeyRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class ApplicationAddKeyRequest extends BaseRequest {
      */
     public ApplicationAddKeyRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (ApplicationAddKeyRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class ApplicationAddKeyRequest extends BaseRequest {
      */
     public ApplicationAddKeyRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ApplicationAddKeyRequest)this;
+        return this;
     }
 
 }

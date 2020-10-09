@@ -22,7 +22,7 @@ import com.microsoft.graph.core.BaseActionRequestBuilder;
 /**
  * The class for the Directory Object Get Member Groups Collection Request Builder.
  */
-public class DirectoryObjectGetMemberGroupsCollectionRequestBuilder extends BaseActionRequestBuilder {
+public class DirectoryObjectGetMemberGroupsCollectionRequestBuilder extends BaseActionRequestBuilder<String> {
 
     /**
      * The request builder for this collection of DirectoryObject

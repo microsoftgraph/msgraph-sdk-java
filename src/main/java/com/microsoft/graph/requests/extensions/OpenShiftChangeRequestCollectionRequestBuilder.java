@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Open Shift Change Request Collection Request Builder.
  */
-public class OpenShiftChangeRequestCollectionRequestBuilder extends BaseRequestBuilder {
+public class OpenShiftChangeRequestCollectionRequestBuilder extends BaseRequestBuilder<OpenShiftChangeRequest> {
 
     /**
      * The request builder for this collection of Schedule

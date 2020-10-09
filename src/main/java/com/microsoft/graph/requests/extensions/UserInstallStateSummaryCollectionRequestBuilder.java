@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the User Install State Summary Collection Request Builder.
  */
-public class UserInstallStateSummaryCollectionRequestBuilder extends BaseRequestBuilder {
+public class UserInstallStateSummaryCollectionRequestBuilder extends BaseRequestBuilder<UserInstallStateSummary> {
 
     /**
      * The request builder for this collection of ManagedEBook

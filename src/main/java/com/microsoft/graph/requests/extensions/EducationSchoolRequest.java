@@ -23,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Education School Request.
  */
-public class EducationSchoolRequest extends BaseRequest {
+public class EducationSchoolRequest extends BaseRequest<EducationSchool> {
 	
     /**
      * The request for the EducationSchool
@@ -144,7 +144,7 @@ public class EducationSchoolRequest extends BaseRequest {
      */
      public EducationSchoolRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EducationSchoolRequest)this;
+         return this;
      }
 
     /**
@@ -155,7 +155,7 @@ public class EducationSchoolRequest extends BaseRequest {
      */
      public EducationSchoolRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EducationSchoolRequest)this;
+         return this;
      }
 
 }

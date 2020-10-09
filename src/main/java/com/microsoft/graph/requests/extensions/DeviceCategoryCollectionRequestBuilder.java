@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device Category Collection Request Builder.
  */
-public class DeviceCategoryCollectionRequestBuilder extends BaseRequestBuilder {
+public class DeviceCategoryCollectionRequestBuilder extends BaseRequestBuilder<DeviceCategory> {
 
     /**
      * The request builder for this collection of DeviceManagement

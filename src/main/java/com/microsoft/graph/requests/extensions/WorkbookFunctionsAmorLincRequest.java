@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Amor Linc Request.
  */
-public class WorkbookFunctionsAmorLincRequest extends BaseRequest {
+public class WorkbookFunctionsAmorLincRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsAmorLincBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsAmorLincRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsAmorLincRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsAmorLincBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsAmorLincRequest extends BaseRequest {
      */
     public WorkbookFunctionsAmorLincRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsAmorLincRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsAmorLincRequest extends BaseRequest {
      */
     public WorkbookFunctionsAmorLincRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsAmorLincRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsAmorLincRequest extends BaseRequest {
      */
     public WorkbookFunctionsAmorLincRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsAmorLincRequest)this;
+        return this;
     }
 
 }

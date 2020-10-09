@@ -18,7 +18,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Mobile App Content File Commit Request.
  */
-public class MobileAppContentFileCommitRequest extends BaseRequest {
+public class MobileAppContentFileCommitRequest extends BaseRequest<Void> {
     protected final MobileAppContentFileCommitBody body;
 
     /**
@@ -28,6 +28,7 @@ public class MobileAppContentFileCommitRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public MobileAppContentFileCommitRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new MobileAppContentFileCommitBody();
@@ -49,7 +50,7 @@ public class MobileAppContentFileCommitRequest extends BaseRequest {
      */
     public MobileAppContentFileCommitRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (MobileAppContentFileCommitRequest)this;
+        return this;
     }
 
     /**
@@ -60,7 +61,7 @@ public class MobileAppContentFileCommitRequest extends BaseRequest {
      */
     public MobileAppContentFileCommitRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (MobileAppContentFileCommitRequest)this;
+        return this;
     }
 
     /**
@@ -71,7 +72,7 @@ public class MobileAppContentFileCommitRequest extends BaseRequest {
      */
     public MobileAppContentFileCommitRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (MobileAppContentFileCommitRequest)this;
+        return this;
     }
 
 }

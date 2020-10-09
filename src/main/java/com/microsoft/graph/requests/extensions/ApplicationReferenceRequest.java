@@ -24,7 +24,7 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -33,7 +33,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Application Reference Request.
  */
-public class ApplicationReferenceRequest extends BaseRequest {
+public class ApplicationReferenceRequest extends BaseReferenceRequest<Application> {
 
     /**
      * The request for the Application
@@ -46,14 +46,6 @@ public class ApplicationReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, Application.class);
     }
 
-    public void delete(final ICallback<? super Application> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    public Application delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
-    }
-
     /**
      * Sets the select clause for the request
      *
@@ -62,7 +54,7 @@ public class ApplicationReferenceRequest extends BaseRequest {
      */
     public ApplicationReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ApplicationReferenceRequest)this;
+        return this;
     }
 
     /**
@@ -73,7 +65,7 @@ public class ApplicationReferenceRequest extends BaseRequest {
      */
     public ApplicationReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ApplicationReferenceRequest)this;
+        return this;
     }
     /**
      * Puts the Application

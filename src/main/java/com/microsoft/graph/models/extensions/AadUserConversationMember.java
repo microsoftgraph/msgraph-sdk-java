@@ -72,7 +72,8 @@ public class AadUserConversationMember extends ConversationMember implements IJs
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

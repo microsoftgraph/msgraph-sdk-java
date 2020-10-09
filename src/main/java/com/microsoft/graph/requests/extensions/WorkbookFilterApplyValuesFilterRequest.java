@@ -18,7 +18,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Filter Apply Values Filter Request.
  */
-public class WorkbookFilterApplyValuesFilterRequest extends BaseRequest {
+public class WorkbookFilterApplyValuesFilterRequest extends BaseRequest<Void> {
     protected final WorkbookFilterApplyValuesFilterBody body;
 
     /**
@@ -28,6 +28,7 @@ public class WorkbookFilterApplyValuesFilterRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFilterApplyValuesFilterRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new WorkbookFilterApplyValuesFilterBody();
@@ -49,7 +50,7 @@ public class WorkbookFilterApplyValuesFilterRequest extends BaseRequest {
      */
     public WorkbookFilterApplyValuesFilterRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFilterApplyValuesFilterRequest)this;
+        return this;
     }
 
     /**
@@ -60,7 +61,7 @@ public class WorkbookFilterApplyValuesFilterRequest extends BaseRequest {
      */
     public WorkbookFilterApplyValuesFilterRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFilterApplyValuesFilterRequest)this;
+        return this;
     }
 
     /**
@@ -71,7 +72,7 @@ public class WorkbookFilterApplyValuesFilterRequest extends BaseRequest {
      */
     public WorkbookFilterApplyValuesFilterRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFilterApplyValuesFilterRequest)this;
+        return this;
     }
 
 }

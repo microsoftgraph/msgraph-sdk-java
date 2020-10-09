@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Fvschedule Request.
  */
-public class WorkbookFunctionsFvscheduleRequest extends BaseRequest {
+public class WorkbookFunctionsFvscheduleRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsFvscheduleBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsFvscheduleRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsFvscheduleRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsFvscheduleBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsFvscheduleRequest extends BaseRequest {
      */
     public WorkbookFunctionsFvscheduleRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsFvscheduleRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsFvscheduleRequest extends BaseRequest {
      */
     public WorkbookFunctionsFvscheduleRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsFvscheduleRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsFvscheduleRequest extends BaseRequest {
      */
     public WorkbookFunctionsFvscheduleRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsFvscheduleRequest)this;
+        return this;
     }
 
 }

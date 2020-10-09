@@ -18,7 +18,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Drive Item Validate Permission Request.
  */
-public class DriveItemValidatePermissionRequest extends BaseRequest {
+public class DriveItemValidatePermissionRequest extends BaseRequest<Void> {
     protected final DriveItemValidatePermissionBody body;
 
     /**
@@ -28,6 +28,7 @@ public class DriveItemValidatePermissionRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public DriveItemValidatePermissionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new DriveItemValidatePermissionBody();
@@ -49,7 +50,7 @@ public class DriveItemValidatePermissionRequest extends BaseRequest {
      */
     public DriveItemValidatePermissionRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (DriveItemValidatePermissionRequest)this;
+        return this;
     }
 
     /**
@@ -60,7 +61,7 @@ public class DriveItemValidatePermissionRequest extends BaseRequest {
      */
     public DriveItemValidatePermissionRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (DriveItemValidatePermissionRequest)this;
+        return this;
     }
 
     /**
@@ -71,7 +72,7 @@ public class DriveItemValidatePermissionRequest extends BaseRequest {
      */
     public DriveItemValidatePermissionRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DriveItemValidatePermissionRequest)this;
+        return this;
     }
 
 }

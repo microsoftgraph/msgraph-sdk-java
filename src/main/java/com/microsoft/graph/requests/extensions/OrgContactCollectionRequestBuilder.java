@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Org Contact Collection Request Builder.
  */
-public class OrgContactCollectionRequestBuilder extends BaseRequestBuilder {
+public class OrgContactCollectionRequestBuilder extends BaseRequestBuilder<OrgContact> {
 
     /**
      * The request builder for this collection of OrgContact

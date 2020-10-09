@@ -22,7 +22,7 @@ import com.microsoft.graph.core.BaseActionRequestBuilder;
 /**
  * The class for the Device Compliance Policy Assign Collection Request Builder.
  */
-public class DeviceCompliancePolicyAssignCollectionRequestBuilder extends BaseActionRequestBuilder {
+public class DeviceCompliancePolicyAssignCollectionRequestBuilder extends BaseActionRequestBuilder<DeviceCompliancePolicyAssignment> {
 
     /**
      * The request builder for this collection of DeviceCompliancePolicy

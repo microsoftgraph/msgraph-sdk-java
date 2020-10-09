@@ -18,7 +18,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device Compliance Policy Schedule Actions For Rules Request.
  */
-public class DeviceCompliancePolicyScheduleActionsForRulesRequest extends BaseRequest {
+public class DeviceCompliancePolicyScheduleActionsForRulesRequest extends BaseRequest<Void> {
     protected final DeviceCompliancePolicyScheduleActionsForRulesBody body;
 
     /**
@@ -28,6 +28,7 @@ public class DeviceCompliancePolicyScheduleActionsForRulesRequest extends BaseRe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public DeviceCompliancePolicyScheduleActionsForRulesRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new DeviceCompliancePolicyScheduleActionsForRulesBody();
@@ -49,7 +50,7 @@ public class DeviceCompliancePolicyScheduleActionsForRulesRequest extends BaseRe
      */
     public DeviceCompliancePolicyScheduleActionsForRulesRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (DeviceCompliancePolicyScheduleActionsForRulesRequest)this;
+        return this;
     }
 
     /**
@@ -60,7 +61,7 @@ public class DeviceCompliancePolicyScheduleActionsForRulesRequest extends BaseRe
      */
     public DeviceCompliancePolicyScheduleActionsForRulesRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (DeviceCompliancePolicyScheduleActionsForRulesRequest)this;
+        return this;
     }
 
     /**
@@ -71,7 +72,7 @@ public class DeviceCompliancePolicyScheduleActionsForRulesRequest extends BaseRe
      */
     public DeviceCompliancePolicyScheduleActionsForRulesRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DeviceCompliancePolicyScheduleActionsForRulesRequest)this;
+        return this;
     }
 
 }

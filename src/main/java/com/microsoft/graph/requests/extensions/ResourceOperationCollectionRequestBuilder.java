@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Resource Operation Collection Request Builder.
  */
-public class ResourceOperationCollectionRequestBuilder extends BaseRequestBuilder {
+public class ResourceOperationCollectionRequestBuilder extends BaseRequestBuilder<ResourceOperation> {
 
     /**
      * The request builder for this collection of DeviceManagement

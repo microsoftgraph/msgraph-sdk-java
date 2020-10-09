@@ -24,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Managed Device Collection Request Builder.
  */
-public class ManagedDeviceCollectionRequestBuilder extends BaseRequestBuilder {
+public class ManagedDeviceCollectionRequestBuilder extends BaseRequestBuilder<ManagedDevice> {
 
     /**
      * The request builder for this collection of DeviceManagement

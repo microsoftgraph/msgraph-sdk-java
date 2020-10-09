@@ -7,11 +7,11 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.generated.Status;
 import com.microsoft.graph.models.extensions.VisualInfo;
 import com.microsoft.graph.models.extensions.ActivityHistoryItem;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ActivityHistoryItemCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -136,7 +136,7 @@ public class UserActivity extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "historyItems", alternate = {"HistoryItems"})
     @Expose
-    public ActivityHistoryItemCollectionPage historyItems;
+    public BaseCollectionPage<ActivityHistoryItem> historyItems;
 
 
     /**
@@ -163,7 +163,8 @@ public class UserActivity extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -179,7 +180,7 @@ public class UserActivity extends Entity implements IJsonBackedObject {
 
 
         if (json.has("historyItems")) {
-            historyItems = serializer.deserializeObject(json.get("historyItems").toString(), ActivityHistoryItemCollectionPage.class);
+            historyItems = serializer.deserializeObject(json.get("historyItems").toString(), new BaseCollectionPage<ActivityHistoryItem>(new java.util.ArrayList<ActivityHistoryItem>(), null).getClass());
         }
     }
 }

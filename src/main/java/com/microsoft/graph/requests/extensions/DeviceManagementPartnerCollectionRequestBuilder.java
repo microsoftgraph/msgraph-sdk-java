@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device Management Partner Collection Request Builder.
  */
-public class DeviceManagementPartnerCollectionRequestBuilder extends BaseRequestBuilder {
+public class DeviceManagementPartnerCollectionRequestBuilder extends BaseRequestBuilder<DeviceManagementPartner> {
 
     /**
      * The request builder for this collection of DeviceManagement

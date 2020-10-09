@@ -22,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Drive Item Get Activities By Interval Collection Request Builder.
  */
-public class DriveItemGetActivitiesByIntervalCollectionRequestBuilder extends BaseFunctionRequestBuilder {
+public class DriveItemGetActivitiesByIntervalCollectionRequestBuilder extends BaseFunctionRequestBuilder<ItemActivityStat> {
 
     /**
      * The request builder for this collection of DriveItem

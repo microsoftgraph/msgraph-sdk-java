@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android Custom Configuration Request.
  */
-public class AndroidCustomConfigurationRequest extends BaseRequest {
+public class AndroidCustomConfigurationRequest extends BaseRequest<AndroidCustomConfiguration> {
 	
     /**
      * The request for the AndroidCustomConfiguration
@@ -140,7 +140,7 @@ public class AndroidCustomConfigurationRequest extends BaseRequest {
      */
      public AndroidCustomConfigurationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidCustomConfigurationRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class AndroidCustomConfigurationRequest extends BaseRequest {
      */
      public AndroidCustomConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidCustomConfigurationRequest)this;
+         return this;
      }
 
 }

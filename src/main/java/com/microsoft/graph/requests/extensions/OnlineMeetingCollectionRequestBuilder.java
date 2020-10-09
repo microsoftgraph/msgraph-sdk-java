@@ -26,7 +26,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Online Meeting Collection Request Builder.
  */
-public class OnlineMeetingCollectionRequestBuilder extends BaseRequestBuilder {
+public class OnlineMeetingCollectionRequestBuilder extends BaseRequestBuilder<OnlineMeeting> {
 
     /**
      * The request builder for this collection of CloudCommunications

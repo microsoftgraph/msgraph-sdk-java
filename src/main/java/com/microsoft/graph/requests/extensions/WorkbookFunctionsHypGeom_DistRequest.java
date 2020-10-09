@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Hyp Geom_Dist Request.
  */
-public class WorkbookFunctionsHypGeom_DistRequest extends BaseRequest {
+public class WorkbookFunctionsHypGeom_DistRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsHypGeom_DistBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsHypGeom_DistRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsHypGeom_DistRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsHypGeom_DistBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsHypGeom_DistRequest extends BaseRequest {
      */
     public WorkbookFunctionsHypGeom_DistRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsHypGeom_DistRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsHypGeom_DistRequest extends BaseRequest {
      */
     public WorkbookFunctionsHypGeom_DistRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsHypGeom_DistRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsHypGeom_DistRequest extends BaseRequest {
      */
     public WorkbookFunctionsHypGeom_DistRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsHypGeom_DistRequest)this;
+        return this;
     }
 
 }

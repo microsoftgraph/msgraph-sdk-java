@@ -18,7 +18,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Onenote Page Onenote Patch Content Request.
  */
-public class OnenotePageOnenotePatchContentRequest extends BaseRequest {
+public class OnenotePageOnenotePatchContentRequest extends BaseRequest<Void> {
     protected final OnenotePageOnenotePatchContentBody body;
 
     /**
@@ -28,6 +28,7 @@ public class OnenotePageOnenotePatchContentRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public OnenotePageOnenotePatchContentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new OnenotePageOnenotePatchContentBody();
@@ -49,7 +50,7 @@ public class OnenotePageOnenotePatchContentRequest extends BaseRequest {
      */
     public OnenotePageOnenotePatchContentRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (OnenotePageOnenotePatchContentRequest)this;
+        return this;
     }
 
     /**
@@ -60,7 +61,7 @@ public class OnenotePageOnenotePatchContentRequest extends BaseRequest {
      */
     public OnenotePageOnenotePatchContentRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (OnenotePageOnenotePatchContentRequest)this;
+        return this;
     }
 
     /**
@@ -71,7 +72,7 @@ public class OnenotePageOnenotePatchContentRequest extends BaseRequest {
      */
     public OnenotePageOnenotePatchContentRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (OnenotePageOnenotePatchContentRequest)this;
+        return this;
     }
 
 }

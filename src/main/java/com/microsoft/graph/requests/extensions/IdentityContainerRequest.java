@@ -20,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Identity Container Request.
  */
-public class IdentityContainerRequest extends BaseRequest {
+public class IdentityContainerRequest extends BaseRequest<IdentityContainer> {
 	
     /**
      * The request for the IdentityContainer
@@ -141,7 +141,7 @@ public class IdentityContainerRequest extends BaseRequest {
      */
      public IdentityContainerRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (IdentityContainerRequest)this;
+         return this;
      }
 
     /**
@@ -152,7 +152,7 @@ public class IdentityContainerRequest extends BaseRequest {
      */
      public IdentityContainerRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IdentityContainerRequest)this;
+         return this;
      }
 
 }

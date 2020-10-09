@@ -24,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Onenote Section Collection Request Builder.
  */
-public class OnenoteSectionCollectionRequestBuilder extends BaseRequestBuilder {
+public class OnenoteSectionCollectionRequestBuilder extends BaseRequestBuilder<OnenoteSection> {
 
     /**
      * The request builder for this collection of SectionGroup

@@ -23,7 +23,7 @@ import com.microsoft.graph.core.BaseActionRequestBuilder;
 /**
  * The class for the Permission Grant Collection Request Builder.
  */
-public class PermissionGrantCollectionRequestBuilder extends BaseActionRequestBuilder {
+public class PermissionGrantCollectionRequestBuilder extends BaseActionRequestBuilder<Permission> {
 
     /**
      * The request builder for this collection of Permission

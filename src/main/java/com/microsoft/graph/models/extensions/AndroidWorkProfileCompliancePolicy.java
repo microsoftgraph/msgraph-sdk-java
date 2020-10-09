@@ -217,7 +217,8 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

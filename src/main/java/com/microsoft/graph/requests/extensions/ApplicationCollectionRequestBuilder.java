@@ -25,7 +25,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Application Collection Request Builder.
  */
-public class ApplicationCollectionRequestBuilder extends BaseRequestBuilder {
+public class ApplicationCollectionRequestBuilder extends BaseRequestBuilder<Application> {
 
     /**
      * The request builder for this collection of Application

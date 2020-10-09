@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Managed EBook Assignment Collection Request Builder.
  */
-public class ManagedEBookAssignmentCollectionRequestBuilder extends BaseRequestBuilder {
+public class ManagedEBookAssignmentCollectionRequestBuilder extends BaseRequestBuilder<ManagedEBookAssignment> {
 
     /**
      * The request builder for this collection of ManagedEBook

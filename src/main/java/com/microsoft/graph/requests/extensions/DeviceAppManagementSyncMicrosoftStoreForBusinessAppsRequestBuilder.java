@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.DeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest;
+import com.microsoft.graph.models.extensions.DeviceAppManagement;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Device App Management Sync Microsoft Store For Business Apps Request Builder.
  */
-public class DeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequestBuilder extends BaseActionRequestBuilder {
+public class DeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequestBuilder extends BaseActionRequestBuilder<DeviceAppManagement> {
 
     /**
      * The request builder for this DeviceAppManagementSyncMicrosoftStoreForBusinessApps

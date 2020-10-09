@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Role Assignment Collection Request Builder.
  */
-public class RoleAssignmentCollectionRequestBuilder extends BaseRequestBuilder {
+public class RoleAssignmentCollectionRequestBuilder extends BaseRequestBuilder<RoleAssignment> {
 
     /**
      * The request builder for this collection of RoleDefinition

@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Compliance Scheduled Action For Rule Request.
  */
-public class DeviceComplianceScheduledActionForRuleRequest extends BaseRequest {
+public class DeviceComplianceScheduledActionForRuleRequest extends BaseRequest<DeviceComplianceScheduledActionForRule> {
 	
     /**
      * The request for the DeviceComplianceScheduledActionForRule
@@ -142,7 +142,7 @@ public class DeviceComplianceScheduledActionForRuleRequest extends BaseRequest {
      */
      public DeviceComplianceScheduledActionForRuleRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceComplianceScheduledActionForRuleRequest)this;
+         return this;
      }
 
     /**
@@ -153,7 +153,7 @@ public class DeviceComplianceScheduledActionForRuleRequest extends BaseRequest {
      */
      public DeviceComplianceScheduledActionForRuleRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceComplianceScheduledActionForRuleRequest)this;
+         return this;
      }
 
 }

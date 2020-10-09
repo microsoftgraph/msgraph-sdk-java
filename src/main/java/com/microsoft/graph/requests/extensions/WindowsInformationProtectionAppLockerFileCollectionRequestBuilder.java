@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Windows Information Protection App Locker File Collection Request Builder.
  */
-public class WindowsInformationProtectionAppLockerFileCollectionRequestBuilder extends BaseRequestBuilder {
+public class WindowsInformationProtectionAppLockerFileCollectionRequestBuilder extends BaseRequestBuilder<WindowsInformationProtectionAppLockerFile> {
 
     /**
      * The request builder for this collection of WindowsInformationProtection

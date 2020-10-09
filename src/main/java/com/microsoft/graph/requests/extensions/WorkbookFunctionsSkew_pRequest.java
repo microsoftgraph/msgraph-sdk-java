@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Skew_p Request.
  */
-public class WorkbookFunctionsSkew_pRequest extends BaseRequest {
+public class WorkbookFunctionsSkew_pRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsSkew_pBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsSkew_pRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsSkew_pRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsSkew_pBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsSkew_pRequest extends BaseRequest {
      */
     public WorkbookFunctionsSkew_pRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsSkew_pRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsSkew_pRequest extends BaseRequest {
      */
     public WorkbookFunctionsSkew_pRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsSkew_pRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsSkew_pRequest extends BaseRequest {
      */
     public WorkbookFunctionsSkew_pRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsSkew_pRequest)this;
+        return this;
     }
 
 }

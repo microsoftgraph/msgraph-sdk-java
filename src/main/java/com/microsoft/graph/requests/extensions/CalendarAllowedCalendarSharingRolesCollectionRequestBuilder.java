@@ -22,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Calendar Allowed Calendar Sharing Roles Collection Request Builder.
  */
-public class CalendarAllowedCalendarSharingRolesCollectionRequestBuilder extends BaseFunctionRequestBuilder {
+public class CalendarAllowedCalendarSharingRolesCollectionRequestBuilder extends BaseFunctionRequestBuilder<CalendarRoleType> {
 
     /**
      * The request builder for this collection of Calendar

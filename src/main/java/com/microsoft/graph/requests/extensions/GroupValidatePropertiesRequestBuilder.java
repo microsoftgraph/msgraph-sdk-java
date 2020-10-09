@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.GroupValidatePropertiesRequest;
+import com.microsoft.graph.models.extensions.Group;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Group Validate Properties Request Builder.
  */
-public class GroupValidatePropertiesRequestBuilder extends BaseActionRequestBuilder {
+public class GroupValidatePropertiesRequestBuilder extends BaseActionRequestBuilder<Group> {
 
     /**
      * The request builder for this GroupValidateProperties

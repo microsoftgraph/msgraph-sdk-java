@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device Compliance Policy Setting State Summary Collection Request Builder.
  */
-public class DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder extends BaseRequestBuilder {
+public class DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder extends BaseRequestBuilder<DeviceCompliancePolicySettingStateSummary> {
 
     /**
      * The request builder for this collection of DeviceManagement

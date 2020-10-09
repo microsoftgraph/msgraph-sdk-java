@@ -25,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Audit Log Root Request.
  */
-public class AuditLogRootRequest extends BaseRequest {
+public class AuditLogRootRequest extends BaseRequest<AuditLogRoot> {
 	
     /**
      * The request for the AuditLogRoot
@@ -146,7 +146,7 @@ public class AuditLogRootRequest extends BaseRequest {
      */
      public AuditLogRootRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AuditLogRootRequest)this;
+         return this;
      }
 
     /**
@@ -157,7 +157,7 @@ public class AuditLogRootRequest extends BaseRequest {
      */
      public AuditLogRootRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AuditLogRootRequest)this;
+         return this;
      }
 
 }

@@ -7,11 +7,10 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.NamedLocation;
 import com.microsoft.graph.models.extensions.ConditionalAccessPolicy;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.NamedLocationCollectionPage;
-import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -32,7 +31,7 @@ public class ConditionalAccessRoot extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "namedLocations", alternate = {"NamedLocations"})
     @Expose
-    public NamedLocationCollectionPage namedLocations;
+    public BaseCollectionPage<NamedLocation> namedLocations;
 
     /**
      * The Policies.
@@ -40,7 +39,7 @@ public class ConditionalAccessRoot extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "policies", alternate = {"Policies"})
     @Expose
-    public ConditionalAccessPolicyCollectionPage policies;
+    public BaseCollectionPage<ConditionalAccessPolicy> policies;
 
 
     /**
@@ -67,7 +66,8 @@ public class ConditionalAccessRoot extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -83,11 +83,11 @@ public class ConditionalAccessRoot extends Entity implements IJsonBackedObject {
 
 
         if (json.has("namedLocations")) {
-            namedLocations = serializer.deserializeObject(json.get("namedLocations").toString(), NamedLocationCollectionPage.class);
+            namedLocations = serializer.deserializeObject(json.get("namedLocations").toString(), new BaseCollectionPage<NamedLocation>(new java.util.ArrayList<NamedLocation>(), null).getClass());
         }
 
         if (json.has("policies")) {
-            policies = serializer.deserializeObject(json.get("policies").toString(), ConditionalAccessPolicyCollectionPage.class);
+            policies = serializer.deserializeObject(json.get("policies").toString(), new BaseCollectionPage<ConditionalAccessPolicy>(new java.util.ArrayList<ConditionalAccessPolicy>(), null).getClass());
         }
     }
 }

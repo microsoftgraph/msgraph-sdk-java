@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.ListItemVersion;
 import com.microsoft.graph.requests.extensions.ListItemVersionRestoreVersionRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -17,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the List Item Version Restore Version Request.
  */
-public class ListItemVersionRestoreVersionRequest extends BaseRequest {
+public class ListItemVersionRestoreVersionRequest extends BaseRequest<ListItemVersion> {
 
     /**
      * The request for this ListItemVersionRestoreVersion
@@ -27,7 +28,7 @@ public class ListItemVersionRestoreVersionRequest extends BaseRequest {
      * @param requestOptions the options for this request
      */
     public ListItemVersionRestoreVersionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Void.class);
+        super(requestUrl, client, requestOptions, ListItemVersion.class);
     }
 
     /**

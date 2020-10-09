@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Price Disc Request.
  */
-public class WorkbookFunctionsPriceDiscRequest extends BaseRequest {
+public class WorkbookFunctionsPriceDiscRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsPriceDiscBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsPriceDiscRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsPriceDiscRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsPriceDiscBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsPriceDiscRequest extends BaseRequest {
      */
     public WorkbookFunctionsPriceDiscRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsPriceDiscRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsPriceDiscRequest extends BaseRequest {
      */
     public WorkbookFunctionsPriceDiscRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsPriceDiscRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsPriceDiscRequest extends BaseRequest {
      */
     public WorkbookFunctionsPriceDiscRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsPriceDiscRequest)this;
+        return this;
     }
 
 }

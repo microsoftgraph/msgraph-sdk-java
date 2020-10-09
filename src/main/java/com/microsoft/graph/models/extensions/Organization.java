@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.AssignedPlan;
 import com.microsoft.graph.models.extensions.PrivacyProfile;
 import com.microsoft.graph.models.extensions.ProvisionedPlan;
@@ -15,8 +16,6 @@ import com.microsoft.graph.models.generated.MdmAuthority;
 import com.microsoft.graph.models.extensions.CertificateBasedAuthConfiguration;
 import com.microsoft.graph.models.extensions.Extension;
 import com.microsoft.graph.models.extensions.DirectoryObject;
-import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionPage;
-import com.microsoft.graph.requests.extensions.ExtensionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -211,7 +210,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      * The Certificate Based Auth Configuration.
      * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
      */
-    public CertificateBasedAuthConfigurationCollectionPage certificateBasedAuthConfiguration;
+    public BaseCollectionPage<CertificateBasedAuthConfiguration> certificateBasedAuthConfiguration;
 
     /**
      * The Extensions.
@@ -219,7 +218,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
-    public ExtensionCollectionPage extensions;
+    public BaseCollectionPage<Extension> extensions;
 
 
     /**
@@ -246,7 +245,8 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -262,11 +262,11 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
 
         if (json.has("certificateBasedAuthConfiguration")) {
-            certificateBasedAuthConfiguration = serializer.deserializeObject(json.get("certificateBasedAuthConfiguration").toString(), CertificateBasedAuthConfigurationCollectionPage.class);
+            certificateBasedAuthConfiguration = serializer.deserializeObject(json.get("certificateBasedAuthConfiguration").toString(), new BaseCollectionPage<CertificateBasedAuthConfiguration>(new java.util.ArrayList<CertificateBasedAuthConfiguration>(), null).getClass());
         }
 
         if (json.has("extensions")) {
-            extensions = serializer.deserializeObject(json.get("extensions").toString(), ExtensionCollectionPage.class);
+            extensions = serializer.deserializeObject(json.get("extensions").toString(), new BaseCollectionPage<Extension>(new java.util.ArrayList<Extension>(), null).getClass());
         }
     }
 }

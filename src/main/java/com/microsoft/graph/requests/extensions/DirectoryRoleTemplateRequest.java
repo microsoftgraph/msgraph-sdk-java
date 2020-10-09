@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Directory Role Template Request.
  */
-public class DirectoryRoleTemplateRequest extends BaseRequest {
+public class DirectoryRoleTemplateRequest extends BaseRequest<DirectoryRoleTemplate> {
 	
     /**
      * The request for the DirectoryRoleTemplate
@@ -140,7 +140,7 @@ public class DirectoryRoleTemplateRequest extends BaseRequest {
      */
      public DirectoryRoleTemplateRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DirectoryRoleTemplateRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class DirectoryRoleTemplateRequest extends BaseRequest {
      */
      public DirectoryRoleTemplateRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DirectoryRoleTemplateRequest)this;
+         return this;
      }
 
 }

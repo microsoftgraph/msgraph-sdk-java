@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Place Collection Request Builder.
  */
-public class PlaceCollectionRequestBuilder extends BaseRequestBuilder {
+public class PlaceCollectionRequestBuilder extends BaseRequestBuilder<Place> {
 
     /**
      * The request builder for this collection of Place

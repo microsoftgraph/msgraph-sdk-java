@@ -23,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Conditional Access Root Request.
  */
-public class ConditionalAccessRootRequest extends BaseRequest {
+public class ConditionalAccessRootRequest extends BaseRequest<ConditionalAccessRoot> {
 	
     /**
      * The request for the ConditionalAccessRoot
@@ -144,7 +144,7 @@ public class ConditionalAccessRootRequest extends BaseRequest {
      */
      public ConditionalAccessRootRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ConditionalAccessRootRequest)this;
+         return this;
      }
 
     /**
@@ -155,7 +155,7 @@ public class ConditionalAccessRootRequest extends BaseRequest {
      */
      public ConditionalAccessRootRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ConditionalAccessRootRequest)this;
+         return this;
      }
 
 }

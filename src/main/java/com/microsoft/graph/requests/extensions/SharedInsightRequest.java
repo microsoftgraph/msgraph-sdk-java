@@ -20,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Shared Insight Request.
  */
-public class SharedInsightRequest extends BaseRequest {
+public class SharedInsightRequest extends BaseRequest<SharedInsight> {
 	
     /**
      * The request for the SharedInsight
@@ -141,7 +141,7 @@ public class SharedInsightRequest extends BaseRequest {
      */
      public SharedInsightRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SharedInsightRequest)this;
+         return this;
      }
 
     /**
@@ -152,7 +152,7 @@ public class SharedInsightRequest extends BaseRequest {
      */
      public SharedInsightRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SharedInsightRequest)this;
+         return this;
      }
 
 }

@@ -25,7 +25,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Targeted Managed App Configuration Collection Request Builder.
  */
-public class TargetedManagedAppConfigurationCollectionRequestBuilder extends BaseRequestBuilder {
+public class TargetedManagedAppConfigurationCollectionRequestBuilder extends BaseRequestBuilder<TargetedManagedAppConfiguration> {
 
     /**
      * The request builder for this collection of DeviceAppManagement

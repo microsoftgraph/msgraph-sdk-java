@@ -7,9 +7,9 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.WorkforceIntegration;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.WorkforceIntegrationCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -30,7 +30,7 @@ public class Teamwork extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "workforceIntegrations", alternate = {"WorkforceIntegrations"})
     @Expose
-    public WorkforceIntegrationCollectionPage workforceIntegrations;
+    public BaseCollectionPage<WorkforceIntegration> workforceIntegrations;
 
 
     /**
@@ -57,7 +57,8 @@ public class Teamwork extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -73,7 +74,7 @@ public class Teamwork extends Entity implements IJsonBackedObject {
 
 
         if (json.has("workforceIntegrations")) {
-            workforceIntegrations = serializer.deserializeObject(json.get("workforceIntegrations").toString(), WorkforceIntegrationCollectionPage.class);
+            workforceIntegrations = serializer.deserializeObject(json.get("workforceIntegrations").toString(), new BaseCollectionPage<WorkforceIntegration>(new java.util.ArrayList<WorkforceIntegration>(), null).getClass());
         }
     }
 }

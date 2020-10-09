@@ -55,7 +55,8 @@ public class OpenShiftChangeRequest extends ScheduleChangeRequest implements IJs
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

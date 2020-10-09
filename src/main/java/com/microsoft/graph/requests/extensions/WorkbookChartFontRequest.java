@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Font Request.
  */
-public class WorkbookChartFontRequest extends BaseRequest {
+public class WorkbookChartFontRequest extends BaseRequest<WorkbookChartFont> {
 	
     /**
      * The request for the WorkbookChartFont
@@ -140,7 +140,7 @@ public class WorkbookChartFontRequest extends BaseRequest {
      */
      public WorkbookChartFontRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookChartFontRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class WorkbookChartFontRequest extends BaseRequest {
      */
      public WorkbookChartFontRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookChartFontRequest)this;
+         return this;
      }
 
 }

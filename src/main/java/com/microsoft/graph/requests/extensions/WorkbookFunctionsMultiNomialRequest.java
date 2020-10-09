@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Multi Nomial Request.
  */
-public class WorkbookFunctionsMultiNomialRequest extends BaseRequest {
+public class WorkbookFunctionsMultiNomialRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsMultiNomialBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsMultiNomialRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsMultiNomialRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsMultiNomialBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsMultiNomialRequest extends BaseRequest {
      */
     public WorkbookFunctionsMultiNomialRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsMultiNomialRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsMultiNomialRequest extends BaseRequest {
      */
     public WorkbookFunctionsMultiNomialRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsMultiNomialRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsMultiNomialRequest extends BaseRequest {
      */
     public WorkbookFunctionsMultiNomialRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsMultiNomialRequest)this;
+        return this;
     }
 
 }

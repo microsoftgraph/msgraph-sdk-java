@@ -24,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device Management Exchange Connector Collection Request Builder.
  */
-public class DeviceManagementExchangeConnectorCollectionRequestBuilder extends BaseRequestBuilder {
+public class DeviceManagementExchangeConnectorCollectionRequestBuilder extends BaseRequestBuilder<DeviceManagementExchangeConnector> {
 
     /**
      * The request builder for this collection of DeviceManagement

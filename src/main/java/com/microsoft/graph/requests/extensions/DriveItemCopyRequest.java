@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Drive Item Copy Request.
  */
-public class DriveItemCopyRequest extends BaseRequest {
+public class DriveItemCopyRequest extends BaseRequest<DriveItem> {
     protected final DriveItemCopyBody body;
 
     /**
@@ -29,6 +29,7 @@ public class DriveItemCopyRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public DriveItemCopyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DriveItem.class);
         body = new DriveItemCopyBody();
@@ -50,7 +51,7 @@ public class DriveItemCopyRequest extends BaseRequest {
      */
     public DriveItemCopyRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (DriveItemCopyRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class DriveItemCopyRequest extends BaseRequest {
      */
     public DriveItemCopyRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (DriveItemCopyRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class DriveItemCopyRequest extends BaseRequest {
      */
     public DriveItemCopyRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DriveItemCopyRequest)this;
+        return this;
     }
 
 }

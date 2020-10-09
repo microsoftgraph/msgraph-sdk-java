@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Shared Drive Item Collection Request Builder.
  */
-public class SharedDriveItemCollectionRequestBuilder extends BaseRequestBuilder {
+public class SharedDriveItemCollectionRequestBuilder extends BaseRequestBuilder<SharedDriveItem> {
 
     /**
      * The request builder for this collection of SharedDriveItem

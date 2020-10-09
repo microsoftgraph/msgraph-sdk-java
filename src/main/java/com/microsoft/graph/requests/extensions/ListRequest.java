@@ -28,7 +28,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the List Request.
  */
-public class ListRequest extends BaseRequest {
+public class ListRequest extends BaseRequest<List> {
 	
     /**
      * The request for the List
@@ -149,7 +149,7 @@ public class ListRequest extends BaseRequest {
      */
      public ListRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ListRequest)this;
+         return this;
      }
 
     /**
@@ -160,7 +160,7 @@ public class ListRequest extends BaseRequest {
      */
      public ListRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ListRequest)this;
+         return this;
      }
 
 }

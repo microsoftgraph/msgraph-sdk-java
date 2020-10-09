@@ -55,7 +55,8 @@ public class PlannerProgressTaskBoardTaskFormat extends Entity implements IJsonB
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

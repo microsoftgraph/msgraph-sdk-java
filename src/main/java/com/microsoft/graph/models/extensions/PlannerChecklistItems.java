@@ -58,7 +58,8 @@ public class PlannerChecklistItems extends HashMap<String, PlannerChecklistItem>
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

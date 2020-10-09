@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.WorkbookChartPoint;
 import com.microsoft.graph.requests.extensions.WorkbookChartPointCountRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -17,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Point Count Request.
  */
-public class WorkbookChartPointCountRequest extends BaseRequest {
+public class WorkbookChartPointCountRequest extends BaseRequest<Int32> {
 
     /**
      * The request for this WorkbookChartPointCount
@@ -27,7 +28,7 @@ public class WorkbookChartPointCountRequest extends BaseRequest {
      * @param requestOptions the options for this request
      */
     public WorkbookChartPointCountRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Integer.class);
+        super(requestUrl, client, requestOptions, Int32.class);
     }
 
     /**
@@ -57,7 +58,7 @@ public class WorkbookChartPointCountRequest extends BaseRequest {
      */
     public WorkbookChartPointCountRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookChartPointCountRequest)this;
+        return this;
     }
 
     /**
@@ -68,7 +69,7 @@ public class WorkbookChartPointCountRequest extends BaseRequest {
      */
     public WorkbookChartPointCountRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookChartPointCountRequest)this;
+        return this;
     }
 
     /**
@@ -79,7 +80,7 @@ public class WorkbookChartPointCountRequest extends BaseRequest {
      */
     public WorkbookChartPointCountRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookChartPointCountRequest)this;
+        return this;
     }
 
     /**
@@ -90,7 +91,7 @@ public class WorkbookChartPointCountRequest extends BaseRequest {
      */
     public WorkbookChartPointCountRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookChartPointCountRequest)this;
+        return this;
     }
 
 }

@@ -59,7 +59,7 @@ public class WorkbookFunctionsOct2BinBody {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

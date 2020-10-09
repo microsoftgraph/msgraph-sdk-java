@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.CallKeepAliveRequest;
+import com.microsoft.graph.models.extensions.Call;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Call Keep Alive Request Builder.
  */
-public class CallKeepAliveRequestBuilder extends BaseActionRequestBuilder {
+public class CallKeepAliveRequestBuilder extends BaseActionRequestBuilder<Call> {
 
     /**
      * The request builder for this CallKeepAlive

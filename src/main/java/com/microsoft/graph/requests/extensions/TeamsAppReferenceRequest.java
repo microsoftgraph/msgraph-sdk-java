@@ -14,7 +14,7 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Teams App Reference Request.
  */
-public class TeamsAppReferenceRequest extends BaseRequest {
+public class TeamsAppReferenceRequest extends BaseReferenceRequest<TeamsApp> {
 
     /**
      * The request for the TeamsApp
@@ -36,14 +36,6 @@ public class TeamsAppReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, TeamsApp.class);
     }
 
-    public void delete(final ICallback<? super TeamsApp> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    public TeamsApp delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
-    }
-
     /**
      * Sets the select clause for the request
      *
@@ -52,7 +44,7 @@ public class TeamsAppReferenceRequest extends BaseRequest {
      */
     public TeamsAppReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (TeamsAppReferenceRequest)this;
+        return this;
     }
 
     /**
@@ -63,7 +55,7 @@ public class TeamsAppReferenceRequest extends BaseRequest {
      */
     public TeamsAppReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (TeamsAppReferenceRequest)this;
+        return this;
     }
     /**
      * Puts the TeamsApp

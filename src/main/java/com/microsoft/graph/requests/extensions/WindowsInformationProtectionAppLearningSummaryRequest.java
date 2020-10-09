@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Information Protection App Learning Summary Request.
  */
-public class WindowsInformationProtectionAppLearningSummaryRequest extends BaseRequest {
+public class WindowsInformationProtectionAppLearningSummaryRequest extends BaseRequest<WindowsInformationProtectionAppLearningSummary> {
 	
     /**
      * The request for the WindowsInformationProtectionAppLearningSummary
@@ -140,7 +140,7 @@ public class WindowsInformationProtectionAppLearningSummaryRequest extends BaseR
      */
      public WindowsInformationProtectionAppLearningSummaryRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsInformationProtectionAppLearningSummaryRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class WindowsInformationProtectionAppLearningSummaryRequest extends BaseR
      */
      public WindowsInformationProtectionAppLearningSummaryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsInformationProtectionAppLearningSummaryRequest)this;
+         return this;
      }
 
 }

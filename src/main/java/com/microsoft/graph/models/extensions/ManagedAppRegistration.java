@@ -7,13 +7,12 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.MobileAppIdentifier;
 import com.microsoft.graph.models.generated.ManagedAppFlaggedReason;
 import com.microsoft.graph.models.extensions.ManagedAppPolicy;
 import com.microsoft.graph.models.extensions.ManagedAppOperation;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ManagedAppPolicyCollectionPage;
-import com.microsoft.graph.requests.extensions.ManagedAppOperationCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -130,7 +129,7 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
      */
     @SerializedName(value = "appliedPolicies", alternate = {"AppliedPolicies"})
     @Expose
-    public ManagedAppPolicyCollectionPage appliedPolicies;
+    public BaseCollectionPage<ManagedAppPolicy> appliedPolicies;
 
     /**
      * The Intended Policies.
@@ -138,7 +137,7 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
      */
     @SerializedName(value = "intendedPolicies", alternate = {"IntendedPolicies"})
     @Expose
-    public ManagedAppPolicyCollectionPage intendedPolicies;
+    public BaseCollectionPage<ManagedAppPolicy> intendedPolicies;
 
     /**
      * The Operations.
@@ -146,7 +145,7 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
      */
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
-    public ManagedAppOperationCollectionPage operations;
+    public BaseCollectionPage<ManagedAppOperation> operations;
 
 
     /**
@@ -173,7 +172,8 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -189,15 +189,15 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
 
 
         if (json.has("appliedPolicies")) {
-            appliedPolicies = serializer.deserializeObject(json.get("appliedPolicies").toString(), ManagedAppPolicyCollectionPage.class);
+            appliedPolicies = serializer.deserializeObject(json.get("appliedPolicies").toString(), new BaseCollectionPage<ManagedAppPolicy>(new java.util.ArrayList<ManagedAppPolicy>(), null).getClass());
         }
 
         if (json.has("intendedPolicies")) {
-            intendedPolicies = serializer.deserializeObject(json.get("intendedPolicies").toString(), ManagedAppPolicyCollectionPage.class);
+            intendedPolicies = serializer.deserializeObject(json.get("intendedPolicies").toString(), new BaseCollectionPage<ManagedAppPolicy>(new java.util.ArrayList<ManagedAppPolicy>(), null).getClass());
         }
 
         if (json.has("operations")) {
-            operations = serializer.deserializeObject(json.get("operations").toString(), ManagedAppOperationCollectionPage.class);
+            operations = serializer.deserializeObject(json.get("operations").toString(), new BaseCollectionPage<ManagedAppOperation>(new java.util.ArrayList<ManagedAppOperation>(), null).getClass());
         }
     }
 }

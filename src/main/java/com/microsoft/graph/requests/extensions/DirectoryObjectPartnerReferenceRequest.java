@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Directory Object Partner Reference Request.
  */
-public class DirectoryObjectPartnerReferenceRequest extends BaseRequest {
+public class DirectoryObjectPartnerReferenceRequest extends BaseRequest<DirectoryObjectPartnerReference> {
 	
     /**
      * The request for the DirectoryObjectPartnerReference
@@ -140,7 +140,7 @@ public class DirectoryObjectPartnerReferenceRequest extends BaseRequest {
      */
      public DirectoryObjectPartnerReferenceRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DirectoryObjectPartnerReferenceRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class DirectoryObjectPartnerReferenceRequest extends BaseRequest {
      */
      public DirectoryObjectPartnerReferenceRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DirectoryObjectPartnerReferenceRequest)this;
+         return this;
      }
 
 }

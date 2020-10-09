@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Column Definition Collection Request Builder.
  */
-public class ColumnDefinitionCollectionRequestBuilder extends BaseRequestBuilder {
+public class ColumnDefinitionCollectionRequestBuilder extends BaseRequestBuilder<ColumnDefinition> {
 
     /**
      * The request builder for this collection of List

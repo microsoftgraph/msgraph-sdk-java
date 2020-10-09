@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Planner Bucket Collection Request Builder.
  */
-public class PlannerBucketCollectionRequestBuilder extends BaseRequestBuilder {
+public class PlannerBucketCollectionRequestBuilder extends BaseRequestBuilder<PlannerBucket> {
 
     /**
      * The request builder for this collection of PlannerPlan

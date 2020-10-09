@@ -24,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Managed EBook Collection Request Builder.
  */
-public class ManagedEBookCollectionRequestBuilder extends BaseRequestBuilder {
+public class ManagedEBookCollectionRequestBuilder extends BaseRequestBuilder<ManagedEBook> {
 
     /**
      * The request builder for this collection of DeviceAppManagement

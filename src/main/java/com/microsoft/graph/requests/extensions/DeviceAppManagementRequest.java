@@ -47,7 +47,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device App Management Request.
  */
-public class DeviceAppManagementRequest extends BaseRequest {
+public class DeviceAppManagementRequest extends BaseRequest<DeviceAppManagement> {
 	
     /**
      * The request for the DeviceAppManagement
@@ -168,7 +168,7 @@ public class DeviceAppManagementRequest extends BaseRequest {
      */
      public DeviceAppManagementRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceAppManagementRequest)this;
+         return this;
      }
 
     /**
@@ -179,7 +179,7 @@ public class DeviceAppManagementRequest extends BaseRequest {
      */
      public DeviceAppManagementRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceAppManagementRequest)this;
+         return this;
      }
 
 }

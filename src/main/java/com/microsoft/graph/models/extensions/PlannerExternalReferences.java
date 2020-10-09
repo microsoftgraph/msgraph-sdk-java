@@ -57,7 +57,8 @@ public class PlannerExternalReferences extends HashMap<String, Object> implement
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

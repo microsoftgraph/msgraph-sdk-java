@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Call Play Prompt Request.
  */
-public class CallPlayPromptRequest extends BaseRequest {
+public class CallPlayPromptRequest extends BaseRequest<PlayPromptOperation> {
     protected final CallPlayPromptBody body;
 
     /**
@@ -29,6 +29,7 @@ public class CallPlayPromptRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public CallPlayPromptRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PlayPromptOperation.class);
         body = new CallPlayPromptBody();
@@ -50,7 +51,7 @@ public class CallPlayPromptRequest extends BaseRequest {
      */
     public CallPlayPromptRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (CallPlayPromptRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class CallPlayPromptRequest extends BaseRequest {
      */
     public CallPlayPromptRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (CallPlayPromptRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class CallPlayPromptRequest extends BaseRequest {
      */
     public CallPlayPromptRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (CallPlayPromptRequest)this;
+        return this;
     }
 
 }

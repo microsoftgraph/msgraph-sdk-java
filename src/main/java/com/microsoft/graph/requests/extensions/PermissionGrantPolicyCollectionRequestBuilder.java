@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Permission Grant Policy Collection Request Builder.
  */
-public class PermissionGrantPolicyCollectionRequestBuilder extends BaseRequestBuilder {
+public class PermissionGrantPolicyCollectionRequestBuilder extends BaseRequestBuilder<PermissionGrantPolicy> {
 
     /**
      * The request builder for this collection of PolicyRoot

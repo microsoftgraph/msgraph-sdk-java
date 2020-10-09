@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Entity Request.
  */
-public class EntityRequest extends BaseRequest {
+public class EntityRequest extends BaseRequest<Entity> {
 	
     /**
      * The request for the Entity
@@ -55,7 +55,7 @@ public class EntityRequest extends BaseRequest {
      */
      public EntityRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EntityRequest)this;
+         return this;
      }
 
     /**
@@ -66,7 +66,7 @@ public class EntityRequest extends BaseRequest {
      */
      public EntityRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EntityRequest)this;
+         return this;
      }
 
 }

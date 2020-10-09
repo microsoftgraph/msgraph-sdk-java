@@ -22,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the User Get Managed App Policies Collection Request Builder.
  */
-public class UserGetManagedAppPoliciesCollectionRequestBuilder extends BaseFunctionRequestBuilder {
+public class UserGetManagedAppPoliciesCollectionRequestBuilder extends BaseFunctionRequestBuilder<ManagedAppPolicy> {
 
     /**
      * The request builder for this collection of User

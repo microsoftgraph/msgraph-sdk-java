@@ -4,8 +4,8 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.WorkbookRangeBorderCountRequest;
+import com.microsoft.graph.models.extensions.WorkbookRangeBorder;
 
-import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Range Border Count Request Builder.
  */
-public class WorkbookRangeBorderCountRequestBuilder extends BaseFunctionRequestBuilder {
+public class WorkbookRangeBorderCountRequestBuilder extends BaseFunctionRequestBuilder<Int32> {
 
     /**
      * The request builder for this WorkbookRangeBorderCount

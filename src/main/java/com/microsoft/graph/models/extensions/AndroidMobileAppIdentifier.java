@@ -55,7 +55,8 @@ public class AndroidMobileAppIdentifier extends MobileAppIdentifier implements I
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

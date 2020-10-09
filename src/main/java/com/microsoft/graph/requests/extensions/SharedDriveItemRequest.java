@@ -25,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Shared Drive Item Request.
  */
-public class SharedDriveItemRequest extends BaseRequest {
+public class SharedDriveItemRequest extends BaseRequest<SharedDriveItem> {
 	
     /**
      * The request for the SharedDriveItem
@@ -146,7 +146,7 @@ public class SharedDriveItemRequest extends BaseRequest {
      */
      public SharedDriveItemRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SharedDriveItemRequest)this;
+         return this;
      }
 
     /**
@@ -157,7 +157,7 @@ public class SharedDriveItemRequest extends BaseRequest {
      */
      public SharedDriveItemRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SharedDriveItemRequest)this;
+         return this;
      }
 
 }

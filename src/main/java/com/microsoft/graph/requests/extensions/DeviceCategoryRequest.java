@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Category Request.
  */
-public class DeviceCategoryRequest extends BaseRequest {
+public class DeviceCategoryRequest extends BaseRequest<DeviceCategory> {
 	
     /**
      * The request for the DeviceCategory
@@ -140,7 +140,7 @@ public class DeviceCategoryRequest extends BaseRequest {
      */
      public DeviceCategoryRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceCategoryRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class DeviceCategoryRequest extends BaseRequest {
      */
      public DeviceCategoryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceCategoryRequest)this;
+         return this;
      }
 
 }

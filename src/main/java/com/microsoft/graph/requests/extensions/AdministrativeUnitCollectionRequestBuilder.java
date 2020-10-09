@@ -24,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Administrative Unit Collection Request Builder.
  */
-public class AdministrativeUnitCollectionRequestBuilder extends BaseRequestBuilder {
+public class AdministrativeUnitCollectionRequestBuilder extends BaseRequestBuilder<AdministrativeUnit> {
 
     /**
      * The request builder for this collection of Directory

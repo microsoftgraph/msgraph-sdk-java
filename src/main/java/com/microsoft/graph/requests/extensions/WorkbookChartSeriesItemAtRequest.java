@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Series Item At Request.
  */
-public class WorkbookChartSeriesItemAtRequest extends BaseRequest {
+public class WorkbookChartSeriesItemAtRequest extends BaseRequest<WorkbookChartSeries> {
 
     /**
      * The request for this WorkbookChartSeriesItemAt
@@ -98,7 +98,7 @@ public class WorkbookChartSeriesItemAtRequest extends BaseRequest {
      */
     public WorkbookChartSeriesItemAtRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookChartSeriesItemAtRequest)this;
+        return this;
     }
 
     /**
@@ -109,7 +109,7 @@ public class WorkbookChartSeriesItemAtRequest extends BaseRequest {
      */
     public WorkbookChartSeriesItemAtRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookChartSeriesItemAtRequest)this;
+        return this;
     }
 
     /**
@@ -120,7 +120,7 @@ public class WorkbookChartSeriesItemAtRequest extends BaseRequest {
      */
     public WorkbookChartSeriesItemAtRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookChartSeriesItemAtRequest)this;
+        return this;
     }
 
     /**
@@ -131,7 +131,7 @@ public class WorkbookChartSeriesItemAtRequest extends BaseRequest {
      */
     public WorkbookChartSeriesItemAtRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookChartSeriesItemAtRequest)this;
+        return this;
     }
 
 }

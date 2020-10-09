@@ -6,7 +6,6 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRestoreRequest;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -15,7 +14,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Directory Object Restore Request Builder.
  */
-public class DirectoryObjectRestoreRequestBuilder extends BaseActionRequestBuilder {
+public class DirectoryObjectRestoreRequestBuilder extends BaseActionRequestBuilder<DirectoryObject> {
 
     /**
      * The request builder for this DirectoryObjectRestore

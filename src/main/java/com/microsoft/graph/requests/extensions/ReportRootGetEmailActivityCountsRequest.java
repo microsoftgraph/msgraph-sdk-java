@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
+import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.requests.extensions.ReportRootGetEmailActivityCountsRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Email Activity Counts Request.
  */
-public class ReportRootGetEmailActivityCountsRequest extends BaseRequest {
+public class ReportRootGetEmailActivityCountsRequest extends BaseRequest<Report> {
 
     /**
      * The request for this ReportRootGetEmailActivityCounts
@@ -98,7 +99,7 @@ public class ReportRootGetEmailActivityCountsRequest extends BaseRequest {
      */
     public ReportRootGetEmailActivityCountsRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ReportRootGetEmailActivityCountsRequest)this;
+        return this;
     }
 
     /**
@@ -109,7 +110,7 @@ public class ReportRootGetEmailActivityCountsRequest extends BaseRequest {
      */
     public ReportRootGetEmailActivityCountsRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ReportRootGetEmailActivityCountsRequest)this;
+        return this;
     }
 
     /**
@@ -120,7 +121,7 @@ public class ReportRootGetEmailActivityCountsRequest extends BaseRequest {
      */
     public ReportRootGetEmailActivityCountsRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ReportRootGetEmailActivityCountsRequest)this;
+        return this;
     }
 
     /**
@@ -131,7 +132,7 @@ public class ReportRootGetEmailActivityCountsRequest extends BaseRequest {
      */
     public ReportRootGetEmailActivityCountsRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ReportRootGetEmailActivityCountsRequest)this;
+        return this;
     }
 
 }

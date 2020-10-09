@@ -7,9 +7,9 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.EnrollmentConfigurationAssignment;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignmentCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -78,7 +78,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements IJsonBacked
      */
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
-    public EnrollmentConfigurationAssignmentCollectionPage assignments;
+    public BaseCollectionPage<EnrollmentConfigurationAssignment> assignments;
 
 
     /**
@@ -105,7 +105,8 @@ public class DeviceEnrollmentConfiguration extends Entity implements IJsonBacked
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -121,7 +122,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements IJsonBacked
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments").toString(), EnrollmentConfigurationAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments").toString(), new BaseCollectionPage<EnrollmentConfigurationAssignment>(new java.util.ArrayList<EnrollmentConfigurationAssignment>(), null).getClass());
         }
     }
 }

@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.Audio;
 import com.microsoft.graph.models.extensions.Deleted;
 import com.microsoft.graph.models.extensions.File;
@@ -33,11 +34,6 @@ import com.microsoft.graph.models.extensions.Subscription;
 import com.microsoft.graph.models.extensions.ThumbnailSet;
 import com.microsoft.graph.models.extensions.DriveItemVersion;
 import com.microsoft.graph.models.extensions.BaseItem;
-import com.microsoft.graph.requests.extensions.DriveItemCollectionPage;
-import com.microsoft.graph.requests.extensions.PermissionCollectionPage;
-import com.microsoft.graph.requests.extensions.SubscriptionCollectionPage;
-import com.microsoft.graph.requests.extensions.ThumbnailSetCollectionPage;
-import com.microsoft.graph.requests.extensions.DriveItemVersionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -242,7 +238,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      */
     @SerializedName(value = "children", alternate = {"Children"})
     @Expose
-    public DriveItemCollectionPage children;
+    public BaseCollectionPage<DriveItem> children;
 
     /**
      * The List Item.
@@ -258,7 +254,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      */
     @SerializedName(value = "permissions", alternate = {"Permissions"})
     @Expose
-    public PermissionCollectionPage permissions;
+    public BaseCollectionPage<Permission> permissions;
 
     /**
      * The Subscriptions.
@@ -266,7 +262,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      */
     @SerializedName(value = "subscriptions", alternate = {"Subscriptions"})
     @Expose
-    public SubscriptionCollectionPage subscriptions;
+    public BaseCollectionPage<Subscription> subscriptions;
 
     /**
      * The Thumbnails.
@@ -274,7 +270,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      */
     @SerializedName(value = "thumbnails", alternate = {"Thumbnails"})
     @Expose
-    public ThumbnailSetCollectionPage thumbnails;
+    public BaseCollectionPage<ThumbnailSet> thumbnails;
 
     /**
      * The Versions.
@@ -282,7 +278,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      */
     @SerializedName(value = "versions", alternate = {"Versions"})
     @Expose
-    public DriveItemVersionCollectionPage versions;
+    public BaseCollectionPage<DriveItemVersion> versions;
 
 
     /**
@@ -309,7 +305,8 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -325,23 +322,23 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
 
 
         if (json.has("children")) {
-            children = serializer.deserializeObject(json.get("children").toString(), DriveItemCollectionPage.class);
+            children = serializer.deserializeObject(json.get("children").toString(), new BaseCollectionPage<DriveItem>(new java.util.ArrayList<DriveItem>(), null).getClass());
         }
 
         if (json.has("permissions")) {
-            permissions = serializer.deserializeObject(json.get("permissions").toString(), PermissionCollectionPage.class);
+            permissions = serializer.deserializeObject(json.get("permissions").toString(), new BaseCollectionPage<Permission>(new java.util.ArrayList<Permission>(), null).getClass());
         }
 
         if (json.has("subscriptions")) {
-            subscriptions = serializer.deserializeObject(json.get("subscriptions").toString(), SubscriptionCollectionPage.class);
+            subscriptions = serializer.deserializeObject(json.get("subscriptions").toString(), new BaseCollectionPage<Subscription>(new java.util.ArrayList<Subscription>(), null).getClass());
         }
 
         if (json.has("thumbnails")) {
-            thumbnails = serializer.deserializeObject(json.get("thumbnails").toString(), ThumbnailSetCollectionPage.class);
+            thumbnails = serializer.deserializeObject(json.get("thumbnails").toString(), new BaseCollectionPage<ThumbnailSet>(new java.util.ArrayList<ThumbnailSet>(), null).getClass());
         }
 
         if (json.has("versions")) {
-            versions = serializer.deserializeObject(json.get("versions").toString(), DriveItemVersionCollectionPage.class);
+            versions = serializer.deserializeObject(json.get("versions").toString(), new BaseCollectionPage<DriveItemVersion>(new java.util.ArrayList<DriveItemVersion>(), null).getClass());
         }
     }
 }

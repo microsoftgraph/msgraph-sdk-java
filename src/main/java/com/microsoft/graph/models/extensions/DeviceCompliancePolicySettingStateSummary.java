@@ -7,10 +7,10 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.generated.PolicyPlatformType;
 import com.microsoft.graph.models.extensions.DeviceComplianceSettingState;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.DeviceComplianceSettingStateCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -111,7 +111,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      */
     @SerializedName(value = "deviceComplianceSettingStates", alternate = {"DeviceComplianceSettingStates"})
     @Expose
-    public DeviceComplianceSettingStateCollectionPage deviceComplianceSettingStates;
+    public BaseCollectionPage<DeviceComplianceSettingState> deviceComplianceSettingStates;
 
 
     /**
@@ -138,7 +138,8 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -154,7 +155,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
 
 
         if (json.has("deviceComplianceSettingStates")) {
-            deviceComplianceSettingStates = serializer.deserializeObject(json.get("deviceComplianceSettingStates").toString(), DeviceComplianceSettingStateCollectionPage.class);
+            deviceComplianceSettingStates = serializer.deserializeObject(json.get("deviceComplianceSettingStates").toString(), new BaseCollectionPage<DeviceComplianceSettingState>(new java.util.ArrayList<DeviceComplianceSettingState>(), null).getClass());
         }
     }
 }

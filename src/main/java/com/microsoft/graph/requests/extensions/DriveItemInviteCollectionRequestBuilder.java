@@ -23,7 +23,7 @@ import com.microsoft.graph.core.BaseActionRequestBuilder;
 /**
  * The class for the Drive Item Invite Collection Request Builder.
  */
-public class DriveItemInviteCollectionRequestBuilder extends BaseActionRequestBuilder {
+public class DriveItemInviteCollectionRequestBuilder extends BaseActionRequestBuilder<Permission> {
 
     /**
      * The request builder for this collection of DriveItem

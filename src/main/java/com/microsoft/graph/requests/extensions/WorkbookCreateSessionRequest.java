@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Create Session Request.
  */
-public class WorkbookCreateSessionRequest extends BaseRequest {
+public class WorkbookCreateSessionRequest extends BaseRequest<WorkbookSessionInfo> {
     protected final WorkbookCreateSessionBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookCreateSessionRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookCreateSessionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookSessionInfo.class);
         body = new WorkbookCreateSessionBody();
@@ -50,7 +51,7 @@ public class WorkbookCreateSessionRequest extends BaseRequest {
      */
     public WorkbookCreateSessionRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookCreateSessionRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookCreateSessionRequest extends BaseRequest {
      */
     public WorkbookCreateSessionRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookCreateSessionRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookCreateSessionRequest extends BaseRequest {
      */
     public WorkbookCreateSessionRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookCreateSessionRequest)this;
+        return this;
     }
 
 }

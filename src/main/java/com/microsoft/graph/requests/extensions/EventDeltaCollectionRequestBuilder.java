@@ -22,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Event Delta Collection Request Builder.
  */
-public class EventDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder {
+public class EventDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder<Event> {
 
     /**
      * The request builder for this collection of Event

@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Contact Folder Collection Request Builder.
  */
-public class ContactFolderCollectionRequestBuilder extends BaseRequestBuilder {
+public class ContactFolderCollectionRequestBuilder extends BaseRequestBuilder<ContactFolder> {
 
     /**
      * The request builder for this collection of ContactFolder

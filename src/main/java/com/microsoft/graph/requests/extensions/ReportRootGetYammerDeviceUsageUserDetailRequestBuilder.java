@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ReportRootGetYammerDeviceUsageUserDetailRequest;
+import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.models.extensions.Report;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
@@ -16,7 +16,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Report Root Get Yammer Device Usage User Detail Request Builder.
  */
-public class ReportRootGetYammerDeviceUsageUserDetailRequestBuilder extends BaseFunctionRequestBuilder {
+public class ReportRootGetYammerDeviceUsageUserDetailRequestBuilder extends BaseFunctionRequestBuilder<Report> {
 
     /**
      * The request builder for this ReportRootGetYammerDeviceUsageUserDetail

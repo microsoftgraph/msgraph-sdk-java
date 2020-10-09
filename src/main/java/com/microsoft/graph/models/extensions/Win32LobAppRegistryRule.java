@@ -97,7 +97,8 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements IJsonBac
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

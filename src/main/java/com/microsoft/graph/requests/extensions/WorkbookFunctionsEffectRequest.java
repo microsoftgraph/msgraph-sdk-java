@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Effect Request.
  */
-public class WorkbookFunctionsEffectRequest extends BaseRequest {
+public class WorkbookFunctionsEffectRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsEffectBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsEffectRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsEffectRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsEffectBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsEffectRequest extends BaseRequest {
      */
     public WorkbookFunctionsEffectRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsEffectRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsEffectRequest extends BaseRequest {
      */
     public WorkbookFunctionsEffectRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsEffectRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsEffectRequest extends BaseRequest {
      */
     public WorkbookFunctionsEffectRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsEffectRequest)this;
+        return this;
     }
 
 }

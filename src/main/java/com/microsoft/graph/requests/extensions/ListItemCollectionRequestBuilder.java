@@ -24,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the List Item Collection Request Builder.
  */
-public class ListItemCollectionRequestBuilder extends BaseRequestBuilder {
+public class ListItemCollectionRequestBuilder extends BaseRequestBuilder<ListItem> {
 
     /**
      * The request builder for this collection of List

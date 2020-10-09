@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Ios Update Device Status Collection Request Builder.
  */
-public class IosUpdateDeviceStatusCollectionRequestBuilder extends BaseRequestBuilder {
+public class IosUpdateDeviceStatusCollectionRequestBuilder extends BaseRequestBuilder<IosUpdateDeviceStatus> {
 
     /**
      * The request builder for this collection of DeviceManagement

@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Message Rule Request.
  */
-public class MessageRuleRequest extends BaseRequest {
+public class MessageRuleRequest extends BaseRequest<MessageRule> {
 	
     /**
      * The request for the MessageRule
@@ -140,7 +140,7 @@ public class MessageRuleRequest extends BaseRequest {
      */
      public MessageRuleRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MessageRuleRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class MessageRuleRequest extends BaseRequest {
      */
      public MessageRuleRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MessageRuleRequest)this;
+         return this;
      }
 
 }

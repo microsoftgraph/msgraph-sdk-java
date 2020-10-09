@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.Call;
 import com.microsoft.graph.requests.extensions.CallKeepAliveRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -17,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Call Keep Alive Request.
  */
-public class CallKeepAliveRequest extends BaseRequest {
+public class CallKeepAliveRequest extends BaseRequest<Call> {
 
     /**
      * The request for this CallKeepAlive
@@ -27,7 +28,7 @@ public class CallKeepAliveRequest extends BaseRequest {
      * @param requestOptions the options for this request
      */
     public CallKeepAliveRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Void.class);
+        super(requestUrl, client, requestOptions, Call.class);
     }
 
     /**

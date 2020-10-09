@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Week Num Request.
  */
-public class WorkbookFunctionsWeekNumRequest extends BaseRequest {
+public class WorkbookFunctionsWeekNumRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsWeekNumBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsWeekNumRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsWeekNumRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsWeekNumBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsWeekNumRequest extends BaseRequest {
      */
     public WorkbookFunctionsWeekNumRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsWeekNumRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsWeekNumRequest extends BaseRequest {
      */
     public WorkbookFunctionsWeekNumRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsWeekNumRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsWeekNumRequest extends BaseRequest {
      */
     public WorkbookFunctionsWeekNumRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsWeekNumRequest)this;
+        return this;
     }
 
 }

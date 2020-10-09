@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the App Role Assignment Request.
  */
-public class AppRoleAssignmentRequest extends BaseRequest {
+public class AppRoleAssignmentRequest extends BaseRequest<AppRoleAssignment> {
 	
     /**
      * The request for the AppRoleAssignment
@@ -140,7 +140,7 @@ public class AppRoleAssignmentRequest extends BaseRequest {
      */
      public AppRoleAssignmentRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AppRoleAssignmentRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class AppRoleAssignmentRequest extends BaseRequest {
      */
      public AppRoleAssignmentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AppRoleAssignmentRequest)this;
+         return this;
      }
 
 }

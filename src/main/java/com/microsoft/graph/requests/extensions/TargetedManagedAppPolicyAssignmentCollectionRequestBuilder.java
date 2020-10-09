@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Targeted Managed App Policy Assignment Collection Request Builder.
  */
-public class TargetedManagedAppPolicyAssignmentCollectionRequestBuilder extends BaseRequestBuilder {
+public class TargetedManagedAppPolicyAssignmentCollectionRequestBuilder extends BaseRequestBuilder<TargetedManagedAppPolicyAssignment> {
 
     /**
      * The request builder for this collection of TargetedManagedAppConfiguration

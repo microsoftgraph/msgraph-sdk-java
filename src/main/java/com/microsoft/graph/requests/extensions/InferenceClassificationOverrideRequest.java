@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Inference Classification Override Request.
  */
-public class InferenceClassificationOverrideRequest extends BaseRequest {
+public class InferenceClassificationOverrideRequest extends BaseRequest<InferenceClassificationOverride> {
 	
     /**
      * The request for the InferenceClassificationOverride
@@ -140,7 +140,7 @@ public class InferenceClassificationOverrideRequest extends BaseRequest {
      */
      public InferenceClassificationOverrideRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (InferenceClassificationOverrideRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class InferenceClassificationOverrideRequest extends BaseRequest {
      */
      public InferenceClassificationOverrideRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (InferenceClassificationOverrideRequest)this;
+         return this;
      }
 
 }

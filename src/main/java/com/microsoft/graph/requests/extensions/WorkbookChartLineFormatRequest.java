@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Line Format Request.
  */
-public class WorkbookChartLineFormatRequest extends BaseRequest {
+public class WorkbookChartLineFormatRequest extends BaseRequest<WorkbookChartLineFormat> {
 	
     /**
      * The request for the WorkbookChartLineFormat
@@ -140,7 +140,7 @@ public class WorkbookChartLineFormatRequest extends BaseRequest {
      */
      public WorkbookChartLineFormatRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookChartLineFormatRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class WorkbookChartLineFormatRequest extends BaseRequest {
      */
      public WorkbookChartLineFormatRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookChartLineFormatRequest)this;
+         return this;
      }
 
 }

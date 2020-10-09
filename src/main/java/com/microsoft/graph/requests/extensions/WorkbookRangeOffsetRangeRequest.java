@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Offset Range Request.
  */
-public class WorkbookRangeOffsetRangeRequest extends BaseRequest {
+public class WorkbookRangeOffsetRangeRequest extends BaseRequest<WorkbookRange> {
 
     /**
      * The request for this WorkbookRangeOffsetRange
@@ -98,7 +98,7 @@ public class WorkbookRangeOffsetRangeRequest extends BaseRequest {
      */
     public WorkbookRangeOffsetRangeRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookRangeOffsetRangeRequest)this;
+        return this;
     }
 
     /**
@@ -109,7 +109,7 @@ public class WorkbookRangeOffsetRangeRequest extends BaseRequest {
      */
     public WorkbookRangeOffsetRangeRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookRangeOffsetRangeRequest)this;
+        return this;
     }
 
     /**
@@ -120,7 +120,7 @@ public class WorkbookRangeOffsetRangeRequest extends BaseRequest {
      */
     public WorkbookRangeOffsetRangeRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookRangeOffsetRangeRequest)this;
+        return this;
     }
 
     /**
@@ -131,7 +131,7 @@ public class WorkbookRangeOffsetRangeRequest extends BaseRequest {
      */
     public WorkbookRangeOffsetRangeRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookRangeOffsetRangeRequest)this;
+        return this;
     }
 
 }

@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Inference Classification Request.
  */
-public class InferenceClassificationRequest extends BaseRequest {
+public class InferenceClassificationRequest extends BaseRequest<InferenceClassification> {
 	
     /**
      * The request for the InferenceClassification
@@ -142,7 +142,7 @@ public class InferenceClassificationRequest extends BaseRequest {
      */
      public InferenceClassificationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (InferenceClassificationRequest)this;
+         return this;
      }
 
     /**
@@ -153,7 +153,7 @@ public class InferenceClassificationRequest extends BaseRequest {
      */
      public InferenceClassificationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (InferenceClassificationRequest)this;
+         return this;
      }
 
 }

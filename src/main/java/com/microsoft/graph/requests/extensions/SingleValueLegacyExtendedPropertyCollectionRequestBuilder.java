@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Single Value Legacy Extended Property Collection Request Builder.
  */
-public class SingleValueLegacyExtendedPropertyCollectionRequestBuilder extends BaseRequestBuilder {
+public class SingleValueLegacyExtendedPropertyCollectionRequestBuilder extends BaseRequestBuilder<SingleValueLegacyExtendedProperty> {
 
     /**
      * The request builder for this collection of Post

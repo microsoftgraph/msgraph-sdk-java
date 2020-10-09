@@ -7,12 +7,10 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.ScopedRoleMembership;
 import com.microsoft.graph.models.extensions.Extension;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
-import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionPage;
-import com.microsoft.graph.requests.extensions.ExtensionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -55,7 +53,7 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
      * The Members.
      * Users and groups that are members of this Adminsitrative Unit. HTTP Methods: GET (list members), POST (add members), DELETE (remove members).
      */
-    public DirectoryObjectCollectionPage members;
+    public BaseCollectionPage<DirectoryObject> members;
 
     /**
      * The Scoped Role Members.
@@ -63,7 +61,7 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
      */
     @SerializedName(value = "scopedRoleMembers", alternate = {"ScopedRoleMembers"})
     @Expose
-    public ScopedRoleMembershipCollectionPage scopedRoleMembers;
+    public BaseCollectionPage<ScopedRoleMembership> scopedRoleMembers;
 
     /**
      * The Extensions.
@@ -71,7 +69,7 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
      */
     @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
-    public ExtensionCollectionPage extensions;
+    public BaseCollectionPage<Extension> extensions;
 
 
     /**
@@ -98,7 +96,8 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -114,15 +113,15 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
 
 
         if (json.has("members")) {
-            members = serializer.deserializeObject(json.get("members").toString(), DirectoryObjectCollectionPage.class);
+            members = serializer.deserializeObject(json.get("members").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
         }
 
         if (json.has("scopedRoleMembers")) {
-            scopedRoleMembers = serializer.deserializeObject(json.get("scopedRoleMembers").toString(), ScopedRoleMembershipCollectionPage.class);
+            scopedRoleMembers = serializer.deserializeObject(json.get("scopedRoleMembers").toString(), new BaseCollectionPage<ScopedRoleMembership>(new java.util.ArrayList<ScopedRoleMembership>(), null).getClass());
         }
 
         if (json.has("extensions")) {
-            extensions = serializer.deserializeObject(json.get("extensions").toString(), ExtensionCollectionPage.class);
+            extensions = serializer.deserializeObject(json.get("extensions").toString(), new BaseCollectionPage<Extension>(new java.util.ArrayList<Extension>(), null).getClass());
         }
     }
 }

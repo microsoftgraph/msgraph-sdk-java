@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Column Item At Request.
  */
-public class WorkbookTableColumnItemAtRequest extends BaseRequest {
+public class WorkbookTableColumnItemAtRequest extends BaseRequest<WorkbookTableColumn> {
 
     /**
      * The request for this WorkbookTableColumnItemAt
@@ -98,7 +98,7 @@ public class WorkbookTableColumnItemAtRequest extends BaseRequest {
      */
     public WorkbookTableColumnItemAtRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookTableColumnItemAtRequest)this;
+        return this;
     }
 
     /**
@@ -109,7 +109,7 @@ public class WorkbookTableColumnItemAtRequest extends BaseRequest {
      */
     public WorkbookTableColumnItemAtRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookTableColumnItemAtRequest)this;
+        return this;
     }
 
     /**
@@ -120,7 +120,7 @@ public class WorkbookTableColumnItemAtRequest extends BaseRequest {
      */
     public WorkbookTableColumnItemAtRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookTableColumnItemAtRequest)this;
+        return this;
     }
 
     /**
@@ -131,7 +131,7 @@ public class WorkbookTableColumnItemAtRequest extends BaseRequest {
      */
     public WorkbookTableColumnItemAtRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookTableColumnItemAtRequest)this;
+        return this;
     }
 
 }

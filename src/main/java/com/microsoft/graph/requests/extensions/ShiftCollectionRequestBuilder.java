@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Shift Collection Request Builder.
  */
-public class ShiftCollectionRequestBuilder extends BaseRequestBuilder {
+public class ShiftCollectionRequestBuilder extends BaseRequestBuilder<Shift> {
 
     /**
      * The request builder for this collection of Schedule

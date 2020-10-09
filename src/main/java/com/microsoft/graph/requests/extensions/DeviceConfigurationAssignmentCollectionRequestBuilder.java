@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device Configuration Assignment Collection Request Builder.
  */
-public class DeviceConfigurationAssignmentCollectionRequestBuilder extends BaseRequestBuilder {
+public class DeviceConfigurationAssignmentCollectionRequestBuilder extends BaseRequestBuilder<DeviceConfigurationAssignment> {
 
     /**
      * The request builder for this collection of DeviceConfiguration

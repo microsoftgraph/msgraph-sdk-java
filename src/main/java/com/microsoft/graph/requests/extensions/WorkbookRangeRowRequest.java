@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Row Request.
  */
-public class WorkbookRangeRowRequest extends BaseRequest {
+public class WorkbookRangeRowRequest extends BaseRequest<WorkbookRange> {
 
     /**
      * The request for this WorkbookRangeRow
@@ -98,7 +98,7 @@ public class WorkbookRangeRowRequest extends BaseRequest {
      */
     public WorkbookRangeRowRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookRangeRowRequest)this;
+        return this;
     }
 
     /**
@@ -109,7 +109,7 @@ public class WorkbookRangeRowRequest extends BaseRequest {
      */
     public WorkbookRangeRowRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookRangeRowRequest)this;
+        return this;
     }
 
     /**
@@ -120,7 +120,7 @@ public class WorkbookRangeRowRequest extends BaseRequest {
      */
     public WorkbookRangeRowRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookRangeRowRequest)this;
+        return this;
     }
 
     /**
@@ -131,7 +131,7 @@ public class WorkbookRangeRowRequest extends BaseRequest {
      */
     public WorkbookRangeRowRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookRangeRowRequest)this;
+        return this;
     }
 
 }

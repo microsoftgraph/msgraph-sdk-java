@@ -20,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Trending Request.
  */
-public class TrendingRequest extends BaseRequest {
+public class TrendingRequest extends BaseRequest<Trending> {
 	
     /**
      * The request for the Trending
@@ -141,7 +141,7 @@ public class TrendingRequest extends BaseRequest {
      */
      public TrendingRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TrendingRequest)this;
+         return this;
      }
 
     /**
@@ -152,7 +152,7 @@ public class TrendingRequest extends BaseRequest {
      */
      public TrendingRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TrendingRequest)this;
+         return this;
      }
 
 }

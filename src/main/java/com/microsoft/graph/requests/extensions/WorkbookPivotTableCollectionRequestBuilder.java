@@ -24,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Pivot Table Collection Request Builder.
  */
-public class WorkbookPivotTableCollectionRequestBuilder extends BaseRequestBuilder {
+public class WorkbookPivotTableCollectionRequestBuilder extends BaseRequestBuilder<WorkbookPivotTable> {
 
     /**
      * The request builder for this collection of WorkbookWorksheet

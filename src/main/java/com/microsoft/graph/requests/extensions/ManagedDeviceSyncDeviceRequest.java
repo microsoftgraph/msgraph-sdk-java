@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.requests.extensions.ManagedDeviceSyncDeviceRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -17,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Device Sync Device Request.
  */
-public class ManagedDeviceSyncDeviceRequest extends BaseRequest {
+public class ManagedDeviceSyncDeviceRequest extends BaseRequest<ManagedDevice> {
 
     /**
      * The request for this ManagedDeviceSyncDevice
@@ -27,7 +28,7 @@ public class ManagedDeviceSyncDeviceRequest extends BaseRequest {
      * @param requestOptions the options for this request
      */
     public ManagedDeviceSyncDeviceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Void.class);
+        super(requestUrl, client, requestOptions, ManagedDevice.class);
     }
 
     /**

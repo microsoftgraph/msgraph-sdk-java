@@ -4,8 +4,8 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest;
+import com.microsoft.graph.models.extensions.DeviceManagement;
 
-import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Device Management Verify Windows Enrollment Auto Discovery Request Builder.
  */
-public class DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequestBuilder extends BaseFunctionRequestBuilder {
+public class DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequestBuilder extends BaseFunctionRequestBuilder<Boolean> {
 
     /**
      * The request builder for this DeviceManagementVerifyWindowsEnrollmentAutoDiscovery

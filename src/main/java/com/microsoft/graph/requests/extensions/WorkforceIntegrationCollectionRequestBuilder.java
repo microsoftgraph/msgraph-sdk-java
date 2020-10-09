@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workforce Integration Collection Request Builder.
  */
-public class WorkforceIntegrationCollectionRequestBuilder extends BaseRequestBuilder {
+public class WorkforceIntegrationCollectionRequestBuilder extends BaseRequestBuilder<WorkforceIntegration> {
 
     /**
      * The request builder for this collection of Teamwork

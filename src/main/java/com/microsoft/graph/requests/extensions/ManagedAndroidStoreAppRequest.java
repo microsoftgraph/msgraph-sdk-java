@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Android Store App Request.
  */
-public class ManagedAndroidStoreAppRequest extends BaseRequest {
+public class ManagedAndroidStoreAppRequest extends BaseRequest<ManagedAndroidStoreApp> {
 	
     /**
      * The request for the ManagedAndroidStoreApp
@@ -140,7 +140,7 @@ public class ManagedAndroidStoreAppRequest extends BaseRequest {
      */
      public ManagedAndroidStoreAppRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ManagedAndroidStoreAppRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class ManagedAndroidStoreAppRequest extends BaseRequest {
      */
      public ManagedAndroidStoreAppRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ManagedAndroidStoreAppRequest)this;
+         return this;
      }
 
 }

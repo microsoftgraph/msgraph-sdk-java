@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Teams Async Operation Collection Request Builder.
  */
-public class TeamsAsyncOperationCollectionRequestBuilder extends BaseRequestBuilder {
+public class TeamsAsyncOperationCollectionRequestBuilder extends BaseRequestBuilder<TeamsAsyncOperation> {
 
     /**
      * The request builder for this collection of Team

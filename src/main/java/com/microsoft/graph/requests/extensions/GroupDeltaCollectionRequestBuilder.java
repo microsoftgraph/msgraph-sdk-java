@@ -22,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Group Delta Collection Request Builder.
  */
-public class GroupDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder {
+public class GroupDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder<Group> {
 
     /**
      * The request builder for this collection of Group

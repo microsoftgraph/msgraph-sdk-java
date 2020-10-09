@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.requests.extensions.GroupRenewRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -17,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Group Renew Request.
  */
-public class GroupRenewRequest extends BaseRequest {
+public class GroupRenewRequest extends BaseRequest<Group> {
 
     /**
      * The request for this GroupRenew
@@ -27,7 +28,7 @@ public class GroupRenewRequest extends BaseRequest {
      * @param requestOptions the options for this request
      */
     public GroupRenewRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Void.class);
+        super(requestUrl, client, requestOptions, Group.class);
     }
 
     /**

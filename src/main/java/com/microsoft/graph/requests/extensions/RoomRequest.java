@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Room Request.
  */
-public class RoomRequest extends BaseRequest {
+public class RoomRequest extends BaseRequest<Room> {
 	
     /**
      * The request for the Room
@@ -140,7 +140,7 @@ public class RoomRequest extends BaseRequest {
      */
      public RoomRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (RoomRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class RoomRequest extends BaseRequest {
      */
      public RoomRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (RoomRequest)this;
+         return this;
      }
 
 }

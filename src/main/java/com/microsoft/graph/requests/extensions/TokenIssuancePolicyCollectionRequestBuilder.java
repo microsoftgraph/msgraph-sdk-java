@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Token Issuance Policy Collection Request Builder.
  */
-public class TokenIssuancePolicyCollectionRequestBuilder extends BaseRequestBuilder {
+public class TokenIssuancePolicyCollectionRequestBuilder extends BaseRequestBuilder<TokenIssuancePolicy> {
 
     /**
      * The request builder for this collection of PolicyRoot

@@ -23,7 +23,7 @@ import com.microsoft.graph.core.BaseActionRequestBuilder;
 /**
  * The class for the Calendar Get Schedule Collection Request Builder.
  */
-public class CalendarGetScheduleCollectionRequestBuilder extends BaseActionRequestBuilder {
+public class CalendarGetScheduleCollectionRequestBuilder extends BaseActionRequestBuilder<ScheduleInformation> {
 
     /**
      * The request builder for this collection of Calendar

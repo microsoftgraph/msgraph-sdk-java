@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Contract Collection Request Builder.
  */
-public class ContractCollectionRequestBuilder extends BaseRequestBuilder {
+public class ContractCollectionRequestBuilder extends BaseRequestBuilder<Contract> {
 
     /**
      * The request builder for this collection of Contract

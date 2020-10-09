@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Base Item Collection Request Builder.
  */
-public class BaseItemCollectionRequestBuilder extends BaseRequestBuilder {
+public class BaseItemCollectionRequestBuilder extends BaseRequestBuilder<BaseItem> {
 
     /**
      * The request builder for this collection of Site

@@ -24,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device Enrollment Configuration Collection Request Builder.
  */
-public class DeviceEnrollmentConfigurationCollectionRequestBuilder extends BaseRequestBuilder {
+public class DeviceEnrollmentConfigurationCollectionRequestBuilder extends BaseRequestBuilder<DeviceEnrollmentConfiguration> {
 
     /**
      * The request builder for this collection of DeviceManagement

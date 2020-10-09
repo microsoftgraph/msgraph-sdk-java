@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAssignRequest;
+import com.microsoft.graph.models.extensions.WindowsInformationProtection;
 import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Windows Information Protection Assign Request Builder.
  */
-public class WindowsInformationProtectionAssignRequestBuilder extends BaseActionRequestBuilder {
+public class WindowsInformationProtectionAssignRequestBuilder extends BaseActionRequestBuilder<WindowsInformationProtection> {
 
     /**
      * The request builder for this WindowsInformationProtectionAssign

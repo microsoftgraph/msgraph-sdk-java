@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Outlook Category Request.
  */
-public class OutlookCategoryRequest extends BaseRequest {
+public class OutlookCategoryRequest extends BaseRequest<OutlookCategory> {
 	
     /**
      * The request for the OutlookCategory
@@ -140,7 +140,7 @@ public class OutlookCategoryRequest extends BaseRequest {
      */
      public OutlookCategoryRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OutlookCategoryRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class OutlookCategoryRequest extends BaseRequest {
      */
      public OutlookCategoryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OutlookCategoryRequest)this;
+         return this;
      }
 
 }

@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.WorkbookTableRow;
 import com.microsoft.graph.requests.extensions.WorkbookTableRowCountRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -17,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Row Count Request.
  */
-public class WorkbookTableRowCountRequest extends BaseRequest {
+public class WorkbookTableRowCountRequest extends BaseRequest<Int32> {
 
     /**
      * The request for this WorkbookTableRowCount
@@ -27,7 +28,7 @@ public class WorkbookTableRowCountRequest extends BaseRequest {
      * @param requestOptions the options for this request
      */
     public WorkbookTableRowCountRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Integer.class);
+        super(requestUrl, client, requestOptions, Int32.class);
     }
 
     /**
@@ -57,7 +58,7 @@ public class WorkbookTableRowCountRequest extends BaseRequest {
      */
     public WorkbookTableRowCountRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookTableRowCountRequest)this;
+        return this;
     }
 
     /**
@@ -68,7 +69,7 @@ public class WorkbookTableRowCountRequest extends BaseRequest {
      */
     public WorkbookTableRowCountRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookTableRowCountRequest)this;
+        return this;
     }
 
     /**
@@ -79,7 +80,7 @@ public class WorkbookTableRowCountRequest extends BaseRequest {
      */
     public WorkbookTableRowCountRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookTableRowCountRequest)this;
+        return this;
     }
 
     /**
@@ -90,7 +91,7 @@ public class WorkbookTableRowCountRequest extends BaseRequest {
      */
     public WorkbookTableRowCountRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookTableRowCountRequest)this;
+        return this;
     }
 
 }

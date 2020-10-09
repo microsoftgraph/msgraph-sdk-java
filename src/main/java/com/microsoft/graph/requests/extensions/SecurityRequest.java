@@ -25,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Security Request.
  */
-public class SecurityRequest extends BaseRequest {
+public class SecurityRequest extends BaseRequest<Security> {
 	
     /**
      * The request for the Security
@@ -146,7 +146,7 @@ public class SecurityRequest extends BaseRequest {
      */
      public SecurityRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SecurityRequest)this;
+         return this;
      }
 
     /**
@@ -157,7 +157,7 @@ public class SecurityRequest extends BaseRequest {
      */
      public SecurityRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SecurityRequest)this;
+         return this;
      }
 
 }

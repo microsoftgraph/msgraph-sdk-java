@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.OnenoteSectionCopyToNotebookRequest;
+import com.microsoft.graph.models.extensions.OnenoteSection;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Onenote Section Copy To Notebook Request Builder.
  */
-public class OnenoteSectionCopyToNotebookRequestBuilder extends BaseActionRequestBuilder {
+public class OnenoteSectionCopyToNotebookRequestBuilder extends BaseActionRequestBuilder<OnenoteOperation> {
 
     /**
      * The request builder for this OnenoteSectionCopyToNotebook

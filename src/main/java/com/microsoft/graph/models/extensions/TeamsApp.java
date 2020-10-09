@@ -7,10 +7,10 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.generated.TeamsAppDistributionMethod;
 import com.microsoft.graph.models.extensions.TeamsAppDefinition;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.TeamsAppDefinitionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -55,7 +55,7 @@ public class TeamsApp extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "appDefinitions", alternate = {"AppDefinitions"})
     @Expose
-    public TeamsAppDefinitionCollectionPage appDefinitions;
+    public BaseCollectionPage<TeamsAppDefinition> appDefinitions;
 
 
     /**
@@ -82,7 +82,8 @@ public class TeamsApp extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -98,7 +99,7 @@ public class TeamsApp extends Entity implements IJsonBackedObject {
 
 
         if (json.has("appDefinitions")) {
-            appDefinitions = serializer.deserializeObject(json.get("appDefinitions").toString(), TeamsAppDefinitionCollectionPage.class);
+            appDefinitions = serializer.deserializeObject(json.get("appDefinitions").toString(), new BaseCollectionPage<TeamsAppDefinition>(new java.util.ArrayList<TeamsAppDefinition>(), null).getClass());
         }
     }
 }

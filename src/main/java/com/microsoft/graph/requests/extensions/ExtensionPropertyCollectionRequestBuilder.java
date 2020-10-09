@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Extension Property Collection Request Builder.
  */
-public class ExtensionPropertyCollectionRequestBuilder extends BaseRequestBuilder {
+public class ExtensionPropertyCollectionRequestBuilder extends BaseRequestBuilder<ExtensionProperty> {
 
     /**
      * The request builder for this collection of Application

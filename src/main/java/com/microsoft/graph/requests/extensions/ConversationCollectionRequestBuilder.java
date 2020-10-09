@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Conversation Collection Request Builder.
  */
-public class ConversationCollectionRequestBuilder extends BaseRequestBuilder {
+public class ConversationCollectionRequestBuilder extends BaseRequestBuilder<Conversation> {
 
     /**
      * The request builder for this collection of Group

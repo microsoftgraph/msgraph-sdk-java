@@ -18,7 +18,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Targeted Managed App Protection Assign Request.
  */
-public class TargetedManagedAppProtectionAssignRequest extends BaseRequest {
+public class TargetedManagedAppProtectionAssignRequest extends BaseRequest<Void> {
     protected final TargetedManagedAppProtectionAssignBody body;
 
     /**
@@ -28,6 +28,7 @@ public class TargetedManagedAppProtectionAssignRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public TargetedManagedAppProtectionAssignRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new TargetedManagedAppProtectionAssignBody();
@@ -49,7 +50,7 @@ public class TargetedManagedAppProtectionAssignRequest extends BaseRequest {
      */
     public TargetedManagedAppProtectionAssignRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (TargetedManagedAppProtectionAssignRequest)this;
+        return this;
     }
 
     /**
@@ -60,7 +61,7 @@ public class TargetedManagedAppProtectionAssignRequest extends BaseRequest {
      */
     public TargetedManagedAppProtectionAssignRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (TargetedManagedAppProtectionAssignRequest)this;
+        return this;
     }
 
     /**
@@ -71,7 +72,7 @@ public class TargetedManagedAppProtectionAssignRequest extends BaseRequest {
      */
     public TargetedManagedAppProtectionAssignRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (TargetedManagedAppProtectionAssignRequest)this;
+        return this;
     }
 
 }

@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.WorkbookRangeFill;
 import com.microsoft.graph.requests.extensions.WorkbookRangeFillClearRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -17,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Fill Clear Request.
  */
-public class WorkbookRangeFillClearRequest extends BaseRequest {
+public class WorkbookRangeFillClearRequest extends BaseRequest<WorkbookRangeFill> {
 
     /**
      * The request for this WorkbookRangeFillClear
@@ -27,7 +28,7 @@ public class WorkbookRangeFillClearRequest extends BaseRequest {
      * @param requestOptions the options for this request
      */
     public WorkbookRangeFillClearRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Void.class);
+        super(requestUrl, client, requestOptions, WorkbookRangeFill.class);
     }
 
     /**

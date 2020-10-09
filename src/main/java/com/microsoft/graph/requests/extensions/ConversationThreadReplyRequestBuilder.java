@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ConversationThreadReplyRequest;
+import com.microsoft.graph.models.extensions.ConversationThread;
 import com.microsoft.graph.models.extensions.Post;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Conversation Thread Reply Request Builder.
  */
-public class ConversationThreadReplyRequestBuilder extends BaseActionRequestBuilder {
+public class ConversationThreadReplyRequestBuilder extends BaseActionRequestBuilder<ConversationThread> {
 
     /**
      * The request builder for this ConversationThreadReply

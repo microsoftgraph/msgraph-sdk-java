@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Error_Type Request.
  */
-public class WorkbookFunctionsError_TypeRequest extends BaseRequest {
+public class WorkbookFunctionsError_TypeRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsError_TypeBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsError_TypeRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsError_TypeRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsError_TypeBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsError_TypeRequest extends BaseRequest {
      */
     public WorkbookFunctionsError_TypeRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsError_TypeRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsError_TypeRequest extends BaseRequest {
      */
     public WorkbookFunctionsError_TypeRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsError_TypeRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsError_TypeRequest extends BaseRequest {
      */
     public WorkbookFunctionsError_TypeRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsError_TypeRequest)this;
+        return this;
     }
 
 }

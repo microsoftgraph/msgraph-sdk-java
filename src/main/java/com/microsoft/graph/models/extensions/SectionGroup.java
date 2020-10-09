@@ -7,12 +7,11 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.Notebook;
 import com.microsoft.graph.models.extensions.SectionGroup;
 import com.microsoft.graph.models.extensions.OnenoteSection;
 import com.microsoft.graph.models.extensions.OnenoteEntityHierarchyModel;
-import com.microsoft.graph.requests.extensions.SectionGroupCollectionPage;
-import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -65,7 +64,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements IJsonBa
      */
     @SerializedName(value = "sectionGroups", alternate = {"SectionGroups"})
     @Expose
-    public SectionGroupCollectionPage sectionGroups;
+    public BaseCollectionPage<SectionGroup> sectionGroups;
 
     /**
      * The Sections.
@@ -73,7 +72,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements IJsonBa
      */
     @SerializedName(value = "sections", alternate = {"Sections"})
     @Expose
-    public OnenoteSectionCollectionPage sections;
+    public BaseCollectionPage<OnenoteSection> sections;
 
 
     /**
@@ -100,7 +99,8 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements IJsonBa
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -116,11 +116,11 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements IJsonBa
 
 
         if (json.has("sectionGroups")) {
-            sectionGroups = serializer.deserializeObject(json.get("sectionGroups").toString(), SectionGroupCollectionPage.class);
+            sectionGroups = serializer.deserializeObject(json.get("sectionGroups").toString(), new BaseCollectionPage<SectionGroup>(new java.util.ArrayList<SectionGroup>(), null).getClass());
         }
 
         if (json.has("sections")) {
-            sections = serializer.deserializeObject(json.get("sections").toString(), OnenoteSectionCollectionPage.class);
+            sections = serializer.deserializeObject(json.get("sections").toString(), new BaseCollectionPage<OnenoteSection>(new java.util.ArrayList<OnenoteSection>(), null).getClass());
         }
     }
 }

@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.requests.extensions.ManagedDeviceBypassActivationLockRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -17,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Device Bypass Activation Lock Request.
  */
-public class ManagedDeviceBypassActivationLockRequest extends BaseRequest {
+public class ManagedDeviceBypassActivationLockRequest extends BaseRequest<ManagedDevice> {
 
     /**
      * The request for this ManagedDeviceBypassActivationLock
@@ -27,7 +28,7 @@ public class ManagedDeviceBypassActivationLockRequest extends BaseRequest {
      * @param requestOptions the options for this request
      */
     public ManagedDeviceBypassActivationLockRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Void.class);
+        super(requestUrl, client, requestOptions, ManagedDevice.class);
     }
 
     /**

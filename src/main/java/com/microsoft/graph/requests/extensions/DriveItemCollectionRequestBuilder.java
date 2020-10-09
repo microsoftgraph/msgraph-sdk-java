@@ -29,7 +29,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Drive Item Collection Request Builder.
  */
-public class DriveItemCollectionRequestBuilder extends BaseRequestBuilder {
+public class DriveItemCollectionRequestBuilder extends BaseRequestBuilder<DriveItem> {
 
     /**
      * The request builder for this collection of DriveItem

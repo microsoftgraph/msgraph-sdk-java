@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Localized Notification Message Collection Request Builder.
  */
-public class LocalizedNotificationMessageCollectionRequestBuilder extends BaseRequestBuilder {
+public class LocalizedNotificationMessageCollectionRequestBuilder extends BaseRequestBuilder<LocalizedNotificationMessage> {
 
     /**
      * The request builder for this collection of NotificationMessageTemplate

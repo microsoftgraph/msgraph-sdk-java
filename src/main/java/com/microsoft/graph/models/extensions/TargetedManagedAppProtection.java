@@ -7,9 +7,9 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
 import com.microsoft.graph.models.extensions.ManagedAppProtection;
-import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -38,7 +38,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
      */
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
-    public TargetedManagedAppPolicyAssignmentCollectionPage assignments;
+    public BaseCollectionPage<TargetedManagedAppPolicyAssignment> assignments;
 
 
     /**
@@ -65,7 +65,8 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -81,7 +82,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments").toString(), TargetedManagedAppPolicyAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments").toString(), new BaseCollectionPage<TargetedManagedAppPolicyAssignment>(new java.util.ArrayList<TargetedManagedAppPolicyAssignment>(), null).getClass());
         }
     }
 }

@@ -18,7 +18,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the User Wipe Managed App Registrations By Device Tag Request.
  */
-public class UserWipeManagedAppRegistrationsByDeviceTagRequest extends BaseRequest {
+public class UserWipeManagedAppRegistrationsByDeviceTagRequest extends BaseRequest<Void> {
     protected final UserWipeManagedAppRegistrationsByDeviceTagBody body;
 
     /**
@@ -28,6 +28,7 @@ public class UserWipeManagedAppRegistrationsByDeviceTagRequest extends BaseReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public UserWipeManagedAppRegistrationsByDeviceTagRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new UserWipeManagedAppRegistrationsByDeviceTagBody();
@@ -49,7 +50,7 @@ public class UserWipeManagedAppRegistrationsByDeviceTagRequest extends BaseReque
      */
     public UserWipeManagedAppRegistrationsByDeviceTagRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (UserWipeManagedAppRegistrationsByDeviceTagRequest)this;
+        return this;
     }
 
     /**
@@ -60,7 +61,7 @@ public class UserWipeManagedAppRegistrationsByDeviceTagRequest extends BaseReque
      */
     public UserWipeManagedAppRegistrationsByDeviceTagRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (UserWipeManagedAppRegistrationsByDeviceTagRequest)this;
+        return this;
     }
 
     /**
@@ -71,7 +72,7 @@ public class UserWipeManagedAppRegistrationsByDeviceTagRequest extends BaseReque
      */
     public UserWipeManagedAppRegistrationsByDeviceTagRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (UserWipeManagedAppRegistrationsByDeviceTagRequest)this;
+        return this;
     }
 
 }

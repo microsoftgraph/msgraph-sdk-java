@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Used Insight Collection Request Builder.
  */
-public class UsedInsightCollectionRequestBuilder extends BaseRequestBuilder {
+public class UsedInsightCollectionRequestBuilder extends BaseRequestBuilder<UsedInsight> {
 
     /**
      * The request builder for this collection of OfficeGraphInsights

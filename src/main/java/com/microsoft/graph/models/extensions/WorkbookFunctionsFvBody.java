@@ -83,7 +83,7 @@ public class WorkbookFunctionsFvBody {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

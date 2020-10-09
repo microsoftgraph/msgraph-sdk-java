@@ -7,7 +7,6 @@ import com.microsoft.graph.requests.extensions.DriveItemRestoreRequest;
 import com.microsoft.graph.models.extensions.ItemReference;
 import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Drive Item Restore Request Builder.
  */
-public class DriveItemRestoreRequestBuilder extends BaseActionRequestBuilder {
+public class DriveItemRestoreRequestBuilder extends BaseActionRequestBuilder<DriveItem> {
 
     /**
      * The request builder for this DriveItemRestore

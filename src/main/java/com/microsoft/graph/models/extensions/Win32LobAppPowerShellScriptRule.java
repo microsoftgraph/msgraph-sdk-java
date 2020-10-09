@@ -114,7 +114,8 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

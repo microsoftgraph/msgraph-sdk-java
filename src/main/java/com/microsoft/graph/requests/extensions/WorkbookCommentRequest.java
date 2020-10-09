@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Comment Request.
  */
-public class WorkbookCommentRequest extends BaseRequest {
+public class WorkbookCommentRequest extends BaseRequest<WorkbookComment> {
 	
     /**
      * The request for the WorkbookComment
@@ -142,7 +142,7 @@ public class WorkbookCommentRequest extends BaseRequest {
      */
      public WorkbookCommentRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookCommentRequest)this;
+         return this;
      }
 
     /**
@@ -153,7 +153,7 @@ public class WorkbookCommentRequest extends BaseRequest {
      */
      public WorkbookCommentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookCommentRequest)this;
+         return this;
      }
 
 }

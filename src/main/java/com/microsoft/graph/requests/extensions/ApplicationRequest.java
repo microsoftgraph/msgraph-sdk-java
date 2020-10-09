@@ -31,7 +31,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Application Request.
  */
-public class ApplicationRequest extends BaseRequest {
+public class ApplicationRequest extends BaseRequest<Application> {
 	
     /**
      * The request for the Application
@@ -152,7 +152,7 @@ public class ApplicationRequest extends BaseRequest {
      */
      public ApplicationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ApplicationRequest)this;
+         return this;
      }
 
     /**
@@ -163,7 +163,7 @@ public class ApplicationRequest extends BaseRequest {
      */
      public ApplicationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ApplicationRequest)this;
+         return this;
      }
 
 }

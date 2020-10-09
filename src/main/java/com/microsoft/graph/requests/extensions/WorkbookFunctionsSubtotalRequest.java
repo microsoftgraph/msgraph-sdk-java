@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Subtotal Request.
  */
-public class WorkbookFunctionsSubtotalRequest extends BaseRequest {
+public class WorkbookFunctionsSubtotalRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsSubtotalBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsSubtotalRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsSubtotalRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsSubtotalBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsSubtotalRequest extends BaseRequest {
      */
     public WorkbookFunctionsSubtotalRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsSubtotalRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsSubtotalRequest extends BaseRequest {
      */
     public WorkbookFunctionsSubtotalRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsSubtotalRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsSubtotalRequest extends BaseRequest {
      */
     public WorkbookFunctionsSubtotalRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsSubtotalRequest)this;
+        return this;
     }
 
 }

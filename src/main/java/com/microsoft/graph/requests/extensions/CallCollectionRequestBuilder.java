@@ -39,7 +39,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Call Collection Request Builder.
  */
-public class CallCollectionRequestBuilder extends BaseRequestBuilder {
+public class CallCollectionRequestBuilder extends BaseRequestBuilder<Call> {
 
     /**
      * The request builder for this collection of CloudCommunications

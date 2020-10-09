@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
+import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.requests.extensions.ReportRootGetOffice365ServicesUserCountsRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Office365Services User Counts Request.
  */
-public class ReportRootGetOffice365ServicesUserCountsRequest extends BaseRequest {
+public class ReportRootGetOffice365ServicesUserCountsRequest extends BaseRequest<Report> {
 
     /**
      * The request for this ReportRootGetOffice365ServicesUserCounts
@@ -98,7 +99,7 @@ public class ReportRootGetOffice365ServicesUserCountsRequest extends BaseRequest
      */
     public ReportRootGetOffice365ServicesUserCountsRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ReportRootGetOffice365ServicesUserCountsRequest)this;
+        return this;
     }
 
     /**
@@ -109,7 +110,7 @@ public class ReportRootGetOffice365ServicesUserCountsRequest extends BaseRequest
      */
     public ReportRootGetOffice365ServicesUserCountsRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ReportRootGetOffice365ServicesUserCountsRequest)this;
+        return this;
     }
 
     /**
@@ -120,7 +121,7 @@ public class ReportRootGetOffice365ServicesUserCountsRequest extends BaseRequest
      */
     public ReportRootGetOffice365ServicesUserCountsRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ReportRootGetOffice365ServicesUserCountsRequest)this;
+        return this;
     }
 
     /**
@@ -131,7 +132,7 @@ public class ReportRootGetOffice365ServicesUserCountsRequest extends BaseRequest
      */
     public ReportRootGetOffice365ServicesUserCountsRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ReportRootGetOffice365ServicesUserCountsRequest)this;
+        return this;
     }
 
 }

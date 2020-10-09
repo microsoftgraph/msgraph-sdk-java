@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Room Collection Request Builder.
  */
-public class RoomCollectionRequestBuilder extends BaseRequestBuilder {
+public class RoomCollectionRequestBuilder extends BaseRequestBuilder<Room> {
 
     /**
      * The request builder for this collection of RoomList

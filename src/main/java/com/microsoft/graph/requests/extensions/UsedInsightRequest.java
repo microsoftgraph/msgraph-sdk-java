@@ -20,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Used Insight Request.
  */
-public class UsedInsightRequest extends BaseRequest {
+public class UsedInsightRequest extends BaseRequest<UsedInsight> {
 	
     /**
      * The request for the UsedInsight
@@ -141,7 +141,7 @@ public class UsedInsightRequest extends BaseRequest {
      */
      public UsedInsightRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (UsedInsightRequest)this;
+         return this;
      }
 
     /**
@@ -152,7 +152,7 @@ public class UsedInsightRequest extends BaseRequest {
      */
      public UsedInsightRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UsedInsightRequest)this;
+         return this;
      }
 
 }

@@ -22,7 +22,7 @@ import com.microsoft.graph.core.BaseActionRequestBuilder;
 /**
  * The class for the Directory Object Get By Ids Collection Request Builder.
  */
-public class DirectoryObjectGetByIdsCollectionRequestBuilder extends BaseActionRequestBuilder {
+public class DirectoryObjectGetByIdsCollectionRequestBuilder extends BaseActionRequestBuilder<DirectoryObject> {
 
     /**
      * The request builder for this collection of DirectoryObject

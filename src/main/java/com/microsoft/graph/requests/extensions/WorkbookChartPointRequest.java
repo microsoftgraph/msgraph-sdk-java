@@ -20,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Point Request.
  */
-public class WorkbookChartPointRequest extends BaseRequest {
+public class WorkbookChartPointRequest extends BaseRequest<WorkbookChartPoint> {
 	
     /**
      * The request for the WorkbookChartPoint
@@ -141,7 +141,7 @@ public class WorkbookChartPointRequest extends BaseRequest {
      */
      public WorkbookChartPointRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookChartPointRequest)this;
+         return this;
      }
 
     /**
@@ -152,7 +152,7 @@ public class WorkbookChartPointRequest extends BaseRequest {
      */
      public WorkbookChartPointRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookChartPointRequest)this;
+         return this;
      }
 
 }

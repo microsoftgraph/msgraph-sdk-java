@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Fact Double Request.
  */
-public class WorkbookFunctionsFactDoubleRequest extends BaseRequest {
+public class WorkbookFunctionsFactDoubleRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsFactDoubleBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsFactDoubleRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsFactDoubleRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsFactDoubleBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsFactDoubleRequest extends BaseRequest {
      */
     public WorkbookFunctionsFactDoubleRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsFactDoubleRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsFactDoubleRequest extends BaseRequest {
      */
     public WorkbookFunctionsFactDoubleRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsFactDoubleRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsFactDoubleRequest extends BaseRequest {
      */
     public WorkbookFunctionsFactDoubleRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsFactDoubleRequest)this;
+        return this;
     }
 
 }

@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Alert Collection Request Builder.
  */
-public class AlertCollectionRequestBuilder extends BaseRequestBuilder {
+public class AlertCollectionRequestBuilder extends BaseRequestBuilder<Alert> {
 
     /**
      * The request builder for this collection of Security

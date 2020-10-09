@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Universal App XRequest.
  */
-public class WindowsUniversalAppXRequest extends BaseRequest {
+public class WindowsUniversalAppXRequest extends BaseRequest<WindowsUniversalAppX> {
 	
     /**
      * The request for the WindowsUniversalAppX
@@ -140,7 +140,7 @@ public class WindowsUniversalAppXRequest extends BaseRequest {
      */
      public WindowsUniversalAppXRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsUniversalAppXRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class WindowsUniversalAppXRequest extends BaseRequest {
      */
      public WindowsUniversalAppXRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsUniversalAppXRequest)this;
+         return this;
      }
 
 }

@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Teams App Definition Collection Request Builder.
  */
-public class TeamsAppDefinitionCollectionRequestBuilder extends BaseRequestBuilder {
+public class TeamsAppDefinitionCollectionRequestBuilder extends BaseRequestBuilder<TeamsAppDefinition> {
 
     /**
      * The request builder for this collection of TeamsApp

@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Domain Dns Record Collection Request Builder.
  */
-public class DomainDnsRecordCollectionRequestBuilder extends BaseRequestBuilder {
+public class DomainDnsRecordCollectionRequestBuilder extends BaseRequestBuilder<DomainDnsRecord> {
 
     /**
      * The request builder for this collection of DomainDnsRecord

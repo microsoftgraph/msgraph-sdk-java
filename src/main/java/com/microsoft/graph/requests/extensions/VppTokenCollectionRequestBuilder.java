@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Vpp Token Collection Request Builder.
  */
-public class VppTokenCollectionRequestBuilder extends BaseRequestBuilder {
+public class VppTokenCollectionRequestBuilder extends BaseRequestBuilder<VppToken> {
 
     /**
      * The request builder for this collection of DeviceAppManagement

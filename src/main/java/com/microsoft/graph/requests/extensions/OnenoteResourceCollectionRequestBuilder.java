@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Onenote Resource Collection Request Builder.
  */
-public class OnenoteResourceCollectionRequestBuilder extends BaseRequestBuilder {
+public class OnenoteResourceCollectionRequestBuilder extends BaseRequestBuilder<OnenoteResource> {
 
     /**
      * The request builder for this collection of Onenote

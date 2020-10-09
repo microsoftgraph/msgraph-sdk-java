@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.requests.extensions.DriveItemCheckoutRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -17,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Drive Item Checkout Request.
  */
-public class DriveItemCheckoutRequest extends BaseRequest {
+public class DriveItemCheckoutRequest extends BaseRequest<DriveItem> {
 
     /**
      * The request for this DriveItemCheckout
@@ -27,7 +28,7 @@ public class DriveItemCheckoutRequest extends BaseRequest {
      * @param requestOptions the options for this request
      */
     public DriveItemCheckoutRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Void.class);
+        super(requestUrl, client, requestOptions, DriveItem.class);
     }
 
     /**

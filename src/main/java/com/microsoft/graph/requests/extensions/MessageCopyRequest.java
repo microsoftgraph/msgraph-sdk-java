@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Message Copy Request.
  */
-public class MessageCopyRequest extends BaseRequest {
+public class MessageCopyRequest extends BaseRequest<Message> {
     protected final MessageCopyBody body;
 
     /**
@@ -29,6 +29,7 @@ public class MessageCopyRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public MessageCopyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Message.class);
         body = new MessageCopyBody();
@@ -50,7 +51,7 @@ public class MessageCopyRequest extends BaseRequest {
      */
     public MessageCopyRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (MessageCopyRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class MessageCopyRequest extends BaseRequest {
      */
     public MessageCopyRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (MessageCopyRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class MessageCopyRequest extends BaseRequest {
      */
     public MessageCopyRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (MessageCopyRequest)this;
+        return this;
     }
 
 }

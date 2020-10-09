@@ -63,7 +63,8 @@ public class WindowsInformationProtectionNetworkLearningSummary extends Entity i
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

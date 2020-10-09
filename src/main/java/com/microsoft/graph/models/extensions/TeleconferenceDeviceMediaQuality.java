@@ -224,7 +224,8 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

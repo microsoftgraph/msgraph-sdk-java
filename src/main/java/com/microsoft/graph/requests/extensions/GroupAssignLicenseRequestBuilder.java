@@ -7,7 +7,6 @@ import com.microsoft.graph.requests.extensions.GroupAssignLicenseRequest;
 import com.microsoft.graph.models.extensions.AssignedLicense;
 import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Group Assign License Request Builder.
  */
-public class GroupAssignLicenseRequestBuilder extends BaseActionRequestBuilder {
+public class GroupAssignLicenseRequestBuilder extends BaseActionRequestBuilder<Group> {
 
     /**
      * The request builder for this GroupAssignLicense

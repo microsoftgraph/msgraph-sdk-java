@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ScheduleShareRequest;
+import com.microsoft.graph.models.extensions.Schedule;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 
@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Schedule Share Request Builder.
  */
-public class ScheduleShareRequestBuilder extends BaseActionRequestBuilder {
+public class ScheduleShareRequestBuilder extends BaseActionRequestBuilder<Schedule> {
 
     /**
      * The request builder for this ScheduleShare

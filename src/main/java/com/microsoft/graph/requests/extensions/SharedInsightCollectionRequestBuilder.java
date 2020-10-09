@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Shared Insight Collection Request Builder.
  */
-public class SharedInsightCollectionRequestBuilder extends BaseRequestBuilder {
+public class SharedInsightCollectionRequestBuilder extends BaseRequestBuilder<SharedInsight> {
 
     /**
      * The request builder for this collection of OfficeGraphInsights

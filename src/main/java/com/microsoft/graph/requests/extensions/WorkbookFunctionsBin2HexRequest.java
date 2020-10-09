@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Bin2Hex Request.
  */
-public class WorkbookFunctionsBin2HexRequest extends BaseRequest {
+public class WorkbookFunctionsBin2HexRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsBin2HexBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsBin2HexRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsBin2HexRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsBin2HexBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsBin2HexRequest extends BaseRequest {
      */
     public WorkbookFunctionsBin2HexRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsBin2HexRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsBin2HexRequest extends BaseRequest {
      */
     public WorkbookFunctionsBin2HexRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsBin2HexRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsBin2HexRequest extends BaseRequest {
      */
     public WorkbookFunctionsBin2HexRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsBin2HexRequest)this;
+        return this;
     }
 
 }

@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Secure Score Collection Request Builder.
  */
-public class SecureScoreCollectionRequestBuilder extends BaseRequestBuilder {
+public class SecureScoreCollectionRequestBuilder extends BaseRequestBuilder<SecureScore> {
 
     /**
      * The request builder for this collection of Security

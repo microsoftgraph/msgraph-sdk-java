@@ -47,7 +47,8 @@ public class MdmWindowsInformationProtectionPolicy extends WindowsInformationPro
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

@@ -22,7 +22,7 @@ import com.microsoft.graph.core.BaseActionRequestBuilder;
 /**
  * The class for the Device Configuration Assign Collection Request Builder.
  */
-public class DeviceConfigurationAssignCollectionRequestBuilder extends BaseActionRequestBuilder {
+public class DeviceConfigurationAssignCollectionRequestBuilder extends BaseActionRequestBuilder<DeviceConfigurationAssignment> {
 
     /**
      * The request builder for this collection of DeviceConfiguration

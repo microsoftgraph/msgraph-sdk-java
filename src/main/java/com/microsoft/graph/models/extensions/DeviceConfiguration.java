@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.DeviceConfigurationAssignment;
 import com.microsoft.graph.models.extensions.SettingStateDeviceSummary;
 import com.microsoft.graph.models.extensions.DeviceConfigurationDeviceStatus;
@@ -14,10 +15,6 @@ import com.microsoft.graph.models.extensions.DeviceConfigurationDeviceOverview;
 import com.microsoft.graph.models.extensions.DeviceConfigurationUserStatus;
 import com.microsoft.graph.models.extensions.DeviceConfigurationUserOverview;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignmentCollectionPage;
-import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionPage;
-import com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceStatusCollectionPage;
-import com.microsoft.graph.requests.extensions.DeviceConfigurationUserStatusCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -78,7 +75,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
-    public DeviceConfigurationAssignmentCollectionPage assignments;
+    public BaseCollectionPage<DeviceConfigurationAssignment> assignments;
 
     /**
      * The Device Setting State Summaries.
@@ -86,7 +83,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "deviceSettingStateSummaries", alternate = {"DeviceSettingStateSummaries"})
     @Expose
-    public SettingStateDeviceSummaryCollectionPage deviceSettingStateSummaries;
+    public BaseCollectionPage<SettingStateDeviceSummary> deviceSettingStateSummaries;
 
     /**
      * The Device Statuses.
@@ -94,7 +91,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "deviceStatuses", alternate = {"DeviceStatuses"})
     @Expose
-    public DeviceConfigurationDeviceStatusCollectionPage deviceStatuses;
+    public BaseCollectionPage<DeviceConfigurationDeviceStatus> deviceStatuses;
 
     /**
      * The Device Status Overview.
@@ -110,7 +107,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "userStatuses", alternate = {"UserStatuses"})
     @Expose
-    public DeviceConfigurationUserStatusCollectionPage userStatuses;
+    public BaseCollectionPage<DeviceConfigurationUserStatus> userStatuses;
 
     /**
      * The User Status Overview.
@@ -145,7 +142,8 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -161,19 +159,19 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments").toString(), DeviceConfigurationAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments").toString(), new BaseCollectionPage<DeviceConfigurationAssignment>(new java.util.ArrayList<DeviceConfigurationAssignment>(), null).getClass());
         }
 
         if (json.has("deviceSettingStateSummaries")) {
-            deviceSettingStateSummaries = serializer.deserializeObject(json.get("deviceSettingStateSummaries").toString(), SettingStateDeviceSummaryCollectionPage.class);
+            deviceSettingStateSummaries = serializer.deserializeObject(json.get("deviceSettingStateSummaries").toString(), new BaseCollectionPage<SettingStateDeviceSummary>(new java.util.ArrayList<SettingStateDeviceSummary>(), null).getClass());
         }
 
         if (json.has("deviceStatuses")) {
-            deviceStatuses = serializer.deserializeObject(json.get("deviceStatuses").toString(), DeviceConfigurationDeviceStatusCollectionPage.class);
+            deviceStatuses = serializer.deserializeObject(json.get("deviceStatuses").toString(), new BaseCollectionPage<DeviceConfigurationDeviceStatus>(new java.util.ArrayList<DeviceConfigurationDeviceStatus>(), null).getClass());
         }
 
         if (json.has("userStatuses")) {
-            userStatuses = serializer.deserializeObject(json.get("userStatuses").toString(), DeviceConfigurationUserStatusCollectionPage.class);
+            userStatuses = serializer.deserializeObject(json.get("userStatuses").toString(), new BaseCollectionPage<DeviceConfigurationUserStatus>(new java.util.ArrayList<DeviceConfigurationUserStatus>(), null).getClass());
         }
     }
 }

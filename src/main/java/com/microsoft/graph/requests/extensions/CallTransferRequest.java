@@ -18,7 +18,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Call Transfer Request.
  */
-public class CallTransferRequest extends BaseRequest {
+public class CallTransferRequest extends BaseRequest<Void> {
     protected final CallTransferBody body;
 
     /**
@@ -28,6 +28,7 @@ public class CallTransferRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public CallTransferRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new CallTransferBody();
@@ -49,7 +50,7 @@ public class CallTransferRequest extends BaseRequest {
      */
     public CallTransferRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (CallTransferRequest)this;
+        return this;
     }
 
     /**
@@ -60,7 +61,7 @@ public class CallTransferRequest extends BaseRequest {
      */
     public CallTransferRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (CallTransferRequest)this;
+        return this;
     }
 
     /**
@@ -71,7 +72,7 @@ public class CallTransferRequest extends BaseRequest {
      */
     public CallTransferRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (CallTransferRequest)this;
+        return this;
     }
 
 }

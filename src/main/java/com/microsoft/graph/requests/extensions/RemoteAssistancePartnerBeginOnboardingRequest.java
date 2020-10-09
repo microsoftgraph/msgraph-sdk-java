@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.RemoteAssistancePartner;
 import com.microsoft.graph.requests.extensions.RemoteAssistancePartnerBeginOnboardingRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -17,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Remote Assistance Partner Begin Onboarding Request.
  */
-public class RemoteAssistancePartnerBeginOnboardingRequest extends BaseRequest {
+public class RemoteAssistancePartnerBeginOnboardingRequest extends BaseRequest<RemoteAssistancePartner> {
 
     /**
      * The request for this RemoteAssistancePartnerBeginOnboarding
@@ -27,7 +28,7 @@ public class RemoteAssistancePartnerBeginOnboardingRequest extends BaseRequest {
      * @param requestOptions the options for this request
      */
     public RemoteAssistancePartnerBeginOnboardingRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Void.class);
+        super(requestUrl, client, requestOptions, RemoteAssistancePartner.class);
     }
 
     /**

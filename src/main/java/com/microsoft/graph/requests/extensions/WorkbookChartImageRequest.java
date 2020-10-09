@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.WorkbookChart;
 import com.microsoft.graph.requests.extensions.WorkbookChartImageRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -17,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Image Request.
  */
-public class WorkbookChartImageRequest extends BaseRequest {
+public class WorkbookChartImageRequest extends BaseRequest<String> {
 
     /**
      * The request for this WorkbookChartImage
@@ -57,7 +58,7 @@ public class WorkbookChartImageRequest extends BaseRequest {
      */
     public WorkbookChartImageRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookChartImageRequest)this;
+        return this;
     }
 
     /**
@@ -68,7 +69,7 @@ public class WorkbookChartImageRequest extends BaseRequest {
      */
     public WorkbookChartImageRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookChartImageRequest)this;
+        return this;
     }
 
     /**
@@ -79,7 +80,7 @@ public class WorkbookChartImageRequest extends BaseRequest {
      */
     public WorkbookChartImageRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookChartImageRequest)this;
+        return this;
     }
 
     /**
@@ -90,7 +91,7 @@ public class WorkbookChartImageRequest extends BaseRequest {
      */
     public WorkbookChartImageRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookChartImageRequest)this;
+        return this;
     }
 
 }

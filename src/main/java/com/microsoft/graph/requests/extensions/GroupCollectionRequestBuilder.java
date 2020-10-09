@@ -24,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Group Collection Request Builder.
  */
-public class GroupCollectionRequestBuilder extends BaseRequestBuilder {
+public class GroupCollectionRequestBuilder extends BaseRequestBuilder<Group> {
 
     /**
      * The request builder for this collection of Group

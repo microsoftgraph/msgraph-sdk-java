@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Detected App Collection Request Builder.
  */
-public class DetectedAppCollectionRequestBuilder extends BaseRequestBuilder {
+public class DetectedAppCollectionRequestBuilder extends BaseRequestBuilder<DetectedApp> {
 
     /**
      * The request builder for this collection of DeviceManagement

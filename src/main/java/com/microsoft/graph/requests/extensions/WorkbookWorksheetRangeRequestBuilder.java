@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetRangeRequest;
+import com.microsoft.graph.models.extensions.WorkbookWorksheet;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.models.extensions.WorkbookRange;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
@@ -16,7 +16,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Worksheet Range Request Builder.
  */
-public class WorkbookWorksheetRangeRequestBuilder extends BaseFunctionRequestBuilder {
+public class WorkbookWorksheetRangeRequestBuilder extends BaseFunctionRequestBuilder<WorkbookRange> {
 
     /**
      * The request builder for this WorkbookWorksheetRange

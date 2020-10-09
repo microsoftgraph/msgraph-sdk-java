@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.generated.OperationStatus;
 import com.microsoft.graph.models.extensions.OfferShiftRequest;
 import com.microsoft.graph.models.extensions.OpenShiftChangeRequest;
@@ -18,15 +19,6 @@ import com.microsoft.graph.models.extensions.TimeOffReason;
 import com.microsoft.graph.models.extensions.TimeOffRequest;
 import com.microsoft.graph.models.extensions.TimeOff;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.OfferShiftRequestCollectionPage;
-import com.microsoft.graph.requests.extensions.OpenShiftChangeRequestCollectionPage;
-import com.microsoft.graph.requests.extensions.OpenShiftCollectionPage;
-import com.microsoft.graph.requests.extensions.SchedulingGroupCollectionPage;
-import com.microsoft.graph.requests.extensions.ShiftCollectionPage;
-import com.microsoft.graph.requests.extensions.SwapShiftsChangeRequestCollectionPage;
-import com.microsoft.graph.requests.extensions.TimeOffReasonCollectionPage;
-import com.microsoft.graph.requests.extensions.TimeOffRequestCollectionPage;
-import com.microsoft.graph.requests.extensions.TimeOffCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -127,7 +119,7 @@ public class Schedule extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "offerShiftRequests", alternate = {"OfferShiftRequests"})
     @Expose
-    public OfferShiftRequestCollectionPage offerShiftRequests;
+    public BaseCollectionPage<OfferShiftRequest> offerShiftRequests;
 
     /**
      * The Open Shift Change Requests.
@@ -135,7 +127,7 @@ public class Schedule extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "openShiftChangeRequests", alternate = {"OpenShiftChangeRequests"})
     @Expose
-    public OpenShiftChangeRequestCollectionPage openShiftChangeRequests;
+    public BaseCollectionPage<OpenShiftChangeRequest> openShiftChangeRequests;
 
     /**
      * The Open Shifts.
@@ -143,7 +135,7 @@ public class Schedule extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "openShifts", alternate = {"OpenShifts"})
     @Expose
-    public OpenShiftCollectionPage openShifts;
+    public BaseCollectionPage<OpenShift> openShifts;
 
     /**
      * The Scheduling Groups.
@@ -151,7 +143,7 @@ public class Schedule extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "schedulingGroups", alternate = {"SchedulingGroups"})
     @Expose
-    public SchedulingGroupCollectionPage schedulingGroups;
+    public BaseCollectionPage<SchedulingGroup> schedulingGroups;
 
     /**
      * The Shifts.
@@ -159,7 +151,7 @@ public class Schedule extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "shifts", alternate = {"Shifts"})
     @Expose
-    public ShiftCollectionPage shifts;
+    public BaseCollectionPage<Shift> shifts;
 
     /**
      * The Swap Shifts Change Requests.
@@ -167,7 +159,7 @@ public class Schedule extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "swapShiftsChangeRequests", alternate = {"SwapShiftsChangeRequests"})
     @Expose
-    public SwapShiftsChangeRequestCollectionPage swapShiftsChangeRequests;
+    public BaseCollectionPage<SwapShiftsChangeRequest> swapShiftsChangeRequests;
 
     /**
      * The Time Off Reasons.
@@ -175,7 +167,7 @@ public class Schedule extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "timeOffReasons", alternate = {"TimeOffReasons"})
     @Expose
-    public TimeOffReasonCollectionPage timeOffReasons;
+    public BaseCollectionPage<TimeOffReason> timeOffReasons;
 
     /**
      * The Time Off Requests.
@@ -183,7 +175,7 @@ public class Schedule extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "timeOffRequests", alternate = {"TimeOffRequests"})
     @Expose
-    public TimeOffRequestCollectionPage timeOffRequests;
+    public BaseCollectionPage<TimeOffRequest> timeOffRequests;
 
     /**
      * The Times Off.
@@ -191,7 +183,7 @@ public class Schedule extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "timesOff", alternate = {"TimesOff"})
     @Expose
-    public TimeOffCollectionPage timesOff;
+    public BaseCollectionPage<TimeOff> timesOff;
 
 
     /**
@@ -218,7 +210,8 @@ public class Schedule extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -234,39 +227,39 @@ public class Schedule extends Entity implements IJsonBackedObject {
 
 
         if (json.has("offerShiftRequests")) {
-            offerShiftRequests = serializer.deserializeObject(json.get("offerShiftRequests").toString(), OfferShiftRequestCollectionPage.class);
+            offerShiftRequests = serializer.deserializeObject(json.get("offerShiftRequests").toString(), new BaseCollectionPage<OfferShiftRequest>(new java.util.ArrayList<OfferShiftRequest>(), null).getClass());
         }
 
         if (json.has("openShiftChangeRequests")) {
-            openShiftChangeRequests = serializer.deserializeObject(json.get("openShiftChangeRequests").toString(), OpenShiftChangeRequestCollectionPage.class);
+            openShiftChangeRequests = serializer.deserializeObject(json.get("openShiftChangeRequests").toString(), new BaseCollectionPage<OpenShiftChangeRequest>(new java.util.ArrayList<OpenShiftChangeRequest>(), null).getClass());
         }
 
         if (json.has("openShifts")) {
-            openShifts = serializer.deserializeObject(json.get("openShifts").toString(), OpenShiftCollectionPage.class);
+            openShifts = serializer.deserializeObject(json.get("openShifts").toString(), new BaseCollectionPage<OpenShift>(new java.util.ArrayList<OpenShift>(), null).getClass());
         }
 
         if (json.has("schedulingGroups")) {
-            schedulingGroups = serializer.deserializeObject(json.get("schedulingGroups").toString(), SchedulingGroupCollectionPage.class);
+            schedulingGroups = serializer.deserializeObject(json.get("schedulingGroups").toString(), new BaseCollectionPage<SchedulingGroup>(new java.util.ArrayList<SchedulingGroup>(), null).getClass());
         }
 
         if (json.has("shifts")) {
-            shifts = serializer.deserializeObject(json.get("shifts").toString(), ShiftCollectionPage.class);
+            shifts = serializer.deserializeObject(json.get("shifts").toString(), new BaseCollectionPage<Shift>(new java.util.ArrayList<Shift>(), null).getClass());
         }
 
         if (json.has("swapShiftsChangeRequests")) {
-            swapShiftsChangeRequests = serializer.deserializeObject(json.get("swapShiftsChangeRequests").toString(), SwapShiftsChangeRequestCollectionPage.class);
+            swapShiftsChangeRequests = serializer.deserializeObject(json.get("swapShiftsChangeRequests").toString(), new BaseCollectionPage<SwapShiftsChangeRequest>(new java.util.ArrayList<SwapShiftsChangeRequest>(), null).getClass());
         }
 
         if (json.has("timeOffReasons")) {
-            timeOffReasons = serializer.deserializeObject(json.get("timeOffReasons").toString(), TimeOffReasonCollectionPage.class);
+            timeOffReasons = serializer.deserializeObject(json.get("timeOffReasons").toString(), new BaseCollectionPage<TimeOffReason>(new java.util.ArrayList<TimeOffReason>(), null).getClass());
         }
 
         if (json.has("timeOffRequests")) {
-            timeOffRequests = serializer.deserializeObject(json.get("timeOffRequests").toString(), TimeOffRequestCollectionPage.class);
+            timeOffRequests = serializer.deserializeObject(json.get("timeOffRequests").toString(), new BaseCollectionPage<TimeOffRequest>(new java.util.ArrayList<TimeOffRequest>(), null).getClass());
         }
 
         if (json.has("timesOff")) {
-            timesOff = serializer.deserializeObject(json.get("timesOff").toString(), TimeOffCollectionPage.class);
+            timesOff = serializer.deserializeObject(json.get("timesOff").toString(), new BaseCollectionPage<TimeOff>(new java.util.ArrayList<TimeOff>(), null).getClass());
         }
     }
 }

@@ -39,7 +39,7 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -48,7 +48,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Group Reference Request.
  */
-public class GroupReferenceRequest extends BaseRequest {
+public class GroupReferenceRequest extends BaseReferenceRequest<Group> {
 
     /**
      * The request for the Group
@@ -61,14 +61,6 @@ public class GroupReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, Group.class);
     }
 
-    public void delete(final ICallback<? super Group> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    public Group delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
-    }
-
     /**
      * Sets the select clause for the request
      *
@@ -77,7 +69,7 @@ public class GroupReferenceRequest extends BaseRequest {
      */
     public GroupReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (GroupReferenceRequest)this;
+        return this;
     }
 
     /**
@@ -88,7 +80,7 @@ public class GroupReferenceRequest extends BaseRequest {
      */
     public GroupReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (GroupReferenceRequest)this;
+        return this;
     }
     /**
      * Puts the Group

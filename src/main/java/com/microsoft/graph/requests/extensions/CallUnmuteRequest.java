@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Call Unmute Request.
  */
-public class CallUnmuteRequest extends BaseRequest {
+public class CallUnmuteRequest extends BaseRequest<UnmuteParticipantOperation> {
     protected final CallUnmuteBody body;
 
     /**
@@ -29,6 +29,7 @@ public class CallUnmuteRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public CallUnmuteRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UnmuteParticipantOperation.class);
         body = new CallUnmuteBody();
@@ -50,7 +51,7 @@ public class CallUnmuteRequest extends BaseRequest {
      */
     public CallUnmuteRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (CallUnmuteRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class CallUnmuteRequest extends BaseRequest {
      */
     public CallUnmuteRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (CallUnmuteRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class CallUnmuteRequest extends BaseRequest {
      */
     public CallUnmuteRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (CallUnmuteRequest)this;
+        return this;
     }
 
 }

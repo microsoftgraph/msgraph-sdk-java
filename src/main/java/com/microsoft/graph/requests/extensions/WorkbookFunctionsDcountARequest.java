@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Dcount ARequest.
  */
-public class WorkbookFunctionsDcountARequest extends BaseRequest {
+public class WorkbookFunctionsDcountARequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsDcountABody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsDcountARequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsDcountARequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsDcountABody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsDcountARequest extends BaseRequest {
      */
     public WorkbookFunctionsDcountARequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsDcountARequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsDcountARequest extends BaseRequest {
      */
     public WorkbookFunctionsDcountARequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsDcountARequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsDcountARequest extends BaseRequest {
      */
     public WorkbookFunctionsDcountARequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsDcountARequest)this;
+        return this;
     }
 
 }

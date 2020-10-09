@@ -67,7 +67,7 @@ public class WorkbookFunctionsConfidence_TBody {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

@@ -24,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the User Activity Collection Request Builder.
  */
-public class UserActivityCollectionRequestBuilder extends BaseRequestBuilder {
+public class UserActivityCollectionRequestBuilder extends BaseRequestBuilder<UserActivity> {
 
     /**
      * The request builder for this collection of User

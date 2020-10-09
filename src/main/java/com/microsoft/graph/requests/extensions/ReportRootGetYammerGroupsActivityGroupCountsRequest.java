@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
+import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.requests.extensions.ReportRootGetYammerGroupsActivityGroupCountsRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Yammer Groups Activity Group Counts Request.
  */
-public class ReportRootGetYammerGroupsActivityGroupCountsRequest extends BaseRequest {
+public class ReportRootGetYammerGroupsActivityGroupCountsRequest extends BaseRequest<Report> {
 
     /**
      * The request for this ReportRootGetYammerGroupsActivityGroupCounts
@@ -98,7 +99,7 @@ public class ReportRootGetYammerGroupsActivityGroupCountsRequest extends BaseReq
      */
     public ReportRootGetYammerGroupsActivityGroupCountsRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ReportRootGetYammerGroupsActivityGroupCountsRequest)this;
+        return this;
     }
 
     /**
@@ -109,7 +110,7 @@ public class ReportRootGetYammerGroupsActivityGroupCountsRequest extends BaseReq
      */
     public ReportRootGetYammerGroupsActivityGroupCountsRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ReportRootGetYammerGroupsActivityGroupCountsRequest)this;
+        return this;
     }
 
     /**
@@ -120,7 +121,7 @@ public class ReportRootGetYammerGroupsActivityGroupCountsRequest extends BaseReq
      */
     public ReportRootGetYammerGroupsActivityGroupCountsRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ReportRootGetYammerGroupsActivityGroupCountsRequest)this;
+        return this;
     }
 
     /**
@@ -131,7 +132,7 @@ public class ReportRootGetYammerGroupsActivityGroupCountsRequest extends BaseReq
      */
     public ReportRootGetYammerGroupsActivityGroupCountsRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ReportRootGetYammerGroupsActivityGroupCountsRequest)this;
+        return this;
     }
 
 }

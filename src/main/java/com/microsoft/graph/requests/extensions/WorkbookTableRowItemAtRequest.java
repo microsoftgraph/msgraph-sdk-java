@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Row Item At Request.
  */
-public class WorkbookTableRowItemAtRequest extends BaseRequest {
+public class WorkbookTableRowItemAtRequest extends BaseRequest<WorkbookTableRow> {
 
     /**
      * The request for this WorkbookTableRowItemAt
@@ -98,7 +98,7 @@ public class WorkbookTableRowItemAtRequest extends BaseRequest {
      */
     public WorkbookTableRowItemAtRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookTableRowItemAtRequest)this;
+        return this;
     }
 
     /**
@@ -109,7 +109,7 @@ public class WorkbookTableRowItemAtRequest extends BaseRequest {
      */
     public WorkbookTableRowItemAtRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookTableRowItemAtRequest)this;
+        return this;
     }
 
     /**
@@ -120,7 +120,7 @@ public class WorkbookTableRowItemAtRequest extends BaseRequest {
      */
     public WorkbookTableRowItemAtRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookTableRowItemAtRequest)this;
+        return this;
     }
 
     /**
@@ -131,7 +131,7 @@ public class WorkbookTableRowItemAtRequest extends BaseRequest {
      */
     public WorkbookTableRowItemAtRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookTableRowItemAtRequest)this;
+        return this;
     }
 
 }

@@ -7,17 +7,13 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.MailFolder;
 import com.microsoft.graph.models.extensions.MessageRule;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.models.extensions.MultiValueLegacyExtendedProperty;
 import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.MailFolderCollectionPage;
-import com.microsoft.graph.requests.extensions.MessageRuleCollectionPage;
-import com.microsoft.graph.requests.extensions.MessageCollectionPage;
-import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionPage;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -78,7 +74,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "childFolders", alternate = {"ChildFolders"})
     @Expose
-    public MailFolderCollectionPage childFolders;
+    public BaseCollectionPage<MailFolder> childFolders;
 
     /**
      * The Message Rules.
@@ -86,7 +82,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "messageRules", alternate = {"MessageRules"})
     @Expose
-    public MessageRuleCollectionPage messageRules;
+    public BaseCollectionPage<MessageRule> messageRules;
 
     /**
      * The Messages.
@@ -94,7 +90,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "messages", alternate = {"Messages"})
     @Expose
-    public MessageCollectionPage messages;
+    public BaseCollectionPage<Message> messages;
 
     /**
      * The Multi Value Extended Properties.
@@ -102,7 +98,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "multiValueExtendedProperties", alternate = {"MultiValueExtendedProperties"})
     @Expose
-    public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
+    public BaseCollectionPage<MultiValueLegacyExtendedProperty> multiValueExtendedProperties;
 
     /**
      * The Single Value Extended Properties.
@@ -110,7 +106,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "singleValueExtendedProperties", alternate = {"SingleValueExtendedProperties"})
     @Expose
-    public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
+    public BaseCollectionPage<SingleValueLegacyExtendedProperty> singleValueExtendedProperties;
 
 
     /**
@@ -137,7 +133,8 @@ public class MailFolder extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -153,23 +150,23 @@ public class MailFolder extends Entity implements IJsonBackedObject {
 
 
         if (json.has("childFolders")) {
-            childFolders = serializer.deserializeObject(json.get("childFolders").toString(), MailFolderCollectionPage.class);
+            childFolders = serializer.deserializeObject(json.get("childFolders").toString(), new BaseCollectionPage<MailFolder>(new java.util.ArrayList<MailFolder>(), null).getClass());
         }
 
         if (json.has("messageRules")) {
-            messageRules = serializer.deserializeObject(json.get("messageRules").toString(), MessageRuleCollectionPage.class);
+            messageRules = serializer.deserializeObject(json.get("messageRules").toString(), new BaseCollectionPage<MessageRule>(new java.util.ArrayList<MessageRule>(), null).getClass());
         }
 
         if (json.has("messages")) {
-            messages = serializer.deserializeObject(json.get("messages").toString(), MessageCollectionPage.class);
+            messages = serializer.deserializeObject(json.get("messages").toString(), new BaseCollectionPage<Message>(new java.util.ArrayList<Message>(), null).getClass());
         }
 
         if (json.has("multiValueExtendedProperties")) {
-            multiValueExtendedProperties = serializer.deserializeObject(json.get("multiValueExtendedProperties").toString(), MultiValueLegacyExtendedPropertyCollectionPage.class);
+            multiValueExtendedProperties = serializer.deserializeObject(json.get("multiValueExtendedProperties").toString(), new BaseCollectionPage<MultiValueLegacyExtendedProperty>(new java.util.ArrayList<MultiValueLegacyExtendedProperty>(), null).getClass());
         }
 
         if (json.has("singleValueExtendedProperties")) {
-            singleValueExtendedProperties = serializer.deserializeObject(json.get("singleValueExtendedProperties").toString(), SingleValueLegacyExtendedPropertyCollectionPage.class);
+            singleValueExtendedProperties = serializer.deserializeObject(json.get("singleValueExtendedProperties").toString(), new BaseCollectionPage<SingleValueLegacyExtendedProperty>(new java.util.ArrayList<SingleValueLegacyExtendedProperty>(), null).getClass());
         }
     }
 }

@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the List Collection Request Builder.
  */
-public class ListCollectionRequestBuilder extends BaseRequestBuilder {
+public class ListCollectionRequestBuilder extends BaseRequestBuilder<List> {
 
     /**
      * The request builder for this collection of Site

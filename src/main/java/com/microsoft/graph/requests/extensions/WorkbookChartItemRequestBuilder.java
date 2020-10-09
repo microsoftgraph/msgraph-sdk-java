@@ -5,7 +5,6 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.WorkbookChartItemRequest;
 import com.microsoft.graph.models.extensions.WorkbookChart;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
@@ -15,7 +14,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Chart Item Request Builder.
  */
-public class WorkbookChartItemRequestBuilder extends BaseFunctionRequestBuilder {
+public class WorkbookChartItemRequestBuilder extends BaseFunctionRequestBuilder<WorkbookChart> {
 
     /**
      * The request builder for this WorkbookChartItem

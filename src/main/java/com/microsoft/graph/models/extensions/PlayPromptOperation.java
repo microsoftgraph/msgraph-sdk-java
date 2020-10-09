@@ -48,7 +48,8 @@ public class PlayPromptOperation extends CommsOperation implements IJsonBackedOb
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

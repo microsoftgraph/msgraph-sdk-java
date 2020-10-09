@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Claims Mapping Policy With Reference Request.
  */
-public class ClaimsMappingPolicyWithReferenceRequest extends BaseRequest {
+public class ClaimsMappingPolicyWithReferenceRequest extends BaseWithReferenceRequest<ClaimsMappingPolicy> {
 
     /**
      * The request for the ClaimsMappingPolicy
@@ -35,43 +35,6 @@ public class ClaimsMappingPolicyWithReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, ClaimsMappingPolicy.class);
     }
 
-    public void post(final ClaimsMappingPolicy newClaimsMappingPolicy, final IJsonBackedObject payload, final ICallback<? super ClaimsMappingPolicy> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    public ClaimsMappingPolicy post(final ClaimsMappingPolicy newClaimsMappingPolicy, final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newClaimsMappingPolicy;
-        }
-        return null;
-    }
-
-    public void get(final ICallback<? super ClaimsMappingPolicy> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    public ClaimsMappingPolicy get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(final ICallback<? super ClaimsMappingPolicy> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(final ClaimsMappingPolicy sourceClaimsMappingPolicy, final ICallback<? super ClaimsMappingPolicy> callback) {
-		send(HttpMethod.PATCH, callback, sourceClaimsMappingPolicy);
-	}
-
-	public ClaimsMappingPolicy patch(final ClaimsMappingPolicy sourceClaimsMappingPolicy) throws ClientException {
-		return send(HttpMethod.PATCH, sourceClaimsMappingPolicy);
-	}
-
-
     /**
      * Sets the select clause for the request
      *
@@ -80,7 +43,7 @@ public class ClaimsMappingPolicyWithReferenceRequest extends BaseRequest {
      */
     public ClaimsMappingPolicyWithReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ClaimsMappingPolicyWithReferenceRequest)this;
+        return this;
     }
 
     /**
@@ -91,6 +54,6 @@ public class ClaimsMappingPolicyWithReferenceRequest extends BaseRequest {
      */
     public ClaimsMappingPolicyWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ClaimsMappingPolicyWithReferenceRequest)this;
+        return this;
     }
 }

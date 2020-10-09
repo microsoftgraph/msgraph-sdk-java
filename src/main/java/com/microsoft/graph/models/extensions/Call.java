@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.CallOptions;
 import com.microsoft.graph.models.extensions.CallRoute;
 import com.microsoft.graph.models.extensions.ChatInfo;
@@ -25,8 +26,6 @@ import com.microsoft.graph.models.extensions.CallTranscriptionInfo;
 import com.microsoft.graph.models.extensions.CommsOperation;
 import com.microsoft.graph.models.extensions.Participant;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.CommsOperationCollectionPage;
-import com.microsoft.graph.requests.extensions.ParticipantCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -207,7 +206,7 @@ public class Call extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
-    public CommsOperationCollectionPage operations;
+    public BaseCollectionPage<CommsOperation> operations;
 
     /**
      * The Participants.
@@ -215,7 +214,7 @@ public class Call extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "participants", alternate = {"Participants"})
     @Expose
-    public ParticipantCollectionPage participants;
+    public BaseCollectionPage<Participant> participants;
 
 
     /**
@@ -242,7 +241,8 @@ public class Call extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
-    protected ISerializer getSerializer() {
+	@Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 
@@ -258,11 +258,11 @@ public class Call extends Entity implements IJsonBackedObject {
 
 
         if (json.has("operations")) {
-            operations = serializer.deserializeObject(json.get("operations").toString(), CommsOperationCollectionPage.class);
+            operations = serializer.deserializeObject(json.get("operations").toString(), new BaseCollectionPage<CommsOperation>(new java.util.ArrayList<CommsOperation>(), null).getClass());
         }
 
         if (json.has("participants")) {
-            participants = serializer.deserializeObject(json.get("participants").toString(), ParticipantCollectionPage.class);
+            participants = serializer.deserializeObject(json.get("participants").toString(), new BaseCollectionPage<Participant>(new java.util.ArrayList<Participant>(), null).getClass());
         }
     }
 }

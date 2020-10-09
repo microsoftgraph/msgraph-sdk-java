@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Last Row Request.
  */
-public class WorkbookRangeLastRowRequest extends BaseRequest {
+public class WorkbookRangeLastRowRequest extends BaseRequest<WorkbookRange> {
 
     /**
      * The request for this WorkbookRangeLastRow
@@ -98,7 +98,7 @@ public class WorkbookRangeLastRowRequest extends BaseRequest {
      */
     public WorkbookRangeLastRowRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookRangeLastRowRequest)this;
+        return this;
     }
 
     /**
@@ -109,7 +109,7 @@ public class WorkbookRangeLastRowRequest extends BaseRequest {
      */
     public WorkbookRangeLastRowRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookRangeLastRowRequest)this;
+        return this;
     }
 
     /**
@@ -120,7 +120,7 @@ public class WorkbookRangeLastRowRequest extends BaseRequest {
      */
     public WorkbookRangeLastRowRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookRangeLastRowRequest)this;
+        return this;
     }
 
     /**
@@ -131,7 +131,7 @@ public class WorkbookRangeLastRowRequest extends BaseRequest {
      */
     public WorkbookRangeLastRowRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookRangeLastRowRequest)this;
+        return this;
     }
 
 }

@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the License Details Request.
  */
-public class LicenseDetailsRequest extends BaseRequest {
+public class LicenseDetailsRequest extends BaseRequest<LicenseDetails> {
 	
     /**
      * The request for the LicenseDetails
@@ -140,7 +140,7 @@ public class LicenseDetailsRequest extends BaseRequest {
      */
      public LicenseDetailsRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (LicenseDetailsRequest)this;
+         return this;
      }
 
     /**
@@ -151,7 +151,7 @@ public class LicenseDetailsRequest extends BaseRequest {
      */
      public LicenseDetailsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (LicenseDetailsRequest)this;
+         return this;
      }
 
 }

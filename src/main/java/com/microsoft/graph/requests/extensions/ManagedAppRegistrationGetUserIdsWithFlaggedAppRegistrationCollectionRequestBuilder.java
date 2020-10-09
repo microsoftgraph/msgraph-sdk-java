@@ -22,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Managed App Registration Get User Ids With Flagged App Registration Collection Request Builder.
  */
-public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder extends BaseFunctionRequestBuilder {
+public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder extends BaseFunctionRequestBuilder<String> {
 
     /**
      * The request builder for this collection of ManagedAppRegistration

@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Gamma Ln Request.
  */
-public class WorkbookFunctionsGammaLnRequest extends BaseRequest {
+public class WorkbookFunctionsGammaLnRequest extends BaseRequest<WorkbookFunctionResult> {
     protected final WorkbookFunctionsGammaLnBody body;
 
     /**
@@ -29,6 +29,7 @@ public class WorkbookFunctionsGammaLnRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
+    @SuppressWarnings("unchecked")
     public WorkbookFunctionsGammaLnRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsGammaLnBody();
@@ -50,7 +51,7 @@ public class WorkbookFunctionsGammaLnRequest extends BaseRequest {
      */
     public WorkbookFunctionsGammaLnRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsGammaLnRequest)this;
+        return this;
     }
 
     /**
@@ -61,7 +62,7 @@ public class WorkbookFunctionsGammaLnRequest extends BaseRequest {
      */
     public WorkbookFunctionsGammaLnRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsGammaLnRequest)this;
+        return this;
     }
 
     /**
@@ -72,7 +73,7 @@ public class WorkbookFunctionsGammaLnRequest extends BaseRequest {
      */
     public WorkbookFunctionsGammaLnRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsGammaLnRequest)this;
+        return this;
     }
 
 }
