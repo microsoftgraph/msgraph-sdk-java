@@ -96,7 +96,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The ICal UId.
-     * A unique identifier that is shared by all instances of an event across different calendars. Read-only.
+     * A unique identifier for an event across calendars. This ID is different for each occurrence in a recurring series. Read-only.
      */
     @SerializedName(value = "iCalUId", alternate = {"ICalUId"})
     @Expose
@@ -125,6 +125,14 @@ public class Event extends OutlookItem implements IJsonBackedObject {
     @SerializedName(value = "isCancelled", alternate = {"IsCancelled"})
     @Expose
     public Boolean isCancelled;
+
+    /**
+     * The Is Draft.
+     * 
+     */
+    @SerializedName(value = "isDraft", alternate = {"IsDraft"})
+    @Expose
+    public Boolean isDraft;
 
     /**
      * The Is Online Meeting.

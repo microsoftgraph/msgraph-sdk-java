@@ -45,6 +45,7 @@ import com.microsoft.graph.models.extensions.Onenote;
 import com.microsoft.graph.models.extensions.UserActivity;
 import com.microsoft.graph.models.extensions.OnlineMeeting;
 import com.microsoft.graph.models.extensions.Team;
+import com.microsoft.graph.models.extensions.UserTeamwork;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionPage;
@@ -909,6 +910,14 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "joinedTeams", alternate = {"JoinedTeams"})
     @Expose
     public TeamCollectionPage joinedTeams;
+
+    /**
+     * The Teamwork.
+     * 
+     */
+    @SerializedName(value = "teamwork", alternate = {"Teamwork"})
+    @Expose
+    public UserTeamwork teamwork;
 
 
     /**

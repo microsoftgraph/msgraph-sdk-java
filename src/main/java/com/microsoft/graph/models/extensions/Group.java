@@ -149,7 +149,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Mail Nickname.
-     * The mail alias for the group, unique in the organization. This property must be specified when a group is created. Returned by default. Supports $filter.
+     * The mail alias for the group, unique in the organization. This property must be specified when a group is created. These characters cannot be used in the mailNickName: @()/[]';:.&amp;lt;&amp;gt;,SPACE. Returned by default. Supports $filter.
      */
     @SerializedName(value = "mailNickname", alternate = {"MailNickname"})
     @Expose

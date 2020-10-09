@@ -138,28 +138,4 @@ public interface IDeviceRequestBuilder extends IRequestBuilder {
 
     IExtensionRequestBuilder extensions(final String id);
 
-    IUserCollectionRequestBuilder extensionsAsUser();
-
-    IUserRequestBuilder extensionsAsUser(final String id);
-
-    IGroupCollectionRequestBuilder extensionsAsGroup();
-
-    IGroupRequestBuilder extensionsAsGroup(final String id);
-
-    IApplicationCollectionRequestBuilder extensionsAsApplication();
-
-    IApplicationRequestBuilder extensionsAsApplication(final String id);
-
-    IServicePrincipalCollectionRequestBuilder extensionsAsServicePrincipal();
-
-    IServicePrincipalRequestBuilder extensionsAsServicePrincipal(final String id);
-
-    IDeviceCollectionRequestBuilder extensionsAsDevice();
-
-    IDeviceRequestBuilder extensionsAsDevice(final String id);
-
-    IOrgContactCollectionRequestBuilder extensionsAsOrgContact();
-
-    IOrgContactRequestBuilder extensionsAsOrgContact(final String id);
-
 }
