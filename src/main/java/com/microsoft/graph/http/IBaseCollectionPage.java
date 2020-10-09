@@ -31,11 +31,10 @@ import java.util.List;
 /**
  * A page of results from a collection
  * 
- * @param <T1> the type of the item contained within the collection
- * @param <T2> the type of the request builder for the next page in this collection
+ * @param <T> the type of the item contained within the collection
  */
 
-public interface IBaseCollectionPage<T1, T2 extends IRequestBuilder> extends IJsonBackedObject {
+public interface IBaseCollectionPage<T> extends IJsonBackedObject {
 
     /**
      * Gets the raw representation of this class
@@ -49,12 +48,12 @@ public interface IBaseCollectionPage<T1, T2 extends IRequestBuilder> extends IJs
      * 
      * @return the next page request builder
      */
-    T2 getNextPage();
+    BaseRequestBuilder<T> getNextPage();
 
     /**
      * Gets the current page
      * 
      * @return the current page
      */
-    List<T1> getCurrentPage();
+    List<T> getCurrentPage();
 }

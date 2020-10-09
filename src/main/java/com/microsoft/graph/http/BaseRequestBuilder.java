@@ -33,7 +33,7 @@ import java.util.Arrays;
 /**
  * A request builder
  */
-public abstract class BaseRequestBuilder implements IRequestBuilder {
+public abstract class BaseRequestBuilder<T> implements IRequestBuilder {
 
     /**
      * The backing client for this request.

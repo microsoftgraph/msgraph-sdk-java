@@ -70,10 +70,9 @@ public class CollectionPageSerializer {
      * @param src the CollectionPage variable for serialization
      * @param logger the logger
 	 * @param <T1> the entity type for the collection
-	 * @param <T2> the collection request builder interface type
      * @return       JsonElement of CollectionPage
      */
-	public static <T1, T2 extends IRequestBuilder> JsonElement serialize(final BaseCollectionPage<T1, T2> src, final ILogger logger) {
+	public static <T1> JsonElement serialize(final BaseCollectionPage<T1> src, final ILogger logger) {
 		if(src == null) {
 			return null;
 		}
@@ -98,12 +97,11 @@ public class CollectionPageSerializer {
    	 * @param typeOfT The type of the CollectionPage to deserialize to
      * @param logger the logger
 	 * @param <T1> the entity type for the collection
-	 * @param <T2> the collection request builder interface type
      * @throws JsonParseException the parse exception
      * @return    the deserialized CollectionPage
      */
 	@SuppressWarnings("unchecked")
-	public static <T1, T2 extends IRequestBuilder> BaseCollectionPage<T1, T2> deserialize(final JsonElement json, Type typeOfT, final ILogger logger) throws JsonParseException {
+	public static <T1> BaseCollectionPage<T1> deserialize(final JsonElement json, Type typeOfT, final ILogger logger) throws JsonParseException {
 		if (json == null || !json.isJsonArray()) {
 			return null;
 		}
@@ -141,7 +139,7 @@ public class CollectionPageSerializer {
 						.substring(0, responseClassCanonicalName.length() - responseLength)
 						.replace(extensionsPath, extensionsPath) + "RequestBuilder";
 			final Class<?> responseBuilderClass = Class.forName(responseBuilderCanonicalName);
-			return (BaseCollectionPage<T1, T2>)collectionPageClass.getConstructor(responseClass, responseBuilderClass).newInstance(response, null);
+			return (BaseCollectionPage<T1>)collectionPageClass.getConstructor(responseClass, responseBuilderClass).newInstance(response, null);
 		} catch(ClassNotFoundException ex) {
 			logger.logError("Could not find class during deserialization", ex);
 		} catch(NoSuchMethodException | InstantiationException | InvocationTargetException ex) {

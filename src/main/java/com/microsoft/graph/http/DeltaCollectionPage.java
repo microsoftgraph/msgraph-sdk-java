@@ -1,16 +1,16 @@
 // ------------------------------------------------------------------------------
 // Copyright (c) 2017 Microsoft Corporation
-//
+// 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
 // to use, copy, modify, merge, publish, distribute, sub-license, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-//
+// 
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
-//
+// 
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -23,66 +23,45 @@
 package com.microsoft.graph.http;
 
 import com.google.gson.JsonObject;
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.ISerializer;
 
-public class ReferenceRequestBody implements IJsonBackedObject {
+import java.util.Collections;
+import java.util.List;
 
-    private AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
-
-    @SerializedName("@odata.id")
-    @Expose
-    public String odataId;
-
+/**
+ * A page of results from a delta collection
+ *
+ * @param <T> the type of the item contained within the collection
+ */
+public class DeltaCollectionPage<T> extends BaseCollectionPage<T> {
     /**
-     * The raw representation of this class
+     * The opaque link to query delta after the 
+     * initial request
      */
-    private JsonObject rawObject;
+    public String deltaLink;
 
     /**
-     * The serializer
-     */
-    private ISerializer serializer;
-
-    public ReferenceRequestBody(final String payload) {
-        odataId = payload;
-    }
-
-    /**
-     * Gets the raw representation of this class
+     * A collection page for the delta response.
      *
-     * @return the raw representation of this class
+     * @param response The serialized delta reponse from the service
+     * @param builder The request builder for the next collection page
      */
-    public JsonObject getRawObject() {
-        return rawObject;
+    public DeltaCollectionPage(final ICollectionResponse<T> response, final BaseRequestBuilder<T> builder) {
+       super(response.values(), builder, response.additionalDataManager());
+        if (response.getRawObject().get("@odata.deltaLink") != null) {
+            deltaLink = response.getRawObject().get("@odata.deltaLink").getAsString();
+        } else {
+            deltaLink = null;
+        }
     }
-
     /**
-     * Gets serializer
+     * The deltaLink to make future delta requests
      *
-     * @return the serializer
+     * @return String The deltaLink URL
      */
-    @Override
-    public ISerializer getSerializer() {
-        return serializer;
+    public String deltaLink() {
+        return deltaLink;
     }
 
-    /**
-     * Sets the raw JSON object
-     *
-     * @param serializer the serializer
-     * @param json       the JSON object to set this object to
-     */
-    public void setRawObject(final ISerializer serializer, final JsonObject json) {
-        this.serializer = serializer;
-        this.rawObject = json;
-    }
-
-    @Override
-    public final AdditionalDataManager additionalDataManager() {
-        return additionalDataManager;
-    }
 }

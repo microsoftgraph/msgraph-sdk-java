@@ -101,7 +101,7 @@ public abstract class BaseRequest<T> implements IHttpRequest {
     /**
      * The class for the response
      */
-    private final Class<T> responseClass;
+    private final Class<? extends T> responseClass;
 
     /**
      * Value to pass to setUseCaches in connection
@@ -144,7 +144,7 @@ public abstract class BaseRequest<T> implements IHttpRequest {
     public BaseRequest(final String requestUrl,
                        final IBaseClient client,
                        final List<? extends Option> options,
-                       final Class<T> responseClass) {
+                       final Class<? extends T> responseClass) {
         this.requestUrl = requestUrl;
         this.client = client;
         this.responseClass = responseClass;
@@ -426,7 +426,7 @@ public abstract class BaseRequest<T> implements IHttpRequest {
      *
      * @return the response type
      */
-    public Class<T> getResponseType() {
+    public Class<? extends T> getResponseType() {
         return responseClass;
     }
 	

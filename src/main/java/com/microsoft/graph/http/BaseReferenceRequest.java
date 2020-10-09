@@ -20,42 +20,38 @@
 // THE SOFTWARE.
 // ------------------------------------------------------------------------------
 
-package com.microsoft.graph.serializer;
+package com.microsoft.graph.http;
 
-import com.google.gson.JsonObject;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.core.IBaseClient;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.options.Option;
+
+import java.util.List;
 
 /**
- * An object that was parsed from JSON
+ * An HTTP request.
+ * 
+ * @param <T> the response class
  */
-public interface IJsonBackedObject {
+public abstract class BaseReferenceRequest<T> extends BaseRequest<T> {
 
     /**
-     * Sets the raw JSON object this object was parsed from
+     * The request for reference
      *
-     * @param serializer the serializer for sub class deserialization
-     * @param json       the JSON that this object was derived from
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
-    void setRawObject(final ISerializer serializer, final JsonObject json);
+    public BaseReferenceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final Class<T> entityType) {
+        super(requestUrl, client, requestOptions, entityType);
+    }
 
-    /**
-     * Provides access to objects not anticipated in the model, as well as 
-     * request and response data from the HTTP call
-     * 
-     * @return the AddtionalDataManager
-     */
-    AdditionalDataManager additionalDataManager();
+    public void delete(final ICallback<? super T> callback) {
+        send(HttpMethod.DELETE, callback, null);
+    }
 
-
-    /**
-     * Gets the raw JSON object for this object as parsed from
-     * @return the JSON that this object was derived from
-     */
-    JsonObject getRawObject();
-
-    /**
-     * Gets serializer
-     *
-     * @return the serializer
-     */
-    ISerializer getSerializer();
+    public T delete() throws ClientException {
+       return send(HttpMethod.DELETE, null);
+    }
 }

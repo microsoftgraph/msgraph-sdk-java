@@ -23,12 +23,14 @@
 package com.microsoft.graph.http;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.ICollectionResponse;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.httpcore.middlewareoption.IShouldRedirect;
 import com.microsoft.graph.httpcore.middlewareoption.IShouldRetry;
 import com.microsoft.graph.options.FunctionOption;
@@ -43,22 +45,27 @@ import okhttp3.Request;
  *
  * @param <T> the type of the object in the collection 
  */
-public abstract class BaseCollectionRequest<T> implements IHttpRequest {
+public abstract class BaseCollectionRequest<T, T1 extends ICollectionResponse<T>> implements IHttpRequest {
 
     /**
      * The base request for this collection request
      */
-    private final BaseRequest baseRequest;
+    private final BaseRequest<T1> baseRequest;
 
+    /**
+     * The class for the response collection
+     */
+    private final Class<T1> responseCollectionClass;
+    
     /**
      * The class for the response
      */
-    private final Class<? extends ICollectionResponse<T>> responseClass;
+    private final Class<? extends T> responseClass;
 
     /**
      * The class for the collection page
      */
-    private final Class<? extends BaseCollectionPage<T, BaseCollectionRequest<T>>> collectionPageClass;
+    private final Class<BaseCollectionPage<T>> collectionPageClass;
 
 
     /**
@@ -67,18 +74,21 @@ public abstract class BaseCollectionRequest<T> implements IHttpRequest {
      * @param requestUrl          the URL to make the request against
      * @param client              the client which can issue the request
      * @param options             the options for this request
-     * @param responseClass       the class for the response
+     * @param responseClass       the tclass for the response
+     * @param responseCollectionClass       the class for the response collection
      * @param collectionPageClass the class for the collection page
+     * @param <T1>                the response collection type
      */
     public BaseCollectionRequest(final String requestUrl,
                                  final IBaseClient client,
                                  final List<? extends Option> options,
-                                 final Class<? extends ICollectionResponse<T>> responseClass,
-                                 final Class<? extends BaseCollectionPage<T, BaseCollectionRequest<T>>> collectionPageClass) {
-        this.responseClass = responseClass;
+                                 final Class<? extends T> responseClass,
+                                 final Class<T1> responseCollectionClass,
+                                 final Class<BaseCollectionPage<T>> collectionPageClass) {
+        this.responseCollectionClass = responseCollectionClass;
         this.collectionPageClass = collectionPageClass;
-        baseRequest = new BaseRequest(requestUrl, client, options, responseClass) {
-        };
+        this.responseClass = responseClass;
+        baseRequest = new BaseRequest<T1>(requestUrl, client, options, responseCollectionClass) {};
     }
 
     /**
@@ -87,9 +97,9 @@ public abstract class BaseCollectionRequest<T> implements IHttpRequest {
      * @return the response object
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    protected ICollectionResponse<T> send() throws ClientException {
+    protected T1 send() throws ClientException {
         baseRequest.setHttpMethod(HttpMethod.GET);
-        return baseRequest.getClient().getHttpProvider().send(this, responseClass, /* serialization object */ null);
+        return baseRequest.getClient().getHttpProvider().send(this, responseCollectionClass, new ArrayList<com.microsoft.graph.options.Option>());
     }
 
     /**
@@ -100,9 +110,9 @@ public abstract class BaseCollectionRequest<T> implements IHttpRequest {
      * @return the response object
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    protected T1 post(final T serializedObject) throws ClientException {
+    protected <BodyType> T1 post(final BodyType serializedObject) throws ClientException {
         baseRequest.setHttpMethod(HttpMethod.POST);
-        return (T1) baseRequest.getClient().getHttpProvider().send(this, responseClass, serializedObject);
+        return baseRequest.getClient().getHttpProvider().send(this, responseClass, serializedObject);
     }
 
     /**
@@ -198,7 +208,7 @@ public abstract class BaseCollectionRequest<T> implements IHttpRequest {
      *
      * @return the base request for this collection request
      */
-    protected BaseRequest getBaseRequest() {
+    public BaseRequest<T1> getBaseRequest() {
         return baseRequest;
     }
 
@@ -207,7 +217,7 @@ public abstract class BaseCollectionRequest<T> implements IHttpRequest {
      *
      * @return the class for the collection page
      */
-    public Class<? extends BaseCollectionPage<T, BaseCollectionRequest<T>>> getCollectionPageClass() {
+    public Class<BaseCollectionPage<T>> getCollectionPageClass() {
         return collectionPageClass;
     }
     

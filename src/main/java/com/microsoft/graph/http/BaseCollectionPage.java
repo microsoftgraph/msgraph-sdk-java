@@ -1,16 +1,16 @@
 // ------------------------------------------------------------------------------
 // Copyright (c) 2017 Microsoft Corporation
-//
+// 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
 // to use, copy, modify, merge, publish, distribute, sub-license, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-//
+// 
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
-//
+// 
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -23,19 +23,30 @@
 package com.microsoft.graph.http;
 
 import com.google.gson.JsonObject;
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.ISerializer;
 
-public class ReferenceRequestBody implements IJsonBackedObject {
+import java.util.Collections;
+import java.util.List;
+
+/**
+ * A page of results from a collection
+ *
+ * @param <T> the type of the item contained within the collection
+ */
+public class BaseCollectionPage<T> implements IBaseCollectionPage<T> {
 
     private AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
-    @SerializedName("@odata.id")
-    @Expose
-    public String odataId;
+    /**
+     * The contents of this page
+     */
+    private final List<T> pageContents;
+
+    /**
+     * The request builder for the next page
+     */
+    private final BaseRequestBuilder<T> requestBuilder;
 
     /**
      * The raw representation of this class
@@ -47,8 +58,57 @@ public class ReferenceRequestBody implements IJsonBackedObject {
      */
     private ISerializer serializer;
 
-    public ReferenceRequestBody(final String payload) {
-        odataId = payload;
+    /**
+     * A collection page for WorkforceIntegration
+     *
+     * @param response the serialized WorkforceIntegrationCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
+     */
+    public BaseCollectionPage(final ICollectionResponse<T> response, final BaseRequestBuilder<T> builder) {
+        this(response.values(), builder, response.additionalDataManager());
+    }
+
+    /**
+     * Creates the collection page
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public BaseCollectionPage(final List<T> pageContents, final BaseRequestBuilder<T> nextRequestBuilder) {
+        // CollectionPages are never directly modifiable, either 'update'/'delete' the specific child or 'add' the new
+        // object to the 'children' of the collection.
+        this.pageContents = Collections.unmodifiableList(pageContents);
+        requestBuilder = nextRequestBuilder;
+    }
+
+    /**
+     * Creates the collection page
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     * @param responseAdditionalData the additional data returned by the response
+     */
+    public BaseCollectionPage(final List<T> pageContents, final BaseRequestBuilder<T> nextRequestBuilder, final AdditionalDataManager responseAdditionalData) {
+        this(pageContents, nextRequestBuilder);
+        this.additionalDataManager().putAll(responseAdditionalData);
+    }
+
+    /**
+     * Gets the next page request builder
+     *
+     * @return the next page request builder
+     */
+    public BaseRequestBuilder<T> getNextPage() {
+        return requestBuilder;
+    }
+
+    /**
+     * Gets the current page
+     *
+     * @return the current page
+     */
+    public List<T> getCurrentPage() {
+        return pageContents;
     }
 
     /**
@@ -61,7 +121,7 @@ public class ReferenceRequestBody implements IJsonBackedObject {
     }
 
     /**
-     * Gets serializer
+     * Gets the serializer
      *
      * @return the serializer
      */
@@ -78,7 +138,7 @@ public class ReferenceRequestBody implements IJsonBackedObject {
      */
     public void setRawObject(final ISerializer serializer, final JsonObject json) {
         this.serializer = serializer;
-        this.rawObject = json;
+        rawObject = json;
     }
 
     @Override

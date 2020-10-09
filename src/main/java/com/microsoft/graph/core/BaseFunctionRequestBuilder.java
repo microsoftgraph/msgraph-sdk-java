@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * The base method request builder class
  */
-public class BaseFunctionRequestBuilder extends BaseRequestBuilder {
+public class BaseFunctionRequestBuilder<T> extends BaseRequestBuilder<T> {
 
     /**
      * The {@link FunctionOption}s to add to this request

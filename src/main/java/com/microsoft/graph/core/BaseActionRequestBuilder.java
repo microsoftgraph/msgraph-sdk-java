@@ -14,7 +14,7 @@ import java.util.Map;
 /**
  * The base method request builder class used for POST actions
  */
-public class BaseActionRequestBuilder extends BaseRequestBuilder {
+public class BaseActionRequestBuilder<T> extends BaseRequestBuilder<T> {
 
     /**
      * The body parameters to add to this request
@@ -50,11 +50,11 @@ public class BaseActionRequestBuilder extends BaseRequestBuilder {
      * Gets the requested parameter if present, otherwise null
      *
      * @param name the named object to retrieve
-     * @param <T>  the type to which this object should be cast
+     * @param <T1>  the type to which this object should be cast
      * @return the stored instance of T, otherwise null
      */
     @SuppressWarnings("unchecked")
-    protected <T> T getParameter(final String name) {
-        return (T) bodyParams.get(name);
+    protected <T1> T1 getParameter(final String name) {
+        return (T1) bodyParams.get(name);
     }
 }
