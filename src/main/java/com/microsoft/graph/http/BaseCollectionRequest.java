@@ -44,6 +44,7 @@ import okhttp3.Request;
  * A request against a collection
  *
  * @param <T> the type of the object in the collection 
+ * @param <T2> the response collection type
  */
 public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>> implements IHttpRequest {
 
@@ -71,7 +72,6 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      * @param options             the options for this request
      * @param responseCollectionClass       the class for the response collection
      * @param collectionPageClass the class for the collection page
-     * @param <T2>                the response collection type
      */
     public BaseCollectionRequest(final String requestUrl,
                                  final IBaseClient client,
