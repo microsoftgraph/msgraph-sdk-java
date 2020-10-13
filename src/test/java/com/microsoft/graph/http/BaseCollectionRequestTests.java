@@ -40,9 +40,10 @@ import com.microsoft.graph.serializer.MockSerializer;
 public class BaseCollectionRequestTests {
 
     private MockBaseClient mBaseClient;
-    private BaseCollectionRequest<JsonObject, String> mRequest;
+    private BaseCollectionRequest<JsonObject, MockJsonObjectCollectionResponse> mRequest;
 
     @Before
+    @SuppressWarnings("unchecked")
     public void setUp() throws Exception {
         mBaseClient = new MockBaseClient();
         final Response response = new Response.Builder()
@@ -51,7 +52,7 @@ public class BaseCollectionRequestTests {
                 .code(200).message("OK").body(
                    ResponseBody.create(
                         MediaType.parse("application/json"),
-                        "{ \"id\": \"zzz\" }"
+                        "[{ \"id\": \"zzz\" }]"
                 ))
                 .addHeader("Content-Type", "application/json")
                 .build();
@@ -63,28 +64,29 @@ public class BaseCollectionRequestTests {
                 new MockLogger(),
                 mockClient);
         mBaseClient.setHttpProvider(mProvider);
-        mRequest = new BaseCollectionRequest<JsonObject,String>("https://a.b.c/", mBaseClient, null, JsonObject.class,null){};
+        final BaseCollectionPage<JsonObject> jsonObjectPage = new BaseCollectionPage<JsonObject>(new MockJsonObjectCollectionResponse(), null);
+        mRequest = new BaseCollectionRequest<JsonObject,MockJsonObjectCollectionResponse>("https://a.b.c/", mBaseClient, null, MockJsonObjectCollectionResponse.class, (Class<BaseCollectionPage<JsonObject>>)jsonObjectPage.getClass()){};
     }
 
     @Test
     public void testSend() {
-        JsonObject result = (JsonObject)mRequest.send();
+        final MockJsonObjectCollectionResponse result = mRequest.send();
         assertNotNull(result);
-        assertEquals("zzz", result.get("id").getAsString());
+        assertEquals("zzz", result.values().get(0).get("id").getAsString());
     }
 
     @Test
     public void testPost() {
-        JsonObject result = (JsonObject)mRequest.post(null);
+        final MockJsonObjectCollectionResponse result = mRequest.post(null);
         assertNotNull(result);
-        assertEquals("zzz", result.get("id").getAsString());
+        assertEquals("zzz", result.values().get(0).get("id").getAsString());
     }
 
     @Test
     public void testFunctionParameters() {
         final Option f1 = new FunctionOption("1", "one");
         final Option f2 = new FunctionOption("2", null);
-        final BaseCollectionRequest<String,String> request = new BaseCollectionRequest<String,String>("https://a.b.c/", null, Arrays.asList(f1, f2), null,null){};
+        final BaseCollectionRequest<String,ICollectionResponse<String>> request = new BaseCollectionRequest<String,ICollectionResponse<String>>("https://a.b.c/", null, Arrays.asList(f1, f2), null,null){};
         assertEquals("https://a.b.c/(1='one',2=null)", request.getRequestUrl().toString());
         request.addFunctionOption(new FunctionOption("3","two"));;
         assertEquals("https://a.b.c/(1='one',2=null,3='two')", request.getRequestUrl().toString());
@@ -95,7 +97,7 @@ public class BaseCollectionRequestTests {
     public void testQueryParameters() {
         final Option q1 = new QueryOption("q1","option1 ");
         final Option q2 = new QueryOption("q2","option2");
-        final BaseCollectionRequest<String,String> request = new BaseCollectionRequest<String,String>("https://a.b.c/", null, Arrays.asList(q1, q2), null,null){};
+        final BaseCollectionRequest<String,ICollectionResponse<String>> request = new BaseCollectionRequest<String,ICollectionResponse<String>>("https://a.b.c/", null, Arrays.asList(q1, q2), null,null){};
         assertEquals("https://a.b.c/?q1=option1%20&q2=option2", request.getRequestUrl().toString());
         request.addQueryOption(new QueryOption("q3","option3"));
         assertEquals("https://a.b.c/?q1=option1%20&q2=option2&q3=option3", request.getRequestUrl().toString());
@@ -108,7 +110,7 @@ public class BaseCollectionRequestTests {
         final Option f2 = new FunctionOption("f2", null);
         final Option q1 = new QueryOption("q1","option1 ");
         final Option q2 = new QueryOption("q2","option2");
-        final BaseCollectionRequest<String,String> request = new BaseCollectionRequest<String,String>("https://a.b.c/", null, Arrays.asList(f1, f2, q1, q2), null,null){};
+        final BaseCollectionRequest<String,ICollectionResponse<String>> request = new BaseCollectionRequest<String,ICollectionResponse<String>>("https://a.b.c/", null, Arrays.asList(f1, f2, q1, q2), null,null){};
         assertEquals("https://a.b.c/(f1='fun1',f2=null)?q1=option1%20&q2=option2", request.getRequestUrl().toString());
         assertEquals(5, request.getOptions().size());
     }
@@ -128,9 +130,9 @@ public class BaseCollectionRequestTests {
 
     @Test
     public void testHeader() {
-        String expectedHeader = "header key";
-        String expectedValue = "header value";
-        final BaseCollectionRequest<String,String> request = new BaseCollectionRequest<String,String>("https://a.b.c/", null, null, null,null){};
+        final String expectedHeader = "header key";
+        final String expectedValue = "header value";
+        final BaseCollectionRequest<String,ICollectionResponse<String>> request = new BaseCollectionRequest<String,ICollectionResponse<String>>("https://a.b.c/", null, null, null,null){};
         assertEquals(1, request.getHeaders().size());
         request.addHeader(expectedHeader,expectedValue);
         assertEquals(2,request.getHeaders().size());

@@ -25,6 +25,8 @@ import org.junit.Test;
 import com.microsoft.graph.concurrency.ChunkedUploadProvider;
 import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.extensions.Attachment;
 import com.microsoft.graph.models.extensions.AttachmentItem;
 import com.microsoft.graph.models.extensions.Attendee;
 import com.microsoft.graph.models.extensions.AttendeeBase;
@@ -43,14 +45,9 @@ import com.microsoft.graph.models.extensions.UploadSession;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.generated.AttachmentType;
 import com.microsoft.graph.models.generated.BodyType;
-import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
-import com.microsoft.graph.requests.extensions.MessageCollectionPage;
-import com.microsoft.graph.requests.extensions.UserCollectionPage;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionPage;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionResponse;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionResponse;
-import com.microsoft.graph.requests.extensions.EventCollectionPage;
 
 @Ignore
 public class OutlookTests {
@@ -78,7 +75,7 @@ public class OutlookTests {
 
         // Get the first user in the tenant
         User me = testBase.graphClient.me().buildRequest().get();
-        UserCollectionPage users = testBase.graphClient.users().buildRequest().get();
+        BaseCollectionPage<User> users = testBase.graphClient.users().buildRequest().get();
         User tenantUser = users.getCurrentPage().get(0);
 
         //Ensure that the user grabbed is not the logged-in user
@@ -115,7 +112,7 @@ public class OutlookTests {
     	testBase.graphClient.me().mailFolders("Drafts").messages(newMessage.id).send().buildRequest().post();
     	
     	//Check that the sent message exists on the server
-    	MessageCollectionPage mcp = testBase.graphClient.me().messages().buildRequest().filter("subject eq '" + draftSubject + "'").get();
+    	BaseCollectionPage<Message> mcp = testBase.graphClient.me().messages().buildRequest().filter("subject eq '" + draftSubject + "'").get();
     	assertFalse(mcp.getCurrentPage().isEmpty());
     }
     private Message createDraftMessage(TestBase testBase, String draftSubject) {
@@ -141,7 +138,7 @@ public class OutlookTests {
     	message.hasAttachments = true;
     	AttachmentCollectionResponse response = new AttachmentCollectionResponse();
     	response.value = Arrays.asList(getFileAttachment(),getItemAttachmentWithEvent(),getItemAttachmentWithContact());
-		message.attachments = new AttachmentCollectionPage(response, null);
+		message.attachments = new BaseCollectionPage<Attachment>(response, null);
 		testBase.graphClient.me().sendMail(message, true).buildRequest().post();
     }
 
@@ -162,7 +159,7 @@ public class OutlookTests {
 		event.hasAttachments = true;
 		AttachmentCollectionResponse response = new AttachmentCollectionResponse();
 		response.value = Arrays.asList(getFileAttachment(),getItemAttachmentWithContact());
-		event.attachments = new AttachmentCollectionPage(response, null); 
+		event.attachments = new BaseCollectionPage<Attachment>(response, null); 
 		Event eventResponse = testBase.graphClient.me().events().buildRequest().post(event);
 		assertNotNull(eventResponse);
     }
@@ -320,7 +317,7 @@ public class OutlookTests {
 	@Test
 	public void testSingleValuesExtendedProperties() {
     	final TestBase testBase = new TestBase();
-		final EventCollectionPage arrangePage = testBase.graphClient.me().events().buildRequest().top(1).get();
+		final BaseCollectionPage<Event> arrangePage = testBase.graphClient.me().events().buildRequest().top(1).get();
 		final String eventId = arrangePage.getCurrentPage().get(0).id;
 		final Event updatedEvent = new Event();
 		final String uuid = UUID.randomUUID().toString();
@@ -330,10 +327,10 @@ public class OutlookTests {
 		final SingleValueLegacyExtendedPropertyCollectionResponse response = new SingleValueLegacyExtendedPropertyCollectionResponse();
 		response.value = new ArrayList<SingleValueLegacyExtendedProperty>();
 		response.value.add(prop);
-		updatedEvent.singleValueExtendedProperties = new SingleValueLegacyExtendedPropertyCollectionPage(response, new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(null, null, null));
+		updatedEvent.singleValueExtendedProperties = new BaseCollectionPage<SingleValueLegacyExtendedProperty>(response, new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(null, null, null));
 
 		testBase.graphClient.me().events(eventId).buildRequest().patch(updatedEvent);
-		final EventCollectionPage page = testBase.graphClient.me()
+		final BaseCollectionPage<Event> page = testBase.graphClient.me()
 										.events()
 										.buildRequest()
 										.expand("singleValueExtendedProperties")

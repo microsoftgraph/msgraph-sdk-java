@@ -29,7 +29,6 @@ import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.models.extensions.ItemAttachment;
 import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.User;
-import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
 import com.microsoft.graph.requests.extensions.EventCollectionResponse;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionResponse;
 
@@ -45,7 +44,7 @@ public class CollectionPageSerializerTests {
         String expectedString = "[{\"contentBytes\":\"ZGF0YQ==\",\"name\":\"document.pdf\",\"@odata.type\":\"#microsoft.graph.fileAttachment\",\"id\":\"54321\"},{\"item\":{\"end\":{\"dateTime\":\"2018-11-18T07:30:26.544Z\",\"timeZone\":\"UTC\"},\"start\":{\"dateTime\":\"2018-10-16T06:15:26.544Z\",\"timeZone\":\"UTC\"},\"subject\":\"Test Event Subject\",\"@odata.type\":\"microsoft.graph.event\",\"id\":\"1234\"},\"name\":\"Holiday event\",\"@odata.type\":\"#microsoft.graph.itemAttachment\"},{\"item\":{\"displayName\":\"displayname\",\"mobilePhone\":\"123456890\",\"@odata.type\":\"microsoft.graph.contact\"},\"name\":\"Attachment name\",\"@odata.type\":\"#microsoft.graph.itemAttachment\"}]";
         AttachmentCollectionResponse response = new AttachmentCollectionResponse();
         response.value = Arrays.asList(getFileAttachment(),getItemAttachmentWithEvent(),getItemAttachmentWithContact());
-        AttachmentCollectionPage attachmentCollectionPage = new AttachmentCollectionPage(response, null);
+        BaseCollectionPage<Attachment> attachmentCollectionPage = new BaseCollectionPage<Attachment>(response, null);
         JsonElement serializedJson = CollectionPageSerializer.serialize(attachmentCollectionPage, logger);
         logger.logDebug(serializedJson.toString());
         assertEquals(expectedString,serializedJson.toString());
@@ -55,7 +54,8 @@ public class CollectionPageSerializerTests {
     public void testAttachmentCollectionPageDeserialization() throws Exception {
 		String jsonString = "[{\"contentBytes\":\"ZGF0YQ==\",\"name\":\"document.pdf\",\"@odata.type\":\"#microsoft.graph.fileAttachment\",\"id\":\"54321\"},{\"@odata.type\":\"#microsoft.graph.itemAttachment\",\"name\":\"Holiday event\",\"id\":null,\"isInline\":null,\"size\":null,\"item\":{\"subject\":\"Test Event Subject\",\"start\":{\"dateTime\":\"2018-10-16T06:15:26.544Z\",\"timeZone\":\"UTC\"},\"end\":{\"dateTime\":\"2018-11-18T07:30:26.544Z\",\"timeZone\":\"UTC\"},\"@odata.type\":\"microsoft.graph.event\",\"id\":\"1234\"}},{\"@odata.type\":\"#microsoft.graph.itemAttachment\",\"name\":\"Attachment name\",\"id\":null,\"isInline\":null,\"size\":null,\"item\":{\"displayName\":\"displayname\",\"mobilePhone\":\"123456890\",\"@odata.type\":\"microsoft.graph.contact\"}}]";
 		JsonElement jsonElement = JsonParser.parseString(jsonString);
-		BaseCollectionPage<Attachment,?> attachmentCollectionPage = CollectionPageSerializer.deserialize(jsonElement, AttachmentCollectionPage.class, logger);
+        AttachmentCollectionResponse response = new AttachmentCollectionResponse();
+		BaseCollectionPage<Attachment> attachmentCollectionPage = CollectionPageSerializer.deserialize(jsonElement, (new BaseCollectionPage<Attachment>(response, null)).getClass(), logger);
 		for(Attachment attachment: attachmentCollectionPage.getCurrentPage()) {
 			if(attachment instanceof FileAttachment) {
 				FileAttachment fileAttachment = (FileAttachment)attachment;
