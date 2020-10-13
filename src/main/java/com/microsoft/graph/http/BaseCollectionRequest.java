@@ -45,23 +45,18 @@ import okhttp3.Request;
  *
  * @param <T> the type of the object in the collection 
  */
-public abstract class BaseCollectionRequest<T, T1 extends ICollectionResponse<T>> implements IHttpRequest {
+public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>> implements IHttpRequest {
 
     /**
      * The base request for this collection request
      */
-    private final BaseRequest<T1> baseRequest;
+    private final BaseRequest<T2> baseRequest;
 
     /**
      * The class for the response collection
      */
-    private final Class<T1> responseCollectionClass;
+    private final Class<T2> responseCollectionClass;
     
-    /**
-     * The class for the response
-     */
-    private final Class<? extends T> responseClass;
-
     /**
      * The class for the collection page
      */
@@ -74,21 +69,18 @@ public abstract class BaseCollectionRequest<T, T1 extends ICollectionResponse<T>
      * @param requestUrl          the URL to make the request against
      * @param client              the client which can issue the request
      * @param options             the options for this request
-     * @param responseClass       the tclass for the response
      * @param responseCollectionClass       the class for the response collection
      * @param collectionPageClass the class for the collection page
-     * @param <T1>                the response collection type
+     * @param <T2>                the response collection type
      */
     public BaseCollectionRequest(final String requestUrl,
                                  final IBaseClient client,
                                  final List<? extends Option> options,
-                                 final Class<? extends T> responseClass,
-                                 final Class<T1> responseCollectionClass,
+                                 final Class<T2> responseCollectionClass,
                                  final Class<BaseCollectionPage<T>> collectionPageClass) {
         this.responseCollectionClass = responseCollectionClass;
         this.collectionPageClass = collectionPageClass;
-        this.responseClass = responseClass;
-        baseRequest = new BaseRequest<T1>(requestUrl, client, options, responseCollectionClass) {};
+        baseRequest = new BaseRequest<T2>(requestUrl, client, options, responseCollectionClass) {};
     }
 
     /**
@@ -97,7 +89,7 @@ public abstract class BaseCollectionRequest<T, T1 extends ICollectionResponse<T>
      * @return the response object
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    protected T1 send() throws ClientException {
+    protected T2 send() throws ClientException {
         baseRequest.setHttpMethod(HttpMethod.GET);
         return baseRequest.getClient().getHttpProvider().send(this, responseCollectionClass, new ArrayList<com.microsoft.graph.options.Option>());
     }
@@ -110,9 +102,9 @@ public abstract class BaseCollectionRequest<T, T1 extends ICollectionResponse<T>
      * @return the response object
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    protected <BodyType> T1 post(final BodyType serializedObject) throws ClientException {
+    protected <BodyType> T2 post(final BodyType serializedObject) throws ClientException {
         baseRequest.setHttpMethod(HttpMethod.POST);
-        return baseRequest.getClient().getHttpProvider().send(this, responseClass, serializedObject);
+        return baseRequest.getClient().getHttpProvider().send(this, responseCollectionClass, serializedObject);
     }
 
     /**
@@ -208,7 +200,7 @@ public abstract class BaseCollectionRequest<T, T1 extends ICollectionResponse<T>
      *
      * @return the base request for this collection request
      */
-    public BaseRequest<T1> getBaseRequest() {
+    public BaseRequest<T2> getBaseRequest() {
         return baseRequest;
     }
 

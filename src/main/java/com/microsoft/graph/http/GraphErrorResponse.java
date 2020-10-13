@@ -60,6 +60,15 @@ public class GraphErrorResponse implements IJsonBackedObject {
     public ISerializer getSerializer() {
         return null;
     }
+
+    /**
+     * Gets the raw JSON object for this object as parsed from
+     * @return the JSON that this object was derived from
+     */
+    @Override
+    public JsonObject getRawObject() {
+        return rawObject;
+    }
 }
 
 

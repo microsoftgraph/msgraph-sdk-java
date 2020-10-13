@@ -95,7 +95,7 @@ public abstract class BaseCollectionWithReferencesRequestBuilder<T, T2 extends B
 		}
     }
 
-    public BaseCollectionReferenceRequestBuilder<T, T6> references(){
-        return new BaseCollectionReferenceRequestBuilder<T, T6>(getRequestUrl() + "/$ref", getClient(), getOptions(), collRequestClass);
+    public BaseCollectionReferenceRequestBuilder<T, T5, T6> references(){
+        return new BaseCollectionReferenceRequestBuilder<T, T5, T6>(getRequestUrl() + "/$ref", getClient(), getOptions(), collRequestClass);
     }
 }
