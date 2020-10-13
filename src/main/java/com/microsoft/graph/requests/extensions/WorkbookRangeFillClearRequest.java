@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Fill Clear Request.
  */
-public class WorkbookRangeFillClearRequest extends BaseRequest<WorkbookRangeFill> {
+public class WorkbookRangeFillClearRequest extends BaseRequest<Void> {
 
     /**
      * The request for this WorkbookRangeFillClear
@@ -28,7 +28,7 @@ public class WorkbookRangeFillClearRequest extends BaseRequest<WorkbookRangeFill
      * @param requestOptions the options for this request
      */
     public WorkbookRangeFillClearRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WorkbookRangeFill.class);
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**

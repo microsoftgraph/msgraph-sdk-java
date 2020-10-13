@@ -13,9 +13,16 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.models.extensions.OrgContact;
+import com.microsoft.graph.requests.extensions.OrgContactWithReferenceRequest;
+import com.microsoft.graph.requests.extensions.OrgContactReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.OrgContactWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.OrgContactCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.OrgContactCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.OrgContactCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -24,7 +31,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Org Contact Collection With References Request.
  */
-public class OrgContactCollectionWithReferencesRequest extends BaseCollectionRequest<OrgContact, OrgContactCollectionResponse> {
+public class OrgContactCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<OrgContact, OrgContactWithReferenceRequest, OrgContactReferenceRequestBuilder, OrgContactWithReferenceRequestBuilder, OrgContactCollectionResponse, OrgContactCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of OrgContact
@@ -35,7 +42,7 @@ public class OrgContactCollectionWithReferencesRequest extends BaseCollectionReq
      */
     @SuppressWarnings("unchecked")
     public OrgContactCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OrgContact.class, OrgContactCollectionResponse.class, (Class<BaseCollectionPage<OrgContact>>) (new BaseCollectionPage<OrgContact>(new java.util.ArrayList<OrgContact>(), null).getClass()));
+        super(requestUrl, client, requestOptions, OrgContactCollectionResponse.class, (Class<BaseCollectionPage<OrgContact>>) (new BaseCollectionPage<OrgContact>(new java.util.ArrayList<OrgContact>(), null).getClass()), OrgContactCollectionWithReferencesRequestBuilder.class);
     }
 
     public void get(final ICallback<? super BaseCollectionPage<OrgContact>> callback) {

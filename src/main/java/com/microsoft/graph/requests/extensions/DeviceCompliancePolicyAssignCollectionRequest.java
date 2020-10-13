@@ -41,7 +41,7 @@ public class DeviceCompliancePolicyAssignCollectionRequest extends BaseCollectio
      */
     @SuppressWarnings("unchecked")
     public DeviceCompliancePolicyAssignCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceCompliancePolicyAssignment.class, DeviceCompliancePolicyAssignCollectionResponse.class, (Class<BaseCollectionPage<DeviceCompliancePolicyAssignment>>) (new BaseCollectionPage<DeviceCompliancePolicyAssignment>(new java.util.ArrayList<DeviceCompliancePolicyAssignment>(), null).getClass()));
+        super(requestUrl, client, requestOptions, DeviceCompliancePolicyAssignCollectionResponse.class, (Class<BaseCollectionPage<DeviceCompliancePolicyAssignment>>) (new BaseCollectionPage<DeviceCompliancePolicyAssignment>(new java.util.ArrayList<DeviceCompliancePolicyAssignment>(), null).getClass()));
         body = new DeviceCompliancePolicyAssignBody();
     }
 

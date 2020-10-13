@@ -37,7 +37,7 @@ public class RoleDefinitionCollectionRequest extends BaseCollectionRequest<RoleD
      */
     @SuppressWarnings("unchecked")
     public RoleDefinitionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, RoleDefinition.class, RoleDefinitionCollectionResponse.class,(Class<BaseCollectionPage<RoleDefinition>>) (new BaseCollectionPage<RoleDefinition>(new java.util.ArrayList<RoleDefinition>(), null).getClass()));
+        super(requestUrl, client, requestOptions, RoleDefinitionCollectionResponse.class,(Class<BaseCollectionPage<RoleDefinition>>) (new BaseCollectionPage<RoleDefinition>(new java.util.ArrayList<RoleDefinition>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<RoleDefinition>> callback) {

@@ -41,7 +41,7 @@ public class SiteRemoveCollectionRequest extends BaseCollectionRequest<Site, Sit
      */
     @SuppressWarnings("unchecked")
     public SiteRemoveCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Site.class, SiteRemoveCollectionResponse.class, (Class<BaseCollectionPage<Site>>) (new BaseCollectionPage<Site>(new java.util.ArrayList<Site>(), null).getClass()));
+        super(requestUrl, client, requestOptions, SiteRemoveCollectionResponse.class, (Class<BaseCollectionPage<Site>>) (new BaseCollectionPage<Site>(new java.util.ArrayList<Site>(), null).getClass()));
         body = new SiteRemoveBody();
     }
 

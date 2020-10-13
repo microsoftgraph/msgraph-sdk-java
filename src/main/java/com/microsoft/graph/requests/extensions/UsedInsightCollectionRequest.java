@@ -37,7 +37,7 @@ public class UsedInsightCollectionRequest extends BaseCollectionRequest<UsedInsi
      */
     @SuppressWarnings("unchecked")
     public UsedInsightCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, UsedInsight.class, UsedInsightCollectionResponse.class,(Class<BaseCollectionPage<UsedInsight>>) (new BaseCollectionPage<UsedInsight>(new java.util.ArrayList<UsedInsight>(), null).getClass()));
+        super(requestUrl, client, requestOptions, UsedInsightCollectionResponse.class,(Class<BaseCollectionPage<UsedInsight>>) (new BaseCollectionPage<UsedInsight>(new java.util.ArrayList<UsedInsight>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<UsedInsight>> callback) {

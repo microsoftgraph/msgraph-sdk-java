@@ -39,7 +39,7 @@ public class AttachmentCollectionRequest extends BaseCollectionRequest<Attachmen
      */
     @SuppressWarnings("unchecked")
     public AttachmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Attachment.class, AttachmentCollectionResponse.class,(Class<BaseCollectionPage<Attachment>>) (new BaseCollectionPage<Attachment>(new java.util.ArrayList<Attachment>(), null).getClass()));
+        super(requestUrl, client, requestOptions, AttachmentCollectionResponse.class,(Class<BaseCollectionPage<Attachment>>) (new BaseCollectionPage<Attachment>(new java.util.ArrayList<Attachment>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<Attachment>> callback) {

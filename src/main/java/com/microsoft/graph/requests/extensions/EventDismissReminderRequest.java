@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Event Dismiss Reminder Request.
  */
-public class EventDismissReminderRequest extends BaseRequest<Event> {
+public class EventDismissReminderRequest extends BaseRequest<Void> {
 
     /**
      * The request for this EventDismissReminder
@@ -28,7 +28,7 @@ public class EventDismissReminderRequest extends BaseRequest<Event> {
      * @param requestOptions the options for this request
      */
     public EventDismissReminderRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Event.class);
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**

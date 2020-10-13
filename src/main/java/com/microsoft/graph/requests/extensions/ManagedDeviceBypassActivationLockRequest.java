@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Device Bypass Activation Lock Request.
  */
-public class ManagedDeviceBypassActivationLockRequest extends BaseRequest<ManagedDevice> {
+public class ManagedDeviceBypassActivationLockRequest extends BaseRequest<Void> {
 
     /**
      * The request for this ManagedDeviceBypassActivationLock
@@ -28,7 +28,7 @@ public class ManagedDeviceBypassActivationLockRequest extends BaseRequest<Manage
      * @param requestOptions the options for this request
      */
     public ManagedDeviceBypassActivationLockRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedDevice.class);
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**

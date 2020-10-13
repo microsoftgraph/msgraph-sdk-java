@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Remote Assistance Partner Disconnect Request.
  */
-public class RemoteAssistancePartnerDisconnectRequest extends BaseRequest<RemoteAssistancePartner> {
+public class RemoteAssistancePartnerDisconnectRequest extends BaseRequest<Void> {
 
     /**
      * The request for this RemoteAssistancePartnerDisconnect
@@ -28,7 +28,7 @@ public class RemoteAssistancePartnerDisconnectRequest extends BaseRequest<Remote
      * @param requestOptions the options for this request
      */
     public RemoteAssistancePartnerDisconnectRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, RemoteAssistancePartner.class);
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**

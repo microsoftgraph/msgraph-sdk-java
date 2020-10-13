@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Chart Series Count Request Builder.
  */
-public class WorkbookChartSeriesCountRequestBuilder extends BaseFunctionRequestBuilder<Int32> {
+public class WorkbookChartSeriesCountRequestBuilder extends BaseFunctionRequestBuilder<Integer> {
 
     /**
      * The request builder for this WorkbookChartSeriesCount

@@ -13,9 +13,16 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
+import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantWithReferenceRequest;
+import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -24,7 +31,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the OAuth2Permission Grant Collection With References Request.
  */
-public class OAuth2PermissionGrantCollectionWithReferencesRequest extends BaseCollectionRequest<OAuth2PermissionGrant, OAuth2PermissionGrantCollectionResponse> {
+public class OAuth2PermissionGrantCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<OAuth2PermissionGrant, OAuth2PermissionGrantWithReferenceRequest, OAuth2PermissionGrantReferenceRequestBuilder, OAuth2PermissionGrantWithReferenceRequestBuilder, OAuth2PermissionGrantCollectionResponse, OAuth2PermissionGrantCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of OAuth2PermissionGrant
@@ -35,7 +42,7 @@ public class OAuth2PermissionGrantCollectionWithReferencesRequest extends BaseCo
      */
     @SuppressWarnings("unchecked")
     public OAuth2PermissionGrantCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OAuth2PermissionGrant.class, OAuth2PermissionGrantCollectionResponse.class, (Class<BaseCollectionPage<OAuth2PermissionGrant>>) (new BaseCollectionPage<OAuth2PermissionGrant>(new java.util.ArrayList<OAuth2PermissionGrant>(), null).getClass()));
+        super(requestUrl, client, requestOptions, OAuth2PermissionGrantCollectionResponse.class, (Class<BaseCollectionPage<OAuth2PermissionGrant>>) (new BaseCollectionPage<OAuth2PermissionGrant>(new java.util.ArrayList<OAuth2PermissionGrant>(), null).getClass()), OAuth2PermissionGrantCollectionWithReferencesRequestBuilder.class);
     }
 
     public void get(final ICallback<? super BaseCollectionPage<OAuth2PermissionGrant>> callback) {

@@ -40,7 +40,7 @@ public class DirectoryObjectCheckMemberObjectsCollectionRequest extends BaseColl
      */
     @SuppressWarnings("unchecked")
     public DirectoryObjectCheckMemberObjectsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, String.class, DirectoryObjectCheckMemberObjectsCollectionResponse.class, (Class<BaseCollectionPage<String>>) (new BaseCollectionPage<String>(new java.util.ArrayList<String>(), null).getClass()));
+        super(requestUrl, client, requestOptions, DirectoryObjectCheckMemberObjectsCollectionResponse.class, (Class<BaseCollectionPage<String>>) (new BaseCollectionPage<String>(new java.util.ArrayList<String>(), null).getClass()));
         body = new DirectoryObjectCheckMemberObjectsBody();
     }
 

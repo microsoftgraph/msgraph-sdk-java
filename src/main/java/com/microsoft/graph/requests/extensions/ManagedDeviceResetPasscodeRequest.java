@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Device Reset Passcode Request.
  */
-public class ManagedDeviceResetPasscodeRequest extends BaseRequest<ManagedDevice> {
+public class ManagedDeviceResetPasscodeRequest extends BaseRequest<Void> {
 
     /**
      * The request for this ManagedDeviceResetPasscode
@@ -28,7 +28,7 @@ public class ManagedDeviceResetPasscodeRequest extends BaseRequest<ManagedDevice
      * @param requestOptions the options for this request
      */
     public ManagedDeviceResetPasscodeRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedDevice.class);
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**

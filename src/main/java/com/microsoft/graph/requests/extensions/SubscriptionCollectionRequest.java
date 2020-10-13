@@ -36,7 +36,7 @@ public class SubscriptionCollectionRequest extends BaseCollectionRequest<Subscri
      */
     @SuppressWarnings("unchecked")
     public SubscriptionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Subscription.class, SubscriptionCollectionResponse.class,(Class<BaseCollectionPage<Subscription>>) (new BaseCollectionPage<Subscription>(new java.util.ArrayList<Subscription>(), null).getClass()));
+        super(requestUrl, client, requestOptions, SubscriptionCollectionResponse.class,(Class<BaseCollectionPage<Subscription>>) (new BaseCollectionPage<Subscription>(new java.util.ArrayList<Subscription>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<Subscription>> callback) {

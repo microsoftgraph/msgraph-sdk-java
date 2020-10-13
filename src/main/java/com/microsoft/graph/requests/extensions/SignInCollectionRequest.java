@@ -37,7 +37,7 @@ public class SignInCollectionRequest extends BaseCollectionRequest<SignIn, SignI
      */
     @SuppressWarnings("unchecked")
     public SignInCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SignIn.class, SignInCollectionResponse.class,(Class<BaseCollectionPage<SignIn>>) (new BaseCollectionPage<SignIn>(new java.util.ArrayList<SignIn>(), null).getClass()));
+        super(requestUrl, client, requestOptions, SignInCollectionResponse.class,(Class<BaseCollectionPage<SignIn>>) (new BaseCollectionPage<SignIn>(new java.util.ArrayList<SignIn>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<SignIn>> callback) {

@@ -36,7 +36,7 @@ public class OrgContactCollectionRequest extends BaseCollectionRequest<OrgContac
      */
     @SuppressWarnings("unchecked")
     public OrgContactCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OrgContact.class, OrgContactCollectionResponse.class,(Class<BaseCollectionPage<OrgContact>>) (new BaseCollectionPage<OrgContact>(new java.util.ArrayList<OrgContact>(), null).getClass()));
+        super(requestUrl, client, requestOptions, OrgContactCollectionResponse.class,(Class<BaseCollectionPage<OrgContact>>) (new BaseCollectionPage<OrgContact>(new java.util.ArrayList<OrgContact>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<OrgContact>> callback) {

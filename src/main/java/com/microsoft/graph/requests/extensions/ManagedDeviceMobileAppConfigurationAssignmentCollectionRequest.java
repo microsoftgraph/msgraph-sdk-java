@@ -37,7 +37,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest exte
      */
     @SuppressWarnings("unchecked")
     public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfigurationAssignment.class, ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse.class,(Class<BaseCollectionPage<ManagedDeviceMobileAppConfigurationAssignment>>) (new BaseCollectionPage<ManagedDeviceMobileAppConfigurationAssignment>(new java.util.ArrayList<ManagedDeviceMobileAppConfigurationAssignment>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse.class,(Class<BaseCollectionPage<ManagedDeviceMobileAppConfigurationAssignment>>) (new BaseCollectionPage<ManagedDeviceMobileAppConfigurationAssignment>(new java.util.ArrayList<ManagedDeviceMobileAppConfigurationAssignment>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<ManagedDeviceMobileAppConfigurationAssignment>> callback) {

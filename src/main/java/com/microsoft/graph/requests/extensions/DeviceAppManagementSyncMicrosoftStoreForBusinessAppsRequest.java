@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device App Management Sync Microsoft Store For Business Apps Request.
  */
-public class DeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest extends BaseRequest<DeviceAppManagement> {
+public class DeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest extends BaseRequest<Void> {
 
     /**
      * The request for this DeviceAppManagementSyncMicrosoftStoreForBusinessApps
@@ -28,7 +28,7 @@ public class DeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest extends
      * @param requestOptions the options for this request
      */
     public DeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceAppManagement.class);
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**

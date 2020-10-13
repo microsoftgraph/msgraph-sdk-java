@@ -37,7 +37,7 @@ public class WorkbookRangeViewCollectionRequest extends BaseCollectionRequest<Wo
      */
     @SuppressWarnings("unchecked")
     public WorkbookRangeViewCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WorkbookRangeView.class, WorkbookRangeViewCollectionResponse.class,(Class<BaseCollectionPage<WorkbookRangeView>>) (new BaseCollectionPage<WorkbookRangeView>(new java.util.ArrayList<WorkbookRangeView>(), null).getClass()));
+        super(requestUrl, client, requestOptions, WorkbookRangeViewCollectionResponse.class,(Class<BaseCollectionPage<WorkbookRangeView>>) (new BaseCollectionPage<WorkbookRangeView>(new java.util.ArrayList<WorkbookRangeView>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<WorkbookRangeView>> callback) {

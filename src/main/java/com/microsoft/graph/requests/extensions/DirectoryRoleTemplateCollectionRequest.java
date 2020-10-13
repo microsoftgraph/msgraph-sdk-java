@@ -36,7 +36,7 @@ public class DirectoryRoleTemplateCollectionRequest extends BaseCollectionReques
      */
     @SuppressWarnings("unchecked")
     public DirectoryRoleTemplateCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DirectoryRoleTemplate.class, DirectoryRoleTemplateCollectionResponse.class,(Class<BaseCollectionPage<DirectoryRoleTemplate>>) (new BaseCollectionPage<DirectoryRoleTemplate>(new java.util.ArrayList<DirectoryRoleTemplate>(), null).getClass()));
+        super(requestUrl, client, requestOptions, DirectoryRoleTemplateCollectionResponse.class,(Class<BaseCollectionPage<DirectoryRoleTemplate>>) (new BaseCollectionPage<DirectoryRoleTemplate>(new java.util.ArrayList<DirectoryRoleTemplate>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<DirectoryRoleTemplate>> callback) {

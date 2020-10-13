@@ -37,7 +37,7 @@ public class DirectoryRoleDeltaCollectionRequest extends BaseCollectionRequest<D
      */
     @SuppressWarnings("unchecked")
     public DirectoryRoleDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DirectoryRole.class, DirectoryRoleDeltaCollectionResponse.class, (Class<BaseCollectionPage<DirectoryRole>>) (new BaseCollectionPage<DirectoryRole>(new java.util.ArrayList<DirectoryRole>(), null).getClass()));
+        super(requestUrl, client, requestOptions, DirectoryRoleDeltaCollectionResponse.class, (Class<BaseCollectionPage<DirectoryRole>>) (new BaseCollectionPage<DirectoryRole>(new java.util.ArrayList<DirectoryRole>(), null).getClass()));
     }
 
 

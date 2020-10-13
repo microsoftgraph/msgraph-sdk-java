@@ -37,7 +37,7 @@ public class ItemActivityStatCollectionRequest extends BaseCollectionRequest<Ite
      */
     @SuppressWarnings("unchecked")
     public ItemActivityStatCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ItemActivityStat.class, ItemActivityStatCollectionResponse.class,(Class<BaseCollectionPage<ItemActivityStat>>) (new BaseCollectionPage<ItemActivityStat>(new java.util.ArrayList<ItemActivityStat>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ItemActivityStatCollectionResponse.class,(Class<BaseCollectionPage<ItemActivityStat>>) (new BaseCollectionPage<ItemActivityStat>(new java.util.ArrayList<ItemActivityStat>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<ItemActivityStat>> callback) {

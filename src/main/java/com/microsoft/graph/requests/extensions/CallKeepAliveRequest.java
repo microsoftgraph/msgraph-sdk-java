@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Call Keep Alive Request.
  */
-public class CallKeepAliveRequest extends BaseRequest<Call> {
+public class CallKeepAliveRequest extends BaseRequest<Void> {
 
     /**
      * The request for this CallKeepAlive
@@ -28,7 +28,7 @@ public class CallKeepAliveRequest extends BaseRequest<Call> {
      * @param requestOptions the options for this request
      */
     public CallKeepAliveRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Call.class);
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**

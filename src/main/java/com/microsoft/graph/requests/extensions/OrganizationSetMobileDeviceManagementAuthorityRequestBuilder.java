@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Organization Set Mobile Device Management Authority Request Builder.
  */
-public class OrganizationSetMobileDeviceManagementAuthorityRequestBuilder extends BaseActionRequestBuilder<Int32> {
+public class OrganizationSetMobileDeviceManagementAuthorityRequestBuilder extends BaseActionRequestBuilder<Integer> {
 
     /**
      * The request builder for this OrganizationSetMobileDeviceManagementAuthority

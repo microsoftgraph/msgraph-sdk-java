@@ -38,7 +38,7 @@ public class MobileAppCollectionRequest extends BaseCollectionRequest<MobileApp,
      */
     @SuppressWarnings("unchecked")
     public MobileAppCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MobileApp.class, MobileAppCollectionResponse.class,(Class<BaseCollectionPage<MobileApp>>) (new BaseCollectionPage<MobileApp>(new java.util.ArrayList<MobileApp>(), null).getClass()));
+        super(requestUrl, client, requestOptions, MobileAppCollectionResponse.class,(Class<BaseCollectionPage<MobileApp>>) (new BaseCollectionPage<MobileApp>(new java.util.ArrayList<MobileApp>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<MobileApp>> callback) {

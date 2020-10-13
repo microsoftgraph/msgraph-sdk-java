@@ -36,7 +36,7 @@ public class IdentityProviderCollectionRequest extends BaseCollectionRequest<Ide
      */
     @SuppressWarnings("unchecked")
     public IdentityProviderCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, IdentityProvider.class, IdentityProviderCollectionResponse.class,(Class<BaseCollectionPage<IdentityProvider>>) (new BaseCollectionPage<IdentityProvider>(new java.util.ArrayList<IdentityProvider>(), null).getClass()));
+        super(requestUrl, client, requestOptions, IdentityProviderCollectionResponse.class,(Class<BaseCollectionPage<IdentityProvider>>) (new BaseCollectionPage<IdentityProvider>(new java.util.ArrayList<IdentityProvider>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<IdentityProvider>> callback) {

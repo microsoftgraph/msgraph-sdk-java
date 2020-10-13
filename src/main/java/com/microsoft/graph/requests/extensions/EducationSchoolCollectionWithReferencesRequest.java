@@ -13,9 +13,16 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.models.extensions.EducationSchool;
+import com.microsoft.graph.requests.extensions.EducationSchoolWithReferenceRequest;
+import com.microsoft.graph.requests.extensions.EducationSchoolReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationSchoolWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationSchoolCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.EducationSchoolCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.EducationSchoolCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -24,7 +31,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Education School Collection With References Request.
  */
-public class EducationSchoolCollectionWithReferencesRequest extends BaseCollectionRequest<EducationSchool, EducationSchoolCollectionResponse> {
+public class EducationSchoolCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<EducationSchool, EducationSchoolWithReferenceRequest, EducationSchoolReferenceRequestBuilder, EducationSchoolWithReferenceRequestBuilder, EducationSchoolCollectionResponse, EducationSchoolCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of EducationSchool
@@ -35,7 +42,7 @@ public class EducationSchoolCollectionWithReferencesRequest extends BaseCollecti
      */
     @SuppressWarnings("unchecked")
     public EducationSchoolCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, EducationSchool.class, EducationSchoolCollectionResponse.class, (Class<BaseCollectionPage<EducationSchool>>) (new BaseCollectionPage<EducationSchool>(new java.util.ArrayList<EducationSchool>(), null).getClass()));
+        super(requestUrl, client, requestOptions, EducationSchoolCollectionResponse.class, (Class<BaseCollectionPage<EducationSchool>>) (new BaseCollectionPage<EducationSchool>(new java.util.ArrayList<EducationSchool>(), null).getClass()), EducationSchoolCollectionWithReferencesRequestBuilder.class);
     }
 
     public void get(final ICallback<? super BaseCollectionPage<EducationSchool>> callback) {

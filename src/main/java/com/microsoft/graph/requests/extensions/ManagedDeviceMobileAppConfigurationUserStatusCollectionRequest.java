@@ -37,7 +37,7 @@ public class ManagedDeviceMobileAppConfigurationUserStatusCollectionRequest exte
      */
     @SuppressWarnings("unchecked")
     public ManagedDeviceMobileAppConfigurationUserStatusCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfigurationUserStatus.class, ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse.class,(Class<BaseCollectionPage<ManagedDeviceMobileAppConfigurationUserStatus>>) (new BaseCollectionPage<ManagedDeviceMobileAppConfigurationUserStatus>(new java.util.ArrayList<ManagedDeviceMobileAppConfigurationUserStatus>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse.class,(Class<BaseCollectionPage<ManagedDeviceMobileAppConfigurationUserStatus>>) (new BaseCollectionPage<ManagedDeviceMobileAppConfigurationUserStatus>(new java.util.ArrayList<ManagedDeviceMobileAppConfigurationUserStatus>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<ManagedDeviceMobileAppConfigurationUserStatus>> callback) {

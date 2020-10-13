@@ -37,7 +37,7 @@ public class DeviceCompliancePolicySettingStateSummaryCollectionRequest extends 
      */
     @SuppressWarnings("unchecked")
     public DeviceCompliancePolicySettingStateSummaryCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceCompliancePolicySettingStateSummary.class, DeviceCompliancePolicySettingStateSummaryCollectionResponse.class,(Class<BaseCollectionPage<DeviceCompliancePolicySettingStateSummary>>) (new BaseCollectionPage<DeviceCompliancePolicySettingStateSummary>(new java.util.ArrayList<DeviceCompliancePolicySettingStateSummary>(), null).getClass()));
+        super(requestUrl, client, requestOptions, DeviceCompliancePolicySettingStateSummaryCollectionResponse.class,(Class<BaseCollectionPage<DeviceCompliancePolicySettingStateSummary>>) (new BaseCollectionPage<DeviceCompliancePolicySettingStateSummary>(new java.util.ArrayList<DeviceCompliancePolicySettingStateSummary>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<DeviceCompliancePolicySettingStateSummary>> callback) {

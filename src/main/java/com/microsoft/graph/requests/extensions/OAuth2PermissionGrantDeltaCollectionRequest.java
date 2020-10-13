@@ -37,7 +37,7 @@ public class OAuth2PermissionGrantDeltaCollectionRequest extends BaseCollectionR
      */
     @SuppressWarnings("unchecked")
     public OAuth2PermissionGrantDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OAuth2PermissionGrant.class, OAuth2PermissionGrantDeltaCollectionResponse.class, (Class<BaseCollectionPage<OAuth2PermissionGrant>>) (new BaseCollectionPage<OAuth2PermissionGrant>(new java.util.ArrayList<OAuth2PermissionGrant>(), null).getClass()));
+        super(requestUrl, client, requestOptions, OAuth2PermissionGrantDeltaCollectionResponse.class, (Class<BaseCollectionPage<OAuth2PermissionGrant>>) (new BaseCollectionPage<OAuth2PermissionGrant>(new java.util.ArrayList<OAuth2PermissionGrant>(), null).getClass()));
     }
 
 

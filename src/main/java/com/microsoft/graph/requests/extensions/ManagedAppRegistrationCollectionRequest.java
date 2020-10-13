@@ -37,7 +37,7 @@ public class ManagedAppRegistrationCollectionRequest extends BaseCollectionReque
      */
     @SuppressWarnings("unchecked")
     public ManagedAppRegistrationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedAppRegistration.class, ManagedAppRegistrationCollectionResponse.class,(Class<BaseCollectionPage<ManagedAppRegistration>>) (new BaseCollectionPage<ManagedAppRegistration>(new java.util.ArrayList<ManagedAppRegistration>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ManagedAppRegistrationCollectionResponse.class,(Class<BaseCollectionPage<ManagedAppRegistration>>) (new BaseCollectionPage<ManagedAppRegistration>(new java.util.ArrayList<ManagedAppRegistration>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<ManagedAppRegistration>> callback) {

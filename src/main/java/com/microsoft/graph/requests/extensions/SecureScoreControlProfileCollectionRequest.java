@@ -37,7 +37,7 @@ public class SecureScoreControlProfileCollectionRequest extends BaseCollectionRe
      */
     @SuppressWarnings("unchecked")
     public SecureScoreControlProfileCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SecureScoreControlProfile.class, SecureScoreControlProfileCollectionResponse.class,(Class<BaseCollectionPage<SecureScoreControlProfile>>) (new BaseCollectionPage<SecureScoreControlProfile>(new java.util.ArrayList<SecureScoreControlProfile>(), null).getClass()));
+        super(requestUrl, client, requestOptions, SecureScoreControlProfileCollectionResponse.class,(Class<BaseCollectionPage<SecureScoreControlProfile>>) (new BaseCollectionPage<SecureScoreControlProfile>(new java.util.ArrayList<SecureScoreControlProfile>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<SecureScoreControlProfile>> callback) {

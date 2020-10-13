@@ -38,7 +38,7 @@ public class OnenoteSectionCollectionRequest extends BaseCollectionRequest<Oneno
      */
     @SuppressWarnings("unchecked")
     public OnenoteSectionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OnenoteSection.class, OnenoteSectionCollectionResponse.class,(Class<BaseCollectionPage<OnenoteSection>>) (new BaseCollectionPage<OnenoteSection>(new java.util.ArrayList<OnenoteSection>(), null).getClass()));
+        super(requestUrl, client, requestOptions, OnenoteSectionCollectionResponse.class,(Class<BaseCollectionPage<OnenoteSection>>) (new BaseCollectionPage<OnenoteSection>(new java.util.ArrayList<OnenoteSection>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<OnenoteSection>> callback) {

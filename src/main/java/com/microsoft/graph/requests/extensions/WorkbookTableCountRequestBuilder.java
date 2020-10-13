@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Table Count Request Builder.
  */
-public class WorkbookTableCountRequestBuilder extends BaseFunctionRequestBuilder<Int32> {
+public class WorkbookTableCountRequestBuilder extends BaseFunctionRequestBuilder<Integer> {
 
     /**
      * The request builder for this WorkbookTableCount

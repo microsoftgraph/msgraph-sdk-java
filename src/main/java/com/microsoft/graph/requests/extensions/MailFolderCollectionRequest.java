@@ -36,7 +36,7 @@ public class MailFolderCollectionRequest extends BaseCollectionRequest<MailFolde
      */
     @SuppressWarnings("unchecked")
     public MailFolderCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MailFolder.class, MailFolderCollectionResponse.class,(Class<BaseCollectionPage<MailFolder>>) (new BaseCollectionPage<MailFolder>(new java.util.ArrayList<MailFolder>(), null).getClass()));
+        super(requestUrl, client, requestOptions, MailFolderCollectionResponse.class,(Class<BaseCollectionPage<MailFolder>>) (new BaseCollectionPage<MailFolder>(new java.util.ArrayList<MailFolder>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<MailFolder>> callback) {

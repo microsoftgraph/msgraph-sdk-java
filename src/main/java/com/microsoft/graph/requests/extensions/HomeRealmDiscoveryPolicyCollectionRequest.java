@@ -37,7 +37,7 @@ public class HomeRealmDiscoveryPolicyCollectionRequest extends BaseCollectionReq
      */
     @SuppressWarnings("unchecked")
     public HomeRealmDiscoveryPolicyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicy.class, HomeRealmDiscoveryPolicyCollectionResponse.class,(Class<BaseCollectionPage<HomeRealmDiscoveryPolicy>>) (new BaseCollectionPage<HomeRealmDiscoveryPolicy>(new java.util.ArrayList<HomeRealmDiscoveryPolicy>(), null).getClass()));
+        super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicyCollectionResponse.class,(Class<BaseCollectionPage<HomeRealmDiscoveryPolicy>>) (new BaseCollectionPage<HomeRealmDiscoveryPolicy>(new java.util.ArrayList<HomeRealmDiscoveryPolicy>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<HomeRealmDiscoveryPolicy>> callback) {

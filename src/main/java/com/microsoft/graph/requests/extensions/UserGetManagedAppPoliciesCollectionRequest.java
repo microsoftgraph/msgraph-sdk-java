@@ -37,7 +37,7 @@ public class UserGetManagedAppPoliciesCollectionRequest extends BaseCollectionRe
      */
     @SuppressWarnings("unchecked")
     public UserGetManagedAppPoliciesCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedAppPolicy.class, UserGetManagedAppPoliciesCollectionResponse.class, (Class<BaseCollectionPage<ManagedAppPolicy>>) (new BaseCollectionPage<ManagedAppPolicy>(new java.util.ArrayList<ManagedAppPolicy>(), null).getClass()));
+        super(requestUrl, client, requestOptions, UserGetManagedAppPoliciesCollectionResponse.class, (Class<BaseCollectionPage<ManagedAppPolicy>>) (new BaseCollectionPage<ManagedAppPolicy>(new java.util.ArrayList<ManagedAppPolicy>(), null).getClass()));
     }
 
 

@@ -37,7 +37,7 @@ public class ChatMessageHostedContentCollectionRequest extends BaseCollectionReq
      */
     @SuppressWarnings("unchecked")
     public ChatMessageHostedContentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ChatMessageHostedContent.class, ChatMessageHostedContentCollectionResponse.class,(Class<BaseCollectionPage<ChatMessageHostedContent>>) (new BaseCollectionPage<ChatMessageHostedContent>(new java.util.ArrayList<ChatMessageHostedContent>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ChatMessageHostedContentCollectionResponse.class,(Class<BaseCollectionPage<ChatMessageHostedContent>>) (new BaseCollectionPage<ChatMessageHostedContent>(new java.util.ArrayList<ChatMessageHostedContent>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<ChatMessageHostedContent>> callback) {

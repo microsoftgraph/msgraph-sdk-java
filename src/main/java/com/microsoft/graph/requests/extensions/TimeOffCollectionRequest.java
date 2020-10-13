@@ -37,7 +37,7 @@ public class TimeOffCollectionRequest extends BaseCollectionRequest<TimeOff, Tim
      */
     @SuppressWarnings("unchecked")
     public TimeOffCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TimeOff.class, TimeOffCollectionResponse.class,(Class<BaseCollectionPage<TimeOff>>) (new BaseCollectionPage<TimeOff>(new java.util.ArrayList<TimeOff>(), null).getClass()));
+        super(requestUrl, client, requestOptions, TimeOffCollectionResponse.class,(Class<BaseCollectionPage<TimeOff>>) (new BaseCollectionPage<TimeOff>(new java.util.ArrayList<TimeOff>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<TimeOff>> callback) {

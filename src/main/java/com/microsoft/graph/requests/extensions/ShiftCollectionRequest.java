@@ -37,7 +37,7 @@ public class ShiftCollectionRequest extends BaseCollectionRequest<Shift, ShiftCo
      */
     @SuppressWarnings("unchecked")
     public ShiftCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Shift.class, ShiftCollectionResponse.class,(Class<BaseCollectionPage<Shift>>) (new BaseCollectionPage<Shift>(new java.util.ArrayList<Shift>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ShiftCollectionResponse.class,(Class<BaseCollectionPage<Shift>>) (new BaseCollectionPage<Shift>(new java.util.ArrayList<Shift>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<Shift>> callback) {

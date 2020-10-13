@@ -37,7 +37,7 @@ public class WindowsInformationProtectionAppLearningSummaryCollectionRequest ext
      */
     @SuppressWarnings("unchecked")
     public WindowsInformationProtectionAppLearningSummaryCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WindowsInformationProtectionAppLearningSummary.class, WindowsInformationProtectionAppLearningSummaryCollectionResponse.class,(Class<BaseCollectionPage<WindowsInformationProtectionAppLearningSummary>>) (new BaseCollectionPage<WindowsInformationProtectionAppLearningSummary>(new java.util.ArrayList<WindowsInformationProtectionAppLearningSummary>(), null).getClass()));
+        super(requestUrl, client, requestOptions, WindowsInformationProtectionAppLearningSummaryCollectionResponse.class,(Class<BaseCollectionPage<WindowsInformationProtectionAppLearningSummary>>) (new BaseCollectionPage<WindowsInformationProtectionAppLearningSummary>(new java.util.ArrayList<WindowsInformationProtectionAppLearningSummary>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<WindowsInformationProtectionAppLearningSummary>> callback) {

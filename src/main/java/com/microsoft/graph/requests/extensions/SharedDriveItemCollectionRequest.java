@@ -36,7 +36,7 @@ public class SharedDriveItemCollectionRequest extends BaseCollectionRequest<Shar
      */
     @SuppressWarnings("unchecked")
     public SharedDriveItemCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SharedDriveItem.class, SharedDriveItemCollectionResponse.class,(Class<BaseCollectionPage<SharedDriveItem>>) (new BaseCollectionPage<SharedDriveItem>(new java.util.ArrayList<SharedDriveItem>(), null).getClass()));
+        super(requestUrl, client, requestOptions, SharedDriveItemCollectionResponse.class,(Class<BaseCollectionPage<SharedDriveItem>>) (new BaseCollectionPage<SharedDriveItem>(new java.util.ArrayList<SharedDriveItem>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<SharedDriveItem>> callback) {

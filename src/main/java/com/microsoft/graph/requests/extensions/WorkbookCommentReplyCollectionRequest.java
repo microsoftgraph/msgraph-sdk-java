@@ -37,7 +37,7 @@ public class WorkbookCommentReplyCollectionRequest extends BaseCollectionRequest
      */
     @SuppressWarnings("unchecked")
     public WorkbookCommentReplyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WorkbookCommentReply.class, WorkbookCommentReplyCollectionResponse.class,(Class<BaseCollectionPage<WorkbookCommentReply>>) (new BaseCollectionPage<WorkbookCommentReply>(new java.util.ArrayList<WorkbookCommentReply>(), null).getClass()));
+        super(requestUrl, client, requestOptions, WorkbookCommentReplyCollectionResponse.class,(Class<BaseCollectionPage<WorkbookCommentReply>>) (new BaseCollectionPage<WorkbookCommentReply>(new java.util.ArrayList<WorkbookCommentReply>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<WorkbookCommentReply>> callback) {

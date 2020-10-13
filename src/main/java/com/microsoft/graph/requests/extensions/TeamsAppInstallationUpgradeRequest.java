@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Teams App Installation Upgrade Request.
  */
-public class TeamsAppInstallationUpgradeRequest extends BaseRequest<TeamsAppInstallation> {
+public class TeamsAppInstallationUpgradeRequest extends BaseRequest<Void> {
 
     /**
      * The request for this TeamsAppInstallationUpgrade
@@ -28,7 +28,7 @@ public class TeamsAppInstallationUpgradeRequest extends BaseRequest<TeamsAppInst
      * @param requestOptions the options for this request
      */
     public TeamsAppInstallationUpgradeRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TeamsAppInstallation.class);
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**

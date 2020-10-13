@@ -36,7 +36,7 @@ public class TeamsTemplateCollectionRequest extends BaseCollectionRequest<TeamsT
      */
     @SuppressWarnings("unchecked")
     public TeamsTemplateCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TeamsTemplate.class, TeamsTemplateCollectionResponse.class,(Class<BaseCollectionPage<TeamsTemplate>>) (new BaseCollectionPage<TeamsTemplate>(new java.util.ArrayList<TeamsTemplate>(), null).getClass()));
+        super(requestUrl, client, requestOptions, TeamsTemplateCollectionResponse.class,(Class<BaseCollectionPage<TeamsTemplate>>) (new BaseCollectionPage<TeamsTemplate>(new java.util.ArrayList<TeamsTemplate>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<TeamsTemplate>> callback) {

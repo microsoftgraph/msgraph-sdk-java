@@ -37,7 +37,7 @@ public class ContactCollectionRequest extends BaseCollectionRequest<Contact, Con
      */
     @SuppressWarnings("unchecked")
     public ContactCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Contact.class, ContactCollectionResponse.class,(Class<BaseCollectionPage<Contact>>) (new BaseCollectionPage<Contact>(new java.util.ArrayList<Contact>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ContactCollectionResponse.class,(Class<BaseCollectionPage<Contact>>) (new BaseCollectionPage<Contact>(new java.util.ArrayList<Contact>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<Contact>> callback) {

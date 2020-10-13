@@ -37,7 +37,7 @@ public class ClaimsMappingPolicyCollectionRequest extends BaseCollectionRequest<
      */
     @SuppressWarnings("unchecked")
     public ClaimsMappingPolicyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ClaimsMappingPolicy.class, ClaimsMappingPolicyCollectionResponse.class,(Class<BaseCollectionPage<ClaimsMappingPolicy>>) (new BaseCollectionPage<ClaimsMappingPolicy>(new java.util.ArrayList<ClaimsMappingPolicy>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ClaimsMappingPolicyCollectionResponse.class,(Class<BaseCollectionPage<ClaimsMappingPolicy>>) (new BaseCollectionPage<ClaimsMappingPolicy>(new java.util.ArrayList<ClaimsMappingPolicy>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<ClaimsMappingPolicy>> callback) {

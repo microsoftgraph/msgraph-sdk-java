@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Device Shut Down Request.
  */
-public class ManagedDeviceShutDownRequest extends BaseRequest<ManagedDevice> {
+public class ManagedDeviceShutDownRequest extends BaseRequest<Void> {
 
     /**
      * The request for this ManagedDeviceShutDown
@@ -28,7 +28,7 @@ public class ManagedDeviceShutDownRequest extends BaseRequest<ManagedDevice> {
      * @param requestOptions the options for this request
      */
     public ManagedDeviceShutDownRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedDevice.class);
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**

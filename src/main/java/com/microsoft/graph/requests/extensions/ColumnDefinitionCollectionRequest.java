@@ -37,7 +37,7 @@ public class ColumnDefinitionCollectionRequest extends BaseCollectionRequest<Col
      */
     @SuppressWarnings("unchecked")
     public ColumnDefinitionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ColumnDefinition.class, ColumnDefinitionCollectionResponse.class,(Class<BaseCollectionPage<ColumnDefinition>>) (new BaseCollectionPage<ColumnDefinition>(new java.util.ArrayList<ColumnDefinition>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ColumnDefinitionCollectionResponse.class,(Class<BaseCollectionPage<ColumnDefinition>>) (new BaseCollectionPage<ColumnDefinition>(new java.util.ArrayList<ColumnDefinition>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<ColumnDefinition>> callback) {

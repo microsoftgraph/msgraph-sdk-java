@@ -37,7 +37,7 @@ public class UserReminderViewCollectionRequest extends BaseCollectionRequest<Rem
      */
     @SuppressWarnings("unchecked")
     public UserReminderViewCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Reminder.class, UserReminderViewCollectionResponse.class, (Class<BaseCollectionPage<Reminder>>) (new BaseCollectionPage<Reminder>(new java.util.ArrayList<Reminder>(), null).getClass()));
+        super(requestUrl, client, requestOptions, UserReminderViewCollectionResponse.class, (Class<BaseCollectionPage<Reminder>>) (new BaseCollectionPage<Reminder>(new java.util.ArrayList<Reminder>(), null).getClass()));
     }
 
 

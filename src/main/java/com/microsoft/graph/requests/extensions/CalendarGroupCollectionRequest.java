@@ -37,7 +37,7 @@ public class CalendarGroupCollectionRequest extends BaseCollectionRequest<Calend
      */
     @SuppressWarnings("unchecked")
     public CalendarGroupCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, CalendarGroup.class, CalendarGroupCollectionResponse.class,(Class<BaseCollectionPage<CalendarGroup>>) (new BaseCollectionPage<CalendarGroup>(new java.util.ArrayList<CalendarGroup>(), null).getClass()));
+        super(requestUrl, client, requestOptions, CalendarGroupCollectionResponse.class,(Class<BaseCollectionPage<CalendarGroup>>) (new BaseCollectionPage<CalendarGroup>(new java.util.ArrayList<CalendarGroup>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<CalendarGroup>> callback) {

@@ -37,7 +37,7 @@ public class TeamsAppDefinitionCollectionRequest extends BaseCollectionRequest<T
      */
     @SuppressWarnings("unchecked")
     public TeamsAppDefinitionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TeamsAppDefinition.class, TeamsAppDefinitionCollectionResponse.class,(Class<BaseCollectionPage<TeamsAppDefinition>>) (new BaseCollectionPage<TeamsAppDefinition>(new java.util.ArrayList<TeamsAppDefinition>(), null).getClass()));
+        super(requestUrl, client, requestOptions, TeamsAppDefinitionCollectionResponse.class,(Class<BaseCollectionPage<TeamsAppDefinition>>) (new BaseCollectionPage<TeamsAppDefinition>(new java.util.ArrayList<TeamsAppDefinition>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<TeamsAppDefinition>> callback) {

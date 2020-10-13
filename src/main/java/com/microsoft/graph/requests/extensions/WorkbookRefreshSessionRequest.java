@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Refresh Session Request.
  */
-public class WorkbookRefreshSessionRequest extends BaseRequest<Workbook> {
+public class WorkbookRefreshSessionRequest extends BaseRequest<Void> {
 
     /**
      * The request for this WorkbookRefreshSession
@@ -28,7 +28,7 @@ public class WorkbookRefreshSessionRequest extends BaseRequest<Workbook> {
      * @param requestOptions the options for this request
      */
     public WorkbookRefreshSessionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Workbook.class);
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**

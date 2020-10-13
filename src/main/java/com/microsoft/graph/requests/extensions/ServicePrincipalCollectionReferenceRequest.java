@@ -18,10 +18,12 @@ import com.microsoft.graph.requests.extensions.ServicePrincipalReferenceRequestB
 import com.microsoft.graph.requests.extensions.ServicePrincipalWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionWithReferencesRequest;
 import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionWithReferencesRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.http.ReferenceRequestBody;
@@ -42,7 +44,7 @@ public class ServicePrincipalCollectionReferenceRequest extends BaseCollectionWi
      */
     @SuppressWarnings("unchecked")
     public ServicePrincipalCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ServicePrincipal.class, ServicePrincipalCollectionResponse.class, (Class<BaseCollectionPage<ServicePrincipal>>) (new BaseCollectionPage<ServicePrincipal>(new java.util.ArrayList<ServicePrincipal>(), null).getClass()), ServicePrincipalCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, ServicePrincipalCollectionResponse.class, (Class<BaseCollectionPage<ServicePrincipal>>) (new BaseCollectionPage<ServicePrincipal>(new java.util.ArrayList<ServicePrincipal>(), null).getClass()), ServicePrincipalCollectionWithReferencesRequestBuilder.class);
     }
 
     public void post(final ServicePrincipal newServicePrincipal, final ICallback<? super ServicePrincipal> callback) {

@@ -17,10 +17,12 @@ import com.microsoft.graph.requests.extensions.AppRoleAssignmentReferenceRequest
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionWithReferencesRequest;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.models.extensions.AppRoleAssignment;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionWithReferencesRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.http.ReferenceRequestBody;
@@ -41,7 +43,7 @@ public class AppRoleAssignmentCollectionReferenceRequest extends BaseCollectionW
      */
     @SuppressWarnings("unchecked")
     public AppRoleAssignmentCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, AppRoleAssignment.class, AppRoleAssignmentCollectionResponse.class, (Class<BaseCollectionPage<AppRoleAssignment>>) (new BaseCollectionPage<AppRoleAssignment>(new java.util.ArrayList<AppRoleAssignment>(), null).getClass()), AppRoleAssignmentCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, AppRoleAssignmentCollectionResponse.class, (Class<BaseCollectionPage<AppRoleAssignment>>) (new BaseCollectionPage<AppRoleAssignment>(new java.util.ArrayList<AppRoleAssignment>(), null).getClass()), AppRoleAssignmentCollectionWithReferencesRequestBuilder.class);
     }
 
     public void post(final AppRoleAssignment newAppRoleAssignment, final ICallback<? super AppRoleAssignment> callback) {

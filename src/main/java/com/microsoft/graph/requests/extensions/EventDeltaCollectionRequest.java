@@ -37,7 +37,7 @@ public class EventDeltaCollectionRequest extends BaseCollectionRequest<Event, Ev
      */
     @SuppressWarnings("unchecked")
     public EventDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Event.class, EventDeltaCollectionResponse.class, (Class<BaseCollectionPage<Event>>) (new BaseCollectionPage<Event>(new java.util.ArrayList<Event>(), null).getClass()));
+        super(requestUrl, client, requestOptions, EventDeltaCollectionResponse.class, (Class<BaseCollectionPage<Event>>) (new BaseCollectionPage<Event>(new java.util.ArrayList<Event>(), null).getClass()));
     }
 
 

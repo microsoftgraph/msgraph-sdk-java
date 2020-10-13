@@ -37,7 +37,7 @@ public class SegmentCollectionRequest extends BaseCollectionRequest<Segment, Seg
      */
     @SuppressWarnings("unchecked")
     public SegmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Segment.class, SegmentCollectionResponse.class,(Class<BaseCollectionPage<Segment>>) (new BaseCollectionPage<Segment>(new java.util.ArrayList<Segment>(), null).getClass()));
+        super(requestUrl, client, requestOptions, SegmentCollectionResponse.class,(Class<BaseCollectionPage<Segment>>) (new BaseCollectionPage<Segment>(new java.util.ArrayList<Segment>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<Segment>> callback) {

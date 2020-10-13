@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Range Border Count Request Builder.
  */
-public class WorkbookRangeBorderCountRequestBuilder extends BaseFunctionRequestBuilder<Int32> {
+public class WorkbookRangeBorderCountRequestBuilder extends BaseFunctionRequestBuilder<Integer> {
 
     /**
      * The request builder for this WorkbookRangeBorderCount

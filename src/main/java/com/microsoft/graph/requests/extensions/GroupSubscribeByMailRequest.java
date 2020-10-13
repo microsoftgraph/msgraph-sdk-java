@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Group Subscribe By Mail Request.
  */
-public class GroupSubscribeByMailRequest extends BaseRequest<Group> {
+public class GroupSubscribeByMailRequest extends BaseRequest<Void> {
 
     /**
      * The request for this GroupSubscribeByMail
@@ -28,7 +28,7 @@ public class GroupSubscribeByMailRequest extends BaseRequest<Group> {
      * @param requestOptions the options for this request
      */
     public GroupSubscribeByMailRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Group.class);
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**

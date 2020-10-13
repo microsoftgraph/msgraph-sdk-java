@@ -37,7 +37,7 @@ public class DeviceManagementGetEffectivePermissionsCollectionRequest extends Ba
      */
     @SuppressWarnings("unchecked")
     public DeviceManagementGetEffectivePermissionsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, RolePermission.class, DeviceManagementGetEffectivePermissionsCollectionResponse.class, (Class<BaseCollectionPage<RolePermission>>) (new BaseCollectionPage<RolePermission>(new java.util.ArrayList<RolePermission>(), null).getClass()));
+        super(requestUrl, client, requestOptions, DeviceManagementGetEffectivePermissionsCollectionResponse.class, (Class<BaseCollectionPage<RolePermission>>) (new BaseCollectionPage<RolePermission>(new java.util.ArrayList<RolePermission>(), null).getClass()));
     }
 
 

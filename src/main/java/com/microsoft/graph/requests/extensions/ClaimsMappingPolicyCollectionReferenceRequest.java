@@ -17,10 +17,12 @@ import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyReferenceReque
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionWithReferencesRequest;
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.models.extensions.ClaimsMappingPolicy;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionWithReferencesRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.http.ReferenceRequestBody;
@@ -41,7 +43,7 @@ public class ClaimsMappingPolicyCollectionReferenceRequest extends BaseCollectio
      */
     @SuppressWarnings("unchecked")
     public ClaimsMappingPolicyCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ClaimsMappingPolicy.class, ClaimsMappingPolicyCollectionResponse.class, (Class<BaseCollectionPage<ClaimsMappingPolicy>>) (new BaseCollectionPage<ClaimsMappingPolicy>(new java.util.ArrayList<ClaimsMappingPolicy>(), null).getClass()), ClaimsMappingPolicyCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, ClaimsMappingPolicyCollectionResponse.class, (Class<BaseCollectionPage<ClaimsMappingPolicy>>) (new BaseCollectionPage<ClaimsMappingPolicy>(new java.util.ArrayList<ClaimsMappingPolicy>(), null).getClass()), ClaimsMappingPolicyCollectionWithReferencesRequestBuilder.class);
     }
 
     public void post(final ClaimsMappingPolicy newClaimsMappingPolicy, final ICallback<? super ClaimsMappingPolicy> callback) {

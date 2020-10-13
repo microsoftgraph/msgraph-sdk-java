@@ -39,7 +39,7 @@ public class TargetedManagedAppConfigurationCollectionRequest extends BaseCollec
      */
     @SuppressWarnings("unchecked")
     public TargetedManagedAppConfigurationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TargetedManagedAppConfiguration.class, TargetedManagedAppConfigurationCollectionResponse.class,(Class<BaseCollectionPage<TargetedManagedAppConfiguration>>) (new BaseCollectionPage<TargetedManagedAppConfiguration>(new java.util.ArrayList<TargetedManagedAppConfiguration>(), null).getClass()));
+        super(requestUrl, client, requestOptions, TargetedManagedAppConfigurationCollectionResponse.class,(Class<BaseCollectionPage<TargetedManagedAppConfiguration>>) (new BaseCollectionPage<TargetedManagedAppConfiguration>(new java.util.ArrayList<TargetedManagedAppConfiguration>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<TargetedManagedAppConfiguration>> callback) {

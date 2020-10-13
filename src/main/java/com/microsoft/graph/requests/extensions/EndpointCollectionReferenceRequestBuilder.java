@@ -20,10 +20,10 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Endpoint Collection Reference Request Builder.
  */
-public class EndpointCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<ServicePrincipal, EndpointCollectionReferenceRequest> {
+public class EndpointCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<Endpoint, EndpointCollectionResponse, EndpointCollectionReferenceRequest> {
 
     /**
-     * The request builder for this collection of ServicePrincipal
+     * The request builder for this collection of Endpoint
      *
      * @param requestUrl     the request URL
      * @param client         the service client

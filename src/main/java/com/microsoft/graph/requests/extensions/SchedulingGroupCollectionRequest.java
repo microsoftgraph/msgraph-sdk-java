@@ -37,7 +37,7 @@ public class SchedulingGroupCollectionRequest extends BaseCollectionRequest<Sche
      */
     @SuppressWarnings("unchecked")
     public SchedulingGroupCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SchedulingGroup.class, SchedulingGroupCollectionResponse.class,(Class<BaseCollectionPage<SchedulingGroup>>) (new BaseCollectionPage<SchedulingGroup>(new java.util.ArrayList<SchedulingGroup>(), null).getClass()));
+        super(requestUrl, client, requestOptions, SchedulingGroupCollectionResponse.class,(Class<BaseCollectionPage<SchedulingGroup>>) (new BaseCollectionPage<SchedulingGroup>(new java.util.ArrayList<SchedulingGroup>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<SchedulingGroup>> callback) {

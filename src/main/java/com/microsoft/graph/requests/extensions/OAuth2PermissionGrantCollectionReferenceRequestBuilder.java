@@ -20,10 +20,10 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the OAuth2Permission Grant Collection Reference Request Builder.
  */
-public class OAuth2PermissionGrantCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<ServicePrincipal, OAuth2PermissionGrantCollectionReferenceRequest> {
+public class OAuth2PermissionGrantCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<OAuth2PermissionGrant, OAuth2PermissionGrantCollectionResponse, OAuth2PermissionGrantCollectionReferenceRequest> {
 
     /**
-     * The request builder for this collection of ServicePrincipal
+     * The request builder for this collection of OAuth2PermissionGrant
      *
      * @param requestUrl     the request URL
      * @param client         the service client

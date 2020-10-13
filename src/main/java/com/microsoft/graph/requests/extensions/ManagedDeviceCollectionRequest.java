@@ -38,7 +38,7 @@ public class ManagedDeviceCollectionRequest extends BaseCollectionRequest<Manage
      */
     @SuppressWarnings("unchecked")
     public ManagedDeviceCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedDevice.class, ManagedDeviceCollectionResponse.class,(Class<BaseCollectionPage<ManagedDevice>>) (new BaseCollectionPage<ManagedDevice>(new java.util.ArrayList<ManagedDevice>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ManagedDeviceCollectionResponse.class,(Class<BaseCollectionPage<ManagedDevice>>) (new BaseCollectionPage<ManagedDevice>(new java.util.ArrayList<ManagedDevice>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<ManagedDevice>> callback) {

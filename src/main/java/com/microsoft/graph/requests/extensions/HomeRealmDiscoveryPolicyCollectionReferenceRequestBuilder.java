@@ -20,10 +20,10 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Home Realm Discovery Policy Collection Reference Request Builder.
  */
-public class HomeRealmDiscoveryPolicyCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<ServicePrincipal, HomeRealmDiscoveryPolicyCollectionReferenceRequest> {
+public class HomeRealmDiscoveryPolicyCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<HomeRealmDiscoveryPolicy, HomeRealmDiscoveryPolicyCollectionResponse, HomeRealmDiscoveryPolicyCollectionReferenceRequest> {
 
     /**
-     * The request builder for this collection of ServicePrincipal
+     * The request builder for this collection of HomeRealmDiscoveryPolicy
      *
      * @param requestUrl     the request URL
      * @param client         the service client

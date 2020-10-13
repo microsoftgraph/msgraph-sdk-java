@@ -37,7 +37,7 @@ public class DriveSharedWithMeCollectionRequest extends BaseCollectionRequest<Dr
      */
     @SuppressWarnings("unchecked")
     public DriveSharedWithMeCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DriveItem.class, DriveSharedWithMeCollectionResponse.class, (Class<BaseCollectionPage<DriveItem>>) (new BaseCollectionPage<DriveItem>(new java.util.ArrayList<DriveItem>(), null).getClass()));
+        super(requestUrl, client, requestOptions, DriveSharedWithMeCollectionResponse.class, (Class<BaseCollectionPage<DriveItem>>) (new BaseCollectionPage<DriveItem>(new java.util.ArrayList<DriveItem>(), null).getClass()));
     }
 
 

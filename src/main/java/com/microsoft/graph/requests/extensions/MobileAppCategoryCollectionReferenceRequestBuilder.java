@@ -20,10 +20,10 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Mobile App Category Collection Reference Request Builder.
  */
-public class MobileAppCategoryCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<MobileApp, MobileAppCategoryCollectionReferenceRequest> {
+public class MobileAppCategoryCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<MobileAppCategory, MobileAppCategoryCollectionResponse, MobileAppCategoryCollectionReferenceRequest> {
 
     /**
-     * The request builder for this collection of MobileApp
+     * The request builder for this collection of MobileAppCategory
      *
      * @param requestUrl     the request URL
      * @param client         the service client

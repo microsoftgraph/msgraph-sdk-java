@@ -17,10 +17,12 @@ import com.microsoft.graph.requests.extensions.ManagedAppRegistrationReferenceRe
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionWithReferencesRequest;
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.models.extensions.ManagedAppRegistration;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionWithReferencesRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.http.ReferenceRequestBody;
@@ -41,7 +43,7 @@ public class ManagedAppRegistrationCollectionReferenceRequest extends BaseCollec
      */
     @SuppressWarnings("unchecked")
     public ManagedAppRegistrationCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedAppRegistration.class, ManagedAppRegistrationCollectionResponse.class, (Class<BaseCollectionPage<ManagedAppRegistration>>) (new BaseCollectionPage<ManagedAppRegistration>(new java.util.ArrayList<ManagedAppRegistration>(), null).getClass()), ManagedAppRegistrationCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, ManagedAppRegistrationCollectionResponse.class, (Class<BaseCollectionPage<ManagedAppRegistration>>) (new BaseCollectionPage<ManagedAppRegistration>(new java.util.ArrayList<ManagedAppRegistration>(), null).getClass()), ManagedAppRegistrationCollectionWithReferencesRequestBuilder.class);
     }
 
     public void post(final ManagedAppRegistration newManagedAppRegistration, final ICallback<? super ManagedAppRegistration> callback) {

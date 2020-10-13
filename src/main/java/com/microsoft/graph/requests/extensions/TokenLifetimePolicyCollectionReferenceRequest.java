@@ -17,10 +17,12 @@ import com.microsoft.graph.requests.extensions.TokenLifetimePolicyReferenceReque
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionWithReferencesRequest;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionWithReferencesRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.http.ReferenceRequestBody;
@@ -41,7 +43,7 @@ public class TokenLifetimePolicyCollectionReferenceRequest extends BaseCollectio
      */
     @SuppressWarnings("unchecked")
     public TokenLifetimePolicyCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TokenLifetimePolicy.class, TokenLifetimePolicyCollectionResponse.class, (Class<BaseCollectionPage<TokenLifetimePolicy>>) (new BaseCollectionPage<TokenLifetimePolicy>(new java.util.ArrayList<TokenLifetimePolicy>(), null).getClass()), TokenLifetimePolicyCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, TokenLifetimePolicyCollectionResponse.class, (Class<BaseCollectionPage<TokenLifetimePolicy>>) (new BaseCollectionPage<TokenLifetimePolicy>(new java.util.ArrayList<TokenLifetimePolicy>(), null).getClass()), TokenLifetimePolicyCollectionWithReferencesRequestBuilder.class);
     }
 
     public void post(final TokenLifetimePolicy newTokenLifetimePolicy, final ICallback<? super TokenLifetimePolicy> callback) {

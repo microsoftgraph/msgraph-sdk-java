@@ -37,7 +37,7 @@ public class RoomCollectionRequest extends BaseCollectionRequest<Room, RoomColle
      */
     @SuppressWarnings("unchecked")
     public RoomCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Room.class, RoomCollectionResponse.class,(Class<BaseCollectionPage<Room>>) (new BaseCollectionPage<Room>(new java.util.ArrayList<Room>(), null).getClass()));
+        super(requestUrl, client, requestOptions, RoomCollectionResponse.class,(Class<BaseCollectionPage<Room>>) (new BaseCollectionPage<Room>(new java.util.ArrayList<Room>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<Room>> callback) {

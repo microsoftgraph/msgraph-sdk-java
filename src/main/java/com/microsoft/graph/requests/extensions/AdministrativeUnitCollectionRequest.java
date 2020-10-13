@@ -37,7 +37,7 @@ public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<A
      */
     @SuppressWarnings("unchecked")
     public AdministrativeUnitCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, AdministrativeUnit.class, AdministrativeUnitCollectionResponse.class,(Class<BaseCollectionPage<AdministrativeUnit>>) (new BaseCollectionPage<AdministrativeUnit>(new java.util.ArrayList<AdministrativeUnit>(), null).getClass()));
+        super(requestUrl, client, requestOptions, AdministrativeUnitCollectionResponse.class,(Class<BaseCollectionPage<AdministrativeUnit>>) (new BaseCollectionPage<AdministrativeUnit>(new java.util.ArrayList<AdministrativeUnit>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<AdministrativeUnit>> callback) {

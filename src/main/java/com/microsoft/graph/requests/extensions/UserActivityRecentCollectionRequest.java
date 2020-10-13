@@ -37,7 +37,7 @@ public class UserActivityRecentCollectionRequest extends BaseCollectionRequest<U
      */
     @SuppressWarnings("unchecked")
     public UserActivityRecentCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, UserActivity.class, UserActivityRecentCollectionResponse.class, (Class<BaseCollectionPage<UserActivity>>) (new BaseCollectionPage<UserActivity>(new java.util.ArrayList<UserActivity>(), null).getClass()));
+        super(requestUrl, client, requestOptions, UserActivityRecentCollectionResponse.class, (Class<BaseCollectionPage<UserActivity>>) (new BaseCollectionPage<UserActivity>(new java.util.ArrayList<UserActivity>(), null).getClass()));
     }
 
 

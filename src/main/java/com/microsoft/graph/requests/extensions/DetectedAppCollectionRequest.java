@@ -37,7 +37,7 @@ public class DetectedAppCollectionRequest extends BaseCollectionRequest<Detected
      */
     @SuppressWarnings("unchecked")
     public DetectedAppCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DetectedApp.class, DetectedAppCollectionResponse.class,(Class<BaseCollectionPage<DetectedApp>>) (new BaseCollectionPage<DetectedApp>(new java.util.ArrayList<DetectedApp>(), null).getClass()));
+        super(requestUrl, client, requestOptions, DetectedAppCollectionResponse.class,(Class<BaseCollectionPage<DetectedApp>>) (new BaseCollectionPage<DetectedApp>(new java.util.ArrayList<DetectedApp>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<DetectedApp>> callback) {

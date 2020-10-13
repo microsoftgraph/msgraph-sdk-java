@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Format Autofit Columns Request.
  */
-public class WorkbookRangeFormatAutofitColumnsRequest extends BaseRequest<WorkbookRangeFormat> {
+public class WorkbookRangeFormatAutofitColumnsRequest extends BaseRequest<Void> {
 
     /**
      * The request for this WorkbookRangeFormatAutofitColumns
@@ -28,7 +28,7 @@ public class WorkbookRangeFormatAutofitColumnsRequest extends BaseRequest<Workbo
      * @param requestOptions the options for this request
      */
     public WorkbookRangeFormatAutofitColumnsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WorkbookRangeFormat.class);
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**

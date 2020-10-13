@@ -50,7 +50,7 @@ public class UserCollectionRequest extends BaseCollectionRequest<User, UserColle
      */
     @SuppressWarnings("unchecked")
     public UserCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, User.class, UserCollectionResponse.class,(Class<BaseCollectionPage<User>>) (new BaseCollectionPage<User>(new java.util.ArrayList<User>(), null).getClass()));
+        super(requestUrl, client, requestOptions, UserCollectionResponse.class,(Class<BaseCollectionPage<User>>) (new BaseCollectionPage<User>(new java.util.ArrayList<User>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<User>> callback) {

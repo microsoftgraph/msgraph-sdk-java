@@ -38,7 +38,7 @@ public class ManagedEBookCollectionRequest extends BaseCollectionRequest<Managed
      */
     @SuppressWarnings("unchecked")
     public ManagedEBookCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedEBook.class, ManagedEBookCollectionResponse.class,(Class<BaseCollectionPage<ManagedEBook>>) (new BaseCollectionPage<ManagedEBook>(new java.util.ArrayList<ManagedEBook>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ManagedEBookCollectionResponse.class,(Class<BaseCollectionPage<ManagedEBook>>) (new BaseCollectionPage<ManagedEBook>(new java.util.ArrayList<ManagedEBook>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<ManagedEBook>> callback) {

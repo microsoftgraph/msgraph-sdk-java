@@ -41,7 +41,7 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest ext
      */
     @SuppressWarnings("unchecked")
     public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ExtensionProperty.class, DirectoryObjectGetAvailableExtensionPropertiesCollectionResponse.class, (Class<BaseCollectionPage<ExtensionProperty>>) (new BaseCollectionPage<ExtensionProperty>(new java.util.ArrayList<ExtensionProperty>(), null).getClass()));
+        super(requestUrl, client, requestOptions, DirectoryObjectGetAvailableExtensionPropertiesCollectionResponse.class, (Class<BaseCollectionPage<ExtensionProperty>>) (new BaseCollectionPage<ExtensionProperty>(new java.util.ArrayList<ExtensionProperty>(), null).getClass()));
         body = new DirectoryObjectGetAvailableExtensionPropertiesBody();
     }
 

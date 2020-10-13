@@ -37,7 +37,7 @@ public class BaseItemCollectionRequest extends BaseCollectionRequest<BaseItem, B
      */
     @SuppressWarnings("unchecked")
     public BaseItemCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, BaseItem.class, BaseItemCollectionResponse.class,(Class<BaseCollectionPage<BaseItem>>) (new BaseCollectionPage<BaseItem>(new java.util.ArrayList<BaseItem>(), null).getClass()));
+        super(requestUrl, client, requestOptions, BaseItemCollectionResponse.class,(Class<BaseCollectionPage<BaseItem>>) (new BaseCollectionPage<BaseItem>(new java.util.ArrayList<BaseItem>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<BaseItem>> callback) {

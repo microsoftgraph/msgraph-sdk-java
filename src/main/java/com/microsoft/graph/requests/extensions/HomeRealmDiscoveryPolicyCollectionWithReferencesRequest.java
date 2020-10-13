@@ -13,9 +13,16 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
+import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyWithReferenceRequest;
+import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -24,7 +31,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Home Realm Discovery Policy Collection With References Request.
  */
-public class HomeRealmDiscoveryPolicyCollectionWithReferencesRequest extends BaseCollectionRequest<HomeRealmDiscoveryPolicy, HomeRealmDiscoveryPolicyCollectionResponse> {
+public class HomeRealmDiscoveryPolicyCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<HomeRealmDiscoveryPolicy, HomeRealmDiscoveryPolicyWithReferenceRequest, HomeRealmDiscoveryPolicyReferenceRequestBuilder, HomeRealmDiscoveryPolicyWithReferenceRequestBuilder, HomeRealmDiscoveryPolicyCollectionResponse, HomeRealmDiscoveryPolicyCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of HomeRealmDiscoveryPolicy
@@ -35,7 +42,7 @@ public class HomeRealmDiscoveryPolicyCollectionWithReferencesRequest extends Bas
      */
     @SuppressWarnings("unchecked")
     public HomeRealmDiscoveryPolicyCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicy.class, HomeRealmDiscoveryPolicyCollectionResponse.class, (Class<BaseCollectionPage<HomeRealmDiscoveryPolicy>>) (new BaseCollectionPage<HomeRealmDiscoveryPolicy>(new java.util.ArrayList<HomeRealmDiscoveryPolicy>(), null).getClass()));
+        super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicyCollectionResponse.class, (Class<BaseCollectionPage<HomeRealmDiscoveryPolicy>>) (new BaseCollectionPage<HomeRealmDiscoveryPolicy>(new java.util.ArrayList<HomeRealmDiscoveryPolicy>(), null).getClass()), HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder.class);
     }
 
     public void get(final ICallback<? super BaseCollectionPage<HomeRealmDiscoveryPolicy>> callback) {

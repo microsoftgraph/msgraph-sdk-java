@@ -37,7 +37,7 @@ public class EducationSchoolCollectionRequest extends BaseCollectionRequest<Educ
      */
     @SuppressWarnings("unchecked")
     public EducationSchoolCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, EducationSchool.class, EducationSchoolCollectionResponse.class,(Class<BaseCollectionPage<EducationSchool>>) (new BaseCollectionPage<EducationSchool>(new java.util.ArrayList<EducationSchool>(), null).getClass()));
+        super(requestUrl, client, requestOptions, EducationSchoolCollectionResponse.class,(Class<BaseCollectionPage<EducationSchool>>) (new BaseCollectionPage<EducationSchool>(new java.util.ArrayList<EducationSchool>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<EducationSchool>> callback) {

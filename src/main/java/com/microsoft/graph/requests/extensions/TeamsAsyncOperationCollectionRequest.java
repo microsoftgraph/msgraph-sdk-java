@@ -37,7 +37,7 @@ public class TeamsAsyncOperationCollectionRequest extends BaseCollectionRequest<
      */
     @SuppressWarnings("unchecked")
     public TeamsAsyncOperationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TeamsAsyncOperation.class, TeamsAsyncOperationCollectionResponse.class,(Class<BaseCollectionPage<TeamsAsyncOperation>>) (new BaseCollectionPage<TeamsAsyncOperation>(new java.util.ArrayList<TeamsAsyncOperation>(), null).getClass()));
+        super(requestUrl, client, requestOptions, TeamsAsyncOperationCollectionResponse.class,(Class<BaseCollectionPage<TeamsAsyncOperation>>) (new BaseCollectionPage<TeamsAsyncOperation>(new java.util.ArrayList<TeamsAsyncOperation>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<TeamsAsyncOperation>> callback) {

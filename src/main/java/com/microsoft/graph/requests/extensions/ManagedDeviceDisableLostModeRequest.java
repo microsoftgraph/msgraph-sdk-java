@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Device Disable Lost Mode Request.
  */
-public class ManagedDeviceDisableLostModeRequest extends BaseRequest<ManagedDevice> {
+public class ManagedDeviceDisableLostModeRequest extends BaseRequest<Void> {
 
     /**
      * The request for this ManagedDeviceDisableLostMode
@@ -28,7 +28,7 @@ public class ManagedDeviceDisableLostModeRequest extends BaseRequest<ManagedDevi
      * @param requestOptions the options for this request
      */
     public ManagedDeviceDisableLostModeRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedDevice.class);
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**

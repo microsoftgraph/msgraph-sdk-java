@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Worksheet Protection Unprotect Request.
  */
-public class WorkbookWorksheetProtectionUnprotectRequest extends BaseRequest<WorkbookWorksheetProtection> {
+public class WorkbookWorksheetProtectionUnprotectRequest extends BaseRequest<Void> {
 
     /**
      * The request for this WorkbookWorksheetProtectionUnprotect
@@ -28,7 +28,7 @@ public class WorkbookWorksheetProtectionUnprotectRequest extends BaseRequest<Wor
      * @param requestOptions the options for this request
      */
     public WorkbookWorksheetProtectionUnprotectRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WorkbookWorksheetProtection.class);
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**

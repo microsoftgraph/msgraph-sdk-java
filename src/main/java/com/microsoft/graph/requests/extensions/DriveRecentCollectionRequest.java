@@ -37,7 +37,7 @@ public class DriveRecentCollectionRequest extends BaseCollectionRequest<DriveIte
      */
     @SuppressWarnings("unchecked")
     public DriveRecentCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DriveItem.class, DriveRecentCollectionResponse.class, (Class<BaseCollectionPage<DriveItem>>) (new BaseCollectionPage<DriveItem>(new java.util.ArrayList<DriveItem>(), null).getClass()));
+        super(requestUrl, client, requestOptions, DriveRecentCollectionResponse.class, (Class<BaseCollectionPage<DriveItem>>) (new BaseCollectionPage<DriveItem>(new java.util.ArrayList<DriveItem>(), null).getClass()));
     }
 
 

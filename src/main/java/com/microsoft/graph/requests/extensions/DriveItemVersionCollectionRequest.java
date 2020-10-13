@@ -37,7 +37,7 @@ public class DriveItemVersionCollectionRequest extends BaseCollectionRequest<Dri
      */
     @SuppressWarnings("unchecked")
     public DriveItemVersionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DriveItemVersion.class, DriveItemVersionCollectionResponse.class,(Class<BaseCollectionPage<DriveItemVersion>>) (new BaseCollectionPage<DriveItemVersion>(new java.util.ArrayList<DriveItemVersion>(), null).getClass()));
+        super(requestUrl, client, requestOptions, DriveItemVersionCollectionResponse.class,(Class<BaseCollectionPage<DriveItemVersion>>) (new BaseCollectionPage<DriveItemVersion>(new java.util.ArrayList<DriveItemVersion>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<DriveItemVersion>> callback) {

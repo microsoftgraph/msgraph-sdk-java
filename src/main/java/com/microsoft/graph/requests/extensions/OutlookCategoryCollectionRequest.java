@@ -37,7 +37,7 @@ public class OutlookCategoryCollectionRequest extends BaseCollectionRequest<Outl
      */
     @SuppressWarnings("unchecked")
     public OutlookCategoryCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OutlookCategory.class, OutlookCategoryCollectionResponse.class,(Class<BaseCollectionPage<OutlookCategory>>) (new BaseCollectionPage<OutlookCategory>(new java.util.ArrayList<OutlookCategory>(), null).getClass()));
+        super(requestUrl, client, requestOptions, OutlookCategoryCollectionResponse.class,(Class<BaseCollectionPage<OutlookCategory>>) (new BaseCollectionPage<OutlookCategory>(new java.util.ArrayList<OutlookCategory>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<OutlookCategory>> callback) {

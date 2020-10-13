@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Drive Item Version Restore Version Request.
  */
-public class DriveItemVersionRestoreVersionRequest extends BaseRequest<DriveItemVersion> {
+public class DriveItemVersionRestoreVersionRequest extends BaseRequest<Void> {
 
     /**
      * The request for this DriveItemVersionRestoreVersion
@@ -28,7 +28,7 @@ public class DriveItemVersionRestoreVersionRequest extends BaseRequest<DriveItem
      * @param requestOptions the options for this request
      */
     public DriveItemVersionRestoreVersionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DriveItemVersion.class);
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**

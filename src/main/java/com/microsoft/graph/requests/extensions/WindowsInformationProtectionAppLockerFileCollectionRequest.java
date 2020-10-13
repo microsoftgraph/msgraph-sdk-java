@@ -37,7 +37,7 @@ public class WindowsInformationProtectionAppLockerFileCollectionRequest extends 
      */
     @SuppressWarnings("unchecked")
     public WindowsInformationProtectionAppLockerFileCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WindowsInformationProtectionAppLockerFile.class, WindowsInformationProtectionAppLockerFileCollectionResponse.class,(Class<BaseCollectionPage<WindowsInformationProtectionAppLockerFile>>) (new BaseCollectionPage<WindowsInformationProtectionAppLockerFile>(new java.util.ArrayList<WindowsInformationProtectionAppLockerFile>(), null).getClass()));
+        super(requestUrl, client, requestOptions, WindowsInformationProtectionAppLockerFileCollectionResponse.class,(Class<BaseCollectionPage<WindowsInformationProtectionAppLockerFile>>) (new BaseCollectionPage<WindowsInformationProtectionAppLockerFile>(new java.util.ArrayList<WindowsInformationProtectionAppLockerFile>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<WindowsInformationProtectionAppLockerFile>> callback) {

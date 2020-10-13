@@ -17,10 +17,12 @@ import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantReferenceReq
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionWithReferencesRequest;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionWithReferencesRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.http.ReferenceRequestBody;
@@ -41,7 +43,7 @@ public class OAuth2PermissionGrantCollectionReferenceRequest extends BaseCollect
      */
     @SuppressWarnings("unchecked")
     public OAuth2PermissionGrantCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OAuth2PermissionGrant.class, OAuth2PermissionGrantCollectionResponse.class, (Class<BaseCollectionPage<OAuth2PermissionGrant>>) (new BaseCollectionPage<OAuth2PermissionGrant>(new java.util.ArrayList<OAuth2PermissionGrant>(), null).getClass()), OAuth2PermissionGrantCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, OAuth2PermissionGrantCollectionResponse.class, (Class<BaseCollectionPage<OAuth2PermissionGrant>>) (new BaseCollectionPage<OAuth2PermissionGrant>(new java.util.ArrayList<OAuth2PermissionGrant>(), null).getClass()), OAuth2PermissionGrantCollectionWithReferencesRequestBuilder.class);
     }
 
     public void post(final OAuth2PermissionGrant newOAuth2PermissionGrant, final ICallback<? super OAuth2PermissionGrant> callback) {

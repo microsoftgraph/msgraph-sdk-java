@@ -14,9 +14,16 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.models.extensions.Group;
+import com.microsoft.graph.requests.extensions.GroupWithReferenceRequest;
+import com.microsoft.graph.requests.extensions.GroupReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.GroupCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.GroupCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -25,7 +32,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Group Collection With References Request.
  */
-public class GroupCollectionWithReferencesRequest extends BaseCollectionRequest<Group, GroupCollectionResponse> {
+public class GroupCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<Group, GroupWithReferenceRequest, GroupReferenceRequestBuilder, GroupWithReferenceRequestBuilder, GroupCollectionResponse, GroupCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of Group
@@ -36,7 +43,7 @@ public class GroupCollectionWithReferencesRequest extends BaseCollectionRequest<
      */
     @SuppressWarnings("unchecked")
     public GroupCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Group.class, GroupCollectionResponse.class, (Class<BaseCollectionPage<Group>>) (new BaseCollectionPage<Group>(new java.util.ArrayList<Group>(), null).getClass()));
+        super(requestUrl, client, requestOptions, GroupCollectionResponse.class, (Class<BaseCollectionPage<Group>>) (new BaseCollectionPage<Group>(new java.util.ArrayList<Group>(), null).getClass()), GroupCollectionWithReferencesRequestBuilder.class);
     }
 
     public void get(final ICallback<? super BaseCollectionPage<Group>> callback) {

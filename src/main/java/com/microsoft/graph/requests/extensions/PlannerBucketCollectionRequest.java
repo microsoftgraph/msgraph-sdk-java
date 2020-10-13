@@ -37,7 +37,7 @@ public class PlannerBucketCollectionRequest extends BaseCollectionRequest<Planne
      */
     @SuppressWarnings("unchecked")
     public PlannerBucketCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, PlannerBucket.class, PlannerBucketCollectionResponse.class,(Class<BaseCollectionPage<PlannerBucket>>) (new BaseCollectionPage<PlannerBucket>(new java.util.ArrayList<PlannerBucket>(), null).getClass()));
+        super(requestUrl, client, requestOptions, PlannerBucketCollectionResponse.class,(Class<BaseCollectionPage<PlannerBucket>>) (new BaseCollectionPage<PlannerBucket>(new java.util.ArrayList<PlannerBucket>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<PlannerBucket>> callback) {

@@ -39,7 +39,7 @@ public class OnlineMeetingCollectionRequest extends BaseCollectionRequest<Online
      */
     @SuppressWarnings("unchecked")
     public OnlineMeetingCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OnlineMeeting.class, OnlineMeetingCollectionResponse.class,(Class<BaseCollectionPage<OnlineMeeting>>) (new BaseCollectionPage<OnlineMeeting>(new java.util.ArrayList<OnlineMeeting>(), null).getClass()));
+        super(requestUrl, client, requestOptions, OnlineMeetingCollectionResponse.class,(Class<BaseCollectionPage<OnlineMeeting>>) (new BaseCollectionPage<OnlineMeeting>(new java.util.ArrayList<OnlineMeeting>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<OnlineMeeting>> callback) {

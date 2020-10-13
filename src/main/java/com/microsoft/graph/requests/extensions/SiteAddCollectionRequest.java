@@ -41,7 +41,7 @@ public class SiteAddCollectionRequest extends BaseCollectionRequest<Site, SiteAd
      */
     @SuppressWarnings("unchecked")
     public SiteAddCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Site.class, SiteAddCollectionResponse.class, (Class<BaseCollectionPage<Site>>) (new BaseCollectionPage<Site>(new java.util.ArrayList<Site>(), null).getClass()));
+        super(requestUrl, client, requestOptions, SiteAddCollectionResponse.class, (Class<BaseCollectionPage<Site>>) (new BaseCollectionPage<Site>(new java.util.ArrayList<Site>(), null).getClass()));
         body = new SiteAddBody();
     }
 

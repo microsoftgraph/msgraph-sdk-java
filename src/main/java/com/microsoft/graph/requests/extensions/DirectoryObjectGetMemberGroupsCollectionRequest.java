@@ -40,7 +40,7 @@ public class DirectoryObjectGetMemberGroupsCollectionRequest extends BaseCollect
      */
     @SuppressWarnings("unchecked")
     public DirectoryObjectGetMemberGroupsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, String.class, DirectoryObjectGetMemberGroupsCollectionResponse.class, (Class<BaseCollectionPage<String>>) (new BaseCollectionPage<String>(new java.util.ArrayList<String>(), null).getClass()));
+        super(requestUrl, client, requestOptions, DirectoryObjectGetMemberGroupsCollectionResponse.class, (Class<BaseCollectionPage<String>>) (new BaseCollectionPage<String>(new java.util.ArrayList<String>(), null).getClass()));
         body = new DirectoryObjectGetMemberGroupsBody();
     }
 

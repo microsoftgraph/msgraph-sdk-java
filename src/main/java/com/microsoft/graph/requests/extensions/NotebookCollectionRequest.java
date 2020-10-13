@@ -40,7 +40,7 @@ public class NotebookCollectionRequest extends BaseCollectionRequest<Notebook, N
      */
     @SuppressWarnings("unchecked")
     public NotebookCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Notebook.class, NotebookCollectionResponse.class,(Class<BaseCollectionPage<Notebook>>) (new BaseCollectionPage<Notebook>(new java.util.ArrayList<Notebook>(), null).getClass()));
+        super(requestUrl, client, requestOptions, NotebookCollectionResponse.class,(Class<BaseCollectionPage<Notebook>>) (new BaseCollectionPage<Notebook>(new java.util.ArrayList<Notebook>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<Notebook>> callback) {

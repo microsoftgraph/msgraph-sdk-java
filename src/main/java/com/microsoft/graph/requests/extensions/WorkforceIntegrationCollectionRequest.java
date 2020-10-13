@@ -37,7 +37,7 @@ public class WorkforceIntegrationCollectionRequest extends BaseCollectionRequest
      */
     @SuppressWarnings("unchecked")
     public WorkforceIntegrationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WorkforceIntegration.class, WorkforceIntegrationCollectionResponse.class,(Class<BaseCollectionPage<WorkforceIntegration>>) (new BaseCollectionPage<WorkforceIntegration>(new java.util.ArrayList<WorkforceIntegration>(), null).getClass()));
+        super(requestUrl, client, requestOptions, WorkforceIntegrationCollectionResponse.class,(Class<BaseCollectionPage<WorkforceIntegration>>) (new BaseCollectionPage<WorkforceIntegration>(new java.util.ArrayList<WorkforceIntegration>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<WorkforceIntegration>> callback) {

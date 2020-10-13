@@ -37,7 +37,7 @@ public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseColl
      */
     @SuppressWarnings("unchecked")
     public EnrollmentConfigurationAssignmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, EnrollmentConfigurationAssignment.class, EnrollmentConfigurationAssignmentCollectionResponse.class,(Class<BaseCollectionPage<EnrollmentConfigurationAssignment>>) (new BaseCollectionPage<EnrollmentConfigurationAssignment>(new java.util.ArrayList<EnrollmentConfigurationAssignment>(), null).getClass()));
+        super(requestUrl, client, requestOptions, EnrollmentConfigurationAssignmentCollectionResponse.class,(Class<BaseCollectionPage<EnrollmentConfigurationAssignment>>) (new BaseCollectionPage<EnrollmentConfigurationAssignment>(new java.util.ArrayList<EnrollmentConfigurationAssignment>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<EnrollmentConfigurationAssignment>> callback) {

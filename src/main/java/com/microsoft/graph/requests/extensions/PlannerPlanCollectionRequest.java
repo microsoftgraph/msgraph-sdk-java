@@ -37,7 +37,7 @@ public class PlannerPlanCollectionRequest extends BaseCollectionRequest<PlannerP
      */
     @SuppressWarnings("unchecked")
     public PlannerPlanCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, PlannerPlan.class, PlannerPlanCollectionResponse.class,(Class<BaseCollectionPage<PlannerPlan>>) (new BaseCollectionPage<PlannerPlan>(new java.util.ArrayList<PlannerPlan>(), null).getClass()));
+        super(requestUrl, client, requestOptions, PlannerPlanCollectionResponse.class,(Class<BaseCollectionPage<PlannerPlan>>) (new BaseCollectionPage<PlannerPlan>(new java.util.ArrayList<PlannerPlan>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<PlannerPlan>> callback) {

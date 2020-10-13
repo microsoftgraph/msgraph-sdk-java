@@ -37,7 +37,7 @@ public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseColl
      */
     @SuppressWarnings("unchecked")
     public SingleValueLegacyExtendedPropertyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SingleValueLegacyExtendedProperty.class, SingleValueLegacyExtendedPropertyCollectionResponse.class,(Class<BaseCollectionPage<SingleValueLegacyExtendedProperty>>) (new BaseCollectionPage<SingleValueLegacyExtendedProperty>(new java.util.ArrayList<SingleValueLegacyExtendedProperty>(), null).getClass()));
+        super(requestUrl, client, requestOptions, SingleValueLegacyExtendedPropertyCollectionResponse.class,(Class<BaseCollectionPage<SingleValueLegacyExtendedProperty>>) (new BaseCollectionPage<SingleValueLegacyExtendedProperty>(new java.util.ArrayList<SingleValueLegacyExtendedProperty>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<SingleValueLegacyExtendedProperty>> callback) {

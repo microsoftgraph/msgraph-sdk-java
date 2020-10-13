@@ -37,7 +37,7 @@ public class RoleAssignmentCollectionRequest extends BaseCollectionRequest<RoleA
      */
     @SuppressWarnings("unchecked")
     public RoleAssignmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, RoleAssignment.class, RoleAssignmentCollectionResponse.class,(Class<BaseCollectionPage<RoleAssignment>>) (new BaseCollectionPage<RoleAssignment>(new java.util.ArrayList<RoleAssignment>(), null).getClass()));
+        super(requestUrl, client, requestOptions, RoleAssignmentCollectionResponse.class,(Class<BaseCollectionPage<RoleAssignment>>) (new BaseCollectionPage<RoleAssignment>(new java.util.ArrayList<RoleAssignment>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<RoleAssignment>> callback) {

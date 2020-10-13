@@ -37,7 +37,7 @@ public class AdministrativeUnitDeltaCollectionRequest extends BaseCollectionRequ
      */
     @SuppressWarnings("unchecked")
     public AdministrativeUnitDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, AdministrativeUnit.class, AdministrativeUnitDeltaCollectionResponse.class, (Class<BaseCollectionPage<AdministrativeUnit>>) (new BaseCollectionPage<AdministrativeUnit>(new java.util.ArrayList<AdministrativeUnit>(), null).getClass()));
+        super(requestUrl, client, requestOptions, AdministrativeUnitDeltaCollectionResponse.class, (Class<BaseCollectionPage<AdministrativeUnit>>) (new BaseCollectionPage<AdministrativeUnit>(new java.util.ArrayList<AdministrativeUnit>(), null).getClass()));
     }
 
 

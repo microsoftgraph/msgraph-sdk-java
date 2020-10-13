@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Reapply Filters Request.
  */
-public class WorkbookTableReapplyFiltersRequest extends BaseRequest<WorkbookTable> {
+public class WorkbookTableReapplyFiltersRequest extends BaseRequest<Void> {
 
     /**
      * The request for this WorkbookTableReapplyFilters
@@ -28,7 +28,7 @@ public class WorkbookTableReapplyFiltersRequest extends BaseRequest<WorkbookTabl
      * @param requestOptions the options for this request
      */
     public WorkbookTableReapplyFiltersRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WorkbookTable.class);
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**

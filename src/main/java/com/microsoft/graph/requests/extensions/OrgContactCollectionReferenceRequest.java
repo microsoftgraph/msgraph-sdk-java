@@ -17,10 +17,12 @@ import com.microsoft.graph.requests.extensions.OrgContactReferenceRequestBuilder
 import com.microsoft.graph.requests.extensions.OrgContactWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.OrgContactCollectionWithReferencesRequest;
 import com.microsoft.graph.requests.extensions.OrgContactCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.OrgContactCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.models.extensions.OrgContact;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionWithReferencesRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.http.ReferenceRequestBody;
@@ -41,7 +43,7 @@ public class OrgContactCollectionReferenceRequest extends BaseCollectionWithRefe
      */
     @SuppressWarnings("unchecked")
     public OrgContactCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OrgContact.class, OrgContactCollectionResponse.class, (Class<BaseCollectionPage<OrgContact>>) (new BaseCollectionPage<OrgContact>(new java.util.ArrayList<OrgContact>(), null).getClass()), OrgContactCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, OrgContactCollectionResponse.class, (Class<BaseCollectionPage<OrgContact>>) (new BaseCollectionPage<OrgContact>(new java.util.ArrayList<OrgContact>(), null).getClass()), OrgContactCollectionWithReferencesRequestBuilder.class);
     }
 
     public void post(final OrgContact newOrgContact, final ICallback<? super OrgContact> callback) {

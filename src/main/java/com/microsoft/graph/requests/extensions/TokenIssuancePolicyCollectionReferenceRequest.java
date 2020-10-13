@@ -17,10 +17,12 @@ import com.microsoft.graph.requests.extensions.TokenIssuancePolicyReferenceReque
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionWithReferencesRequest;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionWithReferencesRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.http.ReferenceRequestBody;
@@ -41,7 +43,7 @@ public class TokenIssuancePolicyCollectionReferenceRequest extends BaseCollectio
      */
     @SuppressWarnings("unchecked")
     public TokenIssuancePolicyCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TokenIssuancePolicy.class, TokenIssuancePolicyCollectionResponse.class, (Class<BaseCollectionPage<TokenIssuancePolicy>>) (new BaseCollectionPage<TokenIssuancePolicy>(new java.util.ArrayList<TokenIssuancePolicy>(), null).getClass()), TokenIssuancePolicyCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, TokenIssuancePolicyCollectionResponse.class, (Class<BaseCollectionPage<TokenIssuancePolicy>>) (new BaseCollectionPage<TokenIssuancePolicy>(new java.util.ArrayList<TokenIssuancePolicy>(), null).getClass()), TokenIssuancePolicyCollectionWithReferencesRequestBuilder.class);
     }
 
     public void post(final TokenIssuancePolicy newTokenIssuancePolicy, final ICallback<? super TokenIssuancePolicy> callback) {

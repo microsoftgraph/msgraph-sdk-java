@@ -37,7 +37,7 @@ public class DeviceComplianceSettingStateCollectionRequest extends BaseCollectio
      */
     @SuppressWarnings("unchecked")
     public DeviceComplianceSettingStateCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceComplianceSettingState.class, DeviceComplianceSettingStateCollectionResponse.class,(Class<BaseCollectionPage<DeviceComplianceSettingState>>) (new BaseCollectionPage<DeviceComplianceSettingState>(new java.util.ArrayList<DeviceComplianceSettingState>(), null).getClass()));
+        super(requestUrl, client, requestOptions, DeviceComplianceSettingStateCollectionResponse.class,(Class<BaseCollectionPage<DeviceComplianceSettingState>>) (new BaseCollectionPage<DeviceComplianceSettingState>(new java.util.ArrayList<DeviceComplianceSettingState>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<DeviceComplianceSettingState>> callback) {

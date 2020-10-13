@@ -38,7 +38,7 @@ public class PermissionCollectionRequest extends BaseCollectionRequest<Permissio
      */
     @SuppressWarnings("unchecked")
     public PermissionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Permission.class, PermissionCollectionResponse.class,(Class<BaseCollectionPage<Permission>>) (new BaseCollectionPage<Permission>(new java.util.ArrayList<Permission>(), null).getClass()));
+        super(requestUrl, client, requestOptions, PermissionCollectionResponse.class,(Class<BaseCollectionPage<Permission>>) (new BaseCollectionPage<Permission>(new java.util.ArrayList<Permission>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<Permission>> callback) {

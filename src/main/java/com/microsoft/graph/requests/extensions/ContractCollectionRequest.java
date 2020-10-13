@@ -36,7 +36,7 @@ public class ContractCollectionRequest extends BaseCollectionRequest<Contract, C
      */
     @SuppressWarnings("unchecked")
     public ContractCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Contract.class, ContractCollectionResponse.class,(Class<BaseCollectionPage<Contract>>) (new BaseCollectionPage<Contract>(new java.util.ArrayList<Contract>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ContractCollectionResponse.class,(Class<BaseCollectionPage<Contract>>) (new BaseCollectionPage<Contract>(new java.util.ArrayList<Contract>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<Contract>> callback) {

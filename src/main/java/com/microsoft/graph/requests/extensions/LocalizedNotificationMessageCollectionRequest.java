@@ -37,7 +37,7 @@ public class LocalizedNotificationMessageCollectionRequest extends BaseCollectio
      */
     @SuppressWarnings("unchecked")
     public LocalizedNotificationMessageCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, LocalizedNotificationMessage.class, LocalizedNotificationMessageCollectionResponse.class,(Class<BaseCollectionPage<LocalizedNotificationMessage>>) (new BaseCollectionPage<LocalizedNotificationMessage>(new java.util.ArrayList<LocalizedNotificationMessage>(), null).getClass()));
+        super(requestUrl, client, requestOptions, LocalizedNotificationMessageCollectionResponse.class,(Class<BaseCollectionPage<LocalizedNotificationMessage>>) (new BaseCollectionPage<LocalizedNotificationMessage>(new java.util.ArrayList<LocalizedNotificationMessage>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<LocalizedNotificationMessage>> callback) {

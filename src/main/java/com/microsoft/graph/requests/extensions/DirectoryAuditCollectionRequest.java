@@ -37,7 +37,7 @@ public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<Direc
      */
     @SuppressWarnings("unchecked")
     public DirectoryAuditCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DirectoryAudit.class, DirectoryAuditCollectionResponse.class,(Class<BaseCollectionPage<DirectoryAudit>>) (new BaseCollectionPage<DirectoryAudit>(new java.util.ArrayList<DirectoryAudit>(), null).getClass()));
+        super(requestUrl, client, requestOptions, DirectoryAuditCollectionResponse.class,(Class<BaseCollectionPage<DirectoryAudit>>) (new BaseCollectionPage<DirectoryAudit>(new java.util.ArrayList<DirectoryAudit>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<DirectoryAudit>> callback) {

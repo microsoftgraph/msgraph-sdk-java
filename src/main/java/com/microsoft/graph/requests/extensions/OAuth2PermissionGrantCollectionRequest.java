@@ -36,7 +36,7 @@ public class OAuth2PermissionGrantCollectionRequest extends BaseCollectionReques
      */
     @SuppressWarnings("unchecked")
     public OAuth2PermissionGrantCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OAuth2PermissionGrant.class, OAuth2PermissionGrantCollectionResponse.class,(Class<BaseCollectionPage<OAuth2PermissionGrant>>) (new BaseCollectionPage<OAuth2PermissionGrant>(new java.util.ArrayList<OAuth2PermissionGrant>(), null).getClass()));
+        super(requestUrl, client, requestOptions, OAuth2PermissionGrantCollectionResponse.class,(Class<BaseCollectionPage<OAuth2PermissionGrant>>) (new BaseCollectionPage<OAuth2PermissionGrant>(new java.util.ArrayList<OAuth2PermissionGrant>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<OAuth2PermissionGrant>> callback) {

@@ -42,7 +42,7 @@ public class DriveItemInviteCollectionRequest extends BaseCollectionRequest<Perm
      */
     @SuppressWarnings("unchecked")
     public DriveItemInviteCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Permission.class, DriveItemInviteCollectionResponse.class, (Class<BaseCollectionPage<Permission>>) (new BaseCollectionPage<Permission>(new java.util.ArrayList<Permission>(), null).getClass()));
+        super(requestUrl, client, requestOptions, DriveItemInviteCollectionResponse.class, (Class<BaseCollectionPage<Permission>>) (new BaseCollectionPage<Permission>(new java.util.ArrayList<Permission>(), null).getClass()));
         body = new DriveItemInviteBody();
     }
 

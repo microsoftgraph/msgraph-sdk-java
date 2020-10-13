@@ -42,7 +42,7 @@ public class PermissionGrantCollectionRequest extends BaseCollectionRequest<Perm
      */
     @SuppressWarnings("unchecked")
     public PermissionGrantCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Permission.class, PermissionGrantCollectionResponse.class, (Class<BaseCollectionPage<Permission>>) (new BaseCollectionPage<Permission>(new java.util.ArrayList<Permission>(), null).getClass()));
+        super(requestUrl, client, requestOptions, PermissionGrantCollectionResponse.class, (Class<BaseCollectionPage<Permission>>) (new BaseCollectionPage<Permission>(new java.util.ArrayList<Permission>(), null).getClass()));
         body = new PermissionGrantBody();
     }
 

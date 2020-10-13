@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Device Request Remote Assistance Request.
  */
-public class ManagedDeviceRequestRemoteAssistanceRequest extends BaseRequest<ManagedDevice> {
+public class ManagedDeviceRequestRemoteAssistanceRequest extends BaseRequest<Void> {
 
     /**
      * The request for this ManagedDeviceRequestRemoteAssistance
@@ -28,7 +28,7 @@ public class ManagedDeviceRequestRemoteAssistanceRequest extends BaseRequest<Man
      * @param requestOptions the options for this request
      */
     public ManagedDeviceRequestRemoteAssistanceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedDevice.class);
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**

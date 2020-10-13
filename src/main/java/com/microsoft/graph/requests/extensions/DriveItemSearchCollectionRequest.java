@@ -37,7 +37,7 @@ public class DriveItemSearchCollectionRequest extends BaseCollectionRequest<Driv
      */
     @SuppressWarnings("unchecked")
     public DriveItemSearchCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DriveItem.class, DriveItemSearchCollectionResponse.class, (Class<BaseCollectionPage<DriveItem>>) (new BaseCollectionPage<DriveItem>(new java.util.ArrayList<DriveItem>(), null).getClass()));
+        super(requestUrl, client, requestOptions, DriveItemSearchCollectionResponse.class, (Class<BaseCollectionPage<DriveItem>>) (new BaseCollectionPage<DriveItem>(new java.util.ArrayList<DriveItem>(), null).getClass()));
     }
 
 

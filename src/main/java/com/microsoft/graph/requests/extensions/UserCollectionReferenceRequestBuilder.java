@@ -34,10 +34,10 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the User Collection Reference Request Builder.
  */
-public class UserCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<ServicePrincipal, UserCollectionReferenceRequest> {
+public class UserCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<User, UserCollectionResponse, UserCollectionReferenceRequest> {
 
     /**
-     * The request builder for this collection of ServicePrincipal
+     * The request builder for this collection of User
      *
      * @param requestUrl     the request URL
      * @param client         the service client

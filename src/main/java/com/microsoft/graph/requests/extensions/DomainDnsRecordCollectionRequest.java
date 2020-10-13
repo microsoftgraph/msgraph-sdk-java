@@ -36,7 +36,7 @@ public class DomainDnsRecordCollectionRequest extends BaseCollectionRequest<Doma
      */
     @SuppressWarnings("unchecked")
     public DomainDnsRecordCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DomainDnsRecord.class, DomainDnsRecordCollectionResponse.class,(Class<BaseCollectionPage<DomainDnsRecord>>) (new BaseCollectionPage<DomainDnsRecord>(new java.util.ArrayList<DomainDnsRecord>(), null).getClass()));
+        super(requestUrl, client, requestOptions, DomainDnsRecordCollectionResponse.class,(Class<BaseCollectionPage<DomainDnsRecord>>) (new BaseCollectionPage<DomainDnsRecord>(new java.util.ArrayList<DomainDnsRecord>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<DomainDnsRecord>> callback) {

@@ -37,7 +37,7 @@ public class OnenoteResourceCollectionRequest extends BaseCollectionRequest<Onen
      */
     @SuppressWarnings("unchecked")
     public OnenoteResourceCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OnenoteResource.class, OnenoteResourceCollectionResponse.class,(Class<BaseCollectionPage<OnenoteResource>>) (new BaseCollectionPage<OnenoteResource>(new java.util.ArrayList<OnenoteResource>(), null).getClass()));
+        super(requestUrl, client, requestOptions, OnenoteResourceCollectionResponse.class,(Class<BaseCollectionPage<OnenoteResource>>) (new BaseCollectionPage<OnenoteResource>(new java.util.ArrayList<OnenoteResource>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<OnenoteResource>> callback) {

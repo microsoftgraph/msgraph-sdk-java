@@ -37,7 +37,7 @@ public class SettingStateDeviceSummaryCollectionRequest extends BaseCollectionRe
      */
     @SuppressWarnings("unchecked")
     public SettingStateDeviceSummaryCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SettingStateDeviceSummary.class, SettingStateDeviceSummaryCollectionResponse.class,(Class<BaseCollectionPage<SettingStateDeviceSummary>>) (new BaseCollectionPage<SettingStateDeviceSummary>(new java.util.ArrayList<SettingStateDeviceSummary>(), null).getClass()));
+        super(requestUrl, client, requestOptions, SettingStateDeviceSummaryCollectionResponse.class,(Class<BaseCollectionPage<SettingStateDeviceSummary>>) (new BaseCollectionPage<SettingStateDeviceSummary>(new java.util.ArrayList<SettingStateDeviceSummary>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<SettingStateDeviceSummary>> callback) {

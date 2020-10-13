@@ -37,7 +37,7 @@ public class ManagedMobileAppCollectionRequest extends BaseCollectionRequest<Man
      */
     @SuppressWarnings("unchecked")
     public ManagedMobileAppCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedMobileApp.class, ManagedMobileAppCollectionResponse.class,(Class<BaseCollectionPage<ManagedMobileApp>>) (new BaseCollectionPage<ManagedMobileApp>(new java.util.ArrayList<ManagedMobileApp>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ManagedMobileAppCollectionResponse.class,(Class<BaseCollectionPage<ManagedMobileApp>>) (new BaseCollectionPage<ManagedMobileApp>(new java.util.ArrayList<ManagedMobileApp>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<ManagedMobileApp>> callback) {

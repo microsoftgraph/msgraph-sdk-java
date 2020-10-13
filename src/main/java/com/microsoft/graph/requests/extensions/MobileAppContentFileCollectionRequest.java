@@ -38,7 +38,7 @@ public class MobileAppContentFileCollectionRequest extends BaseCollectionRequest
      */
     @SuppressWarnings("unchecked")
     public MobileAppContentFileCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MobileAppContentFile.class, MobileAppContentFileCollectionResponse.class,(Class<BaseCollectionPage<MobileAppContentFile>>) (new BaseCollectionPage<MobileAppContentFile>(new java.util.ArrayList<MobileAppContentFile>(), null).getClass()));
+        super(requestUrl, client, requestOptions, MobileAppContentFileCollectionResponse.class,(Class<BaseCollectionPage<MobileAppContentFile>>) (new BaseCollectionPage<MobileAppContentFile>(new java.util.ArrayList<MobileAppContentFile>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<MobileAppContentFile>> callback) {

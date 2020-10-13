@@ -14,9 +14,16 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.models.extensions.ServicePrincipal;
+import com.microsoft.graph.requests.extensions.ServicePrincipalWithReferenceRequest;
+import com.microsoft.graph.requests.extensions.ServicePrincipalReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.ServicePrincipalWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -25,7 +32,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Service Principal Collection With References Request.
  */
-public class ServicePrincipalCollectionWithReferencesRequest extends BaseCollectionRequest<ServicePrincipal, ServicePrincipalCollectionResponse> {
+public class ServicePrincipalCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<ServicePrincipal, ServicePrincipalWithReferenceRequest, ServicePrincipalReferenceRequestBuilder, ServicePrincipalWithReferenceRequestBuilder, ServicePrincipalCollectionResponse, ServicePrincipalCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -36,7 +43,7 @@ public class ServicePrincipalCollectionWithReferencesRequest extends BaseCollect
      */
     @SuppressWarnings("unchecked")
     public ServicePrincipalCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ServicePrincipal.class, ServicePrincipalCollectionResponse.class, (Class<BaseCollectionPage<ServicePrincipal>>) (new BaseCollectionPage<ServicePrincipal>(new java.util.ArrayList<ServicePrincipal>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ServicePrincipalCollectionResponse.class, (Class<BaseCollectionPage<ServicePrincipal>>) (new BaseCollectionPage<ServicePrincipal>(new java.util.ArrayList<ServicePrincipal>(), null).getClass()), ServicePrincipalCollectionWithReferencesRequestBuilder.class);
     }
 
     public void get(final ICallback<? super BaseCollectionPage<ServicePrincipal>> callback) {

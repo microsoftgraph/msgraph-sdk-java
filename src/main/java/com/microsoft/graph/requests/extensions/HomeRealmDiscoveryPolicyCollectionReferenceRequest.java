@@ -17,10 +17,12 @@ import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyReference
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionWithReferencesRequest;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionWithReferencesRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.http.ReferenceRequestBody;
@@ -41,7 +43,7 @@ public class HomeRealmDiscoveryPolicyCollectionReferenceRequest extends BaseColl
      */
     @SuppressWarnings("unchecked")
     public HomeRealmDiscoveryPolicyCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicy.class, HomeRealmDiscoveryPolicyCollectionResponse.class, (Class<BaseCollectionPage<HomeRealmDiscoveryPolicy>>) (new BaseCollectionPage<HomeRealmDiscoveryPolicy>(new java.util.ArrayList<HomeRealmDiscoveryPolicy>(), null).getClass()), HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicyCollectionResponse.class, (Class<BaseCollectionPage<HomeRealmDiscoveryPolicy>>) (new BaseCollectionPage<HomeRealmDiscoveryPolicy>(new java.util.ArrayList<HomeRealmDiscoveryPolicy>(), null).getClass()), HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder.class);
     }
 
     public void post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final ICallback<? super HomeRealmDiscoveryPolicy> callback) {

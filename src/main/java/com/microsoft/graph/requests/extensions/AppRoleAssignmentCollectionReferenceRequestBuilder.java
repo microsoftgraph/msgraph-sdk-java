@@ -20,10 +20,10 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the App Role Assignment Collection Reference Request Builder.
  */
-public class AppRoleAssignmentCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<ServicePrincipal, AppRoleAssignmentCollectionReferenceRequest> {
+public class AppRoleAssignmentCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<AppRoleAssignment, AppRoleAssignmentCollectionResponse, AppRoleAssignmentCollectionReferenceRequest> {
 
     /**
-     * The request builder for this collection of ServicePrincipal
+     * The request builder for this collection of AppRoleAssignment
      *
      * @param requestUrl     the request URL
      * @param client         the service client

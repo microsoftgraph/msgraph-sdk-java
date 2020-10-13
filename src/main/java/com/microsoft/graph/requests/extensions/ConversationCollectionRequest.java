@@ -37,7 +37,7 @@ public class ConversationCollectionRequest extends BaseCollectionRequest<Convers
      */
     @SuppressWarnings("unchecked")
     public ConversationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Conversation.class, ConversationCollectionResponse.class,(Class<BaseCollectionPage<Conversation>>) (new BaseCollectionPage<Conversation>(new java.util.ArrayList<Conversation>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ConversationCollectionResponse.class,(Class<BaseCollectionPage<Conversation>>) (new BaseCollectionPage<Conversation>(new java.util.ArrayList<Conversation>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<Conversation>> callback) {

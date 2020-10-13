@@ -40,7 +40,7 @@ public class TeamCollectionRequest extends BaseCollectionRequest<Team, TeamColle
      */
     @SuppressWarnings("unchecked")
     public TeamCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Team.class, TeamCollectionResponse.class,(Class<BaseCollectionPage<Team>>) (new BaseCollectionPage<Team>(new java.util.ArrayList<Team>(), null).getClass()));
+        super(requestUrl, client, requestOptions, TeamCollectionResponse.class,(Class<BaseCollectionPage<Team>>) (new BaseCollectionPage<Team>(new java.util.ArrayList<Team>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<Team>> callback) {

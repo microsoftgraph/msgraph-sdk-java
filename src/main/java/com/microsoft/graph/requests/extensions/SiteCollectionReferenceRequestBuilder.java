@@ -21,10 +21,10 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Site Collection Reference Request Builder.
  */
-public class SiteCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<User, SiteCollectionReferenceRequest> {
+public class SiteCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<Site, SiteCollectionResponse, SiteCollectionReferenceRequest> {
 
     /**
-     * The request builder for this collection of User
+     * The request builder for this collection of Site
      *
      * @param requestUrl     the request URL
      * @param client         the service client

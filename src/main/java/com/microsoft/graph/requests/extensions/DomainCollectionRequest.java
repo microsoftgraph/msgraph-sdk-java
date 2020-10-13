@@ -36,7 +36,7 @@ public class DomainCollectionRequest extends BaseCollectionRequest<Domain, Domai
      */
     @SuppressWarnings("unchecked")
     public DomainCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Domain.class, DomainCollectionResponse.class,(Class<BaseCollectionPage<Domain>>) (new BaseCollectionPage<Domain>(new java.util.ArrayList<Domain>(), null).getClass()));
+        super(requestUrl, client, requestOptions, DomainCollectionResponse.class,(Class<BaseCollectionPage<Domain>>) (new BaseCollectionPage<Domain>(new java.util.ArrayList<Domain>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<Domain>> callback) {

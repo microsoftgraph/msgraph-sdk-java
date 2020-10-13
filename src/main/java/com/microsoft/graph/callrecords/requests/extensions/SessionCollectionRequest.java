@@ -37,7 +37,7 @@ public class SessionCollectionRequest extends BaseCollectionRequest<Session, Ses
      */
     @SuppressWarnings("unchecked")
     public SessionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Session.class, SessionCollectionResponse.class,(Class<BaseCollectionPage<Session>>) (new BaseCollectionPage<Session>(new java.util.ArrayList<Session>(), null).getClass()));
+        super(requestUrl, client, requestOptions, SessionCollectionResponse.class,(Class<BaseCollectionPage<Session>>) (new BaseCollectionPage<Session>(new java.util.ArrayList<Session>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<Session>> callback) {

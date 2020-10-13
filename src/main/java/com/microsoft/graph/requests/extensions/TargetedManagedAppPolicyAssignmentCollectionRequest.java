@@ -37,7 +37,7 @@ public class TargetedManagedAppPolicyAssignmentCollectionRequest extends BaseCol
      */
     @SuppressWarnings("unchecked")
     public TargetedManagedAppPolicyAssignmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TargetedManagedAppPolicyAssignment.class, TargetedManagedAppPolicyAssignmentCollectionResponse.class,(Class<BaseCollectionPage<TargetedManagedAppPolicyAssignment>>) (new BaseCollectionPage<TargetedManagedAppPolicyAssignment>(new java.util.ArrayList<TargetedManagedAppPolicyAssignment>(), null).getClass()));
+        super(requestUrl, client, requestOptions, TargetedManagedAppPolicyAssignmentCollectionResponse.class,(Class<BaseCollectionPage<TargetedManagedAppPolicyAssignment>>) (new BaseCollectionPage<TargetedManagedAppPolicyAssignment>(new java.util.ArrayList<TargetedManagedAppPolicyAssignment>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<TargetedManagedAppPolicyAssignment>> callback) {

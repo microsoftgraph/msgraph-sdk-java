@@ -36,7 +36,7 @@ public class SectionGroupCollectionRequest extends BaseCollectionRequest<Section
      */
     @SuppressWarnings("unchecked")
     public SectionGroupCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SectionGroup.class, SectionGroupCollectionResponse.class,(Class<BaseCollectionPage<SectionGroup>>) (new BaseCollectionPage<SectionGroup>(new java.util.ArrayList<SectionGroup>(), null).getClass()));
+        super(requestUrl, client, requestOptions, SectionGroupCollectionResponse.class,(Class<BaseCollectionPage<SectionGroup>>) (new BaseCollectionPage<SectionGroup>(new java.util.ArrayList<SectionGroup>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<SectionGroup>> callback) {

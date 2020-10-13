@@ -37,7 +37,7 @@ public class TermsAndConditionsAcceptanceStatusCollectionRequest extends BaseCol
      */
     @SuppressWarnings("unchecked")
     public TermsAndConditionsAcceptanceStatusCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TermsAndConditionsAcceptanceStatus.class, TermsAndConditionsAcceptanceStatusCollectionResponse.class,(Class<BaseCollectionPage<TermsAndConditionsAcceptanceStatus>>) (new BaseCollectionPage<TermsAndConditionsAcceptanceStatus>(new java.util.ArrayList<TermsAndConditionsAcceptanceStatus>(), null).getClass()));
+        super(requestUrl, client, requestOptions, TermsAndConditionsAcceptanceStatusCollectionResponse.class,(Class<BaseCollectionPage<TermsAndConditionsAcceptanceStatus>>) (new BaseCollectionPage<TermsAndConditionsAcceptanceStatus>(new java.util.ArrayList<TermsAndConditionsAcceptanceStatus>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<TermsAndConditionsAcceptanceStatus>> callback) {

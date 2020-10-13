@@ -20,10 +20,10 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Org Contact Collection Reference Request Builder.
  */
-public class OrgContactCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<ServicePrincipal, OrgContactCollectionReferenceRequest> {
+public class OrgContactCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<OrgContact, OrgContactCollectionResponse, OrgContactCollectionReferenceRequest> {
 
     /**
-     * The request builder for this collection of ServicePrincipal
+     * The request builder for this collection of OrgContact
      *
      * @param requestUrl     the request URL
      * @param client         the service client

@@ -37,7 +37,7 @@ public class ConditionalAccessPolicyCollectionRequest extends BaseCollectionRequ
      */
     @SuppressWarnings("unchecked")
     public ConditionalAccessPolicyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ConditionalAccessPolicy.class, ConditionalAccessPolicyCollectionResponse.class,(Class<BaseCollectionPage<ConditionalAccessPolicy>>) (new BaseCollectionPage<ConditionalAccessPolicy>(new java.util.ArrayList<ConditionalAccessPolicy>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ConditionalAccessPolicyCollectionResponse.class,(Class<BaseCollectionPage<ConditionalAccessPolicy>>) (new BaseCollectionPage<ConditionalAccessPolicy>(new java.util.ArrayList<ConditionalAccessPolicy>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<ConditionalAccessPolicy>> callback) {

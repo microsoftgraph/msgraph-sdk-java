@@ -37,7 +37,7 @@ public class ProfilePhotoCollectionRequest extends BaseCollectionRequest<Profile
      */
     @SuppressWarnings("unchecked")
     public ProfilePhotoCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ProfilePhoto.class, ProfilePhotoCollectionResponse.class,(Class<BaseCollectionPage<ProfilePhoto>>) (new BaseCollectionPage<ProfilePhoto>(new java.util.ArrayList<ProfilePhoto>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ProfilePhotoCollectionResponse.class,(Class<BaseCollectionPage<ProfilePhoto>>) (new BaseCollectionPage<ProfilePhoto>(new java.util.ArrayList<ProfilePhoto>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<ProfilePhoto>> callback) {

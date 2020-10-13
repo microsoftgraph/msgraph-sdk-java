@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Device Windows Defender Update Signatures Request.
  */
-public class ManagedDeviceWindowsDefenderUpdateSignaturesRequest extends BaseRequest<ManagedDevice> {
+public class ManagedDeviceWindowsDefenderUpdateSignaturesRequest extends BaseRequest<Void> {
 
     /**
      * The request for this ManagedDeviceWindowsDefenderUpdateSignatures
@@ -28,7 +28,7 @@ public class ManagedDeviceWindowsDefenderUpdateSignaturesRequest extends BaseReq
      * @param requestOptions the options for this request
      */
     public ManagedDeviceWindowsDefenderUpdateSignaturesRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedDevice.class);
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**

@@ -37,7 +37,7 @@ public class WorkbookPivotTableCollectionRequest extends BaseCollectionRequest<W
      */
     @SuppressWarnings("unchecked")
     public WorkbookPivotTableCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WorkbookPivotTable.class, WorkbookPivotTableCollectionResponse.class,(Class<BaseCollectionPage<WorkbookPivotTable>>) (new BaseCollectionPage<WorkbookPivotTable>(new java.util.ArrayList<WorkbookPivotTable>(), null).getClass()));
+        super(requestUrl, client, requestOptions, WorkbookPivotTableCollectionResponse.class,(Class<BaseCollectionPage<WorkbookPivotTable>>) (new BaseCollectionPage<WorkbookPivotTable>(new java.util.ArrayList<WorkbookPivotTable>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<WorkbookPivotTable>> callback) {

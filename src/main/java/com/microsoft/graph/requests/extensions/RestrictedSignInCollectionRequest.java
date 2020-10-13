@@ -37,7 +37,7 @@ public class RestrictedSignInCollectionRequest extends BaseCollectionRequest<Res
      */
     @SuppressWarnings("unchecked")
     public RestrictedSignInCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, RestrictedSignIn.class, RestrictedSignInCollectionResponse.class,(Class<BaseCollectionPage<RestrictedSignIn>>) (new BaseCollectionPage<RestrictedSignIn>(new java.util.ArrayList<RestrictedSignIn>(), null).getClass()));
+        super(requestUrl, client, requestOptions, RestrictedSignInCollectionResponse.class,(Class<BaseCollectionPage<RestrictedSignIn>>) (new BaseCollectionPage<RestrictedSignIn>(new java.util.ArrayList<RestrictedSignIn>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<RestrictedSignIn>> callback) {

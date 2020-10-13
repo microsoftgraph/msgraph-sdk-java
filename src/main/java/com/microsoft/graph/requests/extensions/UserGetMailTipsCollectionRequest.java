@@ -43,7 +43,7 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<Mail
      */
     @SuppressWarnings("unchecked")
     public UserGetMailTipsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MailTips.class, UserGetMailTipsCollectionResponse.class, (Class<BaseCollectionPage<MailTips>>) (new BaseCollectionPage<MailTips>(new java.util.ArrayList<MailTips>(), null).getClass()));
+        super(requestUrl, client, requestOptions, UserGetMailTipsCollectionResponse.class, (Class<BaseCollectionPage<MailTips>>) (new BaseCollectionPage<MailTips>(new java.util.ArrayList<MailTips>(), null).getClass()));
         body = new UserGetMailTipsBody();
     }
 

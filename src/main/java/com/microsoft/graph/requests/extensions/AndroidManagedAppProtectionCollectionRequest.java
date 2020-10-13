@@ -37,7 +37,7 @@ public class AndroidManagedAppProtectionCollectionRequest extends BaseCollection
      */
     @SuppressWarnings("unchecked")
     public AndroidManagedAppProtectionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, AndroidManagedAppProtection.class, AndroidManagedAppProtectionCollectionResponse.class,(Class<BaseCollectionPage<AndroidManagedAppProtection>>) (new BaseCollectionPage<AndroidManagedAppProtection>(new java.util.ArrayList<AndroidManagedAppProtection>(), null).getClass()));
+        super(requestUrl, client, requestOptions, AndroidManagedAppProtectionCollectionResponse.class,(Class<BaseCollectionPage<AndroidManagedAppProtection>>) (new BaseCollectionPage<AndroidManagedAppProtection>(new java.util.ArrayList<AndroidManagedAppProtection>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<AndroidManagedAppProtection>> callback) {

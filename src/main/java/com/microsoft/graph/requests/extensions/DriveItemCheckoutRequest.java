@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Drive Item Checkout Request.
  */
-public class DriveItemCheckoutRequest extends BaseRequest<DriveItem> {
+public class DriveItemCheckoutRequest extends BaseRequest<Void> {
 
     /**
      * The request for this DriveItemCheckout
@@ -28,7 +28,7 @@ public class DriveItemCheckoutRequest extends BaseRequest<DriveItem> {
      * @param requestOptions the options for this request
      */
     public DriveItemCheckoutRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DriveItem.class);
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**

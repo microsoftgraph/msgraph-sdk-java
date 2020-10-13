@@ -37,7 +37,7 @@ public class ListCollectionRequest extends BaseCollectionRequest<List, ListColle
      */
     @SuppressWarnings("unchecked")
     public ListCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, List.class, ListCollectionResponse.class,(Class<BaseCollectionPage<List>>) (new BaseCollectionPage<List>(new java.util.ArrayList<List>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ListCollectionResponse.class,(Class<BaseCollectionPage<List>>) (new BaseCollectionPage<List>(new java.util.ArrayList<List>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<List>> callback) {

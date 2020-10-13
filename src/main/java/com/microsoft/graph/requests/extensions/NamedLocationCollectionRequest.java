@@ -37,7 +37,7 @@ public class NamedLocationCollectionRequest extends BaseCollectionRequest<NamedL
      */
     @SuppressWarnings("unchecked")
     public NamedLocationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, NamedLocation.class, NamedLocationCollectionResponse.class,(Class<BaseCollectionPage<NamedLocation>>) (new BaseCollectionPage<NamedLocation>(new java.util.ArrayList<NamedLocation>(), null).getClass()));
+        super(requestUrl, client, requestOptions, NamedLocationCollectionResponse.class,(Class<BaseCollectionPage<NamedLocation>>) (new BaseCollectionPage<NamedLocation>(new java.util.ArrayList<NamedLocation>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<NamedLocation>> callback) {

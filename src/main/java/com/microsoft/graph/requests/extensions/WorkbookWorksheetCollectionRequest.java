@@ -38,7 +38,7 @@ public class WorkbookWorksheetCollectionRequest extends BaseCollectionRequest<Wo
      */
     @SuppressWarnings("unchecked")
     public WorkbookWorksheetCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WorkbookWorksheet.class, WorkbookWorksheetCollectionResponse.class,(Class<BaseCollectionPage<WorkbookWorksheet>>) (new BaseCollectionPage<WorkbookWorksheet>(new java.util.ArrayList<WorkbookWorksheet>(), null).getClass()));
+        super(requestUrl, client, requestOptions, WorkbookWorksheetCollectionResponse.class,(Class<BaseCollectionPage<WorkbookWorksheet>>) (new BaseCollectionPage<WorkbookWorksheet>(new java.util.ArrayList<WorkbookWorksheet>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<WorkbookWorksheet>> callback) {

@@ -37,7 +37,7 @@ public class DeviceComplianceScheduledActionForRuleCollectionRequest extends Bas
      */
     @SuppressWarnings("unchecked")
     public DeviceComplianceScheduledActionForRuleCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceComplianceScheduledActionForRule.class, DeviceComplianceScheduledActionForRuleCollectionResponse.class,(Class<BaseCollectionPage<DeviceComplianceScheduledActionForRule>>) (new BaseCollectionPage<DeviceComplianceScheduledActionForRule>(new java.util.ArrayList<DeviceComplianceScheduledActionForRule>(), null).getClass()));
+        super(requestUrl, client, requestOptions, DeviceComplianceScheduledActionForRuleCollectionResponse.class,(Class<BaseCollectionPage<DeviceComplianceScheduledActionForRule>>) (new BaseCollectionPage<DeviceComplianceScheduledActionForRule>(new java.util.ArrayList<DeviceComplianceScheduledActionForRule>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<DeviceComplianceScheduledActionForRule>> callback) {

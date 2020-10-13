@@ -37,7 +37,7 @@ public class UserInstallStateSummaryCollectionRequest extends BaseCollectionRequ
      */
     @SuppressWarnings("unchecked")
     public UserInstallStateSummaryCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, UserInstallStateSummary.class, UserInstallStateSummaryCollectionResponse.class,(Class<BaseCollectionPage<UserInstallStateSummary>>) (new BaseCollectionPage<UserInstallStateSummary>(new java.util.ArrayList<UserInstallStateSummary>(), null).getClass()));
+        super(requestUrl, client, requestOptions, UserInstallStateSummaryCollectionResponse.class,(Class<BaseCollectionPage<UserInstallStateSummary>>) (new BaseCollectionPage<UserInstallStateSummary>(new java.util.ArrayList<UserInstallStateSummary>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<UserInstallStateSummary>> callback) {

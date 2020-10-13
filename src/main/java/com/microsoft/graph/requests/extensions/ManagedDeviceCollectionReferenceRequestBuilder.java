@@ -21,10 +21,10 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Managed Device Collection Reference Request Builder.
  */
-public class ManagedDeviceCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<DetectedApp, ManagedDeviceCollectionReferenceRequest> {
+public class ManagedDeviceCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<ManagedDevice, ManagedDeviceCollectionResponse, ManagedDeviceCollectionReferenceRequest> {
 
     /**
-     * The request builder for this collection of DetectedApp
+     * The request builder for this collection of ManagedDevice
      *
      * @param requestUrl     the request URL
      * @param client         the service client

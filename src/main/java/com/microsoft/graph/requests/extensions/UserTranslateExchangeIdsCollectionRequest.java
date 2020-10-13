@@ -42,7 +42,7 @@ public class UserTranslateExchangeIdsCollectionRequest extends BaseCollectionReq
      */
     @SuppressWarnings("unchecked")
     public UserTranslateExchangeIdsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ConvertIdResult.class, UserTranslateExchangeIdsCollectionResponse.class, (Class<BaseCollectionPage<ConvertIdResult>>) (new BaseCollectionPage<ConvertIdResult>(new java.util.ArrayList<ConvertIdResult>(), null).getClass()));
+        super(requestUrl, client, requestOptions, UserTranslateExchangeIdsCollectionResponse.class, (Class<BaseCollectionPage<ConvertIdResult>>) (new BaseCollectionPage<ConvertIdResult>(new java.util.ArrayList<ConvertIdResult>(), null).getClass()));
         body = new UserTranslateExchangeIdsBody();
     }
 

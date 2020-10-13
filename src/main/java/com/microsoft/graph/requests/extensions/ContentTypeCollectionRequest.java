@@ -37,7 +37,7 @@ public class ContentTypeCollectionRequest extends BaseCollectionRequest<ContentT
      */
     @SuppressWarnings("unchecked")
     public ContentTypeCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ContentType.class, ContentTypeCollectionResponse.class,(Class<BaseCollectionPage<ContentType>>) (new BaseCollectionPage<ContentType>(new java.util.ArrayList<ContentType>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ContentTypeCollectionResponse.class,(Class<BaseCollectionPage<ContentType>>) (new BaseCollectionPage<ContentType>(new java.util.ArrayList<ContentType>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<ContentType>> callback) {

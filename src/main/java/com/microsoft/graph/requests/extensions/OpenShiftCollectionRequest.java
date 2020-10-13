@@ -37,7 +37,7 @@ public class OpenShiftCollectionRequest extends BaseCollectionRequest<OpenShift,
      */
     @SuppressWarnings("unchecked")
     public OpenShiftCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OpenShift.class, OpenShiftCollectionResponse.class,(Class<BaseCollectionPage<OpenShift>>) (new BaseCollectionPage<OpenShift>(new java.util.ArrayList<OpenShift>(), null).getClass()));
+        super(requestUrl, client, requestOptions, OpenShiftCollectionResponse.class,(Class<BaseCollectionPage<OpenShift>>) (new BaseCollectionPage<OpenShift>(new java.util.ArrayList<OpenShift>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<OpenShift>> callback) {

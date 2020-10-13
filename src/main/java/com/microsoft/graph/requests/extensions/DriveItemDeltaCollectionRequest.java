@@ -37,7 +37,7 @@ public class DriveItemDeltaCollectionRequest extends BaseCollectionRequest<Drive
      */
     @SuppressWarnings("unchecked")
     public DriveItemDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DriveItem.class, DriveItemDeltaCollectionResponse.class, (Class<BaseCollectionPage<DriveItem>>) (new BaseCollectionPage<DriveItem>(new java.util.ArrayList<DriveItem>(), null).getClass()));
+        super(requestUrl, client, requestOptions, DriveItemDeltaCollectionResponse.class, (Class<BaseCollectionPage<DriveItem>>) (new BaseCollectionPage<DriveItem>(new java.util.ArrayList<DriveItem>(), null).getClass()));
     }
 
 

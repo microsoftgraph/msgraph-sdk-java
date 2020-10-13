@@ -37,7 +37,7 @@ public class OfferShiftRequestCollectionRequest extends BaseCollectionRequest<Of
      */
     @SuppressWarnings("unchecked")
     public OfferShiftRequestCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OfferShiftRequest.class, OfferShiftRequestCollectionResponse.class,(Class<BaseCollectionPage<OfferShiftRequest>>) (new BaseCollectionPage<OfferShiftRequest>(new java.util.ArrayList<OfferShiftRequest>(), null).getClass()));
+        super(requestUrl, client, requestOptions, OfferShiftRequestCollectionResponse.class,(Class<BaseCollectionPage<OfferShiftRequest>>) (new BaseCollectionPage<OfferShiftRequest>(new java.util.ArrayList<OfferShiftRequest>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<OfferShiftRequest>> callback) {

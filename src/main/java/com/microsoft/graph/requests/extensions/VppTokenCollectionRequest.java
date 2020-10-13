@@ -37,7 +37,7 @@ public class VppTokenCollectionRequest extends BaseCollectionRequest<VppToken, V
      */
     @SuppressWarnings("unchecked")
     public VppTokenCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, VppToken.class, VppTokenCollectionResponse.class,(Class<BaseCollectionPage<VppToken>>) (new BaseCollectionPage<VppToken>(new java.util.ArrayList<VppToken>(), null).getClass()));
+        super(requestUrl, client, requestOptions, VppTokenCollectionResponse.class,(Class<BaseCollectionPage<VppToken>>) (new BaseCollectionPage<VppToken>(new java.util.ArrayList<VppToken>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<VppToken>> callback) {

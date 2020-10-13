@@ -37,7 +37,7 @@ public class ListItemGetActivitiesByIntervalCollectionRequest extends BaseCollec
      */
     @SuppressWarnings("unchecked")
     public ListItemGetActivitiesByIntervalCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ItemActivityStat.class, ListItemGetActivitiesByIntervalCollectionResponse.class, (Class<BaseCollectionPage<ItemActivityStat>>) (new BaseCollectionPage<ItemActivityStat>(new java.util.ArrayList<ItemActivityStat>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ListItemGetActivitiesByIntervalCollectionResponse.class, (Class<BaseCollectionPage<ItemActivityStat>>) (new BaseCollectionPage<ItemActivityStat>(new java.util.ArrayList<ItemActivityStat>(), null).getClass()));
     }
 
 

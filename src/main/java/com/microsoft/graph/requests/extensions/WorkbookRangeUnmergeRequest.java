@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Unmerge Request.
  */
-public class WorkbookRangeUnmergeRequest extends BaseRequest<WorkbookRange> {
+public class WorkbookRangeUnmergeRequest extends BaseRequest<Void> {
 
     /**
      * The request for this WorkbookRangeUnmerge
@@ -28,7 +28,7 @@ public class WorkbookRangeUnmergeRequest extends BaseRequest<WorkbookRange> {
      * @param requestOptions the options for this request
      */
     public WorkbookRangeUnmergeRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WorkbookRange.class);
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**

@@ -39,7 +39,7 @@ public class EventCollectionRequest extends BaseCollectionRequest<Event, EventCo
      */
     @SuppressWarnings("unchecked")
     public EventCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Event.class, EventCollectionResponse.class,(Class<BaseCollectionPage<Event>>) (new BaseCollectionPage<Event>(new java.util.ArrayList<Event>(), null).getClass()));
+        super(requestUrl, client, requestOptions, EventCollectionResponse.class,(Class<BaseCollectionPage<Event>>) (new BaseCollectionPage<Event>(new java.util.ArrayList<Event>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<Event>> callback) {

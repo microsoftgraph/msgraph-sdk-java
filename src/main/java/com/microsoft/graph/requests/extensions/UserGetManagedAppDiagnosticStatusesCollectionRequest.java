@@ -37,7 +37,7 @@ public class UserGetManagedAppDiagnosticStatusesCollectionRequest extends BaseCo
      */
     @SuppressWarnings("unchecked")
     public UserGetManagedAppDiagnosticStatusesCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedAppDiagnosticStatus.class, UserGetManagedAppDiagnosticStatusesCollectionResponse.class, (Class<BaseCollectionPage<ManagedAppDiagnosticStatus>>) (new BaseCollectionPage<ManagedAppDiagnosticStatus>(new java.util.ArrayList<ManagedAppDiagnosticStatus>(), null).getClass()));
+        super(requestUrl, client, requestOptions, UserGetManagedAppDiagnosticStatusesCollectionResponse.class, (Class<BaseCollectionPage<ManagedAppDiagnosticStatus>>) (new BaseCollectionPage<ManagedAppDiagnosticStatus>(new java.util.ArrayList<ManagedAppDiagnosticStatus>(), null).getClass()));
     }
 
 

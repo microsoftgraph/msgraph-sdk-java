@@ -20,10 +20,10 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Managed App Registration Collection Reference Request Builder.
  */
-public class ManagedAppRegistrationCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<User, ManagedAppRegistrationCollectionReferenceRequest> {
+public class ManagedAppRegistrationCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<ManagedAppRegistration, ManagedAppRegistrationCollectionResponse, ManagedAppRegistrationCollectionReferenceRequest> {
 
     /**
-     * The request builder for this collection of User
+     * The request builder for this collection of ManagedAppRegistration
      *
      * @param requestUrl     the request URL
      * @param client         the service client

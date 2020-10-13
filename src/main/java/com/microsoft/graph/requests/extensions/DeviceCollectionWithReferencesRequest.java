@@ -13,9 +13,16 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.models.extensions.Device;
+import com.microsoft.graph.requests.extensions.DeviceWithReferenceRequest;
+import com.microsoft.graph.requests.extensions.DeviceReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.DeviceCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.DeviceCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -24,7 +31,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Device Collection With References Request.
  */
-public class DeviceCollectionWithReferencesRequest extends BaseCollectionRequest<Device, DeviceCollectionResponse> {
+public class DeviceCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<Device, DeviceWithReferenceRequest, DeviceReferenceRequestBuilder, DeviceWithReferenceRequestBuilder, DeviceCollectionResponse, DeviceCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of Device
@@ -35,7 +42,7 @@ public class DeviceCollectionWithReferencesRequest extends BaseCollectionRequest
      */
     @SuppressWarnings("unchecked")
     public DeviceCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Device.class, DeviceCollectionResponse.class, (Class<BaseCollectionPage<Device>>) (new BaseCollectionPage<Device>(new java.util.ArrayList<Device>(), null).getClass()));
+        super(requestUrl, client, requestOptions, DeviceCollectionResponse.class, (Class<BaseCollectionPage<Device>>) (new BaseCollectionPage<Device>(new java.util.ArrayList<Device>(), null).getClass()), DeviceCollectionWithReferencesRequestBuilder.class);
     }
 
     public void get(final ICallback<? super BaseCollectionPage<Device>> callback) {

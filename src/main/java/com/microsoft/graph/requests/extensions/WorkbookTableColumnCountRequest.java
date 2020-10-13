@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Column Count Request.
  */
-public class WorkbookTableColumnCountRequest extends BaseRequest<Int32> {
+public class WorkbookTableColumnCountRequest extends BaseRequest<Integer> {
 
     /**
      * The request for this WorkbookTableColumnCount
@@ -28,7 +28,7 @@ public class WorkbookTableColumnCountRequest extends BaseRequest<Int32> {
      * @param requestOptions the options for this request
      */
     public WorkbookTableColumnCountRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Int32.class);
+        super(requestUrl, client, requestOptions, Integer.class);
     }
 
     /**

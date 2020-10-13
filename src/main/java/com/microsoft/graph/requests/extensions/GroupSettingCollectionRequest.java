@@ -36,7 +36,7 @@ public class GroupSettingCollectionRequest extends BaseCollectionRequest<GroupSe
      */
     @SuppressWarnings("unchecked")
     public GroupSettingCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, GroupSetting.class, GroupSettingCollectionResponse.class,(Class<BaseCollectionPage<GroupSetting>>) (new BaseCollectionPage<GroupSetting>(new java.util.ArrayList<GroupSetting>(), null).getClass()));
+        super(requestUrl, client, requestOptions, GroupSettingCollectionResponse.class,(Class<BaseCollectionPage<GroupSetting>>) (new BaseCollectionPage<GroupSetting>(new java.util.ArrayList<GroupSetting>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<GroupSetting>> callback) {

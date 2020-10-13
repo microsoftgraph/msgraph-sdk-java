@@ -37,7 +37,7 @@ public class DeviceCompliancePolicyAssignmentCollectionRequest extends BaseColle
      */
     @SuppressWarnings("unchecked")
     public DeviceCompliancePolicyAssignmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceCompliancePolicyAssignment.class, DeviceCompliancePolicyAssignmentCollectionResponse.class,(Class<BaseCollectionPage<DeviceCompliancePolicyAssignment>>) (new BaseCollectionPage<DeviceCompliancePolicyAssignment>(new java.util.ArrayList<DeviceCompliancePolicyAssignment>(), null).getClass()));
+        super(requestUrl, client, requestOptions, DeviceCompliancePolicyAssignmentCollectionResponse.class,(Class<BaseCollectionPage<DeviceCompliancePolicyAssignment>>) (new BaseCollectionPage<DeviceCompliancePolicyAssignment>(new java.util.ArrayList<DeviceCompliancePolicyAssignment>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<DeviceCompliancePolicyAssignment>> callback) {

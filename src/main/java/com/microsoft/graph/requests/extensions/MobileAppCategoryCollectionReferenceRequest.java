@@ -17,10 +17,12 @@ import com.microsoft.graph.requests.extensions.MobileAppCategoryReferenceRequest
 import com.microsoft.graph.requests.extensions.MobileAppCategoryWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionWithReferencesRequest;
 import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.models.extensions.MobileAppCategory;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionWithReferencesRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.http.ReferenceRequestBody;
@@ -41,7 +43,7 @@ public class MobileAppCategoryCollectionReferenceRequest extends BaseCollectionW
      */
     @SuppressWarnings("unchecked")
     public MobileAppCategoryCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MobileAppCategory.class, MobileAppCategoryCollectionResponse.class, (Class<BaseCollectionPage<MobileAppCategory>>) (new BaseCollectionPage<MobileAppCategory>(new java.util.ArrayList<MobileAppCategory>(), null).getClass()), MobileAppCategoryCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, MobileAppCategoryCollectionResponse.class, (Class<BaseCollectionPage<MobileAppCategory>>) (new BaseCollectionPage<MobileAppCategory>(new java.util.ArrayList<MobileAppCategory>(), null).getClass()), MobileAppCategoryCollectionWithReferencesRequestBuilder.class);
     }
 
     public void post(final MobileAppCategory newMobileAppCategory, final ICallback<? super MobileAppCategory> callback) {

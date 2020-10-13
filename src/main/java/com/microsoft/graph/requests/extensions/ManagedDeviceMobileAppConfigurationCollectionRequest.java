@@ -38,7 +38,7 @@ public class ManagedDeviceMobileAppConfigurationCollectionRequest extends BaseCo
      */
     @SuppressWarnings("unchecked")
     public ManagedDeviceMobileAppConfigurationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfiguration.class, ManagedDeviceMobileAppConfigurationCollectionResponse.class,(Class<BaseCollectionPage<ManagedDeviceMobileAppConfiguration>>) (new BaseCollectionPage<ManagedDeviceMobileAppConfiguration>(new java.util.ArrayList<ManagedDeviceMobileAppConfiguration>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfigurationCollectionResponse.class,(Class<BaseCollectionPage<ManagedDeviceMobileAppConfiguration>>) (new BaseCollectionPage<ManagedDeviceMobileAppConfiguration>(new java.util.ArrayList<ManagedDeviceMobileAppConfiguration>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<ManagedDeviceMobileAppConfiguration>> callback) {

@@ -37,7 +37,7 @@ public class DeviceAndAppManagementRoleAssignmentCollectionRequest extends BaseC
      */
     @SuppressWarnings("unchecked")
     public DeviceAndAppManagementRoleAssignmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceAndAppManagementRoleAssignment.class, DeviceAndAppManagementRoleAssignmentCollectionResponse.class,(Class<BaseCollectionPage<DeviceAndAppManagementRoleAssignment>>) (new BaseCollectionPage<DeviceAndAppManagementRoleAssignment>(new java.util.ArrayList<DeviceAndAppManagementRoleAssignment>(), null).getClass()));
+        super(requestUrl, client, requestOptions, DeviceAndAppManagementRoleAssignmentCollectionResponse.class,(Class<BaseCollectionPage<DeviceAndAppManagementRoleAssignment>>) (new BaseCollectionPage<DeviceAndAppManagementRoleAssignment>(new java.util.ArrayList<DeviceAndAppManagementRoleAssignment>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<DeviceAndAppManagementRoleAssignment>> callback) {

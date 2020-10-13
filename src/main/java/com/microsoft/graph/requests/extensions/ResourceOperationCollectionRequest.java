@@ -37,7 +37,7 @@ public class ResourceOperationCollectionRequest extends BaseCollectionRequest<Re
      */
     @SuppressWarnings("unchecked")
     public ResourceOperationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ResourceOperation.class, ResourceOperationCollectionResponse.class,(Class<BaseCollectionPage<ResourceOperation>>) (new BaseCollectionPage<ResourceOperation>(new java.util.ArrayList<ResourceOperation>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ResourceOperationCollectionResponse.class,(Class<BaseCollectionPage<ResourceOperation>>) (new BaseCollectionPage<ResourceOperation>(new java.util.ArrayList<ResourceOperation>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<ResourceOperation>> callback) {

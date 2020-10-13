@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Remote Assistance Partner Begin Onboarding Request.
  */
-public class RemoteAssistancePartnerBeginOnboardingRequest extends BaseRequest<RemoteAssistancePartner> {
+public class RemoteAssistancePartnerBeginOnboardingRequest extends BaseRequest<Void> {
 
     /**
      * The request for this RemoteAssistancePartnerBeginOnboarding
@@ -28,7 +28,7 @@ public class RemoteAssistancePartnerBeginOnboardingRequest extends BaseRequest<R
      * @param requestOptions the options for this request
      */
     public RemoteAssistancePartnerBeginOnboardingRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, RemoteAssistancePartner.class);
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**

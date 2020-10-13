@@ -37,7 +37,7 @@ public class ManagedAppStatusCollectionRequest extends BaseCollectionRequest<Man
      */
     @SuppressWarnings("unchecked")
     public ManagedAppStatusCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedAppStatus.class, ManagedAppStatusCollectionResponse.class,(Class<BaseCollectionPage<ManagedAppStatus>>) (new BaseCollectionPage<ManagedAppStatus>(new java.util.ArrayList<ManagedAppStatus>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ManagedAppStatusCollectionResponse.class,(Class<BaseCollectionPage<ManagedAppStatus>>) (new BaseCollectionPage<ManagedAppStatus>(new java.util.ArrayList<ManagedAppStatus>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<ManagedAppStatus>> callback) {

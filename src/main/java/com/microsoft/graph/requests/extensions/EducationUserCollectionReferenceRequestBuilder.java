@@ -20,10 +20,10 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Education User Collection Reference Request Builder.
  */
-public class EducationUserCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<EducationSchool, EducationUserCollectionReferenceRequest> {
+public class EducationUserCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<EducationUser, EducationUserCollectionResponse, EducationUserCollectionReferenceRequest> {
 
     /**
-     * The request builder for this collection of EducationSchool
+     * The request builder for this collection of EducationUser
      *
      * @param requestUrl     the request URL
      * @param client         the service client

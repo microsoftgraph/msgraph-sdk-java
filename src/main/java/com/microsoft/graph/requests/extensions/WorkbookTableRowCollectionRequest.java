@@ -38,7 +38,7 @@ public class WorkbookTableRowCollectionRequest extends BaseCollectionRequest<Wor
      */
     @SuppressWarnings("unchecked")
     public WorkbookTableRowCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WorkbookTableRow.class, WorkbookTableRowCollectionResponse.class,(Class<BaseCollectionPage<WorkbookTableRow>>) (new BaseCollectionPage<WorkbookTableRow>(new java.util.ArrayList<WorkbookTableRow>(), null).getClass()));
+        super(requestUrl, client, requestOptions, WorkbookTableRowCollectionResponse.class,(Class<BaseCollectionPage<WorkbookTableRow>>) (new BaseCollectionPage<WorkbookTableRow>(new java.util.ArrayList<WorkbookTableRow>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<WorkbookTableRow>> callback) {

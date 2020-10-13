@@ -37,7 +37,7 @@ public class ApplicationDeltaCollectionRequest extends BaseCollectionRequest<App
      */
     @SuppressWarnings("unchecked")
     public ApplicationDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Application.class, ApplicationDeltaCollectionResponse.class, (Class<BaseCollectionPage<Application>>) (new BaseCollectionPage<Application>(new java.util.ArrayList<Application>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ApplicationDeltaCollectionResponse.class, (Class<BaseCollectionPage<Application>>) (new BaseCollectionPage<Application>(new java.util.ArrayList<Application>(), null).getClass()));
     }
 
 

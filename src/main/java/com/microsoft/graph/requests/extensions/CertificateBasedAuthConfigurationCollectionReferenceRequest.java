@@ -17,10 +17,12 @@ import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfiguration
 import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionWithReferencesRequest;
 import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.models.extensions.CertificateBasedAuthConfiguration;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionWithReferencesRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.http.ReferenceRequestBody;
@@ -41,7 +43,7 @@ public class CertificateBasedAuthConfigurationCollectionReferenceRequest extends
      */
     @SuppressWarnings("unchecked")
     public CertificateBasedAuthConfigurationCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, CertificateBasedAuthConfiguration.class, CertificateBasedAuthConfigurationCollectionResponse.class, (Class<BaseCollectionPage<CertificateBasedAuthConfiguration>>) (new BaseCollectionPage<CertificateBasedAuthConfiguration>(new java.util.ArrayList<CertificateBasedAuthConfiguration>(), null).getClass()), CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, CertificateBasedAuthConfigurationCollectionResponse.class, (Class<BaseCollectionPage<CertificateBasedAuthConfiguration>>) (new BaseCollectionPage<CertificateBasedAuthConfiguration>(new java.util.ArrayList<CertificateBasedAuthConfiguration>(), null).getClass()), CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder.class);
     }
 
     public void post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, final ICallback<? super CertificateBasedAuthConfiguration> callback) {

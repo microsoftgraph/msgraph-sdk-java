@@ -37,7 +37,7 @@ public class TrendingCollectionRequest extends BaseCollectionRequest<Trending, T
      */
     @SuppressWarnings("unchecked")
     public TrendingCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Trending.class, TrendingCollectionResponse.class,(Class<BaseCollectionPage<Trending>>) (new BaseCollectionPage<Trending>(new java.util.ArrayList<Trending>(), null).getClass()));
+        super(requestUrl, client, requestOptions, TrendingCollectionResponse.class,(Class<BaseCollectionPage<Trending>>) (new BaseCollectionPage<Trending>(new java.util.ArrayList<Trending>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<Trending>> callback) {

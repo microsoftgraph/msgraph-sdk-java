@@ -37,7 +37,7 @@ public class ExtensionPropertyCollectionRequest extends BaseCollectionRequest<Ex
      */
     @SuppressWarnings("unchecked")
     public ExtensionPropertyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ExtensionProperty.class, ExtensionPropertyCollectionResponse.class,(Class<BaseCollectionPage<ExtensionProperty>>) (new BaseCollectionPage<ExtensionProperty>(new java.util.ArrayList<ExtensionProperty>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ExtensionPropertyCollectionResponse.class,(Class<BaseCollectionPage<ExtensionProperty>>) (new BaseCollectionPage<ExtensionProperty>(new java.util.ArrayList<ExtensionProperty>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<ExtensionProperty>> callback) {

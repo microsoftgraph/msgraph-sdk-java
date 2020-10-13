@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Drive Item Unfollow Request.
  */
-public class DriveItemUnfollowRequest extends BaseRequest<DriveItem> {
+public class DriveItemUnfollowRequest extends BaseRequest<Void> {
 
     /**
      * The request for this DriveItemUnfollow
@@ -28,7 +28,7 @@ public class DriveItemUnfollowRequest extends BaseRequest<DriveItem> {
      * @param requestOptions the options for this request
      */
     public DriveItemUnfollowRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DriveItem.class);
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**

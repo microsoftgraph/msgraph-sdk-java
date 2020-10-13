@@ -40,7 +40,7 @@ public class ParticipantCollectionRequest extends BaseCollectionRequest<Particip
      */
     @SuppressWarnings("unchecked")
     public ParticipantCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Participant.class, ParticipantCollectionResponse.class,(Class<BaseCollectionPage<Participant>>) (new BaseCollectionPage<Participant>(new java.util.ArrayList<Participant>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ParticipantCollectionResponse.class,(Class<BaseCollectionPage<Participant>>) (new BaseCollectionPage<Participant>(new java.util.ArrayList<Participant>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<Participant>> callback) {

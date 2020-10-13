@@ -37,7 +37,7 @@ public class PermissionGrantPolicyCollectionRequest extends BaseCollectionReques
      */
     @SuppressWarnings("unchecked")
     public PermissionGrantPolicyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, PermissionGrantPolicy.class, PermissionGrantPolicyCollectionResponse.class,(Class<BaseCollectionPage<PermissionGrantPolicy>>) (new BaseCollectionPage<PermissionGrantPolicy>(new java.util.ArrayList<PermissionGrantPolicy>(), null).getClass()));
+        super(requestUrl, client, requestOptions, PermissionGrantPolicyCollectionResponse.class,(Class<BaseCollectionPage<PermissionGrantPolicy>>) (new BaseCollectionPage<PermissionGrantPolicy>(new java.util.ArrayList<PermissionGrantPolicy>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<PermissionGrantPolicy>> callback) {

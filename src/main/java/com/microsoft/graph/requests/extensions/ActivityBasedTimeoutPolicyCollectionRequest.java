@@ -37,7 +37,7 @@ public class ActivityBasedTimeoutPolicyCollectionRequest extends BaseCollectionR
      */
     @SuppressWarnings("unchecked")
     public ActivityBasedTimeoutPolicyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ActivityBasedTimeoutPolicy.class, ActivityBasedTimeoutPolicyCollectionResponse.class,(Class<BaseCollectionPage<ActivityBasedTimeoutPolicy>>) (new BaseCollectionPage<ActivityBasedTimeoutPolicy>(new java.util.ArrayList<ActivityBasedTimeoutPolicy>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ActivityBasedTimeoutPolicyCollectionResponse.class,(Class<BaseCollectionPage<ActivityBasedTimeoutPolicy>>) (new BaseCollectionPage<ActivityBasedTimeoutPolicy>(new java.util.ArrayList<ActivityBasedTimeoutPolicy>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<ActivityBasedTimeoutPolicy>> callback) {

@@ -37,7 +37,7 @@ public class MobileLobAppCollectionRequest extends BaseCollectionRequest<MobileL
      */
     @SuppressWarnings("unchecked")
     public MobileLobAppCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MobileLobApp.class, MobileLobAppCollectionResponse.class,(Class<BaseCollectionPage<MobileLobApp>>) (new BaseCollectionPage<MobileLobApp>(new java.util.ArrayList<MobileLobApp>(), null).getClass()));
+        super(requestUrl, client, requestOptions, MobileLobAppCollectionResponse.class,(Class<BaseCollectionPage<MobileLobApp>>) (new BaseCollectionPage<MobileLobApp>(new java.util.ArrayList<MobileLobApp>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<MobileLobApp>> callback) {

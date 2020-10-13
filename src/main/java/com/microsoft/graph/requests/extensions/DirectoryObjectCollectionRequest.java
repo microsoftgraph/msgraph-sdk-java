@@ -37,7 +37,7 @@ public class DirectoryObjectCollectionRequest extends BaseCollectionRequest<Dire
      */
     @SuppressWarnings("unchecked")
     public DirectoryObjectCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DirectoryObject.class, DirectoryObjectCollectionResponse.class,(Class<BaseCollectionPage<DirectoryObject>>) (new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass()));
+        super(requestUrl, client, requestOptions, DirectoryObjectCollectionResponse.class,(Class<BaseCollectionPage<DirectoryObject>>) (new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<DirectoryObject>> callback) {

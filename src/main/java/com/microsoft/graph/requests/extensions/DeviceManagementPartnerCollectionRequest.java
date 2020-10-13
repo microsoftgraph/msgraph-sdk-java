@@ -37,7 +37,7 @@ public class DeviceManagementPartnerCollectionRequest extends BaseCollectionRequ
      */
     @SuppressWarnings("unchecked")
     public DeviceManagementPartnerCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceManagementPartner.class, DeviceManagementPartnerCollectionResponse.class,(Class<BaseCollectionPage<DeviceManagementPartner>>) (new BaseCollectionPage<DeviceManagementPartner>(new java.util.ArrayList<DeviceManagementPartner>(), null).getClass()));
+        super(requestUrl, client, requestOptions, DeviceManagementPartnerCollectionResponse.class,(Class<BaseCollectionPage<DeviceManagementPartner>>) (new BaseCollectionPage<DeviceManagementPartner>(new java.util.ArrayList<DeviceManagementPartner>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<DeviceManagementPartner>> callback) {

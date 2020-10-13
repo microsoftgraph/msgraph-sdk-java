@@ -37,7 +37,7 @@ public class ContactDeltaCollectionRequest extends BaseCollectionRequest<Contact
      */
     @SuppressWarnings("unchecked")
     public ContactDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Contact.class, ContactDeltaCollectionResponse.class, (Class<BaseCollectionPage<Contact>>) (new BaseCollectionPage<Contact>(new java.util.ArrayList<Contact>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ContactDeltaCollectionResponse.class, (Class<BaseCollectionPage<Contact>>) (new BaseCollectionPage<Contact>(new java.util.ArrayList<Contact>(), null).getClass()));
     }
 
 

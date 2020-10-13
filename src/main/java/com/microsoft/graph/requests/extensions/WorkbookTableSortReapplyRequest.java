@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Sort Reapply Request.
  */
-public class WorkbookTableSortReapplyRequest extends BaseRequest<WorkbookTableSort> {
+public class WorkbookTableSortReapplyRequest extends BaseRequest<Void> {
 
     /**
      * The request for this WorkbookTableSortReapply
@@ -28,7 +28,7 @@ public class WorkbookTableSortReapplyRequest extends BaseRequest<WorkbookTableSo
      * @param requestOptions the options for this request
      */
     public WorkbookTableSortReapplyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WorkbookTableSort.class);
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**

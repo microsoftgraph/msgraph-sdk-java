@@ -15,9 +15,16 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.models.extensions.Application;
+import com.microsoft.graph.requests.extensions.ApplicationWithReferenceRequest;
+import com.microsoft.graph.requests.extensions.ApplicationReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.ApplicationWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.ApplicationCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.ApplicationCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.ApplicationCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -26,7 +33,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Application Collection With References Request.
  */
-public class ApplicationCollectionWithReferencesRequest extends BaseCollectionRequest<Application, ApplicationCollectionResponse> {
+public class ApplicationCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<Application, ApplicationWithReferenceRequest, ApplicationReferenceRequestBuilder, ApplicationWithReferenceRequestBuilder, ApplicationCollectionResponse, ApplicationCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of Application
@@ -37,7 +44,7 @@ public class ApplicationCollectionWithReferencesRequest extends BaseCollectionRe
      */
     @SuppressWarnings("unchecked")
     public ApplicationCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Application.class, ApplicationCollectionResponse.class, (Class<BaseCollectionPage<Application>>) (new BaseCollectionPage<Application>(new java.util.ArrayList<Application>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ApplicationCollectionResponse.class, (Class<BaseCollectionPage<Application>>) (new BaseCollectionPage<Application>(new java.util.ArrayList<Application>(), null).getClass()), ApplicationCollectionWithReferencesRequestBuilder.class);
     }
 
     public void get(final ICallback<? super BaseCollectionPage<Application>> callback) {

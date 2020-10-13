@@ -37,7 +37,7 @@ public class SwapShiftsChangeRequestCollectionRequest extends BaseCollectionRequ
      */
     @SuppressWarnings("unchecked")
     public SwapShiftsChangeRequestCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SwapShiftsChangeRequest.class, SwapShiftsChangeRequestCollectionResponse.class,(Class<BaseCollectionPage<SwapShiftsChangeRequest>>) (new BaseCollectionPage<SwapShiftsChangeRequest>(new java.util.ArrayList<SwapShiftsChangeRequest>(), null).getClass()));
+        super(requestUrl, client, requestOptions, SwapShiftsChangeRequestCollectionResponse.class,(Class<BaseCollectionPage<SwapShiftsChangeRequest>>) (new BaseCollectionPage<SwapShiftsChangeRequest>(new java.util.ArrayList<SwapShiftsChangeRequest>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<SwapShiftsChangeRequest>> callback) {

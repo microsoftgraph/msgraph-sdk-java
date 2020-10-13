@@ -36,7 +36,7 @@ public class DataPolicyOperationCollectionRequest extends BaseCollectionRequest<
      */
     @SuppressWarnings("unchecked")
     public DataPolicyOperationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DataPolicyOperation.class, DataPolicyOperationCollectionResponse.class,(Class<BaseCollectionPage<DataPolicyOperation>>) (new BaseCollectionPage<DataPolicyOperation>(new java.util.ArrayList<DataPolicyOperation>(), null).getClass()));
+        super(requestUrl, client, requestOptions, DataPolicyOperationCollectionResponse.class,(Class<BaseCollectionPage<DataPolicyOperation>>) (new BaseCollectionPage<DataPolicyOperation>(new java.util.ArrayList<DataPolicyOperation>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<DataPolicyOperation>> callback) {

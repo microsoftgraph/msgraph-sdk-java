@@ -20,10 +20,10 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Claims Mapping Policy Collection Reference Request Builder.
  */
-public class ClaimsMappingPolicyCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<ServicePrincipal, ClaimsMappingPolicyCollectionReferenceRequest> {
+public class ClaimsMappingPolicyCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<ClaimsMappingPolicy, ClaimsMappingPolicyCollectionResponse, ClaimsMappingPolicyCollectionReferenceRequest> {
 
     /**
-     * The request builder for this collection of ServicePrincipal
+     * The request builder for this collection of ClaimsMappingPolicy
      *
      * @param requestUrl     the request URL
      * @param client         the service client

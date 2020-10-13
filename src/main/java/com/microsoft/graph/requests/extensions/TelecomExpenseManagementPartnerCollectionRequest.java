@@ -37,7 +37,7 @@ public class TelecomExpenseManagementPartnerCollectionRequest extends BaseCollec
      */
     @SuppressWarnings("unchecked")
     public TelecomExpenseManagementPartnerCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TelecomExpenseManagementPartner.class, TelecomExpenseManagementPartnerCollectionResponse.class,(Class<BaseCollectionPage<TelecomExpenseManagementPartner>>) (new BaseCollectionPage<TelecomExpenseManagementPartner>(new java.util.ArrayList<TelecomExpenseManagementPartner>(), null).getClass()));
+        super(requestUrl, client, requestOptions, TelecomExpenseManagementPartnerCollectionResponse.class,(Class<BaseCollectionPage<TelecomExpenseManagementPartner>>) (new BaseCollectionPage<TelecomExpenseManagementPartner>(new java.util.ArrayList<TelecomExpenseManagementPartner>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<TelecomExpenseManagementPartner>> callback) {

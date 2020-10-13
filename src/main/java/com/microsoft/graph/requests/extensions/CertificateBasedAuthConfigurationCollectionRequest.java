@@ -36,7 +36,7 @@ public class CertificateBasedAuthConfigurationCollectionRequest extends BaseColl
      */
     @SuppressWarnings("unchecked")
     public CertificateBasedAuthConfigurationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, CertificateBasedAuthConfiguration.class, CertificateBasedAuthConfigurationCollectionResponse.class,(Class<BaseCollectionPage<CertificateBasedAuthConfiguration>>) (new BaseCollectionPage<CertificateBasedAuthConfiguration>(new java.util.ArrayList<CertificateBasedAuthConfiguration>(), null).getClass()));
+        super(requestUrl, client, requestOptions, CertificateBasedAuthConfigurationCollectionResponse.class,(Class<BaseCollectionPage<CertificateBasedAuthConfiguration>>) (new BaseCollectionPage<CertificateBasedAuthConfiguration>(new java.util.ArrayList<CertificateBasedAuthConfiguration>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<CertificateBasedAuthConfiguration>> callback) {

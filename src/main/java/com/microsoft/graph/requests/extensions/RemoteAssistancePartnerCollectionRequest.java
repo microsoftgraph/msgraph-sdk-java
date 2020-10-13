@@ -37,7 +37,7 @@ public class RemoteAssistancePartnerCollectionRequest extends BaseCollectionRequ
      */
     @SuppressWarnings("unchecked")
     public RemoteAssistancePartnerCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, RemoteAssistancePartner.class, RemoteAssistancePartnerCollectionResponse.class,(Class<BaseCollectionPage<RemoteAssistancePartner>>) (new BaseCollectionPage<RemoteAssistancePartner>(new java.util.ArrayList<RemoteAssistancePartner>(), null).getClass()));
+        super(requestUrl, client, requestOptions, RemoteAssistancePartnerCollectionResponse.class,(Class<BaseCollectionPage<RemoteAssistancePartner>>) (new BaseCollectionPage<RemoteAssistancePartner>(new java.util.ArrayList<RemoteAssistancePartner>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<RemoteAssistancePartner>> callback) {

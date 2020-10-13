@@ -20,10 +20,10 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device Collection Reference Request Builder.
  */
-public class DeviceCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<ServicePrincipal, DeviceCollectionReferenceRequest> {
+public class DeviceCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<Device, DeviceCollectionResponse, DeviceCollectionReferenceRequest> {
 
     /**
-     * The request builder for this collection of ServicePrincipal
+     * The request builder for this collection of Device
      *
      * @param requestUrl     the request URL
      * @param client         the service client

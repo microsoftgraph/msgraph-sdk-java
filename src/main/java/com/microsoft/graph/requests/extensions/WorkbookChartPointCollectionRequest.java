@@ -37,7 +37,7 @@ public class WorkbookChartPointCollectionRequest extends BaseCollectionRequest<W
      */
     @SuppressWarnings("unchecked")
     public WorkbookChartPointCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WorkbookChartPoint.class, WorkbookChartPointCollectionResponse.class,(Class<BaseCollectionPage<WorkbookChartPoint>>) (new BaseCollectionPage<WorkbookChartPoint>(new java.util.ArrayList<WorkbookChartPoint>(), null).getClass()));
+        super(requestUrl, client, requestOptions, WorkbookChartPointCollectionResponse.class,(Class<BaseCollectionPage<WorkbookChartPoint>>) (new BaseCollectionPage<WorkbookChartPoint>(new java.util.ArrayList<WorkbookChartPoint>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<WorkbookChartPoint>> callback) {

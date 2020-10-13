@@ -37,7 +37,7 @@ public class ListItemVersionCollectionRequest extends BaseCollectionRequest<List
      */
     @SuppressWarnings("unchecked")
     public ListItemVersionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ListItemVersion.class, ListItemVersionCollectionResponse.class,(Class<BaseCollectionPage<ListItemVersion>>) (new BaseCollectionPage<ListItemVersion>(new java.util.ArrayList<ListItemVersion>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ListItemVersionCollectionResponse.class,(Class<BaseCollectionPage<ListItemVersion>>) (new BaseCollectionPage<ListItemVersion>(new java.util.ArrayList<ListItemVersion>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<ListItemVersion>> callback) {

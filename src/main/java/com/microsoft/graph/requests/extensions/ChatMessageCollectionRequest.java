@@ -36,7 +36,7 @@ public class ChatMessageCollectionRequest extends BaseCollectionRequest<ChatMess
      */
     @SuppressWarnings("unchecked")
     public ChatMessageCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ChatMessage.class, ChatMessageCollectionResponse.class,(Class<BaseCollectionPage<ChatMessage>>) (new BaseCollectionPage<ChatMessage>(new java.util.ArrayList<ChatMessage>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ChatMessageCollectionResponse.class,(Class<BaseCollectionPage<ChatMessage>>) (new BaseCollectionPage<ChatMessage>(new java.util.ArrayList<ChatMessage>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<ChatMessage>> callback) {

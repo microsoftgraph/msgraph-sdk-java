@@ -37,7 +37,7 @@ public class TokenIssuancePolicyCollectionRequest extends BaseCollectionRequest<
      */
     @SuppressWarnings("unchecked")
     public TokenIssuancePolicyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TokenIssuancePolicy.class, TokenIssuancePolicyCollectionResponse.class,(Class<BaseCollectionPage<TokenIssuancePolicy>>) (new BaseCollectionPage<TokenIssuancePolicy>(new java.util.ArrayList<TokenIssuancePolicy>(), null).getClass()));
+        super(requestUrl, client, requestOptions, TokenIssuancePolicyCollectionResponse.class,(Class<BaseCollectionPage<TokenIssuancePolicy>>) (new BaseCollectionPage<TokenIssuancePolicy>(new java.util.ArrayList<TokenIssuancePolicy>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<TokenIssuancePolicy>> callback) {

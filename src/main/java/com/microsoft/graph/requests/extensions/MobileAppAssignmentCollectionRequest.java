@@ -37,7 +37,7 @@ public class MobileAppAssignmentCollectionRequest extends BaseCollectionRequest<
      */
     @SuppressWarnings("unchecked")
     public MobileAppAssignmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MobileAppAssignment.class, MobileAppAssignmentCollectionResponse.class,(Class<BaseCollectionPage<MobileAppAssignment>>) (new BaseCollectionPage<MobileAppAssignment>(new java.util.ArrayList<MobileAppAssignment>(), null).getClass()));
+        super(requestUrl, client, requestOptions, MobileAppAssignmentCollectionResponse.class,(Class<BaseCollectionPage<MobileAppAssignment>>) (new BaseCollectionPage<MobileAppAssignment>(new java.util.ArrayList<MobileAppAssignment>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<MobileAppAssignment>> callback) {

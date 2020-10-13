@@ -14,9 +14,16 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.models.extensions.ManagedDevice;
+import com.microsoft.graph.requests.extensions.ManagedDeviceWithReferenceRequest;
+import com.microsoft.graph.requests.extensions.ManagedDeviceReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -25,7 +32,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Managed Device Collection With References Request.
  */
-public class ManagedDeviceCollectionWithReferencesRequest extends BaseCollectionRequest<ManagedDevice, ManagedDeviceCollectionResponse> {
+public class ManagedDeviceCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<ManagedDevice, ManagedDeviceWithReferenceRequest, ManagedDeviceReferenceRequestBuilder, ManagedDeviceWithReferenceRequestBuilder, ManagedDeviceCollectionResponse, ManagedDeviceCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of ManagedDevice
@@ -36,7 +43,7 @@ public class ManagedDeviceCollectionWithReferencesRequest extends BaseCollection
      */
     @SuppressWarnings("unchecked")
     public ManagedDeviceCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedDevice.class, ManagedDeviceCollectionResponse.class, (Class<BaseCollectionPage<ManagedDevice>>) (new BaseCollectionPage<ManagedDevice>(new java.util.ArrayList<ManagedDevice>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ManagedDeviceCollectionResponse.class, (Class<BaseCollectionPage<ManagedDevice>>) (new BaseCollectionPage<ManagedDevice>(new java.util.ArrayList<ManagedDevice>(), null).getClass()), ManagedDeviceCollectionWithReferencesRequestBuilder.class);
     }
 
     public void get(final ICallback<? super BaseCollectionPage<ManagedDevice>> callback) {

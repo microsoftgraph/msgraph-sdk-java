@@ -37,7 +37,7 @@ public class LicenseDetailsCollectionRequest extends BaseCollectionRequest<Licen
      */
     @SuppressWarnings("unchecked")
     public LicenseDetailsCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, LicenseDetails.class, LicenseDetailsCollectionResponse.class,(Class<BaseCollectionPage<LicenseDetails>>) (new BaseCollectionPage<LicenseDetails>(new java.util.ArrayList<LicenseDetails>(), null).getClass()));
+        super(requestUrl, client, requestOptions, LicenseDetailsCollectionResponse.class,(Class<BaseCollectionPage<LicenseDetails>>) (new BaseCollectionPage<LicenseDetails>(new java.util.ArrayList<LicenseDetails>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<LicenseDetails>> callback) {

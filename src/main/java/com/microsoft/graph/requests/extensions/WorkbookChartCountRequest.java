@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Count Request.
  */
-public class WorkbookChartCountRequest extends BaseRequest<Int32> {
+public class WorkbookChartCountRequest extends BaseRequest<Integer> {
 
     /**
      * The request for this WorkbookChartCount
@@ -28,7 +28,7 @@ public class WorkbookChartCountRequest extends BaseRequest<Int32> {
      * @param requestOptions the options for this request
      */
     public WorkbookChartCountRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Int32.class);
+        super(requestUrl, client, requestOptions, Integer.class);
     }
 
     /**

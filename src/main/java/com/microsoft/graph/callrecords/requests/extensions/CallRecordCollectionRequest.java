@@ -37,7 +37,7 @@ public class CallRecordCollectionRequest extends BaseCollectionRequest<CallRecor
      */
     @SuppressWarnings("unchecked")
     public CallRecordCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, CallRecord.class, CallRecordCollectionResponse.class,(Class<BaseCollectionPage<CallRecord>>) (new BaseCollectionPage<CallRecord>(new java.util.ArrayList<CallRecord>(), null).getClass()));
+        super(requestUrl, client, requestOptions, CallRecordCollectionResponse.class,(Class<BaseCollectionPage<CallRecord>>) (new BaseCollectionPage<CallRecord>(new java.util.ArrayList<CallRecord>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<CallRecord>> callback) {

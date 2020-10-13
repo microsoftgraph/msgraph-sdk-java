@@ -36,7 +36,7 @@ public class InvitationCollectionRequest extends BaseCollectionRequest<Invitatio
      */
     @SuppressWarnings("unchecked")
     public InvitationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Invitation.class, InvitationCollectionResponse.class,(Class<BaseCollectionPage<Invitation>>) (new BaseCollectionPage<Invitation>(new java.util.ArrayList<Invitation>(), null).getClass()));
+        super(requestUrl, client, requestOptions, InvitationCollectionResponse.class,(Class<BaseCollectionPage<Invitation>>) (new BaseCollectionPage<Invitation>(new java.util.ArrayList<Invitation>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<Invitation>> callback) {

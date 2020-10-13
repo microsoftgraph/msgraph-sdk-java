@@ -37,7 +37,7 @@ public class ServicePrincipalDeltaCollectionRequest extends BaseCollectionReques
      */
     @SuppressWarnings("unchecked")
     public ServicePrincipalDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ServicePrincipal.class, ServicePrincipalDeltaCollectionResponse.class, (Class<BaseCollectionPage<ServicePrincipal>>) (new BaseCollectionPage<ServicePrincipal>(new java.util.ArrayList<ServicePrincipal>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ServicePrincipalDeltaCollectionResponse.class, (Class<BaseCollectionPage<ServicePrincipal>>) (new BaseCollectionPage<ServicePrincipal>(new java.util.ArrayList<ServicePrincipal>(), null).getClass()));
     }
 
 

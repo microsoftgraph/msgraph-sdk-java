@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the User Remove All Devices From Management Request.
  */
-public class UserRemoveAllDevicesFromManagementRequest extends BaseRequest<User> {
+public class UserRemoveAllDevicesFromManagementRequest extends BaseRequest<Void> {
 
     /**
      * The request for this UserRemoveAllDevicesFromManagement
@@ -28,7 +28,7 @@ public class UserRemoveAllDevicesFromManagementRequest extends BaseRequest<User>
      * @param requestOptions the options for this request
      */
     public UserRemoveAllDevicesFromManagementRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, User.class);
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**

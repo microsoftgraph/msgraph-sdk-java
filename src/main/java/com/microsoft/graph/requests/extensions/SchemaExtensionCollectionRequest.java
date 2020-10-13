@@ -36,7 +36,7 @@ public class SchemaExtensionCollectionRequest extends BaseCollectionRequest<Sche
      */
     @SuppressWarnings("unchecked")
     public SchemaExtensionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SchemaExtension.class, SchemaExtensionCollectionResponse.class,(Class<BaseCollectionPage<SchemaExtension>>) (new BaseCollectionPage<SchemaExtension>(new java.util.ArrayList<SchemaExtension>(), null).getClass()));
+        super(requestUrl, client, requestOptions, SchemaExtensionCollectionResponse.class,(Class<BaseCollectionPage<SchemaExtension>>) (new BaseCollectionPage<SchemaExtension>(new java.util.ArrayList<SchemaExtension>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<SchemaExtension>> callback) {

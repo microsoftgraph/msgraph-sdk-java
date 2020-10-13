@@ -37,7 +37,7 @@ public class DeviceManagementTroubleshootingEventCollectionRequest extends BaseC
      */
     @SuppressWarnings("unchecked")
     public DeviceManagementTroubleshootingEventCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceManagementTroubleshootingEvent.class, DeviceManagementTroubleshootingEventCollectionResponse.class,(Class<BaseCollectionPage<DeviceManagementTroubleshootingEvent>>) (new BaseCollectionPage<DeviceManagementTroubleshootingEvent>(new java.util.ArrayList<DeviceManagementTroubleshootingEvent>(), null).getClass()));
+        super(requestUrl, client, requestOptions, DeviceManagementTroubleshootingEventCollectionResponse.class,(Class<BaseCollectionPage<DeviceManagementTroubleshootingEvent>>) (new BaseCollectionPage<DeviceManagementTroubleshootingEvent>(new java.util.ArrayList<DeviceManagementTroubleshootingEvent>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<DeviceManagementTroubleshootingEvent>> callback) {

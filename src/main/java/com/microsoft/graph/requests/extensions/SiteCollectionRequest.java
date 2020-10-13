@@ -37,7 +37,7 @@ public class SiteCollectionRequest extends BaseCollectionRequest<Site, SiteColle
      */
     @SuppressWarnings("unchecked")
     public SiteCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Site.class, SiteCollectionResponse.class,(Class<BaseCollectionPage<Site>>) (new BaseCollectionPage<Site>(new java.util.ArrayList<Site>(), null).getClass()));
+        super(requestUrl, client, requestOptions, SiteCollectionResponse.class,(Class<BaseCollectionPage<Site>>) (new BaseCollectionPage<Site>(new java.util.ArrayList<Site>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<Site>> callback) {

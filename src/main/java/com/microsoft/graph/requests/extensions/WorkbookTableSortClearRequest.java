@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Sort Clear Request.
  */
-public class WorkbookTableSortClearRequest extends BaseRequest<WorkbookTableSort> {
+public class WorkbookTableSortClearRequest extends BaseRequest<Void> {
 
     /**
      * The request for this WorkbookTableSortClear
@@ -28,7 +28,7 @@ public class WorkbookTableSortClearRequest extends BaseRequest<WorkbookTableSort
      * @param requestOptions the options for this request
      */
     public WorkbookTableSortClearRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WorkbookTableSort.class);
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**

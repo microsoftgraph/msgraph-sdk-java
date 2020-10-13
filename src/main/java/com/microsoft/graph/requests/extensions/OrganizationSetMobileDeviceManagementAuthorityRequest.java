@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Organization Set Mobile Device Management Authority Request.
  */
-public class OrganizationSetMobileDeviceManagementAuthorityRequest extends BaseRequest<Int32> {
+public class OrganizationSetMobileDeviceManagementAuthorityRequest extends BaseRequest<Integer> {
 
     /**
      * The request for this OrganizationSetMobileDeviceManagementAuthority
@@ -28,7 +28,7 @@ public class OrganizationSetMobileDeviceManagementAuthorityRequest extends BaseR
      * @param requestOptions the options for this request
      */
     public OrganizationSetMobileDeviceManagementAuthorityRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Int32.class);
+        super(requestUrl, client, requestOptions, Integer.class);
     }
 
     /**

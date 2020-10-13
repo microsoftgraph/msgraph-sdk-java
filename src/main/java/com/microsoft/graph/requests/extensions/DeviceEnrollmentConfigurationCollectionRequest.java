@@ -38,7 +38,7 @@ public class DeviceEnrollmentConfigurationCollectionRequest extends BaseCollecti
      */
     @SuppressWarnings("unchecked")
     public DeviceEnrollmentConfigurationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceEnrollmentConfiguration.class, DeviceEnrollmentConfigurationCollectionResponse.class,(Class<BaseCollectionPage<DeviceEnrollmentConfiguration>>) (new BaseCollectionPage<DeviceEnrollmentConfiguration>(new java.util.ArrayList<DeviceEnrollmentConfiguration>(), null).getClass()));
+        super(requestUrl, client, requestOptions, DeviceEnrollmentConfigurationCollectionResponse.class,(Class<BaseCollectionPage<DeviceEnrollmentConfiguration>>) (new BaseCollectionPage<DeviceEnrollmentConfiguration>(new java.util.ArrayList<DeviceEnrollmentConfiguration>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<DeviceEnrollmentConfiguration>> callback) {

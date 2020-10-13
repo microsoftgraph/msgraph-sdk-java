@@ -37,7 +37,7 @@ public class NotificationMessageTemplateCollectionRequest extends BaseCollection
      */
     @SuppressWarnings("unchecked")
     public NotificationMessageTemplateCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, NotificationMessageTemplate.class, NotificationMessageTemplateCollectionResponse.class,(Class<BaseCollectionPage<NotificationMessageTemplate>>) (new BaseCollectionPage<NotificationMessageTemplate>(new java.util.ArrayList<NotificationMessageTemplate>(), null).getClass()));
+        super(requestUrl, client, requestOptions, NotificationMessageTemplateCollectionResponse.class,(Class<BaseCollectionPage<NotificationMessageTemplate>>) (new BaseCollectionPage<NotificationMessageTemplate>(new java.util.ArrayList<NotificationMessageTemplate>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<NotificationMessageTemplate>> callback) {

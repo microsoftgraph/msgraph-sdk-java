@@ -21,10 +21,10 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Directory Object Collection Reference Request Builder.
  */
-public class DirectoryObjectCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<ServicePrincipal, DirectoryObjectCollectionReferenceRequest> {
+public class DirectoryObjectCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<DirectoryObject, DirectoryObjectCollectionResponse, DirectoryObjectCollectionReferenceRequest> {
 
     /**
-     * The request builder for this collection of ServicePrincipal
+     * The request builder for this collection of DirectoryObject
      *
      * @param requestUrl     the request URL
      * @param client         the service client

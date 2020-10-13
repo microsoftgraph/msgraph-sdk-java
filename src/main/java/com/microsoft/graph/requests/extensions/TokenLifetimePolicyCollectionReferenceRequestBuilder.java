@@ -20,10 +20,10 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Token Lifetime Policy Collection Reference Request Builder.
  */
-public class TokenLifetimePolicyCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<ServicePrincipal, TokenLifetimePolicyCollectionReferenceRequest> {
+public class TokenLifetimePolicyCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<TokenLifetimePolicy, TokenLifetimePolicyCollectionResponse, TokenLifetimePolicyCollectionReferenceRequest> {
 
     /**
-     * The request builder for this collection of ServicePrincipal
+     * The request builder for this collection of TokenLifetimePolicy
      *
      * @param requestUrl     the request URL
      * @param client         the service client

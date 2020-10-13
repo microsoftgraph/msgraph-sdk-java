@@ -37,7 +37,7 @@ public class WorkbookRangeBorderCollectionRequest extends BaseCollectionRequest<
      */
     @SuppressWarnings("unchecked")
     public WorkbookRangeBorderCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WorkbookRangeBorder.class, WorkbookRangeBorderCollectionResponse.class,(Class<BaseCollectionPage<WorkbookRangeBorder>>) (new BaseCollectionPage<WorkbookRangeBorder>(new java.util.ArrayList<WorkbookRangeBorder>(), null).getClass()));
+        super(requestUrl, client, requestOptions, WorkbookRangeBorderCollectionResponse.class,(Class<BaseCollectionPage<WorkbookRangeBorder>>) (new BaseCollectionPage<WorkbookRangeBorder>(new java.util.ArrayList<WorkbookRangeBorder>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<WorkbookRangeBorder>> callback) {

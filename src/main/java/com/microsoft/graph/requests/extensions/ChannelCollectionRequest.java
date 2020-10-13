@@ -37,7 +37,7 @@ public class ChannelCollectionRequest extends BaseCollectionRequest<Channel, Cha
      */
     @SuppressWarnings("unchecked")
     public ChannelCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Channel.class, ChannelCollectionResponse.class,(Class<BaseCollectionPage<Channel>>) (new BaseCollectionPage<Channel>(new java.util.ArrayList<Channel>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ChannelCollectionResponse.class,(Class<BaseCollectionPage<Channel>>) (new BaseCollectionPage<Channel>(new java.util.ArrayList<Channel>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<Channel>> callback) {

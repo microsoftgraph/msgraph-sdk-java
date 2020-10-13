@@ -13,7 +13,7 @@ import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.CalendarAllowedCalendarSharingRolesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CalendarAllowedCalendarSharingRolesCollectionResponse;
-import com.microsoft.graph.models.extensions.CalendarRoleType;
+import com.microsoft.graph.models.generated.CalendarRoleType;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
@@ -37,7 +37,7 @@ public class CalendarAllowedCalendarSharingRolesCollectionRequest extends BaseCo
      */
     @SuppressWarnings("unchecked")
     public CalendarAllowedCalendarSharingRolesCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, CalendarRoleType.class, CalendarAllowedCalendarSharingRolesCollectionResponse.class, (Class<BaseCollectionPage<CalendarRoleType>>) (new BaseCollectionPage<CalendarRoleType>(new java.util.ArrayList<CalendarRoleType>(), null).getClass()));
+        super(requestUrl, client, requestOptions, CalendarAllowedCalendarSharingRolesCollectionResponse.class, (Class<BaseCollectionPage<CalendarRoleType>>) (new BaseCollectionPage<CalendarRoleType>(new java.util.ArrayList<CalendarRoleType>(), null).getClass()));
     }
 
 

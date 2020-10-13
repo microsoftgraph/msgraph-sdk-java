@@ -37,7 +37,7 @@ public class IosManagedAppProtectionCollectionRequest extends BaseCollectionRequ
      */
     @SuppressWarnings("unchecked")
     public IosManagedAppProtectionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, IosManagedAppProtection.class, IosManagedAppProtectionCollectionResponse.class,(Class<BaseCollectionPage<IosManagedAppProtection>>) (new BaseCollectionPage<IosManagedAppProtection>(new java.util.ArrayList<IosManagedAppProtection>(), null).getClass()));
+        super(requestUrl, client, requestOptions, IosManagedAppProtectionCollectionResponse.class,(Class<BaseCollectionPage<IosManagedAppProtection>>) (new BaseCollectionPage<IosManagedAppProtection>(new java.util.ArrayList<IosManagedAppProtection>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<IosManagedAppProtection>> callback) {

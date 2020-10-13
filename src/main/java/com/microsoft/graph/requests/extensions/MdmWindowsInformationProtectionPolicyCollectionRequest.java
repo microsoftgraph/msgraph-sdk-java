@@ -37,7 +37,7 @@ public class MdmWindowsInformationProtectionPolicyCollectionRequest extends Base
      */
     @SuppressWarnings("unchecked")
     public MdmWindowsInformationProtectionPolicyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MdmWindowsInformationProtectionPolicy.class, MdmWindowsInformationProtectionPolicyCollectionResponse.class,(Class<BaseCollectionPage<MdmWindowsInformationProtectionPolicy>>) (new BaseCollectionPage<MdmWindowsInformationProtectionPolicy>(new java.util.ArrayList<MdmWindowsInformationProtectionPolicy>(), null).getClass()));
+        super(requestUrl, client, requestOptions, MdmWindowsInformationProtectionPolicyCollectionResponse.class,(Class<BaseCollectionPage<MdmWindowsInformationProtectionPolicy>>) (new BaseCollectionPage<MdmWindowsInformationProtectionPolicy>(new java.util.ArrayList<MdmWindowsInformationProtectionPolicy>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<MdmWindowsInformationProtectionPolicy>> callback) {

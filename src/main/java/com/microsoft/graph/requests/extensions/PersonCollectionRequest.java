@@ -37,7 +37,7 @@ public class PersonCollectionRequest extends BaseCollectionRequest<Person, Perso
      */
     @SuppressWarnings("unchecked")
     public PersonCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Person.class, PersonCollectionResponse.class,(Class<BaseCollectionPage<Person>>) (new BaseCollectionPage<Person>(new java.util.ArrayList<Person>(), null).getClass()));
+        super(requestUrl, client, requestOptions, PersonCollectionResponse.class,(Class<BaseCollectionPage<Person>>) (new BaseCollectionPage<Person>(new java.util.ArrayList<Person>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<Person>> callback) {

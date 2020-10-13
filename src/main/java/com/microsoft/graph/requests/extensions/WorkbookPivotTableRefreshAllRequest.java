@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Pivot Table Refresh All Request.
  */
-public class WorkbookPivotTableRefreshAllRequest extends BaseRequest<WorkbookPivotTable> {
+public class WorkbookPivotTableRefreshAllRequest extends BaseRequest<Void> {
 
     /**
      * The request for this WorkbookPivotTableRefreshAll
@@ -28,7 +28,7 @@ public class WorkbookPivotTableRefreshAllRequest extends BaseRequest<WorkbookPiv
      * @param requestOptions the options for this request
      */
     public WorkbookPivotTableRefreshAllRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WorkbookPivotTable.class);
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**

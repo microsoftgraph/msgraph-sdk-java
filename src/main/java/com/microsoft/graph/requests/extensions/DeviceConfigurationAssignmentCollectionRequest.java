@@ -37,7 +37,7 @@ public class DeviceConfigurationAssignmentCollectionRequest extends BaseCollecti
      */
     @SuppressWarnings("unchecked")
     public DeviceConfigurationAssignmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceConfigurationAssignment.class, DeviceConfigurationAssignmentCollectionResponse.class,(Class<BaseCollectionPage<DeviceConfigurationAssignment>>) (new BaseCollectionPage<DeviceConfigurationAssignment>(new java.util.ArrayList<DeviceConfigurationAssignment>(), null).getClass()));
+        super(requestUrl, client, requestOptions, DeviceConfigurationAssignmentCollectionResponse.class,(Class<BaseCollectionPage<DeviceConfigurationAssignment>>) (new BaseCollectionPage<DeviceConfigurationAssignment>(new java.util.ArrayList<DeviceConfigurationAssignment>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<DeviceConfigurationAssignment>> callback) {

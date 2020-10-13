@@ -37,7 +37,7 @@ public class AlertCollectionRequest extends BaseCollectionRequest<Alert, AlertCo
      */
     @SuppressWarnings("unchecked")
     public AlertCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Alert.class, AlertCollectionResponse.class,(Class<BaseCollectionPage<Alert>>) (new BaseCollectionPage<Alert>(new java.util.ArrayList<Alert>(), null).getClass()));
+        super(requestUrl, client, requestOptions, AlertCollectionResponse.class,(Class<BaseCollectionPage<Alert>>) (new BaseCollectionPage<Alert>(new java.util.ArrayList<Alert>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<Alert>> callback) {

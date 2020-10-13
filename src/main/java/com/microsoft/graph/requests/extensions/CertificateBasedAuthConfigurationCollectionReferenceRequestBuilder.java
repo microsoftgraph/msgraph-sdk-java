@@ -20,10 +20,10 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Certificate Based Auth Configuration Collection Reference Request Builder.
  */
-public class CertificateBasedAuthConfigurationCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<Organization, CertificateBasedAuthConfigurationCollectionReferenceRequest> {
+public class CertificateBasedAuthConfigurationCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<CertificateBasedAuthConfiguration, CertificateBasedAuthConfigurationCollectionResponse, CertificateBasedAuthConfigurationCollectionReferenceRequest> {
 
     /**
-     * The request builder for this collection of Organization
+     * The request builder for this collection of CertificateBasedAuthConfiguration
      *
      * @param requestUrl     the request URL
      * @param client         the service client

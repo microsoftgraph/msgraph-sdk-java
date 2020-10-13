@@ -37,7 +37,7 @@ public class DefaultManagedAppProtectionCollectionRequest extends BaseCollection
      */
     @SuppressWarnings("unchecked")
     public DefaultManagedAppProtectionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DefaultManagedAppProtection.class, DefaultManagedAppProtectionCollectionResponse.class,(Class<BaseCollectionPage<DefaultManagedAppProtection>>) (new BaseCollectionPage<DefaultManagedAppProtection>(new java.util.ArrayList<DefaultManagedAppProtection>(), null).getClass()));
+        super(requestUrl, client, requestOptions, DefaultManagedAppProtectionCollectionResponse.class,(Class<BaseCollectionPage<DefaultManagedAppProtection>>) (new BaseCollectionPage<DefaultManagedAppProtection>(new java.util.ArrayList<DefaultManagedAppProtection>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<DefaultManagedAppProtection>> callback) {

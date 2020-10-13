@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Group Add Favorite Request.
  */
-public class GroupAddFavoriteRequest extends BaseRequest<Group> {
+public class GroupAddFavoriteRequest extends BaseRequest<Void> {
 
     /**
      * The request for this GroupAddFavorite
@@ -28,7 +28,7 @@ public class GroupAddFavoriteRequest extends BaseRequest<Group> {
      * @param requestOptions the options for this request
      */
     public GroupAddFavoriteRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Group.class);
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**

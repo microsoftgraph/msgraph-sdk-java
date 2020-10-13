@@ -37,7 +37,7 @@ public class OrgContactDeltaCollectionRequest extends BaseCollectionRequest<OrgC
      */
     @SuppressWarnings("unchecked")
     public OrgContactDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OrgContact.class, OrgContactDeltaCollectionResponse.class, (Class<BaseCollectionPage<OrgContact>>) (new BaseCollectionPage<OrgContact>(new java.util.ArrayList<OrgContact>(), null).getClass()));
+        super(requestUrl, client, requestOptions, OrgContactDeltaCollectionResponse.class, (Class<BaseCollectionPage<OrgContact>>) (new BaseCollectionPage<OrgContact>(new java.util.ArrayList<OrgContact>(), null).getClass()));
     }
 
 

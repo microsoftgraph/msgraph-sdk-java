@@ -38,7 +38,7 @@ public class MessageCollectionRequest extends BaseCollectionRequest<Message, Mes
      */
     @SuppressWarnings("unchecked")
     public MessageCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Message.class, MessageCollectionResponse.class,(Class<BaseCollectionPage<Message>>) (new BaseCollectionPage<Message>(new java.util.ArrayList<Message>(), null).getClass()));
+        super(requestUrl, client, requestOptions, MessageCollectionResponse.class,(Class<BaseCollectionPage<Message>>) (new BaseCollectionPage<Message>(new java.util.ArrayList<Message>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<Message>> callback) {

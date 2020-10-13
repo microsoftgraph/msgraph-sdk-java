@@ -37,7 +37,7 @@ public class CommsOperationCollectionRequest extends BaseCollectionRequest<Comms
      */
     @SuppressWarnings("unchecked")
     public CommsOperationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, CommsOperation.class, CommsOperationCollectionResponse.class,(Class<BaseCollectionPage<CommsOperation>>) (new BaseCollectionPage<CommsOperation>(new java.util.ArrayList<CommsOperation>(), null).getClass()));
+        super(requestUrl, client, requestOptions, CommsOperationCollectionResponse.class,(Class<BaseCollectionPage<CommsOperation>>) (new BaseCollectionPage<CommsOperation>(new java.util.ArrayList<CommsOperation>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<CommsOperation>> callback) {

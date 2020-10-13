@@ -42,7 +42,7 @@ public class CalendarGetScheduleCollectionRequest extends BaseCollectionRequest<
      */
     @SuppressWarnings("unchecked")
     public CalendarGetScheduleCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ScheduleInformation.class, CalendarGetScheduleCollectionResponse.class, (Class<BaseCollectionPage<ScheduleInformation>>) (new BaseCollectionPage<ScheduleInformation>(new java.util.ArrayList<ScheduleInformation>(), null).getClass()));
+        super(requestUrl, client, requestOptions, CalendarGetScheduleCollectionResponse.class, (Class<BaseCollectionPage<ScheduleInformation>>) (new BaseCollectionPage<ScheduleInformation>(new java.util.ArrayList<ScheduleInformation>(), null).getClass()));
         body = new CalendarGetScheduleBody();
     }
 

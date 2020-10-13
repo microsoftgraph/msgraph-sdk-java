@@ -38,7 +38,7 @@ public class ServicePrincipalCollectionRequest extends BaseCollectionRequest<Ser
      */
     @SuppressWarnings("unchecked")
     public ServicePrincipalCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ServicePrincipal.class, ServicePrincipalCollectionResponse.class,(Class<BaseCollectionPage<ServicePrincipal>>) (new BaseCollectionPage<ServicePrincipal>(new java.util.ArrayList<ServicePrincipal>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ServicePrincipalCollectionResponse.class,(Class<BaseCollectionPage<ServicePrincipal>>) (new BaseCollectionPage<ServicePrincipal>(new java.util.ArrayList<ServicePrincipal>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<ServicePrincipal>> callback) {

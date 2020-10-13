@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Group Reset Unseen Count Request.
  */
-public class GroupResetUnseenCountRequest extends BaseRequest<Group> {
+public class GroupResetUnseenCountRequest extends BaseRequest<Void> {
 
     /**
      * The request for this GroupResetUnseenCount
@@ -28,7 +28,7 @@ public class GroupResetUnseenCountRequest extends BaseRequest<Group> {
      * @param requestOptions the options for this request
      */
     public GroupResetUnseenCountRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Group.class);
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**

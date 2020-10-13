@@ -38,7 +38,7 @@ public class OutlookUserSupportedTimeZonesCollectionRequest extends BaseCollecti
      */
     @SuppressWarnings("unchecked")
     public OutlookUserSupportedTimeZonesCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TimeZoneInformation.class, OutlookUserSupportedTimeZonesCollectionResponse.class, (Class<BaseCollectionPage<TimeZoneInformation>>) (new BaseCollectionPage<TimeZoneInformation>(new java.util.ArrayList<TimeZoneInformation>(), null).getClass()));
+        super(requestUrl, client, requestOptions, OutlookUserSupportedTimeZonesCollectionResponse.class, (Class<BaseCollectionPage<TimeZoneInformation>>) (new BaseCollectionPage<TimeZoneInformation>(new java.util.ArrayList<TimeZoneInformation>(), null).getClass()));
     }
 
 

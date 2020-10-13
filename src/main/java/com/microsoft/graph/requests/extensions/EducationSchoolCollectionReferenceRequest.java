@@ -17,10 +17,12 @@ import com.microsoft.graph.requests.extensions.EducationSchoolReferenceRequestBu
 import com.microsoft.graph.requests.extensions.EducationSchoolWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSchoolCollectionWithReferencesRequest;
 import com.microsoft.graph.requests.extensions.EducationSchoolCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.EducationSchoolCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.models.extensions.EducationSchool;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionWithReferencesRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.http.ReferenceRequestBody;
@@ -41,7 +43,7 @@ public class EducationSchoolCollectionReferenceRequest extends BaseCollectionWit
      */
     @SuppressWarnings("unchecked")
     public EducationSchoolCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, EducationSchool.class, EducationSchoolCollectionResponse.class, (Class<BaseCollectionPage<EducationSchool>>) (new BaseCollectionPage<EducationSchool>(new java.util.ArrayList<EducationSchool>(), null).getClass()), EducationSchoolCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, EducationSchoolCollectionResponse.class, (Class<BaseCollectionPage<EducationSchool>>) (new BaseCollectionPage<EducationSchool>(new java.util.ArrayList<EducationSchool>(), null).getClass()), EducationSchoolCollectionWithReferencesRequestBuilder.class);
     }
 
     public void post(final EducationSchool newEducationSchool, final ICallback<? super EducationSchool> callback) {

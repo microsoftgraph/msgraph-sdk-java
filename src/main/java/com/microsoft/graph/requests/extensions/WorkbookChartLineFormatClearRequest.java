@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Line Format Clear Request.
  */
-public class WorkbookChartLineFormatClearRequest extends BaseRequest<WorkbookChartLineFormat> {
+public class WorkbookChartLineFormatClearRequest extends BaseRequest<Void> {
 
     /**
      * The request for this WorkbookChartLineFormatClear
@@ -28,7 +28,7 @@ public class WorkbookChartLineFormatClearRequest extends BaseRequest<WorkbookCha
      * @param requestOptions the options for this request
      */
     public WorkbookChartLineFormatClearRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WorkbookChartLineFormat.class);
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**

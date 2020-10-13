@@ -36,7 +36,7 @@ public class PlaceCollectionRequest extends BaseCollectionRequest<Place, PlaceCo
      */
     @SuppressWarnings("unchecked")
     public PlaceCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Place.class, PlaceCollectionResponse.class,(Class<BaseCollectionPage<Place>>) (new BaseCollectionPage<Place>(new java.util.ArrayList<Place>(), null).getClass()));
+        super(requestUrl, client, requestOptions, PlaceCollectionResponse.class,(Class<BaseCollectionPage<Place>>) (new BaseCollectionPage<Place>(new java.util.ArrayList<Place>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<Place>> callback) {

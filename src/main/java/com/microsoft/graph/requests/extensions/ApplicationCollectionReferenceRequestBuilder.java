@@ -22,10 +22,10 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Application Collection Reference Request Builder.
  */
-public class ApplicationCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<ServicePrincipal, ApplicationCollectionReferenceRequest> {
+public class ApplicationCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<Application, ApplicationCollectionResponse, ApplicationCollectionReferenceRequest> {
 
     /**
-     * The request builder for this collection of ServicePrincipal
+     * The request builder for this collection of Application
      *
      * @param requestUrl     the request URL
      * @param client         the service client

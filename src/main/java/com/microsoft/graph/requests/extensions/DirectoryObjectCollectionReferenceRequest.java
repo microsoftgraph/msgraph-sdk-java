@@ -18,10 +18,12 @@ import com.microsoft.graph.requests.extensions.DirectoryObjectReferenceRequestBu
 import com.microsoft.graph.requests.extensions.DirectoryObjectWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionWithReferencesRequest;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionWithReferencesRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.http.ReferenceRequestBody;
@@ -42,7 +44,7 @@ public class DirectoryObjectCollectionReferenceRequest extends BaseCollectionWit
      */
     @SuppressWarnings("unchecked")
     public DirectoryObjectCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DirectoryObject.class, DirectoryObjectCollectionResponse.class, (Class<BaseCollectionPage<DirectoryObject>>) (new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass()), DirectoryObjectCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, DirectoryObjectCollectionResponse.class, (Class<BaseCollectionPage<DirectoryObject>>) (new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass()), DirectoryObjectCollectionWithReferencesRequestBuilder.class);
     }
 
     public void post(final DirectoryObject newDirectoryObject, final ICallback<? super DirectoryObject> callback) {

@@ -37,7 +37,7 @@ public class ActivityHistoryItemCollectionRequest extends BaseCollectionRequest<
      */
     @SuppressWarnings("unchecked")
     public ActivityHistoryItemCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ActivityHistoryItem.class, ActivityHistoryItemCollectionResponse.class,(Class<BaseCollectionPage<ActivityHistoryItem>>) (new BaseCollectionPage<ActivityHistoryItem>(new java.util.ArrayList<ActivityHistoryItem>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ActivityHistoryItemCollectionResponse.class,(Class<BaseCollectionPage<ActivityHistoryItem>>) (new BaseCollectionPage<ActivityHistoryItem>(new java.util.ArrayList<ActivityHistoryItem>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<ActivityHistoryItem>> callback) {

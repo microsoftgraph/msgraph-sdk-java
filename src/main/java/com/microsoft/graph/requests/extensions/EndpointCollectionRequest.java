@@ -37,7 +37,7 @@ public class EndpointCollectionRequest extends BaseCollectionRequest<Endpoint, E
      */
     @SuppressWarnings("unchecked")
     public EndpointCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Endpoint.class, EndpointCollectionResponse.class,(Class<BaseCollectionPage<Endpoint>>) (new BaseCollectionPage<Endpoint>(new java.util.ArrayList<Endpoint>(), null).getClass()));
+        super(requestUrl, client, requestOptions, EndpointCollectionResponse.class,(Class<BaseCollectionPage<Endpoint>>) (new BaseCollectionPage<Endpoint>(new java.util.ArrayList<Endpoint>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<Endpoint>> callback) {

@@ -36,7 +36,7 @@ public class OrganizationCollectionRequest extends BaseCollectionRequest<Organiz
      */
     @SuppressWarnings("unchecked")
     public OrganizationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Organization.class, OrganizationCollectionResponse.class,(Class<BaseCollectionPage<Organization>>) (new BaseCollectionPage<Organization>(new java.util.ArrayList<Organization>(), null).getClass()));
+        super(requestUrl, client, requestOptions, OrganizationCollectionResponse.class,(Class<BaseCollectionPage<Organization>>) (new BaseCollectionPage<Organization>(new java.util.ArrayList<Organization>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<Organization>> callback) {

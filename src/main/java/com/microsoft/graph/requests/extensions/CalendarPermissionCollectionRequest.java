@@ -37,7 +37,7 @@ public class CalendarPermissionCollectionRequest extends BaseCollectionRequest<C
      */
     @SuppressWarnings("unchecked")
     public CalendarPermissionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, CalendarPermission.class, CalendarPermissionCollectionResponse.class,(Class<BaseCollectionPage<CalendarPermission>>) (new BaseCollectionPage<CalendarPermission>(new java.util.ArrayList<CalendarPermission>(), null).getClass()));
+        super(requestUrl, client, requestOptions, CalendarPermissionCollectionResponse.class,(Class<BaseCollectionPage<CalendarPermission>>) (new BaseCollectionPage<CalendarPermission>(new java.util.ArrayList<CalendarPermission>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<CalendarPermission>> callback) {

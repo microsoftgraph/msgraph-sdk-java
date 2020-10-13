@@ -37,7 +37,7 @@ public class NotebookGetRecentNotebooksCollectionRequest extends BaseCollectionR
      */
     @SuppressWarnings("unchecked")
     public NotebookGetRecentNotebooksCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, RecentNotebook.class, NotebookGetRecentNotebooksCollectionResponse.class, (Class<BaseCollectionPage<RecentNotebook>>) (new BaseCollectionPage<RecentNotebook>(new java.util.ArrayList<RecentNotebook>(), null).getClass()));
+        super(requestUrl, client, requestOptions, NotebookGetRecentNotebooksCollectionResponse.class, (Class<BaseCollectionPage<RecentNotebook>>) (new BaseCollectionPage<RecentNotebook>(new java.util.ArrayList<RecentNotebook>(), null).getClass()));
     }
 
 

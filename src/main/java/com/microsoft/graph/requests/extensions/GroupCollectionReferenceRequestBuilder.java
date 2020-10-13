@@ -21,10 +21,10 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Group Collection Reference Request Builder.
  */
-public class GroupCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<ServicePrincipal, GroupCollectionReferenceRequest> {
+public class GroupCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<Group, GroupCollectionResponse, GroupCollectionReferenceRequest> {
 
     /**
-     * The request builder for this collection of ServicePrincipal
+     * The request builder for this collection of Group
      *
      * @param requestUrl     the request URL
      * @param client         the service client

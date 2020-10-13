@@ -36,7 +36,7 @@ public class ScopedRoleMembershipCollectionRequest extends BaseCollectionRequest
      */
     @SuppressWarnings("unchecked")
     public ScopedRoleMembershipCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ScopedRoleMembership.class, ScopedRoleMembershipCollectionResponse.class,(Class<BaseCollectionPage<ScopedRoleMembership>>) (new BaseCollectionPage<ScopedRoleMembership>(new java.util.ArrayList<ScopedRoleMembership>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ScopedRoleMembershipCollectionResponse.class,(Class<BaseCollectionPage<ScopedRoleMembership>>) (new BaseCollectionPage<ScopedRoleMembership>(new java.util.ArrayList<ScopedRoleMembership>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<ScopedRoleMembership>> callback) {

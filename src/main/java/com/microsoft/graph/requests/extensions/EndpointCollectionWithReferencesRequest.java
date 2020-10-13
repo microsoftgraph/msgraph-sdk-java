@@ -13,9 +13,16 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.models.extensions.Endpoint;
+import com.microsoft.graph.requests.extensions.EndpointWithReferenceRequest;
+import com.microsoft.graph.requests.extensions.EndpointReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.EndpointWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.EndpointCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.EndpointCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.EndpointCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -24,7 +31,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Endpoint Collection With References Request.
  */
-public class EndpointCollectionWithReferencesRequest extends BaseCollectionRequest<Endpoint, EndpointCollectionResponse> {
+public class EndpointCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<Endpoint, EndpointWithReferenceRequest, EndpointReferenceRequestBuilder, EndpointWithReferenceRequestBuilder, EndpointCollectionResponse, EndpointCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of Endpoint
@@ -35,7 +42,7 @@ public class EndpointCollectionWithReferencesRequest extends BaseCollectionReque
      */
     @SuppressWarnings("unchecked")
     public EndpointCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Endpoint.class, EndpointCollectionResponse.class, (Class<BaseCollectionPage<Endpoint>>) (new BaseCollectionPage<Endpoint>(new java.util.ArrayList<Endpoint>(), null).getClass()));
+        super(requestUrl, client, requestOptions, EndpointCollectionResponse.class, (Class<BaseCollectionPage<Endpoint>>) (new BaseCollectionPage<Endpoint>(new java.util.ArrayList<Endpoint>(), null).getClass()), EndpointCollectionWithReferencesRequestBuilder.class);
     }
 
     public void get(final ICallback<? super BaseCollectionPage<Endpoint>> callback) {

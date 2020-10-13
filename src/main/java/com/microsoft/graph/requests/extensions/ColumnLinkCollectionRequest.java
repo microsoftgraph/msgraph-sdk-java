@@ -37,7 +37,7 @@ public class ColumnLinkCollectionRequest extends BaseCollectionRequest<ColumnLin
      */
     @SuppressWarnings("unchecked")
     public ColumnLinkCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ColumnLink.class, ColumnLinkCollectionResponse.class,(Class<BaseCollectionPage<ColumnLink>>) (new BaseCollectionPage<ColumnLink>(new java.util.ArrayList<ColumnLink>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ColumnLinkCollectionResponse.class,(Class<BaseCollectionPage<ColumnLink>>) (new BaseCollectionPage<ColumnLink>(new java.util.ArrayList<ColumnLink>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<ColumnLink>> callback) {

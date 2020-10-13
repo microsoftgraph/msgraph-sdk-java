@@ -36,7 +36,7 @@ public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectio
      */
     @SuppressWarnings("unchecked")
     public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, String.class, ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionResponse.class, (Class<BaseCollectionPage<String>>) (new BaseCollectionPage<String>(new java.util.ArrayList<String>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionResponse.class, (Class<BaseCollectionPage<String>>) (new BaseCollectionPage<String>(new java.util.ArrayList<String>(), null).getClass()));
     }
 
 

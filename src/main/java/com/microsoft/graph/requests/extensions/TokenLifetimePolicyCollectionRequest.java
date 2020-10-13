@@ -37,7 +37,7 @@ public class TokenLifetimePolicyCollectionRequest extends BaseCollectionRequest<
      */
     @SuppressWarnings("unchecked")
     public TokenLifetimePolicyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TokenLifetimePolicy.class, TokenLifetimePolicyCollectionResponse.class,(Class<BaseCollectionPage<TokenLifetimePolicy>>) (new BaseCollectionPage<TokenLifetimePolicy>(new java.util.ArrayList<TokenLifetimePolicy>(), null).getClass()));
+        super(requestUrl, client, requestOptions, TokenLifetimePolicyCollectionResponse.class,(Class<BaseCollectionPage<TokenLifetimePolicy>>) (new BaseCollectionPage<TokenLifetimePolicy>(new java.util.ArrayList<TokenLifetimePolicy>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<TokenLifetimePolicy>> callback) {

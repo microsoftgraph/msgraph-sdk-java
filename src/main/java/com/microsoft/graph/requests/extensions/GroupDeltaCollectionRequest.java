@@ -37,7 +37,7 @@ public class GroupDeltaCollectionRequest extends BaseCollectionRequest<Group, Gr
      */
     @SuppressWarnings("unchecked")
     public GroupDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Group.class, GroupDeltaCollectionResponse.class, (Class<BaseCollectionPage<Group>>) (new BaseCollectionPage<Group>(new java.util.ArrayList<Group>(), null).getClass()));
+        super(requestUrl, client, requestOptions, GroupDeltaCollectionResponse.class, (Class<BaseCollectionPage<Group>>) (new BaseCollectionPage<Group>(new java.util.ArrayList<Group>(), null).getClass()));
     }
 
 

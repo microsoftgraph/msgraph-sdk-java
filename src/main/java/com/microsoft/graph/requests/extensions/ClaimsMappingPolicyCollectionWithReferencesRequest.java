@@ -13,9 +13,16 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.models.extensions.ClaimsMappingPolicy;
+import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyWithReferenceRequest;
+import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -24,7 +31,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Claims Mapping Policy Collection With References Request.
  */
-public class ClaimsMappingPolicyCollectionWithReferencesRequest extends BaseCollectionRequest<ClaimsMappingPolicy, ClaimsMappingPolicyCollectionResponse> {
+public class ClaimsMappingPolicyCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<ClaimsMappingPolicy, ClaimsMappingPolicyWithReferenceRequest, ClaimsMappingPolicyReferenceRequestBuilder, ClaimsMappingPolicyWithReferenceRequestBuilder, ClaimsMappingPolicyCollectionResponse, ClaimsMappingPolicyCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of ClaimsMappingPolicy
@@ -35,7 +42,7 @@ public class ClaimsMappingPolicyCollectionWithReferencesRequest extends BaseColl
      */
     @SuppressWarnings("unchecked")
     public ClaimsMappingPolicyCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ClaimsMappingPolicy.class, ClaimsMappingPolicyCollectionResponse.class, (Class<BaseCollectionPage<ClaimsMappingPolicy>>) (new BaseCollectionPage<ClaimsMappingPolicy>(new java.util.ArrayList<ClaimsMappingPolicy>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ClaimsMappingPolicyCollectionResponse.class, (Class<BaseCollectionPage<ClaimsMappingPolicy>>) (new BaseCollectionPage<ClaimsMappingPolicy>(new java.util.ArrayList<ClaimsMappingPolicy>(), null).getClass()), ClaimsMappingPolicyCollectionWithReferencesRequestBuilder.class);
     }
 
     public void get(final ICallback<? super BaseCollectionPage<ClaimsMappingPolicy>> callback) {

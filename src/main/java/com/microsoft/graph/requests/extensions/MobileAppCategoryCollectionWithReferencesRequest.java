@@ -13,9 +13,16 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.models.extensions.MobileAppCategory;
+import com.microsoft.graph.requests.extensions.MobileAppCategoryWithReferenceRequest;
+import com.microsoft.graph.requests.extensions.MobileAppCategoryReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppCategoryWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -24,7 +31,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Mobile App Category Collection With References Request.
  */
-public class MobileAppCategoryCollectionWithReferencesRequest extends BaseCollectionRequest<MobileAppCategory, MobileAppCategoryCollectionResponse> {
+public class MobileAppCategoryCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<MobileAppCategory, MobileAppCategoryWithReferenceRequest, MobileAppCategoryReferenceRequestBuilder, MobileAppCategoryWithReferenceRequestBuilder, MobileAppCategoryCollectionResponse, MobileAppCategoryCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of MobileAppCategory
@@ -35,7 +42,7 @@ public class MobileAppCategoryCollectionWithReferencesRequest extends BaseCollec
      */
     @SuppressWarnings("unchecked")
     public MobileAppCategoryCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MobileAppCategory.class, MobileAppCategoryCollectionResponse.class, (Class<BaseCollectionPage<MobileAppCategory>>) (new BaseCollectionPage<MobileAppCategory>(new java.util.ArrayList<MobileAppCategory>(), null).getClass()));
+        super(requestUrl, client, requestOptions, MobileAppCategoryCollectionResponse.class, (Class<BaseCollectionPage<MobileAppCategory>>) (new BaseCollectionPage<MobileAppCategory>(new java.util.ArrayList<MobileAppCategory>(), null).getClass()), MobileAppCategoryCollectionWithReferencesRequestBuilder.class);
     }
 
     public void get(final ICallback<? super BaseCollectionPage<MobileAppCategory>> callback) {

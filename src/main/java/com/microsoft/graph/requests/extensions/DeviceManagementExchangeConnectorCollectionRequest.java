@@ -38,7 +38,7 @@ public class DeviceManagementExchangeConnectorCollectionRequest extends BaseColl
      */
     @SuppressWarnings("unchecked")
     public DeviceManagementExchangeConnectorCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceManagementExchangeConnector.class, DeviceManagementExchangeConnectorCollectionResponse.class,(Class<BaseCollectionPage<DeviceManagementExchangeConnector>>) (new BaseCollectionPage<DeviceManagementExchangeConnector>(new java.util.ArrayList<DeviceManagementExchangeConnector>(), null).getClass()));
+        super(requestUrl, client, requestOptions, DeviceManagementExchangeConnectorCollectionResponse.class,(Class<BaseCollectionPage<DeviceManagementExchangeConnector>>) (new BaseCollectionPage<DeviceManagementExchangeConnector>(new java.util.ArrayList<DeviceManagementExchangeConnector>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<DeviceManagementExchangeConnector>> callback) {

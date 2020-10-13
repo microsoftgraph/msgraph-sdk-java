@@ -37,7 +37,7 @@ public class ThumbnailSetCollectionRequest extends BaseCollectionRequest<Thumbna
      */
     @SuppressWarnings("unchecked")
     public ThumbnailSetCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ThumbnailSet.class, ThumbnailSetCollectionResponse.class,(Class<BaseCollectionPage<ThumbnailSet>>) (new BaseCollectionPage<ThumbnailSet>(new java.util.ArrayList<ThumbnailSet>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ThumbnailSetCollectionResponse.class,(Class<BaseCollectionPage<ThumbnailSet>>) (new BaseCollectionPage<ThumbnailSet>(new java.util.ArrayList<ThumbnailSet>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<ThumbnailSet>> callback) {

@@ -37,7 +37,7 @@ public class OutlookUserSupportedLanguagesCollectionRequest extends BaseCollecti
      */
     @SuppressWarnings("unchecked")
     public OutlookUserSupportedLanguagesCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, LocaleInfo.class, OutlookUserSupportedLanguagesCollectionResponse.class, (Class<BaseCollectionPage<LocaleInfo>>) (new BaseCollectionPage<LocaleInfo>(new java.util.ArrayList<LocaleInfo>(), null).getClass()));
+        super(requestUrl, client, requestOptions, OutlookUserSupportedLanguagesCollectionResponse.class, (Class<BaseCollectionPage<LocaleInfo>>) (new BaseCollectionPage<LocaleInfo>(new java.util.ArrayList<LocaleInfo>(), null).getClass()));
     }
 
 

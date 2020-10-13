@@ -19,10 +19,12 @@ import com.microsoft.graph.requests.extensions.ApplicationReferenceRequestBuilde
 import com.microsoft.graph.requests.extensions.ApplicationWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApplicationCollectionWithReferencesRequest;
 import com.microsoft.graph.requests.extensions.ApplicationCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.ApplicationCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.models.extensions.Application;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionWithReferencesRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.http.ReferenceRequestBody;
@@ -43,7 +45,7 @@ public class ApplicationCollectionReferenceRequest extends BaseCollectionWithRef
      */
     @SuppressWarnings("unchecked")
     public ApplicationCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Application.class, ApplicationCollectionResponse.class, (Class<BaseCollectionPage<Application>>) (new BaseCollectionPage<Application>(new java.util.ArrayList<Application>(), null).getClass()), ApplicationCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, ApplicationCollectionResponse.class, (Class<BaseCollectionPage<Application>>) (new BaseCollectionPage<Application>(new java.util.ArrayList<Application>(), null).getClass()), ApplicationCollectionWithReferencesRequestBuilder.class);
     }
 
     public void post(final Application newApplication, final ICallback<? super Application> callback) {

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mobile App Content File Renew Upload Request.
  */
-public class MobileAppContentFileRenewUploadRequest extends BaseRequest<MobileAppContentFile> {
+public class MobileAppContentFileRenewUploadRequest extends BaseRequest<Void> {
 
     /**
      * The request for this MobileAppContentFileRenewUpload
@@ -28,7 +28,7 @@ public class MobileAppContentFileRenewUploadRequest extends BaseRequest<MobileAp
      * @param requestOptions the options for this request
      */
     public MobileAppContentFileRenewUploadRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MobileAppContentFile.class);
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**

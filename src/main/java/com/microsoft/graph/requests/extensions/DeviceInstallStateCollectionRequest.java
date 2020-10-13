@@ -37,7 +37,7 @@ public class DeviceInstallStateCollectionRequest extends BaseCollectionRequest<D
      */
     @SuppressWarnings("unchecked")
     public DeviceInstallStateCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceInstallState.class, DeviceInstallStateCollectionResponse.class,(Class<BaseCollectionPage<DeviceInstallState>>) (new BaseCollectionPage<DeviceInstallState>(new java.util.ArrayList<DeviceInstallState>(), null).getClass()));
+        super(requestUrl, client, requestOptions, DeviceInstallStateCollectionResponse.class,(Class<BaseCollectionPage<DeviceInstallState>>) (new BaseCollectionPage<DeviceInstallState>(new java.util.ArrayList<DeviceInstallState>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<DeviceInstallState>> callback) {

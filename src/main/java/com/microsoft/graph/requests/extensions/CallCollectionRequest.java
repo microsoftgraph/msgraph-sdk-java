@@ -52,7 +52,7 @@ public class CallCollectionRequest extends BaseCollectionRequest<Call, CallColle
      */
     @SuppressWarnings("unchecked")
     public CallCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Call.class, CallCollectionResponse.class,(Class<BaseCollectionPage<Call>>) (new BaseCollectionPage<Call>(new java.util.ArrayList<Call>(), null).getClass()));
+        super(requestUrl, client, requestOptions, CallCollectionResponse.class,(Class<BaseCollectionPage<Call>>) (new BaseCollectionPage<Call>(new java.util.ArrayList<Call>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<Call>> callback) {

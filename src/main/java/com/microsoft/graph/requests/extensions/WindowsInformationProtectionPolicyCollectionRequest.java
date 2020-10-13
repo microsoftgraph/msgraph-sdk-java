@@ -37,7 +37,7 @@ public class WindowsInformationProtectionPolicyCollectionRequest extends BaseCol
      */
     @SuppressWarnings("unchecked")
     public WindowsInformationProtectionPolicyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WindowsInformationProtectionPolicy.class, WindowsInformationProtectionPolicyCollectionResponse.class,(Class<BaseCollectionPage<WindowsInformationProtectionPolicy>>) (new BaseCollectionPage<WindowsInformationProtectionPolicy>(new java.util.ArrayList<WindowsInformationProtectionPolicy>(), null).getClass()));
+        super(requestUrl, client, requestOptions, WindowsInformationProtectionPolicyCollectionResponse.class,(Class<BaseCollectionPage<WindowsInformationProtectionPolicy>>) (new BaseCollectionPage<WindowsInformationProtectionPolicy>(new java.util.ArrayList<WindowsInformationProtectionPolicy>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<WindowsInformationProtectionPolicy>> callback) {

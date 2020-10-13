@@ -37,7 +37,7 @@ public class InferenceClassificationOverrideCollectionRequest extends BaseCollec
      */
     @SuppressWarnings("unchecked")
     public InferenceClassificationOverrideCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, InferenceClassificationOverride.class, InferenceClassificationOverrideCollectionResponse.class,(Class<BaseCollectionPage<InferenceClassificationOverride>>) (new BaseCollectionPage<InferenceClassificationOverride>(new java.util.ArrayList<InferenceClassificationOverride>(), null).getClass()));
+        super(requestUrl, client, requestOptions, InferenceClassificationOverrideCollectionResponse.class,(Class<BaseCollectionPage<InferenceClassificationOverride>>) (new BaseCollectionPage<InferenceClassificationOverride>(new java.util.ArrayList<InferenceClassificationOverride>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<InferenceClassificationOverride>> callback) {

@@ -37,7 +37,7 @@ public class TermsAndConditionsAssignmentCollectionRequest extends BaseCollectio
      */
     @SuppressWarnings("unchecked")
     public TermsAndConditionsAssignmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TermsAndConditionsAssignment.class, TermsAndConditionsAssignmentCollectionResponse.class,(Class<BaseCollectionPage<TermsAndConditionsAssignment>>) (new BaseCollectionPage<TermsAndConditionsAssignment>(new java.util.ArrayList<TermsAndConditionsAssignment>(), null).getClass()));
+        super(requestUrl, client, requestOptions, TermsAndConditionsAssignmentCollectionResponse.class,(Class<BaseCollectionPage<TermsAndConditionsAssignment>>) (new BaseCollectionPage<TermsAndConditionsAssignment>(new java.util.ArrayList<TermsAndConditionsAssignment>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<TermsAndConditionsAssignment>> callback) {

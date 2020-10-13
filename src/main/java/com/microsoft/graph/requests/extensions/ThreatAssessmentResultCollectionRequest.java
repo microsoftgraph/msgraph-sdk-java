@@ -37,7 +37,7 @@ public class ThreatAssessmentResultCollectionRequest extends BaseCollectionReque
      */
     @SuppressWarnings("unchecked")
     public ThreatAssessmentResultCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ThreatAssessmentResult.class, ThreatAssessmentResultCollectionResponse.class,(Class<BaseCollectionPage<ThreatAssessmentResult>>) (new BaseCollectionPage<ThreatAssessmentResult>(new java.util.ArrayList<ThreatAssessmentResult>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ThreatAssessmentResultCollectionResponse.class,(Class<BaseCollectionPage<ThreatAssessmentResult>>) (new BaseCollectionPage<ThreatAssessmentResult>(new java.util.ArrayList<ThreatAssessmentResult>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<ThreatAssessmentResult>> callback) {

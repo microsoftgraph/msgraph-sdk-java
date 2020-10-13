@@ -14,9 +14,16 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.models.extensions.Site;
+import com.microsoft.graph.requests.extensions.SiteWithReferenceRequest;
+import com.microsoft.graph.requests.extensions.SiteReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.SiteWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.SiteCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.SiteCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.SiteCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -25,7 +32,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Site Collection With References Request.
  */
-public class SiteCollectionWithReferencesRequest extends BaseCollectionRequest<Site, SiteCollectionResponse> {
+public class SiteCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<Site, SiteWithReferenceRequest, SiteReferenceRequestBuilder, SiteWithReferenceRequestBuilder, SiteCollectionResponse, SiteCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of Site
@@ -36,7 +43,7 @@ public class SiteCollectionWithReferencesRequest extends BaseCollectionRequest<S
      */
     @SuppressWarnings("unchecked")
     public SiteCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Site.class, SiteCollectionResponse.class, (Class<BaseCollectionPage<Site>>) (new BaseCollectionPage<Site>(new java.util.ArrayList<Site>(), null).getClass()));
+        super(requestUrl, client, requestOptions, SiteCollectionResponse.class, (Class<BaseCollectionPage<Site>>) (new BaseCollectionPage<Site>(new java.util.ArrayList<Site>(), null).getClass()), SiteCollectionWithReferencesRequestBuilder.class);
     }
 
     public void get(final ICallback<? super BaseCollectionPage<Site>> callback) {

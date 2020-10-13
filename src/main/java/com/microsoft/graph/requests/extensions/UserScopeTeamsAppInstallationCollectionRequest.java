@@ -37,7 +37,7 @@ public class UserScopeTeamsAppInstallationCollectionRequest extends BaseCollecti
      */
     @SuppressWarnings("unchecked")
     public UserScopeTeamsAppInstallationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, UserScopeTeamsAppInstallation.class, UserScopeTeamsAppInstallationCollectionResponse.class,(Class<BaseCollectionPage<UserScopeTeamsAppInstallation>>) (new BaseCollectionPage<UserScopeTeamsAppInstallation>(new java.util.ArrayList<UserScopeTeamsAppInstallation>(), null).getClass()));
+        super(requestUrl, client, requestOptions, UserScopeTeamsAppInstallationCollectionResponse.class,(Class<BaseCollectionPage<UserScopeTeamsAppInstallation>>) (new BaseCollectionPage<UserScopeTeamsAppInstallation>(new java.util.ArrayList<UserScopeTeamsAppInstallation>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<UserScopeTeamsAppInstallation>> callback) {

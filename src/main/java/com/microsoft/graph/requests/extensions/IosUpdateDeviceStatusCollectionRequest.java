@@ -37,7 +37,7 @@ public class IosUpdateDeviceStatusCollectionRequest extends BaseCollectionReques
      */
     @SuppressWarnings("unchecked")
     public IosUpdateDeviceStatusCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, IosUpdateDeviceStatus.class, IosUpdateDeviceStatusCollectionResponse.class,(Class<BaseCollectionPage<IosUpdateDeviceStatus>>) (new BaseCollectionPage<IosUpdateDeviceStatus>(new java.util.ArrayList<IosUpdateDeviceStatus>(), null).getClass()));
+        super(requestUrl, client, requestOptions, IosUpdateDeviceStatusCollectionResponse.class,(Class<BaseCollectionPage<IosUpdateDeviceStatus>>) (new BaseCollectionPage<IosUpdateDeviceStatus>(new java.util.ArrayList<IosUpdateDeviceStatus>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<IosUpdateDeviceStatus>> callback) {

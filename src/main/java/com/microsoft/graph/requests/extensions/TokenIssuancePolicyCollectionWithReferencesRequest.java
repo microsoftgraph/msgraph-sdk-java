@@ -13,9 +13,16 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
+import com.microsoft.graph.requests.extensions.TokenIssuancePolicyWithReferenceRequest;
+import com.microsoft.graph.requests.extensions.TokenIssuancePolicyReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.TokenIssuancePolicyWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -24,7 +31,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Token Issuance Policy Collection With References Request.
  */
-public class TokenIssuancePolicyCollectionWithReferencesRequest extends BaseCollectionRequest<TokenIssuancePolicy, TokenIssuancePolicyCollectionResponse> {
+public class TokenIssuancePolicyCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<TokenIssuancePolicy, TokenIssuancePolicyWithReferenceRequest, TokenIssuancePolicyReferenceRequestBuilder, TokenIssuancePolicyWithReferenceRequestBuilder, TokenIssuancePolicyCollectionResponse, TokenIssuancePolicyCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of TokenIssuancePolicy
@@ -35,7 +42,7 @@ public class TokenIssuancePolicyCollectionWithReferencesRequest extends BaseColl
      */
     @SuppressWarnings("unchecked")
     public TokenIssuancePolicyCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TokenIssuancePolicy.class, TokenIssuancePolicyCollectionResponse.class, (Class<BaseCollectionPage<TokenIssuancePolicy>>) (new BaseCollectionPage<TokenIssuancePolicy>(new java.util.ArrayList<TokenIssuancePolicy>(), null).getClass()));
+        super(requestUrl, client, requestOptions, TokenIssuancePolicyCollectionResponse.class, (Class<BaseCollectionPage<TokenIssuancePolicy>>) (new BaseCollectionPage<TokenIssuancePolicy>(new java.util.ArrayList<TokenIssuancePolicy>(), null).getClass()), TokenIssuancePolicyCollectionWithReferencesRequestBuilder.class);
     }
 
     public void get(final ICallback<? super BaseCollectionPage<TokenIssuancePolicy>> callback) {

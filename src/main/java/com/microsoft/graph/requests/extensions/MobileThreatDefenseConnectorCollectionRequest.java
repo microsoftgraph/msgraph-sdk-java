@@ -37,7 +37,7 @@ public class MobileThreatDefenseConnectorCollectionRequest extends BaseCollectio
      */
     @SuppressWarnings("unchecked")
     public MobileThreatDefenseConnectorCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MobileThreatDefenseConnector.class, MobileThreatDefenseConnectorCollectionResponse.class,(Class<BaseCollectionPage<MobileThreatDefenseConnector>>) (new BaseCollectionPage<MobileThreatDefenseConnector>(new java.util.ArrayList<MobileThreatDefenseConnector>(), null).getClass()));
+        super(requestUrl, client, requestOptions, MobileThreatDefenseConnectorCollectionResponse.class,(Class<BaseCollectionPage<MobileThreatDefenseConnector>>) (new BaseCollectionPage<MobileThreatDefenseConnector>(new java.util.ArrayList<MobileThreatDefenseConnector>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<MobileThreatDefenseConnector>> callback) {

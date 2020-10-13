@@ -18,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Message Send Request.
  */
-public class MessageSendRequest extends BaseRequest<Message> {
+public class MessageSendRequest extends BaseRequest<Void> {
 
     /**
      * The request for this MessageSend
@@ -28,7 +28,7 @@ public class MessageSendRequest extends BaseRequest<Message> {
      * @param requestOptions the options for this request
      */
     public MessageSendRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Message.class);
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**

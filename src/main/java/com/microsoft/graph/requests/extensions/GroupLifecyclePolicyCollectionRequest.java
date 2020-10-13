@@ -36,7 +36,7 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
      */
     @SuppressWarnings("unchecked")
     public GroupLifecyclePolicyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, GroupLifecyclePolicy.class, GroupLifecyclePolicyCollectionResponse.class,(Class<BaseCollectionPage<GroupLifecyclePolicy>>) (new BaseCollectionPage<GroupLifecyclePolicy>(new java.util.ArrayList<GroupLifecyclePolicy>(), null).getClass()));
+        super(requestUrl, client, requestOptions, GroupLifecyclePolicyCollectionResponse.class,(Class<BaseCollectionPage<GroupLifecyclePolicy>>) (new BaseCollectionPage<GroupLifecyclePolicy>(new java.util.ArrayList<GroupLifecyclePolicy>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<GroupLifecyclePolicy>> callback) {

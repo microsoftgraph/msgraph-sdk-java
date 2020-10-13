@@ -37,7 +37,7 @@ public class ComplianceManagementPartnerCollectionRequest extends BaseCollection
      */
     @SuppressWarnings("unchecked")
     public ComplianceManagementPartnerCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ComplianceManagementPartner.class, ComplianceManagementPartnerCollectionResponse.class,(Class<BaseCollectionPage<ComplianceManagementPartner>>) (new BaseCollectionPage<ComplianceManagementPartner>(new java.util.ArrayList<ComplianceManagementPartner>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ComplianceManagementPartnerCollectionResponse.class,(Class<BaseCollectionPage<ComplianceManagementPartner>>) (new BaseCollectionPage<ComplianceManagementPartner>(new java.util.ArrayList<ComplianceManagementPartner>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<ComplianceManagementPartner>> callback) {

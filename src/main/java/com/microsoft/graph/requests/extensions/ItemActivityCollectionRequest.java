@@ -37,7 +37,7 @@ public class ItemActivityCollectionRequest extends BaseCollectionRequest<ItemAct
      */
     @SuppressWarnings("unchecked")
     public ItemActivityCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ItemActivity.class, ItemActivityCollectionResponse.class,(Class<BaseCollectionPage<ItemActivity>>) (new BaseCollectionPage<ItemActivity>(new java.util.ArrayList<ItemActivity>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ItemActivityCollectionResponse.class,(Class<BaseCollectionPage<ItemActivity>>) (new BaseCollectionPage<ItemActivity>(new java.util.ArrayList<ItemActivity>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<ItemActivity>> callback) {

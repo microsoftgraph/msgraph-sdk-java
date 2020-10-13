@@ -13,9 +13,16 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.models.extensions.AppRoleAssignment;
+import com.microsoft.graph.requests.extensions.AppRoleAssignmentWithReferenceRequest;
+import com.microsoft.graph.requests.extensions.AppRoleAssignmentReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.AppRoleAssignmentWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -24,7 +31,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the App Role Assignment Collection With References Request.
  */
-public class AppRoleAssignmentCollectionWithReferencesRequest extends BaseCollectionRequest<AppRoleAssignment, AppRoleAssignmentCollectionResponse> {
+public class AppRoleAssignmentCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<AppRoleAssignment, AppRoleAssignmentWithReferenceRequest, AppRoleAssignmentReferenceRequestBuilder, AppRoleAssignmentWithReferenceRequestBuilder, AppRoleAssignmentCollectionResponse, AppRoleAssignmentCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of AppRoleAssignment
@@ -35,7 +42,7 @@ public class AppRoleAssignmentCollectionWithReferencesRequest extends BaseCollec
      */
     @SuppressWarnings("unchecked")
     public AppRoleAssignmentCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, AppRoleAssignment.class, AppRoleAssignmentCollectionResponse.class, (Class<BaseCollectionPage<AppRoleAssignment>>) (new BaseCollectionPage<AppRoleAssignment>(new java.util.ArrayList<AppRoleAssignment>(), null).getClass()));
+        super(requestUrl, client, requestOptions, AppRoleAssignmentCollectionResponse.class, (Class<BaseCollectionPage<AppRoleAssignment>>) (new BaseCollectionPage<AppRoleAssignment>(new java.util.ArrayList<AppRoleAssignment>(), null).getClass()), AppRoleAssignmentCollectionWithReferencesRequestBuilder.class);
     }
 
     public void get(final ICallback<? super BaseCollectionPage<AppRoleAssignment>> callback) {

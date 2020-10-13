@@ -13,9 +13,16 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.models.extensions.CertificateBasedAuthConfiguration;
+import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationWithReferenceRequest;
+import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionWithReferencesRequest;
+import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequest;
+import com.microsoft.graph.http.BaseCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -24,7 +31,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Certificate Based Auth Configuration Collection With References Request.
  */
-public class CertificateBasedAuthConfigurationCollectionWithReferencesRequest extends BaseCollectionRequest<CertificateBasedAuthConfiguration, CertificateBasedAuthConfigurationCollectionResponse> {
+public class CertificateBasedAuthConfigurationCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<CertificateBasedAuthConfiguration, CertificateBasedAuthConfigurationWithReferenceRequest, CertificateBasedAuthConfigurationReferenceRequestBuilder, CertificateBasedAuthConfigurationWithReferenceRequestBuilder, CertificateBasedAuthConfigurationCollectionResponse, CertificateBasedAuthConfigurationCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of CertificateBasedAuthConfiguration
@@ -35,7 +42,7 @@ public class CertificateBasedAuthConfigurationCollectionWithReferencesRequest ex
      */
     @SuppressWarnings("unchecked")
     public CertificateBasedAuthConfigurationCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, CertificateBasedAuthConfiguration.class, CertificateBasedAuthConfigurationCollectionResponse.class, (Class<BaseCollectionPage<CertificateBasedAuthConfiguration>>) (new BaseCollectionPage<CertificateBasedAuthConfiguration>(new java.util.ArrayList<CertificateBasedAuthConfiguration>(), null).getClass()));
+        super(requestUrl, client, requestOptions, CertificateBasedAuthConfigurationCollectionResponse.class, (Class<BaseCollectionPage<CertificateBasedAuthConfiguration>>) (new BaseCollectionPage<CertificateBasedAuthConfiguration>(new java.util.ArrayList<CertificateBasedAuthConfiguration>(), null).getClass()), CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder.class);
     }
 
     public void get(final ICallback<? super BaseCollectionPage<CertificateBasedAuthConfiguration>> callback) {

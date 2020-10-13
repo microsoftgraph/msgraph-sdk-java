@@ -37,7 +37,7 @@ public class ManagedAppOperationCollectionRequest extends BaseCollectionRequest<
      */
     @SuppressWarnings("unchecked")
     public ManagedAppOperationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedAppOperation.class, ManagedAppOperationCollectionResponse.class,(Class<BaseCollectionPage<ManagedAppOperation>>) (new BaseCollectionPage<ManagedAppOperation>(new java.util.ArrayList<ManagedAppOperation>(), null).getClass()));
+        super(requestUrl, client, requestOptions, ManagedAppOperationCollectionResponse.class,(Class<BaseCollectionPage<ManagedAppOperation>>) (new BaseCollectionPage<ManagedAppOperation>(new java.util.ArrayList<ManagedAppOperation>(), null).getClass()));
     }
 
     public void get(final ICallback<? super BaseCollectionPage<ManagedAppOperation>> callback) {
