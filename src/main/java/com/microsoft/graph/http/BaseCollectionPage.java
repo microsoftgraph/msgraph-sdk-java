@@ -25,6 +25,7 @@ package com.microsoft.graph.http;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.serializer.IJsonBackedObject;
 
 import java.util.Collections;
 import java.util.List;
@@ -34,7 +35,7 @@ import java.util.List;
  *
  * @param <T> the type of the item contained within the collection
  */
-public class BaseCollectionPage<T> implements IBaseCollectionPage<T> {
+public class BaseCollectionPage<T> implements IJsonBackedObject {
 
     private AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
