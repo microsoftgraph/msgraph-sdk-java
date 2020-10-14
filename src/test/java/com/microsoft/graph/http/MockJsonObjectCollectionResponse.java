@@ -17,8 +17,7 @@ public class MockJsonObjectCollectionResponse implements ICollectionResponse<Jso
 
 	@Override
 	public AdditionalDataManager additionalDataManager() {
-		// TODO Auto-generated method stub
-		return null;
+		return new AdditionalDataManager(null);
 	}
 
 	@Override
