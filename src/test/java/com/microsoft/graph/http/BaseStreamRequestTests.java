@@ -50,8 +50,8 @@ public class BaseStreamRequestTests {
                 .protocol(Protocol.HTTP_1_1)
                 .code(200).message("OK").body(
                    ResponseBody.create(
-                        MediaType.parse("application/octet-stream"),
-                        "{ \"id\": \"zzz\" }"
+                        "{ \"id\": \"zzz\" }",
+                        MediaType.parse("application/octet-stream")
                 ))
                 .build();
 
@@ -72,8 +72,8 @@ public class BaseStreamRequestTests {
                 .protocol(Protocol.HTTP_1_1)
                 .code(200).message("OK").body(
                    ResponseBody.create(
-                        MediaType.parse("application/json"),
-                        "{ \"id\": \"zzz\" }"
+                        "{ \"id\": \"zzz\" }",
+                        MediaType.parse("application/json")
                 ))
                 .build();
 
@@ -109,8 +109,8 @@ public class BaseStreamRequestTests {
                 .protocol(Protocol.HTTP_1_1)
                 .code(200).message("OK").body(
                    ResponseBody.create(
-                        MediaType.parse("application/json"),
-                        "{ \"id\": \"zzz\" }"
+                        "{ \"id\": \"zzz\" }",
+                        MediaType.parse("application/json")
                 ))
                 .build();
 
@@ -146,8 +146,8 @@ public class BaseStreamRequestTests {
                 .protocol(Protocol.HTTP_1_1)
                 .code(200).message("OK").body(
                    ResponseBody.create(
-                        MediaType.parse("application/json"),
-                        "{ \"id\": \"zzz\" }"
+                        "{ \"id\": \"zzz\" }",
+                        MediaType.parse("application/json")
                 ))
                 .build();
 

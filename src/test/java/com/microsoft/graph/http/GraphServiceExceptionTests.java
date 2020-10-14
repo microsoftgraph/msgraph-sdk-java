@@ -63,8 +63,8 @@ public class GraphServiceExceptionTests {
                 .protocol(Protocol.HTTP_1_1)
                 .code(401).message("Unauthorized").body(
                    ResponseBody.create(
-                        MediaType.parse("application/json"),
-                        "{}"
+                        "{}",
+                        MediaType.parse("application/json")
                 ))
                 .build();
         try{

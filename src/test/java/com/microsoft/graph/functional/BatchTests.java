@@ -54,7 +54,7 @@ public class BatchTests {
 
         final Request batchRequest = new Request.Builder()
                         .url("https://graph.microsoft.com/v1.0/$batch")
-                        .post(RequestBody.create(MediaType.parse("application/json"), serializedBatchContent))
+                        .post(RequestBody.create(serializedBatchContent, MediaType.parse("application/json")))
                         .build();
         
         final OkHttpClient client = HttpClients.createDefault(testBase.getAuthenticationProvider());
