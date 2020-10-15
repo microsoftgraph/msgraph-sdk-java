@@ -27,6 +27,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -36,7 +37,7 @@ import java.util.List;
  * @param <T> the type of the item contained within the collection
  */
 public class BaseCollectionPage<T> implements IJsonBackedObject {
-
+    
     private AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     /**
@@ -78,7 +79,7 @@ public class BaseCollectionPage<T> implements IJsonBackedObject {
     public BaseCollectionPage(final List<T> pageContents, final BaseRequestBuilder<T> nextRequestBuilder) {
         // CollectionPages are never directly modifiable, either 'update'/'delete' the specific child or 'add' the new
         // object to the 'children' of the collection.
-        this.pageContents = Collections.unmodifiableList(pageContents);
+        this.pageContents = Collections.unmodifiableList(pageContents == null ? new ArrayList<T>() : pageContents);
         requestBuilder = nextRequestBuilder;
     }
 
