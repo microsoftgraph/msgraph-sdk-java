@@ -19,6 +19,8 @@ import com.microsoft.graph.models.extensions.ChatMessageReaction;
 import com.microsoft.graph.models.extensions.ChatMessageHostedContent;
 import com.microsoft.graph.models.extensions.ChatMessage;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.ChatMessageHostedContentCollectionPage;
+import com.microsoft.graph.requests.extensions.ChatMessageCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -183,7 +185,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "hostedContents", alternate = {"HostedContents"})
     @Expose
-    public BaseCollectionPage<ChatMessageHostedContent> hostedContents;
+    public ChatMessageHostedContentCollectionPage hostedContents;
 
     /**
      * The Replies.
@@ -191,7 +193,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "replies", alternate = {"Replies"})
     @Expose
-    public BaseCollectionPage<ChatMessage> replies;
+    public ChatMessageCollectionPage replies;
 
 
     /**
@@ -235,11 +237,11 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
 
         if (json.has("hostedContents")) {
-            hostedContents = serializer.deserializeObject(json.get("hostedContents").toString(), new BaseCollectionPage<ChatMessageHostedContent>(new java.util.ArrayList<ChatMessageHostedContent>(), null).getClass());
+            hostedContents = serializer.deserializeObject(json.get("hostedContents").toString(), ChatMessageHostedContentCollectionPage.class);
         }
 
         if (json.has("replies")) {
-            replies = serializer.deserializeObject(json.get("replies").toString(), new BaseCollectionPage<ChatMessage>(new java.util.ArrayList<ChatMessage>(), null).getClass());
+            replies = serializer.deserializeObject(json.get("replies").toString(), ChatMessageCollectionPage.class);
         }
     }
 }

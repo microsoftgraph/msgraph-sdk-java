@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Managed Android Lob App Request Builder.
  */
-public class ManagedAndroidLobAppRequestBuilder extends BaseRequestBuilder {
+public class ManagedAndroidLobAppRequestBuilder extends BaseRequestBuilder<ManagedAndroidLobApp> {
 
     /**
      * The request builder for the ManagedAndroidLobApp

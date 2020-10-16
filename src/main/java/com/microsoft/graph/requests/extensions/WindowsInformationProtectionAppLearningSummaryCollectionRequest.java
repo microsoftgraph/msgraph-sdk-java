@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLearningSummaryCollectionResponse;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLearningSummaryCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLe
 /**
  * The class for the Windows Information Protection App Learning Summary Collection Request.
  */
-public class WindowsInformationProtectionAppLearningSummaryCollectionRequest extends BaseCollectionRequest<WindowsInformationProtectionAppLearningSummary, WindowsInformationProtectionAppLearningSummaryCollectionResponse> {
+public class WindowsInformationProtectionAppLearningSummaryCollectionRequest extends BaseCollectionRequest<WindowsInformationProtectionAppLearningSummary, WindowsInformationProtectionAppLearningSummaryCollectionResponse, WindowsInformationProtectionAppLearningSummaryCollectionPage> {
 
     /**
      * The request builder for this collection of WindowsInformationProtectionAppLearningSummary
@@ -37,26 +36,7 @@ public class WindowsInformationProtectionAppLearningSummaryCollectionRequest ext
      */
     @SuppressWarnings("unchecked")
     public WindowsInformationProtectionAppLearningSummaryCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WindowsInformationProtectionAppLearningSummaryCollectionResponse.class,(Class<BaseCollectionPage<WindowsInformationProtectionAppLearningSummary>>) (new BaseCollectionPage<WindowsInformationProtectionAppLearningSummary>(new java.util.ArrayList<WindowsInformationProtectionAppLearningSummary>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<WindowsInformationProtectionAppLearningSummary>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<WindowsInformationProtectionAppLearningSummary> get() throws ClientException {
-        final WindowsInformationProtectionAppLearningSummaryCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, WindowsInformationProtectionAppLearningSummaryCollectionResponse.class, WindowsInformationProtectionAppLearningSummaryCollectionPage.class, WindowsInformationProtectionAppLearningSummaryCollectionRequestBuilder.class);
     }
 
     public void post(final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary, final ICallback<? super WindowsInformationProtectionAppLearningSummary> callback) {
@@ -148,16 +128,5 @@ public class WindowsInformationProtectionAppLearningSummaryCollectionRequest ext
     public WindowsInformationProtectionAppLearningSummaryCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<WindowsInformationProtectionAppLearningSummary> buildFromResponse(final WindowsInformationProtectionAppLearningSummaryCollectionResponse response) {
-        final WindowsInformationProtectionAppLearningSummaryCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new WindowsInformationProtectionAppLearningSummaryCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<WindowsInformationProtectionAppLearningSummary> page = new BaseCollectionPage<WindowsInformationProtectionAppLearningSummary>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

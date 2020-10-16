@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Chart Data Label Format Request Builder.
  */
-public class WorkbookChartDataLabelFormatRequestBuilder extends BaseRequestBuilder {
+public class WorkbookChartDataLabelFormatRequestBuilder extends BaseRequestBuilder<WorkbookChartDataLabelFormat> {
 
     /**
      * The request builder for the WorkbookChartDataLabelFormat

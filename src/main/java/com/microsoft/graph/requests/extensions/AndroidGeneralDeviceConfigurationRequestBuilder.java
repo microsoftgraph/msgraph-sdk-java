@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Android General Device Configuration Request Builder.
  */
-public class AndroidGeneralDeviceConfigurationRequestBuilder extends BaseRequestBuilder {
+public class AndroidGeneralDeviceConfigurationRequestBuilder extends BaseRequestBuilder<AndroidGeneralDeviceConfiguration> {
 
     /**
      * The request builder for the AndroidGeneralDeviceConfiguration

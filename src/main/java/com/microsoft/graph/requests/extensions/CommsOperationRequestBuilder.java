@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Comms Operation Request Builder.
  */
-public class CommsOperationRequestBuilder extends BaseRequestBuilder {
+public class CommsOperationRequestBuilder extends BaseRequestBuilder<CommsOperation> {
 
     /**
      * The request builder for the CommsOperation

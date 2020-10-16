@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ManagedAppStatusCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedAppStatusCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.ManagedAppStatusCollectionRequest
 /**
  * The class for the Managed App Status Collection Request.
  */
-public class ManagedAppStatusCollectionRequest extends BaseCollectionRequest<ManagedAppStatus, ManagedAppStatusCollectionResponse> {
+public class ManagedAppStatusCollectionRequest extends BaseCollectionRequest<ManagedAppStatus, ManagedAppStatusCollectionResponse, ManagedAppStatusCollectionPage> {
 
     /**
      * The request builder for this collection of ManagedAppStatus
@@ -37,26 +36,7 @@ public class ManagedAppStatusCollectionRequest extends BaseCollectionRequest<Man
      */
     @SuppressWarnings("unchecked")
     public ManagedAppStatusCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedAppStatusCollectionResponse.class,(Class<BaseCollectionPage<ManagedAppStatus>>) (new BaseCollectionPage<ManagedAppStatus>(new java.util.ArrayList<ManagedAppStatus>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<ManagedAppStatus>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<ManagedAppStatus> get() throws ClientException {
-        final ManagedAppStatusCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, ManagedAppStatusCollectionResponse.class, ManagedAppStatusCollectionPage.class, ManagedAppStatusCollectionRequestBuilder.class);
     }
 
     public void post(final ManagedAppStatus newManagedAppStatus, final ICallback<? super ManagedAppStatus> callback) {
@@ -148,16 +128,5 @@ public class ManagedAppStatusCollectionRequest extends BaseCollectionRequest<Man
     public ManagedAppStatusCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<ManagedAppStatus> buildFromResponse(final ManagedAppStatusCollectionResponse response) {
-        final ManagedAppStatusCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new ManagedAppStatusCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<ManagedAppStatus> page = new BaseCollectionPage<ManagedAppStatus>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

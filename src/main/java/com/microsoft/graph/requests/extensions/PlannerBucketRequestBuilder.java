@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Planner Bucket Request Builder.
  */
-public class PlannerBucketRequestBuilder extends BaseRequestBuilder {
+public class PlannerBucketRequestBuilder extends BaseRequestBuilder<PlannerBucket> {
 
     /**
      * The request builder for the PlannerBucket

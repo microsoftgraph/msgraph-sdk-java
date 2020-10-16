@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Data Policy Operation Request Builder.
  */
-public class DataPolicyOperationRequestBuilder extends BaseRequestBuilder {
+public class DataPolicyOperationRequestBuilder extends BaseRequestBuilder<DataPolicyOperation> {
 
     /**
      * The request builder for the DataPolicyOperation

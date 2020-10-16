@@ -24,7 +24,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Security Request Builder.
  */
-public class SecurityRequestBuilder extends BaseRequestBuilder {
+public class SecurityRequestBuilder extends BaseRequestBuilder<Security> {
 
     /**
      * The request builder for the Security

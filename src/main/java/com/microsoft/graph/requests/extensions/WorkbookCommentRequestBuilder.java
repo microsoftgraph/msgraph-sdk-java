@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Comment Request Builder.
  */
-public class WorkbookCommentRequestBuilder extends BaseRequestBuilder {
+public class WorkbookCommentRequestBuilder extends BaseRequestBuilder<WorkbookComment> {
 
     /**
      * The request builder for the WorkbookComment

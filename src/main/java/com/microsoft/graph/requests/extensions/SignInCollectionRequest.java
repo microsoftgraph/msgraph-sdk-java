@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.SignInCollectionResponse;
 import com.microsoft.graph.requests.extensions.SignInCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.SignInCollectionRequest;
 /**
  * The class for the Sign In Collection Request.
  */
-public class SignInCollectionRequest extends BaseCollectionRequest<SignIn, SignInCollectionResponse> {
+public class SignInCollectionRequest extends BaseCollectionRequest<SignIn, SignInCollectionResponse, SignInCollectionPage> {
 
     /**
      * The request builder for this collection of SignIn
@@ -37,26 +36,7 @@ public class SignInCollectionRequest extends BaseCollectionRequest<SignIn, SignI
      */
     @SuppressWarnings("unchecked")
     public SignInCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SignInCollectionResponse.class,(Class<BaseCollectionPage<SignIn>>) (new BaseCollectionPage<SignIn>(new java.util.ArrayList<SignIn>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<SignIn>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<SignIn> get() throws ClientException {
-        final SignInCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, SignInCollectionResponse.class, SignInCollectionPage.class, SignInCollectionRequestBuilder.class);
     }
 
     public void post(final SignIn newSignIn, final ICallback<? super SignIn> callback) {
@@ -148,16 +128,5 @@ public class SignInCollectionRequest extends BaseCollectionRequest<SignIn, SignI
     public SignInCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<SignIn> buildFromResponse(final SignInCollectionResponse response) {
-        final SignInCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new SignInCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<SignIn> page = new BaseCollectionPage<SignIn>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

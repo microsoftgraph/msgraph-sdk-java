@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionResponse;
 import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollecti
 /**
  * The class for the Setting State Device Summary Collection Request.
  */
-public class SettingStateDeviceSummaryCollectionRequest extends BaseCollectionRequest<SettingStateDeviceSummary, SettingStateDeviceSummaryCollectionResponse> {
+public class SettingStateDeviceSummaryCollectionRequest extends BaseCollectionRequest<SettingStateDeviceSummary, SettingStateDeviceSummaryCollectionResponse, SettingStateDeviceSummaryCollectionPage> {
 
     /**
      * The request builder for this collection of SettingStateDeviceSummary
@@ -37,26 +36,7 @@ public class SettingStateDeviceSummaryCollectionRequest extends BaseCollectionRe
      */
     @SuppressWarnings("unchecked")
     public SettingStateDeviceSummaryCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SettingStateDeviceSummaryCollectionResponse.class,(Class<BaseCollectionPage<SettingStateDeviceSummary>>) (new BaseCollectionPage<SettingStateDeviceSummary>(new java.util.ArrayList<SettingStateDeviceSummary>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<SettingStateDeviceSummary>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<SettingStateDeviceSummary> get() throws ClientException {
-        final SettingStateDeviceSummaryCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, SettingStateDeviceSummaryCollectionResponse.class, SettingStateDeviceSummaryCollectionPage.class, SettingStateDeviceSummaryCollectionRequestBuilder.class);
     }
 
     public void post(final SettingStateDeviceSummary newSettingStateDeviceSummary, final ICallback<? super SettingStateDeviceSummary> callback) {
@@ -148,16 +128,5 @@ public class SettingStateDeviceSummaryCollectionRequest extends BaseCollectionRe
     public SettingStateDeviceSummaryCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<SettingStateDeviceSummary> buildFromResponse(final SettingStateDeviceSummaryCollectionResponse response) {
-        final SettingStateDeviceSummaryCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new SettingStateDeviceSummaryCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<SettingStateDeviceSummary> page = new BaseCollectionPage<SettingStateDeviceSummary>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

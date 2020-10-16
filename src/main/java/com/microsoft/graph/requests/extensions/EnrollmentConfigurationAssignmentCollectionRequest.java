@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignmentCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignment
 /**
  * The class for the Enrollment Configuration Assignment Collection Request.
  */
-public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseCollectionRequest<EnrollmentConfigurationAssignment, EnrollmentConfigurationAssignmentCollectionResponse> {
+public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseCollectionRequest<EnrollmentConfigurationAssignment, EnrollmentConfigurationAssignmentCollectionResponse, EnrollmentConfigurationAssignmentCollectionPage> {
 
     /**
      * The request builder for this collection of EnrollmentConfigurationAssignment
@@ -37,26 +36,7 @@ public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseColl
      */
     @SuppressWarnings("unchecked")
     public EnrollmentConfigurationAssignmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, EnrollmentConfigurationAssignmentCollectionResponse.class,(Class<BaseCollectionPage<EnrollmentConfigurationAssignment>>) (new BaseCollectionPage<EnrollmentConfigurationAssignment>(new java.util.ArrayList<EnrollmentConfigurationAssignment>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<EnrollmentConfigurationAssignment>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<EnrollmentConfigurationAssignment> get() throws ClientException {
-        final EnrollmentConfigurationAssignmentCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, EnrollmentConfigurationAssignmentCollectionResponse.class, EnrollmentConfigurationAssignmentCollectionPage.class, EnrollmentConfigurationAssignmentCollectionRequestBuilder.class);
     }
 
     public void post(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment, final ICallback<? super EnrollmentConfigurationAssignment> callback) {
@@ -148,16 +128,5 @@ public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseColl
     public EnrollmentConfigurationAssignmentCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<EnrollmentConfigurationAssignment> buildFromResponse(final EnrollmentConfigurationAssignmentCollectionResponse response) {
-        final EnrollmentConfigurationAssignmentCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new EnrollmentConfigurationAssignmentCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<EnrollmentConfigurationAssignment> page = new BaseCollectionPage<EnrollmentConfigurationAssignment>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

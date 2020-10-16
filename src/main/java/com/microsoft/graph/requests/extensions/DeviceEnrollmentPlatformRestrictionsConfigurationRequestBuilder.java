@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Enrollment Platform Restrictions Configuration Request Builder.
  */
-public class DeviceEnrollmentPlatformRestrictionsConfigurationRequestBuilder extends BaseRequestBuilder {
+public class DeviceEnrollmentPlatformRestrictionsConfigurationRequestBuilder extends BaseRequestBuilder<DeviceEnrollmentPlatformRestrictionsConfiguration> {
 
     /**
      * The request builder for the DeviceEnrollmentPlatformRestrictionsConfiguration

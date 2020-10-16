@@ -18,7 +18,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.NotebookCollectionResponse;
 import com.microsoft.graph.requests.extensions.NotebookCollectionRequestBuilder;
@@ -29,7 +28,7 @@ import com.microsoft.graph.requests.extensions.NotebookCollectionRequest;
 /**
  * The class for the Notebook Collection Request.
  */
-public class NotebookCollectionRequest extends BaseCollectionRequest<Notebook, NotebookCollectionResponse> {
+public class NotebookCollectionRequest extends BaseCollectionRequest<Notebook, NotebookCollectionResponse, NotebookCollectionPage> {
 
     /**
      * The request builder for this collection of Notebook
@@ -40,26 +39,7 @@ public class NotebookCollectionRequest extends BaseCollectionRequest<Notebook, N
      */
     @SuppressWarnings("unchecked")
     public NotebookCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, NotebookCollectionResponse.class,(Class<BaseCollectionPage<Notebook>>) (new BaseCollectionPage<Notebook>(new java.util.ArrayList<Notebook>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<Notebook>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<Notebook> get() throws ClientException {
-        final NotebookCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, NotebookCollectionResponse.class, NotebookCollectionPage.class, NotebookCollectionRequestBuilder.class);
     }
 
     public void post(final Notebook newNotebook, final ICallback<? super Notebook> callback) {
@@ -151,16 +131,5 @@ public class NotebookCollectionRequest extends BaseCollectionRequest<Notebook, N
     public NotebookCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<Notebook> buildFromResponse(final NotebookCollectionResponse response) {
-        final NotebookCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new NotebookCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<Notebook> page = new BaseCollectionPage<Notebook>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

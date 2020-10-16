@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Ios Certificate Profile Request Builder.
  */
-public class IosCertificateProfileRequestBuilder extends BaseRequestBuilder {
+public class IosCertificateProfileRequestBuilder extends BaseRequestBuilder<IosCertificateProfile> {
 
     /**
      * The request builder for the IosCertificateProfile

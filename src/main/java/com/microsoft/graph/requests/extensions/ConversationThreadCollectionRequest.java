@@ -16,7 +16,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ConversationThreadCollectionResponse;
 import com.microsoft.graph.requests.extensions.ConversationThreadCollectionRequestBuilder;
@@ -27,7 +26,7 @@ import com.microsoft.graph.requests.extensions.ConversationThreadCollectionReque
 /**
  * The class for the Conversation Thread Collection Request.
  */
-public class ConversationThreadCollectionRequest extends BaseCollectionRequest<ConversationThread, ConversationThreadCollectionResponse> {
+public class ConversationThreadCollectionRequest extends BaseCollectionRequest<ConversationThread, ConversationThreadCollectionResponse, ConversationThreadCollectionPage> {
 
     /**
      * The request builder for this collection of ConversationThread
@@ -38,26 +37,7 @@ public class ConversationThreadCollectionRequest extends BaseCollectionRequest<C
      */
     @SuppressWarnings("unchecked")
     public ConversationThreadCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ConversationThreadCollectionResponse.class,(Class<BaseCollectionPage<ConversationThread>>) (new BaseCollectionPage<ConversationThread>(new java.util.ArrayList<ConversationThread>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<ConversationThread>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<ConversationThread> get() throws ClientException {
-        final ConversationThreadCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, ConversationThreadCollectionResponse.class, ConversationThreadCollectionPage.class, ConversationThreadCollectionRequestBuilder.class);
     }
 
     public void post(final ConversationThread newConversationThread, final ICallback<? super ConversationThread> callback) {
@@ -149,16 +129,5 @@ public class ConversationThreadCollectionRequest extends BaseCollectionRequest<C
     public ConversationThreadCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<ConversationThread> buildFromResponse(final ConversationThreadCollectionResponse response) {
-        final ConversationThreadCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new ConversationThreadCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<ConversationThread> page = new BaseCollectionPage<ConversationThread>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

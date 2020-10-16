@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Ios Vpp App Request Builder.
  */
-public class IosVppAppRequestBuilder extends BaseRequestBuilder {
+public class IosVppAppRequestBuilder extends BaseRequestBuilder<IosVppApp> {
 
     /**
      * The request builder for the IosVppApp

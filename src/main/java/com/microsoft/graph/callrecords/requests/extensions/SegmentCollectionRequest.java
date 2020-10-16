@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.callrecords.requests.extensions.SegmentCollectionResponse;
 import com.microsoft.graph.callrecords.requests.extensions.SegmentCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.callrecords.requests.extensions.SegmentCollectionRequ
 /**
  * The class for the Segment Collection Request.
  */
-public class SegmentCollectionRequest extends BaseCollectionRequest<Segment, SegmentCollectionResponse> {
+public class SegmentCollectionRequest extends BaseCollectionRequest<Segment, SegmentCollectionResponse, SegmentCollectionPage> {
 
     /**
      * The request builder for this collection of Segment
@@ -37,26 +36,7 @@ public class SegmentCollectionRequest extends BaseCollectionRequest<Segment, Seg
      */
     @SuppressWarnings("unchecked")
     public SegmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SegmentCollectionResponse.class,(Class<BaseCollectionPage<Segment>>) (new BaseCollectionPage<Segment>(new java.util.ArrayList<Segment>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<Segment>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<Segment> get() throws ClientException {
-        final SegmentCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, SegmentCollectionResponse.class, SegmentCollectionPage.class, SegmentCollectionRequestBuilder.class);
     }
 
     public void post(final Segment newSegment, final ICallback<? super Segment> callback) {
@@ -148,16 +128,5 @@ public class SegmentCollectionRequest extends BaseCollectionRequest<Segment, Seg
     public SegmentCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<Segment> buildFromResponse(final SegmentCollectionResponse response) {
-        final SegmentCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new SegmentCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<Segment> page = new BaseCollectionPage<Segment>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

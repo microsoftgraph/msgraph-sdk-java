@@ -23,6 +23,14 @@ import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
 import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
 import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
+import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionPage;
+import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionPage;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
+import com.microsoft.graph.requests.extensions.EndpointCollectionPage;
+import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionPage;
+import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionPage;
+import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionPage;
+import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -275,7 +283,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      */
     @SerializedName(value = "appRoleAssignedTo", alternate = {"AppRoleAssignedTo"})
     @Expose
-    public BaseCollectionPage<AppRoleAssignment> appRoleAssignedTo;
+    public AppRoleAssignmentCollectionPage appRoleAssignedTo;
 
     /**
      * The App Role Assignments.
@@ -283,19 +291,19 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      */
     @SerializedName(value = "appRoleAssignments", alternate = {"AppRoleAssignments"})
     @Expose
-    public BaseCollectionPage<AppRoleAssignment> appRoleAssignments;
+    public AppRoleAssignmentCollectionPage appRoleAssignments;
 
     /**
      * The Claims Mapping Policies.
      * The claimsMappingPolicies assigned to this service principal.
      */
-    public BaseCollectionPage<ClaimsMappingPolicy> claimsMappingPolicies;
+    public ClaimsMappingPolicyCollectionPage claimsMappingPolicies;
 
     /**
      * The Created Objects.
      * Directory objects created by this service principal. Read-only. Nullable.
      */
-    public BaseCollectionPage<DirectoryObject> createdObjects;
+    public DirectoryObjectCollectionPage createdObjects;
 
     /**
      * The Endpoints.
@@ -303,55 +311,55 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      */
     @SerializedName(value = "endpoints", alternate = {"Endpoints"})
     @Expose
-    public BaseCollectionPage<Endpoint> endpoints;
+    public EndpointCollectionPage endpoints;
 
     /**
      * The Home Realm Discovery Policies.
      * The homeRealmDiscoveryPolicies assigned to this service principal.
      */
-    public BaseCollectionPage<HomeRealmDiscoveryPolicy> homeRealmDiscoveryPolicies;
+    public HomeRealmDiscoveryPolicyCollectionPage homeRealmDiscoveryPolicies;
 
     /**
      * The Member Of.
      * Roles that this service principal is a member of. HTTP Methods: GET Read-only. Nullable.
      */
-    public BaseCollectionPage<DirectoryObject> memberOf;
+    public DirectoryObjectCollectionPage memberOf;
 
     /**
      * The Oauth2Permission Grants.
      * Delegated permission grants authorizing this service principal to access an API on behalf of a signed-in user. Read-only. Nullable.
      */
-    public BaseCollectionPage<OAuth2PermissionGrant> oauth2PermissionGrants;
+    public OAuth2PermissionGrantCollectionPage oauth2PermissionGrants;
 
     /**
      * The Owned Objects.
      * Directory objects that are owned by this service principal. Read-only. Nullable.
      */
-    public BaseCollectionPage<DirectoryObject> ownedObjects;
+    public DirectoryObjectCollectionPage ownedObjects;
 
     /**
      * The Owners.
      * Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable.
      */
-    public BaseCollectionPage<DirectoryObject> owners;
+    public DirectoryObjectCollectionPage owners;
 
     /**
      * The Token Issuance Policies.
      * The tokenIssuancePolicies assigned to this service principal.
      */
-    public BaseCollectionPage<TokenIssuancePolicy> tokenIssuancePolicies;
+    public TokenIssuancePolicyCollectionPage tokenIssuancePolicies;
 
     /**
      * The Token Lifetime Policies.
      * The tokenLifetimePolicies assigned to this service principal.
      */
-    public BaseCollectionPage<TokenLifetimePolicy> tokenLifetimePolicies;
+    public TokenLifetimePolicyCollectionPage tokenLifetimePolicies;
 
     /**
      * The Transitive Member Of.
      * 
      */
-    public BaseCollectionPage<DirectoryObject> transitiveMemberOf;
+    public DirectoryObjectCollectionPage transitiveMemberOf;
 
 
     /**
@@ -395,55 +403,55 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
 
         if (json.has("appRoleAssignedTo")) {
-            appRoleAssignedTo = serializer.deserializeObject(json.get("appRoleAssignedTo").toString(), new BaseCollectionPage<AppRoleAssignment>(new java.util.ArrayList<AppRoleAssignment>(), null).getClass());
+            appRoleAssignedTo = serializer.deserializeObject(json.get("appRoleAssignedTo").toString(), AppRoleAssignmentCollectionPage.class);
         }
 
         if (json.has("appRoleAssignments")) {
-            appRoleAssignments = serializer.deserializeObject(json.get("appRoleAssignments").toString(), new BaseCollectionPage<AppRoleAssignment>(new java.util.ArrayList<AppRoleAssignment>(), null).getClass());
+            appRoleAssignments = serializer.deserializeObject(json.get("appRoleAssignments").toString(), AppRoleAssignmentCollectionPage.class);
         }
 
         if (json.has("claimsMappingPolicies")) {
-            claimsMappingPolicies = serializer.deserializeObject(json.get("claimsMappingPolicies").toString(), new BaseCollectionPage<ClaimsMappingPolicy>(new java.util.ArrayList<ClaimsMappingPolicy>(), null).getClass());
+            claimsMappingPolicies = serializer.deserializeObject(json.get("claimsMappingPolicies").toString(), ClaimsMappingPolicyCollectionPage.class);
         }
 
         if (json.has("createdObjects")) {
-            createdObjects = serializer.deserializeObject(json.get("createdObjects").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
+            createdObjects = serializer.deserializeObject(json.get("createdObjects").toString(), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("endpoints")) {
-            endpoints = serializer.deserializeObject(json.get("endpoints").toString(), new BaseCollectionPage<Endpoint>(new java.util.ArrayList<Endpoint>(), null).getClass());
+            endpoints = serializer.deserializeObject(json.get("endpoints").toString(), EndpointCollectionPage.class);
         }
 
         if (json.has("homeRealmDiscoveryPolicies")) {
-            homeRealmDiscoveryPolicies = serializer.deserializeObject(json.get("homeRealmDiscoveryPolicies").toString(), new BaseCollectionPage<HomeRealmDiscoveryPolicy>(new java.util.ArrayList<HomeRealmDiscoveryPolicy>(), null).getClass());
+            homeRealmDiscoveryPolicies = serializer.deserializeObject(json.get("homeRealmDiscoveryPolicies").toString(), HomeRealmDiscoveryPolicyCollectionPage.class);
         }
 
         if (json.has("memberOf")) {
-            memberOf = serializer.deserializeObject(json.get("memberOf").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
+            memberOf = serializer.deserializeObject(json.get("memberOf").toString(), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("oauth2PermissionGrants")) {
-            oauth2PermissionGrants = serializer.deserializeObject(json.get("oauth2PermissionGrants").toString(), new BaseCollectionPage<OAuth2PermissionGrant>(new java.util.ArrayList<OAuth2PermissionGrant>(), null).getClass());
+            oauth2PermissionGrants = serializer.deserializeObject(json.get("oauth2PermissionGrants").toString(), OAuth2PermissionGrantCollectionPage.class);
         }
 
         if (json.has("ownedObjects")) {
-            ownedObjects = serializer.deserializeObject(json.get("ownedObjects").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
+            ownedObjects = serializer.deserializeObject(json.get("ownedObjects").toString(), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("owners")) {
-            owners = serializer.deserializeObject(json.get("owners").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
+            owners = serializer.deserializeObject(json.get("owners").toString(), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("tokenIssuancePolicies")) {
-            tokenIssuancePolicies = serializer.deserializeObject(json.get("tokenIssuancePolicies").toString(), new BaseCollectionPage<TokenIssuancePolicy>(new java.util.ArrayList<TokenIssuancePolicy>(), null).getClass());
+            tokenIssuancePolicies = serializer.deserializeObject(json.get("tokenIssuancePolicies").toString(), TokenIssuancePolicyCollectionPage.class);
         }
 
         if (json.has("tokenLifetimePolicies")) {
-            tokenLifetimePolicies = serializer.deserializeObject(json.get("tokenLifetimePolicies").toString(), new BaseCollectionPage<TokenLifetimePolicy>(new java.util.ArrayList<TokenLifetimePolicy>(), null).getClass());
+            tokenLifetimePolicies = serializer.deserializeObject(json.get("tokenLifetimePolicies").toString(), TokenLifetimePolicyCollectionPage.class);
         }
 
         if (json.has("transitiveMemberOf")) {
-            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
+            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf").toString(), DirectoryObjectCollectionPage.class);
         }
     }
 }

@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionResponse;
 import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionRequest;
 /**
  * The class for the License Details Collection Request.
  */
-public class LicenseDetailsCollectionRequest extends BaseCollectionRequest<LicenseDetails, LicenseDetailsCollectionResponse> {
+public class LicenseDetailsCollectionRequest extends BaseCollectionRequest<LicenseDetails, LicenseDetailsCollectionResponse, LicenseDetailsCollectionPage> {
 
     /**
      * The request builder for this collection of LicenseDetails
@@ -37,26 +36,7 @@ public class LicenseDetailsCollectionRequest extends BaseCollectionRequest<Licen
      */
     @SuppressWarnings("unchecked")
     public LicenseDetailsCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, LicenseDetailsCollectionResponse.class,(Class<BaseCollectionPage<LicenseDetails>>) (new BaseCollectionPage<LicenseDetails>(new java.util.ArrayList<LicenseDetails>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<LicenseDetails>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<LicenseDetails> get() throws ClientException {
-        final LicenseDetailsCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, LicenseDetailsCollectionResponse.class, LicenseDetailsCollectionPage.class, LicenseDetailsCollectionRequestBuilder.class);
     }
 
     public void post(final LicenseDetails newLicenseDetails, final ICallback<? super LicenseDetails> callback) {
@@ -148,16 +128,5 @@ public class LicenseDetailsCollectionRequest extends BaseCollectionRequest<Licen
     public LicenseDetailsCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<LicenseDetails> buildFromResponse(final LicenseDetailsCollectionResponse response) {
-        final LicenseDetailsCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new LicenseDetailsCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<LicenseDetails> page = new BaseCollectionPage<LicenseDetails>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

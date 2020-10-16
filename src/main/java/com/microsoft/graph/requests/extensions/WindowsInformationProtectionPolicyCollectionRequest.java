@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionPolicyCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.WindowsInformationProtectionPolic
 /**
  * The class for the Windows Information Protection Policy Collection Request.
  */
-public class WindowsInformationProtectionPolicyCollectionRequest extends BaseCollectionRequest<WindowsInformationProtectionPolicy, WindowsInformationProtectionPolicyCollectionResponse> {
+public class WindowsInformationProtectionPolicyCollectionRequest extends BaseCollectionRequest<WindowsInformationProtectionPolicy, WindowsInformationProtectionPolicyCollectionResponse, WindowsInformationProtectionPolicyCollectionPage> {
 
     /**
      * The request builder for this collection of WindowsInformationProtectionPolicy
@@ -37,26 +36,7 @@ public class WindowsInformationProtectionPolicyCollectionRequest extends BaseCol
      */
     @SuppressWarnings("unchecked")
     public WindowsInformationProtectionPolicyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WindowsInformationProtectionPolicyCollectionResponse.class,(Class<BaseCollectionPage<WindowsInformationProtectionPolicy>>) (new BaseCollectionPage<WindowsInformationProtectionPolicy>(new java.util.ArrayList<WindowsInformationProtectionPolicy>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<WindowsInformationProtectionPolicy>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<WindowsInformationProtectionPolicy> get() throws ClientException {
-        final WindowsInformationProtectionPolicyCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, WindowsInformationProtectionPolicyCollectionResponse.class, WindowsInformationProtectionPolicyCollectionPage.class, WindowsInformationProtectionPolicyCollectionRequestBuilder.class);
     }
 
     public void post(final WindowsInformationProtectionPolicy newWindowsInformationProtectionPolicy, final ICallback<? super WindowsInformationProtectionPolicy> callback) {
@@ -148,16 +128,5 @@ public class WindowsInformationProtectionPolicyCollectionRequest extends BaseCol
     public WindowsInformationProtectionPolicyCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<WindowsInformationProtectionPolicy> buildFromResponse(final WindowsInformationProtectionPolicyCollectionResponse response) {
-        final WindowsInformationProtectionPolicyCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new WindowsInformationProtectionPolicyCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<WindowsInformationProtectionPolicy> page = new BaseCollectionPage<WindowsInformationProtectionPolicy>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

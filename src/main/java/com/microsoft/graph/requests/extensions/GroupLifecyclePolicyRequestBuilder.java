@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Group Lifecycle Policy Request Builder.
  */
-public class GroupLifecyclePolicyRequestBuilder extends BaseRequestBuilder {
+public class GroupLifecyclePolicyRequestBuilder extends BaseRequestBuilder<GroupLifecyclePolicy> {
 
     /**
      * The request builder for the GroupLifecyclePolicy

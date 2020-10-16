@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.ManagedMobileApp;
 import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
 import com.microsoft.graph.models.extensions.ManagedAppPolicyDeploymentSummary;
 import com.microsoft.graph.models.extensions.ManagedAppConfiguration;
+import com.microsoft.graph.requests.extensions.ManagedMobileAppCollectionPage;
+import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -48,7 +50,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
      */
     @SerializedName(value = "apps", alternate = {"Apps"})
     @Expose
-    public BaseCollectionPage<ManagedMobileApp> apps;
+    public ManagedMobileAppCollectionPage apps;
 
     /**
      * The Assignments.
@@ -56,7 +58,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
      */
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
-    public BaseCollectionPage<TargetedManagedAppPolicyAssignment> assignments;
+    public TargetedManagedAppPolicyAssignmentCollectionPage assignments;
 
     /**
      * The Deployment Summary.
@@ -108,11 +110,11 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
 
 
         if (json.has("apps")) {
-            apps = serializer.deserializeObject(json.get("apps").toString(), new BaseCollectionPage<ManagedMobileApp>(new java.util.ArrayList<ManagedMobileApp>(), null).getClass());
+            apps = serializer.deserializeObject(json.get("apps").toString(), ManagedMobileAppCollectionPage.class);
         }
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments").toString(), new BaseCollectionPage<TargetedManagedAppPolicyAssignment>(new java.util.ArrayList<TargetedManagedAppPolicyAssignment>(), null).getClass());
+            assignments = serializer.deserializeObject(json.get("assignments").toString(), TargetedManagedAppPolicyAssignmentCollectionPage.class);
         }
     }
 }

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Event Message Request Request Builder.
  */
-public class EventMessageRequestRequestBuilder extends BaseRequestBuilder {
+public class EventMessageRequestRequestBuilder extends BaseRequestBuilder<EventMessageRequest> {
 
     /**
      * The request builder for the EventMessageRequest

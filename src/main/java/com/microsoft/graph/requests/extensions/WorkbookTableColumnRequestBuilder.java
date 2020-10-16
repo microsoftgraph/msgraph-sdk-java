@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Table Column Request Builder.
  */
-public class WorkbookTableColumnRequestBuilder extends BaseRequestBuilder {
+public class WorkbookTableColumnRequestBuilder extends BaseRequestBuilder<WorkbookTableColumn> {
 
     /**
      * The request builder for the WorkbookTableColumn

@@ -19,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Permission Request Builder.
  */
-public class PermissionRequestBuilder extends BaseRequestBuilder {
+public class PermissionRequestBuilder extends BaseRequestBuilder<Permission> {
 
     /**
      * The request builder for the Permission

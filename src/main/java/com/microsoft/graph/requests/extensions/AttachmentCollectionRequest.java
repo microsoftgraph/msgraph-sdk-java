@@ -17,7 +17,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionRequestBuilder;
@@ -28,7 +27,7 @@ import com.microsoft.graph.requests.extensions.AttachmentCollectionRequest;
 /**
  * The class for the Attachment Collection Request.
  */
-public class AttachmentCollectionRequest extends BaseCollectionRequest<Attachment, AttachmentCollectionResponse> {
+public class AttachmentCollectionRequest extends BaseCollectionRequest<Attachment, AttachmentCollectionResponse, AttachmentCollectionPage> {
 
     /**
      * The request builder for this collection of Attachment
@@ -39,26 +38,7 @@ public class AttachmentCollectionRequest extends BaseCollectionRequest<Attachmen
      */
     @SuppressWarnings("unchecked")
     public AttachmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, AttachmentCollectionResponse.class,(Class<BaseCollectionPage<Attachment>>) (new BaseCollectionPage<Attachment>(new java.util.ArrayList<Attachment>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<Attachment>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<Attachment> get() throws ClientException {
-        final AttachmentCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, AttachmentCollectionResponse.class, AttachmentCollectionPage.class, AttachmentCollectionRequestBuilder.class);
     }
 
     public void post(final Attachment newAttachment, final ICallback<? super Attachment> callback) {
@@ -150,16 +130,5 @@ public class AttachmentCollectionRequest extends BaseCollectionRequest<Attachmen
     public AttachmentCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<Attachment> buildFromResponse(final AttachmentCollectionResponse response) {
-        final AttachmentCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new AttachmentCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<Attachment> page = new BaseCollectionPage<Attachment>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionResponse;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyC
 /**
  * The class for the Multi Value Legacy Extended Property Collection Request.
  */
-public class MultiValueLegacyExtendedPropertyCollectionRequest extends BaseCollectionRequest<MultiValueLegacyExtendedProperty, MultiValueLegacyExtendedPropertyCollectionResponse> {
+public class MultiValueLegacyExtendedPropertyCollectionRequest extends BaseCollectionRequest<MultiValueLegacyExtendedProperty, MultiValueLegacyExtendedPropertyCollectionResponse, MultiValueLegacyExtendedPropertyCollectionPage> {
 
     /**
      * The request builder for this collection of MultiValueLegacyExtendedProperty
@@ -37,26 +36,7 @@ public class MultiValueLegacyExtendedPropertyCollectionRequest extends BaseColle
      */
     @SuppressWarnings("unchecked")
     public MultiValueLegacyExtendedPropertyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MultiValueLegacyExtendedPropertyCollectionResponse.class,(Class<BaseCollectionPage<MultiValueLegacyExtendedProperty>>) (new BaseCollectionPage<MultiValueLegacyExtendedProperty>(new java.util.ArrayList<MultiValueLegacyExtendedProperty>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<MultiValueLegacyExtendedProperty>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<MultiValueLegacyExtendedProperty> get() throws ClientException {
-        final MultiValueLegacyExtendedPropertyCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, MultiValueLegacyExtendedPropertyCollectionResponse.class, MultiValueLegacyExtendedPropertyCollectionPage.class, MultiValueLegacyExtendedPropertyCollectionRequestBuilder.class);
     }
 
     public void post(final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty, final ICallback<? super MultiValueLegacyExtendedProperty> callback) {
@@ -148,16 +128,5 @@ public class MultiValueLegacyExtendedPropertyCollectionRequest extends BaseColle
     public MultiValueLegacyExtendedPropertyCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<MultiValueLegacyExtendedProperty> buildFromResponse(final MultiValueLegacyExtendedPropertyCollectionResponse response) {
-        final MultiValueLegacyExtendedPropertyCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new MultiValueLegacyExtendedPropertyCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<MultiValueLegacyExtendedProperty> page = new BaseCollectionPage<MultiValueLegacyExtendedProperty>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

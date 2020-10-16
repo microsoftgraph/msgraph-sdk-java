@@ -16,6 +16,7 @@ import com.microsoft.graph.models.generated.ThreatAssessmentRequestSource;
 import com.microsoft.graph.models.generated.ThreatAssessmentStatus;
 import com.microsoft.graph.models.extensions.ThreatAssessmentResult;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.ThreatAssessmentResultCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -92,7 +93,7 @@ public class ThreatAssessmentRequest extends Entity implements IJsonBackedObject
      */
     @SerializedName(value = "results", alternate = {"Results"})
     @Expose
-    public BaseCollectionPage<ThreatAssessmentResult> results;
+    public ThreatAssessmentResultCollectionPage results;
 
 
     /**
@@ -136,7 +137,7 @@ public class ThreatAssessmentRequest extends Entity implements IJsonBackedObject
 
 
         if (json.has("results")) {
-            results = serializer.deserializeObject(json.get("results").toString(), new BaseCollectionPage<ThreatAssessmentResult>(new java.util.ArrayList<ThreatAssessmentResult>(), null).getClass());
+            results = serializer.deserializeObject(json.get("results").toString(), ThreatAssessmentResultCollectionPage.class);
         }
     }
 }

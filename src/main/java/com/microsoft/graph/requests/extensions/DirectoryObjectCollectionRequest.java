@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionResponse;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequest;
 /**
  * The class for the Directory Object Collection Request.
  */
-public class DirectoryObjectCollectionRequest extends BaseCollectionRequest<DirectoryObject, DirectoryObjectCollectionResponse> {
+public class DirectoryObjectCollectionRequest extends BaseCollectionRequest<DirectoryObject, DirectoryObjectCollectionResponse, DirectoryObjectCollectionPage> {
 
     /**
      * The request builder for this collection of DirectoryObject
@@ -37,26 +36,7 @@ public class DirectoryObjectCollectionRequest extends BaseCollectionRequest<Dire
      */
     @SuppressWarnings("unchecked")
     public DirectoryObjectCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DirectoryObjectCollectionResponse.class,(Class<BaseCollectionPage<DirectoryObject>>) (new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<DirectoryObject>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<DirectoryObject> get() throws ClientException {
-        final DirectoryObjectCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, DirectoryObjectCollectionResponse.class, DirectoryObjectCollectionPage.class, DirectoryObjectCollectionRequestBuilder.class);
     }
 
     public void post(final DirectoryObject newDirectoryObject, final ICallback<? super DirectoryObject> callback) {
@@ -148,16 +128,5 @@ public class DirectoryObjectCollectionRequest extends BaseCollectionRequest<Dire
     public DirectoryObjectCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<DirectoryObject> buildFromResponse(final DirectoryObjectCollectionResponse response) {
-        final DirectoryObjectCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DirectoryObjectCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<DirectoryObject> page = new BaseCollectionPage<DirectoryObject>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the User Install State Summary Request Builder.
  */
-public class UserInstallStateSummaryRequestBuilder extends BaseRequestBuilder {
+public class UserInstallStateSummaryRequestBuilder extends BaseRequestBuilder<UserInstallStateSummary> {
 
     /**
      * The request builder for the UserInstallStateSummary

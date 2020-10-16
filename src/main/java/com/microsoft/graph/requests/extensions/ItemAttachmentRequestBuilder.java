@@ -19,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Item Attachment Request Builder.
  */
-public class ItemAttachmentRequestBuilder extends BaseRequestBuilder {
+public class ItemAttachmentRequestBuilder extends BaseRequestBuilder<ItemAttachment> {
 
     /**
      * The request builder for the ItemAttachment

@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.AdministrativeUnitCollectionResponse;
 import com.microsoft.graph.requests.extensions.AdministrativeUnitCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.AdministrativeUnitCollectionReque
 /**
  * The class for the Administrative Unit Collection Request.
  */
-public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<AdministrativeUnit, AdministrativeUnitCollectionResponse> {
+public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<AdministrativeUnit, AdministrativeUnitCollectionResponse, AdministrativeUnitCollectionPage> {
 
     /**
      * The request builder for this collection of AdministrativeUnit
@@ -37,26 +36,7 @@ public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<A
      */
     @SuppressWarnings("unchecked")
     public AdministrativeUnitCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, AdministrativeUnitCollectionResponse.class,(Class<BaseCollectionPage<AdministrativeUnit>>) (new BaseCollectionPage<AdministrativeUnit>(new java.util.ArrayList<AdministrativeUnit>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<AdministrativeUnit>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<AdministrativeUnit> get() throws ClientException {
-        final AdministrativeUnitCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, AdministrativeUnitCollectionResponse.class, AdministrativeUnitCollectionPage.class, AdministrativeUnitCollectionRequestBuilder.class);
     }
 
     public void post(final AdministrativeUnit newAdministrativeUnit, final ICallback<? super AdministrativeUnit> callback) {
@@ -148,16 +128,5 @@ public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<A
     public AdministrativeUnitCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<AdministrativeUnit> buildFromResponse(final AdministrativeUnitCollectionResponse response) {
-        final AdministrativeUnitCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new AdministrativeUnitCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<AdministrativeUnit> page = new BaseCollectionPage<AdministrativeUnit>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

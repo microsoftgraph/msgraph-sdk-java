@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Default Managed App Protection Request Builder.
  */
-public class DefaultManagedAppProtectionRequestBuilder extends BaseRequestBuilder {
+public class DefaultManagedAppProtectionRequestBuilder extends BaseRequestBuilder<DefaultManagedAppProtection> {
 
     /**
      * The request builder for the DefaultManagedAppProtection

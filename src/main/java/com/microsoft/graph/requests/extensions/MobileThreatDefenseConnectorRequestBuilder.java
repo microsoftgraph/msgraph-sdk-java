@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Mobile Threat Defense Connector Request Builder.
  */
-public class MobileThreatDefenseConnectorRequestBuilder extends BaseRequestBuilder {
+public class MobileThreatDefenseConnectorRequestBuilder extends BaseRequestBuilder<MobileThreatDefenseConnector> {
 
     /**
      * The request builder for the MobileThreatDefenseConnector

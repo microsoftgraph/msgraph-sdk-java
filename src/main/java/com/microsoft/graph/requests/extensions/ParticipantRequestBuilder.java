@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Participant Request Builder.
  */
-public class ParticipantRequestBuilder extends BaseRequestBuilder {
+public class ParticipantRequestBuilder extends BaseRequestBuilder<Participant> {
 
     /**
      * The request builder for the Participant

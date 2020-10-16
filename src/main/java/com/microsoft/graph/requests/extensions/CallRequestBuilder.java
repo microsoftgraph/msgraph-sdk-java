@@ -37,7 +37,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Call Request Builder.
  */
-public class CallRequestBuilder extends BaseRequestBuilder {
+public class CallRequestBuilder extends BaseRequestBuilder<Call> {
 
     /**
      * The request builder for the Call

@@ -19,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Management Exchange Connector Request Builder.
  */
-public class DeviceManagementExchangeConnectorRequestBuilder extends BaseRequestBuilder {
+public class DeviceManagementExchangeConnectorRequestBuilder extends BaseRequestBuilder<DeviceManagementExchangeConnector> {
 
     /**
      * The request builder for the DeviceManagementExchangeConnector

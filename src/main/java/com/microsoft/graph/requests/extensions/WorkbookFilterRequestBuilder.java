@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Filter Request Builder.
  */
-public class WorkbookFilterRequestBuilder extends BaseRequestBuilder {
+public class WorkbookFilterRequestBuilder extends BaseRequestBuilder<WorkbookFilter> {
 
     /**
      * The request builder for the WorkbookFilter

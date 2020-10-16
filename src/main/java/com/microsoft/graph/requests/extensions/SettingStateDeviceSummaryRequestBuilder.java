@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Setting State Device Summary Request Builder.
  */
-public class SettingStateDeviceSummaryRequestBuilder extends BaseRequestBuilder {
+public class SettingStateDeviceSummaryRequestBuilder extends BaseRequestBuilder<SettingStateDeviceSummary> {
 
     /**
      * The request builder for the SettingStateDeviceSummary

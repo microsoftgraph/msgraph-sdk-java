@@ -10,6 +10,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.Room;
 import com.microsoft.graph.models.extensions.Place;
+import com.microsoft.graph.requests.extensions.RoomCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -38,7 +39,7 @@ public class RoomList extends Place implements IJsonBackedObject {
      */
     @SerializedName(value = "rooms", alternate = {"Rooms"})
     @Expose
-    public BaseCollectionPage<Room> rooms;
+    public RoomCollectionPage rooms;
 
 
     /**
@@ -82,7 +83,7 @@ public class RoomList extends Place implements IJsonBackedObject {
 
 
         if (json.has("rooms")) {
-            rooms = serializer.deserializeObject(json.get("rooms").toString(), new BaseCollectionPage<Room>(new java.util.ArrayList<Room>(), null).getClass());
+            rooms = serializer.deserializeObject(json.get("rooms").toString(), RoomCollectionPage.class);
         }
     }
 }

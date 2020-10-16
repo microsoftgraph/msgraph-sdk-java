@@ -16,6 +16,8 @@ import com.microsoft.graph.models.generated.MdmAuthority;
 import com.microsoft.graph.models.extensions.CertificateBasedAuthConfiguration;
 import com.microsoft.graph.models.extensions.Extension;
 import com.microsoft.graph.models.extensions.DirectoryObject;
+import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionPage;
+import com.microsoft.graph.requests.extensions.ExtensionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -210,7 +212,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      * The Certificate Based Auth Configuration.
      * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
      */
-    public BaseCollectionPage<CertificateBasedAuthConfiguration> certificateBasedAuthConfiguration;
+    public CertificateBasedAuthConfigurationCollectionPage certificateBasedAuthConfiguration;
 
     /**
      * The Extensions.
@@ -218,7 +220,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
-    public BaseCollectionPage<Extension> extensions;
+    public ExtensionCollectionPage extensions;
 
 
     /**
@@ -262,11 +264,11 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
 
         if (json.has("certificateBasedAuthConfiguration")) {
-            certificateBasedAuthConfiguration = serializer.deserializeObject(json.get("certificateBasedAuthConfiguration").toString(), new BaseCollectionPage<CertificateBasedAuthConfiguration>(new java.util.ArrayList<CertificateBasedAuthConfiguration>(), null).getClass());
+            certificateBasedAuthConfiguration = serializer.deserializeObject(json.get("certificateBasedAuthConfiguration").toString(), CertificateBasedAuthConfigurationCollectionPage.class);
         }
 
         if (json.has("extensions")) {
-            extensions = serializer.deserializeObject(json.get("extensions").toString(), new BaseCollectionPage<Extension>(new java.util.ArrayList<Extension>(), null).getClass());
+            extensions = serializer.deserializeObject(json.get("extensions").toString(), ExtensionCollectionPage.class);
         }
     }
 }

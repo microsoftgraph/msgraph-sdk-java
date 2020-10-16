@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Column Definition Request Builder.
  */
-public class ColumnDefinitionRequestBuilder extends BaseRequestBuilder {
+public class ColumnDefinitionRequestBuilder extends BaseRequestBuilder<ColumnDefinition> {
 
     /**
      * The request builder for the ColumnDefinition

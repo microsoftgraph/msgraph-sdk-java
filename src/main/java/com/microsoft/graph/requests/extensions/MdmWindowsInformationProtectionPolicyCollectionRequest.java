@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPo
 /**
  * The class for the Mdm Windows Information Protection Policy Collection Request.
  */
-public class MdmWindowsInformationProtectionPolicyCollectionRequest extends BaseCollectionRequest<MdmWindowsInformationProtectionPolicy, MdmWindowsInformationProtectionPolicyCollectionResponse> {
+public class MdmWindowsInformationProtectionPolicyCollectionRequest extends BaseCollectionRequest<MdmWindowsInformationProtectionPolicy, MdmWindowsInformationProtectionPolicyCollectionResponse, MdmWindowsInformationProtectionPolicyCollectionPage> {
 
     /**
      * The request builder for this collection of MdmWindowsInformationProtectionPolicy
@@ -37,26 +36,7 @@ public class MdmWindowsInformationProtectionPolicyCollectionRequest extends Base
      */
     @SuppressWarnings("unchecked")
     public MdmWindowsInformationProtectionPolicyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MdmWindowsInformationProtectionPolicyCollectionResponse.class,(Class<BaseCollectionPage<MdmWindowsInformationProtectionPolicy>>) (new BaseCollectionPage<MdmWindowsInformationProtectionPolicy>(new java.util.ArrayList<MdmWindowsInformationProtectionPolicy>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<MdmWindowsInformationProtectionPolicy>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<MdmWindowsInformationProtectionPolicy> get() throws ClientException {
-        final MdmWindowsInformationProtectionPolicyCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, MdmWindowsInformationProtectionPolicyCollectionResponse.class, MdmWindowsInformationProtectionPolicyCollectionPage.class, MdmWindowsInformationProtectionPolicyCollectionRequestBuilder.class);
     }
 
     public void post(final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy, final ICallback<? super MdmWindowsInformationProtectionPolicy> callback) {
@@ -148,16 +128,5 @@ public class MdmWindowsInformationProtectionPolicyCollectionRequest extends Base
     public MdmWindowsInformationProtectionPolicyCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<MdmWindowsInformationProtectionPolicy> buildFromResponse(final MdmWindowsInformationProtectionPolicyCollectionResponse response) {
-        final MdmWindowsInformationProtectionPolicyCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new MdmWindowsInformationProtectionPolicyCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<MdmWindowsInformationProtectionPolicy> page = new BaseCollectionPage<MdmWindowsInformationProtectionPolicy>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

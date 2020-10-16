@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Android Managed App Registration Request Builder.
  */
-public class AndroidManagedAppRegistrationRequestBuilder extends BaseRequestBuilder {
+public class AndroidManagedAppRegistrationRequestBuilder extends BaseRequestBuilder<AndroidManagedAppRegistration> {
 
     /**
      * The request builder for the AndroidManagedAppRegistration

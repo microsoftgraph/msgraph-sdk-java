@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionResponse;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionRequestBuilder;
@@ -25,7 +24,7 @@ import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionRe
 /**
  * The class for the OAuth2Permission Grant Collection Request.
  */
-public class OAuth2PermissionGrantCollectionRequest extends BaseCollectionRequest<OAuth2PermissionGrant, OAuth2PermissionGrantCollectionResponse> {
+public class OAuth2PermissionGrantCollectionRequest extends BaseCollectionRequest<OAuth2PermissionGrant, OAuth2PermissionGrantCollectionResponse, OAuth2PermissionGrantCollectionPage> {
 
     /**
      * The request builder for this collection of OAuth2PermissionGrant
@@ -36,26 +35,7 @@ public class OAuth2PermissionGrantCollectionRequest extends BaseCollectionReques
      */
     @SuppressWarnings("unchecked")
     public OAuth2PermissionGrantCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OAuth2PermissionGrantCollectionResponse.class,(Class<BaseCollectionPage<OAuth2PermissionGrant>>) (new BaseCollectionPage<OAuth2PermissionGrant>(new java.util.ArrayList<OAuth2PermissionGrant>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<OAuth2PermissionGrant>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<OAuth2PermissionGrant> get() throws ClientException {
-        final OAuth2PermissionGrantCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, OAuth2PermissionGrantCollectionResponse.class, OAuth2PermissionGrantCollectionPage.class, OAuth2PermissionGrantCollectionRequestBuilder.class);
     }
 
     public void post(final OAuth2PermissionGrant newOAuth2PermissionGrant, final ICallback<? super OAuth2PermissionGrant> callback) {
@@ -147,16 +127,5 @@ public class OAuth2PermissionGrantCollectionRequest extends BaseCollectionReques
     public OAuth2PermissionGrantCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<OAuth2PermissionGrant> buildFromResponse(final OAuth2PermissionGrantCollectionResponse response) {
-        final OAuth2PermissionGrantCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new OAuth2PermissionGrantCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<OAuth2PermissionGrant> page = new BaseCollectionPage<OAuth2PermissionGrant>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

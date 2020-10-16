@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WorkbookChartPointCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookChartPointCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.WorkbookChartPointCollectionReque
 /**
  * The class for the Workbook Chart Point Collection Request.
  */
-public class WorkbookChartPointCollectionRequest extends BaseCollectionRequest<WorkbookChartPoint, WorkbookChartPointCollectionResponse> {
+public class WorkbookChartPointCollectionRequest extends BaseCollectionRequest<WorkbookChartPoint, WorkbookChartPointCollectionResponse, WorkbookChartPointCollectionPage> {
 
     /**
      * The request builder for this collection of WorkbookChartPoint
@@ -37,26 +36,7 @@ public class WorkbookChartPointCollectionRequest extends BaseCollectionRequest<W
      */
     @SuppressWarnings("unchecked")
     public WorkbookChartPointCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WorkbookChartPointCollectionResponse.class,(Class<BaseCollectionPage<WorkbookChartPoint>>) (new BaseCollectionPage<WorkbookChartPoint>(new java.util.ArrayList<WorkbookChartPoint>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<WorkbookChartPoint>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<WorkbookChartPoint> get() throws ClientException {
-        final WorkbookChartPointCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, WorkbookChartPointCollectionResponse.class, WorkbookChartPointCollectionPage.class, WorkbookChartPointCollectionRequestBuilder.class);
     }
 
     public void post(final WorkbookChartPoint newWorkbookChartPoint, final ICallback<? super WorkbookChartPoint> callback) {
@@ -148,16 +128,5 @@ public class WorkbookChartPointCollectionRequest extends BaseCollectionRequest<W
     public WorkbookChartPointCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<WorkbookChartPoint> buildFromResponse(final WorkbookChartPointCollectionResponse response) {
-        final WorkbookChartPointCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new WorkbookChartPointCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<WorkbookChartPoint> page = new BaseCollectionPage<WorkbookChartPoint>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

@@ -15,6 +15,7 @@ import com.microsoft.graph.models.extensions.SystemFacet;
 import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.List;
 import com.microsoft.graph.models.extensions.BaseItem;
+import com.microsoft.graph.requests.extensions.DriveItemCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -75,7 +76,7 @@ public class Drive extends BaseItem implements IJsonBackedObject {
      */
     @SerializedName(value = "following", alternate = {"Following"})
     @Expose
-    public BaseCollectionPage<DriveItem> following;
+    public DriveItemCollectionPage following;
 
     /**
      * The Items.
@@ -83,7 +84,7 @@ public class Drive extends BaseItem implements IJsonBackedObject {
      */
     @SerializedName(value = "items", alternate = {"Items"})
     @Expose
-    public BaseCollectionPage<DriveItem> items;
+    public DriveItemCollectionPage items;
 
     /**
      * The List.
@@ -107,7 +108,7 @@ public class Drive extends BaseItem implements IJsonBackedObject {
      */
     @SerializedName(value = "special", alternate = {"Special"})
     @Expose
-    public BaseCollectionPage<DriveItem> special;
+    public DriveItemCollectionPage special;
 
 
     /**
@@ -151,15 +152,15 @@ public class Drive extends BaseItem implements IJsonBackedObject {
 
 
         if (json.has("following")) {
-            following = serializer.deserializeObject(json.get("following").toString(), new BaseCollectionPage<DriveItem>(new java.util.ArrayList<DriveItem>(), null).getClass());
+            following = serializer.deserializeObject(json.get("following").toString(), DriveItemCollectionPage.class);
         }
 
         if (json.has("items")) {
-            items = serializer.deserializeObject(json.get("items").toString(), new BaseCollectionPage<DriveItem>(new java.util.ArrayList<DriveItem>(), null).getClass());
+            items = serializer.deserializeObject(json.get("items").toString(), DriveItemCollectionPage.class);
         }
 
         if (json.has("special")) {
-            special = serializer.deserializeObject(json.get("special").toString(), new BaseCollectionPage<DriveItem>(new java.util.ArrayList<DriveItem>(), null).getClass());
+            special = serializer.deserializeObject(json.get("special").toString(), DriveItemCollectionPage.class);
         }
     }
 }

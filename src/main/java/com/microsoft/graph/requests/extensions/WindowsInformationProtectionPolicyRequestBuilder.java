@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows Information Protection Policy Request Builder.
  */
-public class WindowsInformationProtectionPolicyRequestBuilder extends BaseRequestBuilder {
+public class WindowsInformationProtectionPolicyRequestBuilder extends BaseRequestBuilder<WindowsInformationProtectionPolicy> {
 
     /**
      * The request builder for the WindowsInformationProtectionPolicy

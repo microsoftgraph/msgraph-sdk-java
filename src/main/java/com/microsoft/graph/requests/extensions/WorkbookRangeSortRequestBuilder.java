@@ -19,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Range Sort Request Builder.
  */
-public class WorkbookRangeSortRequestBuilder extends BaseRequestBuilder {
+public class WorkbookRangeSortRequestBuilder extends BaseRequestBuilder<WorkbookRangeSort> {
 
     /**
      * The request builder for the WorkbookRangeSort

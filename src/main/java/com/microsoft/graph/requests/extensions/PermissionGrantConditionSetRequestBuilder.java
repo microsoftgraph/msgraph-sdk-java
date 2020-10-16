@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Permission Grant Condition Set Request Builder.
  */
-public class PermissionGrantConditionSetRequestBuilder extends BaseRequestBuilder {
+public class PermissionGrantConditionSetRequestBuilder extends BaseRequestBuilder<PermissionGrantConditionSet> {
 
     /**
      * The request builder for the PermissionGrantConditionSet

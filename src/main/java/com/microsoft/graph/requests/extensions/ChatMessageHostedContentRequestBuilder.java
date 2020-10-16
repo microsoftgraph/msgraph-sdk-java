@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Chat Message Hosted Content Request Builder.
  */
-public class ChatMessageHostedContentRequestBuilder extends BaseRequestBuilder {
+public class ChatMessageHostedContentRequestBuilder extends BaseRequestBuilder<ChatMessageHostedContent> {
 
     /**
      * The request builder for the ChatMessageHostedContent

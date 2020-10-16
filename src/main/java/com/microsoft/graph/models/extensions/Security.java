@@ -12,6 +12,9 @@ import com.microsoft.graph.models.extensions.Alert;
 import com.microsoft.graph.models.extensions.SecureScoreControlProfile;
 import com.microsoft.graph.models.extensions.SecureScore;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.AlertCollectionPage;
+import com.microsoft.graph.requests.extensions.SecureScoreControlProfileCollectionPage;
+import com.microsoft.graph.requests.extensions.SecureScoreCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -32,7 +35,7 @@ public class Security extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "alerts", alternate = {"Alerts"})
     @Expose
-    public BaseCollectionPage<Alert> alerts;
+    public AlertCollectionPage alerts;
 
     /**
      * The Secure Score Control Profiles.
@@ -40,7 +43,7 @@ public class Security extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "secureScoreControlProfiles", alternate = {"SecureScoreControlProfiles"})
     @Expose
-    public BaseCollectionPage<SecureScoreControlProfile> secureScoreControlProfiles;
+    public SecureScoreControlProfileCollectionPage secureScoreControlProfiles;
 
     /**
      * The Secure Scores.
@@ -48,7 +51,7 @@ public class Security extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "secureScores", alternate = {"SecureScores"})
     @Expose
-    public BaseCollectionPage<SecureScore> secureScores;
+    public SecureScoreCollectionPage secureScores;
 
 
     /**
@@ -92,15 +95,15 @@ public class Security extends Entity implements IJsonBackedObject {
 
 
         if (json.has("alerts")) {
-            alerts = serializer.deserializeObject(json.get("alerts").toString(), new BaseCollectionPage<Alert>(new java.util.ArrayList<Alert>(), null).getClass());
+            alerts = serializer.deserializeObject(json.get("alerts").toString(), AlertCollectionPage.class);
         }
 
         if (json.has("secureScoreControlProfiles")) {
-            secureScoreControlProfiles = serializer.deserializeObject(json.get("secureScoreControlProfiles").toString(), new BaseCollectionPage<SecureScoreControlProfile>(new java.util.ArrayList<SecureScoreControlProfile>(), null).getClass());
+            secureScoreControlProfiles = serializer.deserializeObject(json.get("secureScoreControlProfiles").toString(), SecureScoreControlProfileCollectionPage.class);
         }
 
         if (json.has("secureScores")) {
-            secureScores = serializer.deserializeObject(json.get("secureScores").toString(), new BaseCollectionPage<SecureScore>(new java.util.ArrayList<SecureScore>(), null).getClass());
+            secureScores = serializer.deserializeObject(json.get("secureScores").toString(), SecureScoreCollectionPage.class);
         }
     }
 }

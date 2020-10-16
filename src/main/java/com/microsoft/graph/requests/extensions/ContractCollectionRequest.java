@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ContractCollectionResponse;
 import com.microsoft.graph.requests.extensions.ContractCollectionRequestBuilder;
@@ -25,7 +24,7 @@ import com.microsoft.graph.requests.extensions.ContractCollectionRequest;
 /**
  * The class for the Contract Collection Request.
  */
-public class ContractCollectionRequest extends BaseCollectionRequest<Contract, ContractCollectionResponse> {
+public class ContractCollectionRequest extends BaseCollectionRequest<Contract, ContractCollectionResponse, ContractCollectionPage> {
 
     /**
      * The request builder for this collection of Contract
@@ -36,26 +35,7 @@ public class ContractCollectionRequest extends BaseCollectionRequest<Contract, C
      */
     @SuppressWarnings("unchecked")
     public ContractCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ContractCollectionResponse.class,(Class<BaseCollectionPage<Contract>>) (new BaseCollectionPage<Contract>(new java.util.ArrayList<Contract>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<Contract>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<Contract> get() throws ClientException {
-        final ContractCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, ContractCollectionResponse.class, ContractCollectionPage.class, ContractCollectionRequestBuilder.class);
     }
 
     public void post(final Contract newContract, final ICallback<? super Contract> callback) {
@@ -147,16 +127,5 @@ public class ContractCollectionRequest extends BaseCollectionRequest<Contract, C
     public ContractCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<Contract> buildFromResponse(final ContractCollectionResponse response) {
-        final ContractCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new ContractCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<Contract> page = new BaseCollectionPage<Contract>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

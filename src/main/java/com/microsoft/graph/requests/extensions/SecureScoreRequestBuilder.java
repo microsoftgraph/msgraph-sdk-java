@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Secure Score Request Builder.
  */
-public class SecureScoreRequestBuilder extends BaseRequestBuilder {
+public class SecureScoreRequestBuilder extends BaseRequestBuilder<SecureScore> {
 
     /**
      * The request builder for the SecureScore

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Domain Dns Mx Record Request Builder.
  */
-public class DomainDnsMxRecordRequestBuilder extends BaseRequestBuilder {
+public class DomainDnsMxRecordRequestBuilder extends BaseRequestBuilder<DomainDnsMxRecord> {
 
     /**
      * The request builder for the DomainDnsMxRecord

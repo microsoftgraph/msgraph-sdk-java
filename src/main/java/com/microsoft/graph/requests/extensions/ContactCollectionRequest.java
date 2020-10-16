@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ContactCollectionResponse;
 import com.microsoft.graph.requests.extensions.ContactCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.ContactCollectionRequest;
 /**
  * The class for the Contact Collection Request.
  */
-public class ContactCollectionRequest extends BaseCollectionRequest<Contact, ContactCollectionResponse> {
+public class ContactCollectionRequest extends BaseCollectionRequest<Contact, ContactCollectionResponse, ContactCollectionPage> {
 
     /**
      * The request builder for this collection of Contact
@@ -37,26 +36,7 @@ public class ContactCollectionRequest extends BaseCollectionRequest<Contact, Con
      */
     @SuppressWarnings("unchecked")
     public ContactCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ContactCollectionResponse.class,(Class<BaseCollectionPage<Contact>>) (new BaseCollectionPage<Contact>(new java.util.ArrayList<Contact>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<Contact>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<Contact> get() throws ClientException {
-        final ContactCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, ContactCollectionResponse.class, ContactCollectionPage.class, ContactCollectionRequestBuilder.class);
     }
 
     public void post(final Contact newContact, final ICallback<? super Contact> callback) {
@@ -148,16 +128,5 @@ public class ContactCollectionRequest extends BaseCollectionRequest<Contact, Con
     public ContactCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<Contact> buildFromResponse(final ContactCollectionResponse response) {
-        final ContactCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new ContactCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<Contact> page = new BaseCollectionPage<Contact>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

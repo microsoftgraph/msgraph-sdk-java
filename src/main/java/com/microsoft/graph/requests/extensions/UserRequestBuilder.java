@@ -85,7 +85,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the User Request Builder.
  */
-public class UserRequestBuilder extends BaseRequestBuilder {
+public class UserRequestBuilder extends BaseRequestBuilder<User> {
 
     /**
      * The request builder for the User

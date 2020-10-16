@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ColumnLinkCollectionResponse;
 import com.microsoft.graph.requests.extensions.ColumnLinkCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.ColumnLinkCollectionRequest;
 /**
  * The class for the Column Link Collection Request.
  */
-public class ColumnLinkCollectionRequest extends BaseCollectionRequest<ColumnLink, ColumnLinkCollectionResponse> {
+public class ColumnLinkCollectionRequest extends BaseCollectionRequest<ColumnLink, ColumnLinkCollectionResponse, ColumnLinkCollectionPage> {
 
     /**
      * The request builder for this collection of ColumnLink
@@ -37,26 +36,7 @@ public class ColumnLinkCollectionRequest extends BaseCollectionRequest<ColumnLin
      */
     @SuppressWarnings("unchecked")
     public ColumnLinkCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ColumnLinkCollectionResponse.class,(Class<BaseCollectionPage<ColumnLink>>) (new BaseCollectionPage<ColumnLink>(new java.util.ArrayList<ColumnLink>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<ColumnLink>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<ColumnLink> get() throws ClientException {
-        final ColumnLinkCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, ColumnLinkCollectionResponse.class, ColumnLinkCollectionPage.class, ColumnLinkCollectionRequestBuilder.class);
     }
 
     public void post(final ColumnLink newColumnLink, final ICallback<? super ColumnLink> callback) {
@@ -148,16 +128,5 @@ public class ColumnLinkCollectionRequest extends BaseCollectionRequest<ColumnLin
     public ColumnLinkCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<ColumnLink> buildFromResponse(final ColumnLinkCollectionResponse response) {
-        final ColumnLinkCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new ColumnLinkCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<ColumnLink> page = new BaseCollectionPage<ColumnLink>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

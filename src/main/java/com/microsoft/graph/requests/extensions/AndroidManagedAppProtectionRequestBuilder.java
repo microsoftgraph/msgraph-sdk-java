@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Android Managed App Protection Request Builder.
  */
-public class AndroidManagedAppProtectionRequestBuilder extends BaseRequestBuilder {
+public class AndroidManagedAppProtectionRequestBuilder extends BaseRequestBuilder<AndroidManagedAppProtection> {
 
     /**
      * The request builder for the AndroidManagedAppProtection

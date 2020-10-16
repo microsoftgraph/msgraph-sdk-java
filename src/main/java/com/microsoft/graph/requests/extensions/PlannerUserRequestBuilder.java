@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Planner User Request Builder.
  */
-public class PlannerUserRequestBuilder extends BaseRequestBuilder {
+public class PlannerUserRequestBuilder extends BaseRequestBuilder<PlannerUser> {
 
     /**
      * The request builder for the PlannerUser

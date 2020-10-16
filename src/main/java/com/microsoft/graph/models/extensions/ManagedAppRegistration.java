@@ -13,6 +13,8 @@ import com.microsoft.graph.models.generated.ManagedAppFlaggedReason;
 import com.microsoft.graph.models.extensions.ManagedAppPolicy;
 import com.microsoft.graph.models.extensions.ManagedAppOperation;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.ManagedAppPolicyCollectionPage;
+import com.microsoft.graph.requests.extensions.ManagedAppOperationCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -129,7 +131,7 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
      */
     @SerializedName(value = "appliedPolicies", alternate = {"AppliedPolicies"})
     @Expose
-    public BaseCollectionPage<ManagedAppPolicy> appliedPolicies;
+    public ManagedAppPolicyCollectionPage appliedPolicies;
 
     /**
      * The Intended Policies.
@@ -137,7 +139,7 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
      */
     @SerializedName(value = "intendedPolicies", alternate = {"IntendedPolicies"})
     @Expose
-    public BaseCollectionPage<ManagedAppPolicy> intendedPolicies;
+    public ManagedAppPolicyCollectionPage intendedPolicies;
 
     /**
      * The Operations.
@@ -145,7 +147,7 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
      */
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
-    public BaseCollectionPage<ManagedAppOperation> operations;
+    public ManagedAppOperationCollectionPage operations;
 
 
     /**
@@ -189,15 +191,15 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
 
 
         if (json.has("appliedPolicies")) {
-            appliedPolicies = serializer.deserializeObject(json.get("appliedPolicies").toString(), new BaseCollectionPage<ManagedAppPolicy>(new java.util.ArrayList<ManagedAppPolicy>(), null).getClass());
+            appliedPolicies = serializer.deserializeObject(json.get("appliedPolicies").toString(), ManagedAppPolicyCollectionPage.class);
         }
 
         if (json.has("intendedPolicies")) {
-            intendedPolicies = serializer.deserializeObject(json.get("intendedPolicies").toString(), new BaseCollectionPage<ManagedAppPolicy>(new java.util.ArrayList<ManagedAppPolicy>(), null).getClass());
+            intendedPolicies = serializer.deserializeObject(json.get("intendedPolicies").toString(), ManagedAppPolicyCollectionPage.class);
         }
 
         if (json.has("operations")) {
-            operations = serializer.deserializeObject(json.get("operations").toString(), new BaseCollectionPage<ManagedAppOperation>(new java.util.ArrayList<ManagedAppOperation>(), null).getClass());
+            operations = serializer.deserializeObject(json.get("operations").toString(), ManagedAppOperationCollectionPage.class);
         }
     }
 }

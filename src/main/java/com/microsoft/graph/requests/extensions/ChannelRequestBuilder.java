@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Channel Request Builder.
  */
-public class ChannelRequestBuilder extends BaseRequestBuilder {
+public class ChannelRequestBuilder extends BaseRequestBuilder<Channel> {
 
     /**
      * The request builder for the Channel

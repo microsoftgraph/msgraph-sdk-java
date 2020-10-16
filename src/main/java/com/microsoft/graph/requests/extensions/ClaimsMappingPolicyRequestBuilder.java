@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Claims Mapping Policy Request Builder.
  */
-public class ClaimsMappingPolicyRequestBuilder extends BaseRequestBuilder {
+public class ClaimsMappingPolicyRequestBuilder extends BaseRequestBuilder<ClaimsMappingPolicy> {
 
     /**
      * The request builder for the ClaimsMappingPolicy

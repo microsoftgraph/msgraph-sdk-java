@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ChatMessageHostedContentCollectionResponse;
 import com.microsoft.graph.requests.extensions.ChatMessageHostedContentCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.ChatMessageHostedContentCollectio
 /**
  * The class for the Chat Message Hosted Content Collection Request.
  */
-public class ChatMessageHostedContentCollectionRequest extends BaseCollectionRequest<ChatMessageHostedContent, ChatMessageHostedContentCollectionResponse> {
+public class ChatMessageHostedContentCollectionRequest extends BaseCollectionRequest<ChatMessageHostedContent, ChatMessageHostedContentCollectionResponse, ChatMessageHostedContentCollectionPage> {
 
     /**
      * The request builder for this collection of ChatMessageHostedContent
@@ -37,26 +36,7 @@ public class ChatMessageHostedContentCollectionRequest extends BaseCollectionReq
      */
     @SuppressWarnings("unchecked")
     public ChatMessageHostedContentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ChatMessageHostedContentCollectionResponse.class,(Class<BaseCollectionPage<ChatMessageHostedContent>>) (new BaseCollectionPage<ChatMessageHostedContent>(new java.util.ArrayList<ChatMessageHostedContent>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<ChatMessageHostedContent>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<ChatMessageHostedContent> get() throws ClientException {
-        final ChatMessageHostedContentCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, ChatMessageHostedContentCollectionResponse.class, ChatMessageHostedContentCollectionPage.class, ChatMessageHostedContentCollectionRequestBuilder.class);
     }
 
     public void post(final ChatMessageHostedContent newChatMessageHostedContent, final ICallback<? super ChatMessageHostedContent> callback) {
@@ -148,16 +128,5 @@ public class ChatMessageHostedContentCollectionRequest extends BaseCollectionReq
     public ChatMessageHostedContentCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<ChatMessageHostedContent> buildFromResponse(final ChatMessageHostedContentCollectionResponse response) {
-        final ChatMessageHostedContentCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new ChatMessageHostedContentCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<ChatMessageHostedContent> page = new BaseCollectionPage<ChatMessageHostedContent>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

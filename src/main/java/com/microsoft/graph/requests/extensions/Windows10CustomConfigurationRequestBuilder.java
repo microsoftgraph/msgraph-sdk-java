@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows10Custom Configuration Request Builder.
  */
-public class Windows10CustomConfigurationRequestBuilder extends BaseRequestBuilder {
+public class Windows10CustomConfigurationRequestBuilder extends BaseRequestBuilder<Windows10CustomConfiguration> {
 
     /**
      * The request builder for the Windows10CustomConfiguration

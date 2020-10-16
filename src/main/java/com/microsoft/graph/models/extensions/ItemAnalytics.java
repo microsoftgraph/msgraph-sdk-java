@@ -10,6 +10,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.ItemActivityStatCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -38,7 +39,7 @@ public class ItemAnalytics extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "itemActivityStats", alternate = {"ItemActivityStats"})
     @Expose
-    public BaseCollectionPage<ItemActivityStat> itemActivityStats;
+    public ItemActivityStatCollectionPage itemActivityStats;
 
     /**
      * The Last Seven Days.
@@ -90,7 +91,7 @@ public class ItemAnalytics extends Entity implements IJsonBackedObject {
 
 
         if (json.has("itemActivityStats")) {
-            itemActivityStats = serializer.deserializeObject(json.get("itemActivityStats").toString(), new BaseCollectionPage<ItemActivityStat>(new java.util.ArrayList<ItemActivityStat>(), null).getClass());
+            itemActivityStats = serializer.deserializeObject(json.get("itemActivityStats").toString(), ItemActivityStatCollectionPage.class);
         }
     }
 }

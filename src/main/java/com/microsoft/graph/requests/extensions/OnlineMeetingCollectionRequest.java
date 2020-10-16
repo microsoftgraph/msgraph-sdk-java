@@ -17,7 +17,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionResponse;
 import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionRequestBuilder;
@@ -28,7 +27,7 @@ import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionRequest;
 /**
  * The class for the Online Meeting Collection Request.
  */
-public class OnlineMeetingCollectionRequest extends BaseCollectionRequest<OnlineMeeting, OnlineMeetingCollectionResponse> {
+public class OnlineMeetingCollectionRequest extends BaseCollectionRequest<OnlineMeeting, OnlineMeetingCollectionResponse, OnlineMeetingCollectionPage> {
 
     /**
      * The request builder for this collection of OnlineMeeting
@@ -39,26 +38,7 @@ public class OnlineMeetingCollectionRequest extends BaseCollectionRequest<Online
      */
     @SuppressWarnings("unchecked")
     public OnlineMeetingCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OnlineMeetingCollectionResponse.class,(Class<BaseCollectionPage<OnlineMeeting>>) (new BaseCollectionPage<OnlineMeeting>(new java.util.ArrayList<OnlineMeeting>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<OnlineMeeting>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<OnlineMeeting> get() throws ClientException {
-        final OnlineMeetingCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, OnlineMeetingCollectionResponse.class, OnlineMeetingCollectionPage.class, OnlineMeetingCollectionRequestBuilder.class);
     }
 
     public void post(final OnlineMeeting newOnlineMeeting, final ICallback<? super OnlineMeeting> callback) {
@@ -150,16 +130,5 @@ public class OnlineMeetingCollectionRequest extends BaseCollectionRequest<Online
     public OnlineMeetingCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<OnlineMeeting> buildFromResponse(final OnlineMeetingCollectionResponse response) {
-        final OnlineMeetingCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new OnlineMeetingCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<OnlineMeeting> page = new BaseCollectionPage<OnlineMeeting>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Section Group Request Builder.
  */
-public class SectionGroupRequestBuilder extends BaseRequestBuilder {
+public class SectionGroupRequestBuilder extends BaseRequestBuilder<SectionGroup> {
 
     /**
      * The request builder for the SectionGroup

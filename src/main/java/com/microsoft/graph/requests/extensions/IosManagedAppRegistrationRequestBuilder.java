@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Ios Managed App Registration Request Builder.
  */
-public class IosManagedAppRegistrationRequestBuilder extends BaseRequestBuilder {
+public class IosManagedAppRegistrationRequestBuilder extends BaseRequestBuilder<IosManagedAppRegistration> {
 
     /**
      * The request builder for the IosManagedAppRegistration

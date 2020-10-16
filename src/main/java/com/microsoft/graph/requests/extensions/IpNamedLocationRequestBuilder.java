@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Ip Named Location Request Builder.
  */
-public class IpNamedLocationRequestBuilder extends BaseRequestBuilder {
+public class IpNamedLocationRequestBuilder extends BaseRequestBuilder<IpNamedLocation> {
 
     /**
      * The request builder for the IpNamedLocation

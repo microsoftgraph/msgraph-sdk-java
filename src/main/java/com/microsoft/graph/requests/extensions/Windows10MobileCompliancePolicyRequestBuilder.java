@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows10Mobile Compliance Policy Request Builder.
  */
-public class Windows10MobileCompliancePolicyRequestBuilder extends BaseRequestBuilder {
+public class Windows10MobileCompliancePolicyRequestBuilder extends BaseRequestBuilder<Windows10MobileCompliancePolicy> {
 
     /**
      * The request builder for the Windows10MobileCompliancePolicy

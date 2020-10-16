@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.NotificationMessageTemplateCollectionResponse;
 import com.microsoft.graph.requests.extensions.NotificationMessageTemplateCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.NotificationMessageTemplateCollec
 /**
  * The class for the Notification Message Template Collection Request.
  */
-public class NotificationMessageTemplateCollectionRequest extends BaseCollectionRequest<NotificationMessageTemplate, NotificationMessageTemplateCollectionResponse> {
+public class NotificationMessageTemplateCollectionRequest extends BaseCollectionRequest<NotificationMessageTemplate, NotificationMessageTemplateCollectionResponse, NotificationMessageTemplateCollectionPage> {
 
     /**
      * The request builder for this collection of NotificationMessageTemplate
@@ -37,26 +36,7 @@ public class NotificationMessageTemplateCollectionRequest extends BaseCollection
      */
     @SuppressWarnings("unchecked")
     public NotificationMessageTemplateCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, NotificationMessageTemplateCollectionResponse.class,(Class<BaseCollectionPage<NotificationMessageTemplate>>) (new BaseCollectionPage<NotificationMessageTemplate>(new java.util.ArrayList<NotificationMessageTemplate>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<NotificationMessageTemplate>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<NotificationMessageTemplate> get() throws ClientException {
-        final NotificationMessageTemplateCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, NotificationMessageTemplateCollectionResponse.class, NotificationMessageTemplateCollectionPage.class, NotificationMessageTemplateCollectionRequestBuilder.class);
     }
 
     public void post(final NotificationMessageTemplate newNotificationMessageTemplate, final ICallback<? super NotificationMessageTemplate> callback) {
@@ -148,16 +128,5 @@ public class NotificationMessageTemplateCollectionRequest extends BaseCollection
     public NotificationMessageTemplateCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<NotificationMessageTemplate> buildFromResponse(final NotificationMessageTemplateCollectionResponse response) {
-        final NotificationMessageTemplateCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new NotificationMessageTemplateCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<NotificationMessageTemplate> page = new BaseCollectionPage<NotificationMessageTemplate>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

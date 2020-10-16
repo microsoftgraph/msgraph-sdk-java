@@ -19,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Functions Request Builder.
  */
-public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder {
+public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<WorkbookFunctions> {
 
     /**
      * The request builder for the WorkbookFunctions

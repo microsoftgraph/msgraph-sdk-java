@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Ios General Device Configuration Request Builder.
  */
-public class IosGeneralDeviceConfigurationRequestBuilder extends BaseRequestBuilder {
+public class IosGeneralDeviceConfigurationRequestBuilder extends BaseRequestBuilder<IosGeneralDeviceConfiguration> {
 
     /**
      * The request builder for the IosGeneralDeviceConfiguration

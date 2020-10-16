@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.SectionGroupCollectionResponse;
 import com.microsoft.graph.requests.extensions.SectionGroupCollectionRequestBuilder;
@@ -25,7 +24,7 @@ import com.microsoft.graph.requests.extensions.SectionGroupCollectionRequest;
 /**
  * The class for the Section Group Collection Request.
  */
-public class SectionGroupCollectionRequest extends BaseCollectionRequest<SectionGroup, SectionGroupCollectionResponse> {
+public class SectionGroupCollectionRequest extends BaseCollectionRequest<SectionGroup, SectionGroupCollectionResponse, SectionGroupCollectionPage> {
 
     /**
      * The request builder for this collection of SectionGroup
@@ -36,26 +35,7 @@ public class SectionGroupCollectionRequest extends BaseCollectionRequest<Section
      */
     @SuppressWarnings("unchecked")
     public SectionGroupCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SectionGroupCollectionResponse.class,(Class<BaseCollectionPage<SectionGroup>>) (new BaseCollectionPage<SectionGroup>(new java.util.ArrayList<SectionGroup>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<SectionGroup>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<SectionGroup> get() throws ClientException {
-        final SectionGroupCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, SectionGroupCollectionResponse.class, SectionGroupCollectionPage.class, SectionGroupCollectionRequestBuilder.class);
     }
 
     public void post(final SectionGroup newSectionGroup, final ICallback<? super SectionGroup> callback) {
@@ -147,16 +127,5 @@ public class SectionGroupCollectionRequest extends BaseCollectionRequest<Section
     public SectionGroupCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<SectionGroup> buildFromResponse(final SectionGroupCollectionResponse response) {
-        final SectionGroupCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new SectionGroupCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<SectionGroup> page = new BaseCollectionPage<SectionGroup>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

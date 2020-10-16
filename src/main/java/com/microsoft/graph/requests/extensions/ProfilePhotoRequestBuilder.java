@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Profile Photo Request Builder.
  */
-public class ProfilePhotoRequestBuilder extends BaseRequestBuilder {
+public class ProfilePhotoRequestBuilder extends BaseRequestBuilder<ProfilePhoto> {
 
     /**
      * The request builder for the ProfilePhoto

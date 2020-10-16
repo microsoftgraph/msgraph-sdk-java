@@ -22,6 +22,8 @@ import com.microsoft.graph.models.extensions.EducationClass;
 import com.microsoft.graph.models.extensions.EducationSchool;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.EducationClassCollectionPage;
+import com.microsoft.graph.requests.extensions.EducationSchoolCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -272,13 +274,13 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The Classes.
      * Classes to which the user belongs. Nullable.
      */
-    public BaseCollectionPage<EducationClass> classes;
+    public EducationClassCollectionPage classes;
 
     /**
      * The Schools.
      * Schools to which the user belongs. Nullable.
      */
-    public BaseCollectionPage<EducationSchool> schools;
+    public EducationSchoolCollectionPage schools;
 
     /**
      * The User.
@@ -330,11 +332,11 @@ public class EducationUser extends Entity implements IJsonBackedObject {
 
 
         if (json.has("classes")) {
-            classes = serializer.deserializeObject(json.get("classes").toString(), new BaseCollectionPage<EducationClass>(new java.util.ArrayList<EducationClass>(), null).getClass());
+            classes = serializer.deserializeObject(json.get("classes").toString(), EducationClassCollectionPage.class);
         }
 
         if (json.has("schools")) {
-            schools = serializer.deserializeObject(json.get("schools").toString(), new BaseCollectionPage<EducationSchool>(new java.util.ArrayList<EducationSchool>(), null).getClass());
+            schools = serializer.deserializeObject(json.get("schools").toString(), EducationSchoolCollectionPage.class);
         }
     }
 }

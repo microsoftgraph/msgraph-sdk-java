@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Mobile App Category Request Builder.
  */
-public class MobileAppCategoryRequestBuilder extends BaseRequestBuilder {
+public class MobileAppCategoryRequestBuilder extends BaseRequestBuilder<MobileAppCategory> {
 
     /**
      * The request builder for the MobileAppCategory

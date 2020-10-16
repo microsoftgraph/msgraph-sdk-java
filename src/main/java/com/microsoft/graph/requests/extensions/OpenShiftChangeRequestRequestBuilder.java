@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Open Shift Change Request Request Builder.
  */
-public class OpenShiftChangeRequestRequestBuilder extends BaseRequestBuilder {
+public class OpenShiftChangeRequestRequestBuilder extends BaseRequestBuilder<OpenShiftChangeRequest> {
 
     /**
      * The request builder for the OpenShiftChangeRequest

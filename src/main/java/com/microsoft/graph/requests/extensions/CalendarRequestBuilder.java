@@ -29,7 +29,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Calendar Request Builder.
  */
-public class CalendarRequestBuilder extends BaseRequestBuilder {
+public class CalendarRequestBuilder extends BaseRequestBuilder<Calendar> {
 
     /**
      * The request builder for the Calendar

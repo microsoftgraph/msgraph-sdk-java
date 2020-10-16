@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Token Lifetime Policy Collection With References Request Builder.
  */
-public class TokenLifetimePolicyCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<TokenLifetimePolicy, TokenLifetimePolicyWithReferenceRequest, TokenLifetimePolicyReferenceRequestBuilder, TokenLifetimePolicyWithReferenceRequestBuilder, TokenLifetimePolicyCollectionResponse, TokenLifetimePolicyCollectionWithReferencesRequest, TokenLifetimePolicyCollectionWithReferencesRequest> {
+public class TokenLifetimePolicyCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<TokenLifetimePolicy, TokenLifetimePolicyWithReferenceRequest, TokenLifetimePolicyReferenceRequestBuilder, TokenLifetimePolicyWithReferenceRequestBuilder, TokenLifetimePolicyCollectionResponse, TokenLifetimePolicyCollectionPage, TokenLifetimePolicyCollectionWithReferencesRequest, TokenLifetimePolicyCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -30,6 +30,6 @@ public class TokenLifetimePolicyCollectionWithReferencesRequestBuilder extends B
      * @param requestOptions the options for this request
      */
     public TokenLifetimePolicyCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TokenLifetimePolicyWithReferenceRequestBuilder.class, TokenLifetimePolicyCollectionWithReferencesRequest.class, TokenLifetimePolicyCollectionWithReferencesRequest.class);
+        super(requestUrl, client, requestOptions, TokenLifetimePolicyReferenceRequestBuilder.class, TokenLifetimePolicyCollectionResponse.class, TokenLifetimePolicyCollectionPage.class, TokenLifetimePolicyCollectionWithReferencesRequest.class);
     }
 }

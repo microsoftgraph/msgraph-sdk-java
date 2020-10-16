@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.EndpointCollectionResponse;
 import com.microsoft.graph.requests.extensions.EndpointCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.EndpointCollectionRequest;
 /**
  * The class for the Endpoint Collection Request.
  */
-public class EndpointCollectionRequest extends BaseCollectionRequest<Endpoint, EndpointCollectionResponse> {
+public class EndpointCollectionRequest extends BaseCollectionRequest<Endpoint, EndpointCollectionResponse, EndpointCollectionPage> {
 
     /**
      * The request builder for this collection of Endpoint
@@ -37,26 +36,7 @@ public class EndpointCollectionRequest extends BaseCollectionRequest<Endpoint, E
      */
     @SuppressWarnings("unchecked")
     public EndpointCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, EndpointCollectionResponse.class,(Class<BaseCollectionPage<Endpoint>>) (new BaseCollectionPage<Endpoint>(new java.util.ArrayList<Endpoint>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<Endpoint>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<Endpoint> get() throws ClientException {
-        final EndpointCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, EndpointCollectionResponse.class, EndpointCollectionPage.class, EndpointCollectionRequestBuilder.class);
     }
 
     public void post(final Endpoint newEndpoint, final ICallback<? super Endpoint> callback) {
@@ -148,16 +128,5 @@ public class EndpointCollectionRequest extends BaseCollectionRequest<Endpoint, E
     public EndpointCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<Endpoint> buildFromResponse(final EndpointCollectionResponse response) {
-        final EndpointCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new EndpointCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<Endpoint> page = new BaseCollectionPage<Endpoint>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DataPolicyOperationCollectionResponse;
 import com.microsoft.graph.requests.extensions.DataPolicyOperationCollectionRequestBuilder;
@@ -25,7 +24,7 @@ import com.microsoft.graph.requests.extensions.DataPolicyOperationCollectionRequ
 /**
  * The class for the Data Policy Operation Collection Request.
  */
-public class DataPolicyOperationCollectionRequest extends BaseCollectionRequest<DataPolicyOperation, DataPolicyOperationCollectionResponse> {
+public class DataPolicyOperationCollectionRequest extends BaseCollectionRequest<DataPolicyOperation, DataPolicyOperationCollectionResponse, DataPolicyOperationCollectionPage> {
 
     /**
      * The request builder for this collection of DataPolicyOperation
@@ -36,26 +35,7 @@ public class DataPolicyOperationCollectionRequest extends BaseCollectionRequest<
      */
     @SuppressWarnings("unchecked")
     public DataPolicyOperationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DataPolicyOperationCollectionResponse.class,(Class<BaseCollectionPage<DataPolicyOperation>>) (new BaseCollectionPage<DataPolicyOperation>(new java.util.ArrayList<DataPolicyOperation>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<DataPolicyOperation>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<DataPolicyOperation> get() throws ClientException {
-        final DataPolicyOperationCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, DataPolicyOperationCollectionResponse.class, DataPolicyOperationCollectionPage.class, DataPolicyOperationCollectionRequestBuilder.class);
     }
 
     public void post(final DataPolicyOperation newDataPolicyOperation, final ICallback<? super DataPolicyOperation> callback) {
@@ -147,16 +127,5 @@ public class DataPolicyOperationCollectionRequest extends BaseCollectionRequest<
     public DataPolicyOperationCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<DataPolicyOperation> buildFromResponse(final DataPolicyOperationCollectionResponse response) {
-        final DataPolicyOperationCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DataPolicyOperationCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<DataPolicyOperation> page = new BaseCollectionPage<DataPolicyOperation>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

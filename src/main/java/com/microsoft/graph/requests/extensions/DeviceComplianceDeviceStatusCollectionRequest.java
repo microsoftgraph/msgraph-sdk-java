@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DeviceComplianceDeviceStatusCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceComplianceDeviceStatusCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.DeviceComplianceDeviceStatusColle
 /**
  * The class for the Device Compliance Device Status Collection Request.
  */
-public class DeviceComplianceDeviceStatusCollectionRequest extends BaseCollectionRequest<DeviceComplianceDeviceStatus, DeviceComplianceDeviceStatusCollectionResponse> {
+public class DeviceComplianceDeviceStatusCollectionRequest extends BaseCollectionRequest<DeviceComplianceDeviceStatus, DeviceComplianceDeviceStatusCollectionResponse, DeviceComplianceDeviceStatusCollectionPage> {
 
     /**
      * The request builder for this collection of DeviceComplianceDeviceStatus
@@ -37,26 +36,7 @@ public class DeviceComplianceDeviceStatusCollectionRequest extends BaseCollectio
      */
     @SuppressWarnings("unchecked")
     public DeviceComplianceDeviceStatusCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceComplianceDeviceStatusCollectionResponse.class,(Class<BaseCollectionPage<DeviceComplianceDeviceStatus>>) (new BaseCollectionPage<DeviceComplianceDeviceStatus>(new java.util.ArrayList<DeviceComplianceDeviceStatus>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<DeviceComplianceDeviceStatus>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<DeviceComplianceDeviceStatus> get() throws ClientException {
-        final DeviceComplianceDeviceStatusCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, DeviceComplianceDeviceStatusCollectionResponse.class, DeviceComplianceDeviceStatusCollectionPage.class, DeviceComplianceDeviceStatusCollectionRequestBuilder.class);
     }
 
     public void post(final DeviceComplianceDeviceStatus newDeviceComplianceDeviceStatus, final ICallback<? super DeviceComplianceDeviceStatus> callback) {
@@ -148,16 +128,5 @@ public class DeviceComplianceDeviceStatusCollectionRequest extends BaseCollectio
     public DeviceComplianceDeviceStatusCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<DeviceComplianceDeviceStatus> buildFromResponse(final DeviceComplianceDeviceStatusCollectionResponse response) {
-        final DeviceComplianceDeviceStatusCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DeviceComplianceDeviceStatusCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<DeviceComplianceDeviceStatus> page = new BaseCollectionPage<DeviceComplianceDeviceStatus>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the File Attachment Request Builder.
  */
-public class FileAttachmentRequestBuilder extends BaseRequestBuilder {
+public class FileAttachmentRequestBuilder extends BaseRequestBuilder<FileAttachment> {
 
     /**
      * The request builder for the FileAttachment

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Managed Device Mobile App Configuration Assignment Request Builder.
  */
-public class ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder extends BaseRequestBuilder {
+public class ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder extends BaseRequestBuilder<ManagedDeviceMobileAppConfigurationAssignment> {
 
     /**
      * The request builder for the ManagedDeviceMobileAppConfigurationAssignment

@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Role Definition Request Builder.
  */
-public class RoleDefinitionRequestBuilder extends BaseRequestBuilder {
+public class RoleDefinitionRequestBuilder extends BaseRequestBuilder<RoleDefinition> {
 
     /**
      * The request builder for the RoleDefinition

@@ -5,7 +5,7 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.DriveItemFollowRequest;
 import com.microsoft.graph.models.extensions.DriveItem;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
+import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 

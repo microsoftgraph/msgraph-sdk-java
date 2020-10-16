@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.OpenShiftChangeRequestCollectionResponse;
 import com.microsoft.graph.requests.extensions.OpenShiftChangeRequestCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.OpenShiftChangeRequestCollectionR
 /**
  * The class for the Open Shift Change Request Collection Request.
  */
-public class OpenShiftChangeRequestCollectionRequest extends BaseCollectionRequest<OpenShiftChangeRequest, OpenShiftChangeRequestCollectionResponse> {
+public class OpenShiftChangeRequestCollectionRequest extends BaseCollectionRequest<OpenShiftChangeRequest, OpenShiftChangeRequestCollectionResponse, OpenShiftChangeRequestCollectionPage> {
 
     /**
      * The request builder for this collection of OpenShiftChangeRequest
@@ -37,26 +36,7 @@ public class OpenShiftChangeRequestCollectionRequest extends BaseCollectionReque
      */
     @SuppressWarnings("unchecked")
     public OpenShiftChangeRequestCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OpenShiftChangeRequestCollectionResponse.class,(Class<BaseCollectionPage<OpenShiftChangeRequest>>) (new BaseCollectionPage<OpenShiftChangeRequest>(new java.util.ArrayList<OpenShiftChangeRequest>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<OpenShiftChangeRequest>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<OpenShiftChangeRequest> get() throws ClientException {
-        final OpenShiftChangeRequestCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, OpenShiftChangeRequestCollectionResponse.class, OpenShiftChangeRequestCollectionPage.class, OpenShiftChangeRequestCollectionRequestBuilder.class);
     }
 
     public void post(final OpenShiftChangeRequest newOpenShiftChangeRequest, final ICallback<? super OpenShiftChangeRequest> callback) {
@@ -148,16 +128,5 @@ public class OpenShiftChangeRequestCollectionRequest extends BaseCollectionReque
     public OpenShiftChangeRequestCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<OpenShiftChangeRequest> buildFromResponse(final OpenShiftChangeRequestCollectionResponse response) {
-        final OpenShiftChangeRequestCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new OpenShiftChangeRequestCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<OpenShiftChangeRequest> page = new BaseCollectionPage<OpenShiftChangeRequest>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

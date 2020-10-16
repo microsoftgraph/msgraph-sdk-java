@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.SecureScoreControlProfileCollectionResponse;
 import com.microsoft.graph.requests.extensions.SecureScoreControlProfileCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.SecureScoreControlProfileCollecti
 /**
  * The class for the Secure Score Control Profile Collection Request.
  */
-public class SecureScoreControlProfileCollectionRequest extends BaseCollectionRequest<SecureScoreControlProfile, SecureScoreControlProfileCollectionResponse> {
+public class SecureScoreControlProfileCollectionRequest extends BaseCollectionRequest<SecureScoreControlProfile, SecureScoreControlProfileCollectionResponse, SecureScoreControlProfileCollectionPage> {
 
     /**
      * The request builder for this collection of SecureScoreControlProfile
@@ -37,26 +36,7 @@ public class SecureScoreControlProfileCollectionRequest extends BaseCollectionRe
      */
     @SuppressWarnings("unchecked")
     public SecureScoreControlProfileCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SecureScoreControlProfileCollectionResponse.class,(Class<BaseCollectionPage<SecureScoreControlProfile>>) (new BaseCollectionPage<SecureScoreControlProfile>(new java.util.ArrayList<SecureScoreControlProfile>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<SecureScoreControlProfile>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<SecureScoreControlProfile> get() throws ClientException {
-        final SecureScoreControlProfileCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, SecureScoreControlProfileCollectionResponse.class, SecureScoreControlProfileCollectionPage.class, SecureScoreControlProfileCollectionRequestBuilder.class);
     }
 
     public void post(final SecureScoreControlProfile newSecureScoreControlProfile, final ICallback<? super SecureScoreControlProfile> callback) {
@@ -148,16 +128,5 @@ public class SecureScoreControlProfileCollectionRequest extends BaseCollectionRe
     public SecureScoreControlProfileCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<SecureScoreControlProfile> buildFromResponse(final SecureScoreControlProfileCollectionResponse response) {
-        final SecureScoreControlProfileCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new SecureScoreControlProfileCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<SecureScoreControlProfile> page = new BaseCollectionPage<SecureScoreControlProfile>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

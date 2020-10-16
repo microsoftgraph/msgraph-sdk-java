@@ -19,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Calendar Sharing Message Request Builder.
  */
-public class CalendarSharingMessageRequestBuilder extends BaseRequestBuilder {
+public class CalendarSharingMessageRequestBuilder extends BaseRequestBuilder<CalendarSharingMessage> {
 
     /**
      * The request builder for the CalendarSharingMessage

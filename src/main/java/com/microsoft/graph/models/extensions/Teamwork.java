@@ -10,6 +10,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.WorkforceIntegration;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.WorkforceIntegrationCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -30,7 +31,7 @@ public class Teamwork extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "workforceIntegrations", alternate = {"WorkforceIntegrations"})
     @Expose
-    public BaseCollectionPage<WorkforceIntegration> workforceIntegrations;
+    public WorkforceIntegrationCollectionPage workforceIntegrations;
 
 
     /**
@@ -74,7 +75,7 @@ public class Teamwork extends Entity implements IJsonBackedObject {
 
 
         if (json.has("workforceIntegrations")) {
-            workforceIntegrations = serializer.deserializeObject(json.get("workforceIntegrations").toString(), new BaseCollectionPage<WorkforceIntegration>(new java.util.ArrayList<WorkforceIntegration>(), null).getClass());
+            workforceIntegrations = serializer.deserializeObject(json.get("workforceIntegrations").toString(), WorkforceIntegrationCollectionPage.class);
         }
     }
 }

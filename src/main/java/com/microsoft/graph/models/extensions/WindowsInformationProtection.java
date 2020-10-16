@@ -17,6 +17,8 @@ import com.microsoft.graph.models.extensions.WindowsInformationProtectionApp;
 import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionAppLockerFile;
 import com.microsoft.graph.models.extensions.ManagedAppPolicy;
+import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentCollectionPage;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -213,7 +215,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements IJ
      */
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
-    public BaseCollectionPage<TargetedManagedAppPolicyAssignment> assignments;
+    public TargetedManagedAppPolicyAssignmentCollectionPage assignments;
 
     /**
      * The Exempt App Locker Files.
@@ -221,7 +223,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements IJ
      */
     @SerializedName(value = "exemptAppLockerFiles", alternate = {"ExemptAppLockerFiles"})
     @Expose
-    public BaseCollectionPage<WindowsInformationProtectionAppLockerFile> exemptAppLockerFiles;
+    public WindowsInformationProtectionAppLockerFileCollectionPage exemptAppLockerFiles;
 
     /**
      * The Protected App Locker Files.
@@ -229,7 +231,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements IJ
      */
     @SerializedName(value = "protectedAppLockerFiles", alternate = {"ProtectedAppLockerFiles"})
     @Expose
-    public BaseCollectionPage<WindowsInformationProtectionAppLockerFile> protectedAppLockerFiles;
+    public WindowsInformationProtectionAppLockerFileCollectionPage protectedAppLockerFiles;
 
 
     /**
@@ -273,15 +275,15 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements IJ
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments").toString(), new BaseCollectionPage<TargetedManagedAppPolicyAssignment>(new java.util.ArrayList<TargetedManagedAppPolicyAssignment>(), null).getClass());
+            assignments = serializer.deserializeObject(json.get("assignments").toString(), TargetedManagedAppPolicyAssignmentCollectionPage.class);
         }
 
         if (json.has("exemptAppLockerFiles")) {
-            exemptAppLockerFiles = serializer.deserializeObject(json.get("exemptAppLockerFiles").toString(), new BaseCollectionPage<WindowsInformationProtectionAppLockerFile>(new java.util.ArrayList<WindowsInformationProtectionAppLockerFile>(), null).getClass());
+            exemptAppLockerFiles = serializer.deserializeObject(json.get("exemptAppLockerFiles").toString(), WindowsInformationProtectionAppLockerFileCollectionPage.class);
         }
 
         if (json.has("protectedAppLockerFiles")) {
-            protectedAppLockerFiles = serializer.deserializeObject(json.get("protectedAppLockerFiles").toString(), new BaseCollectionPage<WindowsInformationProtectionAppLockerFile>(new java.util.ArrayList<WindowsInformationProtectionAppLockerFile>(), null).getClass());
+            protectedAppLockerFiles = serializer.deserializeObject(json.get("protectedAppLockerFiles").toString(), WindowsInformationProtectionAppLockerFileCollectionPage.class);
         }
     }
 }

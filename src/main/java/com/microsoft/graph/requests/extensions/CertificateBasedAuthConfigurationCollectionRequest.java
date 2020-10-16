@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionResponse;
 import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionRequestBuilder;
@@ -25,7 +24,7 @@ import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfiguration
 /**
  * The class for the Certificate Based Auth Configuration Collection Request.
  */
-public class CertificateBasedAuthConfigurationCollectionRequest extends BaseCollectionRequest<CertificateBasedAuthConfiguration, CertificateBasedAuthConfigurationCollectionResponse> {
+public class CertificateBasedAuthConfigurationCollectionRequest extends BaseCollectionRequest<CertificateBasedAuthConfiguration, CertificateBasedAuthConfigurationCollectionResponse, CertificateBasedAuthConfigurationCollectionPage> {
 
     /**
      * The request builder for this collection of CertificateBasedAuthConfiguration
@@ -36,26 +35,7 @@ public class CertificateBasedAuthConfigurationCollectionRequest extends BaseColl
      */
     @SuppressWarnings("unchecked")
     public CertificateBasedAuthConfigurationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, CertificateBasedAuthConfigurationCollectionResponse.class,(Class<BaseCollectionPage<CertificateBasedAuthConfiguration>>) (new BaseCollectionPage<CertificateBasedAuthConfiguration>(new java.util.ArrayList<CertificateBasedAuthConfiguration>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<CertificateBasedAuthConfiguration>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<CertificateBasedAuthConfiguration> get() throws ClientException {
-        final CertificateBasedAuthConfigurationCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, CertificateBasedAuthConfigurationCollectionResponse.class, CertificateBasedAuthConfigurationCollectionPage.class, CertificateBasedAuthConfigurationCollectionRequestBuilder.class);
     }
 
     public void post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, final ICallback<? super CertificateBasedAuthConfiguration> callback) {
@@ -147,16 +127,5 @@ public class CertificateBasedAuthConfigurationCollectionRequest extends BaseColl
     public CertificateBasedAuthConfigurationCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<CertificateBasedAuthConfiguration> buildFromResponse(final CertificateBasedAuthConfigurationCollectionResponse response) {
-        final CertificateBasedAuthConfigurationCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new CertificateBasedAuthConfigurationCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<CertificateBasedAuthConfiguration> page = new BaseCollectionPage<CertificateBasedAuthConfiguration>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

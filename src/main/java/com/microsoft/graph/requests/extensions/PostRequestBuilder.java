@@ -28,7 +28,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Post Request Builder.
  */
-public class PostRequestBuilder extends BaseRequestBuilder {
+public class PostRequestBuilder extends BaseRequestBuilder<Post> {
 
     /**
      * The request builder for the Post

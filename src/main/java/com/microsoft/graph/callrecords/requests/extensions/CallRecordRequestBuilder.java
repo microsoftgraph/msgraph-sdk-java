@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Call Record Request Builder.
  */
-public class CallRecordRequestBuilder extends BaseRequestBuilder {
+public class CallRecordRequestBuilder extends BaseRequestBuilder<CallRecord> {
 
     /**
      * The request builder for the CallRecord

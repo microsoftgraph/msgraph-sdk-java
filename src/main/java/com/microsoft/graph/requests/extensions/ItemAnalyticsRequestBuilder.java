@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Item Analytics Request Builder.
  */
-public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder {
+public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder<ItemAnalytics> {
 
     /**
      * The request builder for the ItemAnalytics

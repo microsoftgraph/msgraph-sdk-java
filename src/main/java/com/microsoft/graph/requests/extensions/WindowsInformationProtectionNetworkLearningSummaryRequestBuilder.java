@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows Information Protection Network Learning Summary Request Builder.
  */
-public class WindowsInformationProtectionNetworkLearningSummaryRequestBuilder extends BaseRequestBuilder {
+public class WindowsInformationProtectionNetworkLearningSummaryRequestBuilder extends BaseRequestBuilder<WindowsInformationProtectionNetworkLearningSummary> {
 
     /**
      * The request builder for the WindowsInformationProtectionNetworkLearningSummary

@@ -46,7 +46,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device App Management Request Builder.
  */
-public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
+public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<DeviceAppManagement> {
 
     /**
      * The request builder for the DeviceAppManagement

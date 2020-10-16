@@ -13,6 +13,7 @@ import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.callrecords.models.generated.CallType;
 import com.microsoft.graph.callrecords.models.extensions.Session;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.callrecords.requests.extensions.SessionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -105,7 +106,7 @@ public class CallRecord extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "sessions", alternate = {"Sessions"})
     @Expose
-    public BaseCollectionPage<Session> sessions;
+    public SessionCollectionPage sessions;
 
 
     /**
@@ -149,7 +150,7 @@ public class CallRecord extends Entity implements IJsonBackedObject {
 
 
         if (json.has("sessions")) {
-            sessions = serializer.deserializeObject(json.get("sessions").toString(), new BaseCollectionPage<Session>(new java.util.ArrayList<Session>(), null).getClass());
+            sessions = serializer.deserializeObject(json.get("sessions").toString(), SessionCollectionPage.class);
         }
     }
 }

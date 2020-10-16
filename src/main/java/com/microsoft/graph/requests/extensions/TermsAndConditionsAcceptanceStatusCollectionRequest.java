@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusCollectionResponse;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatu
 /**
  * The class for the Terms And Conditions Acceptance Status Collection Request.
  */
-public class TermsAndConditionsAcceptanceStatusCollectionRequest extends BaseCollectionRequest<TermsAndConditionsAcceptanceStatus, TermsAndConditionsAcceptanceStatusCollectionResponse> {
+public class TermsAndConditionsAcceptanceStatusCollectionRequest extends BaseCollectionRequest<TermsAndConditionsAcceptanceStatus, TermsAndConditionsAcceptanceStatusCollectionResponse, TermsAndConditionsAcceptanceStatusCollectionPage> {
 
     /**
      * The request builder for this collection of TermsAndConditionsAcceptanceStatus
@@ -37,26 +36,7 @@ public class TermsAndConditionsAcceptanceStatusCollectionRequest extends BaseCol
      */
     @SuppressWarnings("unchecked")
     public TermsAndConditionsAcceptanceStatusCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TermsAndConditionsAcceptanceStatusCollectionResponse.class,(Class<BaseCollectionPage<TermsAndConditionsAcceptanceStatus>>) (new BaseCollectionPage<TermsAndConditionsAcceptanceStatus>(new java.util.ArrayList<TermsAndConditionsAcceptanceStatus>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<TermsAndConditionsAcceptanceStatus>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<TermsAndConditionsAcceptanceStatus> get() throws ClientException {
-        final TermsAndConditionsAcceptanceStatusCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, TermsAndConditionsAcceptanceStatusCollectionResponse.class, TermsAndConditionsAcceptanceStatusCollectionPage.class, TermsAndConditionsAcceptanceStatusCollectionRequestBuilder.class);
     }
 
     public void post(final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus, final ICallback<? super TermsAndConditionsAcceptanceStatus> callback) {
@@ -148,16 +128,5 @@ public class TermsAndConditionsAcceptanceStatusCollectionRequest extends BaseCol
     public TermsAndConditionsAcceptanceStatusCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<TermsAndConditionsAcceptanceStatus> buildFromResponse(final TermsAndConditionsAcceptanceStatusCollectionResponse response) {
-        final TermsAndConditionsAcceptanceStatusCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new TermsAndConditionsAcceptanceStatusCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<TermsAndConditionsAcceptanceStatus> page = new BaseCollectionPage<TermsAndConditionsAcceptanceStatus>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

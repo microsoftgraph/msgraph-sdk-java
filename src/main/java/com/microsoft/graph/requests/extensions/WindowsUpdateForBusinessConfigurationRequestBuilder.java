@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows Update For Business Configuration Request Builder.
  */
-public class WindowsUpdateForBusinessConfigurationRequestBuilder extends BaseRequestBuilder {
+public class WindowsUpdateForBusinessConfigurationRequestBuilder extends BaseRequestBuilder<WindowsUpdateForBusinessConfiguration> {
 
     /**
      * The request builder for the WindowsUpdateForBusinessConfiguration

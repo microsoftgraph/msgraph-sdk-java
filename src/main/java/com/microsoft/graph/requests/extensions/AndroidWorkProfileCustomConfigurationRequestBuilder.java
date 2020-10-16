@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Android Work Profile Custom Configuration Request Builder.
  */
-public class AndroidWorkProfileCustomConfigurationRequestBuilder extends BaseRequestBuilder {
+public class AndroidWorkProfileCustomConfigurationRequestBuilder extends BaseRequestBuilder<AndroidWorkProfileCustomConfiguration> {
 
     /**
      * The request builder for the AndroidWorkProfileCustomConfiguration

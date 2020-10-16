@@ -21,7 +21,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DriveItemCollectionResponse;
 import com.microsoft.graph.requests.extensions.DriveItemCollectionRequestBuilder;
@@ -32,7 +31,7 @@ import com.microsoft.graph.requests.extensions.DriveItemCollectionRequest;
 /**
  * The class for the Drive Item Collection Request.
  */
-public class DriveItemCollectionRequest extends BaseCollectionRequest<DriveItem, DriveItemCollectionResponse> {
+public class DriveItemCollectionRequest extends BaseCollectionRequest<DriveItem, DriveItemCollectionResponse, DriveItemCollectionPage> {
 
     /**
      * The request builder for this collection of DriveItem
@@ -43,26 +42,7 @@ public class DriveItemCollectionRequest extends BaseCollectionRequest<DriveItem,
      */
     @SuppressWarnings("unchecked")
     public DriveItemCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DriveItemCollectionResponse.class,(Class<BaseCollectionPage<DriveItem>>) (new BaseCollectionPage<DriveItem>(new java.util.ArrayList<DriveItem>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<DriveItem>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<DriveItem> get() throws ClientException {
-        final DriveItemCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, DriveItemCollectionResponse.class, DriveItemCollectionPage.class, DriveItemCollectionRequestBuilder.class);
     }
 
     public void post(final DriveItem newDriveItem, final ICallback<? super DriveItem> callback) {
@@ -154,16 +134,5 @@ public class DriveItemCollectionRequest extends BaseCollectionRequest<DriveItem,
     public DriveItemCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<DriveItem> buildFromResponse(final DriveItemCollectionResponse response) {
-        final DriveItemCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DriveItemCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<DriveItem> page = new BaseCollectionPage<DriveItem>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

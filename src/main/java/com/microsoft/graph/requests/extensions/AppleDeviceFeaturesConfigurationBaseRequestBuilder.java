@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Apple Device Features Configuration Base Request Builder.
  */
-public class AppleDeviceFeaturesConfigurationBaseRequestBuilder extends BaseRequestBuilder {
+public class AppleDeviceFeaturesConfigurationBaseRequestBuilder extends BaseRequestBuilder<AppleDeviceFeaturesConfigurationBase> {
 
     /**
      * The request builder for the AppleDeviceFeaturesConfigurationBase

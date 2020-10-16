@@ -11,6 +11,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.generated.NotificationTemplateBrandingOptions;
 import com.microsoft.graph.models.extensions.LocalizedNotificationMessage;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.LocalizedNotificationMessageCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -63,7 +64,7 @@ public class NotificationMessageTemplate extends Entity implements IJsonBackedOb
      */
     @SerializedName(value = "localizedNotificationMessages", alternate = {"LocalizedNotificationMessages"})
     @Expose
-    public BaseCollectionPage<LocalizedNotificationMessage> localizedNotificationMessages;
+    public LocalizedNotificationMessageCollectionPage localizedNotificationMessages;
 
 
     /**
@@ -107,7 +108,7 @@ public class NotificationMessageTemplate extends Entity implements IJsonBackedOb
 
 
         if (json.has("localizedNotificationMessages")) {
-            localizedNotificationMessages = serializer.deserializeObject(json.get("localizedNotificationMessages").toString(), new BaseCollectionPage<LocalizedNotificationMessage>(new java.util.ArrayList<LocalizedNotificationMessage>(), null).getClass());
+            localizedNotificationMessages = serializer.deserializeObject(json.get("localizedNotificationMessages").toString(), LocalizedNotificationMessageCollectionPage.class);
         }
     }
 }

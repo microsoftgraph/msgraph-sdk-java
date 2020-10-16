@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Win32Lob App Request Builder.
  */
-public class Win32LobAppRequestBuilder extends BaseRequestBuilder {
+public class Win32LobAppRequestBuilder extends BaseRequestBuilder<Win32LobApp> {
 
     /**
      * The request builder for the Win32LobApp

@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WorkbookRangeViewCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookRangeViewCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.WorkbookRangeViewCollectionReques
 /**
  * The class for the Workbook Range View Collection Request.
  */
-public class WorkbookRangeViewCollectionRequest extends BaseCollectionRequest<WorkbookRangeView, WorkbookRangeViewCollectionResponse> {
+public class WorkbookRangeViewCollectionRequest extends BaseCollectionRequest<WorkbookRangeView, WorkbookRangeViewCollectionResponse, WorkbookRangeViewCollectionPage> {
 
     /**
      * The request builder for this collection of WorkbookRangeView
@@ -37,26 +36,7 @@ public class WorkbookRangeViewCollectionRequest extends BaseCollectionRequest<Wo
      */
     @SuppressWarnings("unchecked")
     public WorkbookRangeViewCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WorkbookRangeViewCollectionResponse.class,(Class<BaseCollectionPage<WorkbookRangeView>>) (new BaseCollectionPage<WorkbookRangeView>(new java.util.ArrayList<WorkbookRangeView>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<WorkbookRangeView>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<WorkbookRangeView> get() throws ClientException {
-        final WorkbookRangeViewCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, WorkbookRangeViewCollectionResponse.class, WorkbookRangeViewCollectionPage.class, WorkbookRangeViewCollectionRequestBuilder.class);
     }
 
     public void post(final WorkbookRangeView newWorkbookRangeView, final ICallback<? super WorkbookRangeView> callback) {
@@ -148,16 +128,5 @@ public class WorkbookRangeViewCollectionRequest extends BaseCollectionRequest<Wo
     public WorkbookRangeViewCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<WorkbookRangeView> buildFromResponse(final WorkbookRangeViewCollectionResponse response) {
-        final WorkbookRangeViewCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new WorkbookRangeViewCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<WorkbookRangeView> page = new BaseCollectionPage<WorkbookRangeView>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

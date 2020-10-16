@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Conversation Thread Request Builder.
  */
-public class ConversationThreadRequestBuilder extends BaseRequestBuilder {
+public class ConversationThreadRequestBuilder extends BaseRequestBuilder<ConversationThread> {
 
     /**
      * The request builder for the ConversationThread

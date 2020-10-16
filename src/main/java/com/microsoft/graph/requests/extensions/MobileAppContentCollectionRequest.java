@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.MobileAppContentCollectionResponse;
 import com.microsoft.graph.requests.extensions.MobileAppContentCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.MobileAppContentCollectionRequest
 /**
  * The class for the Mobile App Content Collection Request.
  */
-public class MobileAppContentCollectionRequest extends BaseCollectionRequest<MobileAppContent, MobileAppContentCollectionResponse> {
+public class MobileAppContentCollectionRequest extends BaseCollectionRequest<MobileAppContent, MobileAppContentCollectionResponse, MobileAppContentCollectionPage> {
 
     /**
      * The request builder for this collection of MobileAppContent
@@ -37,26 +36,7 @@ public class MobileAppContentCollectionRequest extends BaseCollectionRequest<Mob
      */
     @SuppressWarnings("unchecked")
     public MobileAppContentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MobileAppContentCollectionResponse.class,(Class<BaseCollectionPage<MobileAppContent>>) (new BaseCollectionPage<MobileAppContent>(new java.util.ArrayList<MobileAppContent>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<MobileAppContent>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<MobileAppContent> get() throws ClientException {
-        final MobileAppContentCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, MobileAppContentCollectionResponse.class, MobileAppContentCollectionPage.class, MobileAppContentCollectionRequestBuilder.class);
     }
 
     public void post(final MobileAppContent newMobileAppContent, final ICallback<? super MobileAppContent> callback) {
@@ -148,16 +128,5 @@ public class MobileAppContentCollectionRequest extends BaseCollectionRequest<Mob
     public MobileAppContentCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<MobileAppContent> buildFromResponse(final MobileAppContentCollectionResponse response) {
-        final MobileAppContentCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new MobileAppContentCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<MobileAppContent> page = new BaseCollectionPage<MobileAppContent>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

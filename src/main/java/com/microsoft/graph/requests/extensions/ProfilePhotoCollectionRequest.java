@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ProfilePhotoCollectionResponse;
 import com.microsoft.graph.requests.extensions.ProfilePhotoCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.ProfilePhotoCollectionRequest;
 /**
  * The class for the Profile Photo Collection Request.
  */
-public class ProfilePhotoCollectionRequest extends BaseCollectionRequest<ProfilePhoto, ProfilePhotoCollectionResponse> {
+public class ProfilePhotoCollectionRequest extends BaseCollectionRequest<ProfilePhoto, ProfilePhotoCollectionResponse, ProfilePhotoCollectionPage> {
 
     /**
      * The request builder for this collection of ProfilePhoto
@@ -37,26 +36,7 @@ public class ProfilePhotoCollectionRequest extends BaseCollectionRequest<Profile
      */
     @SuppressWarnings("unchecked")
     public ProfilePhotoCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ProfilePhotoCollectionResponse.class,(Class<BaseCollectionPage<ProfilePhoto>>) (new BaseCollectionPage<ProfilePhoto>(new java.util.ArrayList<ProfilePhoto>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<ProfilePhoto>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<ProfilePhoto> get() throws ClientException {
-        final ProfilePhotoCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, ProfilePhotoCollectionResponse.class, ProfilePhotoCollectionPage.class, ProfilePhotoCollectionRequestBuilder.class);
     }
 
     public void post(final ProfilePhoto newProfilePhoto, final ICallback<? super ProfilePhoto> callback) {
@@ -148,16 +128,5 @@ public class ProfilePhotoCollectionRequest extends BaseCollectionRequest<Profile
     public ProfilePhotoCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<ProfilePhoto> buildFromResponse(final ProfilePhotoCollectionResponse response) {
-        final ProfilePhotoCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new ProfilePhotoCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<ProfilePhoto> page = new BaseCollectionPage<ProfilePhoto>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DriveItemVersionCollectionResponse;
 import com.microsoft.graph.requests.extensions.DriveItemVersionCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.DriveItemVersionCollectionRequest
 /**
  * The class for the Drive Item Version Collection Request.
  */
-public class DriveItemVersionCollectionRequest extends BaseCollectionRequest<DriveItemVersion, DriveItemVersionCollectionResponse> {
+public class DriveItemVersionCollectionRequest extends BaseCollectionRequest<DriveItemVersion, DriveItemVersionCollectionResponse, DriveItemVersionCollectionPage> {
 
     /**
      * The request builder for this collection of DriveItemVersion
@@ -37,26 +36,7 @@ public class DriveItemVersionCollectionRequest extends BaseCollectionRequest<Dri
      */
     @SuppressWarnings("unchecked")
     public DriveItemVersionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DriveItemVersionCollectionResponse.class,(Class<BaseCollectionPage<DriveItemVersion>>) (new BaseCollectionPage<DriveItemVersion>(new java.util.ArrayList<DriveItemVersion>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<DriveItemVersion>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<DriveItemVersion> get() throws ClientException {
-        final DriveItemVersionCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, DriveItemVersionCollectionResponse.class, DriveItemVersionCollectionPage.class, DriveItemVersionCollectionRequestBuilder.class);
     }
 
     public void post(final DriveItemVersion newDriveItemVersion, final ICallback<? super DriveItemVersion> callback) {
@@ -148,16 +128,5 @@ public class DriveItemVersionCollectionRequest extends BaseCollectionRequest<Dri
     public DriveItemVersionCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<DriveItemVersion> buildFromResponse(final DriveItemVersionCollectionResponse response) {
-        final DriveItemVersionCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DriveItemVersionCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<DriveItemVersion> page = new BaseCollectionPage<DriveItemVersion>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

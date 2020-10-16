@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows Phone81Custom Configuration Request Builder.
  */
-public class WindowsPhone81CustomConfigurationRequestBuilder extends BaseRequestBuilder {
+public class WindowsPhone81CustomConfigurationRequestBuilder extends BaseRequestBuilder<WindowsPhone81CustomConfiguration> {
 
     /**
      * The request builder for the WindowsPhone81CustomConfiguration

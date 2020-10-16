@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device And App Management Role Definition Request Builder.
  */
-public class DeviceAndAppManagementRoleDefinitionRequestBuilder extends BaseRequestBuilder {
+public class DeviceAndAppManagementRoleDefinitionRequestBuilder extends BaseRequestBuilder<DeviceAndAppManagementRoleDefinition> {
 
     /**
      * The request builder for the DeviceAndAppManagementRoleDefinition

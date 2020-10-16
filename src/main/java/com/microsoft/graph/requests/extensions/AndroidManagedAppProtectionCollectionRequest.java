@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.AndroidManagedAppProtectionCollectionResponse;
 import com.microsoft.graph.requests.extensions.AndroidManagedAppProtectionCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.AndroidManagedAppProtectionCollec
 /**
  * The class for the Android Managed App Protection Collection Request.
  */
-public class AndroidManagedAppProtectionCollectionRequest extends BaseCollectionRequest<AndroidManagedAppProtection, AndroidManagedAppProtectionCollectionResponse> {
+public class AndroidManagedAppProtectionCollectionRequest extends BaseCollectionRequest<AndroidManagedAppProtection, AndroidManagedAppProtectionCollectionResponse, AndroidManagedAppProtectionCollectionPage> {
 
     /**
      * The request builder for this collection of AndroidManagedAppProtection
@@ -37,26 +36,7 @@ public class AndroidManagedAppProtectionCollectionRequest extends BaseCollection
      */
     @SuppressWarnings("unchecked")
     public AndroidManagedAppProtectionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, AndroidManagedAppProtectionCollectionResponse.class,(Class<BaseCollectionPage<AndroidManagedAppProtection>>) (new BaseCollectionPage<AndroidManagedAppProtection>(new java.util.ArrayList<AndroidManagedAppProtection>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<AndroidManagedAppProtection>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<AndroidManagedAppProtection> get() throws ClientException {
-        final AndroidManagedAppProtectionCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, AndroidManagedAppProtectionCollectionResponse.class, AndroidManagedAppProtectionCollectionPage.class, AndroidManagedAppProtectionCollectionRequestBuilder.class);
     }
 
     public void post(final AndroidManagedAppProtection newAndroidManagedAppProtection, final ICallback<? super AndroidManagedAppProtection> callback) {
@@ -148,16 +128,5 @@ public class AndroidManagedAppProtectionCollectionRequest extends BaseCollection
     public AndroidManagedAppProtectionCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<AndroidManagedAppProtection> buildFromResponse(final AndroidManagedAppProtectionCollectionResponse response) {
-        final AndroidManagedAppProtectionCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new AndroidManagedAppProtectionCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<AndroidManagedAppProtection> page = new BaseCollectionPage<AndroidManagedAppProtection>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

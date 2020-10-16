@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TeamsAppDefinitionCollectionResponse;
 import com.microsoft.graph.requests.extensions.TeamsAppDefinitionCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.TeamsAppDefinitionCollectionReque
 /**
  * The class for the Teams App Definition Collection Request.
  */
-public class TeamsAppDefinitionCollectionRequest extends BaseCollectionRequest<TeamsAppDefinition, TeamsAppDefinitionCollectionResponse> {
+public class TeamsAppDefinitionCollectionRequest extends BaseCollectionRequest<TeamsAppDefinition, TeamsAppDefinitionCollectionResponse, TeamsAppDefinitionCollectionPage> {
 
     /**
      * The request builder for this collection of TeamsAppDefinition
@@ -37,26 +36,7 @@ public class TeamsAppDefinitionCollectionRequest extends BaseCollectionRequest<T
      */
     @SuppressWarnings("unchecked")
     public TeamsAppDefinitionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TeamsAppDefinitionCollectionResponse.class,(Class<BaseCollectionPage<TeamsAppDefinition>>) (new BaseCollectionPage<TeamsAppDefinition>(new java.util.ArrayList<TeamsAppDefinition>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<TeamsAppDefinition>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<TeamsAppDefinition> get() throws ClientException {
-        final TeamsAppDefinitionCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, TeamsAppDefinitionCollectionResponse.class, TeamsAppDefinitionCollectionPage.class, TeamsAppDefinitionCollectionRequestBuilder.class);
     }
 
     public void post(final TeamsAppDefinition newTeamsAppDefinition, final ICallback<? super TeamsAppDefinition> callback) {
@@ -148,16 +128,5 @@ public class TeamsAppDefinitionCollectionRequest extends BaseCollectionRequest<T
     public TeamsAppDefinitionCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<TeamsAppDefinition> buildFromResponse(final TeamsAppDefinitionCollectionResponse response) {
-        final TeamsAppDefinitionCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new TeamsAppDefinitionCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<TeamsAppDefinition> page = new BaseCollectionPage<TeamsAppDefinition>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

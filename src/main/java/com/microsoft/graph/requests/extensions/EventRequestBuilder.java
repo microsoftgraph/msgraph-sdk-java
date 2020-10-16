@@ -31,7 +31,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Event Request Builder.
  */
-public class EventRequestBuilder extends BaseRequestBuilder {
+public class EventRequestBuilder extends BaseRequestBuilder<Event> {
 
     /**
      * The request builder for the Event

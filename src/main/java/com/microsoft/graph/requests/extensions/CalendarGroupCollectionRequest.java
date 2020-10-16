@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.CalendarGroupCollectionResponse;
 import com.microsoft.graph.requests.extensions.CalendarGroupCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.CalendarGroupCollectionRequest;
 /**
  * The class for the Calendar Group Collection Request.
  */
-public class CalendarGroupCollectionRequest extends BaseCollectionRequest<CalendarGroup, CalendarGroupCollectionResponse> {
+public class CalendarGroupCollectionRequest extends BaseCollectionRequest<CalendarGroup, CalendarGroupCollectionResponse, CalendarGroupCollectionPage> {
 
     /**
      * The request builder for this collection of CalendarGroup
@@ -37,26 +36,7 @@ public class CalendarGroupCollectionRequest extends BaseCollectionRequest<Calend
      */
     @SuppressWarnings("unchecked")
     public CalendarGroupCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, CalendarGroupCollectionResponse.class,(Class<BaseCollectionPage<CalendarGroup>>) (new BaseCollectionPage<CalendarGroup>(new java.util.ArrayList<CalendarGroup>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<CalendarGroup>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<CalendarGroup> get() throws ClientException {
-        final CalendarGroupCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, CalendarGroupCollectionResponse.class, CalendarGroupCollectionPage.class, CalendarGroupCollectionRequestBuilder.class);
     }
 
     public void post(final CalendarGroup newCalendarGroup, final ICallback<? super CalendarGroup> callback) {
@@ -148,16 +128,5 @@ public class CalendarGroupCollectionRequest extends BaseCollectionRequest<Calend
     public CalendarGroupCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<CalendarGroup> buildFromResponse(final CalendarGroupCollectionResponse response) {
-        final CalendarGroupCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new CalendarGroupCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<CalendarGroup> page = new BaseCollectionPage<CalendarGroup>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Targeted Managed App Protection Request Builder.
  */
-public class TargetedManagedAppProtectionRequestBuilder extends BaseRequestBuilder {
+public class TargetedManagedAppProtectionRequestBuilder extends BaseRequestBuilder<TargetedManagedAppProtection> {
 
     /**
      * The request builder for the TargetedManagedAppProtection

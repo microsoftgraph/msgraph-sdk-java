@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Terms And Conditions Request Builder.
  */
-public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder {
+public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder<TermsAndConditions> {
 
     /**
      * The request builder for the TermsAndConditions

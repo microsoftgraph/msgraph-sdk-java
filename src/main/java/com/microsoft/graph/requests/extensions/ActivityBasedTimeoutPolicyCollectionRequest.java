@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ActivityBasedTimeoutPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.ActivityBasedTimeoutPolicyCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.ActivityBasedTimeoutPolicyCollect
 /**
  * The class for the Activity Based Timeout Policy Collection Request.
  */
-public class ActivityBasedTimeoutPolicyCollectionRequest extends BaseCollectionRequest<ActivityBasedTimeoutPolicy, ActivityBasedTimeoutPolicyCollectionResponse> {
+public class ActivityBasedTimeoutPolicyCollectionRequest extends BaseCollectionRequest<ActivityBasedTimeoutPolicy, ActivityBasedTimeoutPolicyCollectionResponse, ActivityBasedTimeoutPolicyCollectionPage> {
 
     /**
      * The request builder for this collection of ActivityBasedTimeoutPolicy
@@ -37,26 +36,7 @@ public class ActivityBasedTimeoutPolicyCollectionRequest extends BaseCollectionR
      */
     @SuppressWarnings("unchecked")
     public ActivityBasedTimeoutPolicyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ActivityBasedTimeoutPolicyCollectionResponse.class,(Class<BaseCollectionPage<ActivityBasedTimeoutPolicy>>) (new BaseCollectionPage<ActivityBasedTimeoutPolicy>(new java.util.ArrayList<ActivityBasedTimeoutPolicy>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<ActivityBasedTimeoutPolicy>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<ActivityBasedTimeoutPolicy> get() throws ClientException {
-        final ActivityBasedTimeoutPolicyCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, ActivityBasedTimeoutPolicyCollectionResponse.class, ActivityBasedTimeoutPolicyCollectionPage.class, ActivityBasedTimeoutPolicyCollectionRequestBuilder.class);
     }
 
     public void post(final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy, final ICallback<? super ActivityBasedTimeoutPolicy> callback) {
@@ -148,16 +128,5 @@ public class ActivityBasedTimeoutPolicyCollectionRequest extends BaseCollectionR
     public ActivityBasedTimeoutPolicyCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<ActivityBasedTimeoutPolicy> buildFromResponse(final ActivityBasedTimeoutPolicyCollectionResponse response) {
-        final ActivityBasedTimeoutPolicyCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new ActivityBasedTimeoutPolicyCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<ActivityBasedTimeoutPolicy> page = new BaseCollectionPage<ActivityBasedTimeoutPolicy>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

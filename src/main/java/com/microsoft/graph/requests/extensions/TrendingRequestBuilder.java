@@ -19,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Trending Request Builder.
  */
-public class TrendingRequestBuilder extends BaseRequestBuilder {
+public class TrendingRequestBuilder extends BaseRequestBuilder<Trending> {
 
     /**
      * The request builder for the Trending

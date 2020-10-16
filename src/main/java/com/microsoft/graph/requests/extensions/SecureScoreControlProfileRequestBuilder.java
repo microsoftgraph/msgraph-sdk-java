@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Secure Score Control Profile Request Builder.
  */
-public class SecureScoreControlProfileRequestBuilder extends BaseRequestBuilder {
+public class SecureScoreControlProfileRequestBuilder extends BaseRequestBuilder<SecureScoreControlProfile> {
 
     /**
      * The request builder for the SecureScoreControlProfile

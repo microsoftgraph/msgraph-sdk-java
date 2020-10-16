@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TeamsTemplateCollectionResponse;
 import com.microsoft.graph.requests.extensions.TeamsTemplateCollectionRequestBuilder;
@@ -25,7 +24,7 @@ import com.microsoft.graph.requests.extensions.TeamsTemplateCollectionRequest;
 /**
  * The class for the Teams Template Collection Request.
  */
-public class TeamsTemplateCollectionRequest extends BaseCollectionRequest<TeamsTemplate, TeamsTemplateCollectionResponse> {
+public class TeamsTemplateCollectionRequest extends BaseCollectionRequest<TeamsTemplate, TeamsTemplateCollectionResponse, TeamsTemplateCollectionPage> {
 
     /**
      * The request builder for this collection of TeamsTemplate
@@ -36,26 +35,7 @@ public class TeamsTemplateCollectionRequest extends BaseCollectionRequest<TeamsT
      */
     @SuppressWarnings("unchecked")
     public TeamsTemplateCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TeamsTemplateCollectionResponse.class,(Class<BaseCollectionPage<TeamsTemplate>>) (new BaseCollectionPage<TeamsTemplate>(new java.util.ArrayList<TeamsTemplate>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<TeamsTemplate>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<TeamsTemplate> get() throws ClientException {
-        final TeamsTemplateCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, TeamsTemplateCollectionResponse.class, TeamsTemplateCollectionPage.class, TeamsTemplateCollectionRequestBuilder.class);
     }
 
     public void post(final TeamsTemplate newTeamsTemplate, final ICallback<? super TeamsTemplate> callback) {
@@ -147,16 +127,5 @@ public class TeamsTemplateCollectionRequest extends BaseCollectionRequest<TeamsT
     public TeamsTemplateCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<TeamsTemplate> buildFromResponse(final TeamsTemplateCollectionResponse response) {
-        final TeamsTemplateCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new TeamsTemplateCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<TeamsTemplate> page = new BaseCollectionPage<TeamsTemplate>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

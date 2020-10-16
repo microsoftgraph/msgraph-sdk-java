@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ThumbnailSetCollectionResponse;
 import com.microsoft.graph.requests.extensions.ThumbnailSetCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.ThumbnailSetCollectionRequest;
 /**
  * The class for the Thumbnail Set Collection Request.
  */
-public class ThumbnailSetCollectionRequest extends BaseCollectionRequest<ThumbnailSet, ThumbnailSetCollectionResponse> {
+public class ThumbnailSetCollectionRequest extends BaseCollectionRequest<ThumbnailSet, ThumbnailSetCollectionResponse, ThumbnailSetCollectionPage> {
 
     /**
      * The request builder for this collection of ThumbnailSet
@@ -37,26 +36,7 @@ public class ThumbnailSetCollectionRequest extends BaseCollectionRequest<Thumbna
      */
     @SuppressWarnings("unchecked")
     public ThumbnailSetCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ThumbnailSetCollectionResponse.class,(Class<BaseCollectionPage<ThumbnailSet>>) (new BaseCollectionPage<ThumbnailSet>(new java.util.ArrayList<ThumbnailSet>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<ThumbnailSet>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<ThumbnailSet> get() throws ClientException {
-        final ThumbnailSetCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, ThumbnailSetCollectionResponse.class, ThumbnailSetCollectionPage.class, ThumbnailSetCollectionRequestBuilder.class);
     }
 
     public void post(final ThumbnailSet newThumbnailSet, final ICallback<? super ThumbnailSet> callback) {
@@ -148,16 +128,5 @@ public class ThumbnailSetCollectionRequest extends BaseCollectionRequest<Thumbna
     public ThumbnailSetCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<ThumbnailSet> buildFromResponse(final ThumbnailSetCollectionResponse response) {
-        final ThumbnailSetCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new ThumbnailSetCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<ThumbnailSet> page = new BaseCollectionPage<ThumbnailSet>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

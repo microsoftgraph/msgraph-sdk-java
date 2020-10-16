@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Drive Request Builder.
  */
-public class DriveRequestBuilder extends BaseRequestBuilder {
+public class DriveRequestBuilder extends BaseRequestBuilder<Drive> {
 
     /**
      * The request builder for the Drive

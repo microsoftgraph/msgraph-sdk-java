@@ -15,6 +15,12 @@ import com.microsoft.graph.models.extensions.OnenoteResource;
 import com.microsoft.graph.models.extensions.SectionGroup;
 import com.microsoft.graph.models.extensions.OnenoteSection;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.NotebookCollectionPage;
+import com.microsoft.graph.requests.extensions.OnenoteOperationCollectionPage;
+import com.microsoft.graph.requests.extensions.OnenotePageCollectionPage;
+import com.microsoft.graph.requests.extensions.OnenoteResourceCollectionPage;
+import com.microsoft.graph.requests.extensions.SectionGroupCollectionPage;
+import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -35,7 +41,7 @@ public class Onenote extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "notebooks", alternate = {"Notebooks"})
     @Expose
-    public BaseCollectionPage<Notebook> notebooks;
+    public NotebookCollectionPage notebooks;
 
     /**
      * The Operations.
@@ -43,7 +49,7 @@ public class Onenote extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
-    public BaseCollectionPage<OnenoteOperation> operations;
+    public OnenoteOperationCollectionPage operations;
 
     /**
      * The Pages.
@@ -51,7 +57,7 @@ public class Onenote extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "pages", alternate = {"Pages"})
     @Expose
-    public BaseCollectionPage<OnenotePage> pages;
+    public OnenotePageCollectionPage pages;
 
     /**
      * The Resources.
@@ -59,7 +65,7 @@ public class Onenote extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "resources", alternate = {"Resources"})
     @Expose
-    public BaseCollectionPage<OnenoteResource> resources;
+    public OnenoteResourceCollectionPage resources;
 
     /**
      * The Section Groups.
@@ -67,7 +73,7 @@ public class Onenote extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "sectionGroups", alternate = {"SectionGroups"})
     @Expose
-    public BaseCollectionPage<SectionGroup> sectionGroups;
+    public SectionGroupCollectionPage sectionGroups;
 
     /**
      * The Sections.
@@ -75,7 +81,7 @@ public class Onenote extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "sections", alternate = {"Sections"})
     @Expose
-    public BaseCollectionPage<OnenoteSection> sections;
+    public OnenoteSectionCollectionPage sections;
 
 
     /**
@@ -119,27 +125,27 @@ public class Onenote extends Entity implements IJsonBackedObject {
 
 
         if (json.has("notebooks")) {
-            notebooks = serializer.deserializeObject(json.get("notebooks").toString(), new BaseCollectionPage<Notebook>(new java.util.ArrayList<Notebook>(), null).getClass());
+            notebooks = serializer.deserializeObject(json.get("notebooks").toString(), NotebookCollectionPage.class);
         }
 
         if (json.has("operations")) {
-            operations = serializer.deserializeObject(json.get("operations").toString(), new BaseCollectionPage<OnenoteOperation>(new java.util.ArrayList<OnenoteOperation>(), null).getClass());
+            operations = serializer.deserializeObject(json.get("operations").toString(), OnenoteOperationCollectionPage.class);
         }
 
         if (json.has("pages")) {
-            pages = serializer.deserializeObject(json.get("pages").toString(), new BaseCollectionPage<OnenotePage>(new java.util.ArrayList<OnenotePage>(), null).getClass());
+            pages = serializer.deserializeObject(json.get("pages").toString(), OnenotePageCollectionPage.class);
         }
 
         if (json.has("resources")) {
-            resources = serializer.deserializeObject(json.get("resources").toString(), new BaseCollectionPage<OnenoteResource>(new java.util.ArrayList<OnenoteResource>(), null).getClass());
+            resources = serializer.deserializeObject(json.get("resources").toString(), OnenoteResourceCollectionPage.class);
         }
 
         if (json.has("sectionGroups")) {
-            sectionGroups = serializer.deserializeObject(json.get("sectionGroups").toString(), new BaseCollectionPage<SectionGroup>(new java.util.ArrayList<SectionGroup>(), null).getClass());
+            sectionGroups = serializer.deserializeObject(json.get("sectionGroups").toString(), SectionGroupCollectionPage.class);
         }
 
         if (json.has("sections")) {
-            sections = serializer.deserializeObject(json.get("sections").toString(), new BaseCollectionPage<OnenoteSection>(new java.util.ArrayList<OnenoteSection>(), null).getClass());
+            sections = serializer.deserializeObject(json.get("sections").toString(), OnenoteSectionCollectionPage.class);
         }
     }
 }

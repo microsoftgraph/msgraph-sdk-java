@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Token Issuance Policy Request Builder.
  */
-public class TokenIssuancePolicyRequestBuilder extends BaseRequestBuilder {
+public class TokenIssuancePolicyRequestBuilder extends BaseRequestBuilder<TokenIssuancePolicy> {
 
     /**
      * The request builder for the TokenIssuancePolicy

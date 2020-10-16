@@ -19,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Worksheet Protection Request Builder.
  */
-public class WorkbookWorksheetProtectionRequestBuilder extends BaseRequestBuilder {
+public class WorkbookWorksheetProtectionRequestBuilder extends BaseRequestBuilder<WorkbookWorksheetProtection> {
 
     /**
      * The request builder for the WorkbookWorksheetProtection

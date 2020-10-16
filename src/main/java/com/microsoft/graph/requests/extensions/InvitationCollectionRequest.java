@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.InvitationCollectionResponse;
 import com.microsoft.graph.requests.extensions.InvitationCollectionRequestBuilder;
@@ -25,7 +24,7 @@ import com.microsoft.graph.requests.extensions.InvitationCollectionRequest;
 /**
  * The class for the Invitation Collection Request.
  */
-public class InvitationCollectionRequest extends BaseCollectionRequest<Invitation, InvitationCollectionResponse> {
+public class InvitationCollectionRequest extends BaseCollectionRequest<Invitation, InvitationCollectionResponse, InvitationCollectionPage> {
 
     /**
      * The request builder for this collection of Invitation
@@ -36,26 +35,7 @@ public class InvitationCollectionRequest extends BaseCollectionRequest<Invitatio
      */
     @SuppressWarnings("unchecked")
     public InvitationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, InvitationCollectionResponse.class,(Class<BaseCollectionPage<Invitation>>) (new BaseCollectionPage<Invitation>(new java.util.ArrayList<Invitation>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<Invitation>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<Invitation> get() throws ClientException {
-        final InvitationCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, InvitationCollectionResponse.class, InvitationCollectionPage.class, InvitationCollectionRequestBuilder.class);
     }
 
     public void post(final Invitation newInvitation, final ICallback<? super Invitation> callback) {
@@ -147,16 +127,5 @@ public class InvitationCollectionRequest extends BaseCollectionRequest<Invitatio
     public InvitationCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<Invitation> buildFromResponse(final InvitationCollectionResponse response) {
-        final InvitationCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new InvitationCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<Invitation> page = new BaseCollectionPage<Invitation>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

@@ -11,6 +11,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.Recipient;
 import com.microsoft.graph.models.extensions.Post;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.PostCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -95,7 +96,7 @@ public class ConversationThread extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "posts", alternate = {"Posts"})
     @Expose
-    public BaseCollectionPage<Post> posts;
+    public PostCollectionPage posts;
 
 
     /**
@@ -139,7 +140,7 @@ public class ConversationThread extends Entity implements IJsonBackedObject {
 
 
         if (json.has("posts")) {
-            posts = serializer.deserializeObject(json.get("posts").toString(), new BaseCollectionPage<Post>(new java.util.ArrayList<Post>(), null).getClass());
+            posts = serializer.deserializeObject(json.get("posts").toString(), PostCollectionPage.class);
         }
     }
 }

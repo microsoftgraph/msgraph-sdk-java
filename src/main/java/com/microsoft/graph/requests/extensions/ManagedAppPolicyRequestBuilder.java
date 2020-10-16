@@ -19,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Managed App Policy Request Builder.
  */
-public class ManagedAppPolicyRequestBuilder extends BaseRequestBuilder {
+public class ManagedAppPolicyRequestBuilder extends BaseRequestBuilder<ManagedAppPolicy> {
 
     /**
      * The request builder for the ManagedAppPolicy

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Managed App Policy Deployment Summary Request Builder.
  */
-public class ManagedAppPolicyDeploymentSummaryRequestBuilder extends BaseRequestBuilder {
+public class ManagedAppPolicyDeploymentSummaryRequestBuilder extends BaseRequestBuilder<ManagedAppPolicyDeploymentSummary> {
 
     /**
      * The request builder for the ManagedAppPolicyDeploymentSummary

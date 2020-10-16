@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Vpp Token Request Builder.
  */
-public class VppTokenRequestBuilder extends BaseRequestBuilder {
+public class VppTokenRequestBuilder extends BaseRequestBuilder<VppToken> {
 
     /**
      * The request builder for the VppToken

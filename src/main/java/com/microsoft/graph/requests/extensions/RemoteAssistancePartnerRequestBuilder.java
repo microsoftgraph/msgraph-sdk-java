@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Remote Assistance Partner Request Builder.
  */
-public class RemoteAssistancePartnerRequestBuilder extends BaseRequestBuilder {
+public class RemoteAssistancePartnerRequestBuilder extends BaseRequestBuilder<RemoteAssistancePartner> {
 
     /**
      * The request builder for the RemoteAssistancePartner

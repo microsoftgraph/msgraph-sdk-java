@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Software Update Status Summary Request Builder.
  */
-public class SoftwareUpdateStatusSummaryRequestBuilder extends BaseRequestBuilder {
+public class SoftwareUpdateStatusSummaryRequestBuilder extends BaseRequestBuilder<SoftwareUpdateStatusSummary> {
 
     /**
      * The request builder for the SoftwareUpdateStatusSummary

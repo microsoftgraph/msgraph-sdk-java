@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Ios Custom Configuration Request Builder.
  */
-public class IosCustomConfigurationRequestBuilder extends BaseRequestBuilder {
+public class IosCustomConfigurationRequestBuilder extends BaseRequestBuilder<IosCustomConfiguration> {
 
     /**
      * The request builder for the IosCustomConfiguration

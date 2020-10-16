@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetCollectionResponse;
 import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetCollec
 /**
  * The class for the Permission Grant Condition Set Collection Request.
  */
-public class PermissionGrantConditionSetCollectionRequest extends BaseCollectionRequest<PermissionGrantConditionSet, PermissionGrantConditionSetCollectionResponse> {
+public class PermissionGrantConditionSetCollectionRequest extends BaseCollectionRequest<PermissionGrantConditionSet, PermissionGrantConditionSetCollectionResponse, PermissionGrantConditionSetCollectionPage> {
 
     /**
      * The request builder for this collection of PermissionGrantConditionSet
@@ -37,26 +36,7 @@ public class PermissionGrantConditionSetCollectionRequest extends BaseCollection
      */
     @SuppressWarnings("unchecked")
     public PermissionGrantConditionSetCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, PermissionGrantConditionSetCollectionResponse.class,(Class<BaseCollectionPage<PermissionGrantConditionSet>>) (new BaseCollectionPage<PermissionGrantConditionSet>(new java.util.ArrayList<PermissionGrantConditionSet>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<PermissionGrantConditionSet>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<PermissionGrantConditionSet> get() throws ClientException {
-        final PermissionGrantConditionSetCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, PermissionGrantConditionSetCollectionResponse.class, PermissionGrantConditionSetCollectionPage.class, PermissionGrantConditionSetCollectionRequestBuilder.class);
     }
 
     public void post(final PermissionGrantConditionSet newPermissionGrantConditionSet, final ICallback<? super PermissionGrantConditionSet> callback) {
@@ -148,16 +128,5 @@ public class PermissionGrantConditionSetCollectionRequest extends BaseCollection
     public PermissionGrantConditionSetCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<PermissionGrantConditionSet> buildFromResponse(final PermissionGrantConditionSetCollectionResponse response) {
-        final PermissionGrantConditionSetCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new PermissionGrantConditionSetCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<PermissionGrantConditionSet> page = new BaseCollectionPage<PermissionGrantConditionSet>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

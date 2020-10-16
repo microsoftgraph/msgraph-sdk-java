@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows10Enterprise Modern App Management Configuration Request Builder.
  */
-public class Windows10EnterpriseModernAppManagementConfigurationRequestBuilder extends BaseRequestBuilder {
+public class Windows10EnterpriseModernAppManagementConfigurationRequestBuilder extends BaseRequestBuilder<Windows10EnterpriseModernAppManagementConfiguration> {
 
     /**
      * The request builder for the Windows10EnterpriseModernAppManagementConfiguration

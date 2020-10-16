@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Terms And Conditions Assignment Request Builder.
  */
-public class TermsAndConditionsAssignmentRequestBuilder extends BaseRequestBuilder {
+public class TermsAndConditionsAssignmentRequestBuilder extends BaseRequestBuilder<TermsAndConditionsAssignment> {
 
     /**
      * The request builder for the TermsAndConditionsAssignment

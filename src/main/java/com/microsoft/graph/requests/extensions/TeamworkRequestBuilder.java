@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Teamwork Request Builder.
  */
-public class TeamworkRequestBuilder extends BaseRequestBuilder {
+public class TeamworkRequestBuilder extends BaseRequestBuilder<Teamwork> {
 
     /**
      * The request builder for the Teamwork

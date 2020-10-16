@@ -24,7 +24,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Administrative Unit Request Builder.
  */
-public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder {
+public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder<AdministrativeUnit> {
 
     /**
      * The request builder for the AdministrativeUnit

@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ExtensionPropertyCollectionResponse;
 import com.microsoft.graph.requests.extensions.ExtensionPropertyCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.ExtensionPropertyCollectionReques
 /**
  * The class for the Extension Property Collection Request.
  */
-public class ExtensionPropertyCollectionRequest extends BaseCollectionRequest<ExtensionProperty, ExtensionPropertyCollectionResponse> {
+public class ExtensionPropertyCollectionRequest extends BaseCollectionRequest<ExtensionProperty, ExtensionPropertyCollectionResponse, ExtensionPropertyCollectionPage> {
 
     /**
      * The request builder for this collection of ExtensionProperty
@@ -37,26 +36,7 @@ public class ExtensionPropertyCollectionRequest extends BaseCollectionRequest<Ex
      */
     @SuppressWarnings("unchecked")
     public ExtensionPropertyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ExtensionPropertyCollectionResponse.class,(Class<BaseCollectionPage<ExtensionProperty>>) (new BaseCollectionPage<ExtensionProperty>(new java.util.ArrayList<ExtensionProperty>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<ExtensionProperty>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<ExtensionProperty> get() throws ClientException {
-        final ExtensionPropertyCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, ExtensionPropertyCollectionResponse.class, ExtensionPropertyCollectionPage.class, ExtensionPropertyCollectionRequestBuilder.class);
     }
 
     public void post(final ExtensionProperty newExtensionProperty, final ICallback<? super ExtensionProperty> callback) {
@@ -148,16 +128,5 @@ public class ExtensionPropertyCollectionRequest extends BaseCollectionRequest<Ex
     public ExtensionPropertyCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<ExtensionProperty> buildFromResponse(final ExtensionPropertyCollectionResponse response) {
-        final ExtensionPropertyCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new ExtensionPropertyCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<ExtensionProperty> page = new BaseCollectionPage<ExtensionProperty>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

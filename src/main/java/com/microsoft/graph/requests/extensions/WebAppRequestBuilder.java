@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Web App Request Builder.
  */
-public class WebAppRequestBuilder extends BaseRequestBuilder {
+public class WebAppRequestBuilder extends BaseRequestBuilder<WebApp> {
 
     /**
      * The request builder for the WebApp

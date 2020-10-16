@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Organization Request Builder.
  */
-public class OrganizationRequestBuilder extends BaseRequestBuilder {
+public class OrganizationRequestBuilder extends BaseRequestBuilder<Organization> {
 
     /**
      * The request builder for the Organization

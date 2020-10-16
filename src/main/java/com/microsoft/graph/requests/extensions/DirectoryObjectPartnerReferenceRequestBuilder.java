@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Directory Object Partner Reference Request Builder.
  */
-public class DirectoryObjectPartnerReferenceRequestBuilder extends BaseRequestBuilder {
+public class DirectoryObjectPartnerReferenceRequestBuilder extends BaseRequestBuilder<DirectoryObjectPartnerReference> {
 
     /**
      * The request builder for the DirectoryObjectPartnerReference

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Person Request Builder.
  */
-public class PersonRequestBuilder extends BaseRequestBuilder {
+public class PersonRequestBuilder extends BaseRequestBuilder<Person> {
 
     /**
      * The request builder for the Person

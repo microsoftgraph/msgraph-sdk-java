@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Onenote Section Request Builder.
  */
-public class OnenoteSectionRequestBuilder extends BaseRequestBuilder {
+public class OnenoteSectionRequestBuilder extends BaseRequestBuilder<OnenoteSection> {
 
     /**
      * The request builder for the OnenoteSection

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Ios Compliance Policy Request Builder.
  */
-public class IosCompliancePolicyRequestBuilder extends BaseRequestBuilder {
+public class IosCompliancePolicyRequestBuilder extends BaseRequestBuilder<IosCompliancePolicy> {
 
     /**
      * The request builder for the IosCompliancePolicy

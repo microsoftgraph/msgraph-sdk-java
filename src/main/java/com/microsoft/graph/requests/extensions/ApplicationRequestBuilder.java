@@ -30,7 +30,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Application Request Builder.
  */
-public class ApplicationRequestBuilder extends BaseRequestBuilder {
+public class ApplicationRequestBuilder extends BaseRequestBuilder<Application> {
 
     /**
      * The request builder for the Application

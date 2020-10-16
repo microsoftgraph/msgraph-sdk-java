@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ComplianceManagementPartnerCollectionResponse;
 import com.microsoft.graph.requests.extensions.ComplianceManagementPartnerCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.ComplianceManagementPartnerCollec
 /**
  * The class for the Compliance Management Partner Collection Request.
  */
-public class ComplianceManagementPartnerCollectionRequest extends BaseCollectionRequest<ComplianceManagementPartner, ComplianceManagementPartnerCollectionResponse> {
+public class ComplianceManagementPartnerCollectionRequest extends BaseCollectionRequest<ComplianceManagementPartner, ComplianceManagementPartnerCollectionResponse, ComplianceManagementPartnerCollectionPage> {
 
     /**
      * The request builder for this collection of ComplianceManagementPartner
@@ -37,26 +36,7 @@ public class ComplianceManagementPartnerCollectionRequest extends BaseCollection
      */
     @SuppressWarnings("unchecked")
     public ComplianceManagementPartnerCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ComplianceManagementPartnerCollectionResponse.class,(Class<BaseCollectionPage<ComplianceManagementPartner>>) (new BaseCollectionPage<ComplianceManagementPartner>(new java.util.ArrayList<ComplianceManagementPartner>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<ComplianceManagementPartner>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<ComplianceManagementPartner> get() throws ClientException {
-        final ComplianceManagementPartnerCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, ComplianceManagementPartnerCollectionResponse.class, ComplianceManagementPartnerCollectionPage.class, ComplianceManagementPartnerCollectionRequestBuilder.class);
     }
 
     public void post(final ComplianceManagementPartner newComplianceManagementPartner, final ICallback<? super ComplianceManagementPartner> callback) {
@@ -148,16 +128,5 @@ public class ComplianceManagementPartnerCollectionRequest extends BaseCollection
     public ComplianceManagementPartnerCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<ComplianceManagementPartner> buildFromResponse(final ComplianceManagementPartnerCollectionResponse response) {
-        final ComplianceManagementPartnerCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new ComplianceManagementPartnerCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<ComplianceManagementPartner> page = new BaseCollectionPage<ComplianceManagementPartner>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

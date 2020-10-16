@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Outlook User Request Builder.
  */
-public class OutlookUserRequestBuilder extends BaseRequestBuilder {
+public class OutlookUserRequestBuilder extends BaseRequestBuilder<OutlookUser> {
 
     /**
      * The request builder for the OutlookUser

@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Conditional Access Root Request Builder.
  */
-public class ConditionalAccessRootRequestBuilder extends BaseRequestBuilder {
+public class ConditionalAccessRootRequestBuilder extends BaseRequestBuilder<ConditionalAccessRoot> {
 
     /**
      * The request builder for the ConditionalAccessRoot

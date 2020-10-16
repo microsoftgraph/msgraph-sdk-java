@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionRequ
 /**
  * The class for the Claims Mapping Policy Collection Request.
  */
-public class ClaimsMappingPolicyCollectionRequest extends BaseCollectionRequest<ClaimsMappingPolicy, ClaimsMappingPolicyCollectionResponse> {
+public class ClaimsMappingPolicyCollectionRequest extends BaseCollectionRequest<ClaimsMappingPolicy, ClaimsMappingPolicyCollectionResponse, ClaimsMappingPolicyCollectionPage> {
 
     /**
      * The request builder for this collection of ClaimsMappingPolicy
@@ -37,26 +36,7 @@ public class ClaimsMappingPolicyCollectionRequest extends BaseCollectionRequest<
      */
     @SuppressWarnings("unchecked")
     public ClaimsMappingPolicyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ClaimsMappingPolicyCollectionResponse.class,(Class<BaseCollectionPage<ClaimsMappingPolicy>>) (new BaseCollectionPage<ClaimsMappingPolicy>(new java.util.ArrayList<ClaimsMappingPolicy>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<ClaimsMappingPolicy>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<ClaimsMappingPolicy> get() throws ClientException {
-        final ClaimsMappingPolicyCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, ClaimsMappingPolicyCollectionResponse.class, ClaimsMappingPolicyCollectionPage.class, ClaimsMappingPolicyCollectionRequestBuilder.class);
     }
 
     public void post(final ClaimsMappingPolicy newClaimsMappingPolicy, final ICallback<? super ClaimsMappingPolicy> callback) {
@@ -148,16 +128,5 @@ public class ClaimsMappingPolicyCollectionRequest extends BaseCollectionRequest<
     public ClaimsMappingPolicyCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<ClaimsMappingPolicy> buildFromResponse(final ClaimsMappingPolicyCollectionResponse response) {
-        final ClaimsMappingPolicyCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new ClaimsMappingPolicyCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<ClaimsMappingPolicy> page = new BaseCollectionPage<ClaimsMappingPolicy>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

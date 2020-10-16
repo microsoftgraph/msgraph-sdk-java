@@ -31,7 +31,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Request Builder.
  */
-public class WorkbookRequestBuilder extends BaseRequestBuilder {
+public class WorkbookRequestBuilder extends BaseRequestBuilder<Workbook> {
 
     /**
      * The request builder for the Workbook

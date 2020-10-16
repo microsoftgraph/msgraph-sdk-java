@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Managed IOSLob App Request Builder.
  */
-public class ManagedIOSLobAppRequestBuilder extends BaseRequestBuilder {
+public class ManagedIOSLobAppRequestBuilder extends BaseRequestBuilder<ManagedIOSLobApp> {
 
     /**
      * The request builder for the ManagedIOSLobApp

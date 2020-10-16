@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Enrollment Configuration Request Builder.
  */
-public class DeviceEnrollmentConfigurationRequestBuilder extends BaseRequestBuilder {
+public class DeviceEnrollmentConfigurationRequestBuilder extends BaseRequestBuilder<DeviceEnrollmentConfiguration> {
 
     /**
      * The request builder for the DeviceEnrollmentConfiguration

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Invite Participants Operation Request Builder.
  */
-public class InviteParticipantsOperationRequestBuilder extends BaseRequestBuilder {
+public class InviteParticipantsOperationRequestBuilder extends BaseRequestBuilder<InviteParticipantsOperation> {
 
     /**
      * The request builder for the InviteParticipantsOperation

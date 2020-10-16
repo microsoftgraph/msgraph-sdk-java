@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.PlannerBucketCollectionResponse;
 import com.microsoft.graph.requests.extensions.PlannerBucketCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.PlannerBucketCollectionRequest;
 /**
  * The class for the Planner Bucket Collection Request.
  */
-public class PlannerBucketCollectionRequest extends BaseCollectionRequest<PlannerBucket, PlannerBucketCollectionResponse> {
+public class PlannerBucketCollectionRequest extends BaseCollectionRequest<PlannerBucket, PlannerBucketCollectionResponse, PlannerBucketCollectionPage> {
 
     /**
      * The request builder for this collection of PlannerBucket
@@ -37,26 +36,7 @@ public class PlannerBucketCollectionRequest extends BaseCollectionRequest<Planne
      */
     @SuppressWarnings("unchecked")
     public PlannerBucketCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, PlannerBucketCollectionResponse.class,(Class<BaseCollectionPage<PlannerBucket>>) (new BaseCollectionPage<PlannerBucket>(new java.util.ArrayList<PlannerBucket>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<PlannerBucket>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<PlannerBucket> get() throws ClientException {
-        final PlannerBucketCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, PlannerBucketCollectionResponse.class, PlannerBucketCollectionPage.class, PlannerBucketCollectionRequestBuilder.class);
     }
 
     public void post(final PlannerBucket newPlannerBucket, final ICallback<? super PlannerBucket> callback) {
@@ -148,16 +128,5 @@ public class PlannerBucketCollectionRequest extends BaseCollectionRequest<Planne
     public PlannerBucketCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<PlannerBucket> buildFromResponse(final PlannerBucketCollectionResponse response) {
-        final PlannerBucketCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new PlannerBucketCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<PlannerBucket> page = new BaseCollectionPage<PlannerBucket>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

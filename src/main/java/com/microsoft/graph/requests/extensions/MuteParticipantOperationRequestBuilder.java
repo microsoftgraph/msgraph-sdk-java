@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Mute Participant Operation Request Builder.
  */
-public class MuteParticipantOperationRequestBuilder extends BaseRequestBuilder {
+public class MuteParticipantOperationRequestBuilder extends BaseRequestBuilder<MuteParticipantOperation> {
 
     /**
      * The request builder for the MuteParticipantOperation

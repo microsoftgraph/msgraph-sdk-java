@@ -14,6 +14,10 @@ import com.microsoft.graph.models.extensions.WorkbookPivotTable;
 import com.microsoft.graph.models.extensions.WorkbookWorksheetProtection;
 import com.microsoft.graph.models.extensions.WorkbookTable;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.WorkbookChartCollectionPage;
+import com.microsoft.graph.requests.extensions.WorkbookNamedItemCollectionPage;
+import com.microsoft.graph.requests.extensions.WorkbookPivotTableCollectionPage;
+import com.microsoft.graph.requests.extensions.WorkbookTableCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -58,7 +62,7 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "charts", alternate = {"Charts"})
     @Expose
-    public BaseCollectionPage<WorkbookChart> charts;
+    public WorkbookChartCollectionPage charts;
 
     /**
      * The Names.
@@ -66,7 +70,7 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "names", alternate = {"Names"})
     @Expose
-    public BaseCollectionPage<WorkbookNamedItem> names;
+    public WorkbookNamedItemCollectionPage names;
 
     /**
      * The Pivot Tables.
@@ -74,7 +78,7 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "pivotTables", alternate = {"PivotTables"})
     @Expose
-    public BaseCollectionPage<WorkbookPivotTable> pivotTables;
+    public WorkbookPivotTableCollectionPage pivotTables;
 
     /**
      * The Protection.
@@ -90,7 +94,7 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "tables", alternate = {"Tables"})
     @Expose
-    public BaseCollectionPage<WorkbookTable> tables;
+    public WorkbookTableCollectionPage tables;
 
 
     /**
@@ -134,19 +138,19 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
 
 
         if (json.has("charts")) {
-            charts = serializer.deserializeObject(json.get("charts").toString(), new BaseCollectionPage<WorkbookChart>(new java.util.ArrayList<WorkbookChart>(), null).getClass());
+            charts = serializer.deserializeObject(json.get("charts").toString(), WorkbookChartCollectionPage.class);
         }
 
         if (json.has("names")) {
-            names = serializer.deserializeObject(json.get("names").toString(), new BaseCollectionPage<WorkbookNamedItem>(new java.util.ArrayList<WorkbookNamedItem>(), null).getClass());
+            names = serializer.deserializeObject(json.get("names").toString(), WorkbookNamedItemCollectionPage.class);
         }
 
         if (json.has("pivotTables")) {
-            pivotTables = serializer.deserializeObject(json.get("pivotTables").toString(), new BaseCollectionPage<WorkbookPivotTable>(new java.util.ArrayList<WorkbookPivotTable>(), null).getClass());
+            pivotTables = serializer.deserializeObject(json.get("pivotTables").toString(), WorkbookPivotTableCollectionPage.class);
         }
 
         if (json.has("tables")) {
-            tables = serializer.deserializeObject(json.get("tables").toString(), new BaseCollectionPage<WorkbookTable>(new java.util.ArrayList<WorkbookTable>(), null).getClass());
+            tables = serializer.deserializeObject(json.get("tables").toString(), WorkbookTableCollectionPage.class);
         }
     }
 }

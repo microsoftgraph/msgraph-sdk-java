@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollection
 /**
  * The class for the Conditional Access Policy Collection Request.
  */
-public class ConditionalAccessPolicyCollectionRequest extends BaseCollectionRequest<ConditionalAccessPolicy, ConditionalAccessPolicyCollectionResponse> {
+public class ConditionalAccessPolicyCollectionRequest extends BaseCollectionRequest<ConditionalAccessPolicy, ConditionalAccessPolicyCollectionResponse, ConditionalAccessPolicyCollectionPage> {
 
     /**
      * The request builder for this collection of ConditionalAccessPolicy
@@ -37,26 +36,7 @@ public class ConditionalAccessPolicyCollectionRequest extends BaseCollectionRequ
      */
     @SuppressWarnings("unchecked")
     public ConditionalAccessPolicyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ConditionalAccessPolicyCollectionResponse.class,(Class<BaseCollectionPage<ConditionalAccessPolicy>>) (new BaseCollectionPage<ConditionalAccessPolicy>(new java.util.ArrayList<ConditionalAccessPolicy>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<ConditionalAccessPolicy>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<ConditionalAccessPolicy> get() throws ClientException {
-        final ConditionalAccessPolicyCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, ConditionalAccessPolicyCollectionResponse.class, ConditionalAccessPolicyCollectionPage.class, ConditionalAccessPolicyCollectionRequestBuilder.class);
     }
 
     public void post(final ConditionalAccessPolicy newConditionalAccessPolicy, final ICallback<? super ConditionalAccessPolicy> callback) {
@@ -148,16 +128,5 @@ public class ConditionalAccessPolicyCollectionRequest extends BaseCollectionRequ
     public ConditionalAccessPolicyCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<ConditionalAccessPolicy> buildFromResponse(final ConditionalAccessPolicyCollectionResponse response) {
-        final ConditionalAccessPolicyCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new ConditionalAccessPolicyCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<ConditionalAccessPolicy> page = new BaseCollectionPage<ConditionalAccessPolicy>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

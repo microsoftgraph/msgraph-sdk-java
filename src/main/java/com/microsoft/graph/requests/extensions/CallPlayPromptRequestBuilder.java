@@ -7,7 +7,7 @@ import com.microsoft.graph.requests.extensions.CallPlayPromptRequest;
 import com.microsoft.graph.models.extensions.Call;
 import com.microsoft.graph.models.extensions.Prompt;
 import com.microsoft.graph.models.extensions.PlayPromptOperation;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
+import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 

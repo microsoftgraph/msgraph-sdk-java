@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Compliance Scheduled Action For Rule Request Builder.
  */
-public class DeviceComplianceScheduledActionForRuleRequestBuilder extends BaseRequestBuilder {
+public class DeviceComplianceScheduledActionForRuleRequestBuilder extends BaseRequestBuilder<DeviceComplianceScheduledActionForRule> {
 
     /**
      * The request builder for the DeviceComplianceScheduledActionForRule

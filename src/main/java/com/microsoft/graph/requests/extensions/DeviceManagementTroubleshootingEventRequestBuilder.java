@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Management Troubleshooting Event Request Builder.
  */
-public class DeviceManagementTroubleshootingEventRequestBuilder extends BaseRequestBuilder {
+public class DeviceManagementTroubleshootingEventRequestBuilder extends BaseRequestBuilder<DeviceManagementTroubleshootingEvent> {
 
     /**
      * The request builder for the DeviceManagementTroubleshootingEvent

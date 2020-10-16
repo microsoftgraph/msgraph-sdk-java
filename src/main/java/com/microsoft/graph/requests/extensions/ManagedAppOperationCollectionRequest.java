@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ManagedAppOperationCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedAppOperationCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.ManagedAppOperationCollectionRequ
 /**
  * The class for the Managed App Operation Collection Request.
  */
-public class ManagedAppOperationCollectionRequest extends BaseCollectionRequest<ManagedAppOperation, ManagedAppOperationCollectionResponse> {
+public class ManagedAppOperationCollectionRequest extends BaseCollectionRequest<ManagedAppOperation, ManagedAppOperationCollectionResponse, ManagedAppOperationCollectionPage> {
 
     /**
      * The request builder for this collection of ManagedAppOperation
@@ -37,26 +36,7 @@ public class ManagedAppOperationCollectionRequest extends BaseCollectionRequest<
      */
     @SuppressWarnings("unchecked")
     public ManagedAppOperationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedAppOperationCollectionResponse.class,(Class<BaseCollectionPage<ManagedAppOperation>>) (new BaseCollectionPage<ManagedAppOperation>(new java.util.ArrayList<ManagedAppOperation>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<ManagedAppOperation>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<ManagedAppOperation> get() throws ClientException {
-        final ManagedAppOperationCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, ManagedAppOperationCollectionResponse.class, ManagedAppOperationCollectionPage.class, ManagedAppOperationCollectionRequestBuilder.class);
     }
 
     public void post(final ManagedAppOperation newManagedAppOperation, final ICallback<? super ManagedAppOperation> callback) {
@@ -148,16 +128,5 @@ public class ManagedAppOperationCollectionRequest extends BaseCollectionRequest<
     public ManagedAppOperationCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<ManagedAppOperation> buildFromResponse(final ManagedAppOperationCollectionResponse response) {
-        final ManagedAppOperationCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new ManagedAppOperationCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<ManagedAppOperation> page = new BaseCollectionPage<ManagedAppOperation>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

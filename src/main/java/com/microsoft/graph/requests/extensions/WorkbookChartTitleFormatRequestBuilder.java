@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Chart Title Format Request Builder.
  */
-public class WorkbookChartTitleFormatRequestBuilder extends BaseRequestBuilder {
+public class WorkbookChartTitleFormatRequestBuilder extends BaseRequestBuilder<WorkbookChartTitleFormat> {
 
     /**
      * The request builder for the WorkbookChartTitleFormat

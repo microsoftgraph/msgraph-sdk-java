@@ -7,7 +7,7 @@ import com.microsoft.graph.requests.extensions.DriveItemCreateUploadSessionReque
 import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.DriveItemUploadableProperties;
 import com.microsoft.graph.models.extensions.UploadSession;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
+import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 

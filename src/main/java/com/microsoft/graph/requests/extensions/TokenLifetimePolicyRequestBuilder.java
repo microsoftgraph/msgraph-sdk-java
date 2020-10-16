@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Token Lifetime Policy Request Builder.
  */
-public class TokenLifetimePolicyRequestBuilder extends BaseRequestBuilder {
+public class TokenLifetimePolicyRequestBuilder extends BaseRequestBuilder<TokenLifetimePolicy> {
 
     /**
      * The request builder for the TokenLifetimePolicy

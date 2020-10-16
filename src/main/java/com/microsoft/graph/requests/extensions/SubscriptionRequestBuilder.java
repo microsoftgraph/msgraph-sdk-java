@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Subscription Request Builder.
  */
-public class SubscriptionRequestBuilder extends BaseRequestBuilder {
+public class SubscriptionRequestBuilder extends BaseRequestBuilder<Subscription> {
 
     /**
      * The request builder for the Subscription

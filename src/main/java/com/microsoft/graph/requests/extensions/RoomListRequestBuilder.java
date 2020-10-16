@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Room List Request Builder.
  */
-public class RoomListRequestBuilder extends BaseRequestBuilder {
+public class RoomListRequestBuilder extends BaseRequestBuilder<RoomList> {
 
     /**
      * The request builder for the RoomList

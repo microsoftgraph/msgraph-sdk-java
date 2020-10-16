@@ -11,6 +11,8 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.TermsAndConditionsAcceptanceStatus;
 import com.microsoft.graph.models.extensions.TermsAndConditionsAssignment;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusCollectionPage;
+import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -95,7 +97,7 @@ public class TermsAndConditions extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "acceptanceStatuses", alternate = {"AcceptanceStatuses"})
     @Expose
-    public BaseCollectionPage<TermsAndConditionsAcceptanceStatus> acceptanceStatuses;
+    public TermsAndConditionsAcceptanceStatusCollectionPage acceptanceStatuses;
 
     /**
      * The Assignments.
@@ -103,7 +105,7 @@ public class TermsAndConditions extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
-    public BaseCollectionPage<TermsAndConditionsAssignment> assignments;
+    public TermsAndConditionsAssignmentCollectionPage assignments;
 
 
     /**
@@ -147,11 +149,11 @@ public class TermsAndConditions extends Entity implements IJsonBackedObject {
 
 
         if (json.has("acceptanceStatuses")) {
-            acceptanceStatuses = serializer.deserializeObject(json.get("acceptanceStatuses").toString(), new BaseCollectionPage<TermsAndConditionsAcceptanceStatus>(new java.util.ArrayList<TermsAndConditionsAcceptanceStatus>(), null).getClass());
+            acceptanceStatuses = serializer.deserializeObject(json.get("acceptanceStatuses").toString(), TermsAndConditionsAcceptanceStatusCollectionPage.class);
         }
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments").toString(), new BaseCollectionPage<TermsAndConditionsAssignment>(new java.util.ArrayList<TermsAndConditionsAssignment>(), null).getClass());
+            assignments = serializer.deserializeObject(json.get("assignments").toString(), TermsAndConditionsAssignmentCollectionPage.class);
         }
     }
 }

@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionR
 /**
  * The class for the Managed App Registration Collection Request.
  */
-public class ManagedAppRegistrationCollectionRequest extends BaseCollectionRequest<ManagedAppRegistration, ManagedAppRegistrationCollectionResponse> {
+public class ManagedAppRegistrationCollectionRequest extends BaseCollectionRequest<ManagedAppRegistration, ManagedAppRegistrationCollectionResponse, ManagedAppRegistrationCollectionPage> {
 
     /**
      * The request builder for this collection of ManagedAppRegistration
@@ -37,26 +36,7 @@ public class ManagedAppRegistrationCollectionRequest extends BaseCollectionReque
      */
     @SuppressWarnings("unchecked")
     public ManagedAppRegistrationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedAppRegistrationCollectionResponse.class,(Class<BaseCollectionPage<ManagedAppRegistration>>) (new BaseCollectionPage<ManagedAppRegistration>(new java.util.ArrayList<ManagedAppRegistration>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<ManagedAppRegistration>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<ManagedAppRegistration> get() throws ClientException {
-        final ManagedAppRegistrationCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, ManagedAppRegistrationCollectionResponse.class, ManagedAppRegistrationCollectionPage.class, ManagedAppRegistrationCollectionRequestBuilder.class);
     }
 
     public void post(final ManagedAppRegistration newManagedAppRegistration, final ICallback<? super ManagedAppRegistration> callback) {
@@ -148,16 +128,5 @@ public class ManagedAppRegistrationCollectionRequest extends BaseCollectionReque
     public ManagedAppRegistrationCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<ManagedAppRegistration> buildFromResponse(final ManagedAppRegistrationCollectionResponse response) {
-        final ManagedAppRegistrationCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new ManagedAppRegistrationCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<ManagedAppRegistration> page = new BaseCollectionPage<ManagedAppRegistration>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

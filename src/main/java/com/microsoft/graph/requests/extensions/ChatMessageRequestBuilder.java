@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Chat Message Request Builder.
  */
-public class ChatMessageRequestBuilder extends BaseRequestBuilder {
+public class ChatMessageRequestBuilder extends BaseRequestBuilder<ChatMessage> {
 
     /**
      * The request builder for the ChatMessage

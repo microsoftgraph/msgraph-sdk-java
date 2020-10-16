@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Chart Area Format Request Builder.
  */
-public class WorkbookChartAreaFormatRequestBuilder extends BaseRequestBuilder {
+public class WorkbookChartAreaFormatRequestBuilder extends BaseRequestBuilder<WorkbookChartAreaFormat> {
 
     /**
      * The request builder for the WorkbookChartAreaFormat

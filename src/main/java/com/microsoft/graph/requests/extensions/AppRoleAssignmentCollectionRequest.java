@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionReques
 /**
  * The class for the App Role Assignment Collection Request.
  */
-public class AppRoleAssignmentCollectionRequest extends BaseCollectionRequest<AppRoleAssignment, AppRoleAssignmentCollectionResponse> {
+public class AppRoleAssignmentCollectionRequest extends BaseCollectionRequest<AppRoleAssignment, AppRoleAssignmentCollectionResponse, AppRoleAssignmentCollectionPage> {
 
     /**
      * The request builder for this collection of AppRoleAssignment
@@ -37,26 +36,7 @@ public class AppRoleAssignmentCollectionRequest extends BaseCollectionRequest<Ap
      */
     @SuppressWarnings("unchecked")
     public AppRoleAssignmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, AppRoleAssignmentCollectionResponse.class,(Class<BaseCollectionPage<AppRoleAssignment>>) (new BaseCollectionPage<AppRoleAssignment>(new java.util.ArrayList<AppRoleAssignment>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<AppRoleAssignment>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<AppRoleAssignment> get() throws ClientException {
-        final AppRoleAssignmentCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, AppRoleAssignmentCollectionResponse.class, AppRoleAssignmentCollectionPage.class, AppRoleAssignmentCollectionRequestBuilder.class);
     }
 
     public void post(final AppRoleAssignment newAppRoleAssignment, final ICallback<? super AppRoleAssignment> callback) {
@@ -148,16 +128,5 @@ public class AppRoleAssignmentCollectionRequest extends BaseCollectionRequest<Ap
     public AppRoleAssignmentCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<AppRoleAssignment> buildFromResponse(final AppRoleAssignmentCollectionResponse response) {
-        final AppRoleAssignmentCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new AppRoleAssignmentCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<AppRoleAssignment> page = new BaseCollectionPage<AppRoleAssignment>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

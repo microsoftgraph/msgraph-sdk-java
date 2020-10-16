@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.SecureScoreCollectionResponse;
 import com.microsoft.graph.requests.extensions.SecureScoreCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.SecureScoreCollectionRequest;
 /**
  * The class for the Secure Score Collection Request.
  */
-public class SecureScoreCollectionRequest extends BaseCollectionRequest<SecureScore, SecureScoreCollectionResponse> {
+public class SecureScoreCollectionRequest extends BaseCollectionRequest<SecureScore, SecureScoreCollectionResponse, SecureScoreCollectionPage> {
 
     /**
      * The request builder for this collection of SecureScore
@@ -37,26 +36,7 @@ public class SecureScoreCollectionRequest extends BaseCollectionRequest<SecureSc
      */
     @SuppressWarnings("unchecked")
     public SecureScoreCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SecureScoreCollectionResponse.class,(Class<BaseCollectionPage<SecureScore>>) (new BaseCollectionPage<SecureScore>(new java.util.ArrayList<SecureScore>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<SecureScore>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<SecureScore> get() throws ClientException {
-        final SecureScoreCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, SecureScoreCollectionResponse.class, SecureScoreCollectionPage.class, SecureScoreCollectionRequestBuilder.class);
     }
 
     public void post(final SecureScore newSecureScore, final ICallback<? super SecureScore> callback) {
@@ -148,16 +128,5 @@ public class SecureScoreCollectionRequest extends BaseCollectionRequest<SecureSc
     public SecureScoreCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<SecureScore> buildFromResponse(final SecureScoreCollectionResponse response) {
-        final SecureScoreCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new SecureScoreCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<SecureScore> page = new BaseCollectionPage<SecureScore>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

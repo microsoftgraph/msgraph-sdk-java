@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows10Endpoint Protection Configuration Request Builder.
  */
-public class Windows10EndpointProtectionConfigurationRequestBuilder extends BaseRequestBuilder {
+public class Windows10EndpointProtectionConfigurationRequestBuilder extends BaseRequestBuilder<Windows10EndpointProtectionConfiguration> {
 
     /**
      * The request builder for the Windows10EndpointProtectionConfiguration

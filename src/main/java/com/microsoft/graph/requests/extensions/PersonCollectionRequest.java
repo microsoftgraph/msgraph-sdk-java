@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.PersonCollectionResponse;
 import com.microsoft.graph.requests.extensions.PersonCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.PersonCollectionRequest;
 /**
  * The class for the Person Collection Request.
  */
-public class PersonCollectionRequest extends BaseCollectionRequest<Person, PersonCollectionResponse> {
+public class PersonCollectionRequest extends BaseCollectionRequest<Person, PersonCollectionResponse, PersonCollectionPage> {
 
     /**
      * The request builder for this collection of Person
@@ -37,26 +36,7 @@ public class PersonCollectionRequest extends BaseCollectionRequest<Person, Perso
      */
     @SuppressWarnings("unchecked")
     public PersonCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, PersonCollectionResponse.class,(Class<BaseCollectionPage<Person>>) (new BaseCollectionPage<Person>(new java.util.ArrayList<Person>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<Person>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<Person> get() throws ClientException {
-        final PersonCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, PersonCollectionResponse.class, PersonCollectionPage.class, PersonCollectionRequestBuilder.class);
     }
 
     public void post(final Person newPerson, final ICallback<? super Person> callback) {
@@ -148,16 +128,5 @@ public class PersonCollectionRequest extends BaseCollectionRequest<Person, Perso
     public PersonCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<Person> buildFromResponse(final PersonCollectionResponse response) {
-        final PersonCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new PersonCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<Person> page = new BaseCollectionPage<Person>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

@@ -13,6 +13,8 @@ import com.microsoft.graph.models.extensions.PlannerBucket;
 import com.microsoft.graph.models.extensions.PlannerPlanDetails;
 import com.microsoft.graph.models.extensions.PlannerTask;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.PlannerBucketCollectionPage;
+import com.microsoft.graph.requests.extensions.PlannerTaskCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -65,7 +67,7 @@ public class PlannerPlan extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "buckets", alternate = {"Buckets"})
     @Expose
-    public BaseCollectionPage<PlannerBucket> buckets;
+    public PlannerBucketCollectionPage buckets;
 
     /**
      * The Details.
@@ -81,7 +83,7 @@ public class PlannerPlan extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose
-    public BaseCollectionPage<PlannerTask> tasks;
+    public PlannerTaskCollectionPage tasks;
 
 
     /**
@@ -125,11 +127,11 @@ public class PlannerPlan extends Entity implements IJsonBackedObject {
 
 
         if (json.has("buckets")) {
-            buckets = serializer.deserializeObject(json.get("buckets").toString(), new BaseCollectionPage<PlannerBucket>(new java.util.ArrayList<PlannerBucket>(), null).getClass());
+            buckets = serializer.deserializeObject(json.get("buckets").toString(), PlannerBucketCollectionPage.class);
         }
 
         if (json.has("tasks")) {
-            tasks = serializer.deserializeObject(json.get("tasks").toString(), new BaseCollectionPage<PlannerTask>(new java.util.ArrayList<PlannerTask>(), null).getClass());
+            tasks = serializer.deserializeObject(json.get("tasks").toString(), PlannerTaskCollectionPage.class);
         }
     }
 }

@@ -19,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Mobile App Content File Request Builder.
  */
-public class MobileAppContentFileRequestBuilder extends BaseRequestBuilder {
+public class MobileAppContentFileRequestBuilder extends BaseRequestBuilder<MobileAppContentFile> {
 
     /**
      * The request builder for the MobileAppContentFile

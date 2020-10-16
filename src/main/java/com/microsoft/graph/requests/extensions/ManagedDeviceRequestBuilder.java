@@ -24,7 +24,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Managed Device Request Builder.
  */
-public class ManagedDeviceRequestBuilder extends BaseRequestBuilder {
+public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevice> {
 
     /**
      * The request builder for the ManagedDevice

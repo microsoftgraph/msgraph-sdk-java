@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WorkforceIntegrationCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkforceIntegrationCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.WorkforceIntegrationCollectionReq
 /**
  * The class for the Workforce Integration Collection Request.
  */
-public class WorkforceIntegrationCollectionRequest extends BaseCollectionRequest<WorkforceIntegration, WorkforceIntegrationCollectionResponse> {
+public class WorkforceIntegrationCollectionRequest extends BaseCollectionRequest<WorkforceIntegration, WorkforceIntegrationCollectionResponse, WorkforceIntegrationCollectionPage> {
 
     /**
      * The request builder for this collection of WorkforceIntegration
@@ -37,26 +36,7 @@ public class WorkforceIntegrationCollectionRequest extends BaseCollectionRequest
      */
     @SuppressWarnings("unchecked")
     public WorkforceIntegrationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WorkforceIntegrationCollectionResponse.class,(Class<BaseCollectionPage<WorkforceIntegration>>) (new BaseCollectionPage<WorkforceIntegration>(new java.util.ArrayList<WorkforceIntegration>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<WorkforceIntegration>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<WorkforceIntegration> get() throws ClientException {
-        final WorkforceIntegrationCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, WorkforceIntegrationCollectionResponse.class, WorkforceIntegrationCollectionPage.class, WorkforceIntegrationCollectionRequestBuilder.class);
     }
 
     public void post(final WorkforceIntegration newWorkforceIntegration, final ICallback<? super WorkforceIntegration> callback) {
@@ -148,16 +128,5 @@ public class WorkforceIntegrationCollectionRequest extends BaseCollectionRequest
     public WorkforceIntegrationCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<WorkforceIntegration> buildFromResponse(final WorkforceIntegrationCollectionResponse response) {
-        final WorkforceIntegrationCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new WorkforceIntegrationCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<WorkforceIntegration> page = new BaseCollectionPage<WorkforceIntegration>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

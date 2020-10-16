@@ -19,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Directory Object Request Builder.
  */
-public class DirectoryObjectRequestBuilder extends BaseRequestBuilder {
+public class DirectoryObjectRequestBuilder extends BaseRequestBuilder<DirectoryObject> {
 
     /**
      * The request builder for the DirectoryObject

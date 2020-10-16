@@ -10,6 +10,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.InferenceClassificationOverride;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.InferenceClassificationOverrideCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -30,7 +31,7 @@ public class InferenceClassification extends Entity implements IJsonBackedObject
      */
     @SerializedName(value = "overrides", alternate = {"Overrides"})
     @Expose
-    public BaseCollectionPage<InferenceClassificationOverride> overrides;
+    public InferenceClassificationOverrideCollectionPage overrides;
 
 
     /**
@@ -74,7 +75,7 @@ public class InferenceClassification extends Entity implements IJsonBackedObject
 
 
         if (json.has("overrides")) {
-            overrides = serializer.deserializeObject(json.get("overrides").toString(), new BaseCollectionPage<InferenceClassificationOverride>(new java.util.ArrayList<InferenceClassificationOverride>(), null).getClass());
+            overrides = serializer.deserializeObject(json.get("overrides").toString(), InferenceClassificationOverrideCollectionPage.class);
         }
     }
 }

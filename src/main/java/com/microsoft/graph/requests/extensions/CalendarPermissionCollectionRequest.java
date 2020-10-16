@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.CalendarPermissionCollectionResponse;
 import com.microsoft.graph.requests.extensions.CalendarPermissionCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.CalendarPermissionCollectionReque
 /**
  * The class for the Calendar Permission Collection Request.
  */
-public class CalendarPermissionCollectionRequest extends BaseCollectionRequest<CalendarPermission, CalendarPermissionCollectionResponse> {
+public class CalendarPermissionCollectionRequest extends BaseCollectionRequest<CalendarPermission, CalendarPermissionCollectionResponse, CalendarPermissionCollectionPage> {
 
     /**
      * The request builder for this collection of CalendarPermission
@@ -37,26 +36,7 @@ public class CalendarPermissionCollectionRequest extends BaseCollectionRequest<C
      */
     @SuppressWarnings("unchecked")
     public CalendarPermissionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, CalendarPermissionCollectionResponse.class,(Class<BaseCollectionPage<CalendarPermission>>) (new BaseCollectionPage<CalendarPermission>(new java.util.ArrayList<CalendarPermission>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<CalendarPermission>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<CalendarPermission> get() throws ClientException {
-        final CalendarPermissionCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, CalendarPermissionCollectionResponse.class, CalendarPermissionCollectionPage.class, CalendarPermissionCollectionRequestBuilder.class);
     }
 
     public void post(final CalendarPermission newCalendarPermission, final ICallback<? super CalendarPermission> callback) {
@@ -148,16 +128,5 @@ public class CalendarPermissionCollectionRequest extends BaseCollectionRequest<C
     public CalendarPermissionCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<CalendarPermission> buildFromResponse(final CalendarPermissionCollectionResponse response) {
-        final CalendarPermissionCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new CalendarPermissionCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<CalendarPermission> page = new BaseCollectionPage<CalendarPermission>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Resource Operation Request Builder.
  */
-public class ResourceOperationRequestBuilder extends BaseRequestBuilder {
+public class ResourceOperationRequestBuilder extends BaseRequestBuilder<ResourceOperation> {
 
     /**
      * The request builder for the ResourceOperation

@@ -16,6 +16,10 @@ import com.microsoft.graph.models.extensions.Post;
 import com.microsoft.graph.models.extensions.MultiValueLegacyExtendedProperty;
 import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
 import com.microsoft.graph.models.extensions.OutlookItem;
+import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
+import com.microsoft.graph.requests.extensions.ExtensionCollectionPage;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionPage;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -100,7 +104,7 @@ public class Post extends OutlookItem implements IJsonBackedObject {
      */
     @SerializedName(value = "attachments", alternate = {"Attachments"})
     @Expose
-    public BaseCollectionPage<Attachment> attachments;
+    public AttachmentCollectionPage attachments;
 
     /**
      * The Extensions.
@@ -108,7 +112,7 @@ public class Post extends OutlookItem implements IJsonBackedObject {
      */
     @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
-    public BaseCollectionPage<Extension> extensions;
+    public ExtensionCollectionPage extensions;
 
     /**
      * The In Reply To.
@@ -124,7 +128,7 @@ public class Post extends OutlookItem implements IJsonBackedObject {
      */
     @SerializedName(value = "multiValueExtendedProperties", alternate = {"MultiValueExtendedProperties"})
     @Expose
-    public BaseCollectionPage<MultiValueLegacyExtendedProperty> multiValueExtendedProperties;
+    public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
     /**
      * The Single Value Extended Properties.
@@ -132,7 +136,7 @@ public class Post extends OutlookItem implements IJsonBackedObject {
      */
     @SerializedName(value = "singleValueExtendedProperties", alternate = {"SingleValueExtendedProperties"})
     @Expose
-    public BaseCollectionPage<SingleValueLegacyExtendedProperty> singleValueExtendedProperties;
+    public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
 
     /**
@@ -176,19 +180,19 @@ public class Post extends OutlookItem implements IJsonBackedObject {
 
 
         if (json.has("attachments")) {
-            attachments = serializer.deserializeObject(json.get("attachments").toString(), new BaseCollectionPage<Attachment>(new java.util.ArrayList<Attachment>(), null).getClass());
+            attachments = serializer.deserializeObject(json.get("attachments").toString(), AttachmentCollectionPage.class);
         }
 
         if (json.has("extensions")) {
-            extensions = serializer.deserializeObject(json.get("extensions").toString(), new BaseCollectionPage<Extension>(new java.util.ArrayList<Extension>(), null).getClass());
+            extensions = serializer.deserializeObject(json.get("extensions").toString(), ExtensionCollectionPage.class);
         }
 
         if (json.has("multiValueExtendedProperties")) {
-            multiValueExtendedProperties = serializer.deserializeObject(json.get("multiValueExtendedProperties").toString(), new BaseCollectionPage<MultiValueLegacyExtendedProperty>(new java.util.ArrayList<MultiValueLegacyExtendedProperty>(), null).getClass());
+            multiValueExtendedProperties = serializer.deserializeObject(json.get("multiValueExtendedProperties").toString(), MultiValueLegacyExtendedPropertyCollectionPage.class);
         }
 
         if (json.has("singleValueExtendedProperties")) {
-            singleValueExtendedProperties = serializer.deserializeObject(json.get("singleValueExtendedProperties").toString(), new BaseCollectionPage<SingleValueLegacyExtendedProperty>(new java.util.ArrayList<SingleValueLegacyExtendedProperty>(), null).getClass());
+            singleValueExtendedProperties = serializer.deserializeObject(json.get("singleValueExtendedProperties").toString(), SingleValueLegacyExtendedPropertyCollectionPage.class);
         }
     }
 }

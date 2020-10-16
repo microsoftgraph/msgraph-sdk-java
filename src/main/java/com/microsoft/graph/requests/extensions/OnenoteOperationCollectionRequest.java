@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.OnenoteOperationCollectionResponse;
 import com.microsoft.graph.requests.extensions.OnenoteOperationCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.OnenoteOperationCollectionRequest
 /**
  * The class for the Onenote Operation Collection Request.
  */
-public class OnenoteOperationCollectionRequest extends BaseCollectionRequest<OnenoteOperation, OnenoteOperationCollectionResponse> {
+public class OnenoteOperationCollectionRequest extends BaseCollectionRequest<OnenoteOperation, OnenoteOperationCollectionResponse, OnenoteOperationCollectionPage> {
 
     /**
      * The request builder for this collection of OnenoteOperation
@@ -37,26 +36,7 @@ public class OnenoteOperationCollectionRequest extends BaseCollectionRequest<One
      */
     @SuppressWarnings("unchecked")
     public OnenoteOperationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OnenoteOperationCollectionResponse.class,(Class<BaseCollectionPage<OnenoteOperation>>) (new BaseCollectionPage<OnenoteOperation>(new java.util.ArrayList<OnenoteOperation>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<OnenoteOperation>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<OnenoteOperation> get() throws ClientException {
-        final OnenoteOperationCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, OnenoteOperationCollectionResponse.class, OnenoteOperationCollectionPage.class, OnenoteOperationCollectionRequestBuilder.class);
     }
 
     public void post(final OnenoteOperation newOnenoteOperation, final ICallback<? super OnenoteOperation> callback) {
@@ -148,16 +128,5 @@ public class OnenoteOperationCollectionRequest extends BaseCollectionRequest<One
     public OnenoteOperationCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<OnenoteOperation> buildFromResponse(final OnenoteOperationCollectionResponse response) {
-        final OnenoteOperationCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new OnenoteOperationCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<OnenoteOperation> page = new BaseCollectionPage<OnenoteOperation>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

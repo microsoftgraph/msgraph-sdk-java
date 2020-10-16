@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyCollectionRequestBuilder;
@@ -25,7 +24,7 @@ import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyCollectionReq
 /**
  * The class for the Group Lifecycle Policy Collection Request.
  */
-public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest<GroupLifecyclePolicy, GroupLifecyclePolicyCollectionResponse> {
+public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest<GroupLifecyclePolicy, GroupLifecyclePolicyCollectionResponse, GroupLifecyclePolicyCollectionPage> {
 
     /**
      * The request builder for this collection of GroupLifecyclePolicy
@@ -36,26 +35,7 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
      */
     @SuppressWarnings("unchecked")
     public GroupLifecyclePolicyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, GroupLifecyclePolicyCollectionResponse.class,(Class<BaseCollectionPage<GroupLifecyclePolicy>>) (new BaseCollectionPage<GroupLifecyclePolicy>(new java.util.ArrayList<GroupLifecyclePolicy>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<GroupLifecyclePolicy>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<GroupLifecyclePolicy> get() throws ClientException {
-        final GroupLifecyclePolicyCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, GroupLifecyclePolicyCollectionResponse.class, GroupLifecyclePolicyCollectionPage.class, GroupLifecyclePolicyCollectionRequestBuilder.class);
     }
 
     public void post(final GroupLifecyclePolicy newGroupLifecyclePolicy, final ICallback<? super GroupLifecyclePolicy> callback) {
@@ -147,16 +127,5 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
     public GroupLifecyclePolicyCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<GroupLifecyclePolicy> buildFromResponse(final GroupLifecyclePolicyCollectionResponse response) {
-        final GroupLifecyclePolicyCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new GroupLifecyclePolicyCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<GroupLifecyclePolicy> page = new BaseCollectionPage<GroupLifecyclePolicy>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

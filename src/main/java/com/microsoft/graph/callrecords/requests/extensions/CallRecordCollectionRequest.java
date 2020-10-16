@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.callrecords.requests.extensions.CallRecordCollectionResponse;
 import com.microsoft.graph.callrecords.requests.extensions.CallRecordCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.callrecords.requests.extensions.CallRecordCollectionR
 /**
  * The class for the Call Record Collection Request.
  */
-public class CallRecordCollectionRequest extends BaseCollectionRequest<CallRecord, CallRecordCollectionResponse> {
+public class CallRecordCollectionRequest extends BaseCollectionRequest<CallRecord, CallRecordCollectionResponse, CallRecordCollectionPage> {
 
     /**
      * The request builder for this collection of CallRecord
@@ -37,26 +36,7 @@ public class CallRecordCollectionRequest extends BaseCollectionRequest<CallRecor
      */
     @SuppressWarnings("unchecked")
     public CallRecordCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, CallRecordCollectionResponse.class,(Class<BaseCollectionPage<CallRecord>>) (new BaseCollectionPage<CallRecord>(new java.util.ArrayList<CallRecord>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<CallRecord>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<CallRecord> get() throws ClientException {
-        final CallRecordCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, CallRecordCollectionResponse.class, CallRecordCollectionPage.class, CallRecordCollectionRequestBuilder.class);
     }
 
     public void post(final CallRecord newCallRecord, final ICallback<? super CallRecord> callback) {
@@ -148,16 +128,5 @@ public class CallRecordCollectionRequest extends BaseCollectionRequest<CallRecor
     public CallRecordCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<CallRecord> buildFromResponse(final CallRecordCollectionResponse response) {
-        final CallRecordCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new CallRecordCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<CallRecord> page = new BaseCollectionPage<CallRecord>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

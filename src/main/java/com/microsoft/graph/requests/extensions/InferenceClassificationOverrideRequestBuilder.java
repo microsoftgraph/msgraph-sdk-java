@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Inference Classification Override Request Builder.
  */
-public class InferenceClassificationOverrideRequestBuilder extends BaseRequestBuilder {
+public class InferenceClassificationOverrideRequestBuilder extends BaseRequestBuilder<InferenceClassificationOverride> {
 
     /**
      * The request builder for the InferenceClassificationOverride

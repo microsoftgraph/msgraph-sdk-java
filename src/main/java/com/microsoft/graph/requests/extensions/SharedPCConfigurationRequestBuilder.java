@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Shared PCConfiguration Request Builder.
  */
-public class SharedPCConfigurationRequestBuilder extends BaseRequestBuilder {
+public class SharedPCConfigurationRequestBuilder extends BaseRequestBuilder<SharedPCConfiguration> {
 
     /**
      * The request builder for the SharedPCConfiguration

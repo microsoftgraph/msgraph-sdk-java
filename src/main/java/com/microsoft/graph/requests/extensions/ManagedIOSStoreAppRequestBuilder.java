@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Managed IOSStore App Request Builder.
  */
-public class ManagedIOSStoreAppRequestBuilder extends BaseRequestBuilder {
+public class ManagedIOSStoreAppRequestBuilder extends BaseRequestBuilder<ManagedIOSStoreApp> {
 
     /**
      * The request builder for the ManagedIOSStoreApp

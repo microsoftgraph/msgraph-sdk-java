@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Managed EBook Request Builder.
  */
-public class ManagedEBookRequestBuilder extends BaseRequestBuilder {
+public class ManagedEBookRequestBuilder extends BaseRequestBuilder<ManagedEBook> {
 
     /**
      * The request builder for the ManagedEBook

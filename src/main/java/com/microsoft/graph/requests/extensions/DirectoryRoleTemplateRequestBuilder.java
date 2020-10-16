@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Directory Role Template Request Builder.
  */
-public class DirectoryRoleTemplateRequestBuilder extends BaseRequestBuilder {
+public class DirectoryRoleTemplateRequestBuilder extends BaseRequestBuilder<DirectoryRoleTemplate> {
 
     /**
      * The request builder for the DirectoryRoleTemplate

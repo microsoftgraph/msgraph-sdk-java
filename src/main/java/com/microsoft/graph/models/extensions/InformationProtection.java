@@ -10,6 +10,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.ThreatAssessmentRequest;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -30,7 +31,7 @@ public class InformationProtection extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "threatAssessmentRequests", alternate = {"ThreatAssessmentRequests"})
     @Expose
-    public BaseCollectionPage<ThreatAssessmentRequest> threatAssessmentRequests;
+    public ThreatAssessmentRequestCollectionPage threatAssessmentRequests;
 
 
     /**
@@ -74,7 +75,7 @@ public class InformationProtection extends Entity implements IJsonBackedObject {
 
 
         if (json.has("threatAssessmentRequests")) {
-            threatAssessmentRequests = serializer.deserializeObject(json.get("threatAssessmentRequests").toString(), new BaseCollectionPage<ThreatAssessmentRequest>(new java.util.ArrayList<ThreatAssessmentRequest>(), null).getClass());
+            threatAssessmentRequests = serializer.deserializeObject(json.get("threatAssessmentRequests").toString(), ThreatAssessmentRequestCollectionPage.class);
         }
     }
 }

@@ -7,7 +7,7 @@ import com.microsoft.graph.requests.extensions.CallAnswerRequest;
 import com.microsoft.graph.models.extensions.Call;
 import com.microsoft.graph.models.extensions.MediaConfig;
 import com.microsoft.graph.models.generated.Modality;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
+import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 

@@ -12,6 +12,7 @@ import com.microsoft.graph.models.extensions.ItemReference;
 import com.microsoft.graph.models.extensions.ContentTypeOrder;
 import com.microsoft.graph.models.extensions.ColumnLink;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.ColumnLinkCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -104,7 +105,7 @@ public class ContentType extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "columnLinks", alternate = {"ColumnLinks"})
     @Expose
-    public BaseCollectionPage<ColumnLink> columnLinks;
+    public ColumnLinkCollectionPage columnLinks;
 
 
     /**
@@ -148,7 +149,7 @@ public class ContentType extends Entity implements IJsonBackedObject {
 
 
         if (json.has("columnLinks")) {
-            columnLinks = serializer.deserializeObject(json.get("columnLinks").toString(), new BaseCollectionPage<ColumnLink>(new java.util.ArrayList<ColumnLink>(), null).getClass());
+            columnLinks = serializer.deserializeObject(json.get("columnLinks").toString(), ColumnLinkCollectionPage.class);
         }
     }
 }

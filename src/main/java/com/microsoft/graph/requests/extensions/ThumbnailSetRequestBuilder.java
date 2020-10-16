@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Thumbnail Set Request Builder.
  */
-public class ThumbnailSetRequestBuilder extends BaseRequestBuilder {
+public class ThumbnailSetRequestBuilder extends BaseRequestBuilder<ThumbnailSet> {
 
     /**
      * The request builder for the ThumbnailSet

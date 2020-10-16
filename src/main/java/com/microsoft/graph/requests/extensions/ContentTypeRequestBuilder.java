@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Content Type Request Builder.
  */
-public class ContentTypeRequestBuilder extends BaseRequestBuilder {
+public class ContentTypeRequestBuilder extends BaseRequestBuilder<ContentType> {
 
     /**
      * The request builder for the ContentType

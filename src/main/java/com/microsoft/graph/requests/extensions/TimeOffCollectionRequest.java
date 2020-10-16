@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TimeOffCollectionResponse;
 import com.microsoft.graph.requests.extensions.TimeOffCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.TimeOffCollectionRequest;
 /**
  * The class for the Time Off Collection Request.
  */
-public class TimeOffCollectionRequest extends BaseCollectionRequest<TimeOff, TimeOffCollectionResponse> {
+public class TimeOffCollectionRequest extends BaseCollectionRequest<TimeOff, TimeOffCollectionResponse, TimeOffCollectionPage> {
 
     /**
      * The request builder for this collection of TimeOff
@@ -37,26 +36,7 @@ public class TimeOffCollectionRequest extends BaseCollectionRequest<TimeOff, Tim
      */
     @SuppressWarnings("unchecked")
     public TimeOffCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TimeOffCollectionResponse.class,(Class<BaseCollectionPage<TimeOff>>) (new BaseCollectionPage<TimeOff>(new java.util.ArrayList<TimeOff>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<TimeOff>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<TimeOff> get() throws ClientException {
-        final TimeOffCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, TimeOffCollectionResponse.class, TimeOffCollectionPage.class, TimeOffCollectionRequestBuilder.class);
     }
 
     public void post(final TimeOff newTimeOff, final ICallback<? super TimeOff> callback) {
@@ -148,16 +128,5 @@ public class TimeOffCollectionRequest extends BaseCollectionRequest<TimeOff, Tim
     public TimeOffCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<TimeOff> buildFromResponse(final TimeOffCollectionResponse response) {
-        final TimeOffCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new TimeOffCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<TimeOff> page = new BaseCollectionPage<TimeOff>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

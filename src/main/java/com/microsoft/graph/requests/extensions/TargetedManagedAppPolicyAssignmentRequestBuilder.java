@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Targeted Managed App Policy Assignment Request Builder.
  */
-public class TargetedManagedAppPolicyAssignmentRequestBuilder extends BaseRequestBuilder {
+public class TargetedManagedAppPolicyAssignmentRequestBuilder extends BaseRequestBuilder<TargetedManagedAppPolicyAssignment> {
 
     /**
      * The request builder for the TargetedManagedAppPolicyAssignment

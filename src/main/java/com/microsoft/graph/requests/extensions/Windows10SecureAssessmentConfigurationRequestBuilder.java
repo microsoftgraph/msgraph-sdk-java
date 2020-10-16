@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows10Secure Assessment Configuration Request Builder.
  */
-public class Windows10SecureAssessmentConfigurationRequestBuilder extends BaseRequestBuilder {
+public class Windows10SecureAssessmentConfigurationRequestBuilder extends BaseRequestBuilder<Windows10SecureAssessmentConfiguration> {
 
     /**
      * The request builder for the Windows10SecureAssessmentConfiguration

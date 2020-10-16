@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Request Builder.
  */
-public class DeviceRequestBuilder extends BaseRequestBuilder {
+public class DeviceRequestBuilder extends BaseRequestBuilder<Device> {
 
     /**
      * The request builder for the Device

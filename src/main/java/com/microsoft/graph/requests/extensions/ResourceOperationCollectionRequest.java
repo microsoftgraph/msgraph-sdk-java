@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ResourceOperationCollectionResponse;
 import com.microsoft.graph.requests.extensions.ResourceOperationCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.ResourceOperationCollectionReques
 /**
  * The class for the Resource Operation Collection Request.
  */
-public class ResourceOperationCollectionRequest extends BaseCollectionRequest<ResourceOperation, ResourceOperationCollectionResponse> {
+public class ResourceOperationCollectionRequest extends BaseCollectionRequest<ResourceOperation, ResourceOperationCollectionResponse, ResourceOperationCollectionPage> {
 
     /**
      * The request builder for this collection of ResourceOperation
@@ -37,26 +36,7 @@ public class ResourceOperationCollectionRequest extends BaseCollectionRequest<Re
      */
     @SuppressWarnings("unchecked")
     public ResourceOperationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ResourceOperationCollectionResponse.class,(Class<BaseCollectionPage<ResourceOperation>>) (new BaseCollectionPage<ResourceOperation>(new java.util.ArrayList<ResourceOperation>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<ResourceOperation>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<ResourceOperation> get() throws ClientException {
-        final ResourceOperationCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, ResourceOperationCollectionResponse.class, ResourceOperationCollectionPage.class, ResourceOperationCollectionRequestBuilder.class);
     }
 
     public void post(final ResourceOperation newResourceOperation, final ICallback<? super ResourceOperation> callback) {
@@ -148,16 +128,5 @@ public class ResourceOperationCollectionRequest extends BaseCollectionRequest<Re
     public ResourceOperationCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<ResourceOperation> buildFromResponse(final ResourceOperationCollectionResponse response) {
-        final ResourceOperationCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new ResourceOperationCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<ResourceOperation> page = new BaseCollectionPage<ResourceOperation>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

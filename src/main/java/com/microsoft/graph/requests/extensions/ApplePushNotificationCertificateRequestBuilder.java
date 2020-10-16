@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Apple Push Notification Certificate Request Builder.
  */
-public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestBuilder {
+public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestBuilder<ApplePushNotificationCertificate> {
 
     /**
      * The request builder for the ApplePushNotificationCertificate

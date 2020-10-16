@@ -16,7 +16,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ManagedEBookCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedEBookCollectionRequestBuilder;
@@ -27,7 +26,7 @@ import com.microsoft.graph.requests.extensions.ManagedEBookCollectionRequest;
 /**
  * The class for the Managed EBook Collection Request.
  */
-public class ManagedEBookCollectionRequest extends BaseCollectionRequest<ManagedEBook, ManagedEBookCollectionResponse> {
+public class ManagedEBookCollectionRequest extends BaseCollectionRequest<ManagedEBook, ManagedEBookCollectionResponse, ManagedEBookCollectionPage> {
 
     /**
      * The request builder for this collection of ManagedEBook
@@ -38,26 +37,7 @@ public class ManagedEBookCollectionRequest extends BaseCollectionRequest<Managed
      */
     @SuppressWarnings("unchecked")
     public ManagedEBookCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedEBookCollectionResponse.class,(Class<BaseCollectionPage<ManagedEBook>>) (new BaseCollectionPage<ManagedEBook>(new java.util.ArrayList<ManagedEBook>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<ManagedEBook>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<ManagedEBook> get() throws ClientException {
-        final ManagedEBookCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, ManagedEBookCollectionResponse.class, ManagedEBookCollectionPage.class, ManagedEBookCollectionRequestBuilder.class);
     }
 
     public void post(final ManagedEBook newManagedEBook, final ICallback<? super ManagedEBook> callback) {
@@ -149,16 +129,5 @@ public class ManagedEBookCollectionRequest extends BaseCollectionRequest<Managed
     public ManagedEBookCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<ManagedEBook> buildFromResponse(final ManagedEBookCollectionResponse response) {
-        final ManagedEBookCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new ManagedEBookCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<ManagedEBook> page = new BaseCollectionPage<ManagedEBook>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

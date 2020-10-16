@@ -24,7 +24,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Cloud Communications Request Builder.
  */
-public class CloudCommunicationsRequestBuilder extends BaseRequestBuilder {
+public class CloudCommunicationsRequestBuilder extends BaseRequestBuilder<CloudCommunications> {
 
     /**
      * The request builder for the CloudCommunications

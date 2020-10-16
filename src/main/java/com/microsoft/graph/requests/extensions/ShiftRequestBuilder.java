@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Shift Request Builder.
  */
-public class ShiftRequestBuilder extends BaseRequestBuilder {
+public class ShiftRequestBuilder extends BaseRequestBuilder<Shift> {
 
     /**
      * The request builder for the Shift

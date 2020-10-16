@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the App Role Assignment Collection With References Request Builder.
  */
-public class AppRoleAssignmentCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<AppRoleAssignment, AppRoleAssignmentWithReferenceRequest, AppRoleAssignmentReferenceRequestBuilder, AppRoleAssignmentWithReferenceRequestBuilder, AppRoleAssignmentCollectionResponse, AppRoleAssignmentCollectionWithReferencesRequest, AppRoleAssignmentCollectionWithReferencesRequest> {
+public class AppRoleAssignmentCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<AppRoleAssignment, AppRoleAssignmentWithReferenceRequest, AppRoleAssignmentReferenceRequestBuilder, AppRoleAssignmentWithReferenceRequestBuilder, AppRoleAssignmentCollectionResponse, AppRoleAssignmentCollectionPage, AppRoleAssignmentCollectionWithReferencesRequest, AppRoleAssignmentCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -30,6 +30,6 @@ public class AppRoleAssignmentCollectionWithReferencesRequestBuilder extends Bas
      * @param requestOptions the options for this request
      */
     public AppRoleAssignmentCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, AppRoleAssignmentWithReferenceRequestBuilder.class, AppRoleAssignmentCollectionWithReferencesRequest.class, AppRoleAssignmentCollectionWithReferencesRequest.class);
+        super(requestUrl, client, requestOptions, AppRoleAssignmentReferenceRequestBuilder.class, AppRoleAssignmentCollectionResponse.class, AppRoleAssignmentCollectionPage.class, AppRoleAssignmentCollectionWithReferencesRequest.class);
     }
 }

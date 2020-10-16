@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Education User Request Builder.
  */
-public class EducationUserRequestBuilder extends BaseRequestBuilder {
+public class EducationUserRequestBuilder extends BaseRequestBuilder<EducationUser> {
 
     /**
      * The request builder for the EducationUser

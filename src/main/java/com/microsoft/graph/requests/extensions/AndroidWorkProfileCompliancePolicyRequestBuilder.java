@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Android Work Profile Compliance Policy Request Builder.
  */
-public class AndroidWorkProfileCompliancePolicyRequestBuilder extends BaseRequestBuilder {
+public class AndroidWorkProfileCompliancePolicyRequestBuilder extends BaseRequestBuilder<AndroidWorkProfileCompliancePolicy> {
 
     /**
      * The request builder for the AndroidWorkProfileCompliancePolicy

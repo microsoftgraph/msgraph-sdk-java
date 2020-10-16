@@ -12,6 +12,7 @@ import com.microsoft.graph.models.extensions.PhysicalOfficeAddress;
 import com.microsoft.graph.models.extensions.OnPremisesProvisioningError;
 import com.microsoft.graph.models.extensions.Phone;
 import com.microsoft.graph.models.extensions.DirectoryObject;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -142,7 +143,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
      * The Direct Reports.
      * 
      */
-    public BaseCollectionPage<DirectoryObject> directReports;
+    public DirectoryObjectCollectionPage directReports;
 
     /**
      * The Manager.
@@ -156,13 +157,13 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
      * The Member Of.
      * 
      */
-    public BaseCollectionPage<DirectoryObject> memberOf;
+    public DirectoryObjectCollectionPage memberOf;
 
     /**
      * The Transitive Member Of.
      * 
      */
-    public BaseCollectionPage<DirectoryObject> transitiveMemberOf;
+    public DirectoryObjectCollectionPage transitiveMemberOf;
 
 
     /**
@@ -206,15 +207,15 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
 
 
         if (json.has("directReports")) {
-            directReports = serializer.deserializeObject(json.get("directReports").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
+            directReports = serializer.deserializeObject(json.get("directReports").toString(), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("memberOf")) {
-            memberOf = serializer.deserializeObject(json.get("memberOf").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
+            memberOf = serializer.deserializeObject(json.get("memberOf").toString(), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("transitiveMemberOf")) {
-            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
+            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf").toString(), DirectoryObjectCollectionPage.class);
         }
     }
 }

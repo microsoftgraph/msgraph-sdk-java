@@ -33,7 +33,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Site Request Builder.
  */
-public class SiteRequestBuilder extends BaseRequestBuilder {
+public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
 
     /**
      * The request builder for the Site

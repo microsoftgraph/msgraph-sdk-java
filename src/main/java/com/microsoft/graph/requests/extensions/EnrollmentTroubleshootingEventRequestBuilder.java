@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Enrollment Troubleshooting Event Request Builder.
  */
-public class EnrollmentTroubleshootingEventRequestBuilder extends BaseRequestBuilder {
+public class EnrollmentTroubleshootingEventRequestBuilder extends BaseRequestBuilder<EnrollmentTroubleshootingEvent> {
 
     /**
      * The request builder for the EnrollmentTroubleshootingEvent

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Enrollment Windows Hello For Business Configuration Request Builder.
  */
-public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequestBuilder extends BaseRequestBuilder {
+public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequestBuilder extends BaseRequestBuilder<DeviceEnrollmentWindowsHelloForBusinessConfiguration> {
 
     /**
      * The request builder for the DeviceEnrollmentWindowsHelloForBusinessConfiguration

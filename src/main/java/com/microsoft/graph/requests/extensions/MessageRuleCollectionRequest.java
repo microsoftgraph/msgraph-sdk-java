@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.MessageRuleCollectionResponse;
 import com.microsoft.graph.requests.extensions.MessageRuleCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.MessageRuleCollectionRequest;
 /**
  * The class for the Message Rule Collection Request.
  */
-public class MessageRuleCollectionRequest extends BaseCollectionRequest<MessageRule, MessageRuleCollectionResponse> {
+public class MessageRuleCollectionRequest extends BaseCollectionRequest<MessageRule, MessageRuleCollectionResponse, MessageRuleCollectionPage> {
 
     /**
      * The request builder for this collection of MessageRule
@@ -37,26 +36,7 @@ public class MessageRuleCollectionRequest extends BaseCollectionRequest<MessageR
      */
     @SuppressWarnings("unchecked")
     public MessageRuleCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MessageRuleCollectionResponse.class,(Class<BaseCollectionPage<MessageRule>>) (new BaseCollectionPage<MessageRule>(new java.util.ArrayList<MessageRule>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<MessageRule>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<MessageRule> get() throws ClientException {
-        final MessageRuleCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, MessageRuleCollectionResponse.class, MessageRuleCollectionPage.class, MessageRuleCollectionRequestBuilder.class);
     }
 
     public void post(final MessageRule newMessageRule, final ICallback<? super MessageRule> callback) {
@@ -148,16 +128,5 @@ public class MessageRuleCollectionRequest extends BaseCollectionRequest<MessageR
     public MessageRuleCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<MessageRule> buildFromResponse(final MessageRuleCollectionResponse response) {
-        final MessageRuleCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new MessageRuleCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<MessageRule> page = new BaseCollectionPage<MessageRule>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

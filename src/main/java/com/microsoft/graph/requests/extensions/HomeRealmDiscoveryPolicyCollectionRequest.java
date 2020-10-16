@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectio
 /**
  * The class for the Home Realm Discovery Policy Collection Request.
  */
-public class HomeRealmDiscoveryPolicyCollectionRequest extends BaseCollectionRequest<HomeRealmDiscoveryPolicy, HomeRealmDiscoveryPolicyCollectionResponse> {
+public class HomeRealmDiscoveryPolicyCollectionRequest extends BaseCollectionRequest<HomeRealmDiscoveryPolicy, HomeRealmDiscoveryPolicyCollectionResponse, HomeRealmDiscoveryPolicyCollectionPage> {
 
     /**
      * The request builder for this collection of HomeRealmDiscoveryPolicy
@@ -37,26 +36,7 @@ public class HomeRealmDiscoveryPolicyCollectionRequest extends BaseCollectionReq
      */
     @SuppressWarnings("unchecked")
     public HomeRealmDiscoveryPolicyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicyCollectionResponse.class,(Class<BaseCollectionPage<HomeRealmDiscoveryPolicy>>) (new BaseCollectionPage<HomeRealmDiscoveryPolicy>(new java.util.ArrayList<HomeRealmDiscoveryPolicy>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<HomeRealmDiscoveryPolicy>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<HomeRealmDiscoveryPolicy> get() throws ClientException {
-        final HomeRealmDiscoveryPolicyCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicyCollectionResponse.class, HomeRealmDiscoveryPolicyCollectionPage.class, HomeRealmDiscoveryPolicyCollectionRequestBuilder.class);
     }
 
     public void post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
@@ -148,16 +128,5 @@ public class HomeRealmDiscoveryPolicyCollectionRequest extends BaseCollectionReq
     public HomeRealmDiscoveryPolicyCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<HomeRealmDiscoveryPolicy> buildFromResponse(final HomeRealmDiscoveryPolicyCollectionResponse response) {
-        final HomeRealmDiscoveryPolicyCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new HomeRealmDiscoveryPolicyCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<HomeRealmDiscoveryPolicy> page = new BaseCollectionPage<HomeRealmDiscoveryPolicy>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

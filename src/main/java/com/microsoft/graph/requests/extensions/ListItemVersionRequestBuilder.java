@@ -19,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the List Item Version Request Builder.
  */
-public class ListItemVersionRequestBuilder extends BaseRequestBuilder {
+public class ListItemVersionRequestBuilder extends BaseRequestBuilder<ListItemVersion> {
 
     /**
      * The request builder for the ListItemVersion

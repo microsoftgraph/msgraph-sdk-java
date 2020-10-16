@@ -16,7 +16,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.PermissionCollectionResponse;
 import com.microsoft.graph.requests.extensions.PermissionCollectionRequestBuilder;
@@ -27,7 +26,7 @@ import com.microsoft.graph.requests.extensions.PermissionCollectionRequest;
 /**
  * The class for the Permission Collection Request.
  */
-public class PermissionCollectionRequest extends BaseCollectionRequest<Permission, PermissionCollectionResponse> {
+public class PermissionCollectionRequest extends BaseCollectionRequest<Permission, PermissionCollectionResponse, PermissionCollectionPage> {
 
     /**
      * The request builder for this collection of Permission
@@ -38,26 +37,7 @@ public class PermissionCollectionRequest extends BaseCollectionRequest<Permissio
      */
     @SuppressWarnings("unchecked")
     public PermissionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, PermissionCollectionResponse.class,(Class<BaseCollectionPage<Permission>>) (new BaseCollectionPage<Permission>(new java.util.ArrayList<Permission>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<Permission>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<Permission> get() throws ClientException {
-        final PermissionCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, PermissionCollectionResponse.class, PermissionCollectionPage.class, PermissionCollectionRequestBuilder.class);
     }
 
     public void post(final Permission newPermission, final ICallback<? super Permission> callback) {
@@ -149,16 +129,5 @@ public class PermissionCollectionRequest extends BaseCollectionRequest<Permissio
     public PermissionCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<Permission> buildFromResponse(final PermissionCollectionResponse response) {
-        final PermissionCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new PermissionCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<Permission> page = new BaseCollectionPage<Permission>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

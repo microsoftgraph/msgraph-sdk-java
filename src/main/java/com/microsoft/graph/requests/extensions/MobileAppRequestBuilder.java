@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Mobile App Request Builder.
  */
-public class MobileAppRequestBuilder extends BaseRequestBuilder {
+public class MobileAppRequestBuilder extends BaseRequestBuilder<MobileApp> {
 
     /**
      * The request builder for the MobileApp

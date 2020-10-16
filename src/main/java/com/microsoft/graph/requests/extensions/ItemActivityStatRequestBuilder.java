@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Item Activity Stat Request Builder.
  */
-public class ItemActivityStatRequestBuilder extends BaseRequestBuilder {
+public class ItemActivityStatRequestBuilder extends BaseRequestBuilder<ItemActivityStat> {
 
     /**
      * The request builder for the ItemActivityStat

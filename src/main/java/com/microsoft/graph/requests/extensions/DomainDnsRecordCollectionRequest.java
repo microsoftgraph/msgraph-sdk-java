@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionResponse;
 import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionRequestBuilder;
@@ -25,7 +24,7 @@ import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionRequest;
 /**
  * The class for the Domain Dns Record Collection Request.
  */
-public class DomainDnsRecordCollectionRequest extends BaseCollectionRequest<DomainDnsRecord, DomainDnsRecordCollectionResponse> {
+public class DomainDnsRecordCollectionRequest extends BaseCollectionRequest<DomainDnsRecord, DomainDnsRecordCollectionResponse, DomainDnsRecordCollectionPage> {
 
     /**
      * The request builder for this collection of DomainDnsRecord
@@ -36,26 +35,7 @@ public class DomainDnsRecordCollectionRequest extends BaseCollectionRequest<Doma
      */
     @SuppressWarnings("unchecked")
     public DomainDnsRecordCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DomainDnsRecordCollectionResponse.class,(Class<BaseCollectionPage<DomainDnsRecord>>) (new BaseCollectionPage<DomainDnsRecord>(new java.util.ArrayList<DomainDnsRecord>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<DomainDnsRecord>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<DomainDnsRecord> get() throws ClientException {
-        final DomainDnsRecordCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, DomainDnsRecordCollectionResponse.class, DomainDnsRecordCollectionPage.class, DomainDnsRecordCollectionRequestBuilder.class);
     }
 
     public void post(final DomainDnsRecord newDomainDnsRecord, final ICallback<? super DomainDnsRecord> callback) {
@@ -147,16 +127,5 @@ public class DomainDnsRecordCollectionRequest extends BaseCollectionRequest<Doma
     public DomainDnsRecordCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<DomainDnsRecord> buildFromResponse(final DomainDnsRecordCollectionResponse response) {
-        final DomainDnsRecordCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DomainDnsRecordCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<DomainDnsRecord> page = new BaseCollectionPage<DomainDnsRecord>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

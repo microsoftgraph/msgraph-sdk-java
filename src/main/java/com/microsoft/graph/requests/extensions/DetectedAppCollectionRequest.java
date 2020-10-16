@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DetectedAppCollectionResponse;
 import com.microsoft.graph.requests.extensions.DetectedAppCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.DetectedAppCollectionRequest;
 /**
  * The class for the Detected App Collection Request.
  */
-public class DetectedAppCollectionRequest extends BaseCollectionRequest<DetectedApp, DetectedAppCollectionResponse> {
+public class DetectedAppCollectionRequest extends BaseCollectionRequest<DetectedApp, DetectedAppCollectionResponse, DetectedAppCollectionPage> {
 
     /**
      * The request builder for this collection of DetectedApp
@@ -37,26 +36,7 @@ public class DetectedAppCollectionRequest extends BaseCollectionRequest<Detected
      */
     @SuppressWarnings("unchecked")
     public DetectedAppCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DetectedAppCollectionResponse.class,(Class<BaseCollectionPage<DetectedApp>>) (new BaseCollectionPage<DetectedApp>(new java.util.ArrayList<DetectedApp>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<DetectedApp>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<DetectedApp> get() throws ClientException {
-        final DetectedAppCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, DetectedAppCollectionResponse.class, DetectedAppCollectionPage.class, DetectedAppCollectionRequestBuilder.class);
     }
 
     public void post(final DetectedApp newDetectedApp, final ICallback<? super DetectedApp> callback) {
@@ -148,16 +128,5 @@ public class DetectedAppCollectionRequest extends BaseCollectionRequest<Detected
     public DetectedAppCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<DetectedApp> buildFromResponse(final DetectedAppCollectionResponse response) {
-        final DetectedAppCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DetectedAppCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<DetectedApp> page = new BaseCollectionPage<DetectedApp>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurati
 /**
  * The class for the Managed Device Mobile App Configuration User Status Collection Request.
  */
-public class ManagedDeviceMobileAppConfigurationUserStatusCollectionRequest extends BaseCollectionRequest<ManagedDeviceMobileAppConfigurationUserStatus, ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse> {
+public class ManagedDeviceMobileAppConfigurationUserStatusCollectionRequest extends BaseCollectionRequest<ManagedDeviceMobileAppConfigurationUserStatus, ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse, ManagedDeviceMobileAppConfigurationUserStatusCollectionPage> {
 
     /**
      * The request builder for this collection of ManagedDeviceMobileAppConfigurationUserStatus
@@ -37,26 +36,7 @@ public class ManagedDeviceMobileAppConfigurationUserStatusCollectionRequest exte
      */
     @SuppressWarnings("unchecked")
     public ManagedDeviceMobileAppConfigurationUserStatusCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse.class,(Class<BaseCollectionPage<ManagedDeviceMobileAppConfigurationUserStatus>>) (new BaseCollectionPage<ManagedDeviceMobileAppConfigurationUserStatus>(new java.util.ArrayList<ManagedDeviceMobileAppConfigurationUserStatus>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<ManagedDeviceMobileAppConfigurationUserStatus>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<ManagedDeviceMobileAppConfigurationUserStatus> get() throws ClientException {
-        final ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse.class, ManagedDeviceMobileAppConfigurationUserStatusCollectionPage.class, ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder.class);
     }
 
     public void post(final ManagedDeviceMobileAppConfigurationUserStatus newManagedDeviceMobileAppConfigurationUserStatus, final ICallback<? super ManagedDeviceMobileAppConfigurationUserStatus> callback) {
@@ -148,16 +128,5 @@ public class ManagedDeviceMobileAppConfigurationUserStatusCollectionRequest exte
     public ManagedDeviceMobileAppConfigurationUserStatusCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<ManagedDeviceMobileAppConfigurationUserStatus> buildFromResponse(final ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse response) {
-        final ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<ManagedDeviceMobileAppConfigurationUserStatus> page = new BaseCollectionPage<ManagedDeviceMobileAppConfigurationUserStatus>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

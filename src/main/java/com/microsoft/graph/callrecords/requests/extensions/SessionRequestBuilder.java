@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Session Request Builder.
  */
-public class SessionRequestBuilder extends BaseRequestBuilder {
+public class SessionRequestBuilder extends BaseRequestBuilder<Session> {
 
     /**
      * The request builder for the Session

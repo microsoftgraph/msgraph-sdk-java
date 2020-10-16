@@ -17,7 +17,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.EventCollectionResponse;
 import com.microsoft.graph.requests.extensions.EventCollectionRequestBuilder;
@@ -28,7 +27,7 @@ import com.microsoft.graph.requests.extensions.EventCollectionRequest;
 /**
  * The class for the Event Collection Request.
  */
-public class EventCollectionRequest extends BaseCollectionRequest<Event, EventCollectionResponse> {
+public class EventCollectionRequest extends BaseCollectionRequest<Event, EventCollectionResponse, EventCollectionPage> {
 
     /**
      * The request builder for this collection of Event
@@ -39,26 +38,7 @@ public class EventCollectionRequest extends BaseCollectionRequest<Event, EventCo
      */
     @SuppressWarnings("unchecked")
     public EventCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, EventCollectionResponse.class,(Class<BaseCollectionPage<Event>>) (new BaseCollectionPage<Event>(new java.util.ArrayList<Event>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<Event>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<Event> get() throws ClientException {
-        final EventCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, EventCollectionResponse.class, EventCollectionPage.class, EventCollectionRequestBuilder.class);
     }
 
     public void post(final Event newEvent, final ICallback<? super Event> callback) {
@@ -150,16 +130,5 @@ public class EventCollectionRequest extends BaseCollectionRequest<Event, EventCo
     public EventCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<Event> buildFromResponse(final EventCollectionResponse response) {
-        final EventCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new EventCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<Event> page = new BaseCollectionPage<Event>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

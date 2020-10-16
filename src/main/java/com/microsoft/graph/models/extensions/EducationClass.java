@@ -15,6 +15,8 @@ import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.models.extensions.EducationUser;
 import com.microsoft.graph.models.extensions.EducationSchool;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.EducationUserCollectionPage;
+import com.microsoft.graph.requests.extensions.EducationSchoolCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -113,19 +115,19 @@ public class EducationClass extends Entity implements IJsonBackedObject {
      * The Members.
      * All users in the class. Nullable.
      */
-    public BaseCollectionPage<EducationUser> members;
+    public EducationUserCollectionPage members;
 
     /**
      * The Schools.
      * All schools that this class is associated with. Nullable.
      */
-    public BaseCollectionPage<EducationSchool> schools;
+    public EducationSchoolCollectionPage schools;
 
     /**
      * The Teachers.
      * All teachers in the class. Nullable.
      */
-    public BaseCollectionPage<EducationUser> teachers;
+    public EducationUserCollectionPage teachers;
 
 
     /**
@@ -169,15 +171,15 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
 
         if (json.has("members")) {
-            members = serializer.deserializeObject(json.get("members").toString(), new BaseCollectionPage<EducationUser>(new java.util.ArrayList<EducationUser>(), null).getClass());
+            members = serializer.deserializeObject(json.get("members").toString(), EducationUserCollectionPage.class);
         }
 
         if (json.has("schools")) {
-            schools = serializer.deserializeObject(json.get("schools").toString(), new BaseCollectionPage<EducationSchool>(new java.util.ArrayList<EducationSchool>(), null).getClass());
+            schools = serializer.deserializeObject(json.get("schools").toString(), EducationSchoolCollectionPage.class);
         }
 
         if (json.has("teachers")) {
-            teachers = serializer.deserializeObject(json.get("teachers").toString(), new BaseCollectionPage<EducationUser>(new java.util.ArrayList<EducationUser>(), null).getClass());
+            teachers = serializer.deserializeObject(json.get("teachers").toString(), EducationUserCollectionPage.class);
         }
     }
 }

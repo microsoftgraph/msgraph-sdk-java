@@ -14,6 +14,9 @@ import com.microsoft.graph.models.extensions.ConversationMember;
 import com.microsoft.graph.models.extensions.ChatMessage;
 import com.microsoft.graph.models.extensions.TeamsTab;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.ConversationMemberCollectionPage;
+import com.microsoft.graph.requests.extensions.ChatMessageCollectionPage;
+import com.microsoft.graph.requests.extensions.TeamsTabCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -82,7 +85,7 @@ public class Channel extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "members", alternate = {"Members"})
     @Expose
-    public BaseCollectionPage<ConversationMember> members;
+    public ConversationMemberCollectionPage members;
 
     /**
      * The Messages.
@@ -90,7 +93,7 @@ public class Channel extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "messages", alternate = {"Messages"})
     @Expose
-    public BaseCollectionPage<ChatMessage> messages;
+    public ChatMessageCollectionPage messages;
 
     /**
      * The Tabs.
@@ -98,7 +101,7 @@ public class Channel extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "tabs", alternate = {"Tabs"})
     @Expose
-    public BaseCollectionPage<TeamsTab> tabs;
+    public TeamsTabCollectionPage tabs;
 
 
     /**
@@ -142,15 +145,15 @@ public class Channel extends Entity implements IJsonBackedObject {
 
 
         if (json.has("members")) {
-            members = serializer.deserializeObject(json.get("members").toString(), new BaseCollectionPage<ConversationMember>(new java.util.ArrayList<ConversationMember>(), null).getClass());
+            members = serializer.deserializeObject(json.get("members").toString(), ConversationMemberCollectionPage.class);
         }
 
         if (json.has("messages")) {
-            messages = serializer.deserializeObject(json.get("messages").toString(), new BaseCollectionPage<ChatMessage>(new java.util.ArrayList<ChatMessage>(), null).getClass());
+            messages = serializer.deserializeObject(json.get("messages").toString(), ChatMessageCollectionPage.class);
         }
 
         if (json.has("tabs")) {
-            tabs = serializer.deserializeObject(json.get("tabs").toString(), new BaseCollectionPage<TeamsTab>(new java.util.ArrayList<TeamsTab>(), null).getClass());
+            tabs = serializer.deserializeObject(json.get("tabs").toString(), TeamsTabCollectionPage.class);
         }
     }
 }

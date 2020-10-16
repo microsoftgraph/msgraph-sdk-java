@@ -16,7 +16,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationCollectionRequestBuilder;
@@ -27,7 +26,7 @@ import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurati
 /**
  * The class for the Managed Device Mobile App Configuration Collection Request.
  */
-public class ManagedDeviceMobileAppConfigurationCollectionRequest extends BaseCollectionRequest<ManagedDeviceMobileAppConfiguration, ManagedDeviceMobileAppConfigurationCollectionResponse> {
+public class ManagedDeviceMobileAppConfigurationCollectionRequest extends BaseCollectionRequest<ManagedDeviceMobileAppConfiguration, ManagedDeviceMobileAppConfigurationCollectionResponse, ManagedDeviceMobileAppConfigurationCollectionPage> {
 
     /**
      * The request builder for this collection of ManagedDeviceMobileAppConfiguration
@@ -38,26 +37,7 @@ public class ManagedDeviceMobileAppConfigurationCollectionRequest extends BaseCo
      */
     @SuppressWarnings("unchecked")
     public ManagedDeviceMobileAppConfigurationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfigurationCollectionResponse.class,(Class<BaseCollectionPage<ManagedDeviceMobileAppConfiguration>>) (new BaseCollectionPage<ManagedDeviceMobileAppConfiguration>(new java.util.ArrayList<ManagedDeviceMobileAppConfiguration>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<ManagedDeviceMobileAppConfiguration>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<ManagedDeviceMobileAppConfiguration> get() throws ClientException {
-        final ManagedDeviceMobileAppConfigurationCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfigurationCollectionResponse.class, ManagedDeviceMobileAppConfigurationCollectionPage.class, ManagedDeviceMobileAppConfigurationCollectionRequestBuilder.class);
     }
 
     public void post(final ManagedDeviceMobileAppConfiguration newManagedDeviceMobileAppConfiguration, final ICallback<? super ManagedDeviceMobileAppConfiguration> callback) {
@@ -149,16 +129,5 @@ public class ManagedDeviceMobileAppConfigurationCollectionRequest extends BaseCo
     public ManagedDeviceMobileAppConfigurationCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<ManagedDeviceMobileAppConfiguration> buildFromResponse(final ManagedDeviceMobileAppConfigurationCollectionResponse response) {
-        final ManagedDeviceMobileAppConfigurationCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new ManagedDeviceMobileAppConfigurationCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<ManagedDeviceMobileAppConfiguration> page = new BaseCollectionPage<ManagedDeviceMobileAppConfiguration>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

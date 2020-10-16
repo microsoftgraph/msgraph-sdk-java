@@ -27,7 +27,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Message Request Builder.
  */
-public class MessageRequestBuilder extends BaseRequestBuilder {
+public class MessageRequestBuilder extends BaseRequestBuilder<Message> {
 
     /**
      * The request builder for the Message

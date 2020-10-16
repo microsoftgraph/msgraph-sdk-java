@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Range Font Request Builder.
  */
-public class WorkbookRangeFontRequestBuilder extends BaseRequestBuilder {
+public class WorkbookRangeFontRequestBuilder extends BaseRequestBuilder<WorkbookRangeFont> {
 
     /**
      * The request builder for the WorkbookRangeFont

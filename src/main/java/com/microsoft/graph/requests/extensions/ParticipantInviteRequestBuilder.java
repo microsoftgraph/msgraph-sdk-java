@@ -7,7 +7,7 @@ import com.microsoft.graph.requests.extensions.ParticipantInviteRequest;
 import com.microsoft.graph.models.extensions.Participant;
 import com.microsoft.graph.models.extensions.InvitationParticipantInfo;
 import com.microsoft.graph.models.extensions.InviteParticipantsOperation;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
+import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 

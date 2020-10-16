@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileCollectionResponse;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLo
 /**
  * The class for the Windows Information Protection App Locker File Collection Request.
  */
-public class WindowsInformationProtectionAppLockerFileCollectionRequest extends BaseCollectionRequest<WindowsInformationProtectionAppLockerFile, WindowsInformationProtectionAppLockerFileCollectionResponse> {
+public class WindowsInformationProtectionAppLockerFileCollectionRequest extends BaseCollectionRequest<WindowsInformationProtectionAppLockerFile, WindowsInformationProtectionAppLockerFileCollectionResponse, WindowsInformationProtectionAppLockerFileCollectionPage> {
 
     /**
      * The request builder for this collection of WindowsInformationProtectionAppLockerFile
@@ -37,26 +36,7 @@ public class WindowsInformationProtectionAppLockerFileCollectionRequest extends 
      */
     @SuppressWarnings("unchecked")
     public WindowsInformationProtectionAppLockerFileCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WindowsInformationProtectionAppLockerFileCollectionResponse.class,(Class<BaseCollectionPage<WindowsInformationProtectionAppLockerFile>>) (new BaseCollectionPage<WindowsInformationProtectionAppLockerFile>(new java.util.ArrayList<WindowsInformationProtectionAppLockerFile>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<WindowsInformationProtectionAppLockerFile>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<WindowsInformationProtectionAppLockerFile> get() throws ClientException {
-        final WindowsInformationProtectionAppLockerFileCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, WindowsInformationProtectionAppLockerFileCollectionResponse.class, WindowsInformationProtectionAppLockerFileCollectionPage.class, WindowsInformationProtectionAppLockerFileCollectionRequestBuilder.class);
     }
 
     public void post(final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile, final ICallback<? super WindowsInformationProtectionAppLockerFile> callback) {
@@ -148,16 +128,5 @@ public class WindowsInformationProtectionAppLockerFileCollectionRequest extends 
     public WindowsInformationProtectionAppLockerFileCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<WindowsInformationProtectionAppLockerFile> buildFromResponse(final WindowsInformationProtectionAppLockerFileCollectionResponse response) {
-        final WindowsInformationProtectionAppLockerFileCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new WindowsInformationProtectionAppLockerFileCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<WindowsInformationProtectionAppLockerFile> page = new BaseCollectionPage<WindowsInformationProtectionAppLockerFile>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

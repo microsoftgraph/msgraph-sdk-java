@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Detected App Request Builder.
  */
-public class DetectedAppRequestBuilder extends BaseRequestBuilder {
+public class DetectedAppRequestBuilder extends BaseRequestBuilder<DetectedApp> {
 
     /**
      * The request builder for the DetectedApp

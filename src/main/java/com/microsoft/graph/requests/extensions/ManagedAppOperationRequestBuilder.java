@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Managed App Operation Request Builder.
  */
-public class ManagedAppOperationRequestBuilder extends BaseRequestBuilder {
+public class ManagedAppOperationRequestBuilder extends BaseRequestBuilder<ManagedAppOperation> {
 
     /**
      * The request builder for the ManagedAppOperation

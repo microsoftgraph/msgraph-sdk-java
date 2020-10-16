@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.RemoteAssistancePartnerCollectionResponse;
 import com.microsoft.graph.requests.extensions.RemoteAssistancePartnerCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.RemoteAssistancePartnerCollection
 /**
  * The class for the Remote Assistance Partner Collection Request.
  */
-public class RemoteAssistancePartnerCollectionRequest extends BaseCollectionRequest<RemoteAssistancePartner, RemoteAssistancePartnerCollectionResponse> {
+public class RemoteAssistancePartnerCollectionRequest extends BaseCollectionRequest<RemoteAssistancePartner, RemoteAssistancePartnerCollectionResponse, RemoteAssistancePartnerCollectionPage> {
 
     /**
      * The request builder for this collection of RemoteAssistancePartner
@@ -37,26 +36,7 @@ public class RemoteAssistancePartnerCollectionRequest extends BaseCollectionRequ
      */
     @SuppressWarnings("unchecked")
     public RemoteAssistancePartnerCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, RemoteAssistancePartnerCollectionResponse.class,(Class<BaseCollectionPage<RemoteAssistancePartner>>) (new BaseCollectionPage<RemoteAssistancePartner>(new java.util.ArrayList<RemoteAssistancePartner>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<RemoteAssistancePartner>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<RemoteAssistancePartner> get() throws ClientException {
-        final RemoteAssistancePartnerCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, RemoteAssistancePartnerCollectionResponse.class, RemoteAssistancePartnerCollectionPage.class, RemoteAssistancePartnerCollectionRequestBuilder.class);
     }
 
     public void post(final RemoteAssistancePartner newRemoteAssistancePartner, final ICallback<? super RemoteAssistancePartner> callback) {
@@ -148,16 +128,5 @@ public class RemoteAssistancePartnerCollectionRequest extends BaseCollectionRequ
     public RemoteAssistancePartnerCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<RemoteAssistancePartner> buildFromResponse(final RemoteAssistancePartnerCollectionResponse response) {
-        final RemoteAssistancePartnerCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new RemoteAssistancePartnerCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<RemoteAssistancePartner> page = new BaseCollectionPage<RemoteAssistancePartner>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

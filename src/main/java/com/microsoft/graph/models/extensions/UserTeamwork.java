@@ -10,6 +10,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.UserScopeTeamsAppInstallation;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.UserScopeTeamsAppInstallationCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -30,7 +31,7 @@ public class UserTeamwork extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "installedApps", alternate = {"InstalledApps"})
     @Expose
-    public BaseCollectionPage<UserScopeTeamsAppInstallation> installedApps;
+    public UserScopeTeamsAppInstallationCollectionPage installedApps;
 
 
     /**
@@ -74,7 +75,7 @@ public class UserTeamwork extends Entity implements IJsonBackedObject {
 
 
         if (json.has("installedApps")) {
-            installedApps = serializer.deserializeObject(json.get("installedApps").toString(), new BaseCollectionPage<UserScopeTeamsAppInstallation>(new java.util.ArrayList<UserScopeTeamsAppInstallation>(), null).getClass());
+            installedApps = serializer.deserializeObject(json.get("installedApps").toString(), UserScopeTeamsAppInstallationCollectionPage.class);
         }
     }
 }

@@ -29,7 +29,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Configuration Request Builder.
  */
-public class DeviceConfigurationRequestBuilder extends BaseRequestBuilder {
+public class DeviceConfigurationRequestBuilder extends BaseRequestBuilder<DeviceConfiguration> {
 
     /**
      * The request builder for the DeviceConfiguration

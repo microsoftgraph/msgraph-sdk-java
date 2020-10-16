@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TeamsAppCollectionResponse;
 import com.microsoft.graph.requests.extensions.TeamsAppCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.TeamsAppCollectionRequest;
 /**
  * The class for the Teams App Collection Request.
  */
-public class TeamsAppCollectionRequest extends BaseCollectionRequest<TeamsApp, TeamsAppCollectionResponse> {
+public class TeamsAppCollectionRequest extends BaseCollectionRequest<TeamsApp, TeamsAppCollectionResponse, TeamsAppCollectionPage> {
 
     /**
      * The request builder for this collection of TeamsApp
@@ -37,26 +36,7 @@ public class TeamsAppCollectionRequest extends BaseCollectionRequest<TeamsApp, T
      */
     @SuppressWarnings("unchecked")
     public TeamsAppCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TeamsAppCollectionResponse.class,(Class<BaseCollectionPage<TeamsApp>>) (new BaseCollectionPage<TeamsApp>(new java.util.ArrayList<TeamsApp>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<TeamsApp>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<TeamsApp> get() throws ClientException {
-        final TeamsAppCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, TeamsAppCollectionResponse.class, TeamsAppCollectionPage.class, TeamsAppCollectionRequestBuilder.class);
     }
 
     public void post(final TeamsApp newTeamsApp, final ICallback<? super TeamsApp> callback) {
@@ -148,16 +128,5 @@ public class TeamsAppCollectionRequest extends BaseCollectionRequest<TeamsApp, T
     public TeamsAppCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<TeamsApp> buildFromResponse(final TeamsAppCollectionResponse response) {
-        final TeamsAppCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new TeamsAppCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<TeamsApp> page = new BaseCollectionPage<TeamsApp>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

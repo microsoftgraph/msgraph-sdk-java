@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DeviceCategoryCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceCategoryCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.DeviceCategoryCollectionRequest;
 /**
  * The class for the Device Category Collection Request.
  */
-public class DeviceCategoryCollectionRequest extends BaseCollectionRequest<DeviceCategory, DeviceCategoryCollectionResponse> {
+public class DeviceCategoryCollectionRequest extends BaseCollectionRequest<DeviceCategory, DeviceCategoryCollectionResponse, DeviceCategoryCollectionPage> {
 
     /**
      * The request builder for this collection of DeviceCategory
@@ -37,26 +36,7 @@ public class DeviceCategoryCollectionRequest extends BaseCollectionRequest<Devic
      */
     @SuppressWarnings("unchecked")
     public DeviceCategoryCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceCategoryCollectionResponse.class,(Class<BaseCollectionPage<DeviceCategory>>) (new BaseCollectionPage<DeviceCategory>(new java.util.ArrayList<DeviceCategory>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<DeviceCategory>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<DeviceCategory> get() throws ClientException {
-        final DeviceCategoryCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, DeviceCategoryCollectionResponse.class, DeviceCategoryCollectionPage.class, DeviceCategoryCollectionRequestBuilder.class);
     }
 
     public void post(final DeviceCategory newDeviceCategory, final ICallback<? super DeviceCategory> callback) {
@@ -148,16 +128,5 @@ public class DeviceCategoryCollectionRequest extends BaseCollectionRequest<Devic
     public DeviceCategoryCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<DeviceCategory> buildFromResponse(final DeviceCategoryCollectionResponse response) {
-        final DeviceCategoryCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DeviceCategoryCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<DeviceCategory> page = new BaseCollectionPage<DeviceCategory>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

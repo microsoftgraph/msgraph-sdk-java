@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.RoleAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.RoleAssignmentCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.RoleAssignmentCollectionRequest;
 /**
  * The class for the Role Assignment Collection Request.
  */
-public class RoleAssignmentCollectionRequest extends BaseCollectionRequest<RoleAssignment, RoleAssignmentCollectionResponse> {
+public class RoleAssignmentCollectionRequest extends BaseCollectionRequest<RoleAssignment, RoleAssignmentCollectionResponse, RoleAssignmentCollectionPage> {
 
     /**
      * The request builder for this collection of RoleAssignment
@@ -37,26 +36,7 @@ public class RoleAssignmentCollectionRequest extends BaseCollectionRequest<RoleA
      */
     @SuppressWarnings("unchecked")
     public RoleAssignmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, RoleAssignmentCollectionResponse.class,(Class<BaseCollectionPage<RoleAssignment>>) (new BaseCollectionPage<RoleAssignment>(new java.util.ArrayList<RoleAssignment>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<RoleAssignment>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<RoleAssignment> get() throws ClientException {
-        final RoleAssignmentCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, RoleAssignmentCollectionResponse.class, RoleAssignmentCollectionPage.class, RoleAssignmentCollectionRequestBuilder.class);
     }
 
     public void post(final RoleAssignment newRoleAssignment, final ICallback<? super RoleAssignment> callback) {
@@ -148,16 +128,5 @@ public class RoleAssignmentCollectionRequest extends BaseCollectionRequest<RoleA
     public RoleAssignmentCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<RoleAssignment> buildFromResponse(final RoleAssignmentCollectionResponse response) {
-        final RoleAssignmentCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new RoleAssignmentCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<RoleAssignment> page = new BaseCollectionPage<RoleAssignment>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

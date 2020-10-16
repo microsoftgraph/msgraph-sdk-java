@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicySettingStateSummaryCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.DeviceCompliancePolicySettingStat
 /**
  * The class for the Device Compliance Policy Setting State Summary Collection Request.
  */
-public class DeviceCompliancePolicySettingStateSummaryCollectionRequest extends BaseCollectionRequest<DeviceCompliancePolicySettingStateSummary, DeviceCompliancePolicySettingStateSummaryCollectionResponse> {
+public class DeviceCompliancePolicySettingStateSummaryCollectionRequest extends BaseCollectionRequest<DeviceCompliancePolicySettingStateSummary, DeviceCompliancePolicySettingStateSummaryCollectionResponse, DeviceCompliancePolicySettingStateSummaryCollectionPage> {
 
     /**
      * The request builder for this collection of DeviceCompliancePolicySettingStateSummary
@@ -37,26 +36,7 @@ public class DeviceCompliancePolicySettingStateSummaryCollectionRequest extends 
      */
     @SuppressWarnings("unchecked")
     public DeviceCompliancePolicySettingStateSummaryCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceCompliancePolicySettingStateSummaryCollectionResponse.class,(Class<BaseCollectionPage<DeviceCompliancePolicySettingStateSummary>>) (new BaseCollectionPage<DeviceCompliancePolicySettingStateSummary>(new java.util.ArrayList<DeviceCompliancePolicySettingStateSummary>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<DeviceCompliancePolicySettingStateSummary>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<DeviceCompliancePolicySettingStateSummary> get() throws ClientException {
-        final DeviceCompliancePolicySettingStateSummaryCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, DeviceCompliancePolicySettingStateSummaryCollectionResponse.class, DeviceCompliancePolicySettingStateSummaryCollectionPage.class, DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder.class);
     }
 
     public void post(final DeviceCompliancePolicySettingStateSummary newDeviceCompliancePolicySettingStateSummary, final ICallback<? super DeviceCompliancePolicySettingStateSummary> callback) {
@@ -148,16 +128,5 @@ public class DeviceCompliancePolicySettingStateSummaryCollectionRequest extends 
     public DeviceCompliancePolicySettingStateSummaryCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<DeviceCompliancePolicySettingStateSummary> buildFromResponse(final DeviceCompliancePolicySettingStateSummaryCollectionResponse response) {
-        final DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<DeviceCompliancePolicySettingStateSummary> page = new BaseCollectionPage<DeviceCompliancePolicySettingStateSummary>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

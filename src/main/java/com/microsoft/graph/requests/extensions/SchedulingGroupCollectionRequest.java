@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.SchedulingGroupCollectionResponse;
 import com.microsoft.graph.requests.extensions.SchedulingGroupCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.SchedulingGroupCollectionRequest;
 /**
  * The class for the Scheduling Group Collection Request.
  */
-public class SchedulingGroupCollectionRequest extends BaseCollectionRequest<SchedulingGroup, SchedulingGroupCollectionResponse> {
+public class SchedulingGroupCollectionRequest extends BaseCollectionRequest<SchedulingGroup, SchedulingGroupCollectionResponse, SchedulingGroupCollectionPage> {
 
     /**
      * The request builder for this collection of SchedulingGroup
@@ -37,26 +36,7 @@ public class SchedulingGroupCollectionRequest extends BaseCollectionRequest<Sche
      */
     @SuppressWarnings("unchecked")
     public SchedulingGroupCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SchedulingGroupCollectionResponse.class,(Class<BaseCollectionPage<SchedulingGroup>>) (new BaseCollectionPage<SchedulingGroup>(new java.util.ArrayList<SchedulingGroup>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<SchedulingGroup>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<SchedulingGroup> get() throws ClientException {
-        final SchedulingGroupCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, SchedulingGroupCollectionResponse.class, SchedulingGroupCollectionPage.class, SchedulingGroupCollectionRequestBuilder.class);
     }
 
     public void post(final SchedulingGroup newSchedulingGroup, final ICallback<? super SchedulingGroup> callback) {
@@ -148,16 +128,5 @@ public class SchedulingGroupCollectionRequest extends BaseCollectionRequest<Sche
     public SchedulingGroupCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<SchedulingGroup> buildFromResponse(final SchedulingGroupCollectionResponse response) {
-        final SchedulingGroupCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new SchedulingGroupCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<SchedulingGroup> page = new BaseCollectionPage<SchedulingGroup>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Record Operation Request Builder.
  */
-public class RecordOperationRequestBuilder extends BaseRequestBuilder {
+public class RecordOperationRequestBuilder extends BaseRequestBuilder<RecordOperation> {
 
     /**
      * The request builder for the RecordOperation

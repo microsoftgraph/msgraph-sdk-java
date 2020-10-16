@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WorkbookRangeBorderCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookRangeBorderCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.WorkbookRangeBorderCollectionRequ
 /**
  * The class for the Workbook Range Border Collection Request.
  */
-public class WorkbookRangeBorderCollectionRequest extends BaseCollectionRequest<WorkbookRangeBorder, WorkbookRangeBorderCollectionResponse> {
+public class WorkbookRangeBorderCollectionRequest extends BaseCollectionRequest<WorkbookRangeBorder, WorkbookRangeBorderCollectionResponse, WorkbookRangeBorderCollectionPage> {
 
     /**
      * The request builder for this collection of WorkbookRangeBorder
@@ -37,26 +36,7 @@ public class WorkbookRangeBorderCollectionRequest extends BaseCollectionRequest<
      */
     @SuppressWarnings("unchecked")
     public WorkbookRangeBorderCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WorkbookRangeBorderCollectionResponse.class,(Class<BaseCollectionPage<WorkbookRangeBorder>>) (new BaseCollectionPage<WorkbookRangeBorder>(new java.util.ArrayList<WorkbookRangeBorder>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<WorkbookRangeBorder>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<WorkbookRangeBorder> get() throws ClientException {
-        final WorkbookRangeBorderCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, WorkbookRangeBorderCollectionResponse.class, WorkbookRangeBorderCollectionPage.class, WorkbookRangeBorderCollectionRequestBuilder.class);
     }
 
     public void post(final WorkbookRangeBorder newWorkbookRangeBorder, final ICallback<? super WorkbookRangeBorder> callback) {
@@ -148,16 +128,5 @@ public class WorkbookRangeBorderCollectionRequest extends BaseCollectionRequest<
     public WorkbookRangeBorderCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<WorkbookRangeBorder> buildFromResponse(final WorkbookRangeBorderCollectionResponse response) {
-        final WorkbookRangeBorderCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new WorkbookRangeBorderCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<WorkbookRangeBorder> page = new BaseCollectionPage<WorkbookRangeBorder>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

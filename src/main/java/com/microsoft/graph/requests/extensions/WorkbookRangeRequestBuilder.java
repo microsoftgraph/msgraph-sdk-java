@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Range Request Builder.
  */
-public class WorkbookRangeRequestBuilder extends BaseRequestBuilder {
+public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRange> {
 
     /**
      * The request builder for the WorkbookRange

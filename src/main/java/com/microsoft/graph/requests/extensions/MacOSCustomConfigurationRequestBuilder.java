@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Mac OSCustom Configuration Request Builder.
  */
-public class MacOSCustomConfigurationRequestBuilder extends BaseRequestBuilder {
+public class MacOSCustomConfigurationRequestBuilder extends BaseRequestBuilder<MacOSCustomConfiguration> {
 
     /**
      * The request builder for the MacOSCustomConfiguration

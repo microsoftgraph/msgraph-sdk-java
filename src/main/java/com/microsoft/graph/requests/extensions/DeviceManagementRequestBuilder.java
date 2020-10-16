@@ -69,7 +69,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Management Request Builder.
  */
-public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
+public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceManagement> {
 
     /**
      * The request builder for the DeviceManagement

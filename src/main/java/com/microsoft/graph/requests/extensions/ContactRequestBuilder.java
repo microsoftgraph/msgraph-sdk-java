@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Contact Request Builder.
  */
-public class ContactRequestBuilder extends BaseRequestBuilder {
+public class ContactRequestBuilder extends BaseRequestBuilder<Contact> {
 
     /**
      * The request builder for the Contact

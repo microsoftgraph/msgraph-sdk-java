@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionReque
 /**
  * The class for the Device Install State Collection Request.
  */
-public class DeviceInstallStateCollectionRequest extends BaseCollectionRequest<DeviceInstallState, DeviceInstallStateCollectionResponse> {
+public class DeviceInstallStateCollectionRequest extends BaseCollectionRequest<DeviceInstallState, DeviceInstallStateCollectionResponse, DeviceInstallStateCollectionPage> {
 
     /**
      * The request builder for this collection of DeviceInstallState
@@ -37,26 +36,7 @@ public class DeviceInstallStateCollectionRequest extends BaseCollectionRequest<D
      */
     @SuppressWarnings("unchecked")
     public DeviceInstallStateCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceInstallStateCollectionResponse.class,(Class<BaseCollectionPage<DeviceInstallState>>) (new BaseCollectionPage<DeviceInstallState>(new java.util.ArrayList<DeviceInstallState>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<DeviceInstallState>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<DeviceInstallState> get() throws ClientException {
-        final DeviceInstallStateCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, DeviceInstallStateCollectionResponse.class, DeviceInstallStateCollectionPage.class, DeviceInstallStateCollectionRequestBuilder.class);
     }
 
     public void post(final DeviceInstallState newDeviceInstallState, final ICallback<? super DeviceInstallState> callback) {
@@ -148,16 +128,5 @@ public class DeviceInstallStateCollectionRequest extends BaseCollectionRequest<D
     public DeviceInstallStateCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<DeviceInstallState> buildFromResponse(final DeviceInstallStateCollectionResponse response) {
-        final DeviceInstallStateCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DeviceInstallStateCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<DeviceInstallState> page = new BaseCollectionPage<DeviceInstallState>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

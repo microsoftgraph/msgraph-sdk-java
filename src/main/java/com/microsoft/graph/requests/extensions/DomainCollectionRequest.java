@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DomainCollectionResponse;
 import com.microsoft.graph.requests.extensions.DomainCollectionRequestBuilder;
@@ -25,7 +24,7 @@ import com.microsoft.graph.requests.extensions.DomainCollectionRequest;
 /**
  * The class for the Domain Collection Request.
  */
-public class DomainCollectionRequest extends BaseCollectionRequest<Domain, DomainCollectionResponse> {
+public class DomainCollectionRequest extends BaseCollectionRequest<Domain, DomainCollectionResponse, DomainCollectionPage> {
 
     /**
      * The request builder for this collection of Domain
@@ -36,26 +35,7 @@ public class DomainCollectionRequest extends BaseCollectionRequest<Domain, Domai
      */
     @SuppressWarnings("unchecked")
     public DomainCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DomainCollectionResponse.class,(Class<BaseCollectionPage<Domain>>) (new BaseCollectionPage<Domain>(new java.util.ArrayList<Domain>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<Domain>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<Domain> get() throws ClientException {
-        final DomainCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, DomainCollectionResponse.class, DomainCollectionPage.class, DomainCollectionRequestBuilder.class);
     }
 
     public void post(final Domain newDomain, final ICallback<? super Domain> callback) {
@@ -147,16 +127,5 @@ public class DomainCollectionRequest extends BaseCollectionRequest<Domain, Domai
     public DomainCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<Domain> buildFromResponse(final DomainCollectionResponse response) {
-        final DomainCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DomainCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<Domain> page = new BaseCollectionPage<Domain>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

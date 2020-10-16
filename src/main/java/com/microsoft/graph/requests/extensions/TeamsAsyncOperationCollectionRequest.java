@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TeamsAsyncOperationCollectionResponse;
 import com.microsoft.graph.requests.extensions.TeamsAsyncOperationCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.TeamsAsyncOperationCollectionRequ
 /**
  * The class for the Teams Async Operation Collection Request.
  */
-public class TeamsAsyncOperationCollectionRequest extends BaseCollectionRequest<TeamsAsyncOperation, TeamsAsyncOperationCollectionResponse> {
+public class TeamsAsyncOperationCollectionRequest extends BaseCollectionRequest<TeamsAsyncOperation, TeamsAsyncOperationCollectionResponse, TeamsAsyncOperationCollectionPage> {
 
     /**
      * The request builder for this collection of TeamsAsyncOperation
@@ -37,26 +36,7 @@ public class TeamsAsyncOperationCollectionRequest extends BaseCollectionRequest<
      */
     @SuppressWarnings("unchecked")
     public TeamsAsyncOperationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TeamsAsyncOperationCollectionResponse.class,(Class<BaseCollectionPage<TeamsAsyncOperation>>) (new BaseCollectionPage<TeamsAsyncOperation>(new java.util.ArrayList<TeamsAsyncOperation>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<TeamsAsyncOperation>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<TeamsAsyncOperation> get() throws ClientException {
-        final TeamsAsyncOperationCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, TeamsAsyncOperationCollectionResponse.class, TeamsAsyncOperationCollectionPage.class, TeamsAsyncOperationCollectionRequestBuilder.class);
     }
 
     public void post(final TeamsAsyncOperation newTeamsAsyncOperation, final ICallback<? super TeamsAsyncOperation> callback) {
@@ -148,16 +128,5 @@ public class TeamsAsyncOperationCollectionRequest extends BaseCollectionRequest<
     public TeamsAsyncOperationCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<TeamsAsyncOperation> buildFromResponse(final TeamsAsyncOperationCollectionResponse response) {
-        final TeamsAsyncOperationCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new TeamsAsyncOperationCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<TeamsAsyncOperation> page = new BaseCollectionPage<TeamsAsyncOperation>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

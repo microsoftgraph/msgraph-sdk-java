@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.SubscribedSkuCollectionResponse;
 import com.microsoft.graph.requests.extensions.SubscribedSkuCollectionRequestBuilder;
@@ -25,7 +24,7 @@ import com.microsoft.graph.requests.extensions.SubscribedSkuCollectionRequest;
 /**
  * The class for the Subscribed Sku Collection Request.
  */
-public class SubscribedSkuCollectionRequest extends BaseCollectionRequest<SubscribedSku, SubscribedSkuCollectionResponse> {
+public class SubscribedSkuCollectionRequest extends BaseCollectionRequest<SubscribedSku, SubscribedSkuCollectionResponse, SubscribedSkuCollectionPage> {
 
     /**
      * The request builder for this collection of SubscribedSku
@@ -36,26 +35,7 @@ public class SubscribedSkuCollectionRequest extends BaseCollectionRequest<Subscr
      */
     @SuppressWarnings("unchecked")
     public SubscribedSkuCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SubscribedSkuCollectionResponse.class,(Class<BaseCollectionPage<SubscribedSku>>) (new BaseCollectionPage<SubscribedSku>(new java.util.ArrayList<SubscribedSku>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<SubscribedSku>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<SubscribedSku> get() throws ClientException {
-        final SubscribedSkuCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, SubscribedSkuCollectionResponse.class, SubscribedSkuCollectionPage.class, SubscribedSkuCollectionRequestBuilder.class);
     }
 
     public void post(final SubscribedSku newSubscribedSku, final ICallback<? super SubscribedSku> callback) {
@@ -147,16 +127,5 @@ public class SubscribedSkuCollectionRequest extends BaseCollectionRequest<Subscr
     public SubscribedSkuCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<SubscribedSku> buildFromResponse(final SubscribedSkuCollectionResponse response) {
-        final SubscribedSkuCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new SubscribedSkuCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<SubscribedSku> page = new BaseCollectionPage<SubscribedSku>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

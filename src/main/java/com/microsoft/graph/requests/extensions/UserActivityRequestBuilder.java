@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the User Activity Request Builder.
  */
-public class UserActivityRequestBuilder extends BaseRequestBuilder {
+public class UserActivityRequestBuilder extends BaseRequestBuilder<UserActivity> {
 
     /**
      * The request builder for the UserActivity

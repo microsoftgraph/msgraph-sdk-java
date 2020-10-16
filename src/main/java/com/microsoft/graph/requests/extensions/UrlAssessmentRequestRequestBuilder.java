@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Url Assessment Request Request Builder.
  */
-public class UrlAssessmentRequestRequestBuilder extends BaseRequestBuilder {
+public class UrlAssessmentRequestRequestBuilder extends BaseRequestBuilder<UrlAssessmentRequest> {
 
     /**
      * The request builder for the UrlAssessmentRequest

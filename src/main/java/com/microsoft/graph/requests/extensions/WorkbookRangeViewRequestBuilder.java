@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Range View Request Builder.
  */
-public class WorkbookRangeViewRequestBuilder extends BaseRequestBuilder {
+public class WorkbookRangeViewRequestBuilder extends BaseRequestBuilder<WorkbookRangeView> {
 
     /**
      * The request builder for the WorkbookRangeView

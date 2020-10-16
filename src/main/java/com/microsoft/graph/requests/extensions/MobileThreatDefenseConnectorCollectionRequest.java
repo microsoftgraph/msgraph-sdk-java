@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.MobileThreatDefenseConnectorCollectionResponse;
 import com.microsoft.graph.requests.extensions.MobileThreatDefenseConnectorCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.MobileThreatDefenseConnectorColle
 /**
  * The class for the Mobile Threat Defense Connector Collection Request.
  */
-public class MobileThreatDefenseConnectorCollectionRequest extends BaseCollectionRequest<MobileThreatDefenseConnector, MobileThreatDefenseConnectorCollectionResponse> {
+public class MobileThreatDefenseConnectorCollectionRequest extends BaseCollectionRequest<MobileThreatDefenseConnector, MobileThreatDefenseConnectorCollectionResponse, MobileThreatDefenseConnectorCollectionPage> {
 
     /**
      * The request builder for this collection of MobileThreatDefenseConnector
@@ -37,26 +36,7 @@ public class MobileThreatDefenseConnectorCollectionRequest extends BaseCollectio
      */
     @SuppressWarnings("unchecked")
     public MobileThreatDefenseConnectorCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MobileThreatDefenseConnectorCollectionResponse.class,(Class<BaseCollectionPage<MobileThreatDefenseConnector>>) (new BaseCollectionPage<MobileThreatDefenseConnector>(new java.util.ArrayList<MobileThreatDefenseConnector>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<MobileThreatDefenseConnector>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<MobileThreatDefenseConnector> get() throws ClientException {
-        final MobileThreatDefenseConnectorCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, MobileThreatDefenseConnectorCollectionResponse.class, MobileThreatDefenseConnectorCollectionPage.class, MobileThreatDefenseConnectorCollectionRequestBuilder.class);
     }
 
     public void post(final MobileThreatDefenseConnector newMobileThreatDefenseConnector, final ICallback<? super MobileThreatDefenseConnector> callback) {
@@ -148,16 +128,5 @@ public class MobileThreatDefenseConnectorCollectionRequest extends BaseCollectio
     public MobileThreatDefenseConnectorCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<MobileThreatDefenseConnector> buildFromResponse(final MobileThreatDefenseConnectorCollectionResponse response) {
-        final MobileThreatDefenseConnectorCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new MobileThreatDefenseConnectorCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<MobileThreatDefenseConnector> page = new BaseCollectionPage<MobileThreatDefenseConnector>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

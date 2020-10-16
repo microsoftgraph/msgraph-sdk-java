@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.PlannerTaskCollectionResponse;
 import com.microsoft.graph.requests.extensions.PlannerTaskCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.PlannerTaskCollectionRequest;
 /**
  * The class for the Planner Task Collection Request.
  */
-public class PlannerTaskCollectionRequest extends BaseCollectionRequest<PlannerTask, PlannerTaskCollectionResponse> {
+public class PlannerTaskCollectionRequest extends BaseCollectionRequest<PlannerTask, PlannerTaskCollectionResponse, PlannerTaskCollectionPage> {
 
     /**
      * The request builder for this collection of PlannerTask
@@ -37,26 +36,7 @@ public class PlannerTaskCollectionRequest extends BaseCollectionRequest<PlannerT
      */
     @SuppressWarnings("unchecked")
     public PlannerTaskCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, PlannerTaskCollectionResponse.class,(Class<BaseCollectionPage<PlannerTask>>) (new BaseCollectionPage<PlannerTask>(new java.util.ArrayList<PlannerTask>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<PlannerTask>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<PlannerTask> get() throws ClientException {
-        final PlannerTaskCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, PlannerTaskCollectionResponse.class, PlannerTaskCollectionPage.class, PlannerTaskCollectionRequestBuilder.class);
     }
 
     public void post(final PlannerTask newPlannerTask, final ICallback<? super PlannerTask> callback) {
@@ -148,16 +128,5 @@ public class PlannerTaskCollectionRequest extends BaseCollectionRequest<PlannerT
     public PlannerTaskCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<PlannerTask> buildFromResponse(final PlannerTaskCollectionResponse response) {
-        final PlannerTaskCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new PlannerTaskCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<PlannerTask> page = new BaseCollectionPage<PlannerTask>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

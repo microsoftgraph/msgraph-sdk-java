@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Swap Shifts Change Request Request Builder.
  */
-public class SwapShiftsChangeRequestRequestBuilder extends BaseRequestBuilder {
+public class SwapShiftsChangeRequestRequestBuilder extends BaseRequestBuilder<SwapShiftsChangeRequest> {
 
     /**
      * The request builder for the SwapShiftsChangeRequest

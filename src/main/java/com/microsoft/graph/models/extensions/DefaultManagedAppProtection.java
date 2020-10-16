@@ -13,6 +13,7 @@ import com.microsoft.graph.models.extensions.KeyValuePair;
 import com.microsoft.graph.models.extensions.ManagedMobileApp;
 import com.microsoft.graph.models.extensions.ManagedAppPolicyDeploymentSummary;
 import com.microsoft.graph.models.extensions.ManagedAppProtection;
+import com.microsoft.graph.requests.extensions.ManagedMobileAppCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -113,7 +114,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @SerializedName(value = "apps", alternate = {"Apps"})
     @Expose
-    public BaseCollectionPage<ManagedMobileApp> apps;
+    public ManagedMobileAppCollectionPage apps;
 
     /**
      * The Deployment Summary.
@@ -165,7 +166,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
 
 
         if (json.has("apps")) {
-            apps = serializer.deserializeObject(json.get("apps").toString(), new BaseCollectionPage<ManagedMobileApp>(new java.util.ArrayList<ManagedMobileApp>(), null).getClass());
+            apps = serializer.deserializeObject(json.get("apps").toString(), ManagedMobileAppCollectionPage.class);
         }
     }
 }

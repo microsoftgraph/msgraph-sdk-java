@@ -13,6 +13,10 @@ import com.microsoft.graph.models.extensions.Contact;
 import com.microsoft.graph.models.extensions.MultiValueLegacyExtendedProperty;
 import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.ContactFolderCollectionPage;
+import com.microsoft.graph.requests.extensions.ContactCollectionPage;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionPage;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -49,7 +53,7 @@ public class ContactFolder extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "childFolders", alternate = {"ChildFolders"})
     @Expose
-    public BaseCollectionPage<ContactFolder> childFolders;
+    public ContactFolderCollectionPage childFolders;
 
     /**
      * The Contacts.
@@ -57,7 +61,7 @@ public class ContactFolder extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "contacts", alternate = {"Contacts"})
     @Expose
-    public BaseCollectionPage<Contact> contacts;
+    public ContactCollectionPage contacts;
 
     /**
      * The Multi Value Extended Properties.
@@ -65,7 +69,7 @@ public class ContactFolder extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "multiValueExtendedProperties", alternate = {"MultiValueExtendedProperties"})
     @Expose
-    public BaseCollectionPage<MultiValueLegacyExtendedProperty> multiValueExtendedProperties;
+    public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
     /**
      * The Single Value Extended Properties.
@@ -73,7 +77,7 @@ public class ContactFolder extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "singleValueExtendedProperties", alternate = {"SingleValueExtendedProperties"})
     @Expose
-    public BaseCollectionPage<SingleValueLegacyExtendedProperty> singleValueExtendedProperties;
+    public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
 
     /**
@@ -117,19 +121,19 @@ public class ContactFolder extends Entity implements IJsonBackedObject {
 
 
         if (json.has("childFolders")) {
-            childFolders = serializer.deserializeObject(json.get("childFolders").toString(), new BaseCollectionPage<ContactFolder>(new java.util.ArrayList<ContactFolder>(), null).getClass());
+            childFolders = serializer.deserializeObject(json.get("childFolders").toString(), ContactFolderCollectionPage.class);
         }
 
         if (json.has("contacts")) {
-            contacts = serializer.deserializeObject(json.get("contacts").toString(), new BaseCollectionPage<Contact>(new java.util.ArrayList<Contact>(), null).getClass());
+            contacts = serializer.deserializeObject(json.get("contacts").toString(), ContactCollectionPage.class);
         }
 
         if (json.has("multiValueExtendedProperties")) {
-            multiValueExtendedProperties = serializer.deserializeObject(json.get("multiValueExtendedProperties").toString(), new BaseCollectionPage<MultiValueLegacyExtendedProperty>(new java.util.ArrayList<MultiValueLegacyExtendedProperty>(), null).getClass());
+            multiValueExtendedProperties = serializer.deserializeObject(json.get("multiValueExtendedProperties").toString(), MultiValueLegacyExtendedPropertyCollectionPage.class);
         }
 
         if (json.has("singleValueExtendedProperties")) {
-            singleValueExtendedProperties = serializer.deserializeObject(json.get("singleValueExtendedProperties").toString(), new BaseCollectionPage<SingleValueLegacyExtendedProperty>(new java.util.ArrayList<SingleValueLegacyExtendedProperty>(), null).getClass());
+            singleValueExtendedProperties = serializer.deserializeObject(json.get("singleValueExtendedProperties").toString(), SingleValueLegacyExtendedPropertyCollectionPage.class);
         }
     }
 }

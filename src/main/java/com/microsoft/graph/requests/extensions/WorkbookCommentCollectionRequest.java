@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WorkbookCommentCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookCommentCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.WorkbookCommentCollectionRequest;
 /**
  * The class for the Workbook Comment Collection Request.
  */
-public class WorkbookCommentCollectionRequest extends BaseCollectionRequest<WorkbookComment, WorkbookCommentCollectionResponse> {
+public class WorkbookCommentCollectionRequest extends BaseCollectionRequest<WorkbookComment, WorkbookCommentCollectionResponse, WorkbookCommentCollectionPage> {
 
     /**
      * The request builder for this collection of WorkbookComment
@@ -37,26 +36,7 @@ public class WorkbookCommentCollectionRequest extends BaseCollectionRequest<Work
      */
     @SuppressWarnings("unchecked")
     public WorkbookCommentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WorkbookCommentCollectionResponse.class,(Class<BaseCollectionPage<WorkbookComment>>) (new BaseCollectionPage<WorkbookComment>(new java.util.ArrayList<WorkbookComment>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<WorkbookComment>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<WorkbookComment> get() throws ClientException {
-        final WorkbookCommentCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, WorkbookCommentCollectionResponse.class, WorkbookCommentCollectionPage.class, WorkbookCommentCollectionRequestBuilder.class);
     }
 
     public void post(final WorkbookComment newWorkbookComment, final ICallback<? super WorkbookComment> callback) {
@@ -148,16 +128,5 @@ public class WorkbookCommentCollectionRequest extends BaseCollectionRequest<Work
     public WorkbookCommentCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<WorkbookComment> buildFromResponse(final WorkbookCommentCollectionResponse response) {
-        final WorkbookCommentCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new WorkbookCommentCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<WorkbookComment> page = new BaseCollectionPage<WorkbookComment>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

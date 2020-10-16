@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Claims Mapping Policy Collection Reference Request Builder.
  */
-public class ClaimsMappingPolicyCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<ClaimsMappingPolicy, ClaimsMappingPolicyCollectionResponse, ClaimsMappingPolicyCollectionReferenceRequest> {
+public class ClaimsMappingPolicyCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<ClaimsMappingPolicy, ClaimsMappingPolicyWithReferenceRequestBuilder, ClaimsMappingPolicyCollectionResponse, ClaimsMappingPolicyCollectionPage, ClaimsMappingPolicyCollectionReferenceRequest> {
 
     /**
      * The request builder for this collection of ClaimsMappingPolicy
@@ -30,6 +30,6 @@ public class ClaimsMappingPolicyCollectionReferenceRequestBuilder extends BaseCo
      * @param requestOptions the options for this request
      */
     public ClaimsMappingPolicyCollectionReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ClaimsMappingPolicyCollectionReferenceRequest.class);
+        super(requestUrl, client, requestOptions, ClaimsMappingPolicyWithReferenceRequestBuilder.class, ClaimsMappingPolicyCollectionResponse.class, ClaimsMappingPolicyCollectionPage.class, ClaimsMappingPolicyCollectionReferenceRequest.class);
     }
 }

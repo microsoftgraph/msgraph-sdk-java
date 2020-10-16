@@ -13,6 +13,7 @@ import com.microsoft.graph.models.extensions.WorkbookRangeFill;
 import com.microsoft.graph.models.extensions.WorkbookRangeFont;
 import com.microsoft.graph.models.extensions.WorkbookFormatProtection;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.WorkbookRangeBorderCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -73,7 +74,7 @@ public class WorkbookRangeFormat extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "borders", alternate = {"Borders"})
     @Expose
-    public BaseCollectionPage<WorkbookRangeBorder> borders;
+    public WorkbookRangeBorderCollectionPage borders;
 
     /**
      * The Fill.
@@ -141,7 +142,7 @@ public class WorkbookRangeFormat extends Entity implements IJsonBackedObject {
 
 
         if (json.has("borders")) {
-            borders = serializer.deserializeObject(json.get("borders").toString(), new BaseCollectionPage<WorkbookRangeBorder>(new java.util.ArrayList<WorkbookRangeBorder>(), null).getClass());
+            borders = serializer.deserializeObject(json.get("borders").toString(), WorkbookRangeBorderCollectionPage.class);
         }
     }
 }

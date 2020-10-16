@@ -26,6 +26,8 @@ import com.microsoft.graph.models.extensions.CallTranscriptionInfo;
 import com.microsoft.graph.models.extensions.CommsOperation;
 import com.microsoft.graph.models.extensions.Participant;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.CommsOperationCollectionPage;
+import com.microsoft.graph.requests.extensions.ParticipantCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -206,7 +208,7 @@ public class Call extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
-    public BaseCollectionPage<CommsOperation> operations;
+    public CommsOperationCollectionPage operations;
 
     /**
      * The Participants.
@@ -214,7 +216,7 @@ public class Call extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "participants", alternate = {"Participants"})
     @Expose
-    public BaseCollectionPage<Participant> participants;
+    public ParticipantCollectionPage participants;
 
 
     /**
@@ -258,11 +260,11 @@ public class Call extends Entity implements IJsonBackedObject {
 
 
         if (json.has("operations")) {
-            operations = serializer.deserializeObject(json.get("operations").toString(), new BaseCollectionPage<CommsOperation>(new java.util.ArrayList<CommsOperation>(), null).getClass());
+            operations = serializer.deserializeObject(json.get("operations").toString(), CommsOperationCollectionPage.class);
         }
 
         if (json.has("participants")) {
-            participants = serializer.deserializeObject(json.get("participants").toString(), new BaseCollectionPage<Participant>(new java.util.ArrayList<Participant>(), null).getClass());
+            participants = serializer.deserializeObject(json.get("participants").toString(), ParticipantCollectionPage.class);
         }
     }
 }

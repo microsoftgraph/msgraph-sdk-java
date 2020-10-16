@@ -19,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Identity Container Request Builder.
  */
-public class IdentityContainerRequestBuilder extends BaseRequestBuilder {
+public class IdentityContainerRequestBuilder extends BaseRequestBuilder<IdentityContainer> {
 
     /**
      * The request builder for the IdentityContainer

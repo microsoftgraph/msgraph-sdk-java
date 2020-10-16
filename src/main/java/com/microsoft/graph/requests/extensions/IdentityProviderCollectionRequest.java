@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.IdentityProviderCollectionResponse;
 import com.microsoft.graph.requests.extensions.IdentityProviderCollectionRequestBuilder;
@@ -25,7 +24,7 @@ import com.microsoft.graph.requests.extensions.IdentityProviderCollectionRequest
 /**
  * The class for the Identity Provider Collection Request.
  */
-public class IdentityProviderCollectionRequest extends BaseCollectionRequest<IdentityProvider, IdentityProviderCollectionResponse> {
+public class IdentityProviderCollectionRequest extends BaseCollectionRequest<IdentityProvider, IdentityProviderCollectionResponse, IdentityProviderCollectionPage> {
 
     /**
      * The request builder for this collection of IdentityProvider
@@ -36,26 +35,7 @@ public class IdentityProviderCollectionRequest extends BaseCollectionRequest<Ide
      */
     @SuppressWarnings("unchecked")
     public IdentityProviderCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, IdentityProviderCollectionResponse.class,(Class<BaseCollectionPage<IdentityProvider>>) (new BaseCollectionPage<IdentityProvider>(new java.util.ArrayList<IdentityProvider>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<IdentityProvider>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<IdentityProvider> get() throws ClientException {
-        final IdentityProviderCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, IdentityProviderCollectionResponse.class, IdentityProviderCollectionPage.class, IdentityProviderCollectionRequestBuilder.class);
     }
 
     public void post(final IdentityProvider newIdentityProvider, final ICallback<? super IdentityProvider> callback) {
@@ -147,16 +127,5 @@ public class IdentityProviderCollectionRequest extends BaseCollectionRequest<Ide
     public IdentityProviderCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<IdentityProvider> buildFromResponse(final IdentityProviderCollectionResponse response) {
-        final IdentityProviderCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new IdentityProviderCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<IdentityProvider> page = new BaseCollectionPage<IdentityProvider>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

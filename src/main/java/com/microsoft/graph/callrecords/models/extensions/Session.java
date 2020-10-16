@@ -13,6 +13,7 @@ import com.microsoft.graph.callrecords.models.extensions.FailureInfo;
 import com.microsoft.graph.callrecords.models.generated.Modality;
 import com.microsoft.graph.callrecords.models.extensions.Segment;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.callrecords.requests.extensions.SegmentCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -81,7 +82,7 @@ public class Session extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "segments", alternate = {"Segments"})
     @Expose
-    public BaseCollectionPage<Segment> segments;
+    public SegmentCollectionPage segments;
 
 
     /**
@@ -125,7 +126,7 @@ public class Session extends Entity implements IJsonBackedObject {
 
 
         if (json.has("segments")) {
-            segments = serializer.deserializeObject(json.get("segments").toString(), new BaseCollectionPage<Segment>(new java.util.ArrayList<Segment>(), null).getClass());
+            segments = serializer.deserializeObject(json.get("segments").toString(), SegmentCollectionPage.class);
         }
     }
 }

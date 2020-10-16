@@ -24,7 +24,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Education Root Request Builder.
  */
-public class EducationRootRequestBuilder extends BaseRequestBuilder {
+public class EducationRootRequestBuilder extends BaseRequestBuilder<EducationRoot> {
 
     /**
      * The request builder for the EducationRoot

@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.SiteCollectionResponse;
 import com.microsoft.graph.requests.extensions.SiteCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.SiteCollectionRequest;
 /**
  * The class for the Site Collection Request.
  */
-public class SiteCollectionRequest extends BaseCollectionRequest<Site, SiteCollectionResponse> {
+public class SiteCollectionRequest extends BaseCollectionRequest<Site, SiteCollectionResponse, SiteCollectionPage> {
 
     /**
      * The request builder for this collection of Site
@@ -37,26 +36,7 @@ public class SiteCollectionRequest extends BaseCollectionRequest<Site, SiteColle
      */
     @SuppressWarnings("unchecked")
     public SiteCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SiteCollectionResponse.class,(Class<BaseCollectionPage<Site>>) (new BaseCollectionPage<Site>(new java.util.ArrayList<Site>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<Site>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<Site> get() throws ClientException {
-        final SiteCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, SiteCollectionResponse.class, SiteCollectionPage.class, SiteCollectionRequestBuilder.class);
     }
 
     public void post(final Site newSite, final ICallback<? super Site> callback) {
@@ -148,16 +128,5 @@ public class SiteCollectionRequest extends BaseCollectionRequest<Site, SiteColle
     public SiteCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<Site> buildFromResponse(final SiteCollectionResponse response) {
-        final SiteCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new SiteCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<Site> page = new BaseCollectionPage<Site>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

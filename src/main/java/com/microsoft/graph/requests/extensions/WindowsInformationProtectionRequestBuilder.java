@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows Information Protection Request Builder.
  */
-public class WindowsInformationProtectionRequestBuilder extends BaseRequestBuilder {
+public class WindowsInformationProtectionRequestBuilder extends BaseRequestBuilder<WindowsInformationProtection> {
 
     /**
      * The request builder for the WindowsInformationProtection

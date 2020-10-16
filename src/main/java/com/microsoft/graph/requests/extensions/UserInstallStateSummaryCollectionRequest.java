@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.UserInstallStateSummaryCollectionResponse;
 import com.microsoft.graph.requests.extensions.UserInstallStateSummaryCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.UserInstallStateSummaryCollection
 /**
  * The class for the User Install State Summary Collection Request.
  */
-public class UserInstallStateSummaryCollectionRequest extends BaseCollectionRequest<UserInstallStateSummary, UserInstallStateSummaryCollectionResponse> {
+public class UserInstallStateSummaryCollectionRequest extends BaseCollectionRequest<UserInstallStateSummary, UserInstallStateSummaryCollectionResponse, UserInstallStateSummaryCollectionPage> {
 
     /**
      * The request builder for this collection of UserInstallStateSummary
@@ -37,26 +36,7 @@ public class UserInstallStateSummaryCollectionRequest extends BaseCollectionRequ
      */
     @SuppressWarnings("unchecked")
     public UserInstallStateSummaryCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, UserInstallStateSummaryCollectionResponse.class,(Class<BaseCollectionPage<UserInstallStateSummary>>) (new BaseCollectionPage<UserInstallStateSummary>(new java.util.ArrayList<UserInstallStateSummary>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<UserInstallStateSummary>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<UserInstallStateSummary> get() throws ClientException {
-        final UserInstallStateSummaryCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, UserInstallStateSummaryCollectionResponse.class, UserInstallStateSummaryCollectionPage.class, UserInstallStateSummaryCollectionRequestBuilder.class);
     }
 
     public void post(final UserInstallStateSummary newUserInstallStateSummary, final ICallback<? super UserInstallStateSummary> callback) {
@@ -148,16 +128,5 @@ public class UserInstallStateSummaryCollectionRequest extends BaseCollectionRequ
     public UserInstallStateSummaryCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<UserInstallStateSummary> buildFromResponse(final UserInstallStateSummaryCollectionResponse response) {
-        final UserInstallStateSummaryCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new UserInstallStateSummaryCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<UserInstallStateSummary> page = new BaseCollectionPage<UserInstallStateSummary>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

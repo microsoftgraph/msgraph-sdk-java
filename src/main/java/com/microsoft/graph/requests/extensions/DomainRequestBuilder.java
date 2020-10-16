@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Domain Request Builder.
  */
-public class DomainRequestBuilder extends BaseRequestBuilder {
+public class DomainRequestBuilder extends BaseRequestBuilder<Domain> {
 
     /**
      * The request builder for the Domain

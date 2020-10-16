@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Managed App Request Builder.
  */
-public class ManagedAppRequestBuilder extends BaseRequestBuilder {
+public class ManagedAppRequestBuilder extends BaseRequestBuilder<ManagedApp> {
 
     /**
      * The request builder for the ManagedApp

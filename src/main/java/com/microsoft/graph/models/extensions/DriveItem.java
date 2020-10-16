@@ -34,6 +34,11 @@ import com.microsoft.graph.models.extensions.Subscription;
 import com.microsoft.graph.models.extensions.ThumbnailSet;
 import com.microsoft.graph.models.extensions.DriveItemVersion;
 import com.microsoft.graph.models.extensions.BaseItem;
+import com.microsoft.graph.requests.extensions.DriveItemCollectionPage;
+import com.microsoft.graph.requests.extensions.PermissionCollectionPage;
+import com.microsoft.graph.requests.extensions.SubscriptionCollectionPage;
+import com.microsoft.graph.requests.extensions.ThumbnailSetCollectionPage;
+import com.microsoft.graph.requests.extensions.DriveItemVersionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -238,7 +243,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      */
     @SerializedName(value = "children", alternate = {"Children"})
     @Expose
-    public BaseCollectionPage<DriveItem> children;
+    public DriveItemCollectionPage children;
 
     /**
      * The List Item.
@@ -254,7 +259,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      */
     @SerializedName(value = "permissions", alternate = {"Permissions"})
     @Expose
-    public BaseCollectionPage<Permission> permissions;
+    public PermissionCollectionPage permissions;
 
     /**
      * The Subscriptions.
@@ -262,7 +267,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      */
     @SerializedName(value = "subscriptions", alternate = {"Subscriptions"})
     @Expose
-    public BaseCollectionPage<Subscription> subscriptions;
+    public SubscriptionCollectionPage subscriptions;
 
     /**
      * The Thumbnails.
@@ -270,7 +275,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      */
     @SerializedName(value = "thumbnails", alternate = {"Thumbnails"})
     @Expose
-    public BaseCollectionPage<ThumbnailSet> thumbnails;
+    public ThumbnailSetCollectionPage thumbnails;
 
     /**
      * The Versions.
@@ -278,7 +283,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      */
     @SerializedName(value = "versions", alternate = {"Versions"})
     @Expose
-    public BaseCollectionPage<DriveItemVersion> versions;
+    public DriveItemVersionCollectionPage versions;
 
 
     /**
@@ -322,23 +327,23 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
 
 
         if (json.has("children")) {
-            children = serializer.deserializeObject(json.get("children").toString(), new BaseCollectionPage<DriveItem>(new java.util.ArrayList<DriveItem>(), null).getClass());
+            children = serializer.deserializeObject(json.get("children").toString(), DriveItemCollectionPage.class);
         }
 
         if (json.has("permissions")) {
-            permissions = serializer.deserializeObject(json.get("permissions").toString(), new BaseCollectionPage<Permission>(new java.util.ArrayList<Permission>(), null).getClass());
+            permissions = serializer.deserializeObject(json.get("permissions").toString(), PermissionCollectionPage.class);
         }
 
         if (json.has("subscriptions")) {
-            subscriptions = serializer.deserializeObject(json.get("subscriptions").toString(), new BaseCollectionPage<Subscription>(new java.util.ArrayList<Subscription>(), null).getClass());
+            subscriptions = serializer.deserializeObject(json.get("subscriptions").toString(), SubscriptionCollectionPage.class);
         }
 
         if (json.has("thumbnails")) {
-            thumbnails = serializer.deserializeObject(json.get("thumbnails").toString(), new BaseCollectionPage<ThumbnailSet>(new java.util.ArrayList<ThumbnailSet>(), null).getClass());
+            thumbnails = serializer.deserializeObject(json.get("thumbnails").toString(), ThumbnailSetCollectionPage.class);
         }
 
         if (json.has("versions")) {
-            versions = serializer.deserializeObject(json.get("versions").toString(), new BaseCollectionPage<DriveItemVersion>(new java.util.ArrayList<DriveItemVersion>(), null).getClass());
+            versions = serializer.deserializeObject(json.get("versions").toString(), DriveItemVersionCollectionPage.class);
         }
     }
 }

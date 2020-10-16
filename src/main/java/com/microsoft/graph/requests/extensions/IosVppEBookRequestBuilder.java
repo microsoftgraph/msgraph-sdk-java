@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Ios Vpp EBook Request Builder.
  */
-public class IosVppEBookRequestBuilder extends BaseRequestBuilder {
+public class IosVppEBookRequestBuilder extends BaseRequestBuilder<IosVppEBook> {
 
     /**
      * The request builder for the IosVppEBook

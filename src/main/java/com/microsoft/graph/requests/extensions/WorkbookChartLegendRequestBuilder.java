@@ -19,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Chart Legend Request Builder.
  */
-public class WorkbookChartLegendRequestBuilder extends BaseRequestBuilder {
+public class WorkbookChartLegendRequestBuilder extends BaseRequestBuilder<WorkbookChartLegend> {
 
     /**
      * The request builder for the WorkbookChartLegend

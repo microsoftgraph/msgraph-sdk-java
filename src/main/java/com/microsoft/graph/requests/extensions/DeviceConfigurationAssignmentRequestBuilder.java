@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Configuration Assignment Request Builder.
  */
-public class DeviceConfigurationAssignmentRequestBuilder extends BaseRequestBuilder {
+public class DeviceConfigurationAssignmentRequestBuilder extends BaseRequestBuilder<DeviceConfigurationAssignment> {
 
     /**
      * The request builder for the DeviceConfigurationAssignment

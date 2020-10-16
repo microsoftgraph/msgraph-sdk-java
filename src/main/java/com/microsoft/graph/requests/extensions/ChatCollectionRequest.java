@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ChatCollectionResponse;
 import com.microsoft.graph.requests.extensions.ChatCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.ChatCollectionRequest;
 /**
  * The class for the Chat Collection Request.
  */
-public class ChatCollectionRequest extends BaseCollectionRequest<Chat, ChatCollectionResponse> {
+public class ChatCollectionRequest extends BaseCollectionRequest<Chat, ChatCollectionResponse, ChatCollectionPage> {
 
     /**
      * The request builder for this collection of Chat
@@ -37,26 +36,7 @@ public class ChatCollectionRequest extends BaseCollectionRequest<Chat, ChatColle
      */
     @SuppressWarnings("unchecked")
     public ChatCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ChatCollectionResponse.class,(Class<BaseCollectionPage<Chat>>) (new BaseCollectionPage<Chat>(new java.util.ArrayList<Chat>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<Chat>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<Chat> get() throws ClientException {
-        final ChatCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, ChatCollectionResponse.class, ChatCollectionPage.class, ChatCollectionRequestBuilder.class);
     }
 
     public void post(final Chat newChat, final ICallback<? super Chat> callback) {
@@ -148,16 +128,5 @@ public class ChatCollectionRequest extends BaseCollectionRequest<Chat, ChatColle
     public ChatCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<Chat> buildFromResponse(final ChatCollectionResponse response) {
-        final ChatCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new ChatCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<Chat> page = new BaseCollectionPage<Chat>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.IosUpdateDeviceStatusCollectionResponse;
 import com.microsoft.graph.requests.extensions.IosUpdateDeviceStatusCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.IosUpdateDeviceStatusCollectionRe
 /**
  * The class for the Ios Update Device Status Collection Request.
  */
-public class IosUpdateDeviceStatusCollectionRequest extends BaseCollectionRequest<IosUpdateDeviceStatus, IosUpdateDeviceStatusCollectionResponse> {
+public class IosUpdateDeviceStatusCollectionRequest extends BaseCollectionRequest<IosUpdateDeviceStatus, IosUpdateDeviceStatusCollectionResponse, IosUpdateDeviceStatusCollectionPage> {
 
     /**
      * The request builder for this collection of IosUpdateDeviceStatus
@@ -37,26 +36,7 @@ public class IosUpdateDeviceStatusCollectionRequest extends BaseCollectionReques
      */
     @SuppressWarnings("unchecked")
     public IosUpdateDeviceStatusCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, IosUpdateDeviceStatusCollectionResponse.class,(Class<BaseCollectionPage<IosUpdateDeviceStatus>>) (new BaseCollectionPage<IosUpdateDeviceStatus>(new java.util.ArrayList<IosUpdateDeviceStatus>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<IosUpdateDeviceStatus>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<IosUpdateDeviceStatus> get() throws ClientException {
-        final IosUpdateDeviceStatusCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, IosUpdateDeviceStatusCollectionResponse.class, IosUpdateDeviceStatusCollectionPage.class, IosUpdateDeviceStatusCollectionRequestBuilder.class);
     }
 
     public void post(final IosUpdateDeviceStatus newIosUpdateDeviceStatus, final ICallback<? super IosUpdateDeviceStatus> callback) {
@@ -148,16 +128,5 @@ public class IosUpdateDeviceStatusCollectionRequest extends BaseCollectionReques
     public IosUpdateDeviceStatusCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<IosUpdateDeviceStatus> buildFromResponse(final IosUpdateDeviceStatusCollectionResponse response) {
-        final IosUpdateDeviceStatusCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new IosUpdateDeviceStatusCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<IosUpdateDeviceStatus> page = new BaseCollectionPage<IosUpdateDeviceStatus>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

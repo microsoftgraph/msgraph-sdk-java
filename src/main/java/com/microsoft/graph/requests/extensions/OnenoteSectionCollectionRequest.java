@@ -16,7 +16,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionResponse;
 import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionRequestBuilder;
@@ -27,7 +26,7 @@ import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionRequest;
 /**
  * The class for the Onenote Section Collection Request.
  */
-public class OnenoteSectionCollectionRequest extends BaseCollectionRequest<OnenoteSection, OnenoteSectionCollectionResponse> {
+public class OnenoteSectionCollectionRequest extends BaseCollectionRequest<OnenoteSection, OnenoteSectionCollectionResponse, OnenoteSectionCollectionPage> {
 
     /**
      * The request builder for this collection of OnenoteSection
@@ -38,26 +37,7 @@ public class OnenoteSectionCollectionRequest extends BaseCollectionRequest<Oneno
      */
     @SuppressWarnings("unchecked")
     public OnenoteSectionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OnenoteSectionCollectionResponse.class,(Class<BaseCollectionPage<OnenoteSection>>) (new BaseCollectionPage<OnenoteSection>(new java.util.ArrayList<OnenoteSection>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<OnenoteSection>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<OnenoteSection> get() throws ClientException {
-        final OnenoteSectionCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, OnenoteSectionCollectionResponse.class, OnenoteSectionCollectionPage.class, OnenoteSectionCollectionRequestBuilder.class);
     }
 
     public void post(final OnenoteSection newOnenoteSection, final ICallback<? super OnenoteSection> callback) {
@@ -149,16 +129,5 @@ public class OnenoteSectionCollectionRequest extends BaseCollectionRequest<Oneno
     public OnenoteSectionCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<OnenoteSection> buildFromResponse(final OnenoteSectionCollectionResponse response) {
-        final OnenoteSectionCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new OnenoteSectionCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<OnenoteSection> page = new BaseCollectionPage<OnenoteSection>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

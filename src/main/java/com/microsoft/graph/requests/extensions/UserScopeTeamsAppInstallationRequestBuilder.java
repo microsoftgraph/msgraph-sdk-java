@@ -19,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the User Scope Teams App Installation Request Builder.
  */
-public class UserScopeTeamsAppInstallationRequestBuilder extends BaseRequestBuilder {
+public class UserScopeTeamsAppInstallationRequestBuilder extends BaseRequestBuilder<UserScopeTeamsAppInstallation> {
 
     /**
      * The request builder for the UserScopeTeamsAppInstallation

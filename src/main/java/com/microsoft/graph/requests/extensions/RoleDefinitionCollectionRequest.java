@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.RoleDefinitionCollectionResponse;
 import com.microsoft.graph.requests.extensions.RoleDefinitionCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.RoleDefinitionCollectionRequest;
 /**
  * The class for the Role Definition Collection Request.
  */
-public class RoleDefinitionCollectionRequest extends BaseCollectionRequest<RoleDefinition, RoleDefinitionCollectionResponse> {
+public class RoleDefinitionCollectionRequest extends BaseCollectionRequest<RoleDefinition, RoleDefinitionCollectionResponse, RoleDefinitionCollectionPage> {
 
     /**
      * The request builder for this collection of RoleDefinition
@@ -37,26 +36,7 @@ public class RoleDefinitionCollectionRequest extends BaseCollectionRequest<RoleD
      */
     @SuppressWarnings("unchecked")
     public RoleDefinitionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, RoleDefinitionCollectionResponse.class,(Class<BaseCollectionPage<RoleDefinition>>) (new BaseCollectionPage<RoleDefinition>(new java.util.ArrayList<RoleDefinition>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<RoleDefinition>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<RoleDefinition> get() throws ClientException {
-        final RoleDefinitionCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, RoleDefinitionCollectionResponse.class, RoleDefinitionCollectionPage.class, RoleDefinitionCollectionRequestBuilder.class);
     }
 
     public void post(final RoleDefinition newRoleDefinition, final ICallback<? super RoleDefinition> callback) {
@@ -148,16 +128,5 @@ public class RoleDefinitionCollectionRequest extends BaseCollectionRequest<RoleD
     public RoleDefinitionCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<RoleDefinition> buildFromResponse(final RoleDefinitionCollectionResponse response) {
-        final RoleDefinitionCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new RoleDefinitionCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<RoleDefinition> page = new BaseCollectionPage<RoleDefinition>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

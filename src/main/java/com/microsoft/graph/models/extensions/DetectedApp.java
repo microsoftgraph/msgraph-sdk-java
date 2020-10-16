@@ -10,6 +10,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -60,7 +61,7 @@ public class DetectedApp extends Entity implements IJsonBackedObject {
      * The Managed Devices.
      * The devices that have the discovered application installed
      */
-    public BaseCollectionPage<ManagedDevice> managedDevices;
+    public ManagedDeviceCollectionPage managedDevices;
 
 
     /**
@@ -104,7 +105,7 @@ public class DetectedApp extends Entity implements IJsonBackedObject {
 
 
         if (json.has("managedDevices")) {
-            managedDevices = serializer.deserializeObject(json.get("managedDevices").toString(), new BaseCollectionPage<ManagedDevice>(new java.util.ArrayList<ManagedDevice>(), null).getClass());
+            managedDevices = serializer.deserializeObject(json.get("managedDevices").toString(), ManagedDeviceCollectionPage.class);
         }
     }
 }

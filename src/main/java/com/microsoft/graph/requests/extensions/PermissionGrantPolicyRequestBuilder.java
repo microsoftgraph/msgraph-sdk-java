@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Permission Grant Policy Request Builder.
  */
-public class PermissionGrantPolicyRequestBuilder extends BaseRequestBuilder {
+public class PermissionGrantPolicyRequestBuilder extends BaseRequestBuilder<PermissionGrantPolicy> {
 
     /**
      * The request builder for the PermissionGrantPolicy

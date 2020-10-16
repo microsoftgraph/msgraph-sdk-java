@@ -10,6 +10,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.ConversationThread;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.ConversationThreadCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -70,7 +71,7 @@ public class Conversation extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "threads", alternate = {"Threads"})
     @Expose
-    public BaseCollectionPage<ConversationThread> threads;
+    public ConversationThreadCollectionPage threads;
 
 
     /**
@@ -114,7 +115,7 @@ public class Conversation extends Entity implements IJsonBackedObject {
 
 
         if (json.has("threads")) {
-            threads = serializer.deserializeObject(json.get("threads").toString(), new BaseCollectionPage<ConversationThread>(new java.util.ArrayList<ConversationThread>(), null).getClass());
+            threads = serializer.deserializeObject(json.get("threads").toString(), ConversationThreadCollectionPage.class);
         }
     }
 }

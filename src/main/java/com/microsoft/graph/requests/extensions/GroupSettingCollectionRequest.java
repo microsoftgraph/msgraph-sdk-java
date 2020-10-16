@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.GroupSettingCollectionResponse;
 import com.microsoft.graph.requests.extensions.GroupSettingCollectionRequestBuilder;
@@ -25,7 +24,7 @@ import com.microsoft.graph.requests.extensions.GroupSettingCollectionRequest;
 /**
  * The class for the Group Setting Collection Request.
  */
-public class GroupSettingCollectionRequest extends BaseCollectionRequest<GroupSetting, GroupSettingCollectionResponse> {
+public class GroupSettingCollectionRequest extends BaseCollectionRequest<GroupSetting, GroupSettingCollectionResponse, GroupSettingCollectionPage> {
 
     /**
      * The request builder for this collection of GroupSetting
@@ -36,26 +35,7 @@ public class GroupSettingCollectionRequest extends BaseCollectionRequest<GroupSe
      */
     @SuppressWarnings("unchecked")
     public GroupSettingCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, GroupSettingCollectionResponse.class,(Class<BaseCollectionPage<GroupSetting>>) (new BaseCollectionPage<GroupSetting>(new java.util.ArrayList<GroupSetting>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<GroupSetting>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<GroupSetting> get() throws ClientException {
-        final GroupSettingCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, GroupSettingCollectionResponse.class, GroupSettingCollectionPage.class, GroupSettingCollectionRequestBuilder.class);
     }
 
     public void post(final GroupSetting newGroupSetting, final ICallback<? super GroupSetting> callback) {
@@ -147,16 +127,5 @@ public class GroupSettingCollectionRequest extends BaseCollectionRequest<GroupSe
     public GroupSettingCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<GroupSetting> buildFromResponse(final GroupSettingCollectionResponse response) {
-        final GroupSettingCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new GroupSettingCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<GroupSetting> page = new BaseCollectionPage<GroupSetting>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

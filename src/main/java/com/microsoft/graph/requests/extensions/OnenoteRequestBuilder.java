@@ -30,7 +30,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Onenote Request Builder.
  */
-public class OnenoteRequestBuilder extends BaseRequestBuilder {
+public class OnenoteRequestBuilder extends BaseRequestBuilder<Onenote> {
 
     /**
      * The request builder for the Onenote

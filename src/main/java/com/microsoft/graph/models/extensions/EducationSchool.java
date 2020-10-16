@@ -13,6 +13,8 @@ import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.extensions.EducationClass;
 import com.microsoft.graph.models.extensions.EducationUser;
 import com.microsoft.graph.models.extensions.EducationOrganization;
+import com.microsoft.graph.requests.extensions.EducationClassCollectionPage;
+import com.microsoft.graph.requests.extensions.EducationUserCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -119,13 +121,13 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
      * The Classes.
      * Classes taught at the school. Nullable.
      */
-    public BaseCollectionPage<EducationClass> classes;
+    public EducationClassCollectionPage classes;
 
     /**
      * The Users.
      * Users in the school. Nullable.
      */
-    public BaseCollectionPage<EducationUser> users;
+    public EducationUserCollectionPage users;
 
 
     /**
@@ -169,11 +171,11 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
 
 
         if (json.has("classes")) {
-            classes = serializer.deserializeObject(json.get("classes").toString(), new BaseCollectionPage<EducationClass>(new java.util.ArrayList<EducationClass>(), null).getClass());
+            classes = serializer.deserializeObject(json.get("classes").toString(), EducationClassCollectionPage.class);
         }
 
         if (json.has("users")) {
-            users = serializer.deserializeObject(json.get("users").toString(), new BaseCollectionPage<EducationUser>(new java.util.ArrayList<EducationUser>(), null).getClass());
+            users = serializer.deserializeObject(json.get("users").toString(), EducationUserCollectionPage.class);
         }
     }
 }

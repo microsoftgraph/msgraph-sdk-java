@@ -15,6 +15,7 @@ import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.FieldValueSet;
 import com.microsoft.graph.models.extensions.ListItemVersion;
 import com.microsoft.graph.models.extensions.BaseItem;
+import com.microsoft.graph.requests.extensions.ListItemVersionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -75,7 +76,7 @@ public class ListItem extends BaseItem implements IJsonBackedObject {
      */
     @SerializedName(value = "versions", alternate = {"Versions"})
     @Expose
-    public BaseCollectionPage<ListItemVersion> versions;
+    public ListItemVersionCollectionPage versions;
 
 
     /**
@@ -119,7 +120,7 @@ public class ListItem extends BaseItem implements IJsonBackedObject {
 
 
         if (json.has("versions")) {
-            versions = serializer.deserializeObject(json.get("versions").toString(), new BaseCollectionPage<ListItemVersion>(new java.util.ArrayList<ListItemVersion>(), null).getClass());
+            versions = serializer.deserializeObject(json.get("versions").toString(), ListItemVersionCollectionPage.class);
         }
     }
 }

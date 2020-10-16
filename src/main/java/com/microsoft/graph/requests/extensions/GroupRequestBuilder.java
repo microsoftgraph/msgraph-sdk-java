@@ -45,7 +45,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Group Request Builder.
  */
-public class GroupRequestBuilder extends BaseRequestBuilder {
+public class GroupRequestBuilder extends BaseRequestBuilder<Group> {
 
     /**
      * The request builder for the Group

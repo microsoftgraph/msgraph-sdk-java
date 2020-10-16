@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Mac OSOffice Suite App Request Builder.
  */
-public class MacOSOfficeSuiteAppRequestBuilder extends BaseRequestBuilder {
+public class MacOSOfficeSuiteAppRequestBuilder extends BaseRequestBuilder<MacOSOfficeSuiteApp> {
 
     /**
      * The request builder for the MacOSOfficeSuiteApp

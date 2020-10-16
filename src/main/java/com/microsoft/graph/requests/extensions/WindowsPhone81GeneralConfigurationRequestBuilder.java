@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows Phone81General Configuration Request Builder.
  */
-public class WindowsPhone81GeneralConfigurationRequestBuilder extends BaseRequestBuilder {
+public class WindowsPhone81GeneralConfigurationRequestBuilder extends BaseRequestBuilder<WindowsPhone81GeneralConfiguration> {
 
     /**
      * The request builder for the WindowsPhone81GeneralConfiguration

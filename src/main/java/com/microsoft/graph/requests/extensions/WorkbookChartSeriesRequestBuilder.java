@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Chart Series Request Builder.
  */
-public class WorkbookChartSeriesRequestBuilder extends BaseRequestBuilder {
+public class WorkbookChartSeriesRequestBuilder extends BaseRequestBuilder<WorkbookChartSeries> {
 
     /**
      * The request builder for the WorkbookChartSeries

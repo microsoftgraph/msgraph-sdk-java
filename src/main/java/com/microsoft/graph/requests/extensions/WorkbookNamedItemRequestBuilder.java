@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Named Item Request Builder.
  */
-public class WorkbookNamedItemRequestBuilder extends BaseRequestBuilder {
+public class WorkbookNamedItemRequestBuilder extends BaseRequestBuilder<WorkbookNamedItem> {
 
     /**
      * The request builder for the WorkbookNamedItem

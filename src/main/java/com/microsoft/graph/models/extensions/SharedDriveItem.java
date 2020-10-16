@@ -15,6 +15,7 @@ import com.microsoft.graph.models.extensions.ListItem;
 import com.microsoft.graph.models.extensions.Permission;
 import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.models.extensions.BaseItem;
+import com.microsoft.graph.requests.extensions.DriveItemCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -51,7 +52,7 @@ public class SharedDriveItem extends BaseItem implements IJsonBackedObject {
      */
     @SerializedName(value = "items", alternate = {"Items"})
     @Expose
-    public BaseCollectionPage<DriveItem> items;
+    public DriveItemCollectionPage items;
 
     /**
      * The List.
@@ -135,7 +136,7 @@ public class SharedDriveItem extends BaseItem implements IJsonBackedObject {
 
 
         if (json.has("items")) {
-            items = serializer.deserializeObject(json.get("items").toString(), new BaseCollectionPage<DriveItem>(new java.util.ArrayList<DriveItem>(), null).getClass());
+            items = serializer.deserializeObject(json.get("items").toString(), DriveItemCollectionPage.class);
         }
     }
 }

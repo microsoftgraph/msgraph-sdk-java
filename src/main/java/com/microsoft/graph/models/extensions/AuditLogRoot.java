@@ -12,6 +12,9 @@ import com.microsoft.graph.models.extensions.DirectoryAudit;
 import com.microsoft.graph.models.extensions.RestrictedSignIn;
 import com.microsoft.graph.models.extensions.SignIn;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.DirectoryAuditCollectionPage;
+import com.microsoft.graph.requests.extensions.RestrictedSignInCollectionPage;
+import com.microsoft.graph.requests.extensions.SignInCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -32,7 +35,7 @@ public class AuditLogRoot extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "directoryAudits", alternate = {"DirectoryAudits"})
     @Expose
-    public BaseCollectionPage<DirectoryAudit> directoryAudits;
+    public DirectoryAuditCollectionPage directoryAudits;
 
     /**
      * The Restricted Sign Ins.
@@ -40,7 +43,7 @@ public class AuditLogRoot extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "restrictedSignIns", alternate = {"RestrictedSignIns"})
     @Expose
-    public BaseCollectionPage<RestrictedSignIn> restrictedSignIns;
+    public RestrictedSignInCollectionPage restrictedSignIns;
 
     /**
      * The Sign Ins.
@@ -48,7 +51,7 @@ public class AuditLogRoot extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "signIns", alternate = {"SignIns"})
     @Expose
-    public BaseCollectionPage<SignIn> signIns;
+    public SignInCollectionPage signIns;
 
 
     /**
@@ -92,15 +95,15 @@ public class AuditLogRoot extends Entity implements IJsonBackedObject {
 
 
         if (json.has("directoryAudits")) {
-            directoryAudits = serializer.deserializeObject(json.get("directoryAudits").toString(), new BaseCollectionPage<DirectoryAudit>(new java.util.ArrayList<DirectoryAudit>(), null).getClass());
+            directoryAudits = serializer.deserializeObject(json.get("directoryAudits").toString(), DirectoryAuditCollectionPage.class);
         }
 
         if (json.has("restrictedSignIns")) {
-            restrictedSignIns = serializer.deserializeObject(json.get("restrictedSignIns").toString(), new BaseCollectionPage<RestrictedSignIn>(new java.util.ArrayList<RestrictedSignIn>(), null).getClass());
+            restrictedSignIns = serializer.deserializeObject(json.get("restrictedSignIns").toString(), RestrictedSignInCollectionPage.class);
         }
 
         if (json.has("signIns")) {
-            signIns = serializer.deserializeObject(json.get("signIns").toString(), new BaseCollectionPage<SignIn>(new java.util.ArrayList<SignIn>(), null).getClass());
+            signIns = serializer.deserializeObject(json.get("signIns").toString(), SignInCollectionPage.class);
         }
     }
 }

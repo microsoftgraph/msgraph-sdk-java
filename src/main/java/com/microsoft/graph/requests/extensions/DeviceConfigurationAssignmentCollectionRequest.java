@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignmentCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignmentColl
 /**
  * The class for the Device Configuration Assignment Collection Request.
  */
-public class DeviceConfigurationAssignmentCollectionRequest extends BaseCollectionRequest<DeviceConfigurationAssignment, DeviceConfigurationAssignmentCollectionResponse> {
+public class DeviceConfigurationAssignmentCollectionRequest extends BaseCollectionRequest<DeviceConfigurationAssignment, DeviceConfigurationAssignmentCollectionResponse, DeviceConfigurationAssignmentCollectionPage> {
 
     /**
      * The request builder for this collection of DeviceConfigurationAssignment
@@ -37,26 +36,7 @@ public class DeviceConfigurationAssignmentCollectionRequest extends BaseCollecti
      */
     @SuppressWarnings("unchecked")
     public DeviceConfigurationAssignmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceConfigurationAssignmentCollectionResponse.class,(Class<BaseCollectionPage<DeviceConfigurationAssignment>>) (new BaseCollectionPage<DeviceConfigurationAssignment>(new java.util.ArrayList<DeviceConfigurationAssignment>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<DeviceConfigurationAssignment>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<DeviceConfigurationAssignment> get() throws ClientException {
-        final DeviceConfigurationAssignmentCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, DeviceConfigurationAssignmentCollectionResponse.class, DeviceConfigurationAssignmentCollectionPage.class, DeviceConfigurationAssignmentCollectionRequestBuilder.class);
     }
 
     public void post(final DeviceConfigurationAssignment newDeviceConfigurationAssignment, final ICallback<? super DeviceConfigurationAssignment> callback) {
@@ -148,16 +128,5 @@ public class DeviceConfigurationAssignmentCollectionRequest extends BaseCollecti
     public DeviceConfigurationAssignmentCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<DeviceConfigurationAssignment> buildFromResponse(final DeviceConfigurationAssignmentCollectionResponse response) {
-        final DeviceConfigurationAssignmentCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DeviceConfigurationAssignmentCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<DeviceConfigurationAssignment> page = new BaseCollectionPage<DeviceConfigurationAssignment>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

@@ -10,6 +10,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.TeamsApp;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.TeamsAppCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -30,7 +31,7 @@ public class AppCatalogs extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "teamsApps", alternate = {"TeamsApps"})
     @Expose
-    public BaseCollectionPage<TeamsApp> teamsApps;
+    public TeamsAppCollectionPage teamsApps;
 
 
     /**
@@ -74,7 +75,7 @@ public class AppCatalogs extends Entity implements IJsonBackedObject {
 
 
         if (json.has("teamsApps")) {
-            teamsApps = serializer.deserializeObject(json.get("teamsApps").toString(), new BaseCollectionPage<TeamsApp>(new java.util.ArrayList<TeamsApp>(), null).getClass());
+            teamsApps = serializer.deserializeObject(json.get("teamsApps").toString(), TeamsAppCollectionPage.class);
         }
     }
 }

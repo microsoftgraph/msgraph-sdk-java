@@ -16,7 +16,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnCollectionRequestBuilder;
@@ -27,7 +26,7 @@ import com.microsoft.graph.requests.extensions.WorkbookTableColumnCollectionRequ
 /**
  * The class for the Workbook Table Column Collection Request.
  */
-public class WorkbookTableColumnCollectionRequest extends BaseCollectionRequest<WorkbookTableColumn, WorkbookTableColumnCollectionResponse> {
+public class WorkbookTableColumnCollectionRequest extends BaseCollectionRequest<WorkbookTableColumn, WorkbookTableColumnCollectionResponse, WorkbookTableColumnCollectionPage> {
 
     /**
      * The request builder for this collection of WorkbookTableColumn
@@ -38,26 +37,7 @@ public class WorkbookTableColumnCollectionRequest extends BaseCollectionRequest<
      */
     @SuppressWarnings("unchecked")
     public WorkbookTableColumnCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WorkbookTableColumnCollectionResponse.class,(Class<BaseCollectionPage<WorkbookTableColumn>>) (new BaseCollectionPage<WorkbookTableColumn>(new java.util.ArrayList<WorkbookTableColumn>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<WorkbookTableColumn>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<WorkbookTableColumn> get() throws ClientException {
-        final WorkbookTableColumnCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, WorkbookTableColumnCollectionResponse.class, WorkbookTableColumnCollectionPage.class, WorkbookTableColumnCollectionRequestBuilder.class);
     }
 
     public void post(final WorkbookTableColumn newWorkbookTableColumn, final ICallback<? super WorkbookTableColumn> callback) {
@@ -149,16 +129,5 @@ public class WorkbookTableColumnCollectionRequest extends BaseCollectionRequest<
     public WorkbookTableColumnCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<WorkbookTableColumn> buildFromResponse(final WorkbookTableColumnCollectionResponse response) {
-        final WorkbookTableColumnCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new WorkbookTableColumnCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<WorkbookTableColumn> page = new BaseCollectionPage<WorkbookTableColumn>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

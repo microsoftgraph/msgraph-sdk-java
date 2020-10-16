@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionResponse;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedProperty
 /**
  * The class for the Single Value Legacy Extended Property Collection Request.
  */
-public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseCollectionRequest<SingleValueLegacyExtendedProperty, SingleValueLegacyExtendedPropertyCollectionResponse> {
+public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseCollectionRequest<SingleValueLegacyExtendedProperty, SingleValueLegacyExtendedPropertyCollectionResponse, SingleValueLegacyExtendedPropertyCollectionPage> {
 
     /**
      * The request builder for this collection of SingleValueLegacyExtendedProperty
@@ -37,26 +36,7 @@ public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseColl
      */
     @SuppressWarnings("unchecked")
     public SingleValueLegacyExtendedPropertyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SingleValueLegacyExtendedPropertyCollectionResponse.class,(Class<BaseCollectionPage<SingleValueLegacyExtendedProperty>>) (new BaseCollectionPage<SingleValueLegacyExtendedProperty>(new java.util.ArrayList<SingleValueLegacyExtendedProperty>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<SingleValueLegacyExtendedProperty>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<SingleValueLegacyExtendedProperty> get() throws ClientException {
-        final SingleValueLegacyExtendedPropertyCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, SingleValueLegacyExtendedPropertyCollectionResponse.class, SingleValueLegacyExtendedPropertyCollectionPage.class, SingleValueLegacyExtendedPropertyCollectionRequestBuilder.class);
     }
 
     public void post(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty, final ICallback<? super SingleValueLegacyExtendedProperty> callback) {
@@ -148,16 +128,5 @@ public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseColl
     public SingleValueLegacyExtendedPropertyCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<SingleValueLegacyExtendedProperty> buildFromResponse(final SingleValueLegacyExtendedPropertyCollectionResponse response) {
-        final SingleValueLegacyExtendedPropertyCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<SingleValueLegacyExtendedProperty> page = new BaseCollectionPage<SingleValueLegacyExtendedProperty>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

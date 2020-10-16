@@ -23,6 +23,8 @@ import com.microsoft.graph.models.extensions.DeviceCompliancePolicyState;
 import com.microsoft.graph.models.extensions.DeviceConfigurationState;
 import com.microsoft.graph.models.extensions.DeviceCategory;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyStateCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationStateCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -411,7 +413,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "deviceCompliancePolicyStates", alternate = {"DeviceCompliancePolicyStates"})
     @Expose
-    public BaseCollectionPage<DeviceCompliancePolicyState> deviceCompliancePolicyStates;
+    public DeviceCompliancePolicyStateCollectionPage deviceCompliancePolicyStates;
 
     /**
      * The Device Configuration States.
@@ -419,7 +421,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "deviceConfigurationStates", alternate = {"DeviceConfigurationStates"})
     @Expose
-    public BaseCollectionPage<DeviceConfigurationState> deviceConfigurationStates;
+    public DeviceConfigurationStateCollectionPage deviceConfigurationStates;
 
     /**
      * The Device Category.
@@ -471,11 +473,11 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
 
         if (json.has("deviceCompliancePolicyStates")) {
-            deviceCompliancePolicyStates = serializer.deserializeObject(json.get("deviceCompliancePolicyStates").toString(), new BaseCollectionPage<DeviceCompliancePolicyState>(new java.util.ArrayList<DeviceCompliancePolicyState>(), null).getClass());
+            deviceCompliancePolicyStates = serializer.deserializeObject(json.get("deviceCompliancePolicyStates").toString(), DeviceCompliancePolicyStateCollectionPage.class);
         }
 
         if (json.has("deviceConfigurationStates")) {
-            deviceConfigurationStates = serializer.deserializeObject(json.get("deviceConfigurationStates").toString(), new BaseCollectionPage<DeviceConfigurationState>(new java.util.ArrayList<DeviceConfigurationState>(), null).getClass());
+            deviceConfigurationStates = serializer.deserializeObject(json.get("deviceConfigurationStates").toString(), DeviceConfigurationStateCollectionPage.class);
         }
     }
 }

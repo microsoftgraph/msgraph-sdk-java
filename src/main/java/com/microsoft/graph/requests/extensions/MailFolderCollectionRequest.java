@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.MailFolderCollectionResponse;
 import com.microsoft.graph.requests.extensions.MailFolderCollectionRequestBuilder;
@@ -25,7 +24,7 @@ import com.microsoft.graph.requests.extensions.MailFolderCollectionRequest;
 /**
  * The class for the Mail Folder Collection Request.
  */
-public class MailFolderCollectionRequest extends BaseCollectionRequest<MailFolder, MailFolderCollectionResponse> {
+public class MailFolderCollectionRequest extends BaseCollectionRequest<MailFolder, MailFolderCollectionResponse, MailFolderCollectionPage> {
 
     /**
      * The request builder for this collection of MailFolder
@@ -36,26 +35,7 @@ public class MailFolderCollectionRequest extends BaseCollectionRequest<MailFolde
      */
     @SuppressWarnings("unchecked")
     public MailFolderCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MailFolderCollectionResponse.class,(Class<BaseCollectionPage<MailFolder>>) (new BaseCollectionPage<MailFolder>(new java.util.ArrayList<MailFolder>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<MailFolder>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<MailFolder> get() throws ClientException {
-        final MailFolderCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, MailFolderCollectionResponse.class, MailFolderCollectionPage.class, MailFolderCollectionRequestBuilder.class);
     }
 
     public void post(final MailFolder newMailFolder, final ICallback<? super MailFolder> callback) {
@@ -147,16 +127,5 @@ public class MailFolderCollectionRequest extends BaseCollectionRequest<MailFolde
     public MailFolderCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<MailFolder> buildFromResponse(final MailFolderCollectionResponse response) {
-        final MailFolderCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new MailFolderCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<MailFolder> page = new BaseCollectionPage<MailFolder>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the App Role Assignment Request Builder.
  */
-public class AppRoleAssignmentRequestBuilder extends BaseRequestBuilder {
+public class AppRoleAssignmentRequestBuilder extends BaseRequestBuilder<AppRoleAssignment> {
 
     /**
      * The request builder for the AppRoleAssignment

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Column Link Request Builder.
  */
-public class ColumnLinkRequestBuilder extends BaseRequestBuilder {
+public class ColumnLinkRequestBuilder extends BaseRequestBuilder<ColumnLink> {
 
     /**
      * The request builder for the ColumnLink

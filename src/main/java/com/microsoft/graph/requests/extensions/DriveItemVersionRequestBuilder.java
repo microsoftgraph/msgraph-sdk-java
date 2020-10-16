@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Drive Item Version Request Builder.
  */
-public class DriveItemVersionRequestBuilder extends BaseRequestBuilder {
+public class DriveItemVersionRequestBuilder extends BaseRequestBuilder<DriveItemVersion> {
 
     /**
      * The request builder for the DriveItemVersion

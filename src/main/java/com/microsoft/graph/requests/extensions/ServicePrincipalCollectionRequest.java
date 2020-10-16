@@ -16,7 +16,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionResponse;
 import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionRequestBuilder;
@@ -27,7 +26,7 @@ import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionRequest
 /**
  * The class for the Service Principal Collection Request.
  */
-public class ServicePrincipalCollectionRequest extends BaseCollectionRequest<ServicePrincipal, ServicePrincipalCollectionResponse> {
+public class ServicePrincipalCollectionRequest extends BaseCollectionRequest<ServicePrincipal, ServicePrincipalCollectionResponse, ServicePrincipalCollectionPage> {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -38,26 +37,7 @@ public class ServicePrincipalCollectionRequest extends BaseCollectionRequest<Ser
      */
     @SuppressWarnings("unchecked")
     public ServicePrincipalCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ServicePrincipalCollectionResponse.class,(Class<BaseCollectionPage<ServicePrincipal>>) (new BaseCollectionPage<ServicePrincipal>(new java.util.ArrayList<ServicePrincipal>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<ServicePrincipal>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<ServicePrincipal> get() throws ClientException {
-        final ServicePrincipalCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, ServicePrincipalCollectionResponse.class, ServicePrincipalCollectionPage.class, ServicePrincipalCollectionRequestBuilder.class);
     }
 
     public void post(final ServicePrincipal newServicePrincipal, final ICallback<? super ServicePrincipal> callback) {
@@ -149,16 +129,5 @@ public class ServicePrincipalCollectionRequest extends BaseCollectionRequest<Ser
     public ServicePrincipalCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<ServicePrincipal> buildFromResponse(final ServicePrincipalCollectionResponse response) {
-        final ServicePrincipalCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new ServicePrincipalCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<ServicePrincipal> page = new BaseCollectionPage<ServicePrincipal>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

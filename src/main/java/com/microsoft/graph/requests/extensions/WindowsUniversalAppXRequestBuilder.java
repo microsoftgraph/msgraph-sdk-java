@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows Universal App XRequest Builder.
  */
-public class WindowsUniversalAppXRequestBuilder extends BaseRequestBuilder {
+public class WindowsUniversalAppXRequestBuilder extends BaseRequestBuilder<WindowsUniversalAppX> {
 
     /**
      * The request builder for the WindowsUniversalAppX

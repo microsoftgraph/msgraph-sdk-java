@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.SchemaExtensionCollectionResponse;
 import com.microsoft.graph.requests.extensions.SchemaExtensionCollectionRequestBuilder;
@@ -25,7 +24,7 @@ import com.microsoft.graph.requests.extensions.SchemaExtensionCollectionRequest;
 /**
  * The class for the Schema Extension Collection Request.
  */
-public class SchemaExtensionCollectionRequest extends BaseCollectionRequest<SchemaExtension, SchemaExtensionCollectionResponse> {
+public class SchemaExtensionCollectionRequest extends BaseCollectionRequest<SchemaExtension, SchemaExtensionCollectionResponse, SchemaExtensionCollectionPage> {
 
     /**
      * The request builder for this collection of SchemaExtension
@@ -36,26 +35,7 @@ public class SchemaExtensionCollectionRequest extends BaseCollectionRequest<Sche
      */
     @SuppressWarnings("unchecked")
     public SchemaExtensionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SchemaExtensionCollectionResponse.class,(Class<BaseCollectionPage<SchemaExtension>>) (new BaseCollectionPage<SchemaExtension>(new java.util.ArrayList<SchemaExtension>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<SchemaExtension>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<SchemaExtension> get() throws ClientException {
-        final SchemaExtensionCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, SchemaExtensionCollectionResponse.class, SchemaExtensionCollectionPage.class, SchemaExtensionCollectionRequestBuilder.class);
     }
 
     public void post(final SchemaExtension newSchemaExtension, final ICallback<? super SchemaExtension> callback) {
@@ -147,16 +127,5 @@ public class SchemaExtensionCollectionRequest extends BaseCollectionRequest<Sche
     public SchemaExtensionCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<SchemaExtension> buildFromResponse(final SchemaExtensionCollectionResponse response) {
-        final SchemaExtensionCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new SchemaExtensionCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<SchemaExtension> page = new BaseCollectionPage<SchemaExtension>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

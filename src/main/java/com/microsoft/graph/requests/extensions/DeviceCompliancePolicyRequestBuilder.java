@@ -32,7 +32,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Compliance Policy Request Builder.
  */
-public class DeviceCompliancePolicyRequestBuilder extends BaseRequestBuilder {
+public class DeviceCompliancePolicyRequestBuilder extends BaseRequestBuilder<DeviceCompliancePolicy> {
 
     /**
      * The request builder for the DeviceCompliancePolicy

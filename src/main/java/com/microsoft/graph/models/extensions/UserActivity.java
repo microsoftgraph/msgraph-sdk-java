@@ -12,6 +12,7 @@ import com.microsoft.graph.models.generated.Status;
 import com.microsoft.graph.models.extensions.VisualInfo;
 import com.microsoft.graph.models.extensions.ActivityHistoryItem;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.ActivityHistoryItemCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -136,7 +137,7 @@ public class UserActivity extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "historyItems", alternate = {"HistoryItems"})
     @Expose
-    public BaseCollectionPage<ActivityHistoryItem> historyItems;
+    public ActivityHistoryItemCollectionPage historyItems;
 
 
     /**
@@ -180,7 +181,7 @@ public class UserActivity extends Entity implements IJsonBackedObject {
 
 
         if (json.has("historyItems")) {
-            historyItems = serializer.deserializeObject(json.get("historyItems").toString(), new BaseCollectionPage<ActivityHistoryItem>(new java.util.ArrayList<ActivityHistoryItem>(), null).getClass());
+            historyItems = serializer.deserializeObject(json.get("historyItems").toString(), ActivityHistoryItemCollectionPage.class);
         }
     }
 }

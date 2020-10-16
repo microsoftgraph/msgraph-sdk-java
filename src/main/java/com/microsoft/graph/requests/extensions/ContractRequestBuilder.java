@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Contract Request Builder.
  */
-public class ContractRequestBuilder extends BaseRequestBuilder {
+public class ContractRequestBuilder extends BaseRequestBuilder<Contract> {
 
     /**
      * The request builder for the Contract

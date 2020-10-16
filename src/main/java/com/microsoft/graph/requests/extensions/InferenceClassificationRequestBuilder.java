@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Inference Classification Request Builder.
  */
-public class InferenceClassificationRequestBuilder extends BaseRequestBuilder {
+public class InferenceClassificationRequestBuilder extends BaseRequestBuilder<InferenceClassification> {
 
     /**
      * The request builder for the InferenceClassification

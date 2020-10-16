@@ -12,6 +12,9 @@ import com.microsoft.graph.models.extensions.SharedInsight;
 import com.microsoft.graph.models.extensions.Trending;
 import com.microsoft.graph.models.extensions.UsedInsight;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.SharedInsightCollectionPage;
+import com.microsoft.graph.requests.extensions.TrendingCollectionPage;
+import com.microsoft.graph.requests.extensions.UsedInsightCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -32,7 +35,7 @@ public class OfficeGraphInsights extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "shared", alternate = {"Shared"})
     @Expose
-    public BaseCollectionPage<SharedInsight> shared;
+    public SharedInsightCollectionPage shared;
 
     /**
      * The Trending.
@@ -40,7 +43,7 @@ public class OfficeGraphInsights extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "trending", alternate = {"Trending"})
     @Expose
-    public BaseCollectionPage<Trending> trending;
+    public TrendingCollectionPage trending;
 
     /**
      * The Used.
@@ -48,7 +51,7 @@ public class OfficeGraphInsights extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "used", alternate = {"Used"})
     @Expose
-    public BaseCollectionPage<UsedInsight> used;
+    public UsedInsightCollectionPage used;
 
 
     /**
@@ -92,15 +95,15 @@ public class OfficeGraphInsights extends Entity implements IJsonBackedObject {
 
 
         if (json.has("shared")) {
-            shared = serializer.deserializeObject(json.get("shared").toString(), new BaseCollectionPage<SharedInsight>(new java.util.ArrayList<SharedInsight>(), null).getClass());
+            shared = serializer.deserializeObject(json.get("shared").toString(), SharedInsightCollectionPage.class);
         }
 
         if (json.has("trending")) {
-            trending = serializer.deserializeObject(json.get("trending").toString(), new BaseCollectionPage<Trending>(new java.util.ArrayList<Trending>(), null).getClass());
+            trending = serializer.deserializeObject(json.get("trending").toString(), TrendingCollectionPage.class);
         }
 
         if (json.has("used")) {
-            used = serializer.deserializeObject(json.get("used").toString(), new BaseCollectionPage<UsedInsight>(new java.util.ArrayList<UsedInsight>(), null).getClass());
+            used = serializer.deserializeObject(json.get("used").toString(), UsedInsightCollectionPage.class);
         }
     }
 }

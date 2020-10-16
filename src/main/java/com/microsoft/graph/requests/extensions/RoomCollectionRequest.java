@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.RoomCollectionResponse;
 import com.microsoft.graph.requests.extensions.RoomCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.RoomCollectionRequest;
 /**
  * The class for the Room Collection Request.
  */
-public class RoomCollectionRequest extends BaseCollectionRequest<Room, RoomCollectionResponse> {
+public class RoomCollectionRequest extends BaseCollectionRequest<Room, RoomCollectionResponse, RoomCollectionPage> {
 
     /**
      * The request builder for this collection of Room
@@ -37,26 +36,7 @@ public class RoomCollectionRequest extends BaseCollectionRequest<Room, RoomColle
      */
     @SuppressWarnings("unchecked")
     public RoomCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, RoomCollectionResponse.class,(Class<BaseCollectionPage<Room>>) (new BaseCollectionPage<Room>(new java.util.ArrayList<Room>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<Room>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<Room> get() throws ClientException {
-        final RoomCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, RoomCollectionResponse.class, RoomCollectionPage.class, RoomCollectionRequestBuilder.class);
     }
 
     public void post(final Room newRoom, final ICallback<? super Room> callback) {
@@ -148,16 +128,5 @@ public class RoomCollectionRequest extends BaseCollectionRequest<Room, RoomColle
     public RoomCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<Room> buildFromResponse(final RoomCollectionResponse response) {
-        final RoomCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new RoomCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<Room> page = new BaseCollectionPage<Room>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows Mobile MSIRequest Builder.
  */
-public class WindowsMobileMSIRequestBuilder extends BaseRequestBuilder {
+public class WindowsMobileMSIRequestBuilder extends BaseRequestBuilder<WindowsMobileMSI> {
 
     /**
      * The request builder for the WindowsMobileMSI

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Mdm Windows Information Protection Policy Request Builder.
  */
-public class MdmWindowsInformationProtectionPolicyRequestBuilder extends BaseRequestBuilder {
+public class MdmWindowsInformationProtectionPolicyRequestBuilder extends BaseRequestBuilder<MdmWindowsInformationProtectionPolicy> {
 
     /**
      * The request builder for the MdmWindowsInformationProtectionPolicy

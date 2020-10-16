@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionResponse;
 import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionReques
 /**
  * The class for the Mobile App Category Collection Request.
  */
-public class MobileAppCategoryCollectionRequest extends BaseCollectionRequest<MobileAppCategory, MobileAppCategoryCollectionResponse> {
+public class MobileAppCategoryCollectionRequest extends BaseCollectionRequest<MobileAppCategory, MobileAppCategoryCollectionResponse, MobileAppCategoryCollectionPage> {
 
     /**
      * The request builder for this collection of MobileAppCategory
@@ -37,26 +36,7 @@ public class MobileAppCategoryCollectionRequest extends BaseCollectionRequest<Mo
      */
     @SuppressWarnings("unchecked")
     public MobileAppCategoryCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MobileAppCategoryCollectionResponse.class,(Class<BaseCollectionPage<MobileAppCategory>>) (new BaseCollectionPage<MobileAppCategory>(new java.util.ArrayList<MobileAppCategory>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<MobileAppCategory>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<MobileAppCategory> get() throws ClientException {
-        final MobileAppCategoryCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, MobileAppCategoryCollectionResponse.class, MobileAppCategoryCollectionPage.class, MobileAppCategoryCollectionRequestBuilder.class);
     }
 
     public void post(final MobileAppCategory newMobileAppCategory, final ICallback<? super MobileAppCategory> callback) {
@@ -148,16 +128,5 @@ public class MobileAppCategoryCollectionRequest extends BaseCollectionRequest<Mo
     public MobileAppCategoryCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<MobileAppCategory> buildFromResponse(final MobileAppCategoryCollectionResponse response) {
-        final MobileAppCategoryCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new MobileAppCategoryCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<MobileAppCategory> page = new BaseCollectionPage<MobileAppCategory>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

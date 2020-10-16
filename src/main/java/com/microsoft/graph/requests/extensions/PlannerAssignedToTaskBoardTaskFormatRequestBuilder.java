@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Planner Assigned To Task Board Task Format Request Builder.
  */
-public class PlannerAssignedToTaskBoardTaskFormatRequestBuilder extends BaseRequestBuilder {
+public class PlannerAssignedToTaskBoardTaskFormatRequestBuilder extends BaseRequestBuilder<PlannerAssignedToTaskBoardTaskFormat> {
 
     /**
      * The request builder for the PlannerAssignedToTaskBoardTaskFormat

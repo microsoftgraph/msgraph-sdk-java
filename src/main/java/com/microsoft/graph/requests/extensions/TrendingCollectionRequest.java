@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TrendingCollectionResponse;
 import com.microsoft.graph.requests.extensions.TrendingCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.TrendingCollectionRequest;
 /**
  * The class for the Trending Collection Request.
  */
-public class TrendingCollectionRequest extends BaseCollectionRequest<Trending, TrendingCollectionResponse> {
+public class TrendingCollectionRequest extends BaseCollectionRequest<Trending, TrendingCollectionResponse, TrendingCollectionPage> {
 
     /**
      * The request builder for this collection of Trending
@@ -37,26 +36,7 @@ public class TrendingCollectionRequest extends BaseCollectionRequest<Trending, T
      */
     @SuppressWarnings("unchecked")
     public TrendingCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TrendingCollectionResponse.class,(Class<BaseCollectionPage<Trending>>) (new BaseCollectionPage<Trending>(new java.util.ArrayList<Trending>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<Trending>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<Trending> get() throws ClientException {
-        final TrendingCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, TrendingCollectionResponse.class, TrendingCollectionPage.class, TrendingCollectionRequestBuilder.class);
     }
 
     public void post(final Trending newTrending, final ICallback<? super Trending> callback) {
@@ -148,16 +128,5 @@ public class TrendingCollectionRequest extends BaseCollectionRequest<Trending, T
     public TrendingCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<Trending> buildFromResponse(final TrendingCollectionResponse response) {
-        final TrendingCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new TrendingCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<Trending> page = new BaseCollectionPage<Trending>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

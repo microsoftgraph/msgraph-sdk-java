@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.MobileAppAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.MobileAppAssignmentCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.MobileAppAssignmentCollectionRequ
 /**
  * The class for the Mobile App Assignment Collection Request.
  */
-public class MobileAppAssignmentCollectionRequest extends BaseCollectionRequest<MobileAppAssignment, MobileAppAssignmentCollectionResponse> {
+public class MobileAppAssignmentCollectionRequest extends BaseCollectionRequest<MobileAppAssignment, MobileAppAssignmentCollectionResponse, MobileAppAssignmentCollectionPage> {
 
     /**
      * The request builder for this collection of MobileAppAssignment
@@ -37,26 +36,7 @@ public class MobileAppAssignmentCollectionRequest extends BaseCollectionRequest<
      */
     @SuppressWarnings("unchecked")
     public MobileAppAssignmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MobileAppAssignmentCollectionResponse.class,(Class<BaseCollectionPage<MobileAppAssignment>>) (new BaseCollectionPage<MobileAppAssignment>(new java.util.ArrayList<MobileAppAssignment>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<MobileAppAssignment>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<MobileAppAssignment> get() throws ClientException {
-        final MobileAppAssignmentCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, MobileAppAssignmentCollectionResponse.class, MobileAppAssignmentCollectionPage.class, MobileAppAssignmentCollectionRequestBuilder.class);
     }
 
     public void post(final MobileAppAssignment newMobileAppAssignment, final ICallback<? super MobileAppAssignment> callback) {
@@ -148,16 +128,5 @@ public class MobileAppAssignmentCollectionRequest extends BaseCollectionRequest<
     public MobileAppAssignmentCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<MobileAppAssignment> buildFromResponse(final MobileAppAssignmentCollectionResponse response) {
-        final MobileAppAssignmentCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new MobileAppAssignmentCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<MobileAppAssignment> page = new BaseCollectionPage<MobileAppAssignment>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

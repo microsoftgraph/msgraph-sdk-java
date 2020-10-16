@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the License Details Request Builder.
  */
-public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
+public class LicenseDetailsRequestBuilder extends BaseRequestBuilder<LicenseDetails> {
 
     /**
      * The request builder for the LicenseDetails

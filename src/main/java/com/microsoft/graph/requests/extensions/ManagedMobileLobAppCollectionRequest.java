@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ManagedMobileLobAppCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedMobileLobAppCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.ManagedMobileLobAppCollectionRequ
 /**
  * The class for the Managed Mobile Lob App Collection Request.
  */
-public class ManagedMobileLobAppCollectionRequest extends BaseCollectionRequest<ManagedMobileLobApp, ManagedMobileLobAppCollectionResponse> {
+public class ManagedMobileLobAppCollectionRequest extends BaseCollectionRequest<ManagedMobileLobApp, ManagedMobileLobAppCollectionResponse, ManagedMobileLobAppCollectionPage> {
 
     /**
      * The request builder for this collection of ManagedMobileLobApp
@@ -37,26 +36,7 @@ public class ManagedMobileLobAppCollectionRequest extends BaseCollectionRequest<
      */
     @SuppressWarnings("unchecked")
     public ManagedMobileLobAppCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedMobileLobAppCollectionResponse.class,(Class<BaseCollectionPage<ManagedMobileLobApp>>) (new BaseCollectionPage<ManagedMobileLobApp>(new java.util.ArrayList<ManagedMobileLobApp>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<ManagedMobileLobApp>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<ManagedMobileLobApp> get() throws ClientException {
-        final ManagedMobileLobAppCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, ManagedMobileLobAppCollectionResponse.class, ManagedMobileLobAppCollectionPage.class, ManagedMobileLobAppCollectionRequestBuilder.class);
     }
 
     public void post(final ManagedMobileLobApp newManagedMobileLobApp, final ICallback<? super ManagedMobileLobApp> callback) {
@@ -148,16 +128,5 @@ public class ManagedMobileLobAppCollectionRequest extends BaseCollectionRequest<
     public ManagedMobileLobAppCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<ManagedMobileLobApp> buildFromResponse(final ManagedMobileLobAppCollectionResponse response) {
-        final ManagedMobileLobAppCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new ManagedMobileLobAppCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<ManagedMobileLobApp> page = new BaseCollectionPage<ManagedMobileLobApp>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

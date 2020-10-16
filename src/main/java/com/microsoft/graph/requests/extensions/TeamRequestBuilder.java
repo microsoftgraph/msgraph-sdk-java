@@ -33,7 +33,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Team Request Builder.
  */
-public class TeamRequestBuilder extends BaseRequestBuilder {
+public class TeamRequestBuilder extends BaseRequestBuilder<Team> {
 
     /**
      * The request builder for the Team

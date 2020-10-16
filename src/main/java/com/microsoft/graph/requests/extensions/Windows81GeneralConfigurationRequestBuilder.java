@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows81General Configuration Request Builder.
  */
-public class Windows81GeneralConfigurationRequestBuilder extends BaseRequestBuilder {
+public class Windows81GeneralConfigurationRequestBuilder extends BaseRequestBuilder<Windows81GeneralConfiguration> {
 
     /**
      * The request builder for the Windows81GeneralConfiguration

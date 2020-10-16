@@ -36,7 +36,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Service Principal Request Builder.
  */
-public class ServicePrincipalRequestBuilder extends BaseRequestBuilder {
+public class ServicePrincipalRequestBuilder extends BaseRequestBuilder<ServicePrincipal> {
 
     /**
      * The request builder for the ServicePrincipal

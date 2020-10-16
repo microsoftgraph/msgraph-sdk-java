@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TeamsTabCollectionResponse;
 import com.microsoft.graph.requests.extensions.TeamsTabCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.TeamsTabCollectionRequest;
 /**
  * The class for the Teams Tab Collection Request.
  */
-public class TeamsTabCollectionRequest extends BaseCollectionRequest<TeamsTab, TeamsTabCollectionResponse> {
+public class TeamsTabCollectionRequest extends BaseCollectionRequest<TeamsTab, TeamsTabCollectionResponse, TeamsTabCollectionPage> {
 
     /**
      * The request builder for this collection of TeamsTab
@@ -37,26 +36,7 @@ public class TeamsTabCollectionRequest extends BaseCollectionRequest<TeamsTab, T
      */
     @SuppressWarnings("unchecked")
     public TeamsTabCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TeamsTabCollectionResponse.class,(Class<BaseCollectionPage<TeamsTab>>) (new BaseCollectionPage<TeamsTab>(new java.util.ArrayList<TeamsTab>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<TeamsTab>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<TeamsTab> get() throws ClientException {
-        final TeamsTabCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, TeamsTabCollectionResponse.class, TeamsTabCollectionPage.class, TeamsTabCollectionRequestBuilder.class);
     }
 
     public void post(final TeamsTab newTeamsTab, final ICallback<? super TeamsTab> callback) {
@@ -148,16 +128,5 @@ public class TeamsTabCollectionRequest extends BaseCollectionRequest<TeamsTab, T
     public TeamsTabCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<TeamsTab> buildFromResponse(final TeamsTabCollectionResponse response) {
-        final TeamsTabCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new TeamsTabCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<TeamsTab> page = new BaseCollectionPage<TeamsTab>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

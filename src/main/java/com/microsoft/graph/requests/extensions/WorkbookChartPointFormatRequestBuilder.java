@@ -19,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Chart Point Format Request Builder.
  */
-public class WorkbookChartPointFormatRequestBuilder extends BaseRequestBuilder {
+public class WorkbookChartPointFormatRequestBuilder extends BaseRequestBuilder<WorkbookChartPointFormat> {
 
     /**
      * The request builder for the WorkbookChartPointFormat

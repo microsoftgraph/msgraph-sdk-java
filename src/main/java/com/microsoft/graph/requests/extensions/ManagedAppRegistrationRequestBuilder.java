@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Managed App Registration Request Builder.
  */
-public class ManagedAppRegistrationRequestBuilder extends BaseRequestBuilder {
+public class ManagedAppRegistrationRequestBuilder extends BaseRequestBuilder<ManagedAppRegistration> {
 
     /**
      * The request builder for the ManagedAppRegistration

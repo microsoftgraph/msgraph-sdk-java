@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.UserScopeTeamsAppInstallationCollectionResponse;
 import com.microsoft.graph.requests.extensions.UserScopeTeamsAppInstallationCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.UserScopeTeamsAppInstallationColl
 /**
  * The class for the User Scope Teams App Installation Collection Request.
  */
-public class UserScopeTeamsAppInstallationCollectionRequest extends BaseCollectionRequest<UserScopeTeamsAppInstallation, UserScopeTeamsAppInstallationCollectionResponse> {
+public class UserScopeTeamsAppInstallationCollectionRequest extends BaseCollectionRequest<UserScopeTeamsAppInstallation, UserScopeTeamsAppInstallationCollectionResponse, UserScopeTeamsAppInstallationCollectionPage> {
 
     /**
      * The request builder for this collection of UserScopeTeamsAppInstallation
@@ -37,26 +36,7 @@ public class UserScopeTeamsAppInstallationCollectionRequest extends BaseCollecti
      */
     @SuppressWarnings("unchecked")
     public UserScopeTeamsAppInstallationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, UserScopeTeamsAppInstallationCollectionResponse.class,(Class<BaseCollectionPage<UserScopeTeamsAppInstallation>>) (new BaseCollectionPage<UserScopeTeamsAppInstallation>(new java.util.ArrayList<UserScopeTeamsAppInstallation>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<UserScopeTeamsAppInstallation>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<UserScopeTeamsAppInstallation> get() throws ClientException {
-        final UserScopeTeamsAppInstallationCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, UserScopeTeamsAppInstallationCollectionResponse.class, UserScopeTeamsAppInstallationCollectionPage.class, UserScopeTeamsAppInstallationCollectionRequestBuilder.class);
     }
 
     public void post(final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation, final ICallback<? super UserScopeTeamsAppInstallation> callback) {
@@ -148,16 +128,5 @@ public class UserScopeTeamsAppInstallationCollectionRequest extends BaseCollecti
     public UserScopeTeamsAppInstallationCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<UserScopeTeamsAppInstallation> buildFromResponse(final UserScopeTeamsAppInstallationCollectionResponse response) {
-        final UserScopeTeamsAppInstallationCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new UserScopeTeamsAppInstallationCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<UserScopeTeamsAppInstallation> page = new BaseCollectionPage<UserScopeTeamsAppInstallation>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

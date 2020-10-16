@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DeviceAndAppManagementRoleAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.DeviceAndAppManagementRoleAssignm
 /**
  * The class for the Device And App Management Role Assignment Collection Request.
  */
-public class DeviceAndAppManagementRoleAssignmentCollectionRequest extends BaseCollectionRequest<DeviceAndAppManagementRoleAssignment, DeviceAndAppManagementRoleAssignmentCollectionResponse> {
+public class DeviceAndAppManagementRoleAssignmentCollectionRequest extends BaseCollectionRequest<DeviceAndAppManagementRoleAssignment, DeviceAndAppManagementRoleAssignmentCollectionResponse, DeviceAndAppManagementRoleAssignmentCollectionPage> {
 
     /**
      * The request builder for this collection of DeviceAndAppManagementRoleAssignment
@@ -37,26 +36,7 @@ public class DeviceAndAppManagementRoleAssignmentCollectionRequest extends BaseC
      */
     @SuppressWarnings("unchecked")
     public DeviceAndAppManagementRoleAssignmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceAndAppManagementRoleAssignmentCollectionResponse.class,(Class<BaseCollectionPage<DeviceAndAppManagementRoleAssignment>>) (new BaseCollectionPage<DeviceAndAppManagementRoleAssignment>(new java.util.ArrayList<DeviceAndAppManagementRoleAssignment>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<DeviceAndAppManagementRoleAssignment>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<DeviceAndAppManagementRoleAssignment> get() throws ClientException {
-        final DeviceAndAppManagementRoleAssignmentCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, DeviceAndAppManagementRoleAssignmentCollectionResponse.class, DeviceAndAppManagementRoleAssignmentCollectionPage.class, DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder.class);
     }
 
     public void post(final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment, final ICallback<? super DeviceAndAppManagementRoleAssignment> callback) {
@@ -148,16 +128,5 @@ public class DeviceAndAppManagementRoleAssignmentCollectionRequest extends BaseC
     public DeviceAndAppManagementRoleAssignmentCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<DeviceAndAppManagementRoleAssignment> buildFromResponse(final DeviceAndAppManagementRoleAssignmentCollectionResponse response) {
-        final DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<DeviceAndAppManagementRoleAssignment> page = new BaseCollectionPage<DeviceAndAppManagementRoleAssignment>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

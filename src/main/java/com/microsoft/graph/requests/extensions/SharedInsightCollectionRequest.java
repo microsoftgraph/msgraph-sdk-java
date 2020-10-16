@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.SharedInsightCollectionResponse;
 import com.microsoft.graph.requests.extensions.SharedInsightCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.SharedInsightCollectionRequest;
 /**
  * The class for the Shared Insight Collection Request.
  */
-public class SharedInsightCollectionRequest extends BaseCollectionRequest<SharedInsight, SharedInsightCollectionResponse> {
+public class SharedInsightCollectionRequest extends BaseCollectionRequest<SharedInsight, SharedInsightCollectionResponse, SharedInsightCollectionPage> {
 
     /**
      * The request builder for this collection of SharedInsight
@@ -37,26 +36,7 @@ public class SharedInsightCollectionRequest extends BaseCollectionRequest<Shared
      */
     @SuppressWarnings("unchecked")
     public SharedInsightCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SharedInsightCollectionResponse.class,(Class<BaseCollectionPage<SharedInsight>>) (new BaseCollectionPage<SharedInsight>(new java.util.ArrayList<SharedInsight>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<SharedInsight>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<SharedInsight> get() throws ClientException {
-        final SharedInsightCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, SharedInsightCollectionResponse.class, SharedInsightCollectionPage.class, SharedInsightCollectionRequestBuilder.class);
     }
 
     public void post(final SharedInsight newSharedInsight, final ICallback<? super SharedInsight> callback) {
@@ -148,16 +128,5 @@ public class SharedInsightCollectionRequest extends BaseCollectionRequest<Shared
     public SharedInsightCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<SharedInsight> buildFromResponse(final SharedInsightCollectionResponse response) {
-        final SharedInsightCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new SharedInsightCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<SharedInsight> page = new BaseCollectionPage<SharedInsight>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

@@ -40,6 +40,28 @@ import com.microsoft.graph.models.extensions.DeviceManagementTroubleshootingEven
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionAppLearningSummary;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionNetworkLearningSummary;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.TermsAndConditionsCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceCompliancePolicySettingStateSummaryCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationCollectionPage;
+import com.microsoft.graph.requests.extensions.IosUpdateDeviceStatusCollectionPage;
+import com.microsoft.graph.requests.extensions.ComplianceManagementPartnerCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceCategoryCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceEnrollmentConfigurationCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceManagementPartnerCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceManagementExchangeConnectorCollectionPage;
+import com.microsoft.graph.requests.extensions.MobileThreatDefenseConnectorCollectionPage;
+import com.microsoft.graph.requests.extensions.DetectedAppCollectionPage;
+import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionPage;
+import com.microsoft.graph.requests.extensions.NotificationMessageTemplateCollectionPage;
+import com.microsoft.graph.requests.extensions.ResourceOperationCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceAndAppManagementRoleAssignmentCollectionPage;
+import com.microsoft.graph.requests.extensions.RoleDefinitionCollectionPage;
+import com.microsoft.graph.requests.extensions.RemoteAssistancePartnerCollectionPage;
+import com.microsoft.graph.requests.extensions.TelecomExpenseManagementPartnerCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceManagementTroubleshootingEventCollectionPage;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLearningSummaryCollectionPage;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionNetworkLearningSummaryCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -92,7 +114,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "termsAndConditions", alternate = {"TermsAndConditions"})
     @Expose
-    public BaseCollectionPage<TermsAndConditions> termsAndConditions;
+    public TermsAndConditionsCollectionPage termsAndConditions;
 
     /**
      * The Device Compliance Policies.
@@ -100,7 +122,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "deviceCompliancePolicies", alternate = {"DeviceCompliancePolicies"})
     @Expose
-    public BaseCollectionPage<DeviceCompliancePolicy> deviceCompliancePolicies;
+    public DeviceCompliancePolicyCollectionPage deviceCompliancePolicies;
 
     /**
      * The Device Compliance Policy Device State Summary.
@@ -116,7 +138,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "deviceCompliancePolicySettingStateSummaries", alternate = {"DeviceCompliancePolicySettingStateSummaries"})
     @Expose
-    public BaseCollectionPage<DeviceCompliancePolicySettingStateSummary> deviceCompliancePolicySettingStateSummaries;
+    public DeviceCompliancePolicySettingStateSummaryCollectionPage deviceCompliancePolicySettingStateSummaries;
 
     /**
      * The Device Configuration Device State Summaries.
@@ -132,7 +154,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "deviceConfigurations", alternate = {"DeviceConfigurations"})
     @Expose
-    public BaseCollectionPage<DeviceConfiguration> deviceConfigurations;
+    public DeviceConfigurationCollectionPage deviceConfigurations;
 
     /**
      * The Ios Update Statuses.
@@ -140,7 +162,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "iosUpdateStatuses", alternate = {"IosUpdateStatuses"})
     @Expose
-    public BaseCollectionPage<IosUpdateDeviceStatus> iosUpdateStatuses;
+    public IosUpdateDeviceStatusCollectionPage iosUpdateStatuses;
 
     /**
      * The Software Update Status Summary.
@@ -156,7 +178,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "complianceManagementPartners", alternate = {"ComplianceManagementPartners"})
     @Expose
-    public BaseCollectionPage<ComplianceManagementPartner> complianceManagementPartners;
+    public ComplianceManagementPartnerCollectionPage complianceManagementPartners;
 
     /**
      * The Conditional Access Settings.
@@ -172,7 +194,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "deviceCategories", alternate = {"DeviceCategories"})
     @Expose
-    public BaseCollectionPage<DeviceCategory> deviceCategories;
+    public DeviceCategoryCollectionPage deviceCategories;
 
     /**
      * The Device Enrollment Configurations.
@@ -180,7 +202,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "deviceEnrollmentConfigurations", alternate = {"DeviceEnrollmentConfigurations"})
     @Expose
-    public BaseCollectionPage<DeviceEnrollmentConfiguration> deviceEnrollmentConfigurations;
+    public DeviceEnrollmentConfigurationCollectionPage deviceEnrollmentConfigurations;
 
     /**
      * The Device Management Partners.
@@ -188,7 +210,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "deviceManagementPartners", alternate = {"DeviceManagementPartners"})
     @Expose
-    public BaseCollectionPage<DeviceManagementPartner> deviceManagementPartners;
+    public DeviceManagementPartnerCollectionPage deviceManagementPartners;
 
     /**
      * The Exchange Connectors.
@@ -196,7 +218,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "exchangeConnectors", alternate = {"ExchangeConnectors"})
     @Expose
-    public BaseCollectionPage<DeviceManagementExchangeConnector> exchangeConnectors;
+    public DeviceManagementExchangeConnectorCollectionPage exchangeConnectors;
 
     /**
      * The Mobile Threat Defense Connectors.
@@ -204,7 +226,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "mobileThreatDefenseConnectors", alternate = {"MobileThreatDefenseConnectors"})
     @Expose
-    public BaseCollectionPage<MobileThreatDefenseConnector> mobileThreatDefenseConnectors;
+    public MobileThreatDefenseConnectorCollectionPage mobileThreatDefenseConnectors;
 
     /**
      * The Apple Push Notification Certificate.
@@ -220,7 +242,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "detectedApps", alternate = {"DetectedApps"})
     @Expose
-    public BaseCollectionPage<DetectedApp> detectedApps;
+    public DetectedAppCollectionPage detectedApps;
 
     /**
      * The Managed Device Overview.
@@ -236,7 +258,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "managedDevices", alternate = {"ManagedDevices"})
     @Expose
-    public BaseCollectionPage<ManagedDevice> managedDevices;
+    public ManagedDeviceCollectionPage managedDevices;
 
     /**
      * The Notification Message Templates.
@@ -244,7 +266,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "notificationMessageTemplates", alternate = {"NotificationMessageTemplates"})
     @Expose
-    public BaseCollectionPage<NotificationMessageTemplate> notificationMessageTemplates;
+    public NotificationMessageTemplateCollectionPage notificationMessageTemplates;
 
     /**
      * The Resource Operations.
@@ -252,7 +274,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "resourceOperations", alternate = {"ResourceOperations"})
     @Expose
-    public BaseCollectionPage<ResourceOperation> resourceOperations;
+    public ResourceOperationCollectionPage resourceOperations;
 
     /**
      * The Role Assignments.
@@ -260,7 +282,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "roleAssignments", alternate = {"RoleAssignments"})
     @Expose
-    public BaseCollectionPage<DeviceAndAppManagementRoleAssignment> roleAssignments;
+    public DeviceAndAppManagementRoleAssignmentCollectionPage roleAssignments;
 
     /**
      * The Role Definitions.
@@ -268,7 +290,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "roleDefinitions", alternate = {"RoleDefinitions"})
     @Expose
-    public BaseCollectionPage<RoleDefinition> roleDefinitions;
+    public RoleDefinitionCollectionPage roleDefinitions;
 
     /**
      * The Remote Assistance Partners.
@@ -276,7 +298,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "remoteAssistancePartners", alternate = {"RemoteAssistancePartners"})
     @Expose
-    public BaseCollectionPage<RemoteAssistancePartner> remoteAssistancePartners;
+    public RemoteAssistancePartnerCollectionPage remoteAssistancePartners;
 
     /**
      * The Telecom Expense Management Partners.
@@ -284,7 +306,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "telecomExpenseManagementPartners", alternate = {"TelecomExpenseManagementPartners"})
     @Expose
-    public BaseCollectionPage<TelecomExpenseManagementPartner> telecomExpenseManagementPartners;
+    public TelecomExpenseManagementPartnerCollectionPage telecomExpenseManagementPartners;
 
     /**
      * The Troubleshooting Events.
@@ -292,7 +314,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "troubleshootingEvents", alternate = {"TroubleshootingEvents"})
     @Expose
-    public BaseCollectionPage<DeviceManagementTroubleshootingEvent> troubleshootingEvents;
+    public DeviceManagementTroubleshootingEventCollectionPage troubleshootingEvents;
 
     /**
      * The Windows Information Protection App Learning Summaries.
@@ -300,7 +322,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "windowsInformationProtectionAppLearningSummaries", alternate = {"WindowsInformationProtectionAppLearningSummaries"})
     @Expose
-    public BaseCollectionPage<WindowsInformationProtectionAppLearningSummary> windowsInformationProtectionAppLearningSummaries;
+    public WindowsInformationProtectionAppLearningSummaryCollectionPage windowsInformationProtectionAppLearningSummaries;
 
     /**
      * The Windows Information Protection Network Learning Summaries.
@@ -308,7 +330,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "windowsInformationProtectionNetworkLearningSummaries", alternate = {"WindowsInformationProtectionNetworkLearningSummaries"})
     @Expose
-    public BaseCollectionPage<WindowsInformationProtectionNetworkLearningSummary> windowsInformationProtectionNetworkLearningSummaries;
+    public WindowsInformationProtectionNetworkLearningSummaryCollectionPage windowsInformationProtectionNetworkLearningSummaries;
 
 
     /**
@@ -352,91 +374,91 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
 
         if (json.has("termsAndConditions")) {
-            termsAndConditions = serializer.deserializeObject(json.get("termsAndConditions").toString(), new BaseCollectionPage<TermsAndConditions>(new java.util.ArrayList<TermsAndConditions>(), null).getClass());
+            termsAndConditions = serializer.deserializeObject(json.get("termsAndConditions").toString(), TermsAndConditionsCollectionPage.class);
         }
 
         if (json.has("deviceCompliancePolicies")) {
-            deviceCompliancePolicies = serializer.deserializeObject(json.get("deviceCompliancePolicies").toString(), new BaseCollectionPage<DeviceCompliancePolicy>(new java.util.ArrayList<DeviceCompliancePolicy>(), null).getClass());
+            deviceCompliancePolicies = serializer.deserializeObject(json.get("deviceCompliancePolicies").toString(), DeviceCompliancePolicyCollectionPage.class);
         }
 
         if (json.has("deviceCompliancePolicySettingStateSummaries")) {
-            deviceCompliancePolicySettingStateSummaries = serializer.deserializeObject(json.get("deviceCompliancePolicySettingStateSummaries").toString(), new BaseCollectionPage<DeviceCompliancePolicySettingStateSummary>(new java.util.ArrayList<DeviceCompliancePolicySettingStateSummary>(), null).getClass());
+            deviceCompliancePolicySettingStateSummaries = serializer.deserializeObject(json.get("deviceCompliancePolicySettingStateSummaries").toString(), DeviceCompliancePolicySettingStateSummaryCollectionPage.class);
         }
 
         if (json.has("deviceConfigurations")) {
-            deviceConfigurations = serializer.deserializeObject(json.get("deviceConfigurations").toString(), new BaseCollectionPage<DeviceConfiguration>(new java.util.ArrayList<DeviceConfiguration>(), null).getClass());
+            deviceConfigurations = serializer.deserializeObject(json.get("deviceConfigurations").toString(), DeviceConfigurationCollectionPage.class);
         }
 
         if (json.has("iosUpdateStatuses")) {
-            iosUpdateStatuses = serializer.deserializeObject(json.get("iosUpdateStatuses").toString(), new BaseCollectionPage<IosUpdateDeviceStatus>(new java.util.ArrayList<IosUpdateDeviceStatus>(), null).getClass());
+            iosUpdateStatuses = serializer.deserializeObject(json.get("iosUpdateStatuses").toString(), IosUpdateDeviceStatusCollectionPage.class);
         }
 
         if (json.has("complianceManagementPartners")) {
-            complianceManagementPartners = serializer.deserializeObject(json.get("complianceManagementPartners").toString(), new BaseCollectionPage<ComplianceManagementPartner>(new java.util.ArrayList<ComplianceManagementPartner>(), null).getClass());
+            complianceManagementPartners = serializer.deserializeObject(json.get("complianceManagementPartners").toString(), ComplianceManagementPartnerCollectionPage.class);
         }
 
         if (json.has("deviceCategories")) {
-            deviceCategories = serializer.deserializeObject(json.get("deviceCategories").toString(), new BaseCollectionPage<DeviceCategory>(new java.util.ArrayList<DeviceCategory>(), null).getClass());
+            deviceCategories = serializer.deserializeObject(json.get("deviceCategories").toString(), DeviceCategoryCollectionPage.class);
         }
 
         if (json.has("deviceEnrollmentConfigurations")) {
-            deviceEnrollmentConfigurations = serializer.deserializeObject(json.get("deviceEnrollmentConfigurations").toString(), new BaseCollectionPage<DeviceEnrollmentConfiguration>(new java.util.ArrayList<DeviceEnrollmentConfiguration>(), null).getClass());
+            deviceEnrollmentConfigurations = serializer.deserializeObject(json.get("deviceEnrollmentConfigurations").toString(), DeviceEnrollmentConfigurationCollectionPage.class);
         }
 
         if (json.has("deviceManagementPartners")) {
-            deviceManagementPartners = serializer.deserializeObject(json.get("deviceManagementPartners").toString(), new BaseCollectionPage<DeviceManagementPartner>(new java.util.ArrayList<DeviceManagementPartner>(), null).getClass());
+            deviceManagementPartners = serializer.deserializeObject(json.get("deviceManagementPartners").toString(), DeviceManagementPartnerCollectionPage.class);
         }
 
         if (json.has("exchangeConnectors")) {
-            exchangeConnectors = serializer.deserializeObject(json.get("exchangeConnectors").toString(), new BaseCollectionPage<DeviceManagementExchangeConnector>(new java.util.ArrayList<DeviceManagementExchangeConnector>(), null).getClass());
+            exchangeConnectors = serializer.deserializeObject(json.get("exchangeConnectors").toString(), DeviceManagementExchangeConnectorCollectionPage.class);
         }
 
         if (json.has("mobileThreatDefenseConnectors")) {
-            mobileThreatDefenseConnectors = serializer.deserializeObject(json.get("mobileThreatDefenseConnectors").toString(), new BaseCollectionPage<MobileThreatDefenseConnector>(new java.util.ArrayList<MobileThreatDefenseConnector>(), null).getClass());
+            mobileThreatDefenseConnectors = serializer.deserializeObject(json.get("mobileThreatDefenseConnectors").toString(), MobileThreatDefenseConnectorCollectionPage.class);
         }
 
         if (json.has("detectedApps")) {
-            detectedApps = serializer.deserializeObject(json.get("detectedApps").toString(), new BaseCollectionPage<DetectedApp>(new java.util.ArrayList<DetectedApp>(), null).getClass());
+            detectedApps = serializer.deserializeObject(json.get("detectedApps").toString(), DetectedAppCollectionPage.class);
         }
 
         if (json.has("managedDevices")) {
-            managedDevices = serializer.deserializeObject(json.get("managedDevices").toString(), new BaseCollectionPage<ManagedDevice>(new java.util.ArrayList<ManagedDevice>(), null).getClass());
+            managedDevices = serializer.deserializeObject(json.get("managedDevices").toString(), ManagedDeviceCollectionPage.class);
         }
 
         if (json.has("notificationMessageTemplates")) {
-            notificationMessageTemplates = serializer.deserializeObject(json.get("notificationMessageTemplates").toString(), new BaseCollectionPage<NotificationMessageTemplate>(new java.util.ArrayList<NotificationMessageTemplate>(), null).getClass());
+            notificationMessageTemplates = serializer.deserializeObject(json.get("notificationMessageTemplates").toString(), NotificationMessageTemplateCollectionPage.class);
         }
 
         if (json.has("resourceOperations")) {
-            resourceOperations = serializer.deserializeObject(json.get("resourceOperations").toString(), new BaseCollectionPage<ResourceOperation>(new java.util.ArrayList<ResourceOperation>(), null).getClass());
+            resourceOperations = serializer.deserializeObject(json.get("resourceOperations").toString(), ResourceOperationCollectionPage.class);
         }
 
         if (json.has("roleAssignments")) {
-            roleAssignments = serializer.deserializeObject(json.get("roleAssignments").toString(), new BaseCollectionPage<DeviceAndAppManagementRoleAssignment>(new java.util.ArrayList<DeviceAndAppManagementRoleAssignment>(), null).getClass());
+            roleAssignments = serializer.deserializeObject(json.get("roleAssignments").toString(), DeviceAndAppManagementRoleAssignmentCollectionPage.class);
         }
 
         if (json.has("roleDefinitions")) {
-            roleDefinitions = serializer.deserializeObject(json.get("roleDefinitions").toString(), new BaseCollectionPage<RoleDefinition>(new java.util.ArrayList<RoleDefinition>(), null).getClass());
+            roleDefinitions = serializer.deserializeObject(json.get("roleDefinitions").toString(), RoleDefinitionCollectionPage.class);
         }
 
         if (json.has("remoteAssistancePartners")) {
-            remoteAssistancePartners = serializer.deserializeObject(json.get("remoteAssistancePartners").toString(), new BaseCollectionPage<RemoteAssistancePartner>(new java.util.ArrayList<RemoteAssistancePartner>(), null).getClass());
+            remoteAssistancePartners = serializer.deserializeObject(json.get("remoteAssistancePartners").toString(), RemoteAssistancePartnerCollectionPage.class);
         }
 
         if (json.has("telecomExpenseManagementPartners")) {
-            telecomExpenseManagementPartners = serializer.deserializeObject(json.get("telecomExpenseManagementPartners").toString(), new BaseCollectionPage<TelecomExpenseManagementPartner>(new java.util.ArrayList<TelecomExpenseManagementPartner>(), null).getClass());
+            telecomExpenseManagementPartners = serializer.deserializeObject(json.get("telecomExpenseManagementPartners").toString(), TelecomExpenseManagementPartnerCollectionPage.class);
         }
 
         if (json.has("troubleshootingEvents")) {
-            troubleshootingEvents = serializer.deserializeObject(json.get("troubleshootingEvents").toString(), new BaseCollectionPage<DeviceManagementTroubleshootingEvent>(new java.util.ArrayList<DeviceManagementTroubleshootingEvent>(), null).getClass());
+            troubleshootingEvents = serializer.deserializeObject(json.get("troubleshootingEvents").toString(), DeviceManagementTroubleshootingEventCollectionPage.class);
         }
 
         if (json.has("windowsInformationProtectionAppLearningSummaries")) {
-            windowsInformationProtectionAppLearningSummaries = serializer.deserializeObject(json.get("windowsInformationProtectionAppLearningSummaries").toString(), new BaseCollectionPage<WindowsInformationProtectionAppLearningSummary>(new java.util.ArrayList<WindowsInformationProtectionAppLearningSummary>(), null).getClass());
+            windowsInformationProtectionAppLearningSummaries = serializer.deserializeObject(json.get("windowsInformationProtectionAppLearningSummaries").toString(), WindowsInformationProtectionAppLearningSummaryCollectionPage.class);
         }
 
         if (json.has("windowsInformationProtectionNetworkLearningSummaries")) {
-            windowsInformationProtectionNetworkLearningSummaries = serializer.deserializeObject(json.get("windowsInformationProtectionNetworkLearningSummaries").toString(), new BaseCollectionPage<WindowsInformationProtectionNetworkLearningSummary>(new java.util.ArrayList<WindowsInformationProtectionNetworkLearningSummary>(), null).getClass());
+            windowsInformationProtectionNetworkLearningSummaries = serializer.deserializeObject(json.get("windowsInformationProtectionNetworkLearningSummaries").toString(), WindowsInformationProtectionNetworkLearningSummaryCollectionPage.class);
         }
     }
 }

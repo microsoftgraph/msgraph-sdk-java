@@ -24,7 +24,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Shared Drive Item Request Builder.
  */
-public class SharedDriveItemRequestBuilder extends BaseRequestBuilder {
+public class SharedDriveItemRequestBuilder extends BaseRequestBuilder<SharedDriveItem> {
 
     /**
      * The request builder for the SharedDriveItem

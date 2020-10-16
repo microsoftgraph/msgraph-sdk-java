@@ -10,6 +10,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.PlannerPlan;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.PlannerPlanCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -30,7 +31,7 @@ public class PlannerGroup extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "plans", alternate = {"Plans"})
     @Expose
-    public BaseCollectionPage<PlannerPlan> plans;
+    public PlannerPlanCollectionPage plans;
 
 
     /**
@@ -74,7 +75,7 @@ public class PlannerGroup extends Entity implements IJsonBackedObject {
 
 
         if (json.has("plans")) {
-            plans = serializer.deserializeObject(json.get("plans").toString(), new BaseCollectionPage<PlannerPlan>(new java.util.ArrayList<PlannerPlan>(), null).getClass());
+            plans = serializer.deserializeObject(json.get("plans").toString(), PlannerPlanCollectionPage.class);
         }
     }
 }

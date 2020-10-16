@@ -11,6 +11,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.generated.PolicyPlatformType;
 import com.microsoft.graph.models.extensions.DeviceComplianceSettingState;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.DeviceComplianceSettingStateCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -111,7 +112,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      */
     @SerializedName(value = "deviceComplianceSettingStates", alternate = {"DeviceComplianceSettingStates"})
     @Expose
-    public BaseCollectionPage<DeviceComplianceSettingState> deviceComplianceSettingStates;
+    public DeviceComplianceSettingStateCollectionPage deviceComplianceSettingStates;
 
 
     /**
@@ -155,7 +156,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
 
 
         if (json.has("deviceComplianceSettingStates")) {
-            deviceComplianceSettingStates = serializer.deserializeObject(json.get("deviceComplianceSettingStates").toString(), new BaseCollectionPage<DeviceComplianceSettingState>(new java.util.ArrayList<DeviceComplianceSettingState>(), null).getClass());
+            deviceComplianceSettingStates = serializer.deserializeObject(json.get("deviceComplianceSettingStates").toString(), DeviceComplianceSettingStateCollectionPage.class);
         }
     }
 }

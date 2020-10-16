@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.OrgContactCollectionResponse;
 import com.microsoft.graph.requests.extensions.OrgContactCollectionRequestBuilder;
@@ -25,7 +24,7 @@ import com.microsoft.graph.requests.extensions.OrgContactCollectionRequest;
 /**
  * The class for the Org Contact Collection Request.
  */
-public class OrgContactCollectionRequest extends BaseCollectionRequest<OrgContact, OrgContactCollectionResponse> {
+public class OrgContactCollectionRequest extends BaseCollectionRequest<OrgContact, OrgContactCollectionResponse, OrgContactCollectionPage> {
 
     /**
      * The request builder for this collection of OrgContact
@@ -36,26 +35,7 @@ public class OrgContactCollectionRequest extends BaseCollectionRequest<OrgContac
      */
     @SuppressWarnings("unchecked")
     public OrgContactCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OrgContactCollectionResponse.class,(Class<BaseCollectionPage<OrgContact>>) (new BaseCollectionPage<OrgContact>(new java.util.ArrayList<OrgContact>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<OrgContact>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<OrgContact> get() throws ClientException {
-        final OrgContactCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, OrgContactCollectionResponse.class, OrgContactCollectionPage.class, OrgContactCollectionRequestBuilder.class);
     }
 
     public void post(final OrgContact newOrgContact, final ICallback<? super OrgContact> callback) {
@@ -147,16 +127,5 @@ public class OrgContactCollectionRequest extends BaseCollectionRequest<OrgContac
     public OrgContactCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<OrgContact> buildFromResponse(final OrgContactCollectionResponse response) {
-        final OrgContactCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new OrgContactCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<OrgContact> page = new BaseCollectionPage<OrgContact>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

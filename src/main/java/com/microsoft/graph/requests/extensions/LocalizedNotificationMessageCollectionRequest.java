@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.LocalizedNotificationMessageCollectionResponse;
 import com.microsoft.graph.requests.extensions.LocalizedNotificationMessageCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.LocalizedNotificationMessageColle
 /**
  * The class for the Localized Notification Message Collection Request.
  */
-public class LocalizedNotificationMessageCollectionRequest extends BaseCollectionRequest<LocalizedNotificationMessage, LocalizedNotificationMessageCollectionResponse> {
+public class LocalizedNotificationMessageCollectionRequest extends BaseCollectionRequest<LocalizedNotificationMessage, LocalizedNotificationMessageCollectionResponse, LocalizedNotificationMessageCollectionPage> {
 
     /**
      * The request builder for this collection of LocalizedNotificationMessage
@@ -37,26 +36,7 @@ public class LocalizedNotificationMessageCollectionRequest extends BaseCollectio
      */
     @SuppressWarnings("unchecked")
     public LocalizedNotificationMessageCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, LocalizedNotificationMessageCollectionResponse.class,(Class<BaseCollectionPage<LocalizedNotificationMessage>>) (new BaseCollectionPage<LocalizedNotificationMessage>(new java.util.ArrayList<LocalizedNotificationMessage>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<LocalizedNotificationMessage>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<LocalizedNotificationMessage> get() throws ClientException {
-        final LocalizedNotificationMessageCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, LocalizedNotificationMessageCollectionResponse.class, LocalizedNotificationMessageCollectionPage.class, LocalizedNotificationMessageCollectionRequestBuilder.class);
     }
 
     public void post(final LocalizedNotificationMessage newLocalizedNotificationMessage, final ICallback<? super LocalizedNotificationMessage> callback) {
@@ -148,16 +128,5 @@ public class LocalizedNotificationMessageCollectionRequest extends BaseCollectio
     public LocalizedNotificationMessageCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<LocalizedNotificationMessage> buildFromResponse(final LocalizedNotificationMessageCollectionResponse response) {
-        final LocalizedNotificationMessageCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new LocalizedNotificationMessageCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<LocalizedNotificationMessage> page = new BaseCollectionPage<LocalizedNotificationMessage>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

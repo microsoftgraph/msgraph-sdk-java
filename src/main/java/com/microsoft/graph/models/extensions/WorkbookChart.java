@@ -16,6 +16,7 @@ import com.microsoft.graph.models.extensions.WorkbookChartSeries;
 import com.microsoft.graph.models.extensions.WorkbookChartTitle;
 import com.microsoft.graph.models.extensions.WorkbookWorksheet;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.WorkbookChartSeriesCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -108,7 +109,7 @@ public class WorkbookChart extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "series", alternate = {"Series"})
     @Expose
-    public BaseCollectionPage<WorkbookChartSeries> series;
+    public WorkbookChartSeriesCollectionPage series;
 
     /**
      * The Title.
@@ -168,7 +169,7 @@ public class WorkbookChart extends Entity implements IJsonBackedObject {
 
 
         if (json.has("series")) {
-            series = serializer.deserializeObject(json.get("series").toString(), new BaseCollectionPage<WorkbookChartSeries>(new java.util.ArrayList<WorkbookChartSeries>(), null).getClass());
+            series = serializer.deserializeObject(json.get("series").toString(), WorkbookChartSeriesCollectionPage.class);
         }
     }
 }

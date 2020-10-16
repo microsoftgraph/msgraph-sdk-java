@@ -16,6 +16,10 @@ import com.microsoft.graph.models.extensions.Event;
 import com.microsoft.graph.models.extensions.MultiValueLegacyExtendedProperty;
 import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.CalendarPermissionCollectionPage;
+import com.microsoft.graph.requests.extensions.EventCollectionPage;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionPage;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -132,7 +136,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "calendarPermissions", alternate = {"CalendarPermissions"})
     @Expose
-    public BaseCollectionPage<CalendarPermission> calendarPermissions;
+    public CalendarPermissionCollectionPage calendarPermissions;
 
     /**
      * The Calendar View.
@@ -140,7 +144,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "calendarView", alternate = {"CalendarView"})
     @Expose
-    public BaseCollectionPage<Event> calendarView;
+    public EventCollectionPage calendarView;
 
     /**
      * The Events.
@@ -148,7 +152,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "events", alternate = {"Events"})
     @Expose
-    public BaseCollectionPage<Event> events;
+    public EventCollectionPage events;
 
     /**
      * The Multi Value Extended Properties.
@@ -156,7 +160,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "multiValueExtendedProperties", alternate = {"MultiValueExtendedProperties"})
     @Expose
-    public BaseCollectionPage<MultiValueLegacyExtendedProperty> multiValueExtendedProperties;
+    public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
     /**
      * The Single Value Extended Properties.
@@ -164,7 +168,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "singleValueExtendedProperties", alternate = {"SingleValueExtendedProperties"})
     @Expose
-    public BaseCollectionPage<SingleValueLegacyExtendedProperty> singleValueExtendedProperties;
+    public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
 
     /**
@@ -208,23 +212,23 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
 
         if (json.has("calendarPermissions")) {
-            calendarPermissions = serializer.deserializeObject(json.get("calendarPermissions").toString(), new BaseCollectionPage<CalendarPermission>(new java.util.ArrayList<CalendarPermission>(), null).getClass());
+            calendarPermissions = serializer.deserializeObject(json.get("calendarPermissions").toString(), CalendarPermissionCollectionPage.class);
         }
 
         if (json.has("calendarView")) {
-            calendarView = serializer.deserializeObject(json.get("calendarView").toString(), new BaseCollectionPage<Event>(new java.util.ArrayList<Event>(), null).getClass());
+            calendarView = serializer.deserializeObject(json.get("calendarView").toString(), EventCollectionPage.class);
         }
 
         if (json.has("events")) {
-            events = serializer.deserializeObject(json.get("events").toString(), new BaseCollectionPage<Event>(new java.util.ArrayList<Event>(), null).getClass());
+            events = serializer.deserializeObject(json.get("events").toString(), EventCollectionPage.class);
         }
 
         if (json.has("multiValueExtendedProperties")) {
-            multiValueExtendedProperties = serializer.deserializeObject(json.get("multiValueExtendedProperties").toString(), new BaseCollectionPage<MultiValueLegacyExtendedProperty>(new java.util.ArrayList<MultiValueLegacyExtendedProperty>(), null).getClass());
+            multiValueExtendedProperties = serializer.deserializeObject(json.get("multiValueExtendedProperties").toString(), MultiValueLegacyExtendedPropertyCollectionPage.class);
         }
 
         if (json.has("singleValueExtendedProperties")) {
-            singleValueExtendedProperties = serializer.deserializeObject(json.get("singleValueExtendedProperties").toString(), new BaseCollectionPage<SingleValueLegacyExtendedProperty>(new java.util.ArrayList<SingleValueLegacyExtendedProperty>(), null).getClass());
+            singleValueExtendedProperties = serializer.deserializeObject(json.get("singleValueExtendedProperties").toString(), SingleValueLegacyExtendedPropertyCollectionPage.class);
         }
     }
 }

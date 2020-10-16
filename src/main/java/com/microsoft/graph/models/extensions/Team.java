@@ -22,6 +22,10 @@ import com.microsoft.graph.models.extensions.ConversationMember;
 import com.microsoft.graph.models.extensions.TeamsAsyncOperation;
 import com.microsoft.graph.models.extensions.TeamsTemplate;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.ChannelCollectionPage;
+import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionPage;
+import com.microsoft.graph.requests.extensions.ConversationMemberCollectionPage;
+import com.microsoft.graph.requests.extensions.TeamsAsyncOperationCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -146,7 +150,7 @@ public class Team extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "channels", alternate = {"Channels"})
     @Expose
-    public BaseCollectionPage<Channel> channels;
+    public ChannelCollectionPage channels;
 
     /**
      * The Group.
@@ -162,7 +166,7 @@ public class Team extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "installedApps", alternate = {"InstalledApps"})
     @Expose
-    public BaseCollectionPage<TeamsAppInstallation> installedApps;
+    public TeamsAppInstallationCollectionPage installedApps;
 
     /**
      * The Members.
@@ -170,7 +174,7 @@ public class Team extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "members", alternate = {"Members"})
     @Expose
-    public BaseCollectionPage<ConversationMember> members;
+    public ConversationMemberCollectionPage members;
 
     /**
      * The Operations.
@@ -178,7 +182,7 @@ public class Team extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
-    public BaseCollectionPage<TeamsAsyncOperation> operations;
+    public TeamsAsyncOperationCollectionPage operations;
 
     /**
      * The Primary Channel.
@@ -238,19 +242,19 @@ public class Team extends Entity implements IJsonBackedObject {
 
 
         if (json.has("channels")) {
-            channels = serializer.deserializeObject(json.get("channels").toString(), new BaseCollectionPage<Channel>(new java.util.ArrayList<Channel>(), null).getClass());
+            channels = serializer.deserializeObject(json.get("channels").toString(), ChannelCollectionPage.class);
         }
 
         if (json.has("installedApps")) {
-            installedApps = serializer.deserializeObject(json.get("installedApps").toString(), new BaseCollectionPage<TeamsAppInstallation>(new java.util.ArrayList<TeamsAppInstallation>(), null).getClass());
+            installedApps = serializer.deserializeObject(json.get("installedApps").toString(), TeamsAppInstallationCollectionPage.class);
         }
 
         if (json.has("members")) {
-            members = serializer.deserializeObject(json.get("members").toString(), new BaseCollectionPage<ConversationMember>(new java.util.ArrayList<ConversationMember>(), null).getClass());
+            members = serializer.deserializeObject(json.get("members").toString(), ConversationMemberCollectionPage.class);
         }
 
         if (json.has("operations")) {
-            operations = serializer.deserializeObject(json.get("operations").toString(), new BaseCollectionPage<TeamsAsyncOperation>(new java.util.ArrayList<TeamsAsyncOperation>(), null).getClass());
+            operations = serializer.deserializeObject(json.get("operations").toString(), TeamsAsyncOperationCollectionPage.class);
         }
     }
 }

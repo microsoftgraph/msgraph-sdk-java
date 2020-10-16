@@ -24,7 +24,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Office Graph Insights Request Builder.
  */
-public class OfficeGraphInsightsRequestBuilder extends BaseRequestBuilder {
+public class OfficeGraphInsightsRequestBuilder extends BaseRequestBuilder<OfficeGraphInsights> {
 
     /**
      * The request builder for the OfficeGraphInsights

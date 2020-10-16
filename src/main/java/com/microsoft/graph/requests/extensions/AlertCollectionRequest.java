@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.AlertCollectionResponse;
 import com.microsoft.graph.requests.extensions.AlertCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.AlertCollectionRequest;
 /**
  * The class for the Alert Collection Request.
  */
-public class AlertCollectionRequest extends BaseCollectionRequest<Alert, AlertCollectionResponse> {
+public class AlertCollectionRequest extends BaseCollectionRequest<Alert, AlertCollectionResponse, AlertCollectionPage> {
 
     /**
      * The request builder for this collection of Alert
@@ -37,26 +36,7 @@ public class AlertCollectionRequest extends BaseCollectionRequest<Alert, AlertCo
      */
     @SuppressWarnings("unchecked")
     public AlertCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, AlertCollectionResponse.class,(Class<BaseCollectionPage<Alert>>) (new BaseCollectionPage<Alert>(new java.util.ArrayList<Alert>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<Alert>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<Alert> get() throws ClientException {
-        final AlertCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, AlertCollectionResponse.class, AlertCollectionPage.class, AlertCollectionRequestBuilder.class);
     }
 
     public void post(final Alert newAlert, final ICallback<? super Alert> callback) {
@@ -148,16 +128,5 @@ public class AlertCollectionRequest extends BaseCollectionRequest<Alert, AlertCo
     public AlertCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<Alert> buildFromResponse(final AlertCollectionResponse response) {
-        final AlertCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new AlertCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<Alert> page = new BaseCollectionPage<Alert>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

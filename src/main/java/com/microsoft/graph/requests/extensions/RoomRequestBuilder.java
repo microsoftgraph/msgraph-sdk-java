@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Room Request Builder.
  */
-public class RoomRequestBuilder extends BaseRequestBuilder {
+public class RoomRequestBuilder extends BaseRequestBuilder<Room> {
 
     /**
      * The request builder for the Room

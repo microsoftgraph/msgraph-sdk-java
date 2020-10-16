@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Segment Request Builder.
  */
-public class SegmentRequestBuilder extends BaseRequestBuilder {
+public class SegmentRequestBuilder extends BaseRequestBuilder<Segment> {
 
     /**
      * The request builder for the Segment

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Ios Lob App Request Builder.
  */
-public class IosLobAppRequestBuilder extends BaseRequestBuilder {
+public class IosLobAppRequestBuilder extends BaseRequestBuilder<IosLobApp> {
 
     /**
      * The request builder for the IosLobApp

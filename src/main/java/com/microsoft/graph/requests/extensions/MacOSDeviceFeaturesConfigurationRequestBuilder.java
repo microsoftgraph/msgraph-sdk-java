@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Mac OSDevice Features Configuration Request Builder.
  */
-public class MacOSDeviceFeaturesConfigurationRequestBuilder extends BaseRequestBuilder {
+public class MacOSDeviceFeaturesConfigurationRequestBuilder extends BaseRequestBuilder<MacOSDeviceFeaturesConfiguration> {
 
     /**
      * The request builder for the MacOSDeviceFeaturesConfiguration

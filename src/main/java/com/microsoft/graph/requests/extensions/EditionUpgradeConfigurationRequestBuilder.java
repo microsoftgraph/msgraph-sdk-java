@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Edition Upgrade Configuration Request Builder.
  */
-public class EditionUpgradeConfigurationRequestBuilder extends BaseRequestBuilder {
+public class EditionUpgradeConfigurationRequestBuilder extends BaseRequestBuilder<EditionUpgradeConfiguration> {
 
     /**
      * The request builder for the EditionUpgradeConfiguration

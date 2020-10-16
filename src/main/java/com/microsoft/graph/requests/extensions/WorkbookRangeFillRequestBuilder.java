@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Range Fill Request Builder.
  */
-public class WorkbookRangeFillRequestBuilder extends BaseRequestBuilder {
+public class WorkbookRangeFillRequestBuilder extends BaseRequestBuilder<WorkbookRangeFill> {
 
     /**
      * The request builder for the WorkbookRangeFill

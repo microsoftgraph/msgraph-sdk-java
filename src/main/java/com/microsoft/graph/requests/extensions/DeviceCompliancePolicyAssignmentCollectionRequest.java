@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignmentCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignmentC
 /**
  * The class for the Device Compliance Policy Assignment Collection Request.
  */
-public class DeviceCompliancePolicyAssignmentCollectionRequest extends BaseCollectionRequest<DeviceCompliancePolicyAssignment, DeviceCompliancePolicyAssignmentCollectionResponse> {
+public class DeviceCompliancePolicyAssignmentCollectionRequest extends BaseCollectionRequest<DeviceCompliancePolicyAssignment, DeviceCompliancePolicyAssignmentCollectionResponse, DeviceCompliancePolicyAssignmentCollectionPage> {
 
     /**
      * The request builder for this collection of DeviceCompliancePolicyAssignment
@@ -37,26 +36,7 @@ public class DeviceCompliancePolicyAssignmentCollectionRequest extends BaseColle
      */
     @SuppressWarnings("unchecked")
     public DeviceCompliancePolicyAssignmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceCompliancePolicyAssignmentCollectionResponse.class,(Class<BaseCollectionPage<DeviceCompliancePolicyAssignment>>) (new BaseCollectionPage<DeviceCompliancePolicyAssignment>(new java.util.ArrayList<DeviceCompliancePolicyAssignment>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<DeviceCompliancePolicyAssignment>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<DeviceCompliancePolicyAssignment> get() throws ClientException {
-        final DeviceCompliancePolicyAssignmentCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, DeviceCompliancePolicyAssignmentCollectionResponse.class, DeviceCompliancePolicyAssignmentCollectionPage.class, DeviceCompliancePolicyAssignmentCollectionRequestBuilder.class);
     }
 
     public void post(final DeviceCompliancePolicyAssignment newDeviceCompliancePolicyAssignment, final ICallback<? super DeviceCompliancePolicyAssignment> callback) {
@@ -148,16 +128,5 @@ public class DeviceCompliancePolicyAssignmentCollectionRequest extends BaseColle
     public DeviceCompliancePolicyAssignmentCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<DeviceCompliancePolicyAssignment> buildFromResponse(final DeviceCompliancePolicyAssignmentCollectionResponse response) {
-        final DeviceCompliancePolicyAssignmentCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DeviceCompliancePolicyAssignmentCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<DeviceCompliancePolicyAssignment> page = new BaseCollectionPage<DeviceCompliancePolicyAssignment>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

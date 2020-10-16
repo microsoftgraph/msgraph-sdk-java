@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Configuration Device Overview Request Builder.
  */
-public class DeviceConfigurationDeviceOverviewRequestBuilder extends BaseRequestBuilder {
+public class DeviceConfigurationDeviceOverviewRequestBuilder extends BaseRequestBuilder<DeviceConfigurationDeviceOverview> {
 
     /**
      * The request builder for the DeviceConfigurationDeviceOverview

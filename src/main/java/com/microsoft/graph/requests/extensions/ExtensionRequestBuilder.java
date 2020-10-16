@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Extension Request Builder.
  */
-public class ExtensionRequestBuilder extends BaseRequestBuilder {
+public class ExtensionRequestBuilder extends BaseRequestBuilder<Extension> {
 
     /**
      * The request builder for the Extension

@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.BaseItemCollectionResponse;
 import com.microsoft.graph.requests.extensions.BaseItemCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.BaseItemCollectionRequest;
 /**
  * The class for the Base Item Collection Request.
  */
-public class BaseItemCollectionRequest extends BaseCollectionRequest<BaseItem, BaseItemCollectionResponse> {
+public class BaseItemCollectionRequest extends BaseCollectionRequest<BaseItem, BaseItemCollectionResponse, BaseItemCollectionPage> {
 
     /**
      * The request builder for this collection of BaseItem
@@ -37,26 +36,7 @@ public class BaseItemCollectionRequest extends BaseCollectionRequest<BaseItem, B
      */
     @SuppressWarnings("unchecked")
     public BaseItemCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, BaseItemCollectionResponse.class,(Class<BaseCollectionPage<BaseItem>>) (new BaseCollectionPage<BaseItem>(new java.util.ArrayList<BaseItem>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<BaseItem>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<BaseItem> get() throws ClientException {
-        final BaseItemCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, BaseItemCollectionResponse.class, BaseItemCollectionPage.class, BaseItemCollectionRequestBuilder.class);
     }
 
     public void post(final BaseItem newBaseItem, final ICallback<? super BaseItem> callback) {
@@ -148,16 +128,5 @@ public class BaseItemCollectionRequest extends BaseCollectionRequest<BaseItem, B
     public BaseItemCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<BaseItem> buildFromResponse(final BaseItemCollectionResponse response) {
-        final BaseItemCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new BaseItemCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<BaseItem> page = new BaseCollectionPage<BaseItem>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

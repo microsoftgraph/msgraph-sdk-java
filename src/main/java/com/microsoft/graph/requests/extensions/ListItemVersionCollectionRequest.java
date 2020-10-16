@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ListItemVersionCollectionResponse;
 import com.microsoft.graph.requests.extensions.ListItemVersionCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.ListItemVersionCollectionRequest;
 /**
  * The class for the List Item Version Collection Request.
  */
-public class ListItemVersionCollectionRequest extends BaseCollectionRequest<ListItemVersion, ListItemVersionCollectionResponse> {
+public class ListItemVersionCollectionRequest extends BaseCollectionRequest<ListItemVersion, ListItemVersionCollectionResponse, ListItemVersionCollectionPage> {
 
     /**
      * The request builder for this collection of ListItemVersion
@@ -37,26 +36,7 @@ public class ListItemVersionCollectionRequest extends BaseCollectionRequest<List
      */
     @SuppressWarnings("unchecked")
     public ListItemVersionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ListItemVersionCollectionResponse.class,(Class<BaseCollectionPage<ListItemVersion>>) (new BaseCollectionPage<ListItemVersion>(new java.util.ArrayList<ListItemVersion>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<ListItemVersion>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<ListItemVersion> get() throws ClientException {
-        final ListItemVersionCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, ListItemVersionCollectionResponse.class, ListItemVersionCollectionPage.class, ListItemVersionCollectionRequestBuilder.class);
     }
 
     public void post(final ListItemVersion newListItemVersion, final ICallback<? super ListItemVersion> callback) {
@@ -148,16 +128,5 @@ public class ListItemVersionCollectionRequest extends BaseCollectionRequest<List
     public ListItemVersionCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<ListItemVersion> buildFromResponse(final ListItemVersionCollectionResponse response) {
-        final ListItemVersionCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new ListItemVersionCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<ListItemVersion> page = new BaseCollectionPage<ListItemVersion>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

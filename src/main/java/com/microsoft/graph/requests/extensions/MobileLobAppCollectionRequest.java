@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.MobileLobAppCollectionResponse;
 import com.microsoft.graph.requests.extensions.MobileLobAppCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.MobileLobAppCollectionRequest;
 /**
  * The class for the Mobile Lob App Collection Request.
  */
-public class MobileLobAppCollectionRequest extends BaseCollectionRequest<MobileLobApp, MobileLobAppCollectionResponse> {
+public class MobileLobAppCollectionRequest extends BaseCollectionRequest<MobileLobApp, MobileLobAppCollectionResponse, MobileLobAppCollectionPage> {
 
     /**
      * The request builder for this collection of MobileLobApp
@@ -37,26 +36,7 @@ public class MobileLobAppCollectionRequest extends BaseCollectionRequest<MobileL
      */
     @SuppressWarnings("unchecked")
     public MobileLobAppCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MobileLobAppCollectionResponse.class,(Class<BaseCollectionPage<MobileLobApp>>) (new BaseCollectionPage<MobileLobApp>(new java.util.ArrayList<MobileLobApp>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<MobileLobApp>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<MobileLobApp> get() throws ClientException {
-        final MobileLobAppCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, MobileLobAppCollectionResponse.class, MobileLobAppCollectionPage.class, MobileLobAppCollectionRequestBuilder.class);
     }
 
     public void post(final MobileLobApp newMobileLobApp, final ICallback<? super MobileLobApp> callback) {
@@ -148,16 +128,5 @@ public class MobileLobAppCollectionRequest extends BaseCollectionRequest<MobileL
     public MobileLobAppCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<MobileLobApp> buildFromResponse(final MobileLobAppCollectionResponse response) {
-        final MobileLobAppCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new MobileLobAppCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<MobileLobApp> page = new BaseCollectionPage<MobileLobApp>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

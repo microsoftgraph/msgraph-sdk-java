@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Managed Android Store App Request Builder.
  */
-public class ManagedAndroidStoreAppRequestBuilder extends BaseRequestBuilder {
+public class ManagedAndroidStoreAppRequestBuilder extends BaseRequestBuilder<ManagedAndroidStoreApp> {
 
     /**
      * The request builder for the ManagedAndroidStoreApp

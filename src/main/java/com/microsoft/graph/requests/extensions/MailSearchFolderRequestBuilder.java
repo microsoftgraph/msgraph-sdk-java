@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Mail Search Folder Request Builder.
  */
-public class MailSearchFolderRequestBuilder extends BaseRequestBuilder {
+public class MailSearchFolderRequestBuilder extends BaseRequestBuilder<MailSearchFolder> {
 
     /**
      * The request builder for the MailSearchFolder

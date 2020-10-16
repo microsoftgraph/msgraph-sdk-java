@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Delegated Permission Classification Request Builder.
  */
-public class DelegatedPermissionClassificationRequestBuilder extends BaseRequestBuilder {
+public class DelegatedPermissionClassificationRequestBuilder extends BaseRequestBuilder<DelegatedPermissionClassification> {
 
     /**
      * The request builder for the DelegatedPermissionClassification

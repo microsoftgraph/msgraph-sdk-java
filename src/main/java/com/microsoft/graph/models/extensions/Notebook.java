@@ -13,6 +13,8 @@ import com.microsoft.graph.models.generated.OnenoteUserRole;
 import com.microsoft.graph.models.extensions.SectionGroup;
 import com.microsoft.graph.models.extensions.OnenoteSection;
 import com.microsoft.graph.models.extensions.OnenoteEntityHierarchyModel;
+import com.microsoft.graph.requests.extensions.SectionGroupCollectionPage;
+import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -81,7 +83,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements IJsonBacked
      */
     @SerializedName(value = "sectionGroups", alternate = {"SectionGroups"})
     @Expose
-    public BaseCollectionPage<SectionGroup> sectionGroups;
+    public SectionGroupCollectionPage sectionGroups;
 
     /**
      * The Sections.
@@ -89,7 +91,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements IJsonBacked
      */
     @SerializedName(value = "sections", alternate = {"Sections"})
     @Expose
-    public BaseCollectionPage<OnenoteSection> sections;
+    public OnenoteSectionCollectionPage sections;
 
 
     /**
@@ -133,11 +135,11 @@ public class Notebook extends OnenoteEntityHierarchyModel implements IJsonBacked
 
 
         if (json.has("sectionGroups")) {
-            sectionGroups = serializer.deserializeObject(json.get("sectionGroups").toString(), new BaseCollectionPage<SectionGroup>(new java.util.ArrayList<SectionGroup>(), null).getClass());
+            sectionGroups = serializer.deserializeObject(json.get("sectionGroups").toString(), SectionGroupCollectionPage.class);
         }
 
         if (json.has("sections")) {
-            sections = serializer.deserializeObject(json.get("sections").toString(), new BaseCollectionPage<OnenoteSection>(new java.util.ArrayList<OnenoteSection>(), null).getClass());
+            sections = serializer.deserializeObject(json.get("sections").toString(), OnenoteSectionCollectionPage.class);
         }
     }
 }

@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TimeOffReasonCollectionResponse;
 import com.microsoft.graph.requests.extensions.TimeOffReasonCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.TimeOffReasonCollectionRequest;
 /**
  * The class for the Time Off Reason Collection Request.
  */
-public class TimeOffReasonCollectionRequest extends BaseCollectionRequest<TimeOffReason, TimeOffReasonCollectionResponse> {
+public class TimeOffReasonCollectionRequest extends BaseCollectionRequest<TimeOffReason, TimeOffReasonCollectionResponse, TimeOffReasonCollectionPage> {
 
     /**
      * The request builder for this collection of TimeOffReason
@@ -37,26 +36,7 @@ public class TimeOffReasonCollectionRequest extends BaseCollectionRequest<TimeOf
      */
     @SuppressWarnings("unchecked")
     public TimeOffReasonCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TimeOffReasonCollectionResponse.class,(Class<BaseCollectionPage<TimeOffReason>>) (new BaseCollectionPage<TimeOffReason>(new java.util.ArrayList<TimeOffReason>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<TimeOffReason>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<TimeOffReason> get() throws ClientException {
-        final TimeOffReasonCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, TimeOffReasonCollectionResponse.class, TimeOffReasonCollectionPage.class, TimeOffReasonCollectionRequestBuilder.class);
     }
 
     public void post(final TimeOffReason newTimeOffReason, final ICallback<? super TimeOffReason> callback) {
@@ -148,16 +128,5 @@ public class TimeOffReasonCollectionRequest extends BaseCollectionRequest<TimeOf
     public TimeOffReasonCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<TimeOffReason> buildFromResponse(final TimeOffReasonCollectionResponse response) {
-        final TimeOffReasonCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new TimeOffReasonCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<TimeOffReason> page = new BaseCollectionPage<TimeOffReason>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

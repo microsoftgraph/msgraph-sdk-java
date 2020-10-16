@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Android Custom Configuration Request Builder.
  */
-public class AndroidCustomConfigurationRequestBuilder extends BaseRequestBuilder {
+public class AndroidCustomConfigurationRequestBuilder extends BaseRequestBuilder<AndroidCustomConfiguration> {
 
     /**
      * The request builder for the AndroidCustomConfiguration

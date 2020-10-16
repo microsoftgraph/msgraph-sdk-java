@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.DomainState;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.DomainDnsRecord;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
+import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -134,7 +136,7 @@ public class Domain extends Entity implements IJsonBackedObject {
      * The Domain Name References.
      * Read-only, Nullable
      */
-    public BaseCollectionPage<DirectoryObject> domainNameReferences;
+    public DirectoryObjectCollectionPage domainNameReferences;
 
     /**
      * The Service Configuration Records.
@@ -142,7 +144,7 @@ public class Domain extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "serviceConfigurationRecords", alternate = {"ServiceConfigurationRecords"})
     @Expose
-    public BaseCollectionPage<DomainDnsRecord> serviceConfigurationRecords;
+    public DomainDnsRecordCollectionPage serviceConfigurationRecords;
 
     /**
      * The Verification Dns Records.
@@ -150,7 +152,7 @@ public class Domain extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "verificationDnsRecords", alternate = {"VerificationDnsRecords"})
     @Expose
-    public BaseCollectionPage<DomainDnsRecord> verificationDnsRecords;
+    public DomainDnsRecordCollectionPage verificationDnsRecords;
 
 
     /**
@@ -194,15 +196,15 @@ public class Domain extends Entity implements IJsonBackedObject {
 
 
         if (json.has("domainNameReferences")) {
-            domainNameReferences = serializer.deserializeObject(json.get("domainNameReferences").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
+            domainNameReferences = serializer.deserializeObject(json.get("domainNameReferences").toString(), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("serviceConfigurationRecords")) {
-            serviceConfigurationRecords = serializer.deserializeObject(json.get("serviceConfigurationRecords").toString(), new BaseCollectionPage<DomainDnsRecord>(new java.util.ArrayList<DomainDnsRecord>(), null).getClass());
+            serviceConfigurationRecords = serializer.deserializeObject(json.get("serviceConfigurationRecords").toString(), DomainDnsRecordCollectionPage.class);
         }
 
         if (json.has("verificationDnsRecords")) {
-            verificationDnsRecords = serializer.deserializeObject(json.get("verificationDnsRecords").toString(), new BaseCollectionPage<DomainDnsRecord>(new java.util.ArrayList<DomainDnsRecord>(), null).getClass());
+            verificationDnsRecords = serializer.deserializeObject(json.get("verificationDnsRecords").toString(), DomainDnsRecordCollectionPage.class);
         }
     }
 }

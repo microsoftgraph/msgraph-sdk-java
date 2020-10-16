@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ColumnDefinitionCollectionResponse;
 import com.microsoft.graph.requests.extensions.ColumnDefinitionCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.ColumnDefinitionCollectionRequest
 /**
  * The class for the Column Definition Collection Request.
  */
-public class ColumnDefinitionCollectionRequest extends BaseCollectionRequest<ColumnDefinition, ColumnDefinitionCollectionResponse> {
+public class ColumnDefinitionCollectionRequest extends BaseCollectionRequest<ColumnDefinition, ColumnDefinitionCollectionResponse, ColumnDefinitionCollectionPage> {
 
     /**
      * The request builder for this collection of ColumnDefinition
@@ -37,26 +36,7 @@ public class ColumnDefinitionCollectionRequest extends BaseCollectionRequest<Col
      */
     @SuppressWarnings("unchecked")
     public ColumnDefinitionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ColumnDefinitionCollectionResponse.class,(Class<BaseCollectionPage<ColumnDefinition>>) (new BaseCollectionPage<ColumnDefinition>(new java.util.ArrayList<ColumnDefinition>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<ColumnDefinition>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<ColumnDefinition> get() throws ClientException {
-        final ColumnDefinitionCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, ColumnDefinitionCollectionResponse.class, ColumnDefinitionCollectionPage.class, ColumnDefinitionCollectionRequestBuilder.class);
     }
 
     public void post(final ColumnDefinition newColumnDefinition, final ICallback<? super ColumnDefinition> callback) {
@@ -148,16 +128,5 @@ public class ColumnDefinitionCollectionRequest extends BaseCollectionRequest<Col
     public ColumnDefinitionCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<ColumnDefinition> buildFromResponse(final ColumnDefinitionCollectionResponse response) {
-        final ColumnDefinitionCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new ColumnDefinitionCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<ColumnDefinition> page = new BaseCollectionPage<ColumnDefinition>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

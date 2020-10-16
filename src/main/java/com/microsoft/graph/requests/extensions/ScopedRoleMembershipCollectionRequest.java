@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionResponse;
 import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionRequestBuilder;
@@ -25,7 +24,7 @@ import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionReq
 /**
  * The class for the Scoped Role Membership Collection Request.
  */
-public class ScopedRoleMembershipCollectionRequest extends BaseCollectionRequest<ScopedRoleMembership, ScopedRoleMembershipCollectionResponse> {
+public class ScopedRoleMembershipCollectionRequest extends BaseCollectionRequest<ScopedRoleMembership, ScopedRoleMembershipCollectionResponse, ScopedRoleMembershipCollectionPage> {
 
     /**
      * The request builder for this collection of ScopedRoleMembership
@@ -36,26 +35,7 @@ public class ScopedRoleMembershipCollectionRequest extends BaseCollectionRequest
      */
     @SuppressWarnings("unchecked")
     public ScopedRoleMembershipCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ScopedRoleMembershipCollectionResponse.class,(Class<BaseCollectionPage<ScopedRoleMembership>>) (new BaseCollectionPage<ScopedRoleMembership>(new java.util.ArrayList<ScopedRoleMembership>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<ScopedRoleMembership>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<ScopedRoleMembership> get() throws ClientException {
-        final ScopedRoleMembershipCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, ScopedRoleMembershipCollectionResponse.class, ScopedRoleMembershipCollectionPage.class, ScopedRoleMembershipCollectionRequestBuilder.class);
     }
 
     public void post(final ScopedRoleMembership newScopedRoleMembership, final ICallback<? super ScopedRoleMembership> callback) {
@@ -147,16 +127,5 @@ public class ScopedRoleMembershipCollectionRequest extends BaseCollectionRequest
     public ScopedRoleMembershipCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<ScopedRoleMembership> buildFromResponse(final ScopedRoleMembershipCollectionResponse response) {
-        final ScopedRoleMembershipCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new ScopedRoleMembershipCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<ScopedRoleMembership> page = new BaseCollectionPage<ScopedRoleMembership>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

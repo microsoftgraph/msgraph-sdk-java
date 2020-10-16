@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Onenote Resource Request Builder.
  */
-public class OnenoteResourceRequestBuilder extends BaseRequestBuilder {
+public class OnenoteResourceRequestBuilder extends BaseRequestBuilder<OnenoteResource> {
 
     /**
      * The request builder for the OnenoteResource

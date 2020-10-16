@@ -19,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Teams Tab Request Builder.
  */
-public class TeamsTabRequestBuilder extends BaseRequestBuilder {
+public class TeamsTabRequestBuilder extends BaseRequestBuilder<TeamsTab> {
 
     /**
      * The request builder for the TeamsTab

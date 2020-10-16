@@ -24,6 +24,11 @@ import com.microsoft.graph.models.extensions.ExtensionProperty;
 import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
 import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
+import com.microsoft.graph.requests.extensions.ExtensionPropertyCollectionPage;
+import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionPage;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
+import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionPage;
+import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -260,31 +265,31 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName(value = "extensionProperties", alternate = {"ExtensionProperties"})
     @Expose
-    public BaseCollectionPage<ExtensionProperty> extensionProperties;
+    public ExtensionPropertyCollectionPage extensionProperties;
 
     /**
      * The Home Realm Discovery Policies.
      * 
      */
-    public BaseCollectionPage<HomeRealmDiscoveryPolicy> homeRealmDiscoveryPolicies;
+    public HomeRealmDiscoveryPolicyCollectionPage homeRealmDiscoveryPolicies;
 
     /**
      * The Owners.
      * Directory objects that are owners of the application. The owners are a set of non-admin users who are allowed to modify this object. Requires version 2013-11-08 or newer. Read-only. Nullable.
      */
-    public BaseCollectionPage<DirectoryObject> owners;
+    public DirectoryObjectCollectionPage owners;
 
     /**
      * The Token Issuance Policies.
      * 
      */
-    public BaseCollectionPage<TokenIssuancePolicy> tokenIssuancePolicies;
+    public TokenIssuancePolicyCollectionPage tokenIssuancePolicies;
 
     /**
      * The Token Lifetime Policies.
      * 
      */
-    public BaseCollectionPage<TokenLifetimePolicy> tokenLifetimePolicies;
+    public TokenLifetimePolicyCollectionPage tokenLifetimePolicies;
 
 
     /**
@@ -328,23 +333,23 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
 
         if (json.has("extensionProperties")) {
-            extensionProperties = serializer.deserializeObject(json.get("extensionProperties").toString(), new BaseCollectionPage<ExtensionProperty>(new java.util.ArrayList<ExtensionProperty>(), null).getClass());
+            extensionProperties = serializer.deserializeObject(json.get("extensionProperties").toString(), ExtensionPropertyCollectionPage.class);
         }
 
         if (json.has("homeRealmDiscoveryPolicies")) {
-            homeRealmDiscoveryPolicies = serializer.deserializeObject(json.get("homeRealmDiscoveryPolicies").toString(), new BaseCollectionPage<HomeRealmDiscoveryPolicy>(new java.util.ArrayList<HomeRealmDiscoveryPolicy>(), null).getClass());
+            homeRealmDiscoveryPolicies = serializer.deserializeObject(json.get("homeRealmDiscoveryPolicies").toString(), HomeRealmDiscoveryPolicyCollectionPage.class);
         }
 
         if (json.has("owners")) {
-            owners = serializer.deserializeObject(json.get("owners").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
+            owners = serializer.deserializeObject(json.get("owners").toString(), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("tokenIssuancePolicies")) {
-            tokenIssuancePolicies = serializer.deserializeObject(json.get("tokenIssuancePolicies").toString(), new BaseCollectionPage<TokenIssuancePolicy>(new java.util.ArrayList<TokenIssuancePolicy>(), null).getClass());
+            tokenIssuancePolicies = serializer.deserializeObject(json.get("tokenIssuancePolicies").toString(), TokenIssuancePolicyCollectionPage.class);
         }
 
         if (json.has("tokenLifetimePolicies")) {
-            tokenLifetimePolicies = serializer.deserializeObject(json.get("tokenLifetimePolicies").toString(), new BaseCollectionPage<TokenLifetimePolicy>(new java.util.ArrayList<TokenLifetimePolicy>(), null).getClass());
+            tokenLifetimePolicies = serializer.deserializeObject(json.get("tokenLifetimePolicies").toString(), TokenLifetimePolicyCollectionPage.class);
         }
     }
 }

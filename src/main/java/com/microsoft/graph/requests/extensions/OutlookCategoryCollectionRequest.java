@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.OutlookCategoryCollectionResponse;
 import com.microsoft.graph.requests.extensions.OutlookCategoryCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.OutlookCategoryCollectionRequest;
 /**
  * The class for the Outlook Category Collection Request.
  */
-public class OutlookCategoryCollectionRequest extends BaseCollectionRequest<OutlookCategory, OutlookCategoryCollectionResponse> {
+public class OutlookCategoryCollectionRequest extends BaseCollectionRequest<OutlookCategory, OutlookCategoryCollectionResponse, OutlookCategoryCollectionPage> {
 
     /**
      * The request builder for this collection of OutlookCategory
@@ -37,26 +36,7 @@ public class OutlookCategoryCollectionRequest extends BaseCollectionRequest<Outl
      */
     @SuppressWarnings("unchecked")
     public OutlookCategoryCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OutlookCategoryCollectionResponse.class,(Class<BaseCollectionPage<OutlookCategory>>) (new BaseCollectionPage<OutlookCategory>(new java.util.ArrayList<OutlookCategory>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<OutlookCategory>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<OutlookCategory> get() throws ClientException {
-        final OutlookCategoryCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, OutlookCategoryCollectionResponse.class, OutlookCategoryCollectionPage.class, OutlookCategoryCollectionRequestBuilder.class);
     }
 
     public void post(final OutlookCategory newOutlookCategory, final ICallback<? super OutlookCategory> callback) {
@@ -148,16 +128,5 @@ public class OutlookCategoryCollectionRequest extends BaseCollectionRequest<Outl
     public OutlookCategoryCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<OutlookCategory> buildFromResponse(final OutlookCategoryCollectionResponse response) {
-        final OutlookCategoryCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new OutlookCategoryCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<OutlookCategory> page = new BaseCollectionPage<OutlookCategory>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

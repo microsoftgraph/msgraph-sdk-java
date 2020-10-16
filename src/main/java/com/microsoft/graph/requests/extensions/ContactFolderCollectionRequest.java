@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ContactFolderCollectionResponse;
 import com.microsoft.graph.requests.extensions.ContactFolderCollectionRequestBuilder;
@@ -25,7 +24,7 @@ import com.microsoft.graph.requests.extensions.ContactFolderCollectionRequest;
 /**
  * The class for the Contact Folder Collection Request.
  */
-public class ContactFolderCollectionRequest extends BaseCollectionRequest<ContactFolder, ContactFolderCollectionResponse> {
+public class ContactFolderCollectionRequest extends BaseCollectionRequest<ContactFolder, ContactFolderCollectionResponse, ContactFolderCollectionPage> {
 
     /**
      * The request builder for this collection of ContactFolder
@@ -36,26 +35,7 @@ public class ContactFolderCollectionRequest extends BaseCollectionRequest<Contac
      */
     @SuppressWarnings("unchecked")
     public ContactFolderCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ContactFolderCollectionResponse.class,(Class<BaseCollectionPage<ContactFolder>>) (new BaseCollectionPage<ContactFolder>(new java.util.ArrayList<ContactFolder>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<ContactFolder>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<ContactFolder> get() throws ClientException {
-        final ContactFolderCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, ContactFolderCollectionResponse.class, ContactFolderCollectionPage.class, ContactFolderCollectionRequestBuilder.class);
     }
 
     public void post(final ContactFolder newContactFolder, final ICallback<? super ContactFolder> callback) {
@@ -147,16 +127,5 @@ public class ContactFolderCollectionRequest extends BaseCollectionRequest<Contac
     public ContactFolderCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<ContactFolder> buildFromResponse(final ContactFolderCollectionResponse response) {
-        final ContactFolderCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new ContactFolderCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<ContactFolder> page = new BaseCollectionPage<ContactFolder>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

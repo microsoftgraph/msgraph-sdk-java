@@ -12,6 +12,9 @@ import com.microsoft.graph.models.extensions.Call;
 import com.microsoft.graph.callrecords.models.extensions.CallRecord;
 import com.microsoft.graph.models.extensions.OnlineMeeting;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.CallCollectionPage;
+import com.microsoft.graph.callrecords.requests.extensions.CallRecordCollectionPage;
+import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -32,7 +35,7 @@ public class CloudCommunications extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "calls", alternate = {"Calls"})
     @Expose
-    public BaseCollectionPage<Call> calls;
+    public CallCollectionPage calls;
 
     /**
      * The Call Records.
@@ -40,7 +43,7 @@ public class CloudCommunications extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "callRecords", alternate = {"CallRecords"})
     @Expose
-    public BaseCollectionPage<CallRecord> callRecords;
+    public CallRecordCollectionPage callRecords;
 
     /**
      * The Online Meetings.
@@ -48,7 +51,7 @@ public class CloudCommunications extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "onlineMeetings", alternate = {"OnlineMeetings"})
     @Expose
-    public BaseCollectionPage<OnlineMeeting> onlineMeetings;
+    public OnlineMeetingCollectionPage onlineMeetings;
 
 
     /**
@@ -92,15 +95,15 @@ public class CloudCommunications extends Entity implements IJsonBackedObject {
 
 
         if (json.has("calls")) {
-            calls = serializer.deserializeObject(json.get("calls").toString(), new BaseCollectionPage<Call>(new java.util.ArrayList<Call>(), null).getClass());
+            calls = serializer.deserializeObject(json.get("calls").toString(), CallCollectionPage.class);
         }
 
         if (json.has("callRecords")) {
-            callRecords = serializer.deserializeObject(json.get("callRecords").toString(), new BaseCollectionPage<CallRecord>(new java.util.ArrayList<CallRecord>(), null).getClass());
+            callRecords = serializer.deserializeObject(json.get("callRecords").toString(), CallRecordCollectionPage.class);
         }
 
         if (json.has("onlineMeetings")) {
-            onlineMeetings = serializer.deserializeObject(json.get("onlineMeetings").toString(), new BaseCollectionPage<OnlineMeeting>(new java.util.ArrayList<OnlineMeeting>(), null).getClass());
+            onlineMeetings = serializer.deserializeObject(json.get("onlineMeetings").toString(), OnlineMeetingCollectionPage.class);
         }
     }
 }

@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Online Meeting Request Builder.
  */
-public class OnlineMeetingRequestBuilder extends BaseRequestBuilder {
+public class OnlineMeetingRequestBuilder extends BaseRequestBuilder<OnlineMeeting> {
 
     /**
      * The request builder for the OnlineMeeting

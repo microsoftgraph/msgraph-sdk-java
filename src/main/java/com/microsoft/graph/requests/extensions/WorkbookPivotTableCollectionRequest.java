@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WorkbookPivotTableCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookPivotTableCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.WorkbookPivotTableCollectionReque
 /**
  * The class for the Workbook Pivot Table Collection Request.
  */
-public class WorkbookPivotTableCollectionRequest extends BaseCollectionRequest<WorkbookPivotTable, WorkbookPivotTableCollectionResponse> {
+public class WorkbookPivotTableCollectionRequest extends BaseCollectionRequest<WorkbookPivotTable, WorkbookPivotTableCollectionResponse, WorkbookPivotTableCollectionPage> {
 
     /**
      * The request builder for this collection of WorkbookPivotTable
@@ -37,26 +36,7 @@ public class WorkbookPivotTableCollectionRequest extends BaseCollectionRequest<W
      */
     @SuppressWarnings("unchecked")
     public WorkbookPivotTableCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WorkbookPivotTableCollectionResponse.class,(Class<BaseCollectionPage<WorkbookPivotTable>>) (new BaseCollectionPage<WorkbookPivotTable>(new java.util.ArrayList<WorkbookPivotTable>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<WorkbookPivotTable>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<WorkbookPivotTable> get() throws ClientException {
-        final WorkbookPivotTableCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, WorkbookPivotTableCollectionResponse.class, WorkbookPivotTableCollectionPage.class, WorkbookPivotTableCollectionRequestBuilder.class);
     }
 
     public void post(final WorkbookPivotTable newWorkbookPivotTable, final ICallback<? super WorkbookPivotTable> callback) {
@@ -148,16 +128,5 @@ public class WorkbookPivotTableCollectionRequest extends BaseCollectionRequest<W
     public WorkbookPivotTableCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<WorkbookPivotTable> buildFromResponse(final WorkbookPivotTableCollectionResponse response) {
-        final WorkbookPivotTableCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new WorkbookPivotTableCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<WorkbookPivotTable> page = new BaseCollectionPage<WorkbookPivotTable>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

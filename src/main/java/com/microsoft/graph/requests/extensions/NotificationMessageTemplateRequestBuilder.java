@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Notification Message Template Request Builder.
  */
-public class NotificationMessageTemplateRequestBuilder extends BaseRequestBuilder {
+public class NotificationMessageTemplateRequestBuilder extends BaseRequestBuilder<NotificationMessageTemplate> {
 
     /**
      * The request builder for the NotificationMessageTemplate

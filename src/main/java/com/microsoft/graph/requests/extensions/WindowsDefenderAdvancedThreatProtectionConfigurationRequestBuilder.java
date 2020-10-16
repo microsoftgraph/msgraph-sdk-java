@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows Defender Advanced Threat Protection Configuration Request Builder.
  */
-public class WindowsDefenderAdvancedThreatProtectionConfigurationRequestBuilder extends BaseRequestBuilder {
+public class WindowsDefenderAdvancedThreatProtectionConfigurationRequestBuilder extends BaseRequestBuilder<WindowsDefenderAdvancedThreatProtectionConfiguration> {
 
     /**
      * The request builder for the WindowsDefenderAdvancedThreatProtectionConfiguration

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Teams App Definition Request Builder.
  */
-public class TeamsAppDefinitionRequestBuilder extends BaseRequestBuilder {
+public class TeamsAppDefinitionRequestBuilder extends BaseRequestBuilder<TeamsAppDefinition> {
 
     /**
      * The request builder for the TeamsAppDefinition

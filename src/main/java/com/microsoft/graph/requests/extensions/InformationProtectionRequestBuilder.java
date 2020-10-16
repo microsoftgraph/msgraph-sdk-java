@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Information Protection Request Builder.
  */
-public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
+public class InformationProtectionRequestBuilder extends BaseRequestBuilder<InformationProtection> {
 
     /**
      * The request builder for the InformationProtection

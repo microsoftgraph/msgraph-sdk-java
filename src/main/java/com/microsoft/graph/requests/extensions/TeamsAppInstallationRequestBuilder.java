@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Teams App Installation Request Builder.
  */
-public class TeamsAppInstallationRequestBuilder extends BaseRequestBuilder {
+public class TeamsAppInstallationRequestBuilder extends BaseRequestBuilder<TeamsAppInstallation> {
 
     /**
      * The request builder for the TeamsAppInstallation

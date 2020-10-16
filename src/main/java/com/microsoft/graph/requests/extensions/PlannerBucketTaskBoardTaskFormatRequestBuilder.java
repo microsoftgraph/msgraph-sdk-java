@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Planner Bucket Task Board Task Format Request Builder.
  */
-public class PlannerBucketTaskBoardTaskFormatRequestBuilder extends BaseRequestBuilder {
+public class PlannerBucketTaskBoardTaskFormatRequestBuilder extends BaseRequestBuilder<PlannerBucketTaskBoardTaskFormat> {
 
     /**
      * The request builder for the PlannerBucketTaskBoardTaskFormat

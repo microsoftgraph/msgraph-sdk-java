@@ -17,7 +17,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationCollectionResponse;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationCollectionRequestBuilder;
@@ -28,7 +27,7 @@ import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationCo
 /**
  * The class for the Targeted Managed App Configuration Collection Request.
  */
-public class TargetedManagedAppConfigurationCollectionRequest extends BaseCollectionRequest<TargetedManagedAppConfiguration, TargetedManagedAppConfigurationCollectionResponse> {
+public class TargetedManagedAppConfigurationCollectionRequest extends BaseCollectionRequest<TargetedManagedAppConfiguration, TargetedManagedAppConfigurationCollectionResponse, TargetedManagedAppConfigurationCollectionPage> {
 
     /**
      * The request builder for this collection of TargetedManagedAppConfiguration
@@ -39,26 +38,7 @@ public class TargetedManagedAppConfigurationCollectionRequest extends BaseCollec
      */
     @SuppressWarnings("unchecked")
     public TargetedManagedAppConfigurationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TargetedManagedAppConfigurationCollectionResponse.class,(Class<BaseCollectionPage<TargetedManagedAppConfiguration>>) (new BaseCollectionPage<TargetedManagedAppConfiguration>(new java.util.ArrayList<TargetedManagedAppConfiguration>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<TargetedManagedAppConfiguration>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<TargetedManagedAppConfiguration> get() throws ClientException {
-        final TargetedManagedAppConfigurationCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, TargetedManagedAppConfigurationCollectionResponse.class, TargetedManagedAppConfigurationCollectionPage.class, TargetedManagedAppConfigurationCollectionRequestBuilder.class);
     }
 
     public void post(final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration, final ICallback<? super TargetedManagedAppConfiguration> callback) {
@@ -150,16 +130,5 @@ public class TargetedManagedAppConfigurationCollectionRequest extends BaseCollec
     public TargetedManagedAppConfigurationCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<TargetedManagedAppConfiguration> buildFromResponse(final TargetedManagedAppConfigurationCollectionResponse response) {
-        final TargetedManagedAppConfigurationCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new TargetedManagedAppConfigurationCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<TargetedManagedAppConfiguration> page = new BaseCollectionPage<TargetedManagedAppConfiguration>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

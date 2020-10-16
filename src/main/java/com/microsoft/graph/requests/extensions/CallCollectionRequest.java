@@ -30,7 +30,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.CallCollectionResponse;
 import com.microsoft.graph.requests.extensions.CallCollectionRequestBuilder;
@@ -41,7 +40,7 @@ import com.microsoft.graph.requests.extensions.CallCollectionRequest;
 /**
  * The class for the Call Collection Request.
  */
-public class CallCollectionRequest extends BaseCollectionRequest<Call, CallCollectionResponse> {
+public class CallCollectionRequest extends BaseCollectionRequest<Call, CallCollectionResponse, CallCollectionPage> {
 
     /**
      * The request builder for this collection of Call
@@ -52,26 +51,7 @@ public class CallCollectionRequest extends BaseCollectionRequest<Call, CallColle
      */
     @SuppressWarnings("unchecked")
     public CallCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, CallCollectionResponse.class,(Class<BaseCollectionPage<Call>>) (new BaseCollectionPage<Call>(new java.util.ArrayList<Call>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<Call>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<Call> get() throws ClientException {
-        final CallCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, CallCollectionResponse.class, CallCollectionPage.class, CallCollectionRequestBuilder.class);
     }
 
     public void post(final Call newCall, final ICallback<? super Call> callback) {
@@ -163,16 +143,5 @@ public class CallCollectionRequest extends BaseCollectionRequest<Call, CallColle
     public CallCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<Call> buildFromResponse(final CallCollectionResponse response) {
-        final CallCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new CallCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<Call> page = new BaseCollectionPage<Call>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

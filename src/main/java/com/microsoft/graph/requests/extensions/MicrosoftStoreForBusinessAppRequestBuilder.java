@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Microsoft Store For Business App Request Builder.
  */
-public class MicrosoftStoreForBusinessAppRequestBuilder extends BaseRequestBuilder {
+public class MicrosoftStoreForBusinessAppRequestBuilder extends BaseRequestBuilder<MicrosoftStoreForBusinessApp> {
 
     /**
      * The request builder for the MicrosoftStoreForBusinessApp

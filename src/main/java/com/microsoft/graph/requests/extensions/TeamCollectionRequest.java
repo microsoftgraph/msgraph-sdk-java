@@ -18,7 +18,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TeamCollectionResponse;
 import com.microsoft.graph.requests.extensions.TeamCollectionRequestBuilder;
@@ -29,7 +28,7 @@ import com.microsoft.graph.requests.extensions.TeamCollectionRequest;
 /**
  * The class for the Team Collection Request.
  */
-public class TeamCollectionRequest extends BaseCollectionRequest<Team, TeamCollectionResponse> {
+public class TeamCollectionRequest extends BaseCollectionRequest<Team, TeamCollectionResponse, TeamCollectionPage> {
 
     /**
      * The request builder for this collection of Team
@@ -40,26 +39,7 @@ public class TeamCollectionRequest extends BaseCollectionRequest<Team, TeamColle
      */
     @SuppressWarnings("unchecked")
     public TeamCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TeamCollectionResponse.class,(Class<BaseCollectionPage<Team>>) (new BaseCollectionPage<Team>(new java.util.ArrayList<Team>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<Team>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<Team> get() throws ClientException {
-        final TeamCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, TeamCollectionResponse.class, TeamCollectionPage.class, TeamCollectionRequestBuilder.class);
     }
 
     public void post(final Team newTeam, final ICallback<? super Team> callback) {
@@ -151,16 +131,5 @@ public class TeamCollectionRequest extends BaseCollectionRequest<Team, TeamColle
     public TeamCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<Team> buildFromResponse(final TeamCollectionResponse response) {
-        final TeamCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new TeamCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<Team> page = new BaseCollectionPage<Team>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

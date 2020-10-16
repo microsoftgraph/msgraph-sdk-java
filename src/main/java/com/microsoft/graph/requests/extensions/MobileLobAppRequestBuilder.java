@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Mobile Lob App Request Builder.
  */
-public class MobileLobAppRequestBuilder extends BaseRequestBuilder {
+public class MobileLobAppRequestBuilder extends BaseRequestBuilder<MobileLobApp> {
 
     /**
      * The request builder for the MobileLobApp

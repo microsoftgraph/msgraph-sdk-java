@@ -16,7 +16,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.MobileAppCollectionResponse;
 import com.microsoft.graph.requests.extensions.MobileAppCollectionRequestBuilder;
@@ -27,7 +26,7 @@ import com.microsoft.graph.requests.extensions.MobileAppCollectionRequest;
 /**
  * The class for the Mobile App Collection Request.
  */
-public class MobileAppCollectionRequest extends BaseCollectionRequest<MobileApp, MobileAppCollectionResponse> {
+public class MobileAppCollectionRequest extends BaseCollectionRequest<MobileApp, MobileAppCollectionResponse, MobileAppCollectionPage> {
 
     /**
      * The request builder for this collection of MobileApp
@@ -38,26 +37,7 @@ public class MobileAppCollectionRequest extends BaseCollectionRequest<MobileApp,
      */
     @SuppressWarnings("unchecked")
     public MobileAppCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MobileAppCollectionResponse.class,(Class<BaseCollectionPage<MobileApp>>) (new BaseCollectionPage<MobileApp>(new java.util.ArrayList<MobileApp>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<MobileApp>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<MobileApp> get() throws ClientException {
-        final MobileAppCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, MobileAppCollectionResponse.class, MobileAppCollectionPage.class, MobileAppCollectionRequestBuilder.class);
     }
 
     public void post(final MobileApp newMobileApp, final ICallback<? super MobileApp> callback) {
@@ -149,16 +129,5 @@ public class MobileAppCollectionRequest extends BaseCollectionRequest<MobileApp,
     public MobileAppCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<MobileApp> buildFromResponse(final MobileAppCollectionResponse response) {
-        final MobileAppCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new MobileAppCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<MobileApp> page = new BaseCollectionPage<MobileApp>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

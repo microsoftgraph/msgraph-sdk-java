@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Sts Policy Request Builder.
  */
-public class StsPolicyRequestBuilder extends BaseRequestBuilder {
+public class StsPolicyRequestBuilder extends BaseRequestBuilder<StsPolicy> {
 
     /**
      * The request builder for the StsPolicy

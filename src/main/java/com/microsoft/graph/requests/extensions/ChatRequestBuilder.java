@@ -19,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Chat Request Builder.
  */
-public class ChatRequestBuilder extends BaseRequestBuilder {
+public class ChatRequestBuilder extends BaseRequestBuilder<Chat> {
 
     /**
      * The request builder for the Chat

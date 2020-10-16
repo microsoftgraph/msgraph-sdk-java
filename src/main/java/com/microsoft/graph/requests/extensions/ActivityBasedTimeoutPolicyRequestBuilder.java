@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Activity Based Timeout Policy Request Builder.
  */
-public class ActivityBasedTimeoutPolicyRequestBuilder extends BaseRequestBuilder {
+public class ActivityBasedTimeoutPolicyRequestBuilder extends BaseRequestBuilder<ActivityBasedTimeoutPolicy> {
 
     /**
      * The request builder for the ActivityBasedTimeoutPolicy

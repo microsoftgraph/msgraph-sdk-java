@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.SharedDriveItemCollectionResponse;
 import com.microsoft.graph.requests.extensions.SharedDriveItemCollectionRequestBuilder;
@@ -25,7 +24,7 @@ import com.microsoft.graph.requests.extensions.SharedDriveItemCollectionRequest;
 /**
  * The class for the Shared Drive Item Collection Request.
  */
-public class SharedDriveItemCollectionRequest extends BaseCollectionRequest<SharedDriveItem, SharedDriveItemCollectionResponse> {
+public class SharedDriveItemCollectionRequest extends BaseCollectionRequest<SharedDriveItem, SharedDriveItemCollectionResponse, SharedDriveItemCollectionPage> {
 
     /**
      * The request builder for this collection of SharedDriveItem
@@ -36,26 +35,7 @@ public class SharedDriveItemCollectionRequest extends BaseCollectionRequest<Shar
      */
     @SuppressWarnings("unchecked")
     public SharedDriveItemCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SharedDriveItemCollectionResponse.class,(Class<BaseCollectionPage<SharedDriveItem>>) (new BaseCollectionPage<SharedDriveItem>(new java.util.ArrayList<SharedDriveItem>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<SharedDriveItem>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<SharedDriveItem> get() throws ClientException {
-        final SharedDriveItemCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, SharedDriveItemCollectionResponse.class, SharedDriveItemCollectionPage.class, SharedDriveItemCollectionRequestBuilder.class);
     }
 
     public void post(final SharedDriveItem newSharedDriveItem, final ICallback<? super SharedDriveItem> callback) {
@@ -147,16 +127,5 @@ public class SharedDriveItemCollectionRequest extends BaseCollectionRequest<Shar
     public SharedDriveItemCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<SharedDriveItem> buildFromResponse(final SharedDriveItemCollectionResponse response) {
-        final SharedDriveItemCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new SharedDriveItemCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<SharedDriveItem> page = new BaseCollectionPage<SharedDriveItem>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

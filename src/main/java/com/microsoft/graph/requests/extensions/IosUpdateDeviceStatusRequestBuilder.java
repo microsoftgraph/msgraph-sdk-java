@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Ios Update Device Status Request Builder.
  */
-public class IosUpdateDeviceStatusRequestBuilder extends BaseRequestBuilder {
+public class IosUpdateDeviceStatusRequestBuilder extends BaseRequestBuilder<IosUpdateDeviceStatus> {
 
     /**
      * The request builder for the IosUpdateDeviceStatus

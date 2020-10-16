@@ -36,7 +36,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Schedule Request Builder.
  */
-public class ScheduleRequestBuilder extends BaseRequestBuilder {
+public class ScheduleRequestBuilder extends BaseRequestBuilder<Schedule> {
 
     /**
      * The request builder for the Schedule

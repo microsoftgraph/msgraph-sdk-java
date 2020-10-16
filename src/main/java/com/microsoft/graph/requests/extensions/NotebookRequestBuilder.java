@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Notebook Request Builder.
  */
-public class NotebookRequestBuilder extends BaseRequestBuilder {
+public class NotebookRequestBuilder extends BaseRequestBuilder<Notebook> {
 
     /**
      * The request builder for the Notebook

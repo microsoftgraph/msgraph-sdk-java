@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsCollectionResponse;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.TermsAndConditionsCollectionReque
 /**
  * The class for the Terms And Conditions Collection Request.
  */
-public class TermsAndConditionsCollectionRequest extends BaseCollectionRequest<TermsAndConditions, TermsAndConditionsCollectionResponse> {
+public class TermsAndConditionsCollectionRequest extends BaseCollectionRequest<TermsAndConditions, TermsAndConditionsCollectionResponse, TermsAndConditionsCollectionPage> {
 
     /**
      * The request builder for this collection of TermsAndConditions
@@ -37,26 +36,7 @@ public class TermsAndConditionsCollectionRequest extends BaseCollectionRequest<T
      */
     @SuppressWarnings("unchecked")
     public TermsAndConditionsCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TermsAndConditionsCollectionResponse.class,(Class<BaseCollectionPage<TermsAndConditions>>) (new BaseCollectionPage<TermsAndConditions>(new java.util.ArrayList<TermsAndConditions>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<TermsAndConditions>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<TermsAndConditions> get() throws ClientException {
-        final TermsAndConditionsCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, TermsAndConditionsCollectionResponse.class, TermsAndConditionsCollectionPage.class, TermsAndConditionsCollectionRequestBuilder.class);
     }
 
     public void post(final TermsAndConditions newTermsAndConditions, final ICallback<? super TermsAndConditions> callback) {
@@ -148,16 +128,5 @@ public class TermsAndConditionsCollectionRequest extends BaseCollectionRequest<T
     public TermsAndConditionsCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<TermsAndConditions> buildFromResponse(final TermsAndConditionsCollectionResponse response) {
-        final TermsAndConditionsCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new TermsAndConditionsCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<TermsAndConditions> page = new BaseCollectionPage<TermsAndConditions>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Managed App Status Raw Request Builder.
  */
-public class ManagedAppStatusRawRequestBuilder extends BaseRequestBuilder {
+public class ManagedAppStatusRawRequestBuilder extends BaseRequestBuilder<ManagedAppStatusRaw> {
 
     /**
      * The request builder for the ManagedAppStatusRaw

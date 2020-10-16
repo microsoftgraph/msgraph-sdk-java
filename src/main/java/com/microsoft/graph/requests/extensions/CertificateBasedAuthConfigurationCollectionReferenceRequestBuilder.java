@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Certificate Based Auth Configuration Collection Reference Request Builder.
  */
-public class CertificateBasedAuthConfigurationCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<CertificateBasedAuthConfiguration, CertificateBasedAuthConfigurationCollectionResponse, CertificateBasedAuthConfigurationCollectionReferenceRequest> {
+public class CertificateBasedAuthConfigurationCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<CertificateBasedAuthConfiguration, CertificateBasedAuthConfigurationWithReferenceRequestBuilder, CertificateBasedAuthConfigurationCollectionResponse, CertificateBasedAuthConfigurationCollectionPage, CertificateBasedAuthConfigurationCollectionReferenceRequest> {
 
     /**
      * The request builder for this collection of CertificateBasedAuthConfiguration
@@ -30,6 +30,6 @@ public class CertificateBasedAuthConfigurationCollectionReferenceRequestBuilder 
      * @param requestOptions the options for this request
      */
     public CertificateBasedAuthConfigurationCollectionReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, CertificateBasedAuthConfigurationCollectionReferenceRequest.class);
+        super(requestUrl, client, requestOptions, CertificateBasedAuthConfigurationWithReferenceRequestBuilder.class, CertificateBasedAuthConfigurationCollectionResponse.class, CertificateBasedAuthConfigurationCollectionPage.class, CertificateBasedAuthConfigurationCollectionReferenceRequest.class);
     }
 }

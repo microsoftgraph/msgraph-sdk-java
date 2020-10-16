@@ -19,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Report Root Request Builder.
  */
-public class ReportRootRequestBuilder extends BaseRequestBuilder {
+public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
 
     /**
      * The request builder for the ReportRoot

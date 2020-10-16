@@ -10,6 +10,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.Calendar;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.CalendarCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -54,7 +55,7 @@ public class CalendarGroup extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "calendars", alternate = {"Calendars"})
     @Expose
-    public BaseCollectionPage<Calendar> calendars;
+    public CalendarCollectionPage calendars;
 
 
     /**
@@ -98,7 +99,7 @@ public class CalendarGroup extends Entity implements IJsonBackedObject {
 
 
         if (json.has("calendars")) {
-            calendars = serializer.deserializeObject(json.get("calendars").toString(), new BaseCollectionPage<Calendar>(new java.util.ArrayList<Calendar>(), null).getClass());
+            calendars = serializer.deserializeObject(json.get("calendars").toString(), CalendarCollectionPage.class);
         }
     }
 }

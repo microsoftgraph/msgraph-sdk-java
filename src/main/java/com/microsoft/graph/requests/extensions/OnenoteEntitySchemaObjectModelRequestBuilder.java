@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Onenote Entity Schema Object Model Request Builder.
  */
-public class OnenoteEntitySchemaObjectModelRequestBuilder extends BaseRequestBuilder {
+public class OnenoteEntitySchemaObjectModelRequestBuilder extends BaseRequestBuilder<OnenoteEntitySchemaObjectModel> {
 
     /**
      * The request builder for the OnenoteEntitySchemaObjectModel

@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.SubscriptionCollectionResponse;
 import com.microsoft.graph.requests.extensions.SubscriptionCollectionRequestBuilder;
@@ -25,7 +24,7 @@ import com.microsoft.graph.requests.extensions.SubscriptionCollectionRequest;
 /**
  * The class for the Subscription Collection Request.
  */
-public class SubscriptionCollectionRequest extends BaseCollectionRequest<Subscription, SubscriptionCollectionResponse> {
+public class SubscriptionCollectionRequest extends BaseCollectionRequest<Subscription, SubscriptionCollectionResponse, SubscriptionCollectionPage> {
 
     /**
      * The request builder for this collection of Subscription
@@ -36,26 +35,7 @@ public class SubscriptionCollectionRequest extends BaseCollectionRequest<Subscri
      */
     @SuppressWarnings("unchecked")
     public SubscriptionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SubscriptionCollectionResponse.class,(Class<BaseCollectionPage<Subscription>>) (new BaseCollectionPage<Subscription>(new java.util.ArrayList<Subscription>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<Subscription>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<Subscription> get() throws ClientException {
-        final SubscriptionCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, SubscriptionCollectionResponse.class, SubscriptionCollectionPage.class, SubscriptionCollectionRequestBuilder.class);
     }
 
     public void post(final Subscription newSubscription, final ICallback<? super Subscription> callback) {
@@ -147,16 +127,5 @@ public class SubscriptionCollectionRequest extends BaseCollectionRequest<Subscri
     public SubscriptionCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<Subscription> buildFromResponse(final SubscriptionCollectionResponse response) {
-        final SubscriptionCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new SubscriptionCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<Subscription> page = new BaseCollectionPage<Subscription>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

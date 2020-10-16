@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestCollectionResponse;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestCollection
 /**
  * The class for the Threat Assessment Request Collection Request.
  */
-public class ThreatAssessmentRequestCollectionRequest extends BaseCollectionRequest<ThreatAssessmentRequest, ThreatAssessmentRequestCollectionResponse> {
+public class ThreatAssessmentRequestCollectionRequest extends BaseCollectionRequest<ThreatAssessmentRequest, ThreatAssessmentRequestCollectionResponse, ThreatAssessmentRequestCollectionPage> {
 
     /**
      * The request builder for this collection of ThreatAssessmentRequest
@@ -37,26 +36,7 @@ public class ThreatAssessmentRequestCollectionRequest extends BaseCollectionRequ
      */
     @SuppressWarnings("unchecked")
     public ThreatAssessmentRequestCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ThreatAssessmentRequestCollectionResponse.class,(Class<BaseCollectionPage<ThreatAssessmentRequest>>) (new BaseCollectionPage<ThreatAssessmentRequest>(new java.util.ArrayList<ThreatAssessmentRequest>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<ThreatAssessmentRequest>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<ThreatAssessmentRequest> get() throws ClientException {
-        final ThreatAssessmentRequestCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, ThreatAssessmentRequestCollectionResponse.class, ThreatAssessmentRequestCollectionPage.class, ThreatAssessmentRequestCollectionRequestBuilder.class);
     }
 
     public void post(final ThreatAssessmentRequest newThreatAssessmentRequest, final ICallback<? super ThreatAssessmentRequest> callback) {
@@ -148,16 +128,5 @@ public class ThreatAssessmentRequestCollectionRequest extends BaseCollectionRequ
     public ThreatAssessmentRequestCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<ThreatAssessmentRequest> buildFromResponse(final ThreatAssessmentRequestCollectionResponse response) {
-        final ThreatAssessmentRequestCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new ThreatAssessmentRequestCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<ThreatAssessmentRequest> page = new BaseCollectionPage<ThreatAssessmentRequest>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

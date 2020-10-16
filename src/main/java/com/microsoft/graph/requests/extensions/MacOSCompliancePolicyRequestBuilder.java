@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Mac OSCompliance Policy Request Builder.
  */
-public class MacOSCompliancePolicyRequestBuilder extends BaseRequestBuilder {
+public class MacOSCompliancePolicyRequestBuilder extends BaseRequestBuilder<MacOSCompliancePolicy> {
 
     /**
      * The request builder for the MacOSCompliancePolicy

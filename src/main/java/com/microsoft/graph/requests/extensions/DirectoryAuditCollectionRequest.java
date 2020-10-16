@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DirectoryAuditCollectionResponse;
 import com.microsoft.graph.requests.extensions.DirectoryAuditCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.DirectoryAuditCollectionRequest;
 /**
  * The class for the Directory Audit Collection Request.
  */
-public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<DirectoryAudit, DirectoryAuditCollectionResponse> {
+public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<DirectoryAudit, DirectoryAuditCollectionResponse, DirectoryAuditCollectionPage> {
 
     /**
      * The request builder for this collection of DirectoryAudit
@@ -37,26 +36,7 @@ public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<Direc
      */
     @SuppressWarnings("unchecked")
     public DirectoryAuditCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DirectoryAuditCollectionResponse.class,(Class<BaseCollectionPage<DirectoryAudit>>) (new BaseCollectionPage<DirectoryAudit>(new java.util.ArrayList<DirectoryAudit>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<DirectoryAudit>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<DirectoryAudit> get() throws ClientException {
-        final DirectoryAuditCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, DirectoryAuditCollectionResponse.class, DirectoryAuditCollectionPage.class, DirectoryAuditCollectionRequestBuilder.class);
     }
 
     public void post(final DirectoryAudit newDirectoryAudit, final ICallback<? super DirectoryAudit> callback) {
@@ -148,16 +128,5 @@ public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<Direc
     public DirectoryAuditCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<DirectoryAudit> buildFromResponse(final DirectoryAuditCollectionResponse response) {
-        final DirectoryAuditCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DirectoryAuditCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<DirectoryAudit> page = new BaseCollectionPage<DirectoryAudit>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

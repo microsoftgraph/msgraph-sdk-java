@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WorkbookChartSeriesCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookChartSeriesCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.WorkbookChartSeriesCollectionRequ
 /**
  * The class for the Workbook Chart Series Collection Request.
  */
-public class WorkbookChartSeriesCollectionRequest extends BaseCollectionRequest<WorkbookChartSeries, WorkbookChartSeriesCollectionResponse> {
+public class WorkbookChartSeriesCollectionRequest extends BaseCollectionRequest<WorkbookChartSeries, WorkbookChartSeriesCollectionResponse, WorkbookChartSeriesCollectionPage> {
 
     /**
      * The request builder for this collection of WorkbookChartSeries
@@ -37,26 +36,7 @@ public class WorkbookChartSeriesCollectionRequest extends BaseCollectionRequest<
      */
     @SuppressWarnings("unchecked")
     public WorkbookChartSeriesCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WorkbookChartSeriesCollectionResponse.class,(Class<BaseCollectionPage<WorkbookChartSeries>>) (new BaseCollectionPage<WorkbookChartSeries>(new java.util.ArrayList<WorkbookChartSeries>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<WorkbookChartSeries>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<WorkbookChartSeries> get() throws ClientException {
-        final WorkbookChartSeriesCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, WorkbookChartSeriesCollectionResponse.class, WorkbookChartSeriesCollectionPage.class, WorkbookChartSeriesCollectionRequestBuilder.class);
     }
 
     public void post(final WorkbookChartSeries newWorkbookChartSeries, final ICallback<? super WorkbookChartSeries> callback) {
@@ -148,16 +128,5 @@ public class WorkbookChartSeriesCollectionRequest extends BaseCollectionRequest<
     public WorkbookChartSeriesCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<WorkbookChartSeries> buildFromResponse(final WorkbookChartSeriesCollectionResponse response) {
-        final WorkbookChartSeriesCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new WorkbookChartSeriesCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<WorkbookChartSeries> page = new BaseCollectionPage<WorkbookChartSeries>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

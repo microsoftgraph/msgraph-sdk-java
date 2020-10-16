@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TelecomExpenseManagementPartnerCollectionResponse;
 import com.microsoft.graph.requests.extensions.TelecomExpenseManagementPartnerCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.TelecomExpenseManagementPartnerCo
 /**
  * The class for the Telecom Expense Management Partner Collection Request.
  */
-public class TelecomExpenseManagementPartnerCollectionRequest extends BaseCollectionRequest<TelecomExpenseManagementPartner, TelecomExpenseManagementPartnerCollectionResponse> {
+public class TelecomExpenseManagementPartnerCollectionRequest extends BaseCollectionRequest<TelecomExpenseManagementPartner, TelecomExpenseManagementPartnerCollectionResponse, TelecomExpenseManagementPartnerCollectionPage> {
 
     /**
      * The request builder for this collection of TelecomExpenseManagementPartner
@@ -37,26 +36,7 @@ public class TelecomExpenseManagementPartnerCollectionRequest extends BaseCollec
      */
     @SuppressWarnings("unchecked")
     public TelecomExpenseManagementPartnerCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TelecomExpenseManagementPartnerCollectionResponse.class,(Class<BaseCollectionPage<TelecomExpenseManagementPartner>>) (new BaseCollectionPage<TelecomExpenseManagementPartner>(new java.util.ArrayList<TelecomExpenseManagementPartner>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<TelecomExpenseManagementPartner>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<TelecomExpenseManagementPartner> get() throws ClientException {
-        final TelecomExpenseManagementPartnerCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, TelecomExpenseManagementPartnerCollectionResponse.class, TelecomExpenseManagementPartnerCollectionPage.class, TelecomExpenseManagementPartnerCollectionRequestBuilder.class);
     }
 
     public void post(final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner, final ICallback<? super TelecomExpenseManagementPartner> callback) {
@@ -148,16 +128,5 @@ public class TelecomExpenseManagementPartnerCollectionRequest extends BaseCollec
     public TelecomExpenseManagementPartnerCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<TelecomExpenseManagementPartner> buildFromResponse(final TelecomExpenseManagementPartnerCollectionResponse response) {
-        final TelecomExpenseManagementPartnerCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new TelecomExpenseManagementPartnerCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<TelecomExpenseManagementPartner> page = new BaseCollectionPage<TelecomExpenseManagementPartner>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

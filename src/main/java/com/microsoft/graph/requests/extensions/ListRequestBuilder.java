@@ -27,7 +27,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the List Request Builder.
  */
-public class ListRequestBuilder extends BaseRequestBuilder {
+public class ListRequestBuilder extends BaseRequestBuilder<List> {
 
     /**
      * The request builder for the List

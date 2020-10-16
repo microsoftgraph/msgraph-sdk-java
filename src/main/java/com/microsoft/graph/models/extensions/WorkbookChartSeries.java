@@ -11,6 +11,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.WorkbookChartSeriesFormat;
 import com.microsoft.graph.models.extensions.WorkbookChartPoint;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.WorkbookChartPointCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -47,7 +48,7 @@ public class WorkbookChartSeries extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "points", alternate = {"Points"})
     @Expose
-    public BaseCollectionPage<WorkbookChartPoint> points;
+    public WorkbookChartPointCollectionPage points;
 
 
     /**
@@ -91,7 +92,7 @@ public class WorkbookChartSeries extends Entity implements IJsonBackedObject {
 
 
         if (json.has("points")) {
-            points = serializer.deserializeObject(json.get("points").toString(), new BaseCollectionPage<WorkbookChartPoint>(new java.util.ArrayList<WorkbookChartPoint>(), null).getClass());
+            points = serializer.deserializeObject(json.get("points").toString(), WorkbookChartPointCollectionPage.class);
         }
     }
 }

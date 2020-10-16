@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionRequ
 /**
  * The class for the Token Lifetime Policy Collection Request.
  */
-public class TokenLifetimePolicyCollectionRequest extends BaseCollectionRequest<TokenLifetimePolicy, TokenLifetimePolicyCollectionResponse> {
+public class TokenLifetimePolicyCollectionRequest extends BaseCollectionRequest<TokenLifetimePolicy, TokenLifetimePolicyCollectionResponse, TokenLifetimePolicyCollectionPage> {
 
     /**
      * The request builder for this collection of TokenLifetimePolicy
@@ -37,26 +36,7 @@ public class TokenLifetimePolicyCollectionRequest extends BaseCollectionRequest<
      */
     @SuppressWarnings("unchecked")
     public TokenLifetimePolicyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TokenLifetimePolicyCollectionResponse.class,(Class<BaseCollectionPage<TokenLifetimePolicy>>) (new BaseCollectionPage<TokenLifetimePolicy>(new java.util.ArrayList<TokenLifetimePolicy>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<TokenLifetimePolicy>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<TokenLifetimePolicy> get() throws ClientException {
-        final TokenLifetimePolicyCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, TokenLifetimePolicyCollectionResponse.class, TokenLifetimePolicyCollectionPage.class, TokenLifetimePolicyCollectionRequestBuilder.class);
     }
 
     public void post(final TokenLifetimePolicy newTokenLifetimePolicy, final ICallback<? super TokenLifetimePolicy> callback) {
@@ -148,16 +128,5 @@ public class TokenLifetimePolicyCollectionRequest extends BaseCollectionRequest<
     public TokenLifetimePolicyCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<TokenLifetimePolicy> buildFromResponse(final TokenLifetimePolicyCollectionResponse response) {
-        final TokenLifetimePolicyCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new TokenLifetimePolicyCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<TokenLifetimePolicy> page = new BaseCollectionPage<TokenLifetimePolicy>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

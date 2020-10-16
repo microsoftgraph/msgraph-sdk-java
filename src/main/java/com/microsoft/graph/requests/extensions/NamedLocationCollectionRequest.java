@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.NamedLocationCollectionResponse;
 import com.microsoft.graph.requests.extensions.NamedLocationCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.NamedLocationCollectionRequest;
 /**
  * The class for the Named Location Collection Request.
  */
-public class NamedLocationCollectionRequest extends BaseCollectionRequest<NamedLocation, NamedLocationCollectionResponse> {
+public class NamedLocationCollectionRequest extends BaseCollectionRequest<NamedLocation, NamedLocationCollectionResponse, NamedLocationCollectionPage> {
 
     /**
      * The request builder for this collection of NamedLocation
@@ -37,26 +36,7 @@ public class NamedLocationCollectionRequest extends BaseCollectionRequest<NamedL
      */
     @SuppressWarnings("unchecked")
     public NamedLocationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, NamedLocationCollectionResponse.class,(Class<BaseCollectionPage<NamedLocation>>) (new BaseCollectionPage<NamedLocation>(new java.util.ArrayList<NamedLocation>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<NamedLocation>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<NamedLocation> get() throws ClientException {
-        final NamedLocationCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, NamedLocationCollectionResponse.class, NamedLocationCollectionPage.class, NamedLocationCollectionRequestBuilder.class);
     }
 
     public void post(final NamedLocation newNamedLocation, final ICallback<? super NamedLocation> callback) {
@@ -148,16 +128,5 @@ public class NamedLocationCollectionRequest extends BaseCollectionRequest<NamedL
     public NamedLocationCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<NamedLocation> buildFromResponse(final NamedLocationCollectionResponse response) {
-        final NamedLocationCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new NamedLocationCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<NamedLocation> page = new BaseCollectionPage<NamedLocation>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

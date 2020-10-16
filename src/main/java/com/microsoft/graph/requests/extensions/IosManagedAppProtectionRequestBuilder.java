@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Ios Managed App Protection Request Builder.
  */
-public class IosManagedAppProtectionRequestBuilder extends BaseRequestBuilder {
+public class IosManagedAppProtectionRequestBuilder extends BaseRequestBuilder<IosManagedAppProtection> {
 
     /**
      * The request builder for the IosManagedAppProtection

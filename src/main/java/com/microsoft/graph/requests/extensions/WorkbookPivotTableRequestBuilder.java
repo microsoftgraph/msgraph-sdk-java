@@ -19,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Pivot Table Request Builder.
  */
-public class WorkbookPivotTableRequestBuilder extends BaseRequestBuilder {
+public class WorkbookPivotTableRequestBuilder extends BaseRequestBuilder<WorkbookPivotTable> {
 
     /**
      * The request builder for the WorkbookPivotTable

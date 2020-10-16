@@ -19,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Chart Gridlines Format Request Builder.
  */
-public class WorkbookChartGridlinesFormatRequestBuilder extends BaseRequestBuilder {
+public class WorkbookChartGridlinesFormatRequestBuilder extends BaseRequestBuilder<WorkbookChartGridlinesFormat> {
 
     /**
      * The request builder for the WorkbookChartGridlinesFormat

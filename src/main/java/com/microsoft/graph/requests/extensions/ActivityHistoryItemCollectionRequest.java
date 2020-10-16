@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ActivityHistoryItemCollectionResponse;
 import com.microsoft.graph.requests.extensions.ActivityHistoryItemCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.ActivityHistoryItemCollectionRequ
 /**
  * The class for the Activity History Item Collection Request.
  */
-public class ActivityHistoryItemCollectionRequest extends BaseCollectionRequest<ActivityHistoryItem, ActivityHistoryItemCollectionResponse> {
+public class ActivityHistoryItemCollectionRequest extends BaseCollectionRequest<ActivityHistoryItem, ActivityHistoryItemCollectionResponse, ActivityHistoryItemCollectionPage> {
 
     /**
      * The request builder for this collection of ActivityHistoryItem
@@ -37,26 +36,7 @@ public class ActivityHistoryItemCollectionRequest extends BaseCollectionRequest<
      */
     @SuppressWarnings("unchecked")
     public ActivityHistoryItemCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ActivityHistoryItemCollectionResponse.class,(Class<BaseCollectionPage<ActivityHistoryItem>>) (new BaseCollectionPage<ActivityHistoryItem>(new java.util.ArrayList<ActivityHistoryItem>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<ActivityHistoryItem>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<ActivityHistoryItem> get() throws ClientException {
-        final ActivityHistoryItemCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, ActivityHistoryItemCollectionResponse.class, ActivityHistoryItemCollectionPage.class, ActivityHistoryItemCollectionRequestBuilder.class);
     }
 
     public void post(final ActivityHistoryItem newActivityHistoryItem, final ICallback<? super ActivityHistoryItem> callback) {
@@ -148,16 +128,5 @@ public class ActivityHistoryItemCollectionRequest extends BaseCollectionRequest<
     public ActivityHistoryItemCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<ActivityHistoryItem> buildFromResponse(final ActivityHistoryItemCollectionResponse response) {
-        final ActivityHistoryItemCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new ActivityHistoryItemCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<ActivityHistoryItem> page = new BaseCollectionPage<ActivityHistoryItem>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

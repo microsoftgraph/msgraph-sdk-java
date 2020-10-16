@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.OpenShiftCollectionResponse;
 import com.microsoft.graph.requests.extensions.OpenShiftCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.OpenShiftCollectionRequest;
 /**
  * The class for the Open Shift Collection Request.
  */
-public class OpenShiftCollectionRequest extends BaseCollectionRequest<OpenShift, OpenShiftCollectionResponse> {
+public class OpenShiftCollectionRequest extends BaseCollectionRequest<OpenShift, OpenShiftCollectionResponse, OpenShiftCollectionPage> {
 
     /**
      * The request builder for this collection of OpenShift
@@ -37,26 +36,7 @@ public class OpenShiftCollectionRequest extends BaseCollectionRequest<OpenShift,
      */
     @SuppressWarnings("unchecked")
     public OpenShiftCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OpenShiftCollectionResponse.class,(Class<BaseCollectionPage<OpenShift>>) (new BaseCollectionPage<OpenShift>(new java.util.ArrayList<OpenShift>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<OpenShift>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<OpenShift> get() throws ClientException {
-        final OpenShiftCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, OpenShiftCollectionResponse.class, OpenShiftCollectionPage.class, OpenShiftCollectionRequestBuilder.class);
     }
 
     public void post(final OpenShift newOpenShift, final ICallback<? super OpenShift> callback) {
@@ -148,16 +128,5 @@ public class OpenShiftCollectionRequest extends BaseCollectionRequest<OpenShift,
     public OpenShiftCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<OpenShift> buildFromResponse(final OpenShiftCollectionResponse response) {
-        final OpenShiftCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new OpenShiftCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<OpenShift> page = new BaseCollectionPage<OpenShift>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

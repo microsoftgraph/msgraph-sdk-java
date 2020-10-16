@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Single Value Legacy Extended Property Request Builder.
  */
-public class SingleValueLegacyExtendedPropertyRequestBuilder extends BaseRequestBuilder {
+public class SingleValueLegacyExtendedPropertyRequestBuilder extends BaseRequestBuilder<SingleValueLegacyExtendedProperty> {
 
     /**
      * The request builder for the SingleValueLegacyExtendedProperty

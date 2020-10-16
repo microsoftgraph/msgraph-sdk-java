@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.OfferShiftRequestCollectionResponse;
 import com.microsoft.graph.requests.extensions.OfferShiftRequestCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.OfferShiftRequestCollectionReques
 /**
  * The class for the Offer Shift Request Collection Request.
  */
-public class OfferShiftRequestCollectionRequest extends BaseCollectionRequest<OfferShiftRequest, OfferShiftRequestCollectionResponse> {
+public class OfferShiftRequestCollectionRequest extends BaseCollectionRequest<OfferShiftRequest, OfferShiftRequestCollectionResponse, OfferShiftRequestCollectionPage> {
 
     /**
      * The request builder for this collection of OfferShiftRequest
@@ -37,26 +36,7 @@ public class OfferShiftRequestCollectionRequest extends BaseCollectionRequest<Of
      */
     @SuppressWarnings("unchecked")
     public OfferShiftRequestCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OfferShiftRequestCollectionResponse.class,(Class<BaseCollectionPage<OfferShiftRequest>>) (new BaseCollectionPage<OfferShiftRequest>(new java.util.ArrayList<OfferShiftRequest>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<OfferShiftRequest>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<OfferShiftRequest> get() throws ClientException {
-        final OfferShiftRequestCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, OfferShiftRequestCollectionResponse.class, OfferShiftRequestCollectionPage.class, OfferShiftRequestCollectionRequestBuilder.class);
     }
 
     public void post(final OfferShiftRequest newOfferShiftRequest, final ICallback<? super OfferShiftRequest> callback) {
@@ -148,16 +128,5 @@ public class OfferShiftRequestCollectionRequest extends BaseCollectionRequest<Of
     public OfferShiftRequestCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<OfferShiftRequest> buildFromResponse(final OfferShiftRequestCollectionResponse response) {
-        final OfferShiftRequestCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new OfferShiftRequestCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<OfferShiftRequest> page = new BaseCollectionPage<OfferShiftRequest>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

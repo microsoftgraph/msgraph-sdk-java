@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DirectoryRoleTemplateCollectionResponse;
 import com.microsoft.graph.requests.extensions.DirectoryRoleTemplateCollectionRequestBuilder;
@@ -25,7 +24,7 @@ import com.microsoft.graph.requests.extensions.DirectoryRoleTemplateCollectionRe
 /**
  * The class for the Directory Role Template Collection Request.
  */
-public class DirectoryRoleTemplateCollectionRequest extends BaseCollectionRequest<DirectoryRoleTemplate, DirectoryRoleTemplateCollectionResponse> {
+public class DirectoryRoleTemplateCollectionRequest extends BaseCollectionRequest<DirectoryRoleTemplate, DirectoryRoleTemplateCollectionResponse, DirectoryRoleTemplateCollectionPage> {
 
     /**
      * The request builder for this collection of DirectoryRoleTemplate
@@ -36,26 +35,7 @@ public class DirectoryRoleTemplateCollectionRequest extends BaseCollectionReques
      */
     @SuppressWarnings("unchecked")
     public DirectoryRoleTemplateCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DirectoryRoleTemplateCollectionResponse.class,(Class<BaseCollectionPage<DirectoryRoleTemplate>>) (new BaseCollectionPage<DirectoryRoleTemplate>(new java.util.ArrayList<DirectoryRoleTemplate>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<DirectoryRoleTemplate>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<DirectoryRoleTemplate> get() throws ClientException {
-        final DirectoryRoleTemplateCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, DirectoryRoleTemplateCollectionResponse.class, DirectoryRoleTemplateCollectionPage.class, DirectoryRoleTemplateCollectionRequestBuilder.class);
     }
 
     public void post(final DirectoryRoleTemplate newDirectoryRoleTemplate, final ICallback<? super DirectoryRoleTemplate> callback) {
@@ -147,16 +127,5 @@ public class DirectoryRoleTemplateCollectionRequest extends BaseCollectionReques
     public DirectoryRoleTemplateCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<DirectoryRoleTemplate> buildFromResponse(final DirectoryRoleTemplateCollectionResponse response) {
-        final DirectoryRoleTemplateCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DirectoryRoleTemplateCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<DirectoryRoleTemplate> page = new BaseCollectionPage<DirectoryRoleTemplate>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Schedule Change Request Request Builder.
  */
-public class ScheduleChangeRequestRequestBuilder extends BaseRequestBuilder {
+public class ScheduleChangeRequestRequestBuilder extends BaseRequestBuilder<ScheduleChangeRequest> {
 
     /**
      * The request builder for the ScheduleChangeRequest

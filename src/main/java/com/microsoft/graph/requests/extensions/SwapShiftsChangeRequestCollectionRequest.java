@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.SwapShiftsChangeRequestCollectionResponse;
 import com.microsoft.graph.requests.extensions.SwapShiftsChangeRequestCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.SwapShiftsChangeRequestCollection
 /**
  * The class for the Swap Shifts Change Request Collection Request.
  */
-public class SwapShiftsChangeRequestCollectionRequest extends BaseCollectionRequest<SwapShiftsChangeRequest, SwapShiftsChangeRequestCollectionResponse> {
+public class SwapShiftsChangeRequestCollectionRequest extends BaseCollectionRequest<SwapShiftsChangeRequest, SwapShiftsChangeRequestCollectionResponse, SwapShiftsChangeRequestCollectionPage> {
 
     /**
      * The request builder for this collection of SwapShiftsChangeRequest
@@ -37,26 +36,7 @@ public class SwapShiftsChangeRequestCollectionRequest extends BaseCollectionRequ
      */
     @SuppressWarnings("unchecked")
     public SwapShiftsChangeRequestCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SwapShiftsChangeRequestCollectionResponse.class,(Class<BaseCollectionPage<SwapShiftsChangeRequest>>) (new BaseCollectionPage<SwapShiftsChangeRequest>(new java.util.ArrayList<SwapShiftsChangeRequest>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<SwapShiftsChangeRequest>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<SwapShiftsChangeRequest> get() throws ClientException {
-        final SwapShiftsChangeRequestCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, SwapShiftsChangeRequestCollectionResponse.class, SwapShiftsChangeRequestCollectionPage.class, SwapShiftsChangeRequestCollectionRequestBuilder.class);
     }
 
     public void post(final SwapShiftsChangeRequest newSwapShiftsChangeRequest, final ICallback<? super SwapShiftsChangeRequest> callback) {
@@ -148,16 +128,5 @@ public class SwapShiftsChangeRequestCollectionRequest extends BaseCollectionRequ
     public SwapShiftsChangeRequestCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<SwapShiftsChangeRequest> buildFromResponse(final SwapShiftsChangeRequestCollectionResponse response) {
-        final SwapShiftsChangeRequestCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new SwapShiftsChangeRequestCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<SwapShiftsChangeRequest> page = new BaseCollectionPage<SwapShiftsChangeRequest>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

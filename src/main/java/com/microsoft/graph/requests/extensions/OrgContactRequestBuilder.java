@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Org Contact Request Builder.
  */
-public class OrgContactRequestBuilder extends BaseRequestBuilder {
+public class OrgContactRequestBuilder extends BaseRequestBuilder<OrgContact> {
 
     /**
      * The request builder for the OrgContact

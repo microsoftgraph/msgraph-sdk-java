@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Mail Assessment Request Request Builder.
  */
-public class MailAssessmentRequestRequestBuilder extends BaseRequestBuilder {
+public class MailAssessmentRequestRequestBuilder extends BaseRequestBuilder<MailAssessmentRequest> {
 
     /**
      * The request builder for the MailAssessmentRequest

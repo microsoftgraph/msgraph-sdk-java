@@ -33,7 +33,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Policy Root Request Builder.
  */
-public class PolicyRootRequestBuilder extends BaseRequestBuilder {
+public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
 
     /**
      * The request builder for the PolicyRoot

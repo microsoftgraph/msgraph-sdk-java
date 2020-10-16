@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the File Assessment Request Request Builder.
  */
-public class FileAssessmentRequestRequestBuilder extends BaseRequestBuilder {
+public class FileAssessmentRequestRequestBuilder extends BaseRequestBuilder<FileAssessmentRequest> {
 
     /**
      * The request builder for the FileAssessmentRequest

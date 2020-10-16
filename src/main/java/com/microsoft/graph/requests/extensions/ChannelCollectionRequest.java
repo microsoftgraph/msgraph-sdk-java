@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ChannelCollectionResponse;
 import com.microsoft.graph.requests.extensions.ChannelCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.ChannelCollectionRequest;
 /**
  * The class for the Channel Collection Request.
  */
-public class ChannelCollectionRequest extends BaseCollectionRequest<Channel, ChannelCollectionResponse> {
+public class ChannelCollectionRequest extends BaseCollectionRequest<Channel, ChannelCollectionResponse, ChannelCollectionPage> {
 
     /**
      * The request builder for this collection of Channel
@@ -37,26 +36,7 @@ public class ChannelCollectionRequest extends BaseCollectionRequest<Channel, Cha
      */
     @SuppressWarnings("unchecked")
     public ChannelCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ChannelCollectionResponse.class,(Class<BaseCollectionPage<Channel>>) (new BaseCollectionPage<Channel>(new java.util.ArrayList<Channel>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<Channel>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<Channel> get() throws ClientException {
-        final ChannelCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, ChannelCollectionResponse.class, ChannelCollectionPage.class, ChannelCollectionRequestBuilder.class);
     }
 
     public void post(final Channel newChannel, final ICallback<? super Channel> callback) {
@@ -148,16 +128,5 @@ public class ChannelCollectionRequest extends BaseCollectionRequest<Channel, Cha
     public ChannelCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<Channel> buildFromResponse(final ChannelCollectionResponse response) {
-        final ChannelCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new ChannelCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<Channel> page = new BaseCollectionPage<Channel>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

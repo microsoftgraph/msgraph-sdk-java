@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.RestrictedSignInCollectionResponse;
 import com.microsoft.graph.requests.extensions.RestrictedSignInCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.RestrictedSignInCollectionRequest
 /**
  * The class for the Restricted Sign In Collection Request.
  */
-public class RestrictedSignInCollectionRequest extends BaseCollectionRequest<RestrictedSignIn, RestrictedSignInCollectionResponse> {
+public class RestrictedSignInCollectionRequest extends BaseCollectionRequest<RestrictedSignIn, RestrictedSignInCollectionResponse, RestrictedSignInCollectionPage> {
 
     /**
      * The request builder for this collection of RestrictedSignIn
@@ -37,26 +36,7 @@ public class RestrictedSignInCollectionRequest extends BaseCollectionRequest<Res
      */
     @SuppressWarnings("unchecked")
     public RestrictedSignInCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, RestrictedSignInCollectionResponse.class,(Class<BaseCollectionPage<RestrictedSignIn>>) (new BaseCollectionPage<RestrictedSignIn>(new java.util.ArrayList<RestrictedSignIn>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<RestrictedSignIn>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<RestrictedSignIn> get() throws ClientException {
-        final RestrictedSignInCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, RestrictedSignInCollectionResponse.class, RestrictedSignInCollectionPage.class, RestrictedSignInCollectionRequestBuilder.class);
     }
 
     public void post(final RestrictedSignIn newRestrictedSignIn, final ICallback<? super RestrictedSignIn> callback) {
@@ -148,16 +128,5 @@ public class RestrictedSignInCollectionRequest extends BaseCollectionRequest<Res
     public RestrictedSignInCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<RestrictedSignIn> buildFromResponse(final RestrictedSignInCollectionResponse response) {
-        final RestrictedSignInCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new RestrictedSignInCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<RestrictedSignIn> page = new BaseCollectionPage<RestrictedSignIn>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

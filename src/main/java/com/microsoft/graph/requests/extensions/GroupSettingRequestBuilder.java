@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Group Setting Request Builder.
  */
-public class GroupSettingRequestBuilder extends BaseRequestBuilder {
+public class GroupSettingRequestBuilder extends BaseRequestBuilder<GroupSetting> {
 
     /**
      * The request builder for the GroupSetting

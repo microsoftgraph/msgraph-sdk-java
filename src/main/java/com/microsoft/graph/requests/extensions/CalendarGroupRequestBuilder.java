@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Calendar Group Request Builder.
  */
-public class CalendarGroupRequestBuilder extends BaseRequestBuilder {
+public class CalendarGroupRequestBuilder extends BaseRequestBuilder<CalendarGroup> {
 
     /**
      * The request builder for the CalendarGroup

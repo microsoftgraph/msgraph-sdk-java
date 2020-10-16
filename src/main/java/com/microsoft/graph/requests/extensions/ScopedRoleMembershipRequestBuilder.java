@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Scoped Role Membership Request Builder.
  */
-public class ScopedRoleMembershipRequestBuilder extends BaseRequestBuilder {
+public class ScopedRoleMembershipRequestBuilder extends BaseRequestBuilder<ScopedRoleMembership> {
 
     /**
      * The request builder for the ScopedRoleMembership

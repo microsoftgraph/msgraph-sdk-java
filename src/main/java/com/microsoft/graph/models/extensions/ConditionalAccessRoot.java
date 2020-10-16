@@ -11,6 +11,8 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.NamedLocation;
 import com.microsoft.graph.models.extensions.ConditionalAccessPolicy;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.NamedLocationCollectionPage;
+import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -31,7 +33,7 @@ public class ConditionalAccessRoot extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "namedLocations", alternate = {"NamedLocations"})
     @Expose
-    public BaseCollectionPage<NamedLocation> namedLocations;
+    public NamedLocationCollectionPage namedLocations;
 
     /**
      * The Policies.
@@ -39,7 +41,7 @@ public class ConditionalAccessRoot extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "policies", alternate = {"Policies"})
     @Expose
-    public BaseCollectionPage<ConditionalAccessPolicy> policies;
+    public ConditionalAccessPolicyCollectionPage policies;
 
 
     /**
@@ -83,11 +85,11 @@ public class ConditionalAccessRoot extends Entity implements IJsonBackedObject {
 
 
         if (json.has("namedLocations")) {
-            namedLocations = serializer.deserializeObject(json.get("namedLocations").toString(), new BaseCollectionPage<NamedLocation>(new java.util.ArrayList<NamedLocation>(), null).getClass());
+            namedLocations = serializer.deserializeObject(json.get("namedLocations").toString(), NamedLocationCollectionPage.class);
         }
 
         if (json.has("policies")) {
-            policies = serializer.deserializeObject(json.get("policies").toString(), new BaseCollectionPage<ConditionalAccessPolicy>(new java.util.ArrayList<ConditionalAccessPolicy>(), null).getClass());
+            policies = serializer.deserializeObject(json.get("policies").toString(), ConditionalAccessPolicyCollectionPage.class);
         }
     }
 }

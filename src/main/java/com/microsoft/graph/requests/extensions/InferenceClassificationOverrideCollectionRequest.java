@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.InferenceClassificationOverrideCollectionResponse;
 import com.microsoft.graph.requests.extensions.InferenceClassificationOverrideCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.InferenceClassificationOverrideCo
 /**
  * The class for the Inference Classification Override Collection Request.
  */
-public class InferenceClassificationOverrideCollectionRequest extends BaseCollectionRequest<InferenceClassificationOverride, InferenceClassificationOverrideCollectionResponse> {
+public class InferenceClassificationOverrideCollectionRequest extends BaseCollectionRequest<InferenceClassificationOverride, InferenceClassificationOverrideCollectionResponse, InferenceClassificationOverrideCollectionPage> {
 
     /**
      * The request builder for this collection of InferenceClassificationOverride
@@ -37,26 +36,7 @@ public class InferenceClassificationOverrideCollectionRequest extends BaseCollec
      */
     @SuppressWarnings("unchecked")
     public InferenceClassificationOverrideCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, InferenceClassificationOverrideCollectionResponse.class,(Class<BaseCollectionPage<InferenceClassificationOverride>>) (new BaseCollectionPage<InferenceClassificationOverride>(new java.util.ArrayList<InferenceClassificationOverride>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<InferenceClassificationOverride>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<InferenceClassificationOverride> get() throws ClientException {
-        final InferenceClassificationOverrideCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, InferenceClassificationOverrideCollectionResponse.class, InferenceClassificationOverrideCollectionPage.class, InferenceClassificationOverrideCollectionRequestBuilder.class);
     }
 
     public void post(final InferenceClassificationOverride newInferenceClassificationOverride, final ICallback<? super InferenceClassificationOverride> callback) {
@@ -148,16 +128,5 @@ public class InferenceClassificationOverrideCollectionRequest extends BaseCollec
     public InferenceClassificationOverrideCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<InferenceClassificationOverride> buildFromResponse(final InferenceClassificationOverrideCollectionResponse response) {
-        final InferenceClassificationOverrideCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new InferenceClassificationOverrideCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<InferenceClassificationOverride> page = new BaseCollectionPage<InferenceClassificationOverride>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

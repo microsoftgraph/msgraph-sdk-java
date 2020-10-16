@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Teams Template Request Builder.
  */
-public class TeamsTemplateRequestBuilder extends BaseRequestBuilder {
+public class TeamsTemplateRequestBuilder extends BaseRequestBuilder<TeamsTemplate> {
 
     /**
      * The request builder for the TeamsTemplate

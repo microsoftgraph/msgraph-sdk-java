@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DeviceManagementTroubleshootingEventCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceManagementTroubleshootingEventCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.DeviceManagementTroubleshootingEv
 /**
  * The class for the Device Management Troubleshooting Event Collection Request.
  */
-public class DeviceManagementTroubleshootingEventCollectionRequest extends BaseCollectionRequest<DeviceManagementTroubleshootingEvent, DeviceManagementTroubleshootingEventCollectionResponse> {
+public class DeviceManagementTroubleshootingEventCollectionRequest extends BaseCollectionRequest<DeviceManagementTroubleshootingEvent, DeviceManagementTroubleshootingEventCollectionResponse, DeviceManagementTroubleshootingEventCollectionPage> {
 
     /**
      * The request builder for this collection of DeviceManagementTroubleshootingEvent
@@ -37,26 +36,7 @@ public class DeviceManagementTroubleshootingEventCollectionRequest extends BaseC
      */
     @SuppressWarnings("unchecked")
     public DeviceManagementTroubleshootingEventCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceManagementTroubleshootingEventCollectionResponse.class,(Class<BaseCollectionPage<DeviceManagementTroubleshootingEvent>>) (new BaseCollectionPage<DeviceManagementTroubleshootingEvent>(new java.util.ArrayList<DeviceManagementTroubleshootingEvent>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<DeviceManagementTroubleshootingEvent>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<DeviceManagementTroubleshootingEvent> get() throws ClientException {
-        final DeviceManagementTroubleshootingEventCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, DeviceManagementTroubleshootingEventCollectionResponse.class, DeviceManagementTroubleshootingEventCollectionPage.class, DeviceManagementTroubleshootingEventCollectionRequestBuilder.class);
     }
 
     public void post(final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent, final ICallback<? super DeviceManagementTroubleshootingEvent> callback) {
@@ -148,16 +128,5 @@ public class DeviceManagementTroubleshootingEventCollectionRequest extends BaseC
     public DeviceManagementTroubleshootingEventCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<DeviceManagementTroubleshootingEvent> buildFromResponse(final DeviceManagementTroubleshootingEventCollectionResponse response) {
-        final DeviceManagementTroubleshootingEventCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DeviceManagementTroubleshootingEventCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<DeviceManagementTroubleshootingEvent> page = new BaseCollectionPage<DeviceManagementTroubleshootingEvent>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

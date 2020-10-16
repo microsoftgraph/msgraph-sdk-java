@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionResponse;
 import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionReq
 /**
  * The class for the Teams App Installation Collection Request.
  */
-public class TeamsAppInstallationCollectionRequest extends BaseCollectionRequest<TeamsAppInstallation, TeamsAppInstallationCollectionResponse> {
+public class TeamsAppInstallationCollectionRequest extends BaseCollectionRequest<TeamsAppInstallation, TeamsAppInstallationCollectionResponse, TeamsAppInstallationCollectionPage> {
 
     /**
      * The request builder for this collection of TeamsAppInstallation
@@ -37,26 +36,7 @@ public class TeamsAppInstallationCollectionRequest extends BaseCollectionRequest
      */
     @SuppressWarnings("unchecked")
     public TeamsAppInstallationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TeamsAppInstallationCollectionResponse.class,(Class<BaseCollectionPage<TeamsAppInstallation>>) (new BaseCollectionPage<TeamsAppInstallation>(new java.util.ArrayList<TeamsAppInstallation>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<TeamsAppInstallation>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<TeamsAppInstallation> get() throws ClientException {
-        final TeamsAppInstallationCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, TeamsAppInstallationCollectionResponse.class, TeamsAppInstallationCollectionPage.class, TeamsAppInstallationCollectionRequestBuilder.class);
     }
 
     public void post(final TeamsAppInstallation newTeamsAppInstallation, final ICallback<? super TeamsAppInstallation> callback) {
@@ -148,16 +128,5 @@ public class TeamsAppInstallationCollectionRequest extends BaseCollectionRequest
     public TeamsAppInstallationCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<TeamsAppInstallation> buildFromResponse(final TeamsAppInstallationCollectionResponse response) {
-        final TeamsAppInstallationCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new TeamsAppInstallationCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<TeamsAppInstallation> page = new BaseCollectionPage<TeamsAppInstallation>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

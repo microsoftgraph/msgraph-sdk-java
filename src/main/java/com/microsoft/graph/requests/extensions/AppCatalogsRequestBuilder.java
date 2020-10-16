@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the App Catalogs Request Builder.
  */
-public class AppCatalogsRequestBuilder extends BaseRequestBuilder {
+public class AppCatalogsRequestBuilder extends BaseRequestBuilder<AppCatalogs> {
 
     /**
      * The request builder for the AppCatalogs

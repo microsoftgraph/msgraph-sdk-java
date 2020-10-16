@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionRequ
 /**
  * The class for the Token Issuance Policy Collection Request.
  */
-public class TokenIssuancePolicyCollectionRequest extends BaseCollectionRequest<TokenIssuancePolicy, TokenIssuancePolicyCollectionResponse> {
+public class TokenIssuancePolicyCollectionRequest extends BaseCollectionRequest<TokenIssuancePolicy, TokenIssuancePolicyCollectionResponse, TokenIssuancePolicyCollectionPage> {
 
     /**
      * The request builder for this collection of TokenIssuancePolicy
@@ -37,26 +36,7 @@ public class TokenIssuancePolicyCollectionRequest extends BaseCollectionRequest<
      */
     @SuppressWarnings("unchecked")
     public TokenIssuancePolicyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TokenIssuancePolicyCollectionResponse.class,(Class<BaseCollectionPage<TokenIssuancePolicy>>) (new BaseCollectionPage<TokenIssuancePolicy>(new java.util.ArrayList<TokenIssuancePolicy>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<TokenIssuancePolicy>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<TokenIssuancePolicy> get() throws ClientException {
-        final TokenIssuancePolicyCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, TokenIssuancePolicyCollectionResponse.class, TokenIssuancePolicyCollectionPage.class, TokenIssuancePolicyCollectionRequestBuilder.class);
     }
 
     public void post(final TokenIssuancePolicy newTokenIssuancePolicy, final ICallback<? super TokenIssuancePolicy> callback) {
@@ -148,16 +128,5 @@ public class TokenIssuancePolicyCollectionRequest extends BaseCollectionRequest<
     public TokenIssuancePolicyCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<TokenIssuancePolicy> buildFromResponse(final TokenIssuancePolicyCollectionResponse response) {
-        final TokenIssuancePolicyCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new TokenIssuancePolicyCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<TokenIssuancePolicy> page = new BaseCollectionPage<TokenIssuancePolicy>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

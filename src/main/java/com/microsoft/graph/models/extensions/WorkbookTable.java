@@ -13,6 +13,8 @@ import com.microsoft.graph.models.extensions.WorkbookTableRow;
 import com.microsoft.graph.models.extensions.WorkbookTableSort;
 import com.microsoft.graph.models.extensions.WorkbookWorksheet;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.WorkbookTableColumnCollectionPage;
+import com.microsoft.graph.requests.extensions.WorkbookTableRowCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -113,7 +115,7 @@ public class WorkbookTable extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "columns", alternate = {"Columns"})
     @Expose
-    public BaseCollectionPage<WorkbookTableColumn> columns;
+    public WorkbookTableColumnCollectionPage columns;
 
     /**
      * The Rows.
@@ -121,7 +123,7 @@ public class WorkbookTable extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "rows", alternate = {"Rows"})
     @Expose
-    public BaseCollectionPage<WorkbookTableRow> rows;
+    public WorkbookTableRowCollectionPage rows;
 
     /**
      * The Sort.
@@ -181,11 +183,11 @@ public class WorkbookTable extends Entity implements IJsonBackedObject {
 
 
         if (json.has("columns")) {
-            columns = serializer.deserializeObject(json.get("columns").toString(), new BaseCollectionPage<WorkbookTableColumn>(new java.util.ArrayList<WorkbookTableColumn>(), null).getClass());
+            columns = serializer.deserializeObject(json.get("columns").toString(), WorkbookTableColumnCollectionPage.class);
         }
 
         if (json.has("rows")) {
-            rows = serializer.deserializeObject(json.get("rows").toString(), new BaseCollectionPage<WorkbookTableRow>(new java.util.ArrayList<WorkbookTableRow>(), null).getClass());
+            rows = serializer.deserializeObject(json.get("rows").toString(), WorkbookTableRowCollectionPage.class);
         }
     }
 }

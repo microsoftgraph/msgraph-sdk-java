@@ -11,6 +11,8 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.AdministrativeUnit;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.AdministrativeUnitCollectionPage;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -31,7 +33,7 @@ public class Directory extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "administrativeUnits", alternate = {"AdministrativeUnits"})
     @Expose
-    public BaseCollectionPage<AdministrativeUnit> administrativeUnits;
+    public AdministrativeUnitCollectionPage administrativeUnits;
 
     /**
      * The Deleted Items.
@@ -39,7 +41,7 @@ public class Directory extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "deletedItems", alternate = {"DeletedItems"})
     @Expose
-    public BaseCollectionPage<DirectoryObject> deletedItems;
+    public DirectoryObjectCollectionPage deletedItems;
 
 
     /**
@@ -83,11 +85,11 @@ public class Directory extends Entity implements IJsonBackedObject {
 
 
         if (json.has("administrativeUnits")) {
-            administrativeUnits = serializer.deserializeObject(json.get("administrativeUnits").toString(), new BaseCollectionPage<AdministrativeUnit>(new java.util.ArrayList<AdministrativeUnit>(), null).getClass());
+            administrativeUnits = serializer.deserializeObject(json.get("administrativeUnits").toString(), AdministrativeUnitCollectionPage.class);
         }
 
         if (json.has("deletedItems")) {
-            deletedItems = serializer.deserializeObject(json.get("deletedItems").toString(), new BaseCollectionPage<DirectoryObject>(new java.util.ArrayList<DirectoryObject>(), null).getClass());
+            deletedItems = serializer.deserializeObject(json.get("deletedItems").toString(), DirectoryObjectCollectionPage.class);
         }
     }
 }

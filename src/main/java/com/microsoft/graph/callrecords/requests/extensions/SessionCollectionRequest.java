@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.callrecords.requests.extensions.SessionCollectionResponse;
 import com.microsoft.graph.callrecords.requests.extensions.SessionCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.callrecords.requests.extensions.SessionCollectionRequ
 /**
  * The class for the Session Collection Request.
  */
-public class SessionCollectionRequest extends BaseCollectionRequest<Session, SessionCollectionResponse> {
+public class SessionCollectionRequest extends BaseCollectionRequest<Session, SessionCollectionResponse, SessionCollectionPage> {
 
     /**
      * The request builder for this collection of Session
@@ -37,26 +36,7 @@ public class SessionCollectionRequest extends BaseCollectionRequest<Session, Ses
      */
     @SuppressWarnings("unchecked")
     public SessionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SessionCollectionResponse.class,(Class<BaseCollectionPage<Session>>) (new BaseCollectionPage<Session>(new java.util.ArrayList<Session>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<Session>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<Session> get() throws ClientException {
-        final SessionCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, SessionCollectionResponse.class, SessionCollectionPage.class, SessionCollectionRequestBuilder.class);
     }
 
     public void post(final Session newSession, final ICallback<? super Session> callback) {
@@ -148,16 +128,5 @@ public class SessionCollectionRequest extends BaseCollectionRequest<Session, Ses
     public SessionCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<Session> buildFromResponse(final SessionCollectionResponse response) {
-        final SessionCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new SessionCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<Session> page = new BaseCollectionPage<Session>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

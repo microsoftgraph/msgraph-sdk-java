@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.VppTokenCollectionResponse;
 import com.microsoft.graph.requests.extensions.VppTokenCollectionRequestBuilder;
@@ -26,7 +25,7 @@ import com.microsoft.graph.requests.extensions.VppTokenCollectionRequest;
 /**
  * The class for the Vpp Token Collection Request.
  */
-public class VppTokenCollectionRequest extends BaseCollectionRequest<VppToken, VppTokenCollectionResponse> {
+public class VppTokenCollectionRequest extends BaseCollectionRequest<VppToken, VppTokenCollectionResponse, VppTokenCollectionPage> {
 
     /**
      * The request builder for this collection of VppToken
@@ -37,26 +36,7 @@ public class VppTokenCollectionRequest extends BaseCollectionRequest<VppToken, V
      */
     @SuppressWarnings("unchecked")
     public VppTokenCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, VppTokenCollectionResponse.class,(Class<BaseCollectionPage<VppToken>>) (new BaseCollectionPage<VppToken>(new java.util.ArrayList<VppToken>(), null).getClass()));
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<VppToken>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<VppToken> get() throws ClientException {
-        final VppTokenCollectionResponse response = send();
-        return buildFromResponse(response);
+        super(requestUrl, client, requestOptions, VppTokenCollectionResponse.class, VppTokenCollectionPage.class, VppTokenCollectionRequestBuilder.class);
     }
 
     public void post(final VppToken newVppToken, final ICallback<? super VppToken> callback) {
@@ -148,16 +128,5 @@ public class VppTokenCollectionRequest extends BaseCollectionRequest<VppToken, V
     public VppTokenCollectionRequest skipToken(final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return this;
-    }
-    public BaseCollectionPage<VppToken> buildFromResponse(final VppTokenCollectionResponse response) {
-        final VppTokenCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new VppTokenCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final BaseCollectionPage<VppToken> page = new BaseCollectionPage<VppToken>(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
     }
 }

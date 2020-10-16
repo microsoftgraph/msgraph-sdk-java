@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows Phone81Compliance Policy Request Builder.
  */
-public class WindowsPhone81CompliancePolicyRequestBuilder extends BaseRequestBuilder {
+public class WindowsPhone81CompliancePolicyRequestBuilder extends BaseRequestBuilder<WindowsPhone81CompliancePolicy> {
 
     /**
      * The request builder for the WindowsPhone81CompliancePolicy

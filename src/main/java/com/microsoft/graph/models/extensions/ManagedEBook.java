@@ -14,6 +14,9 @@ import com.microsoft.graph.models.extensions.DeviceInstallState;
 import com.microsoft.graph.models.extensions.EBookInstallSummary;
 import com.microsoft.graph.models.extensions.UserInstallStateSummary;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.ManagedEBookAssignmentCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionPage;
+import com.microsoft.graph.requests.extensions.UserInstallStateSummaryCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -106,7 +109,7 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
-    public BaseCollectionPage<ManagedEBookAssignment> assignments;
+    public ManagedEBookAssignmentCollectionPage assignments;
 
     /**
      * The Device States.
@@ -114,7 +117,7 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "deviceStates", alternate = {"DeviceStates"})
     @Expose
-    public BaseCollectionPage<DeviceInstallState> deviceStates;
+    public DeviceInstallStateCollectionPage deviceStates;
 
     /**
      * The Install Summary.
@@ -130,7 +133,7 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "userStateSummary", alternate = {"UserStateSummary"})
     @Expose
-    public BaseCollectionPage<UserInstallStateSummary> userStateSummary;
+    public UserInstallStateSummaryCollectionPage userStateSummary;
 
 
     /**
@@ -174,15 +177,15 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments").toString(), new BaseCollectionPage<ManagedEBookAssignment>(new java.util.ArrayList<ManagedEBookAssignment>(), null).getClass());
+            assignments = serializer.deserializeObject(json.get("assignments").toString(), ManagedEBookAssignmentCollectionPage.class);
         }
 
         if (json.has("deviceStates")) {
-            deviceStates = serializer.deserializeObject(json.get("deviceStates").toString(), new BaseCollectionPage<DeviceInstallState>(new java.util.ArrayList<DeviceInstallState>(), null).getClass());
+            deviceStates = serializer.deserializeObject(json.get("deviceStates").toString(), DeviceInstallStateCollectionPage.class);
         }
 
         if (json.has("userStateSummary")) {
-            userStateSummary = serializer.deserializeObject(json.get("userStateSummary").toString(), new BaseCollectionPage<UserInstallStateSummary>(new java.util.ArrayList<UserInstallStateSummary>(), null).getClass());
+            userStateSummary = serializer.deserializeObject(json.get("userStateSummary").toString(), UserInstallStateSummaryCollectionPage.class);
         }
     }
 }

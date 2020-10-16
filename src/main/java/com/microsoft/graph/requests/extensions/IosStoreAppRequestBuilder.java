@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Ios Store App Request Builder.
  */
-public class IosStoreAppRequestBuilder extends BaseRequestBuilder {
+public class IosStoreAppRequestBuilder extends BaseRequestBuilder<IosStoreApp> {
 
     /**
      * The request builder for the IosStoreApp

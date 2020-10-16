@@ -24,7 +24,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Audit Log Root Request Builder.
  */
-public class AuditLogRootRequestBuilder extends BaseRequestBuilder {
+public class AuditLogRootRequestBuilder extends BaseRequestBuilder<AuditLogRoot> {
 
     /**
      * The request builder for the AuditLogRoot

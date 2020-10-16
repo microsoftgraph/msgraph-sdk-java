@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Shift Preferences Request Builder.
  */
-public class ShiftPreferencesRequestBuilder extends BaseRequestBuilder {
+public class ShiftPreferencesRequestBuilder extends BaseRequestBuilder<ShiftPreferences> {
 
     /**
      * The request builder for the ShiftPreferences

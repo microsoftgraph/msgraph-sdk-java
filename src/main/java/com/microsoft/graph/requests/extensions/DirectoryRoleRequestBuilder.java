@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Directory Role Request Builder.
  */
-public class DirectoryRoleRequestBuilder extends BaseRequestBuilder {
+public class DirectoryRoleRequestBuilder extends BaseRequestBuilder<DirectoryRole> {
 
     /**
      * The request builder for the DirectoryRole

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Domain Dns Unavailable Record Request Builder.
  */
-public class DomainDnsUnavailableRecordRequestBuilder extends BaseRequestBuilder {
+public class DomainDnsUnavailableRecordRequestBuilder extends BaseRequestBuilder<DomainDnsUnavailableRecord> {
 
     /**
      * The request builder for the DomainDnsUnavailableRecord
