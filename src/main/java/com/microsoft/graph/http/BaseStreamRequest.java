@@ -49,7 +49,7 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
     /**
      * The base request for this collection request
      */
-    private final BaseRequest baseRequest;
+    private final BaseRequest<T> baseRequest;
 
     /**
      * Creates the stream request.
@@ -63,7 +63,7 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
                              final IBaseClient client,
                              final List<? extends Option> options,
                              final Class<T> responseClass) {
-        baseRequest = new BaseRequest(requestUrl, client, options, responseClass) {
+        baseRequest = new BaseRequest<T>(requestUrl, client, options, responseClass) {
         };
     }
 

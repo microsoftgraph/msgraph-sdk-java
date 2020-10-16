@@ -38,12 +38,13 @@ public abstract class BaseCollectionWithReferencesRequestBuilder<T, T2 extends B
                             T3 extends BaseReferenceRequestBuilder<T, ? extends BaseReferenceRequest<T>>,
                             T4 extends BaseWithReferenceRequestBuilder<T, T2, T3>,
                             T5 extends ICollectionResponse<T>,
-                            T6 extends BaseCollectionRequest<T, T5>,
-                            T7 extends BaseCollectionWithReferencesRequest<T, T2, T3, T4, T5, T6>> extends BaseRequestBuilder<T> {
-
-    private Class<T4> refRequestBuilderClass;
-    private Class<T6> collRequestClass;
-    private Class<T7> collWithReferencesRequestClass;
+                            T6 extends BaseCollectionPage<T>,
+                            T7 extends BaseCollectionRequest<T, T5, T6>,
+                            T8 extends BaseCollectionWithReferencesRequest<T, T2, T3, T4, T5, T6, T7>> extends BaseCollectionRequestBuilder<T, T3, T5, T6, T8> {
+    private final Class<T3> refRequestBuilderClass;
+    private final Class<T8> collRequestClass;
+    private final Class<T5> respClass;
+    private final Class<T6> collPageClass;
     /**
      * The request builder for this collection
      *
@@ -52,50 +53,18 @@ public abstract class BaseCollectionWithReferencesRequestBuilder<T, T2 extends B
      * @param requestOptions the options for this request
      */
     public BaseCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-                                                    final Class<T4> referenceRequestBuilderClass,
-                                                    final Class<T6> collectionRequestClass,
-                                                    final Class<T7> collectionWithReferencesRequestClass) {
-        super(requestUrl, client, requestOptions);
+                                                    final Class<T3> referenceRequestBuilderClass,
+                                                    final Class<T5> responseClass,
+                                                    final Class<T6> collectionPageClass,
+                                                    final Class<T8> collectionWithReferencesRequestClass) {
+        super(requestUrl, client, requestOptions, referenceRequestBuilderClass, responseClass, collectionPageClass, collectionWithReferencesRequestClass);
         this.refRequestBuilderClass = referenceRequestBuilderClass;
-        this.collRequestClass = collectionRequestClass;
-        this.collWithReferencesRequestClass = collectionWithReferencesRequestClass;
+        this.collRequestClass = collectionWithReferencesRequestClass;
+        this.respClass = responseClass;
+        this.collPageClass = collectionPageClass;
     }
 
-    /**
-     * Creates the request
-     *
-     * @param requestOptions the options for this request
-     * @return the IUserRequest instance
-     */
-    public T7 buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
-        return buildRequest(getOptions(requestOptions));
-    }
-
-    /**
-     * Creates the request
-     *
-     * @param requestOptions the options for this request
-     * @return the IUserRequest instance
-     */
-    public T7 buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        try {
-            return collWithReferencesRequestClass.getConstructor(String.class, IBaseClient.class, getOptions().getClass())
-                                .newInstance(getRequestUrl(), getClient(), getOptions());
-        } catch (IllegalArgumentException | InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException | SecurityException ex) {
-            return null;
-		}
-    }
-
-    public T4 byId(final String id) {
-        try {
-            return refRequestBuilderClass.getConstructor(String.class, IBaseClient.class, getOptions().getClass())
-                                .newInstance(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
-        } catch (IllegalArgumentException | InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException | SecurityException ex) {
-            return null;
-		}
-    }
-
-    public BaseCollectionReferenceRequestBuilder<T, T5, T6> references(){
-        return new BaseCollectionReferenceRequestBuilder<T, T5, T6>(getRequestUrl() + "/$ref", getClient(), getOptions(), collRequestClass);
+    public BaseCollectionReferenceRequestBuilder<T, T3, T5, T6, T8> references(){
+        return new BaseCollectionReferenceRequestBuilder<T, T3, T5, T6, T8>(getRequestUrl() + "/$ref", getClient(), getOptions(), refRequestBuilderClass, respClass, collPageClass, collRequestClass);
     }
 }

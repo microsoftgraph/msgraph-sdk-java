@@ -40,9 +40,9 @@ public abstract class BaseCollectionWithReferencesRequest<T,T2 extends BaseWithR
                                         T3 extends BaseReferenceRequestBuilder<T, ? extends BaseReferenceRequest<T>>,
                                         T4 extends BaseWithReferenceRequestBuilder<T, T2, T3>,
                                         T5 extends ICollectionResponse<T>,
-                                        T6 extends BaseCollectionRequest<T, T5>> extends BaseCollectionRequest<T, T5> {
+                                        T6 extends BaseCollectionPage<T>,
+                                        T7 extends BaseCollectionRequest<T, T5, T6>> extends BaseCollectionRequest<T, T5, T6> {
     
-    private Class<? extends BaseCollectionWithReferencesRequestBuilder<T, T2, T3, T4, T5, T6, ? extends BaseCollectionWithReferencesRequest<T, T2, T3, T4, T5, T6>>> collWithReferencesRequestBuilderClass;
     /**
      * The request builder for this collection of User
      *
@@ -52,46 +52,8 @@ public abstract class BaseCollectionWithReferencesRequest<T,T2 extends BaseWithR
      */
     public BaseCollectionWithReferencesRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
                                                 final Class<T5> collectionResponseClass,
-                                                final Class<BaseCollectionPage<T>> collectionPageClass,
-                                                final Class<? extends BaseCollectionWithReferencesRequestBuilder<T, T2, T3, T4, T5, T6, ? extends BaseCollectionWithReferencesRequest<T, T2, T3, T4, T5, T6>>> collectionWithReferencesRequestBuilderClass) {
-        super(requestUrl, client, requestOptions, collectionResponseClass, collectionPageClass);
-        this.collWithReferencesRequestBuilderClass = collectionWithReferencesRequestBuilderClass;
-    }
-
-    public void get(final ICallback<? super BaseCollectionPage<T>> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public BaseCollectionPage<T> get() throws ClientException {
-        final ICollectionResponse<T> response = send();
-        return buildFromResponse(response);
-    }
-
-    @SuppressWarnings("unchecked")
-    public BaseCollectionPage<T> buildFromResponse(final ICollectionResponse<T> response) {
-        if (response.nextLink() != null) {
-            final List<com.microsoft.graph.options.Option> options = new java.util.ArrayList<com.microsoft.graph.options.Option>();
-            try {
-                final Object builder = this.collWithReferencesRequestBuilderClass.getConstructor(response.nextLink().getClass(), getBaseRequest().getClient().getClass(), options.getClass())
-                        .newInstance(response.nextLink(), getBaseRequest().getClient(), options);
-                final BaseCollectionPage<T> page = new BaseCollectionPage<T>(response, (BaseCollectionWithReferencesRequestBuilder<T, T2, T3, T4, T5, T6, BaseCollectionWithReferencesRequest<T, T2, T3, T4, T5, T6>>)builder);
-                page.setRawObject(response.getSerializer(), response.getRawObject());
-                return page;
-            } catch(IllegalArgumentException | InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException | SecurityException ex) {
-                return null;
-            }
-        } else {
-            return null;
-        }
+                                                final Class<T6> collectionPageClass,
+                                                final Class<? extends BaseCollectionWithReferencesRequestBuilder<T, T2, T3, T4, T5, T6, T7, ? extends BaseCollectionWithReferencesRequest<T, T2, T3, T4, T5, T6, T7>>> collectionWithReferencesRequestBuilderClass) {
+        super(requestUrl, client, requestOptions, collectionResponseClass, collectionPageClass, collectionWithReferencesRequestBuilderClass);
     }
 }

@@ -31,10 +31,11 @@ import java.util.List;
 /**
  * A request builder
  */
-public class BaseCollectionReferenceRequestBuilder<T1, T2 extends ICollectionResponse<T1>, T3 extends BaseCollectionRequest<T1, T2>> extends BaseRequestBuilder<T1> {
-
-    private Class<T3> colReferenceRequestBuilderClass;
-
+public class BaseCollectionReferenceRequestBuilder<T, T2 extends BaseRequestBuilder<T>,
+                                                    T3 extends ICollectionResponse<T>,
+                                                    T4 extends BaseCollectionPage<T>,
+                                                    T5 extends BaseCollectionRequest<T, T3, T4>> extends BaseCollectionRequestBuilder<T, T2, T3, T4, T5> {
+// TODO type constraints need to be more explicit to require with reference
     /**
      * The request builder for this collection 
      *
@@ -43,33 +44,10 @@ public class BaseCollectionReferenceRequestBuilder<T1, T2 extends ICollectionRes
      * @param requestOptions the options for this request
      */
     public BaseCollectionReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-                                                final Class<T3> collectionReferenceRequestBuilderClass) {
-        super(requestUrl, client, requestOptions);
-        this.colReferenceRequestBuilderClass = collectionReferenceRequestBuilderClass;
-    }
-
-    /**
-     * Creates the request
-     *
-     * @param requestOptions the options for this request
-     * @return the IUserRequest instance
-     */
-    public T3 buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
-        return buildRequest(getOptions(requestOptions));
-    }
-
-    /**
-     * Creates the request
-     *
-     * @param requestOptions the options for this request
-     * @return the IUserRequest instance
-     */
-    public T3 buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        try {
-            return colReferenceRequestBuilderClass.getConstructor(String.class, IBaseClient.class, requestOptions.getClass())
-                                .newInstance(getRequestUrl(), getClient(), requestOptions);
-        } catch (IllegalArgumentException | InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException | SecurityException ex) {
-            return null;
-		}
+										final Class<T2> requestBuilderClass,
+                                        final Class<T3> responseCollectionClass,
+                                        final Class<T4> collectionPageClass,
+										final Class<T5> collectionRequestClass) {
+        super(requestUrl, client, requestOptions, requestBuilderClass, responseCollectionClass, collectionPageClass, collectionRequestClass);
     }
 }
