@@ -35,7 +35,6 @@ public class ListItemCollectionRequest extends BaseCollectionRequest<ListItem, L
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public ListItemCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ListItemCollectionResponse.class, ListItemCollectionPage.class, ListItemCollectionRequestBuilder.class);
     }

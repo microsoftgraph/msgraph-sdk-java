@@ -29,7 +29,6 @@ public class ApplicationAddPasswordRequest extends BaseRequest<PasswordCredentia
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public ApplicationAddPasswordRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PasswordCredential.class);
         body = new ApplicationAddPasswordBody();

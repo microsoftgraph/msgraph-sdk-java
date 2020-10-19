@@ -34,7 +34,6 @@ public class TeamsAppCollectionRequest extends BaseCollectionRequest<TeamsApp, T
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public TeamsAppCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TeamsAppCollectionResponse.class, TeamsAppCollectionPage.class, TeamsAppCollectionRequestBuilder.class);
     }

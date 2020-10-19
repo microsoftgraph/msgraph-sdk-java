@@ -34,7 +34,6 @@ public class SecureScoreControlProfileCollectionRequest extends BaseCollectionRe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public SecureScoreControlProfileCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SecureScoreControlProfileCollectionResponse.class, SecureScoreControlProfileCollectionPage.class, SecureScoreControlProfileCollectionRequestBuilder.class);
     }

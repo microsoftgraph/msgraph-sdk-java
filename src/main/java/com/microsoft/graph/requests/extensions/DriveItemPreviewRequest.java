@@ -29,7 +29,6 @@ public class DriveItemPreviewRequest extends BaseRequest<ItemPreviewInfo> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public DriveItemPreviewRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ItemPreviewInfo.class);
         body = new DriveItemPreviewBody();

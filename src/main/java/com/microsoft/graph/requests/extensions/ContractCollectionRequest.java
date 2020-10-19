@@ -33,7 +33,6 @@ public class ContractCollectionRequest extends BaseCollectionRequest<Contract, C
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public ContractCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ContractCollectionResponse.class, ContractCollectionPage.class, ContractCollectionRequestBuilder.class);
     }

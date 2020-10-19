@@ -34,7 +34,6 @@ public class RoomCollectionRequest extends BaseCollectionRequest<Room, RoomColle
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public RoomCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, RoomCollectionResponse.class, RoomCollectionPage.class, RoomCollectionRequestBuilder.class);
     }

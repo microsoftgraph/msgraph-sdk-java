@@ -29,7 +29,6 @@ public class WorkbookFunctionsSkew_pRequest extends BaseRequest<WorkbookFunction
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public WorkbookFunctionsSkew_pRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsSkew_pBody();

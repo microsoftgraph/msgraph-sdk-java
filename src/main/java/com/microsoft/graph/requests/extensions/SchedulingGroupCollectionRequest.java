@@ -34,7 +34,6 @@ public class SchedulingGroupCollectionRequest extends BaseCollectionRequest<Sche
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public SchedulingGroupCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SchedulingGroupCollectionResponse.class, SchedulingGroupCollectionPage.class, SchedulingGroupCollectionRequestBuilder.class);
     }

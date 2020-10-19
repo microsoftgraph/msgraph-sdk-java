@@ -33,7 +33,6 @@ public class DomainDnsRecordCollectionRequest extends BaseCollectionRequest<Doma
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public DomainDnsRecordCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DomainDnsRecordCollectionResponse.class, DomainDnsRecordCollectionPage.class, DomainDnsRecordCollectionRequestBuilder.class);
     }

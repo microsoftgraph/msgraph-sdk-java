@@ -34,7 +34,6 @@ public class ActivityBasedTimeoutPolicyCollectionRequest extends BaseCollectionR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public ActivityBasedTimeoutPolicyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ActivityBasedTimeoutPolicyCollectionResponse.class, ActivityBasedTimeoutPolicyCollectionPage.class, ActivityBasedTimeoutPolicyCollectionRequestBuilder.class);
     }

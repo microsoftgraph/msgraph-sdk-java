@@ -34,7 +34,6 @@ public class MailFolderDeltaCollectionRequest extends BaseCollectionRequest<Mail
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public MailFolderDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MailFolderDeltaCollectionResponse.class, MailFolderDeltaCollectionPage.class, MailFolderDeltaCollectionRequestBuilder.class);
     }

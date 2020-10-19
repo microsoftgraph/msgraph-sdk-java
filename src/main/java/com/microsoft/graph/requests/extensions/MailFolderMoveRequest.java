@@ -29,7 +29,6 @@ public class MailFolderMoveRequest extends BaseRequest<MailFolder> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public MailFolderMoveRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MailFolder.class);
         body = new MailFolderMoveBody();

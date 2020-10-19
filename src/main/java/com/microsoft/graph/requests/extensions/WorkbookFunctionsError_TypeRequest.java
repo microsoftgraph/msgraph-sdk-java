@@ -29,7 +29,6 @@ public class WorkbookFunctionsError_TypeRequest extends BaseRequest<WorkbookFunc
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public WorkbookFunctionsError_TypeRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsError_TypeBody();

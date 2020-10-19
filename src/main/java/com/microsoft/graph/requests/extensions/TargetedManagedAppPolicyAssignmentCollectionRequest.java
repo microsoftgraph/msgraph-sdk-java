@@ -34,7 +34,6 @@ public class TargetedManagedAppPolicyAssignmentCollectionRequest extends BaseCol
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public TargetedManagedAppPolicyAssignmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TargetedManagedAppPolicyAssignmentCollectionResponse.class, TargetedManagedAppPolicyAssignmentCollectionPage.class, TargetedManagedAppPolicyAssignmentCollectionRequestBuilder.class);
     }

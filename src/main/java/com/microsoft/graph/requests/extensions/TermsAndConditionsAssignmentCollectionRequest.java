@@ -34,7 +34,6 @@ public class TermsAndConditionsAssignmentCollectionRequest extends BaseCollectio
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public TermsAndConditionsAssignmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TermsAndConditionsAssignmentCollectionResponse.class, TermsAndConditionsAssignmentCollectionPage.class, TermsAndConditionsAssignmentCollectionRequestBuilder.class);
     }

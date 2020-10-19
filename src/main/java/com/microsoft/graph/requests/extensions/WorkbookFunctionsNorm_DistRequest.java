@@ -29,7 +29,6 @@ public class WorkbookFunctionsNorm_DistRequest extends BaseRequest<WorkbookFunct
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public WorkbookFunctionsNorm_DistRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsNorm_DistBody();

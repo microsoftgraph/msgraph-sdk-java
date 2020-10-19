@@ -34,7 +34,6 @@ public class OutlookCategoryCollectionRequest extends BaseCollectionRequest<Outl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public OutlookCategoryCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OutlookCategoryCollectionResponse.class, OutlookCategoryCollectionPage.class, OutlookCategoryCollectionRequestBuilder.class);
     }

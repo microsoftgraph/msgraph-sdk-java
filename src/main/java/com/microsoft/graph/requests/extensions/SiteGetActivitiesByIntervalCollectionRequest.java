@@ -34,7 +34,6 @@ public class SiteGetActivitiesByIntervalCollectionRequest extends BaseCollection
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public SiteGetActivitiesByIntervalCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SiteGetActivitiesByIntervalCollectionResponse.class, SiteGetActivitiesByIntervalCollectionPage.class, SiteGetActivitiesByIntervalCollectionRequestBuilder.class);
     }

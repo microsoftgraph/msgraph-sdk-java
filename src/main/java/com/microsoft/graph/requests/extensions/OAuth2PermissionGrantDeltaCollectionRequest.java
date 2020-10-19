@@ -34,7 +34,6 @@ public class OAuth2PermissionGrantDeltaCollectionRequest extends BaseCollectionR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public OAuth2PermissionGrantDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OAuth2PermissionGrantDeltaCollectionResponse.class, OAuth2PermissionGrantDeltaCollectionPage.class, OAuth2PermissionGrantDeltaCollectionRequestBuilder.class);
     }

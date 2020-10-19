@@ -33,7 +33,6 @@ public class SubscriptionCollectionRequest extends BaseCollectionRequest<Subscri
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public SubscriptionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SubscriptionCollectionResponse.class, SubscriptionCollectionPage.class, SubscriptionCollectionRequestBuilder.class);
     }

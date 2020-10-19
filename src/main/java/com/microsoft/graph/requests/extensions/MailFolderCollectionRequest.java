@@ -33,7 +33,6 @@ public class MailFolderCollectionRequest extends BaseCollectionRequest<MailFolde
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public MailFolderCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MailFolderCollectionResponse.class, MailFolderCollectionPage.class, MailFolderCollectionRequestBuilder.class);
     }

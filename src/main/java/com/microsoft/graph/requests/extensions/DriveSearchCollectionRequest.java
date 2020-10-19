@@ -34,7 +34,6 @@ public class DriveSearchCollectionRequest extends BaseCollectionRequest<DriveIte
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public DriveSearchCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DriveSearchCollectionResponse.class, DriveSearchCollectionPage.class, DriveSearchCollectionRequestBuilder.class);
     }

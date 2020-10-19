@@ -34,7 +34,6 @@ public class RoleAssignmentCollectionRequest extends BaseCollectionRequest<RoleA
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public RoleAssignmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, RoleAssignmentCollectionResponse.class, RoleAssignmentCollectionPage.class, RoleAssignmentCollectionRequestBuilder.class);
     }

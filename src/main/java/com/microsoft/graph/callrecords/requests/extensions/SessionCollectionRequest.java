@@ -34,7 +34,6 @@ public class SessionCollectionRequest extends BaseCollectionRequest<Session, Ses
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public SessionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SessionCollectionResponse.class, SessionCollectionPage.class, SessionCollectionRequestBuilder.class);
     }

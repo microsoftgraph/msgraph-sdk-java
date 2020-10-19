@@ -34,7 +34,6 @@ public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseColl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public SingleValueLegacyExtendedPropertyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SingleValueLegacyExtendedPropertyCollectionResponse.class, SingleValueLegacyExtendedPropertyCollectionPage.class, SingleValueLegacyExtendedPropertyCollectionRequestBuilder.class);
     }

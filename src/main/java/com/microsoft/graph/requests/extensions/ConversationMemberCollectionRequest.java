@@ -34,7 +34,6 @@ public class ConversationMemberCollectionRequest extends BaseCollectionRequest<C
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public ConversationMemberCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ConversationMemberCollectionResponse.class, ConversationMemberCollectionPage.class, ConversationMemberCollectionRequestBuilder.class);
     }

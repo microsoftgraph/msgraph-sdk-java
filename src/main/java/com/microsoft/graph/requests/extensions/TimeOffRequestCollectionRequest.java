@@ -35,7 +35,6 @@ public class TimeOffRequestCollectionRequest extends BaseCollectionRequest<TimeO
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public TimeOffRequestCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TimeOffRequestCollectionResponse.class, TimeOffRequestCollectionPage.class, TimeOffRequestCollectionRequestBuilder.class);
     }

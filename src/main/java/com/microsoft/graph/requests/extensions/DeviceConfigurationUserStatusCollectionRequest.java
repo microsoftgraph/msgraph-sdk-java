@@ -34,7 +34,6 @@ public class DeviceConfigurationUserStatusCollectionRequest extends BaseCollecti
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public DeviceConfigurationUserStatusCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceConfigurationUserStatusCollectionResponse.class, DeviceConfigurationUserStatusCollectionPage.class, DeviceConfigurationUserStatusCollectionRequestBuilder.class);
     }

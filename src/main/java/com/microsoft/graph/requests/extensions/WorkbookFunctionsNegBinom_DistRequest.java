@@ -29,7 +29,6 @@ public class WorkbookFunctionsNegBinom_DistRequest extends BaseRequest<WorkbookF
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public WorkbookFunctionsNegBinom_DistRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsNegBinom_DistBody();

@@ -38,7 +38,6 @@ public class DeviceCollectionReferenceRequest extends BaseCollectionWithReferenc
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public DeviceCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceCollectionResponse.class, DeviceCollectionPage.class, DeviceCollectionWithReferencesRequestBuilder.class);
     }

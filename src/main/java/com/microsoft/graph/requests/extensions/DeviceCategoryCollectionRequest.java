@@ -34,7 +34,6 @@ public class DeviceCategoryCollectionRequest extends BaseCollectionRequest<Devic
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public DeviceCategoryCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceCategoryCollectionResponse.class, DeviceCategoryCollectionPage.class, DeviceCategoryCollectionRequestBuilder.class);
     }

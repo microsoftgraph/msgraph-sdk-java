@@ -29,7 +29,6 @@ public class ParticipantMuteRequest extends BaseRequest<MuteParticipantOperation
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public ParticipantMuteRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MuteParticipantOperation.class);
         body = new ParticipantMuteBody();

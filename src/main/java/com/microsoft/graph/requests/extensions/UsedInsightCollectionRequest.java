@@ -34,7 +34,6 @@ public class UsedInsightCollectionRequest extends BaseCollectionRequest<UsedInsi
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public UsedInsightCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UsedInsightCollectionResponse.class, UsedInsightCollectionPage.class, UsedInsightCollectionRequestBuilder.class);
     }

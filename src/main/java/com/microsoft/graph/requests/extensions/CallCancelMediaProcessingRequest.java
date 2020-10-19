@@ -29,7 +29,6 @@ public class CallCancelMediaProcessingRequest extends BaseRequest<CancelMediaPro
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public CallCancelMediaProcessingRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CancelMediaProcessingOperation.class);
         body = new CallCancelMediaProcessingBody();

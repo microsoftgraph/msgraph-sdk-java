@@ -39,7 +39,6 @@ public class OrgContactCollectionWithReferencesRequest extends BaseCollectionWit
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public OrgContactCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OrgContactCollectionResponse.class, OrgContactCollectionPage.class, OrgContactCollectionWithReferencesRequestBuilder.class);
     }

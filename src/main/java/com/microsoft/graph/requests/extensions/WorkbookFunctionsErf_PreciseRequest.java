@@ -29,7 +29,6 @@ public class WorkbookFunctionsErf_PreciseRequest extends BaseRequest<WorkbookFun
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public WorkbookFunctionsErf_PreciseRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsErf_PreciseBody();

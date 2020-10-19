@@ -34,7 +34,6 @@ public class RemoteAssistancePartnerCollectionRequest extends BaseCollectionRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public RemoteAssistancePartnerCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, RemoteAssistancePartnerCollectionResponse.class, RemoteAssistancePartnerCollectionPage.class, RemoteAssistancePartnerCollectionRequestBuilder.class);
     }

@@ -34,7 +34,6 @@ public class OpenShiftCollectionRequest extends BaseCollectionRequest<OpenShift,
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public OpenShiftCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OpenShiftCollectionResponse.class, OpenShiftCollectionPage.class, OpenShiftCollectionRequestBuilder.class);
     }

@@ -34,7 +34,6 @@ public class OnenoteResourceCollectionRequest extends BaseCollectionRequest<Onen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public OnenoteResourceCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OnenoteResourceCollectionResponse.class, OnenoteResourceCollectionPage.class, OnenoteResourceCollectionRequestBuilder.class);
     }

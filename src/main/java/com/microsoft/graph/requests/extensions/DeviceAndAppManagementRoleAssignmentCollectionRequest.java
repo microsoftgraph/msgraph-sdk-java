@@ -34,7 +34,6 @@ public class DeviceAndAppManagementRoleAssignmentCollectionRequest extends BaseC
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public DeviceAndAppManagementRoleAssignmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceAndAppManagementRoleAssignmentCollectionResponse.class, DeviceAndAppManagementRoleAssignmentCollectionPage.class, DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder.class);
     }

@@ -33,7 +33,6 @@ public class PlaceCollectionRequest extends BaseCollectionRequest<Place, PlaceCo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public PlaceCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PlaceCollectionResponse.class, PlaceCollectionPage.class, PlaceCollectionRequestBuilder.class);
     }

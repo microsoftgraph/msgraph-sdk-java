@@ -34,7 +34,6 @@ public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<Direc
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public DirectoryAuditCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DirectoryAuditCollectionResponse.class, DirectoryAuditCollectionPage.class, DirectoryAuditCollectionRequestBuilder.class);
     }

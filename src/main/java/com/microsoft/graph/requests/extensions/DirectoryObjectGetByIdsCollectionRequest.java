@@ -38,7 +38,6 @@ public class DirectoryObjectGetByIdsCollectionRequest extends BaseCollectionRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public DirectoryObjectGetByIdsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DirectoryObjectGetByIdsCollectionResponse.class, DirectoryObjectGetByIdsCollectionPage.class, DirectoryObjectGetByIdsCollectionRequestBuilder.class);
         body = new DirectoryObjectGetByIdsBody();

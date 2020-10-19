@@ -34,7 +34,6 @@ public class ContentTypeCollectionRequest extends BaseCollectionRequest<ContentT
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public ContentTypeCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ContentTypeCollectionResponse.class, ContentTypeCollectionPage.class, ContentTypeCollectionRequestBuilder.class);
     }

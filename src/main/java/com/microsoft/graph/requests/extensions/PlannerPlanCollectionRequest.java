@@ -34,7 +34,6 @@ public class PlannerPlanCollectionRequest extends BaseCollectionRequest<PlannerP
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public PlannerPlanCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PlannerPlanCollectionResponse.class, PlannerPlanCollectionPage.class, PlannerPlanCollectionRequestBuilder.class);
     }

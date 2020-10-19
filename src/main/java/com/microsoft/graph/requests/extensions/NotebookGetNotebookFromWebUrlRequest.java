@@ -29,7 +29,6 @@ public class NotebookGetNotebookFromWebUrlRequest extends BaseRequest<CopyNotebo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public NotebookGetNotebookFromWebUrlRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CopyNotebookModel.class);
         body = new NotebookGetNotebookFromWebUrlBody();

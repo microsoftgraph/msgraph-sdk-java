@@ -34,7 +34,6 @@ public class ContactCollectionRequest extends BaseCollectionRequest<Contact, Con
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public ContactCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ContactCollectionResponse.class, ContactCollectionPage.class, ContactCollectionRequestBuilder.class);
     }

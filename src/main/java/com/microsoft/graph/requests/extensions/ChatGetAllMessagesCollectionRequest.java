@@ -34,7 +34,6 @@ public class ChatGetAllMessagesCollectionRequest extends BaseCollectionRequest<C
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    @SuppressWarnings("unchecked")
     public ChatGetAllMessagesCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ChatGetAllMessagesCollectionResponse.class, ChatGetAllMessagesCollectionPage.class, ChatGetAllMessagesCollectionRequestBuilder.class);
     }
