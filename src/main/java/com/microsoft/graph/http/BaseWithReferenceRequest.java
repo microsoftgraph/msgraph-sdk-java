@@ -43,6 +43,7 @@ public abstract class BaseWithReferenceRequest<T> extends BaseRequest<T> {
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
+     * @param entityClass     the class for the entity
      */
     public BaseWithReferenceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
                                     Class<T> entityClass) {

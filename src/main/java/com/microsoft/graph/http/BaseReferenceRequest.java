@@ -42,6 +42,7 @@ public abstract class BaseReferenceRequest<T> extends BaseRequest<T> {
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
+     * @param entityType     the class for the entity
      */
     public BaseReferenceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final Class<T> entityType) {
         super(requestUrl, client, requestOptions, entityType);

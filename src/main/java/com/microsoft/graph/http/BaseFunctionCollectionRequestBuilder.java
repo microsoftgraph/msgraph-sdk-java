@@ -30,6 +30,10 @@ public class BaseFunctionCollectionRequestBuilder<T, T2 extends BaseRequestBuild
      * @param requestUrl the URL for the request
      * @param client     the {@link IBaseClient} for handling requests
      * @param options    {@link List} of {@link Option}s to add to this request
+     * @param requestBuilderClass the class for the request builder
+     * @param responseCollectionClass the class for the collection response
+     * @param collectionPageClass the class for the collection page
+     * @param collectionRequestClass the class for the collection request
      */
     public BaseFunctionCollectionRequestBuilder(
             final String requestUrl,

@@ -10,7 +10,8 @@ public interface ICollectionResponse<T> extends IJsonBackedObject{
     List<T> values();
 
     /**
-     * The URL to the next page of this collection, or null
+     * Gets the link to the next page of this collection
+     * @return The URL to the next page of this collection, or null
      */
     String nextLink();
 }

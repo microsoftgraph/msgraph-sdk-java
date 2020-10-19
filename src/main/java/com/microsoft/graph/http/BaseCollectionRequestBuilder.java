@@ -17,6 +17,10 @@ public class BaseCollectionRequestBuilder<T, T2 extends BaseRequestBuilder<T>,
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
+     * @param requestBuilderClass the class for the request builder
+     * @param responseCollectionClass the class for the collection response
+     * @param collectionPageClass the class for the collection page
+     * @param collectionRequestClass the class for the collection request
      */
 	public BaseCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
                                         final Class<T2> requestBuilderClass,

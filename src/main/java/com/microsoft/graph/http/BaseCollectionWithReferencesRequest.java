@@ -49,6 +49,9 @@ public abstract class BaseCollectionWithReferencesRequest<T,T2 extends BaseWithR
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
+     * @param collectionResponseClass the class for the collection response
+     * @param collectionPageClass the class for the collection page
+     * @param collectionWithReferencesRequestBuilderClass the class for the request builder
      */
     public BaseCollectionWithReferencesRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
                                                 final Class<T5> collectionResponseClass,

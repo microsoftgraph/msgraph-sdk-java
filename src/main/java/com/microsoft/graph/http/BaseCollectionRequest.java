@@ -78,6 +78,7 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      * @param options             the options for this request
      * @param responseCollectionClass       the class for the response collection
      * @param collectionPageClass the class for the collection page
+     * @param collectionRequestBuilderClass the class for the collection request builder
      */
     public BaseCollectionRequest(final String requestUrl,
                                  final IBaseClient client,

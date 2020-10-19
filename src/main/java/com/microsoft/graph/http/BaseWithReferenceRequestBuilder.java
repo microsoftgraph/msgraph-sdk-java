@@ -43,6 +43,8 @@ public abstract class BaseWithReferenceRequestBuilder<T, T2 extends BaseWithRefe
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
+     * @param withReferenceRequestClass the class for the request
+     * @param referenceRequestBuilderClass the class for the request builder
      */
     public BaseWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
                                             Class<T2> withReferenceRequestClass,
