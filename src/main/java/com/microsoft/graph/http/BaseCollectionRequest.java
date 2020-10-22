@@ -100,7 +100,7 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      */
     protected T2 send() throws ClientException {
         baseRequest.setHttpMethod(HttpMethod.GET);
-        return baseRequest.getClient().getHttpProvider().send(this, responseCollectionClass, new ArrayList<com.microsoft.graph.options.Option>());
+        return baseRequest.getClient().getHttpProvider().send(this, responseCollectionClass, null);
     }
 
     public void get(final ICallback<? super T3> callback) {
