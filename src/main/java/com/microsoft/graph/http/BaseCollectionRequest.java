@@ -50,7 +50,7 @@ import okhttp3.Request;
  * @param <T2> the response collection type
  */
 public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>,
-                                            T3 extends BaseCollectionPage<T>> implements IHttpRequest {
+                                            T3 extends BaseCollectionPage<T, ? extends BaseRequestBuilder<T>>> implements IHttpRequest {
 
     /**
      * The base request for this collection request
@@ -121,7 +121,6 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
         return buildFromResponse(send());
     }
 
-    @SuppressWarnings("unchecked")
     public T3 buildFromResponse(final T2 response) {
         if (response.nextLink() != null) {
             final List<com.microsoft.graph.options.Option> options = new java.util.ArrayList<com.microsoft.graph.options.Option>();
@@ -318,7 +317,7 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      *
      * @return the class for the collection page
      */
-    public Class<? extends BaseCollectionPage<T>> getCollectionPageClass() {
+    public Class<T3> getCollectionPageClass() {
         return collectionPageClass;
     }
     

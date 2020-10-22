@@ -34,7 +34,7 @@ import java.util.List;
  *
  * @param <T> the type of the item contained within the collection
  */
-public class DeltaCollectionPage<T> extends BaseCollectionPage<T> {
+public class DeltaCollectionPage<T, T2 extends BaseRequestBuilder<T>> extends BaseCollectionPage<T, T2> {
     /**
      * The opaque link to query delta after the 
      * initial request
@@ -47,7 +47,7 @@ public class DeltaCollectionPage<T> extends BaseCollectionPage<T> {
      * @param response The serialized delta reponse from the service
      * @param builder The request builder for the next collection page
      */
-    public DeltaCollectionPage(final ICollectionResponse<T> response, final BaseRequestBuilder<T> builder) {
+    public DeltaCollectionPage(final ICollectionResponse<T> response, final T2 builder) {
        super(response.values(), builder, response.additionalDataManager());
         if (response.getRawObject().get("@odata.deltaLink") != null) {
             deltaLink = response.getRawObject().get("@odata.deltaLink").getAsString();

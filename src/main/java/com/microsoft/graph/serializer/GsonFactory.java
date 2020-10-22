@@ -212,18 +212,18 @@ final class GsonFactory {
             }
         };
         
-        final JsonSerializer<BaseCollectionPage<?>> collectionPageSerializer = new JsonSerializer<BaseCollectionPage<?>>() {
+        final JsonSerializer<BaseCollectionPage<?, ?>> collectionPageSerializer = new JsonSerializer<BaseCollectionPage<?, ?>>() {
             @Override
-            public JsonElement serialize(final BaseCollectionPage<?> src,
+            public JsonElement serialize(final BaseCollectionPage<?, ?> src,
                                          final Type typeOfSrc,
                                          final JsonSerializationContext context) {
             	return CollectionPageSerializer.serialize(src, logger);
             }
         };
 
-        final JsonDeserializer<BaseCollectionPage<?>> collectionPageDeserializer = new JsonDeserializer<BaseCollectionPage<?>>() {
+        final JsonDeserializer<BaseCollectionPage<?, ?>> collectionPageDeserializer = new JsonDeserializer<BaseCollectionPage<?, ?>>() {
             @Override
-            public BaseCollectionPage<?> deserialize(final JsonElement json,
+            public BaseCollectionPage<?, ?> deserialize(final JsonElement json,
                                         final Type typeOfT,
                                         final JsonDeserializationContext context) throws JsonParseException {
                 return CollectionPageSerializer.deserialize(json, typeOfT, logger);

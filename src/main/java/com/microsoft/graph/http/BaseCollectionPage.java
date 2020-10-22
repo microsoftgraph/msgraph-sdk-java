@@ -36,7 +36,7 @@ import java.util.List;
  *
  * @param <T> the type of the item contained within the collection
  */
-public class BaseCollectionPage<T> implements IJsonBackedObject {
+public class BaseCollectionPage<T, T2 extends BaseRequestBuilder<T>> implements IJsonBackedObject {
     
     private AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
@@ -48,7 +48,7 @@ public class BaseCollectionPage<T> implements IJsonBackedObject {
     /**
      * The request builder for the next page
      */
-    private final BaseRequestBuilder<T> requestBuilder;
+    private final T2 requestBuilder;
 
     /**
      * The raw representation of this class
@@ -66,7 +66,7 @@ public class BaseCollectionPage<T> implements IJsonBackedObject {
      * @param response the serialized WorkforceIntegrationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public BaseCollectionPage(final ICollectionResponse<T> response, final BaseRequestBuilder<T> builder) {
+    public BaseCollectionPage(final ICollectionResponse<T> response, final T2 builder) {
         this(response.values(), builder, response.additionalDataManager());
     }
 
@@ -76,7 +76,7 @@ public class BaseCollectionPage<T> implements IJsonBackedObject {
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public BaseCollectionPage(final List<T> pageContents, final BaseRequestBuilder<T> nextRequestBuilder) {
+    public BaseCollectionPage(final List<T> pageContents, final T2 nextRequestBuilder) {
         // CollectionPages are never directly modifiable, either 'update'/'delete' the specific child or 'add' the new
         // object to the 'children' of the collection.
         this.pageContents = Collections.unmodifiableList(pageContents == null ? new ArrayList<T>() : pageContents);
@@ -90,7 +90,7 @@ public class BaseCollectionPage<T> implements IJsonBackedObject {
      * @param nextRequestBuilder the request builder for the next page
      * @param responseAdditionalData the additional data returned by the response
      */
-    public BaseCollectionPage(final List<T> pageContents, final BaseRequestBuilder<T> nextRequestBuilder, final AdditionalDataManager responseAdditionalData) {
+    public BaseCollectionPage(final List<T> pageContents, final T2 nextRequestBuilder, final AdditionalDataManager responseAdditionalData) {
         this(pageContents, nextRequestBuilder);
         this.additionalDataManager().putAll(responseAdditionalData);
     }
@@ -100,7 +100,7 @@ public class BaseCollectionPage<T> implements IJsonBackedObject {
      *
      * @return the next page request builder
      */
-    public BaseRequestBuilder<T> getNextPage() {
+    public T2 getNextPage() {
         return requestBuilder;
     }
 

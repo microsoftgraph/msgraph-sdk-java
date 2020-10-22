@@ -38,7 +38,7 @@ public abstract class BaseCollectionWithReferencesRequestBuilder<T, T2 extends B
                             T3 extends BaseReferenceRequestBuilder<T, ? extends BaseReferenceRequest<T>>,
                             T4 extends BaseWithReferenceRequestBuilder<T, T2, T3>,
                             T5 extends ICollectionResponse<T>,
-                            T6 extends BaseCollectionPage<T>,
+                            T6 extends BaseCollectionPage<T, ? extends BaseRequestBuilder<T>>,
                             T7 extends BaseCollectionRequest<T, T5, T6>,
                             T8 extends BaseCollectionWithReferencesRequest<T, T2, T3, T4, T5, T6, T7>> extends BaseCollectionRequestBuilder<T, T3, T5, T6, T8> {
     private final Class<T3> refRequestBuilderClass;

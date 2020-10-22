@@ -35,6 +35,7 @@ import com.google.gson.JsonParseException;
 import com.google.gson.JsonParser;
 import com.google.common.reflect.TypeToken;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.logger.ILogger;
 
@@ -72,7 +73,7 @@ public class CollectionPageSerializer {
 	 * @param <T1> the entity type for the collection
      * @return       JsonElement of CollectionPage
      */
-	public static <T1> JsonElement serialize(final BaseCollectionPage<T1> src, final ILogger logger) {
+	public static <T1, T2 extends BaseRequestBuilder<T1>> JsonElement serialize(final BaseCollectionPage<T1, T2> src, final ILogger logger) {
 		if(src == null) {
 			return null;
 		}
@@ -101,7 +102,7 @@ public class CollectionPageSerializer {
      * @return    the deserialized CollectionPage
      */
 	@SuppressWarnings("unchecked")
-	public static <T1> BaseCollectionPage<T1> deserialize(final JsonElement json, Type typeOfT, final ILogger logger) throws JsonParseException {
+	public static <T1, T2 extends BaseRequestBuilder<T1>> BaseCollectionPage<T1, T2> deserialize(final JsonElement json, Type typeOfT, final ILogger logger) throws JsonParseException {
 		if (json == null || !json.isJsonArray()) {
 			return null;
 		}
@@ -139,7 +140,7 @@ public class CollectionPageSerializer {
 						.substring(0, responseClassCanonicalName.length() - responseLength)
 						.replace(extensionsPath, extensionsPath) + "RequestBuilder";
 			final Class<?> responseBuilderClass = Class.forName(responseBuilderCanonicalName);
-			return (BaseCollectionPage<T1>)collectionPageClass.getConstructor(responseClass, responseBuilderClass).newInstance(response, null);
+			return (BaseCollectionPage<T1, T2>)collectionPageClass.getConstructor(responseClass, responseBuilderClass).newInstance(response, null);
 		} catch(ClassNotFoundException ex) {
 			logger.logError("Could not find class during deserialization", ex);
 		} catch(NoSuchMethodException | InstantiationException | InvocationTargetException ex) {

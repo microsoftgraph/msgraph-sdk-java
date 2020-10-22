@@ -40,7 +40,7 @@ public abstract class BaseCollectionWithReferencesRequest<T,T2 extends BaseWithR
                                         T3 extends BaseReferenceRequestBuilder<T, ? extends BaseReferenceRequest<T>>,
                                         T4 extends BaseWithReferenceRequestBuilder<T, T2, T3>,
                                         T5 extends ICollectionResponse<T>,
-                                        T6 extends BaseCollectionPage<T>,
+                                        T6 extends BaseCollectionPage<T, ? extends BaseRequestBuilder<T>>,
                                         T7 extends BaseCollectionRequest<T, T5, T6>> extends BaseCollectionRequest<T, T5, T6> {
     
     /**

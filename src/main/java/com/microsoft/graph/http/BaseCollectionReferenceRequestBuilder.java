@@ -33,7 +33,7 @@ import java.util.List;
  */
 public class BaseCollectionReferenceRequestBuilder<T, T2 extends BaseRequestBuilder<T>,
                                                     T3 extends ICollectionResponse<T>,
-                                                    T4 extends BaseCollectionPage<T>,
+                                                    T4 extends BaseCollectionPage<T, ? extends BaseRequestBuilder<T>>,
                                                     T5 extends BaseCollectionRequest<T, T3, T4>> extends BaseCollectionRequestBuilder<T, T2, T3, T4, T5> {
 // TODO type constraints need to be more explicit to require with reference
     /**

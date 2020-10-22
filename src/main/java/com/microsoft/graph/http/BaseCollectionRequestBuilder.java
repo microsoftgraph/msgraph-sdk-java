@@ -5,7 +5,7 @@ import java.lang.reflect.InvocationTargetException;
 
 public class BaseCollectionRequestBuilder<T, T2 extends BaseRequestBuilder<T>,
                                             T3 extends ICollectionResponse<T>,
-                                            T4 extends BaseCollectionPage<T>,
+                                            T4 extends BaseCollectionPage<T, ? extends BaseRequestBuilder<T>>,
 											T5 extends BaseCollectionRequest<T, T3, T4>> extends BaseRequestBuilder<T> {
 	private final Class<T5> collRequestClass;
     private final Class<T2> reqBuilderClass;
