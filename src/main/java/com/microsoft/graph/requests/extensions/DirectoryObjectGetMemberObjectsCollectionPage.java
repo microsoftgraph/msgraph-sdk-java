@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.DirectoryObjectGetMemberObjectsCo
 /**
  * The class for the Directory Object Get Member Objects Collection Page.
  */
-public class DirectoryObjectGetMemberObjectsCollectionPage extends BaseCollectionPage<String> {
+public class DirectoryObjectGetMemberObjectsCollectionPage extends BaseCollectionPage<String, DirectoryObjectGetMemberObjectsCollectionRequestBuilder> {
 
     /**
      * A collection page for String.

@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Thumbnail Set Collection Page.
  */
-public class ThumbnailSetCollectionPage extends BaseCollectionPage<ThumbnailSet> {
+public class ThumbnailSetCollectionPage extends BaseCollectionPage<ThumbnailSet, ThumbnailSetCollectionRequestBuilder> {
 
     /**
      * A collection page for ThumbnailSet

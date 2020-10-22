@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Managed App Status Collection Page.
  */
-public class ManagedAppStatusCollectionPage extends BaseCollectionPage<ManagedAppStatus> {
+public class ManagedAppStatusCollectionPage extends BaseCollectionPage<ManagedAppStatus, ManagedAppStatusCollectionRequestBuilder> {
 
     /**
      * A collection page for ManagedAppStatus

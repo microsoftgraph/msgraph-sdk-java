@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Onenote Operation Collection Page.
  */
-public class OnenoteOperationCollectionPage extends BaseCollectionPage<OnenoteOperation> {
+public class OnenoteOperationCollectionPage extends BaseCollectionPage<OnenoteOperation, OnenoteOperationCollectionRequestBuilder> {
 
     /**
      * A collection page for OnenoteOperation

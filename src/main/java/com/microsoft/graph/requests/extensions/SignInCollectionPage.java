@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Sign In Collection Page.
  */
-public class SignInCollectionPage extends BaseCollectionPage<SignIn> {
+public class SignInCollectionPage extends BaseCollectionPage<SignIn, SignInCollectionRequestBuilder> {
 
     /**
      * A collection page for SignIn

@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Device Collection With References Page.
  */
-public class DeviceCollectionWithReferencesPage extends BaseCollectionPage<Device> {
+public class DeviceCollectionWithReferencesPage extends BaseCollectionPage<Device, DeviceCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for Device

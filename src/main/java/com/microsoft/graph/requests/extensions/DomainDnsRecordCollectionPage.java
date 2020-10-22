@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Domain Dns Record Collection Page.
  */
-public class DomainDnsRecordCollectionPage extends BaseCollectionPage<DomainDnsRecord> {
+public class DomainDnsRecordCollectionPage extends BaseCollectionPage<DomainDnsRecord, DomainDnsRecordCollectionRequestBuilder> {
 
     /**
      * A collection page for DomainDnsRecord

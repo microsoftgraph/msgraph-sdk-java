@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Managed Device Collection Page.
  */
-public class ManagedDeviceCollectionPage extends BaseCollectionPage<ManagedDevice> {
+public class ManagedDeviceCollectionPage extends BaseCollectionPage<ManagedDevice, ManagedDeviceCollectionRequestBuilder> {
 
     /**
      * A collection page for ManagedDevice

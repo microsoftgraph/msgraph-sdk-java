@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.UserActivityRecentCollectionRespo
 /**
  * The class for the User Activity Recent Collection Page.
  */
-public class UserActivityRecentCollectionPage extends BaseCollectionPage<UserActivity> {
+public class UserActivityRecentCollectionPage extends BaseCollectionPage<UserActivity, UserActivityRecentCollectionRequestBuilder> {
 
     /**
      * A collection page for UserActivity.

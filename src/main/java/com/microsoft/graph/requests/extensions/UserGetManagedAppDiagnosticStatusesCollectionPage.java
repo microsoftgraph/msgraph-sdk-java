@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.UserGetManagedAppDiagnosticStatus
 /**
  * The class for the User Get Managed App Diagnostic Statuses Collection Page.
  */
-public class UserGetManagedAppDiagnosticStatusesCollectionPage extends BaseCollectionPage<ManagedAppDiagnosticStatus> {
+public class UserGetManagedAppDiagnosticStatusesCollectionPage extends BaseCollectionPage<ManagedAppDiagnosticStatus, UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder> {
 
     /**
      * A collection page for ManagedAppDiagnosticStatus.

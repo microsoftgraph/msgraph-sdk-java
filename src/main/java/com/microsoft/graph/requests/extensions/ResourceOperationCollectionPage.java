@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Resource Operation Collection Page.
  */
-public class ResourceOperationCollectionPage extends BaseCollectionPage<ResourceOperation> {
+public class ResourceOperationCollectionPage extends BaseCollectionPage<ResourceOperation, ResourceOperationCollectionRequestBuilder> {
 
     /**
      * A collection page for ResourceOperation

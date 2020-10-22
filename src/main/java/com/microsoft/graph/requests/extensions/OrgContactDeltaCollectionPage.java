@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.OrgContactDeltaCollectionResponse
 /**
  * The class for the Org Contact Delta Collection Page.
  */
-public class OrgContactDeltaCollectionPage extends DeltaCollectionPage<OrgContact> {
+public class OrgContactDeltaCollectionPage extends DeltaCollectionPage<OrgContact, OrgContactDeltaCollectionRequestBuilder> {
 
     /**
      * A collection page for OrgContact.

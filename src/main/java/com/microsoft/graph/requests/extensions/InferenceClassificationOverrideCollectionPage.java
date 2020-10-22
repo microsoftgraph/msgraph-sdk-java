@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Inference Classification Override Collection Page.
  */
-public class InferenceClassificationOverrideCollectionPage extends BaseCollectionPage<InferenceClassificationOverride> {
+public class InferenceClassificationOverrideCollectionPage extends BaseCollectionPage<InferenceClassificationOverride, InferenceClassificationOverrideCollectionRequestBuilder> {
 
     /**
      * A collection page for InferenceClassificationOverride

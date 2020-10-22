@@ -40,7 +40,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the User Collection With References Page.
  */
-public class UserCollectionWithReferencesPage extends BaseCollectionPage<User> {
+public class UserCollectionWithReferencesPage extends BaseCollectionPage<User, UserCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for User

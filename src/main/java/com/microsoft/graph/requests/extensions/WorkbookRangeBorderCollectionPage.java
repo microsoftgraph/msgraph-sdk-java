@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Workbook Range Border Collection Page.
  */
-public class WorkbookRangeBorderCollectionPage extends BaseCollectionPage<WorkbookRangeBorder> {
+public class WorkbookRangeBorderCollectionPage extends BaseCollectionPage<WorkbookRangeBorder, WorkbookRangeBorderCollectionRequestBuilder> {
 
     /**
      * A collection page for WorkbookRangeBorder

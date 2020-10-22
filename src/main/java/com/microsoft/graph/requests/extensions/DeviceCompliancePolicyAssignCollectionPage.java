@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignColle
 /**
  * The class for the Device Compliance Policy Assign Collection Page.
  */
-public class DeviceCompliancePolicyAssignCollectionPage extends BaseCollectionPage<DeviceCompliancePolicyAssignment> {
+public class DeviceCompliancePolicyAssignCollectionPage extends BaseCollectionPage<DeviceCompliancePolicyAssignment, DeviceCompliancePolicyAssignCollectionRequestBuilder> {
 
     /**
      * A collection page for DeviceCompliancePolicyAssignment.

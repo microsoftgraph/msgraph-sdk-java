@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Workbook Comment Reply Collection Page.
  */
-public class WorkbookCommentReplyCollectionPage extends BaseCollectionPage<WorkbookCommentReply> {
+public class WorkbookCommentReplyCollectionPage extends BaseCollectionPage<WorkbookCommentReply, WorkbookCommentReplyCollectionRequestBuilder> {
 
     /**
      * A collection page for WorkbookCommentReply

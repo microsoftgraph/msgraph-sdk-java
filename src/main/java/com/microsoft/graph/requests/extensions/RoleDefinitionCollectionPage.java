@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Role Definition Collection Page.
  */
-public class RoleDefinitionCollectionPage extends BaseCollectionPage<RoleDefinition> {
+public class RoleDefinitionCollectionPage extends BaseCollectionPage<RoleDefinition, RoleDefinitionCollectionRequestBuilder> {
 
     /**
      * A collection page for RoleDefinition

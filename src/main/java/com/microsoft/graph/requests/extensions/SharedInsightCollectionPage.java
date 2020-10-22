@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Shared Insight Collection Page.
  */
-public class SharedInsightCollectionPage extends BaseCollectionPage<SharedInsight> {
+public class SharedInsightCollectionPage extends BaseCollectionPage<SharedInsight, SharedInsightCollectionRequestBuilder> {
 
     /**
      * A collection page for SharedInsight

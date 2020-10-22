@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Localized Notification Message Collection Page.
  */
-public class LocalizedNotificationMessageCollectionPage extends BaseCollectionPage<LocalizedNotificationMessage> {
+public class LocalizedNotificationMessageCollectionPage extends BaseCollectionPage<LocalizedNotificationMessage, LocalizedNotificationMessageCollectionRequestBuilder> {
 
     /**
      * A collection page for LocalizedNotificationMessage

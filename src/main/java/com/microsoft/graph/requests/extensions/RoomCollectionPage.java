@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Room Collection Page.
  */
-public class RoomCollectionPage extends BaseCollectionPage<Room> {
+public class RoomCollectionPage extends BaseCollectionPage<Room, RoomCollectionRequestBuilder> {
 
     /**
      * A collection page for Room

@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Calendar Collection Page.
  */
-public class CalendarCollectionPage extends BaseCollectionPage<Calendar> {
+public class CalendarCollectionPage extends BaseCollectionPage<Calendar, CalendarCollectionRequestBuilder> {
 
     /**
      * A collection page for Calendar

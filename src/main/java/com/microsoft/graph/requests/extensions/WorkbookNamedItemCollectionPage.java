@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Workbook Named Item Collection Page.
  */
-public class WorkbookNamedItemCollectionPage extends BaseCollectionPage<WorkbookNamedItem> {
+public class WorkbookNamedItemCollectionPage extends BaseCollectionPage<WorkbookNamedItem, WorkbookNamedItemCollectionRequestBuilder> {
 
     /**
      * A collection page for WorkbookNamedItem

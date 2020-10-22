@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Compliance Management Partner Collection Page.
  */
-public class ComplianceManagementPartnerCollectionPage extends BaseCollectionPage<ComplianceManagementPartner> {
+public class ComplianceManagementPartnerCollectionPage extends BaseCollectionPage<ComplianceManagementPartner, ComplianceManagementPartnerCollectionRequestBuilder> {
 
     /**
      * A collection page for ComplianceManagementPartner

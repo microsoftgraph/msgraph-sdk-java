@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Subscribed Sku Collection Page.
  */
-public class SubscribedSkuCollectionPage extends BaseCollectionPage<SubscribedSku> {
+public class SubscribedSkuCollectionPage extends BaseCollectionPage<SubscribedSku, SubscribedSkuCollectionRequestBuilder> {
 
     /**
      * A collection page for SubscribedSku

@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Default Managed App Protection Collection Page.
  */
-public class DefaultManagedAppProtectionCollectionPage extends BaseCollectionPage<DefaultManagedAppProtection> {
+public class DefaultManagedAppProtectionCollectionPage extends BaseCollectionPage<DefaultManagedAppProtection, DefaultManagedAppProtectionCollectionRequestBuilder> {
 
     /**
      * A collection page for DefaultManagedAppProtection

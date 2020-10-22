@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Token Lifetime Policy Collection Page.
  */
-public class TokenLifetimePolicyCollectionPage extends BaseCollectionPage<TokenLifetimePolicy> {
+public class TokenLifetimePolicyCollectionPage extends BaseCollectionPage<TokenLifetimePolicy, TokenLifetimePolicyCollectionRequestBuilder> {
 
     /**
      * A collection page for TokenLifetimePolicy

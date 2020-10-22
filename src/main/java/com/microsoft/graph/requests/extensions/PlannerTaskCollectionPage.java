@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Planner Task Collection Page.
  */
-public class PlannerTaskCollectionPage extends BaseCollectionPage<PlannerTask> {
+public class PlannerTaskCollectionPage extends BaseCollectionPage<PlannerTask, PlannerTaskCollectionRequestBuilder> {
 
     /**
      * A collection page for PlannerTask

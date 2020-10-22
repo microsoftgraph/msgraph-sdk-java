@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.ManagedAppRegistrationGetUserIdsW
 /**
  * The class for the Managed App Registration Get User Ids With Flagged App Registration Collection Page.
  */
-public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage extends BaseCollectionPage<String> {
+public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage extends BaseCollectionPage<String, ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder> {
 
     /**
      * A collection page for String.

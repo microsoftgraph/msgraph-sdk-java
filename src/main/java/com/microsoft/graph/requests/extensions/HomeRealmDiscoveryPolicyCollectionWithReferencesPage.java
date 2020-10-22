@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Home Realm Discovery Policy Collection With References Page.
  */
-public class HomeRealmDiscoveryPolicyCollectionWithReferencesPage extends BaseCollectionPage<HomeRealmDiscoveryPolicy> {
+public class HomeRealmDiscoveryPolicyCollectionWithReferencesPage extends BaseCollectionPage<HomeRealmDiscoveryPolicy, HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for HomeRealmDiscoveryPolicy

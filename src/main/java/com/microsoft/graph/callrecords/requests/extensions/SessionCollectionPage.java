@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Session Collection Page.
  */
-public class SessionCollectionPage extends BaseCollectionPage<Session> {
+public class SessionCollectionPage extends BaseCollectionPage<Session, SessionCollectionRequestBuilder> {
 
     /**
      * A collection page for Session

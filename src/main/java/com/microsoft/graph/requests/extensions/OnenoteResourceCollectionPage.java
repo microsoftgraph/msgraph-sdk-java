@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Onenote Resource Collection Page.
  */
-public class OnenoteResourceCollectionPage extends BaseCollectionPage<OnenoteResource> {
+public class OnenoteResourceCollectionPage extends BaseCollectionPage<OnenoteResource, OnenoteResourceCollectionRequestBuilder> {
 
     /**
      * A collection page for OnenoteResource

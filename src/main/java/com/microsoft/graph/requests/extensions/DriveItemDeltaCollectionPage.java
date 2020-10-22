@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.DriveItemDeltaCollectionResponse;
 /**
  * The class for the Drive Item Delta Collection Page.
  */
-public class DriveItemDeltaCollectionPage extends DeltaCollectionPage<DriveItem> {
+public class DriveItemDeltaCollectionPage extends DeltaCollectionPage<DriveItem, DriveItemDeltaCollectionRequestBuilder> {
 
     /**
      * A collection page for DriveItem.

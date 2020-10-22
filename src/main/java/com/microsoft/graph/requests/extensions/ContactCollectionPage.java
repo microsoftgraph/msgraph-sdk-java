@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Contact Collection Page.
  */
-public class ContactCollectionPage extends BaseCollectionPage<Contact> {
+public class ContactCollectionPage extends BaseCollectionPage<Contact, ContactCollectionRequestBuilder> {
 
     /**
      * A collection page for Contact

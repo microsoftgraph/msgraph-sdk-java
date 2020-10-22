@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.SiteAddCollectionResponse;
 /**
  * The class for the Site Add Collection Page.
  */
-public class SiteAddCollectionPage extends BaseCollectionPage<Site> {
+public class SiteAddCollectionPage extends BaseCollectionPage<Site, SiteAddCollectionRequestBuilder> {
 
     /**
      * A collection page for Site.

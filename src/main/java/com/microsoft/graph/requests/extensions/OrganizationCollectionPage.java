@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Organization Collection Page.
  */
-public class OrganizationCollectionPage extends BaseCollectionPage<Organization> {
+public class OrganizationCollectionPage extends BaseCollectionPage<Organization, OrganizationCollectionRequestBuilder> {
 
     /**
      * A collection page for Organization

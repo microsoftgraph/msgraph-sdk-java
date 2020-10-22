@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Chat Message Collection Page.
  */
-public class ChatMessageCollectionPage extends BaseCollectionPage<ChatMessage> {
+public class ChatMessageCollectionPage extends BaseCollectionPage<ChatMessage, ChatMessageCollectionRequestBuilder> {
 
     /**
      * A collection page for ChatMessage

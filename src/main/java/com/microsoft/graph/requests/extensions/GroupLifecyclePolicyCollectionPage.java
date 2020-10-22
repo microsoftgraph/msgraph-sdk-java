@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Group Lifecycle Policy Collection Page.
  */
-public class GroupLifecyclePolicyCollectionPage extends BaseCollectionPage<GroupLifecyclePolicy> {
+public class GroupLifecyclePolicyCollectionPage extends BaseCollectionPage<GroupLifecyclePolicy, GroupLifecyclePolicyCollectionRequestBuilder> {
 
     /**
      * A collection page for GroupLifecyclePolicy

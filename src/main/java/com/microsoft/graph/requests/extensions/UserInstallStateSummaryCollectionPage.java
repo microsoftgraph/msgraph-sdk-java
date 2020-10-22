@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the User Install State Summary Collection Page.
  */
-public class UserInstallStateSummaryCollectionPage extends BaseCollectionPage<UserInstallStateSummary> {
+public class UserInstallStateSummaryCollectionPage extends BaseCollectionPage<UserInstallStateSummary, UserInstallStateSummaryCollectionRequestBuilder> {
 
     /**
      * A collection page for UserInstallStateSummary

@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Education User Collection With References Page.
  */
-public class EducationUserCollectionWithReferencesPage extends BaseCollectionPage<EducationUser> {
+public class EducationUserCollectionWithReferencesPage extends BaseCollectionPage<EducationUser, EducationUserCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for EducationUser

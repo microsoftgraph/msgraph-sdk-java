@@ -22,7 +22,7 @@ import com.microsoft.graph.requests.extensions.CalendarGetScheduleCollectionResp
 /**
  * The class for the Calendar Get Schedule Collection Page.
  */
-public class CalendarGetScheduleCollectionPage extends BaseCollectionPage<ScheduleInformation> {
+public class CalendarGetScheduleCollectionPage extends BaseCollectionPage<ScheduleInformation, CalendarGetScheduleCollectionRequestBuilder> {
 
     /**
      * A collection page for ScheduleInformation.

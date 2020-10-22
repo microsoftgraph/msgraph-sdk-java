@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.MailFolderDeltaCollectionResponse
 /**
  * The class for the Mail Folder Delta Collection Page.
  */
-public class MailFolderDeltaCollectionPage extends DeltaCollectionPage<MailFolder> {
+public class MailFolderDeltaCollectionPage extends DeltaCollectionPage<MailFolder, MailFolderDeltaCollectionRequestBuilder> {
 
     /**
      * A collection page for MailFolder.

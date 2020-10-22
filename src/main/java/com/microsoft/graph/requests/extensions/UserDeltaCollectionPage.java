@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.UserDeltaCollectionResponse;
 /**
  * The class for the User Delta Collection Page.
  */
-public class UserDeltaCollectionPage extends DeltaCollectionPage<User> {
+public class UserDeltaCollectionPage extends DeltaCollectionPage<User, UserDeltaCollectionRequestBuilder> {
 
     /**
      * A collection page for User.

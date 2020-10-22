@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Setting State Device Summary Collection Page.
  */
-public class SettingStateDeviceSummaryCollectionPage extends BaseCollectionPage<SettingStateDeviceSummary> {
+public class SettingStateDeviceSummaryCollectionPage extends BaseCollectionPage<SettingStateDeviceSummary, SettingStateDeviceSummaryCollectionRequestBuilder> {
 
     /**
      * A collection page for SettingStateDeviceSummary

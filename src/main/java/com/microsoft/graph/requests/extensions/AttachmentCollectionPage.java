@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Attachment Collection Page.
  */
-public class AttachmentCollectionPage extends BaseCollectionPage<Attachment> {
+public class AttachmentCollectionPage extends BaseCollectionPage<Attachment, AttachmentCollectionRequestBuilder> {
 
     /**
      * A collection page for Attachment

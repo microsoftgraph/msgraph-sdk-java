@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Event Collection Page.
  */
-public class EventCollectionPage extends BaseCollectionPage<Event> {
+public class EventCollectionPage extends BaseCollectionPage<Event, EventCollectionRequestBuilder> {
 
     /**
      * A collection page for Event

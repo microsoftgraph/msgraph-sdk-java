@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Data Policy Operation Collection Page.
  */
-public class DataPolicyOperationCollectionPage extends BaseCollectionPage<DataPolicyOperation> {
+public class DataPolicyOperationCollectionPage extends BaseCollectionPage<DataPolicyOperation, DataPolicyOperationCollectionRequestBuilder> {
 
     /**
      * A collection page for DataPolicyOperation

@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Android Managed App Protection Collection Page.
  */
-public class AndroidManagedAppProtectionCollectionPage extends BaseCollectionPage<AndroidManagedAppProtection> {
+public class AndroidManagedAppProtectionCollectionPage extends BaseCollectionPage<AndroidManagedAppProtection, AndroidManagedAppProtectionCollectionRequestBuilder> {
 
     /**
      * A collection page for AndroidManagedAppProtection

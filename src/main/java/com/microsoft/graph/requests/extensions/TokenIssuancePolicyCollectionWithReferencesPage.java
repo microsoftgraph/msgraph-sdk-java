@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Token Issuance Policy Collection With References Page.
  */
-public class TokenIssuancePolicyCollectionWithReferencesPage extends BaseCollectionPage<TokenIssuancePolicy> {
+public class TokenIssuancePolicyCollectionWithReferencesPage extends BaseCollectionPage<TokenIssuancePolicy, TokenIssuancePolicyCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for TokenIssuancePolicy

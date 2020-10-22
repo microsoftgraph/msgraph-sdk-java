@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Targeted Managed App Policy Assignment Collection Page.
  */
-public class TargetedManagedAppPolicyAssignmentCollectionPage extends BaseCollectionPage<TargetedManagedAppPolicyAssignment> {
+public class TargetedManagedAppPolicyAssignmentCollectionPage extends BaseCollectionPage<TargetedManagedAppPolicyAssignment, TargetedManagedAppPolicyAssignmentCollectionRequestBuilder> {
 
     /**
      * A collection page for TargetedManagedAppPolicyAssignment

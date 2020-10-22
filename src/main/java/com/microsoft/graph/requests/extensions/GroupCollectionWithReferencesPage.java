@@ -27,7 +27,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Group Collection With References Page.
  */
-public class GroupCollectionWithReferencesPage extends BaseCollectionPage<Group> {
+public class GroupCollectionWithReferencesPage extends BaseCollectionPage<Group, GroupCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for Group

@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Telecom Expense Management Partner Collection Page.
  */
-public class TelecomExpenseManagementPartnerCollectionPage extends BaseCollectionPage<TelecomExpenseManagementPartner> {
+public class TelecomExpenseManagementPartnerCollectionPage extends BaseCollectionPage<TelecomExpenseManagementPartner, TelecomExpenseManagementPartnerCollectionRequestBuilder> {
 
     /**
      * A collection page for TelecomExpenseManagementPartner

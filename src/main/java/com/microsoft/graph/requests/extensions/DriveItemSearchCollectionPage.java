@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.DriveItemSearchCollectionResponse
 /**
  * The class for the Drive Item Search Collection Page.
  */
-public class DriveItemSearchCollectionPage extends BaseCollectionPage<DriveItem> {
+public class DriveItemSearchCollectionPage extends BaseCollectionPage<DriveItem, DriveItemSearchCollectionRequestBuilder> {
 
     /**
      * A collection page for DriveItem.

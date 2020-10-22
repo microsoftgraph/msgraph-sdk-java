@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Terms And Conditions Assignment Collection Page.
  */
-public class TermsAndConditionsAssignmentCollectionPage extends BaseCollectionPage<TermsAndConditionsAssignment> {
+public class TermsAndConditionsAssignmentCollectionPage extends BaseCollectionPage<TermsAndConditionsAssignment, TermsAndConditionsAssignmentCollectionRequestBuilder> {
 
     /**
      * A collection page for TermsAndConditionsAssignment

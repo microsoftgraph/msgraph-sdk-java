@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Workbook Chart Collection Page.
  */
-public class WorkbookChartCollectionPage extends BaseCollectionPage<WorkbookChart> {
+public class WorkbookChartCollectionPage extends BaseCollectionPage<WorkbookChart, WorkbookChartCollectionRequestBuilder> {
 
     /**
      * A collection page for WorkbookChart

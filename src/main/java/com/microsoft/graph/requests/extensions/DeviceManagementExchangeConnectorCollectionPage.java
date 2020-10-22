@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Device Management Exchange Connector Collection Page.
  */
-public class DeviceManagementExchangeConnectorCollectionPage extends BaseCollectionPage<DeviceManagementExchangeConnector> {
+public class DeviceManagementExchangeConnectorCollectionPage extends BaseCollectionPage<DeviceManagementExchangeConnector, DeviceManagementExchangeConnectorCollectionRequestBuilder> {
 
     /**
      * A collection page for DeviceManagementExchangeConnector

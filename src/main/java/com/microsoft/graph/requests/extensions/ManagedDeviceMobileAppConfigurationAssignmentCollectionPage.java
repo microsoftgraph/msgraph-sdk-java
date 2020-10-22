@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Managed Device Mobile App Configuration Assignment Collection Page.
  */
-public class ManagedDeviceMobileAppConfigurationAssignmentCollectionPage extends BaseCollectionPage<ManagedDeviceMobileAppConfigurationAssignment> {
+public class ManagedDeviceMobileAppConfigurationAssignmentCollectionPage extends BaseCollectionPage<ManagedDeviceMobileAppConfigurationAssignment, ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder> {
 
     /**
      * A collection page for ManagedDeviceMobileAppConfigurationAssignment

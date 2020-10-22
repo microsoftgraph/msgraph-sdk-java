@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Service Principal Collection Page.
  */
-public class ServicePrincipalCollectionPage extends BaseCollectionPage<ServicePrincipal> {
+public class ServicePrincipalCollectionPage extends BaseCollectionPage<ServicePrincipal, ServicePrincipalCollectionRequestBuilder> {
 
     /**
      * A collection page for ServicePrincipal

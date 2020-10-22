@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Drive Item Collection Page.
  */
-public class DriveItemCollectionPage extends BaseCollectionPage<DriveItem> {
+public class DriveItemCollectionPage extends BaseCollectionPage<DriveItem, DriveItemCollectionRequestBuilder> {
 
     /**
      * A collection page for DriveItem

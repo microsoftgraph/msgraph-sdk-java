@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Used Insight Collection Page.
  */
-public class UsedInsightCollectionPage extends BaseCollectionPage<UsedInsight> {
+public class UsedInsightCollectionPage extends BaseCollectionPage<UsedInsight, UsedInsightCollectionRequestBuilder> {
 
     /**
      * A collection page for UsedInsight

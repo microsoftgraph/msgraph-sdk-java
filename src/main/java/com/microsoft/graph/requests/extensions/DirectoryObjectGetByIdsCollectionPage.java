@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.DirectoryObjectGetByIdsCollection
 /**
  * The class for the Directory Object Get By Ids Collection Page.
  */
-public class DirectoryObjectGetByIdsCollectionPage extends BaseCollectionPage<DirectoryObject> {
+public class DirectoryObjectGetByIdsCollectionPage extends BaseCollectionPage<DirectoryObject, DirectoryObjectGetByIdsCollectionRequestBuilder> {
 
     /**
      * A collection page for DirectoryObject.

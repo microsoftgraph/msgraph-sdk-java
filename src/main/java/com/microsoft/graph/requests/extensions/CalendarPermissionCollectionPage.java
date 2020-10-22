@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Calendar Permission Collection Page.
  */
-public class CalendarPermissionCollectionPage extends BaseCollectionPage<CalendarPermission> {
+public class CalendarPermissionCollectionPage extends BaseCollectionPage<CalendarPermission, CalendarPermissionCollectionRequestBuilder> {
 
     /**
      * A collection page for CalendarPermission

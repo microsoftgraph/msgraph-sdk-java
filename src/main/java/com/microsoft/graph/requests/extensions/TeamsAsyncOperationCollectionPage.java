@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Teams Async Operation Collection Page.
  */
-public class TeamsAsyncOperationCollectionPage extends BaseCollectionPage<TeamsAsyncOperation> {
+public class TeamsAsyncOperationCollectionPage extends BaseCollectionPage<TeamsAsyncOperation, TeamsAsyncOperationCollectionRequestBuilder> {
 
     /**
      * A collection page for TeamsAsyncOperation

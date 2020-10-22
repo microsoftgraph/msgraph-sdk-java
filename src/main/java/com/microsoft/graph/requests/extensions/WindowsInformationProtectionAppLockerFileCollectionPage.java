@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Windows Information Protection App Locker File Collection Page.
  */
-public class WindowsInformationProtectionAppLockerFileCollectionPage extends BaseCollectionPage<WindowsInformationProtectionAppLockerFile> {
+public class WindowsInformationProtectionAppLockerFileCollectionPage extends BaseCollectionPage<WindowsInformationProtectionAppLockerFile, WindowsInformationProtectionAppLockerFileCollectionRequestBuilder> {
 
     /**
      * A collection page for WindowsInformationProtectionAppLockerFile

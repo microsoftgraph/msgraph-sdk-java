@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Notebook Collection Page.
  */
-public class NotebookCollectionPage extends BaseCollectionPage<Notebook> {
+public class NotebookCollectionPage extends BaseCollectionPage<Notebook, NotebookCollectionRequestBuilder> {
 
     /**
      * A collection page for Notebook

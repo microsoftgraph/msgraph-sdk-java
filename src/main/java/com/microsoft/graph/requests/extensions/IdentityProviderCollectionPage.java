@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Identity Provider Collection Page.
  */
-public class IdentityProviderCollectionPage extends BaseCollectionPage<IdentityProvider> {
+public class IdentityProviderCollectionPage extends BaseCollectionPage<IdentityProvider, IdentityProviderCollectionRequestBuilder> {
 
     /**
      * A collection page for IdentityProvider

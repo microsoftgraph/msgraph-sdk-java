@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Mobile App Assignment Collection Page.
  */
-public class MobileAppAssignmentCollectionPage extends BaseCollectionPage<MobileAppAssignment> {
+public class MobileAppAssignmentCollectionPage extends BaseCollectionPage<MobileAppAssignment, MobileAppAssignmentCollectionRequestBuilder> {
 
     /**
      * A collection page for MobileAppAssignment

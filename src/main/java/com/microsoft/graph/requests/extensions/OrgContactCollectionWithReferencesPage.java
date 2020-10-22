@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Org Contact Collection With References Page.
  */
-public class OrgContactCollectionWithReferencesPage extends BaseCollectionPage<OrgContact> {
+public class OrgContactCollectionWithReferencesPage extends BaseCollectionPage<OrgContact, OrgContactCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for OrgContact

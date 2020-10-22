@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.DirectoryObjectGetAvailableExtens
 /**
  * The class for the Directory Object Get Available Extension Properties Collection Page.
  */
-public class DirectoryObjectGetAvailableExtensionPropertiesCollectionPage extends BaseCollectionPage<ExtensionProperty> {
+public class DirectoryObjectGetAvailableExtensionPropertiesCollectionPage extends BaseCollectionPage<ExtensionProperty, DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder> {
 
     /**
      * A collection page for ExtensionProperty.

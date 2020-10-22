@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Scoped Role Membership Collection Page.
  */
-public class ScopedRoleMembershipCollectionPage extends BaseCollectionPage<ScopedRoleMembership> {
+public class ScopedRoleMembershipCollectionPage extends BaseCollectionPage<ScopedRoleMembership, ScopedRoleMembershipCollectionRequestBuilder> {
 
     /**
      * A collection page for ScopedRoleMembership

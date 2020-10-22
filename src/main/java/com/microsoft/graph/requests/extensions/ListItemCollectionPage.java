@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the List Item Collection Page.
  */
-public class ListItemCollectionPage extends BaseCollectionPage<ListItem> {
+public class ListItemCollectionPage extends BaseCollectionPage<ListItem, ListItemCollectionRequestBuilder> {
 
     /**
      * A collection page for ListItem

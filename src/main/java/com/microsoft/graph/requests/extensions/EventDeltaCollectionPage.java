@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.EventDeltaCollectionResponse;
 /**
  * The class for the Event Delta Collection Page.
  */
-public class EventDeltaCollectionPage extends DeltaCollectionPage<Event> {
+public class EventDeltaCollectionPage extends DeltaCollectionPage<Event, EventDeltaCollectionRequestBuilder> {
 
     /**
      * A collection page for Event.

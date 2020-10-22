@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.ContactFolderDeltaCollectionRespo
 /**
  * The class for the Contact Folder Delta Collection Page.
  */
-public class ContactFolderDeltaCollectionPage extends DeltaCollectionPage<ContactFolder> {
+public class ContactFolderDeltaCollectionPage extends DeltaCollectionPage<ContactFolder, ContactFolderDeltaCollectionRequestBuilder> {
 
     /**
      * A collection page for ContactFolder.

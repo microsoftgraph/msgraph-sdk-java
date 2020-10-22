@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Remote Assistance Partner Collection Page.
  */
-public class RemoteAssistancePartnerCollectionPage extends BaseCollectionPage<RemoteAssistancePartner> {
+public class RemoteAssistancePartnerCollectionPage extends BaseCollectionPage<RemoteAssistancePartner, RemoteAssistancePartnerCollectionRequestBuilder> {
 
     /**
      * A collection page for RemoteAssistancePartner

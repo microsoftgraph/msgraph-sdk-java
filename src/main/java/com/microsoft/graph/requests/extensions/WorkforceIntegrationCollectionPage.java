@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Workforce Integration Collection Page.
  */
-public class WorkforceIntegrationCollectionPage extends BaseCollectionPage<WorkforceIntegration> {
+public class WorkforceIntegrationCollectionPage extends BaseCollectionPage<WorkforceIntegration, WorkforceIntegrationCollectionRequestBuilder> {
 
     /**
      * A collection page for WorkforceIntegration

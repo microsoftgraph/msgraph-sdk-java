@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.CalendarAllowedCalendarSharingRol
 /**
  * The class for the Calendar Allowed Calendar Sharing Roles Collection Page.
  */
-public class CalendarAllowedCalendarSharingRolesCollectionPage extends BaseCollectionPage<CalendarRoleType> {
+public class CalendarAllowedCalendarSharingRolesCollectionPage extends BaseCollectionPage<CalendarRoleType, CalendarAllowedCalendarSharingRolesCollectionRequestBuilder> {
 
     /**
      * A collection page for CalendarRoleType.

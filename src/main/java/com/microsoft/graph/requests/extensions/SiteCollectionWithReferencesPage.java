@@ -27,7 +27,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Site Collection With References Page.
  */
-public class SiteCollectionWithReferencesPage extends BaseCollectionPage<Site> {
+public class SiteCollectionWithReferencesPage extends BaseCollectionPage<Site, SiteCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for Site

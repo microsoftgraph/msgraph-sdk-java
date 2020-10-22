@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Managed EBook Assignment Collection Page.
  */
-public class ManagedEBookAssignmentCollectionPage extends BaseCollectionPage<ManagedEBookAssignment> {
+public class ManagedEBookAssignmentCollectionPage extends BaseCollectionPage<ManagedEBookAssignment, ManagedEBookAssignmentCollectionRequestBuilder> {
 
     /**
      * A collection page for ManagedEBookAssignment

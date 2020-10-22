@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.SiteRemoveCollectionResponse;
 /**
  * The class for the Site Remove Collection Page.
  */
-public class SiteRemoveCollectionPage extends BaseCollectionPage<Site> {
+public class SiteRemoveCollectionPage extends BaseCollectionPage<Site, SiteRemoveCollectionRequestBuilder> {
 
     /**
      * A collection page for Site.

@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.AdministrativeUnitDeltaCollection
 /**
  * The class for the Administrative Unit Delta Collection Page.
  */
-public class AdministrativeUnitDeltaCollectionPage extends DeltaCollectionPage<AdministrativeUnit> {
+public class AdministrativeUnitDeltaCollectionPage extends DeltaCollectionPage<AdministrativeUnit, AdministrativeUnitDeltaCollectionRequestBuilder> {
 
     /**
      * A collection page for AdministrativeUnit.

@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Vpp Token Collection Page.
  */
-public class VppTokenCollectionPage extends BaseCollectionPage<VppToken> {
+public class VppTokenCollectionPage extends BaseCollectionPage<VppToken, VppTokenCollectionRequestBuilder> {
 
     /**
      * A collection page for VppToken

@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.OutlookUserSupportedLanguagesColl
 /**
  * The class for the Outlook User Supported Languages Collection Page.
  */
-public class OutlookUserSupportedLanguagesCollectionPage extends BaseCollectionPage<LocaleInfo> {
+public class OutlookUserSupportedLanguagesCollectionPage extends BaseCollectionPage<LocaleInfo, OutlookUserSupportedLanguagesCollectionRequestBuilder> {
 
     /**
      * A collection page for LocaleInfo.

@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Offer Shift Request Collection Page.
  */
-public class OfferShiftRequestCollectionPage extends BaseCollectionPage<OfferShiftRequest> {
+public class OfferShiftRequestCollectionPage extends BaseCollectionPage<OfferShiftRequest, OfferShiftRequestCollectionRequestBuilder> {
 
     /**
      * A collection page for OfferShiftRequest

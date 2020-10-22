@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.ServicePrincipalDeltaCollectionRe
 /**
  * The class for the Service Principal Delta Collection Page.
  */
-public class ServicePrincipalDeltaCollectionPage extends DeltaCollectionPage<ServicePrincipal> {
+public class ServicePrincipalDeltaCollectionPage extends DeltaCollectionPage<ServicePrincipal, ServicePrincipalDeltaCollectionRequestBuilder> {
 
     /**
      * A collection page for ServicePrincipal.

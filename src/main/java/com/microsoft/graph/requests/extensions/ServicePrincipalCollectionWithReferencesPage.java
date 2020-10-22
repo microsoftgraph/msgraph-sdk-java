@@ -27,7 +27,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Service Principal Collection With References Page.
  */
-public class ServicePrincipalCollectionWithReferencesPage extends BaseCollectionPage<ServicePrincipal> {
+public class ServicePrincipalCollectionWithReferencesPage extends BaseCollectionPage<ServicePrincipal, ServicePrincipalCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for ServicePrincipal

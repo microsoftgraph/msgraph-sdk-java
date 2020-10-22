@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Domain Collection Page.
  */
-public class DomainCollectionPage extends BaseCollectionPage<Domain> {
+public class DomainCollectionPage extends BaseCollectionPage<Domain, DomainCollectionRequestBuilder> {
 
     /**
      * A collection page for Domain

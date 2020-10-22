@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Trending Collection Page.
  */
-public class TrendingCollectionPage extends BaseCollectionPage<Trending> {
+public class TrendingCollectionPage extends BaseCollectionPage<Trending, TrendingCollectionRequestBuilder> {
 
     /**
      * A collection page for Trending

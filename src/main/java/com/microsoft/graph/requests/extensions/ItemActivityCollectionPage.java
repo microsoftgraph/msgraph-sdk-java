@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Item Activity Collection Page.
  */
-public class ItemActivityCollectionPage extends BaseCollectionPage<ItemActivity> {
+public class ItemActivityCollectionPage extends BaseCollectionPage<ItemActivity, ItemActivityCollectionRequestBuilder> {
 
     /**
      * A collection page for ItemActivity

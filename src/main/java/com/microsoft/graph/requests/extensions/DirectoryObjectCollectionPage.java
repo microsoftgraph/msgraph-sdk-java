@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Directory Object Collection Page.
  */
-public class DirectoryObjectCollectionPage extends BaseCollectionPage<DirectoryObject> {
+public class DirectoryObjectCollectionPage extends BaseCollectionPage<DirectoryObject, DirectoryObjectCollectionRequestBuilder> {
 
     /**
      * A collection page for DirectoryObject

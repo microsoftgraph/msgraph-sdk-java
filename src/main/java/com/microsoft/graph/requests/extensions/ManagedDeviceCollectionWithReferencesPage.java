@@ -27,7 +27,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Managed Device Collection With References Page.
  */
-public class ManagedDeviceCollectionWithReferencesPage extends BaseCollectionPage<ManagedDevice> {
+public class ManagedDeviceCollectionWithReferencesPage extends BaseCollectionPage<ManagedDevice, ManagedDeviceCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for ManagedDevice

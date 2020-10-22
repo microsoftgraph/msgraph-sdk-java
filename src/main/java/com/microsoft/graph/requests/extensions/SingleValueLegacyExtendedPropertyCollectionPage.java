@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Single Value Legacy Extended Property Collection Page.
  */
-public class SingleValueLegacyExtendedPropertyCollectionPage extends BaseCollectionPage<SingleValueLegacyExtendedProperty> {
+public class SingleValueLegacyExtendedPropertyCollectionPage extends BaseCollectionPage<SingleValueLegacyExtendedProperty, SingleValueLegacyExtendedPropertyCollectionRequestBuilder> {
 
     /**
      * A collection page for SingleValueLegacyExtendedProperty

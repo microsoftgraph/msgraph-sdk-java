@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Team Collection Page.
  */
-public class TeamCollectionPage extends BaseCollectionPage<Team> {
+public class TeamCollectionPage extends BaseCollectionPage<Team, TeamCollectionRequestBuilder> {
 
     /**
      * A collection page for Team

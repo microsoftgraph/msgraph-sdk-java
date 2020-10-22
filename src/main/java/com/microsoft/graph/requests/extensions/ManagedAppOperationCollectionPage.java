@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Managed App Operation Collection Page.
  */
-public class ManagedAppOperationCollectionPage extends BaseCollectionPage<ManagedAppOperation> {
+public class ManagedAppOperationCollectionPage extends BaseCollectionPage<ManagedAppOperation, ManagedAppOperationCollectionRequestBuilder> {
 
     /**
      * A collection page for ManagedAppOperation

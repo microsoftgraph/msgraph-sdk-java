@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Org Contact Collection Page.
  */
-public class OrgContactCollectionPage extends BaseCollectionPage<OrgContact> {
+public class OrgContactCollectionPage extends BaseCollectionPage<OrgContact, OrgContactCollectionRequestBuilder> {
 
     /**
      * A collection page for OrgContact

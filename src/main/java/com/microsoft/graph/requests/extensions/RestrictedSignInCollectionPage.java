@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Restricted Sign In Collection Page.
  */
-public class RestrictedSignInCollectionPage extends BaseCollectionPage<RestrictedSignIn> {
+public class RestrictedSignInCollectionPage extends BaseCollectionPage<RestrictedSignIn, RestrictedSignInCollectionRequestBuilder> {
 
     /**
      * A collection page for RestrictedSignIn

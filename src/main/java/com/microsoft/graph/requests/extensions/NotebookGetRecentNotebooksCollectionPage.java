@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.NotebookGetRecentNotebooksCollect
 /**
  * The class for the Notebook Get Recent Notebooks Collection Page.
  */
-public class NotebookGetRecentNotebooksCollectionPage extends BaseCollectionPage<RecentNotebook> {
+public class NotebookGetRecentNotebooksCollectionPage extends BaseCollectionPage<RecentNotebook, NotebookGetRecentNotebooksCollectionRequestBuilder> {
 
     /**
      * A collection page for RecentNotebook.

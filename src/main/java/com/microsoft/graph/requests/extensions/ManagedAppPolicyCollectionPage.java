@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Managed App Policy Collection Page.
  */
-public class ManagedAppPolicyCollectionPage extends BaseCollectionPage<ManagedAppPolicy> {
+public class ManagedAppPolicyCollectionPage extends BaseCollectionPage<ManagedAppPolicy, ManagedAppPolicyCollectionRequestBuilder> {
 
     /**
      * A collection page for ManagedAppPolicy

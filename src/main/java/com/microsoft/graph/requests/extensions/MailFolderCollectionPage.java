@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Mail Folder Collection Page.
  */
-public class MailFolderCollectionPage extends BaseCollectionPage<MailFolder> {
+public class MailFolderCollectionPage extends BaseCollectionPage<MailFolder, MailFolderCollectionRequestBuilder> {
 
     /**
      * A collection page for MailFolder

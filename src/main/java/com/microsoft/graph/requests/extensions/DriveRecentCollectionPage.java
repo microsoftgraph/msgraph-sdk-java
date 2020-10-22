@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.DriveRecentCollectionResponse;
 /**
  * The class for the Drive Recent Collection Page.
  */
-public class DriveRecentCollectionPage extends BaseCollectionPage<DriveItem> {
+public class DriveRecentCollectionPage extends BaseCollectionPage<DriveItem, DriveRecentCollectionRequestBuilder> {
 
     /**
      * A collection page for DriveItem.

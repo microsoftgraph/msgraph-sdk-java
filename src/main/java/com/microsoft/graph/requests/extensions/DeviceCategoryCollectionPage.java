@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Device Category Collection Page.
  */
-public class DeviceCategoryCollectionPage extends BaseCollectionPage<DeviceCategory> {
+public class DeviceCategoryCollectionPage extends BaseCollectionPage<DeviceCategory, DeviceCategoryCollectionRequestBuilder> {
 
     /**
      * A collection page for DeviceCategory

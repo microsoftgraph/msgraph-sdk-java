@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Swap Shifts Change Request Collection Page.
  */
-public class SwapShiftsChangeRequestCollectionPage extends BaseCollectionPage<SwapShiftsChangeRequest> {
+public class SwapShiftsChangeRequestCollectionPage extends BaseCollectionPage<SwapShiftsChangeRequest, SwapShiftsChangeRequestCollectionRequestBuilder> {
 
     /**
      * A collection page for SwapShiftsChangeRequest

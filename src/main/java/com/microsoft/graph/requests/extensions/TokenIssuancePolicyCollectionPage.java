@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Token Issuance Policy Collection Page.
  */
-public class TokenIssuancePolicyCollectionPage extends BaseCollectionPage<TokenIssuancePolicy> {
+public class TokenIssuancePolicyCollectionPage extends BaseCollectionPage<TokenIssuancePolicy, TokenIssuancePolicyCollectionRequestBuilder> {
 
     /**
      * A collection page for TokenIssuancePolicy

@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Workbook Range View Collection Page.
  */
-public class WorkbookRangeViewCollectionPage extends BaseCollectionPage<WorkbookRangeView> {
+public class WorkbookRangeViewCollectionPage extends BaseCollectionPage<WorkbookRangeView, WorkbookRangeViewCollectionRequestBuilder> {
 
     /**
      * A collection page for WorkbookRangeView

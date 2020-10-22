@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Certificate Based Auth Configuration Collection Page.
  */
-public class CertificateBasedAuthConfigurationCollectionPage extends BaseCollectionPage<CertificateBasedAuthConfiguration> {
+public class CertificateBasedAuthConfigurationCollectionPage extends BaseCollectionPage<CertificateBasedAuthConfiguration, CertificateBasedAuthConfigurationCollectionRequestBuilder> {
 
     /**
      * A collection page for CertificateBasedAuthConfiguration

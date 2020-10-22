@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Endpoint Collection With References Page.
  */
-public class EndpointCollectionWithReferencesPage extends BaseCollectionPage<Endpoint> {
+public class EndpointCollectionWithReferencesPage extends BaseCollectionPage<Endpoint, EndpointCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for Endpoint

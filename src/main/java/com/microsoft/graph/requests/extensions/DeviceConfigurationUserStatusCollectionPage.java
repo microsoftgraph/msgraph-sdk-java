@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Device Configuration User Status Collection Page.
  */
-public class DeviceConfigurationUserStatusCollectionPage extends BaseCollectionPage<DeviceConfigurationUserStatus> {
+public class DeviceConfigurationUserStatusCollectionPage extends BaseCollectionPage<DeviceConfigurationUserStatus, DeviceConfigurationUserStatusCollectionRequestBuilder> {
 
     /**
      * A collection page for DeviceConfigurationUserStatus

@@ -22,7 +22,7 @@ import com.microsoft.graph.requests.extensions.UserTranslateExchangeIdsCollectio
 /**
  * The class for the User Translate Exchange Ids Collection Page.
  */
-public class UserTranslateExchangeIdsCollectionPage extends BaseCollectionPage<ConvertIdResult> {
+public class UserTranslateExchangeIdsCollectionPage extends BaseCollectionPage<ConvertIdResult, UserTranslateExchangeIdsCollectionRequestBuilder> {
 
     /**
      * A collection page for ConvertIdResult.

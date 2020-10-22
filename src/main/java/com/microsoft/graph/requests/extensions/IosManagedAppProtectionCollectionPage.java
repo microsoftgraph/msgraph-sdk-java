@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Ios Managed App Protection Collection Page.
  */
-public class IosManagedAppProtectionCollectionPage extends BaseCollectionPage<IosManagedAppProtection> {
+public class IosManagedAppProtectionCollectionPage extends BaseCollectionPage<IosManagedAppProtection, IosManagedAppProtectionCollectionRequestBuilder> {
 
     /**
      * A collection page for IosManagedAppProtection

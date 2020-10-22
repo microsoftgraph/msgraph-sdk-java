@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.DriveItemGetActivitiesByIntervalC
 /**
  * The class for the Drive Item Get Activities By Interval Collection Page.
  */
-public class DriveItemGetActivitiesByIntervalCollectionPage extends BaseCollectionPage<ItemActivityStat> {
+public class DriveItemGetActivitiesByIntervalCollectionPage extends BaseCollectionPage<ItemActivityStat, DriveItemGetActivitiesByIntervalCollectionRequestBuilder> {
 
     /**
      * A collection page for ItemActivityStat.

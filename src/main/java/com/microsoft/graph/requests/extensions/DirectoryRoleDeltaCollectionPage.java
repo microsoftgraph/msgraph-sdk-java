@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.DirectoryRoleDeltaCollectionRespo
 /**
  * The class for the Directory Role Delta Collection Page.
  */
-public class DirectoryRoleDeltaCollectionPage extends DeltaCollectionPage<DirectoryRole> {
+public class DirectoryRoleDeltaCollectionPage extends DeltaCollectionPage<DirectoryRole, DirectoryRoleDeltaCollectionRequestBuilder> {
 
     /**
      * A collection page for DirectoryRole.

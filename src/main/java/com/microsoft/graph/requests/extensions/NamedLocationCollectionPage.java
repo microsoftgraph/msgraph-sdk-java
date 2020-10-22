@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Named Location Collection Page.
  */
-public class NamedLocationCollectionPage extends BaseCollectionPage<NamedLocation> {
+public class NamedLocationCollectionPage extends BaseCollectionPage<NamedLocation, NamedLocationCollectionRequestBuilder> {
 
     /**
      * A collection page for NamedLocation

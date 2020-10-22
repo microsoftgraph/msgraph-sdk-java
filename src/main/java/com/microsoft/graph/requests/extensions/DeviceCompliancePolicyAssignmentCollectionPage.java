@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Device Compliance Policy Assignment Collection Page.
  */
-public class DeviceCompliancePolicyAssignmentCollectionPage extends BaseCollectionPage<DeviceCompliancePolicyAssignment> {
+public class DeviceCompliancePolicyAssignmentCollectionPage extends BaseCollectionPage<DeviceCompliancePolicyAssignment, DeviceCompliancePolicyAssignmentCollectionRequestBuilder> {
 
     /**
      * A collection page for DeviceCompliancePolicyAssignment

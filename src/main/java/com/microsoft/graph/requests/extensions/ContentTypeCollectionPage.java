@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Content Type Collection Page.
  */
-public class ContentTypeCollectionPage extends BaseCollectionPage<ContentType> {
+public class ContentTypeCollectionPage extends BaseCollectionPage<ContentType, ContentTypeCollectionRequestBuilder> {
 
     /**
      * A collection page for ContentType

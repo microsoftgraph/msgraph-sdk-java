@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Conversation Collection Page.
  */
-public class ConversationCollectionPage extends BaseCollectionPage<Conversation> {
+public class ConversationCollectionPage extends BaseCollectionPage<Conversation, ConversationCollectionRequestBuilder> {
 
     /**
      * A collection page for Conversation

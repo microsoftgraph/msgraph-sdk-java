@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Column Link Collection Page.
  */
-public class ColumnLinkCollectionPage extends BaseCollectionPage<ColumnLink> {
+public class ColumnLinkCollectionPage extends BaseCollectionPage<ColumnLink, ColumnLinkCollectionRequestBuilder> {
 
     /**
      * A collection page for ColumnLink

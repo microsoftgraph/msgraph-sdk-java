@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Ios Update Device Status Collection Page.
  */
-public class IosUpdateDeviceStatusCollectionPage extends BaseCollectionPage<IosUpdateDeviceStatus> {
+public class IosUpdateDeviceStatusCollectionPage extends BaseCollectionPage<IosUpdateDeviceStatus, IosUpdateDeviceStatusCollectionRequestBuilder> {
 
     /**
      * A collection page for IosUpdateDeviceStatus

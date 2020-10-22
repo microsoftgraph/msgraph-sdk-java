@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the OAuth2Permission Grant Collection With References Page.
  */
-public class OAuth2PermissionGrantCollectionWithReferencesPage extends BaseCollectionPage<OAuth2PermissionGrant> {
+public class OAuth2PermissionGrantCollectionWithReferencesPage extends BaseCollectionPage<OAuth2PermissionGrant, OAuth2PermissionGrantCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for OAuth2PermissionGrant

@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Teams Tab Collection Page.
  */
-public class TeamsTabCollectionPage extends BaseCollectionPage<TeamsTab> {
+public class TeamsTabCollectionPage extends BaseCollectionPage<TeamsTab, TeamsTabCollectionRequestBuilder> {
 
     /**
      * A collection page for TeamsTab

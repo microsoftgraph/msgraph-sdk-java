@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Group Setting Template Collection Page.
  */
-public class GroupSettingTemplateCollectionPage extends BaseCollectionPage<GroupSettingTemplate> {
+public class GroupSettingTemplateCollectionPage extends BaseCollectionPage<GroupSettingTemplate, GroupSettingTemplateCollectionRequestBuilder> {
 
     /**
      * A collection page for GroupSettingTemplate

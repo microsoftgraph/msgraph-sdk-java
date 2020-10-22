@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberGroupsC
 /**
  * The class for the Directory Object Check Member Groups Collection Page.
  */
-public class DirectoryObjectCheckMemberGroupsCollectionPage extends BaseCollectionPage<String> {
+public class DirectoryObjectCheckMemberGroupsCollectionPage extends BaseCollectionPage<String, DirectoryObjectCheckMemberGroupsCollectionRequestBuilder> {
 
     /**
      * A collection page for String.

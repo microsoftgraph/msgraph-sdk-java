@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Message Rule Collection Page.
  */
-public class MessageRuleCollectionPage extends BaseCollectionPage<MessageRule> {
+public class MessageRuleCollectionPage extends BaseCollectionPage<MessageRule, MessageRuleCollectionRequestBuilder> {
 
     /**
      * A collection page for MessageRule

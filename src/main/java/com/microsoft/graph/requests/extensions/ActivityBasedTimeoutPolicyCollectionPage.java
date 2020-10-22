@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Activity Based Timeout Policy Collection Page.
  */
-public class ActivityBasedTimeoutPolicyCollectionPage extends BaseCollectionPage<ActivityBasedTimeoutPolicy> {
+public class ActivityBasedTimeoutPolicyCollectionPage extends BaseCollectionPage<ActivityBasedTimeoutPolicy, ActivityBasedTimeoutPolicyCollectionRequestBuilder> {
 
     /**
      * A collection page for ActivityBasedTimeoutPolicy

@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.DriveSharedWithMeCollectionRespon
 /**
  * The class for the Drive Shared With Me Collection Page.
  */
-public class DriveSharedWithMeCollectionPage extends BaseCollectionPage<DriveItem> {
+public class DriveSharedWithMeCollectionPage extends BaseCollectionPage<DriveItem, DriveSharedWithMeCollectionRequestBuilder> {
 
     /**
      * A collection page for DriveItem.

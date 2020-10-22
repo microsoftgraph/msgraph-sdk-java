@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Open Shift Change Request Collection Page.
  */
-public class OpenShiftChangeRequestCollectionPage extends BaseCollectionPage<OpenShiftChangeRequest> {
+public class OpenShiftChangeRequestCollectionPage extends BaseCollectionPage<OpenShiftChangeRequest, OpenShiftChangeRequestCollectionRequestBuilder> {
 
     /**
      * A collection page for OpenShiftChangeRequest

@@ -28,7 +28,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Application Collection With References Page.
  */
-public class ApplicationCollectionWithReferencesPage extends BaseCollectionPage<Application> {
+public class ApplicationCollectionWithReferencesPage extends BaseCollectionPage<Application, ApplicationCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for Application

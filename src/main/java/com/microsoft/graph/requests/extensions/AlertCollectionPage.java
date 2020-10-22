@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Alert Collection Page.
  */
-public class AlertCollectionPage extends BaseCollectionPage<Alert> {
+public class AlertCollectionPage extends BaseCollectionPage<Alert, AlertCollectionRequestBuilder> {
 
     /**
      * A collection page for Alert

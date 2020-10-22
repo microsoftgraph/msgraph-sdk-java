@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Permission Grant Policy Collection Page.
  */
-public class PermissionGrantPolicyCollectionPage extends BaseCollectionPage<PermissionGrantPolicy> {
+public class PermissionGrantPolicyCollectionPage extends BaseCollectionPage<PermissionGrantPolicy, PermissionGrantPolicyCollectionRequestBuilder> {
 
     /**
      * A collection page for PermissionGrantPolicy

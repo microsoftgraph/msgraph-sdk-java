@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Scheduling Group Collection Page.
  */
-public class SchedulingGroupCollectionPage extends BaseCollectionPage<SchedulingGroup> {
+public class SchedulingGroupCollectionPage extends BaseCollectionPage<SchedulingGroup, SchedulingGroupCollectionRequestBuilder> {
 
     /**
      * A collection page for SchedulingGroup

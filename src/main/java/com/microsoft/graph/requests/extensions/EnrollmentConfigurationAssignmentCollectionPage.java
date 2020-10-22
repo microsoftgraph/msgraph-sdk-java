@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Enrollment Configuration Assignment Collection Page.
  */
-public class EnrollmentConfigurationAssignmentCollectionPage extends BaseCollectionPage<EnrollmentConfigurationAssignment> {
+public class EnrollmentConfigurationAssignmentCollectionPage extends BaseCollectionPage<EnrollmentConfigurationAssignment, EnrollmentConfigurationAssignmentCollectionRequestBuilder> {
 
     /**
      * A collection page for EnrollmentConfigurationAssignment

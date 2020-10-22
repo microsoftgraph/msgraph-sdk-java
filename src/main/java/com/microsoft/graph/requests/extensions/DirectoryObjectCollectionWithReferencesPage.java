@@ -27,7 +27,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Directory Object Collection With References Page.
  */
-public class DirectoryObjectCollectionWithReferencesPage extends BaseCollectionPage<DirectoryObject> {
+public class DirectoryObjectCollectionWithReferencesPage extends BaseCollectionPage<DirectoryObject, DirectoryObjectCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for DirectoryObject

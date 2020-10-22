@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Post Collection Page.
  */
-public class PostCollectionPage extends BaseCollectionPage<Post> {
+public class PostCollectionPage extends BaseCollectionPage<Post, PostCollectionRequestBuilder> {
 
     /**
      * A collection page for Post

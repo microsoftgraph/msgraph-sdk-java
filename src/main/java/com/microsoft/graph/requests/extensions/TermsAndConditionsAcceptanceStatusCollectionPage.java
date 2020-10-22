@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Terms And Conditions Acceptance Status Collection Page.
  */
-public class TermsAndConditionsAcceptanceStatusCollectionPage extends BaseCollectionPage<TermsAndConditionsAcceptanceStatus> {
+public class TermsAndConditionsAcceptanceStatusCollectionPage extends BaseCollectionPage<TermsAndConditionsAcceptanceStatus, TermsAndConditionsAcceptanceStatusCollectionRequestBuilder> {
 
     /**
      * A collection page for TermsAndConditionsAcceptanceStatus

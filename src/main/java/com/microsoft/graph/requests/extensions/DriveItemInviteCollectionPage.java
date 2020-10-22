@@ -22,7 +22,7 @@ import com.microsoft.graph.requests.extensions.DriveItemInviteCollectionResponse
 /**
  * The class for the Drive Item Invite Collection Page.
  */
-public class DriveItemInviteCollectionPage extends BaseCollectionPage<Permission> {
+public class DriveItemInviteCollectionPage extends BaseCollectionPage<Permission, DriveItemInviteCollectionRequestBuilder> {
 
     /**
      * A collection page for Permission.

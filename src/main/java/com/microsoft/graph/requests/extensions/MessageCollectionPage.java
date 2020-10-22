@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Message Collection Page.
  */
-public class MessageCollectionPage extends BaseCollectionPage<Message> {
+public class MessageCollectionPage extends BaseCollectionPage<Message, MessageCollectionRequestBuilder> {
 
     /**
      * A collection page for Message

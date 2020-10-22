@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Education School Collection Page.
  */
-public class EducationSchoolCollectionPage extends BaseCollectionPage<EducationSchool> {
+public class EducationSchoolCollectionPage extends BaseCollectionPage<EducationSchool, EducationSchoolCollectionRequestBuilder> {
 
     /**
      * A collection page for EducationSchool

@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Permission Collection Page.
  */
-public class PermissionCollectionPage extends BaseCollectionPage<Permission> {
+public class PermissionCollectionPage extends BaseCollectionPage<Permission, PermissionCollectionRequestBuilder> {
 
     /**
      * A collection page for Permission

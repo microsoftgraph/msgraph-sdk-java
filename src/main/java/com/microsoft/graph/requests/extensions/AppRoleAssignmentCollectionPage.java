@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the App Role Assignment Collection Page.
  */
-public class AppRoleAssignmentCollectionPage extends BaseCollectionPage<AppRoleAssignment> {
+public class AppRoleAssignmentCollectionPage extends BaseCollectionPage<AppRoleAssignment, AppRoleAssignmentCollectionRequestBuilder> {
 
     /**
      * A collection page for AppRoleAssignment

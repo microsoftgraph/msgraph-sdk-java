@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Mobile Threat Defense Connector Collection Page.
  */
-public class MobileThreatDefenseConnectorCollectionPage extends BaseCollectionPage<MobileThreatDefenseConnector> {
+public class MobileThreatDefenseConnectorCollectionPage extends BaseCollectionPage<MobileThreatDefenseConnector, MobileThreatDefenseConnectorCollectionRequestBuilder> {
 
     /**
      * A collection page for MobileThreatDefenseConnector

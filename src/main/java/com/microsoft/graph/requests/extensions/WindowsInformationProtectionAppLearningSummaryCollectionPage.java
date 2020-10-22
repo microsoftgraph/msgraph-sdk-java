@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Windows Information Protection App Learning Summary Collection Page.
  */
-public class WindowsInformationProtectionAppLearningSummaryCollectionPage extends BaseCollectionPage<WindowsInformationProtectionAppLearningSummary> {
+public class WindowsInformationProtectionAppLearningSummaryCollectionPage extends BaseCollectionPage<WindowsInformationProtectionAppLearningSummary, WindowsInformationProtectionAppLearningSummaryCollectionRequestBuilder> {
 
     /**
      * A collection page for WindowsInformationProtectionAppLearningSummary

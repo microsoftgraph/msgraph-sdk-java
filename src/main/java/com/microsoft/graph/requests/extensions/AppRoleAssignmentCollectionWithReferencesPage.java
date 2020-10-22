@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the App Role Assignment Collection With References Page.
  */
-public class AppRoleAssignmentCollectionWithReferencesPage extends BaseCollectionPage<AppRoleAssignment> {
+public class AppRoleAssignmentCollectionWithReferencesPage extends BaseCollectionPage<AppRoleAssignment, AppRoleAssignmentCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for AppRoleAssignment

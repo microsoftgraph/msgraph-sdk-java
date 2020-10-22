@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Segment Collection Page.
  */
-public class SegmentCollectionPage extends BaseCollectionPage<Segment> {
+public class SegmentCollectionPage extends BaseCollectionPage<Segment, SegmentCollectionRequestBuilder> {
 
     /**
      * A collection page for Segment

@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Outlook Category Collection Page.
  */
-public class OutlookCategoryCollectionPage extends BaseCollectionPage<OutlookCategory> {
+public class OutlookCategoryCollectionPage extends BaseCollectionPage<OutlookCategory, OutlookCategoryCollectionRequestBuilder> {
 
     /**
      * A collection page for OutlookCategory

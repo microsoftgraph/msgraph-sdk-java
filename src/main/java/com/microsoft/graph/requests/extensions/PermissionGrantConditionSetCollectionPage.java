@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Permission Grant Condition Set Collection Page.
  */
-public class PermissionGrantConditionSetCollectionPage extends BaseCollectionPage<PermissionGrantConditionSet> {
+public class PermissionGrantConditionSetCollectionPage extends BaseCollectionPage<PermissionGrantConditionSet, PermissionGrantConditionSetCollectionRequestBuilder> {
 
     /**
      * A collection page for PermissionGrantConditionSet

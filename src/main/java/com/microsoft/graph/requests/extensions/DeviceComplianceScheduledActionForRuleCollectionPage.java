@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Device Compliance Scheduled Action For Rule Collection Page.
  */
-public class DeviceComplianceScheduledActionForRuleCollectionPage extends BaseCollectionPage<DeviceComplianceScheduledActionForRule> {
+public class DeviceComplianceScheduledActionForRuleCollectionPage extends BaseCollectionPage<DeviceComplianceScheduledActionForRule, DeviceComplianceScheduledActionForRuleCollectionRequestBuilder> {
 
     /**
      * A collection page for DeviceComplianceScheduledActionForRule

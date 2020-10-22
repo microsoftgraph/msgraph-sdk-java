@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Managed App Registration Collection Page.
  */
-public class ManagedAppRegistrationCollectionPage extends BaseCollectionPage<ManagedAppRegistration> {
+public class ManagedAppRegistrationCollectionPage extends BaseCollectionPage<ManagedAppRegistration, ManagedAppRegistrationCollectionRequestBuilder> {
 
     /**
      * A collection page for ManagedAppRegistration

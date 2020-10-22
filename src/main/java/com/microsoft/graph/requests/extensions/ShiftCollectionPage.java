@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Shift Collection Page.
  */
-public class ShiftCollectionPage extends BaseCollectionPage<Shift> {
+public class ShiftCollectionPage extends BaseCollectionPage<Shift, ShiftCollectionRequestBuilder> {
 
     /**
      * A collection page for Shift

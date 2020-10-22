@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.GroupDeltaCollectionResponse;
 /**
  * The class for the Group Delta Collection Page.
  */
-public class GroupDeltaCollectionPage extends DeltaCollectionPage<Group> {
+public class GroupDeltaCollectionPage extends DeltaCollectionPage<Group, GroupDeltaCollectionRequestBuilder> {
 
     /**
      * A collection page for Group.

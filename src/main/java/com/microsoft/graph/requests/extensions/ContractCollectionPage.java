@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Contract Collection Page.
  */
-public class ContractCollectionPage extends BaseCollectionPage<Contract> {
+public class ContractCollectionPage extends BaseCollectionPage<Contract, ContractCollectionRequestBuilder> {
 
     /**
      * A collection page for Contract

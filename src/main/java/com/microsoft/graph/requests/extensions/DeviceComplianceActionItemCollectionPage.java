@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Device Compliance Action Item Collection Page.
  */
-public class DeviceComplianceActionItemCollectionPage extends BaseCollectionPage<DeviceComplianceActionItem> {
+public class DeviceComplianceActionItemCollectionPage extends BaseCollectionPage<DeviceComplianceActionItem, DeviceComplianceActionItemCollectionRequestBuilder> {
 
     /**
      * A collection page for DeviceComplianceActionItem

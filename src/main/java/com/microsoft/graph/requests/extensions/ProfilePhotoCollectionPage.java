@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Profile Photo Collection Page.
  */
-public class ProfilePhotoCollectionPage extends BaseCollectionPage<ProfilePhoto> {
+public class ProfilePhotoCollectionPage extends BaseCollectionPage<ProfilePhoto, ProfilePhotoCollectionRequestBuilder> {
 
     /**
      * A collection page for ProfilePhoto

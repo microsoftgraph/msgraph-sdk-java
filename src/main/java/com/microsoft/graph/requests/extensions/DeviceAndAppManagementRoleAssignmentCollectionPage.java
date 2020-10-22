@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Device And App Management Role Assignment Collection Page.
  */
-public class DeviceAndAppManagementRoleAssignmentCollectionPage extends BaseCollectionPage<DeviceAndAppManagementRoleAssignment> {
+public class DeviceAndAppManagementRoleAssignmentCollectionPage extends BaseCollectionPage<DeviceAndAppManagementRoleAssignment, DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder> {
 
     /**
      * A collection page for DeviceAndAppManagementRoleAssignment

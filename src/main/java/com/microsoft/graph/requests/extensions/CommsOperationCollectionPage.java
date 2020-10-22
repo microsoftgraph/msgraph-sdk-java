@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Comms Operation Collection Page.
  */
-public class CommsOperationCollectionPage extends BaseCollectionPage<CommsOperation> {
+public class CommsOperationCollectionPage extends BaseCollectionPage<CommsOperation, CommsOperationCollectionRequestBuilder> {
 
     /**
      * A collection page for CommsOperation

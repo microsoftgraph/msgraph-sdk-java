@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Managed App Registration Collection With References Page.
  */
-public class ManagedAppRegistrationCollectionWithReferencesPage extends BaseCollectionPage<ManagedAppRegistration> {
+public class ManagedAppRegistrationCollectionWithReferencesPage extends BaseCollectionPage<ManagedAppRegistration, ManagedAppRegistrationCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for ManagedAppRegistration

@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Mobile App Content File Collection Page.
  */
-public class MobileAppContentFileCollectionPage extends BaseCollectionPage<MobileAppContentFile> {
+public class MobileAppContentFileCollectionPage extends BaseCollectionPage<MobileAppContentFile, MobileAppContentFileCollectionRequestBuilder> {
 
     /**
      * A collection page for MobileAppContentFile

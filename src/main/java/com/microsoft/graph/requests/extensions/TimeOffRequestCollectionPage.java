@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Time Off Request Collection Page.
  */
-public class TimeOffRequestCollectionPage extends BaseCollectionPage<TimeOffRequest> {
+public class TimeOffRequestCollectionPage extends BaseCollectionPage<TimeOffRequest, TimeOffRequestCollectionRequestBuilder> {
 
     /**
      * A collection page for TimeOffRequest

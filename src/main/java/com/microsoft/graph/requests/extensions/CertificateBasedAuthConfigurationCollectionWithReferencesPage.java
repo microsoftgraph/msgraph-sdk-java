@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Certificate Based Auth Configuration Collection With References Page.
  */
-public class CertificateBasedAuthConfigurationCollectionWithReferencesPage extends BaseCollectionPage<CertificateBasedAuthConfiguration> {
+public class CertificateBasedAuthConfigurationCollectionWithReferencesPage extends BaseCollectionPage<CertificateBasedAuthConfiguration, CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for CertificateBasedAuthConfiguration

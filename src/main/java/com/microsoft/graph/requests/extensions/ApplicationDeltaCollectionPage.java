@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.ApplicationDeltaCollectionRespons
 /**
  * The class for the Application Delta Collection Page.
  */
-public class ApplicationDeltaCollectionPage extends DeltaCollectionPage<Application> {
+public class ApplicationDeltaCollectionPage extends DeltaCollectionPage<Application, ApplicationDeltaCollectionRequestBuilder> {
 
     /**
      * A collection page for Application.

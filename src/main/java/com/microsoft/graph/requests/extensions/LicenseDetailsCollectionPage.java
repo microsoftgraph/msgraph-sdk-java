@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the License Details Collection Page.
  */
-public class LicenseDetailsCollectionPage extends BaseCollectionPage<LicenseDetails> {
+public class LicenseDetailsCollectionPage extends BaseCollectionPage<LicenseDetails, LicenseDetailsCollectionRequestBuilder> {
 
     /**
      * A collection page for LicenseDetails

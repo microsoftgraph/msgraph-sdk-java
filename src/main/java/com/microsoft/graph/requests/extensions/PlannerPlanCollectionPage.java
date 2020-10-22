@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Planner Plan Collection Page.
  */
-public class PlannerPlanCollectionPage extends BaseCollectionPage<PlannerPlan> {
+public class PlannerPlanCollectionPage extends BaseCollectionPage<PlannerPlan, PlannerPlanCollectionRequestBuilder> {
 
     /**
      * A collection page for PlannerPlan

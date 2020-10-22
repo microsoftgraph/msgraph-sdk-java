@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Secure Score Control Profile Collection Page.
  */
-public class SecureScoreControlProfileCollectionPage extends BaseCollectionPage<SecureScoreControlProfile> {
+public class SecureScoreControlProfileCollectionPage extends BaseCollectionPage<SecureScoreControlProfile, SecureScoreControlProfileCollectionRequestBuilder> {
 
     /**
      * A collection page for SecureScoreControlProfile

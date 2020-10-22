@@ -23,7 +23,7 @@ import com.microsoft.graph.requests.extensions.UserGetMailTipsCollectionResponse
 /**
  * The class for the User Get Mail Tips Collection Page.
  */
-public class UserGetMailTipsCollectionPage extends BaseCollectionPage<MailTips> {
+public class UserGetMailTipsCollectionPage extends BaseCollectionPage<MailTips, UserGetMailTipsCollectionRequestBuilder> {
 
     /**
      * A collection page for MailTips.

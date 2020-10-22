@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignCollecti
 /**
  * The class for the Device Configuration Assign Collection Page.
  */
-public class DeviceConfigurationAssignCollectionPage extends BaseCollectionPage<DeviceConfigurationAssignment> {
+public class DeviceConfigurationAssignCollectionPage extends BaseCollectionPage<DeviceConfigurationAssignment, DeviceConfigurationAssignCollectionRequestBuilder> {
 
     /**
      * A collection page for DeviceConfigurationAssignment.

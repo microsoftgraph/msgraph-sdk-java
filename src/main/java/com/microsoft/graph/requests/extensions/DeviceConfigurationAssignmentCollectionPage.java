@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Device Configuration Assignment Collection Page.
  */
-public class DeviceConfigurationAssignmentCollectionPage extends BaseCollectionPage<DeviceConfigurationAssignment> {
+public class DeviceConfigurationAssignmentCollectionPage extends BaseCollectionPage<DeviceConfigurationAssignment, DeviceConfigurationAssignmentCollectionRequestBuilder> {
 
     /**
      * A collection page for DeviceConfigurationAssignment

@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Token Lifetime Policy Collection With References Page.
  */
-public class TokenLifetimePolicyCollectionWithReferencesPage extends BaseCollectionPage<TokenLifetimePolicy> {
+public class TokenLifetimePolicyCollectionWithReferencesPage extends BaseCollectionPage<TokenLifetimePolicy, TokenLifetimePolicyCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for TokenLifetimePolicy

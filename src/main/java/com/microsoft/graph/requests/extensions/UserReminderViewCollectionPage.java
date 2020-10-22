@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.UserReminderViewCollectionRespons
 /**
  * The class for the User Reminder View Collection Page.
  */
-public class UserReminderViewCollectionPage extends BaseCollectionPage<Reminder> {
+public class UserReminderViewCollectionPage extends BaseCollectionPage<Reminder, UserReminderViewCollectionRequestBuilder> {
 
     /**
      * A collection page for Reminder.

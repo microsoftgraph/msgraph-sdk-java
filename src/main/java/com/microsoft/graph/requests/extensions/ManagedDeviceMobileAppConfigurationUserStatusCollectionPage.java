@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Managed Device Mobile App Configuration User Status Collection Page.
  */
-public class ManagedDeviceMobileAppConfigurationUserStatusCollectionPage extends BaseCollectionPage<ManagedDeviceMobileAppConfigurationUserStatus> {
+public class ManagedDeviceMobileAppConfigurationUserStatusCollectionPage extends BaseCollectionPage<ManagedDeviceMobileAppConfigurationUserStatus, ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder> {
 
     /**
      * A collection page for ManagedDeviceMobileAppConfigurationUserStatus

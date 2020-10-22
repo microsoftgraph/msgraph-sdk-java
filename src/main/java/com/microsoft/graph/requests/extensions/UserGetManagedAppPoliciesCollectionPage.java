@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.UserGetManagedAppPoliciesCollecti
 /**
  * The class for the User Get Managed App Policies Collection Page.
  */
-public class UserGetManagedAppPoliciesCollectionPage extends BaseCollectionPage<ManagedAppPolicy> {
+public class UserGetManagedAppPoliciesCollectionPage extends BaseCollectionPage<ManagedAppPolicy, UserGetManagedAppPoliciesCollectionRequestBuilder> {
 
     /**
      * A collection page for ManagedAppPolicy.

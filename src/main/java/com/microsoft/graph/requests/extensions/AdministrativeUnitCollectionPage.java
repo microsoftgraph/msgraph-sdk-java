@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Administrative Unit Collection Page.
  */
-public class AdministrativeUnitCollectionPage extends BaseCollectionPage<AdministrativeUnit> {
+public class AdministrativeUnitCollectionPage extends BaseCollectionPage<AdministrativeUnit, AdministrativeUnitCollectionRequestBuilder> {
 
     /**
      * A collection page for AdministrativeUnit

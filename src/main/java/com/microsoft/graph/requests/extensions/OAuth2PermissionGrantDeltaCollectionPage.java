@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantDeltaCollect
 /**
  * The class for the OAuth2Permission Grant Delta Collection Page.
  */
-public class OAuth2PermissionGrantDeltaCollectionPage extends DeltaCollectionPage<OAuth2PermissionGrant> {
+public class OAuth2PermissionGrantDeltaCollectionPage extends DeltaCollectionPage<OAuth2PermissionGrant, OAuth2PermissionGrantDeltaCollectionRequestBuilder> {
 
     /**
      * A collection page for OAuth2PermissionGrant.

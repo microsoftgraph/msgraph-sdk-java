@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Notification Message Template Collection Page.
  */
-public class NotificationMessageTemplateCollectionPage extends BaseCollectionPage<NotificationMessageTemplate> {
+public class NotificationMessageTemplateCollectionPage extends BaseCollectionPage<NotificationMessageTemplate, NotificationMessageTemplateCollectionRequestBuilder> {
 
     /**
      * A collection page for NotificationMessageTemplate

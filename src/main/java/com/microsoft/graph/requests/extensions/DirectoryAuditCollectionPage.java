@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Directory Audit Collection Page.
  */
-public class DirectoryAuditCollectionPage extends BaseCollectionPage<DirectoryAudit> {
+public class DirectoryAuditCollectionPage extends BaseCollectionPage<DirectoryAudit, DirectoryAuditCollectionRequestBuilder> {
 
     /**
      * A collection page for DirectoryAudit

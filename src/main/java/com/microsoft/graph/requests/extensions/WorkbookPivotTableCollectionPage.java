@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Workbook Pivot Table Collection Page.
  */
-public class WorkbookPivotTableCollectionPage extends BaseCollectionPage<WorkbookPivotTable> {
+public class WorkbookPivotTableCollectionPage extends BaseCollectionPage<WorkbookPivotTable, WorkbookPivotTableCollectionRequestBuilder> {
 
     /**
      * A collection page for WorkbookPivotTable

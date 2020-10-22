@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the OAuth2Permission Grant Collection Page.
  */
-public class OAuth2PermissionGrantCollectionPage extends BaseCollectionPage<OAuth2PermissionGrant> {
+public class OAuth2PermissionGrantCollectionPage extends BaseCollectionPage<OAuth2PermissionGrant, OAuth2PermissionGrantCollectionRequestBuilder> {
 
     /**
      * A collection page for OAuth2PermissionGrant

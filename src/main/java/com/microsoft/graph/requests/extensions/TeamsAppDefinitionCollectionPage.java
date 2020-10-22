@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Teams App Definition Collection Page.
  */
-public class TeamsAppDefinitionCollectionPage extends BaseCollectionPage<TeamsAppDefinition> {
+public class TeamsAppDefinitionCollectionPage extends BaseCollectionPage<TeamsAppDefinition, TeamsAppDefinitionCollectionRequestBuilder> {
 
     /**
      * A collection page for TeamsAppDefinition

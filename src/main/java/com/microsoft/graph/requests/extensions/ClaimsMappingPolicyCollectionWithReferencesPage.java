@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Claims Mapping Policy Collection With References Page.
  */
-public class ClaimsMappingPolicyCollectionWithReferencesPage extends BaseCollectionPage<ClaimsMappingPolicy> {
+public class ClaimsMappingPolicyCollectionWithReferencesPage extends BaseCollectionPage<ClaimsMappingPolicy, ClaimsMappingPolicyCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for ClaimsMappingPolicy

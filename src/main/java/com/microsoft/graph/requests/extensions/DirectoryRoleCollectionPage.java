@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Directory Role Collection Page.
  */
-public class DirectoryRoleCollectionPage extends BaseCollectionPage<DirectoryRole> {
+public class DirectoryRoleCollectionPage extends BaseCollectionPage<DirectoryRole, DirectoryRoleCollectionRequestBuilder> {
 
     /**
      * A collection page for DirectoryRole

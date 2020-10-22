@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Device Enrollment Configuration Collection Page.
  */
-public class DeviceEnrollmentConfigurationCollectionPage extends BaseCollectionPage<DeviceEnrollmentConfiguration> {
+public class DeviceEnrollmentConfigurationCollectionPage extends BaseCollectionPage<DeviceEnrollmentConfiguration, DeviceEnrollmentConfigurationCollectionRequestBuilder> {
 
     /**
      * A collection page for DeviceEnrollmentConfiguration

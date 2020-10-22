@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Mdm Windows Information Protection Policy Collection Page.
  */
-public class MdmWindowsInformationProtectionPolicyCollectionPage extends BaseCollectionPage<MdmWindowsInformationProtectionPolicy> {
+public class MdmWindowsInformationProtectionPolicyCollectionPage extends BaseCollectionPage<MdmWindowsInformationProtectionPolicy, MdmWindowsInformationProtectionPolicyCollectionRequestBuilder> {
 
     /**
      * A collection page for MdmWindowsInformationProtectionPolicy

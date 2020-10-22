@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.MessageDeltaCollectionResponse;
 /**
  * The class for the Message Delta Collection Page.
  */
-public class MessageDeltaCollectionPage extends DeltaCollectionPage<Message> {
+public class MessageDeltaCollectionPage extends DeltaCollectionPage<Message, MessageDeltaCollectionRequestBuilder> {
 
     /**
      * A collection page for Message.

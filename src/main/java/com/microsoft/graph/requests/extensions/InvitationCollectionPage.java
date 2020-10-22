@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Invitation Collection Page.
  */
-public class InvitationCollectionPage extends BaseCollectionPage<Invitation> {
+public class InvitationCollectionPage extends BaseCollectionPage<Invitation, InvitationCollectionRequestBuilder> {
 
     /**
      * A collection page for Invitation

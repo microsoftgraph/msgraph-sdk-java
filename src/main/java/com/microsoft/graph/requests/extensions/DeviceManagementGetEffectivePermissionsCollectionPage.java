@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.DeviceManagementGetEffectivePermi
 /**
  * The class for the Device Management Get Effective Permissions Collection Page.
  */
-public class DeviceManagementGetEffectivePermissionsCollectionPage extends BaseCollectionPage<RolePermission> {
+public class DeviceManagementGetEffectivePermissionsCollectionPage extends BaseCollectionPage<RolePermission, DeviceManagementGetEffectivePermissionsCollectionRequestBuilder> {
 
     /**
      * A collection page for RolePermission.

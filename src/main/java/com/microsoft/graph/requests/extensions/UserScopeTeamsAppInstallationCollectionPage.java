@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the User Scope Teams App Installation Collection Page.
  */
-public class UserScopeTeamsAppInstallationCollectionPage extends BaseCollectionPage<UserScopeTeamsAppInstallation> {
+public class UserScopeTeamsAppInstallationCollectionPage extends BaseCollectionPage<UserScopeTeamsAppInstallation, UserScopeTeamsAppInstallationCollectionRequestBuilder> {
 
     /**
      * A collection page for UserScopeTeamsAppInstallation

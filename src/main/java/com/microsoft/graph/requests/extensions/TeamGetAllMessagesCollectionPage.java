@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.TeamGetAllMessagesCollectionRespo
 /**
  * The class for the Team Get All Messages Collection Page.
  */
-public class TeamGetAllMessagesCollectionPage extends BaseCollectionPage<ChatMessage> {
+public class TeamGetAllMessagesCollectionPage extends BaseCollectionPage<ChatMessage, TeamGetAllMessagesCollectionRequestBuilder> {
 
     /**
      * A collection page for ChatMessage.

@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Channel Collection Page.
  */
-public class ChannelCollectionPage extends BaseCollectionPage<Channel> {
+public class ChannelCollectionPage extends BaseCollectionPage<Channel, ChannelCollectionRequestBuilder> {
 
     /**
      * A collection page for Channel

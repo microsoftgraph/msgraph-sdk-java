@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Threat Assessment Request Collection Page.
  */
-public class ThreatAssessmentRequestCollectionPage extends BaseCollectionPage<ThreatAssessmentRequest> {
+public class ThreatAssessmentRequestCollectionPage extends BaseCollectionPage<ThreatAssessmentRequest, ThreatAssessmentRequestCollectionRequestBuilder> {
 
     /**
      * A collection page for ThreatAssessmentRequest

@@ -22,7 +22,7 @@ import com.microsoft.graph.requests.extensions.OutlookUserSupportedTimeZonesColl
 /**
  * The class for the Outlook User Supported Time Zones Collection Page.
  */
-public class OutlookUserSupportedTimeZonesCollectionPage extends BaseCollectionPage<TimeZoneInformation> {
+public class OutlookUserSupportedTimeZonesCollectionPage extends BaseCollectionPage<TimeZoneInformation, OutlookUserSupportedTimeZonesCollectionRequestBuilder> {
 
     /**
      * A collection page for TimeZoneInformation.

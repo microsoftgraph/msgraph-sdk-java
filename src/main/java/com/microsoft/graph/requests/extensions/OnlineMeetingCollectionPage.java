@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Online Meeting Collection Page.
  */
-public class OnlineMeetingCollectionPage extends BaseCollectionPage<OnlineMeeting> {
+public class OnlineMeetingCollectionPage extends BaseCollectionPage<OnlineMeeting, OnlineMeetingCollectionRequestBuilder> {
 
     /**
      * A collection page for OnlineMeeting

@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Claims Mapping Policy Collection Page.
  */
-public class ClaimsMappingPolicyCollectionPage extends BaseCollectionPage<ClaimsMappingPolicy> {
+public class ClaimsMappingPolicyCollectionPage extends BaseCollectionPage<ClaimsMappingPolicy, ClaimsMappingPolicyCollectionRequestBuilder> {
 
     /**
      * A collection page for ClaimsMappingPolicy

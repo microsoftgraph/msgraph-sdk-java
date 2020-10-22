@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Device Management Troubleshooting Event Collection Page.
  */
-public class DeviceManagementTroubleshootingEventCollectionPage extends BaseCollectionPage<DeviceManagementTroubleshootingEvent> {
+public class DeviceManagementTroubleshootingEventCollectionPage extends BaseCollectionPage<DeviceManagementTroubleshootingEvent, DeviceManagementTroubleshootingEventCollectionRequestBuilder> {
 
     /**
      * A collection page for DeviceManagementTroubleshootingEvent

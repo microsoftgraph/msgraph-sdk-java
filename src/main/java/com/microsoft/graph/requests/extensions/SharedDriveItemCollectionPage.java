@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Shared Drive Item Collection Page.
  */
-public class SharedDriveItemCollectionPage extends BaseCollectionPage<SharedDriveItem> {
+public class SharedDriveItemCollectionPage extends BaseCollectionPage<SharedDriveItem, SharedDriveItemCollectionRequestBuilder> {
 
     /**
      * A collection page for SharedDriveItem

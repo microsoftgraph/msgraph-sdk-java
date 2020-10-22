@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Endpoint Collection Page.
  */
-public class EndpointCollectionPage extends BaseCollectionPage<Endpoint> {
+public class EndpointCollectionPage extends BaseCollectionPage<Endpoint, EndpointCollectionRequestBuilder> {
 
     /**
      * A collection page for Endpoint

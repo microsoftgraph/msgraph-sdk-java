@@ -21,7 +21,7 @@ import com.microsoft.graph.requests.extensions.ListItemGetActivitiesByIntervalCo
 /**
  * The class for the List Item Get Activities By Interval Collection Page.
  */
-public class ListItemGetActivitiesByIntervalCollectionPage extends BaseCollectionPage<ItemActivityStat> {
+public class ListItemGetActivitiesByIntervalCollectionPage extends BaseCollectionPage<ItemActivityStat, ListItemGetActivitiesByIntervalCollectionRequestBuilder> {
 
     /**
      * A collection page for ItemActivityStat.

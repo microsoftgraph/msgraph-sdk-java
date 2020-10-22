@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Conditional Access Policy Collection Page.
  */
-public class ConditionalAccessPolicyCollectionPage extends BaseCollectionPage<ConditionalAccessPolicy> {
+public class ConditionalAccessPolicyCollectionPage extends BaseCollectionPage<ConditionalAccessPolicy, ConditionalAccessPolicyCollectionRequestBuilder> {
 
     /**
      * A collection page for ConditionalAccessPolicy

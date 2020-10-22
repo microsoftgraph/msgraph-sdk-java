@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Managed Mobile Lob App Collection Page.
  */
-public class ManagedMobileLobAppCollectionPage extends BaseCollectionPage<ManagedMobileLobApp> {
+public class ManagedMobileLobAppCollectionPage extends BaseCollectionPage<ManagedMobileLobApp, ManagedMobileLobAppCollectionRequestBuilder> {
 
     /**
      * A collection page for ManagedMobileLobApp

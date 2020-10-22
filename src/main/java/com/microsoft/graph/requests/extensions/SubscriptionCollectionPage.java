@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Subscription Collection Page.
  */
-public class SubscriptionCollectionPage extends BaseCollectionPage<Subscription> {
+public class SubscriptionCollectionPage extends BaseCollectionPage<Subscription, SubscriptionCollectionRequestBuilder> {
 
     /**
      * A collection page for Subscription

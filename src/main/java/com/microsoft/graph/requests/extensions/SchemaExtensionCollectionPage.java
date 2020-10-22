@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Schema Extension Collection Page.
  */
-public class SchemaExtensionCollectionPage extends BaseCollectionPage<SchemaExtension> {
+public class SchemaExtensionCollectionPage extends BaseCollectionPage<SchemaExtension, SchemaExtensionCollectionRequestBuilder> {
 
     /**
      * A collection page for SchemaExtension

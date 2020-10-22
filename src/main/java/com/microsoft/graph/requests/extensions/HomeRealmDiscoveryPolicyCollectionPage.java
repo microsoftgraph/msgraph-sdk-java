@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Home Realm Discovery Policy Collection Page.
  */
-public class HomeRealmDiscoveryPolicyCollectionPage extends BaseCollectionPage<HomeRealmDiscoveryPolicy> {
+public class HomeRealmDiscoveryPolicyCollectionPage extends BaseCollectionPage<HomeRealmDiscoveryPolicy, HomeRealmDiscoveryPolicyCollectionRequestBuilder> {
 
     /**
      * A collection page for HomeRealmDiscoveryPolicy

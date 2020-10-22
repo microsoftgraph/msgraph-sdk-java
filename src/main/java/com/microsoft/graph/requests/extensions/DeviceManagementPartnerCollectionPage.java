@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Device Management Partner Collection Page.
  */
-public class DeviceManagementPartnerCollectionPage extends BaseCollectionPage<DeviceManagementPartner> {
+public class DeviceManagementPartnerCollectionPage extends BaseCollectionPage<DeviceManagementPartner, DeviceManagementPartnerCollectionRequestBuilder> {
 
     /**
      * A collection page for DeviceManagementPartner

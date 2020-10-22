@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Mobile App Category Collection With References Page.
  */
-public class MobileAppCategoryCollectionWithReferencesPage extends BaseCollectionPage<MobileAppCategory> {
+public class MobileAppCategoryCollectionWithReferencesPage extends BaseCollectionPage<MobileAppCategory, MobileAppCategoryCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for MobileAppCategory

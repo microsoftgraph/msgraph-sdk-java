@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Teams Template Collection Page.
  */
-public class TeamsTemplateCollectionPage extends BaseCollectionPage<TeamsTemplate> {
+public class TeamsTemplateCollectionPage extends BaseCollectionPage<TeamsTemplate, TeamsTemplateCollectionRequestBuilder> {
 
     /**
      * A collection page for TeamsTemplate

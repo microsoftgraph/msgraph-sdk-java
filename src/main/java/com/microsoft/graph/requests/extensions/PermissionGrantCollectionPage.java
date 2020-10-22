@@ -22,7 +22,7 @@ import com.microsoft.graph.requests.extensions.PermissionGrantCollectionResponse
 /**
  * The class for the Permission Grant Collection Page.
  */
-public class PermissionGrantCollectionPage extends BaseCollectionPage<Permission> {
+public class PermissionGrantCollectionPage extends BaseCollectionPage<Permission, PermissionGrantCollectionRequestBuilder> {
 
     /**
      * A collection page for Permission.

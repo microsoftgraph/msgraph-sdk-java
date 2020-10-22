@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Device Install State Collection Page.
  */
-public class DeviceInstallStateCollectionPage extends BaseCollectionPage<DeviceInstallState> {
+public class DeviceInstallStateCollectionPage extends BaseCollectionPage<DeviceInstallState, DeviceInstallStateCollectionRequestBuilder> {
 
     /**
      * A collection page for DeviceInstallState

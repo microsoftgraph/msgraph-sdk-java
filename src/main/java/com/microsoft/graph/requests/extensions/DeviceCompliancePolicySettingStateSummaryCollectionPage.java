@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Device Compliance Policy Setting State Summary Collection Page.
  */
-public class DeviceCompliancePolicySettingStateSummaryCollectionPage extends BaseCollectionPage<DeviceCompliancePolicySettingStateSummary> {
+public class DeviceCompliancePolicySettingStateSummaryCollectionPage extends BaseCollectionPage<DeviceCompliancePolicySettingStateSummary, DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder> {
 
     /**
      * A collection page for DeviceCompliancePolicySettingStateSummary

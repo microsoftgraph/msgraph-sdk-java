@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Column Definition Collection Page.
  */
-public class ColumnDefinitionCollectionPage extends BaseCollectionPage<ColumnDefinition> {
+public class ColumnDefinitionCollectionPage extends BaseCollectionPage<ColumnDefinition, ColumnDefinitionCollectionRequestBuilder> {
 
     /**
      * A collection page for ColumnDefinition

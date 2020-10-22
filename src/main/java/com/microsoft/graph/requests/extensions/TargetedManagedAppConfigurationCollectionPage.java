@@ -13,7 +13,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Targeted Managed App Configuration Collection Page.
  */
-public class TargetedManagedAppConfigurationCollectionPage extends BaseCollectionPage<TargetedManagedAppConfiguration> {
+public class TargetedManagedAppConfigurationCollectionPage extends BaseCollectionPage<TargetedManagedAppConfiguration, TargetedManagedAppConfigurationCollectionRequestBuilder> {
 
     /**
      * A collection page for TargetedManagedAppConfiguration
