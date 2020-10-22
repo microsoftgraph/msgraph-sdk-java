@@ -106,7 +106,6 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      * @param fileContents the file to upload
      * @return             the stream that the caller needs to close
      */
-    @SuppressWarnings("unchecked")
     protected T send(final byte[] fileContents) {
         baseRequest.setHttpMethod(HttpMethod.PUT);
         return (T) baseRequest.getClient().getHttpProvider().send(this, baseRequest.getResponseType(), fileContents);
