@@ -44,27 +44,27 @@ public class EducationUserCollectionWithReferencesRequest extends BaseCollection
     }
 
     public EducationUserCollectionWithReferencesRequest expand(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 
     public EducationUserCollectionWithReferencesRequest filter(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        addFilterOption(value);
         return this;
     }
 
     public EducationUserCollectionWithReferencesRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        addOrderByOption(value);
         return this;
     }
 
     public EducationUserCollectionWithReferencesRequest select(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
     public EducationUserCollectionWithReferencesRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
+        addTopOption(value);
         return this;
     }
 

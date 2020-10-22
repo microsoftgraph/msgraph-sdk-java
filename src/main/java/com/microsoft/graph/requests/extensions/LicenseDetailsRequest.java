@@ -139,7 +139,7 @@ public class LicenseDetailsRequest extends BaseRequest<LicenseDetails> {
      * @return the updated request
      */
      public LicenseDetailsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -150,7 +150,7 @@ public class LicenseDetailsRequest extends BaseRequest<LicenseDetails> {
      * @return the updated request
      */
      public LicenseDetailsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

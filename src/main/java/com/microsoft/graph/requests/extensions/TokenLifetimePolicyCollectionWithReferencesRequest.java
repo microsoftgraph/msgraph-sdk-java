@@ -44,27 +44,27 @@ public class TokenLifetimePolicyCollectionWithReferencesRequest extends BaseColl
     }
 
     public TokenLifetimePolicyCollectionWithReferencesRequest expand(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 
     public TokenLifetimePolicyCollectionWithReferencesRequest filter(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        addFilterOption(value);
         return this;
     }
 
     public TokenLifetimePolicyCollectionWithReferencesRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        addOrderByOption(value);
         return this;
     }
 
     public TokenLifetimePolicyCollectionWithReferencesRequest select(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
     public TokenLifetimePolicyCollectionWithReferencesRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
+        addTopOption(value);
         return this;
     }
 

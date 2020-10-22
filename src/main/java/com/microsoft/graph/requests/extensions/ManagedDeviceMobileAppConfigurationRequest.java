@@ -163,7 +163,7 @@ public class ManagedDeviceMobileAppConfigurationRequest extends BaseRequest<Mana
      * @return the updated request
      */
      public ManagedDeviceMobileAppConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -174,7 +174,7 @@ public class ManagedDeviceMobileAppConfigurationRequest extends BaseRequest<Mana
      * @return the updated request
      */
      public ManagedDeviceMobileAppConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

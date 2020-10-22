@@ -73,7 +73,7 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<Mail
      * @return the updated request
      */
     public UserGetMailTipsCollectionRequest select(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -84,7 +84,7 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<Mail
      * @return the updated request
      */
     public UserGetMailTipsCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
+        addTopOption(value);
         return this;
     }
 
@@ -95,7 +95,7 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<Mail
      * @return the updated request
      */
     public UserGetMailTipsCollectionRequest expand(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 
@@ -106,7 +106,7 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<Mail
      * @return the updated request
      */
     public UserGetMailTipsCollectionRequest filter(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        addFilterOption(value);
         return this;
     }
 
@@ -117,7 +117,7 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<Mail
      * @return the updated request
      */
     public UserGetMailTipsCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        addOrderByOption(value);
         return this;
     }
 

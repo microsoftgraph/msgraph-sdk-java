@@ -57,7 +57,7 @@ public class UserRevokeSignInSessionsRequest extends BaseRequest<Boolean> {
      * @return the updated request
      */
     public UserRevokeSignInSessionsRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -68,7 +68,7 @@ public class UserRevokeSignInSessionsRequest extends BaseRequest<Boolean> {
      * @return the updated request
      */
     public UserRevokeSignInSessionsRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 

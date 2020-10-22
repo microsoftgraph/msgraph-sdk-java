@@ -139,7 +139,7 @@ public class ThumbnailSetRequest extends BaseRequest<ThumbnailSet> {
      * @return the updated request
      */
      public ThumbnailSetRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -150,7 +150,7 @@ public class ThumbnailSetRequest extends BaseRequest<ThumbnailSet> {
      * @return the updated request
      */
      public ThumbnailSetRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

@@ -57,7 +57,7 @@ public class OrganizationSetMobileDeviceManagementAuthorityRequest extends BaseR
      * @return the updated request
      */
     public OrganizationSetMobileDeviceManagementAuthorityRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -68,7 +68,7 @@ public class OrganizationSetMobileDeviceManagementAuthorityRequest extends BaseR
      * @return the updated request
      */
     public OrganizationSetMobileDeviceManagementAuthorityRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 

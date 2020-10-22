@@ -142,7 +142,7 @@ public class IosManagedAppProtectionRequest extends BaseRequest<IosManagedAppPro
      * @return the updated request
      */
      public IosManagedAppProtectionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -153,7 +153,7 @@ public class IosManagedAppProtectionRequest extends BaseRequest<IosManagedAppPro
      * @return the updated request
      */
      public IosManagedAppProtectionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

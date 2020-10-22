@@ -140,7 +140,7 @@ public class TeamsTabRequest extends BaseRequest<TeamsTab> {
      * @return the updated request
      */
      public TeamsTabRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -151,7 +151,7 @@ public class TeamsTabRequest extends BaseRequest<TeamsTab> {
      * @return the updated request
      */
      public TeamsTabRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

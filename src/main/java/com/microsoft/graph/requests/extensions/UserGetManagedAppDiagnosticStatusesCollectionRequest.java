@@ -46,7 +46,7 @@ public class UserGetManagedAppDiagnosticStatusesCollectionRequest extends BaseCo
      * @return the updated request
      */
     public UserGetManagedAppDiagnosticStatusesCollectionRequest select(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -57,7 +57,7 @@ public class UserGetManagedAppDiagnosticStatusesCollectionRequest extends BaseCo
      * @return the updated request
      */
     public UserGetManagedAppDiagnosticStatusesCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
+        addTopOption(value);
         return this;
     }
 
@@ -68,7 +68,7 @@ public class UserGetManagedAppDiagnosticStatusesCollectionRequest extends BaseCo
      * @return the updated request
      */
     public UserGetManagedAppDiagnosticStatusesCollectionRequest expand(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 
@@ -79,7 +79,7 @@ public class UserGetManagedAppDiagnosticStatusesCollectionRequest extends BaseCo
      * @return the updated request
      */
     public UserGetManagedAppDiagnosticStatusesCollectionRequest filter(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        addFilterOption(value);
         return this;
     }
 
@@ -90,7 +90,7 @@ public class UserGetManagedAppDiagnosticStatusesCollectionRequest extends BaseCo
      * @return the updated request
      */
     public UserGetManagedAppDiagnosticStatusesCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        addOrderByOption(value);
         return this;
     }
 

@@ -49,7 +49,7 @@ public class WorkbookFunctionsIsLogicalRequest extends BaseRequest<WorkbookFunct
      * @return the updated request
      */
     public WorkbookFunctionsIsLogicalRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -60,7 +60,7 @@ public class WorkbookFunctionsIsLogicalRequest extends BaseRequest<WorkbookFunct
      * @return the updated request
      */
     public WorkbookFunctionsIsLogicalRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
+        addTopOption(value);
         return this;
     }
 
@@ -71,7 +71,7 @@ public class WorkbookFunctionsIsLogicalRequest extends BaseRequest<WorkbookFunct
      * @return the updated request
      */
     public WorkbookFunctionsIsLogicalRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 

@@ -97,7 +97,7 @@ public class WorkbookRangeBoundingRectRequest extends BaseRequest<WorkbookRange>
      * @return the updated request
      */
     public WorkbookRangeBoundingRectRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -108,7 +108,7 @@ public class WorkbookRangeBoundingRectRequest extends BaseRequest<WorkbookRange>
      * @return the updated request
      */
     public WorkbookRangeBoundingRectRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 
@@ -119,7 +119,7 @@ public class WorkbookRangeBoundingRectRequest extends BaseRequest<WorkbookRange>
      * @return the updated request
      */
     public WorkbookRangeBoundingRectRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        addFilterOption(value);
         return this;
     }
 
@@ -130,7 +130,7 @@ public class WorkbookRangeBoundingRectRequest extends BaseRequest<WorkbookRange>
      * @return the updated request
      */
     public WorkbookRangeBoundingRectRequest orderBy(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        addOrderByOption(value);
         return this;
     }
 

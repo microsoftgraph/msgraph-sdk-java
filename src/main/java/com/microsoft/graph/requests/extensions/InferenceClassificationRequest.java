@@ -141,7 +141,7 @@ public class InferenceClassificationRequest extends BaseRequest<InferenceClassif
      * @return the updated request
      */
      public InferenceClassificationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -152,7 +152,7 @@ public class InferenceClassificationRequest extends BaseRequest<InferenceClassif
      * @return the updated request
      */
      public InferenceClassificationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

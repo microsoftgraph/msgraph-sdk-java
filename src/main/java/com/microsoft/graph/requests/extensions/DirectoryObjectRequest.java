@@ -155,7 +155,7 @@ public class DirectoryObjectRequest extends BaseRequest<DirectoryObject> {
      * @return the updated request
      */
      public DirectoryObjectRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -166,7 +166,7 @@ public class DirectoryObjectRequest extends BaseRequest<DirectoryObject> {
      * @return the updated request
      */
      public DirectoryObjectRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

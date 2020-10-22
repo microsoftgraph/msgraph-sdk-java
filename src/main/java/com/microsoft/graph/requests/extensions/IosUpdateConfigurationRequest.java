@@ -139,7 +139,7 @@ public class IosUpdateConfigurationRequest extends BaseRequest<IosUpdateConfigur
      * @return the updated request
      */
      public IosUpdateConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -150,7 +150,7 @@ public class IosUpdateConfigurationRequest extends BaseRequest<IosUpdateConfigur
      * @return the updated request
      */
      public IosUpdateConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

@@ -143,7 +143,7 @@ public class ConditionalAccessRootRequest extends BaseRequest<ConditionalAccessR
      * @return the updated request
      */
      public ConditionalAccessRootRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -154,7 +154,7 @@ public class ConditionalAccessRootRequest extends BaseRequest<ConditionalAccessR
      * @return the updated request
      */
      public ConditionalAccessRootRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

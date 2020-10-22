@@ -144,7 +144,7 @@ public class SectionGroupRequest extends BaseRequest<SectionGroup> {
      * @return the updated request
      */
      public SectionGroupRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -155,7 +155,7 @@ public class SectionGroupRequest extends BaseRequest<SectionGroup> {
      * @return the updated request
      */
      public SectionGroupRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

@@ -139,7 +139,7 @@ public class AndroidCompliancePolicyRequest extends BaseRequest<AndroidComplianc
      * @return the updated request
      */
      public AndroidCompliancePolicyRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -150,7 +150,7 @@ public class AndroidCompliancePolicyRequest extends BaseRequest<AndroidComplianc
      * @return the updated request
      */
      public AndroidCompliancePolicyRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

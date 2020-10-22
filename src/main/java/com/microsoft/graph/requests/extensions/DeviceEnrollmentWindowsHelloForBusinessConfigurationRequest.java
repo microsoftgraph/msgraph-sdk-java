@@ -139,7 +139,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends
      * @return the updated request
      */
      public DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -150,7 +150,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends
      * @return the updated request
      */
      public DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

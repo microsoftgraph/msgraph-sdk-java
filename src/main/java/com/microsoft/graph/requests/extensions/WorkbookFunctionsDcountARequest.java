@@ -49,7 +49,7 @@ public class WorkbookFunctionsDcountARequest extends BaseRequest<WorkbookFunctio
      * @return the updated request
      */
     public WorkbookFunctionsDcountARequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -60,7 +60,7 @@ public class WorkbookFunctionsDcountARequest extends BaseRequest<WorkbookFunctio
      * @return the updated request
      */
     public WorkbookFunctionsDcountARequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
+        addTopOption(value);
         return this;
     }
 
@@ -71,7 +71,7 @@ public class WorkbookFunctionsDcountARequest extends BaseRequest<WorkbookFunctio
      * @return the updated request
      */
     public WorkbookFunctionsDcountARequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 

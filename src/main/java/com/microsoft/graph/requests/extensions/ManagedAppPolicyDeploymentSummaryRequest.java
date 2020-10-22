@@ -139,7 +139,7 @@ public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest<Manage
      * @return the updated request
      */
      public ManagedAppPolicyDeploymentSummaryRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -150,7 +150,7 @@ public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest<Manage
      * @return the updated request
      */
      public ManagedAppPolicyDeploymentSummaryRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

@@ -139,7 +139,7 @@ public class SubscribedSkuRequest extends BaseRequest<SubscribedSku> {
      * @return the updated request
      */
      public SubscribedSkuRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -150,7 +150,7 @@ public class SubscribedSkuRequest extends BaseRequest<SubscribedSku> {
      * @return the updated request
      */
      public SubscribedSkuRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

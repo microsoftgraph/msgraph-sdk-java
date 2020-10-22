@@ -146,7 +146,7 @@ public class TargetedManagedAppConfigurationRequest extends BaseRequest<Targeted
      * @return the updated request
      */
      public TargetedManagedAppConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -157,7 +157,7 @@ public class TargetedManagedAppConfigurationRequest extends BaseRequest<Targeted
      * @return the updated request
      */
      public TargetedManagedAppConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

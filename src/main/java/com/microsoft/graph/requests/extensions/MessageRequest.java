@@ -163,7 +163,7 @@ public class MessageRequest extends BaseRequest<Message> {
      * @return the updated request
      */
      public MessageRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -174,7 +174,7 @@ public class MessageRequest extends BaseRequest<Message> {
      * @return the updated request
      */
      public MessageRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

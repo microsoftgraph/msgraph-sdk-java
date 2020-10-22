@@ -156,7 +156,7 @@ public class MobileLobAppRequest extends BaseRequest<MobileLobApp> {
      * @return the updated request
      */
      public MobileLobAppRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -167,7 +167,7 @@ public class MobileLobAppRequest extends BaseRequest<MobileLobApp> {
      * @return the updated request
      */
      public MobileLobAppRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

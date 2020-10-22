@@ -168,7 +168,7 @@ public class DeviceCompliancePolicyRequest extends BaseRequest<DeviceComplianceP
      * @return the updated request
      */
      public DeviceCompliancePolicyRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -179,7 +179,7 @@ public class DeviceCompliancePolicyRequest extends BaseRequest<DeviceComplianceP
      * @return the updated request
      */
      public DeviceCompliancePolicyRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

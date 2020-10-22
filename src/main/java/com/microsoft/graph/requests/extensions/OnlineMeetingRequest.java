@@ -141,7 +141,7 @@ public class OnlineMeetingRequest extends BaseRequest<OnlineMeeting> {
      * @return the updated request
      */
      public OnlineMeetingRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -152,7 +152,7 @@ public class OnlineMeetingRequest extends BaseRequest<OnlineMeeting> {
      * @return the updated request
      */
      public OnlineMeetingRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

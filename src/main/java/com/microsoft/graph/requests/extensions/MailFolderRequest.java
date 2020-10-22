@@ -164,7 +164,7 @@ public class MailFolderRequest extends BaseRequest<MailFolder> {
      * @return the updated request
      */
      public MailFolderRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -175,7 +175,7 @@ public class MailFolderRequest extends BaseRequest<MailFolder> {
      * @return the updated request
      */
      public MailFolderRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

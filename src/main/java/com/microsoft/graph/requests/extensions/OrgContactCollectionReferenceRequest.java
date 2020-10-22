@@ -64,7 +64,7 @@ public class OrgContactCollectionReferenceRequest extends BaseCollectionWithRefe
      * @return the updated request
      */
     public OrgContactCollectionReferenceRequest expand(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 
@@ -75,7 +75,7 @@ public class OrgContactCollectionReferenceRequest extends BaseCollectionWithRefe
      * @return the updated request
      */
     public OrgContactCollectionReferenceRequest filter(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        addFilterOption(value);
         return this;
     }
 
@@ -86,7 +86,7 @@ public class OrgContactCollectionReferenceRequest extends BaseCollectionWithRefe
      * @return the updated request
      */
     public OrgContactCollectionReferenceRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        addOrderByOption(value);
         return this;
     }
 
@@ -97,7 +97,7 @@ public class OrgContactCollectionReferenceRequest extends BaseCollectionWithRefe
      * @return the updated request
      */
     public OrgContactCollectionReferenceRequest select(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -108,7 +108,7 @@ public class OrgContactCollectionReferenceRequest extends BaseCollectionWithRefe
      * @return the updated request
      */
     public OrgContactCollectionReferenceRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
+        addTopOption(value);
         return this;
     }
 }

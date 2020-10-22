@@ -154,7 +154,7 @@ public class ExtensionRequest extends BaseRequest<Extension> {
      * @return the updated request
      */
      public ExtensionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -165,7 +165,7 @@ public class ExtensionRequest extends BaseRequest<Extension> {
      * @return the updated request
      */
      public ExtensionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

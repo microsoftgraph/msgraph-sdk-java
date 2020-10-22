@@ -72,7 +72,7 @@ public class UserCollectionRequest extends BaseCollectionRequest<User, UserColle
      * @return the updated request
      */
     public UserCollectionRequest expand(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 
@@ -83,7 +83,7 @@ public class UserCollectionRequest extends BaseCollectionRequest<User, UserColle
      * @return the updated request
      */
     public UserCollectionRequest filter(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        addFilterOption(value);
         return this;
     }
 
@@ -94,7 +94,7 @@ public class UserCollectionRequest extends BaseCollectionRequest<User, UserColle
      * @return the updated request
      */
     public UserCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        addOrderByOption(value);
         return this;
     }
 
@@ -105,7 +105,7 @@ public class UserCollectionRequest extends BaseCollectionRequest<User, UserColle
      * @return the updated request
      */
     public UserCollectionRequest select(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -116,7 +116,7 @@ public class UserCollectionRequest extends BaseCollectionRequest<User, UserColle
      * @return the updated request
      */
     public UserCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
+        addTopOption(value);
         return this;
     }
 
@@ -127,7 +127,7 @@ public class UserCollectionRequest extends BaseCollectionRequest<User, UserColle
      * @return the updated request
      */
     public UserCollectionRequest skip(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        addSkipOption(value);
         return this;
     }
 
@@ -138,7 +138,7 @@ public class UserCollectionRequest extends BaseCollectionRequest<User, UserColle
      * @return the updated request
      */
     public UserCollectionRequest skipToken(final String skipToken) {
-    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+    	addSkipTokenOption(skipToken);
         return this;
     }
 }

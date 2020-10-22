@@ -157,7 +157,7 @@ public class ScheduleRequest extends BaseRequest<Schedule> {
      * @return the updated request
      */
      public ScheduleRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -168,7 +168,7 @@ public class ScheduleRequest extends BaseRequest<Schedule> {
      * @return the updated request
      */
      public ScheduleRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

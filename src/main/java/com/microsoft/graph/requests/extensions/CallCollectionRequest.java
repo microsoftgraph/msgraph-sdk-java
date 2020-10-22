@@ -74,7 +74,7 @@ public class CallCollectionRequest extends BaseCollectionRequest<Call, CallColle
      * @return the updated request
      */
     public CallCollectionRequest expand(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 
@@ -85,7 +85,7 @@ public class CallCollectionRequest extends BaseCollectionRequest<Call, CallColle
      * @return the updated request
      */
     public CallCollectionRequest filter(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        addFilterOption(value);
         return this;
     }
 
@@ -96,7 +96,7 @@ public class CallCollectionRequest extends BaseCollectionRequest<Call, CallColle
      * @return the updated request
      */
     public CallCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        addOrderByOption(value);
         return this;
     }
 
@@ -107,7 +107,7 @@ public class CallCollectionRequest extends BaseCollectionRequest<Call, CallColle
      * @return the updated request
      */
     public CallCollectionRequest select(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -118,7 +118,7 @@ public class CallCollectionRequest extends BaseCollectionRequest<Call, CallColle
      * @return the updated request
      */
     public CallCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
+        addTopOption(value);
         return this;
     }
 
@@ -129,7 +129,7 @@ public class CallCollectionRequest extends BaseCollectionRequest<Call, CallColle
      * @return the updated request
      */
     public CallCollectionRequest skip(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        addSkipOption(value);
         return this;
     }
 
@@ -140,7 +140,7 @@ public class CallCollectionRequest extends BaseCollectionRequest<Call, CallColle
      * @return the updated request
      */
     public CallCollectionRequest skipToken(final String skipToken) {
-    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+    	addSkipTokenOption(skipToken);
         return this;
     }
 }

@@ -58,7 +58,7 @@ public class CalendarSharingMessageAcceptRequest extends BaseRequest<Calendar> {
      * @return the updated request
      */
     public CalendarSharingMessageAcceptRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -69,7 +69,7 @@ public class CalendarSharingMessageAcceptRequest extends BaseRequest<Calendar> {
      * @return the updated request
      */
     public CalendarSharingMessageAcceptRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 

@@ -41,7 +41,7 @@ public class EntityReferenceRequest extends BaseReferenceRequest<Entity> {
      * @return the updated request
      */
     public EntityReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -52,7 +52,7 @@ public class EntityReferenceRequest extends BaseReferenceRequest<Entity> {
      * @return the updated request
      */
     public EntityReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
     /**

@@ -154,7 +154,7 @@ public class OnenoteEntityHierarchyModelRequest extends BaseRequest<OnenoteEntit
      * @return the updated request
      */
      public OnenoteEntityHierarchyModelRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -165,7 +165,7 @@ public class OnenoteEntityHierarchyModelRequest extends BaseRequest<OnenoteEntit
      * @return the updated request
      */
      public OnenoteEntityHierarchyModelRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

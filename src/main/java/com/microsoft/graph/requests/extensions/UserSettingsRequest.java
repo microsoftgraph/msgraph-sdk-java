@@ -140,7 +140,7 @@ public class UserSettingsRequest extends BaseRequest<UserSettings> {
      * @return the updated request
      */
      public UserSettingsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -151,7 +151,7 @@ public class UserSettingsRequest extends BaseRequest<UserSettings> {
      * @return the updated request
      */
      public UserSettingsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

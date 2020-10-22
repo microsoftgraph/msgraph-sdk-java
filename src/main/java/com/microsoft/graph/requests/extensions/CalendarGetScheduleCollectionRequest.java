@@ -72,7 +72,7 @@ public class CalendarGetScheduleCollectionRequest extends BaseCollectionRequest<
      * @return the updated request
      */
     public CalendarGetScheduleCollectionRequest select(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -83,7 +83,7 @@ public class CalendarGetScheduleCollectionRequest extends BaseCollectionRequest<
      * @return the updated request
      */
     public CalendarGetScheduleCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
+        addTopOption(value);
         return this;
     }
 
@@ -94,7 +94,7 @@ public class CalendarGetScheduleCollectionRequest extends BaseCollectionRequest<
      * @return the updated request
      */
     public CalendarGetScheduleCollectionRequest expand(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 
@@ -105,7 +105,7 @@ public class CalendarGetScheduleCollectionRequest extends BaseCollectionRequest<
      * @return the updated request
      */
     public CalendarGetScheduleCollectionRequest filter(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        addFilterOption(value);
         return this;
     }
 
@@ -116,7 +116,7 @@ public class CalendarGetScheduleCollectionRequest extends BaseCollectionRequest<
      * @return the updated request
      */
     public CalendarGetScheduleCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        addOrderByOption(value);
         return this;
     }
 

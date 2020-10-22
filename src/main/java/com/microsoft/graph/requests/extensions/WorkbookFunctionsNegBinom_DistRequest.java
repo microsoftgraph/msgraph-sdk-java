@@ -49,7 +49,7 @@ public class WorkbookFunctionsNegBinom_DistRequest extends BaseRequest<WorkbookF
      * @return the updated request
      */
     public WorkbookFunctionsNegBinom_DistRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -60,7 +60,7 @@ public class WorkbookFunctionsNegBinom_DistRequest extends BaseRequest<WorkbookF
      * @return the updated request
      */
     public WorkbookFunctionsNegBinom_DistRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
+        addTopOption(value);
         return this;
     }
 
@@ -71,7 +71,7 @@ public class WorkbookFunctionsNegBinom_DistRequest extends BaseRequest<WorkbookF
      * @return the updated request
      */
     public WorkbookFunctionsNegBinom_DistRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 

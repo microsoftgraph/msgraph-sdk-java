@@ -58,7 +58,7 @@ public class OnenotePagePreviewRequest extends BaseRequest<OnenotePagePreview> {
      * @return the updated request
      */
     public OnenotePagePreviewRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -69,7 +69,7 @@ public class OnenotePagePreviewRequest extends BaseRequest<OnenotePagePreview> {
      * @return the updated request
      */
     public OnenotePagePreviewRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 
@@ -80,7 +80,7 @@ public class OnenotePagePreviewRequest extends BaseRequest<OnenotePagePreview> {
      * @return the updated request
      */
     public OnenotePagePreviewRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        addFilterOption(value);
         return this;
     }
 
@@ -91,7 +91,7 @@ public class OnenotePagePreviewRequest extends BaseRequest<OnenotePagePreview> {
      * @return the updated request
      */
     public OnenotePagePreviewRequest orderBy(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        addOrderByOption(value);
         return this;
     }
 

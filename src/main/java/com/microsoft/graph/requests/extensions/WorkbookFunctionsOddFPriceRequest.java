@@ -49,7 +49,7 @@ public class WorkbookFunctionsOddFPriceRequest extends BaseRequest<WorkbookFunct
      * @return the updated request
      */
     public WorkbookFunctionsOddFPriceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -60,7 +60,7 @@ public class WorkbookFunctionsOddFPriceRequest extends BaseRequest<WorkbookFunct
      * @return the updated request
      */
     public WorkbookFunctionsOddFPriceRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
+        addTopOption(value);
         return this;
     }
 
@@ -71,7 +71,7 @@ public class WorkbookFunctionsOddFPriceRequest extends BaseRequest<WorkbookFunct
      * @return the updated request
      */
     public WorkbookFunctionsOddFPriceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 

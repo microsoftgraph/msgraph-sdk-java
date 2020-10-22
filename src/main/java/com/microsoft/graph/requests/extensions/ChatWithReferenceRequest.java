@@ -43,7 +43,7 @@ public class ChatWithReferenceRequest extends BaseWithReferenceRequest<Chat> {
      * @return the updated request
      */
     public ChatWithReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -54,7 +54,7 @@ public class ChatWithReferenceRequest extends BaseWithReferenceRequest<Chat> {
      * @return the updated request
      */
     public ChatWithReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 }

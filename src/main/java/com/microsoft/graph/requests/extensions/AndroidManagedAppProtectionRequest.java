@@ -142,7 +142,7 @@ public class AndroidManagedAppProtectionRequest extends BaseRequest<AndroidManag
      * @return the updated request
      */
      public AndroidManagedAppProtectionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -153,7 +153,7 @@ public class AndroidManagedAppProtectionRequest extends BaseRequest<AndroidManag
      * @return the updated request
      */
      public AndroidManagedAppProtectionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

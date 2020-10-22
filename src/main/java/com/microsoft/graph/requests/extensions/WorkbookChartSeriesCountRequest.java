@@ -57,7 +57,7 @@ public class WorkbookChartSeriesCountRequest extends BaseRequest<Integer> {
      * @return the updated request
      */
     public WorkbookChartSeriesCountRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -68,7 +68,7 @@ public class WorkbookChartSeriesCountRequest extends BaseRequest<Integer> {
      * @return the updated request
      */
     public WorkbookChartSeriesCountRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 
@@ -79,7 +79,7 @@ public class WorkbookChartSeriesCountRequest extends BaseRequest<Integer> {
      * @return the updated request
      */
     public WorkbookChartSeriesCountRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        addFilterOption(value);
         return this;
     }
 
@@ -90,7 +90,7 @@ public class WorkbookChartSeriesCountRequest extends BaseRequest<Integer> {
      * @return the updated request
      */
     public WorkbookChartSeriesCountRequest orderBy(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        addOrderByOption(value);
         return this;
     }
 

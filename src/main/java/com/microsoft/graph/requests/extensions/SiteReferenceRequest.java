@@ -56,7 +56,7 @@ public class SiteReferenceRequest extends BaseReferenceRequest<Site> {
      * @return the updated request
      */
     public SiteReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -67,7 +67,7 @@ public class SiteReferenceRequest extends BaseReferenceRequest<Site> {
      * @return the updated request
      */
     public SiteReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
     /**

@@ -139,7 +139,7 @@ public class DeviceConfigurationAssignmentRequest extends BaseRequest<DeviceConf
      * @return the updated request
      */
      public DeviceConfigurationAssignmentRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -150,7 +150,7 @@ public class DeviceConfigurationAssignmentRequest extends BaseRequest<DeviceConf
      * @return the updated request
      */
      public DeviceConfigurationAssignmentRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

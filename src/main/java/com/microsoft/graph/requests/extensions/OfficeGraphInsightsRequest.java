@@ -145,7 +145,7 @@ public class OfficeGraphInsightsRequest extends BaseRequest<OfficeGraphInsights>
      * @return the updated request
      */
      public OfficeGraphInsightsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -156,7 +156,7 @@ public class OfficeGraphInsightsRequest extends BaseRequest<OfficeGraphInsights>
      * @return the updated request
      */
      public OfficeGraphInsightsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

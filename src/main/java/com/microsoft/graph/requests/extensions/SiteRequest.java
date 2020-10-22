@@ -154,7 +154,7 @@ public class SiteRequest extends BaseRequest<Site> {
      * @return the updated request
      */
      public SiteRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -165,7 +165,7 @@ public class SiteRequest extends BaseRequest<Site> {
      * @return the updated request
      */
      public SiteRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

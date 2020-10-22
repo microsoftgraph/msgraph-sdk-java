@@ -58,7 +58,7 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
      * @return the updated request
      */
     public GroupLifecyclePolicyCollectionRequest expand(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 
@@ -69,7 +69,7 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
      * @return the updated request
      */
     public GroupLifecyclePolicyCollectionRequest filter(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        addFilterOption(value);
         return this;
     }
 
@@ -80,7 +80,7 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
      * @return the updated request
      */
     public GroupLifecyclePolicyCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        addOrderByOption(value);
         return this;
     }
 
@@ -91,7 +91,7 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
      * @return the updated request
      */
     public GroupLifecyclePolicyCollectionRequest select(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -102,7 +102,7 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
      * @return the updated request
      */
     public GroupLifecyclePolicyCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
+        addTopOption(value);
         return this;
     }
 
@@ -113,7 +113,7 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
      * @return the updated request
      */
     public GroupLifecyclePolicyCollectionRequest skip(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        addSkipOption(value);
         return this;
     }
 
@@ -124,7 +124,7 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
      * @return the updated request
      */
     public GroupLifecyclePolicyCollectionRequest skipToken(final String skipToken) {
-    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+    	addSkipTokenOption(skipToken);
         return this;
     }
 }

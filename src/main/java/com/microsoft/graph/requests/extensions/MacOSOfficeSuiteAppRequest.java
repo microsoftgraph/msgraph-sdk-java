@@ -139,7 +139,7 @@ public class MacOSOfficeSuiteAppRequest extends BaseRequest<MacOSOfficeSuiteApp>
      * @return the updated request
      */
      public MacOSOfficeSuiteAppRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -150,7 +150,7 @@ public class MacOSOfficeSuiteAppRequest extends BaseRequest<MacOSOfficeSuiteApp>
      * @return the updated request
      */
      public MacOSOfficeSuiteAppRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

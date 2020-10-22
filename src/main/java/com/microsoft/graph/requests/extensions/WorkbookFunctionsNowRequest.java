@@ -58,7 +58,7 @@ public class WorkbookFunctionsNowRequest extends BaseRequest<WorkbookFunctionRes
      * @return the updated request
      */
     public WorkbookFunctionsNowRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -69,7 +69,7 @@ public class WorkbookFunctionsNowRequest extends BaseRequest<WorkbookFunctionRes
      * @return the updated request
      */
     public WorkbookFunctionsNowRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 

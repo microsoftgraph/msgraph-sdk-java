@@ -145,7 +145,7 @@ public class SharedDriveItemRequest extends BaseRequest<SharedDriveItem> {
      * @return the updated request
      */
      public SharedDriveItemRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -156,7 +156,7 @@ public class SharedDriveItemRequest extends BaseRequest<SharedDriveItem> {
      * @return the updated request
      */
      public SharedDriveItemRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

@@ -143,7 +143,7 @@ public class PlannerTaskRequest extends BaseRequest<PlannerTask> {
      * @return the updated request
      */
      public PlannerTaskRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -154,7 +154,7 @@ public class PlannerTaskRequest extends BaseRequest<PlannerTask> {
      * @return the updated request
      */
      public PlannerTaskRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

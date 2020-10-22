@@ -41,7 +41,7 @@ public class OAuth2PermissionGrantReferenceRequest extends BaseReferenceRequest<
      * @return the updated request
      */
     public OAuth2PermissionGrantReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -52,7 +52,7 @@ public class OAuth2PermissionGrantReferenceRequest extends BaseReferenceRequest<
      * @return the updated request
      */
     public OAuth2PermissionGrantReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
     /**

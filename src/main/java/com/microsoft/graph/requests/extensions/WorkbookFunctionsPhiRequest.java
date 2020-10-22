@@ -49,7 +49,7 @@ public class WorkbookFunctionsPhiRequest extends BaseRequest<WorkbookFunctionRes
      * @return the updated request
      */
     public WorkbookFunctionsPhiRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -60,7 +60,7 @@ public class WorkbookFunctionsPhiRequest extends BaseRequest<WorkbookFunctionRes
      * @return the updated request
      */
     public WorkbookFunctionsPhiRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
+        addTopOption(value);
         return this;
     }
 
@@ -71,7 +71,7 @@ public class WorkbookFunctionsPhiRequest extends BaseRequest<WorkbookFunctionRes
      * @return the updated request
      */
     public WorkbookFunctionsPhiRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 

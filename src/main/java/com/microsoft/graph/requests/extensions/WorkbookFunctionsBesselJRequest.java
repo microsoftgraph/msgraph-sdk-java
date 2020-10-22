@@ -49,7 +49,7 @@ public class WorkbookFunctionsBesselJRequest extends BaseRequest<WorkbookFunctio
      * @return the updated request
      */
     public WorkbookFunctionsBesselJRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -60,7 +60,7 @@ public class WorkbookFunctionsBesselJRequest extends BaseRequest<WorkbookFunctio
      * @return the updated request
      */
     public WorkbookFunctionsBesselJRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
+        addTopOption(value);
         return this;
     }
 
@@ -71,7 +71,7 @@ public class WorkbookFunctionsBesselJRequest extends BaseRequest<WorkbookFunctio
      * @return the updated request
      */
     public WorkbookFunctionsBesselJRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 

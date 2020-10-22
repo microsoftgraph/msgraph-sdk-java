@@ -49,7 +49,7 @@ public class WorkbookFunctionsRank_EqRequest extends BaseRequest<WorkbookFunctio
      * @return the updated request
      */
     public WorkbookFunctionsRank_EqRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -60,7 +60,7 @@ public class WorkbookFunctionsRank_EqRequest extends BaseRequest<WorkbookFunctio
      * @return the updated request
      */
     public WorkbookFunctionsRank_EqRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
+        addTopOption(value);
         return this;
     }
 
@@ -71,7 +71,7 @@ public class WorkbookFunctionsRank_EqRequest extends BaseRequest<WorkbookFunctio
      * @return the updated request
      */
     public WorkbookFunctionsRank_EqRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 

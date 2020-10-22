@@ -45,27 +45,27 @@ public class ManagedDeviceCollectionWithReferencesRequest extends BaseCollection
     }
 
     public ManagedDeviceCollectionWithReferencesRequest expand(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 
     public ManagedDeviceCollectionWithReferencesRequest filter(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        addFilterOption(value);
         return this;
     }
 
     public ManagedDeviceCollectionWithReferencesRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        addOrderByOption(value);
         return this;
     }
 
     public ManagedDeviceCollectionWithReferencesRequest select(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
     public ManagedDeviceCollectionWithReferencesRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
+        addTopOption(value);
         return this;
     }
 

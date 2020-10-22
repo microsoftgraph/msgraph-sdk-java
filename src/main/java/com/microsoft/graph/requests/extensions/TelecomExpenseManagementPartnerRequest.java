@@ -139,7 +139,7 @@ public class TelecomExpenseManagementPartnerRequest extends BaseRequest<TelecomE
      * @return the updated request
      */
      public TelecomExpenseManagementPartnerRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -150,7 +150,7 @@ public class TelecomExpenseManagementPartnerRequest extends BaseRequest<TelecomE
      * @return the updated request
      */
      public TelecomExpenseManagementPartnerRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

@@ -141,7 +141,7 @@ public class ItemAnalyticsRequest extends BaseRequest<ItemAnalytics> {
      * @return the updated request
      */
      public ItemAnalyticsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -152,7 +152,7 @@ public class ItemAnalyticsRequest extends BaseRequest<ItemAnalytics> {
      * @return the updated request
      */
      public ItemAnalyticsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

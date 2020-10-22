@@ -43,7 +43,7 @@ public class OrgContactReferenceRequest extends BaseReferenceRequest<OrgContact>
      * @return the updated request
      */
     public OrgContactReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -54,7 +54,7 @@ public class OrgContactReferenceRequest extends BaseReferenceRequest<OrgContact>
      * @return the updated request
      */
     public OrgContactReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
     /**

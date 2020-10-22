@@ -57,7 +57,7 @@ public class WorkbookChartImageRequest extends BaseRequest<String> {
      * @return the updated request
      */
     public WorkbookChartImageRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -68,7 +68,7 @@ public class WorkbookChartImageRequest extends BaseRequest<String> {
      * @return the updated request
      */
     public WorkbookChartImageRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 
@@ -79,7 +79,7 @@ public class WorkbookChartImageRequest extends BaseRequest<String> {
      * @return the updated request
      */
     public WorkbookChartImageRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        addFilterOption(value);
         return this;
     }
 
@@ -90,7 +90,7 @@ public class WorkbookChartImageRequest extends BaseRequest<String> {
      * @return the updated request
      */
     public WorkbookChartImageRequest orderBy(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        addOrderByOption(value);
         return this;
     }
 

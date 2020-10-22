@@ -49,7 +49,7 @@ public class WorkbookFunctionsT_Inv_2TRequest extends BaseRequest<WorkbookFuncti
      * @return the updated request
      */
     public WorkbookFunctionsT_Inv_2TRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -60,7 +60,7 @@ public class WorkbookFunctionsT_Inv_2TRequest extends BaseRequest<WorkbookFuncti
      * @return the updated request
      */
     public WorkbookFunctionsT_Inv_2TRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
+        addTopOption(value);
         return this;
     }
 
@@ -71,7 +71,7 @@ public class WorkbookFunctionsT_Inv_2TRequest extends BaseRequest<WorkbookFuncti
      * @return the updated request
      */
     public WorkbookFunctionsT_Inv_2TRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 

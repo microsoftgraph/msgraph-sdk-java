@@ -141,7 +141,7 @@ public class WorkbookCommentRequest extends BaseRequest<WorkbookComment> {
      * @return the updated request
      */
      public WorkbookCommentRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -152,7 +152,7 @@ public class WorkbookCommentRequest extends BaseRequest<WorkbookComment> {
      * @return the updated request
      */
      public WorkbookCommentRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

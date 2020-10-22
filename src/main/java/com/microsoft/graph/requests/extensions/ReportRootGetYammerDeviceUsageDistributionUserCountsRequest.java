@@ -98,7 +98,7 @@ public class ReportRootGetYammerDeviceUsageDistributionUserCountsRequest extends
      * @return the updated request
      */
     public ReportRootGetYammerDeviceUsageDistributionUserCountsRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -109,7 +109,7 @@ public class ReportRootGetYammerDeviceUsageDistributionUserCountsRequest extends
      * @return the updated request
      */
     public ReportRootGetYammerDeviceUsageDistributionUserCountsRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 
@@ -120,7 +120,7 @@ public class ReportRootGetYammerDeviceUsageDistributionUserCountsRequest extends
      * @return the updated request
      */
     public ReportRootGetYammerDeviceUsageDistributionUserCountsRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        addFilterOption(value);
         return this;
     }
 
@@ -131,7 +131,7 @@ public class ReportRootGetYammerDeviceUsageDistributionUserCountsRequest extends
      * @return the updated request
      */
     public ReportRootGetYammerDeviceUsageDistributionUserCountsRequest orderBy(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        addOrderByOption(value);
         return this;
     }
 

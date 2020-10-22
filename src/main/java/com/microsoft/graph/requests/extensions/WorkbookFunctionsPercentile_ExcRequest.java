@@ -49,7 +49,7 @@ public class WorkbookFunctionsPercentile_ExcRequest extends BaseRequest<Workbook
      * @return the updated request
      */
     public WorkbookFunctionsPercentile_ExcRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -60,7 +60,7 @@ public class WorkbookFunctionsPercentile_ExcRequest extends BaseRequest<Workbook
      * @return the updated request
      */
     public WorkbookFunctionsPercentile_ExcRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
+        addTopOption(value);
         return this;
     }
 
@@ -71,7 +71,7 @@ public class WorkbookFunctionsPercentile_ExcRequest extends BaseRequest<Workbook
      * @return the updated request
      */
     public WorkbookFunctionsPercentile_ExcRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 

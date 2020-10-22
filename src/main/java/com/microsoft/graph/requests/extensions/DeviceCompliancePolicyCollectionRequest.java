@@ -61,7 +61,7 @@ public class DeviceCompliancePolicyCollectionRequest extends BaseCollectionReque
      * @return the updated request
      */
     public DeviceCompliancePolicyCollectionRequest expand(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 
@@ -72,7 +72,7 @@ public class DeviceCompliancePolicyCollectionRequest extends BaseCollectionReque
      * @return the updated request
      */
     public DeviceCompliancePolicyCollectionRequest filter(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        addFilterOption(value);
         return this;
     }
 
@@ -83,7 +83,7 @@ public class DeviceCompliancePolicyCollectionRequest extends BaseCollectionReque
      * @return the updated request
      */
     public DeviceCompliancePolicyCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        addOrderByOption(value);
         return this;
     }
 
@@ -94,7 +94,7 @@ public class DeviceCompliancePolicyCollectionRequest extends BaseCollectionReque
      * @return the updated request
      */
     public DeviceCompliancePolicyCollectionRequest select(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -105,7 +105,7 @@ public class DeviceCompliancePolicyCollectionRequest extends BaseCollectionReque
      * @return the updated request
      */
     public DeviceCompliancePolicyCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
+        addTopOption(value);
         return this;
     }
 
@@ -116,7 +116,7 @@ public class DeviceCompliancePolicyCollectionRequest extends BaseCollectionReque
      * @return the updated request
      */
     public DeviceCompliancePolicyCollectionRequest skip(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        addSkipOption(value);
         return this;
     }
 
@@ -127,7 +127,7 @@ public class DeviceCompliancePolicyCollectionRequest extends BaseCollectionReque
      * @return the updated request
      */
     public DeviceCompliancePolicyCollectionRequest skipToken(final String skipToken) {
-    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+    	addSkipTokenOption(skipToken);
         return this;
     }
 }

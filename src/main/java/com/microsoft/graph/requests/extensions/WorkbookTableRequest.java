@@ -146,7 +146,7 @@ public class WorkbookTableRequest extends BaseRequest<WorkbookTable> {
      * @return the updated request
      */
      public WorkbookTableRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -157,7 +157,7 @@ public class WorkbookTableRequest extends BaseRequest<WorkbookTable> {
      * @return the updated request
      */
      public WorkbookTableRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

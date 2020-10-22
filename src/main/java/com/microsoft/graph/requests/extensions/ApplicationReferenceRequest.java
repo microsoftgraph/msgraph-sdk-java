@@ -53,7 +53,7 @@ public class ApplicationReferenceRequest extends BaseReferenceRequest<Applicatio
      * @return the updated request
      */
     public ApplicationReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -64,7 +64,7 @@ public class ApplicationReferenceRequest extends BaseReferenceRequest<Applicatio
      * @return the updated request
      */
     public ApplicationReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
     /**

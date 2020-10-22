@@ -139,7 +139,7 @@ public class MacOSGeneralDeviceConfigurationRequest extends BaseRequest<MacOSGen
      * @return the updated request
      */
      public MacOSGeneralDeviceConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -150,7 +150,7 @@ public class MacOSGeneralDeviceConfigurationRequest extends BaseRequest<MacOSGen
      * @return the updated request
      */
      public MacOSGeneralDeviceConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

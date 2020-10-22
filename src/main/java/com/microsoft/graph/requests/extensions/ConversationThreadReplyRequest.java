@@ -48,7 +48,7 @@ public class ConversationThreadReplyRequest extends BaseRequest<Void> {
      * @return the updated request
      */
     public ConversationThreadReplyRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -59,7 +59,7 @@ public class ConversationThreadReplyRequest extends BaseRequest<Void> {
      * @return the updated request
      */
     public ConversationThreadReplyRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
+        addTopOption(value);
         return this;
     }
 
@@ -70,7 +70,7 @@ public class ConversationThreadReplyRequest extends BaseRequest<Void> {
      * @return the updated request
      */
     public ConversationThreadReplyRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 

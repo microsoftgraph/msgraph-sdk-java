@@ -59,7 +59,7 @@ public class AndroidManagedAppProtectionCollectionRequest extends BaseCollection
      * @return the updated request
      */
     public AndroidManagedAppProtectionCollectionRequest expand(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 
@@ -70,7 +70,7 @@ public class AndroidManagedAppProtectionCollectionRequest extends BaseCollection
      * @return the updated request
      */
     public AndroidManagedAppProtectionCollectionRequest filter(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        addFilterOption(value);
         return this;
     }
 
@@ -81,7 +81,7 @@ public class AndroidManagedAppProtectionCollectionRequest extends BaseCollection
      * @return the updated request
      */
     public AndroidManagedAppProtectionCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        addOrderByOption(value);
         return this;
     }
 
@@ -92,7 +92,7 @@ public class AndroidManagedAppProtectionCollectionRequest extends BaseCollection
      * @return the updated request
      */
     public AndroidManagedAppProtectionCollectionRequest select(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -103,7 +103,7 @@ public class AndroidManagedAppProtectionCollectionRequest extends BaseCollection
      * @return the updated request
      */
     public AndroidManagedAppProtectionCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
+        addTopOption(value);
         return this;
     }
 
@@ -114,7 +114,7 @@ public class AndroidManagedAppProtectionCollectionRequest extends BaseCollection
      * @return the updated request
      */
     public AndroidManagedAppProtectionCollectionRequest skip(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        addSkipOption(value);
         return this;
     }
 
@@ -125,7 +125,7 @@ public class AndroidManagedAppProtectionCollectionRequest extends BaseCollection
      * @return the updated request
      */
     public AndroidManagedAppProtectionCollectionRequest skipToken(final String skipToken) {
-    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+    	addSkipTokenOption(skipToken);
         return this;
     }
 }

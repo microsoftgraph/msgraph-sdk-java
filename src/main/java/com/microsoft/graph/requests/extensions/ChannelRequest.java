@@ -146,7 +146,7 @@ public class ChannelRequest extends BaseRequest<Channel> {
      * @return the updated request
      */
      public ChannelRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -157,7 +157,7 @@ public class ChannelRequest extends BaseRequest<Channel> {
      * @return the updated request
      */
      public ChannelRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

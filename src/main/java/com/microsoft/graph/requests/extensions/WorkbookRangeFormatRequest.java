@@ -144,7 +144,7 @@ public class WorkbookRangeFormatRequest extends BaseRequest<WorkbookRangeFormat>
      * @return the updated request
      */
      public WorkbookRangeFormatRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -155,7 +155,7 @@ public class WorkbookRangeFormatRequest extends BaseRequest<WorkbookRangeFormat>
      * @return the updated request
      */
      public WorkbookRangeFormatRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

@@ -49,7 +49,7 @@ public class NotebookCopyNotebookRequest extends BaseRequest<OnenoteOperation> {
      * @return the updated request
      */
     public NotebookCopyNotebookRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -60,7 +60,7 @@ public class NotebookCopyNotebookRequest extends BaseRequest<OnenoteOperation> {
      * @return the updated request
      */
     public NotebookCopyNotebookRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
+        addTopOption(value);
         return this;
     }
 
@@ -71,7 +71,7 @@ public class NotebookCopyNotebookRequest extends BaseRequest<OnenoteOperation> {
      * @return the updated request
      */
     public NotebookCopyNotebookRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 

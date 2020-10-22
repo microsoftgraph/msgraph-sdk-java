@@ -141,7 +141,7 @@ public class UserTeamworkRequest extends BaseRequest<UserTeamwork> {
      * @return the updated request
      */
      public UserTeamworkRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -152,7 +152,7 @@ public class UserTeamworkRequest extends BaseRequest<UserTeamwork> {
      * @return the updated request
      */
      public UserTeamworkRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

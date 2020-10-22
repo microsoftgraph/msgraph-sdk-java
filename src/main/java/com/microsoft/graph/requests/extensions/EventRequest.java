@@ -152,7 +152,7 @@ public class EventRequest extends BaseRequest<Event> {
      * @return the updated request
      */
      public EventRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -163,7 +163,7 @@ public class EventRequest extends BaseRequest<Event> {
      * @return the updated request
      */
      public EventRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

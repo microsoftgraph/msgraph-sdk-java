@@ -58,7 +58,7 @@ public class WorkbookFunctionsFalseRequest extends BaseRequest<WorkbookFunctionR
      * @return the updated request
      */
     public WorkbookFunctionsFalseRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -69,7 +69,7 @@ public class WorkbookFunctionsFalseRequest extends BaseRequest<WorkbookFunctionR
      * @return the updated request
      */
     public WorkbookFunctionsFalseRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 

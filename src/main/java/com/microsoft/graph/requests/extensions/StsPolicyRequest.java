@@ -156,7 +156,7 @@ public class StsPolicyRequest extends BaseRequest<StsPolicy> {
      * @return the updated request
      */
      public StsPolicyRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -167,7 +167,7 @@ public class StsPolicyRequest extends BaseRequest<StsPolicy> {
      * @return the updated request
      */
      public StsPolicyRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

@@ -167,7 +167,7 @@ public class DeviceAppManagementRequest extends BaseRequest<DeviceAppManagement>
      * @return the updated request
      */
      public DeviceAppManagementRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -178,7 +178,7 @@ public class DeviceAppManagementRequest extends BaseRequest<DeviceAppManagement>
      * @return the updated request
      */
      public DeviceAppManagementRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

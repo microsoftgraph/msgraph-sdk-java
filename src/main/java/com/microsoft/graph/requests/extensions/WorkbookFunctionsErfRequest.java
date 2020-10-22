@@ -49,7 +49,7 @@ public class WorkbookFunctionsErfRequest extends BaseRequest<WorkbookFunctionRes
      * @return the updated request
      */
     public WorkbookFunctionsErfRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -60,7 +60,7 @@ public class WorkbookFunctionsErfRequest extends BaseRequest<WorkbookFunctionRes
      * @return the updated request
      */
     public WorkbookFunctionsErfRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
+        addTopOption(value);
         return this;
     }
 
@@ -71,7 +71,7 @@ public class WorkbookFunctionsErfRequest extends BaseRequest<WorkbookFunctionRes
      * @return the updated request
      */
     public WorkbookFunctionsErfRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 

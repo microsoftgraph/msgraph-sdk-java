@@ -44,7 +44,7 @@ public class ItemAnalyticsWithReferenceRequest extends BaseWithReferenceRequest<
      * @return the updated request
      */
     public ItemAnalyticsWithReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -55,7 +55,7 @@ public class ItemAnalyticsWithReferenceRequest extends BaseWithReferenceRequest<
      * @return the updated request
      */
     public ItemAnalyticsWithReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 }

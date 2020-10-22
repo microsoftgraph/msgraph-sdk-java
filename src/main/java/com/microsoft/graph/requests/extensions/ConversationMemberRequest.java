@@ -154,7 +154,7 @@ public class ConversationMemberRequest extends BaseRequest<ConversationMember> {
      * @return the updated request
      */
      public ConversationMemberRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -165,7 +165,7 @@ public class ConversationMemberRequest extends BaseRequest<ConversationMember> {
      * @return the updated request
      */
      public ConversationMemberRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

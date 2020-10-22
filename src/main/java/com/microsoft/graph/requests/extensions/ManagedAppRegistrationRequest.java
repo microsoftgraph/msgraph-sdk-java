@@ -158,7 +158,7 @@ public class ManagedAppRegistrationRequest extends BaseRequest<ManagedAppRegistr
      * @return the updated request
      */
      public ManagedAppRegistrationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -169,7 +169,7 @@ public class ManagedAppRegistrationRequest extends BaseRequest<ManagedAppRegistr
      * @return the updated request
      */
      public ManagedAppRegistrationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

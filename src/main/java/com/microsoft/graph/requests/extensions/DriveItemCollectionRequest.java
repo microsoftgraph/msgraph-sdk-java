@@ -65,7 +65,7 @@ public class DriveItemCollectionRequest extends BaseCollectionRequest<DriveItem,
      * @return the updated request
      */
     public DriveItemCollectionRequest expand(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 
@@ -76,7 +76,7 @@ public class DriveItemCollectionRequest extends BaseCollectionRequest<DriveItem,
      * @return the updated request
      */
     public DriveItemCollectionRequest filter(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        addFilterOption(value);
         return this;
     }
 
@@ -87,7 +87,7 @@ public class DriveItemCollectionRequest extends BaseCollectionRequest<DriveItem,
      * @return the updated request
      */
     public DriveItemCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        addOrderByOption(value);
         return this;
     }
 
@@ -98,7 +98,7 @@ public class DriveItemCollectionRequest extends BaseCollectionRequest<DriveItem,
      * @return the updated request
      */
     public DriveItemCollectionRequest select(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -109,7 +109,7 @@ public class DriveItemCollectionRequest extends BaseCollectionRequest<DriveItem,
      * @return the updated request
      */
     public DriveItemCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
+        addTopOption(value);
         return this;
     }
 
@@ -120,7 +120,7 @@ public class DriveItemCollectionRequest extends BaseCollectionRequest<DriveItem,
      * @return the updated request
      */
     public DriveItemCollectionRequest skip(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        addSkipOption(value);
         return this;
     }
 
@@ -131,7 +131,7 @@ public class DriveItemCollectionRequest extends BaseCollectionRequest<DriveItem,
      * @return the updated request
      */
     public DriveItemCollectionRequest skipToken(final String skipToken) {
-    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+    	addSkipTokenOption(skipToken);
         return this;
     }
 }

@@ -159,7 +159,7 @@ public class WindowsInformationProtectionRequest extends BaseRequest<WindowsInfo
      * @return the updated request
      */
      public WindowsInformationProtectionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -170,7 +170,7 @@ public class WindowsInformationProtectionRequest extends BaseRequest<WindowsInfo
      * @return the updated request
      */
      public WindowsInformationProtectionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

@@ -157,7 +157,7 @@ public class DeviceEnrollmentConfigurationRequest extends BaseRequest<DeviceEnro
      * @return the updated request
      */
      public DeviceEnrollmentConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -168,7 +168,7 @@ public class DeviceEnrollmentConfigurationRequest extends BaseRequest<DeviceEnro
      * @return the updated request
      */
      public DeviceEnrollmentConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

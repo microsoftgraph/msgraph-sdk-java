@@ -98,7 +98,7 @@ public class ReportRootGetEmailAppUsageAppsUserCountsRequest extends BaseRequest
      * @return the updated request
      */
     public ReportRootGetEmailAppUsageAppsUserCountsRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -109,7 +109,7 @@ public class ReportRootGetEmailAppUsageAppsUserCountsRequest extends BaseRequest
      * @return the updated request
      */
     public ReportRootGetEmailAppUsageAppsUserCountsRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 
@@ -120,7 +120,7 @@ public class ReportRootGetEmailAppUsageAppsUserCountsRequest extends BaseRequest
      * @return the updated request
      */
     public ReportRootGetEmailAppUsageAppsUserCountsRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        addFilterOption(value);
         return this;
     }
 
@@ -131,7 +131,7 @@ public class ReportRootGetEmailAppUsageAppsUserCountsRequest extends BaseRequest
      * @return the updated request
      */
     public ReportRootGetEmailAppUsageAppsUserCountsRequest orderBy(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        addOrderByOption(value);
         return this;
     }
 

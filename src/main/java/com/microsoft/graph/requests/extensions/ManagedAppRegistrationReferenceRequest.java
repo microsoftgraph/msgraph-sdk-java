@@ -45,7 +45,7 @@ public class ManagedAppRegistrationReferenceRequest extends BaseReferenceRequest
      * @return the updated request
      */
     public ManagedAppRegistrationReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -56,7 +56,7 @@ public class ManagedAppRegistrationReferenceRequest extends BaseReferenceRequest
      * @return the updated request
      */
     public ManagedAppRegistrationReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
     /**

@@ -41,7 +41,7 @@ public class MobileAppCategoryReferenceRequest extends BaseReferenceRequest<Mobi
      * @return the updated request
      */
     public MobileAppCategoryReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -52,7 +52,7 @@ public class MobileAppCategoryReferenceRequest extends BaseReferenceRequest<Mobi
      * @return the updated request
      */
     public MobileAppCategoryReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
     /**

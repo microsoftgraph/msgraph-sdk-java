@@ -59,7 +59,7 @@ public class ManagedMobileLobAppCollectionRequest extends BaseCollectionRequest<
      * @return the updated request
      */
     public ManagedMobileLobAppCollectionRequest expand(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 
@@ -70,7 +70,7 @@ public class ManagedMobileLobAppCollectionRequest extends BaseCollectionRequest<
      * @return the updated request
      */
     public ManagedMobileLobAppCollectionRequest filter(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        addFilterOption(value);
         return this;
     }
 
@@ -81,7 +81,7 @@ public class ManagedMobileLobAppCollectionRequest extends BaseCollectionRequest<
      * @return the updated request
      */
     public ManagedMobileLobAppCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        addOrderByOption(value);
         return this;
     }
 
@@ -92,7 +92,7 @@ public class ManagedMobileLobAppCollectionRequest extends BaseCollectionRequest<
      * @return the updated request
      */
     public ManagedMobileLobAppCollectionRequest select(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -103,7 +103,7 @@ public class ManagedMobileLobAppCollectionRequest extends BaseCollectionRequest<
      * @return the updated request
      */
     public ManagedMobileLobAppCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
+        addTopOption(value);
         return this;
     }
 
@@ -114,7 +114,7 @@ public class ManagedMobileLobAppCollectionRequest extends BaseCollectionRequest<
      * @return the updated request
      */
     public ManagedMobileLobAppCollectionRequest skip(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        addSkipOption(value);
         return this;
     }
 
@@ -125,7 +125,7 @@ public class ManagedMobileLobAppCollectionRequest extends BaseCollectionRequest<
      * @return the updated request
      */
     public ManagedMobileLobAppCollectionRequest skipToken(final String skipToken) {
-    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+    	addSkipTokenOption(skipToken);
         return this;
     }
 }

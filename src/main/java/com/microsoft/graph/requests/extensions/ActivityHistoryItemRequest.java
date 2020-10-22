@@ -140,7 +140,7 @@ public class ActivityHistoryItemRequest extends BaseRequest<ActivityHistoryItem>
      * @return the updated request
      */
      public ActivityHistoryItemRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -151,7 +151,7 @@ public class ActivityHistoryItemRequest extends BaseRequest<ActivityHistoryItem>
      * @return the updated request
      */
      public ActivityHistoryItemRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

@@ -48,7 +48,7 @@ public class TargetedManagedAppConfigurationTargetAppsRequest extends BaseReques
      * @return the updated request
      */
     public TargetedManagedAppConfigurationTargetAppsRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -59,7 +59,7 @@ public class TargetedManagedAppConfigurationTargetAppsRequest extends BaseReques
      * @return the updated request
      */
     public TargetedManagedAppConfigurationTargetAppsRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
+        addTopOption(value);
         return this;
     }
 
@@ -70,7 +70,7 @@ public class TargetedManagedAppConfigurationTargetAppsRequest extends BaseReques
      * @return the updated request
      */
     public TargetedManagedAppConfigurationTargetAppsRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 

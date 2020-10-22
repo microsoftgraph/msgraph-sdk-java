@@ -139,7 +139,7 @@ public class WindowsPhone81CompliancePolicyRequest extends BaseRequest<WindowsPh
      * @return the updated request
      */
      public WindowsPhone81CompliancePolicyRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -150,7 +150,7 @@ public class WindowsPhone81CompliancePolicyRequest extends BaseRequest<WindowsPh
      * @return the updated request
      */
      public WindowsPhone81CompliancePolicyRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

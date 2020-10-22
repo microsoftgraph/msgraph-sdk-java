@@ -98,7 +98,7 @@ public class ReportRootDeviceConfigurationDeviceActivityRequest extends BaseRequ
      * @return the updated request
      */
     public ReportRootDeviceConfigurationDeviceActivityRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -109,7 +109,7 @@ public class ReportRootDeviceConfigurationDeviceActivityRequest extends BaseRequ
      * @return the updated request
      */
     public ReportRootDeviceConfigurationDeviceActivityRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 
@@ -120,7 +120,7 @@ public class ReportRootDeviceConfigurationDeviceActivityRequest extends BaseRequ
      * @return the updated request
      */
     public ReportRootDeviceConfigurationDeviceActivityRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        addFilterOption(value);
         return this;
     }
 
@@ -131,7 +131,7 @@ public class ReportRootDeviceConfigurationDeviceActivityRequest extends BaseRequ
      * @return the updated request
      */
     public ReportRootDeviceConfigurationDeviceActivityRequest orderBy(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        addOrderByOption(value);
         return this;
     }
 

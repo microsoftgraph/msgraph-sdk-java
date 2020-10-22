@@ -139,7 +139,7 @@ public class MobileThreatDefenseConnectorRequest extends BaseRequest<MobileThrea
      * @return the updated request
      */
      public MobileThreatDefenseConnectorRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -150,7 +150,7 @@ public class MobileThreatDefenseConnectorRequest extends BaseRequest<MobileThrea
      * @return the updated request
      */
      public MobileThreatDefenseConnectorRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

@@ -152,7 +152,7 @@ public class WorkbookRequest extends BaseRequest<Workbook> {
      * @return the updated request
      */
      public WorkbookRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -163,7 +163,7 @@ public class WorkbookRequest extends BaseRequest<Workbook> {
      * @return the updated request
      */
      public WorkbookRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

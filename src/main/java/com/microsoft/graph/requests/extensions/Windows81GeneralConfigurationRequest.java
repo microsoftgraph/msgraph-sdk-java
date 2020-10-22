@@ -139,7 +139,7 @@ public class Windows81GeneralConfigurationRequest extends BaseRequest<Windows81G
      * @return the updated request
      */
      public Windows81GeneralConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -150,7 +150,7 @@ public class Windows81GeneralConfigurationRequest extends BaseRequest<Windows81G
      * @return the updated request
      */
      public Windows81GeneralConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

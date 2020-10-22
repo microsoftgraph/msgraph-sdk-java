@@ -139,7 +139,7 @@ public class ManagedIOSStoreAppRequest extends BaseRequest<ManagedIOSStoreApp> {
      * @return the updated request
      */
      public ManagedIOSStoreAppRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+         addSelectOption(value);
          return this;
      }
 
@@ -150,7 +150,7 @@ public class ManagedIOSStoreAppRequest extends BaseRequest<ManagedIOSStoreApp> {
      * @return the updated request
      */
      public ManagedIOSStoreAppRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         addExpandOption(value);
          return this;
      }
 

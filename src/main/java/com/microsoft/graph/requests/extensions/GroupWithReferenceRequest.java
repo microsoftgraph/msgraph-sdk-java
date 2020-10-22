@@ -69,7 +69,7 @@ public class GroupWithReferenceRequest extends BaseWithReferenceRequest<Group> {
      * @return the updated request
      */
     public GroupWithReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -80,7 +80,7 @@ public class GroupWithReferenceRequest extends BaseWithReferenceRequest<Group> {
      * @return the updated request
      */
     public GroupWithReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 }

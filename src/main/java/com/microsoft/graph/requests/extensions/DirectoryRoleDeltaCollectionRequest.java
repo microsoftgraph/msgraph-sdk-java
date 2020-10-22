@@ -46,7 +46,7 @@ public class DirectoryRoleDeltaCollectionRequest extends BaseCollectionRequest<D
      * @return the updated request
      */
     public DirectoryRoleDeltaCollectionRequest select(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
+        addSelectOption(value);
         return this;
     }
 
@@ -57,7 +57,7 @@ public class DirectoryRoleDeltaCollectionRequest extends BaseCollectionRequest<D
      * @return the updated request
      */
     public DirectoryRoleDeltaCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
+        addTopOption(value);
         return this;
     }
 
@@ -68,7 +68,7 @@ public class DirectoryRoleDeltaCollectionRequest extends BaseCollectionRequest<D
      * @return the updated request
      */
     public DirectoryRoleDeltaCollectionRequest expand(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addExpandOption(value);
         return this;
     }
 
@@ -79,7 +79,7 @@ public class DirectoryRoleDeltaCollectionRequest extends BaseCollectionRequest<D
      * @return the updated request
      */
     public DirectoryRoleDeltaCollectionRequest filter(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        addFilterOption(value);
         return this;
     }
 
@@ -90,7 +90,7 @@ public class DirectoryRoleDeltaCollectionRequest extends BaseCollectionRequest<D
      * @return the updated request
      */
     public DirectoryRoleDeltaCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        addOrderByOption(value);
         return this;
     }
 
