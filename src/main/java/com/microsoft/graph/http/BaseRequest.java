@@ -391,6 +391,69 @@ public abstract class BaseRequest<T> implements IHttpRequest {
     public void addFunctionOption(final FunctionOption option) {
         getFunctionOptions().add(option);
     }
+    
+    /**
+     * Sets the expand clause for the request
+     *
+     * @param value the expand clause
+     */
+    protected void addExpandOption(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     */
+    protected void addFilterOption(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     */
+    protected void addOrderByOption(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+    }
+
+    /**
+     * Sets the select clause for the request
+     *
+     * @param value the select clause
+     */
+    protected void addSelectOption(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
+    }
+
+    /**
+     * Sets the top value for the request
+     *
+     * @param value the max number of items to return
+     */
+    protected void addTopOption(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", String.valueOf(value)));
+    }
+
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     */
+    protected void addSkipOption(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", String.valueOf(value)));
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     */
+    protected void addSkipTokenOption(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+    }
 
     /**
      * Sets the HTTP method
