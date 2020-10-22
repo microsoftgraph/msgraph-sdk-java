@@ -11,6 +11,9 @@ import org.junit.Test;
 
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.Site;
+import com.microsoft.graph.requests.extensions.SiteCollectionPage;
+import com.microsoft.graph.requests.extensions.DriveCollectionPage;
+import com.microsoft.graph.requests.extensions.DriveItemCollectionPage;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.models.extensions.Drive;
@@ -29,7 +32,7 @@ public class SharePointTests {
 
         List<Option> requestOptions = new LinkedList<Option>();
         requestOptions.add(new QueryOption("search", "Contoso"));
-        BaseCollectionPage<Site> sites = testBase.graphClient.sites().buildRequest(requestOptions).get();
+        SiteCollectionPage sites = testBase.graphClient.sites().buildRequest(requestOptions).get();
         testSite = sites.getCurrentPage().get(0);
     }
 
@@ -43,21 +46,21 @@ public class SharePointTests {
     public void testSearch() {
         List<Option> requestOptions = new LinkedList<Option>();
         requestOptions.add(new QueryOption("search", "Contoso"));
-        BaseCollectionPage<Site> sites = testBase.graphClient.sites().buildRequest(requestOptions).get();
+        SiteCollectionPage sites = testBase.graphClient.sites().buildRequest(requestOptions).get();
 
         assertNotNull(sites);
     }
 
     @Test
     public void testDrives() {
-        BaseCollectionPage<Drive> drives = testBase.graphClient.sites(testSite.id).drives().buildRequest().get();
+        DriveCollectionPage drives = testBase.graphClient.sites(testSite.id).drives().buildRequest().get();
         assertNotNull(drives);
     }
 
     @Test
     public void testNonDefaultLibrary() {
-        BaseCollectionPage<Drive> drives = testBase.graphClient.sites(testSite.id).drives().buildRequest().get();
-        BaseCollectionPage<DriveItem> driveItems = testBase.graphClient.sites(testSite.id).drives(drives.getCurrentPage().get(0).id).root().children().buildRequest().get();
+        DriveCollectionPage drives = testBase.graphClient.sites(testSite.id).drives().buildRequest().get();
+        DriveItemCollectionPage driveItems = testBase.graphClient.sites(testSite.id).drives(drives.getCurrentPage().get(0).id).root().children().buildRequest().get();
 
         assertNotNull(driveItems);
     }

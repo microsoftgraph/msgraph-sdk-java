@@ -40,7 +40,11 @@ import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.requests.extensions.OnenotePageCollectionRequest;
 import com.microsoft.graph.requests.extensions.OnenotePageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteRequestBuilder;
-import com.microsoft.graph.requests.extensions.OnenotePageCollectionRequest;
+import com.microsoft.graph.requests.extensions.OnenotePageCollectionPage;
+import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionPage;
+import com.microsoft.graph.requests.extensions.NotebookGetRecentNotebooksCollectionPage;
+import com.microsoft.graph.requests.extensions.SectionGroupCollectionPage;
+import com.microsoft.graph.requests.extensions.NotebookCollectionPage;
 
 /**
  * Tests for OneNote API functionality
@@ -105,21 +109,21 @@ public class OneNoteTests {
     @Test
     public void testGetNotebookData() {
     	// Get notebooks
-        BaseCollectionPage<Notebook> books = orb
+        NotebookCollectionPage books = orb
         		.notebooks()
         		.buildRequest()
         		.get();
         assertNotNull(books);
 
         // Get pages from the OneNote object
-        BaseCollectionPage<OnenotePage> pages = orb
+        OnenotePageCollectionPage pages = orb
         		.pages()
         		.buildRequest()
         		.get();
         assertNotNull(pages);
 
         // Get sections from a specific notebook
-        BaseCollectionPage<OnenoteSection> notebookSections = orb
+        OnenoteSectionCollectionPage notebookSections = orb
         		.notebooks(testNotebook.id)
         		.sections()
         		.buildRequest()
@@ -127,14 +131,14 @@ public class OneNoteTests {
         assertNotNull(notebookSections);
 
         // Get sections from the OneNote object
-        BaseCollectionPage<OnenoteSection> sections = orb
+        OnenoteSectionCollectionPage sections = orb
         		.sections()
         		.buildRequest()
         		.get();
         assertNotNull(sections);
 
         // Get section groups from a specific notebook
-        BaseCollectionPage<SectionGroup> notebookGroups = orb
+        SectionGroupCollectionPage notebookGroups = orb
         		.notebooks(testNotebook.id)
         		.sectionGroups()
         		.buildRequest()
@@ -142,14 +146,14 @@ public class OneNoteTests {
         assertNotNull(notebookGroups);
 
         // Get section groups from the OneNote object
-        BaseCollectionPage<SectionGroup> groups = orb
+        SectionGroupCollectionPage groups = orb
         		.sectionGroups()
         		.buildRequest()
         		.get();
         assertNotNull(groups);
 
         // Get pages from a specific section
-        BaseCollectionPage<OnenotePage> sectionPages = orb
+        OnenotePageCollectionPage sectionPages = orb
         		.sections(sections.getCurrentPage().get(0).id)
         		.pages()
         		.buildRequest()
@@ -163,14 +167,14 @@ public class OneNoteTests {
     @Test
     public void testODataQueries() {
         // Test Filter
-        BaseCollectionPage<Notebook> filteredBooks = orb
+        NotebookCollectionPage filteredBooks = orb
         		.notebooks()
                 .buildRequest()
                 .filter("isDefault eq true")
                 .get();
         assertTrue(filteredBooks.getCurrentPage().size() == 0);
     	// Test Expand
-        BaseCollectionPage<Notebook> books = orb
+        NotebookCollectionPage books = orb
         		.notebooks()
         		.buildRequest()
         		.expand("sections")
@@ -179,7 +183,7 @@ public class OneNoteTests {
         assertNotNull(book.sections);
 
         // Test Select on notebook
-        BaseCollectionPage<Notebook> idBooks = orb
+        NotebookCollectionPage idBooks = orb
         		.notebooks()
         		.buildRequest()
         		.select("id")
@@ -188,7 +192,7 @@ public class OneNoteTests {
         assertNotNull(idBook.id);
 
         // Test Select on page
-        BaseCollectionPage<OnenotePage> pages = orb
+        OnenotePageCollectionPage pages = orb
         		.pages()
         		.buildRequest()
         		.select("title")
@@ -199,7 +203,7 @@ public class OneNoteTests {
         // Test Count on notebooks
         List<Option> options = new ArrayList<Option>();
         options.add(new QueryOption("count", "true"));
-        BaseCollectionPage<Notebook> countedBooks = orb
+        NotebookCollectionPage countedBooks = orb
         		.notebooks()
         		.buildRequest(options)
         		.get();
@@ -208,7 +212,7 @@ public class OneNoteTests {
         // Test PageLevel on pages
         List<QueryOption> pageLevelOptions = new ArrayList<QueryOption>();
         pageLevelOptions.add(new QueryOption("pagelevel", "true"));
-        BaseCollectionPage<OnenotePage> pageLevelPages = orb
+        OnenotePageCollectionPage pageLevelPages = orb
         		.sections(testSection.id)
         		.pages()
         		.buildRequest(pageLevelOptions)
@@ -221,14 +225,14 @@ public class OneNoteTests {
      */
     @Test
     public void testRecentNotebooks() {
-        BaseCollectionPage<RecentNotebook> books = orb
+        NotebookGetRecentNotebooksCollectionPage books = orb
         		.notebooks()
         		.getRecentNotebooks(true)
         		.buildRequest()
         		.get();
         assertNotNull(books);
 
-        BaseCollectionPage<RecentNotebook> noPersonalBooks = orb
+        NotebookGetRecentNotebooksCollectionPage noPersonalBooks = orb
         		.notebooks()
         		.getRecentNotebooks(false)
         		.buildRequest()

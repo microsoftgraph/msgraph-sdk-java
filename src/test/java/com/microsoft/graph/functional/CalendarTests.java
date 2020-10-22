@@ -11,6 +11,8 @@ import org.junit.Test;
 
 import com.microsoft.graph.models.extensions.Calendar;
 import com.microsoft.graph.models.extensions.Event;
+import com.microsoft.graph.requests.extensions.CalendarCollectionPage;
+import com.microsoft.graph.requests.extensions.EventCollectionPage;
 import com.microsoft.graph.core.IGraphServiceClient;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.options.Option;
@@ -29,7 +31,7 @@ public class CalendarTests {
 	@Test
 	public void getMeCalendars() {
 		//GET me/calendars
-		BaseCollectionPage<Calendar> calendarCollectionPage = graphServiceClient.me().calendars().buildRequest().get();
+		CalendarCollectionPage calendarCollectionPage = graphServiceClient.me().calendars().buildRequest().get();
 		assertNotNull(calendarCollectionPage);
 	}
 
@@ -41,7 +43,7 @@ public class CalendarTests {
 		List<Option> list = new ArrayList<>();
 		list.add(q1);
 		list.add(q2);
-		BaseCollectionPage<Event> collectionPage = graphServiceClient.me().calendarView().buildRequest(list).get();
+		EventCollectionPage collectionPage = graphServiceClient.me().calendarView().buildRequest(list).get();
 		assertNotNull(collectionPage);
 	}
 
@@ -53,7 +55,7 @@ public class CalendarTests {
 		List<Option> list = new ArrayList<>();
 		list.add(q1);
 		list.add(q2);
-		BaseCollectionPage<Calendar> calendarCollectionPage = graphServiceClient.me().calendars().buildRequest().get();
+		CalendarCollectionPage calendarCollectionPage = graphServiceClient.me().calendars().buildRequest().get();
 		assertNotNull(calendarCollectionPage);
 		if(calendarCollectionPage.getCurrentPage().size() > 0)
 			graphServiceClient.me().calendars(calendarCollectionPage.getCurrentPage().get(0).id).calendarView().buildRequest(list).get();

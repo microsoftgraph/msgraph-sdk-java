@@ -45,7 +45,7 @@ public class CollectionPageSerializerTests {
         String expectedString = "[{\"contentBytes\":\"ZGF0YQ==\",\"name\":\"document.pdf\",\"@odata.type\":\"#microsoft.graph.fileAttachment\",\"id\":\"54321\"},{\"item\":{\"end\":{\"dateTime\":\"2018-11-18T07:30:26.544Z\",\"timeZone\":\"UTC\"},\"start\":{\"dateTime\":\"2018-10-16T06:15:26.544Z\",\"timeZone\":\"UTC\"},\"subject\":\"Test Event Subject\",\"@odata.type\":\"microsoft.graph.event\",\"id\":\"1234\"},\"name\":\"Holiday event\",\"@odata.type\":\"#microsoft.graph.itemAttachment\"},{\"item\":{\"displayName\":\"displayname\",\"mobilePhone\":\"123456890\",\"@odata.type\":\"microsoft.graph.contact\"},\"name\":\"Attachment name\",\"@odata.type\":\"#microsoft.graph.itemAttachment\"}]";
         AttachmentCollectionResponse response = new AttachmentCollectionResponse();
         response.value = Arrays.asList(getFileAttachment(),getItemAttachmentWithEvent(),getItemAttachmentWithContact());
-        BaseCollectionPage<Attachment> attachmentCollectionPage = new AttachmentCollectionPage(response, null);
+        AttachmentCollectionPage attachmentCollectionPage = new AttachmentCollectionPage(response, null);
         JsonElement serializedJson = CollectionPageSerializer.serialize(attachmentCollectionPage, logger);
         logger.logDebug(serializedJson.toString());
         assertEquals(expectedString,serializedJson.toString());
@@ -56,7 +56,7 @@ public class CollectionPageSerializerTests {
 		String jsonString = "[{\"contentBytes\":\"ZGF0YQ==\",\"name\":\"document.pdf\",\"@odata.type\":\"#microsoft.graph.fileAttachment\",\"id\":\"54321\"},{\"@odata.type\":\"#microsoft.graph.itemAttachment\",\"name\":\"Holiday event\",\"id\":null,\"isInline\":null,\"size\":null,\"item\":{\"subject\":\"Test Event Subject\",\"start\":{\"dateTime\":\"2018-10-16T06:15:26.544Z\",\"timeZone\":\"UTC\"},\"end\":{\"dateTime\":\"2018-11-18T07:30:26.544Z\",\"timeZone\":\"UTC\"},\"@odata.type\":\"microsoft.graph.event\",\"id\":\"1234\"}},{\"@odata.type\":\"#microsoft.graph.itemAttachment\",\"name\":\"Attachment name\",\"id\":null,\"isInline\":null,\"size\":null,\"item\":{\"displayName\":\"displayname\",\"mobilePhone\":\"123456890\",\"@odata.type\":\"microsoft.graph.contact\"}}]";
 		JsonElement jsonElement = JsonParser.parseString(jsonString);
         AttachmentCollectionResponse response = new AttachmentCollectionResponse();
-		BaseCollectionPage<Attachment> attachmentCollectionPage = CollectionPageSerializer.deserialize(jsonElement, (new AttachmentCollectionPage(response, null)).getClass(), logger);
+		BaseCollectionPage<Attachment,?> attachmentCollectionPage = CollectionPageSerializer.deserialize(jsonElement, AttachmentCollectionPage.class, logger);
 		for(Attachment attachment: attachmentCollectionPage.getCurrentPage()) {
 			if(attachment instanceof FileAttachment) {
 				FileAttachment fileAttachment = (FileAttachment)attachment;

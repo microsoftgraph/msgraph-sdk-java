@@ -23,7 +23,7 @@ public class BaseCollectionPageTests {
 
     private BaseRequestBuilder<String> mRequestBuilder;
     private static ArrayList<String> list;
-    private BaseCollectionPage<String> baseCollectionPage;
+    private BaseCollectionPage<String, BaseRequestBuilder<String>> baseCollectionPage;
     private String requestUrl = "https://a.b.c/";
 
     @Before
@@ -34,7 +34,7 @@ public class BaseCollectionPageTests {
         list.add("Object3");
         IBaseClient mBaseClient = new MockBaseClient();
         mRequestBuilder = new BaseRequestBuilder<String>(requestUrl, mBaseClient, null) {};
-        baseCollectionPage = new BaseCollectionPage<String>(list, mRequestBuilder) {};
+        baseCollectionPage = new BaseCollectionPage<String, BaseRequestBuilder<String>>(list, mRequestBuilder) {};
     }
 
     @Test
