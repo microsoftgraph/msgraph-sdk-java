@@ -48,6 +48,8 @@ import com.microsoft.graph.models.generated.BodyType;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionResponse;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionResponse;
+import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionPage;
 
 @Ignore
 public class OutlookTests {
@@ -138,7 +140,7 @@ public class OutlookTests {
     	message.hasAttachments = true;
     	AttachmentCollectionResponse response = new AttachmentCollectionResponse();
     	response.value = Arrays.asList(getFileAttachment(),getItemAttachmentWithEvent(),getItemAttachmentWithContact());
-		message.attachments = new BaseCollectionPage<Attachment>(response, null);
+		message.attachments = new AttachmentCollectionPage(response, null);
 		testBase.graphClient.me().sendMail(message, true).buildRequest().post();
     }
 
@@ -159,7 +161,7 @@ public class OutlookTests {
 		event.hasAttachments = true;
 		AttachmentCollectionResponse response = new AttachmentCollectionResponse();
 		response.value = Arrays.asList(getFileAttachment(),getItemAttachmentWithContact());
-		event.attachments = new BaseCollectionPage<Attachment>(response, null); 
+		event.attachments = new AttachmentCollectionPage(response, null); 
 		Event eventResponse = testBase.graphClient.me().events().buildRequest().post(event);
 		assertNotNull(eventResponse);
     }
@@ -327,7 +329,7 @@ public class OutlookTests {
 		final SingleValueLegacyExtendedPropertyCollectionResponse response = new SingleValueLegacyExtendedPropertyCollectionResponse();
 		response.value = new ArrayList<SingleValueLegacyExtendedProperty>();
 		response.value.add(prop);
-		updatedEvent.singleValueExtendedProperties = new BaseCollectionPage<SingleValueLegacyExtendedProperty>(response, new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(null, null, null));
+		updatedEvent.singleValueExtendedProperties = new SingleValueLegacyExtendedPropertyCollectionPage(response, new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(null, null, null));
 
 		testBase.graphClient.me().events(eventId).buildRequest().patch(updatedEvent);
 		final BaseCollectionPage<Event> page = testBase.graphClient.me()
