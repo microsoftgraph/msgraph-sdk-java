@@ -55,6 +55,16 @@ public class DeltaCollectionPage<T, T2 extends BaseRequestBuilder<T>> extends Ba
             deltaLink = null;
         }
     }
+
+    /**
+     * Creates the collection page
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DeltaCollectionPage(final List<T> pageContents, final T2 nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
     /**
      * The deltaLink to make future delta requests
      *
