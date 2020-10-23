@@ -122,19 +122,15 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
     }
 
     public T3 buildFromResponse(final T2 response) {
-        if (response.nextLink() != null) {
-            final List<com.microsoft.graph.options.Option> options = new java.util.ArrayList<com.microsoft.graph.options.Option>();
-            try {
-                final Object builder = this.collRequestBuilderClass
-                        .getConstructor(response.nextLink().getClass(), getBaseRequest().getClient().getClass(), options.getClass())
-                        .newInstance(response.nextLink(), getBaseRequest().getClient(), options);
-                final T3 page = (T3)this.collectionPageClass.getConstructor(response.getClass(), builder.getClass()).newInstance(response, builder);
-                page.setRawObject(response.getSerializer(), response.getRawObject());
-                return page;
-            } catch(IllegalArgumentException | InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException | SecurityException ex) {
-                return null;
-            }
-        } else {
+        final List<com.microsoft.graph.options.Option> options = new java.util.ArrayList<com.microsoft.graph.options.Option>();
+        try {
+            final Object builder = this.collRequestBuilderClass
+                    .getConstructor(String.class, IBaseClient.class, java.util.List.class)
+                    .newInstance(response.nextLink(), getBaseRequest().getClient(), options);
+            final T3 page = (T3)this.collectionPageClass.getConstructor(response.getClass(), builder.getClass()).newInstance(response, response.nextLink() == null ? null : builder);
+            page.setRawObject(response.getSerializer(), response.getRawObject());
+            return page;
+        } catch(IllegalArgumentException | InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException | SecurityException ex) {
             return null;
         }
     }
