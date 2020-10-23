@@ -29,7 +29,7 @@ import com.microsoft.graph.http.ReferenceRequestBody;
 /**
  * The class for the Endpoint Collection Reference Request.
  */
-public class EndpointCollectionReferenceRequest extends BaseCollectionWithReferencesRequest<Endpoint, EndpointWithReferenceRequest, EndpointReferenceRequestBuilder, EndpointWithReferenceRequestBuilder, EndpointCollectionResponse, EndpointCollectionPage, EndpointCollectionWithReferencesRequest> {
+public class EndpointCollectionReferenceRequest extends BaseCollectionWithReferencesRequest<Endpoint, EndpointWithReferenceRequest, EndpointReferenceRequestBuilder, EndpointWithReferenceRequestBuilder, EndpointCollectionResponse, EndpointCollectionWithReferencesPage, EndpointCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of Endpoint
@@ -39,7 +39,7 @@ public class EndpointCollectionReferenceRequest extends BaseCollectionWithRefere
      * @param requestOptions the options for this request
      */
     public EndpointCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, EndpointCollectionResponse.class, EndpointCollectionPage.class, EndpointCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, EndpointCollectionResponse.class, EndpointCollectionWithReferencesPage.class, EndpointCollectionWithReferencesRequestBuilder.class);
     }
 
     /**

@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Managed App Registration Collection Reference Request Builder.
  */
-public class ManagedAppRegistrationCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<ManagedAppRegistration, ManagedAppRegistrationWithReferenceRequestBuilder, ManagedAppRegistrationCollectionResponse, ManagedAppRegistrationCollectionPage, ManagedAppRegistrationCollectionReferenceRequest> {
+public class ManagedAppRegistrationCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<ManagedAppRegistration, ManagedAppRegistrationWithReferenceRequestBuilder, ManagedAppRegistrationCollectionResponse, ManagedAppRegistrationCollectionWithReferencesPage, ManagedAppRegistrationCollectionReferenceRequest> {
 
     /**
      * The request builder for this collection of ManagedAppRegistration
@@ -30,6 +30,6 @@ public class ManagedAppRegistrationCollectionReferenceRequestBuilder extends Bas
      * @param requestOptions the options for this request
      */
     public ManagedAppRegistrationCollectionReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedAppRegistrationWithReferenceRequestBuilder.class, ManagedAppRegistrationCollectionResponse.class, ManagedAppRegistrationCollectionPage.class, ManagedAppRegistrationCollectionReferenceRequest.class);
+        super(requestUrl, client, requestOptions, ManagedAppRegistrationWithReferenceRequestBuilder.class, ManagedAppRegistrationCollectionResponse.class, ManagedAppRegistrationCollectionWithReferencesPage.class, ManagedAppRegistrationCollectionReferenceRequest.class);
     }
 }

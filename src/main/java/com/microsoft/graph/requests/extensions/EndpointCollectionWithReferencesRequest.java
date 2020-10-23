@@ -30,7 +30,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Endpoint Collection With References Request.
  */
-public class EndpointCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<Endpoint, EndpointWithReferenceRequest, EndpointReferenceRequestBuilder, EndpointWithReferenceRequestBuilder, EndpointCollectionResponse, EndpointCollectionPage, EndpointCollectionWithReferencesRequest> {
+public class EndpointCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<Endpoint, EndpointWithReferenceRequest, EndpointReferenceRequestBuilder, EndpointWithReferenceRequestBuilder, EndpointCollectionResponse, EndpointCollectionWithReferencesPage, EndpointCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of Endpoint
@@ -40,7 +40,7 @@ public class EndpointCollectionWithReferencesRequest extends BaseCollectionWithR
      * @param requestOptions the options for this request
      */
     public EndpointCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, EndpointCollectionResponse.class, EndpointCollectionPage.class, EndpointCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, EndpointCollectionResponse.class, EndpointCollectionWithReferencesPage.class, EndpointCollectionWithReferencesRequestBuilder.class);
     }
 
     public EndpointCollectionWithReferencesRequest expand(final String value) {

@@ -30,7 +30,7 @@ import com.microsoft.graph.http.ReferenceRequestBody;
 /**
  * The class for the Group Collection Reference Request.
  */
-public class GroupCollectionReferenceRequest extends BaseCollectionWithReferencesRequest<Group, GroupWithReferenceRequest, GroupReferenceRequestBuilder, GroupWithReferenceRequestBuilder, GroupCollectionResponse, GroupCollectionPage, GroupCollectionWithReferencesRequest> {
+public class GroupCollectionReferenceRequest extends BaseCollectionWithReferencesRequest<Group, GroupWithReferenceRequest, GroupReferenceRequestBuilder, GroupWithReferenceRequestBuilder, GroupCollectionResponse, GroupCollectionWithReferencesPage, GroupCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of Group
@@ -40,7 +40,7 @@ public class GroupCollectionReferenceRequest extends BaseCollectionWithReference
      * @param requestOptions the options for this request
      */
     public GroupCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, GroupCollectionResponse.class, GroupCollectionPage.class, GroupCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, GroupCollectionResponse.class, GroupCollectionWithReferencesPage.class, GroupCollectionWithReferencesRequestBuilder.class);
     }
 
     public void post(final Group newGroup, final ICallback<? super Group> callback) {

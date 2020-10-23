@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Home Realm Discovery Policy Collection With References Request Builder.
  */
-public class HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<HomeRealmDiscoveryPolicy, HomeRealmDiscoveryPolicyWithReferenceRequest, HomeRealmDiscoveryPolicyReferenceRequestBuilder, HomeRealmDiscoveryPolicyWithReferenceRequestBuilder, HomeRealmDiscoveryPolicyCollectionResponse, HomeRealmDiscoveryPolicyCollectionPage, HomeRealmDiscoveryPolicyCollectionWithReferencesRequest, HomeRealmDiscoveryPolicyCollectionWithReferencesRequest> {
+public class HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<HomeRealmDiscoveryPolicy, HomeRealmDiscoveryPolicyWithReferenceRequest, HomeRealmDiscoveryPolicyReferenceRequestBuilder, HomeRealmDiscoveryPolicyWithReferenceRequestBuilder, HomeRealmDiscoveryPolicyCollectionResponse, HomeRealmDiscoveryPolicyCollectionWithReferencesPage, HomeRealmDiscoveryPolicyCollectionWithReferencesRequest, HomeRealmDiscoveryPolicyCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -30,6 +30,6 @@ public class HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder exte
      * @param requestOptions the options for this request
      */
     public HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicyReferenceRequestBuilder.class, HomeRealmDiscoveryPolicyCollectionResponse.class, HomeRealmDiscoveryPolicyCollectionPage.class, HomeRealmDiscoveryPolicyCollectionWithReferencesRequest.class);
+        super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicyReferenceRequestBuilder.class, HomeRealmDiscoveryPolicyCollectionResponse.class, HomeRealmDiscoveryPolicyCollectionWithReferencesPage.class, HomeRealmDiscoveryPolicyCollectionWithReferencesRequest.class);
     }
 }

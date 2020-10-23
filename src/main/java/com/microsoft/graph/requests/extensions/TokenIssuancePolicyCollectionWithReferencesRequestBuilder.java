@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Token Issuance Policy Collection With References Request Builder.
  */
-public class TokenIssuancePolicyCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<TokenIssuancePolicy, TokenIssuancePolicyWithReferenceRequest, TokenIssuancePolicyReferenceRequestBuilder, TokenIssuancePolicyWithReferenceRequestBuilder, TokenIssuancePolicyCollectionResponse, TokenIssuancePolicyCollectionPage, TokenIssuancePolicyCollectionWithReferencesRequest, TokenIssuancePolicyCollectionWithReferencesRequest> {
+public class TokenIssuancePolicyCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<TokenIssuancePolicy, TokenIssuancePolicyWithReferenceRequest, TokenIssuancePolicyReferenceRequestBuilder, TokenIssuancePolicyWithReferenceRequestBuilder, TokenIssuancePolicyCollectionResponse, TokenIssuancePolicyCollectionWithReferencesPage, TokenIssuancePolicyCollectionWithReferencesRequest, TokenIssuancePolicyCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -30,6 +30,6 @@ public class TokenIssuancePolicyCollectionWithReferencesRequestBuilder extends B
      * @param requestOptions the options for this request
      */
     public TokenIssuancePolicyCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TokenIssuancePolicyReferenceRequestBuilder.class, TokenIssuancePolicyCollectionResponse.class, TokenIssuancePolicyCollectionPage.class, TokenIssuancePolicyCollectionWithReferencesRequest.class);
+        super(requestUrl, client, requestOptions, TokenIssuancePolicyReferenceRequestBuilder.class, TokenIssuancePolicyCollectionResponse.class, TokenIssuancePolicyCollectionWithReferencesPage.class, TokenIssuancePolicyCollectionWithReferencesRequest.class);
     }
 }

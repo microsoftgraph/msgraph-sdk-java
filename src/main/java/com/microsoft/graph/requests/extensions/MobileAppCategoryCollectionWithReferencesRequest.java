@@ -30,7 +30,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Mobile App Category Collection With References Request.
  */
-public class MobileAppCategoryCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<MobileAppCategory, MobileAppCategoryWithReferenceRequest, MobileAppCategoryReferenceRequestBuilder, MobileAppCategoryWithReferenceRequestBuilder, MobileAppCategoryCollectionResponse, MobileAppCategoryCollectionPage, MobileAppCategoryCollectionWithReferencesRequest> {
+public class MobileAppCategoryCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<MobileAppCategory, MobileAppCategoryWithReferenceRequest, MobileAppCategoryReferenceRequestBuilder, MobileAppCategoryWithReferenceRequestBuilder, MobileAppCategoryCollectionResponse, MobileAppCategoryCollectionWithReferencesPage, MobileAppCategoryCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of MobileAppCategory
@@ -40,7 +40,7 @@ public class MobileAppCategoryCollectionWithReferencesRequest extends BaseCollec
      * @param requestOptions the options for this request
      */
     public MobileAppCategoryCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MobileAppCategoryCollectionResponse.class, MobileAppCategoryCollectionPage.class, MobileAppCategoryCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, MobileAppCategoryCollectionResponse.class, MobileAppCategoryCollectionWithReferencesPage.class, MobileAppCategoryCollectionWithReferencesRequestBuilder.class);
     }
 
     public MobileAppCategoryCollectionWithReferencesRequest expand(final String value) {

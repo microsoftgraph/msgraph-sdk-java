@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Home Realm Discovery Policy Collection Reference Request Builder.
  */
-public class HomeRealmDiscoveryPolicyCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<HomeRealmDiscoveryPolicy, HomeRealmDiscoveryPolicyWithReferenceRequestBuilder, HomeRealmDiscoveryPolicyCollectionResponse, HomeRealmDiscoveryPolicyCollectionPage, HomeRealmDiscoveryPolicyCollectionReferenceRequest> {
+public class HomeRealmDiscoveryPolicyCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<HomeRealmDiscoveryPolicy, HomeRealmDiscoveryPolicyWithReferenceRequestBuilder, HomeRealmDiscoveryPolicyCollectionResponse, HomeRealmDiscoveryPolicyCollectionWithReferencesPage, HomeRealmDiscoveryPolicyCollectionReferenceRequest> {
 
     /**
      * The request builder for this collection of HomeRealmDiscoveryPolicy
@@ -30,6 +30,6 @@ public class HomeRealmDiscoveryPolicyCollectionReferenceRequestBuilder extends B
      * @param requestOptions the options for this request
      */
     public HomeRealmDiscoveryPolicyCollectionReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicyWithReferenceRequestBuilder.class, HomeRealmDiscoveryPolicyCollectionResponse.class, HomeRealmDiscoveryPolicyCollectionPage.class, HomeRealmDiscoveryPolicyCollectionReferenceRequest.class);
+        super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicyWithReferenceRequestBuilder.class, HomeRealmDiscoveryPolicyCollectionResponse.class, HomeRealmDiscoveryPolicyCollectionWithReferencesPage.class, HomeRealmDiscoveryPolicyCollectionReferenceRequest.class);
     }
 }

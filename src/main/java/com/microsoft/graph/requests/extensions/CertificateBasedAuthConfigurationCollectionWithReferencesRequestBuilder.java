@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Certificate Based Auth Configuration Collection With References Request Builder.
  */
-public class CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<CertificateBasedAuthConfiguration, CertificateBasedAuthConfigurationWithReferenceRequest, CertificateBasedAuthConfigurationReferenceRequestBuilder, CertificateBasedAuthConfigurationWithReferenceRequestBuilder, CertificateBasedAuthConfigurationCollectionResponse, CertificateBasedAuthConfigurationCollectionPage, CertificateBasedAuthConfigurationCollectionWithReferencesRequest, CertificateBasedAuthConfigurationCollectionWithReferencesRequest> {
+public class CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<CertificateBasedAuthConfiguration, CertificateBasedAuthConfigurationWithReferenceRequest, CertificateBasedAuthConfigurationReferenceRequestBuilder, CertificateBasedAuthConfigurationWithReferenceRequestBuilder, CertificateBasedAuthConfigurationCollectionResponse, CertificateBasedAuthConfigurationCollectionWithReferencesPage, CertificateBasedAuthConfigurationCollectionWithReferencesRequest, CertificateBasedAuthConfigurationCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of Organization
@@ -30,6 +30,6 @@ public class CertificateBasedAuthConfigurationCollectionWithReferencesRequestBui
      * @param requestOptions the options for this request
      */
     public CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, CertificateBasedAuthConfigurationReferenceRequestBuilder.class, CertificateBasedAuthConfigurationCollectionResponse.class, CertificateBasedAuthConfigurationCollectionPage.class, CertificateBasedAuthConfigurationCollectionWithReferencesRequest.class);
+        super(requestUrl, client, requestOptions, CertificateBasedAuthConfigurationReferenceRequestBuilder.class, CertificateBasedAuthConfigurationCollectionResponse.class, CertificateBasedAuthConfigurationCollectionWithReferencesPage.class, CertificateBasedAuthConfigurationCollectionWithReferencesRequest.class);
     }
 }

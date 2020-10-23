@@ -30,7 +30,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the App Role Assignment Collection With References Request.
  */
-public class AppRoleAssignmentCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<AppRoleAssignment, AppRoleAssignmentWithReferenceRequest, AppRoleAssignmentReferenceRequestBuilder, AppRoleAssignmentWithReferenceRequestBuilder, AppRoleAssignmentCollectionResponse, AppRoleAssignmentCollectionPage, AppRoleAssignmentCollectionWithReferencesRequest> {
+public class AppRoleAssignmentCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<AppRoleAssignment, AppRoleAssignmentWithReferenceRequest, AppRoleAssignmentReferenceRequestBuilder, AppRoleAssignmentWithReferenceRequestBuilder, AppRoleAssignmentCollectionResponse, AppRoleAssignmentCollectionWithReferencesPage, AppRoleAssignmentCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of AppRoleAssignment
@@ -40,7 +40,7 @@ public class AppRoleAssignmentCollectionWithReferencesRequest extends BaseCollec
      * @param requestOptions the options for this request
      */
     public AppRoleAssignmentCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, AppRoleAssignmentCollectionResponse.class, AppRoleAssignmentCollectionPage.class, AppRoleAssignmentCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, AppRoleAssignmentCollectionResponse.class, AppRoleAssignmentCollectionWithReferencesPage.class, AppRoleAssignmentCollectionWithReferencesRequestBuilder.class);
     }
 
     public AppRoleAssignmentCollectionWithReferencesRequest expand(final String value) {

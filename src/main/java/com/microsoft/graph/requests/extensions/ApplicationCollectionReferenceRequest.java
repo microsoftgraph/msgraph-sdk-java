@@ -31,7 +31,7 @@ import com.microsoft.graph.http.ReferenceRequestBody;
 /**
  * The class for the Application Collection Reference Request.
  */
-public class ApplicationCollectionReferenceRequest extends BaseCollectionWithReferencesRequest<Application, ApplicationWithReferenceRequest, ApplicationReferenceRequestBuilder, ApplicationWithReferenceRequestBuilder, ApplicationCollectionResponse, ApplicationCollectionPage, ApplicationCollectionWithReferencesRequest> {
+public class ApplicationCollectionReferenceRequest extends BaseCollectionWithReferencesRequest<Application, ApplicationWithReferenceRequest, ApplicationReferenceRequestBuilder, ApplicationWithReferenceRequestBuilder, ApplicationCollectionResponse, ApplicationCollectionWithReferencesPage, ApplicationCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of Application
@@ -41,7 +41,7 @@ public class ApplicationCollectionReferenceRequest extends BaseCollectionWithRef
      * @param requestOptions the options for this request
      */
     public ApplicationCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ApplicationCollectionResponse.class, ApplicationCollectionPage.class, ApplicationCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, ApplicationCollectionResponse.class, ApplicationCollectionWithReferencesPage.class, ApplicationCollectionWithReferencesRequestBuilder.class);
     }
 
     public void post(final Application newApplication, final ICallback<? super Application> callback) {

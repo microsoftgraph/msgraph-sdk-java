@@ -30,7 +30,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Token Issuance Policy Collection With References Request.
  */
-public class TokenIssuancePolicyCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<TokenIssuancePolicy, TokenIssuancePolicyWithReferenceRequest, TokenIssuancePolicyReferenceRequestBuilder, TokenIssuancePolicyWithReferenceRequestBuilder, TokenIssuancePolicyCollectionResponse, TokenIssuancePolicyCollectionPage, TokenIssuancePolicyCollectionWithReferencesRequest> {
+public class TokenIssuancePolicyCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<TokenIssuancePolicy, TokenIssuancePolicyWithReferenceRequest, TokenIssuancePolicyReferenceRequestBuilder, TokenIssuancePolicyWithReferenceRequestBuilder, TokenIssuancePolicyCollectionResponse, TokenIssuancePolicyCollectionWithReferencesPage, TokenIssuancePolicyCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of TokenIssuancePolicy
@@ -40,7 +40,7 @@ public class TokenIssuancePolicyCollectionWithReferencesRequest extends BaseColl
      * @param requestOptions the options for this request
      */
     public TokenIssuancePolicyCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TokenIssuancePolicyCollectionResponse.class, TokenIssuancePolicyCollectionPage.class, TokenIssuancePolicyCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, TokenIssuancePolicyCollectionResponse.class, TokenIssuancePolicyCollectionWithReferencesPage.class, TokenIssuancePolicyCollectionWithReferencesRequestBuilder.class);
     }
 
     public TokenIssuancePolicyCollectionWithReferencesRequest expand(final String value) {

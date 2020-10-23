@@ -30,7 +30,7 @@ import com.microsoft.graph.http.ReferenceRequestBody;
 /**
  * The class for the Service Principal Collection Reference Request.
  */
-public class ServicePrincipalCollectionReferenceRequest extends BaseCollectionWithReferencesRequest<ServicePrincipal, ServicePrincipalWithReferenceRequest, ServicePrincipalReferenceRequestBuilder, ServicePrincipalWithReferenceRequestBuilder, ServicePrincipalCollectionResponse, ServicePrincipalCollectionPage, ServicePrincipalCollectionWithReferencesRequest> {
+public class ServicePrincipalCollectionReferenceRequest extends BaseCollectionWithReferencesRequest<ServicePrincipal, ServicePrincipalWithReferenceRequest, ServicePrincipalReferenceRequestBuilder, ServicePrincipalWithReferenceRequestBuilder, ServicePrincipalCollectionResponse, ServicePrincipalCollectionWithReferencesPage, ServicePrincipalCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -40,7 +40,7 @@ public class ServicePrincipalCollectionReferenceRequest extends BaseCollectionWi
      * @param requestOptions the options for this request
      */
     public ServicePrincipalCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ServicePrincipalCollectionResponse.class, ServicePrincipalCollectionPage.class, ServicePrincipalCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, ServicePrincipalCollectionResponse.class, ServicePrincipalCollectionWithReferencesPage.class, ServicePrincipalCollectionWithReferencesRequestBuilder.class);
     }
 
     public void post(final ServicePrincipal newServicePrincipal, final ICallback<? super ServicePrincipal> callback) {

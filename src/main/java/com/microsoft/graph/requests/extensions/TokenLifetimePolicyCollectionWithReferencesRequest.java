@@ -30,7 +30,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Token Lifetime Policy Collection With References Request.
  */
-public class TokenLifetimePolicyCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<TokenLifetimePolicy, TokenLifetimePolicyWithReferenceRequest, TokenLifetimePolicyReferenceRequestBuilder, TokenLifetimePolicyWithReferenceRequestBuilder, TokenLifetimePolicyCollectionResponse, TokenLifetimePolicyCollectionPage, TokenLifetimePolicyCollectionWithReferencesRequest> {
+public class TokenLifetimePolicyCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<TokenLifetimePolicy, TokenLifetimePolicyWithReferenceRequest, TokenLifetimePolicyReferenceRequestBuilder, TokenLifetimePolicyWithReferenceRequestBuilder, TokenLifetimePolicyCollectionResponse, TokenLifetimePolicyCollectionWithReferencesPage, TokenLifetimePolicyCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of TokenLifetimePolicy
@@ -40,7 +40,7 @@ public class TokenLifetimePolicyCollectionWithReferencesRequest extends BaseColl
      * @param requestOptions the options for this request
      */
     public TokenLifetimePolicyCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TokenLifetimePolicyCollectionResponse.class, TokenLifetimePolicyCollectionPage.class, TokenLifetimePolicyCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, TokenLifetimePolicyCollectionResponse.class, TokenLifetimePolicyCollectionWithReferencesPage.class, TokenLifetimePolicyCollectionWithReferencesRequestBuilder.class);
     }
 
     public TokenLifetimePolicyCollectionWithReferencesRequest expand(final String value) {

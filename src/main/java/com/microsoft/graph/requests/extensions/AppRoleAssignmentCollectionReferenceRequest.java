@@ -29,7 +29,7 @@ import com.microsoft.graph.http.ReferenceRequestBody;
 /**
  * The class for the App Role Assignment Collection Reference Request.
  */
-public class AppRoleAssignmentCollectionReferenceRequest extends BaseCollectionWithReferencesRequest<AppRoleAssignment, AppRoleAssignmentWithReferenceRequest, AppRoleAssignmentReferenceRequestBuilder, AppRoleAssignmentWithReferenceRequestBuilder, AppRoleAssignmentCollectionResponse, AppRoleAssignmentCollectionPage, AppRoleAssignmentCollectionWithReferencesRequest> {
+public class AppRoleAssignmentCollectionReferenceRequest extends BaseCollectionWithReferencesRequest<AppRoleAssignment, AppRoleAssignmentWithReferenceRequest, AppRoleAssignmentReferenceRequestBuilder, AppRoleAssignmentWithReferenceRequestBuilder, AppRoleAssignmentCollectionResponse, AppRoleAssignmentCollectionWithReferencesPage, AppRoleAssignmentCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of AppRoleAssignment
@@ -39,7 +39,7 @@ public class AppRoleAssignmentCollectionReferenceRequest extends BaseCollectionW
      * @param requestOptions the options for this request
      */
     public AppRoleAssignmentCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, AppRoleAssignmentCollectionResponse.class, AppRoleAssignmentCollectionPage.class, AppRoleAssignmentCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, AppRoleAssignmentCollectionResponse.class, AppRoleAssignmentCollectionWithReferencesPage.class, AppRoleAssignmentCollectionWithReferencesRequestBuilder.class);
     }
 
     public void post(final AppRoleAssignment newAppRoleAssignment, final ICallback<? super AppRoleAssignment> callback) {

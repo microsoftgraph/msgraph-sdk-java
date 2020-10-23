@@ -32,7 +32,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Application Collection With References Request.
  */
-public class ApplicationCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<Application, ApplicationWithReferenceRequest, ApplicationReferenceRequestBuilder, ApplicationWithReferenceRequestBuilder, ApplicationCollectionResponse, ApplicationCollectionPage, ApplicationCollectionWithReferencesRequest> {
+public class ApplicationCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<Application, ApplicationWithReferenceRequest, ApplicationReferenceRequestBuilder, ApplicationWithReferenceRequestBuilder, ApplicationCollectionResponse, ApplicationCollectionWithReferencesPage, ApplicationCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of Application
@@ -42,7 +42,7 @@ public class ApplicationCollectionWithReferencesRequest extends BaseCollectionWi
      * @param requestOptions the options for this request
      */
     public ApplicationCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ApplicationCollectionResponse.class, ApplicationCollectionPage.class, ApplicationCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, ApplicationCollectionResponse.class, ApplicationCollectionWithReferencesPage.class, ApplicationCollectionWithReferencesRequestBuilder.class);
     }
 
     public ApplicationCollectionWithReferencesRequest expand(final String value) {

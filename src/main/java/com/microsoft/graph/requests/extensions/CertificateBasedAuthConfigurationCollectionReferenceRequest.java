@@ -29,7 +29,7 @@ import com.microsoft.graph.http.ReferenceRequestBody;
 /**
  * The class for the Certificate Based Auth Configuration Collection Reference Request.
  */
-public class CertificateBasedAuthConfigurationCollectionReferenceRequest extends BaseCollectionWithReferencesRequest<CertificateBasedAuthConfiguration, CertificateBasedAuthConfigurationWithReferenceRequest, CertificateBasedAuthConfigurationReferenceRequestBuilder, CertificateBasedAuthConfigurationWithReferenceRequestBuilder, CertificateBasedAuthConfigurationCollectionResponse, CertificateBasedAuthConfigurationCollectionPage, CertificateBasedAuthConfigurationCollectionWithReferencesRequest> {
+public class CertificateBasedAuthConfigurationCollectionReferenceRequest extends BaseCollectionWithReferencesRequest<CertificateBasedAuthConfiguration, CertificateBasedAuthConfigurationWithReferenceRequest, CertificateBasedAuthConfigurationReferenceRequestBuilder, CertificateBasedAuthConfigurationWithReferenceRequestBuilder, CertificateBasedAuthConfigurationCollectionResponse, CertificateBasedAuthConfigurationCollectionWithReferencesPage, CertificateBasedAuthConfigurationCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of CertificateBasedAuthConfiguration
@@ -39,7 +39,7 @@ public class CertificateBasedAuthConfigurationCollectionReferenceRequest extends
      * @param requestOptions the options for this request
      */
     public CertificateBasedAuthConfigurationCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, CertificateBasedAuthConfigurationCollectionResponse.class, CertificateBasedAuthConfigurationCollectionPage.class, CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, CertificateBasedAuthConfigurationCollectionResponse.class, CertificateBasedAuthConfigurationCollectionWithReferencesPage.class, CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder.class);
     }
 
     public void post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, final ICallback<? super CertificateBasedAuthConfiguration> callback) {

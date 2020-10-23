@@ -30,7 +30,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Org Contact Collection With References Request.
  */
-public class OrgContactCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<OrgContact, OrgContactWithReferenceRequest, OrgContactReferenceRequestBuilder, OrgContactWithReferenceRequestBuilder, OrgContactCollectionResponse, OrgContactCollectionPage, OrgContactCollectionWithReferencesRequest> {
+public class OrgContactCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<OrgContact, OrgContactWithReferenceRequest, OrgContactReferenceRequestBuilder, OrgContactWithReferenceRequestBuilder, OrgContactCollectionResponse, OrgContactCollectionWithReferencesPage, OrgContactCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of OrgContact
@@ -40,7 +40,7 @@ public class OrgContactCollectionWithReferencesRequest extends BaseCollectionWit
      * @param requestOptions the options for this request
      */
     public OrgContactCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OrgContactCollectionResponse.class, OrgContactCollectionPage.class, OrgContactCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, OrgContactCollectionResponse.class, OrgContactCollectionWithReferencesPage.class, OrgContactCollectionWithReferencesRequestBuilder.class);
     }
 
     public OrgContactCollectionWithReferencesRequest expand(final String value) {

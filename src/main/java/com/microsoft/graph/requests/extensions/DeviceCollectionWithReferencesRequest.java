@@ -30,7 +30,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Device Collection With References Request.
  */
-public class DeviceCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<Device, DeviceWithReferenceRequest, DeviceReferenceRequestBuilder, DeviceWithReferenceRequestBuilder, DeviceCollectionResponse, DeviceCollectionPage, DeviceCollectionWithReferencesRequest> {
+public class DeviceCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<Device, DeviceWithReferenceRequest, DeviceReferenceRequestBuilder, DeviceWithReferenceRequestBuilder, DeviceCollectionResponse, DeviceCollectionWithReferencesPage, DeviceCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of Device
@@ -40,7 +40,7 @@ public class DeviceCollectionWithReferencesRequest extends BaseCollectionWithRef
      * @param requestOptions the options for this request
      */
     public DeviceCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceCollectionResponse.class, DeviceCollectionPage.class, DeviceCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, DeviceCollectionResponse.class, DeviceCollectionWithReferencesPage.class, DeviceCollectionWithReferencesRequestBuilder.class);
     }
 
     public DeviceCollectionWithReferencesRequest expand(final String value) {

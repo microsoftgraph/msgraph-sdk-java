@@ -30,7 +30,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Claims Mapping Policy Collection With References Request.
  */
-public class ClaimsMappingPolicyCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<ClaimsMappingPolicy, ClaimsMappingPolicyWithReferenceRequest, ClaimsMappingPolicyReferenceRequestBuilder, ClaimsMappingPolicyWithReferenceRequestBuilder, ClaimsMappingPolicyCollectionResponse, ClaimsMappingPolicyCollectionPage, ClaimsMappingPolicyCollectionWithReferencesRequest> {
+public class ClaimsMappingPolicyCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<ClaimsMappingPolicy, ClaimsMappingPolicyWithReferenceRequest, ClaimsMappingPolicyReferenceRequestBuilder, ClaimsMappingPolicyWithReferenceRequestBuilder, ClaimsMappingPolicyCollectionResponse, ClaimsMappingPolicyCollectionWithReferencesPage, ClaimsMappingPolicyCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of ClaimsMappingPolicy
@@ -40,7 +40,7 @@ public class ClaimsMappingPolicyCollectionWithReferencesRequest extends BaseColl
      * @param requestOptions the options for this request
      */
     public ClaimsMappingPolicyCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ClaimsMappingPolicyCollectionResponse.class, ClaimsMappingPolicyCollectionPage.class, ClaimsMappingPolicyCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, ClaimsMappingPolicyCollectionResponse.class, ClaimsMappingPolicyCollectionWithReferencesPage.class, ClaimsMappingPolicyCollectionWithReferencesRequestBuilder.class);
     }
 
     public ClaimsMappingPolicyCollectionWithReferencesRequest expand(final String value) {

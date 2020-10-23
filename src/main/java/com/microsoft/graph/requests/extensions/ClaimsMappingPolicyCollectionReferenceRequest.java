@@ -29,7 +29,7 @@ import com.microsoft.graph.http.ReferenceRequestBody;
 /**
  * The class for the Claims Mapping Policy Collection Reference Request.
  */
-public class ClaimsMappingPolicyCollectionReferenceRequest extends BaseCollectionWithReferencesRequest<ClaimsMappingPolicy, ClaimsMappingPolicyWithReferenceRequest, ClaimsMappingPolicyReferenceRequestBuilder, ClaimsMappingPolicyWithReferenceRequestBuilder, ClaimsMappingPolicyCollectionResponse, ClaimsMappingPolicyCollectionPage, ClaimsMappingPolicyCollectionWithReferencesRequest> {
+public class ClaimsMappingPolicyCollectionReferenceRequest extends BaseCollectionWithReferencesRequest<ClaimsMappingPolicy, ClaimsMappingPolicyWithReferenceRequest, ClaimsMappingPolicyReferenceRequestBuilder, ClaimsMappingPolicyWithReferenceRequestBuilder, ClaimsMappingPolicyCollectionResponse, ClaimsMappingPolicyCollectionWithReferencesPage, ClaimsMappingPolicyCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of ClaimsMappingPolicy
@@ -39,7 +39,7 @@ public class ClaimsMappingPolicyCollectionReferenceRequest extends BaseCollectio
      * @param requestOptions the options for this request
      */
     public ClaimsMappingPolicyCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ClaimsMappingPolicyCollectionResponse.class, ClaimsMappingPolicyCollectionPage.class, ClaimsMappingPolicyCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, ClaimsMappingPolicyCollectionResponse.class, ClaimsMappingPolicyCollectionWithReferencesPage.class, ClaimsMappingPolicyCollectionWithReferencesRequestBuilder.class);
     }
 
     public void post(final ClaimsMappingPolicy newClaimsMappingPolicy, final ICallback<? super ClaimsMappingPolicy> callback) {

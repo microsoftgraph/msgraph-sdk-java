@@ -43,7 +43,7 @@ import com.microsoft.graph.http.ReferenceRequestBody;
 /**
  * The class for the User Collection Reference Request.
  */
-public class UserCollectionReferenceRequest extends BaseCollectionWithReferencesRequest<User, UserWithReferenceRequest, UserReferenceRequestBuilder, UserWithReferenceRequestBuilder, UserCollectionResponse, UserCollectionPage, UserCollectionWithReferencesRequest> {
+public class UserCollectionReferenceRequest extends BaseCollectionWithReferencesRequest<User, UserWithReferenceRequest, UserReferenceRequestBuilder, UserWithReferenceRequestBuilder, UserCollectionResponse, UserCollectionWithReferencesPage, UserCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of User
@@ -53,7 +53,7 @@ public class UserCollectionReferenceRequest extends BaseCollectionWithReferences
      * @param requestOptions the options for this request
      */
     public UserCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, UserCollectionResponse.class, UserCollectionPage.class, UserCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, UserCollectionResponse.class, UserCollectionWithReferencesPage.class, UserCollectionWithReferencesRequestBuilder.class);
     }
 
     public void post(final User newUser, final ICallback<? super User> callback) {

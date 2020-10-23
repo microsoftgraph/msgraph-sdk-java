@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Token Lifetime Policy Collection Reference Request Builder.
  */
-public class TokenLifetimePolicyCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<TokenLifetimePolicy, TokenLifetimePolicyWithReferenceRequestBuilder, TokenLifetimePolicyCollectionResponse, TokenLifetimePolicyCollectionPage, TokenLifetimePolicyCollectionReferenceRequest> {
+public class TokenLifetimePolicyCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<TokenLifetimePolicy, TokenLifetimePolicyWithReferenceRequestBuilder, TokenLifetimePolicyCollectionResponse, TokenLifetimePolicyCollectionWithReferencesPage, TokenLifetimePolicyCollectionReferenceRequest> {
 
     /**
      * The request builder for this collection of TokenLifetimePolicy
@@ -30,6 +30,6 @@ public class TokenLifetimePolicyCollectionReferenceRequestBuilder extends BaseCo
      * @param requestOptions the options for this request
      */
     public TokenLifetimePolicyCollectionReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TokenLifetimePolicyWithReferenceRequestBuilder.class, TokenLifetimePolicyCollectionResponse.class, TokenLifetimePolicyCollectionPage.class, TokenLifetimePolicyCollectionReferenceRequest.class);
+        super(requestUrl, client, requestOptions, TokenLifetimePolicyWithReferenceRequestBuilder.class, TokenLifetimePolicyCollectionResponse.class, TokenLifetimePolicyCollectionWithReferencesPage.class, TokenLifetimePolicyCollectionReferenceRequest.class);
     }
 }

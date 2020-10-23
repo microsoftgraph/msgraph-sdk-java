@@ -31,7 +31,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Site Collection With References Request.
  */
-public class SiteCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<Site, SiteWithReferenceRequest, SiteReferenceRequestBuilder, SiteWithReferenceRequestBuilder, SiteCollectionResponse, SiteCollectionPage, SiteCollectionWithReferencesRequest> {
+public class SiteCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<Site, SiteWithReferenceRequest, SiteReferenceRequestBuilder, SiteWithReferenceRequestBuilder, SiteCollectionResponse, SiteCollectionWithReferencesPage, SiteCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of Site
@@ -41,7 +41,7 @@ public class SiteCollectionWithReferencesRequest extends BaseCollectionWithRefer
      * @param requestOptions the options for this request
      */
     public SiteCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SiteCollectionResponse.class, SiteCollectionPage.class, SiteCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, SiteCollectionResponse.class, SiteCollectionWithReferencesPage.class, SiteCollectionWithReferencesRequestBuilder.class);
     }
 
     public SiteCollectionWithReferencesRequest expand(final String value) {

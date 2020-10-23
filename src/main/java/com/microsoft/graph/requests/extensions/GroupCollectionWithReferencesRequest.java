@@ -31,7 +31,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Group Collection With References Request.
  */
-public class GroupCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<Group, GroupWithReferenceRequest, GroupReferenceRequestBuilder, GroupWithReferenceRequestBuilder, GroupCollectionResponse, GroupCollectionPage, GroupCollectionWithReferencesRequest> {
+public class GroupCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<Group, GroupWithReferenceRequest, GroupReferenceRequestBuilder, GroupWithReferenceRequestBuilder, GroupCollectionResponse, GroupCollectionWithReferencesPage, GroupCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of Group
@@ -41,7 +41,7 @@ public class GroupCollectionWithReferencesRequest extends BaseCollectionWithRefe
      * @param requestOptions the options for this request
      */
     public GroupCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, GroupCollectionResponse.class, GroupCollectionPage.class, GroupCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, GroupCollectionResponse.class, GroupCollectionWithReferencesPage.class, GroupCollectionWithReferencesRequestBuilder.class);
     }
 
     public GroupCollectionWithReferencesRequest expand(final String value) {

@@ -29,7 +29,7 @@ import com.microsoft.graph.http.ReferenceRequestBody;
 /**
  * The class for the Education School Collection Reference Request.
  */
-public class EducationSchoolCollectionReferenceRequest extends BaseCollectionWithReferencesRequest<EducationSchool, EducationSchoolWithReferenceRequest, EducationSchoolReferenceRequestBuilder, EducationSchoolWithReferenceRequestBuilder, EducationSchoolCollectionResponse, EducationSchoolCollectionPage, EducationSchoolCollectionWithReferencesRequest> {
+public class EducationSchoolCollectionReferenceRequest extends BaseCollectionWithReferencesRequest<EducationSchool, EducationSchoolWithReferenceRequest, EducationSchoolReferenceRequestBuilder, EducationSchoolWithReferenceRequestBuilder, EducationSchoolCollectionResponse, EducationSchoolCollectionWithReferencesPage, EducationSchoolCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of EducationSchool
@@ -39,7 +39,7 @@ public class EducationSchoolCollectionReferenceRequest extends BaseCollectionWit
      * @param requestOptions the options for this request
      */
     public EducationSchoolCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, EducationSchoolCollectionResponse.class, EducationSchoolCollectionPage.class, EducationSchoolCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, EducationSchoolCollectionResponse.class, EducationSchoolCollectionWithReferencesPage.class, EducationSchoolCollectionWithReferencesRequestBuilder.class);
     }
 
     public void post(final EducationSchool newEducationSchool, final ICallback<? super EducationSchool> callback) {

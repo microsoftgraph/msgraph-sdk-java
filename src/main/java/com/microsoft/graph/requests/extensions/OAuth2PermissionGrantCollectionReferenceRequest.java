@@ -29,7 +29,7 @@ import com.microsoft.graph.http.ReferenceRequestBody;
 /**
  * The class for the OAuth2Permission Grant Collection Reference Request.
  */
-public class OAuth2PermissionGrantCollectionReferenceRequest extends BaseCollectionWithReferencesRequest<OAuth2PermissionGrant, OAuth2PermissionGrantWithReferenceRequest, OAuth2PermissionGrantReferenceRequestBuilder, OAuth2PermissionGrantWithReferenceRequestBuilder, OAuth2PermissionGrantCollectionResponse, OAuth2PermissionGrantCollectionPage, OAuth2PermissionGrantCollectionWithReferencesRequest> {
+public class OAuth2PermissionGrantCollectionReferenceRequest extends BaseCollectionWithReferencesRequest<OAuth2PermissionGrant, OAuth2PermissionGrantWithReferenceRequest, OAuth2PermissionGrantReferenceRequestBuilder, OAuth2PermissionGrantWithReferenceRequestBuilder, OAuth2PermissionGrantCollectionResponse, OAuth2PermissionGrantCollectionWithReferencesPage, OAuth2PermissionGrantCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of OAuth2PermissionGrant
@@ -39,7 +39,7 @@ public class OAuth2PermissionGrantCollectionReferenceRequest extends BaseCollect
      * @param requestOptions the options for this request
      */
     public OAuth2PermissionGrantCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OAuth2PermissionGrantCollectionResponse.class, OAuth2PermissionGrantCollectionPage.class, OAuth2PermissionGrantCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, OAuth2PermissionGrantCollectionResponse.class, OAuth2PermissionGrantCollectionWithReferencesPage.class, OAuth2PermissionGrantCollectionWithReferencesRequestBuilder.class);
     }
 
     public void post(final OAuth2PermissionGrant newOAuth2PermissionGrant, final ICallback<? super OAuth2PermissionGrant> callback) {

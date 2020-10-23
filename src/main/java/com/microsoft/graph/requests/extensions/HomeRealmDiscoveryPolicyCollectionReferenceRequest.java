@@ -29,7 +29,7 @@ import com.microsoft.graph.http.ReferenceRequestBody;
 /**
  * The class for the Home Realm Discovery Policy Collection Reference Request.
  */
-public class HomeRealmDiscoveryPolicyCollectionReferenceRequest extends BaseCollectionWithReferencesRequest<HomeRealmDiscoveryPolicy, HomeRealmDiscoveryPolicyWithReferenceRequest, HomeRealmDiscoveryPolicyReferenceRequestBuilder, HomeRealmDiscoveryPolicyWithReferenceRequestBuilder, HomeRealmDiscoveryPolicyCollectionResponse, HomeRealmDiscoveryPolicyCollectionPage, HomeRealmDiscoveryPolicyCollectionWithReferencesRequest> {
+public class HomeRealmDiscoveryPolicyCollectionReferenceRequest extends BaseCollectionWithReferencesRequest<HomeRealmDiscoveryPolicy, HomeRealmDiscoveryPolicyWithReferenceRequest, HomeRealmDiscoveryPolicyReferenceRequestBuilder, HomeRealmDiscoveryPolicyWithReferenceRequestBuilder, HomeRealmDiscoveryPolicyCollectionResponse, HomeRealmDiscoveryPolicyCollectionWithReferencesPage, HomeRealmDiscoveryPolicyCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of HomeRealmDiscoveryPolicy
@@ -39,7 +39,7 @@ public class HomeRealmDiscoveryPolicyCollectionReferenceRequest extends BaseColl
      * @param requestOptions the options for this request
      */
     public HomeRealmDiscoveryPolicyCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicyCollectionResponse.class, HomeRealmDiscoveryPolicyCollectionPage.class, HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicyCollectionResponse.class, HomeRealmDiscoveryPolicyCollectionWithReferencesPage.class, HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder.class);
     }
 
     public void post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final ICallback<? super HomeRealmDiscoveryPolicy> callback) {

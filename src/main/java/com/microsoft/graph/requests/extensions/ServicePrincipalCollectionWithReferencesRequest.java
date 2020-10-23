@@ -31,7 +31,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Service Principal Collection With References Request.
  */
-public class ServicePrincipalCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<ServicePrincipal, ServicePrincipalWithReferenceRequest, ServicePrincipalReferenceRequestBuilder, ServicePrincipalWithReferenceRequestBuilder, ServicePrincipalCollectionResponse, ServicePrincipalCollectionPage, ServicePrincipalCollectionWithReferencesRequest> {
+public class ServicePrincipalCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<ServicePrincipal, ServicePrincipalWithReferenceRequest, ServicePrincipalReferenceRequestBuilder, ServicePrincipalWithReferenceRequestBuilder, ServicePrincipalCollectionResponse, ServicePrincipalCollectionWithReferencesPage, ServicePrincipalCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -41,7 +41,7 @@ public class ServicePrincipalCollectionWithReferencesRequest extends BaseCollect
      * @param requestOptions the options for this request
      */
     public ServicePrincipalCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ServicePrincipalCollectionResponse.class, ServicePrincipalCollectionPage.class, ServicePrincipalCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, ServicePrincipalCollectionResponse.class, ServicePrincipalCollectionWithReferencesPage.class, ServicePrincipalCollectionWithReferencesRequestBuilder.class);
     }
 
     public ServicePrincipalCollectionWithReferencesRequest expand(final String value) {

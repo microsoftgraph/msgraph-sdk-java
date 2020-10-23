@@ -29,7 +29,7 @@ import com.microsoft.graph.http.ReferenceRequestBody;
 /**
  * The class for the Org Contact Collection Reference Request.
  */
-public class OrgContactCollectionReferenceRequest extends BaseCollectionWithReferencesRequest<OrgContact, OrgContactWithReferenceRequest, OrgContactReferenceRequestBuilder, OrgContactWithReferenceRequestBuilder, OrgContactCollectionResponse, OrgContactCollectionPage, OrgContactCollectionWithReferencesRequest> {
+public class OrgContactCollectionReferenceRequest extends BaseCollectionWithReferencesRequest<OrgContact, OrgContactWithReferenceRequest, OrgContactReferenceRequestBuilder, OrgContactWithReferenceRequestBuilder, OrgContactCollectionResponse, OrgContactCollectionWithReferencesPage, OrgContactCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of OrgContact
@@ -39,7 +39,7 @@ public class OrgContactCollectionReferenceRequest extends BaseCollectionWithRefe
      * @param requestOptions the options for this request
      */
     public OrgContactCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OrgContactCollectionResponse.class, OrgContactCollectionPage.class, OrgContactCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, OrgContactCollectionResponse.class, OrgContactCollectionWithReferencesPage.class, OrgContactCollectionWithReferencesRequestBuilder.class);
     }
 
     public void post(final OrgContact newOrgContact, final ICallback<? super OrgContact> callback) {

@@ -30,7 +30,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Managed App Registration Collection With References Request.
  */
-public class ManagedAppRegistrationCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<ManagedAppRegistration, ManagedAppRegistrationWithReferenceRequest, ManagedAppRegistrationReferenceRequestBuilder, ManagedAppRegistrationWithReferenceRequestBuilder, ManagedAppRegistrationCollectionResponse, ManagedAppRegistrationCollectionPage, ManagedAppRegistrationCollectionWithReferencesRequest> {
+public class ManagedAppRegistrationCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<ManagedAppRegistration, ManagedAppRegistrationWithReferenceRequest, ManagedAppRegistrationReferenceRequestBuilder, ManagedAppRegistrationWithReferenceRequestBuilder, ManagedAppRegistrationCollectionResponse, ManagedAppRegistrationCollectionWithReferencesPage, ManagedAppRegistrationCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of ManagedAppRegistration
@@ -40,7 +40,7 @@ public class ManagedAppRegistrationCollectionWithReferencesRequest extends BaseC
      * @param requestOptions the options for this request
      */
     public ManagedAppRegistrationCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedAppRegistrationCollectionResponse.class, ManagedAppRegistrationCollectionPage.class, ManagedAppRegistrationCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, ManagedAppRegistrationCollectionResponse.class, ManagedAppRegistrationCollectionWithReferencesPage.class, ManagedAppRegistrationCollectionWithReferencesRequestBuilder.class);
     }
 
     public ManagedAppRegistrationCollectionWithReferencesRequest expand(final String value) {

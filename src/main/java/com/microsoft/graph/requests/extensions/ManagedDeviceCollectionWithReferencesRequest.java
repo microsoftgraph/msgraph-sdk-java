@@ -31,7 +31,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Managed Device Collection With References Request.
  */
-public class ManagedDeviceCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<ManagedDevice, ManagedDeviceWithReferenceRequest, ManagedDeviceReferenceRequestBuilder, ManagedDeviceWithReferenceRequestBuilder, ManagedDeviceCollectionResponse, ManagedDeviceCollectionPage, ManagedDeviceCollectionWithReferencesRequest> {
+public class ManagedDeviceCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<ManagedDevice, ManagedDeviceWithReferenceRequest, ManagedDeviceReferenceRequestBuilder, ManagedDeviceWithReferenceRequestBuilder, ManagedDeviceCollectionResponse, ManagedDeviceCollectionWithReferencesPage, ManagedDeviceCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of ManagedDevice
@@ -41,7 +41,7 @@ public class ManagedDeviceCollectionWithReferencesRequest extends BaseCollection
      * @param requestOptions the options for this request
      */
     public ManagedDeviceCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedDeviceCollectionResponse.class, ManagedDeviceCollectionPage.class, ManagedDeviceCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, ManagedDeviceCollectionResponse.class, ManagedDeviceCollectionWithReferencesPage.class, ManagedDeviceCollectionWithReferencesRequestBuilder.class);
     }
 
     public ManagedDeviceCollectionWithReferencesRequest expand(final String value) {

@@ -30,7 +30,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Certificate Based Auth Configuration Collection With References Request.
  */
-public class CertificateBasedAuthConfigurationCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<CertificateBasedAuthConfiguration, CertificateBasedAuthConfigurationWithReferenceRequest, CertificateBasedAuthConfigurationReferenceRequestBuilder, CertificateBasedAuthConfigurationWithReferenceRequestBuilder, CertificateBasedAuthConfigurationCollectionResponse, CertificateBasedAuthConfigurationCollectionPage, CertificateBasedAuthConfigurationCollectionWithReferencesRequest> {
+public class CertificateBasedAuthConfigurationCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<CertificateBasedAuthConfiguration, CertificateBasedAuthConfigurationWithReferenceRequest, CertificateBasedAuthConfigurationReferenceRequestBuilder, CertificateBasedAuthConfigurationWithReferenceRequestBuilder, CertificateBasedAuthConfigurationCollectionResponse, CertificateBasedAuthConfigurationCollectionWithReferencesPage, CertificateBasedAuthConfigurationCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of CertificateBasedAuthConfiguration
@@ -40,7 +40,7 @@ public class CertificateBasedAuthConfigurationCollectionWithReferencesRequest ex
      * @param requestOptions the options for this request
      */
     public CertificateBasedAuthConfigurationCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, CertificateBasedAuthConfigurationCollectionResponse.class, CertificateBasedAuthConfigurationCollectionPage.class, CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, CertificateBasedAuthConfigurationCollectionResponse.class, CertificateBasedAuthConfigurationCollectionWithReferencesPage.class, CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder.class);
     }
 
     public CertificateBasedAuthConfigurationCollectionWithReferencesRequest expand(final String value) {

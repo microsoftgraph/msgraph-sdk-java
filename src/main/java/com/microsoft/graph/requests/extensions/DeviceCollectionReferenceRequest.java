@@ -29,7 +29,7 @@ import com.microsoft.graph.http.ReferenceRequestBody;
 /**
  * The class for the Device Collection Reference Request.
  */
-public class DeviceCollectionReferenceRequest extends BaseCollectionWithReferencesRequest<Device, DeviceWithReferenceRequest, DeviceReferenceRequestBuilder, DeviceWithReferenceRequestBuilder, DeviceCollectionResponse, DeviceCollectionPage, DeviceCollectionWithReferencesRequest> {
+public class DeviceCollectionReferenceRequest extends BaseCollectionWithReferencesRequest<Device, DeviceWithReferenceRequest, DeviceReferenceRequestBuilder, DeviceWithReferenceRequestBuilder, DeviceCollectionResponse, DeviceCollectionWithReferencesPage, DeviceCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of Device
@@ -39,7 +39,7 @@ public class DeviceCollectionReferenceRequest extends BaseCollectionWithReferenc
      * @param requestOptions the options for this request
      */
     public DeviceCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceCollectionResponse.class, DeviceCollectionPage.class, DeviceCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, DeviceCollectionResponse.class, DeviceCollectionWithReferencesPage.class, DeviceCollectionWithReferencesRequestBuilder.class);
     }
 
     public void post(final Device newDevice, final ICallback<? super Device> callback) {

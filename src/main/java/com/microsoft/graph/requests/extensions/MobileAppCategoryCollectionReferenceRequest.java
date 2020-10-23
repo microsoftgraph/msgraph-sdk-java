@@ -29,7 +29,7 @@ import com.microsoft.graph.http.ReferenceRequestBody;
 /**
  * The class for the Mobile App Category Collection Reference Request.
  */
-public class MobileAppCategoryCollectionReferenceRequest extends BaseCollectionWithReferencesRequest<MobileAppCategory, MobileAppCategoryWithReferenceRequest, MobileAppCategoryReferenceRequestBuilder, MobileAppCategoryWithReferenceRequestBuilder, MobileAppCategoryCollectionResponse, MobileAppCategoryCollectionPage, MobileAppCategoryCollectionWithReferencesRequest> {
+public class MobileAppCategoryCollectionReferenceRequest extends BaseCollectionWithReferencesRequest<MobileAppCategory, MobileAppCategoryWithReferenceRequest, MobileAppCategoryReferenceRequestBuilder, MobileAppCategoryWithReferenceRequestBuilder, MobileAppCategoryCollectionResponse, MobileAppCategoryCollectionWithReferencesPage, MobileAppCategoryCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of MobileAppCategory
@@ -39,7 +39,7 @@ public class MobileAppCategoryCollectionReferenceRequest extends BaseCollectionW
      * @param requestOptions the options for this request
      */
     public MobileAppCategoryCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MobileAppCategoryCollectionResponse.class, MobileAppCategoryCollectionPage.class, MobileAppCategoryCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, MobileAppCategoryCollectionResponse.class, MobileAppCategoryCollectionWithReferencesPage.class, MobileAppCategoryCollectionWithReferencesRequestBuilder.class);
     }
 
     public void post(final MobileAppCategory newMobileAppCategory, final ICallback<? super MobileAppCategory> callback) {

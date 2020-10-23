@@ -30,7 +30,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Education User Collection With References Request.
  */
-public class EducationUserCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<EducationUser, EducationUserWithReferenceRequest, EducationUserReferenceRequestBuilder, EducationUserWithReferenceRequestBuilder, EducationUserCollectionResponse, EducationUserCollectionPage, EducationUserCollectionWithReferencesRequest> {
+public class EducationUserCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<EducationUser, EducationUserWithReferenceRequest, EducationUserReferenceRequestBuilder, EducationUserWithReferenceRequestBuilder, EducationUserCollectionResponse, EducationUserCollectionWithReferencesPage, EducationUserCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of EducationUser
@@ -40,7 +40,7 @@ public class EducationUserCollectionWithReferencesRequest extends BaseCollection
      * @param requestOptions the options for this request
      */
     public EducationUserCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, EducationUserCollectionResponse.class, EducationUserCollectionPage.class, EducationUserCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, EducationUserCollectionResponse.class, EducationUserCollectionWithReferencesPage.class, EducationUserCollectionWithReferencesRequestBuilder.class);
     }
 
     public EducationUserCollectionWithReferencesRequest expand(final String value) {

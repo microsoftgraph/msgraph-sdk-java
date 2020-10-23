@@ -30,7 +30,7 @@ import com.microsoft.graph.http.ReferenceRequestBody;
 /**
  * The class for the Directory Object Collection Reference Request.
  */
-public class DirectoryObjectCollectionReferenceRequest extends BaseCollectionWithReferencesRequest<DirectoryObject, DirectoryObjectWithReferenceRequest, DirectoryObjectReferenceRequestBuilder, DirectoryObjectWithReferenceRequestBuilder, DirectoryObjectCollectionResponse, DirectoryObjectCollectionPage, DirectoryObjectCollectionWithReferencesRequest> {
+public class DirectoryObjectCollectionReferenceRequest extends BaseCollectionWithReferencesRequest<DirectoryObject, DirectoryObjectWithReferenceRequest, DirectoryObjectReferenceRequestBuilder, DirectoryObjectWithReferenceRequestBuilder, DirectoryObjectCollectionResponse, DirectoryObjectCollectionWithReferencesPage, DirectoryObjectCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of DirectoryObject
@@ -40,7 +40,7 @@ public class DirectoryObjectCollectionReferenceRequest extends BaseCollectionWit
      * @param requestOptions the options for this request
      */
     public DirectoryObjectCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DirectoryObjectCollectionResponse.class, DirectoryObjectCollectionPage.class, DirectoryObjectCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, DirectoryObjectCollectionResponse.class, DirectoryObjectCollectionWithReferencesPage.class, DirectoryObjectCollectionWithReferencesRequestBuilder.class);
     }
 
     public void post(final DirectoryObject newDirectoryObject, final ICallback<? super DirectoryObject> callback) {

@@ -30,7 +30,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Home Realm Discovery Policy Collection With References Request.
  */
-public class HomeRealmDiscoveryPolicyCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<HomeRealmDiscoveryPolicy, HomeRealmDiscoveryPolicyWithReferenceRequest, HomeRealmDiscoveryPolicyReferenceRequestBuilder, HomeRealmDiscoveryPolicyWithReferenceRequestBuilder, HomeRealmDiscoveryPolicyCollectionResponse, HomeRealmDiscoveryPolicyCollectionPage, HomeRealmDiscoveryPolicyCollectionWithReferencesRequest> {
+public class HomeRealmDiscoveryPolicyCollectionWithReferencesRequest extends BaseCollectionWithReferencesRequest<HomeRealmDiscoveryPolicy, HomeRealmDiscoveryPolicyWithReferenceRequest, HomeRealmDiscoveryPolicyReferenceRequestBuilder, HomeRealmDiscoveryPolicyWithReferenceRequestBuilder, HomeRealmDiscoveryPolicyCollectionResponse, HomeRealmDiscoveryPolicyCollectionWithReferencesPage, HomeRealmDiscoveryPolicyCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of HomeRealmDiscoveryPolicy
@@ -40,7 +40,7 @@ public class HomeRealmDiscoveryPolicyCollectionWithReferencesRequest extends Bas
      * @param requestOptions the options for this request
      */
     public HomeRealmDiscoveryPolicyCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicyCollectionResponse.class, HomeRealmDiscoveryPolicyCollectionPage.class, HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder.class);
+        super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicyCollectionResponse.class, HomeRealmDiscoveryPolicyCollectionWithReferencesPage.class, HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder.class);
     }
 
     public HomeRealmDiscoveryPolicyCollectionWithReferencesRequest expand(final String value) {
