@@ -36,6 +36,7 @@ import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.options.HeaderOption;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.DriveItemCollectionPage;
 import com.microsoft.graph.requests.extensions.GroupCollectionPage;
 import com.microsoft.graph.requests.extensions.MailFolderCollectionPage;
@@ -43,6 +44,7 @@ import com.microsoft.graph.requests.extensions.MessageCollectionPage;
 import com.microsoft.graph.requests.extensions.OrganizationCollectionPage;
 import com.microsoft.graph.requests.extensions.UsedInsightCollectionPage;
 import com.microsoft.graph.requests.extensions.UserCollectionPage;
+import com.microsoft.graph.requests.extensions.UserCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.ContactCollectionPage;
 @Ignore
 public class UserTests {
@@ -180,7 +182,7 @@ public class UserTests {
 	
 	@Test
 	public void meMemberof() {
-		final DirectoryObjectCollectionPage page = graphServiceClient.me().memberOf().buildRequest().get();
+		final DirectoryObjectCollectionWithReferencesPage page = graphServiceClient.me().memberOf().buildRequest().get();
 		assertNotNull(page);
 	}
 	@Test
@@ -222,14 +224,14 @@ public class UserTests {
 	public void castTest() {
 		final GroupCollectionPage groups = graphServiceClient.groups().buildRequest().top(1).get();
 		final Group group = groups.getCurrentPage().get(0);
-		final UserCollectionPage usersPage = graphServiceClient
+		final UserCollectionWithReferencesPage usersPage = graphServiceClient
 		.groups(group.id)
 		.membersAsUser()
 		.buildRequest()
 		.get();
 		assertNotNull(usersPage);
 
-		final DirectoryObjectCollectionPage testUserCollection = graphServiceClient
+		final DirectoryObjectCollectionWithReferencesPage testUserCollection = graphServiceClient
 							.groups(group.id)
 							.members()
 							.buildRequest()
