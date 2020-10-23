@@ -12,7 +12,7 @@ import com.microsoft.graph.options.Option;
  *
  * If the provided URL is malformed, the ClientException will contain a MalformedURLException
  */
-public class CustomRequestBuilder<T> extends BaseRequestBuilder {
+public class CustomRequestBuilder<T> extends BaseRequestBuilder<T> {
 	public final Class<T> responseType; 
 	
 	public CustomRequestBuilder(final String requestUrl, final IBaseClient client, final List<? extends Option> requestOptions, final Class<T> responseType) {
@@ -20,8 +20,8 @@ public class CustomRequestBuilder<T> extends BaseRequestBuilder {
 		this.responseType = responseType;
 	}
 	
-	public CustomRequest<T> buildRequest() {
-		return buildRequest(getOptions());
+	public CustomRequest<T> buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+		return buildRequest(getOptions(requestOptions));
 	}
 	
 	public CustomRequest<T> buildRequest(final List<? extends Option> requestOptions) {
