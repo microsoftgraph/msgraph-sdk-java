@@ -72,7 +72,7 @@ public abstract class BaseWithReferenceRequestBuilder<T, T2 extends BaseWithRefe
      */
     public T2 buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         try {
-            return wReferenceRequestClass.getConstructor(String.class, IBaseClient.class, requestOptions.getClass())
+            return wReferenceRequestClass.getConstructor(String.class, IBaseClient.class, java.util.List.class)
                                 .newInstance(getRequestUrl(), getClient(), requestOptions);
         } catch (IllegalArgumentException | InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException | SecurityException ex) {
             return null;
@@ -81,7 +81,7 @@ public abstract class BaseWithReferenceRequestBuilder<T, T2 extends BaseWithRefe
 
     public T3 reference(){
         try {
-            return refRequestBuilderClass.getConstructor(String.class, IBaseClient.class, getOptions().getClass())
+            return refRequestBuilderClass.getConstructor(String.class, IBaseClient.class, java.util.List.class)
                                 .newInstance(getRequestUrl() + "/$ref", getClient(), getOptions());
         } catch (IllegalArgumentException | InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException | SecurityException ex) {
             return null;

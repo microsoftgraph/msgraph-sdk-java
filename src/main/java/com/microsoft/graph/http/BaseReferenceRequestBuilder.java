@@ -66,7 +66,7 @@ public abstract class BaseReferenceRequestBuilder<T, T2 extends BaseReferenceReq
      */
     public T2 buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         try {
-            return refRequestClass.getConstructor(String.class, IBaseClient.class, requestOptions.getClass())
+            return refRequestClass.getConstructor(String.class, IBaseClient.class, java.util.List.class)
                                 .newInstance(getRequestUrl(), getClient(), requestOptions);
         } catch (IllegalArgumentException | InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException | SecurityException ex) {
             return null;
