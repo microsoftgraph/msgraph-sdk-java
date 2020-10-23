@@ -71,6 +71,7 @@ public class CollectionPageSerializer {
      * @param src the CollectionPage variable for serialization
      * @param logger the logger
 	 * @param <T1> the entity type for the collection
+	 * @param <T2> the collection request builder interface type
      * @return       JsonElement of CollectionPage
      */
 	public static <T1, T2 extends BaseRequestBuilder<T1>> JsonElement serialize(final BaseCollectionPage<T1, T2> src, final ILogger logger) {
@@ -98,6 +99,7 @@ public class CollectionPageSerializer {
    	 * @param typeOfT The type of the CollectionPage to deserialize to
      * @param logger the logger
 	 * @param <T1> the entity type for the collection
+	 * @param <T2> the collection request builder interface type
      * @throws JsonParseException the parse exception
      * @return    the deserialized CollectionPage
      */
