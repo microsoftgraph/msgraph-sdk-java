@@ -43,8 +43,6 @@ public abstract class BaseCollectionWithReferencesRequestBuilder<T, T2 extends B
                             T8 extends BaseCollectionWithReferencesRequest<T, T2, T3, T4, T5, T6, T7>> extends BaseCollectionRequestBuilder<T, T3, T5, T6, T8> {
     private final Class<T3> refRequestBuilderClass;
     private final Class<T8> collRequestClass;
-    private final Class<T5> respClass;
-    private final Class<T6> collPageClass;
     /**
      * The request builder for this collection
      *
@@ -52,23 +50,17 @@ public abstract class BaseCollectionWithReferencesRequestBuilder<T, T2 extends B
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param referenceRequestBuilderClass the class for the request builder
-     * @param responseClass the class for the respone
-     * @param collectionPageClass the class for the collection page
      * @param collectionWithReferencesRequestClass the class for the collection request
      */
     public BaseCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
                                                     final Class<T3> referenceRequestBuilderClass,
-                                                    final Class<T5> responseClass,
-                                                    final Class<T6> collectionPageClass,
                                                     final Class<T8> collectionWithReferencesRequestClass) {
-        super(requestUrl, client, requestOptions, referenceRequestBuilderClass, responseClass, collectionPageClass, collectionWithReferencesRequestClass);
+        super(requestUrl, client, requestOptions, referenceRequestBuilderClass, collectionWithReferencesRequestClass);
         this.refRequestBuilderClass = referenceRequestBuilderClass;
         this.collRequestClass = collectionWithReferencesRequestClass;
-        this.respClass = responseClass;
-        this.collPageClass = collectionPageClass;
     }
 
     public BaseCollectionReferenceRequestBuilder<T, T3, T5, T6, T8> references(){
-        return new BaseCollectionReferenceRequestBuilder<T, T3, T5, T6, T8>(getRequestUrl() + "/$ref", getClient(), getOptions(), refRequestBuilderClass, respClass, collPageClass, collRequestClass);
+        return new BaseCollectionReferenceRequestBuilder<T, T3, T5, T6, T8>(getRequestUrl() + "/$ref", getClient(), getOptions(), refRequestBuilderClass, collRequestClass);
     }
 }

@@ -32,8 +32,6 @@ public class BaseActionCollectionRequestBuilder<T, T2 extends BaseRequestBuilder
      * @param client     the {@link IBaseClient} for handling requests
      * @param options    {@link List} of {@link Option}s to add to this request
      * @param requestBuilderClass the class for the request builder
-     * @param responseCollectionClass the class for the response collection
-     * @param collectionPageClass the class for the collection page
      * @param collectionRequestClass the class for the collection request
      */
     public BaseActionCollectionRequestBuilder(
@@ -41,11 +39,9 @@ public class BaseActionCollectionRequestBuilder<T, T2 extends BaseRequestBuilder
             final IBaseClient client,
             final List<? extends Option> options,
             final Class<T2> requestBuilderClass,
-            final Class<T3> responseCollectionClass,
-            final Class<T4> collectionPageClass,
             final Class<T5> collectionRequestClass
     ) {
-        super(requestUrl, client, options, requestBuilderClass, responseCollectionClass, collectionPageClass, collectionRequestClass);
+        super(requestUrl, client, options, requestBuilderClass, collectionRequestClass);
     }
 
     /**

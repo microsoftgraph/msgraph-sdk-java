@@ -43,15 +43,11 @@ public class BaseCollectionReferenceRequestBuilder<T, T2 extends BaseRequestBuil
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param requestBuilderClass the class for the request builder
-     * @param responseCollectionClass the class for the collection response
-     * @param collectionPageClass the class for the collection page
      * @param collectionRequestClass the class for the collection request
      */
     public BaseCollectionReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
 										final Class<T2> requestBuilderClass,
-                                        final Class<T3> responseCollectionClass,
-                                        final Class<T4> collectionPageClass,
 										final Class<T5> collectionRequestClass) {
-        super(requestUrl, client, requestOptions, requestBuilderClass, responseCollectionClass, collectionPageClass, collectionRequestClass);
+        super(requestUrl, client, requestOptions, requestBuilderClass, collectionRequestClass);
     }
 }
