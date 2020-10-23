@@ -35,7 +35,7 @@ public class TargetedManagedAppConfigurationCollectionRequestBuilder extends Bas
      * @param requestOptions the options for this request
      */
     public TargetedManagedAppConfigurationCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TargetedManagedAppConfigurationRequestBuilder.class, TargetedManagedAppConfigurationCollectionResponse.class, TargetedManagedAppConfigurationCollectionPage.class, TargetedManagedAppConfigurationCollectionRequest.class);
+        super(requestUrl, client, requestOptions, TargetedManagedAppConfigurationRequestBuilder.class, TargetedManagedAppConfigurationCollectionRequest.class);
     }
 
 

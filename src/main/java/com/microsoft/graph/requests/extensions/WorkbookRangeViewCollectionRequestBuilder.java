@@ -34,7 +34,7 @@ public class WorkbookRangeViewCollectionRequestBuilder extends BaseCollectionReq
      * @param requestOptions the options for this request
      */
     public WorkbookRangeViewCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WorkbookRangeViewRequestBuilder.class, WorkbookRangeViewCollectionResponse.class, WorkbookRangeViewCollectionPage.class, WorkbookRangeViewCollectionRequest.class);
+        super(requestUrl, client, requestOptions, WorkbookRangeViewRequestBuilder.class, WorkbookRangeViewCollectionRequest.class);
     }
 
 

@@ -33,7 +33,7 @@ public class ThreatAssessmentResultCollectionRequestBuilder extends BaseCollecti
      * @param requestOptions the options for this request
      */
     public ThreatAssessmentResultCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ThreatAssessmentResultRequestBuilder.class, ThreatAssessmentResultCollectionResponse.class, ThreatAssessmentResultCollectionPage.class, ThreatAssessmentResultCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ThreatAssessmentResultRequestBuilder.class, ThreatAssessmentResultCollectionRequest.class);
     }
 
 

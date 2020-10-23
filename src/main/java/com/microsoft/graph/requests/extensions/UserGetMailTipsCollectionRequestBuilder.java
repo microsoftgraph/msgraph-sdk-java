@@ -37,7 +37,7 @@ public class UserGetMailTipsCollectionRequestBuilder extends BaseActionCollectio
      * @param mailTipsOptions the mailTipsOptions
      */
     public UserGetMailTipsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<String> emailAddresses, final EnumSet<MailTipsType> mailTipsOptions) {
-        super(requestUrl, client, requestOptions, UserGetMailTipsCollectionRequestBuilder.class, UserGetMailTipsCollectionResponse.class, UserGetMailTipsCollectionPage.class, UserGetMailTipsCollectionRequest.class);
+        super(requestUrl, client, requestOptions, UserGetMailTipsCollectionRequestBuilder.class, UserGetMailTipsCollectionRequest.class);
   	 if(emailAddresses!=null){
 			bodyParams.put("emailAddresses", emailAddresses);
 		}

@@ -30,6 +30,6 @@ public class OrgContactCollectionWithReferencesRequestBuilder extends BaseCollec
      * @param requestOptions the options for this request
      */
     public OrgContactCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OrgContactReferenceRequestBuilder.class, OrgContactCollectionResponse.class, OrgContactCollectionWithReferencesPage.class, OrgContactCollectionWithReferencesRequest.class);
+        super(requestUrl, client, requestOptions, OrgContactReferenceRequestBuilder.class, OrgContactCollectionWithReferencesRequest.class);
     }
 }

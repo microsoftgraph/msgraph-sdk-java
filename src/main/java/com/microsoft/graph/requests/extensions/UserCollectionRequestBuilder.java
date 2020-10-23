@@ -47,7 +47,7 @@ public class UserCollectionRequestBuilder extends BaseCollectionRequestBuilder<U
      * @param requestOptions the options for this request
      */
     public UserCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, UserRequestBuilder.class, UserCollectionResponse.class, UserCollectionPage.class, UserCollectionRequest.class);
+        super(requestUrl, client, requestOptions, UserRequestBuilder.class, UserCollectionRequest.class);
     }
 
 

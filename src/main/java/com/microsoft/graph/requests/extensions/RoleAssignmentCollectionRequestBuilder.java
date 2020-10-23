@@ -33,7 +33,7 @@ public class RoleAssignmentCollectionRequestBuilder extends BaseCollectionReques
      * @param requestOptions the options for this request
      */
     public RoleAssignmentCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, RoleAssignmentRequestBuilder.class, RoleAssignmentCollectionResponse.class, RoleAssignmentCollectionPage.class, RoleAssignmentCollectionRequest.class);
+        super(requestUrl, client, requestOptions, RoleAssignmentRequestBuilder.class, RoleAssignmentCollectionRequest.class);
     }
 
 

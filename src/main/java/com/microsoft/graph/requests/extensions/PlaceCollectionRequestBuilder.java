@@ -32,7 +32,7 @@ public class PlaceCollectionRequestBuilder extends BaseCollectionRequestBuilder<
      * @param requestOptions the options for this request
      */
     public PlaceCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, PlaceRequestBuilder.class, PlaceCollectionResponse.class, PlaceCollectionPage.class, PlaceCollectionRequest.class);
+        super(requestUrl, client, requestOptions, PlaceRequestBuilder.class, PlaceCollectionRequest.class);
     }
 
 

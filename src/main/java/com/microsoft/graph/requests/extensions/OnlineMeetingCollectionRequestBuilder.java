@@ -36,7 +36,7 @@ public class OnlineMeetingCollectionRequestBuilder extends BaseCollectionRequest
      * @param requestOptions the options for this request
      */
     public OnlineMeetingCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OnlineMeetingRequestBuilder.class, OnlineMeetingCollectionResponse.class, OnlineMeetingCollectionPage.class, OnlineMeetingCollectionRequest.class);
+        super(requestUrl, client, requestOptions, OnlineMeetingRequestBuilder.class, OnlineMeetingCollectionRequest.class);
     }
 
 

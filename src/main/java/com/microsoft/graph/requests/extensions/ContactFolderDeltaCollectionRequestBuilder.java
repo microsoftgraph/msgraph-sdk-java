@@ -33,7 +33,7 @@ public class ContactFolderDeltaCollectionRequestBuilder extends BaseFunctionColl
      * @param requestOptions the options for this request
      */
     public ContactFolderDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ContactFolderDeltaCollectionRequestBuilder.class, ContactFolderDeltaCollectionResponse.class, ContactFolderDeltaCollectionPage.class, ContactFolderDeltaCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ContactFolderDeltaCollectionRequestBuilder.class, ContactFolderDeltaCollectionRequest.class);
     }
     
     /**

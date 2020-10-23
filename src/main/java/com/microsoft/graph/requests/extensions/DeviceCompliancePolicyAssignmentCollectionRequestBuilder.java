@@ -33,7 +33,7 @@ public class DeviceCompliancePolicyAssignmentCollectionRequestBuilder extends Ba
      * @param requestOptions the options for this request
      */
     public DeviceCompliancePolicyAssignmentCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceCompliancePolicyAssignmentRequestBuilder.class, DeviceCompliancePolicyAssignmentCollectionResponse.class, DeviceCompliancePolicyAssignmentCollectionPage.class, DeviceCompliancePolicyAssignmentCollectionRequest.class);
+        super(requestUrl, client, requestOptions, DeviceCompliancePolicyAssignmentRequestBuilder.class, DeviceCompliancePolicyAssignmentCollectionRequest.class);
     }
 
 

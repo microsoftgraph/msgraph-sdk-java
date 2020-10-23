@@ -30,6 +30,6 @@ public class EndpointCollectionReferenceRequestBuilder extends BaseCollectionRef
      * @param requestOptions the options for this request
      */
     public EndpointCollectionReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, EndpointWithReferenceRequestBuilder.class, EndpointCollectionResponse.class, EndpointCollectionWithReferencesPage.class, EndpointCollectionReferenceRequest.class);
+        super(requestUrl, client, requestOptions, EndpointWithReferenceRequestBuilder.class, EndpointCollectionReferenceRequest.class);
     }
 }

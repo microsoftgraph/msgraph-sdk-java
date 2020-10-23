@@ -31,6 +31,6 @@ public class DirectoryObjectCollectionWithReferencesRequestBuilder extends BaseC
      * @param requestOptions the options for this request
      */
     public DirectoryObjectCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DirectoryObjectReferenceRequestBuilder.class, DirectoryObjectCollectionResponse.class, DirectoryObjectCollectionWithReferencesPage.class, DirectoryObjectCollectionWithReferencesRequest.class);
+        super(requestUrl, client, requestOptions, DirectoryObjectReferenceRequestBuilder.class, DirectoryObjectCollectionWithReferencesRequest.class);
     }
 }

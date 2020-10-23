@@ -33,7 +33,7 @@ public class TermsAndConditionsAssignmentCollectionRequestBuilder extends BaseCo
      * @param requestOptions the options for this request
      */
     public TermsAndConditionsAssignmentCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TermsAndConditionsAssignmentRequestBuilder.class, TermsAndConditionsAssignmentCollectionResponse.class, TermsAndConditionsAssignmentCollectionPage.class, TermsAndConditionsAssignmentCollectionRequest.class);
+        super(requestUrl, client, requestOptions, TermsAndConditionsAssignmentRequestBuilder.class, TermsAndConditionsAssignmentCollectionRequest.class);
     }
 
 

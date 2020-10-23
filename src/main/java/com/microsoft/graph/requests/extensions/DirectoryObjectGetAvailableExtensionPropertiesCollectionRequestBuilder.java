@@ -34,7 +34,7 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuil
      * @param isSyncedFromOnPremises the isSyncedFromOnPremises
      */
     public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final Boolean isSyncedFromOnPremises) {
-        super(requestUrl, client, requestOptions, DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder.class, DirectoryObjectGetAvailableExtensionPropertiesCollectionResponse.class, DirectoryObjectGetAvailableExtensionPropertiesCollectionPage.class, DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest.class);
+        super(requestUrl, client, requestOptions, DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder.class, DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest.class);
   	 if(isSyncedFromOnPremises!=null){
 			bodyParams.put("isSyncedFromOnPremises", isSyncedFromOnPremises);
 		}

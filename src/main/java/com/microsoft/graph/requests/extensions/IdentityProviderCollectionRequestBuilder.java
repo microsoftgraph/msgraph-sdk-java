@@ -32,7 +32,7 @@ public class IdentityProviderCollectionRequestBuilder extends BaseCollectionRequ
      * @param requestOptions the options for this request
      */
     public IdentityProviderCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, IdentityProviderRequestBuilder.class, IdentityProviderCollectionResponse.class, IdentityProviderCollectionPage.class, IdentityProviderCollectionRequest.class);
+        super(requestUrl, client, requestOptions, IdentityProviderRequestBuilder.class, IdentityProviderCollectionRequest.class);
     }
 
 

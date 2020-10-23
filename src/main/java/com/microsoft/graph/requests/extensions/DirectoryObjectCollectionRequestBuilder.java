@@ -36,7 +36,7 @@ public class DirectoryObjectCollectionRequestBuilder extends BaseCollectionReque
      * @param requestOptions the options for this request
      */
     public DirectoryObjectCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DirectoryObjectRequestBuilder.class, DirectoryObjectCollectionResponse.class, DirectoryObjectCollectionPage.class, DirectoryObjectCollectionRequest.class);
+        super(requestUrl, client, requestOptions, DirectoryObjectRequestBuilder.class, DirectoryObjectCollectionRequest.class);
     }
 
 

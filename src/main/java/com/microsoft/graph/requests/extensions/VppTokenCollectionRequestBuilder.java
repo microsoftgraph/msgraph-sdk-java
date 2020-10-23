@@ -33,7 +33,7 @@ public class VppTokenCollectionRequestBuilder extends BaseCollectionRequestBuild
      * @param requestOptions the options for this request
      */
     public VppTokenCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, VppTokenRequestBuilder.class, VppTokenCollectionResponse.class, VppTokenCollectionPage.class, VppTokenCollectionRequest.class);
+        super(requestUrl, client, requestOptions, VppTokenRequestBuilder.class, VppTokenCollectionRequest.class);
     }
 
 

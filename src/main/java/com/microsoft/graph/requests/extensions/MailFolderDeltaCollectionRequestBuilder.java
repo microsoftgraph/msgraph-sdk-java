@@ -33,7 +33,7 @@ public class MailFolderDeltaCollectionRequestBuilder extends BaseFunctionCollect
      * @param requestOptions the options for this request
      */
     public MailFolderDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MailFolderDeltaCollectionRequestBuilder.class, MailFolderDeltaCollectionResponse.class, MailFolderDeltaCollectionPage.class, MailFolderDeltaCollectionRequest.class);
+        super(requestUrl, client, requestOptions, MailFolderDeltaCollectionRequestBuilder.class, MailFolderDeltaCollectionRequest.class);
     }
     
     /**

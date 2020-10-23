@@ -34,7 +34,7 @@ public class DeviceCompliancePolicyAssignCollectionRequestBuilder extends BaseAc
      * @param assignments the assignments
      */
     public DeviceCompliancePolicyAssignCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<DeviceCompliancePolicyAssignment> assignments) {
-        super(requestUrl, client, requestOptions, DeviceCompliancePolicyAssignCollectionRequestBuilder.class, DeviceCompliancePolicyAssignCollectionResponse.class, DeviceCompliancePolicyAssignCollectionPage.class, DeviceCompliancePolicyAssignCollectionRequest.class);
+        super(requestUrl, client, requestOptions, DeviceCompliancePolicyAssignCollectionRequestBuilder.class, DeviceCompliancePolicyAssignCollectionRequest.class);
   	 if(assignments!=null){
 			bodyParams.put("assignments", assignments);
 		}

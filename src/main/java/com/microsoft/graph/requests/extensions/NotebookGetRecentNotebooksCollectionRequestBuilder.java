@@ -34,7 +34,7 @@ public class NotebookGetRecentNotebooksCollectionRequestBuilder extends BaseFunc
      * @param includePersonalNotebooks the includePersonalNotebooks
      */
     public NotebookGetRecentNotebooksCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final Boolean includePersonalNotebooks) {
-        super(requestUrl, client, requestOptions, NotebookGetRecentNotebooksCollectionRequestBuilder.class, NotebookGetRecentNotebooksCollectionResponse.class, NotebookGetRecentNotebooksCollectionPage.class, NotebookGetRecentNotebooksCollectionRequest.class);
+        super(requestUrl, client, requestOptions, NotebookGetRecentNotebooksCollectionRequestBuilder.class, NotebookGetRecentNotebooksCollectionRequest.class);
      	 if(includePersonalNotebooks!=null){
 			functionOptions.add(new com.microsoft.graph.options.FunctionOption("includePersonalNotebooks", includePersonalNotebooks));
 		}

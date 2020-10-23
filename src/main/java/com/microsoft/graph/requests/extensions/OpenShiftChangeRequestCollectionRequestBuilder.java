@@ -33,7 +33,7 @@ public class OpenShiftChangeRequestCollectionRequestBuilder extends BaseCollecti
      * @param requestOptions the options for this request
      */
     public OpenShiftChangeRequestCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OpenShiftChangeRequestRequestBuilder.class, OpenShiftChangeRequestCollectionResponse.class, OpenShiftChangeRequestCollectionPage.class, OpenShiftChangeRequestCollectionRequest.class);
+        super(requestUrl, client, requestOptions, OpenShiftChangeRequestRequestBuilder.class, OpenShiftChangeRequestCollectionRequest.class);
     }
 
 

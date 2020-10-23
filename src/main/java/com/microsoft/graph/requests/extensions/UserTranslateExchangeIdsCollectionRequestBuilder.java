@@ -37,7 +37,7 @@ public class UserTranslateExchangeIdsCollectionRequestBuilder extends BaseAction
      * @param sourceIdType the sourceIdType
      */
     public UserTranslateExchangeIdsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<String> inputIds, final ExchangeIdFormat targetIdType, final ExchangeIdFormat sourceIdType) {
-        super(requestUrl, client, requestOptions, UserTranslateExchangeIdsCollectionRequestBuilder.class, UserTranslateExchangeIdsCollectionResponse.class, UserTranslateExchangeIdsCollectionPage.class, UserTranslateExchangeIdsCollectionRequest.class);
+        super(requestUrl, client, requestOptions, UserTranslateExchangeIdsCollectionRequestBuilder.class, UserTranslateExchangeIdsCollectionRequest.class);
   	 if(inputIds!=null){
 			bodyParams.put("inputIds", inputIds);
 		}

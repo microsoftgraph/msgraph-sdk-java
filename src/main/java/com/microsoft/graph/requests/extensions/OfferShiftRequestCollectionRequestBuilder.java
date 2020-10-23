@@ -33,7 +33,7 @@ public class OfferShiftRequestCollectionRequestBuilder extends BaseCollectionReq
      * @param requestOptions the options for this request
      */
     public OfferShiftRequestCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OfferShiftRequestRequestBuilder.class, OfferShiftRequestCollectionResponse.class, OfferShiftRequestCollectionPage.class, OfferShiftRequestCollectionRequest.class);
+        super(requestUrl, client, requestOptions, OfferShiftRequestRequestBuilder.class, OfferShiftRequestCollectionRequest.class);
     }
 
 

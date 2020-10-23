@@ -35,7 +35,7 @@ public class UserReminderViewCollectionRequestBuilder extends BaseFunctionCollec
      * @param endDateTime the endDateTime
      */
     public UserReminderViewCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String startDateTime, final String endDateTime) {
-        super(requestUrl, client, requestOptions, UserReminderViewCollectionRequestBuilder.class, UserReminderViewCollectionResponse.class, UserReminderViewCollectionPage.class, UserReminderViewCollectionRequest.class);
+        super(requestUrl, client, requestOptions, UserReminderViewCollectionRequestBuilder.class, UserReminderViewCollectionRequest.class);
      	 if(startDateTime!=null){
 			functionOptions.add(new com.microsoft.graph.options.FunctionOption("startDateTime", startDateTime));
 		}

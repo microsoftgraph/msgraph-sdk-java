@@ -30,6 +30,6 @@ public class DeviceCollectionReferenceRequestBuilder extends BaseCollectionRefer
      * @param requestOptions the options for this request
      */
     public DeviceCollectionReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceWithReferenceRequestBuilder.class, DeviceCollectionResponse.class, DeviceCollectionWithReferencesPage.class, DeviceCollectionReferenceRequest.class);
+        super(requestUrl, client, requestOptions, DeviceWithReferenceRequestBuilder.class, DeviceCollectionReferenceRequest.class);
     }
 }

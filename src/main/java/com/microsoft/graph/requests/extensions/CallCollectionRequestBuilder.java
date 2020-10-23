@@ -49,7 +49,7 @@ public class CallCollectionRequestBuilder extends BaseCollectionRequestBuilder<C
      * @param requestOptions the options for this request
      */
     public CallCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, CallRequestBuilder.class, CallCollectionResponse.class, CallCollectionPage.class, CallCollectionRequest.class);
+        super(requestUrl, client, requestOptions, CallRequestBuilder.class, CallCollectionRequest.class);
     }
 
 

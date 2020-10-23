@@ -30,6 +30,6 @@ public class TokenIssuancePolicyCollectionWithReferencesRequestBuilder extends B
      * @param requestOptions the options for this request
      */
     public TokenIssuancePolicyCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TokenIssuancePolicyReferenceRequestBuilder.class, TokenIssuancePolicyCollectionResponse.class, TokenIssuancePolicyCollectionWithReferencesPage.class, TokenIssuancePolicyCollectionWithReferencesRequest.class);
+        super(requestUrl, client, requestOptions, TokenIssuancePolicyReferenceRequestBuilder.class, TokenIssuancePolicyCollectionWithReferencesRequest.class);
     }
 }

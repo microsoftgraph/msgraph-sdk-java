@@ -33,7 +33,7 @@ public class ProfilePhotoCollectionRequestBuilder extends BaseCollectionRequestB
      * @param requestOptions the options for this request
      */
     public ProfilePhotoCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ProfilePhotoRequestBuilder.class, ProfilePhotoCollectionResponse.class, ProfilePhotoCollectionPage.class, ProfilePhotoCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ProfilePhotoRequestBuilder.class, ProfilePhotoCollectionRequest.class);
     }
 
 

@@ -35,7 +35,7 @@ public class ServicePrincipalCollectionRequestBuilder extends BaseCollectionRequ
      * @param requestOptions the options for this request
      */
     public ServicePrincipalCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ServicePrincipalRequestBuilder.class, ServicePrincipalCollectionResponse.class, ServicePrincipalCollectionPage.class, ServicePrincipalCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ServicePrincipalRequestBuilder.class, ServicePrincipalCollectionRequest.class);
     }
 
 

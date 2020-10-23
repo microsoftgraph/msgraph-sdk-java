@@ -38,7 +38,7 @@ public class NotebookCollectionRequestBuilder extends BaseCollectionRequestBuild
      * @param requestOptions the options for this request
      */
     public NotebookCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, NotebookRequestBuilder.class, NotebookCollectionResponse.class, NotebookCollectionPage.class, NotebookCollectionRequest.class);
+        super(requestUrl, client, requestOptions, NotebookRequestBuilder.class, NotebookCollectionRequest.class);
     }
 
 

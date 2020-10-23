@@ -33,7 +33,7 @@ public class ListItemGetActivitiesByIntervalCollectionRequestBuilder extends Bas
      * @param requestOptions the options for this request
      */
     public ListItemGetActivitiesByIntervalCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ListItemGetActivitiesByIntervalCollectionRequestBuilder.class, ListItemGetActivitiesByIntervalCollectionResponse.class, ListItemGetActivitiesByIntervalCollectionPage.class, ListItemGetActivitiesByIntervalCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ListItemGetActivitiesByIntervalCollectionRequestBuilder.class, ListItemGetActivitiesByIntervalCollectionRequest.class);
     }
     /**
      * The request builder for this collection of ListItem
@@ -46,7 +46,7 @@ public class ListItemGetActivitiesByIntervalCollectionRequestBuilder extends Bas
      * @param interval the interval
      */
     public ListItemGetActivitiesByIntervalCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String startDateTime, final String endDateTime, final String interval) {
-        super(requestUrl, client, requestOptions, ListItemGetActivitiesByIntervalCollectionRequestBuilder.class, ListItemGetActivitiesByIntervalCollectionResponse.class, ListItemGetActivitiesByIntervalCollectionPage.class, ListItemGetActivitiesByIntervalCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ListItemGetActivitiesByIntervalCollectionRequestBuilder.class, ListItemGetActivitiesByIntervalCollectionRequest.class);
      	 if(startDateTime!=null){
 			functionOptions.add(new com.microsoft.graph.options.FunctionOption("startDateTime", startDateTime));
 		}

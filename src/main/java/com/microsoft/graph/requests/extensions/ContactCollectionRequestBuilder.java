@@ -34,7 +34,7 @@ public class ContactCollectionRequestBuilder extends BaseCollectionRequestBuilde
      * @param requestOptions the options for this request
      */
     public ContactCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ContactRequestBuilder.class, ContactCollectionResponse.class, ContactCollectionPage.class, ContactCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ContactRequestBuilder.class, ContactCollectionRequest.class);
     }
 
 

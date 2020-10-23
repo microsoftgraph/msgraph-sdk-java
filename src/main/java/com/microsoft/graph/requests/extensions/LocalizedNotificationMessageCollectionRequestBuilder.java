@@ -33,7 +33,7 @@ public class LocalizedNotificationMessageCollectionRequestBuilder extends BaseCo
      * @param requestOptions the options for this request
      */
     public LocalizedNotificationMessageCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, LocalizedNotificationMessageRequestBuilder.class, LocalizedNotificationMessageCollectionResponse.class, LocalizedNotificationMessageCollectionPage.class, LocalizedNotificationMessageCollectionRequest.class);
+        super(requestUrl, client, requestOptions, LocalizedNotificationMessageRequestBuilder.class, LocalizedNotificationMessageCollectionRequest.class);
     }
 
 

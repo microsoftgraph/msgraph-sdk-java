@@ -34,7 +34,7 @@ public class ManagedEBookCollectionRequestBuilder extends BaseCollectionRequestB
      * @param requestOptions the options for this request
      */
     public ManagedEBookCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedEBookRequestBuilder.class, ManagedEBookCollectionResponse.class, ManagedEBookCollectionPage.class, ManagedEBookCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ManagedEBookRequestBuilder.class, ManagedEBookCollectionRequest.class);
     }
 
 

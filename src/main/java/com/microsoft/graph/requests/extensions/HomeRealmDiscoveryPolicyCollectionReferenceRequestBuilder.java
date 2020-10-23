@@ -30,6 +30,6 @@ public class HomeRealmDiscoveryPolicyCollectionReferenceRequestBuilder extends B
      * @param requestOptions the options for this request
      */
     public HomeRealmDiscoveryPolicyCollectionReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicyWithReferenceRequestBuilder.class, HomeRealmDiscoveryPolicyCollectionResponse.class, HomeRealmDiscoveryPolicyCollectionWithReferencesPage.class, HomeRealmDiscoveryPolicyCollectionReferenceRequest.class);
+        super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicyWithReferenceRequestBuilder.class, HomeRealmDiscoveryPolicyCollectionReferenceRequest.class);
     }
 }

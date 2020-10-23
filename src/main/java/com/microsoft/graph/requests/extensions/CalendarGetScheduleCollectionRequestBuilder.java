@@ -38,7 +38,7 @@ public class CalendarGetScheduleCollectionRequestBuilder extends BaseActionColle
      * @param availabilityViewInterval the availabilityViewInterval
      */
     public CalendarGetScheduleCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<String> schedules, final DateTimeTimeZone endTime, final DateTimeTimeZone startTime, final Integer availabilityViewInterval) {
-        super(requestUrl, client, requestOptions, CalendarGetScheduleCollectionRequestBuilder.class, CalendarGetScheduleCollectionResponse.class, CalendarGetScheduleCollectionPage.class, CalendarGetScheduleCollectionRequest.class);
+        super(requestUrl, client, requestOptions, CalendarGetScheduleCollectionRequestBuilder.class, CalendarGetScheduleCollectionRequest.class);
   	 if(schedules!=null){
 			bodyParams.put("schedules", schedules);
 		}

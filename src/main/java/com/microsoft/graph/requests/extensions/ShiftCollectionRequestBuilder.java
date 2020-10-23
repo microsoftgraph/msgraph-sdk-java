@@ -33,7 +33,7 @@ public class ShiftCollectionRequestBuilder extends BaseCollectionRequestBuilder<
      * @param requestOptions the options for this request
      */
     public ShiftCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ShiftRequestBuilder.class, ShiftCollectionResponse.class, ShiftCollectionPage.class, ShiftCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ShiftRequestBuilder.class, ShiftCollectionRequest.class);
     }
 
 

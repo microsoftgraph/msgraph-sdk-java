@@ -34,7 +34,7 @@ public class DeviceConfigurationAssignCollectionRequestBuilder extends BaseActio
      * @param assignments the assignments
      */
     public DeviceConfigurationAssignCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<DeviceConfigurationAssignment> assignments) {
-        super(requestUrl, client, requestOptions, DeviceConfigurationAssignCollectionRequestBuilder.class, DeviceConfigurationAssignCollectionResponse.class, DeviceConfigurationAssignCollectionPage.class, DeviceConfigurationAssignCollectionRequest.class);
+        super(requestUrl, client, requestOptions, DeviceConfigurationAssignCollectionRequestBuilder.class, DeviceConfigurationAssignCollectionRequest.class);
   	 if(assignments!=null){
 			bodyParams.put("assignments", assignments);
 		}

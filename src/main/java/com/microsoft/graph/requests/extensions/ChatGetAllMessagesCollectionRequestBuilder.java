@@ -33,7 +33,7 @@ public class ChatGetAllMessagesCollectionRequestBuilder extends BaseFunctionColl
      * @param requestOptions the options for this request
      */
     public ChatGetAllMessagesCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ChatGetAllMessagesCollectionRequestBuilder.class, ChatGetAllMessagesCollectionResponse.class, ChatGetAllMessagesCollectionPage.class, ChatGetAllMessagesCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ChatGetAllMessagesCollectionRequestBuilder.class, ChatGetAllMessagesCollectionRequest.class);
     }
     
     /**

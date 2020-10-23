@@ -35,7 +35,7 @@ public class DirectoryObjectGetByIdsCollectionRequestBuilder extends BaseActionC
      * @param types the types
      */
     public DirectoryObjectGetByIdsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<String> ids, final java.util.List<String> types) {
-        super(requestUrl, client, requestOptions, DirectoryObjectGetByIdsCollectionRequestBuilder.class, DirectoryObjectGetByIdsCollectionResponse.class, DirectoryObjectGetByIdsCollectionPage.class, DirectoryObjectGetByIdsCollectionRequest.class);
+        super(requestUrl, client, requestOptions, DirectoryObjectGetByIdsCollectionRequestBuilder.class, DirectoryObjectGetByIdsCollectionRequest.class);
   	 if(ids!=null){
 			bodyParams.put("ids", ids);
 		}

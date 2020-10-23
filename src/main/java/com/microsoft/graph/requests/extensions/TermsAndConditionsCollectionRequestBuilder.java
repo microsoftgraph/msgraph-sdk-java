@@ -33,7 +33,7 @@ public class TermsAndConditionsCollectionRequestBuilder extends BaseCollectionRe
      * @param requestOptions the options for this request
      */
     public TermsAndConditionsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TermsAndConditionsRequestBuilder.class, TermsAndConditionsCollectionResponse.class, TermsAndConditionsCollectionPage.class, TermsAndConditionsCollectionRequest.class);
+        super(requestUrl, client, requestOptions, TermsAndConditionsRequestBuilder.class, TermsAndConditionsCollectionRequest.class);
     }
 
 

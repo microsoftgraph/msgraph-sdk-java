@@ -31,6 +31,6 @@ public class ServicePrincipalCollectionWithReferencesRequestBuilder extends Base
      * @param requestOptions the options for this request
      */
     public ServicePrincipalCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ServicePrincipalReferenceRequestBuilder.class, ServicePrincipalCollectionResponse.class, ServicePrincipalCollectionWithReferencesPage.class, ServicePrincipalCollectionWithReferencesRequest.class);
+        super(requestUrl, client, requestOptions, ServicePrincipalReferenceRequestBuilder.class, ServicePrincipalCollectionWithReferencesRequest.class);
     }
 }

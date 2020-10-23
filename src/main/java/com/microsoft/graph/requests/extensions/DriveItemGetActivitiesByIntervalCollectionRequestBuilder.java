@@ -33,7 +33,7 @@ public class DriveItemGetActivitiesByIntervalCollectionRequestBuilder extends Ba
      * @param requestOptions the options for this request
      */
     public DriveItemGetActivitiesByIntervalCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DriveItemGetActivitiesByIntervalCollectionRequestBuilder.class, DriveItemGetActivitiesByIntervalCollectionResponse.class, DriveItemGetActivitiesByIntervalCollectionPage.class, DriveItemGetActivitiesByIntervalCollectionRequest.class);
+        super(requestUrl, client, requestOptions, DriveItemGetActivitiesByIntervalCollectionRequestBuilder.class, DriveItemGetActivitiesByIntervalCollectionRequest.class);
     }
     /**
      * The request builder for this collection of DriveItem
@@ -46,7 +46,7 @@ public class DriveItemGetActivitiesByIntervalCollectionRequestBuilder extends Ba
      * @param interval the interval
      */
     public DriveItemGetActivitiesByIntervalCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String startDateTime, final String endDateTime, final String interval) {
-        super(requestUrl, client, requestOptions, DriveItemGetActivitiesByIntervalCollectionRequestBuilder.class, DriveItemGetActivitiesByIntervalCollectionResponse.class, DriveItemGetActivitiesByIntervalCollectionPage.class, DriveItemGetActivitiesByIntervalCollectionRequest.class);
+        super(requestUrl, client, requestOptions, DriveItemGetActivitiesByIntervalCollectionRequestBuilder.class, DriveItemGetActivitiesByIntervalCollectionRequest.class);
      	 if(startDateTime!=null){
 			functionOptions.add(new com.microsoft.graph.options.FunctionOption("startDateTime", startDateTime));
 		}

@@ -33,7 +33,7 @@ public class WorkbookCommentCollectionRequestBuilder extends BaseCollectionReque
      * @param requestOptions the options for this request
      */
     public WorkbookCommentCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WorkbookCommentRequestBuilder.class, WorkbookCommentCollectionResponse.class, WorkbookCommentCollectionPage.class, WorkbookCommentCollectionRequest.class);
+        super(requestUrl, client, requestOptions, WorkbookCommentRequestBuilder.class, WorkbookCommentCollectionRequest.class);
     }
 
 

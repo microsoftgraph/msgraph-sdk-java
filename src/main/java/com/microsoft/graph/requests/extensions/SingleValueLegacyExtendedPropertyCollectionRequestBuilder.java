@@ -33,7 +33,7 @@ public class SingleValueLegacyExtendedPropertyCollectionRequestBuilder extends B
      * @param requestOptions the options for this request
      */
     public SingleValueLegacyExtendedPropertyCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SingleValueLegacyExtendedPropertyRequestBuilder.class, SingleValueLegacyExtendedPropertyCollectionResponse.class, SingleValueLegacyExtendedPropertyCollectionPage.class, SingleValueLegacyExtendedPropertyCollectionRequest.class);
+        super(requestUrl, client, requestOptions, SingleValueLegacyExtendedPropertyRequestBuilder.class, SingleValueLegacyExtendedPropertyCollectionRequest.class);
     }
 
 

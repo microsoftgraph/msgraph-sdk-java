@@ -33,7 +33,7 @@ public class ActivityHistoryItemCollectionRequestBuilder extends BaseCollectionR
      * @param requestOptions the options for this request
      */
     public ActivityHistoryItemCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ActivityHistoryItemRequestBuilder.class, ActivityHistoryItemCollectionResponse.class, ActivityHistoryItemCollectionPage.class, ActivityHistoryItemCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ActivityHistoryItemRequestBuilder.class, ActivityHistoryItemCollectionRequest.class);
     }
 
 

@@ -33,7 +33,7 @@ public class HomeRealmDiscoveryPolicyCollectionRequestBuilder extends BaseCollec
      * @param requestOptions the options for this request
      */
     public HomeRealmDiscoveryPolicyCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicyRequestBuilder.class, HomeRealmDiscoveryPolicyCollectionResponse.class, HomeRealmDiscoveryPolicyCollectionPage.class, HomeRealmDiscoveryPolicyCollectionRequest.class);
+        super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicyRequestBuilder.class, HomeRealmDiscoveryPolicyCollectionRequest.class);
     }
 
 

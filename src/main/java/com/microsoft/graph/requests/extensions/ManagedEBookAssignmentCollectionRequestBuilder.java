@@ -33,7 +33,7 @@ public class ManagedEBookAssignmentCollectionRequestBuilder extends BaseCollecti
      * @param requestOptions the options for this request
      */
     public ManagedEBookAssignmentCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedEBookAssignmentRequestBuilder.class, ManagedEBookAssignmentCollectionResponse.class, ManagedEBookAssignmentCollectionPage.class, ManagedEBookAssignmentCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ManagedEBookAssignmentRequestBuilder.class, ManagedEBookAssignmentCollectionRequest.class);
     }
 
 

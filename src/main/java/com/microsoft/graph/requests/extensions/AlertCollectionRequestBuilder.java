@@ -33,7 +33,7 @@ public class AlertCollectionRequestBuilder extends BaseCollectionRequestBuilder<
      * @param requestOptions the options for this request
      */
     public AlertCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, AlertRequestBuilder.class, AlertCollectionResponse.class, AlertCollectionPage.class, AlertCollectionRequest.class);
+        super(requestUrl, client, requestOptions, AlertRequestBuilder.class, AlertCollectionRequest.class);
     }
 
 

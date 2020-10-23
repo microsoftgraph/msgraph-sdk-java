@@ -33,7 +33,7 @@ public class ChannelCollectionRequestBuilder extends BaseCollectionRequestBuilde
      * @param requestOptions the options for this request
      */
     public ChannelCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ChannelRequestBuilder.class, ChannelCollectionResponse.class, ChannelCollectionPage.class, ChannelCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ChannelRequestBuilder.class, ChannelCollectionRequest.class);
     }
 
 

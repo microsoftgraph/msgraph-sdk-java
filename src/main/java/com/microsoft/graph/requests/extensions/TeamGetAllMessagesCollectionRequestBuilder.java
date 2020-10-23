@@ -33,7 +33,7 @@ public class TeamGetAllMessagesCollectionRequestBuilder extends BaseFunctionColl
      * @param requestOptions the options for this request
      */
     public TeamGetAllMessagesCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TeamGetAllMessagesCollectionRequestBuilder.class, TeamGetAllMessagesCollectionResponse.class, TeamGetAllMessagesCollectionPage.class, TeamGetAllMessagesCollectionRequest.class);
+        super(requestUrl, client, requestOptions, TeamGetAllMessagesCollectionRequestBuilder.class, TeamGetAllMessagesCollectionRequest.class);
     }
     
     /**

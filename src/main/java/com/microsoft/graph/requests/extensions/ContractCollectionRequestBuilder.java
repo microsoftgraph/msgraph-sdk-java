@@ -32,7 +32,7 @@ public class ContractCollectionRequestBuilder extends BaseCollectionRequestBuild
      * @param requestOptions the options for this request
      */
     public ContractCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ContractRequestBuilder.class, ContractCollectionResponse.class, ContractCollectionPage.class, ContractCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ContractRequestBuilder.class, ContractCollectionRequest.class);
     }
 
 

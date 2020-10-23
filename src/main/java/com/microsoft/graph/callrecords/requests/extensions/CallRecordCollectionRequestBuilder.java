@@ -33,7 +33,7 @@ public class CallRecordCollectionRequestBuilder extends BaseCollectionRequestBui
      * @param requestOptions the options for this request
      */
     public CallRecordCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, CallRecordRequestBuilder.class, CallRecordCollectionResponse.class, CallRecordCollectionPage.class, CallRecordCollectionRequest.class);
+        super(requestUrl, client, requestOptions, CallRecordRequestBuilder.class, CallRecordCollectionRequest.class);
     }
 
 

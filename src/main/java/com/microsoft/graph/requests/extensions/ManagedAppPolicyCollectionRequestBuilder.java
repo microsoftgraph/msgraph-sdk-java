@@ -34,7 +34,7 @@ public class ManagedAppPolicyCollectionRequestBuilder extends BaseCollectionRequ
      * @param requestOptions the options for this request
      */
     public ManagedAppPolicyCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedAppPolicyRequestBuilder.class, ManagedAppPolicyCollectionResponse.class, ManagedAppPolicyCollectionPage.class, ManagedAppPolicyCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ManagedAppPolicyRequestBuilder.class, ManagedAppPolicyCollectionRequest.class);
     }
 
 

@@ -34,7 +34,7 @@ public class PostCollectionRequestBuilder extends BaseCollectionRequestBuilder<P
      * @param requestOptions the options for this request
      */
     public PostCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, PostRequestBuilder.class, PostCollectionResponse.class, PostCollectionPage.class, PostCollectionRequest.class);
+        super(requestUrl, client, requestOptions, PostRequestBuilder.class, PostCollectionRequest.class);
     }
 
 

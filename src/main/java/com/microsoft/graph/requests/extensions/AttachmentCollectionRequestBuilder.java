@@ -36,7 +36,7 @@ public class AttachmentCollectionRequestBuilder extends BaseCollectionRequestBui
      * @param requestOptions the options for this request
      */
     public AttachmentCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, AttachmentRequestBuilder.class, AttachmentCollectionResponse.class, AttachmentCollectionPage.class, AttachmentCollectionRequest.class);
+        super(requestUrl, client, requestOptions, AttachmentRequestBuilder.class, AttachmentCollectionRequest.class);
     }
 
 

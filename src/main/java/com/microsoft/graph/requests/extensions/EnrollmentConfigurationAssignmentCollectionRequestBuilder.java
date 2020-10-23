@@ -33,7 +33,7 @@ public class EnrollmentConfigurationAssignmentCollectionRequestBuilder extends B
      * @param requestOptions the options for this request
      */
     public EnrollmentConfigurationAssignmentCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, EnrollmentConfigurationAssignmentRequestBuilder.class, EnrollmentConfigurationAssignmentCollectionResponse.class, EnrollmentConfigurationAssignmentCollectionPage.class, EnrollmentConfigurationAssignmentCollectionRequest.class);
+        super(requestUrl, client, requestOptions, EnrollmentConfigurationAssignmentRequestBuilder.class, EnrollmentConfigurationAssignmentCollectionRequest.class);
     }
 
 

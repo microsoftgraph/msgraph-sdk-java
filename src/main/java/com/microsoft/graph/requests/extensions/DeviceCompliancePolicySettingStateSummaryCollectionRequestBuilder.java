@@ -33,7 +33,7 @@ public class DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder e
      * @param requestOptions the options for this request
      */
     public DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceCompliancePolicySettingStateSummaryRequestBuilder.class, DeviceCompliancePolicySettingStateSummaryCollectionResponse.class, DeviceCompliancePolicySettingStateSummaryCollectionPage.class, DeviceCompliancePolicySettingStateSummaryCollectionRequest.class);
+        super(requestUrl, client, requestOptions, DeviceCompliancePolicySettingStateSummaryRequestBuilder.class, DeviceCompliancePolicySettingStateSummaryCollectionRequest.class);
     }
 
 

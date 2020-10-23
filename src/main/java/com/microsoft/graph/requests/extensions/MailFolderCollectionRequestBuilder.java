@@ -33,7 +33,7 @@ public class MailFolderCollectionRequestBuilder extends BaseCollectionRequestBui
      * @param requestOptions the options for this request
      */
     public MailFolderCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MailFolderRequestBuilder.class, MailFolderCollectionResponse.class, MailFolderCollectionPage.class, MailFolderCollectionRequest.class);
+        super(requestUrl, client, requestOptions, MailFolderRequestBuilder.class, MailFolderCollectionRequest.class);
     }
 
 

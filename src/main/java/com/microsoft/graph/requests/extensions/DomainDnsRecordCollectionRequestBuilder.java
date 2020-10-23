@@ -32,7 +32,7 @@ public class DomainDnsRecordCollectionRequestBuilder extends BaseCollectionReque
      * @param requestOptions the options for this request
      */
     public DomainDnsRecordCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DomainDnsRecordRequestBuilder.class, DomainDnsRecordCollectionResponse.class, DomainDnsRecordCollectionPage.class, DomainDnsRecordCollectionRequest.class);
+        super(requestUrl, client, requestOptions, DomainDnsRecordRequestBuilder.class, DomainDnsRecordCollectionRequest.class);
     }
 
 

@@ -33,7 +33,7 @@ public class LicenseDetailsCollectionRequestBuilder extends BaseCollectionReques
      * @param requestOptions the options for this request
      */
     public LicenseDetailsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, LicenseDetailsRequestBuilder.class, LicenseDetailsCollectionResponse.class, LicenseDetailsCollectionPage.class, LicenseDetailsCollectionRequest.class);
+        super(requestUrl, client, requestOptions, LicenseDetailsRequestBuilder.class, LicenseDetailsCollectionRequest.class);
     }
 
 

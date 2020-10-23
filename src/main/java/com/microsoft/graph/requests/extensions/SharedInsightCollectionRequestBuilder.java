@@ -33,7 +33,7 @@ public class SharedInsightCollectionRequestBuilder extends BaseCollectionRequest
      * @param requestOptions the options for this request
      */
     public SharedInsightCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SharedInsightRequestBuilder.class, SharedInsightCollectionResponse.class, SharedInsightCollectionPage.class, SharedInsightCollectionRequest.class);
+        super(requestUrl, client, requestOptions, SharedInsightRequestBuilder.class, SharedInsightCollectionRequest.class);
     }
 
 

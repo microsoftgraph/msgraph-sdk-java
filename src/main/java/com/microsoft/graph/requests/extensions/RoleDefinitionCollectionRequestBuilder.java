@@ -33,7 +33,7 @@ public class RoleDefinitionCollectionRequestBuilder extends BaseCollectionReques
      * @param requestOptions the options for this request
      */
     public RoleDefinitionCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, RoleDefinitionRequestBuilder.class, RoleDefinitionCollectionResponse.class, RoleDefinitionCollectionPage.class, RoleDefinitionCollectionRequest.class);
+        super(requestUrl, client, requestOptions, RoleDefinitionRequestBuilder.class, RoleDefinitionCollectionRequest.class);
     }
 
 

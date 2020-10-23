@@ -34,7 +34,7 @@ public class DirectoryObjectGetMemberObjectsCollectionRequestBuilder extends Bas
      * @param securityEnabledOnly the securityEnabledOnly
      */
     public DirectoryObjectGetMemberObjectsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final Boolean securityEnabledOnly) {
-        super(requestUrl, client, requestOptions, DirectoryObjectGetMemberObjectsCollectionRequestBuilder.class, DirectoryObjectGetMemberObjectsCollectionResponse.class, DirectoryObjectGetMemberObjectsCollectionPage.class, DirectoryObjectGetMemberObjectsCollectionRequest.class);
+        super(requestUrl, client, requestOptions, DirectoryObjectGetMemberObjectsCollectionRequestBuilder.class, DirectoryObjectGetMemberObjectsCollectionRequest.class);
   	 if(securityEnabledOnly!=null){
 			bodyParams.put("securityEnabledOnly", securityEnabledOnly);
 		}

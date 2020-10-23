@@ -33,7 +33,7 @@ public class DeviceConfigurationAssignmentCollectionRequestBuilder extends BaseC
      * @param requestOptions the options for this request
      */
     public DeviceConfigurationAssignmentCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceConfigurationAssignmentRequestBuilder.class, DeviceConfigurationAssignmentCollectionResponse.class, DeviceConfigurationAssignmentCollectionPage.class, DeviceConfigurationAssignmentCollectionRequest.class);
+        super(requestUrl, client, requestOptions, DeviceConfigurationAssignmentRequestBuilder.class, DeviceConfigurationAssignmentCollectionRequest.class);
     }
 
 

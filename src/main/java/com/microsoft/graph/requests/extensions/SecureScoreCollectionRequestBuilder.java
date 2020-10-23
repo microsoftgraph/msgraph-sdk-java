@@ -33,7 +33,7 @@ public class SecureScoreCollectionRequestBuilder extends BaseCollectionRequestBu
      * @param requestOptions the options for this request
      */
     public SecureScoreCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SecureScoreRequestBuilder.class, SecureScoreCollectionResponse.class, SecureScoreCollectionPage.class, SecureScoreCollectionRequest.class);
+        super(requestUrl, client, requestOptions, SecureScoreRequestBuilder.class, SecureScoreCollectionRequest.class);
     }
 
 

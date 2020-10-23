@@ -33,7 +33,7 @@ public class MultiValueLegacyExtendedPropertyCollectionRequestBuilder extends Ba
      * @param requestOptions the options for this request
      */
     public MultiValueLegacyExtendedPropertyCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MultiValueLegacyExtendedPropertyRequestBuilder.class, MultiValueLegacyExtendedPropertyCollectionResponse.class, MultiValueLegacyExtendedPropertyCollectionPage.class, MultiValueLegacyExtendedPropertyCollectionRequest.class);
+        super(requestUrl, client, requestOptions, MultiValueLegacyExtendedPropertyRequestBuilder.class, MultiValueLegacyExtendedPropertyCollectionRequest.class);
     }
 
 

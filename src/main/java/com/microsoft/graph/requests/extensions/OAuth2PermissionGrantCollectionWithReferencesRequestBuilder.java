@@ -30,6 +30,6 @@ public class OAuth2PermissionGrantCollectionWithReferencesRequestBuilder extends
      * @param requestOptions the options for this request
      */
     public OAuth2PermissionGrantCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OAuth2PermissionGrantReferenceRequestBuilder.class, OAuth2PermissionGrantCollectionResponse.class, OAuth2PermissionGrantCollectionWithReferencesPage.class, OAuth2PermissionGrantCollectionWithReferencesRequest.class);
+        super(requestUrl, client, requestOptions, OAuth2PermissionGrantReferenceRequestBuilder.class, OAuth2PermissionGrantCollectionWithReferencesRequest.class);
     }
 }

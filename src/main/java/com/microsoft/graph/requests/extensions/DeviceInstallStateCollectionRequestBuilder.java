@@ -33,7 +33,7 @@ public class DeviceInstallStateCollectionRequestBuilder extends BaseCollectionRe
      * @param requestOptions the options for this request
      */
     public DeviceInstallStateCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceInstallStateRequestBuilder.class, DeviceInstallStateCollectionResponse.class, DeviceInstallStateCollectionPage.class, DeviceInstallStateCollectionRequest.class);
+        super(requestUrl, client, requestOptions, DeviceInstallStateRequestBuilder.class, DeviceInstallStateCollectionRequest.class);
     }
 
 

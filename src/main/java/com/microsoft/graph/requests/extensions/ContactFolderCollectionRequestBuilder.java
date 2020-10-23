@@ -33,7 +33,7 @@ public class ContactFolderCollectionRequestBuilder extends BaseCollectionRequest
      * @param requestOptions the options for this request
      */
     public ContactFolderCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ContactFolderRequestBuilder.class, ContactFolderCollectionResponse.class, ContactFolderCollectionPage.class, ContactFolderCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ContactFolderRequestBuilder.class, ContactFolderCollectionRequest.class);
     }
 
 

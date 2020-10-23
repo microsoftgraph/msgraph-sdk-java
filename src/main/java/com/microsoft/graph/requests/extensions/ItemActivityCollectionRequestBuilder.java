@@ -33,7 +33,7 @@ public class ItemActivityCollectionRequestBuilder extends BaseCollectionRequestB
      * @param requestOptions the options for this request
      */
     public ItemActivityCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ItemActivityRequestBuilder.class, ItemActivityCollectionResponse.class, ItemActivityCollectionPage.class, ItemActivityCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ItemActivityRequestBuilder.class, ItemActivityCollectionRequest.class);
     }
 
 

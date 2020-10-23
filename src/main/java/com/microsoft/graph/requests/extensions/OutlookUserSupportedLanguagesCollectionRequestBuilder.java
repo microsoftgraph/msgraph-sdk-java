@@ -33,7 +33,7 @@ public class OutlookUserSupportedLanguagesCollectionRequestBuilder extends BaseF
      * @param requestOptions the options for this request
      */
     public OutlookUserSupportedLanguagesCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OutlookUserSupportedLanguagesCollectionRequestBuilder.class, OutlookUserSupportedLanguagesCollectionResponse.class, OutlookUserSupportedLanguagesCollectionPage.class, OutlookUserSupportedLanguagesCollectionRequest.class);
+        super(requestUrl, client, requestOptions, OutlookUserSupportedLanguagesCollectionRequestBuilder.class, OutlookUserSupportedLanguagesCollectionRequest.class);
     }
     
     /**

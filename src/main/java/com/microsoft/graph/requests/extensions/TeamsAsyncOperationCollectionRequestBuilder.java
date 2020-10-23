@@ -33,7 +33,7 @@ public class TeamsAsyncOperationCollectionRequestBuilder extends BaseCollectionR
      * @param requestOptions the options for this request
      */
     public TeamsAsyncOperationCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TeamsAsyncOperationRequestBuilder.class, TeamsAsyncOperationCollectionResponse.class, TeamsAsyncOperationCollectionPage.class, TeamsAsyncOperationCollectionRequest.class);
+        super(requestUrl, client, requestOptions, TeamsAsyncOperationRequestBuilder.class, TeamsAsyncOperationCollectionRequest.class);
     }
 
 

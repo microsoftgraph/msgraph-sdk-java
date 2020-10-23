@@ -33,7 +33,7 @@ public class WorkforceIntegrationCollectionRequestBuilder extends BaseCollection
      * @param requestOptions the options for this request
      */
     public WorkforceIntegrationCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WorkforceIntegrationRequestBuilder.class, WorkforceIntegrationCollectionResponse.class, WorkforceIntegrationCollectionPage.class, WorkforceIntegrationCollectionRequest.class);
+        super(requestUrl, client, requestOptions, WorkforceIntegrationRequestBuilder.class, WorkforceIntegrationCollectionRequest.class);
     }
 
 

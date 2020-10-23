@@ -34,7 +34,7 @@ public class DeviceManagementGetEffectivePermissionsCollectionRequestBuilder ext
      * @param scope the scope
      */
     public DeviceManagementGetEffectivePermissionsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String scope) {
-        super(requestUrl, client, requestOptions, DeviceManagementGetEffectivePermissionsCollectionRequestBuilder.class, DeviceManagementGetEffectivePermissionsCollectionResponse.class, DeviceManagementGetEffectivePermissionsCollectionPage.class, DeviceManagementGetEffectivePermissionsCollectionRequest.class);
+        super(requestUrl, client, requestOptions, DeviceManagementGetEffectivePermissionsCollectionRequestBuilder.class, DeviceManagementGetEffectivePermissionsCollectionRequest.class);
      	 if(scope!=null){
 			functionOptions.add(new com.microsoft.graph.options.FunctionOption("scope", scope));
 		}

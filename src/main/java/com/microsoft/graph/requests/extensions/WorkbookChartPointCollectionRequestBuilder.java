@@ -35,7 +35,7 @@ public class WorkbookChartPointCollectionRequestBuilder extends BaseCollectionRe
      * @param requestOptions the options for this request
      */
     public WorkbookChartPointCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WorkbookChartPointRequestBuilder.class, WorkbookChartPointCollectionResponse.class, WorkbookChartPointCollectionPage.class, WorkbookChartPointCollectionRequest.class);
+        super(requestUrl, client, requestOptions, WorkbookChartPointRequestBuilder.class, WorkbookChartPointCollectionRequest.class);
     }
 
 

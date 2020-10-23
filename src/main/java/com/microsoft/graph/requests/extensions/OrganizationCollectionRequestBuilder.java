@@ -32,7 +32,7 @@ public class OrganizationCollectionRequestBuilder extends BaseCollectionRequestB
      * @param requestOptions the options for this request
      */
     public OrganizationCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OrganizationRequestBuilder.class, OrganizationCollectionResponse.class, OrganizationCollectionPage.class, OrganizationCollectionRequest.class);
+        super(requestUrl, client, requestOptions, OrganizationRequestBuilder.class, OrganizationCollectionRequest.class);
     }
 
 

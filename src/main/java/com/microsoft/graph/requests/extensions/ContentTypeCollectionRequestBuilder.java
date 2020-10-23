@@ -33,7 +33,7 @@ public class ContentTypeCollectionRequestBuilder extends BaseCollectionRequestBu
      * @param requestOptions the options for this request
      */
     public ContentTypeCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ContentTypeRequestBuilder.class, ContentTypeCollectionResponse.class, ContentTypeCollectionPage.class, ContentTypeCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ContentTypeRequestBuilder.class, ContentTypeCollectionRequest.class);
     }
 
 

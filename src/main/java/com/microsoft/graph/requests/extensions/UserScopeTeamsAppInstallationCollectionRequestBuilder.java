@@ -33,7 +33,7 @@ public class UserScopeTeamsAppInstallationCollectionRequestBuilder extends BaseC
      * @param requestOptions the options for this request
      */
     public UserScopeTeamsAppInstallationCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, UserScopeTeamsAppInstallationRequestBuilder.class, UserScopeTeamsAppInstallationCollectionResponse.class, UserScopeTeamsAppInstallationCollectionPage.class, UserScopeTeamsAppInstallationCollectionRequest.class);
+        super(requestUrl, client, requestOptions, UserScopeTeamsAppInstallationRequestBuilder.class, UserScopeTeamsAppInstallationCollectionRequest.class);
     }
 
 

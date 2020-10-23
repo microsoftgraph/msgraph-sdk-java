@@ -34,7 +34,7 @@ public class DeviceManagementExchangeConnectorCollectionRequestBuilder extends B
      * @param requestOptions the options for this request
      */
     public DeviceManagementExchangeConnectorCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceManagementExchangeConnectorRequestBuilder.class, DeviceManagementExchangeConnectorCollectionResponse.class, DeviceManagementExchangeConnectorCollectionPage.class, DeviceManagementExchangeConnectorCollectionRequest.class);
+        super(requestUrl, client, requestOptions, DeviceManagementExchangeConnectorRequestBuilder.class, DeviceManagementExchangeConnectorCollectionRequest.class);
     }
 
 

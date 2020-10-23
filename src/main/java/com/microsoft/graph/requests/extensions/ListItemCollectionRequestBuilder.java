@@ -34,7 +34,7 @@ public class ListItemCollectionRequestBuilder extends BaseCollectionRequestBuild
      * @param requestOptions the options for this request
      */
     public ListItemCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ListItemRequestBuilder.class, ListItemCollectionResponse.class, ListItemCollectionPage.class, ListItemCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ListItemRequestBuilder.class, ListItemCollectionRequest.class);
     }
 
 

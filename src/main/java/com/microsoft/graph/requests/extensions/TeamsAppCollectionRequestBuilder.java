@@ -33,7 +33,7 @@ public class TeamsAppCollectionRequestBuilder extends BaseCollectionRequestBuild
      * @param requestOptions the options for this request
      */
     public TeamsAppCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TeamsAppRequestBuilder.class, TeamsAppCollectionResponse.class, TeamsAppCollectionPage.class, TeamsAppCollectionRequest.class);
+        super(requestUrl, client, requestOptions, TeamsAppRequestBuilder.class, TeamsAppCollectionRequest.class);
     }
 
 

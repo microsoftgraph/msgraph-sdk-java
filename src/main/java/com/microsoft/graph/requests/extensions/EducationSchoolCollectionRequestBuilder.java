@@ -33,7 +33,7 @@ public class EducationSchoolCollectionRequestBuilder extends BaseCollectionReque
      * @param requestOptions the options for this request
      */
     public EducationSchoolCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, EducationSchoolRequestBuilder.class, EducationSchoolCollectionResponse.class, EducationSchoolCollectionPage.class, EducationSchoolCollectionRequest.class);
+        super(requestUrl, client, requestOptions, EducationSchoolRequestBuilder.class, EducationSchoolCollectionRequest.class);
     }
 
 

@@ -33,7 +33,7 @@ public class DriveCollectionRequestBuilder extends BaseCollectionRequestBuilder<
      * @param requestOptions the options for this request
      */
     public DriveCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DriveRequestBuilder.class, DriveCollectionResponse.class, DriveCollectionPage.class, DriveCollectionRequest.class);
+        super(requestUrl, client, requestOptions, DriveRequestBuilder.class, DriveCollectionRequest.class);
     }
 
 

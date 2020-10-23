@@ -33,7 +33,7 @@ public class DeviceManagementTroubleshootingEventCollectionRequestBuilder extend
      * @param requestOptions the options for this request
      */
     public DeviceManagementTroubleshootingEventCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceManagementTroubleshootingEventRequestBuilder.class, DeviceManagementTroubleshootingEventCollectionResponse.class, DeviceManagementTroubleshootingEventCollectionPage.class, DeviceManagementTroubleshootingEventCollectionRequest.class);
+        super(requestUrl, client, requestOptions, DeviceManagementTroubleshootingEventRequestBuilder.class, DeviceManagementTroubleshootingEventCollectionRequest.class);
     }
 
 

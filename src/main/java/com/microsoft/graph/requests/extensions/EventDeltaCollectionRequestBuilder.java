@@ -33,7 +33,7 @@ public class EventDeltaCollectionRequestBuilder extends BaseFunctionCollectionRe
      * @param requestOptions the options for this request
      */
     public EventDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, EventDeltaCollectionRequestBuilder.class, EventDeltaCollectionResponse.class, EventDeltaCollectionPage.class, EventDeltaCollectionRequest.class);
+        super(requestUrl, client, requestOptions, EventDeltaCollectionRequestBuilder.class, EventDeltaCollectionRequest.class);
     }
     
     /**

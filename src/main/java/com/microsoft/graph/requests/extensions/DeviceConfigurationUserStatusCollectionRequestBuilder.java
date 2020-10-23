@@ -33,7 +33,7 @@ public class DeviceConfigurationUserStatusCollectionRequestBuilder extends BaseC
      * @param requestOptions the options for this request
      */
     public DeviceConfigurationUserStatusCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceConfigurationUserStatusRequestBuilder.class, DeviceConfigurationUserStatusCollectionResponse.class, DeviceConfigurationUserStatusCollectionPage.class, DeviceConfigurationUserStatusCollectionRequest.class);
+        super(requestUrl, client, requestOptions, DeviceConfigurationUserStatusRequestBuilder.class, DeviceConfigurationUserStatusCollectionRequest.class);
     }
 
 

@@ -33,7 +33,7 @@ public class MessageDeltaCollectionRequestBuilder extends BaseFunctionCollection
      * @param requestOptions the options for this request
      */
     public MessageDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MessageDeltaCollectionRequestBuilder.class, MessageDeltaCollectionResponse.class, MessageDeltaCollectionPage.class, MessageDeltaCollectionRequest.class);
+        super(requestUrl, client, requestOptions, MessageDeltaCollectionRequestBuilder.class, MessageDeltaCollectionRequest.class);
     }
     
     /**

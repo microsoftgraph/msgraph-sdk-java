@@ -41,7 +41,7 @@ public class DriveItemInviteCollectionRequestBuilder extends BaseActionCollectio
      * @param password the password
      */
     public DriveItemInviteCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final Boolean requireSignIn, final java.util.List<String> roles, final Boolean sendInvitation, final String message, final java.util.List<DriveRecipient> recipients, final String expirationDateTime, final String password) {
-        super(requestUrl, client, requestOptions, DriveItemInviteCollectionRequestBuilder.class, DriveItemInviteCollectionResponse.class, DriveItemInviteCollectionPage.class, DriveItemInviteCollectionRequest.class);
+        super(requestUrl, client, requestOptions, DriveItemInviteCollectionRequestBuilder.class, DriveItemInviteCollectionRequest.class);
   	 if(requireSignIn!=null){
 			bodyParams.put("requireSignIn", requireSignIn);
 		}

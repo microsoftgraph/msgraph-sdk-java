@@ -35,7 +35,7 @@ public class MessageCollectionRequestBuilder extends BaseCollectionRequestBuilde
      * @param requestOptions the options for this request
      */
     public MessageCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MessageRequestBuilder.class, MessageCollectionResponse.class, MessageCollectionPage.class, MessageCollectionRequest.class);
+        super(requestUrl, client, requestOptions, MessageRequestBuilder.class, MessageCollectionRequest.class);
     }
 
 

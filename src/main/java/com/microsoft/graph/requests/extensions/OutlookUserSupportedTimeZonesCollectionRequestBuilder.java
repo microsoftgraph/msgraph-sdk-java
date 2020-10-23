@@ -34,7 +34,7 @@ public class OutlookUserSupportedTimeZonesCollectionRequestBuilder extends BaseF
      * @param requestOptions the options for this request
      */
     public OutlookUserSupportedTimeZonesCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OutlookUserSupportedTimeZonesCollectionRequestBuilder.class, OutlookUserSupportedTimeZonesCollectionResponse.class, OutlookUserSupportedTimeZonesCollectionPage.class, OutlookUserSupportedTimeZonesCollectionRequest.class);
+        super(requestUrl, client, requestOptions, OutlookUserSupportedTimeZonesCollectionRequestBuilder.class, OutlookUserSupportedTimeZonesCollectionRequest.class);
     }
     /**
      * The request builder for this collection of OutlookUser
@@ -45,7 +45,7 @@ public class OutlookUserSupportedTimeZonesCollectionRequestBuilder extends BaseF
      * @param timeZoneStandard the timeZoneStandard
      */
     public OutlookUserSupportedTimeZonesCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final TimeZoneStandard timeZoneStandard) {
-        super(requestUrl, client, requestOptions, OutlookUserSupportedTimeZonesCollectionRequestBuilder.class, OutlookUserSupportedTimeZonesCollectionResponse.class, OutlookUserSupportedTimeZonesCollectionPage.class, OutlookUserSupportedTimeZonesCollectionRequest.class);
+        super(requestUrl, client, requestOptions, OutlookUserSupportedTimeZonesCollectionRequestBuilder.class, OutlookUserSupportedTimeZonesCollectionRequest.class);
      	 if(timeZoneStandard!=null){
 			functionOptions.add(new com.microsoft.graph.options.FunctionOption("timeZoneStandard", timeZoneStandard));
 		}

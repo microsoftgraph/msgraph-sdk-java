@@ -33,7 +33,7 @@ public class WindowsInformationProtectionNetworkLearningSummaryCollectionRequest
      * @param requestOptions the options for this request
      */
     public WindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WindowsInformationProtectionNetworkLearningSummaryRequestBuilder.class, WindowsInformationProtectionNetworkLearningSummaryCollectionResponse.class, WindowsInformationProtectionNetworkLearningSummaryCollectionPage.class, WindowsInformationProtectionNetworkLearningSummaryCollectionRequest.class);
+        super(requestUrl, client, requestOptions, WindowsInformationProtectionNetworkLearningSummaryRequestBuilder.class, WindowsInformationProtectionNetworkLearningSummaryCollectionRequest.class);
     }
 
 

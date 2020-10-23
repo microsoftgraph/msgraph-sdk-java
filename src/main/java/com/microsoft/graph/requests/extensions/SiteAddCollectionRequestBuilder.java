@@ -34,7 +34,7 @@ public class SiteAddCollectionRequestBuilder extends BaseActionCollectionRequest
      * @param value the value
      */
     public SiteAddCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<Site> value) {
-        super(requestUrl, client, requestOptions, SiteAddCollectionRequestBuilder.class, SiteAddCollectionResponse.class, SiteAddCollectionPage.class, SiteAddCollectionRequest.class);
+        super(requestUrl, client, requestOptions, SiteAddCollectionRequestBuilder.class, SiteAddCollectionRequest.class);
   	 if(value!=null){
 			bodyParams.put("value", value);
 		}

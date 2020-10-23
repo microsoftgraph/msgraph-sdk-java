@@ -35,7 +35,7 @@ public class SiteCollectionRequestBuilder extends BaseCollectionRequestBuilder<S
      * @param requestOptions the options for this request
      */
     public SiteCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SiteRequestBuilder.class, SiteCollectionResponse.class, SiteCollectionPage.class, SiteCollectionRequest.class);
+        super(requestUrl, client, requestOptions, SiteRequestBuilder.class, SiteCollectionRequest.class);
     }
 
 

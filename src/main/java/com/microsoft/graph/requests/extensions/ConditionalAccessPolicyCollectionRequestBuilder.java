@@ -33,7 +33,7 @@ public class ConditionalAccessPolicyCollectionRequestBuilder extends BaseCollect
      * @param requestOptions the options for this request
      */
     public ConditionalAccessPolicyCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ConditionalAccessPolicyRequestBuilder.class, ConditionalAccessPolicyCollectionResponse.class, ConditionalAccessPolicyCollectionPage.class, ConditionalAccessPolicyCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ConditionalAccessPolicyRequestBuilder.class, ConditionalAccessPolicyCollectionRequest.class);
     }
 
 

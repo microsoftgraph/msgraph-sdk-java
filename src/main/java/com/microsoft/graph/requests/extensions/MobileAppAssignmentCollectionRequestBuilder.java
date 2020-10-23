@@ -33,7 +33,7 @@ public class MobileAppAssignmentCollectionRequestBuilder extends BaseCollectionR
      * @param requestOptions the options for this request
      */
     public MobileAppAssignmentCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MobileAppAssignmentRequestBuilder.class, MobileAppAssignmentCollectionResponse.class, MobileAppAssignmentCollectionPage.class, MobileAppAssignmentCollectionRequest.class);
+        super(requestUrl, client, requestOptions, MobileAppAssignmentRequestBuilder.class, MobileAppAssignmentCollectionRequest.class);
     }
 
 

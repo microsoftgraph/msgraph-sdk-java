@@ -33,7 +33,7 @@ public class MdmWindowsInformationProtectionPolicyCollectionRequestBuilder exten
      * @param requestOptions the options for this request
      */
     public MdmWindowsInformationProtectionPolicyCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MdmWindowsInformationProtectionPolicyRequestBuilder.class, MdmWindowsInformationProtectionPolicyCollectionResponse.class, MdmWindowsInformationProtectionPolicyCollectionPage.class, MdmWindowsInformationProtectionPolicyCollectionRequest.class);
+        super(requestUrl, client, requestOptions, MdmWindowsInformationProtectionPolicyRequestBuilder.class, MdmWindowsInformationProtectionPolicyCollectionRequest.class);
     }
 
 

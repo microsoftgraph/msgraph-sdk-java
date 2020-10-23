@@ -34,7 +34,7 @@ public class DriveItemSearchCollectionRequestBuilder extends BaseFunctionCollect
      * @param q the q
      */
     public DriveItemSearchCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String q) {
-        super(requestUrl, client, requestOptions, DriveItemSearchCollectionRequestBuilder.class, DriveItemSearchCollectionResponse.class, DriveItemSearchCollectionPage.class, DriveItemSearchCollectionRequest.class);
+        super(requestUrl, client, requestOptions, DriveItemSearchCollectionRequestBuilder.class, DriveItemSearchCollectionRequest.class);
      	 if(q!=null){
 			functionOptions.add(new com.microsoft.graph.options.FunctionOption("q", q));
 		}

@@ -33,7 +33,7 @@ public class DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder extend
      * @param requestOptions the options for this request
      */
     public DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceAndAppManagementRoleAssignmentRequestBuilder.class, DeviceAndAppManagementRoleAssignmentCollectionResponse.class, DeviceAndAppManagementRoleAssignmentCollectionPage.class, DeviceAndAppManagementRoleAssignmentCollectionRequest.class);
+        super(requestUrl, client, requestOptions, DeviceAndAppManagementRoleAssignmentRequestBuilder.class, DeviceAndAppManagementRoleAssignmentCollectionRequest.class);
     }
 
 

@@ -33,7 +33,7 @@ public class UserGetManagedAppPoliciesCollectionRequestBuilder extends BaseFunct
      * @param requestOptions the options for this request
      */
     public UserGetManagedAppPoliciesCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, UserGetManagedAppPoliciesCollectionRequestBuilder.class, UserGetManagedAppPoliciesCollectionResponse.class, UserGetManagedAppPoliciesCollectionPage.class, UserGetManagedAppPoliciesCollectionRequest.class);
+        super(requestUrl, client, requestOptions, UserGetManagedAppPoliciesCollectionRequestBuilder.class, UserGetManagedAppPoliciesCollectionRequest.class);
     }
     
     /**

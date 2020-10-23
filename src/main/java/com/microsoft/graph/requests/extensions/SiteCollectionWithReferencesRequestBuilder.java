@@ -31,6 +31,6 @@ public class SiteCollectionWithReferencesRequestBuilder extends BaseCollectionWi
      * @param requestOptions the options for this request
      */
     public SiteCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SiteReferenceRequestBuilder.class, SiteCollectionResponse.class, SiteCollectionWithReferencesPage.class, SiteCollectionWithReferencesRequest.class);
+        super(requestUrl, client, requestOptions, SiteReferenceRequestBuilder.class, SiteCollectionWithReferencesRequest.class);
     }
 }

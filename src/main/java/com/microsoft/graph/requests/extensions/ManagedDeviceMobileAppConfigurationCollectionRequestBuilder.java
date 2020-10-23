@@ -34,7 +34,7 @@ public class ManagedDeviceMobileAppConfigurationCollectionRequestBuilder extends
      * @param requestOptions the options for this request
      */
     public ManagedDeviceMobileAppConfigurationCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfigurationRequestBuilder.class, ManagedDeviceMobileAppConfigurationCollectionResponse.class, ManagedDeviceMobileAppConfigurationCollectionPage.class, ManagedDeviceMobileAppConfigurationCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfigurationRequestBuilder.class, ManagedDeviceMobileAppConfigurationCollectionRequest.class);
     }
 
 

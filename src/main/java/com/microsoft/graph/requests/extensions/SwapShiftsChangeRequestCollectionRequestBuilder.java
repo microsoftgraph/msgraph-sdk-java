@@ -33,7 +33,7 @@ public class SwapShiftsChangeRequestCollectionRequestBuilder extends BaseCollect
      * @param requestOptions the options for this request
      */
     public SwapShiftsChangeRequestCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SwapShiftsChangeRequestRequestBuilder.class, SwapShiftsChangeRequestCollectionResponse.class, SwapShiftsChangeRequestCollectionPage.class, SwapShiftsChangeRequestCollectionRequest.class);
+        super(requestUrl, client, requestOptions, SwapShiftsChangeRequestRequestBuilder.class, SwapShiftsChangeRequestCollectionRequest.class);
     }
 
 

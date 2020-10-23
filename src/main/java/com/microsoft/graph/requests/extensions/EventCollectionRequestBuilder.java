@@ -36,7 +36,7 @@ public class EventCollectionRequestBuilder extends BaseCollectionRequestBuilder<
      * @param requestOptions the options for this request
      */
     public EventCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, EventRequestBuilder.class, EventCollectionResponse.class, EventCollectionPage.class, EventCollectionRequest.class);
+        super(requestUrl, client, requestOptions, EventRequestBuilder.class, EventCollectionRequest.class);
     }
 
 

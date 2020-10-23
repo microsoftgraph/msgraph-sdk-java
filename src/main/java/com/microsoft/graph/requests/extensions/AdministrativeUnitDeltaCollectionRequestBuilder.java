@@ -33,7 +33,7 @@ public class AdministrativeUnitDeltaCollectionRequestBuilder extends BaseFunctio
      * @param requestOptions the options for this request
      */
     public AdministrativeUnitDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, AdministrativeUnitDeltaCollectionRequestBuilder.class, AdministrativeUnitDeltaCollectionResponse.class, AdministrativeUnitDeltaCollectionPage.class, AdministrativeUnitDeltaCollectionRequest.class);
+        super(requestUrl, client, requestOptions, AdministrativeUnitDeltaCollectionRequestBuilder.class, AdministrativeUnitDeltaCollectionRequest.class);
     }
     
     /**

@@ -32,6 +32,6 @@ public class ApplicationCollectionWithReferencesRequestBuilder extends BaseColle
      * @param requestOptions the options for this request
      */
     public ApplicationCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ApplicationReferenceRequestBuilder.class, ApplicationCollectionResponse.class, ApplicationCollectionWithReferencesPage.class, ApplicationCollectionWithReferencesRequest.class);
+        super(requestUrl, client, requestOptions, ApplicationReferenceRequestBuilder.class, ApplicationCollectionWithReferencesRequest.class);
     }
 }

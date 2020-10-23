@@ -33,7 +33,7 @@ public class NotificationMessageTemplateCollectionRequestBuilder extends BaseCol
      * @param requestOptions the options for this request
      */
     public NotificationMessageTemplateCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, NotificationMessageTemplateRequestBuilder.class, NotificationMessageTemplateCollectionResponse.class, NotificationMessageTemplateCollectionPage.class, NotificationMessageTemplateCollectionRequest.class);
+        super(requestUrl, client, requestOptions, NotificationMessageTemplateRequestBuilder.class, NotificationMessageTemplateCollectionRequest.class);
     }
 
 

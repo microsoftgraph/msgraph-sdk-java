@@ -33,7 +33,7 @@ public class ChatMessageHostedContentCollectionRequestBuilder extends BaseCollec
      * @param requestOptions the options for this request
      */
     public ChatMessageHostedContentCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ChatMessageHostedContentRequestBuilder.class, ChatMessageHostedContentCollectionResponse.class, ChatMessageHostedContentCollectionPage.class, ChatMessageHostedContentCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ChatMessageHostedContentRequestBuilder.class, ChatMessageHostedContentCollectionRequest.class);
     }
 
 

@@ -32,7 +32,7 @@ public class ScopedRoleMembershipCollectionRequestBuilder extends BaseCollection
      * @param requestOptions the options for this request
      */
     public ScopedRoleMembershipCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ScopedRoleMembershipRequestBuilder.class, ScopedRoleMembershipCollectionResponse.class, ScopedRoleMembershipCollectionPage.class, ScopedRoleMembershipCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ScopedRoleMembershipRequestBuilder.class, ScopedRoleMembershipCollectionRequest.class);
     }
 
 

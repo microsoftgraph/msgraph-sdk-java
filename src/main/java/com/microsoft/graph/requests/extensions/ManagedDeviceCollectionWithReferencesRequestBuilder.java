@@ -31,6 +31,6 @@ public class ManagedDeviceCollectionWithReferencesRequestBuilder extends BaseCol
      * @param requestOptions the options for this request
      */
     public ManagedDeviceCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedDeviceReferenceRequestBuilder.class, ManagedDeviceCollectionResponse.class, ManagedDeviceCollectionWithReferencesPage.class, ManagedDeviceCollectionWithReferencesRequest.class);
+        super(requestUrl, client, requestOptions, ManagedDeviceReferenceRequestBuilder.class, ManagedDeviceCollectionWithReferencesRequest.class);
     }
 }

@@ -32,7 +32,7 @@ public class DirectoryRoleTemplateCollectionRequestBuilder extends BaseCollectio
      * @param requestOptions the options for this request
      */
     public DirectoryRoleTemplateCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DirectoryRoleTemplateRequestBuilder.class, DirectoryRoleTemplateCollectionResponse.class, DirectoryRoleTemplateCollectionPage.class, DirectoryRoleTemplateCollectionRequest.class);
+        super(requestUrl, client, requestOptions, DirectoryRoleTemplateRequestBuilder.class, DirectoryRoleTemplateCollectionRequest.class);
     }
 
 

@@ -35,7 +35,7 @@ public class WorkbookChartSeriesCollectionRequestBuilder extends BaseCollectionR
      * @param requestOptions the options for this request
      */
     public WorkbookChartSeriesCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WorkbookChartSeriesRequestBuilder.class, WorkbookChartSeriesCollectionResponse.class, WorkbookChartSeriesCollectionPage.class, WorkbookChartSeriesCollectionRequest.class);
+        super(requestUrl, client, requestOptions, WorkbookChartSeriesRequestBuilder.class, WorkbookChartSeriesCollectionRequest.class);
     }
 
 

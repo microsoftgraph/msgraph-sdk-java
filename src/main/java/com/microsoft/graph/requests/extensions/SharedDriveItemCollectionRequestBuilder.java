@@ -32,7 +32,7 @@ public class SharedDriveItemCollectionRequestBuilder extends BaseCollectionReque
      * @param requestOptions the options for this request
      */
     public SharedDriveItemCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SharedDriveItemRequestBuilder.class, SharedDriveItemCollectionResponse.class, SharedDriveItemCollectionPage.class, SharedDriveItemCollectionRequest.class);
+        super(requestUrl, client, requestOptions, SharedDriveItemRequestBuilder.class, SharedDriveItemCollectionRequest.class);
     }
 
 

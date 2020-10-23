@@ -33,7 +33,7 @@ public class CalendarPermissionCollectionRequestBuilder extends BaseCollectionRe
      * @param requestOptions the options for this request
      */
     public CalendarPermissionCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, CalendarPermissionRequestBuilder.class, CalendarPermissionCollectionResponse.class, CalendarPermissionCollectionPage.class, CalendarPermissionCollectionRequest.class);
+        super(requestUrl, client, requestOptions, CalendarPermissionRequestBuilder.class, CalendarPermissionCollectionRequest.class);
     }
 
 

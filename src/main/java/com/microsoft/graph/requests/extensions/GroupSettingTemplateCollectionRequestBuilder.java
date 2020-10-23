@@ -32,7 +32,7 @@ public class GroupSettingTemplateCollectionRequestBuilder extends BaseCollection
      * @param requestOptions the options for this request
      */
     public GroupSettingTemplateCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, GroupSettingTemplateRequestBuilder.class, GroupSettingTemplateCollectionResponse.class, GroupSettingTemplateCollectionPage.class, GroupSettingTemplateCollectionRequest.class);
+        super(requestUrl, client, requestOptions, GroupSettingTemplateRequestBuilder.class, GroupSettingTemplateCollectionRequest.class);
     }
 
 

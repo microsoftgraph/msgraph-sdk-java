@@ -33,7 +33,7 @@ public class ComplianceManagementPartnerCollectionRequestBuilder extends BaseCol
      * @param requestOptions the options for this request
      */
     public ComplianceManagementPartnerCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ComplianceManagementPartnerRequestBuilder.class, ComplianceManagementPartnerCollectionResponse.class, ComplianceManagementPartnerCollectionPage.class, ComplianceManagementPartnerCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ComplianceManagementPartnerRequestBuilder.class, ComplianceManagementPartnerCollectionRequest.class);
     }
 
 

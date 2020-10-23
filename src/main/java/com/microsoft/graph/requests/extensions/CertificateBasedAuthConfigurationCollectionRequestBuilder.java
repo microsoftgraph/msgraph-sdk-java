@@ -32,7 +32,7 @@ public class CertificateBasedAuthConfigurationCollectionRequestBuilder extends B
      * @param requestOptions the options for this request
      */
     public CertificateBasedAuthConfigurationCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, CertificateBasedAuthConfigurationRequestBuilder.class, CertificateBasedAuthConfigurationCollectionResponse.class, CertificateBasedAuthConfigurationCollectionPage.class, CertificateBasedAuthConfigurationCollectionRequest.class);
+        super(requestUrl, client, requestOptions, CertificateBasedAuthConfigurationRequestBuilder.class, CertificateBasedAuthConfigurationCollectionRequest.class);
     }
 
 

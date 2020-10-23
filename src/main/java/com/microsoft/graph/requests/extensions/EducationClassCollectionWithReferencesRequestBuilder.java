@@ -30,6 +30,6 @@ public class EducationClassCollectionWithReferencesRequestBuilder extends BaseCo
      * @param requestOptions the options for this request
      */
     public EducationClassCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, EducationClassReferenceRequestBuilder.class, EducationClassCollectionResponse.class, EducationClassCollectionWithReferencesPage.class, EducationClassCollectionWithReferencesRequest.class);
+        super(requestUrl, client, requestOptions, EducationClassReferenceRequestBuilder.class, EducationClassCollectionWithReferencesRequest.class);
     }
 }

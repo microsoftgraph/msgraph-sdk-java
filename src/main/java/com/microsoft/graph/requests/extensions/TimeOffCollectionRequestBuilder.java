@@ -33,7 +33,7 @@ public class TimeOffCollectionRequestBuilder extends BaseCollectionRequestBuilde
      * @param requestOptions the options for this request
      */
     public TimeOffCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TimeOffRequestBuilder.class, TimeOffCollectionResponse.class, TimeOffCollectionPage.class, TimeOffCollectionRequest.class);
+        super(requestUrl, client, requestOptions, TimeOffRequestBuilder.class, TimeOffCollectionRequest.class);
     }
 
 

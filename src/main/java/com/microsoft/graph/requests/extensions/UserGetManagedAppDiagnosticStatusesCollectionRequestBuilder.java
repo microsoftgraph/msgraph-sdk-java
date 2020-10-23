@@ -33,7 +33,7 @@ public class UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder extends
      * @param requestOptions the options for this request
      */
     public UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder.class, UserGetManagedAppDiagnosticStatusesCollectionResponse.class, UserGetManagedAppDiagnosticStatusesCollectionPage.class, UserGetManagedAppDiagnosticStatusesCollectionRequest.class);
+        super(requestUrl, client, requestOptions, UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder.class, UserGetManagedAppDiagnosticStatusesCollectionRequest.class);
     }
     
     /**

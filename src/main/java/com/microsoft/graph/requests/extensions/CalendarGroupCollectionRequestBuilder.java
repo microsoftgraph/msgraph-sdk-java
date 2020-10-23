@@ -33,7 +33,7 @@ public class CalendarGroupCollectionRequestBuilder extends BaseCollectionRequest
      * @param requestOptions the options for this request
      */
     public CalendarGroupCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, CalendarGroupRequestBuilder.class, CalendarGroupCollectionResponse.class, CalendarGroupCollectionPage.class, CalendarGroupCollectionRequest.class);
+        super(requestUrl, client, requestOptions, CalendarGroupRequestBuilder.class, CalendarGroupCollectionRequest.class);
     }
 
 

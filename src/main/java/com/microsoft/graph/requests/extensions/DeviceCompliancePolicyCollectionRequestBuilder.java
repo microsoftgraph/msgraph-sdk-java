@@ -35,7 +35,7 @@ public class DeviceCompliancePolicyCollectionRequestBuilder extends BaseCollecti
      * @param requestOptions the options for this request
      */
     public DeviceCompliancePolicyCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceCompliancePolicyRequestBuilder.class, DeviceCompliancePolicyCollectionResponse.class, DeviceCompliancePolicyCollectionPage.class, DeviceCompliancePolicyCollectionRequest.class);
+        super(requestUrl, client, requestOptions, DeviceCompliancePolicyRequestBuilder.class, DeviceCompliancePolicyCollectionRequest.class);
     }
 
 

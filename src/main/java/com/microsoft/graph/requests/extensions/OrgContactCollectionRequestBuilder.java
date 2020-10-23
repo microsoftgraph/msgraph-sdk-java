@@ -33,7 +33,7 @@ public class OrgContactCollectionRequestBuilder extends BaseCollectionRequestBui
      * @param requestOptions the options for this request
      */
     public OrgContactCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OrgContactRequestBuilder.class, OrgContactCollectionResponse.class, OrgContactCollectionPage.class, OrgContactCollectionRequest.class);
+        super(requestUrl, client, requestOptions, OrgContactRequestBuilder.class, OrgContactCollectionRequest.class);
     }
 
 

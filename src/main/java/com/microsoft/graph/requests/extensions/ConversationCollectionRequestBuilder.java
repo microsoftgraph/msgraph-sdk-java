@@ -33,7 +33,7 @@ public class ConversationCollectionRequestBuilder extends BaseCollectionRequestB
      * @param requestOptions the options for this request
      */
     public ConversationCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ConversationRequestBuilder.class, ConversationCollectionResponse.class, ConversationCollectionPage.class, ConversationCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ConversationRequestBuilder.class, ConversationCollectionRequest.class);
     }
 
 

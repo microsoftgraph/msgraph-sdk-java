@@ -33,7 +33,7 @@ public class DeviceComplianceDeviceStatusCollectionRequestBuilder extends BaseCo
      * @param requestOptions the options for this request
      */
     public DeviceComplianceDeviceStatusCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceComplianceDeviceStatusRequestBuilder.class, DeviceComplianceDeviceStatusCollectionResponse.class, DeviceComplianceDeviceStatusCollectionPage.class, DeviceComplianceDeviceStatusCollectionRequest.class);
+        super(requestUrl, client, requestOptions, DeviceComplianceDeviceStatusRequestBuilder.class, DeviceComplianceDeviceStatusCollectionRequest.class);
     }
 
 

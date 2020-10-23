@@ -33,7 +33,7 @@ public class ThumbnailSetCollectionRequestBuilder extends BaseCollectionRequestB
      * @param requestOptions the options for this request
      */
     public ThumbnailSetCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ThumbnailSetRequestBuilder.class, ThumbnailSetCollectionResponse.class, ThumbnailSetCollectionPage.class, ThumbnailSetCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ThumbnailSetRequestBuilder.class, ThumbnailSetCollectionRequest.class);
     }
 
 

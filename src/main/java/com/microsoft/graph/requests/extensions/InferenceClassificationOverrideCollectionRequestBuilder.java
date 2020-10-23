@@ -33,7 +33,7 @@ public class InferenceClassificationOverrideCollectionRequestBuilder extends Bas
      * @param requestOptions the options for this request
      */
     public InferenceClassificationOverrideCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, InferenceClassificationOverrideRequestBuilder.class, InferenceClassificationOverrideCollectionResponse.class, InferenceClassificationOverrideCollectionPage.class, InferenceClassificationOverrideCollectionRequest.class);
+        super(requestUrl, client, requestOptions, InferenceClassificationOverrideRequestBuilder.class, InferenceClassificationOverrideCollectionRequest.class);
     }
 
 

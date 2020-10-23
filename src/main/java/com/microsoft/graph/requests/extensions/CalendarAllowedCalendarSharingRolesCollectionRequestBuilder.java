@@ -34,7 +34,7 @@ public class CalendarAllowedCalendarSharingRolesCollectionRequestBuilder extends
      * @param user the user
      */
     public CalendarAllowedCalendarSharingRolesCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String user) {
-        super(requestUrl, client, requestOptions, CalendarAllowedCalendarSharingRolesCollectionRequestBuilder.class, CalendarAllowedCalendarSharingRolesCollectionResponse.class, CalendarAllowedCalendarSharingRolesCollectionPage.class, CalendarAllowedCalendarSharingRolesCollectionRequest.class);
+        super(requestUrl, client, requestOptions, CalendarAllowedCalendarSharingRolesCollectionRequestBuilder.class, CalendarAllowedCalendarSharingRolesCollectionRequest.class);
      	 if(user!=null){
 			functionOptions.add(new com.microsoft.graph.options.FunctionOption("user", user));
 		}

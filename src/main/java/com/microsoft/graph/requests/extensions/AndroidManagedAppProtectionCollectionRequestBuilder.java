@@ -33,7 +33,7 @@ public class AndroidManagedAppProtectionCollectionRequestBuilder extends BaseCol
      * @param requestOptions the options for this request
      */
     public AndroidManagedAppProtectionCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, AndroidManagedAppProtectionRequestBuilder.class, AndroidManagedAppProtectionCollectionResponse.class, AndroidManagedAppProtectionCollectionPage.class, AndroidManagedAppProtectionCollectionRequest.class);
+        super(requestUrl, client, requestOptions, AndroidManagedAppProtectionRequestBuilder.class, AndroidManagedAppProtectionCollectionRequest.class);
     }
 
 

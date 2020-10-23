@@ -36,7 +36,7 @@ public class PermissionGrantCollectionRequestBuilder extends BaseActionCollectio
      * @param recipients the recipients
      */
     public PermissionGrantCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<String> roles, final java.util.List<DriveRecipient> recipients) {
-        super(requestUrl, client, requestOptions, PermissionGrantCollectionRequestBuilder.class, PermissionGrantCollectionResponse.class, PermissionGrantCollectionPage.class, PermissionGrantCollectionRequest.class);
+        super(requestUrl, client, requestOptions, PermissionGrantCollectionRequestBuilder.class, PermissionGrantCollectionRequest.class);
   	 if(roles!=null){
 			bodyParams.put("roles", roles);
 		}

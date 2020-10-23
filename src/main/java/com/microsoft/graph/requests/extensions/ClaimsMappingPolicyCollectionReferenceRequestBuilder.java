@@ -30,6 +30,6 @@ public class ClaimsMappingPolicyCollectionReferenceRequestBuilder extends BaseCo
      * @param requestOptions the options for this request
      */
     public ClaimsMappingPolicyCollectionReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ClaimsMappingPolicyWithReferenceRequestBuilder.class, ClaimsMappingPolicyCollectionResponse.class, ClaimsMappingPolicyCollectionWithReferencesPage.class, ClaimsMappingPolicyCollectionReferenceRequest.class);
+        super(requestUrl, client, requestOptions, ClaimsMappingPolicyWithReferenceRequestBuilder.class, ClaimsMappingPolicyCollectionReferenceRequest.class);
     }
 }

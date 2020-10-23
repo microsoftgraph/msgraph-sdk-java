@@ -34,7 +34,7 @@ public class AdministrativeUnitCollectionRequestBuilder extends BaseCollectionRe
      * @param requestOptions the options for this request
      */
     public AdministrativeUnitCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, AdministrativeUnitRequestBuilder.class, AdministrativeUnitCollectionResponse.class, AdministrativeUnitCollectionPage.class, AdministrativeUnitCollectionRequest.class);
+        super(requestUrl, client, requestOptions, AdministrativeUnitRequestBuilder.class, AdministrativeUnitCollectionRequest.class);
     }
 
 

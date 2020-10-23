@@ -31,6 +31,6 @@ public class GroupCollectionReferenceRequestBuilder extends BaseCollectionRefere
      * @param requestOptions the options for this request
      */
     public GroupCollectionReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, GroupWithReferenceRequestBuilder.class, GroupCollectionResponse.class, GroupCollectionWithReferencesPage.class, GroupCollectionReferenceRequest.class);
+        super(requestUrl, client, requestOptions, GroupWithReferenceRequestBuilder.class, GroupCollectionReferenceRequest.class);
     }
 }

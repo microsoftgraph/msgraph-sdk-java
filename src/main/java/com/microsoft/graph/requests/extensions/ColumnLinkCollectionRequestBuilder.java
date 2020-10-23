@@ -33,7 +33,7 @@ public class ColumnLinkCollectionRequestBuilder extends BaseCollectionRequestBui
      * @param requestOptions the options for this request
      */
     public ColumnLinkCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ColumnLinkRequestBuilder.class, ColumnLinkCollectionResponse.class, ColumnLinkCollectionPage.class, ColumnLinkCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ColumnLinkRequestBuilder.class, ColumnLinkCollectionRequest.class);
     }
 
 

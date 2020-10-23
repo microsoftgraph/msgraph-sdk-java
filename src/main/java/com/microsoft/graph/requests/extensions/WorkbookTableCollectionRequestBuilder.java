@@ -37,7 +37,7 @@ public class WorkbookTableCollectionRequestBuilder extends BaseCollectionRequest
      * @param requestOptions the options for this request
      */
     public WorkbookTableCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WorkbookTableRequestBuilder.class, WorkbookTableCollectionResponse.class, WorkbookTableCollectionPage.class, WorkbookTableCollectionRequest.class);
+        super(requestUrl, client, requestOptions, WorkbookTableRequestBuilder.class, WorkbookTableCollectionRequest.class);
     }
 
 

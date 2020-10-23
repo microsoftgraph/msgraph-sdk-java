@@ -33,7 +33,7 @@ public class AppRoleAssignmentCollectionRequestBuilder extends BaseCollectionReq
      * @param requestOptions the options for this request
      */
     public AppRoleAssignmentCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, AppRoleAssignmentRequestBuilder.class, AppRoleAssignmentCollectionResponse.class, AppRoleAssignmentCollectionPage.class, AppRoleAssignmentCollectionRequest.class);
+        super(requestUrl, client, requestOptions, AppRoleAssignmentRequestBuilder.class, AppRoleAssignmentCollectionRequest.class);
     }
 
 

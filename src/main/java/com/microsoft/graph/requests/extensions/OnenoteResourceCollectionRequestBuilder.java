@@ -33,7 +33,7 @@ public class OnenoteResourceCollectionRequestBuilder extends BaseCollectionReque
      * @param requestOptions the options for this request
      */
     public OnenoteResourceCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OnenoteResourceRequestBuilder.class, OnenoteResourceCollectionResponse.class, OnenoteResourceCollectionPage.class, OnenoteResourceCollectionRequest.class);
+        super(requestUrl, client, requestOptions, OnenoteResourceRequestBuilder.class, OnenoteResourceCollectionRequest.class);
     }
 
 

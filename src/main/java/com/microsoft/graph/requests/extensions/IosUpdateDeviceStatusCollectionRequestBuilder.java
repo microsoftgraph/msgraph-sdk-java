@@ -33,7 +33,7 @@ public class IosUpdateDeviceStatusCollectionRequestBuilder extends BaseCollectio
      * @param requestOptions the options for this request
      */
     public IosUpdateDeviceStatusCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, IosUpdateDeviceStatusRequestBuilder.class, IosUpdateDeviceStatusCollectionResponse.class, IosUpdateDeviceStatusCollectionPage.class, IosUpdateDeviceStatusCollectionRequest.class);
+        super(requestUrl, client, requestOptions, IosUpdateDeviceStatusRequestBuilder.class, IosUpdateDeviceStatusCollectionRequest.class);
     }
 
 

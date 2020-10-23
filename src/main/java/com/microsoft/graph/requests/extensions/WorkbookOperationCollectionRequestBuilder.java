@@ -33,7 +33,7 @@ public class WorkbookOperationCollectionRequestBuilder extends BaseCollectionReq
      * @param requestOptions the options for this request
      */
     public WorkbookOperationCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WorkbookOperationRequestBuilder.class, WorkbookOperationCollectionResponse.class, WorkbookOperationCollectionPage.class, WorkbookOperationCollectionRequest.class);
+        super(requestUrl, client, requestOptions, WorkbookOperationRequestBuilder.class, WorkbookOperationCollectionRequest.class);
     }
 
 

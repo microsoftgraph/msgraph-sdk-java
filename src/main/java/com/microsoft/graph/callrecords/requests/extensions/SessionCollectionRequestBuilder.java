@@ -33,7 +33,7 @@ public class SessionCollectionRequestBuilder extends BaseCollectionRequestBuilde
      * @param requestOptions the options for this request
      */
     public SessionCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SessionRequestBuilder.class, SessionCollectionResponse.class, SessionCollectionPage.class, SessionCollectionRequest.class);
+        super(requestUrl, client, requestOptions, SessionRequestBuilder.class, SessionCollectionRequest.class);
     }
 
 

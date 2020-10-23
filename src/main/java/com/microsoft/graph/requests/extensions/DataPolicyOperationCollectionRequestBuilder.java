@@ -32,7 +32,7 @@ public class DataPolicyOperationCollectionRequestBuilder extends BaseCollectionR
      * @param requestOptions the options for this request
      */
     public DataPolicyOperationCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DataPolicyOperationRequestBuilder.class, DataPolicyOperationCollectionResponse.class, DataPolicyOperationCollectionPage.class, DataPolicyOperationCollectionRequest.class);
+        super(requestUrl, client, requestOptions, DataPolicyOperationRequestBuilder.class, DataPolicyOperationCollectionRequest.class);
     }
 
 

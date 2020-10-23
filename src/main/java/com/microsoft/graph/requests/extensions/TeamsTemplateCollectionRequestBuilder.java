@@ -32,7 +32,7 @@ public class TeamsTemplateCollectionRequestBuilder extends BaseCollectionRequest
      * @param requestOptions the options for this request
      */
     public TeamsTemplateCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TeamsTemplateRequestBuilder.class, TeamsTemplateCollectionResponse.class, TeamsTemplateCollectionPage.class, TeamsTemplateCollectionRequest.class);
+        super(requestUrl, client, requestOptions, TeamsTemplateRequestBuilder.class, TeamsTemplateCollectionRequest.class);
     }
 
 

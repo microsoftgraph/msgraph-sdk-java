@@ -34,7 +34,7 @@ public class DirectoryObjectCheckMemberObjectsCollectionRequestBuilder extends B
      * @param ids the ids
      */
     public DirectoryObjectCheckMemberObjectsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<String> ids) {
-        super(requestUrl, client, requestOptions, DirectoryObjectCheckMemberObjectsCollectionRequestBuilder.class, DirectoryObjectCheckMemberObjectsCollectionResponse.class, DirectoryObjectCheckMemberObjectsCollectionPage.class, DirectoryObjectCheckMemberObjectsCollectionRequest.class);
+        super(requestUrl, client, requestOptions, DirectoryObjectCheckMemberObjectsCollectionRequestBuilder.class, DirectoryObjectCheckMemberObjectsCollectionRequest.class);
   	 if(ids!=null){
 			bodyParams.put("ids", ids);
 		}

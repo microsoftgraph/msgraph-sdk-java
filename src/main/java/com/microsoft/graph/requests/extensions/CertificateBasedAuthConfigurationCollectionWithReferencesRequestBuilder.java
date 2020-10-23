@@ -30,6 +30,6 @@ public class CertificateBasedAuthConfigurationCollectionWithReferencesRequestBui
      * @param requestOptions the options for this request
      */
     public CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, CertificateBasedAuthConfigurationReferenceRequestBuilder.class, CertificateBasedAuthConfigurationCollectionResponse.class, CertificateBasedAuthConfigurationCollectionWithReferencesPage.class, CertificateBasedAuthConfigurationCollectionWithReferencesRequest.class);
+        super(requestUrl, client, requestOptions, CertificateBasedAuthConfigurationReferenceRequestBuilder.class, CertificateBasedAuthConfigurationCollectionWithReferencesRequest.class);
     }
 }

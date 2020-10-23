@@ -33,7 +33,7 @@ public class MobileAppCategoryCollectionRequestBuilder extends BaseCollectionReq
      * @param requestOptions the options for this request
      */
     public MobileAppCategoryCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MobileAppCategoryRequestBuilder.class, MobileAppCategoryCollectionResponse.class, MobileAppCategoryCollectionPage.class, MobileAppCategoryCollectionRequest.class);
+        super(requestUrl, client, requestOptions, MobileAppCategoryRequestBuilder.class, MobileAppCategoryCollectionRequest.class);
     }
 
 

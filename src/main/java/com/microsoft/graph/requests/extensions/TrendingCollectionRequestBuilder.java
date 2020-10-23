@@ -33,7 +33,7 @@ public class TrendingCollectionRequestBuilder extends BaseCollectionRequestBuild
      * @param requestOptions the options for this request
      */
     public TrendingCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TrendingRequestBuilder.class, TrendingCollectionResponse.class, TrendingCollectionPage.class, TrendingCollectionRequest.class);
+        super(requestUrl, client, requestOptions, TrendingRequestBuilder.class, TrendingCollectionRequest.class);
     }
 
 

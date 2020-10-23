@@ -33,7 +33,7 @@ public class ClaimsMappingPolicyCollectionRequestBuilder extends BaseCollectionR
      * @param requestOptions the options for this request
      */
     public ClaimsMappingPolicyCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ClaimsMappingPolicyRequestBuilder.class, ClaimsMappingPolicyCollectionResponse.class, ClaimsMappingPolicyCollectionPage.class, ClaimsMappingPolicyCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ClaimsMappingPolicyRequestBuilder.class, ClaimsMappingPolicyCollectionRequest.class);
     }
 
 

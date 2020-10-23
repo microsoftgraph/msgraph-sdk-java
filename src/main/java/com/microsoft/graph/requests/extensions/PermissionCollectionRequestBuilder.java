@@ -34,7 +34,7 @@ public class PermissionCollectionRequestBuilder extends BaseCollectionRequestBui
      * @param requestOptions the options for this request
      */
     public PermissionCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, PermissionRequestBuilder.class, PermissionCollectionResponse.class, PermissionCollectionPage.class, PermissionCollectionRequest.class);
+        super(requestUrl, client, requestOptions, PermissionRequestBuilder.class, PermissionCollectionRequest.class);
     }
 
 

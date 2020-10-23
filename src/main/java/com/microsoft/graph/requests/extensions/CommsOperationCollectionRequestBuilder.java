@@ -33,7 +33,7 @@ public class CommsOperationCollectionRequestBuilder extends BaseCollectionReques
      * @param requestOptions the options for this request
      */
     public CommsOperationCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, CommsOperationRequestBuilder.class, CommsOperationCollectionResponse.class, CommsOperationCollectionPage.class, CommsOperationCollectionRequest.class);
+        super(requestUrl, client, requestOptions, CommsOperationRequestBuilder.class, CommsOperationCollectionRequest.class);
     }
 
 

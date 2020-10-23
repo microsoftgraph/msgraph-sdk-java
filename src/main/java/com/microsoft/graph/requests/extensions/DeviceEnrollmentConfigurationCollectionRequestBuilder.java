@@ -34,7 +34,7 @@ public class DeviceEnrollmentConfigurationCollectionRequestBuilder extends BaseC
      * @param requestOptions the options for this request
      */
     public DeviceEnrollmentConfigurationCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceEnrollmentConfigurationRequestBuilder.class, DeviceEnrollmentConfigurationCollectionResponse.class, DeviceEnrollmentConfigurationCollectionPage.class, DeviceEnrollmentConfigurationCollectionRequest.class);
+        super(requestUrl, client, requestOptions, DeviceEnrollmentConfigurationRequestBuilder.class, DeviceEnrollmentConfigurationCollectionRequest.class);
     }
 
 

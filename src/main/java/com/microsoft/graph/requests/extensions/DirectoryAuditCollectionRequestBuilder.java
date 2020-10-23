@@ -33,7 +33,7 @@ public class DirectoryAuditCollectionRequestBuilder extends BaseCollectionReques
      * @param requestOptions the options for this request
      */
     public DirectoryAuditCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DirectoryAuditRequestBuilder.class, DirectoryAuditCollectionResponse.class, DirectoryAuditCollectionPage.class, DirectoryAuditCollectionRequest.class);
+        super(requestUrl, client, requestOptions, DirectoryAuditRequestBuilder.class, DirectoryAuditCollectionRequest.class);
     }
 
 

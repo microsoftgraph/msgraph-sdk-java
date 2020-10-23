@@ -33,7 +33,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuild
      * @param requestOptions the options for this request
      */
     public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder.class, ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse.class, ManagedDeviceMobileAppConfigurationAssignmentCollectionPage.class, ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder.class, ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest.class);
     }
 
 

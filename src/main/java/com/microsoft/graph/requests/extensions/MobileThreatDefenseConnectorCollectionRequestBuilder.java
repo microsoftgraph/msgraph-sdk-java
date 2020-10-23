@@ -33,7 +33,7 @@ public class MobileThreatDefenseConnectorCollectionRequestBuilder extends BaseCo
      * @param requestOptions the options for this request
      */
     public MobileThreatDefenseConnectorCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MobileThreatDefenseConnectorRequestBuilder.class, MobileThreatDefenseConnectorCollectionResponse.class, MobileThreatDefenseConnectorCollectionPage.class, MobileThreatDefenseConnectorCollectionRequest.class);
+        super(requestUrl, client, requestOptions, MobileThreatDefenseConnectorRequestBuilder.class, MobileThreatDefenseConnectorCollectionRequest.class);
     }
 
 

@@ -33,7 +33,7 @@ public class ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuild
      * @param requestOptions the options for this request
      */
     public ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder.class, ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse.class, ManagedDeviceMobileAppConfigurationUserStatusCollectionPage.class, ManagedDeviceMobileAppConfigurationUserStatusCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder.class, ManagedDeviceMobileAppConfigurationUserStatusCollectionRequest.class);
     }
 
 

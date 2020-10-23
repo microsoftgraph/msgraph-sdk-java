@@ -32,7 +32,7 @@ public class GroupLifecyclePolicyCollectionRequestBuilder extends BaseCollection
      * @param requestOptions the options for this request
      */
     public GroupLifecyclePolicyCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, GroupLifecyclePolicyRequestBuilder.class, GroupLifecyclePolicyCollectionResponse.class, GroupLifecyclePolicyCollectionPage.class, GroupLifecyclePolicyCollectionRequest.class);
+        super(requestUrl, client, requestOptions, GroupLifecyclePolicyRequestBuilder.class, GroupLifecyclePolicyCollectionRequest.class);
     }
 
 

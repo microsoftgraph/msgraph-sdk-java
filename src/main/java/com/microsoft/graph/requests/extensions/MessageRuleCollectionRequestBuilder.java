@@ -33,7 +33,7 @@ public class MessageRuleCollectionRequestBuilder extends BaseCollectionRequestBu
      * @param requestOptions the options for this request
      */
     public MessageRuleCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MessageRuleRequestBuilder.class, MessageRuleCollectionResponse.class, MessageRuleCollectionPage.class, MessageRuleCollectionRequest.class);
+        super(requestUrl, client, requestOptions, MessageRuleRequestBuilder.class, MessageRuleCollectionRequest.class);
     }
 
 

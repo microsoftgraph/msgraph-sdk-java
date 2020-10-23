@@ -34,7 +34,7 @@ public class ManagedAppRegistrationCollectionRequestBuilder extends BaseCollecti
      * @param requestOptions the options for this request
      */
     public ManagedAppRegistrationCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedAppRegistrationRequestBuilder.class, ManagedAppRegistrationCollectionResponse.class, ManagedAppRegistrationCollectionPage.class, ManagedAppRegistrationCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ManagedAppRegistrationRequestBuilder.class, ManagedAppRegistrationCollectionRequest.class);
     }
 
 

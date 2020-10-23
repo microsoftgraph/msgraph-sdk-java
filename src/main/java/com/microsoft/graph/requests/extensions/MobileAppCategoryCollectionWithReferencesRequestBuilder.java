@@ -30,6 +30,6 @@ public class MobileAppCategoryCollectionWithReferencesRequestBuilder extends Bas
      * @param requestOptions the options for this request
      */
     public MobileAppCategoryCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MobileAppCategoryReferenceRequestBuilder.class, MobileAppCategoryCollectionResponse.class, MobileAppCategoryCollectionWithReferencesPage.class, MobileAppCategoryCollectionWithReferencesRequest.class);
+        super(requestUrl, client, requestOptions, MobileAppCategoryReferenceRequestBuilder.class, MobileAppCategoryCollectionWithReferencesRequest.class);
     }
 }

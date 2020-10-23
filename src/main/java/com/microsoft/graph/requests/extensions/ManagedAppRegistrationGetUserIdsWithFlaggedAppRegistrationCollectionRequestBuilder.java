@@ -33,7 +33,7 @@ public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectio
      * @param requestOptions the options for this request
      */
     public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder.class, ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionResponse.class, ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage.class, ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder.class, ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest.class);
     }
     
     /**

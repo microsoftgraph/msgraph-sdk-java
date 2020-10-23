@@ -34,7 +34,7 @@ public class SiteRemoveCollectionRequestBuilder extends BaseActionCollectionRequ
      * @param value the value
      */
     public SiteRemoveCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<Site> value) {
-        super(requestUrl, client, requestOptions, SiteRemoveCollectionRequestBuilder.class, SiteRemoveCollectionResponse.class, SiteRemoveCollectionPage.class, SiteRemoveCollectionRequest.class);
+        super(requestUrl, client, requestOptions, SiteRemoveCollectionRequestBuilder.class, SiteRemoveCollectionRequest.class);
   	 if(value!=null){
 			bodyParams.put("value", value);
 		}

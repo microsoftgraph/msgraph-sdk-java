@@ -32,7 +32,7 @@ public class DeviceCollectionRequestBuilder extends BaseCollectionRequestBuilder
      * @param requestOptions the options for this request
      */
     public DeviceCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceRequestBuilder.class, DeviceCollectionResponse.class, DeviceCollectionPage.class, DeviceCollectionRequest.class);
+        super(requestUrl, client, requestOptions, DeviceRequestBuilder.class, DeviceCollectionRequest.class);
     }
 
 

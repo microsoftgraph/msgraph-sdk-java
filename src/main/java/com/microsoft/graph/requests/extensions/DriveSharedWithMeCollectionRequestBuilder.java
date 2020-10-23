@@ -33,7 +33,7 @@ public class DriveSharedWithMeCollectionRequestBuilder extends BaseFunctionColle
      * @param requestOptions the options for this request
      */
     public DriveSharedWithMeCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DriveSharedWithMeCollectionRequestBuilder.class, DriveSharedWithMeCollectionResponse.class, DriveSharedWithMeCollectionPage.class, DriveSharedWithMeCollectionRequest.class);
+        super(requestUrl, client, requestOptions, DriveSharedWithMeCollectionRequestBuilder.class, DriveSharedWithMeCollectionRequest.class);
     }
     
     /**

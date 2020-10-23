@@ -33,7 +33,7 @@ public class PlannerBucketCollectionRequestBuilder extends BaseCollectionRequest
      * @param requestOptions the options for this request
      */
     public PlannerBucketCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, PlannerBucketRequestBuilder.class, PlannerBucketCollectionResponse.class, PlannerBucketCollectionPage.class, PlannerBucketCollectionRequest.class);
+        super(requestUrl, client, requestOptions, PlannerBucketRequestBuilder.class, PlannerBucketCollectionRequest.class);
     }
 
 

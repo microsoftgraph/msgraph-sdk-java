@@ -33,7 +33,7 @@ public class ManagedMobileLobAppCollectionRequestBuilder extends BaseCollectionR
      * @param requestOptions the options for this request
      */
     public ManagedMobileLobAppCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedMobileLobAppRequestBuilder.class, ManagedMobileLobAppCollectionResponse.class, ManagedMobileLobAppCollectionPage.class, ManagedMobileLobAppCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ManagedMobileLobAppRequestBuilder.class, ManagedMobileLobAppCollectionRequest.class);
     }
 
 

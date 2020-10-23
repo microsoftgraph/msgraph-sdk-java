@@ -33,7 +33,7 @@ public class DirectoryRoleCollectionRequestBuilder extends BaseCollectionRequest
      * @param requestOptions the options for this request
      */
     public DirectoryRoleCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DirectoryRoleRequestBuilder.class, DirectoryRoleCollectionResponse.class, DirectoryRoleCollectionPage.class, DirectoryRoleCollectionRequest.class);
+        super(requestUrl, client, requestOptions, DirectoryRoleRequestBuilder.class, DirectoryRoleCollectionRequest.class);
     }
 
 

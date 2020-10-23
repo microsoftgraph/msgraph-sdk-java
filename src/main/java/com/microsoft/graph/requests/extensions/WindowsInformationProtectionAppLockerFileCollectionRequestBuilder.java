@@ -33,7 +33,7 @@ public class WindowsInformationProtectionAppLockerFileCollectionRequestBuilder e
      * @param requestOptions the options for this request
      */
     public WindowsInformationProtectionAppLockerFileCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, WindowsInformationProtectionAppLockerFileRequestBuilder.class, WindowsInformationProtectionAppLockerFileCollectionResponse.class, WindowsInformationProtectionAppLockerFileCollectionPage.class, WindowsInformationProtectionAppLockerFileCollectionRequest.class);
+        super(requestUrl, client, requestOptions, WindowsInformationProtectionAppLockerFileRequestBuilder.class, WindowsInformationProtectionAppLockerFileCollectionRequest.class);
     }
 
 

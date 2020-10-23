@@ -34,7 +34,7 @@ public class ChatCollectionRequestBuilder extends BaseCollectionRequestBuilder<C
      * @param requestOptions the options for this request
      */
     public ChatCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ChatRequestBuilder.class, ChatCollectionResponse.class, ChatCollectionPage.class, ChatCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ChatRequestBuilder.class, ChatCollectionRequest.class);
     }
 
 

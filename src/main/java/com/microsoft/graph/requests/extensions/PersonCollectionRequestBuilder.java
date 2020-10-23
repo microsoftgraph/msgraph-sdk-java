@@ -33,7 +33,7 @@ public class PersonCollectionRequestBuilder extends BaseCollectionRequestBuilder
      * @param requestOptions the options for this request
      */
     public PersonCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, PersonRequestBuilder.class, PersonCollectionResponse.class, PersonCollectionPage.class, PersonCollectionRequest.class);
+        super(requestUrl, client, requestOptions, PersonRequestBuilder.class, PersonCollectionRequest.class);
     }
 
 

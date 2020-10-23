@@ -34,7 +34,7 @@ public class GroupCollectionRequestBuilder extends BaseCollectionRequestBuilder<
      * @param requestOptions the options for this request
      */
     public GroupCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, GroupRequestBuilder.class, GroupCollectionResponse.class, GroupCollectionPage.class, GroupCollectionRequest.class);
+        super(requestUrl, client, requestOptions, GroupRequestBuilder.class, GroupCollectionRequest.class);
     }
 
 

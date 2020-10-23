@@ -34,7 +34,7 @@ public class MobileAppCollectionRequestBuilder extends BaseCollectionRequestBuil
      * @param requestOptions the options for this request
      */
     public MobileAppCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MobileAppRequestBuilder.class, MobileAppCollectionResponse.class, MobileAppCollectionPage.class, MobileAppCollectionRequest.class);
+        super(requestUrl, client, requestOptions, MobileAppRequestBuilder.class, MobileAppCollectionRequest.class);
     }
 
 

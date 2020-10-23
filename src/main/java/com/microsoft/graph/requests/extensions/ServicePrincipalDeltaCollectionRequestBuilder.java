@@ -33,7 +33,7 @@ public class ServicePrincipalDeltaCollectionRequestBuilder extends BaseFunctionC
      * @param requestOptions the options for this request
      */
     public ServicePrincipalDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ServicePrincipalDeltaCollectionRequestBuilder.class, ServicePrincipalDeltaCollectionResponse.class, ServicePrincipalDeltaCollectionPage.class, ServicePrincipalDeltaCollectionRequest.class);
+        super(requestUrl, client, requestOptions, ServicePrincipalDeltaCollectionRequestBuilder.class, ServicePrincipalDeltaCollectionRequest.class);
     }
     
     /**

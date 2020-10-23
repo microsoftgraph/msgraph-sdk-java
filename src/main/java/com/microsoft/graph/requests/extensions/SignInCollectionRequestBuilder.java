@@ -33,7 +33,7 @@ public class SignInCollectionRequestBuilder extends BaseCollectionRequestBuilder
      * @param requestOptions the options for this request
      */
     public SignInCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SignInRequestBuilder.class, SignInCollectionResponse.class, SignInCollectionPage.class, SignInCollectionRequest.class);
+        super(requestUrl, client, requestOptions, SignInRequestBuilder.class, SignInCollectionRequest.class);
     }
 
 
