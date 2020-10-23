@@ -24,4 +24,14 @@ public class OrganizationCollectionPage extends BaseCollectionPage<Organization,
     public OrganizationCollectionPage(final OrganizationCollectionResponse response, final OrganizationCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for Organization
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public OrganizationCollectionPage(final java.util.List<Organization> pageContents, final OrganizationCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -32,4 +32,14 @@ public class ServicePrincipalDeltaCollectionPage extends DeltaCollectionPage<Ser
     public ServicePrincipalDeltaCollectionPage(final ServicePrincipalDeltaCollectionResponse response, final ServicePrincipalDeltaCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for ServicePrincipalDelta
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ServicePrincipalDeltaCollectionPage(final java.util.List<ServicePrincipal> pageContents, final ServicePrincipalDeltaCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

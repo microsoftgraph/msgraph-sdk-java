@@ -32,4 +32,14 @@ public class ListItemGetActivitiesByIntervalCollectionPage extends BaseCollectio
     public ListItemGetActivitiesByIntervalCollectionPage(final ListItemGetActivitiesByIntervalCollectionResponse response, final ListItemGetActivitiesByIntervalCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for ListItemGetActivitiesByInterval
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ListItemGetActivitiesByIntervalCollectionPage(final java.util.List<ItemActivityStat> pageContents, final ListItemGetActivitiesByIntervalCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

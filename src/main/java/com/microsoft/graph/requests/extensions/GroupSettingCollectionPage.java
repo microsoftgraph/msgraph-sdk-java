@@ -24,4 +24,14 @@ public class GroupSettingCollectionPage extends BaseCollectionPage<GroupSetting,
     public GroupSettingCollectionPage(final GroupSettingCollectionResponse response, final GroupSettingCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for GroupSetting
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public GroupSettingCollectionPage(final java.util.List<GroupSetting> pageContents, final GroupSettingCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

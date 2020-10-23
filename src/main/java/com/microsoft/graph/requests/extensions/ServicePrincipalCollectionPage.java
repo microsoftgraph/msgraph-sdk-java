@@ -24,4 +24,14 @@ public class ServicePrincipalCollectionPage extends BaseCollectionPage<ServicePr
     public ServicePrincipalCollectionPage(final ServicePrincipalCollectionResponse response, final ServicePrincipalCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for ServicePrincipal
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ServicePrincipalCollectionPage(final java.util.List<ServicePrincipal> pageContents, final ServicePrincipalCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

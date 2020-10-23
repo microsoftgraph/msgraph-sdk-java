@@ -24,4 +24,14 @@ public class IdentityProviderCollectionPage extends BaseCollectionPage<IdentityP
     public IdentityProviderCollectionPage(final IdentityProviderCollectionResponse response, final IdentityProviderCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for IdentityProvider
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public IdentityProviderCollectionPage(final java.util.List<IdentityProvider> pageContents, final IdentityProviderCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

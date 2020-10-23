@@ -24,4 +24,14 @@ public class ColumnLinkCollectionPage extends BaseCollectionPage<ColumnLink, Col
     public ColumnLinkCollectionPage(final ColumnLinkCollectionResponse response, final ColumnLinkCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for ColumnLink
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ColumnLinkCollectionPage(final java.util.List<ColumnLink> pageContents, final ColumnLinkCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

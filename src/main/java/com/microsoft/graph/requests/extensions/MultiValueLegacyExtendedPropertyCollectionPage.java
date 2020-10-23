@@ -24,4 +24,14 @@ public class MultiValueLegacyExtendedPropertyCollectionPage extends BaseCollecti
     public MultiValueLegacyExtendedPropertyCollectionPage(final MultiValueLegacyExtendedPropertyCollectionResponse response, final MultiValueLegacyExtendedPropertyCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for MultiValueLegacyExtendedProperty
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public MultiValueLegacyExtendedPropertyCollectionPage(final java.util.List<MultiValueLegacyExtendedProperty> pageContents, final MultiValueLegacyExtendedPropertyCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

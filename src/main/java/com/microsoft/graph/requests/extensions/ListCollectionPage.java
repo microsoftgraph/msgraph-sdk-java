@@ -24,4 +24,14 @@ public class ListCollectionPage extends BaseCollectionPage<List, ListCollectionR
     public ListCollectionPage(final ListCollectionResponse response, final ListCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for List
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ListCollectionPage(final java.util.List<List> pageContents, final ListCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

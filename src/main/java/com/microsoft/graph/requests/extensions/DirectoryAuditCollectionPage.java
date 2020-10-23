@@ -24,4 +24,14 @@ public class DirectoryAuditCollectionPage extends BaseCollectionPage<DirectoryAu
     public DirectoryAuditCollectionPage(final DirectoryAuditCollectionResponse response, final DirectoryAuditCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for DirectoryAudit
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DirectoryAuditCollectionPage(final java.util.List<DirectoryAudit> pageContents, final DirectoryAuditCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -24,4 +24,14 @@ public class WindowsInformationProtectionAppLockerFileCollectionPage extends Bas
     public WindowsInformationProtectionAppLockerFileCollectionPage(final WindowsInformationProtectionAppLockerFileCollectionResponse response, final WindowsInformationProtectionAppLockerFileCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for WindowsInformationProtectionAppLockerFile
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public WindowsInformationProtectionAppLockerFileCollectionPage(final java.util.List<WindowsInformationProtectionAppLockerFile> pageContents, final WindowsInformationProtectionAppLockerFileCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -24,4 +24,14 @@ public class OpenShiftCollectionPage extends BaseCollectionPage<OpenShift, OpenS
     public OpenShiftCollectionPage(final OpenShiftCollectionResponse response, final OpenShiftCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for OpenShift
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public OpenShiftCollectionPage(final java.util.List<OpenShift> pageContents, final OpenShiftCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -24,4 +24,14 @@ public class WorkbookChartCollectionPage extends BaseCollectionPage<WorkbookChar
     public WorkbookChartCollectionPage(final WorkbookChartCollectionResponse response, final WorkbookChartCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for WorkbookChart
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public WorkbookChartCollectionPage(final java.util.List<WorkbookChart> pageContents, final WorkbookChartCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

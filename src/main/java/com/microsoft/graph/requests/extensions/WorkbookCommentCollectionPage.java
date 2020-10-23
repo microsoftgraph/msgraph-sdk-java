@@ -24,4 +24,14 @@ public class WorkbookCommentCollectionPage extends BaseCollectionPage<WorkbookCo
     public WorkbookCommentCollectionPage(final WorkbookCommentCollectionResponse response, final WorkbookCommentCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for WorkbookComment
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public WorkbookCommentCollectionPage(final java.util.List<WorkbookComment> pageContents, final WorkbookCommentCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

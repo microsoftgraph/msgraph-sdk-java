@@ -24,4 +24,14 @@ public class ThreatAssessmentResultCollectionPage extends BaseCollectionPage<Thr
     public ThreatAssessmentResultCollectionPage(final ThreatAssessmentResultCollectionResponse response, final ThreatAssessmentResultCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for ThreatAssessmentResult
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ThreatAssessmentResultCollectionPage(final java.util.List<ThreatAssessmentResult> pageContents, final ThreatAssessmentResultCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

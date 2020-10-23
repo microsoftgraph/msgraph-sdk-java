@@ -24,4 +24,14 @@ public class DirectoryObjectCollectionPage extends BaseCollectionPage<DirectoryO
     public DirectoryObjectCollectionPage(final DirectoryObjectCollectionResponse response, final DirectoryObjectCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for DirectoryObject
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DirectoryObjectCollectionPage(final java.util.List<DirectoryObject> pageContents, final DirectoryObjectCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

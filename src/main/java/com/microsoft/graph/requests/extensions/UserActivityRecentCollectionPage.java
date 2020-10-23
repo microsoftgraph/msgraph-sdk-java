@@ -32,4 +32,14 @@ public class UserActivityRecentCollectionPage extends BaseCollectionPage<UserAct
     public UserActivityRecentCollectionPage(final UserActivityRecentCollectionResponse response, final UserActivityRecentCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for UserActivityRecent
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public UserActivityRecentCollectionPage(final java.util.List<UserActivity> pageContents, final UserActivityRecentCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

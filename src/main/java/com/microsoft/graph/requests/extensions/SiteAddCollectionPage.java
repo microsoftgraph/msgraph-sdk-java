@@ -32,4 +32,14 @@ public class SiteAddCollectionPage extends BaseCollectionPage<Site, SiteAddColle
     public SiteAddCollectionPage(final SiteAddCollectionResponse response, final SiteAddCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for SiteAdd
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public SiteAddCollectionPage(final java.util.List<Site> pageContents, final SiteAddCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

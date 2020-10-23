@@ -24,4 +24,14 @@ public class EducationUserCollectionPage extends BaseCollectionPage<EducationUse
     public EducationUserCollectionPage(final EducationUserCollectionResponse response, final EducationUserCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for EducationUser
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public EducationUserCollectionPage(final java.util.List<EducationUser> pageContents, final EducationUserCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

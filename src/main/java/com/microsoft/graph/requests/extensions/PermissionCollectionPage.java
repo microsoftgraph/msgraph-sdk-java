@@ -24,4 +24,14 @@ public class PermissionCollectionPage extends BaseCollectionPage<Permission, Per
     public PermissionCollectionPage(final PermissionCollectionResponse response, final PermissionCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for Permission
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public PermissionCollectionPage(final java.util.List<Permission> pageContents, final PermissionCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

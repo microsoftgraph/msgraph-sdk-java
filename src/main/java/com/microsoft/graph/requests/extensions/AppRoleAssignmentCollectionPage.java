@@ -24,4 +24,14 @@ public class AppRoleAssignmentCollectionPage extends BaseCollectionPage<AppRoleA
     public AppRoleAssignmentCollectionPage(final AppRoleAssignmentCollectionResponse response, final AppRoleAssignmentCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for AppRoleAssignment
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public AppRoleAssignmentCollectionPage(final java.util.List<AppRoleAssignment> pageContents, final AppRoleAssignmentCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

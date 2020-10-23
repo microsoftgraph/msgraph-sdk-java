@@ -24,4 +24,14 @@ public class CommsOperationCollectionPage extends BaseCollectionPage<CommsOperat
     public CommsOperationCollectionPage(final CommsOperationCollectionResponse response, final CommsOperationCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for CommsOperation
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public CommsOperationCollectionPage(final java.util.List<CommsOperation> pageContents, final CommsOperationCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

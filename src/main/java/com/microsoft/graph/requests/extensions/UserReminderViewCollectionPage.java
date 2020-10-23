@@ -32,4 +32,14 @@ public class UserReminderViewCollectionPage extends BaseCollectionPage<Reminder,
     public UserReminderViewCollectionPage(final UserReminderViewCollectionResponse response, final UserReminderViewCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for UserReminderView
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public UserReminderViewCollectionPage(final java.util.List<Reminder> pageContents, final UserReminderViewCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

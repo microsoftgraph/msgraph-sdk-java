@@ -24,4 +24,14 @@ public class AttachmentCollectionPage extends BaseCollectionPage<Attachment, Att
     public AttachmentCollectionPage(final AttachmentCollectionResponse response, final AttachmentCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for Attachment
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public AttachmentCollectionPage(final java.util.List<Attachment> pageContents, final AttachmentCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

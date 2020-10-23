@@ -24,4 +24,14 @@ public class ApplicationCollectionPage extends BaseCollectionPage<Application, A
     public ApplicationCollectionPage(final ApplicationCollectionResponse response, final ApplicationCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for Application
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ApplicationCollectionPage(final java.util.List<Application> pageContents, final ApplicationCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

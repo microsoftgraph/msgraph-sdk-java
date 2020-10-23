@@ -38,4 +38,14 @@ public class ServicePrincipalCollectionWithReferencesPage extends BaseCollection
     public ServicePrincipalCollectionWithReferencesPage(final ServicePrincipalCollectionResponse response, final ServicePrincipalCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
+
+    /**
+     * Creates the collection page for ServicePrincipal
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ServicePrincipalCollectionWithReferencesPage(final java.util.List<ServicePrincipal> pageContents, final ServicePrincipalCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

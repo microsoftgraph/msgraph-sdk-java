@@ -33,4 +33,14 @@ public class UserTranslateExchangeIdsCollectionPage extends BaseCollectionPage<C
     public UserTranslateExchangeIdsCollectionPage(final UserTranslateExchangeIdsCollectionResponse response, final UserTranslateExchangeIdsCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for UserTranslateExchangeIds
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public UserTranslateExchangeIdsCollectionPage(final java.util.List<ConvertIdResult> pageContents, final UserTranslateExchangeIdsCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

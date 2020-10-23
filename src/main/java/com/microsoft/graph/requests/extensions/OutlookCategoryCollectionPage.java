@@ -24,4 +24,14 @@ public class OutlookCategoryCollectionPage extends BaseCollectionPage<OutlookCat
     public OutlookCategoryCollectionPage(final OutlookCategoryCollectionResponse response, final OutlookCategoryCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for OutlookCategory
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public OutlookCategoryCollectionPage(final java.util.List<OutlookCategory> pageContents, final OutlookCategoryCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

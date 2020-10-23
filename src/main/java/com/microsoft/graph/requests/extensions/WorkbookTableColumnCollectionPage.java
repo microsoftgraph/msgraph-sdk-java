@@ -24,4 +24,14 @@ public class WorkbookTableColumnCollectionPage extends BaseCollectionPage<Workbo
     public WorkbookTableColumnCollectionPage(final WorkbookTableColumnCollectionResponse response, final WorkbookTableColumnCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for WorkbookTableColumn
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public WorkbookTableColumnCollectionPage(final java.util.List<WorkbookTableColumn> pageContents, final WorkbookTableColumnCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

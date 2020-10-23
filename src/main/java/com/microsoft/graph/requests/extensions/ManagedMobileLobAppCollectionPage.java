@@ -24,4 +24,14 @@ public class ManagedMobileLobAppCollectionPage extends BaseCollectionPage<Manage
     public ManagedMobileLobAppCollectionPage(final ManagedMobileLobAppCollectionResponse response, final ManagedMobileLobAppCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for ManagedMobileLobApp
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ManagedMobileLobAppCollectionPage(final java.util.List<ManagedMobileLobApp> pageContents, final ManagedMobileLobAppCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -24,4 +24,14 @@ public class ProfilePhotoCollectionPage extends BaseCollectionPage<ProfilePhoto,
     public ProfilePhotoCollectionPage(final ProfilePhotoCollectionResponse response, final ProfilePhotoCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for ProfilePhoto
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ProfilePhotoCollectionPage(final java.util.List<ProfilePhoto> pageContents, final ProfilePhotoCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

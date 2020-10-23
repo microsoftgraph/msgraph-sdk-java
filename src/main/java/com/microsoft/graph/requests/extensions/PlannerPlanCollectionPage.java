@@ -24,4 +24,14 @@ public class PlannerPlanCollectionPage extends BaseCollectionPage<PlannerPlan, P
     public PlannerPlanCollectionPage(final PlannerPlanCollectionResponse response, final PlannerPlanCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for PlannerPlan
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public PlannerPlanCollectionPage(final java.util.List<PlannerPlan> pageContents, final PlannerPlanCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -33,4 +33,14 @@ public class DriveItemInviteCollectionPage extends BaseCollectionPage<Permission
     public DriveItemInviteCollectionPage(final DriveItemInviteCollectionResponse response, final DriveItemInviteCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for DriveItemInvite
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DriveItemInviteCollectionPage(final java.util.List<Permission> pageContents, final DriveItemInviteCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

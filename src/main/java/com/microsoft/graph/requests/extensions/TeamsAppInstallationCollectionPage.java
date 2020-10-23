@@ -24,4 +24,14 @@ public class TeamsAppInstallationCollectionPage extends BaseCollectionPage<Teams
     public TeamsAppInstallationCollectionPage(final TeamsAppInstallationCollectionResponse response, final TeamsAppInstallationCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for TeamsAppInstallation
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public TeamsAppInstallationCollectionPage(final java.util.List<TeamsAppInstallation> pageContents, final TeamsAppInstallationCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

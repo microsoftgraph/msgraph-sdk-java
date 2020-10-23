@@ -32,4 +32,14 @@ public class OrgContactDeltaCollectionPage extends DeltaCollectionPage<OrgContac
     public OrgContactDeltaCollectionPage(final OrgContactDeltaCollectionResponse response, final OrgContactDeltaCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for OrgContactDelta
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public OrgContactDeltaCollectionPage(final java.util.List<OrgContact> pageContents, final OrgContactDeltaCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

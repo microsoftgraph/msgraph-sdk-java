@@ -24,4 +24,14 @@ public class RoomCollectionPage extends BaseCollectionPage<Room, RoomCollectionR
     public RoomCollectionPage(final RoomCollectionResponse response, final RoomCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for Room
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public RoomCollectionPage(final java.util.List<Room> pageContents, final RoomCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

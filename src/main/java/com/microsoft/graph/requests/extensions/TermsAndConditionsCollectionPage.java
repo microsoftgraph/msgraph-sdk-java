@@ -24,4 +24,14 @@ public class TermsAndConditionsCollectionPage extends BaseCollectionPage<TermsAn
     public TermsAndConditionsCollectionPage(final TermsAndConditionsCollectionResponse response, final TermsAndConditionsCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for TermsAndConditions
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public TermsAndConditionsCollectionPage(final java.util.List<TermsAndConditions> pageContents, final TermsAndConditionsCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

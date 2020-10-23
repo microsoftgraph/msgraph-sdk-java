@@ -24,4 +24,14 @@ public class MessageCollectionPage extends BaseCollectionPage<Message, MessageCo
     public MessageCollectionPage(final MessageCollectionResponse response, final MessageCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for Message
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public MessageCollectionPage(final java.util.List<Message> pageContents, final MessageCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

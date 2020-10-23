@@ -24,4 +24,14 @@ public class DirectoryRoleCollectionPage extends BaseCollectionPage<DirectoryRol
     public DirectoryRoleCollectionPage(final DirectoryRoleCollectionResponse response, final DirectoryRoleCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for DirectoryRole
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DirectoryRoleCollectionPage(final java.util.List<DirectoryRole> pageContents, final DirectoryRoleCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

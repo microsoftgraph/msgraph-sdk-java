@@ -24,4 +24,14 @@ public class OrgContactCollectionPage extends BaseCollectionPage<OrgContact, Org
     public OrgContactCollectionPage(final OrgContactCollectionResponse response, final OrgContactCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for OrgContact
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public OrgContactCollectionPage(final java.util.List<OrgContact> pageContents, final OrgContactCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

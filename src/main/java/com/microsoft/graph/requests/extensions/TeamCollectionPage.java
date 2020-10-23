@@ -24,4 +24,14 @@ public class TeamCollectionPage extends BaseCollectionPage<Team, TeamCollectionR
     public TeamCollectionPage(final TeamCollectionResponse response, final TeamCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for Team
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public TeamCollectionPage(final java.util.List<Team> pageContents, final TeamCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

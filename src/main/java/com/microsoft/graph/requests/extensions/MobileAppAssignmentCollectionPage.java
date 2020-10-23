@@ -24,4 +24,14 @@ public class MobileAppAssignmentCollectionPage extends BaseCollectionPage<Mobile
     public MobileAppAssignmentCollectionPage(final MobileAppAssignmentCollectionResponse response, final MobileAppAssignmentCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for MobileAppAssignment
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public MobileAppAssignmentCollectionPage(final java.util.List<MobileAppAssignment> pageContents, final MobileAppAssignmentCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

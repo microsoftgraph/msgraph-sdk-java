@@ -24,4 +24,14 @@ public class DetectedAppCollectionPage extends BaseCollectionPage<DetectedApp, D
     public DetectedAppCollectionPage(final DetectedAppCollectionResponse response, final DetectedAppCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for DetectedApp
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DetectedAppCollectionPage(final java.util.List<DetectedApp> pageContents, final DetectedAppCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

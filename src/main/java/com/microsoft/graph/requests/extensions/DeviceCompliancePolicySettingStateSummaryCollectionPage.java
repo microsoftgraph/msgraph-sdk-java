@@ -24,4 +24,14 @@ public class DeviceCompliancePolicySettingStateSummaryCollectionPage extends Bas
     public DeviceCompliancePolicySettingStateSummaryCollectionPage(final DeviceCompliancePolicySettingStateSummaryCollectionResponse response, final DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for DeviceCompliancePolicySettingStateSummary
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DeviceCompliancePolicySettingStateSummaryCollectionPage(final java.util.List<DeviceCompliancePolicySettingStateSummary> pageContents, final DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -24,4 +24,14 @@ public class ThumbnailSetCollectionPage extends BaseCollectionPage<ThumbnailSet,
     public ThumbnailSetCollectionPage(final ThumbnailSetCollectionResponse response, final ThumbnailSetCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for ThumbnailSet
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ThumbnailSetCollectionPage(final java.util.List<ThumbnailSet> pageContents, final ThumbnailSetCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

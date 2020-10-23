@@ -24,4 +24,14 @@ public class DeviceConfigurationAssignmentCollectionPage extends BaseCollectionP
     public DeviceConfigurationAssignmentCollectionPage(final DeviceConfigurationAssignmentCollectionResponse response, final DeviceConfigurationAssignmentCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for DeviceConfigurationAssignment
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DeviceConfigurationAssignmentCollectionPage(final java.util.List<DeviceConfigurationAssignment> pageContents, final DeviceConfigurationAssignmentCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

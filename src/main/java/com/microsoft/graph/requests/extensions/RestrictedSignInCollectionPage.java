@@ -24,4 +24,14 @@ public class RestrictedSignInCollectionPage extends BaseCollectionPage<Restricte
     public RestrictedSignInCollectionPage(final RestrictedSignInCollectionResponse response, final RestrictedSignInCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for RestrictedSignIn
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public RestrictedSignInCollectionPage(final java.util.List<RestrictedSignIn> pageContents, final RestrictedSignInCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

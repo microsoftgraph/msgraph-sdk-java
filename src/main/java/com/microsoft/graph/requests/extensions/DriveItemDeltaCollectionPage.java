@@ -32,4 +32,14 @@ public class DriveItemDeltaCollectionPage extends DeltaCollectionPage<DriveItem,
     public DriveItemDeltaCollectionPage(final DriveItemDeltaCollectionResponse response, final DriveItemDeltaCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for DriveItemDelta
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DriveItemDeltaCollectionPage(final java.util.List<DriveItem> pageContents, final DriveItemDeltaCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -24,4 +24,14 @@ public class CalendarPermissionCollectionPage extends BaseCollectionPage<Calenda
     public CalendarPermissionCollectionPage(final CalendarPermissionCollectionResponse response, final CalendarPermissionCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for CalendarPermission
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public CalendarPermissionCollectionPage(final java.util.List<CalendarPermission> pageContents, final CalendarPermissionCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

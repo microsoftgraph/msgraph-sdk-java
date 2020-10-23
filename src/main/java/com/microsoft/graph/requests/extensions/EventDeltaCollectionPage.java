@@ -32,4 +32,14 @@ public class EventDeltaCollectionPage extends DeltaCollectionPage<Event, EventDe
     public EventDeltaCollectionPage(final EventDeltaCollectionResponse response, final EventDeltaCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for EventDelta
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public EventDeltaCollectionPage(final java.util.List<Event> pageContents, final EventDeltaCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

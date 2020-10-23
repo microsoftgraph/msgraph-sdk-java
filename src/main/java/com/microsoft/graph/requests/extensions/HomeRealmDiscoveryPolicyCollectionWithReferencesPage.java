@@ -37,4 +37,14 @@ public class HomeRealmDiscoveryPolicyCollectionWithReferencesPage extends BaseCo
     public HomeRealmDiscoveryPolicyCollectionWithReferencesPage(final HomeRealmDiscoveryPolicyCollectionResponse response, final HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
+
+    /**
+     * Creates the collection page for HomeRealmDiscoveryPolicy
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public HomeRealmDiscoveryPolicyCollectionWithReferencesPage(final java.util.List<HomeRealmDiscoveryPolicy> pageContents, final HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -24,4 +24,14 @@ public class SubscribedSkuCollectionPage extends BaseCollectionPage<SubscribedSk
     public SubscribedSkuCollectionPage(final SubscribedSkuCollectionResponse response, final SubscribedSkuCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for SubscribedSku
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public SubscribedSkuCollectionPage(final java.util.List<SubscribedSku> pageContents, final SubscribedSkuCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

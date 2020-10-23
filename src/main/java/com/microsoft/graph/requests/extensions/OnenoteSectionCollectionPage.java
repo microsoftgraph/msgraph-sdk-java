@@ -24,4 +24,14 @@ public class OnenoteSectionCollectionPage extends BaseCollectionPage<OnenoteSect
     public OnenoteSectionCollectionPage(final OnenoteSectionCollectionResponse response, final OnenoteSectionCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for OnenoteSection
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public OnenoteSectionCollectionPage(final java.util.List<OnenoteSection> pageContents, final OnenoteSectionCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

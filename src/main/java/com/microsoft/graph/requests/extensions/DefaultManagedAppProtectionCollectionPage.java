@@ -24,4 +24,14 @@ public class DefaultManagedAppProtectionCollectionPage extends BaseCollectionPag
     public DefaultManagedAppProtectionCollectionPage(final DefaultManagedAppProtectionCollectionResponse response, final DefaultManagedAppProtectionCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for DefaultManagedAppProtection
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DefaultManagedAppProtectionCollectionPage(final java.util.List<DefaultManagedAppProtection> pageContents, final DefaultManagedAppProtectionCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

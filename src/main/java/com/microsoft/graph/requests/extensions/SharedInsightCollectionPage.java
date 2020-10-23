@@ -24,4 +24,14 @@ public class SharedInsightCollectionPage extends BaseCollectionPage<SharedInsigh
     public SharedInsightCollectionPage(final SharedInsightCollectionResponse response, final SharedInsightCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for SharedInsight
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public SharedInsightCollectionPage(final java.util.List<SharedInsight> pageContents, final SharedInsightCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

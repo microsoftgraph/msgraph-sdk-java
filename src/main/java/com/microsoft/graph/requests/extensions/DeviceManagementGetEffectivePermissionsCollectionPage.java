@@ -32,4 +32,14 @@ public class DeviceManagementGetEffectivePermissionsCollectionPage extends BaseC
     public DeviceManagementGetEffectivePermissionsCollectionPage(final DeviceManagementGetEffectivePermissionsCollectionResponse response, final DeviceManagementGetEffectivePermissionsCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for DeviceManagementGetEffectivePermissions
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DeviceManagementGetEffectivePermissionsCollectionPage(final java.util.List<RolePermission> pageContents, final DeviceManagementGetEffectivePermissionsCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -24,4 +24,14 @@ public class ComplianceManagementPartnerCollectionPage extends BaseCollectionPag
     public ComplianceManagementPartnerCollectionPage(final ComplianceManagementPartnerCollectionResponse response, final ComplianceManagementPartnerCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for ComplianceManagementPartner
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ComplianceManagementPartnerCollectionPage(final java.util.List<ComplianceManagementPartner> pageContents, final ComplianceManagementPartnerCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

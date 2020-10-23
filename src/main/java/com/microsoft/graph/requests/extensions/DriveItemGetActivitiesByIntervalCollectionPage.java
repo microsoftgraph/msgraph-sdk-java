@@ -32,4 +32,14 @@ public class DriveItemGetActivitiesByIntervalCollectionPage extends BaseCollecti
     public DriveItemGetActivitiesByIntervalCollectionPage(final DriveItemGetActivitiesByIntervalCollectionResponse response, final DriveItemGetActivitiesByIntervalCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for DriveItemGetActivitiesByInterval
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DriveItemGetActivitiesByIntervalCollectionPage(final java.util.List<ItemActivityStat> pageContents, final DriveItemGetActivitiesByIntervalCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

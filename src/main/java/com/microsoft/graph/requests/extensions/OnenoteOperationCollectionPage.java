@@ -24,4 +24,14 @@ public class OnenoteOperationCollectionPage extends BaseCollectionPage<OnenoteOp
     public OnenoteOperationCollectionPage(final OnenoteOperationCollectionResponse response, final OnenoteOperationCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for OnenoteOperation
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public OnenoteOperationCollectionPage(final java.util.List<OnenoteOperation> pageContents, final OnenoteOperationCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

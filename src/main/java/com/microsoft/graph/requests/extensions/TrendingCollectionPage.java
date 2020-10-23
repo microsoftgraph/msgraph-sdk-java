@@ -24,4 +24,14 @@ public class TrendingCollectionPage extends BaseCollectionPage<Trending, Trendin
     public TrendingCollectionPage(final TrendingCollectionResponse response, final TrendingCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for Trending
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public TrendingCollectionPage(final java.util.List<Trending> pageContents, final TrendingCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

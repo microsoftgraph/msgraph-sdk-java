@@ -32,4 +32,14 @@ public class MailFolderDeltaCollectionPage extends DeltaCollectionPage<MailFolde
     public MailFolderDeltaCollectionPage(final MailFolderDeltaCollectionResponse response, final MailFolderDeltaCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for MailFolderDelta
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public MailFolderDeltaCollectionPage(final java.util.List<MailFolder> pageContents, final MailFolderDeltaCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

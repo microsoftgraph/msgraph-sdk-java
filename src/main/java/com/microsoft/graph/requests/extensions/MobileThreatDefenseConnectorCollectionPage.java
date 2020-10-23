@@ -24,4 +24,14 @@ public class MobileThreatDefenseConnectorCollectionPage extends BaseCollectionPa
     public MobileThreatDefenseConnectorCollectionPage(final MobileThreatDefenseConnectorCollectionResponse response, final MobileThreatDefenseConnectorCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for MobileThreatDefenseConnector
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public MobileThreatDefenseConnectorCollectionPage(final java.util.List<MobileThreatDefenseConnector> pageContents, final MobileThreatDefenseConnectorCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

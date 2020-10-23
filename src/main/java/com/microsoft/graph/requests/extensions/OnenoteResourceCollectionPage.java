@@ -24,4 +24,14 @@ public class OnenoteResourceCollectionPage extends BaseCollectionPage<OnenoteRes
     public OnenoteResourceCollectionPage(final OnenoteResourceCollectionResponse response, final OnenoteResourceCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for OnenoteResource
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public OnenoteResourceCollectionPage(final java.util.List<OnenoteResource> pageContents, final OnenoteResourceCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

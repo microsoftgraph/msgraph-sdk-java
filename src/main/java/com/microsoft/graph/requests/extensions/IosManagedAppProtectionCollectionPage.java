@@ -24,4 +24,14 @@ public class IosManagedAppProtectionCollectionPage extends BaseCollectionPage<Io
     public IosManagedAppProtectionCollectionPage(final IosManagedAppProtectionCollectionResponse response, final IosManagedAppProtectionCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for IosManagedAppProtection
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public IosManagedAppProtectionCollectionPage(final java.util.List<IosManagedAppProtection> pageContents, final IosManagedAppProtectionCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

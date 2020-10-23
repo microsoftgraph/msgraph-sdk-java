@@ -24,4 +24,14 @@ public class InvitationCollectionPage extends BaseCollectionPage<Invitation, Inv
     public InvitationCollectionPage(final InvitationCollectionResponse response, final InvitationCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for Invitation
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public InvitationCollectionPage(final java.util.List<Invitation> pageContents, final InvitationCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

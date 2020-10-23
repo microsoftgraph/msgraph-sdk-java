@@ -24,4 +24,14 @@ public class ManagedDeviceMobileAppConfigurationUserStatusCollectionPage extends
     public ManagedDeviceMobileAppConfigurationUserStatusCollectionPage(final ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse response, final ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for ManagedDeviceMobileAppConfigurationUserStatus
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ManagedDeviceMobileAppConfigurationUserStatusCollectionPage(final java.util.List<ManagedDeviceMobileAppConfigurationUserStatus> pageContents, final ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

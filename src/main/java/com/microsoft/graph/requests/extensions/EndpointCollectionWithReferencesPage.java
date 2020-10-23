@@ -37,4 +37,14 @@ public class EndpointCollectionWithReferencesPage extends BaseCollectionPage<End
     public EndpointCollectionWithReferencesPage(final EndpointCollectionResponse response, final EndpointCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
+
+    /**
+     * Creates the collection page for Endpoint
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public EndpointCollectionWithReferencesPage(final java.util.List<Endpoint> pageContents, final EndpointCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -24,4 +24,14 @@ public class DeviceConfigurationUserStatusCollectionPage extends BaseCollectionP
     public DeviceConfigurationUserStatusCollectionPage(final DeviceConfigurationUserStatusCollectionResponse response, final DeviceConfigurationUserStatusCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for DeviceConfigurationUserStatus
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DeviceConfigurationUserStatusCollectionPage(final java.util.List<DeviceConfigurationUserStatus> pageContents, final DeviceConfigurationUserStatusCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

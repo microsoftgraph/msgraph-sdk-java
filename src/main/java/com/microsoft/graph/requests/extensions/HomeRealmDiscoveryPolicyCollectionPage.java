@@ -24,4 +24,14 @@ public class HomeRealmDiscoveryPolicyCollectionPage extends BaseCollectionPage<H
     public HomeRealmDiscoveryPolicyCollectionPage(final HomeRealmDiscoveryPolicyCollectionResponse response, final HomeRealmDiscoveryPolicyCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for HomeRealmDiscoveryPolicy
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public HomeRealmDiscoveryPolicyCollectionPage(final java.util.List<HomeRealmDiscoveryPolicy> pageContents, final HomeRealmDiscoveryPolicyCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

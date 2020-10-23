@@ -24,4 +24,14 @@ public class ResourceOperationCollectionPage extends BaseCollectionPage<Resource
     public ResourceOperationCollectionPage(final ResourceOperationCollectionResponse response, final ResourceOperationCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for ResourceOperation
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ResourceOperationCollectionPage(final java.util.List<ResourceOperation> pageContents, final ResourceOperationCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

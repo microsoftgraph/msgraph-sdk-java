@@ -24,4 +24,14 @@ public class SegmentCollectionPage extends BaseCollectionPage<Segment, SegmentCo
     public SegmentCollectionPage(final SegmentCollectionResponse response, final SegmentCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for Segment
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public SegmentCollectionPage(final java.util.List<Segment> pageContents, final SegmentCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

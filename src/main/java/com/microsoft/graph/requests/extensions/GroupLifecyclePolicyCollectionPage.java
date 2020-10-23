@@ -24,4 +24,14 @@ public class GroupLifecyclePolicyCollectionPage extends BaseCollectionPage<Group
     public GroupLifecyclePolicyCollectionPage(final GroupLifecyclePolicyCollectionResponse response, final GroupLifecyclePolicyCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for GroupLifecyclePolicy
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public GroupLifecyclePolicyCollectionPage(final java.util.List<GroupLifecyclePolicy> pageContents, final GroupLifecyclePolicyCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

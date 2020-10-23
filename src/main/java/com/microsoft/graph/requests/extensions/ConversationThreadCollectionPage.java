@@ -24,4 +24,14 @@ public class ConversationThreadCollectionPage extends BaseCollectionPage<Convers
     public ConversationThreadCollectionPage(final ConversationThreadCollectionResponse response, final ConversationThreadCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for ConversationThread
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ConversationThreadCollectionPage(final java.util.List<ConversationThread> pageContents, final ConversationThreadCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

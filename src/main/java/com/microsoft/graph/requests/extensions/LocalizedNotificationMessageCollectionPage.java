@@ -24,4 +24,14 @@ public class LocalizedNotificationMessageCollectionPage extends BaseCollectionPa
     public LocalizedNotificationMessageCollectionPage(final LocalizedNotificationMessageCollectionResponse response, final LocalizedNotificationMessageCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for LocalizedNotificationMessage
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public LocalizedNotificationMessageCollectionPage(final java.util.List<LocalizedNotificationMessage> pageContents, final LocalizedNotificationMessageCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

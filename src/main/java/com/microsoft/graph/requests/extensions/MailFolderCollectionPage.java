@@ -24,4 +24,14 @@ public class MailFolderCollectionPage extends BaseCollectionPage<MailFolder, Mai
     public MailFolderCollectionPage(final MailFolderCollectionResponse response, final MailFolderCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for MailFolder
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public MailFolderCollectionPage(final java.util.List<MailFolder> pageContents, final MailFolderCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

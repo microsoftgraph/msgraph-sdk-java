@@ -24,4 +24,14 @@ public class LicenseDetailsCollectionPage extends BaseCollectionPage<LicenseDeta
     public LicenseDetailsCollectionPage(final LicenseDetailsCollectionResponse response, final LicenseDetailsCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for LicenseDetails
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public LicenseDetailsCollectionPage(final java.util.List<LicenseDetails> pageContents, final LicenseDetailsCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

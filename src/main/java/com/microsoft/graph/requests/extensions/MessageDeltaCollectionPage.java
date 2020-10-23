@@ -32,4 +32,14 @@ public class MessageDeltaCollectionPage extends DeltaCollectionPage<Message, Mes
     public MessageDeltaCollectionPage(final MessageDeltaCollectionResponse response, final MessageDeltaCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for MessageDelta
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public MessageDeltaCollectionPage(final java.util.List<Message> pageContents, final MessageDeltaCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -24,4 +24,14 @@ public class ExtensionCollectionPage extends BaseCollectionPage<Extension, Exten
     public ExtensionCollectionPage(final ExtensionCollectionResponse response, final ExtensionCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for Extension
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ExtensionCollectionPage(final java.util.List<Extension> pageContents, final ExtensionCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

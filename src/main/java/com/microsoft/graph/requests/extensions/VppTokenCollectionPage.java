@@ -24,4 +24,14 @@ public class VppTokenCollectionPage extends BaseCollectionPage<VppToken, VppToke
     public VppTokenCollectionPage(final VppTokenCollectionResponse response, final VppTokenCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for VppToken
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public VppTokenCollectionPage(final java.util.List<VppToken> pageContents, final VppTokenCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -24,4 +24,14 @@ public class ContactFolderCollectionPage extends BaseCollectionPage<ContactFolde
     public ContactFolderCollectionPage(final ContactFolderCollectionResponse response, final ContactFolderCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for ContactFolder
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ContactFolderCollectionPage(final java.util.List<ContactFolder> pageContents, final ContactFolderCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -38,4 +38,14 @@ public class SiteCollectionWithReferencesPage extends BaseCollectionPage<Site, S
     public SiteCollectionWithReferencesPage(final SiteCollectionResponse response, final SiteCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
+
+    /**
+     * Creates the collection page for Site
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public SiteCollectionWithReferencesPage(final java.util.List<Site> pageContents, final SiteCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

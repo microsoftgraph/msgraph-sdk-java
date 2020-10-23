@@ -24,4 +24,14 @@ public class ColumnDefinitionCollectionPage extends BaseCollectionPage<ColumnDef
     public ColumnDefinitionCollectionPage(final ColumnDefinitionCollectionResponse response, final ColumnDefinitionCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for ColumnDefinition
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ColumnDefinitionCollectionPage(final java.util.List<ColumnDefinition> pageContents, final ColumnDefinitionCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

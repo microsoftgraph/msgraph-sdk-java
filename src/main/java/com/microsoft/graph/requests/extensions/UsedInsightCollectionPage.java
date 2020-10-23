@@ -24,4 +24,14 @@ public class UsedInsightCollectionPage extends BaseCollectionPage<UsedInsight, U
     public UsedInsightCollectionPage(final UsedInsightCollectionResponse response, final UsedInsightCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for UsedInsight
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public UsedInsightCollectionPage(final java.util.List<UsedInsight> pageContents, final UsedInsightCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

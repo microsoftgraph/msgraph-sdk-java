@@ -24,4 +24,14 @@ public class ManagedAppPolicyCollectionPage extends BaseCollectionPage<ManagedAp
     public ManagedAppPolicyCollectionPage(final ManagedAppPolicyCollectionResponse response, final ManagedAppPolicyCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for ManagedAppPolicy
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ManagedAppPolicyCollectionPage(final java.util.List<ManagedAppPolicy> pageContents, final ManagedAppPolicyCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -32,4 +32,14 @@ public class DirectoryObjectGetMemberGroupsCollectionPage extends BaseCollection
     public DirectoryObjectGetMemberGroupsCollectionPage(final DirectoryObjectGetMemberGroupsCollectionResponse response, final DirectoryObjectGetMemberGroupsCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for DirectoryObjectGetMemberGroups
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DirectoryObjectGetMemberGroupsCollectionPage(final java.util.List<String> pageContents, final DirectoryObjectGetMemberGroupsCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -24,4 +24,14 @@ public class SettingStateDeviceSummaryCollectionPage extends BaseCollectionPage<
     public SettingStateDeviceSummaryCollectionPage(final SettingStateDeviceSummaryCollectionResponse response, final SettingStateDeviceSummaryCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for SettingStateDeviceSummary
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public SettingStateDeviceSummaryCollectionPage(final java.util.List<SettingStateDeviceSummary> pageContents, final SettingStateDeviceSummaryCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

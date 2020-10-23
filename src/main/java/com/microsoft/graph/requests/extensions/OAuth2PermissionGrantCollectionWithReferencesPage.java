@@ -37,4 +37,14 @@ public class OAuth2PermissionGrantCollectionWithReferencesPage extends BaseColle
     public OAuth2PermissionGrantCollectionWithReferencesPage(final OAuth2PermissionGrantCollectionResponse response, final OAuth2PermissionGrantCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
+
+    /**
+     * Creates the collection page for OAuth2PermissionGrant
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public OAuth2PermissionGrantCollectionWithReferencesPage(final java.util.List<OAuth2PermissionGrant> pageContents, final OAuth2PermissionGrantCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -32,4 +32,14 @@ public class DirectoryObjectGetMemberObjectsCollectionPage extends BaseCollectio
     public DirectoryObjectGetMemberObjectsCollectionPage(final DirectoryObjectGetMemberObjectsCollectionResponse response, final DirectoryObjectGetMemberObjectsCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for DirectoryObjectGetMemberObjects
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DirectoryObjectGetMemberObjectsCollectionPage(final java.util.List<String> pageContents, final DirectoryObjectGetMemberObjectsCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

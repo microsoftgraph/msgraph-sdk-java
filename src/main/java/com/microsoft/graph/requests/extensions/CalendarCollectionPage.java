@@ -24,4 +24,14 @@ public class CalendarCollectionPage extends BaseCollectionPage<Calendar, Calenda
     public CalendarCollectionPage(final CalendarCollectionResponse response, final CalendarCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for Calendar
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public CalendarCollectionPage(final java.util.List<Calendar> pageContents, final CalendarCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -24,4 +24,14 @@ public class WorkbookRangeBorderCollectionPage extends BaseCollectionPage<Workbo
     public WorkbookRangeBorderCollectionPage(final WorkbookRangeBorderCollectionResponse response, final WorkbookRangeBorderCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for WorkbookRangeBorder
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public WorkbookRangeBorderCollectionPage(final java.util.List<WorkbookRangeBorder> pageContents, final WorkbookRangeBorderCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -24,4 +24,14 @@ public class SingleValueLegacyExtendedPropertyCollectionPage extends BaseCollect
     public SingleValueLegacyExtendedPropertyCollectionPage(final SingleValueLegacyExtendedPropertyCollectionResponse response, final SingleValueLegacyExtendedPropertyCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for SingleValueLegacyExtendedProperty
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public SingleValueLegacyExtendedPropertyCollectionPage(final java.util.List<SingleValueLegacyExtendedProperty> pageContents, final SingleValueLegacyExtendedPropertyCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

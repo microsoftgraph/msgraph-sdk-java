@@ -24,4 +24,14 @@ public class ItemActivityStatCollectionPage extends BaseCollectionPage<ItemActiv
     public ItemActivityStatCollectionPage(final ItemActivityStatCollectionResponse response, final ItemActivityStatCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for ItemActivityStat
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ItemActivityStatCollectionPage(final java.util.List<ItemActivityStat> pageContents, final ItemActivityStatCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

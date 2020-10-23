@@ -51,4 +51,14 @@ public class UserCollectionWithReferencesPage extends BaseCollectionPage<User, U
     public UserCollectionWithReferencesPage(final UserCollectionResponse response, final UserCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
+
+    /**
+     * Creates the collection page for User
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public UserCollectionWithReferencesPage(final java.util.List<User> pageContents, final UserCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

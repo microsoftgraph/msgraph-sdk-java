@@ -24,4 +24,14 @@ public class ManagedEBookCollectionPage extends BaseCollectionPage<ManagedEBook,
     public ManagedEBookCollectionPage(final ManagedEBookCollectionResponse response, final ManagedEBookCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for ManagedEBook
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ManagedEBookCollectionPage(final java.util.List<ManagedEBook> pageContents, final ManagedEBookCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

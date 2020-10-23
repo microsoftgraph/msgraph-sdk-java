@@ -24,4 +24,14 @@ public class WorkbookOperationCollectionPage extends BaseCollectionPage<Workbook
     public WorkbookOperationCollectionPage(final WorkbookOperationCollectionResponse response, final WorkbookOperationCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for WorkbookOperation
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public WorkbookOperationCollectionPage(final java.util.List<WorkbookOperation> pageContents, final WorkbookOperationCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

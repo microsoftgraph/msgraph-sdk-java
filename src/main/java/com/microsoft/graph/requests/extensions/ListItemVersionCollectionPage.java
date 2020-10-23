@@ -24,4 +24,14 @@ public class ListItemVersionCollectionPage extends BaseCollectionPage<ListItemVe
     public ListItemVersionCollectionPage(final ListItemVersionCollectionResponse response, final ListItemVersionCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for ListItemVersion
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ListItemVersionCollectionPage(final java.util.List<ListItemVersion> pageContents, final ListItemVersionCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

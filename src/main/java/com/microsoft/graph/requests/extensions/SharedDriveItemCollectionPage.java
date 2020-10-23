@@ -24,4 +24,14 @@ public class SharedDriveItemCollectionPage extends BaseCollectionPage<SharedDriv
     public SharedDriveItemCollectionPage(final SharedDriveItemCollectionResponse response, final SharedDriveItemCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for SharedDriveItem
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public SharedDriveItemCollectionPage(final java.util.List<SharedDriveItem> pageContents, final SharedDriveItemCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

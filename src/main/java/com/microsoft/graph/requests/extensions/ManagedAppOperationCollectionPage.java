@@ -24,4 +24,14 @@ public class ManagedAppOperationCollectionPage extends BaseCollectionPage<Manage
     public ManagedAppOperationCollectionPage(final ManagedAppOperationCollectionResponse response, final ManagedAppOperationCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for ManagedAppOperation
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ManagedAppOperationCollectionPage(final java.util.List<ManagedAppOperation> pageContents, final ManagedAppOperationCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -24,4 +24,14 @@ public class ContentTypeCollectionPage extends BaseCollectionPage<ContentType, C
     public ContentTypeCollectionPage(final ContentTypeCollectionResponse response, final ContentTypeCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for ContentType
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ContentTypeCollectionPage(final java.util.List<ContentType> pageContents, final ContentTypeCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

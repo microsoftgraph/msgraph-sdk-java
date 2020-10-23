@@ -32,4 +32,14 @@ public class ContactDeltaCollectionPage extends DeltaCollectionPage<Contact, Con
     public ContactDeltaCollectionPage(final ContactDeltaCollectionResponse response, final ContactDeltaCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for ContactDelta
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ContactDeltaCollectionPage(final java.util.List<Contact> pageContents, final ContactDeltaCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -24,4 +24,14 @@ public class DeviceCollectionPage extends BaseCollectionPage<Device, DeviceColle
     public DeviceCollectionPage(final DeviceCollectionResponse response, final DeviceCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for Device
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DeviceCollectionPage(final java.util.List<Device> pageContents, final DeviceCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

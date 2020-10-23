@@ -37,4 +37,14 @@ public class EducationSchoolCollectionWithReferencesPage extends BaseCollectionP
     public EducationSchoolCollectionWithReferencesPage(final EducationSchoolCollectionResponse response, final EducationSchoolCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
+
+    /**
+     * Creates the collection page for EducationSchool
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public EducationSchoolCollectionWithReferencesPage(final java.util.List<EducationSchool> pageContents, final EducationSchoolCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

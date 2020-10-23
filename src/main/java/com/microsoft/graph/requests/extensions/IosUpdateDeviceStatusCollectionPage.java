@@ -24,4 +24,14 @@ public class IosUpdateDeviceStatusCollectionPage extends BaseCollectionPage<IosU
     public IosUpdateDeviceStatusCollectionPage(final IosUpdateDeviceStatusCollectionResponse response, final IosUpdateDeviceStatusCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for IosUpdateDeviceStatus
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public IosUpdateDeviceStatusCollectionPage(final java.util.List<IosUpdateDeviceStatus> pageContents, final IosUpdateDeviceStatusCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

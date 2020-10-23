@@ -24,4 +24,14 @@ public class RemoteAssistancePartnerCollectionPage extends BaseCollectionPage<Re
     public RemoteAssistancePartnerCollectionPage(final RemoteAssistancePartnerCollectionResponse response, final RemoteAssistancePartnerCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for RemoteAssistancePartner
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public RemoteAssistancePartnerCollectionPage(final java.util.List<RemoteAssistancePartner> pageContents, final RemoteAssistancePartnerCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -24,4 +24,14 @@ public class ManagedAppStatusCollectionPage extends BaseCollectionPage<ManagedAp
     public ManagedAppStatusCollectionPage(final ManagedAppStatusCollectionResponse response, final ManagedAppStatusCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for ManagedAppStatus
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ManagedAppStatusCollectionPage(final java.util.List<ManagedAppStatus> pageContents, final ManagedAppStatusCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

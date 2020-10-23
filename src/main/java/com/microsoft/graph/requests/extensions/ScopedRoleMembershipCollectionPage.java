@@ -24,4 +24,14 @@ public class ScopedRoleMembershipCollectionPage extends BaseCollectionPage<Scope
     public ScopedRoleMembershipCollectionPage(final ScopedRoleMembershipCollectionResponse response, final ScopedRoleMembershipCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for ScopedRoleMembership
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ScopedRoleMembershipCollectionPage(final java.util.List<ScopedRoleMembership> pageContents, final ScopedRoleMembershipCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

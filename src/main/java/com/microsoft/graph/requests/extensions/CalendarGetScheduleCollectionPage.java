@@ -33,4 +33,14 @@ public class CalendarGetScheduleCollectionPage extends BaseCollectionPage<Schedu
     public CalendarGetScheduleCollectionPage(final CalendarGetScheduleCollectionResponse response, final CalendarGetScheduleCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for CalendarGetSchedule
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public CalendarGetScheduleCollectionPage(final java.util.List<ScheduleInformation> pageContents, final CalendarGetScheduleCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

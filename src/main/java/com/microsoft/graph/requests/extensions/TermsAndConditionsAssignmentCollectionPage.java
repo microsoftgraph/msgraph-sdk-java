@@ -24,4 +24,14 @@ public class TermsAndConditionsAssignmentCollectionPage extends BaseCollectionPa
     public TermsAndConditionsAssignmentCollectionPage(final TermsAndConditionsAssignmentCollectionResponse response, final TermsAndConditionsAssignmentCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for TermsAndConditionsAssignment
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public TermsAndConditionsAssignmentCollectionPage(final java.util.List<TermsAndConditionsAssignment> pageContents, final TermsAndConditionsAssignmentCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

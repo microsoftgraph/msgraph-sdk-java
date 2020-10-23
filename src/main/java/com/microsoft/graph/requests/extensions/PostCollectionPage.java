@@ -24,4 +24,14 @@ public class PostCollectionPage extends BaseCollectionPage<Post, PostCollectionR
     public PostCollectionPage(final PostCollectionResponse response, final PostCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for Post
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public PostCollectionPage(final java.util.List<Post> pageContents, final PostCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

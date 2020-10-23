@@ -24,4 +24,14 @@ public class MdmWindowsInformationProtectionPolicyCollectionPage extends BaseCol
     public MdmWindowsInformationProtectionPolicyCollectionPage(final MdmWindowsInformationProtectionPolicyCollectionResponse response, final MdmWindowsInformationProtectionPolicyCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for MdmWindowsInformationProtectionPolicy
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public MdmWindowsInformationProtectionPolicyCollectionPage(final java.util.List<MdmWindowsInformationProtectionPolicy> pageContents, final MdmWindowsInformationProtectionPolicyCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

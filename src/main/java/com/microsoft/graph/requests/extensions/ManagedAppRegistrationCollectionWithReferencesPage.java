@@ -37,4 +37,14 @@ public class ManagedAppRegistrationCollectionWithReferencesPage extends BaseColl
     public ManagedAppRegistrationCollectionWithReferencesPage(final ManagedAppRegistrationCollectionResponse response, final ManagedAppRegistrationCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
+
+    /**
+     * Creates the collection page for ManagedAppRegistration
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ManagedAppRegistrationCollectionWithReferencesPage(final java.util.List<ManagedAppRegistration> pageContents, final ManagedAppRegistrationCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

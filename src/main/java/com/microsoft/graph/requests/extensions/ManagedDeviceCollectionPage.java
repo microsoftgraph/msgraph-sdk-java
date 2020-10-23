@@ -24,4 +24,14 @@ public class ManagedDeviceCollectionPage extends BaseCollectionPage<ManagedDevic
     public ManagedDeviceCollectionPage(final ManagedDeviceCollectionResponse response, final ManagedDeviceCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for ManagedDevice
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ManagedDeviceCollectionPage(final java.util.List<ManagedDevice> pageContents, final ManagedDeviceCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -32,4 +32,14 @@ public class SiteRemoveCollectionPage extends BaseCollectionPage<Site, SiteRemov
     public SiteRemoveCollectionPage(final SiteRemoveCollectionResponse response, final SiteRemoveCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for SiteRemove
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public SiteRemoveCollectionPage(final java.util.List<Site> pageContents, final SiteRemoveCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

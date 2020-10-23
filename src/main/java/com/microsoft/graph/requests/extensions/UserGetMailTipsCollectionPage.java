@@ -34,4 +34,14 @@ public class UserGetMailTipsCollectionPage extends BaseCollectionPage<MailTips, 
     public UserGetMailTipsCollectionPage(final UserGetMailTipsCollectionResponse response, final UserGetMailTipsCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for UserGetMailTips
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public UserGetMailTipsCollectionPage(final java.util.List<MailTips> pageContents, final UserGetMailTipsCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

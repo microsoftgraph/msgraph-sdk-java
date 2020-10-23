@@ -24,4 +24,14 @@ public class EventCollectionPage extends BaseCollectionPage<Event, EventCollecti
     public EventCollectionPage(final EventCollectionResponse response, final EventCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for Event
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public EventCollectionPage(final java.util.List<Event> pageContents, final EventCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

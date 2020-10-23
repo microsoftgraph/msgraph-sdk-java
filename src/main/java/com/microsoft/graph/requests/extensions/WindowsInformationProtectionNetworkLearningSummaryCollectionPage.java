@@ -24,4 +24,14 @@ public class WindowsInformationProtectionNetworkLearningSummaryCollectionPage ex
     public WindowsInformationProtectionNetworkLearningSummaryCollectionPage(final WindowsInformationProtectionNetworkLearningSummaryCollectionResponse response, final WindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for WindowsInformationProtectionNetworkLearningSummary
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public WindowsInformationProtectionNetworkLearningSummaryCollectionPage(final java.util.List<WindowsInformationProtectionNetworkLearningSummary> pageContents, final WindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

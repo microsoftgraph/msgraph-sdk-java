@@ -24,4 +24,14 @@ public class WindowsInformationProtectionPolicyCollectionPage extends BaseCollec
     public WindowsInformationProtectionPolicyCollectionPage(final WindowsInformationProtectionPolicyCollectionResponse response, final WindowsInformationProtectionPolicyCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for WindowsInformationProtectionPolicy
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public WindowsInformationProtectionPolicyCollectionPage(final java.util.List<WindowsInformationProtectionPolicy> pageContents, final WindowsInformationProtectionPolicyCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

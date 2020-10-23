@@ -37,4 +37,14 @@ public class EducationClassCollectionWithReferencesPage extends BaseCollectionPa
     public EducationClassCollectionWithReferencesPage(final EducationClassCollectionResponse response, final EducationClassCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
+
+    /**
+     * Creates the collection page for EducationClass
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public EducationClassCollectionWithReferencesPage(final java.util.List<EducationClass> pageContents, final EducationClassCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

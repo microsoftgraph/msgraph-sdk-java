@@ -24,4 +24,14 @@ public class TokenLifetimePolicyCollectionPage extends BaseCollectionPage<TokenL
     public TokenLifetimePolicyCollectionPage(final TokenLifetimePolicyCollectionResponse response, final TokenLifetimePolicyCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for TokenLifetimePolicy
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public TokenLifetimePolicyCollectionPage(final java.util.List<TokenLifetimePolicy> pageContents, final TokenLifetimePolicyCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

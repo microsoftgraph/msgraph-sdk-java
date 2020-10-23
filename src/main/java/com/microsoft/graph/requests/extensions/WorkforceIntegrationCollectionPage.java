@@ -24,4 +24,14 @@ public class WorkforceIntegrationCollectionPage extends BaseCollectionPage<Workf
     public WorkforceIntegrationCollectionPage(final WorkforceIntegrationCollectionResponse response, final WorkforceIntegrationCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for WorkforceIntegration
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public WorkforceIntegrationCollectionPage(final java.util.List<WorkforceIntegration> pageContents, final WorkforceIntegrationCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

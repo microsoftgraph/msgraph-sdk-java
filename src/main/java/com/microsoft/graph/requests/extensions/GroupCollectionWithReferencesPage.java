@@ -38,4 +38,14 @@ public class GroupCollectionWithReferencesPage extends BaseCollectionPage<Group,
     public GroupCollectionWithReferencesPage(final GroupCollectionResponse response, final GroupCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
+
+    /**
+     * Creates the collection page for Group
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public GroupCollectionWithReferencesPage(final java.util.List<Group> pageContents, final GroupCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

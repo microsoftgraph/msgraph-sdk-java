@@ -24,4 +24,14 @@ public class UserScopeTeamsAppInstallationCollectionPage extends BaseCollectionP
     public UserScopeTeamsAppInstallationCollectionPage(final UserScopeTeamsAppInstallationCollectionResponse response, final UserScopeTeamsAppInstallationCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for UserScopeTeamsAppInstallation
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public UserScopeTeamsAppInstallationCollectionPage(final java.util.List<UserScopeTeamsAppInstallation> pageContents, final UserScopeTeamsAppInstallationCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -24,4 +24,14 @@ public class ChatMessageCollectionPage extends BaseCollectionPage<ChatMessage, C
     public ChatMessageCollectionPage(final ChatMessageCollectionResponse response, final ChatMessageCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for ChatMessage
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ChatMessageCollectionPage(final java.util.List<ChatMessage> pageContents, final ChatMessageCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

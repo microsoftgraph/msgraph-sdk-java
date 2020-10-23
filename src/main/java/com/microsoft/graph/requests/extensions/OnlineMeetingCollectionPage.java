@@ -24,4 +24,14 @@ public class OnlineMeetingCollectionPage extends BaseCollectionPage<OnlineMeetin
     public OnlineMeetingCollectionPage(final OnlineMeetingCollectionResponse response, final OnlineMeetingCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for OnlineMeeting
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public OnlineMeetingCollectionPage(final java.util.List<OnlineMeeting> pageContents, final OnlineMeetingCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

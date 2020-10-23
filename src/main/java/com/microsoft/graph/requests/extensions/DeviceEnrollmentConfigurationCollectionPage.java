@@ -24,4 +24,14 @@ public class DeviceEnrollmentConfigurationCollectionPage extends BaseCollectionP
     public DeviceEnrollmentConfigurationCollectionPage(final DeviceEnrollmentConfigurationCollectionResponse response, final DeviceEnrollmentConfigurationCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for DeviceEnrollmentConfiguration
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DeviceEnrollmentConfigurationCollectionPage(final java.util.List<DeviceEnrollmentConfiguration> pageContents, final DeviceEnrollmentConfigurationCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

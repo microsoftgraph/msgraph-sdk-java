@@ -32,4 +32,14 @@ public class DriveRecentCollectionPage extends BaseCollectionPage<DriveItem, Dri
     public DriveRecentCollectionPage(final DriveRecentCollectionResponse response, final DriveRecentCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for DriveRecent
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DriveRecentCollectionPage(final java.util.List<DriveItem> pageContents, final DriveRecentCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

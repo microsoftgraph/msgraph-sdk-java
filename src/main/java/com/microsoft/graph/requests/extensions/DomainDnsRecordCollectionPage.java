@@ -24,4 +24,14 @@ public class DomainDnsRecordCollectionPage extends BaseCollectionPage<DomainDnsR
     public DomainDnsRecordCollectionPage(final DomainDnsRecordCollectionResponse response, final DomainDnsRecordCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for DomainDnsRecord
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DomainDnsRecordCollectionPage(final java.util.List<DomainDnsRecord> pageContents, final DomainDnsRecordCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

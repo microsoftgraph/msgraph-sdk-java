@@ -37,4 +37,14 @@ public class CertificateBasedAuthConfigurationCollectionWithReferencesPage exten
     public CertificateBasedAuthConfigurationCollectionWithReferencesPage(final CertificateBasedAuthConfigurationCollectionResponse response, final CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
+
+    /**
+     * Creates the collection page for CertificateBasedAuthConfiguration
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public CertificateBasedAuthConfigurationCollectionWithReferencesPage(final java.util.List<CertificateBasedAuthConfiguration> pageContents, final CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

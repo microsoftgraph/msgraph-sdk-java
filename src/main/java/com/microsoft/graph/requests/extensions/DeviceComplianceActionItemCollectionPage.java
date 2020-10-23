@@ -24,4 +24,14 @@ public class DeviceComplianceActionItemCollectionPage extends BaseCollectionPage
     public DeviceComplianceActionItemCollectionPage(final DeviceComplianceActionItemCollectionResponse response, final DeviceComplianceActionItemCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for DeviceComplianceActionItem
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DeviceComplianceActionItemCollectionPage(final java.util.List<DeviceComplianceActionItem> pageContents, final DeviceComplianceActionItemCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

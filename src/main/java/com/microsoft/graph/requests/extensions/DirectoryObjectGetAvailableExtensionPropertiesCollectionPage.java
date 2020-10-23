@@ -32,4 +32,14 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionPage extend
     public DirectoryObjectGetAvailableExtensionPropertiesCollectionPage(final DirectoryObjectGetAvailableExtensionPropertiesCollectionResponse response, final DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for DirectoryObjectGetAvailableExtensionProperties
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DirectoryObjectGetAvailableExtensionPropertiesCollectionPage(final java.util.List<ExtensionProperty> pageContents, final DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

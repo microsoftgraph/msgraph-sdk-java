@@ -32,4 +32,14 @@ public class NotebookGetRecentNotebooksCollectionPage extends BaseCollectionPage
     public NotebookGetRecentNotebooksCollectionPage(final NotebookGetRecentNotebooksCollectionResponse response, final NotebookGetRecentNotebooksCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for NotebookGetRecentNotebooks
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public NotebookGetRecentNotebooksCollectionPage(final java.util.List<RecentNotebook> pageContents, final NotebookGetRecentNotebooksCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

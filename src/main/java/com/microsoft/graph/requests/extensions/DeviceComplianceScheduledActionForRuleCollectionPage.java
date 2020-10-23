@@ -24,4 +24,14 @@ public class DeviceComplianceScheduledActionForRuleCollectionPage extends BaseCo
     public DeviceComplianceScheduledActionForRuleCollectionPage(final DeviceComplianceScheduledActionForRuleCollectionResponse response, final DeviceComplianceScheduledActionForRuleCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for DeviceComplianceScheduledActionForRule
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DeviceComplianceScheduledActionForRuleCollectionPage(final java.util.List<DeviceComplianceScheduledActionForRule> pageContents, final DeviceComplianceScheduledActionForRuleCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

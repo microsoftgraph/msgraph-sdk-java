@@ -37,4 +37,14 @@ public class TokenIssuancePolicyCollectionWithReferencesPage extends BaseCollect
     public TokenIssuancePolicyCollectionWithReferencesPage(final TokenIssuancePolicyCollectionResponse response, final TokenIssuancePolicyCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
+
+    /**
+     * Creates the collection page for TokenIssuancePolicy
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public TokenIssuancePolicyCollectionWithReferencesPage(final java.util.List<TokenIssuancePolicy> pageContents, final TokenIssuancePolicyCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

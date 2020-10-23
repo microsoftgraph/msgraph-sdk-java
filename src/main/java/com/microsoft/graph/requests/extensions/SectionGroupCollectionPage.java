@@ -24,4 +24,14 @@ public class SectionGroupCollectionPage extends BaseCollectionPage<SectionGroup,
     public SectionGroupCollectionPage(final SectionGroupCollectionResponse response, final SectionGroupCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for SectionGroup
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public SectionGroupCollectionPage(final java.util.List<SectionGroup> pageContents, final SectionGroupCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

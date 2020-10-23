@@ -32,4 +32,14 @@ public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectio
     public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage(final ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionResponse response, final ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistration
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage(final java.util.List<String> pageContents, final ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

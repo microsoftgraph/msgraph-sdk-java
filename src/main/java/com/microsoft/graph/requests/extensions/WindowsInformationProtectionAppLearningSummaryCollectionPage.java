@@ -24,4 +24,14 @@ public class WindowsInformationProtectionAppLearningSummaryCollectionPage extend
     public WindowsInformationProtectionAppLearningSummaryCollectionPage(final WindowsInformationProtectionAppLearningSummaryCollectionResponse response, final WindowsInformationProtectionAppLearningSummaryCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for WindowsInformationProtectionAppLearningSummary
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public WindowsInformationProtectionAppLearningSummaryCollectionPage(final java.util.List<WindowsInformationProtectionAppLearningSummary> pageContents, final WindowsInformationProtectionAppLearningSummaryCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

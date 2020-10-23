@@ -24,4 +24,14 @@ public class EndpointCollectionPage extends BaseCollectionPage<Endpoint, Endpoin
     public EndpointCollectionPage(final EndpointCollectionResponse response, final EndpointCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for Endpoint
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public EndpointCollectionPage(final java.util.List<Endpoint> pageContents, final EndpointCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

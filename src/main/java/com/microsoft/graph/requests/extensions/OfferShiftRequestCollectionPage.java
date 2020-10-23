@@ -24,4 +24,14 @@ public class OfferShiftRequestCollectionPage extends BaseCollectionPage<OfferShi
     public OfferShiftRequestCollectionPage(final OfferShiftRequestCollectionResponse response, final OfferShiftRequestCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for OfferShiftRequest
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public OfferShiftRequestCollectionPage(final java.util.List<OfferShiftRequest> pageContents, final OfferShiftRequestCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

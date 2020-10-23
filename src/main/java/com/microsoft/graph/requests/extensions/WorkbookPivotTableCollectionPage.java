@@ -24,4 +24,14 @@ public class WorkbookPivotTableCollectionPage extends BaseCollectionPage<Workboo
     public WorkbookPivotTableCollectionPage(final WorkbookPivotTableCollectionResponse response, final WorkbookPivotTableCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for WorkbookPivotTable
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public WorkbookPivotTableCollectionPage(final java.util.List<WorkbookPivotTable> pageContents, final WorkbookPivotTableCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -24,4 +24,14 @@ public class RoleAssignmentCollectionPage extends BaseCollectionPage<RoleAssignm
     public RoleAssignmentCollectionPage(final RoleAssignmentCollectionResponse response, final RoleAssignmentCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for RoleAssignment
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public RoleAssignmentCollectionPage(final java.util.List<RoleAssignment> pageContents, final RoleAssignmentCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

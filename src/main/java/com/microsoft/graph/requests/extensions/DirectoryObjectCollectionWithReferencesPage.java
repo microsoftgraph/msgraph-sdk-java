@@ -38,4 +38,14 @@ public class DirectoryObjectCollectionWithReferencesPage extends BaseCollectionP
     public DirectoryObjectCollectionWithReferencesPage(final DirectoryObjectCollectionResponse response, final DirectoryObjectCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
+
+    /**
+     * Creates the collection page for DirectoryObject
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DirectoryObjectCollectionWithReferencesPage(final java.util.List<DirectoryObject> pageContents, final DirectoryObjectCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

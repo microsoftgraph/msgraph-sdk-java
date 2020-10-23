@@ -37,4 +37,14 @@ public class ClaimsMappingPolicyCollectionWithReferencesPage extends BaseCollect
     public ClaimsMappingPolicyCollectionWithReferencesPage(final ClaimsMappingPolicyCollectionResponse response, final ClaimsMappingPolicyCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
+
+    /**
+     * Creates the collection page for ClaimsMappingPolicy
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ClaimsMappingPolicyCollectionWithReferencesPage(final java.util.List<ClaimsMappingPolicy> pageContents, final ClaimsMappingPolicyCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

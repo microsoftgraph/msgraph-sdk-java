@@ -24,4 +24,14 @@ public class SecureScoreControlProfileCollectionPage extends BaseCollectionPage<
     public SecureScoreControlProfileCollectionPage(final SecureScoreControlProfileCollectionResponse response, final SecureScoreControlProfileCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for SecureScoreControlProfile
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public SecureScoreControlProfileCollectionPage(final java.util.List<SecureScoreControlProfile> pageContents, final SecureScoreControlProfileCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

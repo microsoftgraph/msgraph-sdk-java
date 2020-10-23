@@ -24,4 +24,14 @@ public class CertificateBasedAuthConfigurationCollectionPage extends BaseCollect
     public CertificateBasedAuthConfigurationCollectionPage(final CertificateBasedAuthConfigurationCollectionResponse response, final CertificateBasedAuthConfigurationCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for CertificateBasedAuthConfiguration
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public CertificateBasedAuthConfigurationCollectionPage(final java.util.List<CertificateBasedAuthConfiguration> pageContents, final CertificateBasedAuthConfigurationCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

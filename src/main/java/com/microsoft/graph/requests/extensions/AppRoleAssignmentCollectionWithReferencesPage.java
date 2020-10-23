@@ -37,4 +37,14 @@ public class AppRoleAssignmentCollectionWithReferencesPage extends BaseCollectio
     public AppRoleAssignmentCollectionWithReferencesPage(final AppRoleAssignmentCollectionResponse response, final AppRoleAssignmentCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
+
+    /**
+     * Creates the collection page for AppRoleAssignment
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public AppRoleAssignmentCollectionWithReferencesPage(final java.util.List<AppRoleAssignment> pageContents, final AppRoleAssignmentCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -24,4 +24,14 @@ public class ClaimsMappingPolicyCollectionPage extends BaseCollectionPage<Claims
     public ClaimsMappingPolicyCollectionPage(final ClaimsMappingPolicyCollectionResponse response, final ClaimsMappingPolicyCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for ClaimsMappingPolicy
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ClaimsMappingPolicyCollectionPage(final java.util.List<ClaimsMappingPolicy> pageContents, final ClaimsMappingPolicyCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

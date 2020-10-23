@@ -24,4 +24,14 @@ public class MobileAppCollectionPage extends BaseCollectionPage<MobileApp, Mobil
     public MobileAppCollectionPage(final MobileAppCollectionResponse response, final MobileAppCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for MobileApp
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public MobileAppCollectionPage(final java.util.List<MobileApp> pageContents, final MobileAppCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

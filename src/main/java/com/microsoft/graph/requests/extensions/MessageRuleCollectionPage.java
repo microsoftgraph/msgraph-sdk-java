@@ -24,4 +24,14 @@ public class MessageRuleCollectionPage extends BaseCollectionPage<MessageRule, M
     public MessageRuleCollectionPage(final MessageRuleCollectionResponse response, final MessageRuleCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for MessageRule
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public MessageRuleCollectionPage(final java.util.List<MessageRule> pageContents, final MessageRuleCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

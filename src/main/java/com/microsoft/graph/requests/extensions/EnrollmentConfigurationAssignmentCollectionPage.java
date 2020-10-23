@@ -24,4 +24,14 @@ public class EnrollmentConfigurationAssignmentCollectionPage extends BaseCollect
     public EnrollmentConfigurationAssignmentCollectionPage(final EnrollmentConfigurationAssignmentCollectionResponse response, final EnrollmentConfigurationAssignmentCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for EnrollmentConfigurationAssignment
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public EnrollmentConfigurationAssignmentCollectionPage(final java.util.List<EnrollmentConfigurationAssignment> pageContents, final EnrollmentConfigurationAssignmentCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

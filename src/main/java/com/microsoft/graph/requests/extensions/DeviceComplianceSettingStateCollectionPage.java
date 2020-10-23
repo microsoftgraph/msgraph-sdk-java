@@ -24,4 +24,14 @@ public class DeviceComplianceSettingStateCollectionPage extends BaseCollectionPa
     public DeviceComplianceSettingStateCollectionPage(final DeviceComplianceSettingStateCollectionResponse response, final DeviceComplianceSettingStateCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for DeviceComplianceSettingState
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DeviceComplianceSettingStateCollectionPage(final java.util.List<DeviceComplianceSettingState> pageContents, final DeviceComplianceSettingStateCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

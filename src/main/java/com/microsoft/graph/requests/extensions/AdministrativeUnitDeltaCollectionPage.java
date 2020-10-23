@@ -32,4 +32,14 @@ public class AdministrativeUnitDeltaCollectionPage extends DeltaCollectionPage<A
     public AdministrativeUnitDeltaCollectionPage(final AdministrativeUnitDeltaCollectionResponse response, final AdministrativeUnitDeltaCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for AdministrativeUnitDelta
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public AdministrativeUnitDeltaCollectionPage(final java.util.List<AdministrativeUnit> pageContents, final AdministrativeUnitDeltaCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

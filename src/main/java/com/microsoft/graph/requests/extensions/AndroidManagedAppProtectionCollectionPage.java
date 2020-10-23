@@ -24,4 +24,14 @@ public class AndroidManagedAppProtectionCollectionPage extends BaseCollectionPag
     public AndroidManagedAppProtectionCollectionPage(final AndroidManagedAppProtectionCollectionResponse response, final AndroidManagedAppProtectionCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for AndroidManagedAppProtection
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public AndroidManagedAppProtectionCollectionPage(final java.util.List<AndroidManagedAppProtection> pageContents, final AndroidManagedAppProtectionCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -24,4 +24,14 @@ public class DataPolicyOperationCollectionPage extends BaseCollectionPage<DataPo
     public DataPolicyOperationCollectionPage(final DataPolicyOperationCollectionResponse response, final DataPolicyOperationCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for DataPolicyOperation
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DataPolicyOperationCollectionPage(final java.util.List<DataPolicyOperation> pageContents, final DataPolicyOperationCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

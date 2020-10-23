@@ -32,4 +32,14 @@ public class DirectoryObjectCheckMemberObjectsCollectionPage extends BaseCollect
     public DirectoryObjectCheckMemberObjectsCollectionPage(final DirectoryObjectCheckMemberObjectsCollectionResponse response, final DirectoryObjectCheckMemberObjectsCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for DirectoryObjectCheckMemberObjects
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DirectoryObjectCheckMemberObjectsCollectionPage(final java.util.List<String> pageContents, final DirectoryObjectCheckMemberObjectsCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

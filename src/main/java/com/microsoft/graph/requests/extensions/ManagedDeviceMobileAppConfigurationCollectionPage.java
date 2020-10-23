@@ -24,4 +24,14 @@ public class ManagedDeviceMobileAppConfigurationCollectionPage extends BaseColle
     public ManagedDeviceMobileAppConfigurationCollectionPage(final ManagedDeviceMobileAppConfigurationCollectionResponse response, final ManagedDeviceMobileAppConfigurationCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for ManagedDeviceMobileAppConfiguration
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ManagedDeviceMobileAppConfigurationCollectionPage(final java.util.List<ManagedDeviceMobileAppConfiguration> pageContents, final ManagedDeviceMobileAppConfigurationCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

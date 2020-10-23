@@ -32,4 +32,14 @@ public class UserGetManagedAppDiagnosticStatusesCollectionPage extends BaseColle
     public UserGetManagedAppDiagnosticStatusesCollectionPage(final UserGetManagedAppDiagnosticStatusesCollectionResponse response, final UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for UserGetManagedAppDiagnosticStatuses
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public UserGetManagedAppDiagnosticStatusesCollectionPage(final java.util.List<ManagedAppDiagnosticStatus> pageContents, final UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

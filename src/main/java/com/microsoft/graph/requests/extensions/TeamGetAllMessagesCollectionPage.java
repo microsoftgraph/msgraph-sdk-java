@@ -32,4 +32,14 @@ public class TeamGetAllMessagesCollectionPage extends BaseCollectionPage<ChatMes
     public TeamGetAllMessagesCollectionPage(final TeamGetAllMessagesCollectionResponse response, final TeamGetAllMessagesCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for TeamGetAllMessages
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public TeamGetAllMessagesCollectionPage(final java.util.List<ChatMessage> pageContents, final TeamGetAllMessagesCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

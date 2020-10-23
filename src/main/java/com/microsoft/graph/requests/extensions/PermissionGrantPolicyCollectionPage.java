@@ -24,4 +24,14 @@ public class PermissionGrantPolicyCollectionPage extends BaseCollectionPage<Perm
     public PermissionGrantPolicyCollectionPage(final PermissionGrantPolicyCollectionResponse response, final PermissionGrantPolicyCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for PermissionGrantPolicy
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public PermissionGrantPolicyCollectionPage(final java.util.List<PermissionGrantPolicy> pageContents, final PermissionGrantPolicyCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

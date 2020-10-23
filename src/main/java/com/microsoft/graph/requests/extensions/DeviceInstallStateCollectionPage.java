@@ -24,4 +24,14 @@ public class DeviceInstallStateCollectionPage extends BaseCollectionPage<DeviceI
     public DeviceInstallStateCollectionPage(final DeviceInstallStateCollectionResponse response, final DeviceInstallStateCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for DeviceInstallState
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DeviceInstallStateCollectionPage(final java.util.List<DeviceInstallState> pageContents, final DeviceInstallStateCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

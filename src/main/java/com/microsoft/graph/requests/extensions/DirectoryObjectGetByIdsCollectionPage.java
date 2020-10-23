@@ -32,4 +32,14 @@ public class DirectoryObjectGetByIdsCollectionPage extends BaseCollectionPage<Di
     public DirectoryObjectGetByIdsCollectionPage(final DirectoryObjectGetByIdsCollectionResponse response, final DirectoryObjectGetByIdsCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for DirectoryObjectGetByIds
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DirectoryObjectGetByIdsCollectionPage(final java.util.List<DirectoryObject> pageContents, final DirectoryObjectGetByIdsCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

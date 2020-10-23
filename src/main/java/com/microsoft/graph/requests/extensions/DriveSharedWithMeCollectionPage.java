@@ -32,4 +32,14 @@ public class DriveSharedWithMeCollectionPage extends BaseCollectionPage<DriveIte
     public DriveSharedWithMeCollectionPage(final DriveSharedWithMeCollectionResponse response, final DriveSharedWithMeCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for DriveSharedWithMe
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DriveSharedWithMeCollectionPage(final java.util.List<DriveItem> pageContents, final DriveSharedWithMeCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

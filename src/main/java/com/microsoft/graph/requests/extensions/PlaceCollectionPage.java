@@ -24,4 +24,14 @@ public class PlaceCollectionPage extends BaseCollectionPage<Place, PlaceCollecti
     public PlaceCollectionPage(final PlaceCollectionResponse response, final PlaceCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for Place
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public PlaceCollectionPage(final java.util.List<Place> pageContents, final PlaceCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

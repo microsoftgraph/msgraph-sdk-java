@@ -24,4 +24,14 @@ public class TermsAndConditionsAcceptanceStatusCollectionPage extends BaseCollec
     public TermsAndConditionsAcceptanceStatusCollectionPage(final TermsAndConditionsAcceptanceStatusCollectionResponse response, final TermsAndConditionsAcceptanceStatusCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for TermsAndConditionsAcceptanceStatus
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public TermsAndConditionsAcceptanceStatusCollectionPage(final java.util.List<TermsAndConditionsAcceptanceStatus> pageContents, final TermsAndConditionsAcceptanceStatusCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -24,4 +24,14 @@ public class NotificationMessageTemplateCollectionPage extends BaseCollectionPag
     public NotificationMessageTemplateCollectionPage(final NotificationMessageTemplateCollectionResponse response, final NotificationMessageTemplateCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for NotificationMessageTemplate
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public NotificationMessageTemplateCollectionPage(final java.util.List<NotificationMessageTemplate> pageContents, final NotificationMessageTemplateCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

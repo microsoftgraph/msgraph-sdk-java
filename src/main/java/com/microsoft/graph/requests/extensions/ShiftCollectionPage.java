@@ -24,4 +24,14 @@ public class ShiftCollectionPage extends BaseCollectionPage<Shift, ShiftCollecti
     public ShiftCollectionPage(final ShiftCollectionResponse response, final ShiftCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for Shift
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ShiftCollectionPage(final java.util.List<Shift> pageContents, final ShiftCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

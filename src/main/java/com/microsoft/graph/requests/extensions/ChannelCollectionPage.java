@@ -24,4 +24,14 @@ public class ChannelCollectionPage extends BaseCollectionPage<Channel, ChannelCo
     public ChannelCollectionPage(final ChannelCollectionResponse response, final ChannelCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for Channel
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ChannelCollectionPage(final java.util.List<Channel> pageContents, final ChannelCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

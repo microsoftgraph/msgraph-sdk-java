@@ -24,4 +24,14 @@ public class TargetedManagedAppConfigurationCollectionPage extends BaseCollectio
     public TargetedManagedAppConfigurationCollectionPage(final TargetedManagedAppConfigurationCollectionResponse response, final TargetedManagedAppConfigurationCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for TargetedManagedAppConfiguration
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public TargetedManagedAppConfigurationCollectionPage(final java.util.List<TargetedManagedAppConfiguration> pageContents, final TargetedManagedAppConfigurationCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

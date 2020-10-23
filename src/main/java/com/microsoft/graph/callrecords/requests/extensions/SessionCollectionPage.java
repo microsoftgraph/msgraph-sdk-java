@@ -24,4 +24,14 @@ public class SessionCollectionPage extends BaseCollectionPage<Session, SessionCo
     public SessionCollectionPage(final SessionCollectionResponse response, final SessionCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for Session
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public SessionCollectionPage(final java.util.List<Session> pageContents, final SessionCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

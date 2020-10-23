@@ -24,4 +24,14 @@ public class ConversationCollectionPage extends BaseCollectionPage<Conversation,
     public ConversationCollectionPage(final ConversationCollectionResponse response, final ConversationCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for Conversation
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ConversationCollectionPage(final java.util.List<Conversation> pageContents, final ConversationCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

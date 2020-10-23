@@ -24,4 +24,14 @@ public class SubscriptionCollectionPage extends BaseCollectionPage<Subscription,
     public SubscriptionCollectionPage(final SubscriptionCollectionResponse response, final SubscriptionCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for Subscription
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public SubscriptionCollectionPage(final java.util.List<Subscription> pageContents, final SubscriptionCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

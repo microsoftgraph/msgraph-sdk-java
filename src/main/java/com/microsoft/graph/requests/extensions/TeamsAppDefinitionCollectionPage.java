@@ -24,4 +24,14 @@ public class TeamsAppDefinitionCollectionPage extends BaseCollectionPage<TeamsAp
     public TeamsAppDefinitionCollectionPage(final TeamsAppDefinitionCollectionResponse response, final TeamsAppDefinitionCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for TeamsAppDefinition
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public TeamsAppDefinitionCollectionPage(final java.util.List<TeamsAppDefinition> pageContents, final TeamsAppDefinitionCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

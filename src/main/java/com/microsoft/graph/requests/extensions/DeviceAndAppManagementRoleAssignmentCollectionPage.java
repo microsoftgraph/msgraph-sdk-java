@@ -24,4 +24,14 @@ public class DeviceAndAppManagementRoleAssignmentCollectionPage extends BaseColl
     public DeviceAndAppManagementRoleAssignmentCollectionPage(final DeviceAndAppManagementRoleAssignmentCollectionResponse response, final DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for DeviceAndAppManagementRoleAssignment
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DeviceAndAppManagementRoleAssignmentCollectionPage(final java.util.List<DeviceAndAppManagementRoleAssignment> pageContents, final DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

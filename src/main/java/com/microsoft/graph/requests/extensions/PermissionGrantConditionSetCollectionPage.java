@@ -24,4 +24,14 @@ public class PermissionGrantConditionSetCollectionPage extends BaseCollectionPag
     public PermissionGrantConditionSetCollectionPage(final PermissionGrantConditionSetCollectionResponse response, final PermissionGrantConditionSetCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for PermissionGrantConditionSet
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public PermissionGrantConditionSetCollectionPage(final java.util.List<PermissionGrantConditionSet> pageContents, final PermissionGrantConditionSetCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

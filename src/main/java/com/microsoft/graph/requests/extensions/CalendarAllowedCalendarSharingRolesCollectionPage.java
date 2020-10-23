@@ -32,4 +32,14 @@ public class CalendarAllowedCalendarSharingRolesCollectionPage extends BaseColle
     public CalendarAllowedCalendarSharingRolesCollectionPage(final CalendarAllowedCalendarSharingRolesCollectionResponse response, final CalendarAllowedCalendarSharingRolesCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for CalendarAllowedCalendarSharingRoles
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public CalendarAllowedCalendarSharingRolesCollectionPage(final java.util.List<CalendarRoleType> pageContents, final CalendarAllowedCalendarSharingRolesCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

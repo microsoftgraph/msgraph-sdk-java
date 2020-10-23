@@ -24,4 +24,14 @@ public class AlertCollectionPage extends BaseCollectionPage<Alert, AlertCollecti
     public AlertCollectionPage(final AlertCollectionResponse response, final AlertCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for Alert
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public AlertCollectionPage(final java.util.List<Alert> pageContents, final AlertCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

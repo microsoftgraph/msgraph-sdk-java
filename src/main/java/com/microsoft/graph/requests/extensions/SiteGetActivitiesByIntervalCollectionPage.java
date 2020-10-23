@@ -32,4 +32,14 @@ public class SiteGetActivitiesByIntervalCollectionPage extends BaseCollectionPag
     public SiteGetActivitiesByIntervalCollectionPage(final SiteGetActivitiesByIntervalCollectionResponse response, final SiteGetActivitiesByIntervalCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for SiteGetActivitiesByInterval
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public SiteGetActivitiesByIntervalCollectionPage(final java.util.List<ItemActivityStat> pageContents, final SiteGetActivitiesByIntervalCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

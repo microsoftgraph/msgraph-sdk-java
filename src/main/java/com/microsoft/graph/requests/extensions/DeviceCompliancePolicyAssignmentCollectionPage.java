@@ -24,4 +24,14 @@ public class DeviceCompliancePolicyAssignmentCollectionPage extends BaseCollecti
     public DeviceCompliancePolicyAssignmentCollectionPage(final DeviceCompliancePolicyAssignmentCollectionResponse response, final DeviceCompliancePolicyAssignmentCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for DeviceCompliancePolicyAssignment
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DeviceCompliancePolicyAssignmentCollectionPage(final java.util.List<DeviceCompliancePolicyAssignment> pageContents, final DeviceCompliancePolicyAssignmentCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

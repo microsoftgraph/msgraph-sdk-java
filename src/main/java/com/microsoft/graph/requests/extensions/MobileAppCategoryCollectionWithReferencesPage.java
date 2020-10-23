@@ -37,4 +37,14 @@ public class MobileAppCategoryCollectionWithReferencesPage extends BaseCollectio
     public MobileAppCategoryCollectionWithReferencesPage(final MobileAppCategoryCollectionResponse response, final MobileAppCategoryCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
+
+    /**
+     * Creates the collection page for MobileAppCategory
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public MobileAppCategoryCollectionWithReferencesPage(final java.util.List<MobileAppCategory> pageContents, final MobileAppCategoryCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

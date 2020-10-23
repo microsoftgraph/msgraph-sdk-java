@@ -24,4 +24,14 @@ public class NamedLocationCollectionPage extends BaseCollectionPage<NamedLocatio
     public NamedLocationCollectionPage(final NamedLocationCollectionResponse response, final NamedLocationCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for NamedLocation
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public NamedLocationCollectionPage(final java.util.List<NamedLocation> pageContents, final NamedLocationCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

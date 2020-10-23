@@ -24,4 +24,14 @@ public class SchedulingGroupCollectionPage extends BaseCollectionPage<Scheduling
     public SchedulingGroupCollectionPage(final SchedulingGroupCollectionResponse response, final SchedulingGroupCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for SchedulingGroup
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public SchedulingGroupCollectionPage(final java.util.List<SchedulingGroup> pageContents, final SchedulingGroupCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

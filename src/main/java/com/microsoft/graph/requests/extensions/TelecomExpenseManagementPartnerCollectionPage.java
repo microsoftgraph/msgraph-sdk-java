@@ -24,4 +24,14 @@ public class TelecomExpenseManagementPartnerCollectionPage extends BaseCollectio
     public TelecomExpenseManagementPartnerCollectionPage(final TelecomExpenseManagementPartnerCollectionResponse response, final TelecomExpenseManagementPartnerCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for TelecomExpenseManagementPartner
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public TelecomExpenseManagementPartnerCollectionPage(final java.util.List<TelecomExpenseManagementPartner> pageContents, final TelecomExpenseManagementPartnerCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

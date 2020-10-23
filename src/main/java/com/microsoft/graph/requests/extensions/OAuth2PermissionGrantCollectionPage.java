@@ -24,4 +24,14 @@ public class OAuth2PermissionGrantCollectionPage extends BaseCollectionPage<OAut
     public OAuth2PermissionGrantCollectionPage(final OAuth2PermissionGrantCollectionResponse response, final OAuth2PermissionGrantCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for OAuth2PermissionGrant
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public OAuth2PermissionGrantCollectionPage(final java.util.List<OAuth2PermissionGrant> pageContents, final OAuth2PermissionGrantCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

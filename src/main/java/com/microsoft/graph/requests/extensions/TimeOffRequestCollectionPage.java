@@ -24,4 +24,14 @@ public class TimeOffRequestCollectionPage extends BaseCollectionPage<TimeOffRequ
     public TimeOffRequestCollectionPage(final TimeOffRequestCollectionResponse response, final TimeOffRequestCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for TimeOffRequest
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public TimeOffRequestCollectionPage(final java.util.List<TimeOffRequest> pageContents, final TimeOffRequestCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

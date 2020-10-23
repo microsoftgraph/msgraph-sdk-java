@@ -24,4 +24,14 @@ public class ManagedMobileAppCollectionPage extends BaseCollectionPage<ManagedMo
     public ManagedMobileAppCollectionPage(final ManagedMobileAppCollectionResponse response, final ManagedMobileAppCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for ManagedMobileApp
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ManagedMobileAppCollectionPage(final java.util.List<ManagedMobileApp> pageContents, final ManagedMobileAppCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

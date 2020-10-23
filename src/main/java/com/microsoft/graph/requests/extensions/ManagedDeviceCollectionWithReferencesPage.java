@@ -38,4 +38,14 @@ public class ManagedDeviceCollectionWithReferencesPage extends BaseCollectionPag
     public ManagedDeviceCollectionWithReferencesPage(final ManagedDeviceCollectionResponse response, final ManagedDeviceCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
+
+    /**
+     * Creates the collection page for ManagedDevice
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ManagedDeviceCollectionWithReferencesPage(final java.util.List<ManagedDevice> pageContents, final ManagedDeviceCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

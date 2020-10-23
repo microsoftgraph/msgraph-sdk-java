@@ -24,4 +24,14 @@ public class DeviceManagementTroubleshootingEventCollectionPage extends BaseColl
     public DeviceManagementTroubleshootingEventCollectionPage(final DeviceManagementTroubleshootingEventCollectionResponse response, final DeviceManagementTroubleshootingEventCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for DeviceManagementTroubleshootingEvent
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DeviceManagementTroubleshootingEventCollectionPage(final java.util.List<DeviceManagementTroubleshootingEvent> pageContents, final DeviceManagementTroubleshootingEventCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

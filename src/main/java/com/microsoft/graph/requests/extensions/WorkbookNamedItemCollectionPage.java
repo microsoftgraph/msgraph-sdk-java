@@ -24,4 +24,14 @@ public class WorkbookNamedItemCollectionPage extends BaseCollectionPage<Workbook
     public WorkbookNamedItemCollectionPage(final WorkbookNamedItemCollectionResponse response, final WorkbookNamedItemCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for WorkbookNamedItem
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public WorkbookNamedItemCollectionPage(final java.util.List<WorkbookNamedItem> pageContents, final WorkbookNamedItemCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

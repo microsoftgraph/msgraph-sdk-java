@@ -32,4 +32,14 @@ public class DriveSearchCollectionPage extends BaseCollectionPage<DriveItem, Dri
     public DriveSearchCollectionPage(final DriveSearchCollectionResponse response, final DriveSearchCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for DriveSearch
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DriveSearchCollectionPage(final java.util.List<DriveItem> pageContents, final DriveSearchCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

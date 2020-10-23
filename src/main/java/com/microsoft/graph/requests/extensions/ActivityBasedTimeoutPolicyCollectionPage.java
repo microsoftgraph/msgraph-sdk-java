@@ -24,4 +24,14 @@ public class ActivityBasedTimeoutPolicyCollectionPage extends BaseCollectionPage
     public ActivityBasedTimeoutPolicyCollectionPage(final ActivityBasedTimeoutPolicyCollectionResponse response, final ActivityBasedTimeoutPolicyCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for ActivityBasedTimeoutPolicy
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ActivityBasedTimeoutPolicyCollectionPage(final java.util.List<ActivityBasedTimeoutPolicy> pageContents, final ActivityBasedTimeoutPolicyCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

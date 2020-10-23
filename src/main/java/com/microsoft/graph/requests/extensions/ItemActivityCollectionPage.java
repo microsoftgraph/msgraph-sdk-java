@@ -24,4 +24,14 @@ public class ItemActivityCollectionPage extends BaseCollectionPage<ItemActivity,
     public ItemActivityCollectionPage(final ItemActivityCollectionResponse response, final ItemActivityCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for ItemActivity
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ItemActivityCollectionPage(final java.util.List<ItemActivity> pageContents, final ItemActivityCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

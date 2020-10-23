@@ -24,4 +24,14 @@ public class TargetedManagedAppPolicyAssignmentCollectionPage extends BaseCollec
     public TargetedManagedAppPolicyAssignmentCollectionPage(final TargetedManagedAppPolicyAssignmentCollectionResponse response, final TargetedManagedAppPolicyAssignmentCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for TargetedManagedAppPolicyAssignment
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public TargetedManagedAppPolicyAssignmentCollectionPage(final java.util.List<TargetedManagedAppPolicyAssignment> pageContents, final TargetedManagedAppPolicyAssignmentCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

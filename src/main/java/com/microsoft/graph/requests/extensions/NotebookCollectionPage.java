@@ -24,4 +24,14 @@ public class NotebookCollectionPage extends BaseCollectionPage<Notebook, Noteboo
     public NotebookCollectionPage(final NotebookCollectionResponse response, final NotebookCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for Notebook
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public NotebookCollectionPage(final java.util.List<Notebook> pageContents, final NotebookCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -24,4 +24,14 @@ public class TokenIssuancePolicyCollectionPage extends BaseCollectionPage<TokenI
     public TokenIssuancePolicyCollectionPage(final TokenIssuancePolicyCollectionResponse response, final TokenIssuancePolicyCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for TokenIssuancePolicy
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public TokenIssuancePolicyCollectionPage(final java.util.List<TokenIssuancePolicy> pageContents, final TokenIssuancePolicyCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -24,4 +24,14 @@ public class DeviceManagementPartnerCollectionPage extends BaseCollectionPage<De
     public DeviceManagementPartnerCollectionPage(final DeviceManagementPartnerCollectionResponse response, final DeviceManagementPartnerCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for DeviceManagementPartner
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DeviceManagementPartnerCollectionPage(final java.util.List<DeviceManagementPartner> pageContents, final DeviceManagementPartnerCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

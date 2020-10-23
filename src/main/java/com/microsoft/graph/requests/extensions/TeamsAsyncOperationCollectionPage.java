@@ -24,4 +24,14 @@ public class TeamsAsyncOperationCollectionPage extends BaseCollectionPage<TeamsA
     public TeamsAsyncOperationCollectionPage(final TeamsAsyncOperationCollectionResponse response, final TeamsAsyncOperationCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for TeamsAsyncOperation
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public TeamsAsyncOperationCollectionPage(final java.util.List<TeamsAsyncOperation> pageContents, final TeamsAsyncOperationCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

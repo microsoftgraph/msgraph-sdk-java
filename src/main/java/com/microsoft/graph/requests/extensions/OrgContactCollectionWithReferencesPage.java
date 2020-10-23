@@ -37,4 +37,14 @@ public class OrgContactCollectionWithReferencesPage extends BaseCollectionPage<O
     public OrgContactCollectionWithReferencesPage(final OrgContactCollectionResponse response, final OrgContactCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
+
+    /**
+     * Creates the collection page for OrgContact
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public OrgContactCollectionWithReferencesPage(final java.util.List<OrgContact> pageContents, final OrgContactCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

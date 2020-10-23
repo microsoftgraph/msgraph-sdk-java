@@ -33,4 +33,14 @@ public class OutlookUserSupportedTimeZonesCollectionPage extends BaseCollectionP
     public OutlookUserSupportedTimeZonesCollectionPage(final OutlookUserSupportedTimeZonesCollectionResponse response, final OutlookUserSupportedTimeZonesCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for OutlookUserSupportedTimeZones
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public OutlookUserSupportedTimeZonesCollectionPage(final java.util.List<TimeZoneInformation> pageContents, final OutlookUserSupportedTimeZonesCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

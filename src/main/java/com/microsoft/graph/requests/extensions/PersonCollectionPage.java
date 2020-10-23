@@ -24,4 +24,14 @@ public class PersonCollectionPage extends BaseCollectionPage<Person, PersonColle
     public PersonCollectionPage(final PersonCollectionResponse response, final PersonCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for Person
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public PersonCollectionPage(final java.util.List<Person> pageContents, final PersonCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

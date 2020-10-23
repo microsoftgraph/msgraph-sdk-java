@@ -24,4 +24,14 @@ public class DeviceManagementExchangeConnectorCollectionPage extends BaseCollect
     public DeviceManagementExchangeConnectorCollectionPage(final DeviceManagementExchangeConnectorCollectionResponse response, final DeviceManagementExchangeConnectorCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for DeviceManagementExchangeConnector
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DeviceManagementExchangeConnectorCollectionPage(final java.util.List<DeviceManagementExchangeConnector> pageContents, final DeviceManagementExchangeConnectorCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

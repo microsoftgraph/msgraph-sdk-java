@@ -24,4 +24,14 @@ public class ContractCollectionPage extends BaseCollectionPage<Contract, Contrac
     public ContractCollectionPage(final ContractCollectionResponse response, final ContractCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for Contract
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ContractCollectionPage(final java.util.List<Contract> pageContents, final ContractCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

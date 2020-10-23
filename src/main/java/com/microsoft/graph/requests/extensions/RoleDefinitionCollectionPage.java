@@ -24,4 +24,14 @@ public class RoleDefinitionCollectionPage extends BaseCollectionPage<RoleDefinit
     public RoleDefinitionCollectionPage(final RoleDefinitionCollectionResponse response, final RoleDefinitionCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for RoleDefinition
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public RoleDefinitionCollectionPage(final java.util.List<RoleDefinition> pageContents, final RoleDefinitionCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

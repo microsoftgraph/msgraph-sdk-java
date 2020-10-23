@@ -24,4 +24,14 @@ public class SwapShiftsChangeRequestCollectionPage extends BaseCollectionPage<Sw
     public SwapShiftsChangeRequestCollectionPage(final SwapShiftsChangeRequestCollectionResponse response, final SwapShiftsChangeRequestCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for SwapShiftsChangeRequest
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public SwapShiftsChangeRequestCollectionPage(final java.util.List<SwapShiftsChangeRequest> pageContents, final SwapShiftsChangeRequestCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

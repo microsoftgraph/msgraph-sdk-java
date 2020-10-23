@@ -32,4 +32,14 @@ public class OutlookUserSupportedLanguagesCollectionPage extends BaseCollectionP
     public OutlookUserSupportedLanguagesCollectionPage(final OutlookUserSupportedLanguagesCollectionResponse response, final OutlookUserSupportedLanguagesCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for OutlookUserSupportedLanguages
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public OutlookUserSupportedLanguagesCollectionPage(final java.util.List<LocaleInfo> pageContents, final OutlookUserSupportedLanguagesCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

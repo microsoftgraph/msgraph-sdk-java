@@ -24,4 +24,14 @@ public class BaseItemCollectionPage extends BaseCollectionPage<BaseItem, BaseIte
     public BaseItemCollectionPage(final BaseItemCollectionResponse response, final BaseItemCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for BaseItem
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public BaseItemCollectionPage(final java.util.List<BaseItem> pageContents, final BaseItemCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

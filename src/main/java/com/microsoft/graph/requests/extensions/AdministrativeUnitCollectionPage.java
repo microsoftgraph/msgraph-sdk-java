@@ -24,4 +24,14 @@ public class AdministrativeUnitCollectionPage extends BaseCollectionPage<Adminis
     public AdministrativeUnitCollectionPage(final AdministrativeUnitCollectionResponse response, final AdministrativeUnitCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for AdministrativeUnit
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public AdministrativeUnitCollectionPage(final java.util.List<AdministrativeUnit> pageContents, final AdministrativeUnitCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -24,4 +24,14 @@ public class ManagedAppRegistrationCollectionPage extends BaseCollectionPage<Man
     public ManagedAppRegistrationCollectionPage(final ManagedAppRegistrationCollectionResponse response, final ManagedAppRegistrationCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for ManagedAppRegistration
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ManagedAppRegistrationCollectionPage(final java.util.List<ManagedAppRegistration> pageContents, final ManagedAppRegistrationCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

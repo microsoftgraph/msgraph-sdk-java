@@ -24,4 +24,14 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionPage extends
     public ManagedDeviceMobileAppConfigurationAssignmentCollectionPage(final ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse response, final ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for ManagedDeviceMobileAppConfigurationAssignment
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ManagedDeviceMobileAppConfigurationAssignmentCollectionPage(final java.util.List<ManagedDeviceMobileAppConfigurationAssignment> pageContents, final ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

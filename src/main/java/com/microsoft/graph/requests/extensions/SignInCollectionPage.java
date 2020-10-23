@@ -24,4 +24,14 @@ public class SignInCollectionPage extends BaseCollectionPage<SignIn, SignInColle
     public SignInCollectionPage(final SignInCollectionResponse response, final SignInCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for SignIn
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public SignInCollectionPage(final java.util.List<SignIn> pageContents, final SignInCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

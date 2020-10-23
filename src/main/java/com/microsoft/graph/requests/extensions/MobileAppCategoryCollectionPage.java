@@ -24,4 +24,14 @@ public class MobileAppCategoryCollectionPage extends BaseCollectionPage<MobileAp
     public MobileAppCategoryCollectionPage(final MobileAppCategoryCollectionResponse response, final MobileAppCategoryCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for MobileAppCategory
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public MobileAppCategoryCollectionPage(final java.util.List<MobileAppCategory> pageContents, final MobileAppCategoryCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -24,4 +24,14 @@ public class CallCollectionPage extends BaseCollectionPage<Call, CallCollectionR
     public CallCollectionPage(final CallCollectionResponse response, final CallCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for Call
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public CallCollectionPage(final java.util.List<Call> pageContents, final CallCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

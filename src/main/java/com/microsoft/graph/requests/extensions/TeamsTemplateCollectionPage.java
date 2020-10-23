@@ -24,4 +24,14 @@ public class TeamsTemplateCollectionPage extends BaseCollectionPage<TeamsTemplat
     public TeamsTemplateCollectionPage(final TeamsTemplateCollectionResponse response, final TeamsTemplateCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for TeamsTemplate
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public TeamsTemplateCollectionPage(final java.util.List<TeamsTemplate> pageContents, final TeamsTemplateCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

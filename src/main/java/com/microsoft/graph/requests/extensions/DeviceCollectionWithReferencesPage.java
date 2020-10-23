@@ -37,4 +37,14 @@ public class DeviceCollectionWithReferencesPage extends BaseCollectionPage<Devic
     public DeviceCollectionWithReferencesPage(final DeviceCollectionResponse response, final DeviceCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
+
+    /**
+     * Creates the collection page for Device
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DeviceCollectionWithReferencesPage(final java.util.List<Device> pageContents, final DeviceCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

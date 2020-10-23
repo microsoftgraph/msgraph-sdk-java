@@ -24,4 +24,14 @@ public class DriveItemVersionCollectionPage extends BaseCollectionPage<DriveItem
     public DriveItemVersionCollectionPage(final DriveItemVersionCollectionResponse response, final DriveItemVersionCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for DriveItemVersion
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DriveItemVersionCollectionPage(final java.util.List<DriveItemVersion> pageContents, final DriveItemVersionCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

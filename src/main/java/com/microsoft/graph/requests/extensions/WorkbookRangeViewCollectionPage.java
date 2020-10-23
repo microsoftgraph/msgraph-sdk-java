@@ -24,4 +24,14 @@ public class WorkbookRangeViewCollectionPage extends BaseCollectionPage<Workbook
     public WorkbookRangeViewCollectionPage(final WorkbookRangeViewCollectionResponse response, final WorkbookRangeViewCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for WorkbookRangeView
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public WorkbookRangeViewCollectionPage(final java.util.List<WorkbookRangeView> pageContents, final WorkbookRangeViewCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

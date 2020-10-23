@@ -24,4 +24,14 @@ public class GroupCollectionPage extends BaseCollectionPage<Group, GroupCollecti
     public GroupCollectionPage(final GroupCollectionResponse response, final GroupCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for Group
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public GroupCollectionPage(final java.util.List<Group> pageContents, final GroupCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -32,4 +32,14 @@ public class GroupDeltaCollectionPage extends DeltaCollectionPage<Group, GroupDe
     public GroupDeltaCollectionPage(final GroupDeltaCollectionResponse response, final GroupDeltaCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for GroupDelta
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public GroupDeltaCollectionPage(final java.util.List<Group> pageContents, final GroupDeltaCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

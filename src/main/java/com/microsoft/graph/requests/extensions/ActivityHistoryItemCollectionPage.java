@@ -24,4 +24,14 @@ public class ActivityHistoryItemCollectionPage extends BaseCollectionPage<Activi
     public ActivityHistoryItemCollectionPage(final ActivityHistoryItemCollectionResponse response, final ActivityHistoryItemCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for ActivityHistoryItem
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ActivityHistoryItemCollectionPage(final java.util.List<ActivityHistoryItem> pageContents, final ActivityHistoryItemCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

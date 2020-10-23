@@ -24,4 +24,14 @@ public class DomainCollectionPage extends BaseCollectionPage<Domain, DomainColle
     public DomainCollectionPage(final DomainCollectionResponse response, final DomainCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for Domain
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DomainCollectionPage(final java.util.List<Domain> pageContents, final DomainCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

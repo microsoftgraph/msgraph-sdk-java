@@ -24,4 +24,14 @@ public class ConditionalAccessPolicyCollectionPage extends BaseCollectionPage<Co
     public ConditionalAccessPolicyCollectionPage(final ConditionalAccessPolicyCollectionResponse response, final ConditionalAccessPolicyCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for ConditionalAccessPolicy
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ConditionalAccessPolicyCollectionPage(final java.util.List<ConditionalAccessPolicy> pageContents, final ConditionalAccessPolicyCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

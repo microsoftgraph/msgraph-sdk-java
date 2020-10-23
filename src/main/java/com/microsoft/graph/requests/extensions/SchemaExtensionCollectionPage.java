@@ -24,4 +24,14 @@ public class SchemaExtensionCollectionPage extends BaseCollectionPage<SchemaExte
     public SchemaExtensionCollectionPage(final SchemaExtensionCollectionResponse response, final SchemaExtensionCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for SchemaExtension
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public SchemaExtensionCollectionPage(final java.util.List<SchemaExtension> pageContents, final SchemaExtensionCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -24,4 +24,14 @@ public class InferenceClassificationOverrideCollectionPage extends BaseCollectio
     public InferenceClassificationOverrideCollectionPage(final InferenceClassificationOverrideCollectionResponse response, final InferenceClassificationOverrideCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for InferenceClassificationOverride
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public InferenceClassificationOverrideCollectionPage(final java.util.List<InferenceClassificationOverride> pageContents, final InferenceClassificationOverrideCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

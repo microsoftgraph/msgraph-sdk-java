@@ -24,4 +24,14 @@ public class UserCollectionPage extends BaseCollectionPage<User, UserCollectionR
     public UserCollectionPage(final UserCollectionResponse response, final UserCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for User
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public UserCollectionPage(final java.util.List<User> pageContents, final UserCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

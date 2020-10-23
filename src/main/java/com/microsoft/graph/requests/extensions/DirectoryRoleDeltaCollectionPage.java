@@ -32,4 +32,14 @@ public class DirectoryRoleDeltaCollectionPage extends DeltaCollectionPage<Direct
     public DirectoryRoleDeltaCollectionPage(final DirectoryRoleDeltaCollectionResponse response, final DirectoryRoleDeltaCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for DirectoryRoleDelta
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DirectoryRoleDeltaCollectionPage(final java.util.List<DirectoryRole> pageContents, final DirectoryRoleDeltaCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

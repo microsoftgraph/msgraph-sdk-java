@@ -24,4 +24,14 @@ public class UserInstallStateSummaryCollectionPage extends BaseCollectionPage<Us
     public UserInstallStateSummaryCollectionPage(final UserInstallStateSummaryCollectionResponse response, final UserInstallStateSummaryCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for UserInstallStateSummary
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public UserInstallStateSummaryCollectionPage(final java.util.List<UserInstallStateSummary> pageContents, final UserInstallStateSummaryCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

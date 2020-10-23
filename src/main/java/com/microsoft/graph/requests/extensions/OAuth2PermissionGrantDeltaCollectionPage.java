@@ -32,4 +32,14 @@ public class OAuth2PermissionGrantDeltaCollectionPage extends DeltaCollectionPag
     public OAuth2PermissionGrantDeltaCollectionPage(final OAuth2PermissionGrantDeltaCollectionResponse response, final OAuth2PermissionGrantDeltaCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for OAuth2PermissionGrantDelta
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public OAuth2PermissionGrantDeltaCollectionPage(final java.util.List<OAuth2PermissionGrant> pageContents, final OAuth2PermissionGrantDeltaCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -24,4 +24,14 @@ public class TeamsTabCollectionPage extends BaseCollectionPage<TeamsTab, TeamsTa
     public TeamsTabCollectionPage(final TeamsTabCollectionResponse response, final TeamsTabCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for TeamsTab
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public TeamsTabCollectionPage(final java.util.List<TeamsTab> pageContents, final TeamsTabCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

@@ -32,4 +32,14 @@ public class ApplicationDeltaCollectionPage extends DeltaCollectionPage<Applicat
     public ApplicationDeltaCollectionPage(final ApplicationDeltaCollectionResponse response, final ApplicationDeltaCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for ApplicationDelta
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ApplicationDeltaCollectionPage(final java.util.List<Application> pageContents, final ApplicationDeltaCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

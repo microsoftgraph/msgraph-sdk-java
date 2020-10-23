@@ -24,4 +24,14 @@ public class ParticipantCollectionPage extends BaseCollectionPage<Participant, P
     public ParticipantCollectionPage(final ParticipantCollectionResponse response, final ParticipantCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for Participant
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ParticipantCollectionPage(final java.util.List<Participant> pageContents, final ParticipantCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

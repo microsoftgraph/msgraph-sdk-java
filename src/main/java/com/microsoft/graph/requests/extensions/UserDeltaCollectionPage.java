@@ -32,4 +32,14 @@ public class UserDeltaCollectionPage extends DeltaCollectionPage<User, UserDelta
     public UserDeltaCollectionPage(final UserDeltaCollectionResponse response, final UserDeltaCollectionRequestBuilder builder) {
        super(response, builder);
     }
+
+	/**
+     * Creates the collection page for UserDelta
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public UserDeltaCollectionPage(final java.util.List<User> pageContents, final UserDeltaCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }

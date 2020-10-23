@@ -24,4 +24,14 @@ public class ManagedEBookAssignmentCollectionPage extends BaseCollectionPage<Man
     public ManagedEBookAssignmentCollectionPage(final ManagedEBookAssignmentCollectionResponse response, final ManagedEBookAssignmentCollectionRequestBuilder builder) {
         super(response, builder);
     }
+
+    /**
+     * Creates the collection page for ManagedEBookAssignment
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ManagedEBookAssignmentCollectionPage(final java.util.List<ManagedEBookAssignment> pageContents, final ManagedEBookAssignmentCollectionRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
+    }
 }
