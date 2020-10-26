@@ -27,6 +27,7 @@ public abstract class BaseCollectionResponse<T> implements ICollectionResponse<T
         return value;
 	}
 
+    /** The link to the next page returned by the initial request if any. */
 	@SerializedName("@odata.nextLink")
     @Expose(serialize = false)
     public String nextLink;
@@ -78,18 +79,15 @@ public abstract class BaseCollectionResponse<T> implements ICollectionResponse<T
      * @param serializer the serializer
      * @param json the JSON object to set this object to
      */
-	@SuppressWarnings("unchecked")
     public void setRawObject(final ISerializer serializer, final JsonObject json) {
         this.serializer = serializer;
         rawObject = json;
-
-
         if (json.has("value")) {
             final JsonArray array = json.getAsJsonArray("value");
             for (int i = 0; i < array.size(); i++) {
 				final Object targetObject = value.get(i);
-				if(targetObject instanceof IJsonBackedObject) {
-					((IJsonBackedObject)targetObject).setRawObject(serializer, (JsonObject) array.get(i));
+				if(targetObject instanceof IJsonBackedObject && array.get(i).isJsonObject()) {
+					((IJsonBackedObject)targetObject).setRawObject(serializer, array.get(i).getAsJsonObject());
 				}
             }
         }

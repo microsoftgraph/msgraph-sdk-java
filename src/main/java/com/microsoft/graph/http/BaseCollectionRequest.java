@@ -102,7 +102,11 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
         baseRequest.setHttpMethod(HttpMethod.GET);
         return baseRequest.getClient().getHttpProvider().send(this, responseCollectionClass, null);
     }
-
+    
+    /**
+     * Gets the collection of items
+     * @param callback the callback to call once the response is received
+     */
     public void get(final ICallback<? super T3> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
@@ -117,10 +121,12 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
         });
     }
 
+    /** Gets the collection of items */
     public T3 get() throws ClientException {
         return buildFromResponse(send());
     }
 
+    /** Deserializes the collection from the response object */
     public T3 buildFromResponse(final T2 response) {
         final List<com.microsoft.graph.options.Option> options = new java.util.ArrayList<com.microsoft.graph.options.Option>();
         try {
