@@ -20,6 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
  * The class for the Service Principal Add Key Request.
  */
 public class ServicePrincipalAddKeyRequest extends BaseRequest<KeyCredential> {
+    /** The body for the method */
     protected final ServicePrincipalAddKeyBody body;
 
     /**
@@ -34,10 +35,18 @@ public class ServicePrincipalAddKeyRequest extends BaseRequest<KeyCredential> {
         body = new ServicePrincipalAddKeyBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(final ICallback<? super KeyCredential> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     public KeyCredential post() throws ClientException {
         return send(HttpMethod.POST, body);
     }

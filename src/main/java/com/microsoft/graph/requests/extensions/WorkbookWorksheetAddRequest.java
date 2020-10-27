@@ -20,6 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
  * The class for the Workbook Worksheet Add Request.
  */
 public class WorkbookWorksheetAddRequest extends BaseRequest<WorkbookWorksheet> {
+    /** The body for the method */
     protected final WorkbookWorksheetAddBody body;
 
     /**
@@ -34,10 +35,18 @@ public class WorkbookWorksheetAddRequest extends BaseRequest<WorkbookWorksheet> 
         body = new WorkbookWorksheetAddBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(final ICallback<? super WorkbookWorksheet> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     public WorkbookWorksheet post() throws ClientException {
         return send(HttpMethod.POST, body);
     }

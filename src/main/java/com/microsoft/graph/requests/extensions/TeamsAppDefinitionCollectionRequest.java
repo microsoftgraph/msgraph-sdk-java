@@ -38,6 +38,11 @@ public class TeamsAppDefinitionCollectionRequest extends BaseCollectionRequest<T
         super(requestUrl, client, requestOptions, TeamsAppDefinitionCollectionResponse.class, TeamsAppDefinitionCollectionPage.class, TeamsAppDefinitionCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new TeamsAppDefinition
+     * @param newTeamsAppDefinition the TeamsAppDefinition to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final TeamsAppDefinition newTeamsAppDefinition, final ICallback<? super TeamsAppDefinition> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TeamsAppDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class TeamsAppDefinitionCollectionRequest extends BaseCollectionRequest<T
             .post(newTeamsAppDefinition, callback);
     }
 
+    /**
+     * Creates a new TeamsAppDefinition
+     * @param newTeamsAppDefinition the TeamsAppDefinition to create
+     * @return the newly created object
+     */
     public TeamsAppDefinition post(final TeamsAppDefinition newTeamsAppDefinition) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TeamsAppDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

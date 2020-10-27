@@ -41,6 +41,11 @@ public class CalendarCollectionRequest extends BaseCollectionRequest<Calendar, C
         super(requestUrl, client, requestOptions, CalendarCollectionResponse.class, CalendarCollectionPage.class, CalendarCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Calendar
+     * @param newCalendar the Calendar to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Calendar newCalendar, final ICallback<? super Calendar> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CalendarRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -48,6 +53,11 @@ public class CalendarCollectionRequest extends BaseCollectionRequest<Calendar, C
             .post(newCalendar, callback);
     }
 
+    /**
+     * Creates a new Calendar
+     * @param newCalendar the Calendar to create
+     * @return the newly created object
+     */
     public Calendar post(final Calendar newCalendar) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CalendarRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

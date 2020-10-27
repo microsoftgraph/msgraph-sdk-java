@@ -38,6 +38,11 @@ public class BaseItemCollectionRequest extends BaseCollectionRequest<BaseItem, B
         super(requestUrl, client, requestOptions, BaseItemCollectionResponse.class, BaseItemCollectionPage.class, BaseItemCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new BaseItem
+     * @param newBaseItem the BaseItem to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final BaseItem newBaseItem, final ICallback<? super BaseItem> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new BaseItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class BaseItemCollectionRequest extends BaseCollectionRequest<BaseItem, B
             .post(newBaseItem, callback);
     }
 
+    /**
+     * Creates a new BaseItem
+     * @param newBaseItem the BaseItem to create
+     * @return the newly created object
+     */
     public BaseItem post(final BaseItem newBaseItem) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new BaseItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

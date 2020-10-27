@@ -68,24 +68,57 @@ public class ChannelRequestBuilder extends BaseRequestBuilder<Channel> {
     public DriveItemRequestBuilder filesFolder() {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("filesFolder"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the ConversationMember collection
+     *
+     * @return the collection request builder
+     */
     public ConversationMemberCollectionRequestBuilder members() {
         return new ConversationMemberCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ConversationMember item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public ConversationMemberRequestBuilder members(final String id) {
         return new ConversationMemberRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the ChatMessage collection
+     *
+     * @return the collection request builder
+     */
     public ChatMessageCollectionRequestBuilder messages() {
         return new ChatMessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("messages"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ChatMessage item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public ChatMessageRequestBuilder messages(final String id) {
         return new ChatMessageRequestBuilder(getRequestUrlWithAdditionalSegment("messages") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the TeamsTab collection
+     *
+     * @return the collection request builder
+     */
     public TeamsTabCollectionRequestBuilder tabs() {
         return new TeamsTabCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tabs"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the TeamsTab item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public TeamsTabRequestBuilder tabs(final String id) {
         return new TeamsTabRequestBuilder(getRequestUrlWithAdditionalSegment("tabs") + "/" + id, getClient(), null);
     }

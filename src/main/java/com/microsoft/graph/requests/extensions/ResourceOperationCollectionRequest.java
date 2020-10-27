@@ -38,6 +38,11 @@ public class ResourceOperationCollectionRequest extends BaseCollectionRequest<Re
         super(requestUrl, client, requestOptions, ResourceOperationCollectionResponse.class, ResourceOperationCollectionPage.class, ResourceOperationCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new ResourceOperation
+     * @param newResourceOperation the ResourceOperation to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final ResourceOperation newResourceOperation, final ICallback<? super ResourceOperation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ResourceOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class ResourceOperationCollectionRequest extends BaseCollectionRequest<Re
             .post(newResourceOperation, callback);
     }
 
+    /**
+     * Creates a new ResourceOperation
+     * @param newResourceOperation the ResourceOperation to create
+     * @return the newly created object
+     */
     public ResourceOperation post(final ResourceOperation newResourceOperation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ResourceOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

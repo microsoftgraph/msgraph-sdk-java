@@ -54,6 +54,12 @@ public class PermissionRequestBuilder extends BaseRequestBuilder<Permission> {
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param roles the roles
+     * @param recipients the recipients
+     */
     public PermissionGrantCollectionRequestBuilder grant(final java.util.List<String> roles, final java.util.List<DriveRecipient> recipients) {
         return new PermissionGrantCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.grant"), getClient(), null, roles, recipients);
     }

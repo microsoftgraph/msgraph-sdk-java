@@ -38,6 +38,11 @@ public class ChatCollectionRequest extends BaseCollectionRequest<Chat, ChatColle
         super(requestUrl, client, requestOptions, ChatCollectionResponse.class, ChatCollectionPage.class, ChatCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Chat
+     * @param newChat the Chat to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Chat newChat, final ICallback<? super Chat> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ChatRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class ChatCollectionRequest extends BaseCollectionRequest<Chat, ChatColle
             .post(newChat, callback);
     }
 
+    /**
+     * Creates a new Chat
+     * @param newChat the Chat to create
+     * @return the newly created object
+     */
     public Chat post(final Chat newChat) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ChatRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

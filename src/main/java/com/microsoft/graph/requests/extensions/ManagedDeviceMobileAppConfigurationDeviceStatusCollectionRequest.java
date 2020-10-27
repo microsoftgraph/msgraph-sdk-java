@@ -38,6 +38,11 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest ex
         super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse.class, ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage.class, ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new ManagedDeviceMobileAppConfigurationDeviceStatus
+     * @param newManagedDeviceMobileAppConfigurationDeviceStatus the ManagedDeviceMobileAppConfigurationDeviceStatus to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final ManagedDeviceMobileAppConfigurationDeviceStatus newManagedDeviceMobileAppConfigurationDeviceStatus, final ICallback<? super ManagedDeviceMobileAppConfigurationDeviceStatus> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest ex
             .post(newManagedDeviceMobileAppConfigurationDeviceStatus, callback);
     }
 
+    /**
+     * Creates a new ManagedDeviceMobileAppConfigurationDeviceStatus
+     * @param newManagedDeviceMobileAppConfigurationDeviceStatus the ManagedDeviceMobileAppConfigurationDeviceStatus to create
+     * @return the newly created object
+     */
     public ManagedDeviceMobileAppConfigurationDeviceStatus post(final ManagedDeviceMobileAppConfigurationDeviceStatus newManagedDeviceMobileAppConfigurationDeviceStatus) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

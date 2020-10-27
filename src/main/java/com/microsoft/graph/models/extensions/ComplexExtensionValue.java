@@ -21,6 +21,7 @@ import java.util.HashMap;
  */
 public class ComplexExtensionValue implements IJsonBackedObject {
 
+    /** the OData type of the object as returned by the service */
     @SerializedName("@odata.type")
     @Expose
     public String oDataType;

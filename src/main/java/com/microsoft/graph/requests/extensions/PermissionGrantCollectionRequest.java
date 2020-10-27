@@ -29,6 +29,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 public class PermissionGrantCollectionRequest extends BaseCollectionRequest<Permission, PermissionGrantCollectionResponse, PermissionGrantCollectionPage> {
 
 
+    /** The body for the method */
     protected final PermissionGrantBody body;
 
 
@@ -45,6 +46,10 @@ public class PermissionGrantCollectionRequest extends BaseCollectionRequest<Perm
     }
 
 
+    /**
+     * Invokes the method and calls the callback with the resulting collection of objects
+     * @param callback a callback to be invoked with the resulting collection of objects
+     */
     public void post(final ICallback<? super PermissionGrantCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
@@ -59,6 +64,10 @@ public class PermissionGrantCollectionRequest extends BaseCollectionRequest<Perm
         });
     }
 
+    /**
+     * Invokes the method and returns the resulting collection of objects
+     * @return a collection of objects returned by the method
+     */
     public PermissionGrantCollectionPage post() throws ClientException {
         final PermissionGrantCollectionResponse response = post(body);
         return buildFromResponse(response);

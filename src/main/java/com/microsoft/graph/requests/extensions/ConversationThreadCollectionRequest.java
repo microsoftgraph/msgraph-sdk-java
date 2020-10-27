@@ -39,6 +39,11 @@ public class ConversationThreadCollectionRequest extends BaseCollectionRequest<C
         super(requestUrl, client, requestOptions, ConversationThreadCollectionResponse.class, ConversationThreadCollectionPage.class, ConversationThreadCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new ConversationThread
+     * @param newConversationThread the ConversationThread to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final ConversationThread newConversationThread, final ICallback<? super ConversationThread> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ConversationThreadRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -46,6 +51,11 @@ public class ConversationThreadCollectionRequest extends BaseCollectionRequest<C
             .post(newConversationThread, callback);
     }
 
+    /**
+     * Creates a new ConversationThread
+     * @param newConversationThread the ConversationThread to create
+     * @return the newly created object
+     */
     public ConversationThread post(final ConversationThread newConversationThread) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ConversationThreadRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

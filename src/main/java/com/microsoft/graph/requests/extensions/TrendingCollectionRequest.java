@@ -38,6 +38,11 @@ public class TrendingCollectionRequest extends BaseCollectionRequest<Trending, T
         super(requestUrl, client, requestOptions, TrendingCollectionResponse.class, TrendingCollectionPage.class, TrendingCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Trending
+     * @param newTrending the Trending to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Trending newTrending, final ICallback<? super Trending> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TrendingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class TrendingCollectionRequest extends BaseCollectionRequest<Trending, T
             .post(newTrending, callback);
     }
 
+    /**
+     * Creates a new Trending
+     * @param newTrending the Trending to create
+     * @return the newly created object
+     */
     public Trending post(final Trending newTrending) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TrendingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

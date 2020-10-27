@@ -42,6 +42,10 @@ public class DriveItemCollectionRequestBuilder extends BaseCollectionRequestBuil
         super(requestUrl, client, requestOptions, DriveItemRequestBuilder.class, DriveItemCollectionRequest.class);
     }
 
+    /**
+     * Gets a request builder to the AppRoot folder.
+     * @return a request builder to the AppRoot folder
+     */
     public DriveItemRequestBuilder appRoot() {
     	return new DriveItemRequestBuilder(this.getRequestUrlWithAdditionalSegment("approot"), this.getClient(), null);
     }

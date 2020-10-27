@@ -103,18 +103,40 @@ public class ListItemRequestBuilder extends BaseRequestBuilder<ListItem> {
     public FieldValueSetRequestBuilder fields() {
         return new FieldValueSetRequestBuilder(getRequestUrlWithAdditionalSegment("fields"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the ListItemVersion collection
+     *
+     * @return the collection request builder
+     */
     public ListItemVersionCollectionRequestBuilder versions() {
         return new ListItemVersionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("versions"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ListItemVersion item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public ListItemVersionRequestBuilder versions(final String id) {
         return new ListItemVersionRequestBuilder(getRequestUrlWithAdditionalSegment("versions") + "/" + id, getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
     public ListItemGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval() {
         return new ListItemGetActivitiesByIntervalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getActivitiesByInterval"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param startDateTime the startDateTime
+     * @param endDateTime the endDateTime
+     * @param interval the interval
+     */
     public ListItemGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval(final String startDateTime, final String endDateTime, final String interval) {
         return new ListItemGetActivitiesByIntervalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getActivitiesByInterval"), getClient(), null, startDateTime, endDateTime, interval);
     }

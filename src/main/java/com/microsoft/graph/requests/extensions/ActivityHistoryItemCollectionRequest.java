@@ -38,6 +38,11 @@ public class ActivityHistoryItemCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, ActivityHistoryItemCollectionResponse.class, ActivityHistoryItemCollectionPage.class, ActivityHistoryItemCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new ActivityHistoryItem
+     * @param newActivityHistoryItem the ActivityHistoryItem to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final ActivityHistoryItem newActivityHistoryItem, final ICallback<? super ActivityHistoryItem> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ActivityHistoryItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class ActivityHistoryItemCollectionRequest extends BaseCollectionRequest<
             .post(newActivityHistoryItem, callback);
     }
 
+    /**
+     * Creates a new ActivityHistoryItem
+     * @param newActivityHistoryItem the ActivityHistoryItem to create
+     * @return the newly created object
+     */
     public ActivityHistoryItem post(final ActivityHistoryItem newActivityHistoryItem) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ActivityHistoryItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

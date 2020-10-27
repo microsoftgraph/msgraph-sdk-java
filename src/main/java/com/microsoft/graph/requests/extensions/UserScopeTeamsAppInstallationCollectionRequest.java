@@ -38,6 +38,11 @@ public class UserScopeTeamsAppInstallationCollectionRequest extends BaseCollecti
         super(requestUrl, client, requestOptions, UserScopeTeamsAppInstallationCollectionResponse.class, UserScopeTeamsAppInstallationCollectionPage.class, UserScopeTeamsAppInstallationCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new UserScopeTeamsAppInstallation
+     * @param newUserScopeTeamsAppInstallation the UserScopeTeamsAppInstallation to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation, final ICallback<? super UserScopeTeamsAppInstallation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserScopeTeamsAppInstallationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class UserScopeTeamsAppInstallationCollectionRequest extends BaseCollecti
             .post(newUserScopeTeamsAppInstallation, callback);
     }
 
+    /**
+     * Creates a new UserScopeTeamsAppInstallation
+     * @param newUserScopeTeamsAppInstallation the UserScopeTeamsAppInstallation to create
+     * @return the newly created object
+     */
     public UserScopeTeamsAppInstallation post(final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UserScopeTeamsAppInstallationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

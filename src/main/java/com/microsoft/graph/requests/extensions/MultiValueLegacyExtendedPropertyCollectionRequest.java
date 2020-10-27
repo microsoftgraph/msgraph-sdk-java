@@ -38,6 +38,11 @@ public class MultiValueLegacyExtendedPropertyCollectionRequest extends BaseColle
         super(requestUrl, client, requestOptions, MultiValueLegacyExtendedPropertyCollectionResponse.class, MultiValueLegacyExtendedPropertyCollectionPage.class, MultiValueLegacyExtendedPropertyCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new MultiValueLegacyExtendedProperty
+     * @param newMultiValueLegacyExtendedProperty the MultiValueLegacyExtendedProperty to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty, final ICallback<? super MultiValueLegacyExtendedProperty> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MultiValueLegacyExtendedPropertyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class MultiValueLegacyExtendedPropertyCollectionRequest extends BaseColle
             .post(newMultiValueLegacyExtendedProperty, callback);
     }
 
+    /**
+     * Creates a new MultiValueLegacyExtendedProperty
+     * @param newMultiValueLegacyExtendedProperty the MultiValueLegacyExtendedProperty to create
+     * @return the newly created object
+     */
     public MultiValueLegacyExtendedProperty post(final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MultiValueLegacyExtendedPropertyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

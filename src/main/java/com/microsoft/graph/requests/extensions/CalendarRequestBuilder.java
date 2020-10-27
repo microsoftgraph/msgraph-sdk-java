@@ -63,46 +63,114 @@ public class CalendarRequestBuilder extends BaseRequestBuilder<Calendar> {
     }
 
 
+    /**
+     *  Gets a request builder for the CalendarPermission collection
+     *
+     * @return the collection request builder
+     */
     public CalendarPermissionCollectionRequestBuilder calendarPermissions() {
         return new CalendarPermissionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calendarPermissions"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the CalendarPermission item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public CalendarPermissionRequestBuilder calendarPermissions(final String id) {
         return new CalendarPermissionRequestBuilder(getRequestUrlWithAdditionalSegment("calendarPermissions") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the Event collection
+     *
+     * @return the collection request builder
+     */
     public EventCollectionRequestBuilder calendarView() {
         return new EventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calendarView"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Event item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public EventRequestBuilder calendarView(final String id) {
         return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("calendarView") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the Event collection
+     *
+     * @return the collection request builder
+     */
     public EventCollectionRequestBuilder events() {
         return new EventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("events"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Event item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public EventRequestBuilder events(final String id) {
         return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("events") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the MultiValueLegacyExtendedProperty collection
+     *
+     * @return the collection request builder
+     */
     public MultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties() {
         return new MultiValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the MultiValueLegacyExtendedProperty item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public MultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id) {
         return new MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the SingleValueLegacyExtendedProperty collection
+     *
+     * @return the collection request builder
+     */
     public SingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
         return new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the SingleValueLegacyExtendedProperty item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public SingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id) {
         return new SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param schedules the schedules
+     * @param endTime the endTime
+     * @param startTime the startTime
+     * @param availabilityViewInterval the availabilityViewInterval
+     */
     public CalendarGetScheduleCollectionRequestBuilder getSchedule(final java.util.List<String> schedules, final DateTimeTimeZone endTime, final DateTimeTimeZone startTime, final Integer availabilityViewInterval) {
         return new CalendarGetScheduleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSchedule"), getClient(), null, schedules, endTime, startTime, availabilityViewInterval);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param user the user
+     */
     public CalendarAllowedCalendarSharingRolesCollectionRequestBuilder allowedCalendarSharingRoles(final String user) {
         return new CalendarAllowedCalendarSharingRolesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.allowedCalendarSharingRoles"), getClient(), null, user);
     }

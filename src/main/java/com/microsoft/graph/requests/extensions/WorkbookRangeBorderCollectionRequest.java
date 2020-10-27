@@ -38,6 +38,11 @@ public class WorkbookRangeBorderCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, WorkbookRangeBorderCollectionResponse.class, WorkbookRangeBorderCollectionPage.class, WorkbookRangeBorderCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new WorkbookRangeBorder
+     * @param newWorkbookRangeBorder the WorkbookRangeBorder to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final WorkbookRangeBorder newWorkbookRangeBorder, final ICallback<? super WorkbookRangeBorder> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookRangeBorderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class WorkbookRangeBorderCollectionRequest extends BaseCollectionRequest<
             .post(newWorkbookRangeBorder, callback);
     }
 
+    /**
+     * Creates a new WorkbookRangeBorder
+     * @param newWorkbookRangeBorder the WorkbookRangeBorder to create
+     * @return the newly created object
+     */
     public WorkbookRangeBorder post(final WorkbookRangeBorder newWorkbookRangeBorder) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookRangeBorderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

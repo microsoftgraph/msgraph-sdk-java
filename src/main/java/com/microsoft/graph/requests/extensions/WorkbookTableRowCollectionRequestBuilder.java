@@ -42,14 +42,29 @@ public class WorkbookTableRowCollectionRequestBuilder extends BaseCollectionRequ
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param index the index
+     * @param values the values
+     */
     public WorkbookTableRowAddRequestBuilder add(final Integer index, final com.google.gson.JsonElement values) {
         return new WorkbookTableRowAddRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.add"), getClient(), null, index, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     public WorkbookTableRowCountRequestBuilder count() {
         return new WorkbookTableRowCountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.count"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param index the index
+     */
     public WorkbookTableRowItemAtRequestBuilder itemAt(final Integer index) {
         return new WorkbookTableRowItemAtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.itemAt"), getClient(), null, index);
     }

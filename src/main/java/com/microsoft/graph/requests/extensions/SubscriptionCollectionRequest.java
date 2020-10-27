@@ -37,6 +37,11 @@ public class SubscriptionCollectionRequest extends BaseCollectionRequest<Subscri
         super(requestUrl, client, requestOptions, SubscriptionCollectionResponse.class, SubscriptionCollectionPage.class, SubscriptionCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Subscription
+     * @param newSubscription the Subscription to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Subscription newSubscription, final ICallback<? super Subscription> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SubscriptionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -44,6 +49,11 @@ public class SubscriptionCollectionRequest extends BaseCollectionRequest<Subscri
             .post(newSubscription, callback);
     }
 
+    /**
+     * Creates a new Subscription
+     * @param newSubscription the Subscription to create
+     * @return the newly created object
+     */
     public Subscription post(final Subscription newSubscription) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SubscriptionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

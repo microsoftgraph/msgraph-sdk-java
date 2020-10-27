@@ -20,6 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
  * The class for the Message Copy Request.
  */
 public class MessageCopyRequest extends BaseRequest<Message> {
+    /** The body for the method */
     protected final MessageCopyBody body;
 
     /**
@@ -34,10 +35,18 @@ public class MessageCopyRequest extends BaseRequest<Message> {
         body = new MessageCopyBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(final ICallback<? super Message> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     public Message post() throws ClientException {
         return send(HttpMethod.POST, body);
     }

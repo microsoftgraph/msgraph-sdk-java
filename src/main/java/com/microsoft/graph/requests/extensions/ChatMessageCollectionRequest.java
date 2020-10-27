@@ -37,6 +37,11 @@ public class ChatMessageCollectionRequest extends BaseCollectionRequest<ChatMess
         super(requestUrl, client, requestOptions, ChatMessageCollectionResponse.class, ChatMessageCollectionPage.class, ChatMessageCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new ChatMessage
+     * @param newChatMessage the ChatMessage to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final ChatMessage newChatMessage, final ICallback<? super ChatMessage> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ChatMessageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -44,6 +49,11 @@ public class ChatMessageCollectionRequest extends BaseCollectionRequest<ChatMess
             .post(newChatMessage, callback);
     }
 
+    /**
+     * Creates a new ChatMessage
+     * @param newChatMessage the ChatMessage to create
+     * @return the newly created object
+     */
     public ChatMessage post(final ChatMessage newChatMessage) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ChatMessageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

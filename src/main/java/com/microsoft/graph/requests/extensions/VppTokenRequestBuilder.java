@@ -53,6 +53,10 @@ public class VppTokenRequestBuilder extends BaseRequestBuilder<VppToken> {
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     public VppTokenSyncLicensesRequestBuilder syncLicenses() {
         return new VppTokenSyncLicensesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.syncLicenses"), getClient(), null);
     }

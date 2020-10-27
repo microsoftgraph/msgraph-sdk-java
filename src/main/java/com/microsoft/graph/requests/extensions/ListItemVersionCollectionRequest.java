@@ -38,6 +38,11 @@ public class ListItemVersionCollectionRequest extends BaseCollectionRequest<List
         super(requestUrl, client, requestOptions, ListItemVersionCollectionResponse.class, ListItemVersionCollectionPage.class, ListItemVersionCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new ListItemVersion
+     * @param newListItemVersion the ListItemVersion to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final ListItemVersion newListItemVersion, final ICallback<? super ListItemVersion> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ListItemVersionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class ListItemVersionCollectionRequest extends BaseCollectionRequest<List
             .post(newListItemVersion, callback);
     }
 
+    /**
+     * Creates a new ListItemVersion
+     * @param newListItemVersion the ListItemVersion to create
+     * @return the newly created object
+     */
     public ListItemVersion post(final ListItemVersion newListItemVersion) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ListItemVersionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

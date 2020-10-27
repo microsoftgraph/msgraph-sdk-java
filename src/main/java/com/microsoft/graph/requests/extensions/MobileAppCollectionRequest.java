@@ -39,6 +39,11 @@ public class MobileAppCollectionRequest extends BaseCollectionRequest<MobileApp,
         super(requestUrl, client, requestOptions, MobileAppCollectionResponse.class, MobileAppCollectionPage.class, MobileAppCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new MobileApp
+     * @param newMobileApp the MobileApp to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final MobileApp newMobileApp, final ICallback<? super MobileApp> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -46,6 +51,11 @@ public class MobileAppCollectionRequest extends BaseCollectionRequest<MobileApp,
             .post(newMobileApp, callback);
     }
 
+    /**
+     * Creates a new MobileApp
+     * @param newMobileApp the MobileApp to create
+     * @return the newly created object
+     */
     public MobileApp post(final MobileApp newMobileApp) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MobileAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

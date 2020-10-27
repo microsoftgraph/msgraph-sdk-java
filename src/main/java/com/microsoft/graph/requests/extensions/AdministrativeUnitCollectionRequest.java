@@ -38,6 +38,11 @@ public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<A
         super(requestUrl, client, requestOptions, AdministrativeUnitCollectionResponse.class, AdministrativeUnitCollectionPage.class, AdministrativeUnitCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new AdministrativeUnit
+     * @param newAdministrativeUnit the AdministrativeUnit to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final AdministrativeUnit newAdministrativeUnit, final ICallback<? super AdministrativeUnit> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AdministrativeUnitRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<A
             .post(newAdministrativeUnit, callback);
     }
 
+    /**
+     * Creates a new AdministrativeUnit
+     * @param newAdministrativeUnit the AdministrativeUnit to create
+     * @return the newly created object
+     */
     public AdministrativeUnit post(final AdministrativeUnit newAdministrativeUnit) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AdministrativeUnitRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

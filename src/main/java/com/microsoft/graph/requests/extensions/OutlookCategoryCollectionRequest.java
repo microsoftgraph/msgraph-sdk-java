@@ -38,6 +38,11 @@ public class OutlookCategoryCollectionRequest extends BaseCollectionRequest<Outl
         super(requestUrl, client, requestOptions, OutlookCategoryCollectionResponse.class, OutlookCategoryCollectionPage.class, OutlookCategoryCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new OutlookCategory
+     * @param newOutlookCategory the OutlookCategory to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final OutlookCategory newOutlookCategory, final ICallback<? super OutlookCategory> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OutlookCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class OutlookCategoryCollectionRequest extends BaseCollectionRequest<Outl
             .post(newOutlookCategory, callback);
     }
 
+    /**
+     * Creates a new OutlookCategory
+     * @param newOutlookCategory the OutlookCategory to create
+     * @return the newly created object
+     */
     public OutlookCategory post(final OutlookCategory newOutlookCategory) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OutlookCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

@@ -20,6 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
  * The class for the Workbook Functions Chi Sq_Inv_RTRequest.
  */
 public class WorkbookFunctionsChiSq_Inv_RTRequest extends BaseRequest<WorkbookFunctionResult> {
+    /** The body for the method */
     protected final WorkbookFunctionsChiSq_Inv_RTBody body;
 
     /**
@@ -34,10 +35,18 @@ public class WorkbookFunctionsChiSq_Inv_RTRequest extends BaseRequest<WorkbookFu
         body = new WorkbookFunctionsChiSq_Inv_RTBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     public WorkbookFunctionResult post() throws ClientException {
         return send(HttpMethod.POST, body);
     }

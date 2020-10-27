@@ -38,6 +38,11 @@ public class SegmentCollectionRequest extends BaseCollectionRequest<Segment, Seg
         super(requestUrl, client, requestOptions, SegmentCollectionResponse.class, SegmentCollectionPage.class, SegmentCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Segment
+     * @param newSegment the Segment to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Segment newSegment, final ICallback<? super Segment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SegmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class SegmentCollectionRequest extends BaseCollectionRequest<Segment, Seg
             .post(newSegment, callback);
     }
 
+    /**
+     * Creates a new Segment
+     * @param newSegment the Segment to create
+     * @return the newly created object
+     */
     public Segment post(final Segment newSegment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SegmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

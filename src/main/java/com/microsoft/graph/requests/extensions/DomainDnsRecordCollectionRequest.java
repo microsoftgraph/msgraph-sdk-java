@@ -37,6 +37,11 @@ public class DomainDnsRecordCollectionRequest extends BaseCollectionRequest<Doma
         super(requestUrl, client, requestOptions, DomainDnsRecordCollectionResponse.class, DomainDnsRecordCollectionPage.class, DomainDnsRecordCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new DomainDnsRecord
+     * @param newDomainDnsRecord the DomainDnsRecord to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final DomainDnsRecord newDomainDnsRecord, final ICallback<? super DomainDnsRecord> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DomainDnsRecordRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -44,6 +49,11 @@ public class DomainDnsRecordCollectionRequest extends BaseCollectionRequest<Doma
             .post(newDomainDnsRecord, callback);
     }
 
+    /**
+     * Creates a new DomainDnsRecord
+     * @param newDomainDnsRecord the DomainDnsRecord to create
+     * @return the newly created object
+     */
     public DomainDnsRecord post(final DomainDnsRecord newDomainDnsRecord) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DomainDnsRecordRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

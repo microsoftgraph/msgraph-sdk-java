@@ -38,6 +38,11 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest exte
         super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse.class, ManagedDeviceMobileAppConfigurationAssignmentCollectionPage.class, ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new ManagedDeviceMobileAppConfigurationAssignment
+     * @param newManagedDeviceMobileAppConfigurationAssignment the ManagedDeviceMobileAppConfigurationAssignment to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final ManagedDeviceMobileAppConfigurationAssignment newManagedDeviceMobileAppConfigurationAssignment, final ICallback<? super ManagedDeviceMobileAppConfigurationAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest exte
             .post(newManagedDeviceMobileAppConfigurationAssignment, callback);
     }
 
+    /**
+     * Creates a new ManagedDeviceMobileAppConfigurationAssignment
+     * @param newManagedDeviceMobileAppConfigurationAssignment the ManagedDeviceMobileAppConfigurationAssignment to create
+     * @return the newly created object
+     */
     public ManagedDeviceMobileAppConfigurationAssignment post(final ManagedDeviceMobileAppConfigurationAssignment newManagedDeviceMobileAppConfigurationAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

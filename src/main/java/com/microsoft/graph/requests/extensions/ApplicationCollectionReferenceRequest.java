@@ -44,6 +44,11 @@ public class ApplicationCollectionReferenceRequest extends BaseCollectionWithRef
         super(requestUrl, client, requestOptions, ApplicationCollectionResponse.class, ApplicationCollectionWithReferencesPage.class, ApplicationCollectionWithReferencesRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Application
+     * @param newApplication the Application to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Application newApplication, final ICallback<? super Application> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/applications/" + newApplication.id);
@@ -52,6 +57,11 @@ public class ApplicationCollectionReferenceRequest extends BaseCollectionWithRef
             .post(newApplication, body, callback);
     }
 
+    /**
+     * Creates a new Application
+     * @param newApplication the Application to create
+     * @return the newly created object
+     */
     public Application post(final Application newApplication) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/applications/" + newApplication.id);

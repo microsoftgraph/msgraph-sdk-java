@@ -38,6 +38,11 @@ public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseColl
         super(requestUrl, client, requestOptions, EnrollmentConfigurationAssignmentCollectionResponse.class, EnrollmentConfigurationAssignmentCollectionPage.class, EnrollmentConfigurationAssignmentCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new EnrollmentConfigurationAssignment
+     * @param newEnrollmentConfigurationAssignment the EnrollmentConfigurationAssignment to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment, final ICallback<? super EnrollmentConfigurationAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EnrollmentConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseColl
             .post(newEnrollmentConfigurationAssignment, callback);
     }
 
+    /**
+     * Creates a new EnrollmentConfigurationAssignment
+     * @param newEnrollmentConfigurationAssignment the EnrollmentConfigurationAssignment to create
+     * @return the newly created object
+     */
     public EnrollmentConfigurationAssignment post(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EnrollmentConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

@@ -96,10 +96,21 @@ public class WorkbookChartRequestBuilder extends BaseRequestBuilder<WorkbookChar
     public WorkbookChartLegendRequestBuilder legend() {
         return new WorkbookChartLegendRequestBuilder(getRequestUrlWithAdditionalSegment("legend"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the WorkbookChartSeries collection
+     *
+     * @return the collection request builder
+     */
     public WorkbookChartSeriesCollectionRequestBuilder series() {
         return new WorkbookChartSeriesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("series"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the WorkbookChartSeries item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public WorkbookChartSeriesRequestBuilder series(final String id) {
         return new WorkbookChartSeriesRequestBuilder(getRequestUrlWithAdditionalSegment("series") + "/" + id, getClient(), null);
     }
@@ -122,26 +133,60 @@ public class WorkbookChartRequestBuilder extends BaseRequestBuilder<WorkbookChar
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param sourceData the sourceData
+     * @param seriesBy the seriesBy
+     */
     public WorkbookChartSetDataRequestBuilder setData(final com.google.gson.JsonElement sourceData, final String seriesBy) {
         return new WorkbookChartSetDataRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setData"), getClient(), null, sourceData, seriesBy);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param startCell the startCell
+     * @param endCell the endCell
+     */
     public WorkbookChartSetPositionRequestBuilder setPosition(final com.google.gson.JsonElement startCell, final com.google.gson.JsonElement endCell) {
         return new WorkbookChartSetPositionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setPosition"), getClient(), null, startCell, endCell);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     public WorkbookChartImageRequestBuilder image() {
         return new WorkbookChartImageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.image"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param width the width
+     */
     public WorkbookChartImageRequestBuilder image(final Integer width) {
         return new WorkbookChartImageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.image"), getClient(), null, width);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param width the width
+     * @param height the height
+     */
     public WorkbookChartImageRequestBuilder image(final Integer width, final Integer height) {
         return new WorkbookChartImageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.image"), getClient(), null, width, height);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param width the width
+     * @param height the height
+     * @param fittingMode the fittingMode
+     */
     public WorkbookChartImageRequestBuilder image(final Integer width, final Integer height, final String fittingMode) {
         return new WorkbookChartImageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.image"), getClient(), null, width, height, fittingMode);
     }

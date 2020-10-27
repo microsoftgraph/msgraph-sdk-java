@@ -39,6 +39,10 @@ public class ManagedAppRegistrationCollectionRequestBuilder extends BaseCollecti
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
     public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder getUserIdsWithFlaggedAppRegistration() {
         return new ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getUserIdsWithFlaggedAppRegistration"), getClient(), null);
     }

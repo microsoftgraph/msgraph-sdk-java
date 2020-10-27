@@ -38,6 +38,11 @@ public class AppRoleAssignmentCollectionRequest extends BaseCollectionRequest<Ap
         super(requestUrl, client, requestOptions, AppRoleAssignmentCollectionResponse.class, AppRoleAssignmentCollectionPage.class, AppRoleAssignmentCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new AppRoleAssignment
+     * @param newAppRoleAssignment the AppRoleAssignment to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final AppRoleAssignment newAppRoleAssignment, final ICallback<? super AppRoleAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AppRoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class AppRoleAssignmentCollectionRequest extends BaseCollectionRequest<Ap
             .post(newAppRoleAssignment, callback);
     }
 
+    /**
+     * Creates a new AppRoleAssignment
+     * @param newAppRoleAssignment the AppRoleAssignment to create
+     * @return the newly created object
+     */
     public AppRoleAssignment post(final AppRoleAssignment newAppRoleAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AppRoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

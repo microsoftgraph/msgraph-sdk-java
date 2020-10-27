@@ -38,6 +38,11 @@ public class WorkbookChartSeriesCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, WorkbookChartSeriesCollectionResponse.class, WorkbookChartSeriesCollectionPage.class, WorkbookChartSeriesCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new WorkbookChartSeries
+     * @param newWorkbookChartSeries the WorkbookChartSeries to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final WorkbookChartSeries newWorkbookChartSeries, final ICallback<? super WorkbookChartSeries> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookChartSeriesRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class WorkbookChartSeriesCollectionRequest extends BaseCollectionRequest<
             .post(newWorkbookChartSeries, callback);
     }
 
+    /**
+     * Creates a new WorkbookChartSeries
+     * @param newWorkbookChartSeries the WorkbookChartSeries to create
+     * @return the newly created object
+     */
     public WorkbookChartSeries post(final WorkbookChartSeries newWorkbookChartSeries) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookChartSeriesRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

@@ -38,6 +38,11 @@ public class ColumnDefinitionCollectionRequest extends BaseCollectionRequest<Col
         super(requestUrl, client, requestOptions, ColumnDefinitionCollectionResponse.class, ColumnDefinitionCollectionPage.class, ColumnDefinitionCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new ColumnDefinition
+     * @param newColumnDefinition the ColumnDefinition to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final ColumnDefinition newColumnDefinition, final ICallback<? super ColumnDefinition> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ColumnDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class ColumnDefinitionCollectionRequest extends BaseCollectionRequest<Col
             .post(newColumnDefinition, callback);
     }
 
+    /**
+     * Creates a new ColumnDefinition
+     * @param newColumnDefinition the ColumnDefinition to create
+     * @return the newly created object
+     */
     public ColumnDefinition post(final ColumnDefinition newColumnDefinition) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ColumnDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

@@ -38,6 +38,11 @@ public class TermsAndConditionsCollectionRequest extends BaseCollectionRequest<T
         super(requestUrl, client, requestOptions, TermsAndConditionsCollectionResponse.class, TermsAndConditionsCollectionPage.class, TermsAndConditionsCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new TermsAndConditions
+     * @param newTermsAndConditions the TermsAndConditions to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final TermsAndConditions newTermsAndConditions, final ICallback<? super TermsAndConditions> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TermsAndConditionsRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class TermsAndConditionsCollectionRequest extends BaseCollectionRequest<T
             .post(newTermsAndConditions, callback);
     }
 
+    /**
+     * Creates a new TermsAndConditions
+     * @param newTermsAndConditions the TermsAndConditions to create
+     * @return the newly created object
+     */
     public TermsAndConditions post(final TermsAndConditions newTermsAndConditions) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TermsAndConditionsRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

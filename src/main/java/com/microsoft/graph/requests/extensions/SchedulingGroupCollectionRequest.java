@@ -38,6 +38,11 @@ public class SchedulingGroupCollectionRequest extends BaseCollectionRequest<Sche
         super(requestUrl, client, requestOptions, SchedulingGroupCollectionResponse.class, SchedulingGroupCollectionPage.class, SchedulingGroupCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new SchedulingGroup
+     * @param newSchedulingGroup the SchedulingGroup to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final SchedulingGroup newSchedulingGroup, final ICallback<? super SchedulingGroup> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SchedulingGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class SchedulingGroupCollectionRequest extends BaseCollectionRequest<Sche
             .post(newSchedulingGroup, callback);
     }
 
+    /**
+     * Creates a new SchedulingGroup
+     * @param newSchedulingGroup the SchedulingGroup to create
+     * @return the newly created object
+     */
     public SchedulingGroup post(final SchedulingGroup newSchedulingGroup) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SchedulingGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

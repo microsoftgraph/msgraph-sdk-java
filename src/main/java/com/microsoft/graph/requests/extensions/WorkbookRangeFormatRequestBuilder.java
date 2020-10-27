@@ -57,10 +57,21 @@ public class WorkbookRangeFormatRequestBuilder extends BaseRequestBuilder<Workbo
     }
 
 
+    /**
+     *  Gets a request builder for the WorkbookRangeBorder collection
+     *
+     * @return the collection request builder
+     */
     public WorkbookRangeBorderCollectionRequestBuilder borders() {
         return new WorkbookRangeBorderCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("borders"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the WorkbookRangeBorder item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public WorkbookRangeBorderRequestBuilder borders(final String id) {
         return new WorkbookRangeBorderRequestBuilder(getRequestUrlWithAdditionalSegment("borders") + "/" + id, getClient(), null);
     }
@@ -92,10 +103,18 @@ public class WorkbookRangeFormatRequestBuilder extends BaseRequestBuilder<Workbo
         return new WorkbookFormatProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("protection"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     public WorkbookRangeFormatAutofitColumnsRequestBuilder autofitColumns() {
         return new WorkbookRangeFormatAutofitColumnsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.autofitColumns"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     public WorkbookRangeFormatAutofitRowsRequestBuilder autofitRows() {
         return new WorkbookRangeFormatAutofitRowsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.autofitRows"), getClient(), null);
     }

@@ -38,6 +38,11 @@ public class NamedLocationCollectionRequest extends BaseCollectionRequest<NamedL
         super(requestUrl, client, requestOptions, NamedLocationCollectionResponse.class, NamedLocationCollectionPage.class, NamedLocationCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new NamedLocation
+     * @param newNamedLocation the NamedLocation to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final NamedLocation newNamedLocation, final ICallback<? super NamedLocation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new NamedLocationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class NamedLocationCollectionRequest extends BaseCollectionRequest<NamedL
             .post(newNamedLocation, callback);
     }
 
+    /**
+     * Creates a new NamedLocation
+     * @param newNamedLocation the NamedLocation to create
+     * @return the newly created object
+     */
     public NamedLocation post(final NamedLocation newNamedLocation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new NamedLocationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

@@ -38,6 +38,11 @@ public class VppTokenCollectionRequest extends BaseCollectionRequest<VppToken, V
         super(requestUrl, client, requestOptions, VppTokenCollectionResponse.class, VppTokenCollectionPage.class, VppTokenCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new VppToken
+     * @param newVppToken the VppToken to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final VppToken newVppToken, final ICallback<? super VppToken> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new VppTokenRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class VppTokenCollectionRequest extends BaseCollectionRequest<VppToken, V
             .post(newVppToken, callback);
     }
 
+    /**
+     * Creates a new VppToken
+     * @param newVppToken the VppToken to create
+     * @return the newly created object
+     */
     public VppToken post(final VppToken newVppToken) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new VppTokenRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

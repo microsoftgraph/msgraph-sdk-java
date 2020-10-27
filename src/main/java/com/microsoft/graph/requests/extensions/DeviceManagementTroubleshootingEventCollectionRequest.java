@@ -38,6 +38,11 @@ public class DeviceManagementTroubleshootingEventCollectionRequest extends BaseC
         super(requestUrl, client, requestOptions, DeviceManagementTroubleshootingEventCollectionResponse.class, DeviceManagementTroubleshootingEventCollectionPage.class, DeviceManagementTroubleshootingEventCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new DeviceManagementTroubleshootingEvent
+     * @param newDeviceManagementTroubleshootingEvent the DeviceManagementTroubleshootingEvent to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent, final ICallback<? super DeviceManagementTroubleshootingEvent> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementTroubleshootingEventRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class DeviceManagementTroubleshootingEventCollectionRequest extends BaseC
             .post(newDeviceManagementTroubleshootingEvent, callback);
     }
 
+    /**
+     * Creates a new DeviceManagementTroubleshootingEvent
+     * @param newDeviceManagementTroubleshootingEvent the DeviceManagementTroubleshootingEvent to create
+     * @return the newly created object
+     */
     public DeviceManagementTroubleshootingEvent post(final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceManagementTroubleshootingEventRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

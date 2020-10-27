@@ -37,6 +37,11 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
         super(requestUrl, client, requestOptions, GroupLifecyclePolicyCollectionResponse.class, GroupLifecyclePolicyCollectionPage.class, GroupLifecyclePolicyCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new GroupLifecyclePolicy
+     * @param newGroupLifecyclePolicy the GroupLifecyclePolicy to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final GroupLifecyclePolicy newGroupLifecyclePolicy, final ICallback<? super GroupLifecyclePolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GroupLifecyclePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -44,6 +49,11 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
             .post(newGroupLifecyclePolicy, callback);
     }
 
+    /**
+     * Creates a new GroupLifecyclePolicy
+     * @param newGroupLifecyclePolicy the GroupLifecyclePolicy to create
+     * @return the newly created object
+     */
     public GroupLifecyclePolicy post(final GroupLifecyclePolicy newGroupLifecyclePolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new GroupLifecyclePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

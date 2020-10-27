@@ -38,6 +38,11 @@ public class DeviceCategoryCollectionRequest extends BaseCollectionRequest<Devic
         super(requestUrl, client, requestOptions, DeviceCategoryCollectionResponse.class, DeviceCategoryCollectionPage.class, DeviceCategoryCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new DeviceCategory
+     * @param newDeviceCategory the DeviceCategory to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final DeviceCategory newDeviceCategory, final ICallback<? super DeviceCategory> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class DeviceCategoryCollectionRequest extends BaseCollectionRequest<Devic
             .post(newDeviceCategory, callback);
     }
 
+    /**
+     * Creates a new DeviceCategory
+     * @param newDeviceCategory the DeviceCategory to create
+     * @return the newly created object
+     */
     public DeviceCategory post(final DeviceCategory newDeviceCategory) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

@@ -70,70 +70,176 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder<Schedule> {
     }
 
 
+    /**
+     *  Gets a request builder for the OfferShiftRequest collection
+     *
+     * @return the collection request builder
+     */
     public OfferShiftRequestCollectionRequestBuilder offerShiftRequests() {
         return new OfferShiftRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("offerShiftRequests"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the OfferShiftRequest item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public OfferShiftRequestRequestBuilder offerShiftRequests(final String id) {
         return new OfferShiftRequestRequestBuilder(getRequestUrlWithAdditionalSegment("offerShiftRequests") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the OpenShiftChangeRequest collection
+     *
+     * @return the collection request builder
+     */
     public OpenShiftChangeRequestCollectionRequestBuilder openShiftChangeRequests() {
         return new OpenShiftChangeRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("openShiftChangeRequests"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the OpenShiftChangeRequest item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public OpenShiftChangeRequestRequestBuilder openShiftChangeRequests(final String id) {
         return new OpenShiftChangeRequestRequestBuilder(getRequestUrlWithAdditionalSegment("openShiftChangeRequests") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the OpenShift collection
+     *
+     * @return the collection request builder
+     */
     public OpenShiftCollectionRequestBuilder openShifts() {
         return new OpenShiftCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("openShifts"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the OpenShift item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public OpenShiftRequestBuilder openShifts(final String id) {
         return new OpenShiftRequestBuilder(getRequestUrlWithAdditionalSegment("openShifts") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the SchedulingGroup collection
+     *
+     * @return the collection request builder
+     */
     public SchedulingGroupCollectionRequestBuilder schedulingGroups() {
         return new SchedulingGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("schedulingGroups"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the SchedulingGroup item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public SchedulingGroupRequestBuilder schedulingGroups(final String id) {
         return new SchedulingGroupRequestBuilder(getRequestUrlWithAdditionalSegment("schedulingGroups") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the Shift collection
+     *
+     * @return the collection request builder
+     */
     public ShiftCollectionRequestBuilder shifts() {
         return new ShiftCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("shifts"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Shift item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public ShiftRequestBuilder shifts(final String id) {
         return new ShiftRequestBuilder(getRequestUrlWithAdditionalSegment("shifts") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the SwapShiftsChangeRequest collection
+     *
+     * @return the collection request builder
+     */
     public SwapShiftsChangeRequestCollectionRequestBuilder swapShiftsChangeRequests() {
         return new SwapShiftsChangeRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("swapShiftsChangeRequests"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the SwapShiftsChangeRequest item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public SwapShiftsChangeRequestRequestBuilder swapShiftsChangeRequests(final String id) {
         return new SwapShiftsChangeRequestRequestBuilder(getRequestUrlWithAdditionalSegment("swapShiftsChangeRequests") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the TimeOffReason collection
+     *
+     * @return the collection request builder
+     */
     public TimeOffReasonCollectionRequestBuilder timeOffReasons() {
         return new TimeOffReasonCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("timeOffReasons"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the TimeOffReason item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public TimeOffReasonRequestBuilder timeOffReasons(final String id) {
         return new TimeOffReasonRequestBuilder(getRequestUrlWithAdditionalSegment("timeOffReasons") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the TimeOffRequest collection
+     *
+     * @return the collection request builder
+     */
     public TimeOffRequestCollectionRequestBuilder timeOffRequests() {
         return new TimeOffRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("timeOffRequests"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the TimeOffRequest item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public TimeOffRequestRequestBuilder timeOffRequests(final String id) {
         return new TimeOffRequestRequestBuilder(getRequestUrlWithAdditionalSegment("timeOffRequests") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the TimeOff collection
+     *
+     * @return the collection request builder
+     */
     public TimeOffCollectionRequestBuilder timesOff() {
         return new TimeOffCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("timesOff"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the TimeOff item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public TimeOffRequestBuilder timesOff(final String id) {
         return new TimeOffRequestBuilder(getRequestUrlWithAdditionalSegment("timesOff") + "/" + id, getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param notifyTeam the notifyTeam
+     * @param startDateTime the startDateTime
+     * @param endDateTime the endDateTime
+     */
     public ScheduleShareRequestBuilder share(final Boolean notifyTeam, final java.util.Calendar startDateTime, final java.util.Calendar endDateTime) {
         return new ScheduleShareRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.share"), getClient(), null, notifyTeam, startDateTime, endDateTime);
     }

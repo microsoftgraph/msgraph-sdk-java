@@ -38,6 +38,11 @@ public class TelecomExpenseManagementPartnerCollectionRequest extends BaseCollec
         super(requestUrl, client, requestOptions, TelecomExpenseManagementPartnerCollectionResponse.class, TelecomExpenseManagementPartnerCollectionPage.class, TelecomExpenseManagementPartnerCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new TelecomExpenseManagementPartner
+     * @param newTelecomExpenseManagementPartner the TelecomExpenseManagementPartner to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner, final ICallback<? super TelecomExpenseManagementPartner> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TelecomExpenseManagementPartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class TelecomExpenseManagementPartnerCollectionRequest extends BaseCollec
             .post(newTelecomExpenseManagementPartner, callback);
     }
 
+    /**
+     * Creates a new TelecomExpenseManagementPartner
+     * @param newTelecomExpenseManagementPartner the TelecomExpenseManagementPartner to create
+     * @return the newly created object
+     */
     public TelecomExpenseManagementPartner post(final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TelecomExpenseManagementPartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

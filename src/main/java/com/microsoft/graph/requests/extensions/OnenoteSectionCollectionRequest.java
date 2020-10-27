@@ -39,6 +39,11 @@ public class OnenoteSectionCollectionRequest extends BaseCollectionRequest<Oneno
         super(requestUrl, client, requestOptions, OnenoteSectionCollectionResponse.class, OnenoteSectionCollectionPage.class, OnenoteSectionCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new OnenoteSection
+     * @param newOnenoteSection the OnenoteSection to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final OnenoteSection newOnenoteSection, final ICallback<? super OnenoteSection> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OnenoteSectionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -46,6 +51,11 @@ public class OnenoteSectionCollectionRequest extends BaseCollectionRequest<Oneno
             .post(newOnenoteSection, callback);
     }
 
+    /**
+     * Creates a new OnenoteSection
+     * @param newOnenoteSection the OnenoteSection to create
+     * @return the newly created object
+     */
     public OnenoteSection post(final OnenoteSection newOnenoteSection) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OnenoteSectionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

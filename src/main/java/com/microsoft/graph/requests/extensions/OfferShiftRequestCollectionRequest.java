@@ -38,6 +38,11 @@ public class OfferShiftRequestCollectionRequest extends BaseCollectionRequest<Of
         super(requestUrl, client, requestOptions, OfferShiftRequestCollectionResponse.class, OfferShiftRequestCollectionPage.class, OfferShiftRequestCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new OfferShiftRequest
+     * @param newOfferShiftRequest the OfferShiftRequest to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final OfferShiftRequest newOfferShiftRequest, final ICallback<? super OfferShiftRequest> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OfferShiftRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class OfferShiftRequestCollectionRequest extends BaseCollectionRequest<Of
             .post(newOfferShiftRequest, callback);
     }
 
+    /**
+     * Creates a new OfferShiftRequest
+     * @param newOfferShiftRequest the OfferShiftRequest to create
+     * @return the newly created object
+     */
     public OfferShiftRequest post(final OfferShiftRequest newOfferShiftRequest) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OfferShiftRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

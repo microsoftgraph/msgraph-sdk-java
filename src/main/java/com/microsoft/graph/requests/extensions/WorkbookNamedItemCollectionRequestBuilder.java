@@ -41,10 +41,24 @@ public class WorkbookNamedItemCollectionRequestBuilder extends BaseCollectionReq
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param name the name
+     * @param reference the reference
+     * @param comment the comment
+     */
     public WorkbookNamedItemAddRequestBuilder add(final String name, final com.google.gson.JsonElement reference, final String comment) {
         return new WorkbookNamedItemAddRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.add"), getClient(), null, name, reference, comment);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param name the name
+     * @param formula the formula
+     * @param comment the comment
+     */
     public WorkbookNamedItemAddFormulaLocalRequestBuilder addFormulaLocal(final String name, final String formula, final String comment) {
         return new WorkbookNamedItemAddFormulaLocalRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.addFormulaLocal"), getClient(), null, name, formula, comment);
     }

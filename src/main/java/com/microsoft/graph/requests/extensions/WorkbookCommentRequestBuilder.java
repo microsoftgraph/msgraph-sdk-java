@@ -54,10 +54,21 @@ public class WorkbookCommentRequestBuilder extends BaseRequestBuilder<WorkbookCo
     }
 
 
+    /**
+     *  Gets a request builder for the WorkbookCommentReply collection
+     *
+     * @return the collection request builder
+     */
     public WorkbookCommentReplyCollectionRequestBuilder replies() {
         return new WorkbookCommentReplyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("replies"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the WorkbookCommentReply item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public WorkbookCommentReplyRequestBuilder replies(final String id) {
         return new WorkbookCommentReplyRequestBuilder(getRequestUrlWithAdditionalSegment("replies") + "/" + id, getClient(), null);
     }

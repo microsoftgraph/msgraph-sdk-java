@@ -37,6 +37,11 @@ public class MailFolderCollectionRequest extends BaseCollectionRequest<MailFolde
         super(requestUrl, client, requestOptions, MailFolderCollectionResponse.class, MailFolderCollectionPage.class, MailFolderCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new MailFolder
+     * @param newMailFolder the MailFolder to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final MailFolder newMailFolder, final ICallback<? super MailFolder> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MailFolderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -44,6 +49,11 @@ public class MailFolderCollectionRequest extends BaseCollectionRequest<MailFolde
             .post(newMailFolder, callback);
     }
 
+    /**
+     * Creates a new MailFolder
+     * @param newMailFolder the MailFolder to create
+     * @return the newly created object
+     */
     public MailFolder post(final MailFolder newMailFolder) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MailFolderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

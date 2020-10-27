@@ -38,6 +38,11 @@ public class RemoteAssistancePartnerCollectionRequest extends BaseCollectionRequ
         super(requestUrl, client, requestOptions, RemoteAssistancePartnerCollectionResponse.class, RemoteAssistancePartnerCollectionPage.class, RemoteAssistancePartnerCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new RemoteAssistancePartner
+     * @param newRemoteAssistancePartner the RemoteAssistancePartner to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final RemoteAssistancePartner newRemoteAssistancePartner, final ICallback<? super RemoteAssistancePartner> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RemoteAssistancePartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class RemoteAssistancePartnerCollectionRequest extends BaseCollectionRequ
             .post(newRemoteAssistancePartner, callback);
     }
 
+    /**
+     * Creates a new RemoteAssistancePartner
+     * @param newRemoteAssistancePartner the RemoteAssistancePartner to create
+     * @return the newly created object
+     */
     public RemoteAssistancePartner post(final RemoteAssistancePartner newRemoteAssistancePartner) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new RemoteAssistancePartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

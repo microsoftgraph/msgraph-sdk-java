@@ -28,6 +28,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 public class DeviceCompliancePolicyAssignCollectionRequest extends BaseCollectionRequest<DeviceCompliancePolicyAssignment, DeviceCompliancePolicyAssignCollectionResponse, DeviceCompliancePolicyAssignCollectionPage> {
 
 
+    /** The body for the method */
     protected final DeviceCompliancePolicyAssignBody body;
 
 
@@ -44,6 +45,10 @@ public class DeviceCompliancePolicyAssignCollectionRequest extends BaseCollectio
     }
 
 
+    /**
+     * Invokes the method and calls the callback with the resulting collection of objects
+     * @param callback a callback to be invoked with the resulting collection of objects
+     */
     public void post(final ICallback<? super DeviceCompliancePolicyAssignCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
@@ -58,6 +63,10 @@ public class DeviceCompliancePolicyAssignCollectionRequest extends BaseCollectio
         });
     }
 
+    /**
+     * Invokes the method and returns the resulting collection of objects
+     * @return a collection of objects returned by the method
+     */
     public DeviceCompliancePolicyAssignCollectionPage post() throws ClientException {
         final DeviceCompliancePolicyAssignCollectionResponse response = post(body);
         return buildFromResponse(response);

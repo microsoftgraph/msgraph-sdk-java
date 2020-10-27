@@ -38,6 +38,11 @@ public class ContactCollectionRequest extends BaseCollectionRequest<Contact, Con
         super(requestUrl, client, requestOptions, ContactCollectionResponse.class, ContactCollectionPage.class, ContactCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Contact
+     * @param newContact the Contact to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Contact newContact, final ICallback<? super Contact> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ContactRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class ContactCollectionRequest extends BaseCollectionRequest<Contact, Con
             .post(newContact, callback);
     }
 
+    /**
+     * Creates a new Contact
+     * @param newContact the Contact to create
+     * @return the newly created object
+     */
     public Contact post(final Contact newContact) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ContactRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

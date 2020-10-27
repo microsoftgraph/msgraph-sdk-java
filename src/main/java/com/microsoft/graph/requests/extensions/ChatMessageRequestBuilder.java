@@ -56,17 +56,39 @@ public class ChatMessageRequestBuilder extends BaseRequestBuilder<ChatMessage> {
     }
 
 
+    /**
+     *  Gets a request builder for the ChatMessageHostedContent collection
+     *
+     * @return the collection request builder
+     */
     public ChatMessageHostedContentCollectionRequestBuilder hostedContents() {
         return new ChatMessageHostedContentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("hostedContents"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ChatMessageHostedContent item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public ChatMessageHostedContentRequestBuilder hostedContents(final String id) {
         return new ChatMessageHostedContentRequestBuilder(getRequestUrlWithAdditionalSegment("hostedContents") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the ChatMessage collection
+     *
+     * @return the collection request builder
+     */
     public ChatMessageCollectionRequestBuilder replies() {
         return new ChatMessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("replies"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ChatMessage item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public ChatMessageRequestBuilder replies(final String id) {
         return new ChatMessageRequestBuilder(getRequestUrlWithAdditionalSegment("replies") + "/" + id, getClient(), null);
     }

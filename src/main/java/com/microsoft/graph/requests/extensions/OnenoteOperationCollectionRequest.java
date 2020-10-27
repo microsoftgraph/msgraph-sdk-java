@@ -38,6 +38,11 @@ public class OnenoteOperationCollectionRequest extends BaseCollectionRequest<One
         super(requestUrl, client, requestOptions, OnenoteOperationCollectionResponse.class, OnenoteOperationCollectionPage.class, OnenoteOperationCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new OnenoteOperation
+     * @param newOnenoteOperation the OnenoteOperation to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final OnenoteOperation newOnenoteOperation, final ICallback<? super OnenoteOperation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OnenoteOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class OnenoteOperationCollectionRequest extends BaseCollectionRequest<One
             .post(newOnenoteOperation, callback);
     }
 
+    /**
+     * Creates a new OnenoteOperation
+     * @param newOnenoteOperation the OnenoteOperation to create
+     * @return the newly created object
+     */
     public OnenoteOperation post(final OnenoteOperation newOnenoteOperation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OnenoteOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

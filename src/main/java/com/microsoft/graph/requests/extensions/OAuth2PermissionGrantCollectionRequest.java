@@ -37,6 +37,11 @@ public class OAuth2PermissionGrantCollectionRequest extends BaseCollectionReques
         super(requestUrl, client, requestOptions, OAuth2PermissionGrantCollectionResponse.class, OAuth2PermissionGrantCollectionPage.class, OAuth2PermissionGrantCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new OAuth2PermissionGrant
+     * @param newOAuth2PermissionGrant the OAuth2PermissionGrant to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final OAuth2PermissionGrant newOAuth2PermissionGrant, final ICallback<? super OAuth2PermissionGrant> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OAuth2PermissionGrantRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -44,6 +49,11 @@ public class OAuth2PermissionGrantCollectionRequest extends BaseCollectionReques
             .post(newOAuth2PermissionGrant, callback);
     }
 
+    /**
+     * Creates a new OAuth2PermissionGrant
+     * @param newOAuth2PermissionGrant the OAuth2PermissionGrant to create
+     * @return the newly created object
+     */
     public OAuth2PermissionGrant post(final OAuth2PermissionGrant newOAuth2PermissionGrant) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OAuth2PermissionGrantRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

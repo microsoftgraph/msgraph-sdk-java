@@ -58,24 +58,57 @@ public class SecurityRequestBuilder extends BaseRequestBuilder<Security> {
     }
 
 
+    /**
+     *  Gets a request builder for the Alert collection
+     *
+     * @return the collection request builder
+     */
     public AlertCollectionRequestBuilder alerts() {
         return new AlertCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("alerts"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Alert item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public AlertRequestBuilder alerts(final String id) {
         return new AlertRequestBuilder(getRequestUrlWithAdditionalSegment("alerts") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the SecureScoreControlProfile collection
+     *
+     * @return the collection request builder
+     */
     public SecureScoreControlProfileCollectionRequestBuilder secureScoreControlProfiles() {
         return new SecureScoreControlProfileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("secureScoreControlProfiles"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the SecureScoreControlProfile item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public SecureScoreControlProfileRequestBuilder secureScoreControlProfiles(final String id) {
         return new SecureScoreControlProfileRequestBuilder(getRequestUrlWithAdditionalSegment("secureScoreControlProfiles") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the SecureScore collection
+     *
+     * @return the collection request builder
+     */
     public SecureScoreCollectionRequestBuilder secureScores() {
         return new SecureScoreCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("secureScores"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the SecureScore item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public SecureScoreRequestBuilder secureScores(final String id) {
         return new SecureScoreRequestBuilder(getRequestUrlWithAdditionalSegment("secureScores") + "/" + id, getClient(), null);
     }

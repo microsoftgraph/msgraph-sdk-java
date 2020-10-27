@@ -38,6 +38,11 @@ public class RoomCollectionRequest extends BaseCollectionRequest<Room, RoomColle
         super(requestUrl, client, requestOptions, RoomCollectionResponse.class, RoomCollectionPage.class, RoomCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Room
+     * @param newRoom the Room to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Room newRoom, final ICallback<? super Room> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RoomRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class RoomCollectionRequest extends BaseCollectionRequest<Room, RoomColle
             .post(newRoom, callback);
     }
 
+    /**
+     * Creates a new Room
+     * @param newRoom the Room to create
+     * @return the newly created object
+     */
     public Room post(final Room newRoom) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new RoomRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

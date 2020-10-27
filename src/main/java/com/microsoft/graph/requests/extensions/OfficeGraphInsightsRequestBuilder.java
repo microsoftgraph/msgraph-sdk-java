@@ -58,24 +58,57 @@ public class OfficeGraphInsightsRequestBuilder extends BaseRequestBuilder<Office
     }
 
 
+    /**
+     *  Gets a request builder for the SharedInsight collection
+     *
+     * @return the collection request builder
+     */
     public SharedInsightCollectionRequestBuilder shared() {
         return new SharedInsightCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("shared"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the SharedInsight item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public SharedInsightRequestBuilder shared(final String id) {
         return new SharedInsightRequestBuilder(getRequestUrlWithAdditionalSegment("shared") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the Trending collection
+     *
+     * @return the collection request builder
+     */
     public TrendingCollectionRequestBuilder trending() {
         return new TrendingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("trending"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Trending item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public TrendingRequestBuilder trending(final String id) {
         return new TrendingRequestBuilder(getRequestUrlWithAdditionalSegment("trending") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the UsedInsight collection
+     *
+     * @return the collection request builder
+     */
     public UsedInsightCollectionRequestBuilder used() {
         return new UsedInsightCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("used"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the UsedInsight item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public UsedInsightRequestBuilder used(final String id) {
         return new UsedInsightRequestBuilder(getRequestUrlWithAdditionalSegment("used") + "/" + id, getClient(), null);
     }

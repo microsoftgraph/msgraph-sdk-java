@@ -58,24 +58,57 @@ public class CloudCommunicationsRequestBuilder extends BaseRequestBuilder<CloudC
     }
 
 
+    /**
+     *  Gets a request builder for the Call collection
+     *
+     * @return the collection request builder
+     */
     public CallCollectionRequestBuilder calls() {
         return new CallCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calls"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Call item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public CallRequestBuilder calls(final String id) {
         return new CallRequestBuilder(getRequestUrlWithAdditionalSegment("calls") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the CallRecord collection
+     *
+     * @return the collection request builder
+     */
     public CallRecordCollectionRequestBuilder callRecords() {
         return new CallRecordCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("callRecords"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the CallRecord item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public CallRecordRequestBuilder callRecords(final String id) {
         return new CallRecordRequestBuilder(getRequestUrlWithAdditionalSegment("callRecords") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the OnlineMeeting collection
+     *
+     * @return the collection request builder
+     */
     public OnlineMeetingCollectionRequestBuilder onlineMeetings() {
         return new OnlineMeetingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("onlineMeetings"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the OnlineMeeting item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public OnlineMeetingRequestBuilder onlineMeetings(final String id) {
         return new OnlineMeetingRequestBuilder(getRequestUrlWithAdditionalSegment("onlineMeetings") + "/" + id, getClient(), null);
     }

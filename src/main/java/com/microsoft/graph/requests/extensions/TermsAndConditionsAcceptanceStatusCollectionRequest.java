@@ -38,6 +38,11 @@ public class TermsAndConditionsAcceptanceStatusCollectionRequest extends BaseCol
         super(requestUrl, client, requestOptions, TermsAndConditionsAcceptanceStatusCollectionResponse.class, TermsAndConditionsAcceptanceStatusCollectionPage.class, TermsAndConditionsAcceptanceStatusCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new TermsAndConditionsAcceptanceStatus
+     * @param newTermsAndConditionsAcceptanceStatus the TermsAndConditionsAcceptanceStatus to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus, final ICallback<? super TermsAndConditionsAcceptanceStatus> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TermsAndConditionsAcceptanceStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class TermsAndConditionsAcceptanceStatusCollectionRequest extends BaseCol
             .post(newTermsAndConditionsAcceptanceStatus, callback);
     }
 
+    /**
+     * Creates a new TermsAndConditionsAcceptanceStatus
+     * @param newTermsAndConditionsAcceptanceStatus the TermsAndConditionsAcceptanceStatus to create
+     * @return the newly created object
+     */
     public TermsAndConditionsAcceptanceStatus post(final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TermsAndConditionsAcceptanceStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

@@ -38,6 +38,11 @@ public class InferenceClassificationOverrideCollectionRequest extends BaseCollec
         super(requestUrl, client, requestOptions, InferenceClassificationOverrideCollectionResponse.class, InferenceClassificationOverrideCollectionPage.class, InferenceClassificationOverrideCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new InferenceClassificationOverride
+     * @param newInferenceClassificationOverride the InferenceClassificationOverride to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final InferenceClassificationOverride newInferenceClassificationOverride, final ICallback<? super InferenceClassificationOverride> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new InferenceClassificationOverrideRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class InferenceClassificationOverrideCollectionRequest extends BaseCollec
             .post(newInferenceClassificationOverride, callback);
     }
 
+    /**
+     * Creates a new InferenceClassificationOverride
+     * @param newInferenceClassificationOverride the InferenceClassificationOverride to create
+     * @return the newly created object
+     */
     public InferenceClassificationOverride post(final InferenceClassificationOverride newInferenceClassificationOverride) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new InferenceClassificationOverrideRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

@@ -38,6 +38,11 @@ public class UserInstallStateSummaryCollectionRequest extends BaseCollectionRequ
         super(requestUrl, client, requestOptions, UserInstallStateSummaryCollectionResponse.class, UserInstallStateSummaryCollectionPage.class, UserInstallStateSummaryCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new UserInstallStateSummary
+     * @param newUserInstallStateSummary the UserInstallStateSummary to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final UserInstallStateSummary newUserInstallStateSummary, final ICallback<? super UserInstallStateSummary> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserInstallStateSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class UserInstallStateSummaryCollectionRequest extends BaseCollectionRequ
             .post(newUserInstallStateSummary, callback);
     }
 
+    /**
+     * Creates a new UserInstallStateSummary
+     * @param newUserInstallStateSummary the UserInstallStateSummary to create
+     * @return the newly created object
+     */
     public UserInstallStateSummary post(final UserInstallStateSummary newUserInstallStateSummary) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UserInstallStateSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

@@ -38,6 +38,11 @@ public class AlertCollectionRequest extends BaseCollectionRequest<Alert, AlertCo
         super(requestUrl, client, requestOptions, AlertCollectionResponse.class, AlertCollectionPage.class, AlertCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Alert
+     * @param newAlert the Alert to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Alert newAlert, final ICallback<? super Alert> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AlertRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class AlertCollectionRequest extends BaseCollectionRequest<Alert, AlertCo
             .post(newAlert, callback);
     }
 
+    /**
+     * Creates a new Alert
+     * @param newAlert the Alert to create
+     * @return the newly created object
+     */
     public Alert post(final Alert newAlert) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AlertRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

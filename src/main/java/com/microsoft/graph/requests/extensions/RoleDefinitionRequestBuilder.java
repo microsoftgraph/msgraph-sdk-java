@@ -54,10 +54,21 @@ public class RoleDefinitionRequestBuilder extends BaseRequestBuilder<RoleDefinit
     }
 
 
+    /**
+     *  Gets a request builder for the RoleAssignment collection
+     *
+     * @return the collection request builder
+     */
     public RoleAssignmentCollectionRequestBuilder roleAssignments() {
         return new RoleAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the RoleAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public RoleAssignmentRequestBuilder roleAssignments(final String id) {
         return new RoleAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments") + "/" + id, getClient(), null);
     }

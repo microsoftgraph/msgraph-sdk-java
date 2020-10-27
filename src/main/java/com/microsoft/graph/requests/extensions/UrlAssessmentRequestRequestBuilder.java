@@ -52,10 +52,21 @@ public class UrlAssessmentRequestRequestBuilder extends BaseRequestBuilder<UrlAs
     }
 
 
+    /**
+     *  Gets a request builder for the ThreatAssessmentResult collection
+     *
+     * @return the collection request builder
+     */
     public ThreatAssessmentResultCollectionRequestBuilder results() {
         return new ThreatAssessmentResultCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("results"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ThreatAssessmentResult item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public ThreatAssessmentResultRequestBuilder results(final String id) {
         return new ThreatAssessmentResultRequestBuilder(getRequestUrlWithAdditionalSegment("results") + "/" + id, getClient(), null);
     }

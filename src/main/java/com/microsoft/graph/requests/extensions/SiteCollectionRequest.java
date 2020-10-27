@@ -38,6 +38,11 @@ public class SiteCollectionRequest extends BaseCollectionRequest<Site, SiteColle
         super(requestUrl, client, requestOptions, SiteCollectionResponse.class, SiteCollectionPage.class, SiteCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Site
+     * @param newSite the Site to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Site newSite, final ICallback<? super Site> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SiteRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class SiteCollectionRequest extends BaseCollectionRequest<Site, SiteColle
             .post(newSite, callback);
     }
 
+    /**
+     * Creates a new Site
+     * @param newSite the Site to create
+     * @return the newly created object
+     */
     public Site post(final Site newSite) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SiteRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

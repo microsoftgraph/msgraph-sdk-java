@@ -43,26 +43,56 @@ public class ClaimsMappingPolicyCollectionWithReferencesRequest extends BaseColl
         super(requestUrl, client, requestOptions, ClaimsMappingPolicyCollectionResponse.class, ClaimsMappingPolicyCollectionWithReferencesPage.class, ClaimsMappingPolicyCollectionWithReferencesRequestBuilder.class);
     }
 
+    /**
+     * Sets the expand clause for the request
+     *
+     * @param value the expand clause
+     * @return the updated request
+     */
     public ClaimsMappingPolicyCollectionWithReferencesRequest expand(final String value) {
         addExpandOption(value);
         return this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
     public ClaimsMappingPolicyCollectionWithReferencesRequest filter(final String value) {
         addFilterOption(value);
         return this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
     public ClaimsMappingPolicyCollectionWithReferencesRequest orderBy(final String value) {
         addOrderByOption(value);
         return this;
     }
 
+    /**
+     * Sets the select clause for the request
+     *
+     * @param value the select clause
+     * @return the updated request
+     */
     public ClaimsMappingPolicyCollectionWithReferencesRequest select(final String value) {
         addSelectOption(value);
         return this;
     }
 
+    /**
+     * Sets the top value for the request
+     *
+     * @param value the max number of items to return
+     * @return the updated request
+     */
     public ClaimsMappingPolicyCollectionWithReferencesRequest top(final int value) {
         addTopOption(value);
         return this;

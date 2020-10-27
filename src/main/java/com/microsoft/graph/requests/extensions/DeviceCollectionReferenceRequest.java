@@ -42,6 +42,11 @@ public class DeviceCollectionReferenceRequest extends BaseCollectionWithReferenc
         super(requestUrl, client, requestOptions, DeviceCollectionResponse.class, DeviceCollectionWithReferencesPage.class, DeviceCollectionWithReferencesRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Device
+     * @param newDevice the Device to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Device newDevice, final ICallback<? super Device> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/devices/" + newDevice.id);
@@ -50,6 +55,11 @@ public class DeviceCollectionReferenceRequest extends BaseCollectionWithReferenc
             .post(newDevice, body, callback);
     }
 
+    /**
+     * Creates a new Device
+     * @param newDevice the Device to create
+     * @return the newly created object
+     */
     public Device post(final Device newDevice) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/devices/" + newDevice.id);

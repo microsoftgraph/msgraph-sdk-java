@@ -20,6 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
  * The class for the Onenote Section Copy To Section Group Request.
  */
 public class OnenoteSectionCopyToSectionGroupRequest extends BaseRequest<OnenoteOperation> {
+    /** The body for the method */
     protected final OnenoteSectionCopyToSectionGroupBody body;
 
     /**
@@ -34,10 +35,18 @@ public class OnenoteSectionCopyToSectionGroupRequest extends BaseRequest<Onenote
         body = new OnenoteSectionCopyToSectionGroupBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(final ICallback<? super OnenoteOperation> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     public OnenoteOperation post() throws ClientException {
         return send(HttpMethod.POST, body);
     }

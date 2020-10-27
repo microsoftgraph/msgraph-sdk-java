@@ -54,10 +54,21 @@ public class AppCatalogsRequestBuilder extends BaseRequestBuilder<AppCatalogs> {
     }
 
 
+    /**
+     *  Gets a request builder for the TeamsApp collection
+     *
+     * @return the collection request builder
+     */
     public TeamsAppCollectionRequestBuilder teamsApps() {
         return new TeamsAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("teamsApps"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the TeamsApp item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public TeamsAppRequestBuilder teamsApps(final String id) {
         return new TeamsAppRequestBuilder(getRequestUrlWithAdditionalSegment("teamsApps") + "/" + id, getClient(), null);
     }

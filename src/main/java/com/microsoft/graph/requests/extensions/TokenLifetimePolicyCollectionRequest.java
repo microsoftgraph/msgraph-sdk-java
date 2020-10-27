@@ -38,6 +38,11 @@ public class TokenLifetimePolicyCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, TokenLifetimePolicyCollectionResponse.class, TokenLifetimePolicyCollectionPage.class, TokenLifetimePolicyCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new TokenLifetimePolicy
+     * @param newTokenLifetimePolicy the TokenLifetimePolicy to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final TokenLifetimePolicy newTokenLifetimePolicy, final ICallback<? super TokenLifetimePolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TokenLifetimePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class TokenLifetimePolicyCollectionRequest extends BaseCollectionRequest<
             .post(newTokenLifetimePolicy, callback);
     }
 
+    /**
+     * Creates a new TokenLifetimePolicy
+     * @param newTokenLifetimePolicy the TokenLifetimePolicy to create
+     * @return the newly created object
+     */
     public TokenLifetimePolicy post(final TokenLifetimePolicy newTokenLifetimePolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TokenLifetimePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

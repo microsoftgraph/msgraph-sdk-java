@@ -38,6 +38,11 @@ public class ShiftCollectionRequest extends BaseCollectionRequest<Shift, ShiftCo
         super(requestUrl, client, requestOptions, ShiftCollectionResponse.class, ShiftCollectionPage.class, ShiftCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Shift
+     * @param newShift the Shift to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Shift newShift, final ICallback<? super Shift> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ShiftRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class ShiftCollectionRequest extends BaseCollectionRequest<Shift, ShiftCo
             .post(newShift, callback);
     }
 
+    /**
+     * Creates a new Shift
+     * @param newShift the Shift to create
+     * @return the newly created object
+     */
     public Shift post(final Shift newShift) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ShiftRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

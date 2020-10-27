@@ -42,6 +42,11 @@ public class ClaimsMappingPolicyCollectionReferenceRequest extends BaseCollectio
         super(requestUrl, client, requestOptions, ClaimsMappingPolicyCollectionResponse.class, ClaimsMappingPolicyCollectionWithReferencesPage.class, ClaimsMappingPolicyCollectionWithReferencesRequestBuilder.class);
     }
 
+    /**
+     * Creates a new ClaimsMappingPolicy
+     * @param newClaimsMappingPolicy the ClaimsMappingPolicy to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final ClaimsMappingPolicy newClaimsMappingPolicy, final ICallback<? super ClaimsMappingPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/policies/claimsMappingPolicies/" + newClaimsMappingPolicy.id);
@@ -50,6 +55,11 @@ public class ClaimsMappingPolicyCollectionReferenceRequest extends BaseCollectio
             .post(newClaimsMappingPolicy, body, callback);
     }
 
+    /**
+     * Creates a new ClaimsMappingPolicy
+     * @param newClaimsMappingPolicy the ClaimsMappingPolicy to create
+     * @return the newly created object
+     */
     public ClaimsMappingPolicy post(final ClaimsMappingPolicy newClaimsMappingPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/policies/claimsMappingPolicies/" + newClaimsMappingPolicy.id);

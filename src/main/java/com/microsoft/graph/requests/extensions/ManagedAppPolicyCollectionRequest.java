@@ -39,6 +39,11 @@ public class ManagedAppPolicyCollectionRequest extends BaseCollectionRequest<Man
         super(requestUrl, client, requestOptions, ManagedAppPolicyCollectionResponse.class, ManagedAppPolicyCollectionPage.class, ManagedAppPolicyCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new ManagedAppPolicy
+     * @param newManagedAppPolicy the ManagedAppPolicy to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final ManagedAppPolicy newManagedAppPolicy, final ICallback<? super ManagedAppPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedAppPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -46,6 +51,11 @@ public class ManagedAppPolicyCollectionRequest extends BaseCollectionRequest<Man
             .post(newManagedAppPolicy, callback);
     }
 
+    /**
+     * Creates a new ManagedAppPolicy
+     * @param newManagedAppPolicy the ManagedAppPolicy to create
+     * @return the newly created object
+     */
     public ManagedAppPolicy post(final ManagedAppPolicy newManagedAppPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedAppPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

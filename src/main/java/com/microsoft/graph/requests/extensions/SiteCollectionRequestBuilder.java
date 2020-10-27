@@ -40,10 +40,20 @@ public class SiteCollectionRequestBuilder extends BaseCollectionRequestBuilder<S
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param value the value
+     */
     public SiteAddCollectionRequestBuilder add(final java.util.List<Site> value) {
         return new SiteAddCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.add"), getClient(), null, value);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param value the value
+     */
     public SiteRemoveCollectionRequestBuilder remove(final java.util.List<Site> value) {
         return new SiteRemoveCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.remove"), getClient(), null, value);
     }

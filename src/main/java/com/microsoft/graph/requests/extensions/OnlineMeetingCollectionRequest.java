@@ -40,6 +40,11 @@ public class OnlineMeetingCollectionRequest extends BaseCollectionRequest<Online
         super(requestUrl, client, requestOptions, OnlineMeetingCollectionResponse.class, OnlineMeetingCollectionPage.class, OnlineMeetingCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new OnlineMeeting
+     * @param newOnlineMeeting the OnlineMeeting to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final OnlineMeeting newOnlineMeeting, final ICallback<? super OnlineMeeting> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OnlineMeetingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -47,6 +52,11 @@ public class OnlineMeetingCollectionRequest extends BaseCollectionRequest<Online
             .post(newOnlineMeeting, callback);
     }
 
+    /**
+     * Creates a new OnlineMeeting
+     * @param newOnlineMeeting the OnlineMeeting to create
+     * @return the newly created object
+     */
     public OnlineMeeting post(final OnlineMeeting newOnlineMeeting) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OnlineMeetingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

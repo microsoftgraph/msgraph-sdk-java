@@ -38,6 +38,11 @@ public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<Direc
         super(requestUrl, client, requestOptions, DirectoryAuditCollectionResponse.class, DirectoryAuditCollectionPage.class, DirectoryAuditCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new DirectoryAudit
+     * @param newDirectoryAudit the DirectoryAudit to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final DirectoryAudit newDirectoryAudit, final ICallback<? super DirectoryAudit> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DirectoryAuditRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<Direc
             .post(newDirectoryAudit, callback);
     }
 
+    /**
+     * Creates a new DirectoryAudit
+     * @param newDirectoryAudit the DirectoryAudit to create
+     * @return the newly created object
+     */
     public DirectoryAudit post(final DirectoryAudit newDirectoryAudit) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DirectoryAuditRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

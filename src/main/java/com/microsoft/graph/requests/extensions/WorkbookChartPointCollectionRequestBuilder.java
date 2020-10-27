@@ -40,10 +40,19 @@ public class WorkbookChartPointCollectionRequestBuilder extends BaseCollectionRe
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     public WorkbookChartPointCountRequestBuilder count() {
         return new WorkbookChartPointCountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.count"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param index the index
+     */
     public WorkbookChartPointItemAtRequestBuilder itemAt(final Integer index) {
         return new WorkbookChartPointItemAtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.itemAt"), getClient(), null, index);
     }

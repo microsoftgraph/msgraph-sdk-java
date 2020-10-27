@@ -38,6 +38,11 @@ public class ComplianceManagementPartnerCollectionRequest extends BaseCollection
         super(requestUrl, client, requestOptions, ComplianceManagementPartnerCollectionResponse.class, ComplianceManagementPartnerCollectionPage.class, ComplianceManagementPartnerCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new ComplianceManagementPartner
+     * @param newComplianceManagementPartner the ComplianceManagementPartner to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final ComplianceManagementPartner newComplianceManagementPartner, final ICallback<? super ComplianceManagementPartner> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ComplianceManagementPartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class ComplianceManagementPartnerCollectionRequest extends BaseCollection
             .post(newComplianceManagementPartner, callback);
     }
 
+    /**
+     * Creates a new ComplianceManagementPartner
+     * @param newComplianceManagementPartner the ComplianceManagementPartner to create
+     * @return the newly created object
+     */
     public ComplianceManagementPartner post(final ComplianceManagementPartner newComplianceManagementPartner) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ComplianceManagementPartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

@@ -94,10 +94,21 @@ public class WorkbookChartItemRequestBuilder extends BaseFunctionRequestBuilder<
     public WorkbookChartLegendRequestBuilder legend() {
         return new WorkbookChartLegendRequestBuilder(getRequestUrlWithAdditionalSegment("legend"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the WorkbookChartSeries collection
+     *
+     * @return the collection request builder
+     */
     public WorkbookChartSeriesCollectionRequestBuilder series() {
         return new WorkbookChartSeriesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("series"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the WorkbookChartSeries item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public WorkbookChartSeriesRequestBuilder series(final String id) {
         return new WorkbookChartSeriesRequestBuilder(getRequestUrlWithAdditionalSegment("series") + "/" + id, getClient(), null);
     }

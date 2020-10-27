@@ -42,6 +42,11 @@ public class MobileAppCategoryCollectionReferenceRequest extends BaseCollectionW
         super(requestUrl, client, requestOptions, MobileAppCategoryCollectionResponse.class, MobileAppCategoryCollectionWithReferencesPage.class, MobileAppCategoryCollectionWithReferencesRequestBuilder.class);
     }
 
+    /**
+     * Creates a new MobileAppCategory
+     * @param newMobileAppCategory the MobileAppCategory to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final MobileAppCategory newMobileAppCategory, final ICallback<? super MobileAppCategory> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceAppManagement/categories/" + newMobileAppCategory.id);
@@ -50,6 +55,11 @@ public class MobileAppCategoryCollectionReferenceRequest extends BaseCollectionW
             .post(newMobileAppCategory, body, callback);
     }
 
+    /**
+     * Creates a new MobileAppCategory
+     * @param newMobileAppCategory the MobileAppCategory to create
+     * @return the newly created object
+     */
     public MobileAppCategory post(final MobileAppCategory newMobileAppCategory) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceAppManagement/categories/" + newMobileAppCategory.id);

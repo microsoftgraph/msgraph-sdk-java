@@ -53,6 +53,10 @@ public class ProfilePhotoRequestBuilder extends BaseRequestBuilder<ProfilePhoto>
 
 
 
+    /**
+     * Gets a request builder to get the binary value of the object
+     * @return the stream request builder
+     */
     public ProfilePhotoStreamRequestBuilder content() {
         return new ProfilePhotoStreamRequestBuilder(getRequestUrlWithAdditionalSegment("$value"), getClient(), null);
     }

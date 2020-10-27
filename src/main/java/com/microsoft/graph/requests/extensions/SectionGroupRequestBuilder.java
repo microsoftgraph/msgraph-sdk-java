@@ -75,17 +75,39 @@ public class SectionGroupRequestBuilder extends BaseRequestBuilder<SectionGroup>
     public SectionGroupRequestBuilder parentSectionGroup() {
         return new SectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("parentSectionGroup"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the SectionGroup collection
+     *
+     * @return the collection request builder
+     */
     public SectionGroupCollectionRequestBuilder sectionGroups() {
         return new SectionGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sectionGroups"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the SectionGroup item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public SectionGroupRequestBuilder sectionGroups(final String id) {
         return new SectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("sectionGroups") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the OnenoteSection collection
+     *
+     * @return the collection request builder
+     */
     public OnenoteSectionCollectionRequestBuilder sections() {
         return new OnenoteSectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sections"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the OnenoteSection item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public OnenoteSectionRequestBuilder sections(final String id) {
         return new OnenoteSectionRequestBuilder(getRequestUrlWithAdditionalSegment("sections") + "/" + id, getClient(), null);
     }

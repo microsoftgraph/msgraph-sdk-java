@@ -44,6 +44,11 @@ public class DriveItemCollectionRequest extends BaseCollectionRequest<DriveItem,
         super(requestUrl, client, requestOptions, DriveItemCollectionResponse.class, DriveItemCollectionPage.class, DriveItemCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new DriveItem
+     * @param newDriveItem the DriveItem to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final DriveItem newDriveItem, final ICallback<? super DriveItem> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DriveItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -51,6 +56,11 @@ public class DriveItemCollectionRequest extends BaseCollectionRequest<DriveItem,
             .post(newDriveItem, callback);
     }
 
+    /**
+     * Creates a new DriveItem
+     * @param newDriveItem the DriveItem to create
+     * @return the newly created object
+     */
     public DriveItem post(final DriveItem newDriveItem) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DriveItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

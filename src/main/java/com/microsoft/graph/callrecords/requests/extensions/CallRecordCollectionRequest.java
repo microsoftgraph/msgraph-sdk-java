@@ -38,6 +38,11 @@ public class CallRecordCollectionRequest extends BaseCollectionRequest<CallRecor
         super(requestUrl, client, requestOptions, CallRecordCollectionResponse.class, CallRecordCollectionPage.class, CallRecordCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new CallRecord
+     * @param newCallRecord the CallRecord to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final CallRecord newCallRecord, final ICallback<? super CallRecord> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CallRecordRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class CallRecordCollectionRequest extends BaseCollectionRequest<CallRecor
             .post(newCallRecord, callback);
     }
 
+    /**
+     * Creates a new CallRecord
+     * @param newCallRecord the CallRecord to create
+     * @return the newly created object
+     */
     public CallRecord post(final CallRecord newCallRecord) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CallRecordRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

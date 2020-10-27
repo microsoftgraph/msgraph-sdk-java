@@ -38,6 +38,11 @@ public class ClaimsMappingPolicyCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, ClaimsMappingPolicyCollectionResponse.class, ClaimsMappingPolicyCollectionPage.class, ClaimsMappingPolicyCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new ClaimsMappingPolicy
+     * @param newClaimsMappingPolicy the ClaimsMappingPolicy to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final ClaimsMappingPolicy newClaimsMappingPolicy, final ICallback<? super ClaimsMappingPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ClaimsMappingPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class ClaimsMappingPolicyCollectionRequest extends BaseCollectionRequest<
             .post(newClaimsMappingPolicy, callback);
     }
 
+    /**
+     * Creates a new ClaimsMappingPolicy
+     * @param newClaimsMappingPolicy the ClaimsMappingPolicy to create
+     * @return the newly created object
+     */
     public ClaimsMappingPolicy post(final ClaimsMappingPolicy newClaimsMappingPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ClaimsMappingPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

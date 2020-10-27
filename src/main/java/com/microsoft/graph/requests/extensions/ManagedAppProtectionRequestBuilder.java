@@ -54,6 +54,11 @@ public class ManagedAppProtectionRequestBuilder extends BaseRequestBuilder<Manag
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param apps the apps
+     */
     public ManagedAppProtectionTargetAppsRequestBuilder targetApps(final java.util.List<ManagedMobileApp> apps) {
         return new ManagedAppProtectionTargetAppsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.targetApps"), getClient(), null, apps);
     }

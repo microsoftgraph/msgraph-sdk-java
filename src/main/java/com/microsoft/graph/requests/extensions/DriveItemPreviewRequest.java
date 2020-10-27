@@ -20,6 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
  * The class for the Drive Item Preview Request.
  */
 public class DriveItemPreviewRequest extends BaseRequest<ItemPreviewInfo> {
+    /** The body for the method */
     protected final DriveItemPreviewBody body;
 
     /**
@@ -34,10 +35,18 @@ public class DriveItemPreviewRequest extends BaseRequest<ItemPreviewInfo> {
         body = new DriveItemPreviewBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(final ICallback<? super ItemPreviewInfo> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     public ItemPreviewInfo post() throws ClientException {
         return send(HttpMethod.POST, body);
     }

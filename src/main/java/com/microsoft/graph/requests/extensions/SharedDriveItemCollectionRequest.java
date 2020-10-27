@@ -37,6 +37,11 @@ public class SharedDriveItemCollectionRequest extends BaseCollectionRequest<Shar
         super(requestUrl, client, requestOptions, SharedDriveItemCollectionResponse.class, SharedDriveItemCollectionPage.class, SharedDriveItemCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new SharedDriveItem
+     * @param newSharedDriveItem the SharedDriveItem to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final SharedDriveItem newSharedDriveItem, final ICallback<? super SharedDriveItem> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SharedDriveItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -44,6 +49,11 @@ public class SharedDriveItemCollectionRequest extends BaseCollectionRequest<Shar
             .post(newSharedDriveItem, callback);
     }
 
+    /**
+     * Creates a new SharedDriveItem
+     * @param newSharedDriveItem the SharedDriveItem to create
+     * @return the newly created object
+     */
     public SharedDriveItem post(final SharedDriveItem newSharedDriveItem) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SharedDriveItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

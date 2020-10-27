@@ -43,26 +43,56 @@ public class HomeRealmDiscoveryPolicyCollectionWithReferencesRequest extends Bas
         super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicyCollectionResponse.class, HomeRealmDiscoveryPolicyCollectionWithReferencesPage.class, HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder.class);
     }
 
+    /**
+     * Sets the expand clause for the request
+     *
+     * @param value the expand clause
+     * @return the updated request
+     */
     public HomeRealmDiscoveryPolicyCollectionWithReferencesRequest expand(final String value) {
         addExpandOption(value);
         return this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
     public HomeRealmDiscoveryPolicyCollectionWithReferencesRequest filter(final String value) {
         addFilterOption(value);
         return this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
     public HomeRealmDiscoveryPolicyCollectionWithReferencesRequest orderBy(final String value) {
         addOrderByOption(value);
         return this;
     }
 
+    /**
+     * Sets the select clause for the request
+     *
+     * @param value the select clause
+     * @return the updated request
+     */
     public HomeRealmDiscoveryPolicyCollectionWithReferencesRequest select(final String value) {
         addSelectOption(value);
         return this;
     }
 
+    /**
+     * Sets the top value for the request
+     *
+     * @param value the max number of items to return
+     * @return the updated request
+     */
     public HomeRealmDiscoveryPolicyCollectionWithReferencesRequest top(final int value) {
         addTopOption(value);
         return this;

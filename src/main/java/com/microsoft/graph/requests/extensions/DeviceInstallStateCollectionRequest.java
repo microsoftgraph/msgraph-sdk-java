@@ -38,6 +38,11 @@ public class DeviceInstallStateCollectionRequest extends BaseCollectionRequest<D
         super(requestUrl, client, requestOptions, DeviceInstallStateCollectionResponse.class, DeviceInstallStateCollectionPage.class, DeviceInstallStateCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new DeviceInstallState
+     * @param newDeviceInstallState the DeviceInstallState to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final DeviceInstallState newDeviceInstallState, final ICallback<? super DeviceInstallState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceInstallStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class DeviceInstallStateCollectionRequest extends BaseCollectionRequest<D
             .post(newDeviceInstallState, callback);
     }
 
+    /**
+     * Creates a new DeviceInstallState
+     * @param newDeviceInstallState the DeviceInstallState to create
+     * @return the newly created object
+     */
     public DeviceInstallState post(final DeviceInstallState newDeviceInstallState) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceInstallStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

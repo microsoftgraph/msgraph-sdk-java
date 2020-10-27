@@ -38,6 +38,11 @@ public class RoleDefinitionCollectionRequest extends BaseCollectionRequest<RoleD
         super(requestUrl, client, requestOptions, RoleDefinitionCollectionResponse.class, RoleDefinitionCollectionPage.class, RoleDefinitionCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new RoleDefinition
+     * @param newRoleDefinition the RoleDefinition to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final RoleDefinition newRoleDefinition, final ICallback<? super RoleDefinition> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RoleDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class RoleDefinitionCollectionRequest extends BaseCollectionRequest<RoleD
             .post(newRoleDefinition, callback);
     }
 
+    /**
+     * Creates a new RoleDefinition
+     * @param newRoleDefinition the RoleDefinition to create
+     * @return the newly created object
+     */
     public RoleDefinition post(final RoleDefinition newRoleDefinition) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new RoleDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

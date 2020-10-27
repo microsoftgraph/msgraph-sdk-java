@@ -56,17 +56,39 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder<TermsAn
     }
 
 
+    /**
+     *  Gets a request builder for the TermsAndConditionsAcceptanceStatus collection
+     *
+     * @return the collection request builder
+     */
     public TermsAndConditionsAcceptanceStatusCollectionRequestBuilder acceptanceStatuses() {
         return new TermsAndConditionsAcceptanceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("acceptanceStatuses"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the TermsAndConditionsAcceptanceStatus item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public TermsAndConditionsAcceptanceStatusRequestBuilder acceptanceStatuses(final String id) {
         return new TermsAndConditionsAcceptanceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("acceptanceStatuses") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the TermsAndConditionsAssignment collection
+     *
+     * @return the collection request builder
+     */
     public TermsAndConditionsAssignmentCollectionRequestBuilder assignments() {
         return new TermsAndConditionsAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the TermsAndConditionsAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public TermsAndConditionsAssignmentRequestBuilder assignments(final String id) {
         return new TermsAndConditionsAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }

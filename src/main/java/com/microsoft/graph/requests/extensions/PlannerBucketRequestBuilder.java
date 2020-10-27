@@ -54,10 +54,21 @@ public class PlannerBucketRequestBuilder extends BaseRequestBuilder<PlannerBucke
     }
 
 
+    /**
+     *  Gets a request builder for the PlannerTask collection
+     *
+     * @return the collection request builder
+     */
     public PlannerTaskCollectionRequestBuilder tasks() {
         return new PlannerTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the PlannerTask item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public PlannerTaskRequestBuilder tasks(final String id) {
         return new PlannerTaskRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);
     }

@@ -56,6 +56,11 @@ public class ParticipantRequestBuilder extends BaseRequestBuilder<Participant> {
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param clientContext the clientContext
+     */
     public ParticipantMuteRequestBuilder mute(final String clientContext) {
         return new ParticipantMuteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.mute"), getClient(), null, clientContext);
     }

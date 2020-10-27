@@ -38,6 +38,11 @@ public class ManagedAppRegistrationCollectionRequest extends BaseCollectionReque
         super(requestUrl, client, requestOptions, ManagedAppRegistrationCollectionResponse.class, ManagedAppRegistrationCollectionPage.class, ManagedAppRegistrationCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new ManagedAppRegistration
+     * @param newManagedAppRegistration the ManagedAppRegistration to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final ManagedAppRegistration newManagedAppRegistration, final ICallback<? super ManagedAppRegistration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedAppRegistrationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class ManagedAppRegistrationCollectionRequest extends BaseCollectionReque
             .post(newManagedAppRegistration, callback);
     }
 
+    /**
+     * Creates a new ManagedAppRegistration
+     * @param newManagedAppRegistration the ManagedAppRegistration to create
+     * @return the newly created object
+     */
     public ManagedAppRegistration post(final ManagedAppRegistration newManagedAppRegistration) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedAppRegistrationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

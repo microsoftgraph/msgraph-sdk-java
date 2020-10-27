@@ -42,6 +42,11 @@ public class TokenIssuancePolicyCollectionReferenceRequest extends BaseCollectio
         super(requestUrl, client, requestOptions, TokenIssuancePolicyCollectionResponse.class, TokenIssuancePolicyCollectionWithReferencesPage.class, TokenIssuancePolicyCollectionWithReferencesRequestBuilder.class);
     }
 
+    /**
+     * Creates a new TokenIssuancePolicy
+     * @param newTokenIssuancePolicy the TokenIssuancePolicy to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final TokenIssuancePolicy newTokenIssuancePolicy, final ICallback<? super TokenIssuancePolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/policies/tokenIssuancePolicies/" + newTokenIssuancePolicy.id);
@@ -50,6 +55,11 @@ public class TokenIssuancePolicyCollectionReferenceRequest extends BaseCollectio
             .post(newTokenIssuancePolicy, body, callback);
     }
 
+    /**
+     * Creates a new TokenIssuancePolicy
+     * @param newTokenIssuancePolicy the TokenIssuancePolicy to create
+     * @return the newly created object
+     */
     public TokenIssuancePolicy post(final TokenIssuancePolicy newTokenIssuancePolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/policies/tokenIssuancePolicies/" + newTokenIssuancePolicy.id);

@@ -38,6 +38,11 @@ public class PlannerPlanCollectionRequest extends BaseCollectionRequest<PlannerP
         super(requestUrl, client, requestOptions, PlannerPlanCollectionResponse.class, PlannerPlanCollectionPage.class, PlannerPlanCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new PlannerPlan
+     * @param newPlannerPlan the PlannerPlan to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final PlannerPlan newPlannerPlan, final ICallback<? super PlannerPlan> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PlannerPlanRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class PlannerPlanCollectionRequest extends BaseCollectionRequest<PlannerP
             .post(newPlannerPlan, callback);
     }
 
+    /**
+     * Creates a new PlannerPlan
+     * @param newPlannerPlan the PlannerPlan to create
+     * @return the newly created object
+     */
     public PlannerPlan post(final PlannerPlan newPlannerPlan) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PlannerPlanRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

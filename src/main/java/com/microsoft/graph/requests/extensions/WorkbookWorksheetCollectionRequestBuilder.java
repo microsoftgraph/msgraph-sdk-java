@@ -40,6 +40,11 @@ public class WorkbookWorksheetCollectionRequestBuilder extends BaseCollectionReq
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param name the name
+     */
     public WorkbookWorksheetAddRequestBuilder add(final String name) {
         return new WorkbookWorksheetAddRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.add"), getClient(), null, name);
     }

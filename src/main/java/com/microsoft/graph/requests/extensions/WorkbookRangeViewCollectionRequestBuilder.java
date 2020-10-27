@@ -39,6 +39,11 @@ public class WorkbookRangeViewCollectionRequestBuilder extends BaseCollectionReq
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param index the index
+     */
     public WorkbookRangeViewItemAtRequestBuilder itemAt(final Integer index) {
         return new WorkbookRangeViewItemAtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.itemAt"), getClient(), null, index);
     }

@@ -38,6 +38,11 @@ public class DetectedAppCollectionRequest extends BaseCollectionRequest<Detected
         super(requestUrl, client, requestOptions, DetectedAppCollectionResponse.class, DetectedAppCollectionPage.class, DetectedAppCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new DetectedApp
+     * @param newDetectedApp the DetectedApp to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final DetectedApp newDetectedApp, final ICallback<? super DetectedApp> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DetectedAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class DetectedAppCollectionRequest extends BaseCollectionRequest<Detected
             .post(newDetectedApp, callback);
     }
 
+    /**
+     * Creates a new DetectedApp
+     * @param newDetectedApp the DetectedApp to create
+     * @return the newly created object
+     */
     public DetectedApp post(final DetectedApp newDetectedApp) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DetectedAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

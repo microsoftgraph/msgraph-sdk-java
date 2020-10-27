@@ -54,10 +54,21 @@ public class DeviceComplianceScheduledActionForRuleRequestBuilder extends BaseRe
     }
 
 
+    /**
+     *  Gets a request builder for the DeviceComplianceActionItem collection
+     *
+     * @return the collection request builder
+     */
     public DeviceComplianceActionItemCollectionRequestBuilder scheduledActionConfigurations() {
         return new DeviceComplianceActionItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionConfigurations"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DeviceComplianceActionItem item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public DeviceComplianceActionItemRequestBuilder scheduledActionConfigurations(final String id) {
         return new DeviceComplianceActionItemRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionConfigurations") + "/" + id, getClient(), null);
     }

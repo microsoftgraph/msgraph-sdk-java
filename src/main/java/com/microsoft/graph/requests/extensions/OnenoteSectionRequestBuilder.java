@@ -57,10 +57,21 @@ public class OnenoteSectionRequestBuilder extends BaseRequestBuilder<OnenoteSect
     }
 
 
+    /**
+     *  Gets a request builder for the OnenotePage collection
+     *
+     * @return the collection request builder
+     */
     public OnenotePageCollectionRequestBuilder pages() {
         return new OnenotePageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("pages"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the OnenotePage item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public OnenotePageRequestBuilder pages(final String id) {
         return new OnenotePageRequestBuilder(getRequestUrlWithAdditionalSegment("pages") + "/" + id, getClient(), null);
     }
@@ -83,10 +94,28 @@ public class OnenoteSectionRequestBuilder extends BaseRequestBuilder<OnenoteSect
         return new SectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("parentSectionGroup"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param id the id
+     * @param groupId the groupId
+     * @param renameAs the renameAs
+     * @param siteCollectionId the siteCollectionId
+     * @param siteId the siteId
+     */
     public OnenoteSectionCopyToNotebookRequestBuilder copyToNotebook(final String id, final String groupId, final String renameAs, final String siteCollectionId, final String siteId) {
         return new OnenoteSectionCopyToNotebookRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copyToNotebook"), getClient(), null, id, groupId, renameAs, siteCollectionId, siteId);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param id the id
+     * @param groupId the groupId
+     * @param renameAs the renameAs
+     * @param siteCollectionId the siteCollectionId
+     * @param siteId the siteId
+     */
     public OnenoteSectionCopyToSectionGroupRequestBuilder copyToSectionGroup(final String id, final String groupId, final String renameAs, final String siteCollectionId, final String siteId) {
         return new OnenoteSectionCopyToSectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copyToSectionGroup"), getClient(), null, id, groupId, renameAs, siteCollectionId, siteId);
     }

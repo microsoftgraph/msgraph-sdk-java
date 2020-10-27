@@ -41,6 +41,11 @@ public class ParticipantCollectionRequest extends BaseCollectionRequest<Particip
         super(requestUrl, client, requestOptions, ParticipantCollectionResponse.class, ParticipantCollectionPage.class, ParticipantCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Participant
+     * @param newParticipant the Participant to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Participant newParticipant, final ICallback<? super Participant> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ParticipantRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -48,6 +53,11 @@ public class ParticipantCollectionRequest extends BaseCollectionRequest<Particip
             .post(newParticipant, callback);
     }
 
+    /**
+     * Creates a new Participant
+     * @param newParticipant the Participant to create
+     * @return the newly created object
+     */
     public Participant post(final Participant newParticipant) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ParticipantRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

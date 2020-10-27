@@ -53,6 +53,11 @@ public class WorkbookApplicationRequestBuilder extends BaseRequestBuilder<Workbo
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param calculationType the calculationType
+     */
     public WorkbookApplicationCalculateRequestBuilder calculate(final String calculationType) {
         return new WorkbookApplicationCalculateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.calculate"), getClient(), null, calculationType);
     }

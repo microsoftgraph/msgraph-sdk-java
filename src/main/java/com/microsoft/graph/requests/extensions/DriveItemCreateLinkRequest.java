@@ -20,6 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
  * The class for the Drive Item Create Link Request.
  */
 public class DriveItemCreateLinkRequest extends BaseRequest<Permission> {
+    /** The body for the method */
     protected final DriveItemCreateLinkBody body;
 
     /**
@@ -34,10 +35,18 @@ public class DriveItemCreateLinkRequest extends BaseRequest<Permission> {
         body = new DriveItemCreateLinkBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(final ICallback<? super Permission> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     public Permission post() throws ClientException {
         return send(HttpMethod.POST, body);
     }

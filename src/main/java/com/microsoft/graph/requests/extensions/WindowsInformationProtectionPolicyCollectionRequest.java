@@ -38,6 +38,11 @@ public class WindowsInformationProtectionPolicyCollectionRequest extends BaseCol
         super(requestUrl, client, requestOptions, WindowsInformationProtectionPolicyCollectionResponse.class, WindowsInformationProtectionPolicyCollectionPage.class, WindowsInformationProtectionPolicyCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new WindowsInformationProtectionPolicy
+     * @param newWindowsInformationProtectionPolicy the WindowsInformationProtectionPolicy to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final WindowsInformationProtectionPolicy newWindowsInformationProtectionPolicy, final ICallback<? super WindowsInformationProtectionPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsInformationProtectionPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class WindowsInformationProtectionPolicyCollectionRequest extends BaseCol
             .post(newWindowsInformationProtectionPolicy, callback);
     }
 
+    /**
+     * Creates a new WindowsInformationProtectionPolicy
+     * @param newWindowsInformationProtectionPolicy the WindowsInformationProtectionPolicy to create
+     * @return the newly created object
+     */
     public WindowsInformationProtectionPolicy post(final WindowsInformationProtectionPolicy newWindowsInformationProtectionPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WindowsInformationProtectionPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

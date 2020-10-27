@@ -59,17 +59,39 @@ public class TargetedManagedAppConfigurationRequestBuilder extends BaseRequestBu
     }
 
 
+    /**
+     *  Gets a request builder for the ManagedMobileApp collection
+     *
+     * @return the collection request builder
+     */
     public ManagedMobileAppCollectionRequestBuilder apps() {
         return new ManagedMobileAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("apps"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ManagedMobileApp item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public ManagedMobileAppRequestBuilder apps(final String id) {
         return new ManagedMobileAppRequestBuilder(getRequestUrlWithAdditionalSegment("apps") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the TargetedManagedAppPolicyAssignment collection
+     *
+     * @return the collection request builder
+     */
     public TargetedManagedAppPolicyAssignmentCollectionRequestBuilder assignments() {
         return new TargetedManagedAppPolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the TargetedManagedAppPolicyAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public TargetedManagedAppPolicyAssignmentRequestBuilder assignments(final String id) {
         return new TargetedManagedAppPolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
@@ -83,10 +105,20 @@ public class TargetedManagedAppConfigurationRequestBuilder extends BaseRequestBu
         return new ManagedAppPolicyDeploymentSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deploymentSummary"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param assignments the assignments
+     */
     public TargetedManagedAppConfigurationAssignRequestBuilder assign(final java.util.List<TargetedManagedAppPolicyAssignment> assignments) {
         return new TargetedManagedAppConfigurationAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, assignments);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param apps the apps
+     */
     public TargetedManagedAppConfigurationTargetAppsRequestBuilder targetApps(final java.util.List<ManagedMobileApp> apps) {
         return new TargetedManagedAppConfigurationTargetAppsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.targetApps"), getClient(), null, apps);
     }

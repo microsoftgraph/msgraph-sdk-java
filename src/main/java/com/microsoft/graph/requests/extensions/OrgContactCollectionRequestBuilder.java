@@ -38,10 +38,20 @@ public class OrgContactCollectionRequestBuilder extends BaseCollectionRequestBui
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
     public OrgContactDeltaCollectionRequestBuilder delta() {
         return new OrgContactDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
 
+    /**
+     * Gets the list of newly created, updated or deleted OrgContact
+     * 
+     * @return a request builder to get the changes
+     * @param deltaLink the link returned by the last delta request
+     */
 	public OrgContactDeltaCollectionRequestBuilder delta(final String deltaLink) {
         return new OrgContactDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }

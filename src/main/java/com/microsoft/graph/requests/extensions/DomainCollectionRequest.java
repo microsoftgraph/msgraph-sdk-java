@@ -37,6 +37,11 @@ public class DomainCollectionRequest extends BaseCollectionRequest<Domain, Domai
         super(requestUrl, client, requestOptions, DomainCollectionResponse.class, DomainCollectionPage.class, DomainCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Domain
+     * @param newDomain the Domain to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Domain newDomain, final ICallback<? super Domain> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DomainRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -44,6 +49,11 @@ public class DomainCollectionRequest extends BaseCollectionRequest<Domain, Domai
             .post(newDomain, callback);
     }
 
+    /**
+     * Creates a new Domain
+     * @param newDomain the Domain to create
+     * @return the newly created object
+     */
     public Domain post(final Domain newDomain) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DomainRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

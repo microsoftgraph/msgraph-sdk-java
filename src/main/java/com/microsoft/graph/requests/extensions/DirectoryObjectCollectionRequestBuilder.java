@@ -41,14 +41,33 @@ public class DirectoryObjectCollectionRequestBuilder extends BaseCollectionReque
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param entityType the entityType
+     * @param displayName the displayName
+     * @param mailNickname the mailNickname
+     * @param onBehalfOfUserId the onBehalfOfUserId
+     */
     public DirectoryObjectValidatePropertiesRequestBuilder validateProperties(final String entityType, final String displayName, final String mailNickname, final java.util.UUID onBehalfOfUserId) {
         return new DirectoryObjectValidatePropertiesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.validateProperties"), getClient(), null, entityType, displayName, mailNickname, onBehalfOfUserId);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param isSyncedFromOnPremises the isSyncedFromOnPremises
+     */
     public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder getAvailableExtensionProperties(final Boolean isSyncedFromOnPremises) {
         return new DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAvailableExtensionProperties"), getClient(), null, isSyncedFromOnPremises);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param ids the ids
+     * @param types the types
+     */
     public DirectoryObjectGetByIdsCollectionRequestBuilder getByIds(final java.util.List<String> ids, final java.util.List<String> types) {
         return new DirectoryObjectGetByIdsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getByIds"), getClient(), null, ids, types);
     }

@@ -38,6 +38,11 @@ public class ManagedMobileLobAppCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, ManagedMobileLobAppCollectionResponse.class, ManagedMobileLobAppCollectionPage.class, ManagedMobileLobAppCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new ManagedMobileLobApp
+     * @param newManagedMobileLobApp the ManagedMobileLobApp to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final ManagedMobileLobApp newManagedMobileLobApp, final ICallback<? super ManagedMobileLobApp> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedMobileLobAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class ManagedMobileLobAppCollectionRequest extends BaseCollectionRequest<
             .post(newManagedMobileLobApp, callback);
     }
 
+    /**
+     * Creates a new ManagedMobileLobApp
+     * @param newManagedMobileLobApp the ManagedMobileLobApp to create
+     * @return the newly created object
+     */
     public ManagedMobileLobApp post(final ManagedMobileLobApp newManagedMobileLobApp) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedMobileLobAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

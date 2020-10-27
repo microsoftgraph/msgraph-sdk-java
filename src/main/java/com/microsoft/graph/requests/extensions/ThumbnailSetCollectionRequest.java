@@ -38,6 +38,11 @@ public class ThumbnailSetCollectionRequest extends BaseCollectionRequest<Thumbna
         super(requestUrl, client, requestOptions, ThumbnailSetCollectionResponse.class, ThumbnailSetCollectionPage.class, ThumbnailSetCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new ThumbnailSet
+     * @param newThumbnailSet the ThumbnailSet to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final ThumbnailSet newThumbnailSet, final ICallback<? super ThumbnailSet> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ThumbnailSetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class ThumbnailSetCollectionRequest extends BaseCollectionRequest<Thumbna
             .post(newThumbnailSet, callback);
     }
 
+    /**
+     * Creates a new ThumbnailSet
+     * @param newThumbnailSet the ThumbnailSet to create
+     * @return the newly created object
+     */
     public ThumbnailSet post(final ThumbnailSet newThumbnailSet) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ThumbnailSetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

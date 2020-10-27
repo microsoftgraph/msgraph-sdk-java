@@ -40,10 +40,20 @@ public class ServicePrincipalCollectionRequestBuilder extends BaseCollectionRequ
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
     public ServicePrincipalDeltaCollectionRequestBuilder delta() {
         return new ServicePrincipalDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
 
+    /**
+     * Gets the list of newly created, updated or deleted ServicePrincipal
+     * 
+     * @return a request builder to get the changes
+     * @param deltaLink the link returned by the last delta request
+     */
 	public ServicePrincipalDeltaCollectionRequestBuilder delta(final String deltaLink) {
         return new ServicePrincipalDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }

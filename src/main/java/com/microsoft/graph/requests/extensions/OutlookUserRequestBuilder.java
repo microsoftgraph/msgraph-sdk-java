@@ -57,22 +57,46 @@ public class OutlookUserRequestBuilder extends BaseRequestBuilder<OutlookUser> {
     }
 
 
+    /**
+     *  Gets a request builder for the OutlookCategory collection
+     *
+     * @return the collection request builder
+     */
     public OutlookCategoryCollectionRequestBuilder masterCategories() {
         return new OutlookCategoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("masterCategories"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the OutlookCategory item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public OutlookCategoryRequestBuilder masterCategories(final String id) {
         return new OutlookCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("masterCategories") + "/" + id, getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
     public OutlookUserSupportedLanguagesCollectionRequestBuilder supportedLanguages() {
         return new OutlookUserSupportedLanguagesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.supportedLanguages"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
     public OutlookUserSupportedTimeZonesCollectionRequestBuilder supportedTimeZones() {
         return new OutlookUserSupportedTimeZonesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.supportedTimeZones"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param timeZoneStandard the timeZoneStandard
+     */
     public OutlookUserSupportedTimeZonesCollectionRequestBuilder supportedTimeZones(final TimeZoneStandard timeZoneStandard) {
         return new OutlookUserSupportedTimeZonesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.supportedTimeZones"), getClient(), null, timeZoneStandard);
     }

@@ -38,6 +38,11 @@ public class RoleAssignmentCollectionRequest extends BaseCollectionRequest<RoleA
         super(requestUrl, client, requestOptions, RoleAssignmentCollectionResponse.class, RoleAssignmentCollectionPage.class, RoleAssignmentCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new RoleAssignment
+     * @param newRoleAssignment the RoleAssignment to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final RoleAssignment newRoleAssignment, final ICallback<? super RoleAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class RoleAssignmentCollectionRequest extends BaseCollectionRequest<RoleA
             .post(newRoleAssignment, callback);
     }
 
+    /**
+     * Creates a new RoleAssignment
+     * @param newRoleAssignment the RoleAssignment to create
+     * @return the newly created object
+     */
     public RoleAssignment post(final RoleAssignment newRoleAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new RoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

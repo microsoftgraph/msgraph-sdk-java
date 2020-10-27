@@ -54,10 +54,21 @@ public class ItemActivityStatRequestBuilder extends BaseRequestBuilder<ItemActiv
     }
 
 
+    /**
+     *  Gets a request builder for the ItemActivity collection
+     *
+     * @return the collection request builder
+     */
     public ItemActivityCollectionRequestBuilder activities() {
         return new ItemActivityCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("activities"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ItemActivity item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public ItemActivityRequestBuilder activities(final String id) {
         return new ItemActivityRequestBuilder(getRequestUrlWithAdditionalSegment("activities") + "/" + id, getClient(), null);
     }

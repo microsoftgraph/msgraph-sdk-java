@@ -41,6 +41,11 @@ public class NotebookCollectionRequest extends BaseCollectionRequest<Notebook, N
         super(requestUrl, client, requestOptions, NotebookCollectionResponse.class, NotebookCollectionPage.class, NotebookCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Notebook
+     * @param newNotebook the Notebook to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Notebook newNotebook, final ICallback<? super Notebook> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new NotebookRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -48,6 +53,11 @@ public class NotebookCollectionRequest extends BaseCollectionRequest<Notebook, N
             .post(newNotebook, callback);
     }
 
+    /**
+     * Creates a new Notebook
+     * @param newNotebook the Notebook to create
+     * @return the newly created object
+     */
     public Notebook post(final Notebook newNotebook) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new NotebookRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

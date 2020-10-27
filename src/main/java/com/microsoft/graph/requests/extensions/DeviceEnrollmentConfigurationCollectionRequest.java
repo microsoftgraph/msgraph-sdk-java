@@ -39,6 +39,11 @@ public class DeviceEnrollmentConfigurationCollectionRequest extends BaseCollecti
         super(requestUrl, client, requestOptions, DeviceEnrollmentConfigurationCollectionResponse.class, DeviceEnrollmentConfigurationCollectionPage.class, DeviceEnrollmentConfigurationCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new DeviceEnrollmentConfiguration
+     * @param newDeviceEnrollmentConfiguration the DeviceEnrollmentConfiguration to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration, final ICallback<? super DeviceEnrollmentConfiguration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceEnrollmentConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -46,6 +51,11 @@ public class DeviceEnrollmentConfigurationCollectionRequest extends BaseCollecti
             .post(newDeviceEnrollmentConfiguration, callback);
     }
 
+    /**
+     * Creates a new DeviceEnrollmentConfiguration
+     * @param newDeviceEnrollmentConfiguration the DeviceEnrollmentConfiguration to create
+     * @return the newly created object
+     */
     public DeviceEnrollmentConfiguration post(final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceEnrollmentConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

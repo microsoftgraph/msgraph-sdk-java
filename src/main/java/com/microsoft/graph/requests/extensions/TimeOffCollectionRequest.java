@@ -38,6 +38,11 @@ public class TimeOffCollectionRequest extends BaseCollectionRequest<TimeOff, Tim
         super(requestUrl, client, requestOptions, TimeOffCollectionResponse.class, TimeOffCollectionPage.class, TimeOffCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new TimeOff
+     * @param newTimeOff the TimeOff to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final TimeOff newTimeOff, final ICallback<? super TimeOff> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TimeOffRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class TimeOffCollectionRequest extends BaseCollectionRequest<TimeOff, Tim
             .post(newTimeOff, callback);
     }
 
+    /**
+     * Creates a new TimeOff
+     * @param newTimeOff the TimeOff to create
+     * @return the newly created object
+     */
     public TimeOff post(final TimeOff newTimeOff) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TimeOffRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

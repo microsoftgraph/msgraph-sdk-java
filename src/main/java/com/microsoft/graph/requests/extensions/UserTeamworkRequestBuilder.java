@@ -54,10 +54,21 @@ public class UserTeamworkRequestBuilder extends BaseRequestBuilder<UserTeamwork>
     }
 
 
+    /**
+     *  Gets a request builder for the UserScopeTeamsAppInstallation collection
+     *
+     * @return the collection request builder
+     */
     public UserScopeTeamsAppInstallationCollectionRequestBuilder installedApps() {
         return new UserScopeTeamsAppInstallationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("installedApps"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the UserScopeTeamsAppInstallation item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public UserScopeTeamsAppInstallationRequestBuilder installedApps(final String id) {
         return new UserScopeTeamsAppInstallationRequestBuilder(getRequestUrlWithAdditionalSegment("installedApps") + "/" + id, getClient(), null);
     }

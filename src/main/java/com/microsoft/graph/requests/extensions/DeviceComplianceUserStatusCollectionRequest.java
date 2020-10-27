@@ -38,6 +38,11 @@ public class DeviceComplianceUserStatusCollectionRequest extends BaseCollectionR
         super(requestUrl, client, requestOptions, DeviceComplianceUserStatusCollectionResponse.class, DeviceComplianceUserStatusCollectionPage.class, DeviceComplianceUserStatusCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new DeviceComplianceUserStatus
+     * @param newDeviceComplianceUserStatus the DeviceComplianceUserStatus to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final DeviceComplianceUserStatus newDeviceComplianceUserStatus, final ICallback<? super DeviceComplianceUserStatus> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceComplianceUserStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class DeviceComplianceUserStatusCollectionRequest extends BaseCollectionR
             .post(newDeviceComplianceUserStatus, callback);
     }
 
+    /**
+     * Creates a new DeviceComplianceUserStatus
+     * @param newDeviceComplianceUserStatus the DeviceComplianceUserStatus to create
+     * @return the newly created object
+     */
     public DeviceComplianceUserStatus post(final DeviceComplianceUserStatus newDeviceComplianceUserStatus) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceComplianceUserStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

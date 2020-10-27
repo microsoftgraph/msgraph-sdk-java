@@ -64,6 +64,10 @@ public class WorkbookNamedItemRequestBuilder extends BaseRequestBuilder<Workbook
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     public WorkbookNamedItemRangeRequestBuilder range() {
         return new WorkbookNamedItemRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.range"), getClient(), null);
     }

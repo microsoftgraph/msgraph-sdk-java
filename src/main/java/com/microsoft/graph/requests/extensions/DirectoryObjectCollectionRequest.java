@@ -38,6 +38,11 @@ public class DirectoryObjectCollectionRequest extends BaseCollectionRequest<Dire
         super(requestUrl, client, requestOptions, DirectoryObjectCollectionResponse.class, DirectoryObjectCollectionPage.class, DirectoryObjectCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new DirectoryObject
+     * @param newDirectoryObject the DirectoryObject to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final DirectoryObject newDirectoryObject, final ICallback<? super DirectoryObject> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DirectoryObjectRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class DirectoryObjectCollectionRequest extends BaseCollectionRequest<Dire
             .post(newDirectoryObject, callback);
     }
 
+    /**
+     * Creates a new DirectoryObject
+     * @param newDirectoryObject the DirectoryObject to create
+     * @return the newly created object
+     */
     public DirectoryObject post(final DirectoryObject newDirectoryObject) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DirectoryObjectRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

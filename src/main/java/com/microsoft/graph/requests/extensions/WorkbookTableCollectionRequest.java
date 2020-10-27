@@ -39,6 +39,11 @@ public class WorkbookTableCollectionRequest extends BaseCollectionRequest<Workbo
         super(requestUrl, client, requestOptions, WorkbookTableCollectionResponse.class, WorkbookTableCollectionPage.class, WorkbookTableCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new WorkbookTable
+     * @param newWorkbookTable the WorkbookTable to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final WorkbookTable newWorkbookTable, final ICallback<? super WorkbookTable> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookTableRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -46,6 +51,11 @@ public class WorkbookTableCollectionRequest extends BaseCollectionRequest<Workbo
             .post(newWorkbookTable, callback);
     }
 
+    /**
+     * Creates a new WorkbookTable
+     * @param newWorkbookTable the WorkbookTable to create
+     * @return the newly created object
+     */
     public WorkbookTable post(final WorkbookTable newWorkbookTable) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookTableRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

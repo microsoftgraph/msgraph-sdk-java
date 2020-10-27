@@ -62,46 +62,111 @@ public class MailFolderRequestBuilder extends BaseRequestBuilder<MailFolder> {
     }
 
 
+    /**
+     *  Gets a request builder for the MailFolder collection
+     *
+     * @return the collection request builder
+     */
     public MailFolderCollectionRequestBuilder childFolders() {
         return new MailFolderCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("childFolders"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the MailFolder item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public MailFolderRequestBuilder childFolders(final String id) {
         return new MailFolderRequestBuilder(getRequestUrlWithAdditionalSegment("childFolders") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the MessageRule collection
+     *
+     * @return the collection request builder
+     */
     public MessageRuleCollectionRequestBuilder messageRules() {
         return new MessageRuleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("messageRules"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the MessageRule item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public MessageRuleRequestBuilder messageRules(final String id) {
         return new MessageRuleRequestBuilder(getRequestUrlWithAdditionalSegment("messageRules") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the Message collection
+     *
+     * @return the collection request builder
+     */
     public MessageCollectionRequestBuilder messages() {
         return new MessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("messages"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Message item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public MessageRequestBuilder messages(final String id) {
         return new MessageRequestBuilder(getRequestUrlWithAdditionalSegment("messages") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the MultiValueLegacyExtendedProperty collection
+     *
+     * @return the collection request builder
+     */
     public MultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties() {
         return new MultiValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the MultiValueLegacyExtendedProperty item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public MultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id) {
         return new MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the SingleValueLegacyExtendedProperty collection
+     *
+     * @return the collection request builder
+     */
     public SingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
         return new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the SingleValueLegacyExtendedProperty item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public SingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id) {
         return new SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param destinationId the destinationId
+     */
     public MailFolderCopyRequestBuilder copy(final String destinationId) {
         return new MailFolderCopyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copy"), getClient(), null, destinationId);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param destinationId the destinationId
+     */
     public MailFolderMoveRequestBuilder move(final String destinationId) {
         return new MailFolderMoveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.move"), getClient(), null, destinationId);
     }

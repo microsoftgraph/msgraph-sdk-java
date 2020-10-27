@@ -38,6 +38,11 @@ public class DeviceCompliancePolicySettingStateSummaryCollectionRequest extends 
         super(requestUrl, client, requestOptions, DeviceCompliancePolicySettingStateSummaryCollectionResponse.class, DeviceCompliancePolicySettingStateSummaryCollectionPage.class, DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new DeviceCompliancePolicySettingStateSummary
+     * @param newDeviceCompliancePolicySettingStateSummary the DeviceCompliancePolicySettingStateSummary to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final DeviceCompliancePolicySettingStateSummary newDeviceCompliancePolicySettingStateSummary, final ICallback<? super DeviceCompliancePolicySettingStateSummary> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceCompliancePolicySettingStateSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class DeviceCompliancePolicySettingStateSummaryCollectionRequest extends 
             .post(newDeviceCompliancePolicySettingStateSummary, callback);
     }
 
+    /**
+     * Creates a new DeviceCompliancePolicySettingStateSummary
+     * @param newDeviceCompliancePolicySettingStateSummary the DeviceCompliancePolicySettingStateSummary to create
+     * @return the newly created object
+     */
     public DeviceCompliancePolicySettingStateSummary post(final DeviceCompliancePolicySettingStateSummary newDeviceCompliancePolicySettingStateSummary) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceCompliancePolicySettingStateSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

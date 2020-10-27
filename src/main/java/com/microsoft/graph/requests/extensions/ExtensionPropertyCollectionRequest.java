@@ -38,6 +38,11 @@ public class ExtensionPropertyCollectionRequest extends BaseCollectionRequest<Ex
         super(requestUrl, client, requestOptions, ExtensionPropertyCollectionResponse.class, ExtensionPropertyCollectionPage.class, ExtensionPropertyCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new ExtensionProperty
+     * @param newExtensionProperty the ExtensionProperty to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final ExtensionProperty newExtensionProperty, final ICallback<? super ExtensionProperty> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ExtensionPropertyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class ExtensionPropertyCollectionRequest extends BaseCollectionRequest<Ex
             .post(newExtensionProperty, callback);
     }
 
+    /**
+     * Creates a new ExtensionProperty
+     * @param newExtensionProperty the ExtensionProperty to create
+     * @return the newly created object
+     */
     public ExtensionProperty post(final ExtensionProperty newExtensionProperty) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ExtensionPropertyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

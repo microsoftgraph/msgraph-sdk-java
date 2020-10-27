@@ -20,6 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
  * The class for the Workbook Functions Oct2Bin Request.
  */
 public class WorkbookFunctionsOct2BinRequest extends BaseRequest<WorkbookFunctionResult> {
+    /** The body for the method */
     protected final WorkbookFunctionsOct2BinBody body;
 
     /**
@@ -34,10 +35,18 @@ public class WorkbookFunctionsOct2BinRequest extends BaseRequest<WorkbookFunctio
         body = new WorkbookFunctionsOct2BinBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     public WorkbookFunctionResult post() throws ClientException {
         return send(HttpMethod.POST, body);
     }

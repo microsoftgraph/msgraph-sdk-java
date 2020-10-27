@@ -37,6 +37,11 @@ public class ContactFolderCollectionRequest extends BaseCollectionRequest<Contac
         super(requestUrl, client, requestOptions, ContactFolderCollectionResponse.class, ContactFolderCollectionPage.class, ContactFolderCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new ContactFolder
+     * @param newContactFolder the ContactFolder to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final ContactFolder newContactFolder, final ICallback<? super ContactFolder> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ContactFolderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -44,6 +49,11 @@ public class ContactFolderCollectionRequest extends BaseCollectionRequest<Contac
             .post(newContactFolder, callback);
     }
 
+    /**
+     * Creates a new ContactFolder
+     * @param newContactFolder the ContactFolder to create
+     * @return the newly created object
+     */
     public ContactFolder post(final ContactFolder newContactFolder) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ContactFolderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

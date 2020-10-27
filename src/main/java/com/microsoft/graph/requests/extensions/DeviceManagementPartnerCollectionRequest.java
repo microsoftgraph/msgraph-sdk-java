@@ -38,6 +38,11 @@ public class DeviceManagementPartnerCollectionRequest extends BaseCollectionRequ
         super(requestUrl, client, requestOptions, DeviceManagementPartnerCollectionResponse.class, DeviceManagementPartnerCollectionPage.class, DeviceManagementPartnerCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new DeviceManagementPartner
+     * @param newDeviceManagementPartner the DeviceManagementPartner to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final DeviceManagementPartner newDeviceManagementPartner, final ICallback<? super DeviceManagementPartner> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementPartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class DeviceManagementPartnerCollectionRequest extends BaseCollectionRequ
             .post(newDeviceManagementPartner, callback);
     }
 
+    /**
+     * Creates a new DeviceManagementPartner
+     * @param newDeviceManagementPartner the DeviceManagementPartner to create
+     * @return the newly created object
+     */
     public DeviceManagementPartner post(final DeviceManagementPartner newDeviceManagementPartner) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceManagementPartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

@@ -38,6 +38,11 @@ public class LicenseDetailsCollectionRequest extends BaseCollectionRequest<Licen
         super(requestUrl, client, requestOptions, LicenseDetailsCollectionResponse.class, LicenseDetailsCollectionPage.class, LicenseDetailsCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new LicenseDetails
+     * @param newLicenseDetails the LicenseDetails to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final LicenseDetails newLicenseDetails, final ICallback<? super LicenseDetails> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new LicenseDetailsRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class LicenseDetailsCollectionRequest extends BaseCollectionRequest<Licen
             .post(newLicenseDetails, callback);
     }
 
+    /**
+     * Creates a new LicenseDetails
+     * @param newLicenseDetails the LicenseDetails to create
+     * @return the newly created object
+     */
     public LicenseDetails post(final LicenseDetails newLicenseDetails) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new LicenseDetailsRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

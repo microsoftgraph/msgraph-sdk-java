@@ -54,10 +54,21 @@ public class MobileAppContentRequestBuilder extends BaseRequestBuilder<MobileApp
     }
 
 
+    /**
+     *  Gets a request builder for the MobileAppContentFile collection
+     *
+     * @return the collection request builder
+     */
     public MobileAppContentFileCollectionRequestBuilder files() {
         return new MobileAppContentFileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("files"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the MobileAppContentFile item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public MobileAppContentFileRequestBuilder files(final String id) {
         return new MobileAppContentFileRequestBuilder(getRequestUrlWithAdditionalSegment("files") + "/" + id, getClient(), null);
     }

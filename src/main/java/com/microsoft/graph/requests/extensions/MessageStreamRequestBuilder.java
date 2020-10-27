@@ -59,73 +59,173 @@ public class MessageStreamRequestBuilder extends BaseRequestBuilder {
     public MessageStreamRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new MessageStreamRequest(getRequestUrl(), getClient(), requestOptions);
     }
+    /**
+     *  Gets a request builder for the Attachment collection
+     *
+     * @return the collection request builder
+     */
     public AttachmentCollectionRequestBuilder attachments() {
         return new AttachmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attachments"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Attachment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public AttachmentRequestBuilder attachments(final String id) {
         return new AttachmentRequestBuilder(getRequestUrlWithAdditionalSegment("attachments") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the Extension collection
+     *
+     * @return the collection request builder
+     */
     public ExtensionCollectionRequestBuilder extensions() {
         return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Extension item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public ExtensionRequestBuilder extensions(final String id) {
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the MultiValueLegacyExtendedProperty collection
+     *
+     * @return the collection request builder
+     */
     public MultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties() {
         return new MultiValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the MultiValueLegacyExtendedProperty item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public MultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id) {
         return new MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the SingleValueLegacyExtendedProperty collection
+     *
+     * @return the collection request builder
+     */
     public SingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
         return new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the SingleValueLegacyExtendedProperty item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public SingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id) {
         return new SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);
     }
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param toRecipients the toRecipients
+     * @param message the message
+     * @param comment the comment
+     */
     public MessageForwardRequestBuilder forward(final java.util.List<Recipient> toRecipients, final Message message, final String comment) {
         return new MessageForwardRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.forward"), getClient(), null, toRecipients, message, comment);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param destinationId the destinationId
+     */
     public MessageCopyRequestBuilder copy(final String destinationId) {
         return new MessageCopyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copy"), getClient(), null, destinationId);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param destinationId the destinationId
+     */
     public MessageMoveRequestBuilder move(final String destinationId) {
         return new MessageMoveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.move"), getClient(), null, destinationId);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param toRecipients the toRecipients
+     * @param message the message
+     * @param comment the comment
+     */
     public MessageCreateForwardRequestBuilder createForward(final java.util.List<Recipient> toRecipients, final Message message, final String comment) {
         return new MessageCreateForwardRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createForward"), getClient(), null, toRecipients, message, comment);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param message the message
+     * @param comment the comment
+     */
     public MessageCreateReplyRequestBuilder createReply(final Message message, final String comment) {
         return new MessageCreateReplyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createReply"), getClient(), null, message, comment);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param message the message
+     * @param comment the comment
+     */
     public MessageCreateReplyAllRequestBuilder createReplyAll(final Message message, final String comment) {
         return new MessageCreateReplyAllRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createReplyAll"), getClient(), null, message, comment);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param message the message
+     * @param comment the comment
+     */
     public MessageReplyRequestBuilder reply(final Message message, final String comment) {
         return new MessageReplyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reply"), getClient(), null, message, comment);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param message the message
+     * @param comment the comment
+     */
     public MessageReplyAllRequestBuilder replyAll(final Message message, final String comment) {
         return new MessageReplyAllRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.replyAll"), getClient(), null, message, comment);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     public MessageSendRequestBuilder send() {
         return new MessageSendRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.send"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
     public MessageDeltaCollectionRequestBuilder delta() {
         return new MessageDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }

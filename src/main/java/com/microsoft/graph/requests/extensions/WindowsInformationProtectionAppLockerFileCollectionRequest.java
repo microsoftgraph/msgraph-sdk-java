@@ -38,6 +38,11 @@ public class WindowsInformationProtectionAppLockerFileCollectionRequest extends 
         super(requestUrl, client, requestOptions, WindowsInformationProtectionAppLockerFileCollectionResponse.class, WindowsInformationProtectionAppLockerFileCollectionPage.class, WindowsInformationProtectionAppLockerFileCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new WindowsInformationProtectionAppLockerFile
+     * @param newWindowsInformationProtectionAppLockerFile the WindowsInformationProtectionAppLockerFile to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile, final ICallback<? super WindowsInformationProtectionAppLockerFile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsInformationProtectionAppLockerFileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class WindowsInformationProtectionAppLockerFileCollectionRequest extends 
             .post(newWindowsInformationProtectionAppLockerFile, callback);
     }
 
+    /**
+     * Creates a new WindowsInformationProtectionAppLockerFile
+     * @param newWindowsInformationProtectionAppLockerFile the WindowsInformationProtectionAppLockerFile to create
+     * @return the newly created object
+     */
     public WindowsInformationProtectionAppLockerFile post(final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WindowsInformationProtectionAppLockerFileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

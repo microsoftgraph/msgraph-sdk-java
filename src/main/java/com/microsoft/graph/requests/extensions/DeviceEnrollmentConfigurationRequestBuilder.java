@@ -55,18 +55,39 @@ public class DeviceEnrollmentConfigurationRequestBuilder extends BaseRequestBuil
     }
 
 
+    /**
+     *  Gets a request builder for the EnrollmentConfigurationAssignment collection
+     *
+     * @return the collection request builder
+     */
     public EnrollmentConfigurationAssignmentCollectionRequestBuilder assignments() {
         return new EnrollmentConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the EnrollmentConfigurationAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public EnrollmentConfigurationAssignmentRequestBuilder assignments(final String id) {
         return new EnrollmentConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param enrollmentConfigurationAssignments the enrollmentConfigurationAssignments
+     */
     public DeviceEnrollmentConfigurationAssignRequestBuilder assign(final java.util.List<EnrollmentConfigurationAssignment> enrollmentConfigurationAssignments) {
         return new DeviceEnrollmentConfigurationAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, enrollmentConfigurationAssignments);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param priority the priority
+     */
     public DeviceEnrollmentConfigurationSetPriorityRequestBuilder setPriority(final Integer priority) {
         return new DeviceEnrollmentConfigurationSetPriorityRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setPriority"), getClient(), null, priority);
     }

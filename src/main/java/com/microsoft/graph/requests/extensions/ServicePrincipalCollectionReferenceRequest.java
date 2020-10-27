@@ -43,6 +43,11 @@ public class ServicePrincipalCollectionReferenceRequest extends BaseCollectionWi
         super(requestUrl, client, requestOptions, ServicePrincipalCollectionResponse.class, ServicePrincipalCollectionWithReferencesPage.class, ServicePrincipalCollectionWithReferencesRequestBuilder.class);
     }
 
+    /**
+     * Creates a new ServicePrincipal
+     * @param newServicePrincipal the ServicePrincipal to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final ServicePrincipal newServicePrincipal, final ICallback<? super ServicePrincipal> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/servicePrincipals/" + newServicePrincipal.id);
@@ -51,6 +56,11 @@ public class ServicePrincipalCollectionReferenceRequest extends BaseCollectionWi
             .post(newServicePrincipal, body, callback);
     }
 
+    /**
+     * Creates a new ServicePrincipal
+     * @param newServicePrincipal the ServicePrincipal to create
+     * @return the newly created object
+     */
     public ServicePrincipal post(final ServicePrincipal newServicePrincipal) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/servicePrincipals/" + newServicePrincipal.id);

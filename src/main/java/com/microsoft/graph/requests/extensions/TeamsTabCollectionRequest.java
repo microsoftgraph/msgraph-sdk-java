@@ -38,6 +38,11 @@ public class TeamsTabCollectionRequest extends BaseCollectionRequest<TeamsTab, T
         super(requestUrl, client, requestOptions, TeamsTabCollectionResponse.class, TeamsTabCollectionPage.class, TeamsTabCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new TeamsTab
+     * @param newTeamsTab the TeamsTab to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final TeamsTab newTeamsTab, final ICallback<? super TeamsTab> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TeamsTabRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class TeamsTabCollectionRequest extends BaseCollectionRequest<TeamsTab, T
             .post(newTeamsTab, callback);
     }
 
+    /**
+     * Creates a new TeamsTab
+     * @param newTeamsTab the TeamsTab to create
+     * @return the newly created object
+     */
     public TeamsTab post(final TeamsTab newTeamsTab) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TeamsTabRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

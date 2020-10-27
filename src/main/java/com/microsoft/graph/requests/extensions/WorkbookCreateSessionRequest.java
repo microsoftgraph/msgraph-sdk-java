@@ -20,6 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
  * The class for the Workbook Create Session Request.
  */
 public class WorkbookCreateSessionRequest extends BaseRequest<WorkbookSessionInfo> {
+    /** The body for the method */
     protected final WorkbookCreateSessionBody body;
 
     /**
@@ -34,10 +35,18 @@ public class WorkbookCreateSessionRequest extends BaseRequest<WorkbookSessionInf
         body = new WorkbookCreateSessionBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(final ICallback<? super WorkbookSessionInfo> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     public WorkbookSessionInfo post() throws ClientException {
         return send(HttpMethod.POST, body);
     }

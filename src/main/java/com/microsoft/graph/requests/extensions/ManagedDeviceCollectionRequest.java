@@ -39,6 +39,11 @@ public class ManagedDeviceCollectionRequest extends BaseCollectionRequest<Manage
         super(requestUrl, client, requestOptions, ManagedDeviceCollectionResponse.class, ManagedDeviceCollectionPage.class, ManagedDeviceCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new ManagedDevice
+     * @param newManagedDevice the ManagedDevice to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final ManagedDevice newManagedDevice, final ICallback<? super ManagedDevice> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedDeviceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -46,6 +51,11 @@ public class ManagedDeviceCollectionRequest extends BaseCollectionRequest<Manage
             .post(newManagedDevice, callback);
     }
 
+    /**
+     * Creates a new ManagedDevice
+     * @param newManagedDevice the ManagedDevice to create
+     * @return the newly created object
+     */
     public ManagedDevice post(final ManagedDevice newManagedDevice) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedDeviceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

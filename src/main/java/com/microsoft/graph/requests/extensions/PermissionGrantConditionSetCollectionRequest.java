@@ -38,6 +38,11 @@ public class PermissionGrantConditionSetCollectionRequest extends BaseCollection
         super(requestUrl, client, requestOptions, PermissionGrantConditionSetCollectionResponse.class, PermissionGrantConditionSetCollectionPage.class, PermissionGrantConditionSetCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new PermissionGrantConditionSet
+     * @param newPermissionGrantConditionSet the PermissionGrantConditionSet to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final PermissionGrantConditionSet newPermissionGrantConditionSet, final ICallback<? super PermissionGrantConditionSet> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PermissionGrantConditionSetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class PermissionGrantConditionSetCollectionRequest extends BaseCollection
             .post(newPermissionGrantConditionSet, callback);
     }
 
+    /**
+     * Creates a new PermissionGrantConditionSet
+     * @param newPermissionGrantConditionSet the PermissionGrantConditionSet to create
+     * @return the newly created object
+     */
     public PermissionGrantConditionSet post(final PermissionGrantConditionSet newPermissionGrantConditionSet) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PermissionGrantConditionSetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

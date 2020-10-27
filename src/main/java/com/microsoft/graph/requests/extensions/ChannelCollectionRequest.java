@@ -38,6 +38,11 @@ public class ChannelCollectionRequest extends BaseCollectionRequest<Channel, Cha
         super(requestUrl, client, requestOptions, ChannelCollectionResponse.class, ChannelCollectionPage.class, ChannelCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Channel
+     * @param newChannel the Channel to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Channel newChannel, final ICallback<? super Channel> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ChannelRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class ChannelCollectionRequest extends BaseCollectionRequest<Channel, Cha
             .post(newChannel, callback);
     }
 
+    /**
+     * Creates a new Channel
+     * @param newChannel the Channel to create
+     * @return the newly created object
+     */
     public Channel post(final Channel newChannel) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ChannelRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

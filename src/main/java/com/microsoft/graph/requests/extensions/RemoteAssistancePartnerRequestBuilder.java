@@ -53,10 +53,18 @@ public class RemoteAssistancePartnerRequestBuilder extends BaseRequestBuilder<Re
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     public RemoteAssistancePartnerBeginOnboardingRequestBuilder beginOnboarding() {
         return new RemoteAssistancePartnerBeginOnboardingRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.beginOnboarding"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     public RemoteAssistancePartnerDisconnectRequestBuilder disconnect() {
         return new RemoteAssistancePartnerDisconnectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.disconnect"), getClient(), null);
     }

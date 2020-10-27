@@ -43,26 +43,56 @@ public class CertificateBasedAuthConfigurationCollectionWithReferencesRequest ex
         super(requestUrl, client, requestOptions, CertificateBasedAuthConfigurationCollectionResponse.class, CertificateBasedAuthConfigurationCollectionWithReferencesPage.class, CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder.class);
     }
 
+    /**
+     * Sets the expand clause for the request
+     *
+     * @param value the expand clause
+     * @return the updated request
+     */
     public CertificateBasedAuthConfigurationCollectionWithReferencesRequest expand(final String value) {
         addExpandOption(value);
         return this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
     public CertificateBasedAuthConfigurationCollectionWithReferencesRequest filter(final String value) {
         addFilterOption(value);
         return this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
     public CertificateBasedAuthConfigurationCollectionWithReferencesRequest orderBy(final String value) {
         addOrderByOption(value);
         return this;
     }
 
+    /**
+     * Sets the select clause for the request
+     *
+     * @param value the select clause
+     * @return the updated request
+     */
     public CertificateBasedAuthConfigurationCollectionWithReferencesRequest select(final String value) {
         addSelectOption(value);
         return this;
     }
 
+    /**
+     * Sets the top value for the request
+     *
+     * @param value the max number of items to return
+     * @return the updated request
+     */
     public CertificateBasedAuthConfigurationCollectionWithReferencesRequest top(final int value) {
         addTopOption(value);
         return this;

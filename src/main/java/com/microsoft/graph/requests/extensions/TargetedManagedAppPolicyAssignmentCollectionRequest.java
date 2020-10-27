@@ -38,6 +38,11 @@ public class TargetedManagedAppPolicyAssignmentCollectionRequest extends BaseCol
         super(requestUrl, client, requestOptions, TargetedManagedAppPolicyAssignmentCollectionResponse.class, TargetedManagedAppPolicyAssignmentCollectionPage.class, TargetedManagedAppPolicyAssignmentCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new TargetedManagedAppPolicyAssignment
+     * @param newTargetedManagedAppPolicyAssignment the TargetedManagedAppPolicyAssignment to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment, final ICallback<? super TargetedManagedAppPolicyAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TargetedManagedAppPolicyAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class TargetedManagedAppPolicyAssignmentCollectionRequest extends BaseCol
             .post(newTargetedManagedAppPolicyAssignment, callback);
     }
 
+    /**
+     * Creates a new TargetedManagedAppPolicyAssignment
+     * @param newTargetedManagedAppPolicyAssignment the TargetedManagedAppPolicyAssignment to create
+     * @return the newly created object
+     */
     public TargetedManagedAppPolicyAssignment post(final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TargetedManagedAppPolicyAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

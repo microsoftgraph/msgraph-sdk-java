@@ -38,6 +38,11 @@ public class DeviceConfigurationStateCollectionRequest extends BaseCollectionReq
         super(requestUrl, client, requestOptions, DeviceConfigurationStateCollectionResponse.class, DeviceConfigurationStateCollectionPage.class, DeviceConfigurationStateCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new DeviceConfigurationState
+     * @param newDeviceConfigurationState the DeviceConfigurationState to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final DeviceConfigurationState newDeviceConfigurationState, final ICallback<? super DeviceConfigurationState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceConfigurationStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class DeviceConfigurationStateCollectionRequest extends BaseCollectionReq
             .post(newDeviceConfigurationState, callback);
     }
 
+    /**
+     * Creates a new DeviceConfigurationState
+     * @param newDeviceConfigurationState the DeviceConfigurationState to create
+     * @return the newly created object
+     */
     public DeviceConfigurationState post(final DeviceConfigurationState newDeviceConfigurationState) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceConfigurationStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

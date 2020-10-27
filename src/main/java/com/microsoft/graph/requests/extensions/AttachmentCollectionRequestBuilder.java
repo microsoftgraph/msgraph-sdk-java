@@ -41,6 +41,11 @@ public class AttachmentCollectionRequestBuilder extends BaseCollectionRequestBui
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param attachmentItem the attachmentItem
+     */
     public AttachmentCreateUploadSessionRequestBuilder createUploadSession(final AttachmentItem attachmentItem) {
         return new AttachmentCreateUploadSessionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createUploadSession"), getClient(), null, attachmentItem);
     }

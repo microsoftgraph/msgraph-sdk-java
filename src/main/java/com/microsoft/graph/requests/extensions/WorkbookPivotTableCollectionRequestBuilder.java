@@ -39,6 +39,10 @@ public class WorkbookPivotTableCollectionRequestBuilder extends BaseCollectionRe
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     public WorkbookPivotTableRefreshAllRequestBuilder refreshAll() {
         return new WorkbookPivotTableRefreshAllRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.refreshAll"), getClient(), null);
     }

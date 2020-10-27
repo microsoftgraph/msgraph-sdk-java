@@ -63,10 +63,21 @@ public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder<ItemAnalytic
     public ItemActivityStatWithReferenceRequestBuilder allTime() {
         return new ItemActivityStatWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("allTime"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the ItemActivityStat collection
+     *
+     * @return the collection request builder
+     */
     public ItemActivityStatCollectionRequestBuilder itemActivityStats() {
         return new ItemActivityStatCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("itemActivityStats"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ItemActivityStat item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public ItemActivityStatRequestBuilder itemActivityStats(final String id) {
         return new ItemActivityStatRequestBuilder(getRequestUrlWithAdditionalSegment("itemActivityStats") + "/" + id, getClient(), null);
     }

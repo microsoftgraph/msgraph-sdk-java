@@ -38,6 +38,11 @@ public class MobileLobAppCollectionRequest extends BaseCollectionRequest<MobileL
         super(requestUrl, client, requestOptions, MobileLobAppCollectionResponse.class, MobileLobAppCollectionPage.class, MobileLobAppCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new MobileLobApp
+     * @param newMobileLobApp the MobileLobApp to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final MobileLobApp newMobileLobApp, final ICallback<? super MobileLobApp> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileLobAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class MobileLobAppCollectionRequest extends BaseCollectionRequest<MobileL
             .post(newMobileLobApp, callback);
     }
 
+    /**
+     * Creates a new MobileLobApp
+     * @param newMobileLobApp the MobileLobApp to create
+     * @return the newly created object
+     */
     public MobileLobApp post(final MobileLobApp newMobileLobApp) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MobileLobAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

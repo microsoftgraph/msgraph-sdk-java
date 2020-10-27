@@ -42,6 +42,12 @@ public class ParticipantCollectionRequestBuilder extends BaseCollectionRequestBu
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param participants the participants
+     * @param clientContext the clientContext
+     */
     public ParticipantInviteRequestBuilder invite(final java.util.List<InvitationParticipantInfo> participants, final String clientContext) {
         return new ParticipantInviteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.invite"), getClient(), null, participants, clientContext);
     }

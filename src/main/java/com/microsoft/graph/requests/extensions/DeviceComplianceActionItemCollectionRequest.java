@@ -38,6 +38,11 @@ public class DeviceComplianceActionItemCollectionRequest extends BaseCollectionR
         super(requestUrl, client, requestOptions, DeviceComplianceActionItemCollectionResponse.class, DeviceComplianceActionItemCollectionPage.class, DeviceComplianceActionItemCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new DeviceComplianceActionItem
+     * @param newDeviceComplianceActionItem the DeviceComplianceActionItem to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final DeviceComplianceActionItem newDeviceComplianceActionItem, final ICallback<? super DeviceComplianceActionItem> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceComplianceActionItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class DeviceComplianceActionItemCollectionRequest extends BaseCollectionR
             .post(newDeviceComplianceActionItem, callback);
     }
 
+    /**
+     * Creates a new DeviceComplianceActionItem
+     * @param newDeviceComplianceActionItem the DeviceComplianceActionItem to create
+     * @return the newly created object
+     */
     public DeviceComplianceActionItem post(final DeviceComplianceActionItem newDeviceComplianceActionItem) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceComplianceActionItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

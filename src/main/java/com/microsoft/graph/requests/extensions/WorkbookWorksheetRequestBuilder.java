@@ -62,24 +62,57 @@ public class WorkbookWorksheetRequestBuilder extends BaseRequestBuilder<Workbook
     }
 
 
+    /**
+     *  Gets a request builder for the WorkbookChart collection
+     *
+     * @return the collection request builder
+     */
     public WorkbookChartCollectionRequestBuilder charts() {
         return new WorkbookChartCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("charts"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the WorkbookChart item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public WorkbookChartRequestBuilder charts(final String id) {
         return new WorkbookChartRequestBuilder(getRequestUrlWithAdditionalSegment("charts") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the WorkbookNamedItem collection
+     *
+     * @return the collection request builder
+     */
     public WorkbookNamedItemCollectionRequestBuilder names() {
         return new WorkbookNamedItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("names"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the WorkbookNamedItem item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public WorkbookNamedItemRequestBuilder names(final String id) {
         return new WorkbookNamedItemRequestBuilder(getRequestUrlWithAdditionalSegment("names") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the WorkbookPivotTable collection
+     *
+     * @return the collection request builder
+     */
     public WorkbookPivotTableCollectionRequestBuilder pivotTables() {
         return new WorkbookPivotTableCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("pivotTables"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the WorkbookPivotTable item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public WorkbookPivotTableRequestBuilder pivotTables(final String id) {
         return new WorkbookPivotTableRequestBuilder(getRequestUrlWithAdditionalSegment("pivotTables") + "/" + id, getClient(), null);
     }
@@ -92,30 +125,65 @@ public class WorkbookWorksheetRequestBuilder extends BaseRequestBuilder<Workbook
     public WorkbookWorksheetProtectionRequestBuilder protection() {
         return new WorkbookWorksheetProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("protection"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the WorkbookTable collection
+     *
+     * @return the collection request builder
+     */
     public WorkbookTableCollectionRequestBuilder tables() {
         return new WorkbookTableCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tables"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the WorkbookTable item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public WorkbookTableRequestBuilder tables(final String id) {
         return new WorkbookTableRequestBuilder(getRequestUrlWithAdditionalSegment("tables") + "/" + id, getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param row the row
+     * @param column the column
+     */
     public WorkbookWorksheetCellRequestBuilder cell(final Integer row, final Integer column) {
         return new WorkbookWorksheetCellRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cell"), getClient(), null, row, column);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     public WorkbookWorksheetUsedRangeRequestBuilder usedRange() {
         return new WorkbookWorksheetUsedRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.usedRange"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param valuesOnly the valuesOnly
+     */
     public WorkbookWorksheetUsedRangeRequestBuilder usedRange(final Boolean valuesOnly) {
         return new WorkbookWorksheetUsedRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.usedRange"), getClient(), null, valuesOnly);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     public WorkbookWorksheetRangeRequestBuilder range() {
         return new WorkbookWorksheetRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.range"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param address the address
+     */
     public WorkbookWorksheetRangeRequestBuilder range(final String address) {
         return new WorkbookWorksheetRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.range"), getClient(), null, address);
     }

@@ -79,17 +79,39 @@ public class ListRequestBuilder extends BaseRequestBuilder<List> {
     public UserWithReferenceRequestBuilder lastModifiedByUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the ColumnDefinition collection
+     *
+     * @return the collection request builder
+     */
     public ColumnDefinitionCollectionRequestBuilder columns() {
         return new ColumnDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("columns"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ColumnDefinition item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public ColumnDefinitionRequestBuilder columns(final String id) {
         return new ColumnDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("columns") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the ContentType collection
+     *
+     * @return the collection request builder
+     */
     public ContentTypeCollectionRequestBuilder contentTypes() {
         return new ContentTypeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contentTypes"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ContentType item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public ContentTypeRequestBuilder contentTypes(final String id) {
         return new ContentTypeRequestBuilder(getRequestUrlWithAdditionalSegment("contentTypes") + "/" + id, getClient(), null);
     }
@@ -102,17 +124,39 @@ public class ListRequestBuilder extends BaseRequestBuilder<List> {
     public DriveRequestBuilder drive() {
         return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drive"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the ListItem collection
+     *
+     * @return the collection request builder
+     */
     public ListItemCollectionRequestBuilder items() {
         return new ListItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ListItem item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public ListItemRequestBuilder items(final String id) {
         return new ListItemRequestBuilder(getRequestUrlWithAdditionalSegment("items") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the Subscription collection
+     *
+     * @return the collection request builder
+     */
     public SubscriptionCollectionRequestBuilder subscriptions() {
         return new SubscriptionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("subscriptions"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Subscription item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public SubscriptionRequestBuilder subscriptions(final String id) {
         return new SubscriptionRequestBuilder(getRequestUrlWithAdditionalSegment("subscriptions") + "/" + id, getClient(), null);
     }

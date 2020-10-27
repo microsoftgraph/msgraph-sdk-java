@@ -54,6 +54,15 @@ public class WorkbookRangeSortRequestBuilder extends BaseRequestBuilder<Workbook
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param fields the fields
+     * @param matchCase the matchCase
+     * @param hasHeaders the hasHeaders
+     * @param orientation the orientation
+     * @param method the method
+     */
     public WorkbookRangeSortApplyRequestBuilder apply(final java.util.List<WorkbookSortField> fields, final Boolean matchCase, final Boolean hasHeaders, final String orientation, final String method) {
         return new WorkbookRangeSortApplyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.apply"), getClient(), null, fields, matchCase, hasHeaders, orientation, method);
     }

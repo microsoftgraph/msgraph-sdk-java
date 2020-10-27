@@ -40,6 +40,11 @@ public class AttachmentCollectionRequest extends BaseCollectionRequest<Attachmen
         super(requestUrl, client, requestOptions, AttachmentCollectionResponse.class, AttachmentCollectionPage.class, AttachmentCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Attachment
+     * @param newAttachment the Attachment to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Attachment newAttachment, final ICallback<? super Attachment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AttachmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -47,6 +52,11 @@ public class AttachmentCollectionRequest extends BaseCollectionRequest<Attachmen
             .post(newAttachment, callback);
     }
 
+    /**
+     * Creates a new Attachment
+     * @param newAttachment the Attachment to create
+     * @return the newly created object
+     */
     public Attachment post(final Attachment newAttachment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AttachmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

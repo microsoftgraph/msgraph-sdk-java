@@ -38,6 +38,11 @@ public class ConditionalAccessPolicyCollectionRequest extends BaseCollectionRequ
         super(requestUrl, client, requestOptions, ConditionalAccessPolicyCollectionResponse.class, ConditionalAccessPolicyCollectionPage.class, ConditionalAccessPolicyCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new ConditionalAccessPolicy
+     * @param newConditionalAccessPolicy the ConditionalAccessPolicy to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final ConditionalAccessPolicy newConditionalAccessPolicy, final ICallback<? super ConditionalAccessPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ConditionalAccessPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class ConditionalAccessPolicyCollectionRequest extends BaseCollectionRequ
             .post(newConditionalAccessPolicy, callback);
     }
 
+    /**
+     * Creates a new ConditionalAccessPolicy
+     * @param newConditionalAccessPolicy the ConditionalAccessPolicy to create
+     * @return the newly created object
+     */
     public ConditionalAccessPolicy post(final ConditionalAccessPolicy newConditionalAccessPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ConditionalAccessPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

@@ -42,6 +42,11 @@ public class OrgContactCollectionReferenceRequest extends BaseCollectionWithRefe
         super(requestUrl, client, requestOptions, OrgContactCollectionResponse.class, OrgContactCollectionWithReferencesPage.class, OrgContactCollectionWithReferencesRequestBuilder.class);
     }
 
+    /**
+     * Creates a new OrgContact
+     * @param newOrgContact the OrgContact to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final OrgContact newOrgContact, final ICallback<? super OrgContact> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/contacts/" + newOrgContact.id);
@@ -50,6 +55,11 @@ public class OrgContactCollectionReferenceRequest extends BaseCollectionWithRefe
             .post(newOrgContact, body, callback);
     }
 
+    /**
+     * Creates a new OrgContact
+     * @param newOrgContact the OrgContact to create
+     * @return the newly created object
+     */
     public OrgContact post(final OrgContact newOrgContact) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/contacts/" + newOrgContact.id);

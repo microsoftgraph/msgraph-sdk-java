@@ -54,10 +54,21 @@ public class DeviceCompliancePolicySettingStateSummaryRequestBuilder extends Bas
     }
 
 
+    /**
+     *  Gets a request builder for the DeviceComplianceSettingState collection
+     *
+     * @return the collection request builder
+     */
     public DeviceComplianceSettingStateCollectionRequestBuilder deviceComplianceSettingStates() {
         return new DeviceComplianceSettingStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceComplianceSettingStates"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DeviceComplianceSettingState item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public DeviceComplianceSettingStateRequestBuilder deviceComplianceSettingStates(final String id) {
         return new DeviceComplianceSettingStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceComplianceSettingStates") + "/" + id, getClient(), null);
     }

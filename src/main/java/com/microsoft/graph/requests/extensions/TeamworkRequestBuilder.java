@@ -54,10 +54,21 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder<Teamwork> {
     }
 
 
+    /**
+     *  Gets a request builder for the WorkforceIntegration collection
+     *
+     * @return the collection request builder
+     */
     public WorkforceIntegrationCollectionRequestBuilder workforceIntegrations() {
         return new WorkforceIntegrationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("workforceIntegrations"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the WorkforceIntegration item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public WorkforceIntegrationRequestBuilder workforceIntegrations(final String id) {
         return new WorkforceIntegrationRequestBuilder(getRequestUrlWithAdditionalSegment("workforceIntegrations") + "/" + id, getClient(), null);
     }

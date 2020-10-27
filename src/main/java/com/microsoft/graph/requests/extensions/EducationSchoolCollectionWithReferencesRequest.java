@@ -43,26 +43,56 @@ public class EducationSchoolCollectionWithReferencesRequest extends BaseCollecti
         super(requestUrl, client, requestOptions, EducationSchoolCollectionResponse.class, EducationSchoolCollectionWithReferencesPage.class, EducationSchoolCollectionWithReferencesRequestBuilder.class);
     }
 
+    /**
+     * Sets the expand clause for the request
+     *
+     * @param value the expand clause
+     * @return the updated request
+     */
     public EducationSchoolCollectionWithReferencesRequest expand(final String value) {
         addExpandOption(value);
         return this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
     public EducationSchoolCollectionWithReferencesRequest filter(final String value) {
         addFilterOption(value);
         return this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
     public EducationSchoolCollectionWithReferencesRequest orderBy(final String value) {
         addOrderByOption(value);
         return this;
     }
 
+    /**
+     * Sets the select clause for the request
+     *
+     * @param value the select clause
+     * @return the updated request
+     */
     public EducationSchoolCollectionWithReferencesRequest select(final String value) {
         addSelectOption(value);
         return this;
     }
 
+    /**
+     * Sets the top value for the request
+     *
+     * @param value the max number of items to return
+     * @return the updated request
+     */
     public EducationSchoolCollectionWithReferencesRequest top(final int value) {
         addTopOption(value);
         return this;

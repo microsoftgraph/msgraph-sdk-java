@@ -40,6 +40,11 @@ public class TargetedManagedAppConfigurationCollectionRequest extends BaseCollec
         super(requestUrl, client, requestOptions, TargetedManagedAppConfigurationCollectionResponse.class, TargetedManagedAppConfigurationCollectionPage.class, TargetedManagedAppConfigurationCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new TargetedManagedAppConfiguration
+     * @param newTargetedManagedAppConfiguration the TargetedManagedAppConfiguration to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration, final ICallback<? super TargetedManagedAppConfiguration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TargetedManagedAppConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -47,6 +52,11 @@ public class TargetedManagedAppConfigurationCollectionRequest extends BaseCollec
             .post(newTargetedManagedAppConfiguration, callback);
     }
 
+    /**
+     * Creates a new TargetedManagedAppConfiguration
+     * @param newTargetedManagedAppConfiguration the TargetedManagedAppConfiguration to create
+     * @return the newly created object
+     */
     public TargetedManagedAppConfiguration post(final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TargetedManagedAppConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

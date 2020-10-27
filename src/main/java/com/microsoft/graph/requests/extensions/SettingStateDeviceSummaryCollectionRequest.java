@@ -38,6 +38,11 @@ public class SettingStateDeviceSummaryCollectionRequest extends BaseCollectionRe
         super(requestUrl, client, requestOptions, SettingStateDeviceSummaryCollectionResponse.class, SettingStateDeviceSummaryCollectionPage.class, SettingStateDeviceSummaryCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new SettingStateDeviceSummary
+     * @param newSettingStateDeviceSummary the SettingStateDeviceSummary to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final SettingStateDeviceSummary newSettingStateDeviceSummary, final ICallback<? super SettingStateDeviceSummary> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SettingStateDeviceSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class SettingStateDeviceSummaryCollectionRequest extends BaseCollectionRe
             .post(newSettingStateDeviceSummary, callback);
     }
 
+    /**
+     * Creates a new SettingStateDeviceSummary
+     * @param newSettingStateDeviceSummary the SettingStateDeviceSummary to create
+     * @return the newly created object
+     */
     public SettingStateDeviceSummary post(final SettingStateDeviceSummary newSettingStateDeviceSummary) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SettingStateDeviceSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

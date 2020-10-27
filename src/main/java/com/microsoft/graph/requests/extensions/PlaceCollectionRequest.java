@@ -37,6 +37,11 @@ public class PlaceCollectionRequest extends BaseCollectionRequest<Place, PlaceCo
         super(requestUrl, client, requestOptions, PlaceCollectionResponse.class, PlaceCollectionPage.class, PlaceCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Place
+     * @param newPlace the Place to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Place newPlace, final ICallback<? super Place> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PlaceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -44,6 +49,11 @@ public class PlaceCollectionRequest extends BaseCollectionRequest<Place, PlaceCo
             .post(newPlace, callback);
     }
 
+    /**
+     * Creates a new Place
+     * @param newPlace the Place to create
+     * @return the newly created object
+     */
     public Place post(final Place newPlace) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PlaceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

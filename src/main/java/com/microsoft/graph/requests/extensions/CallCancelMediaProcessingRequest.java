@@ -20,6 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
  * The class for the Call Cancel Media Processing Request.
  */
 public class CallCancelMediaProcessingRequest extends BaseRequest<CancelMediaProcessingOperation> {
+    /** The body for the method */
     protected final CallCancelMediaProcessingBody body;
 
     /**
@@ -34,10 +35,18 @@ public class CallCancelMediaProcessingRequest extends BaseRequest<CancelMediaPro
         body = new CallCancelMediaProcessingBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(final ICallback<? super CancelMediaProcessingOperation> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     public CancelMediaProcessingOperation post() throws ClientException {
         return send(HttpMethod.POST, body);
     }

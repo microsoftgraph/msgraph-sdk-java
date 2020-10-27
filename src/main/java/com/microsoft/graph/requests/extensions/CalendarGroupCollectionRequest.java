@@ -38,6 +38,11 @@ public class CalendarGroupCollectionRequest extends BaseCollectionRequest<Calend
         super(requestUrl, client, requestOptions, CalendarGroupCollectionResponse.class, CalendarGroupCollectionPage.class, CalendarGroupCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new CalendarGroup
+     * @param newCalendarGroup the CalendarGroup to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final CalendarGroup newCalendarGroup, final ICallback<? super CalendarGroup> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CalendarGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class CalendarGroupCollectionRequest extends BaseCollectionRequest<Calend
             .post(newCalendarGroup, callback);
     }
 
+    /**
+     * Creates a new CalendarGroup
+     * @param newCalendarGroup the CalendarGroup to create
+     * @return the newly created object
+     */
     public CalendarGroup post(final CalendarGroup newCalendarGroup) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CalendarGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

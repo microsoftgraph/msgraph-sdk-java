@@ -56,17 +56,39 @@ public class ConditionalAccessRootRequestBuilder extends BaseRequestBuilder<Cond
     }
 
 
+    /**
+     *  Gets a request builder for the NamedLocation collection
+     *
+     * @return the collection request builder
+     */
     public NamedLocationCollectionRequestBuilder namedLocations() {
         return new NamedLocationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("namedLocations"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the NamedLocation item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public NamedLocationRequestBuilder namedLocations(final String id) {
         return new NamedLocationRequestBuilder(getRequestUrlWithAdditionalSegment("namedLocations") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the ConditionalAccessPolicy collection
+     *
+     * @return the collection request builder
+     */
     public ConditionalAccessPolicyCollectionRequestBuilder policies() {
         return new ConditionalAccessPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("policies"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ConditionalAccessPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public ConditionalAccessPolicyRequestBuilder policies(final String id) {
         return new ConditionalAccessPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("policies") + "/" + id, getClient(), null);
     }

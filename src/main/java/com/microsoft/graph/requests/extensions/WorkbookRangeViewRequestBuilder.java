@@ -55,14 +55,29 @@ public class WorkbookRangeViewRequestBuilder extends BaseRequestBuilder<Workbook
     }
 
 
+    /**
+     *  Gets a request builder for the WorkbookRangeView collection
+     *
+     * @return the collection request builder
+     */
     public WorkbookRangeViewCollectionRequestBuilder rows() {
         return new WorkbookRangeViewCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rows"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the WorkbookRangeView item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public WorkbookRangeViewRequestBuilder rows(final String id) {
         return new WorkbookRangeViewRequestBuilder(getRequestUrlWithAdditionalSegment("rows") + "/" + id, getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     public WorkbookRangeViewRangeRequestBuilder range() {
         return new WorkbookRangeViewRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.range"), getClient(), null);
     }

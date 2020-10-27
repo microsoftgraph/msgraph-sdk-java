@@ -54,10 +54,21 @@ public class PlannerGroupRequestBuilder extends BaseRequestBuilder<PlannerGroup>
     }
 
 
+    /**
+     *  Gets a request builder for the PlannerPlan collection
+     *
+     * @return the collection request builder
+     */
     public PlannerPlanCollectionRequestBuilder plans() {
         return new PlannerPlanCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("plans"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the PlannerPlan item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public PlannerPlanRequestBuilder plans(final String id) {
         return new PlannerPlanRequestBuilder(getRequestUrlWithAdditionalSegment("plans") + "/" + id, getClient(), null);
     }

@@ -54,10 +54,21 @@ public class ContentTypeRequestBuilder extends BaseRequestBuilder<ContentType> {
     }
 
 
+    /**
+     *  Gets a request builder for the ColumnLink collection
+     *
+     * @return the collection request builder
+     */
     public ColumnLinkCollectionRequestBuilder columnLinks() {
         return new ColumnLinkCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("columnLinks"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ColumnLink item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public ColumnLinkRequestBuilder columnLinks(final String id) {
         return new ColumnLinkRequestBuilder(getRequestUrlWithAdditionalSegment("columnLinks") + "/" + id, getClient(), null);
     }

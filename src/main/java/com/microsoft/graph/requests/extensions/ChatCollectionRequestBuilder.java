@@ -39,6 +39,10 @@ public class ChatCollectionRequestBuilder extends BaseCollectionRequestBuilder<C
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
     public ChatGetAllMessagesCollectionRequestBuilder getAllMessages() {
         return new ChatGetAllMessagesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAllMessages"), getClient(), null);
     }

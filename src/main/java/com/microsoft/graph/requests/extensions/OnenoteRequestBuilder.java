@@ -64,45 +64,111 @@ public class OnenoteRequestBuilder extends BaseRequestBuilder<Onenote> {
     }
 
 
+    /**
+     *  Gets a request builder for the Notebook collection
+     *
+     * @return the collection request builder
+     */
     public NotebookCollectionRequestBuilder notebooks() {
         return new NotebookCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("notebooks"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Notebook item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public NotebookRequestBuilder notebooks(final String id) {
         return new NotebookRequestBuilder(getRequestUrlWithAdditionalSegment("notebooks") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the OnenoteOperation collection
+     *
+     * @return the collection request builder
+     */
     public OnenoteOperationCollectionRequestBuilder operations() {
         return new OnenoteOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the OnenoteOperation item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public OnenoteOperationRequestBuilder operations(final String id) {
         return new OnenoteOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the OnenotePage collection
+     *
+     * @return the collection request builder
+     */
     public OnenotePageCollectionRequestBuilder pages() {
         return new OnenotePageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("pages"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the OnenotePage item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public OnenotePageRequestBuilder pages(final String id) {
         return new OnenotePageRequestBuilder(getRequestUrlWithAdditionalSegment("pages") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the OnenoteResource collection
+     *
+     * @return the collection request builder
+     */
     public OnenoteResourceCollectionRequestBuilder resources() {
         return new OnenoteResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("resources"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the OnenoteResource item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public OnenoteResourceRequestBuilder resources(final String id) {
         return new OnenoteResourceRequestBuilder(getRequestUrlWithAdditionalSegment("resources") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the SectionGroup collection
+     *
+     * @return the collection request builder
+     */
     public SectionGroupCollectionRequestBuilder sectionGroups() {
         return new SectionGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sectionGroups"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the SectionGroup item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public SectionGroupRequestBuilder sectionGroups(final String id) {
         return new SectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("sectionGroups") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the OnenoteSection collection
+     *
+     * @return the collection request builder
+     */
     public OnenoteSectionCollectionRequestBuilder sections() {
         return new OnenoteSectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sections"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the OnenoteSection item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public OnenoteSectionRequestBuilder sections(final String id) {
         return new OnenoteSectionRequestBuilder(getRequestUrlWithAdditionalSegment("sections") + "/" + id, getClient(), null);
     }

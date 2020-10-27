@@ -37,6 +37,11 @@ public class DirectoryRoleCollectionRequest extends BaseCollectionRequest<Direct
         super(requestUrl, client, requestOptions, DirectoryRoleCollectionResponse.class, DirectoryRoleCollectionPage.class, DirectoryRoleCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new DirectoryRole
+     * @param newDirectoryRole the DirectoryRole to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final DirectoryRole newDirectoryRole, final ICallback<? super DirectoryRole> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DirectoryRoleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -44,6 +49,11 @@ public class DirectoryRoleCollectionRequest extends BaseCollectionRequest<Direct
             .post(newDirectoryRole, callback);
     }
 
+    /**
+     * Creates a new DirectoryRole
+     * @param newDirectoryRole the DirectoryRole to create
+     * @return the newly created object
+     */
     public DirectoryRole post(final DirectoryRole newDirectoryRole) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DirectoryRoleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

@@ -53,6 +53,10 @@ public class ChatMessageHostedContentRequestBuilder extends BaseRequestBuilder<C
 
 
 
+    /**
+     * Gets a request builder to get the binary value of the object
+     * @return the stream request builder
+     */
     public ChatMessageHostedContentStreamRequestBuilder content() {
         return new ChatMessageHostedContentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("$value"), getClient(), null);
     }

@@ -40,6 +40,11 @@ public class DeviceCompliancePolicyCollectionRequest extends BaseCollectionReque
         super(requestUrl, client, requestOptions, DeviceCompliancePolicyCollectionResponse.class, DeviceCompliancePolicyCollectionPage.class, DeviceCompliancePolicyCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new DeviceCompliancePolicy
+     * @param newDeviceCompliancePolicy the DeviceCompliancePolicy to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final DeviceCompliancePolicy newDeviceCompliancePolicy, final ICallback<? super DeviceCompliancePolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceCompliancePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -47,6 +52,11 @@ public class DeviceCompliancePolicyCollectionRequest extends BaseCollectionReque
             .post(newDeviceCompliancePolicy, callback);
     }
 
+    /**
+     * Creates a new DeviceCompliancePolicy
+     * @param newDeviceCompliancePolicy the DeviceCompliancePolicy to create
+     * @return the newly created object
+     */
     public DeviceCompliancePolicy post(final DeviceCompliancePolicy newDeviceCompliancePolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceCompliancePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

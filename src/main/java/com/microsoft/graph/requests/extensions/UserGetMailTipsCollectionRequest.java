@@ -30,6 +30,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<MailTips, UserGetMailTipsCollectionResponse, UserGetMailTipsCollectionPage> {
 
 
+    /** The body for the method */
     protected final UserGetMailTipsBody body;
 
 
@@ -46,6 +47,10 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<Mail
     }
 
 
+    /**
+     * Invokes the method and calls the callback with the resulting collection of objects
+     * @param callback a callback to be invoked with the resulting collection of objects
+     */
     public void post(final ICallback<? super UserGetMailTipsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
@@ -60,6 +65,10 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<Mail
         });
     }
 
+    /**
+     * Invokes the method and returns the resulting collection of objects
+     * @return a collection of objects returned by the method
+     */
     public UserGetMailTipsCollectionPage post() throws ClientException {
         final UserGetMailTipsCollectionResponse response = post(body);
         return buildFromResponse(response);

@@ -38,6 +38,11 @@ public class IosManagedAppProtectionCollectionRequest extends BaseCollectionRequ
         super(requestUrl, client, requestOptions, IosManagedAppProtectionCollectionResponse.class, IosManagedAppProtectionCollectionPage.class, IosManagedAppProtectionCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new IosManagedAppProtection
+     * @param newIosManagedAppProtection the IosManagedAppProtection to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final IosManagedAppProtection newIosManagedAppProtection, final ICallback<? super IosManagedAppProtection> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new IosManagedAppProtectionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class IosManagedAppProtectionCollectionRequest extends BaseCollectionRequ
             .post(newIosManagedAppProtection, callback);
     }
 
+    /**
+     * Creates a new IosManagedAppProtection
+     * @param newIosManagedAppProtection the IosManagedAppProtection to create
+     * @return the newly created object
+     */
     public IosManagedAppProtection post(final IosManagedAppProtection newIosManagedAppProtection) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new IosManagedAppProtectionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

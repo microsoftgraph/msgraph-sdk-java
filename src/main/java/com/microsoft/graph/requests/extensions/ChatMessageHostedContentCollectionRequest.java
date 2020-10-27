@@ -38,6 +38,11 @@ public class ChatMessageHostedContentCollectionRequest extends BaseCollectionReq
         super(requestUrl, client, requestOptions, ChatMessageHostedContentCollectionResponse.class, ChatMessageHostedContentCollectionPage.class, ChatMessageHostedContentCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new ChatMessageHostedContent
+     * @param newChatMessageHostedContent the ChatMessageHostedContent to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final ChatMessageHostedContent newChatMessageHostedContent, final ICallback<? super ChatMessageHostedContent> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ChatMessageHostedContentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class ChatMessageHostedContentCollectionRequest extends BaseCollectionReq
             .post(newChatMessageHostedContent, callback);
     }
 
+    /**
+     * Creates a new ChatMessageHostedContent
+     * @param newChatMessageHostedContent the ChatMessageHostedContent to create
+     * @return the newly created object
+     */
     public ChatMessageHostedContent post(final ChatMessageHostedContent newChatMessageHostedContent) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ChatMessageHostedContentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

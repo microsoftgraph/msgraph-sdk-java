@@ -39,6 +39,10 @@ public class UserActivityCollectionRequestBuilder extends BaseCollectionRequestB
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
     public UserActivityRecentCollectionRequestBuilder recent() {
         return new UserActivityRecentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.recent"), getClient(), null);
     }

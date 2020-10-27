@@ -73,6 +73,10 @@ public class TeamsAppInstallationRequestBuilder extends BaseRequestBuilder<Teams
         return new TeamsAppDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("teamsAppDefinition"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     public TeamsAppInstallationUpgradeRequestBuilder upgrade() {
         return new TeamsAppInstallationUpgradeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.upgrade"), getClient(), null);
     }

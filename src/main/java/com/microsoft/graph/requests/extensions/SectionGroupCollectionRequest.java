@@ -37,6 +37,11 @@ public class SectionGroupCollectionRequest extends BaseCollectionRequest<Section
         super(requestUrl, client, requestOptions, SectionGroupCollectionResponse.class, SectionGroupCollectionPage.class, SectionGroupCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new SectionGroup
+     * @param newSectionGroup the SectionGroup to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final SectionGroup newSectionGroup, final ICallback<? super SectionGroup> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SectionGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -44,6 +49,11 @@ public class SectionGroupCollectionRequest extends BaseCollectionRequest<Section
             .post(newSectionGroup, callback);
     }
 
+    /**
+     * Creates a new SectionGroup
+     * @param newSectionGroup the SectionGroup to create
+     * @return the newly created object
+     */
     public SectionGroup post(final SectionGroup newSectionGroup) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SectionGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

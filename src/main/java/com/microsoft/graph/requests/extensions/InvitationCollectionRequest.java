@@ -37,6 +37,11 @@ public class InvitationCollectionRequest extends BaseCollectionRequest<Invitatio
         super(requestUrl, client, requestOptions, InvitationCollectionResponse.class, InvitationCollectionPage.class, InvitationCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Invitation
+     * @param newInvitation the Invitation to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Invitation newInvitation, final ICallback<? super Invitation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new InvitationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -44,6 +49,11 @@ public class InvitationCollectionRequest extends BaseCollectionRequest<Invitatio
             .post(newInvitation, callback);
     }
 
+    /**
+     * Creates a new Invitation
+     * @param newInvitation the Invitation to create
+     * @return the newly created object
+     */
     public Invitation post(final Invitation newInvitation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new InvitationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

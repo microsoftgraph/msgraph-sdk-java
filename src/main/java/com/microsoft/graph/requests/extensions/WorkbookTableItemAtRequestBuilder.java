@@ -58,17 +58,39 @@ public class WorkbookTableItemAtRequestBuilder extends BaseFunctionRequestBuilde
 
         return request;
     }
+    /**
+     *  Gets a request builder for the WorkbookTableColumn collection
+     *
+     * @return the collection request builder
+     */
     public WorkbookTableColumnCollectionRequestBuilder columns() {
         return new WorkbookTableColumnCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("columns"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the WorkbookTableColumn item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public WorkbookTableColumnRequestBuilder columns(final String id) {
         return new WorkbookTableColumnRequestBuilder(getRequestUrlWithAdditionalSegment("columns") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the WorkbookTableRow collection
+     *
+     * @return the collection request builder
+     */
     public WorkbookTableRowCollectionRequestBuilder rows() {
         return new WorkbookTableRowCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rows"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the WorkbookTableRow item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public WorkbookTableRowRequestBuilder rows(final String id) {
         return new WorkbookTableRowRequestBuilder(getRequestUrlWithAdditionalSegment("rows") + "/" + id, getClient(), null);
     }

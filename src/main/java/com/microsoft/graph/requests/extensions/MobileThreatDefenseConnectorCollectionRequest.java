@@ -38,6 +38,11 @@ public class MobileThreatDefenseConnectorCollectionRequest extends BaseCollectio
         super(requestUrl, client, requestOptions, MobileThreatDefenseConnectorCollectionResponse.class, MobileThreatDefenseConnectorCollectionPage.class, MobileThreatDefenseConnectorCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new MobileThreatDefenseConnector
+     * @param newMobileThreatDefenseConnector the MobileThreatDefenseConnector to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final MobileThreatDefenseConnector newMobileThreatDefenseConnector, final ICallback<? super MobileThreatDefenseConnector> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileThreatDefenseConnectorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class MobileThreatDefenseConnectorCollectionRequest extends BaseCollectio
             .post(newMobileThreatDefenseConnector, callback);
     }
 
+    /**
+     * Creates a new MobileThreatDefenseConnector
+     * @param newMobileThreatDefenseConnector the MobileThreatDefenseConnector to create
+     * @return the newly created object
+     */
     public MobileThreatDefenseConnector post(final MobileThreatDefenseConnector newMobileThreatDefenseConnector) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MobileThreatDefenseConnectorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

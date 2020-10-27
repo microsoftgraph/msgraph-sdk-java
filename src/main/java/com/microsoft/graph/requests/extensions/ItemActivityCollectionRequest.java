@@ -38,6 +38,11 @@ public class ItemActivityCollectionRequest extends BaseCollectionRequest<ItemAct
         super(requestUrl, client, requestOptions, ItemActivityCollectionResponse.class, ItemActivityCollectionPage.class, ItemActivityCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new ItemActivity
+     * @param newItemActivity the ItemActivity to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final ItemActivity newItemActivity, final ICallback<? super ItemActivity> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ItemActivityRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class ItemActivityCollectionRequest extends BaseCollectionRequest<ItemAct
             .post(newItemActivity, callback);
     }
 
+    /**
+     * Creates a new ItemActivity
+     * @param newItemActivity the ItemActivity to create
+     * @return the newly created object
+     */
     public ItemActivity post(final ItemActivity newItemActivity) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ItemActivityRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

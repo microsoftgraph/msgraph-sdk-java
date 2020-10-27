@@ -38,6 +38,11 @@ public class DeviceConfigurationAssignmentCollectionRequest extends BaseCollecti
         super(requestUrl, client, requestOptions, DeviceConfigurationAssignmentCollectionResponse.class, DeviceConfigurationAssignmentCollectionPage.class, DeviceConfigurationAssignmentCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new DeviceConfigurationAssignment
+     * @param newDeviceConfigurationAssignment the DeviceConfigurationAssignment to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final DeviceConfigurationAssignment newDeviceConfigurationAssignment, final ICallback<? super DeviceConfigurationAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class DeviceConfigurationAssignmentCollectionRequest extends BaseCollecti
             .post(newDeviceConfigurationAssignment, callback);
     }
 
+    /**
+     * Creates a new DeviceConfigurationAssignment
+     * @param newDeviceConfigurationAssignment the DeviceConfigurationAssignment to create
+     * @return the newly created object
+     */
     public DeviceConfigurationAssignment post(final DeviceConfigurationAssignment newDeviceConfigurationAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

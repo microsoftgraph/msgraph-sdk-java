@@ -38,6 +38,11 @@ public class TeamsAsyncOperationCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, TeamsAsyncOperationCollectionResponse.class, TeamsAsyncOperationCollectionPage.class, TeamsAsyncOperationCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new TeamsAsyncOperation
+     * @param newTeamsAsyncOperation the TeamsAsyncOperation to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final TeamsAsyncOperation newTeamsAsyncOperation, final ICallback<? super TeamsAsyncOperation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TeamsAsyncOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class TeamsAsyncOperationCollectionRequest extends BaseCollectionRequest<
             .post(newTeamsAsyncOperation, callback);
     }
 
+    /**
+     * Creates a new TeamsAsyncOperation
+     * @param newTeamsAsyncOperation the TeamsAsyncOperation to create
+     * @return the newly created object
+     */
     public TeamsAsyncOperation post(final TeamsAsyncOperation newTeamsAsyncOperation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TeamsAsyncOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

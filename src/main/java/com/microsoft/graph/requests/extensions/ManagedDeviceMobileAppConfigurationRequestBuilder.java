@@ -61,17 +61,39 @@ public class ManagedDeviceMobileAppConfigurationRequestBuilder extends BaseReque
     }
 
 
+    /**
+     *  Gets a request builder for the ManagedDeviceMobileAppConfigurationAssignment collection
+     *
+     * @return the collection request builder
+     */
     public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder assignments() {
         return new ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ManagedDeviceMobileAppConfigurationAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder assignments(final String id) {
         return new ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the ManagedDeviceMobileAppConfigurationDeviceStatus collection
+     *
+     * @return the collection request builder
+     */
     public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses() {
         return new ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ManagedDeviceMobileAppConfigurationDeviceStatus item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder deviceStatuses(final String id) {
         return new ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
     }
@@ -84,10 +106,21 @@ public class ManagedDeviceMobileAppConfigurationRequestBuilder extends BaseReque
     public ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder deviceStatusSummary() {
         return new ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatusSummary"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the ManagedDeviceMobileAppConfigurationUserStatus collection
+     *
+     * @return the collection request builder
+     */
     public ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder userStatuses() {
         return new ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ManagedDeviceMobileAppConfigurationUserStatus item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder userStatuses(final String id) {
         return new ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
     }
@@ -101,6 +134,11 @@ public class ManagedDeviceMobileAppConfigurationRequestBuilder extends BaseReque
         return new ManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("userStatusSummary"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param assignments the assignments
+     */
     public ManagedDeviceMobileAppConfigurationAssignRequestBuilder assign(final java.util.List<ManagedDeviceMobileAppConfigurationAssignment> assignments) {
         return new ManagedDeviceMobileAppConfigurationAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, assignments);
     }

@@ -38,6 +38,11 @@ public class WorkforceIntegrationCollectionRequest extends BaseCollectionRequest
         super(requestUrl, client, requestOptions, WorkforceIntegrationCollectionResponse.class, WorkforceIntegrationCollectionPage.class, WorkforceIntegrationCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new WorkforceIntegration
+     * @param newWorkforceIntegration the WorkforceIntegration to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final WorkforceIntegration newWorkforceIntegration, final ICallback<? super WorkforceIntegration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkforceIntegrationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class WorkforceIntegrationCollectionRequest extends BaseCollectionRequest
             .post(newWorkforceIntegration, callback);
     }
 
+    /**
+     * Creates a new WorkforceIntegration
+     * @param newWorkforceIntegration the WorkforceIntegration to create
+     * @return the newly created object
+     */
     public WorkforceIntegration post(final WorkforceIntegration newWorkforceIntegration) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkforceIntegrationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

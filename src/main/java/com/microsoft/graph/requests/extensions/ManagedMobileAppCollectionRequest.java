@@ -38,6 +38,11 @@ public class ManagedMobileAppCollectionRequest extends BaseCollectionRequest<Man
         super(requestUrl, client, requestOptions, ManagedMobileAppCollectionResponse.class, ManagedMobileAppCollectionPage.class, ManagedMobileAppCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new ManagedMobileApp
+     * @param newManagedMobileApp the ManagedMobileApp to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final ManagedMobileApp newManagedMobileApp, final ICallback<? super ManagedMobileApp> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedMobileAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class ManagedMobileAppCollectionRequest extends BaseCollectionRequest<Man
             .post(newManagedMobileApp, callback);
     }
 
+    /**
+     * Creates a new ManagedMobileApp
+     * @param newManagedMobileApp the ManagedMobileApp to create
+     * @return the newly created object
+     */
     public ManagedMobileApp post(final ManagedMobileApp newManagedMobileApp) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedMobileAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

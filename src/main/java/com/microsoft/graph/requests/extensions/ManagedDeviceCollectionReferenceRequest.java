@@ -43,6 +43,11 @@ public class ManagedDeviceCollectionReferenceRequest extends BaseCollectionWithR
         super(requestUrl, client, requestOptions, ManagedDeviceCollectionResponse.class, ManagedDeviceCollectionWithReferencesPage.class, ManagedDeviceCollectionWithReferencesRequestBuilder.class);
     }
 
+    /**
+     * Creates a new ManagedDevice
+     * @param newManagedDevice the ManagedDevice to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final ManagedDevice newManagedDevice, final ICallback<? super ManagedDevice> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/me/managedDevices/" + newManagedDevice.id);
@@ -51,6 +56,11 @@ public class ManagedDeviceCollectionReferenceRequest extends BaseCollectionWithR
             .post(newManagedDevice, body, callback);
     }
 
+    /**
+     * Creates a new ManagedDevice
+     * @param newManagedDevice the ManagedDevice to create
+     * @return the newly created object
+     */
     public ManagedDevice post(final ManagedDevice newManagedDevice) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/me/managedDevices/" + newManagedDevice.id);

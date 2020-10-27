@@ -52,24 +52,57 @@ public class WindowsInformationProtectionPolicyRequestBuilder extends BaseReques
     }
 
 
+    /**
+     *  Gets a request builder for the TargetedManagedAppPolicyAssignment collection
+     *
+     * @return the collection request builder
+     */
     public TargetedManagedAppPolicyAssignmentCollectionRequestBuilder assignments() {
         return new TargetedManagedAppPolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the TargetedManagedAppPolicyAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public TargetedManagedAppPolicyAssignmentRequestBuilder assignments(final String id) {
         return new TargetedManagedAppPolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the WindowsInformationProtectionAppLockerFile collection
+     *
+     * @return the collection request builder
+     */
     public WindowsInformationProtectionAppLockerFileCollectionRequestBuilder exemptAppLockerFiles() {
         return new WindowsInformationProtectionAppLockerFileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("exemptAppLockerFiles"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the WindowsInformationProtectionAppLockerFile item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public WindowsInformationProtectionAppLockerFileRequestBuilder exemptAppLockerFiles(final String id) {
         return new WindowsInformationProtectionAppLockerFileRequestBuilder(getRequestUrlWithAdditionalSegment("exemptAppLockerFiles") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the WindowsInformationProtectionAppLockerFile collection
+     *
+     * @return the collection request builder
+     */
     public WindowsInformationProtectionAppLockerFileCollectionRequestBuilder protectedAppLockerFiles() {
         return new WindowsInformationProtectionAppLockerFileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("protectedAppLockerFiles"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the WindowsInformationProtectionAppLockerFile item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public WindowsInformationProtectionAppLockerFileRequestBuilder protectedAppLockerFiles(final String id) {
         return new WindowsInformationProtectionAppLockerFileRequestBuilder(getRequestUrlWithAdditionalSegment("protectedAppLockerFiles") + "/" + id, getClient(), null);
     }

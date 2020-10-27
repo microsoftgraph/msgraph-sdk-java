@@ -53,10 +53,20 @@ public class ScheduleChangeRequestRequestBuilder extends BaseRequestBuilder<Sche
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param message the message
+     */
     public ScheduleChangeRequestDeclineRequestBuilder decline(final String message) {
         return new ScheduleChangeRequestDeclineRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.decline"), getClient(), null, message);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param message the message
+     */
     public ScheduleChangeRequestApproveRequestBuilder approve(final String message) {
         return new ScheduleChangeRequestApproveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.approve"), getClient(), null, message);
     }

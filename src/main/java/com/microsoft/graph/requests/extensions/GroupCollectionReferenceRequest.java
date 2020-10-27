@@ -43,6 +43,11 @@ public class GroupCollectionReferenceRequest extends BaseCollectionWithReference
         super(requestUrl, client, requestOptions, GroupCollectionResponse.class, GroupCollectionWithReferencesPage.class, GroupCollectionWithReferencesRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Group
+     * @param newGroup the Group to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Group newGroup, final ICallback<? super Group> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/groups/" + newGroup.id);
@@ -51,6 +56,11 @@ public class GroupCollectionReferenceRequest extends BaseCollectionWithReference
             .post(newGroup, body, callback);
     }
 
+    /**
+     * Creates a new Group
+     * @param newGroup the Group to create
+     * @return the newly created object
+     */
     public Group post(final Group newGroup) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/groups/" + newGroup.id);

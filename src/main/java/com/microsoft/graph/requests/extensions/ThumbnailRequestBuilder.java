@@ -53,6 +53,11 @@ public class ThumbnailRequestBuilder extends BaseRequestBuilder<Thumbnail> {
 
 
 
+    /**
+     * Gets the request builder for content
+     *
+     * @return the ThumbnailContentStreamRequestBuilder instance
+     */
     public ThumbnailContentStreamRequestBuilder content() {
         return new ThumbnailContentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
     }

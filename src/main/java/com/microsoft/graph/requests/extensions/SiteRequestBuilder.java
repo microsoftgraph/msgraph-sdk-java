@@ -94,17 +94,39 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
     public ItemAnalyticsWithReferenceRequestBuilder analytics() {
         return new ItemAnalyticsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("analytics"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the ColumnDefinition collection
+     *
+     * @return the collection request builder
+     */
     public ColumnDefinitionCollectionRequestBuilder columns() {
         return new ColumnDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("columns"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ColumnDefinition item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public ColumnDefinitionRequestBuilder columns(final String id) {
         return new ColumnDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("columns") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the ContentType collection
+     *
+     * @return the collection request builder
+     */
     public ContentTypeCollectionRequestBuilder contentTypes() {
         return new ContentTypeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contentTypes"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ContentType item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public ContentTypeRequestBuilder contentTypes(final String id) {
         return new ContentTypeRequestBuilder(getRequestUrlWithAdditionalSegment("contentTypes") + "/" + id, getClient(), null);
     }
@@ -117,31 +139,75 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
     public DriveRequestBuilder drive() {
         return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drive"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the Drive collection
+     *
+     * @return the collection request builder
+     */
     public DriveCollectionRequestBuilder drives() {
         return new DriveCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("drives"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Drive item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public DriveRequestBuilder drives(final String id) {
         return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drives") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the BaseItem collection
+     *
+     * @return the collection request builder
+     */
     public BaseItemCollectionRequestBuilder items() {
         return new BaseItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the BaseItem item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public BaseItemRequestBuilder items(final String id) {
         return new BaseItemRequestBuilder(getRequestUrlWithAdditionalSegment("items") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the List collection
+     *
+     * @return the collection request builder
+     */
     public ListCollectionRequestBuilder lists() {
         return new ListCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("lists"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the List item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public ListRequestBuilder lists(final String id) {
         return new ListRequestBuilder(getRequestUrlWithAdditionalSegment("lists") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the Site collection
+     *
+     * @return the collection request builder
+     */
     public SiteCollectionRequestBuilder sites() {
         return new SiteCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sites"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Site item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public SiteRequestBuilder sites(final String id) {
         return new SiteRequestBuilder(getRequestUrlWithAdditionalSegment("sites") + "/" + id, getClient(), null);
     }
@@ -155,14 +221,30 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
         return new OnenoteRequestBuilder(getRequestUrlWithAdditionalSegment("onenote"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
     public SiteGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval() {
         return new SiteGetActivitiesByIntervalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getActivitiesByInterval"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param startDateTime the startDateTime
+     * @param endDateTime the endDateTime
+     * @param interval the interval
+     */
     public SiteGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval(final String startDateTime, final String endDateTime, final String interval) {
         return new SiteGetActivitiesByIntervalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getActivitiesByInterval"), getClient(), null, startDateTime, endDateTime, interval);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param path the path
+     */
     public SiteGetByPathRequestBuilder getByPath(final String path) {
         return new SiteGetByPathRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getByPath"), getClient(), null, path);
     }

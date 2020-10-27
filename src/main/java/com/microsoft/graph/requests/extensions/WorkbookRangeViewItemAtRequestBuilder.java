@@ -58,10 +58,21 @@ public class WorkbookRangeViewItemAtRequestBuilder extends BaseFunctionRequestBu
 
         return request;
     }
+    /**
+     *  Gets a request builder for the WorkbookRangeView collection
+     *
+     * @return the collection request builder
+     */
     public WorkbookRangeViewCollectionRequestBuilder rows() {
         return new WorkbookRangeViewCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rows"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the WorkbookRangeView item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public WorkbookRangeViewRequestBuilder rows(final String id) {
         return new WorkbookRangeViewRequestBuilder(getRequestUrlWithAdditionalSegment("rows") + "/" + id, getClient(), null);
     }

@@ -42,6 +42,11 @@ public class CertificateBasedAuthConfigurationCollectionReferenceRequest extends
         super(requestUrl, client, requestOptions, CertificateBasedAuthConfigurationCollectionResponse.class, CertificateBasedAuthConfigurationCollectionWithReferencesPage.class, CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder.class);
     }
 
+    /**
+     * Creates a new CertificateBasedAuthConfiguration
+     * @param newCertificateBasedAuthConfiguration the CertificateBasedAuthConfiguration to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, final ICallback<? super CertificateBasedAuthConfiguration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/certificateBasedAuthConfiguration/" + newCertificateBasedAuthConfiguration.id);
@@ -50,6 +55,11 @@ public class CertificateBasedAuthConfigurationCollectionReferenceRequest extends
             .post(newCertificateBasedAuthConfiguration, body, callback);
     }
 
+    /**
+     * Creates a new CertificateBasedAuthConfiguration
+     * @param newCertificateBasedAuthConfiguration the CertificateBasedAuthConfiguration to create
+     * @return the newly created object
+     */
     public CertificateBasedAuthConfiguration post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/certificateBasedAuthConfiguration/" + newCertificateBasedAuthConfiguration.id);

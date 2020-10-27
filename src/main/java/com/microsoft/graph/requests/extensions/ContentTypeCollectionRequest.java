@@ -38,6 +38,11 @@ public class ContentTypeCollectionRequest extends BaseCollectionRequest<ContentT
         super(requestUrl, client, requestOptions, ContentTypeCollectionResponse.class, ContentTypeCollectionPage.class, ContentTypeCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new ContentType
+     * @param newContentType the ContentType to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final ContentType newContentType, final ICallback<? super ContentType> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ContentTypeRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class ContentTypeCollectionRequest extends BaseCollectionRequest<ContentT
             .post(newContentType, callback);
     }
 
+    /**
+     * Creates a new ContentType
+     * @param newContentType the ContentType to create
+     * @return the newly created object
+     */
     public ContentType post(final ContentType newContentType) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ContentTypeRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

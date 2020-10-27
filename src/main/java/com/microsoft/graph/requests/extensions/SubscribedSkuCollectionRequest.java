@@ -37,6 +37,11 @@ public class SubscribedSkuCollectionRequest extends BaseCollectionRequest<Subscr
         super(requestUrl, client, requestOptions, SubscribedSkuCollectionResponse.class, SubscribedSkuCollectionPage.class, SubscribedSkuCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new SubscribedSku
+     * @param newSubscribedSku the SubscribedSku to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final SubscribedSku newSubscribedSku, final ICallback<? super SubscribedSku> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SubscribedSkuRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -44,6 +49,11 @@ public class SubscribedSkuCollectionRequest extends BaseCollectionRequest<Subscr
             .post(newSubscribedSku, callback);
     }
 
+    /**
+     * Creates a new SubscribedSku
+     * @param newSubscribedSku the SubscribedSku to create
+     * @return the newly created object
+     */
     public SubscribedSku post(final SubscribedSku newSubscribedSku) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SubscribedSkuRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

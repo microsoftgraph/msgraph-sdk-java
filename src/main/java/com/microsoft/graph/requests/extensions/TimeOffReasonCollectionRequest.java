@@ -38,6 +38,11 @@ public class TimeOffReasonCollectionRequest extends BaseCollectionRequest<TimeOf
         super(requestUrl, client, requestOptions, TimeOffReasonCollectionResponse.class, TimeOffReasonCollectionPage.class, TimeOffReasonCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new TimeOffReason
+     * @param newTimeOffReason the TimeOffReason to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final TimeOffReason newTimeOffReason, final ICallback<? super TimeOffReason> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TimeOffReasonRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class TimeOffReasonCollectionRequest extends BaseCollectionRequest<TimeOf
             .post(newTimeOffReason, callback);
     }
 
+    /**
+     * Creates a new TimeOffReason
+     * @param newTimeOffReason the TimeOffReason to create
+     * @return the newly created object
+     */
     public TimeOffReason post(final TimeOffReason newTimeOffReason) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TimeOffReasonRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

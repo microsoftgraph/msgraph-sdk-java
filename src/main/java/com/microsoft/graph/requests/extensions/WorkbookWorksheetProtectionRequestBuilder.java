@@ -54,10 +54,19 @@ public class WorkbookWorksheetProtectionRequestBuilder extends BaseRequestBuilde
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param options the options
+     */
     public WorkbookWorksheetProtectionProtectRequestBuilder protect(final WorkbookWorksheetProtectionOptions options) {
         return new WorkbookWorksheetProtectionProtectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.protect"), getClient(), null, options);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     public WorkbookWorksheetProtectionUnprotectRequestBuilder unprotect() {
         return new WorkbookWorksheetProtectionUnprotectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unprotect"), getClient(), null);
     }

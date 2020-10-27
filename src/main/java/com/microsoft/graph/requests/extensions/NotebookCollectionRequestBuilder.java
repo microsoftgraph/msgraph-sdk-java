@@ -43,10 +43,20 @@ public class NotebookCollectionRequestBuilder extends BaseCollectionRequestBuild
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param webUrl the webUrl
+     */
     public NotebookGetNotebookFromWebUrlRequestBuilder getNotebookFromWebUrl(final String webUrl) {
         return new NotebookGetNotebookFromWebUrlRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getNotebookFromWebUrl"), getClient(), null, webUrl);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param includePersonalNotebooks the includePersonalNotebooks
+     */
     public NotebookGetRecentNotebooksCollectionRequestBuilder getRecentNotebooks(final Boolean includePersonalNotebooks) {
         return new NotebookGetRecentNotebooksCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getRecentNotebooks"), getClient(), null, includePersonalNotebooks);
     }

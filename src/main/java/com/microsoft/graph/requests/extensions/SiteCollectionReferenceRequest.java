@@ -43,6 +43,11 @@ public class SiteCollectionReferenceRequest extends BaseCollectionWithReferences
         super(requestUrl, client, requestOptions, SiteCollectionResponse.class, SiteCollectionWithReferencesPage.class, SiteCollectionWithReferencesRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Site
+     * @param newSite the Site to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Site newSite, final ICallback<? super Site> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/sites/" + newSite.id);
@@ -51,6 +56,11 @@ public class SiteCollectionReferenceRequest extends BaseCollectionWithReferences
             .post(newSite, body, callback);
     }
 
+    /**
+     * Creates a new Site
+     * @param newSite the Site to create
+     * @return the newly created object
+     */
     public Site post(final Site newSite) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/sites/" + newSite.id);

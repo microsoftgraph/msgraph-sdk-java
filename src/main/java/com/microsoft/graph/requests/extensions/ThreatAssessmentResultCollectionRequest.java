@@ -38,6 +38,11 @@ public class ThreatAssessmentResultCollectionRequest extends BaseCollectionReque
         super(requestUrl, client, requestOptions, ThreatAssessmentResultCollectionResponse.class, ThreatAssessmentResultCollectionPage.class, ThreatAssessmentResultCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new ThreatAssessmentResult
+     * @param newThreatAssessmentResult the ThreatAssessmentResult to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final ThreatAssessmentResult newThreatAssessmentResult, final ICallback<? super ThreatAssessmentResult> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ThreatAssessmentResultRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class ThreatAssessmentResultCollectionRequest extends BaseCollectionReque
             .post(newThreatAssessmentResult, callback);
     }
 
+    /**
+     * Creates a new ThreatAssessmentResult
+     * @param newThreatAssessmentResult the ThreatAssessmentResult to create
+     * @return the newly created object
+     */
     public ThreatAssessmentResult post(final ThreatAssessmentResult newThreatAssessmentResult) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ThreatAssessmentResultRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

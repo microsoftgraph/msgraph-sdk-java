@@ -38,6 +38,11 @@ public class WindowsInformationProtectionNetworkLearningSummaryCollectionRequest
         super(requestUrl, client, requestOptions, WindowsInformationProtectionNetworkLearningSummaryCollectionResponse.class, WindowsInformationProtectionNetworkLearningSummaryCollectionPage.class, WindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new WindowsInformationProtectionNetworkLearningSummary
+     * @param newWindowsInformationProtectionNetworkLearningSummary the WindowsInformationProtectionNetworkLearningSummary to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final WindowsInformationProtectionNetworkLearningSummary newWindowsInformationProtectionNetworkLearningSummary, final ICallback<? super WindowsInformationProtectionNetworkLearningSummary> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsInformationProtectionNetworkLearningSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class WindowsInformationProtectionNetworkLearningSummaryCollectionRequest
             .post(newWindowsInformationProtectionNetworkLearningSummary, callback);
     }
 
+    /**
+     * Creates a new WindowsInformationProtectionNetworkLearningSummary
+     * @param newWindowsInformationProtectionNetworkLearningSummary the WindowsInformationProtectionNetworkLearningSummary to create
+     * @return the newly created object
+     */
     public WindowsInformationProtectionNetworkLearningSummary post(final WindowsInformationProtectionNetworkLearningSummary newWindowsInformationProtectionNetworkLearningSummary) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WindowsInformationProtectionNetworkLearningSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

@@ -56,6 +56,11 @@ public class UserCollectionReferenceRequest extends BaseCollectionWithReferences
         super(requestUrl, client, requestOptions, UserCollectionResponse.class, UserCollectionWithReferencesPage.class, UserCollectionWithReferencesRequestBuilder.class);
     }
 
+    /**
+     * Creates a new User
+     * @param newUser the User to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final User newUser, final ICallback<? super User> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/users/" + newUser.id);
@@ -64,6 +69,11 @@ public class UserCollectionReferenceRequest extends BaseCollectionWithReferences
             .post(newUser, body, callback);
     }
 
+    /**
+     * Creates a new User
+     * @param newUser the User to create
+     * @return the newly created object
+     */
     public User post(final User newUser) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/users/" + newUser.id);

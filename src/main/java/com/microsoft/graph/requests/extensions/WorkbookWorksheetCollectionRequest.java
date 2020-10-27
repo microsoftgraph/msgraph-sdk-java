@@ -39,6 +39,11 @@ public class WorkbookWorksheetCollectionRequest extends BaseCollectionRequest<Wo
         super(requestUrl, client, requestOptions, WorkbookWorksheetCollectionResponse.class, WorkbookWorksheetCollectionPage.class, WorkbookWorksheetCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new WorkbookWorksheet
+     * @param newWorkbookWorksheet the WorkbookWorksheet to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final WorkbookWorksheet newWorkbookWorksheet, final ICallback<? super WorkbookWorksheet> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookWorksheetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -46,6 +51,11 @@ public class WorkbookWorksheetCollectionRequest extends BaseCollectionRequest<Wo
             .post(newWorkbookWorksheet, callback);
     }
 
+    /**
+     * Creates a new WorkbookWorksheet
+     * @param newWorkbookWorksheet the WorkbookWorksheet to create
+     * @return the newly created object
+     */
     public WorkbookWorksheet post(final WorkbookWorksheet newWorkbookWorksheet) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookWorksheetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

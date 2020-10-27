@@ -38,6 +38,11 @@ public class OnenoteResourceCollectionRequest extends BaseCollectionRequest<Onen
         super(requestUrl, client, requestOptions, OnenoteResourceCollectionResponse.class, OnenoteResourceCollectionPage.class, OnenoteResourceCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new OnenoteResource
+     * @param newOnenoteResource the OnenoteResource to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final OnenoteResource newOnenoteResource, final ICallback<? super OnenoteResource> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OnenoteResourceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class OnenoteResourceCollectionRequest extends BaseCollectionRequest<Onen
             .post(newOnenoteResource, callback);
     }
 
+    /**
+     * Creates a new OnenoteResource
+     * @param newOnenoteResource the OnenoteResource to create
+     * @return the newly created object
+     */
     public OnenoteResource post(final OnenoteResource newOnenoteResource) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OnenoteResourceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

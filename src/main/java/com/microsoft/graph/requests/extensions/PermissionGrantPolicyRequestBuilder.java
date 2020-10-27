@@ -54,17 +54,39 @@ public class PermissionGrantPolicyRequestBuilder extends BaseRequestBuilder<Perm
     }
 
 
+    /**
+     *  Gets a request builder for the PermissionGrantConditionSet collection
+     *
+     * @return the collection request builder
+     */
     public PermissionGrantConditionSetCollectionRequestBuilder excludes() {
         return new PermissionGrantConditionSetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("excludes"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the PermissionGrantConditionSet item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public PermissionGrantConditionSetRequestBuilder excludes(final String id) {
         return new PermissionGrantConditionSetRequestBuilder(getRequestUrlWithAdditionalSegment("excludes") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the PermissionGrantConditionSet collection
+     *
+     * @return the collection request builder
+     */
     public PermissionGrantConditionSetCollectionRequestBuilder includes() {
         return new PermissionGrantConditionSetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("includes"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the PermissionGrantConditionSet item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public PermissionGrantConditionSetRequestBuilder includes(final String id) {
         return new PermissionGrantConditionSetRequestBuilder(getRequestUrlWithAdditionalSegment("includes") + "/" + id, getClient(), null);
     }

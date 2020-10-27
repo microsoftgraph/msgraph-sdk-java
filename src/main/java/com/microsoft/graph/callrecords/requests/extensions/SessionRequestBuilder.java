@@ -54,10 +54,21 @@ public class SessionRequestBuilder extends BaseRequestBuilder<Session> {
     }
 
 
+    /**
+     *  Gets a request builder for the Segment collection
+     *
+     * @return the collection request builder
+     */
     public SegmentCollectionRequestBuilder segments() {
         return new SegmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("segments"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Segment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public SegmentRequestBuilder segments(final String id) {
         return new SegmentRequestBuilder(getRequestUrlWithAdditionalSegment("segments") + "/" + id, getClient(), null);
     }

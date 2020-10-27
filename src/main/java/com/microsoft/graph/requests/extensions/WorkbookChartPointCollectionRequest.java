@@ -38,6 +38,11 @@ public class WorkbookChartPointCollectionRequest extends BaseCollectionRequest<W
         super(requestUrl, client, requestOptions, WorkbookChartPointCollectionResponse.class, WorkbookChartPointCollectionPage.class, WorkbookChartPointCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new WorkbookChartPoint
+     * @param newWorkbookChartPoint the WorkbookChartPoint to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final WorkbookChartPoint newWorkbookChartPoint, final ICallback<? super WorkbookChartPoint> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookChartPointRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class WorkbookChartPointCollectionRequest extends BaseCollectionRequest<W
             .post(newWorkbookChartPoint, callback);
     }
 
+    /**
+     * Creates a new WorkbookChartPoint
+     * @param newWorkbookChartPoint the WorkbookChartPoint to create
+     * @return the newly created object
+     */
     public WorkbookChartPoint post(final WorkbookChartPoint newWorkbookChartPoint) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookChartPointRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

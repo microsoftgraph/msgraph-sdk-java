@@ -37,6 +37,11 @@ public class OrganizationCollectionRequest extends BaseCollectionRequest<Organiz
         super(requestUrl, client, requestOptions, OrganizationCollectionResponse.class, OrganizationCollectionPage.class, OrganizationCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Organization
+     * @param newOrganization the Organization to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Organization newOrganization, final ICallback<? super Organization> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OrganizationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -44,6 +49,11 @@ public class OrganizationCollectionRequest extends BaseCollectionRequest<Organiz
             .post(newOrganization, callback);
     }
 
+    /**
+     * Creates a new Organization
+     * @param newOrganization the Organization to create
+     * @return the newly created object
+     */
     public Organization post(final Organization newOrganization) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OrganizationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

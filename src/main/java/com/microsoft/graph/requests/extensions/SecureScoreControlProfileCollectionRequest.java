@@ -38,6 +38,11 @@ public class SecureScoreControlProfileCollectionRequest extends BaseCollectionRe
         super(requestUrl, client, requestOptions, SecureScoreControlProfileCollectionResponse.class, SecureScoreControlProfileCollectionPage.class, SecureScoreControlProfileCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new SecureScoreControlProfile
+     * @param newSecureScoreControlProfile the SecureScoreControlProfile to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final SecureScoreControlProfile newSecureScoreControlProfile, final ICallback<? super SecureScoreControlProfile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SecureScoreControlProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class SecureScoreControlProfileCollectionRequest extends BaseCollectionRe
             .post(newSecureScoreControlProfile, callback);
     }
 
+    /**
+     * Creates a new SecureScoreControlProfile
+     * @param newSecureScoreControlProfile the SecureScoreControlProfile to create
+     * @return the newly created object
+     */
     public SecureScoreControlProfile post(final SecureScoreControlProfile newSecureScoreControlProfile) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SecureScoreControlProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

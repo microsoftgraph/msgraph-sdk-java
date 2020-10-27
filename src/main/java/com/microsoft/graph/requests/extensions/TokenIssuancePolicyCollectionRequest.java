@@ -38,6 +38,11 @@ public class TokenIssuancePolicyCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, TokenIssuancePolicyCollectionResponse.class, TokenIssuancePolicyCollectionPage.class, TokenIssuancePolicyCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new TokenIssuancePolicy
+     * @param newTokenIssuancePolicy the TokenIssuancePolicy to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final TokenIssuancePolicy newTokenIssuancePolicy, final ICallback<? super TokenIssuancePolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TokenIssuancePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class TokenIssuancePolicyCollectionRequest extends BaseCollectionRequest<
             .post(newTokenIssuancePolicy, callback);
     }
 
+    /**
+     * Creates a new TokenIssuancePolicy
+     * @param newTokenIssuancePolicy the TokenIssuancePolicy to create
+     * @return the newly created object
+     */
     public TokenIssuancePolicy post(final TokenIssuancePolicy newTokenIssuancePolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TokenIssuancePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

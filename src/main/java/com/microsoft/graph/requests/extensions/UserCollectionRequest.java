@@ -51,6 +51,11 @@ public class UserCollectionRequest extends BaseCollectionRequest<User, UserColle
         super(requestUrl, client, requestOptions, UserCollectionResponse.class, UserCollectionPage.class, UserCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new User
+     * @param newUser the User to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final User newUser, final ICallback<? super User> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -58,6 +63,11 @@ public class UserCollectionRequest extends BaseCollectionRequest<User, UserColle
             .post(newUser, callback);
     }
 
+    /**
+     * Creates a new User
+     * @param newUser the User to create
+     * @return the newly created object
+     */
     public User post(final User newUser) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UserRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

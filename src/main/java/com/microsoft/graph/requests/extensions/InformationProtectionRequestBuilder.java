@@ -54,10 +54,21 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder<Info
     }
 
 
+    /**
+     *  Gets a request builder for the ThreatAssessmentRequest collection
+     *
+     * @return the collection request builder
+     */
     public ThreatAssessmentRequestCollectionRequestBuilder threatAssessmentRequests() {
         return new ThreatAssessmentRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("threatAssessmentRequests"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ThreatAssessmentRequest item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public ThreatAssessmentRequestRequestBuilder threatAssessmentRequests(final String id) {
         return new ThreatAssessmentRequestRequestBuilder(getRequestUrlWithAdditionalSegment("threatAssessmentRequests") + "/" + id, getClient(), null);
     }

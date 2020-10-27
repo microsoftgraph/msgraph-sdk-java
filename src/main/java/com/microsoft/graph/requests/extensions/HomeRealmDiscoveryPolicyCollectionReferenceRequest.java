@@ -42,6 +42,11 @@ public class HomeRealmDiscoveryPolicyCollectionReferenceRequest extends BaseColl
         super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicyCollectionResponse.class, HomeRealmDiscoveryPolicyCollectionWithReferencesPage.class, HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder.class);
     }
 
+    /**
+     * Creates a new HomeRealmDiscoveryPolicy
+     * @param newHomeRealmDiscoveryPolicy the HomeRealmDiscoveryPolicy to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/policies/homeRealmDiscoveryPolicies/" + newHomeRealmDiscoveryPolicy.id);
@@ -50,6 +55,11 @@ public class HomeRealmDiscoveryPolicyCollectionReferenceRequest extends BaseColl
             .post(newHomeRealmDiscoveryPolicy, body, callback);
     }
 
+    /**
+     * Creates a new HomeRealmDiscoveryPolicy
+     * @param newHomeRealmDiscoveryPolicy the HomeRealmDiscoveryPolicy to create
+     * @return the newly created object
+     */
     public HomeRealmDiscoveryPolicy post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/policies/homeRealmDiscoveryPolicies/" + newHomeRealmDiscoveryPolicy.id);

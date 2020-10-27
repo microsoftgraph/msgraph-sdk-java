@@ -54,10 +54,21 @@ public class CalendarGroupRequestBuilder extends BaseRequestBuilder<CalendarGrou
     }
 
 
+    /**
+     *  Gets a request builder for the Calendar collection
+     *
+     * @return the collection request builder
+     */
     public CalendarCollectionRequestBuilder calendars() {
         return new CalendarCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calendars"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Calendar item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public CalendarRequestBuilder calendars(final String id) {
         return new CalendarRequestBuilder(getRequestUrlWithAdditionalSegment("calendars") + "/" + id, getClient(), null);
     }

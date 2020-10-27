@@ -39,6 +39,11 @@ public class DeviceManagementExchangeConnectorCollectionRequest extends BaseColl
         super(requestUrl, client, requestOptions, DeviceManagementExchangeConnectorCollectionResponse.class, DeviceManagementExchangeConnectorCollectionPage.class, DeviceManagementExchangeConnectorCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new DeviceManagementExchangeConnector
+     * @param newDeviceManagementExchangeConnector the DeviceManagementExchangeConnector to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector, final ICallback<? super DeviceManagementExchangeConnector> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementExchangeConnectorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -46,6 +51,11 @@ public class DeviceManagementExchangeConnectorCollectionRequest extends BaseColl
             .post(newDeviceManagementExchangeConnector, callback);
     }
 
+    /**
+     * Creates a new DeviceManagementExchangeConnector
+     * @param newDeviceManagementExchangeConnector the DeviceManagementExchangeConnector to create
+     * @return the newly created object
+     */
     public DeviceManagementExchangeConnector post(final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceManagementExchangeConnectorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

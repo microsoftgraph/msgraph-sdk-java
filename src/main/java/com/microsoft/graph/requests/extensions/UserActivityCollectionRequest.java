@@ -38,6 +38,11 @@ public class UserActivityCollectionRequest extends BaseCollectionRequest<UserAct
         super(requestUrl, client, requestOptions, UserActivityCollectionResponse.class, UserActivityCollectionPage.class, UserActivityCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new UserActivity
+     * @param newUserActivity the UserActivity to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final UserActivity newUserActivity, final ICallback<? super UserActivity> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserActivityRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class UserActivityCollectionRequest extends BaseCollectionRequest<UserAct
             .post(newUserActivity, callback);
     }
 
+    /**
+     * Creates a new UserActivity
+     * @param newUserActivity the UserActivity to create
+     * @return the newly created object
+     */
     public UserActivity post(final UserActivity newUserActivity) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UserActivityRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

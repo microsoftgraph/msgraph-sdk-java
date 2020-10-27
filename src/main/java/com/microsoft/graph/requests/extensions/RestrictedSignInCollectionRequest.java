@@ -38,6 +38,11 @@ public class RestrictedSignInCollectionRequest extends BaseCollectionRequest<Res
         super(requestUrl, client, requestOptions, RestrictedSignInCollectionResponse.class, RestrictedSignInCollectionPage.class, RestrictedSignInCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new RestrictedSignIn
+     * @param newRestrictedSignIn the RestrictedSignIn to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final RestrictedSignIn newRestrictedSignIn, final ICallback<? super RestrictedSignIn> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RestrictedSignInRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class RestrictedSignInCollectionRequest extends BaseCollectionRequest<Res
             .post(newRestrictedSignIn, callback);
     }
 
+    /**
+     * Creates a new RestrictedSignIn
+     * @param newRestrictedSignIn the RestrictedSignIn to create
+     * @return the newly created object
+     */
     public RestrictedSignIn post(final RestrictedSignIn newRestrictedSignIn) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new RestrictedSignInRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

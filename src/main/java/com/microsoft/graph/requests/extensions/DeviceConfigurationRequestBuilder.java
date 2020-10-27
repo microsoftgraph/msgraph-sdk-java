@@ -63,24 +63,57 @@ public class DeviceConfigurationRequestBuilder extends BaseRequestBuilder<Device
     }
 
 
+    /**
+     *  Gets a request builder for the DeviceConfigurationAssignment collection
+     *
+     * @return the collection request builder
+     */
     public DeviceConfigurationAssignmentCollectionRequestBuilder assignments() {
         return new DeviceConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DeviceConfigurationAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public DeviceConfigurationAssignmentRequestBuilder assignments(final String id) {
         return new DeviceConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the SettingStateDeviceSummary collection
+     *
+     * @return the collection request builder
+     */
     public SettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
         return new SettingStateDeviceSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the SettingStateDeviceSummary item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public SettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id) {
         return new SettingStateDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the DeviceConfigurationDeviceStatus collection
+     *
+     * @return the collection request builder
+     */
     public DeviceConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses() {
         return new DeviceConfigurationDeviceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DeviceConfigurationDeviceStatus item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public DeviceConfigurationDeviceStatusRequestBuilder deviceStatuses(final String id) {
         return new DeviceConfigurationDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
     }
@@ -93,10 +126,21 @@ public class DeviceConfigurationRequestBuilder extends BaseRequestBuilder<Device
     public DeviceConfigurationDeviceOverviewRequestBuilder deviceStatusOverview() {
         return new DeviceConfigurationDeviceOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatusOverview"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the DeviceConfigurationUserStatus collection
+     *
+     * @return the collection request builder
+     */
     public DeviceConfigurationUserStatusCollectionRequestBuilder userStatuses() {
         return new DeviceConfigurationUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DeviceConfigurationUserStatus item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public DeviceConfigurationUserStatusRequestBuilder userStatuses(final String id) {
         return new DeviceConfigurationUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
     }
@@ -110,6 +154,11 @@ public class DeviceConfigurationRequestBuilder extends BaseRequestBuilder<Device
         return new DeviceConfigurationUserOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("userStatusOverview"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param assignments the assignments
+     */
     public DeviceConfigurationAssignCollectionRequestBuilder assign(final java.util.List<DeviceConfigurationAssignment> assignments) {
         return new DeviceConfigurationAssignCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, assignments);
     }

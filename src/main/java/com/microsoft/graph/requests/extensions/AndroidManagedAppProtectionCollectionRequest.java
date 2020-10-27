@@ -38,6 +38,11 @@ public class AndroidManagedAppProtectionCollectionRequest extends BaseCollection
         super(requestUrl, client, requestOptions, AndroidManagedAppProtectionCollectionResponse.class, AndroidManagedAppProtectionCollectionPage.class, AndroidManagedAppProtectionCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new AndroidManagedAppProtection
+     * @param newAndroidManagedAppProtection the AndroidManagedAppProtection to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final AndroidManagedAppProtection newAndroidManagedAppProtection, final ICallback<? super AndroidManagedAppProtection> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AndroidManagedAppProtectionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class AndroidManagedAppProtectionCollectionRequest extends BaseCollection
             .post(newAndroidManagedAppProtection, callback);
     }
 
+    /**
+     * Creates a new AndroidManagedAppProtection
+     * @param newAndroidManagedAppProtection the AndroidManagedAppProtection to create
+     * @return the newly created object
+     */
     public AndroidManagedAppProtection post(final AndroidManagedAppProtection newAndroidManagedAppProtection) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AndroidManagedAppProtectionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

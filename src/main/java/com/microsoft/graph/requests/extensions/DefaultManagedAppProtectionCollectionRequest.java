@@ -38,6 +38,11 @@ public class DefaultManagedAppProtectionCollectionRequest extends BaseCollection
         super(requestUrl, client, requestOptions, DefaultManagedAppProtectionCollectionResponse.class, DefaultManagedAppProtectionCollectionPage.class, DefaultManagedAppProtectionCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new DefaultManagedAppProtection
+     * @param newDefaultManagedAppProtection the DefaultManagedAppProtection to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final DefaultManagedAppProtection newDefaultManagedAppProtection, final ICallback<? super DefaultManagedAppProtection> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DefaultManagedAppProtectionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class DefaultManagedAppProtectionCollectionRequest extends BaseCollection
             .post(newDefaultManagedAppProtection, callback);
     }
 
+    /**
+     * Creates a new DefaultManagedAppProtection
+     * @param newDefaultManagedAppProtection the DefaultManagedAppProtection to create
+     * @return the newly created object
+     */
     public DefaultManagedAppProtection post(final DefaultManagedAppProtection newDefaultManagedAppProtection) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DefaultManagedAppProtectionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

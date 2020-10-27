@@ -54,10 +54,21 @@ public class InferenceClassificationRequestBuilder extends BaseRequestBuilder<In
     }
 
 
+    /**
+     *  Gets a request builder for the InferenceClassificationOverride collection
+     *
+     * @return the collection request builder
+     */
     public InferenceClassificationOverrideCollectionRequestBuilder overrides() {
         return new InferenceClassificationOverrideCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("overrides"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the InferenceClassificationOverride item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public InferenceClassificationOverrideRequestBuilder overrides(final String id) {
         return new InferenceClassificationOverrideRequestBuilder(getRequestUrlWithAdditionalSegment("overrides") + "/" + id, getClient(), null);
     }

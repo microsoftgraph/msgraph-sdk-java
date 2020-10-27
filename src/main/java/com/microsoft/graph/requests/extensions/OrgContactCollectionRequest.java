@@ -37,6 +37,11 @@ public class OrgContactCollectionRequest extends BaseCollectionRequest<OrgContac
         super(requestUrl, client, requestOptions, OrgContactCollectionResponse.class, OrgContactCollectionPage.class, OrgContactCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new OrgContact
+     * @param newOrgContact the OrgContact to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final OrgContact newOrgContact, final ICallback<? super OrgContact> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OrgContactRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -44,6 +49,11 @@ public class OrgContactCollectionRequest extends BaseCollectionRequest<OrgContac
             .post(newOrgContact, callback);
     }
 
+    /**
+     * Creates a new OrgContact
+     * @param newOrgContact the OrgContact to create
+     * @return the newly created object
+     */
     public OrgContact post(final OrgContact newOrgContact) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OrgContactRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

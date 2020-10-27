@@ -66,24 +66,57 @@ public class EducationClassRequestBuilder extends BaseRequestBuilder<EducationCl
     public GroupWithReferenceRequestBuilder group() {
         return new GroupWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("group"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the EducationUser collection
+     *
+     * @return the collection request builder
+     */
     public EducationUserCollectionWithReferencesRequestBuilder members() {
         return new EducationUserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the EducationUser item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public EducationUserWithReferenceRequestBuilder members(final String id) {
         return new EducationUserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the EducationSchool collection
+     *
+     * @return the collection request builder
+     */
     public EducationSchoolCollectionWithReferencesRequestBuilder schools() {
         return new EducationSchoolCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("schools"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the EducationSchool item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public EducationSchoolWithReferenceRequestBuilder schools(final String id) {
         return new EducationSchoolWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("schools") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the EducationUser collection
+     *
+     * @return the collection request builder
+     */
     public EducationUserCollectionWithReferencesRequestBuilder teachers() {
         return new EducationUserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("teachers"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the EducationUser item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public EducationUserWithReferenceRequestBuilder teachers(final String id) {
         return new EducationUserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("teachers") + "/" + id, getClient(), null);
     }

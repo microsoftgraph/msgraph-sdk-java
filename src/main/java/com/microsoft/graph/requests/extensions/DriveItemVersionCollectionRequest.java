@@ -38,6 +38,11 @@ public class DriveItemVersionCollectionRequest extends BaseCollectionRequest<Dri
         super(requestUrl, client, requestOptions, DriveItemVersionCollectionResponse.class, DriveItemVersionCollectionPage.class, DriveItemVersionCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new DriveItemVersion
+     * @param newDriveItemVersion the DriveItemVersion to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final DriveItemVersion newDriveItemVersion, final ICallback<? super DriveItemVersion> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DriveItemVersionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class DriveItemVersionCollectionRequest extends BaseCollectionRequest<Dri
             .post(newDriveItemVersion, callback);
     }
 
+    /**
+     * Creates a new DriveItemVersion
+     * @param newDriveItemVersion the DriveItemVersion to create
+     * @return the newly created object
+     */
     public DriveItemVersion post(final DriveItemVersion newDriveItemVersion) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DriveItemVersionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

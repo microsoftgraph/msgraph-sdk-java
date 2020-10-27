@@ -38,6 +38,11 @@ public class ManagedAppOperationCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, ManagedAppOperationCollectionResponse.class, ManagedAppOperationCollectionPage.class, ManagedAppOperationCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new ManagedAppOperation
+     * @param newManagedAppOperation the ManagedAppOperation to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final ManagedAppOperation newManagedAppOperation, final ICallback<? super ManagedAppOperation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedAppOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class ManagedAppOperationCollectionRequest extends BaseCollectionRequest<
             .post(newManagedAppOperation, callback);
     }
 
+    /**
+     * Creates a new ManagedAppOperation
+     * @param newManagedAppOperation the ManagedAppOperation to create
+     * @return the newly created object
+     */
     public ManagedAppOperation post(final ManagedAppOperation newManagedAppOperation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedAppOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

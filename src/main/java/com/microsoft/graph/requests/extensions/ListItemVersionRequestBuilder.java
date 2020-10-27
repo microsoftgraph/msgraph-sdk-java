@@ -63,6 +63,10 @@ public class ListItemVersionRequestBuilder extends BaseRequestBuilder<ListItemVe
         return new FieldValueSetRequestBuilder(getRequestUrlWithAdditionalSegment("fields"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     public ListItemVersionRestoreVersionRequestBuilder restoreVersion() {
         return new ListItemVersionRestoreVersionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.restoreVersion"), getClient(), null);
     }

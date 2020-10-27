@@ -51,6 +51,11 @@ public class ThumbnailSetRequestBuilder extends BaseRequestBuilder<ThumbnailSet>
         return new com.microsoft.graph.requests.extensions.ThumbnailSetRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
+    /**
+     * Gets a request builder to get the thumbnail of a certain size
+     * @param size the size to get
+     * @return a request builder to get the thumbnail of a certain size
+     */
     public ThumbnailRequestBuilder getThumbnailSize(final String size) {
         return new ThumbnailRequestBuilder(getRequestUrlWithAdditionalSegment(size), getClient(), /* options */ null);
     }

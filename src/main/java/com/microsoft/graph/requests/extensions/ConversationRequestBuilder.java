@@ -54,10 +54,21 @@ public class ConversationRequestBuilder extends BaseRequestBuilder<Conversation>
     }
 
 
+    /**
+     *  Gets a request builder for the ConversationThread collection
+     *
+     * @return the collection request builder
+     */
     public ConversationThreadCollectionRequestBuilder threads() {
         return new ConversationThreadCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("threads"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ConversationThread item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public ConversationThreadRequestBuilder threads(final String id) {
         return new ConversationThreadRequestBuilder(getRequestUrlWithAdditionalSegment("threads") + "/" + id, getClient(), null);
     }

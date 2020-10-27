@@ -19,6 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
  * The class for the Workbook Filter Apply Bottom Percent Filter Request.
  */
 public class WorkbookFilterApplyBottomPercentFilterRequest extends BaseRequest<Void> {
+    /** The body for the method */
     protected final WorkbookFilterApplyBottomPercentFilterBody body;
 
     /**
@@ -33,10 +34,18 @@ public class WorkbookFilterApplyBottomPercentFilterRequest extends BaseRequest<V
         body = new WorkbookFilterApplyBottomPercentFilterBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     public Void post() throws ClientException {
         return send(HttpMethod.POST, body);
     }

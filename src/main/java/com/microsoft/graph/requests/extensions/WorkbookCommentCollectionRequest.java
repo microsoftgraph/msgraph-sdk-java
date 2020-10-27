@@ -38,6 +38,11 @@ public class WorkbookCommentCollectionRequest extends BaseCollectionRequest<Work
         super(requestUrl, client, requestOptions, WorkbookCommentCollectionResponse.class, WorkbookCommentCollectionPage.class, WorkbookCommentCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new WorkbookComment
+     * @param newWorkbookComment the WorkbookComment to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final WorkbookComment newWorkbookComment, final ICallback<? super WorkbookComment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookCommentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class WorkbookCommentCollectionRequest extends BaseCollectionRequest<Work
             .post(newWorkbookComment, callback);
     }
 
+    /**
+     * Creates a new WorkbookComment
+     * @param newWorkbookComment the WorkbookComment to create
+     * @return the newly created object
+     */
     public WorkbookComment post(final WorkbookComment newWorkbookComment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookCommentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

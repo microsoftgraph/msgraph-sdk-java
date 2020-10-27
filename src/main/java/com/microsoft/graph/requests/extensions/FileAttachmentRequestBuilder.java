@@ -53,6 +53,10 @@ public class FileAttachmentRequestBuilder extends BaseRequestBuilder<FileAttachm
 
 
 
+    /**
+     * Gets a request builder to get the binary value of the object
+     * @return the stream request builder
+     */
     public FileAttachmentStreamRequestBuilder content() {
         return new FileAttachmentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("$value"), getClient(), null);
     }

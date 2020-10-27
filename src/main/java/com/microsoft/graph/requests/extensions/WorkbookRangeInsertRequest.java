@@ -20,6 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
  * The class for the Workbook Range Insert Request.
  */
 public class WorkbookRangeInsertRequest extends BaseRequest<WorkbookRange> {
+    /** The body for the method */
     protected final WorkbookRangeInsertBody body;
 
     /**
@@ -34,10 +35,18 @@ public class WorkbookRangeInsertRequest extends BaseRequest<WorkbookRange> {
         body = new WorkbookRangeInsertBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(final ICallback<? super WorkbookRange> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     public WorkbookRange post() throws ClientException {
         return send(HttpMethod.POST, body);
     }

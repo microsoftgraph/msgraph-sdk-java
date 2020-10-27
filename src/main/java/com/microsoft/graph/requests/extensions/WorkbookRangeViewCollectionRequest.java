@@ -38,6 +38,11 @@ public class WorkbookRangeViewCollectionRequest extends BaseCollectionRequest<Wo
         super(requestUrl, client, requestOptions, WorkbookRangeViewCollectionResponse.class, WorkbookRangeViewCollectionPage.class, WorkbookRangeViewCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new WorkbookRangeView
+     * @param newWorkbookRangeView the WorkbookRangeView to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final WorkbookRangeView newWorkbookRangeView, final ICallback<? super WorkbookRangeView> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookRangeViewRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class WorkbookRangeViewCollectionRequest extends BaseCollectionRequest<Wo
             .post(newWorkbookRangeView, callback);
     }
 
+    /**
+     * Creates a new WorkbookRangeView
+     * @param newWorkbookRangeView the WorkbookRangeView to create
+     * @return the newly created object
+     */
     public WorkbookRangeView post(final WorkbookRangeView newWorkbookRangeView) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookRangeViewRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

@@ -54,10 +54,21 @@ public class RoomListRequestBuilder extends BaseRequestBuilder<RoomList> {
     }
 
 
+    /**
+     *  Gets a request builder for the Room collection
+     *
+     * @return the collection request builder
+     */
     public RoomCollectionRequestBuilder rooms() {
         return new RoomCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rooms"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Room item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public RoomRequestBuilder rooms(final String id) {
         return new RoomRequestBuilder(getRequestUrlWithAdditionalSegment("rooms") + "/" + id, getClient(), null);
     }

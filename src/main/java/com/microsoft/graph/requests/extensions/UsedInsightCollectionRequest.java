@@ -38,6 +38,11 @@ public class UsedInsightCollectionRequest extends BaseCollectionRequest<UsedInsi
         super(requestUrl, client, requestOptions, UsedInsightCollectionResponse.class, UsedInsightCollectionPage.class, UsedInsightCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new UsedInsight
+     * @param newUsedInsight the UsedInsight to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final UsedInsight newUsedInsight, final ICallback<? super UsedInsight> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UsedInsightRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class UsedInsightCollectionRequest extends BaseCollectionRequest<UsedInsi
             .post(newUsedInsight, callback);
     }
 
+    /**
+     * Creates a new UsedInsight
+     * @param newUsedInsight the UsedInsight to create
+     * @return the newly created object
+     */
     public UsedInsight post(final UsedInsight newUsedInsight) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UsedInsightRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

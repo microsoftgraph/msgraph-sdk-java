@@ -38,6 +38,11 @@ public class SignInCollectionRequest extends BaseCollectionRequest<SignIn, SignI
         super(requestUrl, client, requestOptions, SignInCollectionResponse.class, SignInCollectionPage.class, SignInCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new SignIn
+     * @param newSignIn the SignIn to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final SignIn newSignIn, final ICallback<? super SignIn> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SignInRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class SignInCollectionRequest extends BaseCollectionRequest<SignIn, SignI
             .post(newSignIn, callback);
     }
 
+    /**
+     * Creates a new SignIn
+     * @param newSignIn the SignIn to create
+     * @return the newly created object
+     */
     public SignIn post(final SignIn newSignIn) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SignInRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

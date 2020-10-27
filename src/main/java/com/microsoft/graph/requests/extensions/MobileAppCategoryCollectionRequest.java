@@ -38,6 +38,11 @@ public class MobileAppCategoryCollectionRequest extends BaseCollectionRequest<Mo
         super(requestUrl, client, requestOptions, MobileAppCategoryCollectionResponse.class, MobileAppCategoryCollectionPage.class, MobileAppCategoryCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new MobileAppCategory
+     * @param newMobileAppCategory the MobileAppCategory to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final MobileAppCategory newMobileAppCategory, final ICallback<? super MobileAppCategory> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileAppCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class MobileAppCategoryCollectionRequest extends BaseCollectionRequest<Mo
             .post(newMobileAppCategory, callback);
     }
 
+    /**
+     * Creates a new MobileAppCategory
+     * @param newMobileAppCategory the MobileAppCategory to create
+     * @return the newly created object
+     */
     public MobileAppCategory post(final MobileAppCategory newMobileAppCategory) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MobileAppCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

@@ -53,6 +53,10 @@ public class WorkbookRangeFillRequestBuilder extends BaseRequestBuilder<Workbook
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     public WorkbookRangeFillClearRequestBuilder clear() {
         return new WorkbookRangeFillClearRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.clear"), getClient(), null);
     }

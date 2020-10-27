@@ -37,6 +37,11 @@ public class SchemaExtensionCollectionRequest extends BaseCollectionRequest<Sche
         super(requestUrl, client, requestOptions, SchemaExtensionCollectionResponse.class, SchemaExtensionCollectionPage.class, SchemaExtensionCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new SchemaExtension
+     * @param newSchemaExtension the SchemaExtension to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final SchemaExtension newSchemaExtension, final ICallback<? super SchemaExtension> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SchemaExtensionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -44,6 +49,11 @@ public class SchemaExtensionCollectionRequest extends BaseCollectionRequest<Sche
             .post(newSchemaExtension, callback);
     }
 
+    /**
+     * Creates a new SchemaExtension
+     * @param newSchemaExtension the SchemaExtension to create
+     * @return the newly created object
+     */
     public SchemaExtension post(final SchemaExtension newSchemaExtension) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SchemaExtensionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

@@ -39,6 +39,11 @@ public class ApplicationCollectionRequest extends BaseCollectionRequest<Applicat
         super(requestUrl, client, requestOptions, ApplicationCollectionResponse.class, ApplicationCollectionPage.class, ApplicationCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Application
+     * @param newApplication the Application to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Application newApplication, final ICallback<? super Application> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ApplicationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -46,6 +51,11 @@ public class ApplicationCollectionRequest extends BaseCollectionRequest<Applicat
             .post(newApplication, callback);
     }
 
+    /**
+     * Creates a new Application
+     * @param newApplication the Application to create
+     * @return the newly created object
+     */
     public Application post(final Application newApplication) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ApplicationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

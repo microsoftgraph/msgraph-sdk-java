@@ -76,18 +76,40 @@ public class OnenotePageRequestBuilder extends BaseRequestBuilder<OnenotePage> {
         return new OnenoteSectionRequestBuilder(getRequestUrlWithAdditionalSegment("parentSection"), getClient(), null);
     }
 
+    /**
+     * Gets the request builder for content
+     *
+     * @return the OnenotePageContentStreamRequestBuilder instance
+     */
     public OnenotePageContentStreamRequestBuilder content() {
         return new OnenotePageContentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param id the id
+     * @param groupId the groupId
+     * @param siteCollectionId the siteCollectionId
+     * @param siteId the siteId
+     */
     public OnenotePageCopyToSectionRequestBuilder copyToSection(final String id, final String groupId, final String siteCollectionId, final String siteId) {
         return new OnenotePageCopyToSectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copyToSection"), getClient(), null, id, groupId, siteCollectionId, siteId);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param commands the commands
+     */
     public OnenotePageOnenotePatchContentRequestBuilder onenotePatchContent(final java.util.List<OnenotePatchContentCommand> commands) {
         return new OnenotePageOnenotePatchContentRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.onenotePatchContent"), getClient(), null, commands);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     public OnenotePagePreviewRequestBuilder preview() {
         return new OnenotePagePreviewRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.preview"), getClient(), null);
     }

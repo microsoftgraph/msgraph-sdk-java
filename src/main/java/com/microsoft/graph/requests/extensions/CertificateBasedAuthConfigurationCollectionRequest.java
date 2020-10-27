@@ -37,6 +37,11 @@ public class CertificateBasedAuthConfigurationCollectionRequest extends BaseColl
         super(requestUrl, client, requestOptions, CertificateBasedAuthConfigurationCollectionResponse.class, CertificateBasedAuthConfigurationCollectionPage.class, CertificateBasedAuthConfigurationCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new CertificateBasedAuthConfiguration
+     * @param newCertificateBasedAuthConfiguration the CertificateBasedAuthConfiguration to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, final ICallback<? super CertificateBasedAuthConfiguration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CertificateBasedAuthConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -44,6 +49,11 @@ public class CertificateBasedAuthConfigurationCollectionRequest extends BaseColl
             .post(newCertificateBasedAuthConfiguration, callback);
     }
 
+    /**
+     * Creates a new CertificateBasedAuthConfiguration
+     * @param newCertificateBasedAuthConfiguration the CertificateBasedAuthConfiguration to create
+     * @return the newly created object
+     */
     public CertificateBasedAuthConfiguration post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CertificateBasedAuthConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

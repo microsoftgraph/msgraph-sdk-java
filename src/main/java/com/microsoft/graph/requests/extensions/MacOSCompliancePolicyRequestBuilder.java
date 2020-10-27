@@ -52,24 +52,57 @@ public class MacOSCompliancePolicyRequestBuilder extends BaseRequestBuilder<MacO
     }
 
 
+    /**
+     *  Gets a request builder for the DeviceCompliancePolicyAssignment collection
+     *
+     * @return the collection request builder
+     */
     public DeviceCompliancePolicyAssignmentCollectionRequestBuilder assignments() {
         return new DeviceCompliancePolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DeviceCompliancePolicyAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public DeviceCompliancePolicyAssignmentRequestBuilder assignments(final String id) {
         return new DeviceCompliancePolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the SettingStateDeviceSummary collection
+     *
+     * @return the collection request builder
+     */
     public SettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
         return new SettingStateDeviceSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the SettingStateDeviceSummary item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public SettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id) {
         return new SettingStateDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the DeviceComplianceDeviceStatus collection
+     *
+     * @return the collection request builder
+     */
     public DeviceComplianceDeviceStatusCollectionRequestBuilder deviceStatuses() {
         return new DeviceComplianceDeviceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DeviceComplianceDeviceStatus item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public DeviceComplianceDeviceStatusRequestBuilder deviceStatuses(final String id) {
         return new DeviceComplianceDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
     }
@@ -82,17 +115,39 @@ public class MacOSCompliancePolicyRequestBuilder extends BaseRequestBuilder<MacO
     public DeviceComplianceDeviceOverviewRequestBuilder deviceStatusOverview() {
         return new DeviceComplianceDeviceOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatusOverview"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the DeviceComplianceScheduledActionForRule collection
+     *
+     * @return the collection request builder
+     */
     public DeviceComplianceScheduledActionForRuleCollectionRequestBuilder scheduledActionsForRule() {
         return new DeviceComplianceScheduledActionForRuleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionsForRule"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DeviceComplianceScheduledActionForRule item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public DeviceComplianceScheduledActionForRuleRequestBuilder scheduledActionsForRule(final String id) {
         return new DeviceComplianceScheduledActionForRuleRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionsForRule") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the DeviceComplianceUserStatus collection
+     *
+     * @return the collection request builder
+     */
     public DeviceComplianceUserStatusCollectionRequestBuilder userStatuses() {
         return new DeviceComplianceUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DeviceComplianceUserStatus item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public DeviceComplianceUserStatusRequestBuilder userStatuses(final String id) {
         return new DeviceComplianceUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
     }

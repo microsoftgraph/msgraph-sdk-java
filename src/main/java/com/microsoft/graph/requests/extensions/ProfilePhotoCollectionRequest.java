@@ -38,6 +38,11 @@ public class ProfilePhotoCollectionRequest extends BaseCollectionRequest<Profile
         super(requestUrl, client, requestOptions, ProfilePhotoCollectionResponse.class, ProfilePhotoCollectionPage.class, ProfilePhotoCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new ProfilePhoto
+     * @param newProfilePhoto the ProfilePhoto to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final ProfilePhoto newProfilePhoto, final ICallback<? super ProfilePhoto> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ProfilePhotoRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class ProfilePhotoCollectionRequest extends BaseCollectionRequest<Profile
             .post(newProfilePhoto, callback);
     }
 
+    /**
+     * Creates a new ProfilePhoto
+     * @param newProfilePhoto the ProfilePhoto to create
+     * @return the newly created object
+     */
     public ProfilePhoto post(final ProfilePhoto newProfilePhoto) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ProfilePhotoRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

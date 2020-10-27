@@ -38,6 +38,11 @@ public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseColl
         super(requestUrl, client, requestOptions, SingleValueLegacyExtendedPropertyCollectionResponse.class, SingleValueLegacyExtendedPropertyCollectionPage.class, SingleValueLegacyExtendedPropertyCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new SingleValueLegacyExtendedProperty
+     * @param newSingleValueLegacyExtendedProperty the SingleValueLegacyExtendedProperty to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty, final ICallback<? super SingleValueLegacyExtendedProperty> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SingleValueLegacyExtendedPropertyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseColl
             .post(newSingleValueLegacyExtendedProperty, callback);
     }
 
+    /**
+     * Creates a new SingleValueLegacyExtendedProperty
+     * @param newSingleValueLegacyExtendedProperty the SingleValueLegacyExtendedProperty to create
+     * @return the newly created object
+     */
     public SingleValueLegacyExtendedProperty post(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SingleValueLegacyExtendedPropertyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

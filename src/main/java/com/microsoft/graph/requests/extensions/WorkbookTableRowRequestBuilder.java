@@ -54,6 +54,10 @@ public class WorkbookTableRowRequestBuilder extends BaseRequestBuilder<WorkbookT
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     public WorkbookTableRowRangeRequestBuilder range() {
         return new WorkbookTableRowRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.range"), getClient(), null);
     }

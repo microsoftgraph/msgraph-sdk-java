@@ -38,6 +38,11 @@ public class ConversationCollectionRequest extends BaseCollectionRequest<Convers
         super(requestUrl, client, requestOptions, ConversationCollectionResponse.class, ConversationCollectionPage.class, ConversationCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Conversation
+     * @param newConversation the Conversation to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Conversation newConversation, final ICallback<? super Conversation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ConversationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class ConversationCollectionRequest extends BaseCollectionRequest<Convers
             .post(newConversation, callback);
     }
 
+    /**
+     * Creates a new Conversation
+     * @param newConversation the Conversation to create
+     * @return the newly created object
+     */
     public Conversation post(final Conversation newConversation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ConversationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

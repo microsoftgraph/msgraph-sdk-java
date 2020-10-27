@@ -54,10 +54,21 @@ public class UserActivityRequestBuilder extends BaseRequestBuilder<UserActivity>
     }
 
 
+    /**
+     *  Gets a request builder for the ActivityHistoryItem collection
+     *
+     * @return the collection request builder
+     */
     public ActivityHistoryItemCollectionRequestBuilder historyItems() {
         return new ActivityHistoryItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("historyItems"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ActivityHistoryItem item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public ActivityHistoryItemRequestBuilder historyItems(final String id) {
         return new ActivityHistoryItemRequestBuilder(getRequestUrlWithAdditionalSegment("historyItems") + "/" + id, getClient(), null);
     }

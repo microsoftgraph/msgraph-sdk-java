@@ -63,6 +63,10 @@ public class WorkbookPivotTableRequestBuilder extends BaseRequestBuilder<Workboo
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     public WorkbookPivotTableRefreshRequestBuilder refresh() {
         return new WorkbookPivotTableRefreshRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.refresh"), getClient(), null);
     }

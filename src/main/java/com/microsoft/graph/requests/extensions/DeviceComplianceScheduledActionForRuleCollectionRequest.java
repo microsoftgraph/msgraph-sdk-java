@@ -38,6 +38,11 @@ public class DeviceComplianceScheduledActionForRuleCollectionRequest extends Bas
         super(requestUrl, client, requestOptions, DeviceComplianceScheduledActionForRuleCollectionResponse.class, DeviceComplianceScheduledActionForRuleCollectionPage.class, DeviceComplianceScheduledActionForRuleCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new DeviceComplianceScheduledActionForRule
+     * @param newDeviceComplianceScheduledActionForRule the DeviceComplianceScheduledActionForRule to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final DeviceComplianceScheduledActionForRule newDeviceComplianceScheduledActionForRule, final ICallback<? super DeviceComplianceScheduledActionForRule> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceComplianceScheduledActionForRuleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class DeviceComplianceScheduledActionForRuleCollectionRequest extends Bas
             .post(newDeviceComplianceScheduledActionForRule, callback);
     }
 
+    /**
+     * Creates a new DeviceComplianceScheduledActionForRule
+     * @param newDeviceComplianceScheduledActionForRule the DeviceComplianceScheduledActionForRule to create
+     * @return the newly created object
+     */
     public DeviceComplianceScheduledActionForRule post(final DeviceComplianceScheduledActionForRule newDeviceComplianceScheduledActionForRule) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceComplianceScheduledActionForRuleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

@@ -38,6 +38,11 @@ public class OpenShiftChangeRequestCollectionRequest extends BaseCollectionReque
         super(requestUrl, client, requestOptions, OpenShiftChangeRequestCollectionResponse.class, OpenShiftChangeRequestCollectionPage.class, OpenShiftChangeRequestCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new OpenShiftChangeRequest
+     * @param newOpenShiftChangeRequest the OpenShiftChangeRequest to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final OpenShiftChangeRequest newOpenShiftChangeRequest, final ICallback<? super OpenShiftChangeRequest> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OpenShiftChangeRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class OpenShiftChangeRequestCollectionRequest extends BaseCollectionReque
             .post(newOpenShiftChangeRequest, callback);
     }
 
+    /**
+     * Creates a new OpenShiftChangeRequest
+     * @param newOpenShiftChangeRequest the OpenShiftChangeRequest to create
+     * @return the newly created object
+     */
     public OpenShiftChangeRequest post(final OpenShiftChangeRequest newOpenShiftChangeRequest) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OpenShiftChangeRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

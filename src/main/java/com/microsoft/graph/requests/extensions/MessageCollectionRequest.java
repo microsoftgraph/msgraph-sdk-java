@@ -39,6 +39,11 @@ public class MessageCollectionRequest extends BaseCollectionRequest<Message, Mes
         super(requestUrl, client, requestOptions, MessageCollectionResponse.class, MessageCollectionPage.class, MessageCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Message
+     * @param newMessage the Message to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Message newMessage, final ICallback<? super Message> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MessageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -46,6 +51,11 @@ public class MessageCollectionRequest extends BaseCollectionRequest<Message, Mes
             .post(newMessage, callback);
     }
 
+    /**
+     * Creates a new Message
+     * @param newMessage the Message to create
+     * @return the newly created object
+     */
     public Message post(final Message newMessage) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MessageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

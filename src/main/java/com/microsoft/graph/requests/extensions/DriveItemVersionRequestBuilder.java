@@ -53,10 +53,19 @@ public class DriveItemVersionRequestBuilder extends BaseRequestBuilder<DriveItem
 
 
 
+    /**
+     * Gets the request builder for content
+     *
+     * @return the DriveItemVersionContentStreamRequestBuilder instance
+     */
     public DriveItemVersionContentStreamRequestBuilder content() {
         return new DriveItemVersionContentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     public DriveItemVersionRestoreVersionRequestBuilder restoreVersion() {
         return new DriveItemVersionRestoreVersionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.restoreVersion"), getClient(), null);
     }

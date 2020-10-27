@@ -37,6 +37,11 @@ public class ScopedRoleMembershipCollectionRequest extends BaseCollectionRequest
         super(requestUrl, client, requestOptions, ScopedRoleMembershipCollectionResponse.class, ScopedRoleMembershipCollectionPage.class, ScopedRoleMembershipCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new ScopedRoleMembership
+     * @param newScopedRoleMembership the ScopedRoleMembership to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final ScopedRoleMembership newScopedRoleMembership, final ICallback<? super ScopedRoleMembership> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ScopedRoleMembershipRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -44,6 +49,11 @@ public class ScopedRoleMembershipCollectionRequest extends BaseCollectionRequest
             .post(newScopedRoleMembership, callback);
     }
 
+    /**
+     * Creates a new ScopedRoleMembership
+     * @param newScopedRoleMembership the ScopedRoleMembership to create
+     * @return the newly created object
+     */
     public ScopedRoleMembership post(final ScopedRoleMembership newScopedRoleMembership) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ScopedRoleMembershipRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

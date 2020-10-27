@@ -39,6 +39,11 @@ public class ManagedDeviceMobileAppConfigurationCollectionRequest extends BaseCo
         super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfigurationCollectionResponse.class, ManagedDeviceMobileAppConfigurationCollectionPage.class, ManagedDeviceMobileAppConfigurationCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new ManagedDeviceMobileAppConfiguration
+     * @param newManagedDeviceMobileAppConfiguration the ManagedDeviceMobileAppConfiguration to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final ManagedDeviceMobileAppConfiguration newManagedDeviceMobileAppConfiguration, final ICallback<? super ManagedDeviceMobileAppConfiguration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedDeviceMobileAppConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -46,6 +51,11 @@ public class ManagedDeviceMobileAppConfigurationCollectionRequest extends BaseCo
             .post(newManagedDeviceMobileAppConfiguration, callback);
     }
 
+    /**
+     * Creates a new ManagedDeviceMobileAppConfiguration
+     * @param newManagedDeviceMobileAppConfiguration the ManagedDeviceMobileAppConfiguration to create
+     * @return the newly created object
+     */
     public ManagedDeviceMobileAppConfiguration post(final ManagedDeviceMobileAppConfiguration newManagedDeviceMobileAppConfiguration) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedDeviceMobileAppConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

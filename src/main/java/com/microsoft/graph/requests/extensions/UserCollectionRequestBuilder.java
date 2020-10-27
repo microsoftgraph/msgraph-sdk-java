@@ -52,10 +52,20 @@ public class UserCollectionRequestBuilder extends BaseCollectionRequestBuilder<U
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
     public UserDeltaCollectionRequestBuilder delta() {
         return new UserDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
 
+    /**
+     * Gets the list of newly created, updated or deleted User
+     * 
+     * @return a request builder to get the changes
+     * @param deltaLink the link returned by the last delta request
+     */
 	public UserDeltaCollectionRequestBuilder delta(final String deltaLink) {
         return new UserDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }

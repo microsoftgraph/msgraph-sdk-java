@@ -42,18 +42,39 @@ public class WorkbookChartCollectionRequestBuilder extends BaseCollectionRequest
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param type the type
+     * @param sourceData the sourceData
+     * @param seriesBy the seriesBy
+     */
     public WorkbookChartAddRequestBuilder add(final String type, final com.google.gson.JsonElement sourceData, final String seriesBy) {
         return new WorkbookChartAddRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.add"), getClient(), null, type, sourceData, seriesBy);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     public WorkbookChartCountRequestBuilder count() {
         return new WorkbookChartCountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.count"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param name the name
+     */
     public WorkbookChartItemRequestBuilder item(final String name) {
         return new WorkbookChartItemRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.item"), getClient(), null, name);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param index the index
+     */
     public WorkbookChartItemAtRequestBuilder itemAt(final Integer index) {
         return new WorkbookChartItemAtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.itemAt"), getClient(), null, index);
     }

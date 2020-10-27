@@ -38,6 +38,11 @@ public class MobileAppAssignmentCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, MobileAppAssignmentCollectionResponse.class, MobileAppAssignmentCollectionPage.class, MobileAppAssignmentCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new MobileAppAssignment
+     * @param newMobileAppAssignment the MobileAppAssignment to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final MobileAppAssignment newMobileAppAssignment, final ICallback<? super MobileAppAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileAppAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class MobileAppAssignmentCollectionRequest extends BaseCollectionRequest<
             .post(newMobileAppAssignment, callback);
     }
 
+    /**
+     * Creates a new MobileAppAssignment
+     * @param newMobileAppAssignment the MobileAppAssignment to create
+     * @return the newly created object
+     */
     public MobileAppAssignment post(final MobileAppAssignment newMobileAppAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MobileAppAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

@@ -42,6 +42,11 @@ public class OAuth2PermissionGrantCollectionReferenceRequest extends BaseCollect
         super(requestUrl, client, requestOptions, OAuth2PermissionGrantCollectionResponse.class, OAuth2PermissionGrantCollectionWithReferencesPage.class, OAuth2PermissionGrantCollectionWithReferencesRequestBuilder.class);
     }
 
+    /**
+     * Creates a new OAuth2PermissionGrant
+     * @param newOAuth2PermissionGrant the OAuth2PermissionGrant to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final OAuth2PermissionGrant newOAuth2PermissionGrant, final ICallback<? super OAuth2PermissionGrant> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/oauth2PermissionGrants/" + newOAuth2PermissionGrant.id);
@@ -50,6 +55,11 @@ public class OAuth2PermissionGrantCollectionReferenceRequest extends BaseCollect
             .post(newOAuth2PermissionGrant, body, callback);
     }
 
+    /**
+     * Creates a new OAuth2PermissionGrant
+     * @param newOAuth2PermissionGrant the OAuth2PermissionGrant to create
+     * @return the newly created object
+     */
     public OAuth2PermissionGrant post(final OAuth2PermissionGrant newOAuth2PermissionGrant) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/oauth2PermissionGrants/" + newOAuth2PermissionGrant.id);

@@ -39,6 +39,11 @@ public class PostCollectionRequest extends BaseCollectionRequest<Post, PostColle
         super(requestUrl, client, requestOptions, PostCollectionResponse.class, PostCollectionPage.class, PostCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Post
+     * @param newPost the Post to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Post newPost, final ICallback<? super Post> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PostRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -46,6 +51,11 @@ public class PostCollectionRequest extends BaseCollectionRequest<Post, PostColle
             .post(newPost, callback);
     }
 
+    /**
+     * Creates a new Post
+     * @param newPost the Post to create
+     * @return the newly created object
+     */
     public Post post(final Post newPost) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PostRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

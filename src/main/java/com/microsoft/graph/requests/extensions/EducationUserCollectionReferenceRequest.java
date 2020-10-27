@@ -42,6 +42,11 @@ public class EducationUserCollectionReferenceRequest extends BaseCollectionWithR
         super(requestUrl, client, requestOptions, EducationUserCollectionResponse.class, EducationUserCollectionWithReferencesPage.class, EducationUserCollectionWithReferencesRequestBuilder.class);
     }
 
+    /**
+     * Creates a new EducationUser
+     * @param newEducationUser the EducationUser to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final EducationUser newEducationUser, final ICallback<? super EducationUser> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/education/users/" + newEducationUser.id);
@@ -50,6 +55,11 @@ public class EducationUserCollectionReferenceRequest extends BaseCollectionWithR
             .post(newEducationUser, body, callback);
     }
 
+    /**
+     * Creates a new EducationUser
+     * @param newEducationUser the EducationUser to create
+     * @return the newly created object
+     */
     public EducationUser post(final EducationUser newEducationUser) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/education/users/" + newEducationUser.id);

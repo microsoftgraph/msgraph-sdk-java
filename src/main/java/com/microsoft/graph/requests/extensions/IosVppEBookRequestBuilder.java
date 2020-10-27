@@ -52,17 +52,39 @@ public class IosVppEBookRequestBuilder extends BaseRequestBuilder<IosVppEBook> {
     }
 
 
+    /**
+     *  Gets a request builder for the ManagedEBookAssignment collection
+     *
+     * @return the collection request builder
+     */
     public ManagedEBookAssignmentCollectionRequestBuilder assignments() {
         return new ManagedEBookAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ManagedEBookAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public ManagedEBookAssignmentRequestBuilder assignments(final String id) {
         return new ManagedEBookAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the DeviceInstallState collection
+     *
+     * @return the collection request builder
+     */
     public DeviceInstallStateCollectionRequestBuilder deviceStates() {
         return new DeviceInstallStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DeviceInstallState item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public DeviceInstallStateRequestBuilder deviceStates(final String id) {
         return new DeviceInstallStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates") + "/" + id, getClient(), null);
     }
@@ -75,10 +97,21 @@ public class IosVppEBookRequestBuilder extends BaseRequestBuilder<IosVppEBook> {
     public EBookInstallSummaryRequestBuilder installSummary() {
         return new EBookInstallSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("installSummary"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the UserInstallStateSummary collection
+     *
+     * @return the collection request builder
+     */
     public UserInstallStateSummaryCollectionRequestBuilder userStateSummary() {
         return new UserInstallStateSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStateSummary"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the UserInstallStateSummary item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public UserInstallStateSummaryRequestBuilder userStateSummary(final String id) {
         return new UserInstallStateSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("userStateSummary") + "/" + id, getClient(), null);
     }

@@ -38,6 +38,11 @@ public class CommsOperationCollectionRequest extends BaseCollectionRequest<Comms
         super(requestUrl, client, requestOptions, CommsOperationCollectionResponse.class, CommsOperationCollectionPage.class, CommsOperationCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new CommsOperation
+     * @param newCommsOperation the CommsOperation to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final CommsOperation newCommsOperation, final ICallback<? super CommsOperation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CommsOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class CommsOperationCollectionRequest extends BaseCollectionRequest<Comms
             .post(newCommsOperation, callback);
     }
 
+    /**
+     * Creates a new CommsOperation
+     * @param newCommsOperation the CommsOperation to create
+     * @return the newly created object
+     */
     public CommsOperation post(final CommsOperation newCommsOperation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CommsOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

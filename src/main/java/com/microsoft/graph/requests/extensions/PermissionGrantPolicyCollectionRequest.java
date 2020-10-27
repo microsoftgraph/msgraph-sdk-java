@@ -38,6 +38,11 @@ public class PermissionGrantPolicyCollectionRequest extends BaseCollectionReques
         super(requestUrl, client, requestOptions, PermissionGrantPolicyCollectionResponse.class, PermissionGrantPolicyCollectionPage.class, PermissionGrantPolicyCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new PermissionGrantPolicy
+     * @param newPermissionGrantPolicy the PermissionGrantPolicy to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final PermissionGrantPolicy newPermissionGrantPolicy, final ICallback<? super PermissionGrantPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PermissionGrantPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class PermissionGrantPolicyCollectionRequest extends BaseCollectionReques
             .post(newPermissionGrantPolicy, callback);
     }
 
+    /**
+     * Creates a new PermissionGrantPolicy
+     * @param newPermissionGrantPolicy the PermissionGrantPolicy to create
+     * @return the newly created object
+     */
     public PermissionGrantPolicy post(final PermissionGrantPolicy newPermissionGrantPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PermissionGrantPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

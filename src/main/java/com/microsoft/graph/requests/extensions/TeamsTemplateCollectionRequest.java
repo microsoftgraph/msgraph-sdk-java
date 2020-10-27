@@ -37,6 +37,11 @@ public class TeamsTemplateCollectionRequest extends BaseCollectionRequest<TeamsT
         super(requestUrl, client, requestOptions, TeamsTemplateCollectionResponse.class, TeamsTemplateCollectionPage.class, TeamsTemplateCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new TeamsTemplate
+     * @param newTeamsTemplate the TeamsTemplate to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final TeamsTemplate newTeamsTemplate, final ICallback<? super TeamsTemplate> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TeamsTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -44,6 +49,11 @@ public class TeamsTemplateCollectionRequest extends BaseCollectionRequest<TeamsT
             .post(newTeamsTemplate, callback);
     }
 
+    /**
+     * Creates a new TeamsTemplate
+     * @param newTeamsTemplate the TeamsTemplate to create
+     * @return the newly created object
+     */
     public TeamsTemplate post(final TeamsTemplate newTeamsTemplate) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TeamsTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

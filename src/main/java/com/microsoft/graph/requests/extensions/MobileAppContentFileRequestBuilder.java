@@ -54,10 +54,19 @@ public class MobileAppContentFileRequestBuilder extends BaseRequestBuilder<Mobil
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param fileEncryptionInfo the fileEncryptionInfo
+     */
     public MobileAppContentFileCommitRequestBuilder commit(final FileEncryptionInfo fileEncryptionInfo) {
         return new MobileAppContentFileCommitRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.commit"), getClient(), null, fileEncryptionInfo);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     public MobileAppContentFileRenewUploadRequestBuilder renewUpload() {
         return new MobileAppContentFileRenewUploadRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.renewUpload"), getClient(), null);
     }

@@ -41,6 +41,11 @@ public class TeamCollectionRequest extends BaseCollectionRequest<Team, TeamColle
         super(requestUrl, client, requestOptions, TeamCollectionResponse.class, TeamCollectionPage.class, TeamCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Team
+     * @param newTeam the Team to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Team newTeam, final ICallback<? super Team> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TeamRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -48,6 +53,11 @@ public class TeamCollectionRequest extends BaseCollectionRequest<Team, TeamColle
             .post(newTeam, callback);
     }
 
+    /**
+     * Creates a new Team
+     * @param newTeam the Team to create
+     * @return the newly created object
+     */
     public Team post(final Team newTeam) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TeamRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

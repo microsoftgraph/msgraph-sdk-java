@@ -39,6 +39,11 @@ public class PermissionCollectionRequest extends BaseCollectionRequest<Permissio
         super(requestUrl, client, requestOptions, PermissionCollectionResponse.class, PermissionCollectionPage.class, PermissionCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Permission
+     * @param newPermission the Permission to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Permission newPermission, final ICallback<? super Permission> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PermissionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -46,6 +51,11 @@ public class PermissionCollectionRequest extends BaseCollectionRequest<Permissio
             .post(newPermission, callback);
     }
 
+    /**
+     * Creates a new Permission
+     * @param newPermission the Permission to create
+     * @return the newly created object
+     */
     public Permission post(final Permission newPermission) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PermissionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

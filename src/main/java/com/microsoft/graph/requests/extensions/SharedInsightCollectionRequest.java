@@ -38,6 +38,11 @@ public class SharedInsightCollectionRequest extends BaseCollectionRequest<Shared
         super(requestUrl, client, requestOptions, SharedInsightCollectionResponse.class, SharedInsightCollectionPage.class, SharedInsightCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new SharedInsight
+     * @param newSharedInsight the SharedInsight to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final SharedInsight newSharedInsight, final ICallback<? super SharedInsight> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SharedInsightRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class SharedInsightCollectionRequest extends BaseCollectionRequest<Shared
             .post(newSharedInsight, callback);
     }
 
+    /**
+     * Creates a new SharedInsight
+     * @param newSharedInsight the SharedInsight to create
+     * @return the newly created object
+     */
     public SharedInsight post(final SharedInsight newSharedInsight) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SharedInsightRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

@@ -19,6 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
  * The class for the Targeted Managed App Protection Assign Request.
  */
 public class TargetedManagedAppProtectionAssignRequest extends BaseRequest<Void> {
+    /** The body for the method */
     protected final TargetedManagedAppProtectionAssignBody body;
 
     /**
@@ -33,10 +34,18 @@ public class TargetedManagedAppProtectionAssignRequest extends BaseRequest<Void>
         body = new TargetedManagedAppProtectionAssignBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     public Void post() throws ClientException {
         return send(HttpMethod.POST, body);
     }

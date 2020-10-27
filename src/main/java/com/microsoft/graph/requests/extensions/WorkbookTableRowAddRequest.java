@@ -20,6 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
  * The class for the Workbook Table Row Add Request.
  */
 public class WorkbookTableRowAddRequest extends BaseRequest<WorkbookTableRow> {
+    /** The body for the method */
     protected final WorkbookTableRowAddBody body;
 
     /**
@@ -34,10 +35,18 @@ public class WorkbookTableRowAddRequest extends BaseRequest<WorkbookTableRow> {
         body = new WorkbookTableRowAddBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(final ICallback<? super WorkbookTableRow> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     public WorkbookTableRow post() throws ClientException {
         return send(HttpMethod.POST, body);
     }

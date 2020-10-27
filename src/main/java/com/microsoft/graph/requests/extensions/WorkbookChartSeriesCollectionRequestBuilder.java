@@ -40,10 +40,19 @@ public class WorkbookChartSeriesCollectionRequestBuilder extends BaseCollectionR
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     public WorkbookChartSeriesCountRequestBuilder count() {
         return new WorkbookChartSeriesCountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.count"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param index the index
+     */
     public WorkbookChartSeriesItemAtRequestBuilder itemAt(final Integer index) {
         return new WorkbookChartSeriesItemAtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.itemAt"), getClient(), null, index);
     }

@@ -41,6 +41,11 @@ public class OnenotePageCollectionRequest extends BaseCollectionRequest<OnenoteP
         super(requestUrl, client, requestOptions, OnenotePageCollectionResponse.class, OnenotePageCollectionPage.class, OnenotePageCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new OnenotePage
+     * @param newOnenotePage the OnenotePage to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final byte[] newOnenotePage, final ICallback<? super OnenotePage> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OnenotePageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -48,6 +53,11 @@ public class OnenotePageCollectionRequest extends BaseCollectionRequest<OnenoteP
             .post(newOnenotePage, callback);
     }
 
+    /**
+     * Creates a new OnenotePage
+     * @param newOnenotePage the OnenotePage to create
+     * @return the newly created object
+     */
     public OnenotePage post(final byte[] newOnenotePage) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OnenotePageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

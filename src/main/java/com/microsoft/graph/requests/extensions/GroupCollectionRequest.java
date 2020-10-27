@@ -38,6 +38,11 @@ public class GroupCollectionRequest extends BaseCollectionRequest<Group, GroupCo
         super(requestUrl, client, requestOptions, GroupCollectionResponse.class, GroupCollectionPage.class, GroupCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Group
+     * @param newGroup the Group to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Group newGroup, final ICallback<? super Group> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class GroupCollectionRequest extends BaseCollectionRequest<Group, GroupCo
             .post(newGroup, callback);
     }
 
+    /**
+     * Creates a new Group
+     * @param newGroup the Group to create
+     * @return the newly created object
+     */
     public Group post(final Group newGroup) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new GroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

@@ -38,6 +38,11 @@ public class SecureScoreCollectionRequest extends BaseCollectionRequest<SecureSc
         super(requestUrl, client, requestOptions, SecureScoreCollectionResponse.class, SecureScoreCollectionPage.class, SecureScoreCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new SecureScore
+     * @param newSecureScore the SecureScore to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final SecureScore newSecureScore, final ICallback<? super SecureScore> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SecureScoreRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class SecureScoreCollectionRequest extends BaseCollectionRequest<SecureSc
             .post(newSecureScore, callback);
     }
 
+    /**
+     * Creates a new SecureScore
+     * @param newSecureScore the SecureScore to create
+     * @return the newly created object
+     */
     public SecureScore post(final SecureScore newSecureScore) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SecureScoreRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

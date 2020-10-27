@@ -38,6 +38,11 @@ public class CalendarPermissionCollectionRequest extends BaseCollectionRequest<C
         super(requestUrl, client, requestOptions, CalendarPermissionCollectionResponse.class, CalendarPermissionCollectionPage.class, CalendarPermissionCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new CalendarPermission
+     * @param newCalendarPermission the CalendarPermission to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final CalendarPermission newCalendarPermission, final ICallback<? super CalendarPermission> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CalendarPermissionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class CalendarPermissionCollectionRequest extends BaseCollectionRequest<C
             .post(newCalendarPermission, callback);
     }
 
+    /**
+     * Creates a new CalendarPermission
+     * @param newCalendarPermission the CalendarPermission to create
+     * @return the newly created object
+     */
     public CalendarPermission post(final CalendarPermission newCalendarPermission) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CalendarPermissionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

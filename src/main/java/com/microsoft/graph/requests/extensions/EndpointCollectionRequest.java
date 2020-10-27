@@ -38,6 +38,11 @@ public class EndpointCollectionRequest extends BaseCollectionRequest<Endpoint, E
         super(requestUrl, client, requestOptions, EndpointCollectionResponse.class, EndpointCollectionPage.class, EndpointCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Endpoint
+     * @param newEndpoint the Endpoint to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Endpoint newEndpoint, final ICallback<? super Endpoint> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EndpointRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class EndpointCollectionRequest extends BaseCollectionRequest<Endpoint, E
             .post(newEndpoint, callback);
     }
 
+    /**
+     * Creates a new Endpoint
+     * @param newEndpoint the Endpoint to create
+     * @return the newly created object
+     */
     public Endpoint post(final Endpoint newEndpoint) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EndpointRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

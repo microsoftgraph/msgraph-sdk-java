@@ -42,14 +42,29 @@ public class WorkbookTableCollectionRequestBuilder extends BaseCollectionRequest
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param address the address
+     * @param hasHeaders the hasHeaders
+     */
     public WorkbookTableAddRequestBuilder add(final String address, final Boolean hasHeaders) {
         return new WorkbookTableAddRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.add"), getClient(), null, address, hasHeaders);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     public WorkbookTableCountRequestBuilder count() {
         return new WorkbookTableCountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.count"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param index the index
+     */
     public WorkbookTableItemAtRequestBuilder itemAt(final Integer index) {
         return new WorkbookTableItemAtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.itemAt"), getClient(), null, index);
     }

@@ -53,6 +53,10 @@ public class WorkbookChartLineFormatRequestBuilder extends BaseRequestBuilder<Wo
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     public WorkbookChartLineFormatClearRequestBuilder clear() {
         return new WorkbookChartLineFormatClearRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.clear"), getClient(), null);
     }

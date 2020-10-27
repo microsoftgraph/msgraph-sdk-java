@@ -54,6 +54,11 @@ public class DeviceManagementExchangeConnectorRequestBuilder extends BaseRequest
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param syncType the syncType
+     */
     public DeviceManagementExchangeConnectorSyncRequestBuilder sync(final DeviceManagementExchangeConnectorSyncType syncType) {
         return new DeviceManagementExchangeConnectorSyncRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sync"), getClient(), null, syncType);
     }

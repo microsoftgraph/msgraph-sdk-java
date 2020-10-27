@@ -38,6 +38,11 @@ public class EducationUserCollectionRequest extends BaseCollectionRequest<Educat
         super(requestUrl, client, requestOptions, EducationUserCollectionResponse.class, EducationUserCollectionPage.class, EducationUserCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new EducationUser
+     * @param newEducationUser the EducationUser to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final EducationUser newEducationUser, final ICallback<? super EducationUser> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EducationUserRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class EducationUserCollectionRequest extends BaseCollectionRequest<Educat
             .post(newEducationUser, callback);
     }
 
+    /**
+     * Creates a new EducationUser
+     * @param newEducationUser the EducationUser to create
+     * @return the newly created object
+     */
     public EducationUser post(final EducationUser newEducationUser) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EducationUserRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

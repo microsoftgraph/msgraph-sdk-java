@@ -38,6 +38,11 @@ public class DeviceComplianceSettingStateCollectionRequest extends BaseCollectio
         super(requestUrl, client, requestOptions, DeviceComplianceSettingStateCollectionResponse.class, DeviceComplianceSettingStateCollectionPage.class, DeviceComplianceSettingStateCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new DeviceComplianceSettingState
+     * @param newDeviceComplianceSettingState the DeviceComplianceSettingState to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final DeviceComplianceSettingState newDeviceComplianceSettingState, final ICallback<? super DeviceComplianceSettingState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceComplianceSettingStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class DeviceComplianceSettingStateCollectionRequest extends BaseCollectio
             .post(newDeviceComplianceSettingState, callback);
     }
 
+    /**
+     * Creates a new DeviceComplianceSettingState
+     * @param newDeviceComplianceSettingState the DeviceComplianceSettingState to create
+     * @return the newly created object
+     */
     public DeviceComplianceSettingState post(final DeviceComplianceSettingState newDeviceComplianceSettingState) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceComplianceSettingStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

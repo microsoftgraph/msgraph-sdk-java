@@ -38,6 +38,11 @@ public class ManagedAppStatusCollectionRequest extends BaseCollectionRequest<Man
         super(requestUrl, client, requestOptions, ManagedAppStatusCollectionResponse.class, ManagedAppStatusCollectionPage.class, ManagedAppStatusCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new ManagedAppStatus
+     * @param newManagedAppStatus the ManagedAppStatus to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final ManagedAppStatus newManagedAppStatus, final ICallback<? super ManagedAppStatus> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedAppStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class ManagedAppStatusCollectionRequest extends BaseCollectionRequest<Man
             .post(newManagedAppStatus, callback);
     }
 
+    /**
+     * Creates a new ManagedAppStatus
+     * @param newManagedAppStatus the ManagedAppStatus to create
+     * @return the newly created object
+     */
     public ManagedAppStatus post(final ManagedAppStatus newManagedAppStatus) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedAppStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

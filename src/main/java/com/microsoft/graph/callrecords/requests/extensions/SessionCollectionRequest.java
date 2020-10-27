@@ -38,6 +38,11 @@ public class SessionCollectionRequest extends BaseCollectionRequest<Session, Ses
         super(requestUrl, client, requestOptions, SessionCollectionResponse.class, SessionCollectionPage.class, SessionCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Session
+     * @param newSession the Session to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Session newSession, final ICallback<? super Session> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SessionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class SessionCollectionRequest extends BaseCollectionRequest<Session, Ses
             .post(newSession, callback);
     }
 
+    /**
+     * Creates a new Session
+     * @param newSession the Session to create
+     * @return the newly created object
+     */
     public Session post(final Session newSession) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SessionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

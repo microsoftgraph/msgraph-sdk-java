@@ -54,10 +54,21 @@ public class DetectedAppRequestBuilder extends BaseRequestBuilder<DetectedApp> {
     }
 
 
+    /**
+     *  Gets a request builder for the ManagedDevice collection
+     *
+     * @return the collection request builder
+     */
     public ManagedDeviceCollectionWithReferencesRequestBuilder managedDevices() {
         return new ManagedDeviceCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("managedDevices"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ManagedDevice item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public ManagedDeviceWithReferenceRequestBuilder managedDevices(final String id) {
         return new ManagedDeviceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("managedDevices") + "/" + id, getClient(), null);
     }

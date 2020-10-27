@@ -39,6 +39,11 @@ public class ServicePrincipalCollectionRequest extends BaseCollectionRequest<Ser
         super(requestUrl, client, requestOptions, ServicePrincipalCollectionResponse.class, ServicePrincipalCollectionPage.class, ServicePrincipalCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new ServicePrincipal
+     * @param newServicePrincipal the ServicePrincipal to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final ServicePrincipal newServicePrincipal, final ICallback<? super ServicePrincipal> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ServicePrincipalRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -46,6 +51,11 @@ public class ServicePrincipalCollectionRequest extends BaseCollectionRequest<Ser
             .post(newServicePrincipal, callback);
     }
 
+    /**
+     * Creates a new ServicePrincipal
+     * @param newServicePrincipal the ServicePrincipal to create
+     * @return the newly created object
+     */
     public ServicePrincipal post(final ServicePrincipal newServicePrincipal) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ServicePrincipalRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

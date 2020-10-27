@@ -28,6 +28,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest extends BaseCollectionRequest<ExtensionProperty, DirectoryObjectGetAvailableExtensionPropertiesCollectionResponse, DirectoryObjectGetAvailableExtensionPropertiesCollectionPage> {
 
 
+    /** The body for the method */
     protected final DirectoryObjectGetAvailableExtensionPropertiesBody body;
 
 
@@ -44,6 +45,10 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest ext
     }
 
 
+    /**
+     * Invokes the method and calls the callback with the resulting collection of objects
+     * @param callback a callback to be invoked with the resulting collection of objects
+     */
     public void post(final ICallback<? super DirectoryObjectGetAvailableExtensionPropertiesCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
@@ -58,6 +63,10 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest ext
         });
     }
 
+    /**
+     * Invokes the method and returns the resulting collection of objects
+     * @return a collection of objects returned by the method
+     */
     public DirectoryObjectGetAvailableExtensionPropertiesCollectionPage post() throws ClientException {
         final DirectoryObjectGetAvailableExtensionPropertiesCollectionResponse response = post(body);
         return buildFromResponse(response);

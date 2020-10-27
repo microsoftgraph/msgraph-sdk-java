@@ -38,6 +38,11 @@ public class TermsAndConditionsAssignmentCollectionRequest extends BaseCollectio
         super(requestUrl, client, requestOptions, TermsAndConditionsAssignmentCollectionResponse.class, TermsAndConditionsAssignmentCollectionPage.class, TermsAndConditionsAssignmentCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new TermsAndConditionsAssignment
+     * @param newTermsAndConditionsAssignment the TermsAndConditionsAssignment to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final TermsAndConditionsAssignment newTermsAndConditionsAssignment, final ICallback<? super TermsAndConditionsAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TermsAndConditionsAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class TermsAndConditionsAssignmentCollectionRequest extends BaseCollectio
             .post(newTermsAndConditionsAssignment, callback);
     }
 
+    /**
+     * Creates a new TermsAndConditionsAssignment
+     * @param newTermsAndConditionsAssignment the TermsAndConditionsAssignment to create
+     * @return the newly created object
+     */
     public TermsAndConditionsAssignment post(final TermsAndConditionsAssignment newTermsAndConditionsAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TermsAndConditionsAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

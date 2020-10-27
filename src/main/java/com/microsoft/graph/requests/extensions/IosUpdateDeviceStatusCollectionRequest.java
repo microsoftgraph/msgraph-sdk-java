@@ -38,6 +38,11 @@ public class IosUpdateDeviceStatusCollectionRequest extends BaseCollectionReques
         super(requestUrl, client, requestOptions, IosUpdateDeviceStatusCollectionResponse.class, IosUpdateDeviceStatusCollectionPage.class, IosUpdateDeviceStatusCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new IosUpdateDeviceStatus
+     * @param newIosUpdateDeviceStatus the IosUpdateDeviceStatus to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final IosUpdateDeviceStatus newIosUpdateDeviceStatus, final ICallback<? super IosUpdateDeviceStatus> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new IosUpdateDeviceStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class IosUpdateDeviceStatusCollectionRequest extends BaseCollectionReques
             .post(newIosUpdateDeviceStatus, callback);
     }
 
+    /**
+     * Creates a new IosUpdateDeviceStatus
+     * @param newIosUpdateDeviceStatus the IosUpdateDeviceStatus to create
+     * @return the newly created object
+     */
     public IosUpdateDeviceStatus post(final IosUpdateDeviceStatus newIosUpdateDeviceStatus) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new IosUpdateDeviceStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

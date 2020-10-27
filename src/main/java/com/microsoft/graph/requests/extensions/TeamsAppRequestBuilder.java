@@ -54,10 +54,21 @@ public class TeamsAppRequestBuilder extends BaseRequestBuilder<TeamsApp> {
     }
 
 
+    /**
+     *  Gets a request builder for the TeamsAppDefinition collection
+     *
+     * @return the collection request builder
+     */
     public TeamsAppDefinitionCollectionRequestBuilder appDefinitions() {
         return new TeamsAppDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appDefinitions"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the TeamsAppDefinition item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public TeamsAppDefinitionRequestBuilder appDefinitions(final String id) {
         return new TeamsAppDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("appDefinitions") + "/" + id, getClient(), null);
     }

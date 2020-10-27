@@ -28,6 +28,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 public class DirectoryObjectGetByIdsCollectionRequest extends BaseCollectionRequest<DirectoryObject, DirectoryObjectGetByIdsCollectionResponse, DirectoryObjectGetByIdsCollectionPage> {
 
 
+    /** The body for the method */
     protected final DirectoryObjectGetByIdsBody body;
 
 
@@ -44,6 +45,10 @@ public class DirectoryObjectGetByIdsCollectionRequest extends BaseCollectionRequ
     }
 
 
+    /**
+     * Invokes the method and calls the callback with the resulting collection of objects
+     * @param callback a callback to be invoked with the resulting collection of objects
+     */
     public void post(final ICallback<? super DirectoryObjectGetByIdsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
@@ -58,6 +63,10 @@ public class DirectoryObjectGetByIdsCollectionRequest extends BaseCollectionRequ
         });
     }
 
+    /**
+     * Invokes the method and returns the resulting collection of objects
+     * @return a collection of objects returned by the method
+     */
     public DirectoryObjectGetByIdsCollectionPage post() throws ClientException {
         final DirectoryObjectGetByIdsCollectionResponse response = post(body);
         return buildFromResponse(response);

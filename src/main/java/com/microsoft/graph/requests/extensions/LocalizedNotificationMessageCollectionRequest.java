@@ -38,6 +38,11 @@ public class LocalizedNotificationMessageCollectionRequest extends BaseCollectio
         super(requestUrl, client, requestOptions, LocalizedNotificationMessageCollectionResponse.class, LocalizedNotificationMessageCollectionPage.class, LocalizedNotificationMessageCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new LocalizedNotificationMessage
+     * @param newLocalizedNotificationMessage the LocalizedNotificationMessage to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final LocalizedNotificationMessage newLocalizedNotificationMessage, final ICallback<? super LocalizedNotificationMessage> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new LocalizedNotificationMessageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class LocalizedNotificationMessageCollectionRequest extends BaseCollectio
             .post(newLocalizedNotificationMessage, callback);
     }
 
+    /**
+     * Creates a new LocalizedNotificationMessage
+     * @param newLocalizedNotificationMessage the LocalizedNotificationMessage to create
+     * @return the newly created object
+     */
     public LocalizedNotificationMessage post(final LocalizedNotificationMessage newLocalizedNotificationMessage) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new LocalizedNotificationMessageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

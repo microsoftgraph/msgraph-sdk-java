@@ -38,6 +38,11 @@ public class PersonCollectionRequest extends BaseCollectionRequest<Person, Perso
         super(requestUrl, client, requestOptions, PersonCollectionResponse.class, PersonCollectionPage.class, PersonCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Person
+     * @param newPerson the Person to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Person newPerson, final ICallback<? super Person> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PersonRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class PersonCollectionRequest extends BaseCollectionRequest<Person, Perso
             .post(newPerson, callback);
     }
 
+    /**
+     * Creates a new Person
+     * @param newPerson the Person to create
+     * @return the newly created object
+     */
     public Person post(final Person newPerson) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PersonRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

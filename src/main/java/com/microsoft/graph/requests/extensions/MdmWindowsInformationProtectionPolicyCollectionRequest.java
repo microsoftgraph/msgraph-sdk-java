@@ -38,6 +38,11 @@ public class MdmWindowsInformationProtectionPolicyCollectionRequest extends Base
         super(requestUrl, client, requestOptions, MdmWindowsInformationProtectionPolicyCollectionResponse.class, MdmWindowsInformationProtectionPolicyCollectionPage.class, MdmWindowsInformationProtectionPolicyCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new MdmWindowsInformationProtectionPolicy
+     * @param newMdmWindowsInformationProtectionPolicy the MdmWindowsInformationProtectionPolicy to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy, final ICallback<? super MdmWindowsInformationProtectionPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MdmWindowsInformationProtectionPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class MdmWindowsInformationProtectionPolicyCollectionRequest extends Base
             .post(newMdmWindowsInformationProtectionPolicy, callback);
     }
 
+    /**
+     * Creates a new MdmWindowsInformationProtectionPolicy
+     * @param newMdmWindowsInformationProtectionPolicy the MdmWindowsInformationProtectionPolicy to create
+     * @return the newly created object
+     */
     public MdmWindowsInformationProtectionPolicy post(final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MdmWindowsInformationProtectionPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

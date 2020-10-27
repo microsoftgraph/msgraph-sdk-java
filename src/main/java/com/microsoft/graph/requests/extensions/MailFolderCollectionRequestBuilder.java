@@ -38,10 +38,20 @@ public class MailFolderCollectionRequestBuilder extends BaseCollectionRequestBui
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
     public MailFolderDeltaCollectionRequestBuilder delta() {
         return new MailFolderDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
 
+    /**
+     * Gets the list of newly created, updated or deleted MailFolder
+     * 
+     * @return a request builder to get the changes
+     * @param deltaLink the link returned by the last delta request
+     */
 	public MailFolderDeltaCollectionRequestBuilder delta(final String deltaLink) {
         return new MailFolderDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }

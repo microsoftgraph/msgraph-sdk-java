@@ -38,6 +38,11 @@ public class SwapShiftsChangeRequestCollectionRequest extends BaseCollectionRequ
         super(requestUrl, client, requestOptions, SwapShiftsChangeRequestCollectionResponse.class, SwapShiftsChangeRequestCollectionPage.class, SwapShiftsChangeRequestCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new SwapShiftsChangeRequest
+     * @param newSwapShiftsChangeRequest the SwapShiftsChangeRequest to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final SwapShiftsChangeRequest newSwapShiftsChangeRequest, final ICallback<? super SwapShiftsChangeRequest> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SwapShiftsChangeRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class SwapShiftsChangeRequestCollectionRequest extends BaseCollectionRequ
             .post(newSwapShiftsChangeRequest, callback);
     }
 
+    /**
+     * Creates a new SwapShiftsChangeRequest
+     * @param newSwapShiftsChangeRequest the SwapShiftsChangeRequest to create
+     * @return the newly created object
+     */
     public SwapShiftsChangeRequest post(final SwapShiftsChangeRequest newSwapShiftsChangeRequest) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SwapShiftsChangeRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

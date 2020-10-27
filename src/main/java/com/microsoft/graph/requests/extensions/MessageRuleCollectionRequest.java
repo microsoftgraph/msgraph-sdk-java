@@ -38,6 +38,11 @@ public class MessageRuleCollectionRequest extends BaseCollectionRequest<MessageR
         super(requestUrl, client, requestOptions, MessageRuleCollectionResponse.class, MessageRuleCollectionPage.class, MessageRuleCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new MessageRule
+     * @param newMessageRule the MessageRule to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final MessageRule newMessageRule, final ICallback<? super MessageRule> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MessageRuleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class MessageRuleCollectionRequest extends BaseCollectionRequest<MessageR
             .post(newMessageRule, callback);
     }
 
+    /**
+     * Creates a new MessageRule
+     * @param newMessageRule the MessageRule to create
+     * @return the newly created object
+     */
     public MessageRule post(final MessageRule newMessageRule) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MessageRuleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

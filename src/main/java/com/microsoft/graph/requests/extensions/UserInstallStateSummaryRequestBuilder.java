@@ -54,10 +54,21 @@ public class UserInstallStateSummaryRequestBuilder extends BaseRequestBuilder<Us
     }
 
 
+    /**
+     *  Gets a request builder for the DeviceInstallState collection
+     *
+     * @return the collection request builder
+     */
     public DeviceInstallStateCollectionRequestBuilder deviceStates() {
         return new DeviceInstallStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DeviceInstallState item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public DeviceInstallStateRequestBuilder deviceStates(final String id) {
         return new DeviceInstallStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates") + "/" + id, getClient(), null);
     }

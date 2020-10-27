@@ -37,6 +37,11 @@ public class DataPolicyOperationCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, DataPolicyOperationCollectionResponse.class, DataPolicyOperationCollectionPage.class, DataPolicyOperationCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new DataPolicyOperation
+     * @param newDataPolicyOperation the DataPolicyOperation to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final DataPolicyOperation newDataPolicyOperation, final ICallback<? super DataPolicyOperation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DataPolicyOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -44,6 +49,11 @@ public class DataPolicyOperationCollectionRequest extends BaseCollectionRequest<
             .post(newDataPolicyOperation, callback);
     }
 
+    /**
+     * Creates a new DataPolicyOperation
+     * @param newDataPolicyOperation the DataPolicyOperation to create
+     * @return the newly created object
+     */
     public DataPolicyOperation post(final DataPolicyOperation newDataPolicyOperation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DataPolicyOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

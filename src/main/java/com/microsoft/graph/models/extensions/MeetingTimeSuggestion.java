@@ -25,6 +25,7 @@ import com.google.gson.annotations.Expose;
  */
 public class MeetingTimeSuggestion implements IJsonBackedObject {
 
+    /** the OData type of the object as returned by the service */
     @SerializedName("@odata.type")
     @Expose
     public String oDataType;

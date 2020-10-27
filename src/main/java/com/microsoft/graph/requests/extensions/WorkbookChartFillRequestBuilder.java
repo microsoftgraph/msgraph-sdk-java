@@ -53,10 +53,19 @@ public class WorkbookChartFillRequestBuilder extends BaseRequestBuilder<Workbook
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     public WorkbookChartFillClearRequestBuilder clear() {
         return new WorkbookChartFillClearRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.clear"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param color the color
+     */
     public WorkbookChartFillSetSolidColorRequestBuilder setSolidColor(final String color) {
         return new WorkbookChartFillSetSolidColorRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setSolidColor"), getClient(), null, color);
     }

@@ -54,6 +54,11 @@ public class CallCollectionRequestBuilder extends BaseCollectionRequestBuilder<C
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param quality the quality
+     */
     public CallLogTeleconferenceDeviceQualityRequestBuilder logTeleconferenceDeviceQuality(final TeleconferenceDeviceQuality quality) {
         return new CallLogTeleconferenceDeviceQualityRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.logTeleconferenceDeviceQuality"), getClient(), null, quality);
     }

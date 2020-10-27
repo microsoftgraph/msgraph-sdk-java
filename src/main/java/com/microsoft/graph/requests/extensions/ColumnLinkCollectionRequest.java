@@ -38,6 +38,11 @@ public class ColumnLinkCollectionRequest extends BaseCollectionRequest<ColumnLin
         super(requestUrl, client, requestOptions, ColumnLinkCollectionResponse.class, ColumnLinkCollectionPage.class, ColumnLinkCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new ColumnLink
+     * @param newColumnLink the ColumnLink to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final ColumnLink newColumnLink, final ICallback<? super ColumnLink> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ColumnLinkRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class ColumnLinkCollectionRequest extends BaseCollectionRequest<ColumnLin
             .post(newColumnLink, callback);
     }
 
+    /**
+     * Creates a new ColumnLink
+     * @param newColumnLink the ColumnLink to create
+     * @return the newly created object
+     */
     public ColumnLink post(final ColumnLink newColumnLink) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ColumnLinkRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

@@ -56,17 +56,39 @@ public class EducationSchoolRequestBuilder extends BaseRequestBuilder<EducationS
     }
 
 
+    /**
+     *  Gets a request builder for the EducationClass collection
+     *
+     * @return the collection request builder
+     */
     public EducationClassCollectionWithReferencesRequestBuilder classes() {
         return new EducationClassCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("classes"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the EducationClass item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public EducationClassWithReferenceRequestBuilder classes(final String id) {
         return new EducationClassWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("classes") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the EducationUser collection
+     *
+     * @return the collection request builder
+     */
     public EducationUserCollectionWithReferencesRequestBuilder users() {
         return new EducationUserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("users"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the EducationUser item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public EducationUserWithReferenceRequestBuilder users(final String id) {
         return new EducationUserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("users") + "/" + id, getClient(), null);
     }

@@ -38,6 +38,11 @@ public class TeamsAppCollectionRequest extends BaseCollectionRequest<TeamsApp, T
         super(requestUrl, client, requestOptions, TeamsAppCollectionResponse.class, TeamsAppCollectionPage.class, TeamsAppCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new TeamsApp
+     * @param newTeamsApp the TeamsApp to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final TeamsApp newTeamsApp, final ICallback<? super TeamsApp> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TeamsAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class TeamsAppCollectionRequest extends BaseCollectionRequest<TeamsApp, T
             .post(newTeamsApp, callback);
     }
 
+    /**
+     * Creates a new TeamsApp
+     * @param newTeamsApp the TeamsApp to create
+     * @return the newly created object
+     */
     public TeamsApp post(final TeamsApp newTeamsApp) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TeamsAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

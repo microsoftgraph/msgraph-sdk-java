@@ -38,10 +38,20 @@ public class ContactFolderCollectionRequestBuilder extends BaseCollectionRequest
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
     public ContactFolderDeltaCollectionRequestBuilder delta() {
         return new ContactFolderDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
 
+    /**
+     * Gets the list of newly created, updated or deleted ContactFolder
+     * 
+     * @return a request builder to get the changes
+     * @param deltaLink the link returned by the last delta request
+     */
 	public ContactFolderDeltaCollectionRequestBuilder delta(final String deltaLink) {
         return new ContactFolderDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }

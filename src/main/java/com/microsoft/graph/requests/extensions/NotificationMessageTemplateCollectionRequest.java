@@ -38,6 +38,11 @@ public class NotificationMessageTemplateCollectionRequest extends BaseCollection
         super(requestUrl, client, requestOptions, NotificationMessageTemplateCollectionResponse.class, NotificationMessageTemplateCollectionPage.class, NotificationMessageTemplateCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new NotificationMessageTemplate
+     * @param newNotificationMessageTemplate the NotificationMessageTemplate to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final NotificationMessageTemplate newNotificationMessageTemplate, final ICallback<? super NotificationMessageTemplate> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new NotificationMessageTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class NotificationMessageTemplateCollectionRequest extends BaseCollection
             .post(newNotificationMessageTemplate, callback);
     }
 
+    /**
+     * Creates a new NotificationMessageTemplate
+     * @param newNotificationMessageTemplate the NotificationMessageTemplate to create
+     * @return the newly created object
+     */
     public NotificationMessageTemplate post(final NotificationMessageTemplate newNotificationMessageTemplate) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new NotificationMessageTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

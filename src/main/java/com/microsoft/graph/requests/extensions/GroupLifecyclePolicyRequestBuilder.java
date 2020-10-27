@@ -53,10 +53,20 @@ public class GroupLifecyclePolicyRequestBuilder extends BaseRequestBuilder<Group
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param groupId the groupId
+     */
     public GroupLifecyclePolicyAddGroupRequestBuilder addGroup(final String groupId) {
         return new GroupLifecyclePolicyAddGroupRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.addGroup"), getClient(), null, groupId);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param groupId the groupId
+     */
     public GroupLifecyclePolicyRemoveGroupRequestBuilder removeGroup(final String groupId) {
         return new GroupLifecyclePolicyRemoveGroupRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.removeGroup"), getClient(), null, groupId);
     }

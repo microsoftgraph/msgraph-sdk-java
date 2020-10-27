@@ -22,6 +22,7 @@ import com.google.gson.annotations.Expose;
  */
 public class MediaStream implements IJsonBackedObject {
 
+    /** the OData type of the object as returned by the service */
     @SerializedName("@odata.type")
     @Expose
     public String oDataType;

@@ -53,6 +53,11 @@ public class OnenoteResourceRequestBuilder extends BaseRequestBuilder<OnenoteRes
 
 
 
+    /**
+     * Gets the request builder for content
+     *
+     * @return the OnenoteResourceContentStreamRequestBuilder instance
+     */
     public OnenoteResourceContentStreamRequestBuilder content() {
         return new OnenoteResourceContentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
     }

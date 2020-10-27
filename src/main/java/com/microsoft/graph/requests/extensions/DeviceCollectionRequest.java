@@ -37,6 +37,11 @@ public class DeviceCollectionRequest extends BaseCollectionRequest<Device, Devic
         super(requestUrl, client, requestOptions, DeviceCollectionResponse.class, DeviceCollectionPage.class, DeviceCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Device
+     * @param newDevice the Device to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Device newDevice, final ICallback<? super Device> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -44,6 +49,11 @@ public class DeviceCollectionRequest extends BaseCollectionRequest<Device, Devic
             .post(newDevice, callback);
     }
 
+    /**
+     * Creates a new Device
+     * @param newDevice the Device to create
+     * @return the newly created object
+     */
     public Device post(final Device newDevice) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

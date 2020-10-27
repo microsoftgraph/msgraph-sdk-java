@@ -54,14 +54,29 @@ public class WorkbookTableSortRequestBuilder extends BaseRequestBuilder<Workbook
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param fields the fields
+     * @param matchCase the matchCase
+     * @param method the method
+     */
     public WorkbookTableSortApplyRequestBuilder apply(final java.util.List<WorkbookSortField> fields, final Boolean matchCase, final String method) {
         return new WorkbookTableSortApplyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.apply"), getClient(), null, fields, matchCase, method);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     public WorkbookTableSortClearRequestBuilder clear() {
         return new WorkbookTableSortClearRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.clear"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     public WorkbookTableSortReapplyRequestBuilder reapply() {
         return new WorkbookTableSortReapplyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reapply"), getClient(), null);
     }

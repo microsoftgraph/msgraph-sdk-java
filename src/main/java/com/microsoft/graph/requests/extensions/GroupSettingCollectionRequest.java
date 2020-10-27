@@ -37,6 +37,11 @@ public class GroupSettingCollectionRequest extends BaseCollectionRequest<GroupSe
         super(requestUrl, client, requestOptions, GroupSettingCollectionResponse.class, GroupSettingCollectionPage.class, GroupSettingCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new GroupSetting
+     * @param newGroupSetting the GroupSetting to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final GroupSetting newGroupSetting, final ICallback<? super GroupSetting> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GroupSettingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -44,6 +49,11 @@ public class GroupSettingCollectionRequest extends BaseCollectionRequest<GroupSe
             .post(newGroupSetting, callback);
     }
 
+    /**
+     * Creates a new GroupSetting
+     * @param newGroupSetting the GroupSetting to create
+     * @return the newly created object
+     */
     public GroupSetting post(final GroupSetting newGroupSetting) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new GroupSettingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

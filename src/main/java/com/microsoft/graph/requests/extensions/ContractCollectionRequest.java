@@ -37,6 +37,11 @@ public class ContractCollectionRequest extends BaseCollectionRequest<Contract, C
         super(requestUrl, client, requestOptions, ContractCollectionResponse.class, ContractCollectionPage.class, ContractCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Contract
+     * @param newContract the Contract to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Contract newContract, final ICallback<? super Contract> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ContractRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -44,6 +49,11 @@ public class ContractCollectionRequest extends BaseCollectionRequest<Contract, C
             .post(newContract, callback);
     }
 
+    /**
+     * Creates a new Contract
+     * @param newContract the Contract to create
+     * @return the newly created object
+     */
     public Contract post(final Contract newContract) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ContractRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

@@ -38,6 +38,11 @@ public class DeviceAndAppManagementRoleAssignmentCollectionRequest extends BaseC
         super(requestUrl, client, requestOptions, DeviceAndAppManagementRoleAssignmentCollectionResponse.class, DeviceAndAppManagementRoleAssignmentCollectionPage.class, DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new DeviceAndAppManagementRoleAssignment
+     * @param newDeviceAndAppManagementRoleAssignment the DeviceAndAppManagementRoleAssignment to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment, final ICallback<? super DeviceAndAppManagementRoleAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceAndAppManagementRoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class DeviceAndAppManagementRoleAssignmentCollectionRequest extends BaseC
             .post(newDeviceAndAppManagementRoleAssignment, callback);
     }
 
+    /**
+     * Creates a new DeviceAndAppManagementRoleAssignment
+     * @param newDeviceAndAppManagementRoleAssignment the DeviceAndAppManagementRoleAssignment to create
+     * @return the newly created object
+     */
     public DeviceAndAppManagementRoleAssignment post(final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceAndAppManagementRoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

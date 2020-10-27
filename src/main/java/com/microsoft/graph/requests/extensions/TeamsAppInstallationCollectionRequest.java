@@ -38,6 +38,11 @@ public class TeamsAppInstallationCollectionRequest extends BaseCollectionRequest
         super(requestUrl, client, requestOptions, TeamsAppInstallationCollectionResponse.class, TeamsAppInstallationCollectionPage.class, TeamsAppInstallationCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new TeamsAppInstallation
+     * @param newTeamsAppInstallation the TeamsAppInstallation to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final TeamsAppInstallation newTeamsAppInstallation, final ICallback<? super TeamsAppInstallation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TeamsAppInstallationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class TeamsAppInstallationCollectionRequest extends BaseCollectionRequest
             .post(newTeamsAppInstallation, callback);
     }
 
+    /**
+     * Creates a new TeamsAppInstallation
+     * @param newTeamsAppInstallation the TeamsAppInstallation to create
+     * @return the newly created object
+     */
     public TeamsAppInstallation post(final TeamsAppInstallation newTeamsAppInstallation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TeamsAppInstallationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

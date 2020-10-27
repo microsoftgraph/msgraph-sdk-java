@@ -52,17 +52,39 @@ public class AndroidStoreAppRequestBuilder extends BaseRequestBuilder<AndroidSto
     }
 
 
+    /**
+     *  Gets a request builder for the MobileAppAssignment collection
+     *
+     * @return the collection request builder
+     */
     public MobileAppAssignmentCollectionRequestBuilder assignments() {
         return new MobileAppAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the MobileAppAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public MobileAppAssignmentRequestBuilder assignments(final String id) {
         return new MobileAppAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the MobileAppCategory collection
+     *
+     * @return the collection request builder
+     */
     public MobileAppCategoryCollectionWithReferencesRequestBuilder categories() {
         return new MobileAppCategoryCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the MobileAppCategory item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     public MobileAppCategoryWithReferenceRequestBuilder categories(final String id) {
         return new MobileAppCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
     }

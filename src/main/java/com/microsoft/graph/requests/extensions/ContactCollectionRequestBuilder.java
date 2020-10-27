@@ -39,10 +39,20 @@ public class ContactCollectionRequestBuilder extends BaseCollectionRequestBuilde
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
     public ContactDeltaCollectionRequestBuilder delta() {
         return new ContactDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
 
+    /**
+     * Gets the list of newly created, updated or deleted Contact
+     * 
+     * @return a request builder to get the changes
+     * @param deltaLink the link returned by the last delta request
+     */
 	public ContactDeltaCollectionRequestBuilder delta(final String deltaLink) {
         return new ContactDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }

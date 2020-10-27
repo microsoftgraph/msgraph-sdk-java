@@ -37,6 +37,11 @@ public class IdentityProviderCollectionRequest extends BaseCollectionRequest<Ide
         super(requestUrl, client, requestOptions, IdentityProviderCollectionResponse.class, IdentityProviderCollectionPage.class, IdentityProviderCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new IdentityProvider
+     * @param newIdentityProvider the IdentityProvider to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final IdentityProvider newIdentityProvider, final ICallback<? super IdentityProvider> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new IdentityProviderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -44,6 +49,11 @@ public class IdentityProviderCollectionRequest extends BaseCollectionRequest<Ide
             .post(newIdentityProvider, callback);
     }
 
+    /**
+     * Creates a new IdentityProvider
+     * @param newIdentityProvider the IdentityProvider to create
+     * @return the newly created object
+     */
     public IdentityProvider post(final IdentityProvider newIdentityProvider) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new IdentityProviderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

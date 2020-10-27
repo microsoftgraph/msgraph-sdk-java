@@ -38,6 +38,11 @@ public class DeviceCompliancePolicyAssignmentCollectionRequest extends BaseColle
         super(requestUrl, client, requestOptions, DeviceCompliancePolicyAssignmentCollectionResponse.class, DeviceCompliancePolicyAssignmentCollectionPage.class, DeviceCompliancePolicyAssignmentCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new DeviceCompliancePolicyAssignment
+     * @param newDeviceCompliancePolicyAssignment the DeviceCompliancePolicyAssignment to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final DeviceCompliancePolicyAssignment newDeviceCompliancePolicyAssignment, final ICallback<? super DeviceCompliancePolicyAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceCompliancePolicyAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class DeviceCompliancePolicyAssignmentCollectionRequest extends BaseColle
             .post(newDeviceCompliancePolicyAssignment, callback);
     }
 
+    /**
+     * Creates a new DeviceCompliancePolicyAssignment
+     * @param newDeviceCompliancePolicyAssignment the DeviceCompliancePolicyAssignment to create
+     * @return the newly created object
+     */
     public DeviceCompliancePolicyAssignment post(final DeviceCompliancePolicyAssignment newDeviceCompliancePolicyAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceCompliancePolicyAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

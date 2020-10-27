@@ -40,6 +40,11 @@ public class EventCollectionRequest extends BaseCollectionRequest<Event, EventCo
         super(requestUrl, client, requestOptions, EventCollectionResponse.class, EventCollectionPage.class, EventCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new Event
+     * @param newEvent the Event to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final Event newEvent, final ICallback<? super Event> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EventRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -47,6 +52,11 @@ public class EventCollectionRequest extends BaseCollectionRequest<Event, EventCo
             .post(newEvent, callback);
     }
 
+    /**
+     * Creates a new Event
+     * @param newEvent the Event to create
+     * @return the newly created object
+     */
     public Event post(final Event newEvent) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EventRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

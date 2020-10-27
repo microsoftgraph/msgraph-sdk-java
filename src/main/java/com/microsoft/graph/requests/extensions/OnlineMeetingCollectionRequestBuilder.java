@@ -41,6 +41,16 @@ public class OnlineMeetingCollectionRequestBuilder extends BaseCollectionRequest
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param chatInfo the chatInfo
+     * @param endDateTime the endDateTime
+     * @param externalId the externalId
+     * @param participants the participants
+     * @param startDateTime the startDateTime
+     * @param subject the subject
+     */
     public OnlineMeetingCreateOrGetRequestBuilder createOrGet(final ChatInfo chatInfo, final java.util.Calendar endDateTime, final String externalId, final MeetingParticipants participants, final java.util.Calendar startDateTime, final String subject) {
         return new OnlineMeetingCreateOrGetRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createOrGet"), getClient(), null, chatInfo, endDateTime, externalId, participants, startDateTime, subject);
     }

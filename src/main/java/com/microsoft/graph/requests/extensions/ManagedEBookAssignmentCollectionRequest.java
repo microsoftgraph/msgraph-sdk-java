@@ -38,6 +38,11 @@ public class ManagedEBookAssignmentCollectionRequest extends BaseCollectionReque
         super(requestUrl, client, requestOptions, ManagedEBookAssignmentCollectionResponse.class, ManagedEBookAssignmentCollectionPage.class, ManagedEBookAssignmentCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new ManagedEBookAssignment
+     * @param newManagedEBookAssignment the ManagedEBookAssignment to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final ManagedEBookAssignment newManagedEBookAssignment, final ICallback<? super ManagedEBookAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedEBookAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class ManagedEBookAssignmentCollectionRequest extends BaseCollectionReque
             .post(newManagedEBookAssignment, callback);
     }
 
+    /**
+     * Creates a new ManagedEBookAssignment
+     * @param newManagedEBookAssignment the ManagedEBookAssignment to create
+     * @return the newly created object
+     */
     public ManagedEBookAssignment post(final ManagedEBookAssignment newManagedEBookAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedEBookAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

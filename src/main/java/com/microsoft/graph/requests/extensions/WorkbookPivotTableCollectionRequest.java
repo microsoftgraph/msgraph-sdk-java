@@ -38,6 +38,11 @@ public class WorkbookPivotTableCollectionRequest extends BaseCollectionRequest<W
         super(requestUrl, client, requestOptions, WorkbookPivotTableCollectionResponse.class, WorkbookPivotTableCollectionPage.class, WorkbookPivotTableCollectionRequestBuilder.class);
     }
 
+    /**
+     * Creates a new WorkbookPivotTable
+     * @param newWorkbookPivotTable the WorkbookPivotTable to create
+     * @param callback the callback to invoke once the object has been created
+     */
     public void post(final WorkbookPivotTable newWorkbookPivotTable, final ICallback<? super WorkbookPivotTable> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookPivotTableRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,6 +50,11 @@ public class WorkbookPivotTableCollectionRequest extends BaseCollectionRequest<W
             .post(newWorkbookPivotTable, callback);
     }
 
+    /**
+     * Creates a new WorkbookPivotTable
+     * @param newWorkbookPivotTable the WorkbookPivotTable to create
+     * @return the newly created object
+     */
     public WorkbookPivotTable post(final WorkbookPivotTable newWorkbookPivotTable) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookPivotTableRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
