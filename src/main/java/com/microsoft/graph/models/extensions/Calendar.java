@@ -98,6 +98,14 @@ public class Calendar extends Entity implements IJsonBackedObject {
     public String hexColor;
 
     /**
+     * The Is Default Calendar.
+     * 
+     */
+    @SerializedName(value = "isDefaultCalendar", alternate = {"IsDefaultCalendar"})
+    @Expose
+    public Boolean isDefaultCalendar;
+
+    /**
      * The Is Removable.
      * Indicates whether this user calendar can be deleted from the user mailbox.
      */

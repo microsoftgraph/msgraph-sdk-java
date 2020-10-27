@@ -7,7 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.Post;
+import com.microsoft.graph.models.extensions.TodoTask;
 import com.microsoft.graph.models.extensions.Extension;
 import java.util.Arrays;
 import java.util.EnumSet;

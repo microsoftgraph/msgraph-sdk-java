@@ -75,6 +75,7 @@ import com.microsoft.graph.requests.extensions.IOfficeGraphInsightsRequestBuilde
 import com.microsoft.graph.requests.extensions.IUserSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserTeamworkRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITodoRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -393,6 +394,13 @@ public interface IUserRequestBuilder extends IRequestBuilder {
      * @return the IUserTeamworkRequestBuilder instance
      */
     IUserTeamworkRequestBuilder teamwork();
+
+    /**
+     * Gets the request builder for Todo
+     *
+     * @return the ITodoRequestBuilder instance
+     */
+    ITodoRequestBuilder todo();
     IUserAssignLicenseRequestBuilder assignLicense(final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses);
     IUserChangePasswordRequestBuilder changePassword(final String currentPassword, final String newPassword);
     IUserReprocessLicenseAssignmentRequestBuilder reprocessLicenseAssignment();
