@@ -75,6 +75,7 @@ import com.microsoft.graph.requests.extensions.IOfficeGraphInsightsRequestBuilde
 import com.microsoft.graph.requests.extensions.IUserSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserTeamworkRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITodoRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

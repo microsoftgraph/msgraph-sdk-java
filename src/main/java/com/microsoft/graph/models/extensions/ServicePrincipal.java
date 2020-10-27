@@ -17,6 +17,7 @@ import com.microsoft.graph.models.extensions.SamlSingleSignOnSettings;
 import com.microsoft.graph.models.extensions.AppRoleAssignment;
 import com.microsoft.graph.models.extensions.ClaimsMappingPolicy;
 import com.microsoft.graph.models.extensions.DirectoryObject;
+import com.microsoft.graph.models.extensions.DelegatedPermissionClassification;
 import com.microsoft.graph.models.extensions.Endpoint;
 import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
@@ -25,6 +26,7 @@ import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
+import com.microsoft.graph.requests.extensions.DelegatedPermissionClassificationCollectionPage;
 import com.microsoft.graph.requests.extensions.EndpointCollectionPage;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionPage;
@@ -305,6 +307,14 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
     public DirectoryObjectCollectionPage createdObjects;
 
     /**
+     * The Delegated Permission Classifications.
+     * 
+     */
+    @SerializedName(value = "delegatedPermissionClassifications", alternate = {"DelegatedPermissionClassifications"})
+    @Expose
+    public DelegatedPermissionClassificationCollectionPage delegatedPermissionClassifications;
+
+    /**
      * The Endpoints.
      * Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences.
      */
@@ -414,6 +424,10 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
         if (json.has("createdObjects")) {
             createdObjects = serializer.deserializeObject(json.get("createdObjects").toString(), DirectoryObjectCollectionPage.class);
+        }
+
+        if (json.has("delegatedPermissionClassifications")) {
+            delegatedPermissionClassifications = serializer.deserializeObject(json.get("delegatedPermissionClassifications").toString(), DelegatedPermissionClassificationCollectionPage.class);
         }
 
         if (json.has("endpoints")) {

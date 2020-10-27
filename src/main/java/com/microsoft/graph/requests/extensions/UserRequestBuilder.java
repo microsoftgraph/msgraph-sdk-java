@@ -128,6 +128,8 @@ import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserTeamworkRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserTeamworkRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITodoRequestBuilder;
+import com.microsoft.graph.requests.extensions.TodoRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -648,6 +650,15 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
      */
     public IUserTeamworkRequestBuilder teamwork() {
         return new UserTeamworkRequestBuilder(getRequestUrlWithAdditionalSegment("teamwork"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for Todo
+     *
+     * @return the ITodoRequestBuilder instance
+     */
+    public ITodoRequestBuilder todo() {
+        return new TodoRequestBuilder(getRequestUrlWithAdditionalSegment("todo"), getClient(), null);
     }
 
     public IUserAssignLicenseRequestBuilder assignLicense(final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses) {

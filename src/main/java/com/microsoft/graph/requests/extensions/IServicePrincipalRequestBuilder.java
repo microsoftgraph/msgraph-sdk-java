@@ -16,6 +16,8 @@ import com.microsoft.graph.requests.extensions.IClaimsMappingPolicyCollectionReq
 import com.microsoft.graph.requests.extensions.IClaimsMappingPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDelegatedPermissionClassificationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDelegatedPermissionClassificationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEndpointCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEndpointRequestBuilder;
 import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollectionRequestBuilder;
@@ -71,6 +73,10 @@ public interface IServicePrincipalRequestBuilder extends IRequestBuilder {
     IServicePrincipalCollectionWithReferencesRequestBuilder createdObjectsAsServicePrincipal();
 
     IServicePrincipalWithReferenceRequestBuilder createdObjectsAsServicePrincipal(final String id);
+
+    IDelegatedPermissionClassificationCollectionRequestBuilder delegatedPermissionClassifications();
+
+    IDelegatedPermissionClassificationRequestBuilder delegatedPermissionClassifications(final String id);
 
     IEndpointCollectionRequestBuilder endpoints();
 
