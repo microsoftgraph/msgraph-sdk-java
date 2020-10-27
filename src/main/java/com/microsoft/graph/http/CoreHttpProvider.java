@@ -564,11 +564,20 @@ public class CoreHttpProvider implements IHttpProvider {
 		return false;
 	}
 
+	/**
+	 * Gets the logger in use
+	 * 
+	 * @return the logger
+	 */
 	@VisibleForTesting
 	public ILogger getLogger() {
 		return logger;
 	}
 
+	/**
+	 * Gets the executors in use
+	 * @return the executors
+	 */
 	@VisibleForTesting
 	public IExecutors getExecutors() {
 		return executors;

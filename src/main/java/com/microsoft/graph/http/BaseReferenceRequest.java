@@ -48,10 +48,18 @@ public abstract class BaseReferenceRequest<T> extends BaseRequest<T> {
         super(requestUrl, client, requestOptions, entityType);
     }
 
+    /**
+     * Deletes the entity and invokes the callback
+     * @param callback callback to be invoked once the entity is deleted
+     */
     public void delete(final ICallback<? super T> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
+    /**
+     * Deletes the entity
+     * @return the deleted entity 
+     */
     public T delete() throws ClientException {
        return send(HttpMethod.DELETE, null);
     }

@@ -121,12 +121,21 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
         });
     }
 
-    /** Gets the collection of items */
+    /** 
+     * Gets the collection of items
+     * 
+     * @return the collection page
+     */
     public T3 get() throws ClientException {
         return buildFromResponse(send());
     }
 
-    /** Deserializes the collection from the response object */
+    /** 
+     * Deserializes the collection from the response object 
+     * 
+     * @param response the collection response
+     * @return the collection page
+     */
     public T3 buildFromResponse(final T2 response) {
         final List<com.microsoft.graph.options.Option> options = new java.util.ArrayList<com.microsoft.graph.options.Option>();
         try {

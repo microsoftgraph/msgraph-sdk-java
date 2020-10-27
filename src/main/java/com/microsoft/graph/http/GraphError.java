@@ -27,16 +27,22 @@ import com.google.gson.annotations.SerializedName;
 import com.microsoft.graph.core.GraphErrorCodes;
 import com.google.gson.annotations.Expose;
 
+/**
+ * Represents an error returned by the service
+ */
 public class GraphError {
 
+    /** The error message */
     @SerializedName("message")
     @Expose()
     public String message;
 
+    /** The error code */
     @SerializedName("code")
     @Expose()
     public String code;
 
+    /** The inner error */
     @SerializedName("innererror")
     public GraphInnerError innererror;
 

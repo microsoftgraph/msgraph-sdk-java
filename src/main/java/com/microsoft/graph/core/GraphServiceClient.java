@@ -60,10 +60,18 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
 				JsonObject.class);
 	}
 
+	/**
+	 * Gets the builder to start configuring the client
+	 * 
+	 * @return builder to start configuring the client
+	 */
 	public static Builder<OkHttpClient> builder() {
 		return new Builder<OkHttpClient>();
 	}
 
+	/**
+	 * Builder to help configure the Graph service client
+	 */
 	public static final class Builder<httpClientType> {
 		private ISerializer serializer;
 		private IHttpProvider httpProvider;

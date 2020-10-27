@@ -22,7 +22,7 @@
 
 package com.microsoft.graph.options;
 
-
+/** Represents an option to use with OData methods */
 public class FunctionOption extends Option {
 
     /**

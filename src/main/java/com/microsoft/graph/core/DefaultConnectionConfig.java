@@ -27,6 +27,7 @@ import com.microsoft.graph.httpcore.middlewareoption.IShouldRetry;
 import com.microsoft.graph.httpcore.middlewareoption.RedirectOptions;
 import com.microsoft.graph.httpcore.middlewareoption.RetryOptions;
 
+/** represents the default configuration applied to http connections by the SDK */
 public class DefaultConnectionConfig implements IConnectionConfig{
 	
     /**

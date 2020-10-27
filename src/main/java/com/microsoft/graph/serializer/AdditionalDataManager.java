@@ -33,12 +33,18 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+/** Holds additional properties that are not part of the default object's schema */
 public class AdditionalDataManager extends HashMap<String, JsonElement> {
 
     private static final long serialVersionUID = 8641634955796941429L;
     
     private final transient IJsonBackedObject jsonBackedObject;
 
+    /**
+     * Instanciates a new additional data manager from the json backed object
+     * 
+     * @param jsonBackedObject the object to read values from
+     */
     public AdditionalDataManager(IJsonBackedObject jsonBackedObject) {
         this.jsonBackedObject = jsonBackedObject;
     }

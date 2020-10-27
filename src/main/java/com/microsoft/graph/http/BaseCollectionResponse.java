@@ -9,6 +9,11 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import com.microsoft.graph.http.ICollectionResponse;
 
+/**
+ * The basic collection response implementation
+ * 
+ * @param <T> the entity or complex type
+ */
 public abstract class BaseCollectionResponse<T> implements ICollectionResponse<T>, IJsonBackedObject  {
 	
 	/**

@@ -24,23 +24,32 @@ package com.microsoft.graph.http;
 
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * Represents an inner error returned by the service
+ */
 public class GraphInnerError {
 
+    /** The error code */
     @SerializedName("code")
     public String code;
 
+    /** The error type */
     @SerializedName("errorType")
     public String errorType;
 
+    /** The debug message */
     @SerializedName("debugMessage")
     public String debugMessage;
 
+    /** The stacktrace */
     @SerializedName("stackTrace")
     public String stackTrace;
 
+    /** The throw site */
     @SerializedName("throwSite")
     public String throwSite;
 
+    /** The inner error */
     @SerializedName("innererror")
     public GraphInnerError innererror;
 }

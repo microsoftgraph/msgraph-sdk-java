@@ -22,6 +22,7 @@ public class Multipart {
 	private String boundary;
 	private static final String RETURN = "\r\n";
 	private ByteArrayOutputStream out;
+	/** Default encoding for multi-part requests */
 	public static final String MULTIPART_ENCODING = "US-ASCII";
 	private String contentType = "multipart/form-data";
 	

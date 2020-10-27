@@ -4,6 +4,14 @@ import com.microsoft.graph.core.IBaseClient;
 
 import java.lang.reflect.InvocationTargetException;
 
+/**
+ * The basic implementation of a collection request builder
+ * @param <T> the entity or complex type
+ * @param <T2> the entity request builder type
+ * @param <T3> the collection response type
+ * @param <T4> the collection page type
+ * @param <T5> the collection request type
+ */
 public class BaseCollectionRequestBuilder<T, T2 extends BaseRequestBuilder<T>,
                                             T3 extends ICollectionResponse<T>,
                                             T4 extends BaseCollectionPage<T, ? extends BaseRequestBuilder<T>>,
@@ -52,6 +60,12 @@ public class BaseCollectionRequestBuilder<T, T2 extends BaseRequestBuilder<T>,
 		}
     }
 
+    /**
+     * Gets a builder to request an item within a collection
+     * 
+     * @return builder to request an item within a collection
+     * @param id identifier for the item
+     */
     public T2 byId(final String id) {
         try {
             return reqBuilderClass.getConstructor(String.class, IBaseClient.class, java.util.List.class)

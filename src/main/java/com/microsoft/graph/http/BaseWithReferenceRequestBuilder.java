@@ -79,6 +79,11 @@ public abstract class BaseWithReferenceRequestBuilder<T, T2 extends BaseWithRefe
 		}
     }
 
+    /**
+     * Creates a request builder to get the reference to the entity
+     * 
+     * @return the request builder
+     */
     public T3 reference(){
         try {
             return refRequestBuilderClass.getConstructor(String.class, IBaseClient.class, java.util.List.class)

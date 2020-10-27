@@ -47,6 +47,7 @@ import com.microsoft.graph.models.extensions.Attachment;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionResponse;
 
+/** Specialized serializer to handle collection pages */
 public class CollectionPageSerializer {
 
 	private static DefaultSerializer serializer;

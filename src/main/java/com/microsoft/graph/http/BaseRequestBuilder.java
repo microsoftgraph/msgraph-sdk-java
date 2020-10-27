@@ -109,6 +109,12 @@ public abstract class BaseRequestBuilder<T> implements IRequestBuilder {
         return requestUrl + "/" + urlSegment;
     }
 
+    /**
+     * Gets the request URL with an odata parameter added to it
+     *
+     * @param  parameter the parameter to add
+     * @return the base URL for this request
+     */
     public String getRequestUrlWithAdditionalParameter(final String parameter) {
         return requestUrl + "('" + parameter + "')";
     }

@@ -32,9 +32,13 @@ public enum GraphErrorCodes {
     ACCESS_DENIED,
     /** The app or user has been throttled */
     ACTIVITY_LIMIT_REACHED,
+    /** No description available */
     ASYNC_TASK_FAILED,
+    /** No description available */
     ASYNC_TASK_NOT_COMPLETED,
+    /** No description available */
     AUTHENTICATION_CANCELLED,
+    /** No description available */
     AUTHENTICATION_FAILURE,
     /** An unspecified error has occurred. */
     GENERAL_EXCEPTION,
@@ -60,11 +64,13 @@ public enum GraphErrorCodes {
     RESYNC_REQUIRED,
     /** The service is not available. Try the request again after a delay. There may be a Retry-After header. */
     SERVICE_NOT_AVAILABLE,
+    /** The application is sending too many requests to the service. Try the request again after a delay. There may be a Retry-After header. */
     TOO_MANY_REDIRECTS,
     /** The caller is not authenticated. */
     UNAUTHENTICATED,
 
     // Extend error codes.
+    /** No description available */
     ACCESS_RESTRICTED,
     /** Access restricted to the item's owner. */
     AUTHORIZATION_REQUEST_DENIED,
@@ -72,7 +78,9 @@ public enum GraphErrorCodes {
     CANNOT_SNAPSHOT_TREE,
     /** Max limit on the number of child items was reached. */
     CHILD_ITEM_COUNT_EXCEEDED,
+    /** No description available */
     ERROR_INVALID_ID_MALFORMED,
+    /** No description available */
     ERROR_INVALID_USER,
     /** ETag does not match the current item's value. */
     ENTITY_TAG_DOES_NOT_MATCH,

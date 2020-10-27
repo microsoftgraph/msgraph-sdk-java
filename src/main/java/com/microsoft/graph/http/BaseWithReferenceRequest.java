@@ -50,10 +50,24 @@ public abstract class BaseWithReferenceRequest<T> extends BaseRequest<T> {
         super(requestUrl, client, requestOptions, entityClass);
     }
 
+    /**
+     * Creates a new entity and invokes the callback with the result
+     * 
+     * @param payload paylod to send to the service
+     * @param newEntity entity to return
+     * @param callback callback to invoke once request is executed
+     */
     public void post(final T newEntity, final IJsonBackedObject payload, final ICallback<? super T> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
+    /**
+     * Creates a new entity and invokes the callback with the result
+     * 
+     * @param payload paylod to send to the service
+     * @param newEntity entity to return
+     * @return the entity once request is executed
+     */
     public T post(final T newEntity, final IJsonBackedObject payload) throws ClientException {
         final T response = send(HttpMethod.POST, payload);
         if (response != null){
@@ -62,27 +76,54 @@ public abstract class BaseWithReferenceRequest<T> extends BaseRequest<T> {
         return null;
     }
 
+    /**
+     * Gets the entity an invokes the callback with it
+     * @param callback callback to be invoked with the returned entity
+     */
     public void get(final ICallback<? super T> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
+    /**
+     * Gets the entity
+     * @return the obtained entity
+     */
     public T get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
+    /**
+     * Deletes the entity and invokes the callback
+     * @param callback callback to be invoked once the entity is deleted
+     */
 	public void delete(final ICallback<? super T> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
+    /**
+     * Deletes the entity
+     */
 	public void delete() throws ClientException {
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final T sourceUser, final ICallback<? super T> callback) {
-		send(HttpMethod.PATCH, callback, sourceUser);
+    /**
+     * Updates the entity and invokes the callback
+     * 
+     * @param sourceObject object to update
+     * @param callback callback to be invoked once the entity is updated
+     */
+	public void patch(final T sourceObject, final ICallback<? super T> callback) {
+		send(HttpMethod.PATCH, callback, sourceObject);
 	}
 
-	public T patch(final T sourceUser) throws ClientException {
-		return send(HttpMethod.PATCH, sourceUser);
+    /**
+     * Updates the entity 
+     * 
+     * @param sourceObject object to update
+     * @return the udpated entity
+     */
+	public T patch(final T sourceObject) throws ClientException {
+		return send(HttpMethod.PATCH, sourceObject);
 	}
 }

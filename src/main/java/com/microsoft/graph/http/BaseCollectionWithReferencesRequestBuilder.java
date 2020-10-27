@@ -60,6 +60,11 @@ public abstract class BaseCollectionWithReferencesRequestBuilder<T, T2 extends B
         this.collRequestClass = collectionWithReferencesRequestClass;
     }
 
+    /**
+     * Gets a request builder to get the references to this collection
+     * 
+     * @return a request builder to get the references to this collection
+     */
     public BaseCollectionReferenceRequestBuilder<T, T3, T5, T6, T8> references(){
         return new BaseCollectionReferenceRequestBuilder<T, T3, T5, T6, T8>(getRequestUrl() + "/$ref", getClient(), getOptions(), refRequestBuilderClass, collRequestClass);
     }

@@ -29,10 +29,14 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.ISerializer;
 
+/**
+ * Represents the error response body returned by the service
+ */
 public class GraphErrorResponse implements IJsonBackedObject {
 
     private AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
+    /** The error returned by the response */
     @SerializedName("error")
     @Expose()
     public GraphError error;
