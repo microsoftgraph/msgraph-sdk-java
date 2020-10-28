@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Org Contact Collection With References Request Builder.
  */
-public class OrgContactCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<OrgContact, OrgContactWithReferenceRequest, OrgContactReferenceRequestBuilder, OrgContactWithReferenceRequestBuilder, OrgContactCollectionResponse, OrgContactCollectionWithReferencesPage, OrgContactCollectionWithReferencesRequest, OrgContactCollectionWithReferencesRequest> {
+public class OrgContactCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<OrgContact, OrgContactWithReferenceRequest, OrgContactReferenceRequestBuilder, OrgContactWithReferenceRequestBuilder, OrgContactCollectionResponse, OrgContactCollectionWithReferencesPage, OrgContactCollectionWithReferencesRequest, OrgContactCollectionReferenceRequestBuilder> {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -30,6 +30,6 @@ public class OrgContactCollectionWithReferencesRequestBuilder extends BaseCollec
      * @param requestOptions the options for this request
      */
     public OrgContactCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OrgContactReferenceRequestBuilder.class, OrgContactCollectionWithReferencesRequest.class);
+        super(requestUrl, client, requestOptions, OrgContactReferenceRequestBuilder.class, OrgContactCollectionWithReferencesRequest.class, OrgContactCollectionReferenceRequestBuilder.class);
     }
 }

@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Application Collection Reference Request Builder.
  */
-public class ApplicationCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<Application, ApplicationWithReferenceRequestBuilder, ApplicationCollectionResponse, ApplicationCollectionWithReferencesPage, ApplicationCollectionReferenceRequest> {
+public class ApplicationCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<Application, ApplicationReferenceRequestBuilder, ApplicationCollectionResponse, ApplicationCollectionWithReferencesPage, ApplicationCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of Application
@@ -32,6 +32,6 @@ public class ApplicationCollectionReferenceRequestBuilder extends BaseCollection
      * @param requestOptions the options for this request
      */
     public ApplicationCollectionReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ApplicationWithReferenceRequestBuilder.class, ApplicationCollectionReferenceRequest.class);
+        super(requestUrl, client, requestOptions, ApplicationReferenceRequestBuilder.class, ApplicationCollectionWithReferencesRequest.class);
     }
 }

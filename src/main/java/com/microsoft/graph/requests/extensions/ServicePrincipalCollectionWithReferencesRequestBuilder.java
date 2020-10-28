@@ -21,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Service Principal Collection With References Request Builder.
  */
-public class ServicePrincipalCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<ServicePrincipal, ServicePrincipalWithReferenceRequest, ServicePrincipalReferenceRequestBuilder, ServicePrincipalWithReferenceRequestBuilder, ServicePrincipalCollectionResponse, ServicePrincipalCollectionWithReferencesPage, ServicePrincipalCollectionWithReferencesRequest, ServicePrincipalCollectionWithReferencesRequest> {
+public class ServicePrincipalCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<ServicePrincipal, ServicePrincipalWithReferenceRequest, ServicePrincipalReferenceRequestBuilder, ServicePrincipalWithReferenceRequestBuilder, ServicePrincipalCollectionResponse, ServicePrincipalCollectionWithReferencesPage, ServicePrincipalCollectionWithReferencesRequest, ServicePrincipalCollectionReferenceRequestBuilder> {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -31,6 +31,6 @@ public class ServicePrincipalCollectionWithReferencesRequestBuilder extends Base
      * @param requestOptions the options for this request
      */
     public ServicePrincipalCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ServicePrincipalReferenceRequestBuilder.class, ServicePrincipalCollectionWithReferencesRequest.class);
+        super(requestUrl, client, requestOptions, ServicePrincipalReferenceRequestBuilder.class, ServicePrincipalCollectionWithReferencesRequest.class, ServicePrincipalCollectionReferenceRequestBuilder.class);
     }
 }

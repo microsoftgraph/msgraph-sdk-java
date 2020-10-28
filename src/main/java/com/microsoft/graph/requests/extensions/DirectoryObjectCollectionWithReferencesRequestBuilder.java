@@ -21,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Directory Object Collection With References Request Builder.
  */
-public class DirectoryObjectCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<DirectoryObject, DirectoryObjectWithReferenceRequest, DirectoryObjectReferenceRequestBuilder, DirectoryObjectWithReferenceRequestBuilder, DirectoryObjectCollectionResponse, DirectoryObjectCollectionWithReferencesPage, DirectoryObjectCollectionWithReferencesRequest, DirectoryObjectCollectionWithReferencesRequest> {
+public class DirectoryObjectCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<DirectoryObject, DirectoryObjectWithReferenceRequest, DirectoryObjectReferenceRequestBuilder, DirectoryObjectWithReferenceRequestBuilder, DirectoryObjectCollectionResponse, DirectoryObjectCollectionWithReferencesPage, DirectoryObjectCollectionWithReferencesRequest, DirectoryObjectCollectionReferenceRequestBuilder> {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -31,6 +31,6 @@ public class DirectoryObjectCollectionWithReferencesRequestBuilder extends BaseC
      * @param requestOptions the options for this request
      */
     public DirectoryObjectCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DirectoryObjectReferenceRequestBuilder.class, DirectoryObjectCollectionWithReferencesRequest.class);
+        super(requestUrl, client, requestOptions, DirectoryObjectReferenceRequestBuilder.class, DirectoryObjectCollectionWithReferencesRequest.class, DirectoryObjectCollectionReferenceRequestBuilder.class);
     }
 }

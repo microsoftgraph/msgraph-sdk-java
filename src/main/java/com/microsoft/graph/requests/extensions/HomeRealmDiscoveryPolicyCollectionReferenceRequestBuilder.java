@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Home Realm Discovery Policy Collection Reference Request Builder.
  */
-public class HomeRealmDiscoveryPolicyCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<HomeRealmDiscoveryPolicy, HomeRealmDiscoveryPolicyWithReferenceRequestBuilder, HomeRealmDiscoveryPolicyCollectionResponse, HomeRealmDiscoveryPolicyCollectionWithReferencesPage, HomeRealmDiscoveryPolicyCollectionReferenceRequest> {
+public class HomeRealmDiscoveryPolicyCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<HomeRealmDiscoveryPolicy, HomeRealmDiscoveryPolicyReferenceRequestBuilder, HomeRealmDiscoveryPolicyCollectionResponse, HomeRealmDiscoveryPolicyCollectionWithReferencesPage, HomeRealmDiscoveryPolicyCollectionWithReferencesRequest> {
 
     /**
      * The request builder for this collection of HomeRealmDiscoveryPolicy
@@ -30,6 +30,6 @@ public class HomeRealmDiscoveryPolicyCollectionReferenceRequestBuilder extends B
      * @param requestOptions the options for this request
      */
     public HomeRealmDiscoveryPolicyCollectionReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicyWithReferenceRequestBuilder.class, HomeRealmDiscoveryPolicyCollectionReferenceRequest.class);
+        super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicyReferenceRequestBuilder.class, HomeRealmDiscoveryPolicyCollectionWithReferencesRequest.class);
     }
 }

@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Mobile App Category Collection With References Request Builder.
  */
-public class MobileAppCategoryCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<MobileAppCategory, MobileAppCategoryWithReferenceRequest, MobileAppCategoryReferenceRequestBuilder, MobileAppCategoryWithReferenceRequestBuilder, MobileAppCategoryCollectionResponse, MobileAppCategoryCollectionWithReferencesPage, MobileAppCategoryCollectionWithReferencesRequest, MobileAppCategoryCollectionWithReferencesRequest> {
+public class MobileAppCategoryCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<MobileAppCategory, MobileAppCategoryWithReferenceRequest, MobileAppCategoryReferenceRequestBuilder, MobileAppCategoryWithReferenceRequestBuilder, MobileAppCategoryCollectionResponse, MobileAppCategoryCollectionWithReferencesPage, MobileAppCategoryCollectionWithReferencesRequest, MobileAppCategoryCollectionReferenceRequestBuilder> {
 
     /**
      * The request builder for this collection of MobileApp
@@ -30,6 +30,6 @@ public class MobileAppCategoryCollectionWithReferencesRequestBuilder extends Bas
      * @param requestOptions the options for this request
      */
     public MobileAppCategoryCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MobileAppCategoryReferenceRequestBuilder.class, MobileAppCategoryCollectionWithReferencesRequest.class);
+        super(requestUrl, client, requestOptions, MobileAppCategoryReferenceRequestBuilder.class, MobileAppCategoryCollectionWithReferencesRequest.class, MobileAppCategoryCollectionReferenceRequestBuilder.class);
     }
 }
