@@ -56,7 +56,7 @@ public abstract class BaseCollectionWithReferencesRequest<T,T2 extends BaseWithR
     public BaseCollectionWithReferencesRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
                                                 final Class<T5> collectionResponseClass,
                                                 final Class<T6> collectionPageClass,
-                                                final Class<? extends BaseCollectionWithReferencesRequestBuilder<T, T2, T3, T4, T5, T6, T7, ? extends BaseCollectionWithReferencesRequest<T, T2, T3, T4, T5, T6, T7>>> collectionWithReferencesRequestBuilderClass) {
+                                                final Class<? extends BaseCollectionWithReferencesRequestBuilder<T, T2, T3, T4, T5, T6, ? extends BaseCollectionWithReferencesRequest<T, T2, T3, T4, T5, T6, T7>, ? extends BaseCollectionReferenceRequestBuilder<T, T3, T5, T6, ? extends BaseCollectionWithReferencesRequest<T, T2, T3, T4, T5, T6, T7>>>> collectionWithReferencesRequestBuilderClass) {
         super(requestUrl, client, requestOptions, collectionResponseClass, collectionPageClass, collectionWithReferencesRequestBuilderClass);
     }
 }
