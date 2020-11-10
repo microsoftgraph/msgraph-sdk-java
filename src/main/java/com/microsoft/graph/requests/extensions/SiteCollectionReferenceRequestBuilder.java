@@ -21,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Site Collection Reference Request Builder.
  */
-public class SiteCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<Site, SiteReferenceRequestBuilder, SiteCollectionResponse, SiteCollectionWithReferencesPage, SiteCollectionWithReferencesRequest> {
+public class SiteCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<Site, SiteReferenceRequestBuilder, SiteCollectionResponse, SiteCollectionWithReferencesPage, SiteCollectionReferenceRequest> {
 
     /**
      * The request builder for this collection of Site
@@ -31,6 +31,6 @@ public class SiteCollectionReferenceRequestBuilder extends BaseCollectionReferen
      * @param requestOptions the options for this request
      */
     public SiteCollectionReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SiteReferenceRequestBuilder.class, SiteCollectionWithReferencesRequest.class);
+        super(requestUrl, client, requestOptions, SiteReferenceRequestBuilder.class, SiteCollectionReferenceRequest.class);
     }
 }

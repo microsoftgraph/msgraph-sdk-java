@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device Collection With References Request Builder.
  */
-public class DeviceCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<Device, DeviceWithReferenceRequest, DeviceReferenceRequestBuilder, DeviceWithReferenceRequestBuilder, DeviceCollectionResponse, DeviceCollectionWithReferencesPage, DeviceCollectionWithReferencesRequest, DeviceCollectionReferenceRequestBuilder> {
+public class DeviceCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<Device, DeviceWithReferenceRequest, DeviceReferenceRequestBuilder, DeviceWithReferenceRequestBuilder, DeviceCollectionResponse, DeviceCollectionWithReferencesPage, DeviceCollectionReferenceRequest, DeviceCollectionReferenceRequestBuilder> {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -30,6 +30,6 @@ public class DeviceCollectionWithReferencesRequestBuilder extends BaseCollection
      * @param requestOptions the options for this request
      */
     public DeviceCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceReferenceRequestBuilder.class, DeviceCollectionWithReferencesRequest.class, DeviceCollectionReferenceRequestBuilder.class);
+        super(requestUrl, client, requestOptions, DeviceReferenceRequestBuilder.class, DeviceCollectionReferenceRequest.class, DeviceCollectionReferenceRequestBuilder.class);
     }
 }

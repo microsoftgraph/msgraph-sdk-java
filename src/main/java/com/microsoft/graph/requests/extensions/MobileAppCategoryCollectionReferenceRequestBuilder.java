@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Mobile App Category Collection Reference Request Builder.
  */
-public class MobileAppCategoryCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<MobileAppCategory, MobileAppCategoryReferenceRequestBuilder, MobileAppCategoryCollectionResponse, MobileAppCategoryCollectionWithReferencesPage, MobileAppCategoryCollectionWithReferencesRequest> {
+public class MobileAppCategoryCollectionReferenceRequestBuilder extends BaseCollectionReferenceRequestBuilder<MobileAppCategory, MobileAppCategoryReferenceRequestBuilder, MobileAppCategoryCollectionResponse, MobileAppCategoryCollectionWithReferencesPage, MobileAppCategoryCollectionReferenceRequest> {
 
     /**
      * The request builder for this collection of MobileAppCategory
@@ -30,6 +30,6 @@ public class MobileAppCategoryCollectionReferenceRequestBuilder extends BaseColl
      * @param requestOptions the options for this request
      */
     public MobileAppCategoryCollectionReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MobileAppCategoryReferenceRequestBuilder.class, MobileAppCategoryCollectionWithReferencesRequest.class);
+        super(requestUrl, client, requestOptions, MobileAppCategoryReferenceRequestBuilder.class, MobileAppCategoryCollectionReferenceRequest.class);
     }
 }

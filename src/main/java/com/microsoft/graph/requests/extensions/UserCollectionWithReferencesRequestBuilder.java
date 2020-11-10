@@ -34,7 +34,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the User Collection With References Request Builder.
  */
-public class UserCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<User, UserWithReferenceRequest, UserReferenceRequestBuilder, UserWithReferenceRequestBuilder, UserCollectionResponse, UserCollectionWithReferencesPage, UserCollectionWithReferencesRequest, UserCollectionReferenceRequestBuilder> {
+public class UserCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<User, UserWithReferenceRequest, UserReferenceRequestBuilder, UserWithReferenceRequestBuilder, UserCollectionResponse, UserCollectionWithReferencesPage, UserCollectionReferenceRequest, UserCollectionReferenceRequestBuilder> {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -44,6 +44,6 @@ public class UserCollectionWithReferencesRequestBuilder extends BaseCollectionWi
      * @param requestOptions the options for this request
      */
     public UserCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, UserReferenceRequestBuilder.class, UserCollectionWithReferencesRequest.class, UserCollectionReferenceRequestBuilder.class);
+        super(requestUrl, client, requestOptions, UserReferenceRequestBuilder.class, UserCollectionReferenceRequest.class, UserCollectionReferenceRequestBuilder.class);
     }
 }

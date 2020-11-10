@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Claims Mapping Policy Collection With References Request Builder.
  */
-public class ClaimsMappingPolicyCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<ClaimsMappingPolicy, ClaimsMappingPolicyWithReferenceRequest, ClaimsMappingPolicyReferenceRequestBuilder, ClaimsMappingPolicyWithReferenceRequestBuilder, ClaimsMappingPolicyCollectionResponse, ClaimsMappingPolicyCollectionWithReferencesPage, ClaimsMappingPolicyCollectionWithReferencesRequest, ClaimsMappingPolicyCollectionReferenceRequestBuilder> {
+public class ClaimsMappingPolicyCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<ClaimsMappingPolicy, ClaimsMappingPolicyWithReferenceRequest, ClaimsMappingPolicyReferenceRequestBuilder, ClaimsMappingPolicyWithReferenceRequestBuilder, ClaimsMappingPolicyCollectionResponse, ClaimsMappingPolicyCollectionWithReferencesPage, ClaimsMappingPolicyCollectionReferenceRequest, ClaimsMappingPolicyCollectionReferenceRequestBuilder> {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -30,6 +30,6 @@ public class ClaimsMappingPolicyCollectionWithReferencesRequestBuilder extends B
      * @param requestOptions the options for this request
      */
     public ClaimsMappingPolicyCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ClaimsMappingPolicyReferenceRequestBuilder.class, ClaimsMappingPolicyCollectionWithReferencesRequest.class, ClaimsMappingPolicyCollectionReferenceRequestBuilder.class);
+        super(requestUrl, client, requestOptions, ClaimsMappingPolicyReferenceRequestBuilder.class, ClaimsMappingPolicyCollectionReferenceRequest.class, ClaimsMappingPolicyCollectionReferenceRequestBuilder.class);
     }
 }

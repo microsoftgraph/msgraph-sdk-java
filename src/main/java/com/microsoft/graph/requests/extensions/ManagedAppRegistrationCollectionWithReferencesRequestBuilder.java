@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Managed App Registration Collection With References Request Builder.
  */
-public class ManagedAppRegistrationCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<ManagedAppRegistration, ManagedAppRegistrationWithReferenceRequest, ManagedAppRegistrationReferenceRequestBuilder, ManagedAppRegistrationWithReferenceRequestBuilder, ManagedAppRegistrationCollectionResponse, ManagedAppRegistrationCollectionWithReferencesPage, ManagedAppRegistrationCollectionWithReferencesRequest, ManagedAppRegistrationCollectionReferenceRequestBuilder> {
+public class ManagedAppRegistrationCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<ManagedAppRegistration, ManagedAppRegistrationWithReferenceRequest, ManagedAppRegistrationReferenceRequestBuilder, ManagedAppRegistrationWithReferenceRequestBuilder, ManagedAppRegistrationCollectionResponse, ManagedAppRegistrationCollectionWithReferencesPage, ManagedAppRegistrationCollectionReferenceRequest, ManagedAppRegistrationCollectionReferenceRequestBuilder> {
 
     /**
      * The request builder for this collection of User
@@ -30,6 +30,6 @@ public class ManagedAppRegistrationCollectionWithReferencesRequestBuilder extend
      * @param requestOptions the options for this request
      */
     public ManagedAppRegistrationCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedAppRegistrationReferenceRequestBuilder.class, ManagedAppRegistrationCollectionWithReferencesRequest.class, ManagedAppRegistrationCollectionReferenceRequestBuilder.class);
+        super(requestUrl, client, requestOptions, ManagedAppRegistrationReferenceRequestBuilder.class, ManagedAppRegistrationCollectionReferenceRequest.class, ManagedAppRegistrationCollectionReferenceRequestBuilder.class);
     }
 }

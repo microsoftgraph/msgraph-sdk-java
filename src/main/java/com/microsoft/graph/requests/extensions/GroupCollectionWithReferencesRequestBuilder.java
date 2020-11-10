@@ -21,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Group Collection With References Request Builder.
  */
-public class GroupCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<Group, GroupWithReferenceRequest, GroupReferenceRequestBuilder, GroupWithReferenceRequestBuilder, GroupCollectionResponse, GroupCollectionWithReferencesPage, GroupCollectionWithReferencesRequest, GroupCollectionReferenceRequestBuilder> {
+public class GroupCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<Group, GroupWithReferenceRequest, GroupReferenceRequestBuilder, GroupWithReferenceRequestBuilder, GroupCollectionResponse, GroupCollectionWithReferencesPage, GroupCollectionReferenceRequest, GroupCollectionReferenceRequestBuilder> {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -31,6 +31,6 @@ public class GroupCollectionWithReferencesRequestBuilder extends BaseCollectionW
      * @param requestOptions the options for this request
      */
     public GroupCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, GroupReferenceRequestBuilder.class, GroupCollectionWithReferencesRequest.class, GroupCollectionReferenceRequestBuilder.class);
+        super(requestUrl, client, requestOptions, GroupReferenceRequestBuilder.class, GroupCollectionReferenceRequest.class, GroupCollectionReferenceRequestBuilder.class);
     }
 }

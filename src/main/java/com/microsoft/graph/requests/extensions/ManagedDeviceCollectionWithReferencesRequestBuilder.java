@@ -21,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Managed Device Collection With References Request Builder.
  */
-public class ManagedDeviceCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<ManagedDevice, ManagedDeviceWithReferenceRequest, ManagedDeviceReferenceRequestBuilder, ManagedDeviceWithReferenceRequestBuilder, ManagedDeviceCollectionResponse, ManagedDeviceCollectionWithReferencesPage, ManagedDeviceCollectionWithReferencesRequest, ManagedDeviceCollectionReferenceRequestBuilder> {
+public class ManagedDeviceCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<ManagedDevice, ManagedDeviceWithReferenceRequest, ManagedDeviceReferenceRequestBuilder, ManagedDeviceWithReferenceRequestBuilder, ManagedDeviceCollectionResponse, ManagedDeviceCollectionWithReferencesPage, ManagedDeviceCollectionReferenceRequest, ManagedDeviceCollectionReferenceRequestBuilder> {
 
     /**
      * The request builder for this collection of DetectedApp
@@ -31,6 +31,6 @@ public class ManagedDeviceCollectionWithReferencesRequestBuilder extends BaseCol
      * @param requestOptions the options for this request
      */
     public ManagedDeviceCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedDeviceReferenceRequestBuilder.class, ManagedDeviceCollectionWithReferencesRequest.class, ManagedDeviceCollectionReferenceRequestBuilder.class);
+        super(requestUrl, client, requestOptions, ManagedDeviceReferenceRequestBuilder.class, ManagedDeviceCollectionReferenceRequest.class, ManagedDeviceCollectionReferenceRequestBuilder.class);
     }
 }
