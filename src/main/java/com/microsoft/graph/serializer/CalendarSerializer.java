@@ -118,7 +118,7 @@ public final class CalendarSerializer {
         }
 
         
-        final SimpleDateFormat dateFormat = new SimpleDateFormat(datePattern);
+        final SimpleDateFormat dateFormat = new SimpleDateFormat(datePattern, Locale.ROOT);
         dateFormat.setTimeZone(TimeZone.getDefault());
 
         final Date date = dateFormat.parse(modifiedStrVal);

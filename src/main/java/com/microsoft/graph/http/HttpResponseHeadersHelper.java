@@ -42,7 +42,7 @@ public class HttpResponseHeadersHelper {
 		Map<String, List<String>> headerFields = response.headers().toMultimap();
 		// Add the response code
 		List<String> list = new ArrayList<>();
-		list.add(String.format("%d", response.code()));
+		list.add(Integer.toString(response.code()));
 		headerFields.put("responseCode", list);
 		return headerFields;
 	}

@@ -34,6 +34,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
@@ -393,7 +394,7 @@ public class CoreHttpProvider implements IHttpProvider {
 					handler.configConnection(response);
 				}
 
-				logger.logDebug(String.format("Response code %d, %s",
+				logger.logDebug(String.format(Locale.ROOT, "Response code %d, %s",
 						response.code(),
 						response.message()));
 

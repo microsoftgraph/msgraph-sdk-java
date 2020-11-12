@@ -5,6 +5,7 @@
 package com.microsoft.graph.concurrency;
 
 import java.util.List;
+import java.util.Locale;
 
 import com.microsoft.graph.concurrency.ChunkedUploadResponseHandler;
 import com.microsoft.graph.core.ClientException;
@@ -81,7 +82,7 @@ public class ChunkedUploadRequest {
         };
         this.baseRequest.setHttpMethod(HttpMethod.PUT);
         this.baseRequest.addHeader(CONTENT_RANGE_HEADER_NAME,
-                String.format(
+                String.format(Locale.ROOT,
                         CONTENT_RANGE_FORMAT,
                         beginIndex,
                         beginIndex + chunkSize - 1,
