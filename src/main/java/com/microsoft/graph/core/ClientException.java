@@ -22,6 +22,9 @@
 
 package com.microsoft.graph.core;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 /**
  * An exception from the client.
  */
@@ -35,7 +38,7 @@ public class ClientException extends RuntimeException {
      * @param message the message to display
      * @param ex      the exception from
      */
-    public ClientException(final String message, final Throwable ex) {
+    public ClientException(@Nonnull final String message, @Nullable final Throwable ex) {
         super(message, ex);
     }
 }

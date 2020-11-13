@@ -39,6 +39,9 @@ import java.io.InputStream;
 import java.net.URL;
 import java.util.List;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 /**
  * A request for a binary stream
  *
@@ -59,10 +62,10 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      * @param options       the options for this request
      * @param responseClass the class for the response
      */
-    public BaseStreamRequest(final String requestUrl,
-                             final IBaseClient client,
-                             final List<? extends Option> options,
-                             final Class<T> responseClass) {
+    public BaseStreamRequest(@Nonnull final String requestUrl,
+                             @Nonnull final IBaseClient client,
+                             @Nullable final List<? extends Option> options,
+                             @Nonnull final Class<T> responseClass) {
         baseRequest = new BaseRequest(requestUrl, client, options, responseClass) {
         };
     }
@@ -72,7 +75,7 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      *
      * @param callback the callback when this request complements. The caller needs to close the stream
      */
-    protected void send(final ICallback<InputStream> callback) {
+    protected void send(@Nonnull final ICallback<InputStream> callback) {
         baseRequest.setHttpMethod(HttpMethod.GET);
         baseRequest.getClient().getHttpProvider().send(this, callback, InputStream.class, null);
     }
@@ -83,6 +86,7 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      * @return the stream that the caller needs to close
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
+    @Nullable
     protected InputStream send() throws ClientException {
         baseRequest.setHttpMethod(HttpMethod.GET);
         return baseRequest.getClient().getHttpProvider().send(this, InputStream.class, null);
@@ -95,7 +99,7 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      * @param callback     the callback when this request complements. The caller needs to close the stream
      */
     @SuppressWarnings("unchecked")
-    protected void send(final byte[] fileContents, final ICallback<? super T> callback) {
+    protected void send(@Nonnull final byte[] fileContents, @Nonnull final ICallback<? super T> callback) {
         baseRequest.setHttpMethod(HttpMethod.PUT);
         baseRequest.getClient().getHttpProvider().send(this, callback, (Class<T>) baseRequest.getResponseType(), fileContents);
     }
@@ -107,7 +111,8 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      * @return             the stream that the caller needs to close
      */
     @SuppressWarnings("unchecked")
-    protected T send(final byte[] fileContents) {
+    @Nullable
+    protected T send(@Nonnull final byte[] fileContents) {
         baseRequest.setHttpMethod(HttpMethod.PUT);
         return (T) baseRequest.getClient().getHttpProvider().send(this, baseRequest.getResponseType(), fileContents);
     }
@@ -118,6 +123,7 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      * @return the request URL
      */
     @Override
+    @Nullable
     public URL getRequestUrl() {
         return baseRequest.getRequestUrl();
     }
@@ -128,6 +134,7 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      * @return the HTTP method
      */
     @Override
+    @Nullable
     public HttpMethod getHttpMethod() {
         return baseRequest.getHttpMethod();
     }
@@ -139,7 +146,7 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      * @param value  the value of the header
      */
     @Override
-    public void addHeader(final String header, final String value) {
+    public void addHeader(@Nonnull final String header, @Nonnull final String value) {
         baseRequest.addHeader(header, value);
     }
 
@@ -169,6 +176,7 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      * @return the headers
      */
     @Override
+    @Nullable
     public List<HeaderOption> getHeaders() {
         return baseRequest.getHeaders();
     }
@@ -179,6 +187,7 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      * @return the query options for this request
      */
     @Override
+    @Nullable
     public List<Option> getOptions() {
         return baseRequest.getOptions();
     }
@@ -206,7 +215,7 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      * 
      * @param shouldRedirect Callback called before doing a redirect
      */
-    public void setShouldRedirect(IShouldRedirect shouldRedirect) {
+    public void setShouldRedirect(@Nonnull final IShouldRedirect shouldRedirect) {
     	baseRequest.setShouldRedirect(shouldRedirect);
     }
     
@@ -215,6 +224,7 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      * 
      * @return Callback which is called before redirect
      */
+    @Nullable
     public IShouldRedirect getShouldRedirect() {
     	return baseRequest.getShouldRedirect();
     }
@@ -224,7 +234,7 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      * 
      * @param shouldretry The callback called before retry
      */
-    public void setShouldRetry(IShouldRetry shouldretry) {
+    public void setShouldRetry(@Nonnull final IShouldRetry shouldretry) {
     	baseRequest.setShouldRetry(shouldretry);
     }
     
@@ -233,6 +243,7 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      * 
      * @return Callback called before retry
      */
+    @Nullable
     public IShouldRetry getShouldRetry() {
     	return baseRequest.getShouldRetry();
     }
@@ -279,7 +290,8 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      * @return the current request
      */
     @Override
-    public IHttpRequest withHttpMethod(final HttpMethod httpMethod) {
+    @Nullable
+    public IHttpRequest withHttpMethod(@Nonnull final HttpMethod httpMethod) {
         baseRequest.setHttpMethod(httpMethod);
         return this;
     }
@@ -289,6 +301,7 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      * @return the Request object to be executed
      */
     @Override
+    @Nullable
     public Request getHttpRequest() throws ClientException {
         return baseRequest.getHttpRequest();
     }
@@ -300,7 +313,8 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      * @return the Request object to be executed
      */
     @Override
-    public <requestBodyType> Request getHttpRequest(final requestBodyType serializedObject) throws ClientException {
+    @Nullable
+    public <requestBodyType> Request getHttpRequest(@Nonnull final requestBodyType serializedObject) throws ClientException {
         return baseRequest.getHttpRequest(serializedObject);
     }
 
@@ -313,7 +327,8 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      * @return the Request object to be executed
      */
     @Override
-    public <requestBodyType, responseType> Request getHttpRequest(final requestBodyType serializedObject, final IProgressCallback<responseType> progress) throws ClientException {
+    @Nullable
+    public <requestBodyType, responseType> Request getHttpRequest(@Nonnull final requestBodyType serializedObject, @Nonnull final IProgressCallback<responseType> progress) throws ClientException {
         return baseRequest.getHttpRequest(serializedObject, progress);
     }
 }

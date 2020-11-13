@@ -39,6 +39,9 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 import com.google.common.annotations.VisibleForTesting;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
@@ -104,10 +107,10 @@ public class CoreHttpProvider implements IHttpProvider {
 	 * @param logger                 the logger for diagnostic information
 	 * @param httpClient             the client to send http requests with
 	 */
-	public CoreHttpProvider(final ISerializer serializer,
-			final IExecutors executors,
-			final ILogger logger,
-			final OkHttpClient httpClient) {
+	public CoreHttpProvider(@Nonnull final ISerializer serializer,
+			@Nonnull final IExecutors executors,
+			@Nonnull final ILogger logger,
+			@Nullable final OkHttpClient httpClient) {
 		if (httpClient == null) {
 			throw new NullPointerException("httpClient");
 		} else if(serializer == null) {
@@ -133,11 +136,11 @@ public class CoreHttpProvider implements IHttpProvider {
 	 * @param httpClient             the http client to execute the requests with
 	 * @param connectionConfig       the connection configuration
 	 */
-	public CoreHttpProvider(final ISerializer serializer,
-			final IExecutors executors,
-			final ILogger logger,
-			final OkHttpClient httpClient,
-			final IConnectionConfig connectionConfig) {
+	public CoreHttpProvider(@Nonnull final ISerializer serializer,
+			@Nonnull final IExecutors executors,
+			@Nonnull final ILogger logger,
+			@Nullable final OkHttpClient httpClient,
+			@Nonnull final IConnectionConfig connectionConfig) {
 		this(serializer, executors, logger, httpClient);
 		if(connectionConfig == null) {
 			throw new NullPointerException("connectionConfig");
@@ -151,6 +154,7 @@ public class CoreHttpProvider implements IHttpProvider {
 	 * @return the serializer for this provider
 	 */
 	@Override
+	@Nullable
 	public ISerializer getSerializer() {
 		return serializer;
 	}
@@ -166,10 +170,11 @@ public class CoreHttpProvider implements IHttpProvider {
 	 * @param <Body>       the type of the object to send to the service in the body of the request
 	 */
 	@Override
-	public <Result, Body> void send(final IHttpRequest request,
-			final ICallback<? super Result> callback,
-			final Class<Result> resultClass,
-			final Body serializable) {
+	@Nullable
+	public <Result, Body> void send(@Nonnull final IHttpRequest request,
+			@Nonnull final ICallback<? super Result> callback,
+			@Nonnull final Class<Result> resultClass,
+			@Nullable final Body serializable) {
 		final IProgressCallback<? super Result> progressCallback;
 		if (callback instanceof IProgressCallback) {
 			progressCallback = (IProgressCallback<? super Result>) callback;
@@ -206,9 +211,10 @@ public class CoreHttpProvider implements IHttpProvider {
 	 * @throws ClientException an exception occurs if the request was unable to complete for any reason
 	 */
 	@Override
-	public <Result, Body> Result send(final IHttpRequest request,
-			final Class<Result> resultClass,
-			final Body serializable)
+	@Nullable
+	public <Result, Body> Result send(@Nonnull final IHttpRequest request,
+			@Nonnull final Class<Result> resultClass,
+			@Nullable final Body serializable)
 					throws ClientException {
 		return send(request, resultClass, serializable, null);
 	}
@@ -226,10 +232,11 @@ public class CoreHttpProvider implements IHttpProvider {
 	 * @return                  the result from the request
 	 * @throws ClientException this exception occurs if the request was unable to complete for any reason
 	 */
-	public <Result, Body, DeserializeType> Result send(final IHttpRequest request,
-			final Class<Result> resultClass,
-			final Body serializable,
-			final IStatefulResponseHandler<Result, DeserializeType> handler) throws ClientException {
+	@Nullable
+	public <Result, Body, DeserializeType> Result send(@Nonnull final IHttpRequest request,
+			@Nonnull final Class<Result> resultClass,
+			@Nullable final Body serializable,
+			@Nonnull final IStatefulResponseHandler<Result, DeserializeType> handler) throws ClientException {
 		return sendRequestInternal(request, resultClass, serializable, null, handler);
 	}
 	/**
@@ -244,10 +251,11 @@ public class CoreHttpProvider implements IHttpProvider {
 	 * @return                  the result from the request
 	 * @throws ClientException an exception occurs if the request was unable to complete for any reason
 	 */
-	public <Result, Body> Request getHttpRequest(final IHttpRequest request,
-			final Class<Result> resultClass,
-			final Body serializable,
-			final IProgressCallback<? super Result> progress) throws ClientException {
+	@Nullable
+	public <Result, Body> Request getHttpRequest(@Nonnull final IHttpRequest request,
+			@Nonnull final Class<Result> resultClass,
+			@Nullable final Body serializable,
+			@Nullable final IProgressCallback<? super Result> progress) throws ClientException {
 		final int defaultBufferSize = 4096;
 
 		final URL requestUrl = request.getRequestUrl();
@@ -539,7 +547,8 @@ public class CoreHttpProvider implements IHttpProvider {
 	 * @param input the response body stream
 	 * @return      the string result
 	 */
-	public static String streamToString(final InputStream input) {
+	@Nullable
+	public static String streamToString(@Nonnull final InputStream input) {
 		final String httpStreamEncoding = "UTF-8";
 		final String endOfFile = "\\A";
 		try (final Scanner scanner = new Scanner(input, httpStreamEncoding)) {
@@ -566,11 +575,13 @@ public class CoreHttpProvider implements IHttpProvider {
 	}
 
 	@VisibleForTesting
+	@Nullable
 	public ILogger getLogger() {
 		return logger;
 	}
 
 	@VisibleForTesting
+	@Nullable
 	public IExecutors getExecutors() {
 		return executors;
 	}
@@ -581,6 +592,7 @@ public class CoreHttpProvider implements IHttpProvider {
 	 *
 	 * @return Connection configuration to be used for timeout values
 	 */
+	@Nullable
 	public IConnectionConfig getConnectionConfigInternal() {
 		return connectionConfig;
 	}

@@ -51,6 +51,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 /**
  * An HTTP request
  */
@@ -139,10 +142,10 @@ public abstract class BaseRequest implements IHttpRequest {
      * @param options       the options for this request
      * @param responseClass the class for the response
      */
-    public BaseRequest(final String requestUrl,
-                       final IBaseClient client,
-                       final List<? extends Option> options,
-                       final Class<?> responseClass) {
+    public BaseRequest(@Nonnull final String requestUrl,
+                       @Nonnull final IBaseClient client,
+                       @Nullable final List<? extends Option> options,
+                       @Nonnull final Class<?> responseClass) {
         this.requestUrl = requestUrl;
         this.client = client;
         this.responseClass = responseClass;
@@ -176,6 +179,7 @@ public abstract class BaseRequest implements IHttpRequest {
      * @return the request URL
      */
     @Override
+    @Nullable
     public URL getRequestUrl() {
         String requestUrl = addFunctionParameters();
         final Builder uriBuilder = HttpUrl.parse(requestUrl).newBuilder();
@@ -201,6 +205,7 @@ public abstract class BaseRequest implements IHttpRequest {
      * @return the Request object to be executed
      */
     @Override
+    @Nullable
     public Request getHttpRequest() throws ClientException {
         return getHttpRequest(null);
     }
@@ -212,7 +217,8 @@ public abstract class BaseRequest implements IHttpRequest {
      * @return the Request object to be executed
      */
     @Override
-    public <requestBodyType> Request getHttpRequest(final requestBodyType serializedObject) throws ClientException {
+    @Nullable
+    public <requestBodyType> Request getHttpRequest(@Nonnull final requestBodyType serializedObject) throws ClientException {
         return getHttpRequest(serializedObject, null);
     }
 
@@ -226,7 +232,8 @@ public abstract class BaseRequest implements IHttpRequest {
      */
     @SuppressWarnings("unchecked")
     @Override
-    public <requestBodyType, responseType> Request getHttpRequest(final requestBodyType serializedObject, final IProgressCallback<responseType> progress) throws ClientException {
+    @Nullable
+    public <requestBodyType, responseType> Request getHttpRequest(@Nonnull final requestBodyType serializedObject, @Nonnull final IProgressCallback<responseType> progress) throws ClientException {
         return client.getHttpProvider().getHttpRequest(this, (Class<responseType>) responseClass, serializedObject, progress);
     }
 
@@ -266,6 +273,7 @@ public abstract class BaseRequest implements IHttpRequest {
      * @return the HTTP method
      */
     @Override
+    @Nullable
     public HttpMethod getHttpMethod() {
         return method;
     }
@@ -276,6 +284,7 @@ public abstract class BaseRequest implements IHttpRequest {
      * @return the headers
      */
     @Override
+    @Nullable
     public List<HeaderOption> getHeaders() {
         return headersOptions;
     }
@@ -287,7 +296,7 @@ public abstract class BaseRequest implements IHttpRequest {
      * @param value  the value of the header
      */
     @Override
-    public void addHeader(final String header, final String value) {
+    public void addHeader(@Nonnull final String header, @Nonnull final String value) {
         headersOptions.add(new HeaderOption(header, value));
     }
 
@@ -321,9 +330,10 @@ public abstract class BaseRequest implements IHttpRequest {
      * @param <T2>             the type of the serialized body
      */
     @SuppressWarnings("unchecked")
-    protected <T1, T2> void send(final HttpMethod method,
-                                 final ICallback<T1> callback,
-                                 final T2 serializedObject) {
+    @Nullable
+    protected <T1, T2> void send(@Nonnull final HttpMethod method,
+                                 @Nonnull final ICallback<T1> callback,
+                                 @Nullable final T2 serializedObject) {
         this.method = method;
         client.getHttpProvider().send(this, callback, (Class<T1>) responseClass, serializedObject);
     }
@@ -339,8 +349,9 @@ public abstract class BaseRequest implements IHttpRequest {
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     @SuppressWarnings("unchecked")
-    protected <T1, T2> T1 send(final HttpMethod method,
-                               final T2 serializedObject) throws ClientException {
+    @Nullable
+    protected <T1, T2> T1 send(@Nonnull final HttpMethod method,
+                               @Nullable final T2 serializedObject) throws ClientException {
         this.method = method;
         return (T1) client.getHttpProvider().send(this, responseClass, serializedObject);
     }
@@ -350,6 +361,7 @@ public abstract class BaseRequest implements IHttpRequest {
      *
      * @return the query options for this request
      */
+    @Nullable
     public List<QueryOption> getQueryOptions() {
         return queryOptions;
     }
@@ -359,6 +371,7 @@ public abstract class BaseRequest implements IHttpRequest {
      *
      * @return the function options for this request
      */
+    @Nullable
     public List<FunctionOption> getFunctionOptions() {
         return functionOptions;
     }
@@ -368,6 +381,7 @@ public abstract class BaseRequest implements IHttpRequest {
      *
      * @return the full list of options for this request
      */
+    @Nullable
     public List<Option> getOptions() {
         final LinkedList<Option> list = new LinkedList<>();
         list.addAll(headersOptions);
@@ -381,7 +395,7 @@ public abstract class BaseRequest implements IHttpRequest {
      *
      * @param option the query option to add
      */
-    public void addQueryOption(final QueryOption option) {
+    public void addQueryOption(@Nonnull final QueryOption option) {
         getQueryOptions().add(option);
     }
 
@@ -390,7 +404,7 @@ public abstract class BaseRequest implements IHttpRequest {
      *
      * @param option the function option to add
      */
-    public void addFunctionOption(final FunctionOption option) {
+    public void addFunctionOption(@Nonnull final FunctionOption option) {
         getFunctionOptions().add(option);
     }
 
@@ -399,7 +413,7 @@ public abstract class BaseRequest implements IHttpRequest {
      *
      * @param httpMethod the HTTP method
      */
-    public void setHttpMethod(final HttpMethod httpMethod) {
+    public void setHttpMethod(@Nonnull final HttpMethod httpMethod) {
         method = httpMethod;
     }
 
@@ -409,7 +423,8 @@ public abstract class BaseRequest implements IHttpRequest {
      * @param httpMethod the HTTP method
      * @return the current request
      */
-    public IHttpRequest withHttpMethod(final HttpMethod httpMethod) {
+    @Nullable
+    public IHttpRequest withHttpMethod(@Nonnull final HttpMethod httpMethod) {
         method = httpMethod;
         return this;
     }
@@ -419,6 +434,7 @@ public abstract class BaseRequest implements IHttpRequest {
      *
      * @return the client
      */
+    @Nonnull
     public IBaseClient getClient() {
         return client;
     }
@@ -428,6 +444,7 @@ public abstract class BaseRequest implements IHttpRequest {
      *
      * @return the response type
      */
+    @Nullable
 	public Class<?> getResponseType() {
         return responseClass;
     }
@@ -455,7 +472,7 @@ public abstract class BaseRequest implements IHttpRequest {
      * 
      * @param shouldRedirect Callback called before doing a redirect
      */
-    public void setShouldRedirect(IShouldRedirect shouldRedirect) {
+    public void setShouldRedirect(@Nonnull IShouldRedirect shouldRedirect) {
     	this.shouldRedirect = shouldRedirect;
     }
     
@@ -464,6 +481,7 @@ public abstract class BaseRequest implements IHttpRequest {
      * 
      * @return Callback which is called before redirect
      */
+    @Nullable
     public IShouldRedirect getShouldRedirect() {
     	return shouldRedirect;
     }
@@ -473,7 +491,7 @@ public abstract class BaseRequest implements IHttpRequest {
      * 
      * @param shouldretry The callback called before retry
      */
-    public void setShouldRetry(IShouldRetry shouldretry) {
+    public void setShouldRetry(@Nonnull IShouldRetry shouldretry) {
     	this.shouldRetry = shouldretry;
     }
     
@@ -482,6 +500,7 @@ public abstract class BaseRequest implements IHttpRequest {
      * 
      * @return Callback called before retry
      */
+    @Nullable
     public IShouldRetry getShouldRetry() {
     	return shouldRetry;
     }

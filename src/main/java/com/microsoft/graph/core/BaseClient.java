@@ -27,6 +27,9 @@ import com.microsoft.graph.http.IHttpProvider;
 import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.serializer.ISerializer;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 /**
  * A client that communications with an OData service
  */
@@ -57,6 +60,7 @@ public abstract class BaseClient implements IBaseClient {
      * @return The executors
      */
     @Override
+    @Nullable
     public IExecutors getExecutors() {
         return executors;
     }
@@ -67,6 +71,7 @@ public abstract class BaseClient implements IBaseClient {
      * @return The HTTP provider
      */
     @Override
+    @Nullable
     public IHttpProvider getHttpProvider() {
         return httpProvider;
     }
@@ -76,6 +81,7 @@ public abstract class BaseClient implements IBaseClient {
      * 
      * @return The logger
      */
+    @Nullable
     public ILogger getLogger() {
         return logger;
     }
@@ -86,6 +92,7 @@ public abstract class BaseClient implements IBaseClient {
      * @return The serializer
      */
     @Override
+    @Nullable
     public ISerializer getSerializer() {
         return serializer;
     }
@@ -113,7 +120,7 @@ public abstract class BaseClient implements IBaseClient {
      * 
      * @param logger The logger
      */
-    protected void setLogger(final ILogger logger) {
+    protected void setLogger(@Nonnull final ILogger logger) {
         this.logger = logger;
     }
 
@@ -122,7 +129,7 @@ public abstract class BaseClient implements IBaseClient {
      * 
      * @param executors The executors
      */
-    protected void setExecutors(final IExecutors executors) {
+    protected void setExecutors(@Nonnull final IExecutors executors) {
         this.executors = executors;
     }
 
@@ -131,7 +138,7 @@ public abstract class BaseClient implements IBaseClient {
      * 
      * @param httpProvider The HTTP provider
      */
-    protected void setHttpProvider(final IHttpProvider httpProvider) {
+    protected void setHttpProvider(@Nonnull final IHttpProvider httpProvider) {
         this.httpProvider = httpProvider;
     }
 
@@ -140,7 +147,7 @@ public abstract class BaseClient implements IBaseClient {
      * 
      * @param serializer The serializer
      */
-    public void setSerializer(final ISerializer serializer) {
+    public void setSerializer(@Nonnull final ISerializer serializer) {
         this.serializer = serializer;
     }
     

@@ -27,6 +27,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Map;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 import com.microsoft.graph.http.CoreHttpProvider;
 import com.microsoft.graph.core.Constants;
 import com.microsoft.graph.http.GraphServiceException;
@@ -61,7 +64,7 @@ public class ChunkedUploadResponseHandler<UploadType>
 	 *
 	 * @param uploadType the expected upload item type
 	 */
-	public ChunkedUploadResponseHandler(final Class<UploadType> uploadType) {
+	public ChunkedUploadResponseHandler(@Nonnull final Class<UploadType> uploadType) {
 		this.deserializeTypeClass = uploadType;
 	}
 
@@ -71,7 +74,7 @@ public class ChunkedUploadResponseHandler<UploadType>
 	 * @param response The response
 	 */
 	@Override
-	public void configConnection(final Response response) {
+	public void configConnection(@Nonnull final Response response) {
 		return;
 	}
 	
@@ -86,11 +89,12 @@ public class ChunkedUploadResponseHandler<UploadType>
 	 * @throws Exception an exception occurs if the request was unable to complete for any reason
 	 */
 	@Override
+	@Nullable
 	public ChunkedUploadResult<UploadType> generateResult(
-			final IHttpRequest request,
-			final Response response,
-			final ISerializer serializer,
-			final ILogger logger) throws Exception {
+			@Nonnull final IHttpRequest request,
+			@Nonnull final Response response,
+			@Nonnull final ISerializer serializer,
+			@Nonnull final ILogger logger) throws Exception {
 		if (response.code() >= HttpResponseCode.HTTP_CLIENT_ERROR) {
 			logger.logDebug("Receiving error during upload, see detail on result error");
 

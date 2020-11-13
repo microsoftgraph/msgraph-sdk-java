@@ -26,6 +26,9 @@ import com.google.common.io.BaseEncoding;
 
 import java.text.ParseException;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 /**
  * Serializer for byte[]s
  */
@@ -44,7 +47,8 @@ public final class ByteArraySerializer {
      * @return                the string encoded bytes
      * @throws ParseException if there is any problem processing the value
      */
-    public static byte[] deserialize(final String strVal) throws ParseException {
+    @Nullable
+    public static byte[] deserialize(@Nonnull final String strVal) throws ParseException {
     	return BaseEncoding.base64().decode(strVal);
     }
 
@@ -54,7 +58,8 @@ public final class ByteArraySerializer {
      * @param src the source array
      * @return    the string
      */
-    public static String serialize(final byte[] src) {
+    @Nullable
+    public static String serialize(@Nonnull final byte[] src) {
         return BaseEncoding.base64().encode(src);
     }
 }

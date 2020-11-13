@@ -29,6 +29,9 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.TimeZone;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 /**
  * Serializes and deserializes a string
  * 
@@ -50,7 +53,8 @@ public final class CalendarSerializer {
      * @return       the calendar
      * @throws java.text.ParseException the parse exception
      */
-    public static Calendar deserialize(final String strVal) throws ParseException {
+    @Nullable
+    public static Calendar deserialize(@Nonnull final String strVal) throws ParseException {
         // Change Z to adapt the string to a format
         // that can be parsed in Java
         final boolean hasZ = strVal.indexOf('Z') != -1;
@@ -134,7 +138,8 @@ public final class CalendarSerializer {
      * @param src the source calendar
      * @return    the string
      */
-    public static String serialize(final Calendar src) {
+    @Nonnull
+    public static String serialize(@Nonnull final Calendar src) {
         final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'.'SSS'Z'", Locale.ROOT);
         dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
         return dateFormat.format(src.getTime());

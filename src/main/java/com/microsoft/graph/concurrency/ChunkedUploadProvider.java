@@ -36,6 +36,9 @@ import java.io.InputStream;
 import java.security.InvalidParameterException;
 import java.util.List;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 /**
  * ChunkedUpload service provider
  *
@@ -103,11 +106,11 @@ public class ChunkedUploadProvider<UploadType> {
      * @param streamSize      the stream size
      * @param uploadTypeClass the upload type class
      */
-    public ChunkedUploadProvider(final UploadSession uploadSession,
-                                 final IGraphServiceClient client,
-                                 final InputStream inputStream,
+    public ChunkedUploadProvider(@Nonnull final UploadSession uploadSession,
+                                 @Nonnull final IGraphServiceClient client,
+                                 @Nonnull final InputStream inputStream,
                                  final long streamSize,
-                                 final Class<UploadType> uploadTypeClass) {
+                                 @Nonnull final Class<UploadType> uploadTypeClass) {
         if (uploadSession == null) {
             throw new InvalidParameterException("Upload session is null.");
         }
@@ -141,9 +144,9 @@ public class ChunkedUploadProvider<UploadType> {
      *                 size and [1] should be the maxRetry for upload retry.
      * @throws IOException the IO exception that occurred during upload
      */
-    public void upload(final List<Option> options,
-                       final IProgressCallback<UploadType> callback,
-                       final int... configs)
+    public void upload(@Nullable final List<Option> options,
+                       @Nullable final IProgressCallback<UploadType> callback,
+                       @Nullable final int... configs)
             throws IOException {
         int chunkSize = DEFAULT_CHUNK_SIZE;
 
@@ -208,8 +211,8 @@ public class ChunkedUploadProvider<UploadType> {
      *                 size and [1] should be the maxRetry for upload retry.
      * @throws IOException the IO exception that occurred during upload
      */
-    public void upload(final IProgressCallback<UploadType> callback,
-    		final int...configs)
+    public void upload(@Nullable final IProgressCallback<UploadType> callback,
+    		@Nullable final int...configs)
     				throws IOException {
     	upload(null,  callback, configs);
 

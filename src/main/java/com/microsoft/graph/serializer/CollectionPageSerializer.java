@@ -28,6 +28,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -73,7 +76,8 @@ public class CollectionPageSerializer {
 	 * @param <T2> the collection request builder interface type
      * @return       JsonElement of CollectionPage
      */
-	public static <T1, T2 extends IRequestBuilder> JsonElement serialize(final BaseCollectionPage<T1, T2> src, final ILogger logger) {
+	@Nullable
+	public static <T1, T2 extends IRequestBuilder> JsonElement serialize(@Nonnull final BaseCollectionPage<T1, T2> src, @Nonnull final ILogger logger) {
 		if(src == null) {
 			return null;
 		}
@@ -103,7 +107,8 @@ public class CollectionPageSerializer {
      * @return    the deserialized CollectionPage
      */
 	@SuppressWarnings("unchecked")
-	public static <T1, T2 extends IRequestBuilder> BaseCollectionPage<T1, T2> deserialize(final JsonElement json, Type typeOfT, final ILogger logger) throws JsonParseException {
+	@Nullable
+	public static <T1, T2 extends IRequestBuilder> BaseCollectionPage<T1, T2> deserialize(@Nonnull final JsonElement json, @Nonnull Type typeOfT, @Nonnull final ILogger logger) throws JsonParseException {
 		if (json == null || !json.isJsonArray()) {
 			return null;
 		}
