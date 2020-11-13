@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.WorkbookChartAxes;
 import com.microsoft.graph.requests.extensions.WorkbookChartAxisRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -28,7 +30,7 @@ public class WorkbookChartAxesRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartAxesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartAxesRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,7 +40,8 @@ public class WorkbookChartAxesRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the WorkbookChartAxesRequest instance
      */
-    public WorkbookChartAxesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WorkbookChartAxesRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,7 +51,8 @@ public class WorkbookChartAxesRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the WorkbookChartAxesRequest instance
      */
-    public WorkbookChartAxesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WorkbookChartAxesRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookChartAxesRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,6 +63,7 @@ public class WorkbookChartAxesRequestBuilder extends BaseRequestBuilder {
      *
      * @return the WorkbookChartAxisRequestBuilder instance
      */
+    @Nonnull
     public WorkbookChartAxisRequestBuilder categoryAxis() {
         return new WorkbookChartAxisRequestBuilder(getRequestUrlWithAdditionalSegment("categoryAxis"), getClient(), null);
     }
@@ -68,6 +73,7 @@ public class WorkbookChartAxesRequestBuilder extends BaseRequestBuilder {
      *
      * @return the WorkbookChartAxisRequestBuilder instance
      */
+    @Nonnull
     public WorkbookChartAxisRequestBuilder seriesAxis() {
         return new WorkbookChartAxisRequestBuilder(getRequestUrlWithAdditionalSegment("seriesAxis"), getClient(), null);
     }
@@ -77,6 +83,7 @@ public class WorkbookChartAxesRequestBuilder extends BaseRequestBuilder {
      *
      * @return the WorkbookChartAxisRequestBuilder instance
      */
+    @Nonnull
     public WorkbookChartAxisRequestBuilder valueAxis() {
         return new WorkbookChartAxisRequestBuilder(getRequestUrlWithAdditionalSegment("valueAxis"), getClient(), null);
     }

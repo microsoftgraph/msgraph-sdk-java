@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Endpoint;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class EndpointRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EndpointRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EndpointRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Endpoint.class);
     }
 
@@ -37,7 +39,7 @@ public class EndpointRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Endpoint> callback) {
+    public void get(@Nonnull final ICallback<? super Endpoint> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class EndpointRequest extends BaseRequest {
      * @return the Endpoint from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Endpoint get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class EndpointRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Endpoint> callback) {
+    public void delete(@Nonnull final ICallback<? super Endpoint> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class EndpointRequest extends BaseRequest {
      * @param sourceEndpoint the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Endpoint sourceEndpoint, final ICallback<? super Endpoint> callback) {
+    public void patch(@Nonnull final Endpoint sourceEndpoint, @Nonnull final ICallback<? super Endpoint> callback) {
         send(HttpMethod.PATCH, callback, sourceEndpoint);
     }
 
@@ -86,7 +89,8 @@ public class EndpointRequest extends BaseRequest {
      * @return the updated Endpoint
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Endpoint patch(final Endpoint sourceEndpoint) throws ClientException {
+    @Nullable
+    public Endpoint patch(@Nonnull final Endpoint sourceEndpoint) throws ClientException {
         return send(HttpMethod.PATCH, sourceEndpoint);
     }
 
@@ -96,7 +100,7 @@ public class EndpointRequest extends BaseRequest {
      * @param newEndpoint the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Endpoint newEndpoint, final ICallback<? super Endpoint> callback) {
+    public void post(@Nonnull final Endpoint newEndpoint, @Nonnull final ICallback<? super Endpoint> callback) {
         send(HttpMethod.POST, callback, newEndpoint);
     }
 
@@ -107,7 +111,8 @@ public class EndpointRequest extends BaseRequest {
      * @return the created Endpoint
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Endpoint post(final Endpoint newEndpoint) throws ClientException {
+    @Nullable
+    public Endpoint post(@Nonnull final Endpoint newEndpoint) throws ClientException {
         return send(HttpMethod.POST, newEndpoint);
     }
 
@@ -117,7 +122,7 @@ public class EndpointRequest extends BaseRequest {
      * @param newEndpoint the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Endpoint newEndpoint, final ICallback<? super Endpoint> callback) {
+    public void put(@Nonnull final Endpoint newEndpoint, @Nonnull final ICallback<? super Endpoint> callback) {
         send(HttpMethod.PUT, callback, newEndpoint);
     }
 
@@ -128,7 +133,8 @@ public class EndpointRequest extends BaseRequest {
      * @return the created Endpoint
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Endpoint put(final Endpoint newEndpoint) throws ClientException {
+    @Nullable
+    public Endpoint put(@Nonnull final Endpoint newEndpoint) throws ClientException {
         return send(HttpMethod.PUT, newEndpoint);
     }
 
@@ -138,7 +144,8 @@ public class EndpointRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public EndpointRequest select(final String value) {
+     @Nonnull
+     public EndpointRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (EndpointRequest)this;
      }
@@ -149,7 +156,8 @@ public class EndpointRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public EndpointRequest expand(final String value) {
+     @Nonnull
+     public EndpointRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (EndpointRequest)this;
      }

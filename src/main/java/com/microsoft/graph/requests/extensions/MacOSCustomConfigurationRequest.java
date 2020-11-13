@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MacOSCustomConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class MacOSCustomConfigurationRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MacOSCustomConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MacOSCustomConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MacOSCustomConfiguration.class);
     }
 
@@ -37,7 +39,7 @@ public class MacOSCustomConfigurationRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MacOSCustomConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super MacOSCustomConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class MacOSCustomConfigurationRequest extends BaseRequest {
      * @return the MacOSCustomConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MacOSCustomConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class MacOSCustomConfigurationRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MacOSCustomConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super MacOSCustomConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class MacOSCustomConfigurationRequest extends BaseRequest {
      * @param sourceMacOSCustomConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MacOSCustomConfiguration sourceMacOSCustomConfiguration, final ICallback<? super MacOSCustomConfiguration> callback) {
+    public void patch(@Nonnull final MacOSCustomConfiguration sourceMacOSCustomConfiguration, @Nonnull final ICallback<? super MacOSCustomConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceMacOSCustomConfiguration);
     }
 
@@ -86,7 +89,8 @@ public class MacOSCustomConfigurationRequest extends BaseRequest {
      * @return the updated MacOSCustomConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSCustomConfiguration patch(final MacOSCustomConfiguration sourceMacOSCustomConfiguration) throws ClientException {
+    @Nullable
+    public MacOSCustomConfiguration patch(@Nonnull final MacOSCustomConfiguration sourceMacOSCustomConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceMacOSCustomConfiguration);
     }
 
@@ -96,7 +100,7 @@ public class MacOSCustomConfigurationRequest extends BaseRequest {
      * @param newMacOSCustomConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MacOSCustomConfiguration newMacOSCustomConfiguration, final ICallback<? super MacOSCustomConfiguration> callback) {
+    public void post(@Nonnull final MacOSCustomConfiguration newMacOSCustomConfiguration, @Nonnull final ICallback<? super MacOSCustomConfiguration> callback) {
         send(HttpMethod.POST, callback, newMacOSCustomConfiguration);
     }
 
@@ -107,7 +111,8 @@ public class MacOSCustomConfigurationRequest extends BaseRequest {
      * @return the created MacOSCustomConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSCustomConfiguration post(final MacOSCustomConfiguration newMacOSCustomConfiguration) throws ClientException {
+    @Nullable
+    public MacOSCustomConfiguration post(@Nonnull final MacOSCustomConfiguration newMacOSCustomConfiguration) throws ClientException {
         return send(HttpMethod.POST, newMacOSCustomConfiguration);
     }
 
@@ -117,7 +122,7 @@ public class MacOSCustomConfigurationRequest extends BaseRequest {
      * @param newMacOSCustomConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MacOSCustomConfiguration newMacOSCustomConfiguration, final ICallback<? super MacOSCustomConfiguration> callback) {
+    public void put(@Nonnull final MacOSCustomConfiguration newMacOSCustomConfiguration, @Nonnull final ICallback<? super MacOSCustomConfiguration> callback) {
         send(HttpMethod.PUT, callback, newMacOSCustomConfiguration);
     }
 
@@ -128,7 +133,8 @@ public class MacOSCustomConfigurationRequest extends BaseRequest {
      * @return the created MacOSCustomConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSCustomConfiguration put(final MacOSCustomConfiguration newMacOSCustomConfiguration) throws ClientException {
+    @Nullable
+    public MacOSCustomConfiguration put(@Nonnull final MacOSCustomConfiguration newMacOSCustomConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newMacOSCustomConfiguration);
     }
 
@@ -138,7 +144,8 @@ public class MacOSCustomConfigurationRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public MacOSCustomConfigurationRequest select(final String value) {
+     @Nonnull
+     public MacOSCustomConfigurationRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (MacOSCustomConfigurationRequest)this;
      }
@@ -149,7 +156,8 @@ public class MacOSCustomConfigurationRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public MacOSCustomConfigurationRequest expand(final String value) {
+     @Nonnull
+     public MacOSCustomConfigurationRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (MacOSCustomConfigurationRequest)this;
      }

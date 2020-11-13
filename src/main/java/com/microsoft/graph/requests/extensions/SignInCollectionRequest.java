@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.AuditLogRoot;
 import com.microsoft.graph.models.extensions.SignIn;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class SignInCollectionRequest extends BaseCollectionRequest<SignInCollect
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SignInCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SignInCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SignInCollectionResponse.class, SignInCollectionPage.class);
     }
 
-    public void get(final ICallback<? super SignInCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super SignInCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class SignInCollectionRequest extends BaseCollectionRequest<SignInCollect
         });
     }
 
+    @Nonnull
     public SignInCollectionPage get() throws ClientException {
         final SignInCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final SignIn newSignIn, final ICallback<? super SignIn> callback) {
+    public void post(@Nonnull final SignIn newSignIn, @Nonnull final ICallback<? super SignIn> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SignInRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newSignIn, callback);
     }
 
-    public SignIn post(final SignIn newSignIn) throws ClientException {
+    @Nonnull
+    public SignIn post(@Nonnull final SignIn newSignIn) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SignInRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class SignInCollectionRequest extends BaseCollectionRequest<SignInCollect
      * @param value the expand clause
      * @return the updated request
      */
-    public SignInCollectionRequest expand(final String value) {
+    @Nonnull
+    public SignInCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (SignInCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class SignInCollectionRequest extends BaseCollectionRequest<SignInCollect
      * @param value the filter clause
      * @return the updated request
      */
-    public SignInCollectionRequest filter(final String value) {
+    @Nonnull
+    public SignInCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (SignInCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class SignInCollectionRequest extends BaseCollectionRequest<SignInCollect
      * @param value the order by clause
      * @return the updated request
      */
-    public SignInCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public SignInCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SignInCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class SignInCollectionRequest extends BaseCollectionRequest<SignInCollect
      * @param value the select clause
      * @return the updated request
      */
-    public SignInCollectionRequest select(final String value) {
+    @Nonnull
+    public SignInCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (SignInCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class SignInCollectionRequest extends BaseCollectionRequest<SignInCollect
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public SignInCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (SignInCollectionRequest)this;
@@ -133,6 +142,7 @@ public class SignInCollectionRequest extends BaseCollectionRequest<SignInCollect
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public SignInCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (SignInCollectionRequest)this;
@@ -144,11 +154,13 @@ public class SignInCollectionRequest extends BaseCollectionRequest<SignInCollect
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public SignInCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public SignInCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (SignInCollectionRequest)this;
     }
-    public SignInCollectionPage buildFromResponse(final SignInCollectionResponse response) {
+    @Nonnull
+    public SignInCollectionPage buildFromResponse(@Nonnull final SignInCollectionResponse response) {
         final SignInCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new SignInCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ChatMessage;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.TeamGetAllMessagesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamGetAllMessagesCollectionPage;
@@ -33,7 +35,7 @@ public class TeamGetAllMessagesCollectionPage extends BaseCollectionPage<ChatMes
      * @param response The serialized TeamGetAllMessagesCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public TeamGetAllMessagesCollectionPage(final TeamGetAllMessagesCollectionResponse response, final TeamGetAllMessagesCollectionRequestBuilder builder) {
+    public TeamGetAllMessagesCollectionPage(@Nonnull final TeamGetAllMessagesCollectionResponse response, @Nonnull final TeamGetAllMessagesCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

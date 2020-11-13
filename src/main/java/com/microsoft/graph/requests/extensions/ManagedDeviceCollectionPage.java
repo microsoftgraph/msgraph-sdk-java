@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionResponse;
@@ -22,7 +24,7 @@ public class ManagedDeviceCollectionPage extends BaseCollectionPage<ManagedDevic
      * @param response the serialized ManagedDeviceCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ManagedDeviceCollectionPage(final ManagedDeviceCollectionResponse response, final ManagedDeviceCollectionRequestBuilder builder) {
+    public ManagedDeviceCollectionPage(@Nonnull final ManagedDeviceCollectionResponse response, @Nonnull final ManagedDeviceCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

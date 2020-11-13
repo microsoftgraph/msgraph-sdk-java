@@ -14,6 +14,8 @@ import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder
 import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
@@ -35,15 +37,16 @@ public class DeviceWithReferenceRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Device.class);
     }
 
-    public void post(final Device newDevice, final IJsonBackedObject payload, final ICallback<? super Device> callback) {
+    public void post(@Nonnull final Device newDevice, @Nullable final IJsonBackedObject payload, @Nonnull final ICallback<? super Device> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
-    public Device post(final Device newDevice, final IJsonBackedObject payload) throws ClientException {
+    @Nullable
+    public Device post(@Nonnull final Device newDevice, @Nullable final IJsonBackedObject payload) throws ClientException {
         IJsonBackedObject response = send(HttpMethod.POST, payload);
         if (response != null){
             return newDevice;
@@ -51,15 +54,16 @@ public class DeviceWithReferenceRequest extends BaseRequest {
         return null;
     }
 
-    public void get(final ICallback<? super Device> callback) {
+    public void get(@Nonnull final ICallback<? super Device> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
+    @Nullable
     public Device get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<? super Device> callback) {
+	public void delete(@Nonnull final ICallback<? super Device> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -67,11 +71,12 @@ public class DeviceWithReferenceRequest extends BaseRequest {
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final Device sourceDevice, final ICallback<? super Device> callback) {
+	public void patch(@Nonnull final Device sourceDevice, @Nonnull final ICallback<? super Device> callback) {
 		send(HttpMethod.PATCH, callback, sourceDevice);
 	}
 
-	public Device patch(final Device sourceDevice) throws ClientException {
+    @Nullable
+	public Device patch(@Nonnull final Device sourceDevice) throws ClientException {
 		return send(HttpMethod.PATCH, sourceDevice);
 	}
 
@@ -82,7 +87,8 @@ public class DeviceWithReferenceRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public DeviceWithReferenceRequest select(final String value) {
+    @Nonnull
+    public DeviceWithReferenceRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DeviceWithReferenceRequest)this;
     }
@@ -93,7 +99,8 @@ public class DeviceWithReferenceRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public DeviceWithReferenceRequest expand(final String value) {
+    @Nonnull
+    public DeviceWithReferenceRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DeviceWithReferenceRequest)this;
     }

@@ -14,6 +14,8 @@ import com.microsoft.graph.models.extensions.CopyNotebookModel;
 import com.microsoft.graph.models.extensions.RecentNotebook;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -38,11 +40,11 @@ public class NotebookCollectionRequest extends BaseCollectionRequest<NotebookCol
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public NotebookCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public NotebookCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, NotebookCollectionResponse.class, NotebookCollectionPage.class);
     }
 
-    public void get(final ICallback<? super NotebookCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super NotebookCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -56,19 +58,21 @@ public class NotebookCollectionRequest extends BaseCollectionRequest<NotebookCol
         });
     }
 
+    @Nonnull
     public NotebookCollectionPage get() throws ClientException {
         final NotebookCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final Notebook newNotebook, final ICallback<? super Notebook> callback) {
+    public void post(@Nonnull final Notebook newNotebook, @Nonnull final ICallback<? super Notebook> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new NotebookRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newNotebook, callback);
     }
 
-    public Notebook post(final Notebook newNotebook) throws ClientException {
+    @Nonnull
+    public Notebook post(@Nonnull final Notebook newNotebook) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new NotebookRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -81,7 +85,8 @@ public class NotebookCollectionRequest extends BaseCollectionRequest<NotebookCol
      * @param value the expand clause
      * @return the updated request
      */
-    public NotebookCollectionRequest expand(final String value) {
+    @Nonnull
+    public NotebookCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (NotebookCollectionRequest)this;
     }
@@ -92,7 +97,8 @@ public class NotebookCollectionRequest extends BaseCollectionRequest<NotebookCol
      * @param value the filter clause
      * @return the updated request
      */
-    public NotebookCollectionRequest filter(final String value) {
+    @Nonnull
+    public NotebookCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (NotebookCollectionRequest)this;
     }
@@ -103,7 +109,8 @@ public class NotebookCollectionRequest extends BaseCollectionRequest<NotebookCol
      * @param value the order by clause
      * @return the updated request
      */
-    public NotebookCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public NotebookCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (NotebookCollectionRequest)this;
     }
@@ -114,7 +121,8 @@ public class NotebookCollectionRequest extends BaseCollectionRequest<NotebookCol
      * @param value the select clause
      * @return the updated request
      */
-    public NotebookCollectionRequest select(final String value) {
+    @Nonnull
+    public NotebookCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (NotebookCollectionRequest)this;
     }
@@ -125,6 +133,7 @@ public class NotebookCollectionRequest extends BaseCollectionRequest<NotebookCol
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public NotebookCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (NotebookCollectionRequest)this;
@@ -136,6 +145,7 @@ public class NotebookCollectionRequest extends BaseCollectionRequest<NotebookCol
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public NotebookCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (NotebookCollectionRequest)this;
@@ -147,11 +157,13 @@ public class NotebookCollectionRequest extends BaseCollectionRequest<NotebookCol
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public NotebookCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public NotebookCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (NotebookCollectionRequest)this;
     }
-    public NotebookCollectionPage buildFromResponse(final NotebookCollectionResponse response) {
+    @Nonnull
+    public NotebookCollectionPage buildFromResponse(@Nonnull final NotebookCollectionResponse response) {
         final NotebookCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new NotebookCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

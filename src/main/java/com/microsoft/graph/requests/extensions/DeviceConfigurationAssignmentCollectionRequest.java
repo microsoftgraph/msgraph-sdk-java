@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceConfiguration;
 import com.microsoft.graph.models.extensions.DeviceConfigurationAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class DeviceConfigurationAssignmentCollectionRequest extends BaseCollecti
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceConfigurationAssignmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceConfigurationAssignmentCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceConfigurationAssignmentCollectionResponse.class, DeviceConfigurationAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<? super DeviceConfigurationAssignmentCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceConfigurationAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class DeviceConfigurationAssignmentCollectionRequest extends BaseCollecti
         });
     }
 
+    @Nonnull
     public DeviceConfigurationAssignmentCollectionPage get() throws ClientException {
         final DeviceConfigurationAssignmentCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceConfigurationAssignment newDeviceConfigurationAssignment, final ICallback<? super DeviceConfigurationAssignment> callback) {
+    public void post(@Nonnull final DeviceConfigurationAssignment newDeviceConfigurationAssignment, @Nonnull final ICallback<? super DeviceConfigurationAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceConfigurationAssignment, callback);
     }
 
-    public DeviceConfigurationAssignment post(final DeviceConfigurationAssignment newDeviceConfigurationAssignment) throws ClientException {
+    @Nonnull
+    public DeviceConfigurationAssignment post(@Nonnull final DeviceConfigurationAssignment newDeviceConfigurationAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class DeviceConfigurationAssignmentCollectionRequest extends BaseCollecti
      * @param value the expand clause
      * @return the updated request
      */
-    public DeviceConfigurationAssignmentCollectionRequest expand(final String value) {
+    @Nonnull
+    public DeviceConfigurationAssignmentCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DeviceConfigurationAssignmentCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class DeviceConfigurationAssignmentCollectionRequest extends BaseCollecti
      * @param value the filter clause
      * @return the updated request
      */
-    public DeviceConfigurationAssignmentCollectionRequest filter(final String value) {
+    @Nonnull
+    public DeviceConfigurationAssignmentCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DeviceConfigurationAssignmentCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class DeviceConfigurationAssignmentCollectionRequest extends BaseCollecti
      * @param value the order by clause
      * @return the updated request
      */
-    public DeviceConfigurationAssignmentCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DeviceConfigurationAssignmentCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceConfigurationAssignmentCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class DeviceConfigurationAssignmentCollectionRequest extends BaseCollecti
      * @param value the select clause
      * @return the updated request
      */
-    public DeviceConfigurationAssignmentCollectionRequest select(final String value) {
+    @Nonnull
+    public DeviceConfigurationAssignmentCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DeviceConfigurationAssignmentCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class DeviceConfigurationAssignmentCollectionRequest extends BaseCollecti
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DeviceConfigurationAssignmentCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (DeviceConfigurationAssignmentCollectionRequest)this;
@@ -133,6 +142,7 @@ public class DeviceConfigurationAssignmentCollectionRequest extends BaseCollecti
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public DeviceConfigurationAssignmentCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (DeviceConfigurationAssignmentCollectionRequest)this;
@@ -144,11 +154,13 @@ public class DeviceConfigurationAssignmentCollectionRequest extends BaseCollecti
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public DeviceConfigurationAssignmentCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public DeviceConfigurationAssignmentCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (DeviceConfigurationAssignmentCollectionRequest)this;
     }
-    public DeviceConfigurationAssignmentCollectionPage buildFromResponse(final DeviceConfigurationAssignmentCollectionResponse response) {
+    @Nonnull
+    public DeviceConfigurationAssignmentCollectionPage buildFromResponse(@Nonnull final DeviceConfigurationAssignmentCollectionResponse response) {
         final DeviceConfigurationAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new DeviceConfigurationAssignmentCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

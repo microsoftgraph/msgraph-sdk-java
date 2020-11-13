@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.NotificationMessageTemplate;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.NotificationMessageTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.NotificationMessageTemplateRequestBuilder;
@@ -32,7 +34,7 @@ public class NotificationMessageTemplateCollectionRequestBuilder extends BaseReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public NotificationMessageTemplateCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public NotificationMessageTemplateCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,7 +44,8 @@ public class NotificationMessageTemplateCollectionRequestBuilder extends BaseReq
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public NotificationMessageTemplateCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public NotificationMessageTemplateCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +55,13 @@ public class NotificationMessageTemplateCollectionRequestBuilder extends BaseReq
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public NotificationMessageTemplateCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public NotificationMessageTemplateCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new NotificationMessageTemplateCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public NotificationMessageTemplateRequestBuilder byId(final String id) {
+    @Nonnull
+    public NotificationMessageTemplateRequestBuilder byId(@Nonnull final String id) {
         return new NotificationMessageTemplateRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

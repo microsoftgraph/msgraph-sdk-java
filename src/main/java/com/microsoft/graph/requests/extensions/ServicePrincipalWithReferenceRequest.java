@@ -28,6 +28,8 @@ import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionRequ
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
@@ -49,15 +51,16 @@ public class ServicePrincipalWithReferenceRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ServicePrincipalWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ServicePrincipalWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ServicePrincipal.class);
     }
 
-    public void post(final ServicePrincipal newServicePrincipal, final IJsonBackedObject payload, final ICallback<? super ServicePrincipal> callback) {
+    public void post(@Nonnull final ServicePrincipal newServicePrincipal, @Nullable final IJsonBackedObject payload, @Nonnull final ICallback<? super ServicePrincipal> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
-    public ServicePrincipal post(final ServicePrincipal newServicePrincipal, final IJsonBackedObject payload) throws ClientException {
+    @Nullable
+    public ServicePrincipal post(@Nonnull final ServicePrincipal newServicePrincipal, @Nullable final IJsonBackedObject payload) throws ClientException {
         IJsonBackedObject response = send(HttpMethod.POST, payload);
         if (response != null){
             return newServicePrincipal;
@@ -65,15 +68,16 @@ public class ServicePrincipalWithReferenceRequest extends BaseRequest {
         return null;
     }
 
-    public void get(final ICallback<? super ServicePrincipal> callback) {
+    public void get(@Nonnull final ICallback<? super ServicePrincipal> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
+    @Nullable
     public ServicePrincipal get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<? super ServicePrincipal> callback) {
+	public void delete(@Nonnull final ICallback<? super ServicePrincipal> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -81,11 +85,12 @@ public class ServicePrincipalWithReferenceRequest extends BaseRequest {
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final ServicePrincipal sourceServicePrincipal, final ICallback<? super ServicePrincipal> callback) {
+	public void patch(@Nonnull final ServicePrincipal sourceServicePrincipal, @Nonnull final ICallback<? super ServicePrincipal> callback) {
 		send(HttpMethod.PATCH, callback, sourceServicePrincipal);
 	}
 
-	public ServicePrincipal patch(final ServicePrincipal sourceServicePrincipal) throws ClientException {
+    @Nullable
+	public ServicePrincipal patch(@Nonnull final ServicePrincipal sourceServicePrincipal) throws ClientException {
 		return send(HttpMethod.PATCH, sourceServicePrincipal);
 	}
 
@@ -96,7 +101,8 @@ public class ServicePrincipalWithReferenceRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public ServicePrincipalWithReferenceRequest select(final String value) {
+    @Nonnull
+    public ServicePrincipalWithReferenceRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ServicePrincipalWithReferenceRequest)this;
     }
@@ -107,7 +113,8 @@ public class ServicePrincipalWithReferenceRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public ServicePrincipalWithReferenceRequest expand(final String value) {
+    @Nonnull
+    public ServicePrincipalWithReferenceRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ServicePrincipalWithReferenceRequest)this;
     }

@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.WorkbookTableSort;
 import com.microsoft.graph.models.extensions.WorkbookSortField;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,7 +31,7 @@ public class WorkbookTableSortRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookTableSortRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableSortRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookTableSort.class);
     }
 
@@ -38,7 +40,7 @@ public class WorkbookTableSortRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookTableSort> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookTableSort> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class WorkbookTableSortRequest extends BaseRequest {
      * @return the WorkbookTableSort from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WorkbookTableSort get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class WorkbookTableSortRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookTableSort> callback) {
+    public void delete(@Nonnull final ICallback<? super WorkbookTableSort> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class WorkbookTableSortRequest extends BaseRequest {
      * @param sourceWorkbookTableSort the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookTableSort sourceWorkbookTableSort, final ICallback<? super WorkbookTableSort> callback) {
+    public void patch(@Nonnull final WorkbookTableSort sourceWorkbookTableSort, @Nonnull final ICallback<? super WorkbookTableSort> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookTableSort);
     }
 
@@ -87,7 +90,8 @@ public class WorkbookTableSortRequest extends BaseRequest {
      * @return the updated WorkbookTableSort
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookTableSort patch(final WorkbookTableSort sourceWorkbookTableSort) throws ClientException {
+    @Nullable
+    public WorkbookTableSort patch(@Nonnull final WorkbookTableSort sourceWorkbookTableSort) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookTableSort);
     }
 
@@ -97,7 +101,7 @@ public class WorkbookTableSortRequest extends BaseRequest {
      * @param newWorkbookTableSort the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookTableSort newWorkbookTableSort, final ICallback<? super WorkbookTableSort> callback) {
+    public void post(@Nonnull final WorkbookTableSort newWorkbookTableSort, @Nonnull final ICallback<? super WorkbookTableSort> callback) {
         send(HttpMethod.POST, callback, newWorkbookTableSort);
     }
 
@@ -108,7 +112,8 @@ public class WorkbookTableSortRequest extends BaseRequest {
      * @return the created WorkbookTableSort
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookTableSort post(final WorkbookTableSort newWorkbookTableSort) throws ClientException {
+    @Nullable
+    public WorkbookTableSort post(@Nonnull final WorkbookTableSort newWorkbookTableSort) throws ClientException {
         return send(HttpMethod.POST, newWorkbookTableSort);
     }
 
@@ -118,7 +123,7 @@ public class WorkbookTableSortRequest extends BaseRequest {
      * @param newWorkbookTableSort the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookTableSort newWorkbookTableSort, final ICallback<? super WorkbookTableSort> callback) {
+    public void put(@Nonnull final WorkbookTableSort newWorkbookTableSort, @Nonnull final ICallback<? super WorkbookTableSort> callback) {
         send(HttpMethod.PUT, callback, newWorkbookTableSort);
     }
 
@@ -129,7 +134,8 @@ public class WorkbookTableSortRequest extends BaseRequest {
      * @return the created WorkbookTableSort
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookTableSort put(final WorkbookTableSort newWorkbookTableSort) throws ClientException {
+    @Nullable
+    public WorkbookTableSort put(@Nonnull final WorkbookTableSort newWorkbookTableSort) throws ClientException {
         return send(HttpMethod.PUT, newWorkbookTableSort);
     }
 
@@ -139,7 +145,8 @@ public class WorkbookTableSortRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public WorkbookTableSortRequest select(final String value) {
+     @Nonnull
+     public WorkbookTableSortRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (WorkbookTableSortRequest)this;
      }
@@ -150,7 +157,8 @@ public class WorkbookTableSortRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public WorkbookTableSortRequest expand(final String value) {
+     @Nonnull
+     public WorkbookTableSortRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (WorkbookTableSortRequest)this;
      }

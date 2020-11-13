@@ -7,6 +7,8 @@ import com.microsoft.graph.models.extensions.UserFindMeetingTimesBody;
 import com.microsoft.graph.models.extensions.MeetingTimeSuggestionsResult;
 import com.microsoft.graph.requests.extensions.UserFindMeetingTimesRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,15 +31,16 @@ public class UserFindMeetingTimesRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserFindMeetingTimesRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserFindMeetingTimesRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MeetingTimeSuggestionsResult.class);
         body = new UserFindMeetingTimesBody();
     }
 
-    public void post(final ICallback<? super MeetingTimeSuggestionsResult> callback) {
+    public void post(@Nonnull final ICallback<? super MeetingTimeSuggestionsResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    @Nullable
     public MeetingTimeSuggestionsResult post() throws ClientException {
         return send(HttpMethod.POST, body);
     }
@@ -48,7 +51,8 @@ public class UserFindMeetingTimesRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public UserFindMeetingTimesRequest select(final String value) {
+    @Nonnull
+    public UserFindMeetingTimesRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (UserFindMeetingTimesRequest)this;
     }
@@ -59,6 +63,7 @@ public class UserFindMeetingTimesRequest extends BaseRequest {
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public UserFindMeetingTimesRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (UserFindMeetingTimesRequest)this;
@@ -70,7 +75,8 @@ public class UserFindMeetingTimesRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public UserFindMeetingTimesRequest expand(final String value) {
+    @Nonnull
+    public UserFindMeetingTimesRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (UserFindMeetingTimesRequest)this;
     }

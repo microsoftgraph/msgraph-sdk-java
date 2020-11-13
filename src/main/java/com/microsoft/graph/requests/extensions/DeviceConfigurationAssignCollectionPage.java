@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceConfigurationAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignCollectionPage;
@@ -33,7 +35,7 @@ public class DeviceConfigurationAssignCollectionPage extends BaseCollectionPage<
      * @param response The serialized DeviceConfigurationAssignCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public DeviceConfigurationAssignCollectionPage(final DeviceConfigurationAssignCollectionResponse response, final DeviceConfigurationAssignCollectionRequestBuilder builder) {
+    public DeviceConfigurationAssignCollectionPage(@Nonnull final DeviceConfigurationAssignCollectionResponse response, @Nonnull final DeviceConfigurationAssignCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

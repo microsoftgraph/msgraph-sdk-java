@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MailFolder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,11 +36,11 @@ public class MailFolderCollectionRequest extends BaseCollectionRequest<MailFolde
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MailFolderCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MailFolderCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MailFolderCollectionResponse.class, MailFolderCollectionPage.class);
     }
 
-    public void get(final ICallback<? super MailFolderCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super MailFolderCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -52,19 +54,21 @@ public class MailFolderCollectionRequest extends BaseCollectionRequest<MailFolde
         });
     }
 
+    @Nonnull
     public MailFolderCollectionPage get() throws ClientException {
         final MailFolderCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final MailFolder newMailFolder, final ICallback<? super MailFolder> callback) {
+    public void post(@Nonnull final MailFolder newMailFolder, @Nonnull final ICallback<? super MailFolder> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MailFolderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newMailFolder, callback);
     }
 
-    public MailFolder post(final MailFolder newMailFolder) throws ClientException {
+    @Nonnull
+    public MailFolder post(@Nonnull final MailFolder newMailFolder) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MailFolderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -77,7 +81,8 @@ public class MailFolderCollectionRequest extends BaseCollectionRequest<MailFolde
      * @param value the expand clause
      * @return the updated request
      */
-    public MailFolderCollectionRequest expand(final String value) {
+    @Nonnull
+    public MailFolderCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (MailFolderCollectionRequest)this;
     }
@@ -88,7 +93,8 @@ public class MailFolderCollectionRequest extends BaseCollectionRequest<MailFolde
      * @param value the filter clause
      * @return the updated request
      */
-    public MailFolderCollectionRequest filter(final String value) {
+    @Nonnull
+    public MailFolderCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (MailFolderCollectionRequest)this;
     }
@@ -99,7 +105,8 @@ public class MailFolderCollectionRequest extends BaseCollectionRequest<MailFolde
      * @param value the order by clause
      * @return the updated request
      */
-    public MailFolderCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public MailFolderCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (MailFolderCollectionRequest)this;
     }
@@ -110,7 +117,8 @@ public class MailFolderCollectionRequest extends BaseCollectionRequest<MailFolde
      * @param value the select clause
      * @return the updated request
      */
-    public MailFolderCollectionRequest select(final String value) {
+    @Nonnull
+    public MailFolderCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (MailFolderCollectionRequest)this;
     }
@@ -121,6 +129,7 @@ public class MailFolderCollectionRequest extends BaseCollectionRequest<MailFolde
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public MailFolderCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (MailFolderCollectionRequest)this;
@@ -132,6 +141,7 @@ public class MailFolderCollectionRequest extends BaseCollectionRequest<MailFolde
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public MailFolderCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (MailFolderCollectionRequest)this;
@@ -143,11 +153,13 @@ public class MailFolderCollectionRequest extends BaseCollectionRequest<MailFolde
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public MailFolderCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public MailFolderCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (MailFolderCollectionRequest)this;
     }
-    public MailFolderCollectionPage buildFromResponse(final MailFolderCollectionResponse response) {
+    @Nonnull
+    public MailFolderCollectionPage buildFromResponse(@Nonnull final MailFolderCollectionResponse response) {
         final MailFolderCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new MailFolderCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

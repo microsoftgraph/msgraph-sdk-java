@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TeamsTemplate;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
@@ -31,15 +33,16 @@ public class TeamsTemplateWithReferenceRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamsTemplateWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsTemplateWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TeamsTemplate.class);
     }
 
-    public void post(final TeamsTemplate newTeamsTemplate, final IJsonBackedObject payload, final ICallback<? super TeamsTemplate> callback) {
+    public void post(@Nonnull final TeamsTemplate newTeamsTemplate, @Nullable final IJsonBackedObject payload, @Nonnull final ICallback<? super TeamsTemplate> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
-    public TeamsTemplate post(final TeamsTemplate newTeamsTemplate, final IJsonBackedObject payload) throws ClientException {
+    @Nullable
+    public TeamsTemplate post(@Nonnull final TeamsTemplate newTeamsTemplate, @Nullable final IJsonBackedObject payload) throws ClientException {
         IJsonBackedObject response = send(HttpMethod.POST, payload);
         if (response != null){
             return newTeamsTemplate;
@@ -47,15 +50,16 @@ public class TeamsTemplateWithReferenceRequest extends BaseRequest {
         return null;
     }
 
-    public void get(final ICallback<? super TeamsTemplate> callback) {
+    public void get(@Nonnull final ICallback<? super TeamsTemplate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
+    @Nullable
     public TeamsTemplate get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<? super TeamsTemplate> callback) {
+	public void delete(@Nonnull final ICallback<? super TeamsTemplate> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,11 +67,12 @@ public class TeamsTemplateWithReferenceRequest extends BaseRequest {
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final TeamsTemplate sourceTeamsTemplate, final ICallback<? super TeamsTemplate> callback) {
+	public void patch(@Nonnull final TeamsTemplate sourceTeamsTemplate, @Nonnull final ICallback<? super TeamsTemplate> callback) {
 		send(HttpMethod.PATCH, callback, sourceTeamsTemplate);
 	}
 
-	public TeamsTemplate patch(final TeamsTemplate sourceTeamsTemplate) throws ClientException {
+    @Nullable
+	public TeamsTemplate patch(@Nonnull final TeamsTemplate sourceTeamsTemplate) throws ClientException {
 		return send(HttpMethod.PATCH, sourceTeamsTemplate);
 	}
 
@@ -78,7 +83,8 @@ public class TeamsTemplateWithReferenceRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public TeamsTemplateWithReferenceRequest select(final String value) {
+    @Nonnull
+    public TeamsTemplateWithReferenceRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (TeamsTemplateWithReferenceRequest)this;
     }
@@ -89,7 +95,8 @@ public class TeamsTemplateWithReferenceRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public TeamsTemplateWithReferenceRequest expand(final String value) {
+    @Nonnull
+    public TeamsTemplateWithReferenceRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (TeamsTemplateWithReferenceRequest)this;
     }

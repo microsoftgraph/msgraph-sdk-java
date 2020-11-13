@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationOrganization;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,10 +31,10 @@ public class EducationOrganizationRequest extends BaseRequest {
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public EducationOrganizationRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends EducationOrganization> responseClass) {
+    public EducationOrganizationRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends EducationOrganization> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -43,7 +45,7 @@ public class EducationOrganizationRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationOrganizationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationOrganizationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EducationOrganization.class);
     }
 
@@ -52,7 +54,7 @@ public class EducationOrganizationRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super EducationOrganization> callback) {
+    public void get(@Nonnull final ICallback<? super EducationOrganization> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -62,6 +64,7 @@ public class EducationOrganizationRequest extends BaseRequest {
      * @return the EducationOrganization from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public EducationOrganization get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -71,7 +74,7 @@ public class EducationOrganizationRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super EducationOrganization> callback) {
+    public void delete(@Nonnull final ICallback<? super EducationOrganization> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +93,7 @@ public class EducationOrganizationRequest extends BaseRequest {
      * @param sourceEducationOrganization the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EducationOrganization sourceEducationOrganization, final ICallback<? super EducationOrganization> callback) {
+    public void patch(@Nonnull final EducationOrganization sourceEducationOrganization, @Nonnull final ICallback<? super EducationOrganization> callback) {
         send(HttpMethod.PATCH, callback, sourceEducationOrganization);
     }
 
@@ -101,7 +104,8 @@ public class EducationOrganizationRequest extends BaseRequest {
      * @return the updated EducationOrganization
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EducationOrganization patch(final EducationOrganization sourceEducationOrganization) throws ClientException {
+    @Nullable
+    public EducationOrganization patch(@Nonnull final EducationOrganization sourceEducationOrganization) throws ClientException {
         return send(HttpMethod.PATCH, sourceEducationOrganization);
     }
 
@@ -111,7 +115,7 @@ public class EducationOrganizationRequest extends BaseRequest {
      * @param newEducationOrganization the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EducationOrganization newEducationOrganization, final ICallback<? super EducationOrganization> callback) {
+    public void post(@Nonnull final EducationOrganization newEducationOrganization, @Nonnull final ICallback<? super EducationOrganization> callback) {
         send(HttpMethod.POST, callback, newEducationOrganization);
     }
 
@@ -122,7 +126,8 @@ public class EducationOrganizationRequest extends BaseRequest {
      * @return the created EducationOrganization
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EducationOrganization post(final EducationOrganization newEducationOrganization) throws ClientException {
+    @Nullable
+    public EducationOrganization post(@Nonnull final EducationOrganization newEducationOrganization) throws ClientException {
         return send(HttpMethod.POST, newEducationOrganization);
     }
 
@@ -132,7 +137,7 @@ public class EducationOrganizationRequest extends BaseRequest {
      * @param newEducationOrganization the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EducationOrganization newEducationOrganization, final ICallback<? super EducationOrganization> callback) {
+    public void put(@Nonnull final EducationOrganization newEducationOrganization, @Nonnull final ICallback<? super EducationOrganization> callback) {
         send(HttpMethod.PUT, callback, newEducationOrganization);
     }
 
@@ -143,7 +148,8 @@ public class EducationOrganizationRequest extends BaseRequest {
      * @return the created EducationOrganization
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EducationOrganization put(final EducationOrganization newEducationOrganization) throws ClientException {
+    @Nullable
+    public EducationOrganization put(@Nonnull final EducationOrganization newEducationOrganization) throws ClientException {
         return send(HttpMethod.PUT, newEducationOrganization);
     }
 
@@ -153,7 +159,8 @@ public class EducationOrganizationRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public EducationOrganizationRequest select(final String value) {
+     @Nonnull
+     public EducationOrganizationRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (EducationOrganizationRequest)this;
      }
@@ -164,7 +171,8 @@ public class EducationOrganizationRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public EducationOrganizationRequest expand(final String value) {
+     @Nonnull
+     public EducationOrganizationRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (EducationOrganizationRequest)this;
      }

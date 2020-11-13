@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.AuditLogRoot;
 import com.microsoft.graph.models.extensions.DirectoryAudit;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<Direc
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DirectoryAuditCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryAuditCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DirectoryAuditCollectionResponse.class, DirectoryAuditCollectionPage.class);
     }
 
-    public void get(final ICallback<? super DirectoryAuditCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super DirectoryAuditCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<Direc
         });
     }
 
+    @Nonnull
     public DirectoryAuditCollectionPage get() throws ClientException {
         final DirectoryAuditCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final DirectoryAudit newDirectoryAudit, final ICallback<? super DirectoryAudit> callback) {
+    public void post(@Nonnull final DirectoryAudit newDirectoryAudit, @Nonnull final ICallback<? super DirectoryAudit> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DirectoryAuditRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newDirectoryAudit, callback);
     }
 
-    public DirectoryAudit post(final DirectoryAudit newDirectoryAudit) throws ClientException {
+    @Nonnull
+    public DirectoryAudit post(@Nonnull final DirectoryAudit newDirectoryAudit) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DirectoryAuditRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<Direc
      * @param value the expand clause
      * @return the updated request
      */
-    public DirectoryAuditCollectionRequest expand(final String value) {
+    @Nonnull
+    public DirectoryAuditCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DirectoryAuditCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<Direc
      * @param value the filter clause
      * @return the updated request
      */
-    public DirectoryAuditCollectionRequest filter(final String value) {
+    @Nonnull
+    public DirectoryAuditCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DirectoryAuditCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<Direc
      * @param value the order by clause
      * @return the updated request
      */
-    public DirectoryAuditCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DirectoryAuditCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DirectoryAuditCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<Direc
      * @param value the select clause
      * @return the updated request
      */
-    public DirectoryAuditCollectionRequest select(final String value) {
+    @Nonnull
+    public DirectoryAuditCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DirectoryAuditCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<Direc
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DirectoryAuditCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (DirectoryAuditCollectionRequest)this;
@@ -133,6 +142,7 @@ public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<Direc
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public DirectoryAuditCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (DirectoryAuditCollectionRequest)this;
@@ -144,11 +154,13 @@ public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<Direc
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public DirectoryAuditCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public DirectoryAuditCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (DirectoryAuditCollectionRequest)this;
     }
-    public DirectoryAuditCollectionPage buildFromResponse(final DirectoryAuditCollectionResponse response) {
+    @Nonnull
+    public DirectoryAuditCollectionPage buildFromResponse(@Nonnull final DirectoryAuditCollectionResponse response) {
         final DirectoryAuditCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new DirectoryAuditCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

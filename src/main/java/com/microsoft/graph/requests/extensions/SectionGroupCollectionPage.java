@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.SectionGroup;
 import com.microsoft.graph.requests.extensions.SectionGroupCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.SectionGroupCollectionPage;
 import com.microsoft.graph.requests.extensions.SectionGroupCollectionResponse;
@@ -22,7 +24,7 @@ public class SectionGroupCollectionPage extends BaseCollectionPage<SectionGroup,
      * @param response the serialized SectionGroupCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public SectionGroupCollectionPage(final SectionGroupCollectionResponse response, final SectionGroupCollectionRequestBuilder builder) {
+    public SectionGroupCollectionPage(@Nonnull final SectionGroupCollectionResponse response, @Nonnull final SectionGroupCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.TargetedManagedAppConfiguration;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationCollectionPage;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationCollectionResponse;
@@ -22,7 +24,7 @@ public class TargetedManagedAppConfigurationCollectionPage extends BaseCollectio
      * @param response the serialized TargetedManagedAppConfigurationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TargetedManagedAppConfigurationCollectionPage(final TargetedManagedAppConfigurationCollectionResponse response, final TargetedManagedAppConfigurationCollectionRequestBuilder builder) {
+    public TargetedManagedAppConfigurationCollectionPage(@Nonnull final TargetedManagedAppConfigurationCollectionResponse response, @Nonnull final TargetedManagedAppConfigurationCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.InformationProtection;
 import com.microsoft.graph.models.extensions.ThreatAssessmentRequest;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class ThreatAssessmentRequestCollectionRequest extends BaseCollectionRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ThreatAssessmentRequestCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ThreatAssessmentRequestCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ThreatAssessmentRequestCollectionResponse.class, ThreatAssessmentRequestCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ThreatAssessmentRequestCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super ThreatAssessmentRequestCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class ThreatAssessmentRequestCollectionRequest extends BaseCollectionRequ
         });
     }
 
+    @Nonnull
     public ThreatAssessmentRequestCollectionPage get() throws ClientException {
         final ThreatAssessmentRequestCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final ThreatAssessmentRequest newThreatAssessmentRequest, final ICallback<? super ThreatAssessmentRequest> callback) {
+    public void post(@Nonnull final ThreatAssessmentRequest newThreatAssessmentRequest, @Nonnull final ICallback<? super ThreatAssessmentRequest> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ThreatAssessmentRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newThreatAssessmentRequest, callback);
     }
 
-    public ThreatAssessmentRequest post(final ThreatAssessmentRequest newThreatAssessmentRequest) throws ClientException {
+    @Nonnull
+    public ThreatAssessmentRequest post(@Nonnull final ThreatAssessmentRequest newThreatAssessmentRequest) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ThreatAssessmentRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class ThreatAssessmentRequestCollectionRequest extends BaseCollectionRequ
      * @param value the expand clause
      * @return the updated request
      */
-    public ThreatAssessmentRequestCollectionRequest expand(final String value) {
+    @Nonnull
+    public ThreatAssessmentRequestCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ThreatAssessmentRequestCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class ThreatAssessmentRequestCollectionRequest extends BaseCollectionRequ
      * @param value the filter clause
      * @return the updated request
      */
-    public ThreatAssessmentRequestCollectionRequest filter(final String value) {
+    @Nonnull
+    public ThreatAssessmentRequestCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ThreatAssessmentRequestCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class ThreatAssessmentRequestCollectionRequest extends BaseCollectionRequ
      * @param value the order by clause
      * @return the updated request
      */
-    public ThreatAssessmentRequestCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ThreatAssessmentRequestCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ThreatAssessmentRequestCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class ThreatAssessmentRequestCollectionRequest extends BaseCollectionRequ
      * @param value the select clause
      * @return the updated request
      */
-    public ThreatAssessmentRequestCollectionRequest select(final String value) {
+    @Nonnull
+    public ThreatAssessmentRequestCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ThreatAssessmentRequestCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class ThreatAssessmentRequestCollectionRequest extends BaseCollectionRequ
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ThreatAssessmentRequestCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ThreatAssessmentRequestCollectionRequest)this;
@@ -133,6 +142,7 @@ public class ThreatAssessmentRequestCollectionRequest extends BaseCollectionRequ
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ThreatAssessmentRequestCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (ThreatAssessmentRequestCollectionRequest)this;
@@ -144,11 +154,13 @@ public class ThreatAssessmentRequestCollectionRequest extends BaseCollectionRequ
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ThreatAssessmentRequestCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ThreatAssessmentRequestCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (ThreatAssessmentRequestCollectionRequest)this;
     }
-    public ThreatAssessmentRequestCollectionPage buildFromResponse(final ThreatAssessmentRequestCollectionResponse response) {
+    @Nonnull
+    public ThreatAssessmentRequestCollectionPage buildFromResponse(@Nonnull final ThreatAssessmentRequestCollectionResponse response) {
         final ThreatAssessmentRequestCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ThreatAssessmentRequestCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

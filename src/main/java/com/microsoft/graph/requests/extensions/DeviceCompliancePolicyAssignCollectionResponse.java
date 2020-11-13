@@ -10,11 +10,15 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.AdditionalDataManager;
@@ -28,15 +32,18 @@ public class DeviceCompliancePolicyAssignCollectionResponse implements IJsonBack
 
     @SerializedName("value")
     @Expose
+    @Nullable
     public java.util.List<DeviceCompliancePolicyAssignment> value;
 
     @SerializedName("@odata.nextLink")
     @Expose(serialize = false)
+    @Nullable
     public String nextLink;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
+    @Nonnull
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
@@ -56,6 +63,7 @@ public class DeviceCompliancePolicyAssignCollectionResponse implements IJsonBack
      *
      * @return the raw representation of this class
      */
+    @Nullable
     public JsonObject getRawObject() {
         return rawObject;
     }
@@ -65,6 +73,7 @@ public class DeviceCompliancePolicyAssignCollectionResponse implements IJsonBack
      *
      * @return the serializer
      */
+    @Nullable
     protected ISerializer getSerializer() {
         return serializer;
     }
@@ -75,7 +84,7 @@ public class DeviceCompliancePolicyAssignCollectionResponse implements IJsonBack
      * @param serializer the serializer
      * @param json the JSON object to set this object to
      */
-    public void setRawObject(final ISerializer serializer, final JsonObject json) {
+    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
         this.serializer = serializer;
         rawObject = json;
 

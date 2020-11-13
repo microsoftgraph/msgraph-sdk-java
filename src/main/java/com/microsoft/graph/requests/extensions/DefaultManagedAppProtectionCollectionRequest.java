@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceAppManagement;
 import com.microsoft.graph.models.extensions.DefaultManagedAppProtection;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class DefaultManagedAppProtectionCollectionRequest extends BaseCollection
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DefaultManagedAppProtectionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DefaultManagedAppProtectionCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DefaultManagedAppProtectionCollectionResponse.class, DefaultManagedAppProtectionCollectionPage.class);
     }
 
-    public void get(final ICallback<? super DefaultManagedAppProtectionCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super DefaultManagedAppProtectionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class DefaultManagedAppProtectionCollectionRequest extends BaseCollection
         });
     }
 
+    @Nonnull
     public DefaultManagedAppProtectionCollectionPage get() throws ClientException {
         final DefaultManagedAppProtectionCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final DefaultManagedAppProtection newDefaultManagedAppProtection, final ICallback<? super DefaultManagedAppProtection> callback) {
+    public void post(@Nonnull final DefaultManagedAppProtection newDefaultManagedAppProtection, @Nonnull final ICallback<? super DefaultManagedAppProtection> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DefaultManagedAppProtectionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newDefaultManagedAppProtection, callback);
     }
 
-    public DefaultManagedAppProtection post(final DefaultManagedAppProtection newDefaultManagedAppProtection) throws ClientException {
+    @Nonnull
+    public DefaultManagedAppProtection post(@Nonnull final DefaultManagedAppProtection newDefaultManagedAppProtection) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DefaultManagedAppProtectionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class DefaultManagedAppProtectionCollectionRequest extends BaseCollection
      * @param value the expand clause
      * @return the updated request
      */
-    public DefaultManagedAppProtectionCollectionRequest expand(final String value) {
+    @Nonnull
+    public DefaultManagedAppProtectionCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DefaultManagedAppProtectionCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class DefaultManagedAppProtectionCollectionRequest extends BaseCollection
      * @param value the filter clause
      * @return the updated request
      */
-    public DefaultManagedAppProtectionCollectionRequest filter(final String value) {
+    @Nonnull
+    public DefaultManagedAppProtectionCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DefaultManagedAppProtectionCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class DefaultManagedAppProtectionCollectionRequest extends BaseCollection
      * @param value the order by clause
      * @return the updated request
      */
-    public DefaultManagedAppProtectionCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DefaultManagedAppProtectionCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DefaultManagedAppProtectionCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class DefaultManagedAppProtectionCollectionRequest extends BaseCollection
      * @param value the select clause
      * @return the updated request
      */
-    public DefaultManagedAppProtectionCollectionRequest select(final String value) {
+    @Nonnull
+    public DefaultManagedAppProtectionCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DefaultManagedAppProtectionCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class DefaultManagedAppProtectionCollectionRequest extends BaseCollection
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DefaultManagedAppProtectionCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (DefaultManagedAppProtectionCollectionRequest)this;
@@ -133,6 +142,7 @@ public class DefaultManagedAppProtectionCollectionRequest extends BaseCollection
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public DefaultManagedAppProtectionCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (DefaultManagedAppProtectionCollectionRequest)this;
@@ -144,11 +154,13 @@ public class DefaultManagedAppProtectionCollectionRequest extends BaseCollection
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public DefaultManagedAppProtectionCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public DefaultManagedAppProtectionCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (DefaultManagedAppProtectionCollectionRequest)this;
     }
-    public DefaultManagedAppProtectionCollectionPage buildFromResponse(final DefaultManagedAppProtectionCollectionResponse response) {
+    @Nonnull
+    public DefaultManagedAppProtectionCollectionPage buildFromResponse(@Nonnull final DefaultManagedAppProtectionCollectionResponse response) {
         final DefaultManagedAppProtectionCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new DefaultManagedAppProtectionCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

@@ -13,6 +13,8 @@ import com.microsoft.graph.requests.extensions.WorkbookRangeViewCollectionReques
 import com.microsoft.graph.requests.extensions.WorkbookRangeViewRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -31,7 +33,7 @@ public class WorkbookRangeViewRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookRangeViewRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeViewRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookRangeView.class);
     }
 
@@ -40,7 +42,7 @@ public class WorkbookRangeViewRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookRangeView> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookRangeView> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +52,7 @@ public class WorkbookRangeViewRequest extends BaseRequest {
      * @return the WorkbookRangeView from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WorkbookRangeView get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +62,7 @@ public class WorkbookRangeViewRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookRangeView> callback) {
+    public void delete(@Nonnull final ICallback<? super WorkbookRangeView> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +81,7 @@ public class WorkbookRangeViewRequest extends BaseRequest {
      * @param sourceWorkbookRangeView the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookRangeView sourceWorkbookRangeView, final ICallback<? super WorkbookRangeView> callback) {
+    public void patch(@Nonnull final WorkbookRangeView sourceWorkbookRangeView, @Nonnull final ICallback<? super WorkbookRangeView> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookRangeView);
     }
 
@@ -89,7 +92,8 @@ public class WorkbookRangeViewRequest extends BaseRequest {
      * @return the updated WorkbookRangeView
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookRangeView patch(final WorkbookRangeView sourceWorkbookRangeView) throws ClientException {
+    @Nullable
+    public WorkbookRangeView patch(@Nonnull final WorkbookRangeView sourceWorkbookRangeView) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookRangeView);
     }
 
@@ -99,7 +103,7 @@ public class WorkbookRangeViewRequest extends BaseRequest {
      * @param newWorkbookRangeView the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookRangeView newWorkbookRangeView, final ICallback<? super WorkbookRangeView> callback) {
+    public void post(@Nonnull final WorkbookRangeView newWorkbookRangeView, @Nonnull final ICallback<? super WorkbookRangeView> callback) {
         send(HttpMethod.POST, callback, newWorkbookRangeView);
     }
 
@@ -110,7 +114,8 @@ public class WorkbookRangeViewRequest extends BaseRequest {
      * @return the created WorkbookRangeView
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookRangeView post(final WorkbookRangeView newWorkbookRangeView) throws ClientException {
+    @Nullable
+    public WorkbookRangeView post(@Nonnull final WorkbookRangeView newWorkbookRangeView) throws ClientException {
         return send(HttpMethod.POST, newWorkbookRangeView);
     }
 
@@ -120,7 +125,7 @@ public class WorkbookRangeViewRequest extends BaseRequest {
      * @param newWorkbookRangeView the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookRangeView newWorkbookRangeView, final ICallback<? super WorkbookRangeView> callback) {
+    public void put(@Nonnull final WorkbookRangeView newWorkbookRangeView, @Nonnull final ICallback<? super WorkbookRangeView> callback) {
         send(HttpMethod.PUT, callback, newWorkbookRangeView);
     }
 
@@ -131,7 +136,8 @@ public class WorkbookRangeViewRequest extends BaseRequest {
      * @return the created WorkbookRangeView
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookRangeView put(final WorkbookRangeView newWorkbookRangeView) throws ClientException {
+    @Nullable
+    public WorkbookRangeView put(@Nonnull final WorkbookRangeView newWorkbookRangeView) throws ClientException {
         return send(HttpMethod.PUT, newWorkbookRangeView);
     }
 
@@ -141,7 +147,8 @@ public class WorkbookRangeViewRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public WorkbookRangeViewRequest select(final String value) {
+     @Nonnull
+     public WorkbookRangeViewRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (WorkbookRangeViewRequest)this;
      }
@@ -152,7 +159,8 @@ public class WorkbookRangeViewRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public WorkbookRangeViewRequest expand(final String value) {
+     @Nonnull
+     public WorkbookRangeViewRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (WorkbookRangeViewRequest)this;
      }

@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosManagedAppRegistration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -27,7 +29,7 @@ public class IosManagedAppRegistrationRequestBuilder extends BaseRequestBuilder 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosManagedAppRegistrationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IosManagedAppRegistrationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -37,7 +39,8 @@ public class IosManagedAppRegistrationRequestBuilder extends BaseRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IosManagedAppRegistrationRequest instance
      */
-    public IosManagedAppRegistrationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public IosManagedAppRegistrationRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,30 +50,37 @@ public class IosManagedAppRegistrationRequestBuilder extends BaseRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IosManagedAppRegistrationRequest instance
      */
-    public IosManagedAppRegistrationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public IosManagedAppRegistrationRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.IosManagedAppRegistrationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    @Nonnull
     public ManagedAppPolicyCollectionRequestBuilder appliedPolicies() {
         return new ManagedAppPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appliedPolicies"), getClient(), null);
     }
 
-    public ManagedAppPolicyRequestBuilder appliedPolicies(final String id) {
+    @Nonnull
+    public ManagedAppPolicyRequestBuilder appliedPolicies(@Nonnull final String id) {
         return new ManagedAppPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("appliedPolicies") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public ManagedAppPolicyCollectionRequestBuilder intendedPolicies() {
         return new ManagedAppPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("intendedPolicies"), getClient(), null);
     }
 
-    public ManagedAppPolicyRequestBuilder intendedPolicies(final String id) {
+    @Nonnull
+    public ManagedAppPolicyRequestBuilder intendedPolicies(@Nonnull final String id) {
         return new ManagedAppPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("intendedPolicies") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public ManagedAppOperationCollectionRequestBuilder operations() {
         return new ManagedAppOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
     }
 
-    public ManagedAppOperationRequestBuilder operations(final String id) {
+    @Nonnull
+    public ManagedAppOperationRequestBuilder operations(@Nonnull final String id) {
         return new ManagedAppOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
 }

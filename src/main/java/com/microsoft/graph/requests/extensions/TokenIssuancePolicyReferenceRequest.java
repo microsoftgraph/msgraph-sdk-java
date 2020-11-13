@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
@@ -30,14 +32,15 @@ public class TokenIssuancePolicyReferenceRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TokenIssuancePolicyReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TokenIssuancePolicyReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TokenIssuancePolicy.class);
     }
 
-    public void delete(final ICallback<? super TokenIssuancePolicy> callback) {
+    public void delete(@Nonnull final ICallback<? super TokenIssuancePolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
+    @Nullable
     public TokenIssuancePolicy delete() throws ClientException {
        return send(HttpMethod.DELETE, null);
     }
@@ -48,7 +51,8 @@ public class TokenIssuancePolicyReferenceRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public TokenIssuancePolicyReferenceRequest select(final String value) {
+    @Nonnull
+    public TokenIssuancePolicyReferenceRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (TokenIssuancePolicyReferenceRequest)this;
     }
@@ -59,7 +63,8 @@ public class TokenIssuancePolicyReferenceRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public TokenIssuancePolicyReferenceRequest expand(final String value) {
+    @Nonnull
+    public TokenIssuancePolicyReferenceRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (TokenIssuancePolicyReferenceRequest)this;
     }
@@ -69,7 +74,7 @@ public class TokenIssuancePolicyReferenceRequest extends BaseRequest {
      * @param srcTokenIssuancePolicy the TokenIssuancePolicy reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(TokenIssuancePolicy srcTokenIssuancePolicy, final ICallback<? super TokenIssuancePolicy> callback) {
+    public void put(@Nonnull final TokenIssuancePolicy srcTokenIssuancePolicy, @Nonnull final ICallback<? super TokenIssuancePolicy> callback) {
         send(HttpMethod.PUT, callback, srcTokenIssuancePolicy);
     }
 
@@ -80,7 +85,8 @@ public class TokenIssuancePolicyReferenceRequest extends BaseRequest {
      * @return the TokenIssuancePolicy
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    public TokenIssuancePolicy put(TokenIssuancePolicy srcTokenIssuancePolicy) throws ClientException {
+    @Nullable
+    public TokenIssuancePolicy put(@Nonnull final TokenIssuancePolicy srcTokenIssuancePolicy) throws ClientException {
         return send(HttpMethod.PUT, srcTokenIssuancePolicy);
     }
 }

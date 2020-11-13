@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.MailTips;
 import java.util.EnumSet;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.UserGetMailTipsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserGetMailTipsCollectionPage;
@@ -35,7 +37,7 @@ public class UserGetMailTipsCollectionPage extends BaseCollectionPage<MailTips, 
      * @param response The serialized UserGetMailTipsCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public UserGetMailTipsCollectionPage(final UserGetMailTipsCollectionResponse response, final UserGetMailTipsCollectionRequestBuilder builder) {
+    public UserGetMailTipsCollectionPage(@Nonnull final UserGetMailTipsCollectionResponse response, @Nonnull final UserGetMailTipsCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

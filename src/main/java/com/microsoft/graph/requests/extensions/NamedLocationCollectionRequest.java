@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ConditionalAccessRoot;
 import com.microsoft.graph.models.extensions.NamedLocation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class NamedLocationCollectionRequest extends BaseCollectionRequest<NamedL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public NamedLocationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public NamedLocationCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, NamedLocationCollectionResponse.class, NamedLocationCollectionPage.class);
     }
 
-    public void get(final ICallback<? super NamedLocationCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super NamedLocationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class NamedLocationCollectionRequest extends BaseCollectionRequest<NamedL
         });
     }
 
+    @Nonnull
     public NamedLocationCollectionPage get() throws ClientException {
         final NamedLocationCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final NamedLocation newNamedLocation, final ICallback<? super NamedLocation> callback) {
+    public void post(@Nonnull final NamedLocation newNamedLocation, @Nonnull final ICallback<? super NamedLocation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new NamedLocationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newNamedLocation, callback);
     }
 
-    public NamedLocation post(final NamedLocation newNamedLocation) throws ClientException {
+    @Nonnull
+    public NamedLocation post(@Nonnull final NamedLocation newNamedLocation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new NamedLocationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class NamedLocationCollectionRequest extends BaseCollectionRequest<NamedL
      * @param value the expand clause
      * @return the updated request
      */
-    public NamedLocationCollectionRequest expand(final String value) {
+    @Nonnull
+    public NamedLocationCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (NamedLocationCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class NamedLocationCollectionRequest extends BaseCollectionRequest<NamedL
      * @param value the filter clause
      * @return the updated request
      */
-    public NamedLocationCollectionRequest filter(final String value) {
+    @Nonnull
+    public NamedLocationCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (NamedLocationCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class NamedLocationCollectionRequest extends BaseCollectionRequest<NamedL
      * @param value the order by clause
      * @return the updated request
      */
-    public NamedLocationCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public NamedLocationCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (NamedLocationCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class NamedLocationCollectionRequest extends BaseCollectionRequest<NamedL
      * @param value the select clause
      * @return the updated request
      */
-    public NamedLocationCollectionRequest select(final String value) {
+    @Nonnull
+    public NamedLocationCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (NamedLocationCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class NamedLocationCollectionRequest extends BaseCollectionRequest<NamedL
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public NamedLocationCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (NamedLocationCollectionRequest)this;
@@ -133,6 +142,7 @@ public class NamedLocationCollectionRequest extends BaseCollectionRequest<NamedL
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public NamedLocationCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (NamedLocationCollectionRequest)this;
@@ -144,11 +154,13 @@ public class NamedLocationCollectionRequest extends BaseCollectionRequest<NamedL
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public NamedLocationCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public NamedLocationCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (NamedLocationCollectionRequest)this;
     }
-    public NamedLocationCollectionPage buildFromResponse(final NamedLocationCollectionResponse response) {
+    @Nonnull
+    public NamedLocationCollectionPage buildFromResponse(@Nonnull final NamedLocationCollectionResponse response) {
         final NamedLocationCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new NamedLocationCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

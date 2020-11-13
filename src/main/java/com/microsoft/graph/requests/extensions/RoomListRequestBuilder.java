@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.RoomCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoomRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -29,7 +31,7 @@ public class RoomListRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RoomListRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RoomListRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +41,8 @@ public class RoomListRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the RoomListRequest instance
      */
-    public RoomListRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public RoomListRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,16 +52,19 @@ public class RoomListRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the RoomListRequest instance
      */
-    public RoomListRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public RoomListRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.RoomListRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    @Nonnull
     public RoomCollectionRequestBuilder rooms() {
         return new RoomCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rooms"), getClient(), null);
     }
 
-    public RoomRequestBuilder rooms(final String id) {
+    @Nonnull
+    public RoomRequestBuilder rooms(@Nonnull final String id) {
         return new RoomRequestBuilder(getRequestUrlWithAdditionalSegment("rooms") + "/" + id, getClient(), null);
     }
 }

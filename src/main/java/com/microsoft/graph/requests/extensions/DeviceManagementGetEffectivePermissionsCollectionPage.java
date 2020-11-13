@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RolePermission;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DeviceManagementGetEffectivePermissionsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementGetEffectivePermissionsCollectionPage;
@@ -33,7 +35,7 @@ public class DeviceManagementGetEffectivePermissionsCollectionPage extends BaseC
      * @param response The serialized DeviceManagementGetEffectivePermissionsCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public DeviceManagementGetEffectivePermissionsCollectionPage(final DeviceManagementGetEffectivePermissionsCollectionResponse response, final DeviceManagementGetEffectivePermissionsCollectionRequestBuilder builder) {
+    public DeviceManagementGetEffectivePermissionsCollectionPage(@Nonnull final DeviceManagementGetEffectivePermissionsCollectionResponse response, @Nonnull final DeviceManagementGetEffectivePermissionsCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookCommentReply;
 import com.microsoft.graph.requests.extensions.WorkbookCommentReplyCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkbookCommentReplyCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkbookCommentReplyCollectionResponse;
@@ -22,7 +24,7 @@ public class WorkbookCommentReplyCollectionPage extends BaseCollectionPage<Workb
      * @param response the serialized WorkbookCommentReplyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public WorkbookCommentReplyCollectionPage(final WorkbookCommentReplyCollectionResponse response, final WorkbookCommentReplyCollectionRequestBuilder builder) {
+    public WorkbookCommentReplyCollectionPage(@Nonnull final WorkbookCommentReplyCollectionResponse response, @Nonnull final WorkbookCommentReplyCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

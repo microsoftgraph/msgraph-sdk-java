@@ -17,6 +17,8 @@ import com.microsoft.graph.models.extensions.ItemPreviewInfo;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -41,11 +43,11 @@ public class DriveItemCollectionRequest extends BaseCollectionRequest<DriveItemC
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DriveItemCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveItemCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DriveItemCollectionResponse.class, DriveItemCollectionPage.class);
     }
 
-    public void get(final ICallback<? super DriveItemCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super DriveItemCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,19 +61,21 @@ public class DriveItemCollectionRequest extends BaseCollectionRequest<DriveItemC
         });
     }
 
+    @Nonnull
     public DriveItemCollectionPage get() throws ClientException {
         final DriveItemCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final DriveItem newDriveItem, final ICallback<? super DriveItem> callback) {
+    public void post(@Nonnull final DriveItem newDriveItem, @Nonnull final ICallback<? super DriveItem> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DriveItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newDriveItem, callback);
     }
 
-    public DriveItem post(final DriveItem newDriveItem) throws ClientException {
+    @Nonnull
+    public DriveItem post(@Nonnull final DriveItem newDriveItem) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DriveItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -84,7 +88,8 @@ public class DriveItemCollectionRequest extends BaseCollectionRequest<DriveItemC
      * @param value the expand clause
      * @return the updated request
      */
-    public DriveItemCollectionRequest expand(final String value) {
+    @Nonnull
+    public DriveItemCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DriveItemCollectionRequest)this;
     }
@@ -95,7 +100,8 @@ public class DriveItemCollectionRequest extends BaseCollectionRequest<DriveItemC
      * @param value the filter clause
      * @return the updated request
      */
-    public DriveItemCollectionRequest filter(final String value) {
+    @Nonnull
+    public DriveItemCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DriveItemCollectionRequest)this;
     }
@@ -106,7 +112,8 @@ public class DriveItemCollectionRequest extends BaseCollectionRequest<DriveItemC
      * @param value the order by clause
      * @return the updated request
      */
-    public DriveItemCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DriveItemCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DriveItemCollectionRequest)this;
     }
@@ -117,7 +124,8 @@ public class DriveItemCollectionRequest extends BaseCollectionRequest<DriveItemC
      * @param value the select clause
      * @return the updated request
      */
-    public DriveItemCollectionRequest select(final String value) {
+    @Nonnull
+    public DriveItemCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DriveItemCollectionRequest)this;
     }
@@ -128,6 +136,7 @@ public class DriveItemCollectionRequest extends BaseCollectionRequest<DriveItemC
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DriveItemCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (DriveItemCollectionRequest)this;
@@ -139,6 +148,7 @@ public class DriveItemCollectionRequest extends BaseCollectionRequest<DriveItemC
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public DriveItemCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (DriveItemCollectionRequest)this;
@@ -150,11 +160,13 @@ public class DriveItemCollectionRequest extends BaseCollectionRequest<DriveItemC
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public DriveItemCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public DriveItemCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (DriveItemCollectionRequest)this;
     }
-    public DriveItemCollectionPage buildFromResponse(final DriveItemCollectionResponse response) {
+    @Nonnull
+    public DriveItemCollectionPage buildFromResponse(@Nonnull final DriveItemCollectionResponse response) {
         final DriveItemCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new DriveItemCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

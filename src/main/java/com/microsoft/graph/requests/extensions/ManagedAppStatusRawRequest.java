@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedAppStatusRaw;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class ManagedAppStatusRawRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedAppStatusRawRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppStatusRawRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedAppStatusRaw.class);
     }
 
@@ -37,7 +39,7 @@ public class ManagedAppStatusRawRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ManagedAppStatusRaw> callback) {
+    public void get(@Nonnull final ICallback<? super ManagedAppStatusRaw> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class ManagedAppStatusRawRequest extends BaseRequest {
      * @return the ManagedAppStatusRaw from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ManagedAppStatusRaw get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class ManagedAppStatusRawRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ManagedAppStatusRaw> callback) {
+    public void delete(@Nonnull final ICallback<? super ManagedAppStatusRaw> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class ManagedAppStatusRawRequest extends BaseRequest {
      * @param sourceManagedAppStatusRaw the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedAppStatusRaw sourceManagedAppStatusRaw, final ICallback<? super ManagedAppStatusRaw> callback) {
+    public void patch(@Nonnull final ManagedAppStatusRaw sourceManagedAppStatusRaw, @Nonnull final ICallback<? super ManagedAppStatusRaw> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedAppStatusRaw);
     }
 
@@ -86,7 +89,8 @@ public class ManagedAppStatusRawRequest extends BaseRequest {
      * @return the updated ManagedAppStatusRaw
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedAppStatusRaw patch(final ManagedAppStatusRaw sourceManagedAppStatusRaw) throws ClientException {
+    @Nullable
+    public ManagedAppStatusRaw patch(@Nonnull final ManagedAppStatusRaw sourceManagedAppStatusRaw) throws ClientException {
         return send(HttpMethod.PATCH, sourceManagedAppStatusRaw);
     }
 
@@ -96,7 +100,7 @@ public class ManagedAppStatusRawRequest extends BaseRequest {
      * @param newManagedAppStatusRaw the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedAppStatusRaw newManagedAppStatusRaw, final ICallback<? super ManagedAppStatusRaw> callback) {
+    public void post(@Nonnull final ManagedAppStatusRaw newManagedAppStatusRaw, @Nonnull final ICallback<? super ManagedAppStatusRaw> callback) {
         send(HttpMethod.POST, callback, newManagedAppStatusRaw);
     }
 
@@ -107,7 +111,8 @@ public class ManagedAppStatusRawRequest extends BaseRequest {
      * @return the created ManagedAppStatusRaw
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedAppStatusRaw post(final ManagedAppStatusRaw newManagedAppStatusRaw) throws ClientException {
+    @Nullable
+    public ManagedAppStatusRaw post(@Nonnull final ManagedAppStatusRaw newManagedAppStatusRaw) throws ClientException {
         return send(HttpMethod.POST, newManagedAppStatusRaw);
     }
 
@@ -117,7 +122,7 @@ public class ManagedAppStatusRawRequest extends BaseRequest {
      * @param newManagedAppStatusRaw the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedAppStatusRaw newManagedAppStatusRaw, final ICallback<? super ManagedAppStatusRaw> callback) {
+    public void put(@Nonnull final ManagedAppStatusRaw newManagedAppStatusRaw, @Nonnull final ICallback<? super ManagedAppStatusRaw> callback) {
         send(HttpMethod.PUT, callback, newManagedAppStatusRaw);
     }
 
@@ -128,7 +133,8 @@ public class ManagedAppStatusRawRequest extends BaseRequest {
      * @return the created ManagedAppStatusRaw
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedAppStatusRaw put(final ManagedAppStatusRaw newManagedAppStatusRaw) throws ClientException {
+    @Nullable
+    public ManagedAppStatusRaw put(@Nonnull final ManagedAppStatusRaw newManagedAppStatusRaw) throws ClientException {
         return send(HttpMethod.PUT, newManagedAppStatusRaw);
     }
 
@@ -138,7 +144,8 @@ public class ManagedAppStatusRawRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ManagedAppStatusRawRequest select(final String value) {
+     @Nonnull
+     public ManagedAppStatusRawRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ManagedAppStatusRawRequest)this;
      }
@@ -149,7 +156,8 @@ public class ManagedAppStatusRawRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ManagedAppStatusRawRequest expand(final String value) {
+     @Nonnull
+     public ManagedAppStatusRawRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ManagedAppStatusRawRequest)this;
      }

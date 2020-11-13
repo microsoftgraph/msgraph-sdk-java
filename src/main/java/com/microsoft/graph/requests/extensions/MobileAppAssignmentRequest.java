@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MobileAppAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class MobileAppAssignmentRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MobileAppAssignmentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppAssignmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MobileAppAssignment.class);
     }
 
@@ -37,7 +39,7 @@ public class MobileAppAssignmentRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MobileAppAssignment> callback) {
+    public void get(@Nonnull final ICallback<? super MobileAppAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class MobileAppAssignmentRequest extends BaseRequest {
      * @return the MobileAppAssignment from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MobileAppAssignment get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class MobileAppAssignmentRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MobileAppAssignment> callback) {
+    public void delete(@Nonnull final ICallback<? super MobileAppAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class MobileAppAssignmentRequest extends BaseRequest {
      * @param sourceMobileAppAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MobileAppAssignment sourceMobileAppAssignment, final ICallback<? super MobileAppAssignment> callback) {
+    public void patch(@Nonnull final MobileAppAssignment sourceMobileAppAssignment, @Nonnull final ICallback<? super MobileAppAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceMobileAppAssignment);
     }
 
@@ -86,7 +89,8 @@ public class MobileAppAssignmentRequest extends BaseRequest {
      * @return the updated MobileAppAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MobileAppAssignment patch(final MobileAppAssignment sourceMobileAppAssignment) throws ClientException {
+    @Nullable
+    public MobileAppAssignment patch(@Nonnull final MobileAppAssignment sourceMobileAppAssignment) throws ClientException {
         return send(HttpMethod.PATCH, sourceMobileAppAssignment);
     }
 
@@ -96,7 +100,7 @@ public class MobileAppAssignmentRequest extends BaseRequest {
      * @param newMobileAppAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MobileAppAssignment newMobileAppAssignment, final ICallback<? super MobileAppAssignment> callback) {
+    public void post(@Nonnull final MobileAppAssignment newMobileAppAssignment, @Nonnull final ICallback<? super MobileAppAssignment> callback) {
         send(HttpMethod.POST, callback, newMobileAppAssignment);
     }
 
@@ -107,7 +111,8 @@ public class MobileAppAssignmentRequest extends BaseRequest {
      * @return the created MobileAppAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MobileAppAssignment post(final MobileAppAssignment newMobileAppAssignment) throws ClientException {
+    @Nullable
+    public MobileAppAssignment post(@Nonnull final MobileAppAssignment newMobileAppAssignment) throws ClientException {
         return send(HttpMethod.POST, newMobileAppAssignment);
     }
 
@@ -117,7 +122,7 @@ public class MobileAppAssignmentRequest extends BaseRequest {
      * @param newMobileAppAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MobileAppAssignment newMobileAppAssignment, final ICallback<? super MobileAppAssignment> callback) {
+    public void put(@Nonnull final MobileAppAssignment newMobileAppAssignment, @Nonnull final ICallback<? super MobileAppAssignment> callback) {
         send(HttpMethod.PUT, callback, newMobileAppAssignment);
     }
 
@@ -128,7 +133,8 @@ public class MobileAppAssignmentRequest extends BaseRequest {
      * @return the created MobileAppAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MobileAppAssignment put(final MobileAppAssignment newMobileAppAssignment) throws ClientException {
+    @Nullable
+    public MobileAppAssignment put(@Nonnull final MobileAppAssignment newMobileAppAssignment) throws ClientException {
         return send(HttpMethod.PUT, newMobileAppAssignment);
     }
 
@@ -138,7 +144,8 @@ public class MobileAppAssignmentRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public MobileAppAssignmentRequest select(final String value) {
+     @Nonnull
+     public MobileAppAssignmentRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (MobileAppAssignmentRequest)this;
      }
@@ -149,7 +156,8 @@ public class MobileAppAssignmentRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public MobileAppAssignmentRequest expand(final String value) {
+     @Nonnull
+     public MobileAppAssignmentRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (MobileAppAssignmentRequest)this;
      }

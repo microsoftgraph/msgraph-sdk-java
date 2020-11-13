@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosMobileAppConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class IosMobileAppConfigurationRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosMobileAppConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IosMobileAppConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IosMobileAppConfiguration.class);
     }
 
@@ -37,7 +39,7 @@ public class IosMobileAppConfigurationRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IosMobileAppConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super IosMobileAppConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class IosMobileAppConfigurationRequest extends BaseRequest {
      * @return the IosMobileAppConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public IosMobileAppConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class IosMobileAppConfigurationRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IosMobileAppConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super IosMobileAppConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class IosMobileAppConfigurationRequest extends BaseRequest {
      * @param sourceIosMobileAppConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosMobileAppConfiguration sourceIosMobileAppConfiguration, final ICallback<? super IosMobileAppConfiguration> callback) {
+    public void patch(@Nonnull final IosMobileAppConfiguration sourceIosMobileAppConfiguration, @Nonnull final ICallback<? super IosMobileAppConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceIosMobileAppConfiguration);
     }
 
@@ -86,7 +89,8 @@ public class IosMobileAppConfigurationRequest extends BaseRequest {
      * @return the updated IosMobileAppConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosMobileAppConfiguration patch(final IosMobileAppConfiguration sourceIosMobileAppConfiguration) throws ClientException {
+    @Nullable
+    public IosMobileAppConfiguration patch(@Nonnull final IosMobileAppConfiguration sourceIosMobileAppConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceIosMobileAppConfiguration);
     }
 
@@ -96,7 +100,7 @@ public class IosMobileAppConfigurationRequest extends BaseRequest {
      * @param newIosMobileAppConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosMobileAppConfiguration newIosMobileAppConfiguration, final ICallback<? super IosMobileAppConfiguration> callback) {
+    public void post(@Nonnull final IosMobileAppConfiguration newIosMobileAppConfiguration, @Nonnull final ICallback<? super IosMobileAppConfiguration> callback) {
         send(HttpMethod.POST, callback, newIosMobileAppConfiguration);
     }
 
@@ -107,7 +111,8 @@ public class IosMobileAppConfigurationRequest extends BaseRequest {
      * @return the created IosMobileAppConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosMobileAppConfiguration post(final IosMobileAppConfiguration newIosMobileAppConfiguration) throws ClientException {
+    @Nullable
+    public IosMobileAppConfiguration post(@Nonnull final IosMobileAppConfiguration newIosMobileAppConfiguration) throws ClientException {
         return send(HttpMethod.POST, newIosMobileAppConfiguration);
     }
 
@@ -117,7 +122,7 @@ public class IosMobileAppConfigurationRequest extends BaseRequest {
      * @param newIosMobileAppConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosMobileAppConfiguration newIosMobileAppConfiguration, final ICallback<? super IosMobileAppConfiguration> callback) {
+    public void put(@Nonnull final IosMobileAppConfiguration newIosMobileAppConfiguration, @Nonnull final ICallback<? super IosMobileAppConfiguration> callback) {
         send(HttpMethod.PUT, callback, newIosMobileAppConfiguration);
     }
 
@@ -128,7 +133,8 @@ public class IosMobileAppConfigurationRequest extends BaseRequest {
      * @return the created IosMobileAppConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosMobileAppConfiguration put(final IosMobileAppConfiguration newIosMobileAppConfiguration) throws ClientException {
+    @Nullable
+    public IosMobileAppConfiguration put(@Nonnull final IosMobileAppConfiguration newIosMobileAppConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newIosMobileAppConfiguration);
     }
 
@@ -138,7 +144,8 @@ public class IosMobileAppConfigurationRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IosMobileAppConfigurationRequest select(final String value) {
+     @Nonnull
+     public IosMobileAppConfigurationRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (IosMobileAppConfigurationRequest)this;
      }
@@ -149,7 +156,8 @@ public class IosMobileAppConfigurationRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IosMobileAppConfigurationRequest expand(final String value) {
+     @Nonnull
+     public IosMobileAppConfigurationRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (IosMobileAppConfigurationRequest)this;
      }

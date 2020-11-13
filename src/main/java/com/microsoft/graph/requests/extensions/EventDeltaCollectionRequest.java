@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Event;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.EventDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EventDeltaCollectionPage;
@@ -34,12 +36,12 @@ public class EventDeltaCollectionRequest extends BaseCollectionRequest<EventDelt
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EventDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EventDeltaCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EventDeltaCollectionResponse.class, EventDeltaCollectionPage.class);
     }
 
 
-    public void get(final ICallback<? super EventDeltaCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super EventDeltaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,13 +55,15 @@ public class EventDeltaCollectionRequest extends BaseCollectionRequest<EventDelt
         });
     }
 
+    @Nullable
     public EventDeltaCollectionPage get() throws ClientException {
         final EventDeltaCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
 
-    public EventDeltaCollectionPage buildFromResponse(final EventDeltaCollectionResponse response) {
+    @Nonnull
+    public EventDeltaCollectionPage buildFromResponse(@Nonnull final EventDeltaCollectionResponse response) {
         final EventDeltaCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new EventDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
@@ -77,7 +81,8 @@ public class EventDeltaCollectionRequest extends BaseCollectionRequest<EventDelt
      * @param value the select clause
      * @return the updated request
      */
-    public EventDeltaCollectionRequest select(final String value) {
+    @Nonnull
+    public EventDeltaCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (EventDeltaCollectionRequest)this;
     }
@@ -88,6 +93,7 @@ public class EventDeltaCollectionRequest extends BaseCollectionRequest<EventDelt
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public EventDeltaCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (EventDeltaCollectionRequest)this;
@@ -99,7 +105,8 @@ public class EventDeltaCollectionRequest extends BaseCollectionRequest<EventDelt
      * @param value the expand clause
      * @return the updated request
      */
-    public EventDeltaCollectionRequest expand(final String value) {
+    @Nonnull
+    public EventDeltaCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (EventDeltaCollectionRequest)this;
     }
@@ -110,7 +117,8 @@ public class EventDeltaCollectionRequest extends BaseCollectionRequest<EventDelt
      * @param value the filter clause
      * @return the updated request
      */
-    public EventDeltaCollectionRequest filter(final String value) {
+    @Nonnull
+    public EventDeltaCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (EventDeltaCollectionRequest)this;
     }
@@ -121,7 +129,8 @@ public class EventDeltaCollectionRequest extends BaseCollectionRequest<EventDelt
      * @param value the order by clause
      * @return the updated request
      */
-    public EventDeltaCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public EventDeltaCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (EventDeltaCollectionRequest)this;
     }

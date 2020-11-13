@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.UserInstallStateSummary;
 import com.microsoft.graph.models.extensions.DeviceInstallState;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class DeviceInstallStateCollectionRequest extends BaseCollectionRequest<D
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceInstallStateCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceInstallStateCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceInstallStateCollectionResponse.class, DeviceInstallStateCollectionPage.class);
     }
 
-    public void get(final ICallback<? super DeviceInstallStateCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceInstallStateCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class DeviceInstallStateCollectionRequest extends BaseCollectionRequest<D
         });
     }
 
+    @Nonnull
     public DeviceInstallStateCollectionPage get() throws ClientException {
         final DeviceInstallStateCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceInstallState newDeviceInstallState, final ICallback<? super DeviceInstallState> callback) {
+    public void post(@Nonnull final DeviceInstallState newDeviceInstallState, @Nonnull final ICallback<? super DeviceInstallState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceInstallStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceInstallState, callback);
     }
 
-    public DeviceInstallState post(final DeviceInstallState newDeviceInstallState) throws ClientException {
+    @Nonnull
+    public DeviceInstallState post(@Nonnull final DeviceInstallState newDeviceInstallState) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceInstallStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class DeviceInstallStateCollectionRequest extends BaseCollectionRequest<D
      * @param value the expand clause
      * @return the updated request
      */
-    public DeviceInstallStateCollectionRequest expand(final String value) {
+    @Nonnull
+    public DeviceInstallStateCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DeviceInstallStateCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class DeviceInstallStateCollectionRequest extends BaseCollectionRequest<D
      * @param value the filter clause
      * @return the updated request
      */
-    public DeviceInstallStateCollectionRequest filter(final String value) {
+    @Nonnull
+    public DeviceInstallStateCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DeviceInstallStateCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class DeviceInstallStateCollectionRequest extends BaseCollectionRequest<D
      * @param value the order by clause
      * @return the updated request
      */
-    public DeviceInstallStateCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DeviceInstallStateCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceInstallStateCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class DeviceInstallStateCollectionRequest extends BaseCollectionRequest<D
      * @param value the select clause
      * @return the updated request
      */
-    public DeviceInstallStateCollectionRequest select(final String value) {
+    @Nonnull
+    public DeviceInstallStateCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DeviceInstallStateCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class DeviceInstallStateCollectionRequest extends BaseCollectionRequest<D
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DeviceInstallStateCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (DeviceInstallStateCollectionRequest)this;
@@ -133,6 +142,7 @@ public class DeviceInstallStateCollectionRequest extends BaseCollectionRequest<D
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public DeviceInstallStateCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (DeviceInstallStateCollectionRequest)this;
@@ -144,11 +154,13 @@ public class DeviceInstallStateCollectionRequest extends BaseCollectionRequest<D
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public DeviceInstallStateCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public DeviceInstallStateCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (DeviceInstallStateCollectionRequest)this;
     }
-    public DeviceInstallStateCollectionPage buildFromResponse(final DeviceInstallStateCollectionResponse response) {
+    @Nonnull
+    public DeviceInstallStateCollectionPage buildFromResponse(@Nonnull final DeviceInstallStateCollectionResponse response) {
         final DeviceInstallStateCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new DeviceInstallStateCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

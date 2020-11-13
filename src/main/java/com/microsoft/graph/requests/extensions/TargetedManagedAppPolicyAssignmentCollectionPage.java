@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentCollectionResponse;
@@ -22,7 +24,7 @@ public class TargetedManagedAppPolicyAssignmentCollectionPage extends BaseCollec
      * @param response the serialized TargetedManagedAppPolicyAssignmentCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TargetedManagedAppPolicyAssignmentCollectionPage(final TargetedManagedAppPolicyAssignmentCollectionResponse response, final TargetedManagedAppPolicyAssignmentCollectionRequestBuilder builder) {
+    public TargetedManagedAppPolicyAssignmentCollectionPage(@Nonnull final TargetedManagedAppPolicyAssignmentCollectionResponse response, @Nonnull final TargetedManagedAppPolicyAssignmentCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

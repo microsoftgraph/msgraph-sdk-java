@@ -25,6 +25,8 @@ import com.microsoft.graph.requests.extensions.ItemAnalyticsRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
@@ -43,7 +45,7 @@ public class SiteWithReferenceRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SiteWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SiteWithReferenceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -53,7 +55,8 @@ public class SiteWithReferenceRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the SiteWithReferenceRequest instance
      */
-    public SiteWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public SiteWithReferenceRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -63,10 +66,12 @@ public class SiteWithReferenceRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the SiteWithReferenceRequest instance
      */
-    public SiteWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public SiteWithReferenceRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SiteWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
+    @Nonnull
     public SiteReferenceRequestBuilder reference(){
         return new SiteReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }

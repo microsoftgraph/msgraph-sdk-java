@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AppRoleAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class AppRoleAssignmentRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AppRoleAssignmentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AppRoleAssignmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AppRoleAssignment.class);
     }
 
@@ -37,7 +39,7 @@ public class AppRoleAssignmentRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AppRoleAssignment> callback) {
+    public void get(@Nonnull final ICallback<? super AppRoleAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class AppRoleAssignmentRequest extends BaseRequest {
      * @return the AppRoleAssignment from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AppRoleAssignment get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class AppRoleAssignmentRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AppRoleAssignment> callback) {
+    public void delete(@Nonnull final ICallback<? super AppRoleAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class AppRoleAssignmentRequest extends BaseRequest {
      * @param sourceAppRoleAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AppRoleAssignment sourceAppRoleAssignment, final ICallback<? super AppRoleAssignment> callback) {
+    public void patch(@Nonnull final AppRoleAssignment sourceAppRoleAssignment, @Nonnull final ICallback<? super AppRoleAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceAppRoleAssignment);
     }
 
@@ -86,7 +89,8 @@ public class AppRoleAssignmentRequest extends BaseRequest {
      * @return the updated AppRoleAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AppRoleAssignment patch(final AppRoleAssignment sourceAppRoleAssignment) throws ClientException {
+    @Nullable
+    public AppRoleAssignment patch(@Nonnull final AppRoleAssignment sourceAppRoleAssignment) throws ClientException {
         return send(HttpMethod.PATCH, sourceAppRoleAssignment);
     }
 
@@ -96,7 +100,7 @@ public class AppRoleAssignmentRequest extends BaseRequest {
      * @param newAppRoleAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AppRoleAssignment newAppRoleAssignment, final ICallback<? super AppRoleAssignment> callback) {
+    public void post(@Nonnull final AppRoleAssignment newAppRoleAssignment, @Nonnull final ICallback<? super AppRoleAssignment> callback) {
         send(HttpMethod.POST, callback, newAppRoleAssignment);
     }
 
@@ -107,7 +111,8 @@ public class AppRoleAssignmentRequest extends BaseRequest {
      * @return the created AppRoleAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AppRoleAssignment post(final AppRoleAssignment newAppRoleAssignment) throws ClientException {
+    @Nullable
+    public AppRoleAssignment post(@Nonnull final AppRoleAssignment newAppRoleAssignment) throws ClientException {
         return send(HttpMethod.POST, newAppRoleAssignment);
     }
 
@@ -117,7 +122,7 @@ public class AppRoleAssignmentRequest extends BaseRequest {
      * @param newAppRoleAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AppRoleAssignment newAppRoleAssignment, final ICallback<? super AppRoleAssignment> callback) {
+    public void put(@Nonnull final AppRoleAssignment newAppRoleAssignment, @Nonnull final ICallback<? super AppRoleAssignment> callback) {
         send(HttpMethod.PUT, callback, newAppRoleAssignment);
     }
 
@@ -128,7 +133,8 @@ public class AppRoleAssignmentRequest extends BaseRequest {
      * @return the created AppRoleAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AppRoleAssignment put(final AppRoleAssignment newAppRoleAssignment) throws ClientException {
+    @Nullable
+    public AppRoleAssignment put(@Nonnull final AppRoleAssignment newAppRoleAssignment) throws ClientException {
         return send(HttpMethod.PUT, newAppRoleAssignment);
     }
 
@@ -138,7 +144,8 @@ public class AppRoleAssignmentRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public AppRoleAssignmentRequest select(final String value) {
+     @Nonnull
+     public AppRoleAssignmentRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (AppRoleAssignmentRequest)this;
      }
@@ -149,7 +156,8 @@ public class AppRoleAssignmentRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public AppRoleAssignmentRequest expand(final String value) {
+     @Nonnull
+     public AppRoleAssignmentRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (AppRoleAssignmentRequest)this;
      }

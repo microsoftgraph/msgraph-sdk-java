@@ -17,6 +17,8 @@ import com.microsoft.graph.requests.extensions.TeamsTabRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -34,7 +36,7 @@ public class ChannelRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ChannelRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ChannelRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +46,8 @@ public class ChannelRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ChannelRequest instance
      */
-    public ChannelRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ChannelRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -54,7 +57,8 @@ public class ChannelRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ChannelRequest instance
      */
-    public ChannelRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ChannelRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ChannelRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -65,28 +69,35 @@ public class ChannelRequestBuilder extends BaseRequestBuilder {
      *
      * @return the DriveItemRequestBuilder instance
      */
+    @Nonnull
     public DriveItemRequestBuilder filesFolder() {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("filesFolder"), getClient(), null);
     }
+    @Nonnull
     public ConversationMemberCollectionRequestBuilder members() {
         return new ConversationMemberCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
     }
 
-    public ConversationMemberRequestBuilder members(final String id) {
+    @Nonnull
+    public ConversationMemberRequestBuilder members(@Nonnull final String id) {
         return new ConversationMemberRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public ChatMessageCollectionRequestBuilder messages() {
         return new ChatMessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("messages"), getClient(), null);
     }
 
-    public ChatMessageRequestBuilder messages(final String id) {
+    @Nonnull
+    public ChatMessageRequestBuilder messages(@Nonnull final String id) {
         return new ChatMessageRequestBuilder(getRequestUrlWithAdditionalSegment("messages") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public TeamsTabCollectionRequestBuilder tabs() {
         return new TeamsTabCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tabs"), getClient(), null);
     }
 
-    public TeamsTabRequestBuilder tabs(final String id) {
+    @Nonnull
+    public TeamsTabRequestBuilder tabs(@Nonnull final String id) {
         return new TeamsTabRequestBuilder(getRequestUrlWithAdditionalSegment("tabs") + "/" + id, getClient(), null);
     }
 }

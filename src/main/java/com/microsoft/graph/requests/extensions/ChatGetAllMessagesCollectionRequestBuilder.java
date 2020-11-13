@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ChatMessage;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.ChatGetAllMessagesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatGetAllMessagesCollectionRequest;
@@ -31,7 +33,7 @@ public class ChatGetAllMessagesCollectionRequestBuilder extends BaseFunctionRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ChatGetAllMessagesCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ChatGetAllMessagesCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
     
@@ -41,7 +43,8 @@ public class ChatGetAllMessagesCollectionRequestBuilder extends BaseFunctionRequ
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ChatGetAllMessagesCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ChatGetAllMessagesCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,7 +54,8 @@ public class ChatGetAllMessagesCollectionRequestBuilder extends BaseFunctionRequ
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ChatGetAllMessagesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ChatGetAllMessagesCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ChatGetAllMessagesCollectionRequest request = new ChatGetAllMessagesCollectionRequest(
                 getRequestUrl(),
                 getClient(),

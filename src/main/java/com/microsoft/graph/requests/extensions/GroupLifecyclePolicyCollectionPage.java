@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.GroupLifecyclePolicy;
 import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyCollectionResponse;
@@ -22,7 +24,7 @@ public class GroupLifecyclePolicyCollectionPage extends BaseCollectionPage<Group
      * @param response the serialized GroupLifecyclePolicyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public GroupLifecyclePolicyCollectionPage(final GroupLifecyclePolicyCollectionResponse response, final GroupLifecyclePolicyCollectionRequestBuilder builder) {
+    public GroupLifecyclePolicyCollectionPage(@Nonnull final GroupLifecyclePolicyCollectionResponse response, @Nonnull final GroupLifecyclePolicyCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

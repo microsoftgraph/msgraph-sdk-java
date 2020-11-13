@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceAppManagement;
 import com.microsoft.graph.models.extensions.VppToken;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class VppTokenCollectionRequest extends BaseCollectionRequest<VppTokenCol
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public VppTokenCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public VppTokenCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, VppTokenCollectionResponse.class, VppTokenCollectionPage.class);
     }
 
-    public void get(final ICallback<? super VppTokenCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super VppTokenCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class VppTokenCollectionRequest extends BaseCollectionRequest<VppTokenCol
         });
     }
 
+    @Nonnull
     public VppTokenCollectionPage get() throws ClientException {
         final VppTokenCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final VppToken newVppToken, final ICallback<? super VppToken> callback) {
+    public void post(@Nonnull final VppToken newVppToken, @Nonnull final ICallback<? super VppToken> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new VppTokenRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newVppToken, callback);
     }
 
-    public VppToken post(final VppToken newVppToken) throws ClientException {
+    @Nonnull
+    public VppToken post(@Nonnull final VppToken newVppToken) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new VppTokenRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class VppTokenCollectionRequest extends BaseCollectionRequest<VppTokenCol
      * @param value the expand clause
      * @return the updated request
      */
-    public VppTokenCollectionRequest expand(final String value) {
+    @Nonnull
+    public VppTokenCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (VppTokenCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class VppTokenCollectionRequest extends BaseCollectionRequest<VppTokenCol
      * @param value the filter clause
      * @return the updated request
      */
-    public VppTokenCollectionRequest filter(final String value) {
+    @Nonnull
+    public VppTokenCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (VppTokenCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class VppTokenCollectionRequest extends BaseCollectionRequest<VppTokenCol
      * @param value the order by clause
      * @return the updated request
      */
-    public VppTokenCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public VppTokenCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (VppTokenCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class VppTokenCollectionRequest extends BaseCollectionRequest<VppTokenCol
      * @param value the select clause
      * @return the updated request
      */
-    public VppTokenCollectionRequest select(final String value) {
+    @Nonnull
+    public VppTokenCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (VppTokenCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class VppTokenCollectionRequest extends BaseCollectionRequest<VppTokenCol
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public VppTokenCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (VppTokenCollectionRequest)this;
@@ -133,6 +142,7 @@ public class VppTokenCollectionRequest extends BaseCollectionRequest<VppTokenCol
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public VppTokenCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (VppTokenCollectionRequest)this;
@@ -144,11 +154,13 @@ public class VppTokenCollectionRequest extends BaseCollectionRequest<VppTokenCol
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public VppTokenCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public VppTokenCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (VppTokenCollectionRequest)this;
     }
-    public VppTokenCollectionPage buildFromResponse(final VppTokenCollectionResponse response) {
+    @Nonnull
+    public VppTokenCollectionPage buildFromResponse(@Nonnull final VppTokenCollectionResponse response) {
         final VppTokenCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new VppTokenCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

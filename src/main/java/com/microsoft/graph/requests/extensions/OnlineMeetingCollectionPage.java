@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.OnlineMeeting;
 import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionPage;
 import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionResponse;
@@ -22,7 +24,7 @@ public class OnlineMeetingCollectionPage extends BaseCollectionPage<OnlineMeetin
      * @param response the serialized OnlineMeetingCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public OnlineMeetingCollectionPage(final OnlineMeetingCollectionResponse response, final OnlineMeetingCollectionRequestBuilder builder) {
+    public OnlineMeetingCollectionPage(@Nonnull final OnlineMeetingCollectionResponse response, @Nonnull final OnlineMeetingCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

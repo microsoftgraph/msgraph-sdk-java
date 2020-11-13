@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.MailFolder;
 import com.microsoft.graph.models.extensions.MessageRule;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class MessageRuleCollectionRequest extends BaseCollectionRequest<MessageR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MessageRuleCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MessageRuleCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MessageRuleCollectionResponse.class, MessageRuleCollectionPage.class);
     }
 
-    public void get(final ICallback<? super MessageRuleCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super MessageRuleCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class MessageRuleCollectionRequest extends BaseCollectionRequest<MessageR
         });
     }
 
+    @Nonnull
     public MessageRuleCollectionPage get() throws ClientException {
         final MessageRuleCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final MessageRule newMessageRule, final ICallback<? super MessageRule> callback) {
+    public void post(@Nonnull final MessageRule newMessageRule, @Nonnull final ICallback<? super MessageRule> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MessageRuleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newMessageRule, callback);
     }
 
-    public MessageRule post(final MessageRule newMessageRule) throws ClientException {
+    @Nonnull
+    public MessageRule post(@Nonnull final MessageRule newMessageRule) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MessageRuleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class MessageRuleCollectionRequest extends BaseCollectionRequest<MessageR
      * @param value the expand clause
      * @return the updated request
      */
-    public MessageRuleCollectionRequest expand(final String value) {
+    @Nonnull
+    public MessageRuleCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (MessageRuleCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class MessageRuleCollectionRequest extends BaseCollectionRequest<MessageR
      * @param value the filter clause
      * @return the updated request
      */
-    public MessageRuleCollectionRequest filter(final String value) {
+    @Nonnull
+    public MessageRuleCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (MessageRuleCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class MessageRuleCollectionRequest extends BaseCollectionRequest<MessageR
      * @param value the order by clause
      * @return the updated request
      */
-    public MessageRuleCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public MessageRuleCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (MessageRuleCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class MessageRuleCollectionRequest extends BaseCollectionRequest<MessageR
      * @param value the select clause
      * @return the updated request
      */
-    public MessageRuleCollectionRequest select(final String value) {
+    @Nonnull
+    public MessageRuleCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (MessageRuleCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class MessageRuleCollectionRequest extends BaseCollectionRequest<MessageR
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public MessageRuleCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (MessageRuleCollectionRequest)this;
@@ -133,6 +142,7 @@ public class MessageRuleCollectionRequest extends BaseCollectionRequest<MessageR
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public MessageRuleCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (MessageRuleCollectionRequest)this;
@@ -144,11 +154,13 @@ public class MessageRuleCollectionRequest extends BaseCollectionRequest<MessageR
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public MessageRuleCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public MessageRuleCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (MessageRuleCollectionRequest)this;
     }
-    public MessageRuleCollectionPage buildFromResponse(final MessageRuleCollectionResponse response) {
+    @Nonnull
+    public MessageRuleCollectionPage buildFromResponse(@Nonnull final MessageRuleCollectionResponse response) {
         final MessageRuleCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new MessageRuleCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

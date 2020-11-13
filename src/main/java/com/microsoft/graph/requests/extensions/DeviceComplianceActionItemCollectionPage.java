@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DeviceComplianceActionItem;
 import com.microsoft.graph.requests.extensions.DeviceComplianceActionItemCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceComplianceActionItemCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceComplianceActionItemCollectionResponse;
@@ -22,7 +24,7 @@ public class DeviceComplianceActionItemCollectionPage extends BaseCollectionPage
      * @param response the serialized DeviceComplianceActionItemCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DeviceComplianceActionItemCollectionPage(final DeviceComplianceActionItemCollectionResponse response, final DeviceComplianceActionItemCollectionRequestBuilder builder) {
+    public DeviceComplianceActionItemCollectionPage(@Nonnull final DeviceComplianceActionItemCollectionResponse response, @Nonnull final DeviceComplianceActionItemCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

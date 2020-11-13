@@ -8,6 +8,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Event;
+import com.microsoft.graph.models.extensions.Recipient;
 import com.microsoft.graph.models.extensions.DateTimeTimeZone;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AttachmentRequestBuilder;
@@ -22,6 +23,8 @@ import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedProperty
 import com.microsoft.graph.requests.extensions.CalendarRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -39,7 +42,7 @@ public class EventRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EventRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EventRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +52,8 @@ public class EventRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the EventRequest instance
      */
-    public EventRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public EventRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -59,16 +63,19 @@ public class EventRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the EventRequest instance
      */
-    public EventRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public EventRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.EventRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    @Nonnull
     public AttachmentCollectionRequestBuilder attachments() {
         return new AttachmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attachments"), getClient(), null);
     }
 
-    public AttachmentRequestBuilder attachments(final String id) {
+    @Nonnull
+    public AttachmentRequestBuilder attachments(@Nonnull final String id) {
         return new AttachmentRequestBuilder(getRequestUrlWithAdditionalSegment("attachments") + "/" + id, getClient(), null);
     }
 
@@ -77,55 +84,79 @@ public class EventRequestBuilder extends BaseRequestBuilder {
      *
      * @return the CalendarRequestBuilder instance
      */
+    @Nonnull
     public CalendarRequestBuilder calendar() {
         return new CalendarRequestBuilder(getRequestUrlWithAdditionalSegment("calendar"), getClient(), null);
     }
+    @Nonnull
     public ExtensionCollectionRequestBuilder extensions() {
         return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
     }
 
-    public ExtensionRequestBuilder extensions(final String id) {
+    @Nonnull
+    public ExtensionRequestBuilder extensions(@Nonnull final String id) {
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public EventCollectionRequestBuilder instances() {
         return new EventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("instances"), getClient(), null);
     }
 
-    public EventRequestBuilder instances(final String id) {
+    @Nonnull
+    public EventRequestBuilder instances(@Nonnull final String id) {
         return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("instances") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public MultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties() {
         return new MultiValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties"), getClient(), null);
     }
 
-    public MultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id) {
+    @Nonnull
+    public MultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(@Nonnull final String id) {
         return new MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public SingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
         return new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties"), getClient(), null);
     }
 
-    public SingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id) {
+    @Nonnull
+    public SingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(@Nonnull final String id) {
         return new SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);
     }
 
-    public EventAcceptRequestBuilder accept(final String comment, final Boolean sendResponse) {
+    @Nonnull
+    public EventAcceptRequestBuilder accept(@Nullable final String comment, @Nullable final Boolean sendResponse) {
         return new EventAcceptRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.accept"), getClient(), null, comment, sendResponse);
     }
 
-    public EventDeclineRequestBuilder decline(final String comment, final Boolean sendResponse) {
+    @Nonnull
+    public EventCancelRequestBuilder cancel(@Nullable final String comment) {
+        return new EventCancelRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cancel"), getClient(), null, comment);
+    }
+
+    @Nonnull
+    public EventDeclineRequestBuilder decline(@Nullable final String comment, @Nullable final Boolean sendResponse) {
         return new EventDeclineRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.decline"), getClient(), null, comment, sendResponse);
     }
 
+    @Nonnull
     public EventDismissReminderRequestBuilder dismissReminder() {
         return new EventDismissReminderRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dismissReminder"), getClient(), null);
     }
 
-    public EventSnoozeReminderRequestBuilder snoozeReminder(final DateTimeTimeZone newReminderTime) {
+    @Nonnull
+    public EventForwardRequestBuilder forward(@Nullable final java.util.List<Recipient> toRecipients, @Nullable final String comment) {
+        return new EventForwardRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.forward"), getClient(), null, toRecipients, comment);
+    }
+
+    @Nonnull
+    public EventSnoozeReminderRequestBuilder snoozeReminder(@Nullable final DateTimeTimeZone newReminderTime) {
         return new EventSnoozeReminderRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.snoozeReminder"), getClient(), null, newReminderTime);
     }
 
-    public EventTentativelyAcceptRequestBuilder tentativelyAccept(final String comment, final Boolean sendResponse) {
+    @Nonnull
+    public EventTentativelyAcceptRequestBuilder tentativelyAccept(@Nullable final String comment, @Nullable final Boolean sendResponse) {
         return new EventTentativelyAcceptRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.tentativelyAccept"), getClient(), null, comment, sendResponse);
     }
 }

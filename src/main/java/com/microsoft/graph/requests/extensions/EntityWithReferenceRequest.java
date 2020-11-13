@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Entity;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
@@ -31,15 +33,16 @@ public class EntityWithReferenceRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EntityWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EntityWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Entity.class);
     }
 
-    public void post(final Entity newEntity, final IJsonBackedObject payload, final ICallback<? super Entity> callback) {
+    public void post(@Nonnull final Entity newEntity, @Nullable final IJsonBackedObject payload, @Nonnull final ICallback<? super Entity> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
-    public Entity post(final Entity newEntity, final IJsonBackedObject payload) throws ClientException {
+    @Nullable
+    public Entity post(@Nonnull final Entity newEntity, @Nullable final IJsonBackedObject payload) throws ClientException {
         IJsonBackedObject response = send(HttpMethod.POST, payload);
         if (response != null){
             return newEntity;
@@ -47,15 +50,16 @@ public class EntityWithReferenceRequest extends BaseRequest {
         return null;
     }
 
-    public void get(final ICallback<? super Entity> callback) {
+    public void get(@Nonnull final ICallback<? super Entity> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
+    @Nullable
     public Entity get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<? super Entity> callback) {
+	public void delete(@Nonnull final ICallback<? super Entity> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,11 +67,12 @@ public class EntityWithReferenceRequest extends BaseRequest {
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final Entity sourceEntity, final ICallback<? super Entity> callback) {
+	public void patch(@Nonnull final Entity sourceEntity, @Nonnull final ICallback<? super Entity> callback) {
 		send(HttpMethod.PATCH, callback, sourceEntity);
 	}
 
-	public Entity patch(final Entity sourceEntity) throws ClientException {
+    @Nullable
+	public Entity patch(@Nonnull final Entity sourceEntity) throws ClientException {
 		return send(HttpMethod.PATCH, sourceEntity);
 	}
 
@@ -78,7 +83,8 @@ public class EntityWithReferenceRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public EntityWithReferenceRequest select(final String value) {
+    @Nonnull
+    public EntityWithReferenceRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (EntityWithReferenceRequest)this;
     }
@@ -89,7 +95,8 @@ public class EntityWithReferenceRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public EntityWithReferenceRequest expand(final String value) {
+    @Nonnull
+    public EntityWithReferenceRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (EntityWithReferenceRequest)this;
     }

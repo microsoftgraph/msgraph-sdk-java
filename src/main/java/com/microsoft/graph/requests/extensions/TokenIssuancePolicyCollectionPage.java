@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionResponse;
@@ -22,7 +24,7 @@ public class TokenIssuancePolicyCollectionPage extends BaseCollectionPage<TokenI
      * @param response the serialized TokenIssuancePolicyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TokenIssuancePolicyCollectionPage(final TokenIssuancePolicyCollectionResponse response, final TokenIssuancePolicyCollectionRequestBuilder builder) {
+    public TokenIssuancePolicyCollectionPage(@Nonnull final TokenIssuancePolicyCollectionResponse response, @Nonnull final TokenIssuancePolicyCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

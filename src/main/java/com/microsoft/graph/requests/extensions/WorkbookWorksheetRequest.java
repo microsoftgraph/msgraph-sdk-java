@@ -20,6 +20,8 @@ import com.microsoft.graph.requests.extensions.WorkbookTableRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetProtectionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -38,7 +40,7 @@ public class WorkbookWorksheetRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookWorksheetRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookWorksheetRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookWorksheet.class);
     }
 
@@ -47,7 +49,7 @@ public class WorkbookWorksheetRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookWorksheet> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookWorksheet> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -57,6 +59,7 @@ public class WorkbookWorksheetRequest extends BaseRequest {
      * @return the WorkbookWorksheet from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WorkbookWorksheet get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -66,7 +69,7 @@ public class WorkbookWorksheetRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookWorksheet> callback) {
+    public void delete(@Nonnull final ICallback<? super WorkbookWorksheet> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -85,7 +88,7 @@ public class WorkbookWorksheetRequest extends BaseRequest {
      * @param sourceWorkbookWorksheet the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookWorksheet sourceWorkbookWorksheet, final ICallback<? super WorkbookWorksheet> callback) {
+    public void patch(@Nonnull final WorkbookWorksheet sourceWorkbookWorksheet, @Nonnull final ICallback<? super WorkbookWorksheet> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookWorksheet);
     }
 
@@ -96,7 +99,8 @@ public class WorkbookWorksheetRequest extends BaseRequest {
      * @return the updated WorkbookWorksheet
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookWorksheet patch(final WorkbookWorksheet sourceWorkbookWorksheet) throws ClientException {
+    @Nullable
+    public WorkbookWorksheet patch(@Nonnull final WorkbookWorksheet sourceWorkbookWorksheet) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookWorksheet);
     }
 
@@ -106,7 +110,7 @@ public class WorkbookWorksheetRequest extends BaseRequest {
      * @param newWorkbookWorksheet the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookWorksheet newWorkbookWorksheet, final ICallback<? super WorkbookWorksheet> callback) {
+    public void post(@Nonnull final WorkbookWorksheet newWorkbookWorksheet, @Nonnull final ICallback<? super WorkbookWorksheet> callback) {
         send(HttpMethod.POST, callback, newWorkbookWorksheet);
     }
 
@@ -117,7 +121,8 @@ public class WorkbookWorksheetRequest extends BaseRequest {
      * @return the created WorkbookWorksheet
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookWorksheet post(final WorkbookWorksheet newWorkbookWorksheet) throws ClientException {
+    @Nullable
+    public WorkbookWorksheet post(@Nonnull final WorkbookWorksheet newWorkbookWorksheet) throws ClientException {
         return send(HttpMethod.POST, newWorkbookWorksheet);
     }
 
@@ -127,7 +132,7 @@ public class WorkbookWorksheetRequest extends BaseRequest {
      * @param newWorkbookWorksheet the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookWorksheet newWorkbookWorksheet, final ICallback<? super WorkbookWorksheet> callback) {
+    public void put(@Nonnull final WorkbookWorksheet newWorkbookWorksheet, @Nonnull final ICallback<? super WorkbookWorksheet> callback) {
         send(HttpMethod.PUT, callback, newWorkbookWorksheet);
     }
 
@@ -138,7 +143,8 @@ public class WorkbookWorksheetRequest extends BaseRequest {
      * @return the created WorkbookWorksheet
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookWorksheet put(final WorkbookWorksheet newWorkbookWorksheet) throws ClientException {
+    @Nullable
+    public WorkbookWorksheet put(@Nonnull final WorkbookWorksheet newWorkbookWorksheet) throws ClientException {
         return send(HttpMethod.PUT, newWorkbookWorksheet);
     }
 
@@ -148,7 +154,8 @@ public class WorkbookWorksheetRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public WorkbookWorksheetRequest select(final String value) {
+     @Nonnull
+     public WorkbookWorksheetRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (WorkbookWorksheetRequest)this;
      }
@@ -159,7 +166,8 @@ public class WorkbookWorksheetRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public WorkbookWorksheetRequest expand(final String value) {
+     @Nonnull
+     public WorkbookWorksheetRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (WorkbookWorksheetRequest)this;
      }

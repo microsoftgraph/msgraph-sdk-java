@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.PlannerPlan;
 import com.microsoft.graph.models.extensions.PlannerTask;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class PlannerTaskCollectionRequest extends BaseCollectionRequest<PlannerT
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PlannerTaskCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PlannerTaskCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PlannerTaskCollectionResponse.class, PlannerTaskCollectionPage.class);
     }
 
-    public void get(final ICallback<? super PlannerTaskCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super PlannerTaskCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class PlannerTaskCollectionRequest extends BaseCollectionRequest<PlannerT
         });
     }
 
+    @Nonnull
     public PlannerTaskCollectionPage get() throws ClientException {
         final PlannerTaskCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final PlannerTask newPlannerTask, final ICallback<? super PlannerTask> callback) {
+    public void post(@Nonnull final PlannerTask newPlannerTask, @Nonnull final ICallback<? super PlannerTask> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PlannerTaskRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newPlannerTask, callback);
     }
 
-    public PlannerTask post(final PlannerTask newPlannerTask) throws ClientException {
+    @Nonnull
+    public PlannerTask post(@Nonnull final PlannerTask newPlannerTask) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PlannerTaskRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class PlannerTaskCollectionRequest extends BaseCollectionRequest<PlannerT
      * @param value the expand clause
      * @return the updated request
      */
-    public PlannerTaskCollectionRequest expand(final String value) {
+    @Nonnull
+    public PlannerTaskCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (PlannerTaskCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class PlannerTaskCollectionRequest extends BaseCollectionRequest<PlannerT
      * @param value the filter clause
      * @return the updated request
      */
-    public PlannerTaskCollectionRequest filter(final String value) {
+    @Nonnull
+    public PlannerTaskCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (PlannerTaskCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class PlannerTaskCollectionRequest extends BaseCollectionRequest<PlannerT
      * @param value the order by clause
      * @return the updated request
      */
-    public PlannerTaskCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public PlannerTaskCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PlannerTaskCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class PlannerTaskCollectionRequest extends BaseCollectionRequest<PlannerT
      * @param value the select clause
      * @return the updated request
      */
-    public PlannerTaskCollectionRequest select(final String value) {
+    @Nonnull
+    public PlannerTaskCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (PlannerTaskCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class PlannerTaskCollectionRequest extends BaseCollectionRequest<PlannerT
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public PlannerTaskCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (PlannerTaskCollectionRequest)this;
@@ -133,6 +142,7 @@ public class PlannerTaskCollectionRequest extends BaseCollectionRequest<PlannerT
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public PlannerTaskCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (PlannerTaskCollectionRequest)this;
@@ -144,11 +154,13 @@ public class PlannerTaskCollectionRequest extends BaseCollectionRequest<PlannerT
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public PlannerTaskCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public PlannerTaskCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (PlannerTaskCollectionRequest)this;
     }
-    public PlannerTaskCollectionPage buildFromResponse(final PlannerTaskCollectionResponse response) {
+    @Nonnull
+    public PlannerTaskCollectionPage buildFromResponse(@Nonnull final PlannerTaskCollectionResponse response) {
         final PlannerTaskCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new PlannerTaskCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

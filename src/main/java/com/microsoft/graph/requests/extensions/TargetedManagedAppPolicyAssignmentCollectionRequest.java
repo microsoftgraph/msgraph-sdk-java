@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.TargetedManagedAppConfiguration;
 import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class TargetedManagedAppPolicyAssignmentCollectionRequest extends BaseCol
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TargetedManagedAppPolicyAssignmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TargetedManagedAppPolicyAssignmentCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TargetedManagedAppPolicyAssignmentCollectionResponse.class, TargetedManagedAppPolicyAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<? super TargetedManagedAppPolicyAssignmentCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super TargetedManagedAppPolicyAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class TargetedManagedAppPolicyAssignmentCollectionRequest extends BaseCol
         });
     }
 
+    @Nonnull
     public TargetedManagedAppPolicyAssignmentCollectionPage get() throws ClientException {
         final TargetedManagedAppPolicyAssignmentCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment, final ICallback<? super TargetedManagedAppPolicyAssignment> callback) {
+    public void post(@Nonnull final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment, @Nonnull final ICallback<? super TargetedManagedAppPolicyAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TargetedManagedAppPolicyAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newTargetedManagedAppPolicyAssignment, callback);
     }
 
-    public TargetedManagedAppPolicyAssignment post(final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment) throws ClientException {
+    @Nonnull
+    public TargetedManagedAppPolicyAssignment post(@Nonnull final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TargetedManagedAppPolicyAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class TargetedManagedAppPolicyAssignmentCollectionRequest extends BaseCol
      * @param value the expand clause
      * @return the updated request
      */
-    public TargetedManagedAppPolicyAssignmentCollectionRequest expand(final String value) {
+    @Nonnull
+    public TargetedManagedAppPolicyAssignmentCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (TargetedManagedAppPolicyAssignmentCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class TargetedManagedAppPolicyAssignmentCollectionRequest extends BaseCol
      * @param value the filter clause
      * @return the updated request
      */
-    public TargetedManagedAppPolicyAssignmentCollectionRequest filter(final String value) {
+    @Nonnull
+    public TargetedManagedAppPolicyAssignmentCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (TargetedManagedAppPolicyAssignmentCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class TargetedManagedAppPolicyAssignmentCollectionRequest extends BaseCol
      * @param value the order by clause
      * @return the updated request
      */
-    public TargetedManagedAppPolicyAssignmentCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public TargetedManagedAppPolicyAssignmentCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (TargetedManagedAppPolicyAssignmentCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class TargetedManagedAppPolicyAssignmentCollectionRequest extends BaseCol
      * @param value the select clause
      * @return the updated request
      */
-    public TargetedManagedAppPolicyAssignmentCollectionRequest select(final String value) {
+    @Nonnull
+    public TargetedManagedAppPolicyAssignmentCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (TargetedManagedAppPolicyAssignmentCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class TargetedManagedAppPolicyAssignmentCollectionRequest extends BaseCol
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public TargetedManagedAppPolicyAssignmentCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (TargetedManagedAppPolicyAssignmentCollectionRequest)this;
@@ -133,6 +142,7 @@ public class TargetedManagedAppPolicyAssignmentCollectionRequest extends BaseCol
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public TargetedManagedAppPolicyAssignmentCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (TargetedManagedAppPolicyAssignmentCollectionRequest)this;
@@ -144,11 +154,13 @@ public class TargetedManagedAppPolicyAssignmentCollectionRequest extends BaseCol
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public TargetedManagedAppPolicyAssignmentCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public TargetedManagedAppPolicyAssignmentCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (TargetedManagedAppPolicyAssignmentCollectionRequest)this;
     }
-    public TargetedManagedAppPolicyAssignmentCollectionPage buildFromResponse(final TargetedManagedAppPolicyAssignmentCollectionResponse response) {
+    @Nonnull
+    public TargetedManagedAppPolicyAssignmentCollectionPage buildFromResponse(@Nonnull final TargetedManagedAppPolicyAssignmentCollectionResponse response) {
         final TargetedManagedAppPolicyAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new TargetedManagedAppPolicyAssignmentCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

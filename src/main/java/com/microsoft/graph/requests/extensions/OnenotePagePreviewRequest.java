@@ -6,6 +6,8 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.OnenotePagePreview;
 import com.microsoft.graph.requests.extensions.OnenotePagePreviewRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.core.ClientException;
@@ -27,7 +29,7 @@ public class OnenotePagePreviewRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnenotePagePreviewRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnenotePagePreviewRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OnenotePagePreview.class);
     }
 
@@ -36,7 +38,7 @@ public class OnenotePagePreviewRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super OnenotePagePreview> callback) {
+    public void get(@Nonnull final ICallback<? super OnenotePagePreview> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -46,6 +48,7 @@ public class OnenotePagePreviewRequest extends BaseRequest {
      * @return the OnenotePagePreview
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
+    @Nullable
     public OnenotePagePreview get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,8 @@ public class OnenotePagePreviewRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public OnenotePagePreviewRequest select(final String value) {
+    @Nonnull
+    public OnenotePagePreviewRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (OnenotePagePreviewRequest)this;
     }
@@ -67,7 +71,8 @@ public class OnenotePagePreviewRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public OnenotePagePreviewRequest expand(final String value) {
+    @Nonnull
+    public OnenotePagePreviewRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (OnenotePagePreviewRequest)this;
     }
@@ -78,7 +83,8 @@ public class OnenotePagePreviewRequest extends BaseRequest {
      * @param value the filter clause
      * @return the updated request
      */
-    public OnenotePagePreviewRequest filter(final String value) {
+    @Nonnull
+    public OnenotePagePreviewRequest filter(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (OnenotePagePreviewRequest)this;
     }
@@ -89,7 +95,8 @@ public class OnenotePagePreviewRequest extends BaseRequest {
      * @param value the order by clause
      * @return the updated request
      */
-    public OnenotePagePreviewRequest orderBy(final String value) {
+    @Nonnull
+    public OnenotePagePreviewRequest orderBy(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (OnenotePagePreviewRequest)this;
     }

@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Attachment;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionResponse;
@@ -22,7 +24,7 @@ public class AttachmentCollectionPage extends BaseCollectionPage<Attachment, Att
      * @param response the serialized AttachmentCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public AttachmentCollectionPage(final AttachmentCollectionResponse response, final AttachmentCollectionRequestBuilder builder) {
+    public AttachmentCollectionPage(@Nonnull final AttachmentCollectionResponse response, @Nonnull final AttachmentCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

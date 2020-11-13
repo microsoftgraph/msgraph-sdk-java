@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.generated.CalendarRoleType;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.CalendarAllowedCalendarSharingRolesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CalendarAllowedCalendarSharingRolesCollectionPage;
@@ -33,7 +35,7 @@ public class CalendarAllowedCalendarSharingRolesCollectionPage extends BaseColle
      * @param response The serialized CalendarAllowedCalendarSharingRolesCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public CalendarAllowedCalendarSharingRolesCollectionPage(final CalendarAllowedCalendarSharingRolesCollectionResponse response, final CalendarAllowedCalendarSharingRolesCollectionRequestBuilder builder) {
+    public CalendarAllowedCalendarSharingRolesCollectionPage(@Nonnull final CalendarAllowedCalendarSharingRolesCollectionResponse response, @Nonnull final CalendarAllowedCalendarSharingRolesCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

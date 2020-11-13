@@ -5,6 +5,8 @@
 package com.microsoft.graph.callrecords.requests.extensions;
 import com.microsoft.graph.callrecords.models.extensions.Session;
 import com.microsoft.graph.callrecords.requests.extensions.SessionCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.callrecords.requests.extensions.SessionCollectionPage;
 import com.microsoft.graph.callrecords.requests.extensions.SessionCollectionResponse;
@@ -22,7 +24,7 @@ public class SessionCollectionPage extends BaseCollectionPage<Session, SessionCo
      * @param response the serialized SessionCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public SessionCollectionPage(final SessionCollectionResponse response, final SessionCollectionRequestBuilder builder) {
+    public SessionCollectionPage(@Nonnull final SessionCollectionResponse response, @Nonnull final SessionCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

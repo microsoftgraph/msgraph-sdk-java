@@ -7,6 +7,8 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
 import java.util.EnumSet;
@@ -24,6 +26,7 @@ public class WorkbookFunctionsF_DistBody {
      */
     @SerializedName(value = "x", alternate = {"X"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement x;
 
     /**
@@ -32,6 +35,7 @@ public class WorkbookFunctionsF_DistBody {
      */
     @SerializedName(value = "degFreedom1", alternate = {"DegFreedom1"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement degFreedom1;
 
     /**
@@ -40,6 +44,7 @@ public class WorkbookFunctionsF_DistBody {
      */
     @SerializedName(value = "degFreedom2", alternate = {"DegFreedom2"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement degFreedom2;
 
     /**
@@ -48,6 +53,7 @@ public class WorkbookFunctionsF_DistBody {
      */
     @SerializedName(value = "cumulative", alternate = {"Cumulative"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement cumulative;
 
 
@@ -66,6 +72,7 @@ public class WorkbookFunctionsF_DistBody {
      *
      * @return the raw representation of this class
      */
+    @Nullable
     public JsonObject getRawObject() {
         return rawObject;
     }
@@ -75,6 +82,7 @@ public class WorkbookFunctionsF_DistBody {
      *
      * @return the serializer
      */
+    @Nullable
     protected ISerializer getSerializer() {
         return serializer;
     }
@@ -85,7 +93,7 @@ public class WorkbookFunctionsF_DistBody {
      * @param serializer the serializer
      * @param json the JSON object to set this object to
      */
-    public void setRawObject(final ISerializer serializer, final JsonObject json) {
+    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
         this.serializer = serializer;
         rawObject = json;
 

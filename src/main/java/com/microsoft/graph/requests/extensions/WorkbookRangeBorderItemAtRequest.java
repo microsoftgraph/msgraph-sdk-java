@@ -6,6 +6,8 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRangeBorder;
 import com.microsoft.graph.requests.extensions.WorkbookRangeBorderItemAtRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.core.ClientException;
@@ -27,7 +29,7 @@ public class WorkbookRangeBorderItemAtRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookRangeBorderItemAtRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeBorderItemAtRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookRangeBorder.class);
     }
 
@@ -36,7 +38,7 @@ public class WorkbookRangeBorderItemAtRequest extends BaseRequest {
      * @param srcWorkbookRangeBorder the WorkbookRangeBorder with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    public void patch(WorkbookRangeBorder srcWorkbookRangeBorder, final ICallback<? super WorkbookRangeBorder> callback) {
+    public void patch(@Nonnull WorkbookRangeBorder srcWorkbookRangeBorder, @Nonnull final ICallback<? super WorkbookRangeBorder> callback) {
         send(HttpMethod.PATCH, callback, srcWorkbookRangeBorder);
     }
 
@@ -47,7 +49,8 @@ public class WorkbookRangeBorderItemAtRequest extends BaseRequest {
      * @return the WorkbookRangeBorder
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-     public WorkbookRangeBorder patch(WorkbookRangeBorder srcWorkbookRangeBorder) throws ClientException {
+     @Nullable
+     public WorkbookRangeBorder patch(@Nonnull final WorkbookRangeBorder srcWorkbookRangeBorder) throws ClientException {
         return this.send(HttpMethod.PATCH, srcWorkbookRangeBorder);
     }
 
@@ -57,7 +60,7 @@ public class WorkbookRangeBorderItemAtRequest extends BaseRequest {
      * @param srcWorkbookRangeBorder the WorkbookRangeBorder to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(WorkbookRangeBorder srcWorkbookRangeBorder, final ICallback<? super WorkbookRangeBorder> callback) {
+    public void put(@Nonnull final WorkbookRangeBorder srcWorkbookRangeBorder, @Nonnull final ICallback<? super WorkbookRangeBorder> callback) {
         send(HttpMethod.PUT, callback, srcWorkbookRangeBorder);
     }
 
@@ -68,7 +71,8 @@ public class WorkbookRangeBorderItemAtRequest extends BaseRequest {
      * @return the WorkbookRangeBorder
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-     public WorkbookRangeBorder put(WorkbookRangeBorder srcWorkbookRangeBorder) throws ClientException {
+     @Nullable
+     public WorkbookRangeBorder put(@Nonnull final WorkbookRangeBorder srcWorkbookRangeBorder) throws ClientException {
         return this.send(HttpMethod.PUT, srcWorkbookRangeBorder);
     }
     /**
@@ -76,7 +80,7 @@ public class WorkbookRangeBorderItemAtRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookRangeBorder> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookRangeBorder> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -86,6 +90,7 @@ public class WorkbookRangeBorderItemAtRequest extends BaseRequest {
      * @return the WorkbookRangeBorder
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
+    @Nullable
     public WorkbookRangeBorder get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -96,7 +101,8 @@ public class WorkbookRangeBorderItemAtRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public WorkbookRangeBorderItemAtRequest select(final String value) {
+    @Nonnull
+    public WorkbookRangeBorderItemAtRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookRangeBorderItemAtRequest)this;
     }
@@ -107,7 +113,8 @@ public class WorkbookRangeBorderItemAtRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public WorkbookRangeBorderItemAtRequest expand(final String value) {
+    @Nonnull
+    public WorkbookRangeBorderItemAtRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookRangeBorderItemAtRequest)this;
     }
@@ -118,7 +125,8 @@ public class WorkbookRangeBorderItemAtRequest extends BaseRequest {
      * @param value the filter clause
      * @return the updated request
      */
-    public WorkbookRangeBorderItemAtRequest filter(final String value) {
+    @Nonnull
+    public WorkbookRangeBorderItemAtRequest filter(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookRangeBorderItemAtRequest)this;
     }
@@ -129,7 +137,8 @@ public class WorkbookRangeBorderItemAtRequest extends BaseRequest {
      * @param value the order by clause
      * @return the updated request
      */
-    public WorkbookRangeBorderItemAtRequest orderBy(final String value) {
+    @Nonnull
+    public WorkbookRangeBorderItemAtRequest orderBy(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookRangeBorderItemAtRequest)this;
     }

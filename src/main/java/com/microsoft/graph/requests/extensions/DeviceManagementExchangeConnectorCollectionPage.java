@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DeviceManagementExchangeConnector;
 import com.microsoft.graph.requests.extensions.DeviceManagementExchangeConnectorCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceManagementExchangeConnectorCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceManagementExchangeConnectorCollectionResponse;
@@ -22,7 +24,7 @@ public class DeviceManagementExchangeConnectorCollectionPage extends BaseCollect
      * @param response the serialized DeviceManagementExchangeConnectorCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DeviceManagementExchangeConnectorCollectionPage(final DeviceManagementExchangeConnectorCollectionResponse response, final DeviceManagementExchangeConnectorCollectionRequestBuilder builder) {
+    public DeviceManagementExchangeConnectorCollectionPage(@Nonnull final DeviceManagementExchangeConnectorCollectionResponse response, @Nonnull final DeviceManagementExchangeConnectorCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

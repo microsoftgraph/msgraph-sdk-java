@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Schedule;
 import com.microsoft.graph.models.extensions.TimeOff;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class TimeOffCollectionRequest extends BaseCollectionRequest<TimeOffColle
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TimeOffCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TimeOffCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TimeOffCollectionResponse.class, TimeOffCollectionPage.class);
     }
 
-    public void get(final ICallback<? super TimeOffCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super TimeOffCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class TimeOffCollectionRequest extends BaseCollectionRequest<TimeOffColle
         });
     }
 
+    @Nonnull
     public TimeOffCollectionPage get() throws ClientException {
         final TimeOffCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final TimeOff newTimeOff, final ICallback<? super TimeOff> callback) {
+    public void post(@Nonnull final TimeOff newTimeOff, @Nonnull final ICallback<? super TimeOff> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TimeOffRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newTimeOff, callback);
     }
 
-    public TimeOff post(final TimeOff newTimeOff) throws ClientException {
+    @Nonnull
+    public TimeOff post(@Nonnull final TimeOff newTimeOff) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TimeOffRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class TimeOffCollectionRequest extends BaseCollectionRequest<TimeOffColle
      * @param value the expand clause
      * @return the updated request
      */
-    public TimeOffCollectionRequest expand(final String value) {
+    @Nonnull
+    public TimeOffCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (TimeOffCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class TimeOffCollectionRequest extends BaseCollectionRequest<TimeOffColle
      * @param value the filter clause
      * @return the updated request
      */
-    public TimeOffCollectionRequest filter(final String value) {
+    @Nonnull
+    public TimeOffCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (TimeOffCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class TimeOffCollectionRequest extends BaseCollectionRequest<TimeOffColle
      * @param value the order by clause
      * @return the updated request
      */
-    public TimeOffCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public TimeOffCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (TimeOffCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class TimeOffCollectionRequest extends BaseCollectionRequest<TimeOffColle
      * @param value the select clause
      * @return the updated request
      */
-    public TimeOffCollectionRequest select(final String value) {
+    @Nonnull
+    public TimeOffCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (TimeOffCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class TimeOffCollectionRequest extends BaseCollectionRequest<TimeOffColle
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public TimeOffCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (TimeOffCollectionRequest)this;
@@ -133,6 +142,7 @@ public class TimeOffCollectionRequest extends BaseCollectionRequest<TimeOffColle
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public TimeOffCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (TimeOffCollectionRequest)this;
@@ -144,11 +154,13 @@ public class TimeOffCollectionRequest extends BaseCollectionRequest<TimeOffColle
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public TimeOffCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public TimeOffCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (TimeOffCollectionRequest)this;
     }
-    public TimeOffCollectionPage buildFromResponse(final TimeOffCollectionResponse response) {
+    @Nonnull
+    public TimeOffCollectionPage buildFromResponse(@Nonnull final TimeOffCollectionResponse response) {
         final TimeOffCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new TimeOffCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

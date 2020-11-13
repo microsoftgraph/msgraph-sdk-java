@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ActivityHistoryItem;
 import com.microsoft.graph.requests.extensions.UserActivityRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,7 +31,7 @@ public class ActivityHistoryItemRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ActivityHistoryItemRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ActivityHistoryItemRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ActivityHistoryItem.class);
     }
 
@@ -38,7 +40,7 @@ public class ActivityHistoryItemRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ActivityHistoryItem> callback) {
+    public void get(@Nonnull final ICallback<? super ActivityHistoryItem> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ActivityHistoryItemRequest extends BaseRequest {
      * @return the ActivityHistoryItem from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ActivityHistoryItem get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ActivityHistoryItemRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ActivityHistoryItem> callback) {
+    public void delete(@Nonnull final ICallback<? super ActivityHistoryItem> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ActivityHistoryItemRequest extends BaseRequest {
      * @param sourceActivityHistoryItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ActivityHistoryItem sourceActivityHistoryItem, final ICallback<? super ActivityHistoryItem> callback) {
+    public void patch(@Nonnull final ActivityHistoryItem sourceActivityHistoryItem, @Nonnull final ICallback<? super ActivityHistoryItem> callback) {
         send(HttpMethod.PATCH, callback, sourceActivityHistoryItem);
     }
 
@@ -87,7 +90,8 @@ public class ActivityHistoryItemRequest extends BaseRequest {
      * @return the updated ActivityHistoryItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ActivityHistoryItem patch(final ActivityHistoryItem sourceActivityHistoryItem) throws ClientException {
+    @Nullable
+    public ActivityHistoryItem patch(@Nonnull final ActivityHistoryItem sourceActivityHistoryItem) throws ClientException {
         return send(HttpMethod.PATCH, sourceActivityHistoryItem);
     }
 
@@ -97,7 +101,7 @@ public class ActivityHistoryItemRequest extends BaseRequest {
      * @param newActivityHistoryItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ActivityHistoryItem newActivityHistoryItem, final ICallback<? super ActivityHistoryItem> callback) {
+    public void post(@Nonnull final ActivityHistoryItem newActivityHistoryItem, @Nonnull final ICallback<? super ActivityHistoryItem> callback) {
         send(HttpMethod.POST, callback, newActivityHistoryItem);
     }
 
@@ -108,7 +112,8 @@ public class ActivityHistoryItemRequest extends BaseRequest {
      * @return the created ActivityHistoryItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ActivityHistoryItem post(final ActivityHistoryItem newActivityHistoryItem) throws ClientException {
+    @Nullable
+    public ActivityHistoryItem post(@Nonnull final ActivityHistoryItem newActivityHistoryItem) throws ClientException {
         return send(HttpMethod.POST, newActivityHistoryItem);
     }
 
@@ -118,7 +123,7 @@ public class ActivityHistoryItemRequest extends BaseRequest {
      * @param newActivityHistoryItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ActivityHistoryItem newActivityHistoryItem, final ICallback<? super ActivityHistoryItem> callback) {
+    public void put(@Nonnull final ActivityHistoryItem newActivityHistoryItem, @Nonnull final ICallback<? super ActivityHistoryItem> callback) {
         send(HttpMethod.PUT, callback, newActivityHistoryItem);
     }
 
@@ -129,7 +134,8 @@ public class ActivityHistoryItemRequest extends BaseRequest {
      * @return the created ActivityHistoryItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ActivityHistoryItem put(final ActivityHistoryItem newActivityHistoryItem) throws ClientException {
+    @Nullable
+    public ActivityHistoryItem put(@Nonnull final ActivityHistoryItem newActivityHistoryItem) throws ClientException {
         return send(HttpMethod.PUT, newActivityHistoryItem);
     }
 
@@ -139,7 +145,8 @@ public class ActivityHistoryItemRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ActivityHistoryItemRequest select(final String value) {
+     @Nonnull
+     public ActivityHistoryItemRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ActivityHistoryItemRequest)this;
      }
@@ -150,7 +157,8 @@ public class ActivityHistoryItemRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ActivityHistoryItemRequest expand(final String value) {
+     @Nonnull
+     public ActivityHistoryItemRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ActivityHistoryItemRequest)this;
      }

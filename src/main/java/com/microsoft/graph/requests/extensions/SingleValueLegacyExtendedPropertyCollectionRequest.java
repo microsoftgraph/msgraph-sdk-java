@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Post;
 import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseColl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SingleValueLegacyExtendedPropertyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SingleValueLegacyExtendedPropertyCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SingleValueLegacyExtendedPropertyCollectionResponse.class, SingleValueLegacyExtendedPropertyCollectionPage.class);
     }
 
-    public void get(final ICallback<? super SingleValueLegacyExtendedPropertyCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super SingleValueLegacyExtendedPropertyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseColl
         });
     }
 
+    @Nonnull
     public SingleValueLegacyExtendedPropertyCollectionPage get() throws ClientException {
         final SingleValueLegacyExtendedPropertyCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty, final ICallback<? super SingleValueLegacyExtendedProperty> callback) {
+    public void post(@Nonnull final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty, @Nonnull final ICallback<? super SingleValueLegacyExtendedProperty> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SingleValueLegacyExtendedPropertyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newSingleValueLegacyExtendedProperty, callback);
     }
 
-    public SingleValueLegacyExtendedProperty post(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty) throws ClientException {
+    @Nonnull
+    public SingleValueLegacyExtendedProperty post(@Nonnull final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SingleValueLegacyExtendedPropertyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseColl
      * @param value the expand clause
      * @return the updated request
      */
-    public SingleValueLegacyExtendedPropertyCollectionRequest expand(final String value) {
+    @Nonnull
+    public SingleValueLegacyExtendedPropertyCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (SingleValueLegacyExtendedPropertyCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseColl
      * @param value the filter clause
      * @return the updated request
      */
-    public SingleValueLegacyExtendedPropertyCollectionRequest filter(final String value) {
+    @Nonnull
+    public SingleValueLegacyExtendedPropertyCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (SingleValueLegacyExtendedPropertyCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseColl
      * @param value the order by clause
      * @return the updated request
      */
-    public SingleValueLegacyExtendedPropertyCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public SingleValueLegacyExtendedPropertyCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SingleValueLegacyExtendedPropertyCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseColl
      * @param value the select clause
      * @return the updated request
      */
-    public SingleValueLegacyExtendedPropertyCollectionRequest select(final String value) {
+    @Nonnull
+    public SingleValueLegacyExtendedPropertyCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (SingleValueLegacyExtendedPropertyCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseColl
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public SingleValueLegacyExtendedPropertyCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (SingleValueLegacyExtendedPropertyCollectionRequest)this;
@@ -133,6 +142,7 @@ public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseColl
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public SingleValueLegacyExtendedPropertyCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (SingleValueLegacyExtendedPropertyCollectionRequest)this;
@@ -144,11 +154,13 @@ public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseColl
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public SingleValueLegacyExtendedPropertyCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public SingleValueLegacyExtendedPropertyCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (SingleValueLegacyExtendedPropertyCollectionRequest)this;
     }
-    public SingleValueLegacyExtendedPropertyCollectionPage buildFromResponse(final SingleValueLegacyExtendedPropertyCollectionResponse response) {
+    @Nonnull
+    public SingleValueLegacyExtendedPropertyCollectionPage buildFromResponse(@Nonnull final SingleValueLegacyExtendedPropertyCollectionResponse response) {
         final SingleValueLegacyExtendedPropertyCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

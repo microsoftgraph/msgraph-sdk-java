@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
 import com.microsoft.graph.requests.extensions.OnenoteOperationCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.OnenoteOperationCollectionPage;
 import com.microsoft.graph.requests.extensions.OnenoteOperationCollectionResponse;
@@ -22,7 +24,7 @@ public class OnenoteOperationCollectionPage extends BaseCollectionPage<OnenoteOp
      * @param response the serialized OnenoteOperationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public OnenoteOperationCollectionPage(final OnenoteOperationCollectionResponse response, final OnenoteOperationCollectionRequestBuilder builder) {
+    public OnenoteOperationCollectionPage(@Nonnull final OnenoteOperationCollectionResponse response, @Nonnull final OnenoteOperationCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

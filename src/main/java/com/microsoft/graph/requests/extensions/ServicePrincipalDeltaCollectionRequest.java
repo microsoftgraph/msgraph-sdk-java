@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ServicePrincipal;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.ServicePrincipalDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ServicePrincipalDeltaCollectionPage;
@@ -34,12 +36,12 @@ public class ServicePrincipalDeltaCollectionRequest extends BaseCollectionReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ServicePrincipalDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ServicePrincipalDeltaCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ServicePrincipalDeltaCollectionResponse.class, ServicePrincipalDeltaCollectionPage.class);
     }
 
 
-    public void get(final ICallback<? super ServicePrincipalDeltaCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super ServicePrincipalDeltaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,13 +55,15 @@ public class ServicePrincipalDeltaCollectionRequest extends BaseCollectionReques
         });
     }
 
+    @Nullable
     public ServicePrincipalDeltaCollectionPage get() throws ClientException {
         final ServicePrincipalDeltaCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
 
-    public ServicePrincipalDeltaCollectionPage buildFromResponse(final ServicePrincipalDeltaCollectionResponse response) {
+    @Nonnull
+    public ServicePrincipalDeltaCollectionPage buildFromResponse(@Nonnull final ServicePrincipalDeltaCollectionResponse response) {
         final ServicePrincipalDeltaCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ServicePrincipalDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
@@ -77,7 +81,8 @@ public class ServicePrincipalDeltaCollectionRequest extends BaseCollectionReques
      * @param value the select clause
      * @return the updated request
      */
-    public ServicePrincipalDeltaCollectionRequest select(final String value) {
+    @Nonnull
+    public ServicePrincipalDeltaCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ServicePrincipalDeltaCollectionRequest)this;
     }
@@ -88,6 +93,7 @@ public class ServicePrincipalDeltaCollectionRequest extends BaseCollectionReques
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ServicePrincipalDeltaCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (ServicePrincipalDeltaCollectionRequest)this;
@@ -99,7 +105,8 @@ public class ServicePrincipalDeltaCollectionRequest extends BaseCollectionReques
      * @param value the expand clause
      * @return the updated request
      */
-    public ServicePrincipalDeltaCollectionRequest expand(final String value) {
+    @Nonnull
+    public ServicePrincipalDeltaCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ServicePrincipalDeltaCollectionRequest)this;
     }
@@ -110,7 +117,8 @@ public class ServicePrincipalDeltaCollectionRequest extends BaseCollectionReques
      * @param value the filter clause
      * @return the updated request
      */
-    public ServicePrincipalDeltaCollectionRequest filter(final String value) {
+    @Nonnull
+    public ServicePrincipalDeltaCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ServicePrincipalDeltaCollectionRequest)this;
     }
@@ -121,7 +129,8 @@ public class ServicePrincipalDeltaCollectionRequest extends BaseCollectionReques
      * @param value the order by clause
      * @return the updated request
      */
-    public ServicePrincipalDeltaCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ServicePrincipalDeltaCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ServicePrincipalDeltaCollectionRequest)this;
     }

@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceConfiguration;
 import com.microsoft.graph.models.extensions.SettingStateDeviceSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class SettingStateDeviceSummaryCollectionRequest extends BaseCollectionRe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SettingStateDeviceSummaryCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SettingStateDeviceSummaryCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SettingStateDeviceSummaryCollectionResponse.class, SettingStateDeviceSummaryCollectionPage.class);
     }
 
-    public void get(final ICallback<? super SettingStateDeviceSummaryCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super SettingStateDeviceSummaryCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class SettingStateDeviceSummaryCollectionRequest extends BaseCollectionRe
         });
     }
 
+    @Nonnull
     public SettingStateDeviceSummaryCollectionPage get() throws ClientException {
         final SettingStateDeviceSummaryCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final SettingStateDeviceSummary newSettingStateDeviceSummary, final ICallback<? super SettingStateDeviceSummary> callback) {
+    public void post(@Nonnull final SettingStateDeviceSummary newSettingStateDeviceSummary, @Nonnull final ICallback<? super SettingStateDeviceSummary> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SettingStateDeviceSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newSettingStateDeviceSummary, callback);
     }
 
-    public SettingStateDeviceSummary post(final SettingStateDeviceSummary newSettingStateDeviceSummary) throws ClientException {
+    @Nonnull
+    public SettingStateDeviceSummary post(@Nonnull final SettingStateDeviceSummary newSettingStateDeviceSummary) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SettingStateDeviceSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class SettingStateDeviceSummaryCollectionRequest extends BaseCollectionRe
      * @param value the expand clause
      * @return the updated request
      */
-    public SettingStateDeviceSummaryCollectionRequest expand(final String value) {
+    @Nonnull
+    public SettingStateDeviceSummaryCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (SettingStateDeviceSummaryCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class SettingStateDeviceSummaryCollectionRequest extends BaseCollectionRe
      * @param value the filter clause
      * @return the updated request
      */
-    public SettingStateDeviceSummaryCollectionRequest filter(final String value) {
+    @Nonnull
+    public SettingStateDeviceSummaryCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (SettingStateDeviceSummaryCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class SettingStateDeviceSummaryCollectionRequest extends BaseCollectionRe
      * @param value the order by clause
      * @return the updated request
      */
-    public SettingStateDeviceSummaryCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public SettingStateDeviceSummaryCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SettingStateDeviceSummaryCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class SettingStateDeviceSummaryCollectionRequest extends BaseCollectionRe
      * @param value the select clause
      * @return the updated request
      */
-    public SettingStateDeviceSummaryCollectionRequest select(final String value) {
+    @Nonnull
+    public SettingStateDeviceSummaryCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (SettingStateDeviceSummaryCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class SettingStateDeviceSummaryCollectionRequest extends BaseCollectionRe
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public SettingStateDeviceSummaryCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (SettingStateDeviceSummaryCollectionRequest)this;
@@ -133,6 +142,7 @@ public class SettingStateDeviceSummaryCollectionRequest extends BaseCollectionRe
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public SettingStateDeviceSummaryCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (SettingStateDeviceSummaryCollectionRequest)this;
@@ -144,11 +154,13 @@ public class SettingStateDeviceSummaryCollectionRequest extends BaseCollectionRe
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public SettingStateDeviceSummaryCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public SettingStateDeviceSummaryCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (SettingStateDeviceSummaryCollectionRequest)this;
     }
-    public SettingStateDeviceSummaryCollectionPage buildFromResponse(final SettingStateDeviceSummaryCollectionResponse response) {
+    @Nonnull
+    public SettingStateDeviceSummaryCollectionPage buildFromResponse(@Nonnull final SettingStateDeviceSummaryCollectionResponse response) {
         final SettingStateDeviceSummaryCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new SettingStateDeviceSummaryCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

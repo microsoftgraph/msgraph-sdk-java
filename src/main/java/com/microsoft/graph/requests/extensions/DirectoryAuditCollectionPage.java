@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DirectoryAudit;
 import com.microsoft.graph.requests.extensions.DirectoryAuditCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryAuditCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryAuditCollectionResponse;
@@ -22,7 +24,7 @@ public class DirectoryAuditCollectionPage extends BaseCollectionPage<DirectoryAu
      * @param response the serialized DirectoryAuditCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DirectoryAuditCollectionPage(final DirectoryAuditCollectionResponse response, final DirectoryAuditCollectionRequestBuilder builder) {
+    public DirectoryAuditCollectionPage(@Nonnull final DirectoryAuditCollectionResponse response, @Nonnull final DirectoryAuditCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

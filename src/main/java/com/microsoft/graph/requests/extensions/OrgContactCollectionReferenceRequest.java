@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.OrgContact;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -32,11 +34,11 @@ public class OrgContactCollectionReferenceRequest extends BaseCollectionRequest<
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OrgContactCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OrgContactCollectionReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OrgContactCollectionResponse.class, OrgContactCollectionPage.class);
     }
 
-    public void post(final OrgContact newOrgContact, final ICallback<? super OrgContact> callback) {
+    public void post(@Nonnull final OrgContact newOrgContact, @Nonnull final ICallback<? super OrgContact> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/contacts/" + newOrgContact.id);
         new OrgContactWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -44,7 +46,8 @@ public class OrgContactCollectionReferenceRequest extends BaseCollectionRequest<
             .post(newOrgContact, body, callback);
     }
 
-    public OrgContact post(final OrgContact newOrgContact) throws ClientException {
+    @Nonnull
+    public OrgContact post(@Nonnull final OrgContact newOrgContact) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/contacts/" + newOrgContact.id);
         return new OrgContactWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
@@ -57,7 +60,8 @@ public class OrgContactCollectionReferenceRequest extends BaseCollectionRequest<
      * @param value the expand clause
      * @return the updated request
      */
-    public OrgContactCollectionReferenceRequest expand(final String value) {
+    @Nonnull
+    public OrgContactCollectionReferenceRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (OrgContactCollectionReferenceRequest)this;
     }
@@ -68,7 +72,8 @@ public class OrgContactCollectionReferenceRequest extends BaseCollectionRequest<
      * @param value the filter clause
      * @return the updated request
      */
-    public OrgContactCollectionReferenceRequest filter(final String value) {
+    @Nonnull
+    public OrgContactCollectionReferenceRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (OrgContactCollectionReferenceRequest)this;
     }
@@ -79,7 +84,8 @@ public class OrgContactCollectionReferenceRequest extends BaseCollectionRequest<
      * @param value the sort clause
      * @return the updated request
      */
-    public OrgContactCollectionReferenceRequest orderBy(final String value) {
+    @Nonnull
+    public OrgContactCollectionReferenceRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (OrgContactCollectionReferenceRequest)this;
     }
@@ -90,7 +96,8 @@ public class OrgContactCollectionReferenceRequest extends BaseCollectionRequest<
      * @param value the select clause
      * @return the updated request
      */
-    public OrgContactCollectionReferenceRequest select(final String value) {
+    @Nonnull
+    public OrgContactCollectionReferenceRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (OrgContactCollectionReferenceRequest)this;
     }
@@ -101,6 +108,7 @@ public class OrgContactCollectionReferenceRequest extends BaseCollectionRequest<
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public OrgContactCollectionReferenceRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (OrgContactCollectionReferenceRequest)this;

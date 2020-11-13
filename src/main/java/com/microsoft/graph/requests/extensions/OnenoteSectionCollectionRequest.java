@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.OnenoteSection;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -36,11 +38,11 @@ public class OnenoteSectionCollectionRequest extends BaseCollectionRequest<Oneno
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnenoteSectionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnenoteSectionCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OnenoteSectionCollectionResponse.class, OnenoteSectionCollectionPage.class);
     }
 
-    public void get(final ICallback<? super OnenoteSectionCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super OnenoteSectionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -54,19 +56,21 @@ public class OnenoteSectionCollectionRequest extends BaseCollectionRequest<Oneno
         });
     }
 
+    @Nonnull
     public OnenoteSectionCollectionPage get() throws ClientException {
         final OnenoteSectionCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final OnenoteSection newOnenoteSection, final ICallback<? super OnenoteSection> callback) {
+    public void post(@Nonnull final OnenoteSection newOnenoteSection, @Nonnull final ICallback<? super OnenoteSection> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OnenoteSectionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newOnenoteSection, callback);
     }
 
-    public OnenoteSection post(final OnenoteSection newOnenoteSection) throws ClientException {
+    @Nonnull
+    public OnenoteSection post(@Nonnull final OnenoteSection newOnenoteSection) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OnenoteSectionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -79,7 +83,8 @@ public class OnenoteSectionCollectionRequest extends BaseCollectionRequest<Oneno
      * @param value the expand clause
      * @return the updated request
      */
-    public OnenoteSectionCollectionRequest expand(final String value) {
+    @Nonnull
+    public OnenoteSectionCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (OnenoteSectionCollectionRequest)this;
     }
@@ -90,7 +95,8 @@ public class OnenoteSectionCollectionRequest extends BaseCollectionRequest<Oneno
      * @param value the filter clause
      * @return the updated request
      */
-    public OnenoteSectionCollectionRequest filter(final String value) {
+    @Nonnull
+    public OnenoteSectionCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (OnenoteSectionCollectionRequest)this;
     }
@@ -101,7 +107,8 @@ public class OnenoteSectionCollectionRequest extends BaseCollectionRequest<Oneno
      * @param value the order by clause
      * @return the updated request
      */
-    public OnenoteSectionCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public OnenoteSectionCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (OnenoteSectionCollectionRequest)this;
     }
@@ -112,7 +119,8 @@ public class OnenoteSectionCollectionRequest extends BaseCollectionRequest<Oneno
      * @param value the select clause
      * @return the updated request
      */
-    public OnenoteSectionCollectionRequest select(final String value) {
+    @Nonnull
+    public OnenoteSectionCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (OnenoteSectionCollectionRequest)this;
     }
@@ -123,6 +131,7 @@ public class OnenoteSectionCollectionRequest extends BaseCollectionRequest<Oneno
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public OnenoteSectionCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (OnenoteSectionCollectionRequest)this;
@@ -134,6 +143,7 @@ public class OnenoteSectionCollectionRequest extends BaseCollectionRequest<Oneno
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public OnenoteSectionCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (OnenoteSectionCollectionRequest)this;
@@ -145,11 +155,13 @@ public class OnenoteSectionCollectionRequest extends BaseCollectionRequest<Oneno
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public OnenoteSectionCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public OnenoteSectionCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (OnenoteSectionCollectionRequest)this;
     }
-    public OnenoteSectionCollectionPage buildFromResponse(final OnenoteSectionCollectionResponse response) {
+    @Nonnull
+    public OnenoteSectionCollectionPage buildFromResponse(@Nonnull final OnenoteSectionCollectionResponse response) {
         final OnenoteSectionCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new OnenoteSectionCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

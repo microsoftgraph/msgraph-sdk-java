@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Shift;
 import com.microsoft.graph.requests.extensions.ShiftCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ShiftCollectionPage;
 import com.microsoft.graph.requests.extensions.ShiftCollectionResponse;
@@ -22,7 +24,7 @@ public class ShiftCollectionPage extends BaseCollectionPage<Shift, ShiftCollecti
      * @param response the serialized ShiftCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ShiftCollectionPage(final ShiftCollectionResponse response, final ShiftCollectionRequestBuilder builder) {
+    public ShiftCollectionPage(@Nonnull final ShiftCollectionResponse response, @Nonnull final ShiftCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

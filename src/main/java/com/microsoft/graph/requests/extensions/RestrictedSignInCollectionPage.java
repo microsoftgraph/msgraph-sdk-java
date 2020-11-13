@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.RestrictedSignIn;
 import com.microsoft.graph.requests.extensions.RestrictedSignInCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.RestrictedSignInCollectionPage;
 import com.microsoft.graph.requests.extensions.RestrictedSignInCollectionResponse;
@@ -22,7 +24,7 @@ public class RestrictedSignInCollectionPage extends BaseCollectionPage<Restricte
      * @param response the serialized RestrictedSignInCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public RestrictedSignInCollectionPage(final RestrictedSignInCollectionResponse response, final RestrictedSignInCollectionRequestBuilder builder) {
+    public RestrictedSignInCollectionPage(@Nonnull final RestrictedSignInCollectionResponse response, @Nonnull final RestrictedSignInCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -9,6 +9,8 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.ISerializer;
@@ -25,6 +27,7 @@ public class DeviceAndAppManagementRoleAssignmentCollectionResponse implements I
      */
     @SerializedName("value")
     @Expose
+    @Nullable
     public java.util.List<DeviceAndAppManagementRoleAssignment> value;
 
     /**
@@ -32,11 +35,13 @@ public class DeviceAndAppManagementRoleAssignmentCollectionResponse implements I
      */
     @SerializedName("@odata.nextLink")
     @Expose(serialize = false)
+    @Nullable
     public String nextLink;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
+    @Nonnull
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
@@ -56,6 +61,7 @@ public class DeviceAndAppManagementRoleAssignmentCollectionResponse implements I
      *
      * @return the raw representation of this class
      */
+    @Nullable
     public JsonObject getRawObject() {
         return rawObject;
     }
@@ -65,6 +71,7 @@ public class DeviceAndAppManagementRoleAssignmentCollectionResponse implements I
      *
      * @return the serializer
      */
+    @Nullable
     protected ISerializer getSerializer() {
         return serializer;
     }
@@ -75,7 +82,7 @@ public class DeviceAndAppManagementRoleAssignmentCollectionResponse implements I
      * @param serializer the serializer
      * @param json the JSON object to set this object to
      */
-    public void setRawObject(final ISerializer serializer, final JsonObject json) {
+    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
         this.serializer = serializer;
         rawObject = json;
 

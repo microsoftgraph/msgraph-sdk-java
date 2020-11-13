@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.SwapShiftsChangeRequest;
 import com.microsoft.graph.requests.extensions.SwapShiftsChangeRequestCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.SwapShiftsChangeRequestCollectionPage;
 import com.microsoft.graph.requests.extensions.SwapShiftsChangeRequestCollectionResponse;
@@ -22,7 +24,7 @@ public class SwapShiftsChangeRequestCollectionPage extends BaseCollectionPage<Sw
      * @param response the serialized SwapShiftsChangeRequestCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public SwapShiftsChangeRequestCollectionPage(final SwapShiftsChangeRequestCollectionResponse response, final SwapShiftsChangeRequestCollectionRequestBuilder builder) {
+    public SwapShiftsChangeRequestCollectionPage(@Nonnull final SwapShiftsChangeRequestCollectionResponse response, @Nonnull final SwapShiftsChangeRequestCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

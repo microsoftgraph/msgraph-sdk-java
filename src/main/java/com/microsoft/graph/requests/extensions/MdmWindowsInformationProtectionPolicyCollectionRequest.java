@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceAppManagement;
 import com.microsoft.graph.models.extensions.MdmWindowsInformationProtectionPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class MdmWindowsInformationProtectionPolicyCollectionRequest extends Base
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MdmWindowsInformationProtectionPolicyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MdmWindowsInformationProtectionPolicyCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MdmWindowsInformationProtectionPolicyCollectionResponse.class, MdmWindowsInformationProtectionPolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<? super MdmWindowsInformationProtectionPolicyCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super MdmWindowsInformationProtectionPolicyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class MdmWindowsInformationProtectionPolicyCollectionRequest extends Base
         });
     }
 
+    @Nonnull
     public MdmWindowsInformationProtectionPolicyCollectionPage get() throws ClientException {
         final MdmWindowsInformationProtectionPolicyCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy, final ICallback<? super MdmWindowsInformationProtectionPolicy> callback) {
+    public void post(@Nonnull final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy, @Nonnull final ICallback<? super MdmWindowsInformationProtectionPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MdmWindowsInformationProtectionPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newMdmWindowsInformationProtectionPolicy, callback);
     }
 
-    public MdmWindowsInformationProtectionPolicy post(final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy) throws ClientException {
+    @Nonnull
+    public MdmWindowsInformationProtectionPolicy post(@Nonnull final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MdmWindowsInformationProtectionPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class MdmWindowsInformationProtectionPolicyCollectionRequest extends Base
      * @param value the expand clause
      * @return the updated request
      */
-    public MdmWindowsInformationProtectionPolicyCollectionRequest expand(final String value) {
+    @Nonnull
+    public MdmWindowsInformationProtectionPolicyCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (MdmWindowsInformationProtectionPolicyCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class MdmWindowsInformationProtectionPolicyCollectionRequest extends Base
      * @param value the filter clause
      * @return the updated request
      */
-    public MdmWindowsInformationProtectionPolicyCollectionRequest filter(final String value) {
+    @Nonnull
+    public MdmWindowsInformationProtectionPolicyCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (MdmWindowsInformationProtectionPolicyCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class MdmWindowsInformationProtectionPolicyCollectionRequest extends Base
      * @param value the order by clause
      * @return the updated request
      */
-    public MdmWindowsInformationProtectionPolicyCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public MdmWindowsInformationProtectionPolicyCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (MdmWindowsInformationProtectionPolicyCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class MdmWindowsInformationProtectionPolicyCollectionRequest extends Base
      * @param value the select clause
      * @return the updated request
      */
-    public MdmWindowsInformationProtectionPolicyCollectionRequest select(final String value) {
+    @Nonnull
+    public MdmWindowsInformationProtectionPolicyCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (MdmWindowsInformationProtectionPolicyCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class MdmWindowsInformationProtectionPolicyCollectionRequest extends Base
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public MdmWindowsInformationProtectionPolicyCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (MdmWindowsInformationProtectionPolicyCollectionRequest)this;
@@ -133,6 +142,7 @@ public class MdmWindowsInformationProtectionPolicyCollectionRequest extends Base
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public MdmWindowsInformationProtectionPolicyCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (MdmWindowsInformationProtectionPolicyCollectionRequest)this;
@@ -144,11 +154,13 @@ public class MdmWindowsInformationProtectionPolicyCollectionRequest extends Base
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public MdmWindowsInformationProtectionPolicyCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public MdmWindowsInformationProtectionPolicyCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (MdmWindowsInformationProtectionPolicyCollectionRequest)this;
     }
-    public MdmWindowsInformationProtectionPolicyCollectionPage buildFromResponse(final MdmWindowsInformationProtectionPolicyCollectionResponse response) {
+    @Nonnull
+    public MdmWindowsInformationProtectionPolicyCollectionPage buildFromResponse(@Nonnull final MdmWindowsInformationProtectionPolicyCollectionResponse response) {
         final MdmWindowsInformationProtectionPolicyCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new MdmWindowsInformationProtectionPolicyCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

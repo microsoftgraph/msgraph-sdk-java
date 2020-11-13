@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Channel;
 import com.microsoft.graph.requests.extensions.ChannelCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ChannelCollectionPage;
 import com.microsoft.graph.requests.extensions.ChannelCollectionResponse;
@@ -22,7 +24,7 @@ public class ChannelCollectionPage extends BaseCollectionPage<Channel, ChannelCo
      * @param response the serialized ChannelCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ChannelCollectionPage(final ChannelCollectionResponse response, final ChannelCollectionRequestBuilder builder) {
+    public ChannelCollectionPage(@Nonnull final ChannelCollectionResponse response, @Nonnull final ChannelCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

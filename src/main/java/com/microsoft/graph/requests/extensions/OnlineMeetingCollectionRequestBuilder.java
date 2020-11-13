@@ -13,6 +13,8 @@ import com.microsoft.graph.models.extensions.ChatInfo;
 import com.microsoft.graph.models.extensions.MeetingParticipants;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnlineMeetingRequestBuilder;
@@ -35,7 +37,7 @@ public class OnlineMeetingCollectionRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnlineMeetingCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnlineMeetingCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,7 +47,8 @@ public class OnlineMeetingCollectionRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public OnlineMeetingCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public OnlineMeetingCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -55,17 +58,20 @@ public class OnlineMeetingCollectionRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public OnlineMeetingCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public OnlineMeetingCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new OnlineMeetingCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public OnlineMeetingRequestBuilder byId(final String id) {
+    @Nonnull
+    public OnlineMeetingRequestBuilder byId(@Nonnull final String id) {
         return new OnlineMeetingRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
-    public OnlineMeetingCreateOrGetRequestBuilder createOrGet(final ChatInfo chatInfo, final java.util.Calendar endDateTime, final String externalId, final MeetingParticipants participants, final java.util.Calendar startDateTime, final String subject) {
+    @Nonnull
+    public OnlineMeetingCreateOrGetRequestBuilder createOrGet(@Nullable final ChatInfo chatInfo, @Nullable final java.util.Calendar endDateTime, @Nullable final String externalId, @Nullable final MeetingParticipants participants, @Nullable final java.util.Calendar startDateTime, @Nullable final String subject) {
         return new OnlineMeetingCreateOrGetRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createOrGet"), getClient(), null, chatInfo, endDateTime, externalId, participants, startDateTime, subject);
     }
 }

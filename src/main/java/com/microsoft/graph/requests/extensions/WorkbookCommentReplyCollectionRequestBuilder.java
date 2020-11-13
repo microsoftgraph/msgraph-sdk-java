@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.WorkbookComment;
 import com.microsoft.graph.models.extensions.WorkbookCommentReply;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.WorkbookCommentReplyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookCommentReplyRequestBuilder;
@@ -32,7 +34,7 @@ public class WorkbookCommentReplyCollectionRequestBuilder extends BaseRequestBui
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookCommentReplyCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookCommentReplyCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,7 +44,8 @@ public class WorkbookCommentReplyCollectionRequestBuilder extends BaseRequestBui
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public WorkbookCommentReplyCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WorkbookCommentReplyCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +55,13 @@ public class WorkbookCommentReplyCollectionRequestBuilder extends BaseRequestBui
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public WorkbookCommentReplyCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WorkbookCommentReplyCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookCommentReplyCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public WorkbookCommentReplyRequestBuilder byId(final String id) {
+    @Nonnull
+    public WorkbookCommentReplyRequestBuilder byId(@Nonnull final String id) {
         return new WorkbookCommentReplyRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.Device;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DeviceCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCollectionWithReferencesPage;
@@ -34,7 +36,7 @@ public class DeviceCollectionWithReferencesPage extends BaseCollectionPage<Devic
      * @param response the serialized DeviceCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DeviceCollectionWithReferencesPage(final DeviceCollectionResponse response, final DeviceCollectionWithReferencesRequestBuilder builder) {
+    public DeviceCollectionWithReferencesPage(@Nonnull final DeviceCollectionResponse response, @Nonnull  final DeviceCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

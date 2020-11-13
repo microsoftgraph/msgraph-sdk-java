@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.models.extensions.UpdateWindowsDeviceAccountActionParameter;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionWithReferencesPage;
@@ -35,7 +37,7 @@ public class ManagedDeviceCollectionWithReferencesPage extends BaseCollectionPag
      * @param response the serialized ManagedDeviceCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ManagedDeviceCollectionWithReferencesPage(final ManagedDeviceCollectionResponse response, final ManagedDeviceCollectionWithReferencesRequestBuilder builder) {
+    public ManagedDeviceCollectionWithReferencesPage(@Nonnull final ManagedDeviceCollectionResponse response, @Nonnull  final ManagedDeviceCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

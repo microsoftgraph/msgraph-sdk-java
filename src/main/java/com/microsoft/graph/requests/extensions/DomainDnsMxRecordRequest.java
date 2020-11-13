@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DomainDnsMxRecord;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class DomainDnsMxRecordRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DomainDnsMxRecordRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DomainDnsMxRecordRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DomainDnsMxRecord.class);
     }
 
@@ -37,7 +39,7 @@ public class DomainDnsMxRecordRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DomainDnsMxRecord> callback) {
+    public void get(@Nonnull final ICallback<? super DomainDnsMxRecord> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class DomainDnsMxRecordRequest extends BaseRequest {
      * @return the DomainDnsMxRecord from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DomainDnsMxRecord get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class DomainDnsMxRecordRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DomainDnsMxRecord> callback) {
+    public void delete(@Nonnull final ICallback<? super DomainDnsMxRecord> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class DomainDnsMxRecordRequest extends BaseRequest {
      * @param sourceDomainDnsMxRecord the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DomainDnsMxRecord sourceDomainDnsMxRecord, final ICallback<? super DomainDnsMxRecord> callback) {
+    public void patch(@Nonnull final DomainDnsMxRecord sourceDomainDnsMxRecord, @Nonnull final ICallback<? super DomainDnsMxRecord> callback) {
         send(HttpMethod.PATCH, callback, sourceDomainDnsMxRecord);
     }
 
@@ -86,7 +89,8 @@ public class DomainDnsMxRecordRequest extends BaseRequest {
      * @return the updated DomainDnsMxRecord
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DomainDnsMxRecord patch(final DomainDnsMxRecord sourceDomainDnsMxRecord) throws ClientException {
+    @Nullable
+    public DomainDnsMxRecord patch(@Nonnull final DomainDnsMxRecord sourceDomainDnsMxRecord) throws ClientException {
         return send(HttpMethod.PATCH, sourceDomainDnsMxRecord);
     }
 
@@ -96,7 +100,7 @@ public class DomainDnsMxRecordRequest extends BaseRequest {
      * @param newDomainDnsMxRecord the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DomainDnsMxRecord newDomainDnsMxRecord, final ICallback<? super DomainDnsMxRecord> callback) {
+    public void post(@Nonnull final DomainDnsMxRecord newDomainDnsMxRecord, @Nonnull final ICallback<? super DomainDnsMxRecord> callback) {
         send(HttpMethod.POST, callback, newDomainDnsMxRecord);
     }
 
@@ -107,7 +111,8 @@ public class DomainDnsMxRecordRequest extends BaseRequest {
      * @return the created DomainDnsMxRecord
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DomainDnsMxRecord post(final DomainDnsMxRecord newDomainDnsMxRecord) throws ClientException {
+    @Nullable
+    public DomainDnsMxRecord post(@Nonnull final DomainDnsMxRecord newDomainDnsMxRecord) throws ClientException {
         return send(HttpMethod.POST, newDomainDnsMxRecord);
     }
 
@@ -117,7 +122,7 @@ public class DomainDnsMxRecordRequest extends BaseRequest {
      * @param newDomainDnsMxRecord the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DomainDnsMxRecord newDomainDnsMxRecord, final ICallback<? super DomainDnsMxRecord> callback) {
+    public void put(@Nonnull final DomainDnsMxRecord newDomainDnsMxRecord, @Nonnull final ICallback<? super DomainDnsMxRecord> callback) {
         send(HttpMethod.PUT, callback, newDomainDnsMxRecord);
     }
 
@@ -128,7 +133,8 @@ public class DomainDnsMxRecordRequest extends BaseRequest {
      * @return the created DomainDnsMxRecord
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DomainDnsMxRecord put(final DomainDnsMxRecord newDomainDnsMxRecord) throws ClientException {
+    @Nullable
+    public DomainDnsMxRecord put(@Nonnull final DomainDnsMxRecord newDomainDnsMxRecord) throws ClientException {
         return send(HttpMethod.PUT, newDomainDnsMxRecord);
     }
 
@@ -138,7 +144,8 @@ public class DomainDnsMxRecordRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public DomainDnsMxRecordRequest select(final String value) {
+     @Nonnull
+     public DomainDnsMxRecordRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (DomainDnsMxRecordRequest)this;
      }
@@ -149,7 +156,8 @@ public class DomainDnsMxRecordRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public DomainDnsMxRecordRequest expand(final String value) {
+     @Nonnull
+     public DomainDnsMxRecordRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (DomainDnsMxRecordRequest)this;
      }

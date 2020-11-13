@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class SiteCollectionRequest extends BaseCollectionRequest<SiteCollectionR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SiteCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SiteCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SiteCollectionResponse.class, SiteCollectionPage.class);
     }
 
-    public void get(final ICallback<? super SiteCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super SiteCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class SiteCollectionRequest extends BaseCollectionRequest<SiteCollectionR
         });
     }
 
+    @Nonnull
     public SiteCollectionPage get() throws ClientException {
         final SiteCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final Site newSite, final ICallback<? super Site> callback) {
+    public void post(@Nonnull final Site newSite, @Nonnull final ICallback<? super Site> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SiteRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newSite, callback);
     }
 
-    public Site post(final Site newSite) throws ClientException {
+    @Nonnull
+    public Site post(@Nonnull final Site newSite) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SiteRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class SiteCollectionRequest extends BaseCollectionRequest<SiteCollectionR
      * @param value the expand clause
      * @return the updated request
      */
-    public SiteCollectionRequest expand(final String value) {
+    @Nonnull
+    public SiteCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (SiteCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class SiteCollectionRequest extends BaseCollectionRequest<SiteCollectionR
      * @param value the filter clause
      * @return the updated request
      */
-    public SiteCollectionRequest filter(final String value) {
+    @Nonnull
+    public SiteCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (SiteCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class SiteCollectionRequest extends BaseCollectionRequest<SiteCollectionR
      * @param value the order by clause
      * @return the updated request
      */
-    public SiteCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public SiteCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SiteCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class SiteCollectionRequest extends BaseCollectionRequest<SiteCollectionR
      * @param value the select clause
      * @return the updated request
      */
-    public SiteCollectionRequest select(final String value) {
+    @Nonnull
+    public SiteCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (SiteCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class SiteCollectionRequest extends BaseCollectionRequest<SiteCollectionR
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public SiteCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (SiteCollectionRequest)this;
@@ -133,6 +142,7 @@ public class SiteCollectionRequest extends BaseCollectionRequest<SiteCollectionR
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public SiteCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (SiteCollectionRequest)this;
@@ -144,11 +154,13 @@ public class SiteCollectionRequest extends BaseCollectionRequest<SiteCollectionR
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public SiteCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public SiteCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (SiteCollectionRequest)this;
     }
-    public SiteCollectionPage buildFromResponse(final SiteCollectionResponse response) {
+    @Nonnull
+    public SiteCollectionPage buildFromResponse(@Nonnull final SiteCollectionResponse response) {
         final SiteCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new SiteCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

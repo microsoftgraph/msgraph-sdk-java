@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -32,11 +34,11 @@ public class HomeRealmDiscoveryPolicyCollectionReferenceRequest extends BaseColl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public HomeRealmDiscoveryPolicyCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public HomeRealmDiscoveryPolicyCollectionReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicyCollectionResponse.class, HomeRealmDiscoveryPolicyCollectionPage.class);
     }
 
-    public void post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
+    public void post(@Nonnull final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, @Nonnull final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/policies/homeRealmDiscoveryPolicies/" + newHomeRealmDiscoveryPolicy.id);
         new HomeRealmDiscoveryPolicyWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -44,7 +46,8 @@ public class HomeRealmDiscoveryPolicyCollectionReferenceRequest extends BaseColl
             .post(newHomeRealmDiscoveryPolicy, body, callback);
     }
 
-    public HomeRealmDiscoveryPolicy post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy) throws ClientException {
+    @Nonnull
+    public HomeRealmDiscoveryPolicy post(@Nonnull final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/policies/homeRealmDiscoveryPolicies/" + newHomeRealmDiscoveryPolicy.id);
         return new HomeRealmDiscoveryPolicyWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
@@ -57,7 +60,8 @@ public class HomeRealmDiscoveryPolicyCollectionReferenceRequest extends BaseColl
      * @param value the expand clause
      * @return the updated request
      */
-    public HomeRealmDiscoveryPolicyCollectionReferenceRequest expand(final String value) {
+    @Nonnull
+    public HomeRealmDiscoveryPolicyCollectionReferenceRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (HomeRealmDiscoveryPolicyCollectionReferenceRequest)this;
     }
@@ -68,7 +72,8 @@ public class HomeRealmDiscoveryPolicyCollectionReferenceRequest extends BaseColl
      * @param value the filter clause
      * @return the updated request
      */
-    public HomeRealmDiscoveryPolicyCollectionReferenceRequest filter(final String value) {
+    @Nonnull
+    public HomeRealmDiscoveryPolicyCollectionReferenceRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (HomeRealmDiscoveryPolicyCollectionReferenceRequest)this;
     }
@@ -79,7 +84,8 @@ public class HomeRealmDiscoveryPolicyCollectionReferenceRequest extends BaseColl
      * @param value the sort clause
      * @return the updated request
      */
-    public HomeRealmDiscoveryPolicyCollectionReferenceRequest orderBy(final String value) {
+    @Nonnull
+    public HomeRealmDiscoveryPolicyCollectionReferenceRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (HomeRealmDiscoveryPolicyCollectionReferenceRequest)this;
     }
@@ -90,7 +96,8 @@ public class HomeRealmDiscoveryPolicyCollectionReferenceRequest extends BaseColl
      * @param value the select clause
      * @return the updated request
      */
-    public HomeRealmDiscoveryPolicyCollectionReferenceRequest select(final String value) {
+    @Nonnull
+    public HomeRealmDiscoveryPolicyCollectionReferenceRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (HomeRealmDiscoveryPolicyCollectionReferenceRequest)this;
     }
@@ -101,6 +108,7 @@ public class HomeRealmDiscoveryPolicyCollectionReferenceRequest extends BaseColl
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public HomeRealmDiscoveryPolicyCollectionReferenceRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (HomeRealmDiscoveryPolicyCollectionReferenceRequest)this;

@@ -15,6 +15,8 @@ import com.microsoft.graph.requests.extensions.EducationSchoolRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -32,7 +34,7 @@ public class EducationClassRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationClassRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationClassRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,7 +44,8 @@ public class EducationClassRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the EducationClassRequest instance
      */
-    public EducationClassRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public EducationClassRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,7 +55,8 @@ public class EducationClassRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the EducationClassRequest instance
      */
-    public EducationClassRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public EducationClassRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.EducationClassRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -63,28 +67,35 @@ public class EducationClassRequestBuilder extends BaseRequestBuilder {
      *
      * @return the GroupWithReferenceRequestBuilder instance
      */
+    @Nonnull
     public GroupWithReferenceRequestBuilder group() {
         return new GroupWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("group"), getClient(), null);
     }
+    @Nonnull
     public EducationUserCollectionWithReferencesRequestBuilder members() {
         return new EducationUserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
     }
 
-    public EducationUserWithReferenceRequestBuilder members(final String id) {
+    @Nonnull
+    public EducationUserWithReferenceRequestBuilder members(@Nonnull final String id) {
         return new EducationUserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public EducationSchoolCollectionWithReferencesRequestBuilder schools() {
         return new EducationSchoolCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("schools"), getClient(), null);
     }
 
-    public EducationSchoolWithReferenceRequestBuilder schools(final String id) {
+    @Nonnull
+    public EducationSchoolWithReferenceRequestBuilder schools(@Nonnull final String id) {
         return new EducationSchoolWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("schools") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public EducationUserCollectionWithReferencesRequestBuilder teachers() {
         return new EducationUserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("teachers"), getClient(), null);
     }
 
-    public EducationUserWithReferenceRequestBuilder teachers(final String id) {
+    @Nonnull
+    public EducationUserWithReferenceRequestBuilder teachers(@Nonnull final String id) {
         return new EducationUserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("teachers") + "/" + id, getClient(), null);
     }
 }

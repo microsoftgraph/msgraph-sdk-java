@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.Endpoint;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.EndpointCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.EndpointCollectionWithReferencesPage;
@@ -34,7 +36,7 @@ public class EndpointCollectionWithReferencesPage extends BaseCollectionPage<End
      * @param response the serialized EndpointCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public EndpointCollectionWithReferencesPage(final EndpointCollectionResponse response, final EndpointCollectionWithReferencesRequestBuilder builder) {
+    public EndpointCollectionWithReferencesPage(@Nonnull final EndpointCollectionResponse response, @Nonnull  final EndpointCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

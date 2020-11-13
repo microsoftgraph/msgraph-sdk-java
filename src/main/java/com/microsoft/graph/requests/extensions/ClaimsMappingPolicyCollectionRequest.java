@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.PolicyRoot;
 import com.microsoft.graph.models.extensions.ClaimsMappingPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class ClaimsMappingPolicyCollectionRequest extends BaseCollectionRequest<
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ClaimsMappingPolicyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ClaimsMappingPolicyCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ClaimsMappingPolicyCollectionResponse.class, ClaimsMappingPolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ClaimsMappingPolicyCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super ClaimsMappingPolicyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class ClaimsMappingPolicyCollectionRequest extends BaseCollectionRequest<
         });
     }
 
+    @Nonnull
     public ClaimsMappingPolicyCollectionPage get() throws ClientException {
         final ClaimsMappingPolicyCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final ClaimsMappingPolicy newClaimsMappingPolicy, final ICallback<? super ClaimsMappingPolicy> callback) {
+    public void post(@Nonnull final ClaimsMappingPolicy newClaimsMappingPolicy, @Nonnull final ICallback<? super ClaimsMappingPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ClaimsMappingPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newClaimsMappingPolicy, callback);
     }
 
-    public ClaimsMappingPolicy post(final ClaimsMappingPolicy newClaimsMappingPolicy) throws ClientException {
+    @Nonnull
+    public ClaimsMappingPolicy post(@Nonnull final ClaimsMappingPolicy newClaimsMappingPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ClaimsMappingPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class ClaimsMappingPolicyCollectionRequest extends BaseCollectionRequest<
      * @param value the expand clause
      * @return the updated request
      */
-    public ClaimsMappingPolicyCollectionRequest expand(final String value) {
+    @Nonnull
+    public ClaimsMappingPolicyCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ClaimsMappingPolicyCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class ClaimsMappingPolicyCollectionRequest extends BaseCollectionRequest<
      * @param value the filter clause
      * @return the updated request
      */
-    public ClaimsMappingPolicyCollectionRequest filter(final String value) {
+    @Nonnull
+    public ClaimsMappingPolicyCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ClaimsMappingPolicyCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class ClaimsMappingPolicyCollectionRequest extends BaseCollectionRequest<
      * @param value the order by clause
      * @return the updated request
      */
-    public ClaimsMappingPolicyCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ClaimsMappingPolicyCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ClaimsMappingPolicyCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class ClaimsMappingPolicyCollectionRequest extends BaseCollectionRequest<
      * @param value the select clause
      * @return the updated request
      */
-    public ClaimsMappingPolicyCollectionRequest select(final String value) {
+    @Nonnull
+    public ClaimsMappingPolicyCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ClaimsMappingPolicyCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class ClaimsMappingPolicyCollectionRequest extends BaseCollectionRequest<
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ClaimsMappingPolicyCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ClaimsMappingPolicyCollectionRequest)this;
@@ -133,6 +142,7 @@ public class ClaimsMappingPolicyCollectionRequest extends BaseCollectionRequest<
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ClaimsMappingPolicyCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (ClaimsMappingPolicyCollectionRequest)this;
@@ -144,11 +154,13 @@ public class ClaimsMappingPolicyCollectionRequest extends BaseCollectionRequest<
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ClaimsMappingPolicyCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ClaimsMappingPolicyCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (ClaimsMappingPolicyCollectionRequest)this;
     }
-    public ClaimsMappingPolicyCollectionPage buildFromResponse(final ClaimsMappingPolicyCollectionResponse response) {
+    @Nonnull
+    public ClaimsMappingPolicyCollectionPage buildFromResponse(@Nonnull final ClaimsMappingPolicyCollectionResponse response) {
         final ClaimsMappingPolicyCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ClaimsMappingPolicyCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

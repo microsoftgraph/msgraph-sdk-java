@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DriveItem;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DriveSharedWithMeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveSharedWithMeCollectionRequest;
@@ -31,7 +33,7 @@ public class DriveSharedWithMeCollectionRequestBuilder extends BaseFunctionReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DriveSharedWithMeCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveSharedWithMeCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
     
@@ -41,7 +43,8 @@ public class DriveSharedWithMeCollectionRequestBuilder extends BaseFunctionReque
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public DriveSharedWithMeCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DriveSharedWithMeCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,7 +54,8 @@ public class DriveSharedWithMeCollectionRequestBuilder extends BaseFunctionReque
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public DriveSharedWithMeCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DriveSharedWithMeCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DriveSharedWithMeCollectionRequest request = new DriveSharedWithMeCollectionRequest(
                 getRequestUrl(),
                 getClient(),

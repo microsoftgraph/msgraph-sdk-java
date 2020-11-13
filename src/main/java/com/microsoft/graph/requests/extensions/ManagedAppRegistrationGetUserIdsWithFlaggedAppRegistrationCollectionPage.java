@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage;
@@ -33,7 +35,7 @@ public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectio
      * @param response The serialized ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage(final ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionResponse response, final ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder builder) {
+    public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage(@Nonnull final ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionResponse response, @Nonnull final ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class TargetedManagedAppPolicyAssignmentRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TargetedManagedAppPolicyAssignmentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TargetedManagedAppPolicyAssignmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TargetedManagedAppPolicyAssignment.class);
     }
 
@@ -37,7 +39,7 @@ public class TargetedManagedAppPolicyAssignmentRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super TargetedManagedAppPolicyAssignment> callback) {
+    public void get(@Nonnull final ICallback<? super TargetedManagedAppPolicyAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class TargetedManagedAppPolicyAssignmentRequest extends BaseRequest {
      * @return the TargetedManagedAppPolicyAssignment from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public TargetedManagedAppPolicyAssignment get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class TargetedManagedAppPolicyAssignmentRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super TargetedManagedAppPolicyAssignment> callback) {
+    public void delete(@Nonnull final ICallback<? super TargetedManagedAppPolicyAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class TargetedManagedAppPolicyAssignmentRequest extends BaseRequest {
      * @param sourceTargetedManagedAppPolicyAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TargetedManagedAppPolicyAssignment sourceTargetedManagedAppPolicyAssignment, final ICallback<? super TargetedManagedAppPolicyAssignment> callback) {
+    public void patch(@Nonnull final TargetedManagedAppPolicyAssignment sourceTargetedManagedAppPolicyAssignment, @Nonnull final ICallback<? super TargetedManagedAppPolicyAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceTargetedManagedAppPolicyAssignment);
     }
 
@@ -86,7 +89,8 @@ public class TargetedManagedAppPolicyAssignmentRequest extends BaseRequest {
      * @return the updated TargetedManagedAppPolicyAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TargetedManagedAppPolicyAssignment patch(final TargetedManagedAppPolicyAssignment sourceTargetedManagedAppPolicyAssignment) throws ClientException {
+    @Nullable
+    public TargetedManagedAppPolicyAssignment patch(@Nonnull final TargetedManagedAppPolicyAssignment sourceTargetedManagedAppPolicyAssignment) throws ClientException {
         return send(HttpMethod.PATCH, sourceTargetedManagedAppPolicyAssignment);
     }
 
@@ -96,7 +100,7 @@ public class TargetedManagedAppPolicyAssignmentRequest extends BaseRequest {
      * @param newTargetedManagedAppPolicyAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment, final ICallback<? super TargetedManagedAppPolicyAssignment> callback) {
+    public void post(@Nonnull final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment, @Nonnull final ICallback<? super TargetedManagedAppPolicyAssignment> callback) {
         send(HttpMethod.POST, callback, newTargetedManagedAppPolicyAssignment);
     }
 
@@ -107,7 +111,8 @@ public class TargetedManagedAppPolicyAssignmentRequest extends BaseRequest {
      * @return the created TargetedManagedAppPolicyAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TargetedManagedAppPolicyAssignment post(final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment) throws ClientException {
+    @Nullable
+    public TargetedManagedAppPolicyAssignment post(@Nonnull final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment) throws ClientException {
         return send(HttpMethod.POST, newTargetedManagedAppPolicyAssignment);
     }
 
@@ -117,7 +122,7 @@ public class TargetedManagedAppPolicyAssignmentRequest extends BaseRequest {
      * @param newTargetedManagedAppPolicyAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment, final ICallback<? super TargetedManagedAppPolicyAssignment> callback) {
+    public void put(@Nonnull final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment, @Nonnull final ICallback<? super TargetedManagedAppPolicyAssignment> callback) {
         send(HttpMethod.PUT, callback, newTargetedManagedAppPolicyAssignment);
     }
 
@@ -128,7 +133,8 @@ public class TargetedManagedAppPolicyAssignmentRequest extends BaseRequest {
      * @return the created TargetedManagedAppPolicyAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TargetedManagedAppPolicyAssignment put(final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment) throws ClientException {
+    @Nullable
+    public TargetedManagedAppPolicyAssignment put(@Nonnull final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment) throws ClientException {
         return send(HttpMethod.PUT, newTargetedManagedAppPolicyAssignment);
     }
 
@@ -138,7 +144,8 @@ public class TargetedManagedAppPolicyAssignmentRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public TargetedManagedAppPolicyAssignmentRequest select(final String value) {
+     @Nonnull
+     public TargetedManagedAppPolicyAssignmentRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (TargetedManagedAppPolicyAssignmentRequest)this;
      }
@@ -149,7 +156,8 @@ public class TargetedManagedAppPolicyAssignmentRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public TargetedManagedAppPolicyAssignmentRequest expand(final String value) {
+     @Nonnull
+     public TargetedManagedAppPolicyAssignmentRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (TargetedManagedAppPolicyAssignmentRequest)this;
      }

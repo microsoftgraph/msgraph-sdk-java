@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionWithReferencesPage;
@@ -34,7 +36,7 @@ public class HomeRealmDiscoveryPolicyCollectionWithReferencesPage extends BaseCo
      * @param response the serialized HomeRealmDiscoveryPolicyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public HomeRealmDiscoveryPolicyCollectionWithReferencesPage(final HomeRealmDiscoveryPolicyCollectionResponse response, final HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder builder) {
+    public HomeRealmDiscoveryPolicyCollectionWithReferencesPage(@Nonnull final HomeRealmDiscoveryPolicyCollectionResponse response, @Nonnull  final HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

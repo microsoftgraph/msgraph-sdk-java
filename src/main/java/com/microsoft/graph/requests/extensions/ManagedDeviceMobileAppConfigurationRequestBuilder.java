@@ -19,6 +19,8 @@ import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurati
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -36,7 +38,7 @@ public class ManagedDeviceMobileAppConfigurationRequestBuilder extends BaseReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceMobileAppConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceMobileAppConfigurationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +48,8 @@ public class ManagedDeviceMobileAppConfigurationRequestBuilder extends BaseReque
      * @param requestOptions the options for this request
      * @return the ManagedDeviceMobileAppConfigurationRequest instance
      */
-    public ManagedDeviceMobileAppConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -56,23 +59,28 @@ public class ManagedDeviceMobileAppConfigurationRequestBuilder extends BaseReque
      * @param requestOptions the options for this request
      * @return the ManagedDeviceMobileAppConfigurationRequest instance
      */
-    public ManagedDeviceMobileAppConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    @Nonnull
     public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder assignments() {
         return new ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
-    public ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder assignments(final String id) {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder assignments(@Nonnull final String id) {
         return new ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses() {
         return new ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
     }
 
-    public ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder deviceStatuses(final String id) {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder deviceStatuses(@Nonnull final String id) {
         return new ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
     }
 
@@ -81,14 +89,17 @@ public class ManagedDeviceMobileAppConfigurationRequestBuilder extends BaseReque
      *
      * @return the ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder instance
      */
+    @Nonnull
     public ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder deviceStatusSummary() {
         return new ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatusSummary"), getClient(), null);
     }
+    @Nonnull
     public ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder userStatuses() {
         return new ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
     }
 
-    public ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder userStatuses(final String id) {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder userStatuses(@Nonnull final String id) {
         return new ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
     }
 
@@ -97,11 +108,13 @@ public class ManagedDeviceMobileAppConfigurationRequestBuilder extends BaseReque
      *
      * @return the ManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder instance
      */
+    @Nonnull
     public ManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder userStatusSummary() {
         return new ManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("userStatusSummary"), getClient(), null);
     }
 
-    public ManagedDeviceMobileAppConfigurationAssignRequestBuilder assign(final java.util.List<ManagedDeviceMobileAppConfigurationAssignment> assignments) {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationAssignRequestBuilder assign(@Nullable final java.util.List<ManagedDeviceMobileAppConfigurationAssignment> assignments) {
         return new ManagedDeviceMobileAppConfigurationAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, assignments);
     }
 }

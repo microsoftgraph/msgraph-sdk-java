@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.TimeOffReason;
 import com.microsoft.graph.requests.extensions.TimeOffReasonCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.TimeOffReasonCollectionPage;
 import com.microsoft.graph.requests.extensions.TimeOffReasonCollectionResponse;
@@ -22,7 +24,7 @@ public class TimeOffReasonCollectionPage extends BaseCollectionPage<TimeOffReaso
      * @param response the serialized TimeOffReasonCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TimeOffReasonCollectionPage(final TimeOffReasonCollectionResponse response, final TimeOffReasonCollectionRequestBuilder builder) {
+    public TimeOffReasonCollectionPage(@Nonnull final TimeOffReasonCollectionResponse response, @Nonnull final TimeOffReasonCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

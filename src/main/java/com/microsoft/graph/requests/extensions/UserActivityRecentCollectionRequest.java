@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserActivity;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.UserActivityRecentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserActivityRecentCollectionPage;
@@ -34,12 +36,12 @@ public class UserActivityRecentCollectionRequest extends BaseCollectionRequest<U
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserActivityRecentCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserActivityRecentCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserActivityRecentCollectionResponse.class, UserActivityRecentCollectionPage.class);
     }
 
 
-    public void get(final ICallback<? super UserActivityRecentCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super UserActivityRecentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,13 +55,15 @@ public class UserActivityRecentCollectionRequest extends BaseCollectionRequest<U
         });
     }
 
+    @Nullable
     public UserActivityRecentCollectionPage get() throws ClientException {
         final UserActivityRecentCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
 
-    public UserActivityRecentCollectionPage buildFromResponse(final UserActivityRecentCollectionResponse response) {
+    @Nonnull
+    public UserActivityRecentCollectionPage buildFromResponse(@Nonnull final UserActivityRecentCollectionResponse response) {
         final UserActivityRecentCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new UserActivityRecentCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
@@ -77,7 +81,8 @@ public class UserActivityRecentCollectionRequest extends BaseCollectionRequest<U
      * @param value the select clause
      * @return the updated request
      */
-    public UserActivityRecentCollectionRequest select(final String value) {
+    @Nonnull
+    public UserActivityRecentCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (UserActivityRecentCollectionRequest)this;
     }
@@ -88,6 +93,7 @@ public class UserActivityRecentCollectionRequest extends BaseCollectionRequest<U
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public UserActivityRecentCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (UserActivityRecentCollectionRequest)this;
@@ -99,7 +105,8 @@ public class UserActivityRecentCollectionRequest extends BaseCollectionRequest<U
      * @param value the expand clause
      * @return the updated request
      */
-    public UserActivityRecentCollectionRequest expand(final String value) {
+    @Nonnull
+    public UserActivityRecentCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (UserActivityRecentCollectionRequest)this;
     }
@@ -110,7 +117,8 @@ public class UserActivityRecentCollectionRequest extends BaseCollectionRequest<U
      * @param value the filter clause
      * @return the updated request
      */
-    public UserActivityRecentCollectionRequest filter(final String value) {
+    @Nonnull
+    public UserActivityRecentCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (UserActivityRecentCollectionRequest)this;
     }
@@ -121,7 +129,8 @@ public class UserActivityRecentCollectionRequest extends BaseCollectionRequest<U
      * @param value the order by clause
      * @return the updated request
      */
-    public UserActivityRecentCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public UserActivityRecentCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (UserActivityRecentCollectionRequest)this;
     }

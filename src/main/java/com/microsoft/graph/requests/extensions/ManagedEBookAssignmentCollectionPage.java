@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ManagedEBookAssignment;
 import com.microsoft.graph.requests.extensions.ManagedEBookAssignmentCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedEBookAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedEBookAssignmentCollectionResponse;
@@ -22,7 +24,7 @@ public class ManagedEBookAssignmentCollectionPage extends BaseCollectionPage<Man
      * @param response the serialized ManagedEBookAssignmentCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ManagedEBookAssignmentCollectionPage(final ManagedEBookAssignmentCollectionResponse response, final ManagedEBookAssignmentCollectionRequestBuilder builder) {
+    public ManagedEBookAssignmentCollectionPage(@Nonnull final ManagedEBookAssignmentCollectionResponse response, @Nonnull final ManagedEBookAssignmentCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

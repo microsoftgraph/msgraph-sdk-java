@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.TeamsAppRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,8 +31,23 @@ public class TeamsAppInstallationRequest extends BaseRequest {
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
-    public TeamsAppInstallationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsAppInstallationRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends TeamsAppInstallation> responseClass) {
+        super(requestUrl, client, requestOptions, responseClass);
+    }
+
+    /**
+     * The request for the TeamsAppInstallation
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public TeamsAppInstallationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TeamsAppInstallation.class);
     }
 
@@ -39,7 +56,7 @@ public class TeamsAppInstallationRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super TeamsAppInstallation> callback) {
+    public void get(@Nonnull final ICallback<? super TeamsAppInstallation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -49,6 +66,7 @@ public class TeamsAppInstallationRequest extends BaseRequest {
      * @return the TeamsAppInstallation from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public TeamsAppInstallation get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -58,7 +76,7 @@ public class TeamsAppInstallationRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super TeamsAppInstallation> callback) {
+    public void delete(@Nonnull final ICallback<? super TeamsAppInstallation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +95,7 @@ public class TeamsAppInstallationRequest extends BaseRequest {
      * @param sourceTeamsAppInstallation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TeamsAppInstallation sourceTeamsAppInstallation, final ICallback<? super TeamsAppInstallation> callback) {
+    public void patch(@Nonnull final TeamsAppInstallation sourceTeamsAppInstallation, @Nonnull final ICallback<? super TeamsAppInstallation> callback) {
         send(HttpMethod.PATCH, callback, sourceTeamsAppInstallation);
     }
 
@@ -88,7 +106,8 @@ public class TeamsAppInstallationRequest extends BaseRequest {
      * @return the updated TeamsAppInstallation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TeamsAppInstallation patch(final TeamsAppInstallation sourceTeamsAppInstallation) throws ClientException {
+    @Nullable
+    public TeamsAppInstallation patch(@Nonnull final TeamsAppInstallation sourceTeamsAppInstallation) throws ClientException {
         return send(HttpMethod.PATCH, sourceTeamsAppInstallation);
     }
 
@@ -98,7 +117,7 @@ public class TeamsAppInstallationRequest extends BaseRequest {
      * @param newTeamsAppInstallation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TeamsAppInstallation newTeamsAppInstallation, final ICallback<? super TeamsAppInstallation> callback) {
+    public void post(@Nonnull final TeamsAppInstallation newTeamsAppInstallation, @Nonnull final ICallback<? super TeamsAppInstallation> callback) {
         send(HttpMethod.POST, callback, newTeamsAppInstallation);
     }
 
@@ -109,7 +128,8 @@ public class TeamsAppInstallationRequest extends BaseRequest {
      * @return the created TeamsAppInstallation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TeamsAppInstallation post(final TeamsAppInstallation newTeamsAppInstallation) throws ClientException {
+    @Nullable
+    public TeamsAppInstallation post(@Nonnull final TeamsAppInstallation newTeamsAppInstallation) throws ClientException {
         return send(HttpMethod.POST, newTeamsAppInstallation);
     }
 
@@ -119,7 +139,7 @@ public class TeamsAppInstallationRequest extends BaseRequest {
      * @param newTeamsAppInstallation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TeamsAppInstallation newTeamsAppInstallation, final ICallback<? super TeamsAppInstallation> callback) {
+    public void put(@Nonnull final TeamsAppInstallation newTeamsAppInstallation, @Nonnull final ICallback<? super TeamsAppInstallation> callback) {
         send(HttpMethod.PUT, callback, newTeamsAppInstallation);
     }
 
@@ -130,7 +150,8 @@ public class TeamsAppInstallationRequest extends BaseRequest {
      * @return the created TeamsAppInstallation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TeamsAppInstallation put(final TeamsAppInstallation newTeamsAppInstallation) throws ClientException {
+    @Nullable
+    public TeamsAppInstallation put(@Nonnull final TeamsAppInstallation newTeamsAppInstallation) throws ClientException {
         return send(HttpMethod.PUT, newTeamsAppInstallation);
     }
 
@@ -140,7 +161,8 @@ public class TeamsAppInstallationRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public TeamsAppInstallationRequest select(final String value) {
+     @Nonnull
+     public TeamsAppInstallationRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (TeamsAppInstallationRequest)this;
      }
@@ -151,7 +173,8 @@ public class TeamsAppInstallationRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public TeamsAppInstallationRequest expand(final String value) {
+     @Nonnull
+     public TeamsAppInstallationRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (TeamsAppInstallationRequest)this;
      }

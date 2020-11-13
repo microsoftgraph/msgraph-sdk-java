@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Device;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,11 +36,11 @@ public class DeviceCollectionRequest extends BaseCollectionRequest<DeviceCollect
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceCollectionResponse.class, DeviceCollectionPage.class);
     }
 
-    public void get(final ICallback<? super DeviceCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -52,19 +54,21 @@ public class DeviceCollectionRequest extends BaseCollectionRequest<DeviceCollect
         });
     }
 
+    @Nonnull
     public DeviceCollectionPage get() throws ClientException {
         final DeviceCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final Device newDevice, final ICallback<? super Device> callback) {
+    public void post(@Nonnull final Device newDevice, @Nonnull final ICallback<? super Device> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newDevice, callback);
     }
 
-    public Device post(final Device newDevice) throws ClientException {
+    @Nonnull
+    public Device post(@Nonnull final Device newDevice) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -77,7 +81,8 @@ public class DeviceCollectionRequest extends BaseCollectionRequest<DeviceCollect
      * @param value the expand clause
      * @return the updated request
      */
-    public DeviceCollectionRequest expand(final String value) {
+    @Nonnull
+    public DeviceCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DeviceCollectionRequest)this;
     }
@@ -88,7 +93,8 @@ public class DeviceCollectionRequest extends BaseCollectionRequest<DeviceCollect
      * @param value the filter clause
      * @return the updated request
      */
-    public DeviceCollectionRequest filter(final String value) {
+    @Nonnull
+    public DeviceCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DeviceCollectionRequest)this;
     }
@@ -99,7 +105,8 @@ public class DeviceCollectionRequest extends BaseCollectionRequest<DeviceCollect
      * @param value the order by clause
      * @return the updated request
      */
-    public DeviceCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DeviceCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceCollectionRequest)this;
     }
@@ -110,7 +117,8 @@ public class DeviceCollectionRequest extends BaseCollectionRequest<DeviceCollect
      * @param value the select clause
      * @return the updated request
      */
-    public DeviceCollectionRequest select(final String value) {
+    @Nonnull
+    public DeviceCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DeviceCollectionRequest)this;
     }
@@ -121,6 +129,7 @@ public class DeviceCollectionRequest extends BaseCollectionRequest<DeviceCollect
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DeviceCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (DeviceCollectionRequest)this;
@@ -132,6 +141,7 @@ public class DeviceCollectionRequest extends BaseCollectionRequest<DeviceCollect
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public DeviceCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (DeviceCollectionRequest)this;
@@ -143,11 +153,13 @@ public class DeviceCollectionRequest extends BaseCollectionRequest<DeviceCollect
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public DeviceCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public DeviceCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (DeviceCollectionRequest)this;
     }
-    public DeviceCollectionPage buildFromResponse(final DeviceCollectionResponse response) {
+    @Nonnull
+    public DeviceCollectionPage buildFromResponse(@Nonnull final DeviceCollectionResponse response) {
         final DeviceCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new DeviceCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

@@ -13,6 +13,8 @@ import com.microsoft.graph.requests.extensions.ManagedMobileAppRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppPolicyDeploymentSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -31,7 +33,7 @@ public class DefaultManagedAppProtectionRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DefaultManagedAppProtectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DefaultManagedAppProtectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DefaultManagedAppProtection.class);
     }
 
@@ -40,7 +42,7 @@ public class DefaultManagedAppProtectionRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DefaultManagedAppProtection> callback) {
+    public void get(@Nonnull final ICallback<? super DefaultManagedAppProtection> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +52,7 @@ public class DefaultManagedAppProtectionRequest extends BaseRequest {
      * @return the DefaultManagedAppProtection from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DefaultManagedAppProtection get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +62,7 @@ public class DefaultManagedAppProtectionRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DefaultManagedAppProtection> callback) {
+    public void delete(@Nonnull final ICallback<? super DefaultManagedAppProtection> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +81,7 @@ public class DefaultManagedAppProtectionRequest extends BaseRequest {
      * @param sourceDefaultManagedAppProtection the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DefaultManagedAppProtection sourceDefaultManagedAppProtection, final ICallback<? super DefaultManagedAppProtection> callback) {
+    public void patch(@Nonnull final DefaultManagedAppProtection sourceDefaultManagedAppProtection, @Nonnull final ICallback<? super DefaultManagedAppProtection> callback) {
         send(HttpMethod.PATCH, callback, sourceDefaultManagedAppProtection);
     }
 
@@ -89,7 +92,8 @@ public class DefaultManagedAppProtectionRequest extends BaseRequest {
      * @return the updated DefaultManagedAppProtection
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DefaultManagedAppProtection patch(final DefaultManagedAppProtection sourceDefaultManagedAppProtection) throws ClientException {
+    @Nullable
+    public DefaultManagedAppProtection patch(@Nonnull final DefaultManagedAppProtection sourceDefaultManagedAppProtection) throws ClientException {
         return send(HttpMethod.PATCH, sourceDefaultManagedAppProtection);
     }
 
@@ -99,7 +103,7 @@ public class DefaultManagedAppProtectionRequest extends BaseRequest {
      * @param newDefaultManagedAppProtection the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DefaultManagedAppProtection newDefaultManagedAppProtection, final ICallback<? super DefaultManagedAppProtection> callback) {
+    public void post(@Nonnull final DefaultManagedAppProtection newDefaultManagedAppProtection, @Nonnull final ICallback<? super DefaultManagedAppProtection> callback) {
         send(HttpMethod.POST, callback, newDefaultManagedAppProtection);
     }
 
@@ -110,7 +114,8 @@ public class DefaultManagedAppProtectionRequest extends BaseRequest {
      * @return the created DefaultManagedAppProtection
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DefaultManagedAppProtection post(final DefaultManagedAppProtection newDefaultManagedAppProtection) throws ClientException {
+    @Nullable
+    public DefaultManagedAppProtection post(@Nonnull final DefaultManagedAppProtection newDefaultManagedAppProtection) throws ClientException {
         return send(HttpMethod.POST, newDefaultManagedAppProtection);
     }
 
@@ -120,7 +125,7 @@ public class DefaultManagedAppProtectionRequest extends BaseRequest {
      * @param newDefaultManagedAppProtection the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DefaultManagedAppProtection newDefaultManagedAppProtection, final ICallback<? super DefaultManagedAppProtection> callback) {
+    public void put(@Nonnull final DefaultManagedAppProtection newDefaultManagedAppProtection, @Nonnull final ICallback<? super DefaultManagedAppProtection> callback) {
         send(HttpMethod.PUT, callback, newDefaultManagedAppProtection);
     }
 
@@ -131,7 +136,8 @@ public class DefaultManagedAppProtectionRequest extends BaseRequest {
      * @return the created DefaultManagedAppProtection
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DefaultManagedAppProtection put(final DefaultManagedAppProtection newDefaultManagedAppProtection) throws ClientException {
+    @Nullable
+    public DefaultManagedAppProtection put(@Nonnull final DefaultManagedAppProtection newDefaultManagedAppProtection) throws ClientException {
         return send(HttpMethod.PUT, newDefaultManagedAppProtection);
     }
 
@@ -141,7 +147,8 @@ public class DefaultManagedAppProtectionRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public DefaultManagedAppProtectionRequest select(final String value) {
+     @Nonnull
+     public DefaultManagedAppProtectionRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (DefaultManagedAppProtectionRequest)this;
      }
@@ -152,7 +159,8 @@ public class DefaultManagedAppProtectionRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public DefaultManagedAppProtectionRequest expand(final String value) {
+     @Nonnull
+     public DefaultManagedAppProtectionRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (DefaultManagedAppProtectionRequest)this;
      }

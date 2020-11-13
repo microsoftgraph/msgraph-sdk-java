@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DriveRecipient;
 import com.microsoft.graph.models.extensions.Permission;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.PermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PermissionGrantCollectionPage;
@@ -39,13 +41,13 @@ public class PermissionGrantCollectionRequest extends BaseCollectionRequest<Perm
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PermissionGrantCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PermissionGrantCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PermissionGrantCollectionResponse.class, PermissionGrantCollectionPage.class);
         body = new PermissionGrantBody();
     }
 
 
-    public void post(final ICallback<? super PermissionGrantCollectionPage> callback) {
+    public void post(@Nonnull final ICallback<? super PermissionGrantCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,13 +61,15 @@ public class PermissionGrantCollectionRequest extends BaseCollectionRequest<Perm
         });
     }
 
+    @Nullable
     public PermissionGrantCollectionPage post() throws ClientException {
         final PermissionGrantCollectionResponse response = post(body);
         return buildFromResponse(response);
     }
 
 
-    public PermissionGrantCollectionPage buildFromResponse(final PermissionGrantCollectionResponse response) {
+    @Nonnull
+    public PermissionGrantCollectionPage buildFromResponse(@Nonnull final PermissionGrantCollectionResponse response) {
         final PermissionGrantCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new PermissionGrantCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, (java.util.List<String>) null, (java.util.List<DriveRecipient>) null);
@@ -83,7 +87,8 @@ public class PermissionGrantCollectionRequest extends BaseCollectionRequest<Perm
      * @param value the select clause
      * @return the updated request
      */
-    public PermissionGrantCollectionRequest select(final String value) {
+    @Nonnull
+    public PermissionGrantCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (PermissionGrantCollectionRequest)this;
     }
@@ -94,6 +99,7 @@ public class PermissionGrantCollectionRequest extends BaseCollectionRequest<Perm
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public PermissionGrantCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (PermissionGrantCollectionRequest)this;
@@ -105,7 +111,8 @@ public class PermissionGrantCollectionRequest extends BaseCollectionRequest<Perm
      * @param value the expand clause
      * @return the updated request
      */
-    public PermissionGrantCollectionRequest expand(final String value) {
+    @Nonnull
+    public PermissionGrantCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (PermissionGrantCollectionRequest)this;
     }
@@ -116,7 +123,8 @@ public class PermissionGrantCollectionRequest extends BaseCollectionRequest<Perm
      * @param value the filter clause
      * @return the updated request
      */
-    public PermissionGrantCollectionRequest filter(final String value) {
+    @Nonnull
+    public PermissionGrantCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (PermissionGrantCollectionRequest)this;
     }
@@ -127,7 +135,8 @@ public class PermissionGrantCollectionRequest extends BaseCollectionRequest<Perm
      * @param value the order by clause
      * @return the updated request
      */
-    public PermissionGrantCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public PermissionGrantCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PermissionGrantCollectionRequest)this;
     }

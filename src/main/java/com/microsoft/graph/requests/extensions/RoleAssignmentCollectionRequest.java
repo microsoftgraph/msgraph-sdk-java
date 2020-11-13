@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.RoleDefinition;
 import com.microsoft.graph.models.extensions.RoleAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class RoleAssignmentCollectionRequest extends BaseCollectionRequest<RoleA
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RoleAssignmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RoleAssignmentCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, RoleAssignmentCollectionResponse.class, RoleAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<? super RoleAssignmentCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super RoleAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class RoleAssignmentCollectionRequest extends BaseCollectionRequest<RoleA
         });
     }
 
+    @Nonnull
     public RoleAssignmentCollectionPage get() throws ClientException {
         final RoleAssignmentCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final RoleAssignment newRoleAssignment, final ICallback<? super RoleAssignment> callback) {
+    public void post(@Nonnull final RoleAssignment newRoleAssignment, @Nonnull final ICallback<? super RoleAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newRoleAssignment, callback);
     }
 
-    public RoleAssignment post(final RoleAssignment newRoleAssignment) throws ClientException {
+    @Nonnull
+    public RoleAssignment post(@Nonnull final RoleAssignment newRoleAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new RoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class RoleAssignmentCollectionRequest extends BaseCollectionRequest<RoleA
      * @param value the expand clause
      * @return the updated request
      */
-    public RoleAssignmentCollectionRequest expand(final String value) {
+    @Nonnull
+    public RoleAssignmentCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (RoleAssignmentCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class RoleAssignmentCollectionRequest extends BaseCollectionRequest<RoleA
      * @param value the filter clause
      * @return the updated request
      */
-    public RoleAssignmentCollectionRequest filter(final String value) {
+    @Nonnull
+    public RoleAssignmentCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (RoleAssignmentCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class RoleAssignmentCollectionRequest extends BaseCollectionRequest<RoleA
      * @param value the order by clause
      * @return the updated request
      */
-    public RoleAssignmentCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public RoleAssignmentCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (RoleAssignmentCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class RoleAssignmentCollectionRequest extends BaseCollectionRequest<RoleA
      * @param value the select clause
      * @return the updated request
      */
-    public RoleAssignmentCollectionRequest select(final String value) {
+    @Nonnull
+    public RoleAssignmentCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (RoleAssignmentCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class RoleAssignmentCollectionRequest extends BaseCollectionRequest<RoleA
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public RoleAssignmentCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (RoleAssignmentCollectionRequest)this;
@@ -133,6 +142,7 @@ public class RoleAssignmentCollectionRequest extends BaseCollectionRequest<RoleA
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public RoleAssignmentCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (RoleAssignmentCollectionRequest)this;
@@ -144,11 +154,13 @@ public class RoleAssignmentCollectionRequest extends BaseCollectionRequest<RoleA
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public RoleAssignmentCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public RoleAssignmentCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (RoleAssignmentCollectionRequest)this;
     }
-    public RoleAssignmentCollectionPage buildFromResponse(final RoleAssignmentCollectionResponse response) {
+    @Nonnull
+    public RoleAssignmentCollectionPage buildFromResponse(@Nonnull final RoleAssignmentCollectionResponse response) {
         final RoleAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new RoleAssignmentCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

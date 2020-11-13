@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookPivotTable;
 import com.microsoft.graph.requests.extensions.WorkbookPivotTableCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkbookPivotTableCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkbookPivotTableCollectionResponse;
@@ -22,7 +24,7 @@ public class WorkbookPivotTableCollectionPage extends BaseCollectionPage<Workboo
      * @param response the serialized WorkbookPivotTableCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public WorkbookPivotTableCollectionPage(final WorkbookPivotTableCollectionResponse response, final WorkbookPivotTableCollectionRequestBuilder builder) {
+    public WorkbookPivotTableCollectionPage(@Nonnull final WorkbookPivotTableCollectionResponse response, @Nonnull final WorkbookPivotTableCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

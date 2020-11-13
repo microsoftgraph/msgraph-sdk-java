@@ -19,6 +19,8 @@ import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedProperty
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -38,10 +40,10 @@ public class MessageRequest extends BaseRequest {
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public MessageRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends Message> responseClass) {
+    public MessageRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends Message> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -52,7 +54,7 @@ public class MessageRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MessageRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MessageRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Message.class);
     }
 
@@ -61,7 +63,7 @@ public class MessageRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Message> callback) {
+    public void get(@Nonnull final ICallback<? super Message> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,6 +73,7 @@ public class MessageRequest extends BaseRequest {
      * @return the Message from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Message get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -80,7 +83,7 @@ public class MessageRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Message> callback) {
+    public void delete(@Nonnull final ICallback<? super Message> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -99,7 +102,7 @@ public class MessageRequest extends BaseRequest {
      * @param sourceMessage the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Message sourceMessage, final ICallback<? super Message> callback) {
+    public void patch(@Nonnull final Message sourceMessage, @Nonnull final ICallback<? super Message> callback) {
         send(HttpMethod.PATCH, callback, sourceMessage);
     }
 
@@ -110,7 +113,8 @@ public class MessageRequest extends BaseRequest {
      * @return the updated Message
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Message patch(final Message sourceMessage) throws ClientException {
+    @Nullable
+    public Message patch(@Nonnull final Message sourceMessage) throws ClientException {
         return send(HttpMethod.PATCH, sourceMessage);
     }
 
@@ -120,7 +124,7 @@ public class MessageRequest extends BaseRequest {
      * @param newMessage the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Message newMessage, final ICallback<? super Message> callback) {
+    public void post(@Nonnull final Message newMessage, @Nonnull final ICallback<? super Message> callback) {
         send(HttpMethod.POST, callback, newMessage);
     }
 
@@ -131,7 +135,8 @@ public class MessageRequest extends BaseRequest {
      * @return the created Message
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Message post(final Message newMessage) throws ClientException {
+    @Nullable
+    public Message post(@Nonnull final Message newMessage) throws ClientException {
         return send(HttpMethod.POST, newMessage);
     }
 
@@ -141,7 +146,7 @@ public class MessageRequest extends BaseRequest {
      * @param newMessage the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Message newMessage, final ICallback<? super Message> callback) {
+    public void put(@Nonnull final Message newMessage, @Nonnull final ICallback<? super Message> callback) {
         send(HttpMethod.PUT, callback, newMessage);
     }
 
@@ -152,7 +157,8 @@ public class MessageRequest extends BaseRequest {
      * @return the created Message
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Message put(final Message newMessage) throws ClientException {
+    @Nullable
+    public Message put(@Nonnull final Message newMessage) throws ClientException {
         return send(HttpMethod.PUT, newMessage);
     }
 
@@ -162,7 +168,8 @@ public class MessageRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public MessageRequest select(final String value) {
+     @Nonnull
+     public MessageRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (MessageRequest)this;
      }
@@ -173,7 +180,8 @@ public class MessageRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public MessageRequest expand(final String value) {
+     @Nonnull
+     public MessageRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (MessageRequest)this;
      }

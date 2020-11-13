@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedAppPolicyDeploymentSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedAppPolicyDeploymentSummaryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppPolicyDeploymentSummaryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedAppPolicyDeploymentSummary.class);
     }
 
@@ -37,7 +39,7 @@ public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ManagedAppPolicyDeploymentSummary> callback) {
+    public void get(@Nonnull final ICallback<? super ManagedAppPolicyDeploymentSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest {
      * @return the ManagedAppPolicyDeploymentSummary from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ManagedAppPolicyDeploymentSummary get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ManagedAppPolicyDeploymentSummary> callback) {
+    public void delete(@Nonnull final ICallback<? super ManagedAppPolicyDeploymentSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest {
      * @param sourceManagedAppPolicyDeploymentSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedAppPolicyDeploymentSummary sourceManagedAppPolicyDeploymentSummary, final ICallback<? super ManagedAppPolicyDeploymentSummary> callback) {
+    public void patch(@Nonnull final ManagedAppPolicyDeploymentSummary sourceManagedAppPolicyDeploymentSummary, @Nonnull final ICallback<? super ManagedAppPolicyDeploymentSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedAppPolicyDeploymentSummary);
     }
 
@@ -86,7 +89,8 @@ public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest {
      * @return the updated ManagedAppPolicyDeploymentSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedAppPolicyDeploymentSummary patch(final ManagedAppPolicyDeploymentSummary sourceManagedAppPolicyDeploymentSummary) throws ClientException {
+    @Nullable
+    public ManagedAppPolicyDeploymentSummary patch(@Nonnull final ManagedAppPolicyDeploymentSummary sourceManagedAppPolicyDeploymentSummary) throws ClientException {
         return send(HttpMethod.PATCH, sourceManagedAppPolicyDeploymentSummary);
     }
 
@@ -96,7 +100,7 @@ public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest {
      * @param newManagedAppPolicyDeploymentSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedAppPolicyDeploymentSummary newManagedAppPolicyDeploymentSummary, final ICallback<? super ManagedAppPolicyDeploymentSummary> callback) {
+    public void post(@Nonnull final ManagedAppPolicyDeploymentSummary newManagedAppPolicyDeploymentSummary, @Nonnull final ICallback<? super ManagedAppPolicyDeploymentSummary> callback) {
         send(HttpMethod.POST, callback, newManagedAppPolicyDeploymentSummary);
     }
 
@@ -107,7 +111,8 @@ public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest {
      * @return the created ManagedAppPolicyDeploymentSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedAppPolicyDeploymentSummary post(final ManagedAppPolicyDeploymentSummary newManagedAppPolicyDeploymentSummary) throws ClientException {
+    @Nullable
+    public ManagedAppPolicyDeploymentSummary post(@Nonnull final ManagedAppPolicyDeploymentSummary newManagedAppPolicyDeploymentSummary) throws ClientException {
         return send(HttpMethod.POST, newManagedAppPolicyDeploymentSummary);
     }
 
@@ -117,7 +122,7 @@ public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest {
      * @param newManagedAppPolicyDeploymentSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedAppPolicyDeploymentSummary newManagedAppPolicyDeploymentSummary, final ICallback<? super ManagedAppPolicyDeploymentSummary> callback) {
+    public void put(@Nonnull final ManagedAppPolicyDeploymentSummary newManagedAppPolicyDeploymentSummary, @Nonnull final ICallback<? super ManagedAppPolicyDeploymentSummary> callback) {
         send(HttpMethod.PUT, callback, newManagedAppPolicyDeploymentSummary);
     }
 
@@ -128,7 +133,8 @@ public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest {
      * @return the created ManagedAppPolicyDeploymentSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedAppPolicyDeploymentSummary put(final ManagedAppPolicyDeploymentSummary newManagedAppPolicyDeploymentSummary) throws ClientException {
+    @Nullable
+    public ManagedAppPolicyDeploymentSummary put(@Nonnull final ManagedAppPolicyDeploymentSummary newManagedAppPolicyDeploymentSummary) throws ClientException {
         return send(HttpMethod.PUT, newManagedAppPolicyDeploymentSummary);
     }
 
@@ -138,7 +144,8 @@ public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ManagedAppPolicyDeploymentSummaryRequest select(final String value) {
+     @Nonnull
+     public ManagedAppPolicyDeploymentSummaryRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ManagedAppPolicyDeploymentSummaryRequest)this;
      }
@@ -149,7 +156,8 @@ public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ManagedAppPolicyDeploymentSummaryRequest expand(final String value) {
+     @Nonnull
+     public ManagedAppPolicyDeploymentSummaryRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ManagedAppPolicyDeploymentSummaryRequest)this;
      }

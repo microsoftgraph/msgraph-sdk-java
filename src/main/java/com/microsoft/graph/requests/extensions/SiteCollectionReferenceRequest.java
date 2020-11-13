@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -33,11 +35,11 @@ public class SiteCollectionReferenceRequest extends BaseCollectionRequest<SiteCo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SiteCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SiteCollectionReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SiteCollectionResponse.class, SiteCollectionPage.class);
     }
 
-    public void post(final Site newSite, final ICallback<? super Site> callback) {
+    public void post(@Nonnull final Site newSite, @Nonnull final ICallback<? super Site> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/sites/" + newSite.id);
         new SiteWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,7 +47,8 @@ public class SiteCollectionReferenceRequest extends BaseCollectionRequest<SiteCo
             .post(newSite, body, callback);
     }
 
-    public Site post(final Site newSite) throws ClientException {
+    @Nonnull
+    public Site post(@Nonnull final Site newSite) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/sites/" + newSite.id);
         return new SiteWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
@@ -58,7 +61,8 @@ public class SiteCollectionReferenceRequest extends BaseCollectionRequest<SiteCo
      * @param value the expand clause
      * @return the updated request
      */
-    public SiteCollectionReferenceRequest expand(final String value) {
+    @Nonnull
+    public SiteCollectionReferenceRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (SiteCollectionReferenceRequest)this;
     }
@@ -69,7 +73,8 @@ public class SiteCollectionReferenceRequest extends BaseCollectionRequest<SiteCo
      * @param value the filter clause
      * @return the updated request
      */
-    public SiteCollectionReferenceRequest filter(final String value) {
+    @Nonnull
+    public SiteCollectionReferenceRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (SiteCollectionReferenceRequest)this;
     }
@@ -80,7 +85,8 @@ public class SiteCollectionReferenceRequest extends BaseCollectionRequest<SiteCo
      * @param value the sort clause
      * @return the updated request
      */
-    public SiteCollectionReferenceRequest orderBy(final String value) {
+    @Nonnull
+    public SiteCollectionReferenceRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SiteCollectionReferenceRequest)this;
     }
@@ -91,7 +97,8 @@ public class SiteCollectionReferenceRequest extends BaseCollectionRequest<SiteCo
      * @param value the select clause
      * @return the updated request
      */
-    public SiteCollectionReferenceRequest select(final String value) {
+    @Nonnull
+    public SiteCollectionReferenceRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (SiteCollectionReferenceRequest)this;
     }
@@ -102,6 +109,7 @@ public class SiteCollectionReferenceRequest extends BaseCollectionRequest<SiteCo
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public SiteCollectionReferenceRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (SiteCollectionReferenceRequest)this;

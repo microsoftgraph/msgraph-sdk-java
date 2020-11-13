@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.NotificationMessageTemplate;
 import com.microsoft.graph.models.extensions.LocalizedNotificationMessage;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class LocalizedNotificationMessageCollectionRequest extends BaseCollectio
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public LocalizedNotificationMessageCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public LocalizedNotificationMessageCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, LocalizedNotificationMessageCollectionResponse.class, LocalizedNotificationMessageCollectionPage.class);
     }
 
-    public void get(final ICallback<? super LocalizedNotificationMessageCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super LocalizedNotificationMessageCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class LocalizedNotificationMessageCollectionRequest extends BaseCollectio
         });
     }
 
+    @Nonnull
     public LocalizedNotificationMessageCollectionPage get() throws ClientException {
         final LocalizedNotificationMessageCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final LocalizedNotificationMessage newLocalizedNotificationMessage, final ICallback<? super LocalizedNotificationMessage> callback) {
+    public void post(@Nonnull final LocalizedNotificationMessage newLocalizedNotificationMessage, @Nonnull final ICallback<? super LocalizedNotificationMessage> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new LocalizedNotificationMessageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newLocalizedNotificationMessage, callback);
     }
 
-    public LocalizedNotificationMessage post(final LocalizedNotificationMessage newLocalizedNotificationMessage) throws ClientException {
+    @Nonnull
+    public LocalizedNotificationMessage post(@Nonnull final LocalizedNotificationMessage newLocalizedNotificationMessage) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new LocalizedNotificationMessageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class LocalizedNotificationMessageCollectionRequest extends BaseCollectio
      * @param value the expand clause
      * @return the updated request
      */
-    public LocalizedNotificationMessageCollectionRequest expand(final String value) {
+    @Nonnull
+    public LocalizedNotificationMessageCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (LocalizedNotificationMessageCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class LocalizedNotificationMessageCollectionRequest extends BaseCollectio
      * @param value the filter clause
      * @return the updated request
      */
-    public LocalizedNotificationMessageCollectionRequest filter(final String value) {
+    @Nonnull
+    public LocalizedNotificationMessageCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (LocalizedNotificationMessageCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class LocalizedNotificationMessageCollectionRequest extends BaseCollectio
      * @param value the order by clause
      * @return the updated request
      */
-    public LocalizedNotificationMessageCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public LocalizedNotificationMessageCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (LocalizedNotificationMessageCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class LocalizedNotificationMessageCollectionRequest extends BaseCollectio
      * @param value the select clause
      * @return the updated request
      */
-    public LocalizedNotificationMessageCollectionRequest select(final String value) {
+    @Nonnull
+    public LocalizedNotificationMessageCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (LocalizedNotificationMessageCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class LocalizedNotificationMessageCollectionRequest extends BaseCollectio
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public LocalizedNotificationMessageCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (LocalizedNotificationMessageCollectionRequest)this;
@@ -133,6 +142,7 @@ public class LocalizedNotificationMessageCollectionRequest extends BaseCollectio
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public LocalizedNotificationMessageCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (LocalizedNotificationMessageCollectionRequest)this;
@@ -144,11 +154,13 @@ public class LocalizedNotificationMessageCollectionRequest extends BaseCollectio
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public LocalizedNotificationMessageCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public LocalizedNotificationMessageCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (LocalizedNotificationMessageCollectionRequest)this;
     }
-    public LocalizedNotificationMessageCollectionPage buildFromResponse(final LocalizedNotificationMessageCollectionResponse response) {
+    @Nonnull
+    public LocalizedNotificationMessageCollectionPage buildFromResponse(@Nonnull final LocalizedNotificationMessageCollectionResponse response) {
         final LocalizedNotificationMessageCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new LocalizedNotificationMessageCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

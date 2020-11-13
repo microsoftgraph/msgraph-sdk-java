@@ -13,6 +13,8 @@ import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.PasswordCredential;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -33,11 +35,11 @@ public class ApplicationCollectionWithReferencesRequest extends BaseCollectionRe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ApplicationCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ApplicationCollectionWithReferencesRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ApplicationCollectionResponse.class, ApplicationCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ApplicationCollectionWithReferencesPage> callback) {
+    public void get(@Nonnull final ICallback<? super ApplicationCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -51,37 +53,44 @@ public class ApplicationCollectionWithReferencesRequest extends BaseCollectionRe
         });
     }
 
+    @Nonnull
     public ApplicationCollectionWithReferencesPage get() throws ClientException {
         final ApplicationCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public ApplicationCollectionWithReferencesRequest expand(final String value) {
+    @Nonnull
+    public ApplicationCollectionWithReferencesRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return this;
     }
 
-    public ApplicationCollectionWithReferencesRequest filter(final String value) {
+    @Nonnull
+    public ApplicationCollectionWithReferencesRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return this;
     }
 
-    public ApplicationCollectionWithReferencesRequest orderBy(final String value) {
+    @Nonnull
+    public ApplicationCollectionWithReferencesRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return this;
     }
 
-    public ApplicationCollectionWithReferencesRequest select(final String value) {
+    @Nonnull
+    public ApplicationCollectionWithReferencesRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return this;
     }
 
+    @Nonnull
     public ApplicationCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return this;
     }
 
-    public ApplicationCollectionWithReferencesPage buildFromResponse(final ApplicationCollectionResponse response) {
+    @Nonnull
+    public ApplicationCollectionWithReferencesPage buildFromResponse(@Nonnull final ApplicationCollectionResponse response) {
         final ApplicationCollectionWithReferencesRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ApplicationCollectionWithReferencesRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

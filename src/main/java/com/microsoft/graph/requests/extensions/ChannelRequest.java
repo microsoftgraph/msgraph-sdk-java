@@ -17,6 +17,8 @@ import com.microsoft.graph.requests.extensions.TeamsTabRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -35,7 +37,7 @@ public class ChannelRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ChannelRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ChannelRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Channel.class);
     }
 
@@ -44,7 +46,7 @@ public class ChannelRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Channel> callback) {
+    public void get(@Nonnull final ICallback<? super Channel> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -54,6 +56,7 @@ public class ChannelRequest extends BaseRequest {
      * @return the Channel from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Channel get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -63,7 +66,7 @@ public class ChannelRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Channel> callback) {
+    public void delete(@Nonnull final ICallback<? super Channel> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -82,7 +85,7 @@ public class ChannelRequest extends BaseRequest {
      * @param sourceChannel the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Channel sourceChannel, final ICallback<? super Channel> callback) {
+    public void patch(@Nonnull final Channel sourceChannel, @Nonnull final ICallback<? super Channel> callback) {
         send(HttpMethod.PATCH, callback, sourceChannel);
     }
 
@@ -93,7 +96,8 @@ public class ChannelRequest extends BaseRequest {
      * @return the updated Channel
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Channel patch(final Channel sourceChannel) throws ClientException {
+    @Nullable
+    public Channel patch(@Nonnull final Channel sourceChannel) throws ClientException {
         return send(HttpMethod.PATCH, sourceChannel);
     }
 
@@ -103,7 +107,7 @@ public class ChannelRequest extends BaseRequest {
      * @param newChannel the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Channel newChannel, final ICallback<? super Channel> callback) {
+    public void post(@Nonnull final Channel newChannel, @Nonnull final ICallback<? super Channel> callback) {
         send(HttpMethod.POST, callback, newChannel);
     }
 
@@ -114,7 +118,8 @@ public class ChannelRequest extends BaseRequest {
      * @return the created Channel
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Channel post(final Channel newChannel) throws ClientException {
+    @Nullable
+    public Channel post(@Nonnull final Channel newChannel) throws ClientException {
         return send(HttpMethod.POST, newChannel);
     }
 
@@ -124,7 +129,7 @@ public class ChannelRequest extends BaseRequest {
      * @param newChannel the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Channel newChannel, final ICallback<? super Channel> callback) {
+    public void put(@Nonnull final Channel newChannel, @Nonnull final ICallback<? super Channel> callback) {
         send(HttpMethod.PUT, callback, newChannel);
     }
 
@@ -135,7 +140,8 @@ public class ChannelRequest extends BaseRequest {
      * @return the created Channel
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Channel put(final Channel newChannel) throws ClientException {
+    @Nullable
+    public Channel put(@Nonnull final Channel newChannel) throws ClientException {
         return send(HttpMethod.PUT, newChannel);
     }
 
@@ -145,7 +151,8 @@ public class ChannelRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ChannelRequest select(final String value) {
+     @Nonnull
+     public ChannelRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ChannelRequest)this;
      }
@@ -156,7 +163,8 @@ public class ChannelRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ChannelRequest expand(final String value) {
+     @Nonnull
+     public ChannelRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ChannelRequest)this;
      }

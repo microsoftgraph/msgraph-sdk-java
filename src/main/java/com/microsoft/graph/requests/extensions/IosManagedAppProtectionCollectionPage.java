@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.IosManagedAppProtection;
 import com.microsoft.graph.requests.extensions.IosManagedAppProtectionCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.IosManagedAppProtectionCollectionPage;
 import com.microsoft.graph.requests.extensions.IosManagedAppProtectionCollectionResponse;
@@ -22,7 +24,7 @@ public class IosManagedAppProtectionCollectionPage extends BaseCollectionPage<Io
      * @param response the serialized IosManagedAppProtectionCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public IosManagedAppProtectionCollectionPage(final IosManagedAppProtectionCollectionResponse response, final IosManagedAppProtectionCollectionRequestBuilder builder) {
+    public IosManagedAppProtectionCollectionPage(@Nonnull final IosManagedAppProtectionCollectionResponse response, @Nonnull final IosManagedAppProtectionCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

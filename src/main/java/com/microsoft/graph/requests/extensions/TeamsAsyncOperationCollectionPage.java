@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.TeamsAsyncOperation;
 import com.microsoft.graph.requests.extensions.TeamsAsyncOperationCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.TeamsAsyncOperationCollectionPage;
 import com.microsoft.graph.requests.extensions.TeamsAsyncOperationCollectionResponse;
@@ -22,7 +24,7 @@ public class TeamsAsyncOperationCollectionPage extends BaseCollectionPage<TeamsA
      * @param response the serialized TeamsAsyncOperationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TeamsAsyncOperationCollectionPage(final TeamsAsyncOperationCollectionResponse response, final TeamsAsyncOperationCollectionRequestBuilder builder) {
+    public TeamsAsyncOperationCollectionPage(@Nonnull final TeamsAsyncOperationCollectionResponse response, @Nonnull final TeamsAsyncOperationCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

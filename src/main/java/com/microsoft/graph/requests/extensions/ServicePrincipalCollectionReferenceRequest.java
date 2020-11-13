@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.PasswordCredential;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -33,11 +35,11 @@ public class ServicePrincipalCollectionReferenceRequest extends BaseCollectionRe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ServicePrincipalCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ServicePrincipalCollectionReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ServicePrincipalCollectionResponse.class, ServicePrincipalCollectionPage.class);
     }
 
-    public void post(final ServicePrincipal newServicePrincipal, final ICallback<? super ServicePrincipal> callback) {
+    public void post(@Nonnull final ServicePrincipal newServicePrincipal, @Nonnull final ICallback<? super ServicePrincipal> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/servicePrincipals/" + newServicePrincipal.id);
         new ServicePrincipalWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,7 +47,8 @@ public class ServicePrincipalCollectionReferenceRequest extends BaseCollectionRe
             .post(newServicePrincipal, body, callback);
     }
 
-    public ServicePrincipal post(final ServicePrincipal newServicePrincipal) throws ClientException {
+    @Nonnull
+    public ServicePrincipal post(@Nonnull final ServicePrincipal newServicePrincipal) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/servicePrincipals/" + newServicePrincipal.id);
         return new ServicePrincipalWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
@@ -58,7 +61,8 @@ public class ServicePrincipalCollectionReferenceRequest extends BaseCollectionRe
      * @param value the expand clause
      * @return the updated request
      */
-    public ServicePrincipalCollectionReferenceRequest expand(final String value) {
+    @Nonnull
+    public ServicePrincipalCollectionReferenceRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ServicePrincipalCollectionReferenceRequest)this;
     }
@@ -69,7 +73,8 @@ public class ServicePrincipalCollectionReferenceRequest extends BaseCollectionRe
      * @param value the filter clause
      * @return the updated request
      */
-    public ServicePrincipalCollectionReferenceRequest filter(final String value) {
+    @Nonnull
+    public ServicePrincipalCollectionReferenceRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ServicePrincipalCollectionReferenceRequest)this;
     }
@@ -80,7 +85,8 @@ public class ServicePrincipalCollectionReferenceRequest extends BaseCollectionRe
      * @param value the sort clause
      * @return the updated request
      */
-    public ServicePrincipalCollectionReferenceRequest orderBy(final String value) {
+    @Nonnull
+    public ServicePrincipalCollectionReferenceRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ServicePrincipalCollectionReferenceRequest)this;
     }
@@ -91,7 +97,8 @@ public class ServicePrincipalCollectionReferenceRequest extends BaseCollectionRe
      * @param value the select clause
      * @return the updated request
      */
-    public ServicePrincipalCollectionReferenceRequest select(final String value) {
+    @Nonnull
+    public ServicePrincipalCollectionReferenceRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ServicePrincipalCollectionReferenceRequest)this;
     }
@@ -102,6 +109,7 @@ public class ServicePrincipalCollectionReferenceRequest extends BaseCollectionRe
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ServicePrincipalCollectionReferenceRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ServicePrincipalCollectionReferenceRequest)this;

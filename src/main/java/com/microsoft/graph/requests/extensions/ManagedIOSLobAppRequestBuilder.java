@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedIOSLobApp;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -27,7 +29,7 @@ public class ManagedIOSLobAppRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedIOSLobAppRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedIOSLobAppRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -37,7 +39,8 @@ public class ManagedIOSLobAppRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ManagedIOSLobAppRequest instance
      */
-    public ManagedIOSLobAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ManagedIOSLobAppRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,30 +50,37 @@ public class ManagedIOSLobAppRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ManagedIOSLobAppRequest instance
      */
-    public ManagedIOSLobAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ManagedIOSLobAppRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ManagedIOSLobAppRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    @Nonnull
     public MobileAppAssignmentCollectionRequestBuilder assignments() {
         return new MobileAppAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
-    public MobileAppAssignmentRequestBuilder assignments(final String id) {
+    @Nonnull
+    public MobileAppAssignmentRequestBuilder assignments(@Nonnull final String id) {
         return new MobileAppAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public MobileAppCategoryCollectionWithReferencesRequestBuilder categories() {
         return new MobileAppCategoryCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
     }
 
-    public MobileAppCategoryWithReferenceRequestBuilder categories(final String id) {
+    @Nonnull
+    public MobileAppCategoryWithReferenceRequestBuilder categories(@Nonnull final String id) {
         return new MobileAppCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public MobileAppContentCollectionRequestBuilder contentVersions() {
         return new MobileAppContentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contentVersions"), getClient(), null);
     }
 
-    public MobileAppContentRequestBuilder contentVersions(final String id) {
+    @Nonnull
+    public MobileAppContentRequestBuilder contentVersions(@Nonnull final String id) {
         return new MobileAppContentRequestBuilder(getRequestUrlWithAdditionalSegment("contentVersions") + "/" + id, getClient(), null);
     }
 }

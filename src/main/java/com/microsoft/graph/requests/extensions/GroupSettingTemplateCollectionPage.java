@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.GroupSettingTemplate;
 import com.microsoft.graph.requests.extensions.GroupSettingTemplateCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.GroupSettingTemplateCollectionPage;
 import com.microsoft.graph.requests.extensions.GroupSettingTemplateCollectionResponse;
@@ -22,7 +24,7 @@ public class GroupSettingTemplateCollectionPage extends BaseCollectionPage<Group
      * @param response the serialized GroupSettingTemplateCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public GroupSettingTemplateCollectionPage(final GroupSettingTemplateCollectionResponse response, final GroupSettingTemplateCollectionRequestBuilder builder) {
+    public GroupSettingTemplateCollectionPage(@Nonnull final GroupSettingTemplateCollectionResponse response, @Nonnull final GroupSettingTemplateCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

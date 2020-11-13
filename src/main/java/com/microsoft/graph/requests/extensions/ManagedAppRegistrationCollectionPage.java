@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ManagedAppRegistration;
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionResponse;
@@ -22,7 +24,7 @@ public class ManagedAppRegistrationCollectionPage extends BaseCollectionPage<Man
      * @param response the serialized ManagedAppRegistrationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ManagedAppRegistrationCollectionPage(final ManagedAppRegistrationCollectionResponse response, final ManagedAppRegistrationCollectionRequestBuilder builder) {
+    public ManagedAppRegistrationCollectionPage(@Nonnull final ManagedAppRegistrationCollectionResponse response, @Nonnull final ManagedAppRegistrationCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

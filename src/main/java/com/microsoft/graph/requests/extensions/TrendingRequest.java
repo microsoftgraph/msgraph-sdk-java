@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Trending;
 import com.microsoft.graph.requests.extensions.EntityRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,7 +31,7 @@ public class TrendingRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TrendingRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TrendingRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Trending.class);
     }
 
@@ -38,7 +40,7 @@ public class TrendingRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Trending> callback) {
+    public void get(@Nonnull final ICallback<? super Trending> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class TrendingRequest extends BaseRequest {
      * @return the Trending from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Trending get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class TrendingRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Trending> callback) {
+    public void delete(@Nonnull final ICallback<? super Trending> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class TrendingRequest extends BaseRequest {
      * @param sourceTrending the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Trending sourceTrending, final ICallback<? super Trending> callback) {
+    public void patch(@Nonnull final Trending sourceTrending, @Nonnull final ICallback<? super Trending> callback) {
         send(HttpMethod.PATCH, callback, sourceTrending);
     }
 
@@ -87,7 +90,8 @@ public class TrendingRequest extends BaseRequest {
      * @return the updated Trending
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Trending patch(final Trending sourceTrending) throws ClientException {
+    @Nullable
+    public Trending patch(@Nonnull final Trending sourceTrending) throws ClientException {
         return send(HttpMethod.PATCH, sourceTrending);
     }
 
@@ -97,7 +101,7 @@ public class TrendingRequest extends BaseRequest {
      * @param newTrending the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Trending newTrending, final ICallback<? super Trending> callback) {
+    public void post(@Nonnull final Trending newTrending, @Nonnull final ICallback<? super Trending> callback) {
         send(HttpMethod.POST, callback, newTrending);
     }
 
@@ -108,7 +112,8 @@ public class TrendingRequest extends BaseRequest {
      * @return the created Trending
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Trending post(final Trending newTrending) throws ClientException {
+    @Nullable
+    public Trending post(@Nonnull final Trending newTrending) throws ClientException {
         return send(HttpMethod.POST, newTrending);
     }
 
@@ -118,7 +123,7 @@ public class TrendingRequest extends BaseRequest {
      * @param newTrending the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Trending newTrending, final ICallback<? super Trending> callback) {
+    public void put(@Nonnull final Trending newTrending, @Nonnull final ICallback<? super Trending> callback) {
         send(HttpMethod.PUT, callback, newTrending);
     }
 
@@ -129,7 +134,8 @@ public class TrendingRequest extends BaseRequest {
      * @return the created Trending
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Trending put(final Trending newTrending) throws ClientException {
+    @Nullable
+    public Trending put(@Nonnull final Trending newTrending) throws ClientException {
         return send(HttpMethod.PUT, newTrending);
     }
 
@@ -139,7 +145,8 @@ public class TrendingRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public TrendingRequest select(final String value) {
+     @Nonnull
+     public TrendingRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (TrendingRequest)this;
      }
@@ -150,7 +157,8 @@ public class TrendingRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public TrendingRequest expand(final String value) {
+     @Nonnull
+     public TrendingRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (TrendingRequest)this;
      }

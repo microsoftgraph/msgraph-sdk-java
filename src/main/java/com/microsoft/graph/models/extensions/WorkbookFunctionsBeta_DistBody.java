@@ -7,6 +7,8 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
 import java.util.EnumSet;
@@ -24,6 +26,7 @@ public class WorkbookFunctionsBeta_DistBody {
      */
     @SerializedName(value = "x", alternate = {"X"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement x;
 
     /**
@@ -32,6 +35,7 @@ public class WorkbookFunctionsBeta_DistBody {
      */
     @SerializedName(value = "alpha", alternate = {"Alpha"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement alpha;
 
     /**
@@ -40,6 +44,7 @@ public class WorkbookFunctionsBeta_DistBody {
      */
     @SerializedName(value = "beta", alternate = {"Beta"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement beta;
 
     /**
@@ -48,6 +53,7 @@ public class WorkbookFunctionsBeta_DistBody {
      */
     @SerializedName(value = "cumulative", alternate = {"Cumulative"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement cumulative;
 
     /**
@@ -56,6 +62,7 @@ public class WorkbookFunctionsBeta_DistBody {
      */
     @SerializedName(value = "a", alternate = {"A"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement a;
 
     /**
@@ -64,6 +71,7 @@ public class WorkbookFunctionsBeta_DistBody {
      */
     @SerializedName(value = "b", alternate = {"B"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement b;
 
 
@@ -82,6 +90,7 @@ public class WorkbookFunctionsBeta_DistBody {
      *
      * @return the raw representation of this class
      */
+    @Nullable
     public JsonObject getRawObject() {
         return rawObject;
     }
@@ -91,6 +100,7 @@ public class WorkbookFunctionsBeta_DistBody {
      *
      * @return the serializer
      */
+    @Nullable
     protected ISerializer getSerializer() {
         return serializer;
     }
@@ -101,7 +111,7 @@ public class WorkbookFunctionsBeta_DistBody {
      * @param serializer the serializer
      * @param json the JSON object to set this object to
      */
-    public void setRawObject(final ISerializer serializer, final JsonObject json) {
+    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
         this.serializer = serializer;
         rawObject = json;
 

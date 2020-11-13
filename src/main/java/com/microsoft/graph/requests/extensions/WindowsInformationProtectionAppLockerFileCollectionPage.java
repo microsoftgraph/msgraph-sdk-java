@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionAppLockerFile;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileCollectionPage;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileCollectionResponse;
@@ -22,7 +24,7 @@ public class WindowsInformationProtectionAppLockerFileCollectionPage extends Bas
      * @param response the serialized WindowsInformationProtectionAppLockerFileCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public WindowsInformationProtectionAppLockerFileCollectionPage(final WindowsInformationProtectionAppLockerFileCollectionResponse response, final WindowsInformationProtectionAppLockerFileCollectionRequestBuilder builder) {
+    public WindowsInformationProtectionAppLockerFileCollectionPage(@Nonnull final WindowsInformationProtectionAppLockerFileCollectionResponse response, @Nonnull final WindowsInformationProtectionAppLockerFileCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

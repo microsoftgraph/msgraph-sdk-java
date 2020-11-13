@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ManagedMobileLobApp;
 import com.microsoft.graph.requests.extensions.ManagedMobileLobAppCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedMobileLobAppCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedMobileLobAppCollectionResponse;
@@ -22,7 +24,7 @@ public class ManagedMobileLobAppCollectionPage extends BaseCollectionPage<Manage
      * @param response the serialized ManagedMobileLobAppCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ManagedMobileLobAppCollectionPage(final ManagedMobileLobAppCollectionResponse response, final ManagedMobileLobAppCollectionRequestBuilder builder) {
+    public ManagedMobileLobAppCollectionPage(@Nonnull final ManagedMobileLobAppCollectionResponse response, @Nonnull final ManagedMobileLobAppCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -31,11 +33,11 @@ public class TokenIssuancePolicyCollectionWithReferencesRequest extends BaseColl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TokenIssuancePolicyCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TokenIssuancePolicyCollectionWithReferencesRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TokenIssuancePolicyCollectionResponse.class, TokenIssuancePolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<? super TokenIssuancePolicyCollectionWithReferencesPage> callback) {
+    public void get(@Nonnull final ICallback<? super TokenIssuancePolicyCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -49,37 +51,44 @@ public class TokenIssuancePolicyCollectionWithReferencesRequest extends BaseColl
         });
     }
 
+    @Nonnull
     public TokenIssuancePolicyCollectionWithReferencesPage get() throws ClientException {
         final TokenIssuancePolicyCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public TokenIssuancePolicyCollectionWithReferencesRequest expand(final String value) {
+    @Nonnull
+    public TokenIssuancePolicyCollectionWithReferencesRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return this;
     }
 
-    public TokenIssuancePolicyCollectionWithReferencesRequest filter(final String value) {
+    @Nonnull
+    public TokenIssuancePolicyCollectionWithReferencesRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return this;
     }
 
-    public TokenIssuancePolicyCollectionWithReferencesRequest orderBy(final String value) {
+    @Nonnull
+    public TokenIssuancePolicyCollectionWithReferencesRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return this;
     }
 
-    public TokenIssuancePolicyCollectionWithReferencesRequest select(final String value) {
+    @Nonnull
+    public TokenIssuancePolicyCollectionWithReferencesRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return this;
     }
 
+    @Nonnull
     public TokenIssuancePolicyCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return this;
     }
 
-    public TokenIssuancePolicyCollectionWithReferencesPage buildFromResponse(final TokenIssuancePolicyCollectionResponse response) {
+    @Nonnull
+    public TokenIssuancePolicyCollectionWithReferencesPage buildFromResponse(@Nonnull final TokenIssuancePolicyCollectionResponse response) {
         final TokenIssuancePolicyCollectionWithReferencesRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new TokenIssuancePolicyCollectionWithReferencesRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

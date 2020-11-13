@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceAndAppManagementRoleDefinition;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class DeviceAndAppManagementRoleDefinitionRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceAndAppManagementRoleDefinitionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceAndAppManagementRoleDefinitionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceAndAppManagementRoleDefinition.class);
     }
 
@@ -37,7 +39,7 @@ public class DeviceAndAppManagementRoleDefinitionRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceAndAppManagementRoleDefinition> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceAndAppManagementRoleDefinition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class DeviceAndAppManagementRoleDefinitionRequest extends BaseRequest {
      * @return the DeviceAndAppManagementRoleDefinition from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceAndAppManagementRoleDefinition get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class DeviceAndAppManagementRoleDefinitionRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceAndAppManagementRoleDefinition> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceAndAppManagementRoleDefinition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class DeviceAndAppManagementRoleDefinitionRequest extends BaseRequest {
      * @param sourceDeviceAndAppManagementRoleDefinition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceAndAppManagementRoleDefinition sourceDeviceAndAppManagementRoleDefinition, final ICallback<? super DeviceAndAppManagementRoleDefinition> callback) {
+    public void patch(@Nonnull final DeviceAndAppManagementRoleDefinition sourceDeviceAndAppManagementRoleDefinition, @Nonnull final ICallback<? super DeviceAndAppManagementRoleDefinition> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceAndAppManagementRoleDefinition);
     }
 
@@ -86,7 +89,8 @@ public class DeviceAndAppManagementRoleDefinitionRequest extends BaseRequest {
      * @return the updated DeviceAndAppManagementRoleDefinition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceAndAppManagementRoleDefinition patch(final DeviceAndAppManagementRoleDefinition sourceDeviceAndAppManagementRoleDefinition) throws ClientException {
+    @Nullable
+    public DeviceAndAppManagementRoleDefinition patch(@Nonnull final DeviceAndAppManagementRoleDefinition sourceDeviceAndAppManagementRoleDefinition) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceAndAppManagementRoleDefinition);
     }
 
@@ -96,7 +100,7 @@ public class DeviceAndAppManagementRoleDefinitionRequest extends BaseRequest {
      * @param newDeviceAndAppManagementRoleDefinition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceAndAppManagementRoleDefinition newDeviceAndAppManagementRoleDefinition, final ICallback<? super DeviceAndAppManagementRoleDefinition> callback) {
+    public void post(@Nonnull final DeviceAndAppManagementRoleDefinition newDeviceAndAppManagementRoleDefinition, @Nonnull final ICallback<? super DeviceAndAppManagementRoleDefinition> callback) {
         send(HttpMethod.POST, callback, newDeviceAndAppManagementRoleDefinition);
     }
 
@@ -107,7 +111,8 @@ public class DeviceAndAppManagementRoleDefinitionRequest extends BaseRequest {
      * @return the created DeviceAndAppManagementRoleDefinition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceAndAppManagementRoleDefinition post(final DeviceAndAppManagementRoleDefinition newDeviceAndAppManagementRoleDefinition) throws ClientException {
+    @Nullable
+    public DeviceAndAppManagementRoleDefinition post(@Nonnull final DeviceAndAppManagementRoleDefinition newDeviceAndAppManagementRoleDefinition) throws ClientException {
         return send(HttpMethod.POST, newDeviceAndAppManagementRoleDefinition);
     }
 
@@ -117,7 +122,7 @@ public class DeviceAndAppManagementRoleDefinitionRequest extends BaseRequest {
      * @param newDeviceAndAppManagementRoleDefinition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceAndAppManagementRoleDefinition newDeviceAndAppManagementRoleDefinition, final ICallback<? super DeviceAndAppManagementRoleDefinition> callback) {
+    public void put(@Nonnull final DeviceAndAppManagementRoleDefinition newDeviceAndAppManagementRoleDefinition, @Nonnull final ICallback<? super DeviceAndAppManagementRoleDefinition> callback) {
         send(HttpMethod.PUT, callback, newDeviceAndAppManagementRoleDefinition);
     }
 
@@ -128,7 +133,8 @@ public class DeviceAndAppManagementRoleDefinitionRequest extends BaseRequest {
      * @return the created DeviceAndAppManagementRoleDefinition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceAndAppManagementRoleDefinition put(final DeviceAndAppManagementRoleDefinition newDeviceAndAppManagementRoleDefinition) throws ClientException {
+    @Nullable
+    public DeviceAndAppManagementRoleDefinition put(@Nonnull final DeviceAndAppManagementRoleDefinition newDeviceAndAppManagementRoleDefinition) throws ClientException {
         return send(HttpMethod.PUT, newDeviceAndAppManagementRoleDefinition);
     }
 
@@ -138,7 +144,8 @@ public class DeviceAndAppManagementRoleDefinitionRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public DeviceAndAppManagementRoleDefinitionRequest select(final String value) {
+     @Nonnull
+     public DeviceAndAppManagementRoleDefinitionRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (DeviceAndAppManagementRoleDefinitionRequest)this;
      }
@@ -149,7 +156,8 @@ public class DeviceAndAppManagementRoleDefinitionRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public DeviceAndAppManagementRoleDefinitionRequest expand(final String value) {
+     @Nonnull
+     public DeviceAndAppManagementRoleDefinitionRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (DeviceAndAppManagementRoleDefinitionRequest)this;
      }

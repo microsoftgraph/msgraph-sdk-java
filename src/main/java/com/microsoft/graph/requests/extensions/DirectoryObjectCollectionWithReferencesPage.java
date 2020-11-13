@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.ExtensionProperty;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionWithReferencesPage;
@@ -35,7 +37,7 @@ public class DirectoryObjectCollectionWithReferencesPage extends BaseCollectionP
      * @param response the serialized DirectoryObjectCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DirectoryObjectCollectionWithReferencesPage(final DirectoryObjectCollectionResponse response, final DirectoryObjectCollectionWithReferencesRequestBuilder builder) {
+    public DirectoryObjectCollectionWithReferencesPage(@Nonnull final DirectoryObjectCollectionResponse response, @Nonnull  final DirectoryObjectCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

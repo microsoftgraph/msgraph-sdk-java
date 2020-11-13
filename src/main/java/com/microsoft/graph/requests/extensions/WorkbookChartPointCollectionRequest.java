@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.WorkbookChartSeries;
 import com.microsoft.graph.models.extensions.WorkbookChartPoint;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class WorkbookChartPointCollectionRequest extends BaseCollectionRequest<W
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartPointCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartPointCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChartPointCollectionResponse.class, WorkbookChartPointCollectionPage.class);
     }
 
-    public void get(final ICallback<? super WorkbookChartPointCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookChartPointCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class WorkbookChartPointCollectionRequest extends BaseCollectionRequest<W
         });
     }
 
+    @Nonnull
     public WorkbookChartPointCollectionPage get() throws ClientException {
         final WorkbookChartPointCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final WorkbookChartPoint newWorkbookChartPoint, final ICallback<? super WorkbookChartPoint> callback) {
+    public void post(@Nonnull final WorkbookChartPoint newWorkbookChartPoint, @Nonnull final ICallback<? super WorkbookChartPoint> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookChartPointRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newWorkbookChartPoint, callback);
     }
 
-    public WorkbookChartPoint post(final WorkbookChartPoint newWorkbookChartPoint) throws ClientException {
+    @Nonnull
+    public WorkbookChartPoint post(@Nonnull final WorkbookChartPoint newWorkbookChartPoint) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookChartPointRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class WorkbookChartPointCollectionRequest extends BaseCollectionRequest<W
      * @param value the expand clause
      * @return the updated request
      */
-    public WorkbookChartPointCollectionRequest expand(final String value) {
+    @Nonnull
+    public WorkbookChartPointCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookChartPointCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class WorkbookChartPointCollectionRequest extends BaseCollectionRequest<W
      * @param value the filter clause
      * @return the updated request
      */
-    public WorkbookChartPointCollectionRequest filter(final String value) {
+    @Nonnull
+    public WorkbookChartPointCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookChartPointCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class WorkbookChartPointCollectionRequest extends BaseCollectionRequest<W
      * @param value the order by clause
      * @return the updated request
      */
-    public WorkbookChartPointCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public WorkbookChartPointCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookChartPointCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class WorkbookChartPointCollectionRequest extends BaseCollectionRequest<W
      * @param value the select clause
      * @return the updated request
      */
-    public WorkbookChartPointCollectionRequest select(final String value) {
+    @Nonnull
+    public WorkbookChartPointCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookChartPointCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class WorkbookChartPointCollectionRequest extends BaseCollectionRequest<W
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public WorkbookChartPointCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (WorkbookChartPointCollectionRequest)this;
@@ -133,6 +142,7 @@ public class WorkbookChartPointCollectionRequest extends BaseCollectionRequest<W
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public WorkbookChartPointCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (WorkbookChartPointCollectionRequest)this;
@@ -144,11 +154,13 @@ public class WorkbookChartPointCollectionRequest extends BaseCollectionRequest<W
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public WorkbookChartPointCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public WorkbookChartPointCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (WorkbookChartPointCollectionRequest)this;
     }
-    public WorkbookChartPointCollectionPage buildFromResponse(final WorkbookChartPointCollectionResponse response) {
+    @Nonnull
+    public WorkbookChartPointCollectionPage buildFromResponse(@Nonnull final WorkbookChartPointCollectionResponse response) {
         final WorkbookChartPointCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new WorkbookChartPointCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

@@ -28,6 +28,8 @@ import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionRequ
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
@@ -46,7 +48,7 @@ public class ServicePrincipalWithReferenceRequestBuilder extends BaseRequestBuil
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ServicePrincipalWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ServicePrincipalWithReferenceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -56,7 +58,8 @@ public class ServicePrincipalWithReferenceRequestBuilder extends BaseRequestBuil
      * @param requestOptions the options for this request
      * @return the ServicePrincipalWithReferenceRequest instance
      */
-    public ServicePrincipalWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ServicePrincipalWithReferenceRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -66,10 +69,12 @@ public class ServicePrincipalWithReferenceRequestBuilder extends BaseRequestBuil
      * @param requestOptions the options for this request
      * @return the ServicePrincipalWithReferenceRequest instance
      */
-    public ServicePrincipalWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ServicePrincipalWithReferenceRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ServicePrincipalWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
+    @Nonnull
     public ServicePrincipalReferenceRequestBuilder reference(){
         return new ServicePrincipalReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }

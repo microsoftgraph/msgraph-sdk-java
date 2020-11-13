@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ChatMessage;
 import com.microsoft.graph.requests.extensions.ChatMessageCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ChatMessageCollectionPage;
 import com.microsoft.graph.requests.extensions.ChatMessageCollectionResponse;
@@ -22,7 +24,7 @@ public class ChatMessageCollectionPage extends BaseCollectionPage<ChatMessage, C
      * @param response the serialized ChatMessageCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ChatMessageCollectionPage(final ChatMessageCollectionResponse response, final ChatMessageCollectionRequestBuilder builder) {
+    public ChatMessageCollectionPage(@Nonnull final ChatMessageCollectionResponse response, @Nonnull final ChatMessageCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

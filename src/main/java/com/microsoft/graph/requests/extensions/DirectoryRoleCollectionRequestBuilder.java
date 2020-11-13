@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DirectoryRole;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DirectoryRoleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryRoleRequestBuilder;
@@ -32,7 +34,7 @@ public class DirectoryRoleCollectionRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DirectoryRoleCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryRoleCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,7 +44,8 @@ public class DirectoryRoleCollectionRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public DirectoryRoleCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DirectoryRoleCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,21 +55,25 @@ public class DirectoryRoleCollectionRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public DirectoryRoleCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DirectoryRoleCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DirectoryRoleCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public DirectoryRoleRequestBuilder byId(final String id) {
+    @Nonnull
+    public DirectoryRoleRequestBuilder byId(@Nonnull final String id) {
         return new DirectoryRoleRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
+    @Nonnull
     public DirectoryRoleDeltaCollectionRequestBuilder delta() {
         return new DirectoryRoleDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
 
-	public DirectoryRoleDeltaCollectionRequestBuilder delta(final String deltaLink) {
+    @Nonnull
+	public DirectoryRoleDeltaCollectionRequestBuilder delta(@Nonnull final String deltaLink) {
         return new DirectoryRoleDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }
 }

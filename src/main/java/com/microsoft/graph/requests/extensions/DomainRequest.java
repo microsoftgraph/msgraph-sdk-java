@@ -14,6 +14,8 @@ import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionRequestB
 import com.microsoft.graph.requests.extensions.DomainDnsRecordRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -32,7 +34,7 @@ public class DomainRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DomainRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DomainRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Domain.class);
     }
 
@@ -41,7 +43,7 @@ public class DomainRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Domain> callback) {
+    public void get(@Nonnull final ICallback<? super Domain> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -51,6 +53,7 @@ public class DomainRequest extends BaseRequest {
      * @return the Domain from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Domain get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -60,7 +63,7 @@ public class DomainRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Domain> callback) {
+    public void delete(@Nonnull final ICallback<? super Domain> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +82,7 @@ public class DomainRequest extends BaseRequest {
      * @param sourceDomain the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Domain sourceDomain, final ICallback<? super Domain> callback) {
+    public void patch(@Nonnull final Domain sourceDomain, @Nonnull final ICallback<? super Domain> callback) {
         send(HttpMethod.PATCH, callback, sourceDomain);
     }
 
@@ -90,7 +93,8 @@ public class DomainRequest extends BaseRequest {
      * @return the updated Domain
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Domain patch(final Domain sourceDomain) throws ClientException {
+    @Nullable
+    public Domain patch(@Nonnull final Domain sourceDomain) throws ClientException {
         return send(HttpMethod.PATCH, sourceDomain);
     }
 
@@ -100,7 +104,7 @@ public class DomainRequest extends BaseRequest {
      * @param newDomain the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Domain newDomain, final ICallback<? super Domain> callback) {
+    public void post(@Nonnull final Domain newDomain, @Nonnull final ICallback<? super Domain> callback) {
         send(HttpMethod.POST, callback, newDomain);
     }
 
@@ -111,7 +115,8 @@ public class DomainRequest extends BaseRequest {
      * @return the created Domain
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Domain post(final Domain newDomain) throws ClientException {
+    @Nullable
+    public Domain post(@Nonnull final Domain newDomain) throws ClientException {
         return send(HttpMethod.POST, newDomain);
     }
 
@@ -121,7 +126,7 @@ public class DomainRequest extends BaseRequest {
      * @param newDomain the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Domain newDomain, final ICallback<? super Domain> callback) {
+    public void put(@Nonnull final Domain newDomain, @Nonnull final ICallback<? super Domain> callback) {
         send(HttpMethod.PUT, callback, newDomain);
     }
 
@@ -132,7 +137,8 @@ public class DomainRequest extends BaseRequest {
      * @return the created Domain
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Domain put(final Domain newDomain) throws ClientException {
+    @Nullable
+    public Domain put(@Nonnull final Domain newDomain) throws ClientException {
         return send(HttpMethod.PUT, newDomain);
     }
 
@@ -142,7 +148,8 @@ public class DomainRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public DomainRequest select(final String value) {
+     @Nonnull
+     public DomainRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (DomainRequest)this;
      }
@@ -153,7 +160,8 @@ public class DomainRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public DomainRequest expand(final String value) {
+     @Nonnull
+     public DomainRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (DomainRequest)this;
      }

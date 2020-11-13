@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.DeviceManagementPartner;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class DeviceManagementPartnerCollectionRequest extends BaseCollectionRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementPartnerCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementPartnerCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagementPartnerCollectionResponse.class, DeviceManagementPartnerCollectionPage.class);
     }
 
-    public void get(final ICallback<? super DeviceManagementPartnerCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceManagementPartnerCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class DeviceManagementPartnerCollectionRequest extends BaseCollectionRequ
         });
     }
 
+    @Nonnull
     public DeviceManagementPartnerCollectionPage get() throws ClientException {
         final DeviceManagementPartnerCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceManagementPartner newDeviceManagementPartner, final ICallback<? super DeviceManagementPartner> callback) {
+    public void post(@Nonnull final DeviceManagementPartner newDeviceManagementPartner, @Nonnull final ICallback<? super DeviceManagementPartner> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementPartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementPartner, callback);
     }
 
-    public DeviceManagementPartner post(final DeviceManagementPartner newDeviceManagementPartner) throws ClientException {
+    @Nonnull
+    public DeviceManagementPartner post(@Nonnull final DeviceManagementPartner newDeviceManagementPartner) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceManagementPartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class DeviceManagementPartnerCollectionRequest extends BaseCollectionRequ
      * @param value the expand clause
      * @return the updated request
      */
-    public DeviceManagementPartnerCollectionRequest expand(final String value) {
+    @Nonnull
+    public DeviceManagementPartnerCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DeviceManagementPartnerCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class DeviceManagementPartnerCollectionRequest extends BaseCollectionRequ
      * @param value the filter clause
      * @return the updated request
      */
-    public DeviceManagementPartnerCollectionRequest filter(final String value) {
+    @Nonnull
+    public DeviceManagementPartnerCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DeviceManagementPartnerCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class DeviceManagementPartnerCollectionRequest extends BaseCollectionRequ
      * @param value the order by clause
      * @return the updated request
      */
-    public DeviceManagementPartnerCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DeviceManagementPartnerCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceManagementPartnerCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class DeviceManagementPartnerCollectionRequest extends BaseCollectionRequ
      * @param value the select clause
      * @return the updated request
      */
-    public DeviceManagementPartnerCollectionRequest select(final String value) {
+    @Nonnull
+    public DeviceManagementPartnerCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DeviceManagementPartnerCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class DeviceManagementPartnerCollectionRequest extends BaseCollectionRequ
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DeviceManagementPartnerCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (DeviceManagementPartnerCollectionRequest)this;
@@ -133,6 +142,7 @@ public class DeviceManagementPartnerCollectionRequest extends BaseCollectionRequ
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public DeviceManagementPartnerCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (DeviceManagementPartnerCollectionRequest)this;
@@ -144,11 +154,13 @@ public class DeviceManagementPartnerCollectionRequest extends BaseCollectionRequ
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public DeviceManagementPartnerCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public DeviceManagementPartnerCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (DeviceManagementPartnerCollectionRequest)this;
     }
-    public DeviceManagementPartnerCollectionPage buildFromResponse(final DeviceManagementPartnerCollectionResponse response) {
+    @Nonnull
+    public DeviceManagementPartnerCollectionPage buildFromResponse(@Nonnull final DeviceManagementPartnerCollectionResponse response) {
         final DeviceManagementPartnerCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new DeviceManagementPartnerCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.ListItemGetActivitiesByIntervalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListItemGetActivitiesByIntervalCollectionPage;
@@ -33,7 +35,7 @@ public class ListItemGetActivitiesByIntervalCollectionPage extends BaseCollectio
      * @param response The serialized ListItemGetActivitiesByIntervalCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public ListItemGetActivitiesByIntervalCollectionPage(final ListItemGetActivitiesByIntervalCollectionResponse response, final ListItemGetActivitiesByIntervalCollectionRequestBuilder builder) {
+    public ListItemGetActivitiesByIntervalCollectionPage(@Nonnull final ListItemGetActivitiesByIntervalCollectionResponse response, @Nonnull final ListItemGetActivitiesByIntervalCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

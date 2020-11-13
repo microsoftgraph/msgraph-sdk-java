@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.OfficeGraphInsights;
 import com.microsoft.graph.models.extensions.UsedInsight;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class UsedInsightCollectionRequest extends BaseCollectionRequest<UsedInsi
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UsedInsightCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UsedInsightCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UsedInsightCollectionResponse.class, UsedInsightCollectionPage.class);
     }
 
-    public void get(final ICallback<? super UsedInsightCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super UsedInsightCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class UsedInsightCollectionRequest extends BaseCollectionRequest<UsedInsi
         });
     }
 
+    @Nonnull
     public UsedInsightCollectionPage get() throws ClientException {
         final UsedInsightCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final UsedInsight newUsedInsight, final ICallback<? super UsedInsight> callback) {
+    public void post(@Nonnull final UsedInsight newUsedInsight, @Nonnull final ICallback<? super UsedInsight> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UsedInsightRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newUsedInsight, callback);
     }
 
-    public UsedInsight post(final UsedInsight newUsedInsight) throws ClientException {
+    @Nonnull
+    public UsedInsight post(@Nonnull final UsedInsight newUsedInsight) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UsedInsightRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class UsedInsightCollectionRequest extends BaseCollectionRequest<UsedInsi
      * @param value the expand clause
      * @return the updated request
      */
-    public UsedInsightCollectionRequest expand(final String value) {
+    @Nonnull
+    public UsedInsightCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (UsedInsightCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class UsedInsightCollectionRequest extends BaseCollectionRequest<UsedInsi
      * @param value the filter clause
      * @return the updated request
      */
-    public UsedInsightCollectionRequest filter(final String value) {
+    @Nonnull
+    public UsedInsightCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (UsedInsightCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class UsedInsightCollectionRequest extends BaseCollectionRequest<UsedInsi
      * @param value the order by clause
      * @return the updated request
      */
-    public UsedInsightCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public UsedInsightCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (UsedInsightCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class UsedInsightCollectionRequest extends BaseCollectionRequest<UsedInsi
      * @param value the select clause
      * @return the updated request
      */
-    public UsedInsightCollectionRequest select(final String value) {
+    @Nonnull
+    public UsedInsightCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (UsedInsightCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class UsedInsightCollectionRequest extends BaseCollectionRequest<UsedInsi
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public UsedInsightCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (UsedInsightCollectionRequest)this;
@@ -133,6 +142,7 @@ public class UsedInsightCollectionRequest extends BaseCollectionRequest<UsedInsi
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public UsedInsightCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (UsedInsightCollectionRequest)this;
@@ -144,11 +154,13 @@ public class UsedInsightCollectionRequest extends BaseCollectionRequest<UsedInsi
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public UsedInsightCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public UsedInsightCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (UsedInsightCollectionRequest)this;
     }
-    public UsedInsightCollectionPage buildFromResponse(final UsedInsightCollectionResponse response) {
+    @Nonnull
+    public UsedInsightCollectionPage buildFromResponse(@Nonnull final UsedInsightCollectionResponse response) {
         final UsedInsightCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new UsedInsightCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

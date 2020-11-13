@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceConfiguration;
 import com.microsoft.graph.models.extensions.DeviceConfigurationUserStatus;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class DeviceConfigurationUserStatusCollectionRequest extends BaseCollecti
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceConfigurationUserStatusCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceConfigurationUserStatusCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceConfigurationUserStatusCollectionResponse.class, DeviceConfigurationUserStatusCollectionPage.class);
     }
 
-    public void get(final ICallback<? super DeviceConfigurationUserStatusCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceConfigurationUserStatusCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class DeviceConfigurationUserStatusCollectionRequest extends BaseCollecti
         });
     }
 
+    @Nonnull
     public DeviceConfigurationUserStatusCollectionPage get() throws ClientException {
         final DeviceConfigurationUserStatusCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceConfigurationUserStatus newDeviceConfigurationUserStatus, final ICallback<? super DeviceConfigurationUserStatus> callback) {
+    public void post(@Nonnull final DeviceConfigurationUserStatus newDeviceConfigurationUserStatus, @Nonnull final ICallback<? super DeviceConfigurationUserStatus> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceConfigurationUserStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceConfigurationUserStatus, callback);
     }
 
-    public DeviceConfigurationUserStatus post(final DeviceConfigurationUserStatus newDeviceConfigurationUserStatus) throws ClientException {
+    @Nonnull
+    public DeviceConfigurationUserStatus post(@Nonnull final DeviceConfigurationUserStatus newDeviceConfigurationUserStatus) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceConfigurationUserStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class DeviceConfigurationUserStatusCollectionRequest extends BaseCollecti
      * @param value the expand clause
      * @return the updated request
      */
-    public DeviceConfigurationUserStatusCollectionRequest expand(final String value) {
+    @Nonnull
+    public DeviceConfigurationUserStatusCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DeviceConfigurationUserStatusCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class DeviceConfigurationUserStatusCollectionRequest extends BaseCollecti
      * @param value the filter clause
      * @return the updated request
      */
-    public DeviceConfigurationUserStatusCollectionRequest filter(final String value) {
+    @Nonnull
+    public DeviceConfigurationUserStatusCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DeviceConfigurationUserStatusCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class DeviceConfigurationUserStatusCollectionRequest extends BaseCollecti
      * @param value the order by clause
      * @return the updated request
      */
-    public DeviceConfigurationUserStatusCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DeviceConfigurationUserStatusCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceConfigurationUserStatusCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class DeviceConfigurationUserStatusCollectionRequest extends BaseCollecti
      * @param value the select clause
      * @return the updated request
      */
-    public DeviceConfigurationUserStatusCollectionRequest select(final String value) {
+    @Nonnull
+    public DeviceConfigurationUserStatusCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DeviceConfigurationUserStatusCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class DeviceConfigurationUserStatusCollectionRequest extends BaseCollecti
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DeviceConfigurationUserStatusCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (DeviceConfigurationUserStatusCollectionRequest)this;
@@ -133,6 +142,7 @@ public class DeviceConfigurationUserStatusCollectionRequest extends BaseCollecti
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public DeviceConfigurationUserStatusCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (DeviceConfigurationUserStatusCollectionRequest)this;
@@ -144,11 +154,13 @@ public class DeviceConfigurationUserStatusCollectionRequest extends BaseCollecti
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public DeviceConfigurationUserStatusCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public DeviceConfigurationUserStatusCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (DeviceConfigurationUserStatusCollectionRequest)this;
     }
-    public DeviceConfigurationUserStatusCollectionPage buildFromResponse(final DeviceConfigurationUserStatusCollectionResponse response) {
+    @Nonnull
+    public DeviceConfigurationUserStatusCollectionPage buildFromResponse(@Nonnull final DeviceConfigurationUserStatusCollectionResponse response) {
         final DeviceConfigurationUserStatusCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new DeviceConfigurationUserStatusCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

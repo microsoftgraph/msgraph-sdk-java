@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TelecomExpenseManagementPartner;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class TelecomExpenseManagementPartnerRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TelecomExpenseManagementPartnerRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TelecomExpenseManagementPartnerRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TelecomExpenseManagementPartner.class);
     }
 
@@ -37,7 +39,7 @@ public class TelecomExpenseManagementPartnerRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super TelecomExpenseManagementPartner> callback) {
+    public void get(@Nonnull final ICallback<? super TelecomExpenseManagementPartner> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class TelecomExpenseManagementPartnerRequest extends BaseRequest {
      * @return the TelecomExpenseManagementPartner from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public TelecomExpenseManagementPartner get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class TelecomExpenseManagementPartnerRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super TelecomExpenseManagementPartner> callback) {
+    public void delete(@Nonnull final ICallback<? super TelecomExpenseManagementPartner> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class TelecomExpenseManagementPartnerRequest extends BaseRequest {
      * @param sourceTelecomExpenseManagementPartner the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TelecomExpenseManagementPartner sourceTelecomExpenseManagementPartner, final ICallback<? super TelecomExpenseManagementPartner> callback) {
+    public void patch(@Nonnull final TelecomExpenseManagementPartner sourceTelecomExpenseManagementPartner, @Nonnull final ICallback<? super TelecomExpenseManagementPartner> callback) {
         send(HttpMethod.PATCH, callback, sourceTelecomExpenseManagementPartner);
     }
 
@@ -86,7 +89,8 @@ public class TelecomExpenseManagementPartnerRequest extends BaseRequest {
      * @return the updated TelecomExpenseManagementPartner
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TelecomExpenseManagementPartner patch(final TelecomExpenseManagementPartner sourceTelecomExpenseManagementPartner) throws ClientException {
+    @Nullable
+    public TelecomExpenseManagementPartner patch(@Nonnull final TelecomExpenseManagementPartner sourceTelecomExpenseManagementPartner) throws ClientException {
         return send(HttpMethod.PATCH, sourceTelecomExpenseManagementPartner);
     }
 
@@ -96,7 +100,7 @@ public class TelecomExpenseManagementPartnerRequest extends BaseRequest {
      * @param newTelecomExpenseManagementPartner the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner, final ICallback<? super TelecomExpenseManagementPartner> callback) {
+    public void post(@Nonnull final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner, @Nonnull final ICallback<? super TelecomExpenseManagementPartner> callback) {
         send(HttpMethod.POST, callback, newTelecomExpenseManagementPartner);
     }
 
@@ -107,7 +111,8 @@ public class TelecomExpenseManagementPartnerRequest extends BaseRequest {
      * @return the created TelecomExpenseManagementPartner
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TelecomExpenseManagementPartner post(final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner) throws ClientException {
+    @Nullable
+    public TelecomExpenseManagementPartner post(@Nonnull final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner) throws ClientException {
         return send(HttpMethod.POST, newTelecomExpenseManagementPartner);
     }
 
@@ -117,7 +122,7 @@ public class TelecomExpenseManagementPartnerRequest extends BaseRequest {
      * @param newTelecomExpenseManagementPartner the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner, final ICallback<? super TelecomExpenseManagementPartner> callback) {
+    public void put(@Nonnull final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner, @Nonnull final ICallback<? super TelecomExpenseManagementPartner> callback) {
         send(HttpMethod.PUT, callback, newTelecomExpenseManagementPartner);
     }
 
@@ -128,7 +133,8 @@ public class TelecomExpenseManagementPartnerRequest extends BaseRequest {
      * @return the created TelecomExpenseManagementPartner
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TelecomExpenseManagementPartner put(final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner) throws ClientException {
+    @Nullable
+    public TelecomExpenseManagementPartner put(@Nonnull final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner) throws ClientException {
         return send(HttpMethod.PUT, newTelecomExpenseManagementPartner);
     }
 
@@ -138,7 +144,8 @@ public class TelecomExpenseManagementPartnerRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public TelecomExpenseManagementPartnerRequest select(final String value) {
+     @Nonnull
+     public TelecomExpenseManagementPartnerRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (TelecomExpenseManagementPartnerRequest)this;
      }
@@ -149,7 +156,8 @@ public class TelecomExpenseManagementPartnerRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public TelecomExpenseManagementPartnerRequest expand(final String value) {
+     @Nonnull
+     public TelecomExpenseManagementPartnerRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (TelecomExpenseManagementPartnerRequest)this;
      }

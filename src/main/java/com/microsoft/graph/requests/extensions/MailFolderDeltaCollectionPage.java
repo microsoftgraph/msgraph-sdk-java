@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MailFolder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.MailFolderDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MailFolderDeltaCollectionPage;
@@ -31,6 +33,7 @@ public class MailFolderDeltaCollectionPage extends BaseCollectionPage<MailFolder
      * The opaque link to query delta after the 
      * initial request
      */
+    @Nullable
     public String deltaLink;
 
     /**
@@ -39,7 +42,7 @@ public class MailFolderDeltaCollectionPage extends BaseCollectionPage<MailFolder
      * @param response The serialized MailFolderDeltaCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public MailFolderDeltaCollectionPage(final MailFolderDeltaCollectionResponse response, final MailFolderDeltaCollectionRequestBuilder builder) {
+    public MailFolderDeltaCollectionPage(@Nonnull final MailFolderDeltaCollectionResponse response, @Nonnull final MailFolderDeltaCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
 
         if (response.getRawObject().get("@odata.deltaLink") != null) {
@@ -53,6 +56,7 @@ public class MailFolderDeltaCollectionPage extends BaseCollectionPage<MailFolder
      *
      * @return String The deltaLink URL
      */
+    @Nullable
     public String deltaLink() {
         return deltaLink;
     }

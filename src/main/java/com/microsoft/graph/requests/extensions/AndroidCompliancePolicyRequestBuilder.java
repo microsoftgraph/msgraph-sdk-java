@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidCompliancePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -27,7 +29,7 @@ public class AndroidCompliancePolicyRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidCompliancePolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidCompliancePolicyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -37,7 +39,8 @@ public class AndroidCompliancePolicyRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the AndroidCompliancePolicyRequest instance
      */
-    public AndroidCompliancePolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public AndroidCompliancePolicyRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,30 +50,37 @@ public class AndroidCompliancePolicyRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the AndroidCompliancePolicyRequest instance
      */
-    public AndroidCompliancePolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public AndroidCompliancePolicyRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.AndroidCompliancePolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    @Nonnull
     public DeviceCompliancePolicyAssignmentCollectionRequestBuilder assignments() {
         return new DeviceCompliancePolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
-    public DeviceCompliancePolicyAssignmentRequestBuilder assignments(final String id) {
+    @Nonnull
+    public DeviceCompliancePolicyAssignmentRequestBuilder assignments(@Nonnull final String id) {
         return new DeviceCompliancePolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public SettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
         return new SettingStateDeviceSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries"), getClient(), null);
     }
 
-    public SettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id) {
+    @Nonnull
+    public SettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(@Nonnull final String id) {
         return new SettingStateDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public DeviceComplianceDeviceStatusCollectionRequestBuilder deviceStatuses() {
         return new DeviceComplianceDeviceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
     }
 
-    public DeviceComplianceDeviceStatusRequestBuilder deviceStatuses(final String id) {
+    @Nonnull
+    public DeviceComplianceDeviceStatusRequestBuilder deviceStatuses(@Nonnull final String id) {
         return new DeviceComplianceDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
     }
 
@@ -79,21 +89,26 @@ public class AndroidCompliancePolicyRequestBuilder extends BaseRequestBuilder {
      *
      * @return the DeviceComplianceDeviceOverviewRequestBuilder instance
      */
+    @Nonnull
     public DeviceComplianceDeviceOverviewRequestBuilder deviceStatusOverview() {
         return new DeviceComplianceDeviceOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatusOverview"), getClient(), null);
     }
+    @Nonnull
     public DeviceComplianceScheduledActionForRuleCollectionRequestBuilder scheduledActionsForRule() {
         return new DeviceComplianceScheduledActionForRuleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionsForRule"), getClient(), null);
     }
 
-    public DeviceComplianceScheduledActionForRuleRequestBuilder scheduledActionsForRule(final String id) {
+    @Nonnull
+    public DeviceComplianceScheduledActionForRuleRequestBuilder scheduledActionsForRule(@Nonnull final String id) {
         return new DeviceComplianceScheduledActionForRuleRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionsForRule") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public DeviceComplianceUserStatusCollectionRequestBuilder userStatuses() {
         return new DeviceComplianceUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
     }
 
-    public DeviceComplianceUserStatusRequestBuilder userStatuses(final String id) {
+    @Nonnull
+    public DeviceComplianceUserStatusRequestBuilder userStatuses(@Nonnull final String id) {
         return new DeviceComplianceUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
     }
 
@@ -102,6 +117,7 @@ public class AndroidCompliancePolicyRequestBuilder extends BaseRequestBuilder {
      *
      * @return the DeviceComplianceUserOverviewRequestBuilder instance
      */
+    @Nonnull
     public DeviceComplianceUserOverviewRequestBuilder userStatusOverview() {
         return new DeviceComplianceUserOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("userStatusOverview"), getClient(), null);
     }

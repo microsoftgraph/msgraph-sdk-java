@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.ActivityHistoryItemCollectionRequ
 import com.microsoft.graph.requests.extensions.ActivityHistoryItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
@@ -33,15 +35,16 @@ public class UserActivityWithReferenceRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserActivityWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserActivityWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserActivity.class);
     }
 
-    public void post(final UserActivity newUserActivity, final IJsonBackedObject payload, final ICallback<? super UserActivity> callback) {
+    public void post(@Nonnull final UserActivity newUserActivity, @Nullable final IJsonBackedObject payload, @Nonnull final ICallback<? super UserActivity> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
-    public UserActivity post(final UserActivity newUserActivity, final IJsonBackedObject payload) throws ClientException {
+    @Nullable
+    public UserActivity post(@Nonnull final UserActivity newUserActivity, @Nullable final IJsonBackedObject payload) throws ClientException {
         IJsonBackedObject response = send(HttpMethod.POST, payload);
         if (response != null){
             return newUserActivity;
@@ -49,15 +52,16 @@ public class UserActivityWithReferenceRequest extends BaseRequest {
         return null;
     }
 
-    public void get(final ICallback<? super UserActivity> callback) {
+    public void get(@Nonnull final ICallback<? super UserActivity> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
+    @Nullable
     public UserActivity get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<? super UserActivity> callback) {
+	public void delete(@Nonnull final ICallback<? super UserActivity> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -65,11 +69,12 @@ public class UserActivityWithReferenceRequest extends BaseRequest {
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final UserActivity sourceUserActivity, final ICallback<? super UserActivity> callback) {
+	public void patch(@Nonnull final UserActivity sourceUserActivity, @Nonnull final ICallback<? super UserActivity> callback) {
 		send(HttpMethod.PATCH, callback, sourceUserActivity);
 	}
 
-	public UserActivity patch(final UserActivity sourceUserActivity) throws ClientException {
+    @Nullable
+	public UserActivity patch(@Nonnull final UserActivity sourceUserActivity) throws ClientException {
 		return send(HttpMethod.PATCH, sourceUserActivity);
 	}
 
@@ -80,7 +85,8 @@ public class UserActivityWithReferenceRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public UserActivityWithReferenceRequest select(final String value) {
+    @Nonnull
+    public UserActivityWithReferenceRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (UserActivityWithReferenceRequest)this;
     }
@@ -91,7 +97,8 @@ public class UserActivityWithReferenceRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public UserActivityWithReferenceRequest expand(final String value) {
+    @Nonnull
+    public UserActivityWithReferenceRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (UserActivityWithReferenceRequest)this;
     }

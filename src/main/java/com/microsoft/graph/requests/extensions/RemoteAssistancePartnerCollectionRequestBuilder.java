@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.RemoteAssistancePartner;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.RemoteAssistancePartnerCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RemoteAssistancePartnerRequestBuilder;
@@ -32,7 +34,7 @@ public class RemoteAssistancePartnerCollectionRequestBuilder extends BaseRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RemoteAssistancePartnerCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RemoteAssistancePartnerCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,7 +44,8 @@ public class RemoteAssistancePartnerCollectionRequestBuilder extends BaseRequest
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public RemoteAssistancePartnerCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public RemoteAssistancePartnerCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +55,13 @@ public class RemoteAssistancePartnerCollectionRequestBuilder extends BaseRequest
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public RemoteAssistancePartnerCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public RemoteAssistancePartnerCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new RemoteAssistancePartnerCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public RemoteAssistancePartnerRequestBuilder byId(final String id) {
+    @Nonnull
+    public RemoteAssistancePartnerRequestBuilder byId(@Nonnull final String id) {
         return new RemoteAssistancePartnerRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

@@ -25,6 +25,8 @@ import com.microsoft.graph.requests.extensions.ItemAnalyticsRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
@@ -45,14 +47,15 @@ public class SiteReferenceRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SiteReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SiteReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Site.class);
     }
 
-    public void delete(final ICallback<? super Site> callback) {
+    public void delete(@Nonnull final ICallback<? super Site> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
+    @Nullable
     public Site delete() throws ClientException {
        return send(HttpMethod.DELETE, null);
     }
@@ -63,7 +66,8 @@ public class SiteReferenceRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public SiteReferenceRequest select(final String value) {
+    @Nonnull
+    public SiteReferenceRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (SiteReferenceRequest)this;
     }
@@ -74,7 +78,8 @@ public class SiteReferenceRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public SiteReferenceRequest expand(final String value) {
+    @Nonnull
+    public SiteReferenceRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (SiteReferenceRequest)this;
     }
@@ -84,7 +89,7 @@ public class SiteReferenceRequest extends BaseRequest {
      * @param srcSite the Site reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(Site srcSite, final ICallback<? super Site> callback) {
+    public void put(@Nonnull final Site srcSite, @Nonnull final ICallback<? super Site> callback) {
         send(HttpMethod.PUT, callback, srcSite);
     }
 
@@ -95,7 +100,8 @@ public class SiteReferenceRequest extends BaseRequest {
      * @return the Site
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    public Site put(Site srcSite) throws ClientException {
+    @Nullable
+    public Site put(@Nonnull final Site srcSite) throws ClientException {
         return send(HttpMethod.PUT, srcSite);
     }
 }

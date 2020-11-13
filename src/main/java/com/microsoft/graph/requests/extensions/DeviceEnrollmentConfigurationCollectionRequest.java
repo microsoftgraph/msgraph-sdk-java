@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.DeviceEnrollmentConfiguration;
 import com.microsoft.graph.models.extensions.EnrollmentConfigurationAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -36,11 +38,11 @@ public class DeviceEnrollmentConfigurationCollectionRequest extends BaseCollecti
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceEnrollmentConfigurationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceEnrollmentConfigurationCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceEnrollmentConfigurationCollectionResponse.class, DeviceEnrollmentConfigurationCollectionPage.class);
     }
 
-    public void get(final ICallback<? super DeviceEnrollmentConfigurationCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceEnrollmentConfigurationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -54,19 +56,21 @@ public class DeviceEnrollmentConfigurationCollectionRequest extends BaseCollecti
         });
     }
 
+    @Nonnull
     public DeviceEnrollmentConfigurationCollectionPage get() throws ClientException {
         final DeviceEnrollmentConfigurationCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration, final ICallback<? super DeviceEnrollmentConfiguration> callback) {
+    public void post(@Nonnull final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration, @Nonnull final ICallback<? super DeviceEnrollmentConfiguration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceEnrollmentConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceEnrollmentConfiguration, callback);
     }
 
-    public DeviceEnrollmentConfiguration post(final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration) throws ClientException {
+    @Nonnull
+    public DeviceEnrollmentConfiguration post(@Nonnull final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceEnrollmentConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -79,7 +83,8 @@ public class DeviceEnrollmentConfigurationCollectionRequest extends BaseCollecti
      * @param value the expand clause
      * @return the updated request
      */
-    public DeviceEnrollmentConfigurationCollectionRequest expand(final String value) {
+    @Nonnull
+    public DeviceEnrollmentConfigurationCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DeviceEnrollmentConfigurationCollectionRequest)this;
     }
@@ -90,7 +95,8 @@ public class DeviceEnrollmentConfigurationCollectionRequest extends BaseCollecti
      * @param value the filter clause
      * @return the updated request
      */
-    public DeviceEnrollmentConfigurationCollectionRequest filter(final String value) {
+    @Nonnull
+    public DeviceEnrollmentConfigurationCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DeviceEnrollmentConfigurationCollectionRequest)this;
     }
@@ -101,7 +107,8 @@ public class DeviceEnrollmentConfigurationCollectionRequest extends BaseCollecti
      * @param value the order by clause
      * @return the updated request
      */
-    public DeviceEnrollmentConfigurationCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DeviceEnrollmentConfigurationCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceEnrollmentConfigurationCollectionRequest)this;
     }
@@ -112,7 +119,8 @@ public class DeviceEnrollmentConfigurationCollectionRequest extends BaseCollecti
      * @param value the select clause
      * @return the updated request
      */
-    public DeviceEnrollmentConfigurationCollectionRequest select(final String value) {
+    @Nonnull
+    public DeviceEnrollmentConfigurationCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DeviceEnrollmentConfigurationCollectionRequest)this;
     }
@@ -123,6 +131,7 @@ public class DeviceEnrollmentConfigurationCollectionRequest extends BaseCollecti
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DeviceEnrollmentConfigurationCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (DeviceEnrollmentConfigurationCollectionRequest)this;
@@ -134,6 +143,7 @@ public class DeviceEnrollmentConfigurationCollectionRequest extends BaseCollecti
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public DeviceEnrollmentConfigurationCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (DeviceEnrollmentConfigurationCollectionRequest)this;
@@ -145,11 +155,13 @@ public class DeviceEnrollmentConfigurationCollectionRequest extends BaseCollecti
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public DeviceEnrollmentConfigurationCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public DeviceEnrollmentConfigurationCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (DeviceEnrollmentConfigurationCollectionRequest)this;
     }
-    public DeviceEnrollmentConfigurationCollectionPage buildFromResponse(final DeviceEnrollmentConfigurationCollectionResponse response) {
+    @Nonnull
+    public DeviceEnrollmentConfigurationCollectionPage buildFromResponse(@Nonnull final DeviceEnrollmentConfigurationCollectionResponse response) {
         final DeviceEnrollmentConfigurationCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new DeviceEnrollmentConfigurationCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

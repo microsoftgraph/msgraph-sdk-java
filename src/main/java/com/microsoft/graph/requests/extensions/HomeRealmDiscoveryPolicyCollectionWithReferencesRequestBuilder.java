@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
@@ -29,7 +31,7 @@ public class HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder exte
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +41,8 @@ public class HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder exte
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public HomeRealmDiscoveryPolicyCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public HomeRealmDiscoveryPolicyCollectionWithReferencesRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,14 +52,17 @@ public class HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder exte
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public HomeRealmDiscoveryPolicyCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public HomeRealmDiscoveryPolicyCollectionWithReferencesRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new HomeRealmDiscoveryPolicyCollectionWithReferencesRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public HomeRealmDiscoveryPolicyWithReferenceRequestBuilder byId(final String id) {
+    @Nonnull
+    public HomeRealmDiscoveryPolicyWithReferenceRequestBuilder byId(@Nonnull final String id) {
         return new HomeRealmDiscoveryPolicyWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
+    @Nonnull
     public HomeRealmDiscoveryPolicyCollectionReferenceRequestBuilder references(){
         return new HomeRealmDiscoveryPolicyCollectionReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }

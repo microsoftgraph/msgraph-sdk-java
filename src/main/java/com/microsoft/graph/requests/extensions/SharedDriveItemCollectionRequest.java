@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SharedDriveItem;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,11 +36,11 @@ public class SharedDriveItemCollectionRequest extends BaseCollectionRequest<Shar
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SharedDriveItemCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SharedDriveItemCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SharedDriveItemCollectionResponse.class, SharedDriveItemCollectionPage.class);
     }
 
-    public void get(final ICallback<? super SharedDriveItemCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super SharedDriveItemCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -52,19 +54,21 @@ public class SharedDriveItemCollectionRequest extends BaseCollectionRequest<Shar
         });
     }
 
+    @Nonnull
     public SharedDriveItemCollectionPage get() throws ClientException {
         final SharedDriveItemCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final SharedDriveItem newSharedDriveItem, final ICallback<? super SharedDriveItem> callback) {
+    public void post(@Nonnull final SharedDriveItem newSharedDriveItem, @Nonnull final ICallback<? super SharedDriveItem> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SharedDriveItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newSharedDriveItem, callback);
     }
 
-    public SharedDriveItem post(final SharedDriveItem newSharedDriveItem) throws ClientException {
+    @Nonnull
+    public SharedDriveItem post(@Nonnull final SharedDriveItem newSharedDriveItem) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SharedDriveItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -77,7 +81,8 @@ public class SharedDriveItemCollectionRequest extends BaseCollectionRequest<Shar
      * @param value the expand clause
      * @return the updated request
      */
-    public SharedDriveItemCollectionRequest expand(final String value) {
+    @Nonnull
+    public SharedDriveItemCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (SharedDriveItemCollectionRequest)this;
     }
@@ -88,7 +93,8 @@ public class SharedDriveItemCollectionRequest extends BaseCollectionRequest<Shar
      * @param value the filter clause
      * @return the updated request
      */
-    public SharedDriveItemCollectionRequest filter(final String value) {
+    @Nonnull
+    public SharedDriveItemCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (SharedDriveItemCollectionRequest)this;
     }
@@ -99,7 +105,8 @@ public class SharedDriveItemCollectionRequest extends BaseCollectionRequest<Shar
      * @param value the order by clause
      * @return the updated request
      */
-    public SharedDriveItemCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public SharedDriveItemCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SharedDriveItemCollectionRequest)this;
     }
@@ -110,7 +117,8 @@ public class SharedDriveItemCollectionRequest extends BaseCollectionRequest<Shar
      * @param value the select clause
      * @return the updated request
      */
-    public SharedDriveItemCollectionRequest select(final String value) {
+    @Nonnull
+    public SharedDriveItemCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (SharedDriveItemCollectionRequest)this;
     }
@@ -121,6 +129,7 @@ public class SharedDriveItemCollectionRequest extends BaseCollectionRequest<Shar
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public SharedDriveItemCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (SharedDriveItemCollectionRequest)this;
@@ -132,6 +141,7 @@ public class SharedDriveItemCollectionRequest extends BaseCollectionRequest<Shar
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public SharedDriveItemCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (SharedDriveItemCollectionRequest)this;
@@ -143,11 +153,13 @@ public class SharedDriveItemCollectionRequest extends BaseCollectionRequest<Shar
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public SharedDriveItemCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public SharedDriveItemCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (SharedDriveItemCollectionRequest)this;
     }
-    public SharedDriveItemCollectionPage buildFromResponse(final SharedDriveItemCollectionResponse response) {
+    @Nonnull
+    public SharedDriveItemCollectionPage buildFromResponse(@Nonnull final SharedDriveItemCollectionResponse response) {
         final SharedDriveItemCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new SharedDriveItemCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

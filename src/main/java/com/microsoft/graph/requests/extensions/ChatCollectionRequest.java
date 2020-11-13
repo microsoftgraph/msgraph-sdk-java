@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Chat;
 import com.microsoft.graph.models.extensions.ChatMessage;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class ChatCollectionRequest extends BaseCollectionRequest<ChatCollectionR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ChatCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ChatCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ChatCollectionResponse.class, ChatCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ChatCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super ChatCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class ChatCollectionRequest extends BaseCollectionRequest<ChatCollectionR
         });
     }
 
+    @Nonnull
     public ChatCollectionPage get() throws ClientException {
         final ChatCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final Chat newChat, final ICallback<? super Chat> callback) {
+    public void post(@Nonnull final Chat newChat, @Nonnull final ICallback<? super Chat> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ChatRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newChat, callback);
     }
 
-    public Chat post(final Chat newChat) throws ClientException {
+    @Nonnull
+    public Chat post(@Nonnull final Chat newChat) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ChatRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class ChatCollectionRequest extends BaseCollectionRequest<ChatCollectionR
      * @param value the expand clause
      * @return the updated request
      */
-    public ChatCollectionRequest expand(final String value) {
+    @Nonnull
+    public ChatCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ChatCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class ChatCollectionRequest extends BaseCollectionRequest<ChatCollectionR
      * @param value the filter clause
      * @return the updated request
      */
-    public ChatCollectionRequest filter(final String value) {
+    @Nonnull
+    public ChatCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ChatCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class ChatCollectionRequest extends BaseCollectionRequest<ChatCollectionR
      * @param value the order by clause
      * @return the updated request
      */
-    public ChatCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ChatCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ChatCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class ChatCollectionRequest extends BaseCollectionRequest<ChatCollectionR
      * @param value the select clause
      * @return the updated request
      */
-    public ChatCollectionRequest select(final String value) {
+    @Nonnull
+    public ChatCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ChatCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class ChatCollectionRequest extends BaseCollectionRequest<ChatCollectionR
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ChatCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ChatCollectionRequest)this;
@@ -133,6 +142,7 @@ public class ChatCollectionRequest extends BaseCollectionRequest<ChatCollectionR
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ChatCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (ChatCollectionRequest)this;
@@ -144,11 +154,13 @@ public class ChatCollectionRequest extends BaseCollectionRequest<ChatCollectionR
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ChatCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ChatCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (ChatCollectionRequest)this;
     }
-    public ChatCollectionPage buildFromResponse(final ChatCollectionResponse response) {
+    @Nonnull
+    public ChatCollectionPage buildFromResponse(@Nonnull final ChatCollectionResponse response) {
         final ChatCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ChatCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

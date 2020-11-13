@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CertificateBasedAuthConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,11 +36,11 @@ public class CertificateBasedAuthConfigurationCollectionRequest extends BaseColl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CertificateBasedAuthConfigurationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CertificateBasedAuthConfigurationCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CertificateBasedAuthConfigurationCollectionResponse.class, CertificateBasedAuthConfigurationCollectionPage.class);
     }
 
-    public void get(final ICallback<? super CertificateBasedAuthConfigurationCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super CertificateBasedAuthConfigurationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -52,19 +54,21 @@ public class CertificateBasedAuthConfigurationCollectionRequest extends BaseColl
         });
     }
 
+    @Nonnull
     public CertificateBasedAuthConfigurationCollectionPage get() throws ClientException {
         final CertificateBasedAuthConfigurationCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, final ICallback<? super CertificateBasedAuthConfiguration> callback) {
+    public void post(@Nonnull final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, @Nonnull final ICallback<? super CertificateBasedAuthConfiguration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CertificateBasedAuthConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newCertificateBasedAuthConfiguration, callback);
     }
 
-    public CertificateBasedAuthConfiguration post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration) throws ClientException {
+    @Nonnull
+    public CertificateBasedAuthConfiguration post(@Nonnull final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CertificateBasedAuthConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -77,7 +81,8 @@ public class CertificateBasedAuthConfigurationCollectionRequest extends BaseColl
      * @param value the expand clause
      * @return the updated request
      */
-    public CertificateBasedAuthConfigurationCollectionRequest expand(final String value) {
+    @Nonnull
+    public CertificateBasedAuthConfigurationCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (CertificateBasedAuthConfigurationCollectionRequest)this;
     }
@@ -88,7 +93,8 @@ public class CertificateBasedAuthConfigurationCollectionRequest extends BaseColl
      * @param value the filter clause
      * @return the updated request
      */
-    public CertificateBasedAuthConfigurationCollectionRequest filter(final String value) {
+    @Nonnull
+    public CertificateBasedAuthConfigurationCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (CertificateBasedAuthConfigurationCollectionRequest)this;
     }
@@ -99,7 +105,8 @@ public class CertificateBasedAuthConfigurationCollectionRequest extends BaseColl
      * @param value the order by clause
      * @return the updated request
      */
-    public CertificateBasedAuthConfigurationCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public CertificateBasedAuthConfigurationCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (CertificateBasedAuthConfigurationCollectionRequest)this;
     }
@@ -110,7 +117,8 @@ public class CertificateBasedAuthConfigurationCollectionRequest extends BaseColl
      * @param value the select clause
      * @return the updated request
      */
-    public CertificateBasedAuthConfigurationCollectionRequest select(final String value) {
+    @Nonnull
+    public CertificateBasedAuthConfigurationCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (CertificateBasedAuthConfigurationCollectionRequest)this;
     }
@@ -121,6 +129,7 @@ public class CertificateBasedAuthConfigurationCollectionRequest extends BaseColl
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public CertificateBasedAuthConfigurationCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (CertificateBasedAuthConfigurationCollectionRequest)this;
@@ -132,6 +141,7 @@ public class CertificateBasedAuthConfigurationCollectionRequest extends BaseColl
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public CertificateBasedAuthConfigurationCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (CertificateBasedAuthConfigurationCollectionRequest)this;
@@ -143,11 +153,13 @@ public class CertificateBasedAuthConfigurationCollectionRequest extends BaseColl
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public CertificateBasedAuthConfigurationCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public CertificateBasedAuthConfigurationCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (CertificateBasedAuthConfigurationCollectionRequest)this;
     }
-    public CertificateBasedAuthConfigurationCollectionPage buildFromResponse(final CertificateBasedAuthConfigurationCollectionResponse response) {
+    @Nonnull
+    public CertificateBasedAuthConfigurationCollectionPage buildFromResponse(@Nonnull final CertificateBasedAuthConfigurationCollectionResponse response) {
         final CertificateBasedAuthConfigurationCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new CertificateBasedAuthConfigurationCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

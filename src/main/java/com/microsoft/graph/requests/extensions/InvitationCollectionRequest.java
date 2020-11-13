@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Invitation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,11 +36,11 @@ public class InvitationCollectionRequest extends BaseCollectionRequest<Invitatio
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public InvitationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public InvitationCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, InvitationCollectionResponse.class, InvitationCollectionPage.class);
     }
 
-    public void get(final ICallback<? super InvitationCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super InvitationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -52,19 +54,21 @@ public class InvitationCollectionRequest extends BaseCollectionRequest<Invitatio
         });
     }
 
+    @Nonnull
     public InvitationCollectionPage get() throws ClientException {
         final InvitationCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final Invitation newInvitation, final ICallback<? super Invitation> callback) {
+    public void post(@Nonnull final Invitation newInvitation, @Nonnull final ICallback<? super Invitation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new InvitationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newInvitation, callback);
     }
 
-    public Invitation post(final Invitation newInvitation) throws ClientException {
+    @Nonnull
+    public Invitation post(@Nonnull final Invitation newInvitation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new InvitationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -77,7 +81,8 @@ public class InvitationCollectionRequest extends BaseCollectionRequest<Invitatio
      * @param value the expand clause
      * @return the updated request
      */
-    public InvitationCollectionRequest expand(final String value) {
+    @Nonnull
+    public InvitationCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (InvitationCollectionRequest)this;
     }
@@ -88,7 +93,8 @@ public class InvitationCollectionRequest extends BaseCollectionRequest<Invitatio
      * @param value the filter clause
      * @return the updated request
      */
-    public InvitationCollectionRequest filter(final String value) {
+    @Nonnull
+    public InvitationCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (InvitationCollectionRequest)this;
     }
@@ -99,7 +105,8 @@ public class InvitationCollectionRequest extends BaseCollectionRequest<Invitatio
      * @param value the order by clause
      * @return the updated request
      */
-    public InvitationCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public InvitationCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (InvitationCollectionRequest)this;
     }
@@ -110,7 +117,8 @@ public class InvitationCollectionRequest extends BaseCollectionRequest<Invitatio
      * @param value the select clause
      * @return the updated request
      */
-    public InvitationCollectionRequest select(final String value) {
+    @Nonnull
+    public InvitationCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (InvitationCollectionRequest)this;
     }
@@ -121,6 +129,7 @@ public class InvitationCollectionRequest extends BaseCollectionRequest<Invitatio
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public InvitationCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (InvitationCollectionRequest)this;
@@ -132,6 +141,7 @@ public class InvitationCollectionRequest extends BaseCollectionRequest<Invitatio
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public InvitationCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (InvitationCollectionRequest)this;
@@ -143,11 +153,13 @@ public class InvitationCollectionRequest extends BaseCollectionRequest<Invitatio
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public InvitationCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public InvitationCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (InvitationCollectionRequest)this;
     }
-    public InvitationCollectionPage buildFromResponse(final InvitationCollectionResponse response) {
+    @Nonnull
+    public InvitationCollectionPage buildFromResponse(@Nonnull final InvitationCollectionResponse response) {
         final InvitationCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new InvitationCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.MobileThreatDefenseConnector;
 import com.microsoft.graph.requests.extensions.MobileThreatDefenseConnectorCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.MobileThreatDefenseConnectorCollectionPage;
 import com.microsoft.graph.requests.extensions.MobileThreatDefenseConnectorCollectionResponse;
@@ -22,7 +24,7 @@ public class MobileThreatDefenseConnectorCollectionPage extends BaseCollectionPa
      * @param response the serialized MobileThreatDefenseConnectorCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public MobileThreatDefenseConnectorCollectionPage(final MobileThreatDefenseConnectorCollectionResponse response, final MobileThreatDefenseConnectorCollectionRequestBuilder builder) {
+    public MobileThreatDefenseConnectorCollectionPage(@Nonnull final MobileThreatDefenseConnectorCollectionResponse response, @Nonnull final MobileThreatDefenseConnectorCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

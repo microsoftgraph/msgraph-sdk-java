@@ -61,6 +61,8 @@ import com.microsoft.graph.requests.extensions.ApplePushNotificationCertificateR
 import com.microsoft.graph.requests.extensions.ManagedDeviceOverviewRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -78,7 +80,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -88,7 +90,8 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the DeviceManagementRequest instance
      */
-    public DeviceManagementRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DeviceManagementRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -98,23 +101,28 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the DeviceManagementRequest instance
      */
-    public DeviceManagementRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DeviceManagementRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceManagementRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    @Nonnull
     public TermsAndConditionsCollectionRequestBuilder termsAndConditions() {
         return new TermsAndConditionsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("termsAndConditions"), getClient(), null);
     }
 
-    public TermsAndConditionsRequestBuilder termsAndConditions(final String id) {
+    @Nonnull
+    public TermsAndConditionsRequestBuilder termsAndConditions(@Nonnull final String id) {
         return new TermsAndConditionsRequestBuilder(getRequestUrlWithAdditionalSegment("termsAndConditions") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public DeviceCompliancePolicyCollectionRequestBuilder deviceCompliancePolicies() {
         return new DeviceCompliancePolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicies"), getClient(), null);
     }
 
-    public DeviceCompliancePolicyRequestBuilder deviceCompliancePolicies(final String id) {
+    @Nonnull
+    public DeviceCompliancePolicyRequestBuilder deviceCompliancePolicies(@Nonnull final String id) {
         return new DeviceCompliancePolicyRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicies") + "/" + id, getClient(), null);
     }
 
@@ -123,14 +131,17 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
      *
      * @return the DeviceCompliancePolicyDeviceStateSummaryRequestBuilder instance
      */
+    @Nonnull
     public DeviceCompliancePolicyDeviceStateSummaryRequestBuilder deviceCompliancePolicyDeviceStateSummary() {
         return new DeviceCompliancePolicyDeviceStateSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicyDeviceStateSummary"), getClient(), null);
     }
+    @Nonnull
     public DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder deviceCompliancePolicySettingStateSummaries() {
         return new DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicySettingStateSummaries"), getClient(), null);
     }
 
-    public DeviceCompliancePolicySettingStateSummaryRequestBuilder deviceCompliancePolicySettingStateSummaries(final String id) {
+    @Nonnull
+    public DeviceCompliancePolicySettingStateSummaryRequestBuilder deviceCompliancePolicySettingStateSummaries(@Nonnull final String id) {
         return new DeviceCompliancePolicySettingStateSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicySettingStateSummaries") + "/" + id, getClient(), null);
     }
 
@@ -139,21 +150,26 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
      *
      * @return the DeviceConfigurationDeviceStateSummaryRequestBuilder instance
      */
+    @Nonnull
     public DeviceConfigurationDeviceStateSummaryRequestBuilder deviceConfigurationDeviceStateSummaries() {
         return new DeviceConfigurationDeviceStateSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceConfigurationDeviceStateSummaries"), getClient(), null);
     }
+    @Nonnull
     public DeviceConfigurationCollectionRequestBuilder deviceConfigurations() {
         return new DeviceConfigurationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceConfigurations"), getClient(), null);
     }
 
-    public DeviceConfigurationRequestBuilder deviceConfigurations(final String id) {
+    @Nonnull
+    public DeviceConfigurationRequestBuilder deviceConfigurations(@Nonnull final String id) {
         return new DeviceConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("deviceConfigurations") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public IosUpdateDeviceStatusCollectionRequestBuilder iosUpdateStatuses() {
         return new IosUpdateDeviceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("iosUpdateStatuses"), getClient(), null);
     }
 
-    public IosUpdateDeviceStatusRequestBuilder iosUpdateStatuses(final String id) {
+    @Nonnull
+    public IosUpdateDeviceStatusRequestBuilder iosUpdateStatuses(@Nonnull final String id) {
         return new IosUpdateDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("iosUpdateStatuses") + "/" + id, getClient(), null);
     }
 
@@ -162,14 +178,17 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
      *
      * @return the SoftwareUpdateStatusSummaryWithReferenceRequestBuilder instance
      */
+    @Nonnull
     public SoftwareUpdateStatusSummaryWithReferenceRequestBuilder softwareUpdateStatusSummary() {
         return new SoftwareUpdateStatusSummaryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("softwareUpdateStatusSummary"), getClient(), null);
     }
+    @Nonnull
     public ComplianceManagementPartnerCollectionRequestBuilder complianceManagementPartners() {
         return new ComplianceManagementPartnerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("complianceManagementPartners"), getClient(), null);
     }
 
-    public ComplianceManagementPartnerRequestBuilder complianceManagementPartners(final String id) {
+    @Nonnull
+    public ComplianceManagementPartnerRequestBuilder complianceManagementPartners(@Nonnull final String id) {
         return new ComplianceManagementPartnerRequestBuilder(getRequestUrlWithAdditionalSegment("complianceManagementPartners") + "/" + id, getClient(), null);
     }
 
@@ -178,42 +197,53 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
      *
      * @return the OnPremisesConditionalAccessSettingsRequestBuilder instance
      */
+    @Nonnull
     public OnPremisesConditionalAccessSettingsRequestBuilder conditionalAccessSettings() {
         return new OnPremisesConditionalAccessSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccessSettings"), getClient(), null);
     }
+    @Nonnull
     public DeviceCategoryCollectionRequestBuilder deviceCategories() {
         return new DeviceCategoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCategories"), getClient(), null);
     }
 
-    public DeviceCategoryRequestBuilder deviceCategories(final String id) {
+    @Nonnull
+    public DeviceCategoryRequestBuilder deviceCategories(@Nonnull final String id) {
         return new DeviceCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCategories") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public DeviceEnrollmentConfigurationCollectionRequestBuilder deviceEnrollmentConfigurations() {
         return new DeviceEnrollmentConfigurationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceEnrollmentConfigurations"), getClient(), null);
     }
 
-    public DeviceEnrollmentConfigurationRequestBuilder deviceEnrollmentConfigurations(final String id) {
+    @Nonnull
+    public DeviceEnrollmentConfigurationRequestBuilder deviceEnrollmentConfigurations(@Nonnull final String id) {
         return new DeviceEnrollmentConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("deviceEnrollmentConfigurations") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public DeviceManagementPartnerCollectionRequestBuilder deviceManagementPartners() {
         return new DeviceManagementPartnerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceManagementPartners"), getClient(), null);
     }
 
-    public DeviceManagementPartnerRequestBuilder deviceManagementPartners(final String id) {
+    @Nonnull
+    public DeviceManagementPartnerRequestBuilder deviceManagementPartners(@Nonnull final String id) {
         return new DeviceManagementPartnerRequestBuilder(getRequestUrlWithAdditionalSegment("deviceManagementPartners") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public DeviceManagementExchangeConnectorCollectionRequestBuilder exchangeConnectors() {
         return new DeviceManagementExchangeConnectorCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("exchangeConnectors"), getClient(), null);
     }
 
-    public DeviceManagementExchangeConnectorRequestBuilder exchangeConnectors(final String id) {
+    @Nonnull
+    public DeviceManagementExchangeConnectorRequestBuilder exchangeConnectors(@Nonnull final String id) {
         return new DeviceManagementExchangeConnectorRequestBuilder(getRequestUrlWithAdditionalSegment("exchangeConnectors") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public MobileThreatDefenseConnectorCollectionRequestBuilder mobileThreatDefenseConnectors() {
         return new MobileThreatDefenseConnectorCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileThreatDefenseConnectors"), getClient(), null);
     }
 
-    public MobileThreatDefenseConnectorRequestBuilder mobileThreatDefenseConnectors(final String id) {
+    @Nonnull
+    public MobileThreatDefenseConnectorRequestBuilder mobileThreatDefenseConnectors(@Nonnull final String id) {
         return new MobileThreatDefenseConnectorRequestBuilder(getRequestUrlWithAdditionalSegment("mobileThreatDefenseConnectors") + "/" + id, getClient(), null);
     }
 
@@ -222,14 +252,17 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
      *
      * @return the ApplePushNotificationCertificateRequestBuilder instance
      */
+    @Nonnull
     public ApplePushNotificationCertificateRequestBuilder applePushNotificationCertificate() {
         return new ApplePushNotificationCertificateRequestBuilder(getRequestUrlWithAdditionalSegment("applePushNotificationCertificate"), getClient(), null);
     }
+    @Nonnull
     public DetectedAppCollectionRequestBuilder detectedApps() {
         return new DetectedAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("detectedApps"), getClient(), null);
     }
 
-    public DetectedAppRequestBuilder detectedApps(final String id) {
+    @Nonnull
+    public DetectedAppRequestBuilder detectedApps(@Nonnull final String id) {
         return new DetectedAppRequestBuilder(getRequestUrlWithAdditionalSegment("detectedApps") + "/" + id, getClient(), null);
     }
 
@@ -238,85 +271,108 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
      *
      * @return the ManagedDeviceOverviewWithReferenceRequestBuilder instance
      */
+    @Nonnull
     public ManagedDeviceOverviewWithReferenceRequestBuilder managedDeviceOverview() {
         return new ManagedDeviceOverviewWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceOverview"), getClient(), null);
     }
+    @Nonnull
     public ManagedDeviceCollectionRequestBuilder managedDevices() {
         return new ManagedDeviceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedDevices"), getClient(), null);
     }
 
-    public ManagedDeviceRequestBuilder managedDevices(final String id) {
+    @Nonnull
+    public ManagedDeviceRequestBuilder managedDevices(@Nonnull final String id) {
         return new ManagedDeviceRequestBuilder(getRequestUrlWithAdditionalSegment("managedDevices") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public NotificationMessageTemplateCollectionRequestBuilder notificationMessageTemplates() {
         return new NotificationMessageTemplateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("notificationMessageTemplates"), getClient(), null);
     }
 
-    public NotificationMessageTemplateRequestBuilder notificationMessageTemplates(final String id) {
+    @Nonnull
+    public NotificationMessageTemplateRequestBuilder notificationMessageTemplates(@Nonnull final String id) {
         return new NotificationMessageTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("notificationMessageTemplates") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public ResourceOperationCollectionRequestBuilder resourceOperations() {
         return new ResourceOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("resourceOperations"), getClient(), null);
     }
 
-    public ResourceOperationRequestBuilder resourceOperations(final String id) {
+    @Nonnull
+    public ResourceOperationRequestBuilder resourceOperations(@Nonnull final String id) {
         return new ResourceOperationRequestBuilder(getRequestUrlWithAdditionalSegment("resourceOperations") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder roleAssignments() {
         return new DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments"), getClient(), null);
     }
 
-    public DeviceAndAppManagementRoleAssignmentRequestBuilder roleAssignments(final String id) {
+    @Nonnull
+    public DeviceAndAppManagementRoleAssignmentRequestBuilder roleAssignments(@Nonnull final String id) {
         return new DeviceAndAppManagementRoleAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public RoleDefinitionCollectionRequestBuilder roleDefinitions() {
         return new RoleDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinitions"), getClient(), null);
     }
 
-    public RoleDefinitionRequestBuilder roleDefinitions(final String id) {
+    @Nonnull
+    public RoleDefinitionRequestBuilder roleDefinitions(@Nonnull final String id) {
         return new RoleDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinitions") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public RemoteAssistancePartnerCollectionRequestBuilder remoteAssistancePartners() {
         return new RemoteAssistancePartnerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("remoteAssistancePartners"), getClient(), null);
     }
 
-    public RemoteAssistancePartnerRequestBuilder remoteAssistancePartners(final String id) {
+    @Nonnull
+    public RemoteAssistancePartnerRequestBuilder remoteAssistancePartners(@Nonnull final String id) {
         return new RemoteAssistancePartnerRequestBuilder(getRequestUrlWithAdditionalSegment("remoteAssistancePartners") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public TelecomExpenseManagementPartnerCollectionRequestBuilder telecomExpenseManagementPartners() {
         return new TelecomExpenseManagementPartnerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("telecomExpenseManagementPartners"), getClient(), null);
     }
 
-    public TelecomExpenseManagementPartnerRequestBuilder telecomExpenseManagementPartners(final String id) {
+    @Nonnull
+    public TelecomExpenseManagementPartnerRequestBuilder telecomExpenseManagementPartners(@Nonnull final String id) {
         return new TelecomExpenseManagementPartnerRequestBuilder(getRequestUrlWithAdditionalSegment("telecomExpenseManagementPartners") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public DeviceManagementTroubleshootingEventCollectionRequestBuilder troubleshootingEvents() {
         return new DeviceManagementTroubleshootingEventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("troubleshootingEvents"), getClient(), null);
     }
 
-    public DeviceManagementTroubleshootingEventRequestBuilder troubleshootingEvents(final String id) {
+    @Nonnull
+    public DeviceManagementTroubleshootingEventRequestBuilder troubleshootingEvents(@Nonnull final String id) {
         return new DeviceManagementTroubleshootingEventRequestBuilder(getRequestUrlWithAdditionalSegment("troubleshootingEvents") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public WindowsInformationProtectionAppLearningSummaryCollectionRequestBuilder windowsInformationProtectionAppLearningSummaries() {
         return new WindowsInformationProtectionAppLearningSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("windowsInformationProtectionAppLearningSummaries"), getClient(), null);
     }
 
-    public WindowsInformationProtectionAppLearningSummaryRequestBuilder windowsInformationProtectionAppLearningSummaries(final String id) {
+    @Nonnull
+    public WindowsInformationProtectionAppLearningSummaryRequestBuilder windowsInformationProtectionAppLearningSummaries(@Nonnull final String id) {
         return new WindowsInformationProtectionAppLearningSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("windowsInformationProtectionAppLearningSummaries") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public WindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder windowsInformationProtectionNetworkLearningSummaries() {
         return new WindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("windowsInformationProtectionNetworkLearningSummaries"), getClient(), null);
     }
 
-    public WindowsInformationProtectionNetworkLearningSummaryRequestBuilder windowsInformationProtectionNetworkLearningSummaries(final String id) {
+    @Nonnull
+    public WindowsInformationProtectionNetworkLearningSummaryRequestBuilder windowsInformationProtectionNetworkLearningSummaries(@Nonnull final String id) {
         return new WindowsInformationProtectionNetworkLearningSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("windowsInformationProtectionNetworkLearningSummaries") + "/" + id, getClient(), null);
     }
 
-    public DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequestBuilder verifyWindowsEnrollmentAutoDiscovery(final String domainName) {
+    @Nonnull
+    public DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequestBuilder verifyWindowsEnrollmentAutoDiscovery(@Nullable final String domainName) {
         return new DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.verifyWindowsEnrollmentAutoDiscovery"), getClient(), null, domainName);
     }
 
-    public DeviceManagementGetEffectivePermissionsCollectionRequestBuilder getEffectivePermissions(final String scope) {
+    @Nonnull
+    public DeviceManagementGetEffectivePermissionsCollectionRequestBuilder getEffectivePermissions(@Nullable final String scope) {
         return new DeviceManagementGetEffectivePermissionsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getEffectivePermissions"), getClient(), null, scope);
     }
 }

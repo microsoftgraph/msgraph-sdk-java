@@ -6,6 +6,8 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookSessionInfo;
 import com.microsoft.graph.requests.extensions.WorkbookSessionInfoResourceRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.core.ClientException;
@@ -27,7 +29,7 @@ public class WorkbookSessionInfoResourceRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookSessionInfoResourceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookSessionInfoResourceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookSessionInfo.class);
     }
 
@@ -36,7 +38,7 @@ public class WorkbookSessionInfoResourceRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookSessionInfo> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookSessionInfo> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -46,6 +48,7 @@ public class WorkbookSessionInfoResourceRequest extends BaseRequest {
      * @return the WorkbookSessionInfo
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
+    @Nullable
     public WorkbookSessionInfo get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,8 @@ public class WorkbookSessionInfoResourceRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public WorkbookSessionInfoResourceRequest select(final String value) {
+    @Nonnull
+    public WorkbookSessionInfoResourceRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookSessionInfoResourceRequest)this;
     }
@@ -67,7 +71,8 @@ public class WorkbookSessionInfoResourceRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public WorkbookSessionInfoResourceRequest expand(final String value) {
+    @Nonnull
+    public WorkbookSessionInfoResourceRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookSessionInfoResourceRequest)this;
     }
@@ -78,7 +83,8 @@ public class WorkbookSessionInfoResourceRequest extends BaseRequest {
      * @param value the filter clause
      * @return the updated request
      */
-    public WorkbookSessionInfoResourceRequest filter(final String value) {
+    @Nonnull
+    public WorkbookSessionInfoResourceRequest filter(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookSessionInfoResourceRequest)this;
     }
@@ -89,7 +95,8 @@ public class WorkbookSessionInfoResourceRequest extends BaseRequest {
      * @param value the order by clause
      * @return the updated request
      */
-    public WorkbookSessionInfoResourceRequest orderBy(final String value) {
+    @Nonnull
+    public WorkbookSessionInfoResourceRequest orderBy(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookSessionInfoResourceRequest)this;
     }

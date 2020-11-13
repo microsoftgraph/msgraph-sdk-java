@@ -14,6 +14,8 @@ import com.microsoft.graph.models.extensions.ScheduleInformation;
 import com.microsoft.graph.models.generated.CalendarRoleType;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -38,11 +40,11 @@ public class CalendarCollectionRequest extends BaseCollectionRequest<CalendarCol
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CalendarCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CalendarCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CalendarCollectionResponse.class, CalendarCollectionPage.class);
     }
 
-    public void get(final ICallback<? super CalendarCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super CalendarCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -56,19 +58,21 @@ public class CalendarCollectionRequest extends BaseCollectionRequest<CalendarCol
         });
     }
 
+    @Nonnull
     public CalendarCollectionPage get() throws ClientException {
         final CalendarCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final Calendar newCalendar, final ICallback<? super Calendar> callback) {
+    public void post(@Nonnull final Calendar newCalendar, @Nonnull final ICallback<? super Calendar> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CalendarRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newCalendar, callback);
     }
 
-    public Calendar post(final Calendar newCalendar) throws ClientException {
+    @Nonnull
+    public Calendar post(@Nonnull final Calendar newCalendar) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CalendarRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -81,7 +85,8 @@ public class CalendarCollectionRequest extends BaseCollectionRequest<CalendarCol
      * @param value the expand clause
      * @return the updated request
      */
-    public CalendarCollectionRequest expand(final String value) {
+    @Nonnull
+    public CalendarCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (CalendarCollectionRequest)this;
     }
@@ -92,7 +97,8 @@ public class CalendarCollectionRequest extends BaseCollectionRequest<CalendarCol
      * @param value the filter clause
      * @return the updated request
      */
-    public CalendarCollectionRequest filter(final String value) {
+    @Nonnull
+    public CalendarCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (CalendarCollectionRequest)this;
     }
@@ -103,7 +109,8 @@ public class CalendarCollectionRequest extends BaseCollectionRequest<CalendarCol
      * @param value the order by clause
      * @return the updated request
      */
-    public CalendarCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public CalendarCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (CalendarCollectionRequest)this;
     }
@@ -114,7 +121,8 @@ public class CalendarCollectionRequest extends BaseCollectionRequest<CalendarCol
      * @param value the select clause
      * @return the updated request
      */
-    public CalendarCollectionRequest select(final String value) {
+    @Nonnull
+    public CalendarCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (CalendarCollectionRequest)this;
     }
@@ -125,6 +133,7 @@ public class CalendarCollectionRequest extends BaseCollectionRequest<CalendarCol
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public CalendarCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (CalendarCollectionRequest)this;
@@ -136,6 +145,7 @@ public class CalendarCollectionRequest extends BaseCollectionRequest<CalendarCol
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public CalendarCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (CalendarCollectionRequest)this;
@@ -147,11 +157,13 @@ public class CalendarCollectionRequest extends BaseCollectionRequest<CalendarCol
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public CalendarCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public CalendarCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (CalendarCollectionRequest)this;
     }
-    public CalendarCollectionPage buildFromResponse(final CalendarCollectionResponse response) {
+    @Nonnull
+    public CalendarCollectionPage buildFromResponse(@Nonnull final CalendarCollectionResponse response) {
         final CalendarCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new CalendarCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

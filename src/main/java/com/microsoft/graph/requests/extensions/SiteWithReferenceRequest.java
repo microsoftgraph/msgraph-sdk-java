@@ -25,6 +25,8 @@ import com.microsoft.graph.requests.extensions.ItemAnalyticsRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
@@ -46,15 +48,16 @@ public class SiteWithReferenceRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SiteWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SiteWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Site.class);
     }
 
-    public void post(final Site newSite, final IJsonBackedObject payload, final ICallback<? super Site> callback) {
+    public void post(@Nonnull final Site newSite, @Nullable final IJsonBackedObject payload, @Nonnull final ICallback<? super Site> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
-    public Site post(final Site newSite, final IJsonBackedObject payload) throws ClientException {
+    @Nullable
+    public Site post(@Nonnull final Site newSite, @Nullable final IJsonBackedObject payload) throws ClientException {
         IJsonBackedObject response = send(HttpMethod.POST, payload);
         if (response != null){
             return newSite;
@@ -62,15 +65,16 @@ public class SiteWithReferenceRequest extends BaseRequest {
         return null;
     }
 
-    public void get(final ICallback<? super Site> callback) {
+    public void get(@Nonnull final ICallback<? super Site> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
+    @Nullable
     public Site get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<? super Site> callback) {
+	public void delete(@Nonnull final ICallback<? super Site> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -78,11 +82,12 @@ public class SiteWithReferenceRequest extends BaseRequest {
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final Site sourceSite, final ICallback<? super Site> callback) {
+	public void patch(@Nonnull final Site sourceSite, @Nonnull final ICallback<? super Site> callback) {
 		send(HttpMethod.PATCH, callback, sourceSite);
 	}
 
-	public Site patch(final Site sourceSite) throws ClientException {
+    @Nullable
+	public Site patch(@Nonnull final Site sourceSite) throws ClientException {
 		return send(HttpMethod.PATCH, sourceSite);
 	}
 
@@ -93,7 +98,8 @@ public class SiteWithReferenceRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public SiteWithReferenceRequest select(final String value) {
+    @Nonnull
+    public SiteWithReferenceRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (SiteWithReferenceRequest)this;
     }
@@ -104,7 +110,8 @@ public class SiteWithReferenceRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public SiteWithReferenceRequest expand(final String value) {
+    @Nonnull
+    public SiteWithReferenceRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (SiteWithReferenceRequest)this;
     }

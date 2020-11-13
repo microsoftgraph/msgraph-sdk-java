@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionResponse;
@@ -22,7 +24,7 @@ public class TokenLifetimePolicyCollectionPage extends BaseCollectionPage<TokenL
      * @param response the serialized TokenLifetimePolicyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TokenLifetimePolicyCollectionPage(final TokenLifetimePolicyCollectionResponse response, final TokenLifetimePolicyCollectionRequestBuilder builder) {
+    public TokenLifetimePolicyCollectionPage(@Nonnull final TokenLifetimePolicyCollectionResponse response, @Nonnull final TokenLifetimePolicyCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

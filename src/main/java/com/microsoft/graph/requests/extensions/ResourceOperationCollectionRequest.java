@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.ResourceOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class ResourceOperationCollectionRequest extends BaseCollectionRequest<Re
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ResourceOperationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ResourceOperationCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ResourceOperationCollectionResponse.class, ResourceOperationCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ResourceOperationCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super ResourceOperationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class ResourceOperationCollectionRequest extends BaseCollectionRequest<Re
         });
     }
 
+    @Nonnull
     public ResourceOperationCollectionPage get() throws ClientException {
         final ResourceOperationCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final ResourceOperation newResourceOperation, final ICallback<? super ResourceOperation> callback) {
+    public void post(@Nonnull final ResourceOperation newResourceOperation, @Nonnull final ICallback<? super ResourceOperation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ResourceOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newResourceOperation, callback);
     }
 
-    public ResourceOperation post(final ResourceOperation newResourceOperation) throws ClientException {
+    @Nonnull
+    public ResourceOperation post(@Nonnull final ResourceOperation newResourceOperation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ResourceOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class ResourceOperationCollectionRequest extends BaseCollectionRequest<Re
      * @param value the expand clause
      * @return the updated request
      */
-    public ResourceOperationCollectionRequest expand(final String value) {
+    @Nonnull
+    public ResourceOperationCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ResourceOperationCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class ResourceOperationCollectionRequest extends BaseCollectionRequest<Re
      * @param value the filter clause
      * @return the updated request
      */
-    public ResourceOperationCollectionRequest filter(final String value) {
+    @Nonnull
+    public ResourceOperationCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ResourceOperationCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class ResourceOperationCollectionRequest extends BaseCollectionRequest<Re
      * @param value the order by clause
      * @return the updated request
      */
-    public ResourceOperationCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ResourceOperationCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ResourceOperationCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class ResourceOperationCollectionRequest extends BaseCollectionRequest<Re
      * @param value the select clause
      * @return the updated request
      */
-    public ResourceOperationCollectionRequest select(final String value) {
+    @Nonnull
+    public ResourceOperationCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ResourceOperationCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class ResourceOperationCollectionRequest extends BaseCollectionRequest<Re
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ResourceOperationCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ResourceOperationCollectionRequest)this;
@@ -133,6 +142,7 @@ public class ResourceOperationCollectionRequest extends BaseCollectionRequest<Re
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ResourceOperationCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (ResourceOperationCollectionRequest)this;
@@ -144,11 +154,13 @@ public class ResourceOperationCollectionRequest extends BaseCollectionRequest<Re
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ResourceOperationCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ResourceOperationCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (ResourceOperationCollectionRequest)this;
     }
-    public ResourceOperationCollectionPage buildFromResponse(final ResourceOperationCollectionResponse response) {
+    @Nonnull
+    public ResourceOperationCollectionPage buildFromResponse(@Nonnull final ResourceOperationCollectionResponse response) {
         final ResourceOperationCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ResourceOperationCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

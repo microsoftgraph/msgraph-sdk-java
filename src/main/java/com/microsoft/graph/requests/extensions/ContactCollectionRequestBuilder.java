@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ContactFolder;
 import com.microsoft.graph.models.extensions.Contact;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.ContactCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContactRequestBuilder;
@@ -33,7 +35,7 @@ public class ContactCollectionRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ContactCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ContactCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -43,7 +45,8 @@ public class ContactCollectionRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ContactCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ContactCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -53,21 +56,25 @@ public class ContactCollectionRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ContactCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ContactCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ContactCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ContactRequestBuilder byId(final String id) {
+    @Nonnull
+    public ContactRequestBuilder byId(@Nonnull final String id) {
         return new ContactRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
+    @Nonnull
     public ContactDeltaCollectionRequestBuilder delta() {
         return new ContactDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
 
-	public ContactDeltaCollectionRequestBuilder delta(final String deltaLink) {
+    @Nonnull
+	public ContactDeltaCollectionRequestBuilder delta(@Nonnull final String deltaLink) {
         return new ContactDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }
 }

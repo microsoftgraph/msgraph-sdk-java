@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AppRoleAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
@@ -30,14 +32,15 @@ public class AppRoleAssignmentReferenceRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AppRoleAssignmentReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AppRoleAssignmentReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AppRoleAssignment.class);
     }
 
-    public void delete(final ICallback<? super AppRoleAssignment> callback) {
+    public void delete(@Nonnull final ICallback<? super AppRoleAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
+    @Nullable
     public AppRoleAssignment delete() throws ClientException {
        return send(HttpMethod.DELETE, null);
     }
@@ -48,7 +51,8 @@ public class AppRoleAssignmentReferenceRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public AppRoleAssignmentReferenceRequest select(final String value) {
+    @Nonnull
+    public AppRoleAssignmentReferenceRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (AppRoleAssignmentReferenceRequest)this;
     }
@@ -59,7 +63,8 @@ public class AppRoleAssignmentReferenceRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public AppRoleAssignmentReferenceRequest expand(final String value) {
+    @Nonnull
+    public AppRoleAssignmentReferenceRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (AppRoleAssignmentReferenceRequest)this;
     }
@@ -69,7 +74,7 @@ public class AppRoleAssignmentReferenceRequest extends BaseRequest {
      * @param srcAppRoleAssignment the AppRoleAssignment reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(AppRoleAssignment srcAppRoleAssignment, final ICallback<? super AppRoleAssignment> callback) {
+    public void put(@Nonnull final AppRoleAssignment srcAppRoleAssignment, @Nonnull final ICallback<? super AppRoleAssignment> callback) {
         send(HttpMethod.PUT, callback, srcAppRoleAssignment);
     }
 
@@ -80,7 +85,8 @@ public class AppRoleAssignmentReferenceRequest extends BaseRequest {
      * @return the AppRoleAssignment
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    public AppRoleAssignment put(AppRoleAssignment srcAppRoleAssignment) throws ClientException {
+    @Nullable
+    public AppRoleAssignment put(@Nonnull final AppRoleAssignment srcAppRoleAssignment) throws ClientException {
         return send(HttpMethod.PUT, srcAppRoleAssignment);
     }
 }

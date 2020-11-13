@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.LocaleInfo;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.OutlookUserSupportedLanguagesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookUserSupportedLanguagesCollectionPage;
@@ -33,7 +35,7 @@ public class OutlookUserSupportedLanguagesCollectionPage extends BaseCollectionP
      * @param response The serialized OutlookUserSupportedLanguagesCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public OutlookUserSupportedLanguagesCollectionPage(final OutlookUserSupportedLanguagesCollectionResponse response, final OutlookUserSupportedLanguagesCollectionRequestBuilder builder) {
+    public OutlookUserSupportedLanguagesCollectionPage(@Nonnull final OutlookUserSupportedLanguagesCollectionResponse response, @Nonnull final OutlookUserSupportedLanguagesCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

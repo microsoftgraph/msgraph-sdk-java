@@ -9,6 +9,8 @@ import com.microsoft.graph.models.extensions.MeetingParticipants;
 import com.microsoft.graph.models.extensions.OnlineMeeting;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
 import java.util.EnumSet;
@@ -26,6 +28,7 @@ public class OnlineMeetingCreateOrGetBody {
      */
     @SerializedName(value = "chatInfo", alternate = {"ChatInfo"})
     @Expose
+	@Nullable
     public ChatInfo chatInfo;
 
     /**
@@ -34,6 +37,7 @@ public class OnlineMeetingCreateOrGetBody {
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
+	@Nullable
     public java.util.Calendar endDateTime;
 
     /**
@@ -42,6 +46,7 @@ public class OnlineMeetingCreateOrGetBody {
      */
     @SerializedName(value = "externalId", alternate = {"ExternalId"})
     @Expose
+	@Nullable
     public String externalId;
 
     /**
@@ -50,6 +55,7 @@ public class OnlineMeetingCreateOrGetBody {
      */
     @SerializedName(value = "participants", alternate = {"Participants"})
     @Expose
+	@Nullable
     public MeetingParticipants participants;
 
     /**
@@ -58,6 +64,7 @@ public class OnlineMeetingCreateOrGetBody {
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
+	@Nullable
     public java.util.Calendar startDateTime;
 
     /**
@@ -66,6 +73,7 @@ public class OnlineMeetingCreateOrGetBody {
      */
     @SerializedName(value = "subject", alternate = {"Subject"})
     @Expose
+	@Nullable
     public String subject;
 
 
@@ -84,6 +92,7 @@ public class OnlineMeetingCreateOrGetBody {
      *
      * @return the raw representation of this class
      */
+    @Nullable
     public JsonObject getRawObject() {
         return rawObject;
     }
@@ -93,6 +102,7 @@ public class OnlineMeetingCreateOrGetBody {
      *
      * @return the serializer
      */
+    @Nullable
     protected ISerializer getSerializer() {
         return serializer;
     }
@@ -103,7 +113,7 @@ public class OnlineMeetingCreateOrGetBody {
      * @param serializer the serializer
      * @param json the JSON object to set this object to
      */
-    public void setRawObject(final ISerializer serializer, final JsonObject json) {
+    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
         this.serializer = serializer;
         rawObject = json;
 

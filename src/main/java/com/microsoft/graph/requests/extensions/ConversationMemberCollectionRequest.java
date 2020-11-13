@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Channel;
 import com.microsoft.graph.models.extensions.ConversationMember;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class ConversationMemberCollectionRequest extends BaseCollectionRequest<C
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ConversationMemberCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ConversationMemberCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ConversationMemberCollectionResponse.class, ConversationMemberCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ConversationMemberCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super ConversationMemberCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class ConversationMemberCollectionRequest extends BaseCollectionRequest<C
         });
     }
 
+    @Nonnull
     public ConversationMemberCollectionPage get() throws ClientException {
         final ConversationMemberCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final ConversationMember newConversationMember, final ICallback<? super ConversationMember> callback) {
+    public void post(@Nonnull final ConversationMember newConversationMember, @Nonnull final ICallback<? super ConversationMember> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ConversationMemberRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newConversationMember, callback);
     }
 
-    public ConversationMember post(final ConversationMember newConversationMember) throws ClientException {
+    @Nonnull
+    public ConversationMember post(@Nonnull final ConversationMember newConversationMember) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ConversationMemberRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class ConversationMemberCollectionRequest extends BaseCollectionRequest<C
      * @param value the expand clause
      * @return the updated request
      */
-    public ConversationMemberCollectionRequest expand(final String value) {
+    @Nonnull
+    public ConversationMemberCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ConversationMemberCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class ConversationMemberCollectionRequest extends BaseCollectionRequest<C
      * @param value the filter clause
      * @return the updated request
      */
-    public ConversationMemberCollectionRequest filter(final String value) {
+    @Nonnull
+    public ConversationMemberCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ConversationMemberCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class ConversationMemberCollectionRequest extends BaseCollectionRequest<C
      * @param value the order by clause
      * @return the updated request
      */
-    public ConversationMemberCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ConversationMemberCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ConversationMemberCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class ConversationMemberCollectionRequest extends BaseCollectionRequest<C
      * @param value the select clause
      * @return the updated request
      */
-    public ConversationMemberCollectionRequest select(final String value) {
+    @Nonnull
+    public ConversationMemberCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ConversationMemberCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class ConversationMemberCollectionRequest extends BaseCollectionRequest<C
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ConversationMemberCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ConversationMemberCollectionRequest)this;
@@ -133,6 +142,7 @@ public class ConversationMemberCollectionRequest extends BaseCollectionRequest<C
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ConversationMemberCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (ConversationMemberCollectionRequest)this;
@@ -144,11 +154,13 @@ public class ConversationMemberCollectionRequest extends BaseCollectionRequest<C
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ConversationMemberCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ConversationMemberCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (ConversationMemberCollectionRequest)this;
     }
-    public ConversationMemberCollectionPage buildFromResponse(final ConversationMemberCollectionResponse response) {
+    @Nonnull
+    public ConversationMemberCollectionPage buildFromResponse(@Nonnull final ConversationMemberCollectionResponse response) {
         final ConversationMemberCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ConversationMemberCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

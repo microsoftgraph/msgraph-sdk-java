@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.WorkbookChartAxes;
 import com.microsoft.graph.requests.extensions.WorkbookChartAxisRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,7 +31,7 @@ public class WorkbookChartAxesRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartAxesRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartAxesRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChartAxes.class);
     }
 
@@ -38,7 +40,7 @@ public class WorkbookChartAxesRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookChartAxes> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookChartAxes> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class WorkbookChartAxesRequest extends BaseRequest {
      * @return the WorkbookChartAxes from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WorkbookChartAxes get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class WorkbookChartAxesRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookChartAxes> callback) {
+    public void delete(@Nonnull final ICallback<? super WorkbookChartAxes> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class WorkbookChartAxesRequest extends BaseRequest {
      * @param sourceWorkbookChartAxes the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookChartAxes sourceWorkbookChartAxes, final ICallback<? super WorkbookChartAxes> callback) {
+    public void patch(@Nonnull final WorkbookChartAxes sourceWorkbookChartAxes, @Nonnull final ICallback<? super WorkbookChartAxes> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartAxes);
     }
 
@@ -87,7 +90,8 @@ public class WorkbookChartAxesRequest extends BaseRequest {
      * @return the updated WorkbookChartAxes
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartAxes patch(final WorkbookChartAxes sourceWorkbookChartAxes) throws ClientException {
+    @Nullable
+    public WorkbookChartAxes patch(@Nonnull final WorkbookChartAxes sourceWorkbookChartAxes) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookChartAxes);
     }
 
@@ -97,7 +101,7 @@ public class WorkbookChartAxesRequest extends BaseRequest {
      * @param newWorkbookChartAxes the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookChartAxes newWorkbookChartAxes, final ICallback<? super WorkbookChartAxes> callback) {
+    public void post(@Nonnull final WorkbookChartAxes newWorkbookChartAxes, @Nonnull final ICallback<? super WorkbookChartAxes> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartAxes);
     }
 
@@ -108,7 +112,8 @@ public class WorkbookChartAxesRequest extends BaseRequest {
      * @return the created WorkbookChartAxes
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartAxes post(final WorkbookChartAxes newWorkbookChartAxes) throws ClientException {
+    @Nullable
+    public WorkbookChartAxes post(@Nonnull final WorkbookChartAxes newWorkbookChartAxes) throws ClientException {
         return send(HttpMethod.POST, newWorkbookChartAxes);
     }
 
@@ -118,7 +123,7 @@ public class WorkbookChartAxesRequest extends BaseRequest {
      * @param newWorkbookChartAxes the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookChartAxes newWorkbookChartAxes, final ICallback<? super WorkbookChartAxes> callback) {
+    public void put(@Nonnull final WorkbookChartAxes newWorkbookChartAxes, @Nonnull final ICallback<? super WorkbookChartAxes> callback) {
         send(HttpMethod.PUT, callback, newWorkbookChartAxes);
     }
 
@@ -129,7 +134,8 @@ public class WorkbookChartAxesRequest extends BaseRequest {
      * @return the created WorkbookChartAxes
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartAxes put(final WorkbookChartAxes newWorkbookChartAxes) throws ClientException {
+    @Nullable
+    public WorkbookChartAxes put(@Nonnull final WorkbookChartAxes newWorkbookChartAxes) throws ClientException {
         return send(HttpMethod.PUT, newWorkbookChartAxes);
     }
 
@@ -139,7 +145,8 @@ public class WorkbookChartAxesRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public WorkbookChartAxesRequest select(final String value) {
+     @Nonnull
+     public WorkbookChartAxesRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (WorkbookChartAxesRequest)this;
      }
@@ -150,7 +157,8 @@ public class WorkbookChartAxesRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public WorkbookChartAxesRequest expand(final String value) {
+     @Nonnull
+     public WorkbookChartAxesRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (WorkbookChartAxesRequest)this;
      }

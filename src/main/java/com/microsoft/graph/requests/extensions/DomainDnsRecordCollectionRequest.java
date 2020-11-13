@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DomainDnsRecord;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,11 +36,11 @@ public class DomainDnsRecordCollectionRequest extends BaseCollectionRequest<Doma
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DomainDnsRecordCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DomainDnsRecordCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DomainDnsRecordCollectionResponse.class, DomainDnsRecordCollectionPage.class);
     }
 
-    public void get(final ICallback<? super DomainDnsRecordCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super DomainDnsRecordCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -52,19 +54,21 @@ public class DomainDnsRecordCollectionRequest extends BaseCollectionRequest<Doma
         });
     }
 
+    @Nonnull
     public DomainDnsRecordCollectionPage get() throws ClientException {
         final DomainDnsRecordCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final DomainDnsRecord newDomainDnsRecord, final ICallback<? super DomainDnsRecord> callback) {
+    public void post(@Nonnull final DomainDnsRecord newDomainDnsRecord, @Nonnull final ICallback<? super DomainDnsRecord> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DomainDnsRecordRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newDomainDnsRecord, callback);
     }
 
-    public DomainDnsRecord post(final DomainDnsRecord newDomainDnsRecord) throws ClientException {
+    @Nonnull
+    public DomainDnsRecord post(@Nonnull final DomainDnsRecord newDomainDnsRecord) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DomainDnsRecordRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -77,7 +81,8 @@ public class DomainDnsRecordCollectionRequest extends BaseCollectionRequest<Doma
      * @param value the expand clause
      * @return the updated request
      */
-    public DomainDnsRecordCollectionRequest expand(final String value) {
+    @Nonnull
+    public DomainDnsRecordCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DomainDnsRecordCollectionRequest)this;
     }
@@ -88,7 +93,8 @@ public class DomainDnsRecordCollectionRequest extends BaseCollectionRequest<Doma
      * @param value the filter clause
      * @return the updated request
      */
-    public DomainDnsRecordCollectionRequest filter(final String value) {
+    @Nonnull
+    public DomainDnsRecordCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DomainDnsRecordCollectionRequest)this;
     }
@@ -99,7 +105,8 @@ public class DomainDnsRecordCollectionRequest extends BaseCollectionRequest<Doma
      * @param value the order by clause
      * @return the updated request
      */
-    public DomainDnsRecordCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DomainDnsRecordCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DomainDnsRecordCollectionRequest)this;
     }
@@ -110,7 +117,8 @@ public class DomainDnsRecordCollectionRequest extends BaseCollectionRequest<Doma
      * @param value the select clause
      * @return the updated request
      */
-    public DomainDnsRecordCollectionRequest select(final String value) {
+    @Nonnull
+    public DomainDnsRecordCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DomainDnsRecordCollectionRequest)this;
     }
@@ -121,6 +129,7 @@ public class DomainDnsRecordCollectionRequest extends BaseCollectionRequest<Doma
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DomainDnsRecordCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (DomainDnsRecordCollectionRequest)this;
@@ -132,6 +141,7 @@ public class DomainDnsRecordCollectionRequest extends BaseCollectionRequest<Doma
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public DomainDnsRecordCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (DomainDnsRecordCollectionRequest)this;
@@ -143,11 +153,13 @@ public class DomainDnsRecordCollectionRequest extends BaseCollectionRequest<Doma
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public DomainDnsRecordCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public DomainDnsRecordCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (DomainDnsRecordCollectionRequest)this;
     }
-    public DomainDnsRecordCollectionPage buildFromResponse(final DomainDnsRecordCollectionResponse response) {
+    @Nonnull
+    public DomainDnsRecordCollectionPage buildFromResponse(@Nonnull final DomainDnsRecordCollectionResponse response) {
         final DomainDnsRecordCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new DomainDnsRecordCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantDeltaCollectionPage;
@@ -31,6 +33,7 @@ public class OAuth2PermissionGrantDeltaCollectionPage extends BaseCollectionPage
      * The opaque link to query delta after the 
      * initial request
      */
+    @Nullable
     public String deltaLink;
 
     /**
@@ -39,7 +42,7 @@ public class OAuth2PermissionGrantDeltaCollectionPage extends BaseCollectionPage
      * @param response The serialized OAuth2PermissionGrantDeltaCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public OAuth2PermissionGrantDeltaCollectionPage(final OAuth2PermissionGrantDeltaCollectionResponse response, final OAuth2PermissionGrantDeltaCollectionRequestBuilder builder) {
+    public OAuth2PermissionGrantDeltaCollectionPage(@Nonnull final OAuth2PermissionGrantDeltaCollectionResponse response, @Nonnull final OAuth2PermissionGrantDeltaCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
 
         if (response.getRawObject().get("@odata.deltaLink") != null) {
@@ -53,6 +56,7 @@ public class OAuth2PermissionGrantDeltaCollectionPage extends BaseCollectionPage
      *
      * @return String The deltaLink URL
      */
+    @Nullable
     public String deltaLink() {
         return deltaLink;
     }

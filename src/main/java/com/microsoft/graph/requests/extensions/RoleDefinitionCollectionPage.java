@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.RoleDefinition;
 import com.microsoft.graph.requests.extensions.RoleDefinitionCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.RoleDefinitionCollectionPage;
 import com.microsoft.graph.requests.extensions.RoleDefinitionCollectionResponse;
@@ -22,7 +24,7 @@ public class RoleDefinitionCollectionPage extends BaseCollectionPage<RoleDefinit
      * @param response the serialized RoleDefinitionCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public RoleDefinitionCollectionPage(final RoleDefinitionCollectionResponse response, final RoleDefinitionCollectionRequestBuilder builder) {
+    public RoleDefinitionCollectionPage(@Nonnull final RoleDefinitionCollectionResponse response, @Nonnull final RoleDefinitionCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

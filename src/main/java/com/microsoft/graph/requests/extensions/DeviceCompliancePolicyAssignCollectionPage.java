@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignCollectionPage;
@@ -33,7 +35,7 @@ public class DeviceCompliancePolicyAssignCollectionPage extends BaseCollectionPa
      * @param response The serialized DeviceCompliancePolicyAssignCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public DeviceCompliancePolicyAssignCollectionPage(final DeviceCompliancePolicyAssignCollectionResponse response, final DeviceCompliancePolicyAssignCollectionRequestBuilder builder) {
+    public DeviceCompliancePolicyAssignCollectionPage(@Nonnull final DeviceCompliancePolicyAssignCollectionResponse response, @Nonnull final DeviceCompliancePolicyAssignCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DeviceConfigurationState;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationStateCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationStateCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationStateCollectionResponse;
@@ -22,7 +24,7 @@ public class DeviceConfigurationStateCollectionPage extends BaseCollectionPage<D
      * @param response the serialized DeviceConfigurationStateCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DeviceConfigurationStateCollectionPage(final DeviceConfigurationStateCollectionResponse response, final DeviceConfigurationStateCollectionRequestBuilder builder) {
+    public DeviceConfigurationStateCollectionPage(@Nonnull final DeviceConfigurationStateCollectionResponse response, @Nonnull final DeviceConfigurationStateCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetCollec
 import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -30,7 +32,7 @@ public class PermissionGrantPolicyRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PermissionGrantPolicyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PermissionGrantPolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PermissionGrantPolicy.class);
     }
 
@@ -39,7 +41,7 @@ public class PermissionGrantPolicyRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PermissionGrantPolicy> callback) {
+    public void get(@Nonnull final ICallback<? super PermissionGrantPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -49,6 +51,7 @@ public class PermissionGrantPolicyRequest extends BaseRequest {
      * @return the PermissionGrantPolicy from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PermissionGrantPolicy get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -58,7 +61,7 @@ public class PermissionGrantPolicyRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PermissionGrantPolicy> callback) {
+    public void delete(@Nonnull final ICallback<? super PermissionGrantPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +80,7 @@ public class PermissionGrantPolicyRequest extends BaseRequest {
      * @param sourcePermissionGrantPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PermissionGrantPolicy sourcePermissionGrantPolicy, final ICallback<? super PermissionGrantPolicy> callback) {
+    public void patch(@Nonnull final PermissionGrantPolicy sourcePermissionGrantPolicy, @Nonnull final ICallback<? super PermissionGrantPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourcePermissionGrantPolicy);
     }
 
@@ -88,7 +91,8 @@ public class PermissionGrantPolicyRequest extends BaseRequest {
      * @return the updated PermissionGrantPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PermissionGrantPolicy patch(final PermissionGrantPolicy sourcePermissionGrantPolicy) throws ClientException {
+    @Nullable
+    public PermissionGrantPolicy patch(@Nonnull final PermissionGrantPolicy sourcePermissionGrantPolicy) throws ClientException {
         return send(HttpMethod.PATCH, sourcePermissionGrantPolicy);
     }
 
@@ -98,7 +102,7 @@ public class PermissionGrantPolicyRequest extends BaseRequest {
      * @param newPermissionGrantPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PermissionGrantPolicy newPermissionGrantPolicy, final ICallback<? super PermissionGrantPolicy> callback) {
+    public void post(@Nonnull final PermissionGrantPolicy newPermissionGrantPolicy, @Nonnull final ICallback<? super PermissionGrantPolicy> callback) {
         send(HttpMethod.POST, callback, newPermissionGrantPolicy);
     }
 
@@ -109,7 +113,8 @@ public class PermissionGrantPolicyRequest extends BaseRequest {
      * @return the created PermissionGrantPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PermissionGrantPolicy post(final PermissionGrantPolicy newPermissionGrantPolicy) throws ClientException {
+    @Nullable
+    public PermissionGrantPolicy post(@Nonnull final PermissionGrantPolicy newPermissionGrantPolicy) throws ClientException {
         return send(HttpMethod.POST, newPermissionGrantPolicy);
     }
 
@@ -119,7 +124,7 @@ public class PermissionGrantPolicyRequest extends BaseRequest {
      * @param newPermissionGrantPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PermissionGrantPolicy newPermissionGrantPolicy, final ICallback<? super PermissionGrantPolicy> callback) {
+    public void put(@Nonnull final PermissionGrantPolicy newPermissionGrantPolicy, @Nonnull final ICallback<? super PermissionGrantPolicy> callback) {
         send(HttpMethod.PUT, callback, newPermissionGrantPolicy);
     }
 
@@ -130,7 +135,8 @@ public class PermissionGrantPolicyRequest extends BaseRequest {
      * @return the created PermissionGrantPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PermissionGrantPolicy put(final PermissionGrantPolicy newPermissionGrantPolicy) throws ClientException {
+    @Nullable
+    public PermissionGrantPolicy put(@Nonnull final PermissionGrantPolicy newPermissionGrantPolicy) throws ClientException {
         return send(HttpMethod.PUT, newPermissionGrantPolicy);
     }
 
@@ -140,7 +146,8 @@ public class PermissionGrantPolicyRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public PermissionGrantPolicyRequest select(final String value) {
+     @Nonnull
+     public PermissionGrantPolicyRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (PermissionGrantPolicyRequest)this;
      }
@@ -151,7 +158,8 @@ public class PermissionGrantPolicyRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public PermissionGrantPolicyRequest expand(final String value) {
+     @Nonnull
+     public PermissionGrantPolicyRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (PermissionGrantPolicyRequest)this;
      }

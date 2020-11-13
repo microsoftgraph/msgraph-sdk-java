@@ -16,6 +16,8 @@ import com.microsoft.graph.requests.extensions.DeviceConfigurationStateRequestBu
 import com.microsoft.graph.requests.extensions.DeviceCategoryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class ManagedDeviceWithReferenceRequestBuilder extends BaseRequestBuilder
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceWithReferenceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +46,8 @@ public class ManagedDeviceWithReferenceRequestBuilder extends BaseRequestBuilder
      * @param requestOptions the options for this request
      * @return the ManagedDeviceWithReferenceRequest instance
      */
-    public ManagedDeviceWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ManagedDeviceWithReferenceRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -54,10 +57,12 @@ public class ManagedDeviceWithReferenceRequestBuilder extends BaseRequestBuilder
      * @param requestOptions the options for this request
      * @return the ManagedDeviceWithReferenceRequest instance
      */
-    public ManagedDeviceWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ManagedDeviceWithReferenceRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagedDeviceWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
+    @Nonnull
     public ManagedDeviceReferenceRequestBuilder reference(){
         return new ManagedDeviceReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }

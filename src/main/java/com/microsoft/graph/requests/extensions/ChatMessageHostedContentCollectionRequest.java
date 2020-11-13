@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ChatMessage;
 import com.microsoft.graph.models.extensions.ChatMessageHostedContent;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class ChatMessageHostedContentCollectionRequest extends BaseCollectionReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ChatMessageHostedContentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ChatMessageHostedContentCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ChatMessageHostedContentCollectionResponse.class, ChatMessageHostedContentCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ChatMessageHostedContentCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super ChatMessageHostedContentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class ChatMessageHostedContentCollectionRequest extends BaseCollectionReq
         });
     }
 
+    @Nonnull
     public ChatMessageHostedContentCollectionPage get() throws ClientException {
         final ChatMessageHostedContentCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final ChatMessageHostedContent newChatMessageHostedContent, final ICallback<? super ChatMessageHostedContent> callback) {
+    public void post(@Nonnull final ChatMessageHostedContent newChatMessageHostedContent, @Nonnull final ICallback<? super ChatMessageHostedContent> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ChatMessageHostedContentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newChatMessageHostedContent, callback);
     }
 
-    public ChatMessageHostedContent post(final ChatMessageHostedContent newChatMessageHostedContent) throws ClientException {
+    @Nonnull
+    public ChatMessageHostedContent post(@Nonnull final ChatMessageHostedContent newChatMessageHostedContent) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ChatMessageHostedContentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class ChatMessageHostedContentCollectionRequest extends BaseCollectionReq
      * @param value the expand clause
      * @return the updated request
      */
-    public ChatMessageHostedContentCollectionRequest expand(final String value) {
+    @Nonnull
+    public ChatMessageHostedContentCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ChatMessageHostedContentCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class ChatMessageHostedContentCollectionRequest extends BaseCollectionReq
      * @param value the filter clause
      * @return the updated request
      */
-    public ChatMessageHostedContentCollectionRequest filter(final String value) {
+    @Nonnull
+    public ChatMessageHostedContentCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ChatMessageHostedContentCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class ChatMessageHostedContentCollectionRequest extends BaseCollectionReq
      * @param value the order by clause
      * @return the updated request
      */
-    public ChatMessageHostedContentCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ChatMessageHostedContentCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ChatMessageHostedContentCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class ChatMessageHostedContentCollectionRequest extends BaseCollectionReq
      * @param value the select clause
      * @return the updated request
      */
-    public ChatMessageHostedContentCollectionRequest select(final String value) {
+    @Nonnull
+    public ChatMessageHostedContentCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ChatMessageHostedContentCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class ChatMessageHostedContentCollectionRequest extends BaseCollectionReq
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ChatMessageHostedContentCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ChatMessageHostedContentCollectionRequest)this;
@@ -133,6 +142,7 @@ public class ChatMessageHostedContentCollectionRequest extends BaseCollectionReq
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ChatMessageHostedContentCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (ChatMessageHostedContentCollectionRequest)this;
@@ -144,11 +154,13 @@ public class ChatMessageHostedContentCollectionRequest extends BaseCollectionReq
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ChatMessageHostedContentCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ChatMessageHostedContentCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (ChatMessageHostedContentCollectionRequest)this;
     }
-    public ChatMessageHostedContentCollectionPage buildFromResponse(final ChatMessageHostedContentCollectionResponse response) {
+    @Nonnull
+    public ChatMessageHostedContentCollectionPage buildFromResponse(@Nonnull final ChatMessageHostedContentCollectionResponse response) {
         final ChatMessageHostedContentCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ChatMessageHostedContentCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

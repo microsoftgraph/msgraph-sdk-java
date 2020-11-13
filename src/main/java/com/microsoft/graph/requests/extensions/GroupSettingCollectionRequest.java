@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupSetting;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,11 +36,11 @@ public class GroupSettingCollectionRequest extends BaseCollectionRequest<GroupSe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupSettingCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupSettingCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupSettingCollectionResponse.class, GroupSettingCollectionPage.class);
     }
 
-    public void get(final ICallback<? super GroupSettingCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super GroupSettingCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -52,19 +54,21 @@ public class GroupSettingCollectionRequest extends BaseCollectionRequest<GroupSe
         });
     }
 
+    @Nonnull
     public GroupSettingCollectionPage get() throws ClientException {
         final GroupSettingCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final GroupSetting newGroupSetting, final ICallback<? super GroupSetting> callback) {
+    public void post(@Nonnull final GroupSetting newGroupSetting, @Nonnull final ICallback<? super GroupSetting> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GroupSettingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newGroupSetting, callback);
     }
 
-    public GroupSetting post(final GroupSetting newGroupSetting) throws ClientException {
+    @Nonnull
+    public GroupSetting post(@Nonnull final GroupSetting newGroupSetting) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new GroupSettingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -77,7 +81,8 @@ public class GroupSettingCollectionRequest extends BaseCollectionRequest<GroupSe
      * @param value the expand clause
      * @return the updated request
      */
-    public GroupSettingCollectionRequest expand(final String value) {
+    @Nonnull
+    public GroupSettingCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (GroupSettingCollectionRequest)this;
     }
@@ -88,7 +93,8 @@ public class GroupSettingCollectionRequest extends BaseCollectionRequest<GroupSe
      * @param value the filter clause
      * @return the updated request
      */
-    public GroupSettingCollectionRequest filter(final String value) {
+    @Nonnull
+    public GroupSettingCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (GroupSettingCollectionRequest)this;
     }
@@ -99,7 +105,8 @@ public class GroupSettingCollectionRequest extends BaseCollectionRequest<GroupSe
      * @param value the order by clause
      * @return the updated request
      */
-    public GroupSettingCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public GroupSettingCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (GroupSettingCollectionRequest)this;
     }
@@ -110,7 +117,8 @@ public class GroupSettingCollectionRequest extends BaseCollectionRequest<GroupSe
      * @param value the select clause
      * @return the updated request
      */
-    public GroupSettingCollectionRequest select(final String value) {
+    @Nonnull
+    public GroupSettingCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (GroupSettingCollectionRequest)this;
     }
@@ -121,6 +129,7 @@ public class GroupSettingCollectionRequest extends BaseCollectionRequest<GroupSe
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public GroupSettingCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (GroupSettingCollectionRequest)this;
@@ -132,6 +141,7 @@ public class GroupSettingCollectionRequest extends BaseCollectionRequest<GroupSe
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public GroupSettingCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (GroupSettingCollectionRequest)this;
@@ -143,11 +153,13 @@ public class GroupSettingCollectionRequest extends BaseCollectionRequest<GroupSe
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public GroupSettingCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public GroupSettingCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (GroupSettingCollectionRequest)this;
     }
-    public GroupSettingCollectionPage buildFromResponse(final GroupSettingCollectionResponse response) {
+    @Nonnull
+    public GroupSettingCollectionPage buildFromResponse(@Nonnull final GroupSettingCollectionResponse response) {
         final GroupSettingCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new GroupSettingCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

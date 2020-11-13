@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceConfigurationAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class DeviceConfigurationAssignmentRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceConfigurationAssignmentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceConfigurationAssignmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceConfigurationAssignment.class);
     }
 
@@ -37,7 +39,7 @@ public class DeviceConfigurationAssignmentRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceConfigurationAssignment> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceConfigurationAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class DeviceConfigurationAssignmentRequest extends BaseRequest {
      * @return the DeviceConfigurationAssignment from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceConfigurationAssignment get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class DeviceConfigurationAssignmentRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceConfigurationAssignment> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceConfigurationAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class DeviceConfigurationAssignmentRequest extends BaseRequest {
      * @param sourceDeviceConfigurationAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceConfigurationAssignment sourceDeviceConfigurationAssignment, final ICallback<? super DeviceConfigurationAssignment> callback) {
+    public void patch(@Nonnull final DeviceConfigurationAssignment sourceDeviceConfigurationAssignment, @Nonnull final ICallback<? super DeviceConfigurationAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceConfigurationAssignment);
     }
 
@@ -86,7 +89,8 @@ public class DeviceConfigurationAssignmentRequest extends BaseRequest {
      * @return the updated DeviceConfigurationAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceConfigurationAssignment patch(final DeviceConfigurationAssignment sourceDeviceConfigurationAssignment) throws ClientException {
+    @Nullable
+    public DeviceConfigurationAssignment patch(@Nonnull final DeviceConfigurationAssignment sourceDeviceConfigurationAssignment) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceConfigurationAssignment);
     }
 
@@ -96,7 +100,7 @@ public class DeviceConfigurationAssignmentRequest extends BaseRequest {
      * @param newDeviceConfigurationAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceConfigurationAssignment newDeviceConfigurationAssignment, final ICallback<? super DeviceConfigurationAssignment> callback) {
+    public void post(@Nonnull final DeviceConfigurationAssignment newDeviceConfigurationAssignment, @Nonnull final ICallback<? super DeviceConfigurationAssignment> callback) {
         send(HttpMethod.POST, callback, newDeviceConfigurationAssignment);
     }
 
@@ -107,7 +111,8 @@ public class DeviceConfigurationAssignmentRequest extends BaseRequest {
      * @return the created DeviceConfigurationAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceConfigurationAssignment post(final DeviceConfigurationAssignment newDeviceConfigurationAssignment) throws ClientException {
+    @Nullable
+    public DeviceConfigurationAssignment post(@Nonnull final DeviceConfigurationAssignment newDeviceConfigurationAssignment) throws ClientException {
         return send(HttpMethod.POST, newDeviceConfigurationAssignment);
     }
 
@@ -117,7 +122,7 @@ public class DeviceConfigurationAssignmentRequest extends BaseRequest {
      * @param newDeviceConfigurationAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceConfigurationAssignment newDeviceConfigurationAssignment, final ICallback<? super DeviceConfigurationAssignment> callback) {
+    public void put(@Nonnull final DeviceConfigurationAssignment newDeviceConfigurationAssignment, @Nonnull final ICallback<? super DeviceConfigurationAssignment> callback) {
         send(HttpMethod.PUT, callback, newDeviceConfigurationAssignment);
     }
 
@@ -128,7 +133,8 @@ public class DeviceConfigurationAssignmentRequest extends BaseRequest {
      * @return the created DeviceConfigurationAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceConfigurationAssignment put(final DeviceConfigurationAssignment newDeviceConfigurationAssignment) throws ClientException {
+    @Nullable
+    public DeviceConfigurationAssignment put(@Nonnull final DeviceConfigurationAssignment newDeviceConfigurationAssignment) throws ClientException {
         return send(HttpMethod.PUT, newDeviceConfigurationAssignment);
     }
 
@@ -138,7 +144,8 @@ public class DeviceConfigurationAssignmentRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public DeviceConfigurationAssignmentRequest select(final String value) {
+     @Nonnull
+     public DeviceConfigurationAssignmentRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (DeviceConfigurationAssignmentRequest)this;
      }
@@ -149,7 +156,8 @@ public class DeviceConfigurationAssignmentRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public DeviceConfigurationAssignmentRequest expand(final String value) {
+     @Nonnull
+     public DeviceConfigurationAssignmentRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (DeviceConfigurationAssignmentRequest)this;
      }

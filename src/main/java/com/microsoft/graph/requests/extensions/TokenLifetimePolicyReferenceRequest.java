@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
@@ -30,14 +32,15 @@ public class TokenLifetimePolicyReferenceRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TokenLifetimePolicyReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TokenLifetimePolicyReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TokenLifetimePolicy.class);
     }
 
-    public void delete(final ICallback<? super TokenLifetimePolicy> callback) {
+    public void delete(@Nonnull final ICallback<? super TokenLifetimePolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
+    @Nullable
     public TokenLifetimePolicy delete() throws ClientException {
        return send(HttpMethod.DELETE, null);
     }
@@ -48,7 +51,8 @@ public class TokenLifetimePolicyReferenceRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public TokenLifetimePolicyReferenceRequest select(final String value) {
+    @Nonnull
+    public TokenLifetimePolicyReferenceRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (TokenLifetimePolicyReferenceRequest)this;
     }
@@ -59,7 +63,8 @@ public class TokenLifetimePolicyReferenceRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public TokenLifetimePolicyReferenceRequest expand(final String value) {
+    @Nonnull
+    public TokenLifetimePolicyReferenceRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (TokenLifetimePolicyReferenceRequest)this;
     }
@@ -69,7 +74,7 @@ public class TokenLifetimePolicyReferenceRequest extends BaseRequest {
      * @param srcTokenLifetimePolicy the TokenLifetimePolicy reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(TokenLifetimePolicy srcTokenLifetimePolicy, final ICallback<? super TokenLifetimePolicy> callback) {
+    public void put(@Nonnull final TokenLifetimePolicy srcTokenLifetimePolicy, @Nonnull final ICallback<? super TokenLifetimePolicy> callback) {
         send(HttpMethod.PUT, callback, srcTokenLifetimePolicy);
     }
 
@@ -80,7 +85,8 @@ public class TokenLifetimePolicyReferenceRequest extends BaseRequest {
      * @return the TokenLifetimePolicy
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    public TokenLifetimePolicy put(TokenLifetimePolicy srcTokenLifetimePolicy) throws ClientException {
+    @Nullable
+    public TokenLifetimePolicy put(@Nonnull final TokenLifetimePolicy srcTokenLifetimePolicy) throws ClientException {
         return send(HttpMethod.PUT, srcTokenLifetimePolicy);
     }
 }

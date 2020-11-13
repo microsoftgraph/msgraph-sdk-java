@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.TargetedManagedAppConfiguration;
 import com.microsoft.graph.models.extensions.ManagedMobileApp;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class ManagedMobileAppCollectionRequest extends BaseCollectionRequest<Man
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedMobileAppCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedMobileAppCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedMobileAppCollectionResponse.class, ManagedMobileAppCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ManagedMobileAppCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super ManagedMobileAppCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class ManagedMobileAppCollectionRequest extends BaseCollectionRequest<Man
         });
     }
 
+    @Nonnull
     public ManagedMobileAppCollectionPage get() throws ClientException {
         final ManagedMobileAppCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final ManagedMobileApp newManagedMobileApp, final ICallback<? super ManagedMobileApp> callback) {
+    public void post(@Nonnull final ManagedMobileApp newManagedMobileApp, @Nonnull final ICallback<? super ManagedMobileApp> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedMobileAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedMobileApp, callback);
     }
 
-    public ManagedMobileApp post(final ManagedMobileApp newManagedMobileApp) throws ClientException {
+    @Nonnull
+    public ManagedMobileApp post(@Nonnull final ManagedMobileApp newManagedMobileApp) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedMobileAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class ManagedMobileAppCollectionRequest extends BaseCollectionRequest<Man
      * @param value the expand clause
      * @return the updated request
      */
-    public ManagedMobileAppCollectionRequest expand(final String value) {
+    @Nonnull
+    public ManagedMobileAppCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ManagedMobileAppCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class ManagedMobileAppCollectionRequest extends BaseCollectionRequest<Man
      * @param value the filter clause
      * @return the updated request
      */
-    public ManagedMobileAppCollectionRequest filter(final String value) {
+    @Nonnull
+    public ManagedMobileAppCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ManagedMobileAppCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class ManagedMobileAppCollectionRequest extends BaseCollectionRequest<Man
      * @param value the order by clause
      * @return the updated request
      */
-    public ManagedMobileAppCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ManagedMobileAppCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ManagedMobileAppCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class ManagedMobileAppCollectionRequest extends BaseCollectionRequest<Man
      * @param value the select clause
      * @return the updated request
      */
-    public ManagedMobileAppCollectionRequest select(final String value) {
+    @Nonnull
+    public ManagedMobileAppCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ManagedMobileAppCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class ManagedMobileAppCollectionRequest extends BaseCollectionRequest<Man
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ManagedMobileAppCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ManagedMobileAppCollectionRequest)this;
@@ -133,6 +142,7 @@ public class ManagedMobileAppCollectionRequest extends BaseCollectionRequest<Man
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ManagedMobileAppCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (ManagedMobileAppCollectionRequest)this;
@@ -144,11 +154,13 @@ public class ManagedMobileAppCollectionRequest extends BaseCollectionRequest<Man
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ManagedMobileAppCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ManagedMobileAppCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (ManagedMobileAppCollectionRequest)this;
     }
-    public ManagedMobileAppCollectionPage buildFromResponse(final ManagedMobileAppCollectionResponse response) {
+    @Nonnull
+    public ManagedMobileAppCollectionPage buildFromResponse(@Nonnull final ManagedMobileAppCollectionResponse response) {
         final ManagedMobileAppCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ManagedMobileAppCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

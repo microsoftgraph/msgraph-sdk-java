@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ServicePrincipal;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.ServicePrincipalDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ServicePrincipalDeltaCollectionPage;
@@ -31,6 +33,7 @@ public class ServicePrincipalDeltaCollectionPage extends BaseCollectionPage<Serv
      * The opaque link to query delta after the 
      * initial request
      */
+    @Nullable
     public String deltaLink;
 
     /**
@@ -39,7 +42,7 @@ public class ServicePrincipalDeltaCollectionPage extends BaseCollectionPage<Serv
      * @param response The serialized ServicePrincipalDeltaCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public ServicePrincipalDeltaCollectionPage(final ServicePrincipalDeltaCollectionResponse response, final ServicePrincipalDeltaCollectionRequestBuilder builder) {
+    public ServicePrincipalDeltaCollectionPage(@Nonnull final ServicePrincipalDeltaCollectionResponse response, @Nonnull final ServicePrincipalDeltaCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
 
         if (response.getRawObject().get("@odata.deltaLink") != null) {
@@ -53,6 +56,7 @@ public class ServicePrincipalDeltaCollectionPage extends BaseCollectionPage<Serv
      *
      * @return String The deltaLink URL
      */
+    @Nullable
     public String deltaLink() {
         return deltaLink;
     }

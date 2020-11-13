@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.Endpoint;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class EndpointCollectionRequest extends BaseCollectionRequest<EndpointCol
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EndpointCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EndpointCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EndpointCollectionResponse.class, EndpointCollectionPage.class);
     }
 
-    public void get(final ICallback<? super EndpointCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super EndpointCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class EndpointCollectionRequest extends BaseCollectionRequest<EndpointCol
         });
     }
 
+    @Nonnull
     public EndpointCollectionPage get() throws ClientException {
         final EndpointCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final Endpoint newEndpoint, final ICallback<? super Endpoint> callback) {
+    public void post(@Nonnull final Endpoint newEndpoint, @Nonnull final ICallback<? super Endpoint> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EndpointRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newEndpoint, callback);
     }
 
-    public Endpoint post(final Endpoint newEndpoint) throws ClientException {
+    @Nonnull
+    public Endpoint post(@Nonnull final Endpoint newEndpoint) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EndpointRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class EndpointCollectionRequest extends BaseCollectionRequest<EndpointCol
      * @param value the expand clause
      * @return the updated request
      */
-    public EndpointCollectionRequest expand(final String value) {
+    @Nonnull
+    public EndpointCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (EndpointCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class EndpointCollectionRequest extends BaseCollectionRequest<EndpointCol
      * @param value the filter clause
      * @return the updated request
      */
-    public EndpointCollectionRequest filter(final String value) {
+    @Nonnull
+    public EndpointCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (EndpointCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class EndpointCollectionRequest extends BaseCollectionRequest<EndpointCol
      * @param value the order by clause
      * @return the updated request
      */
-    public EndpointCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public EndpointCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (EndpointCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class EndpointCollectionRequest extends BaseCollectionRequest<EndpointCol
      * @param value the select clause
      * @return the updated request
      */
-    public EndpointCollectionRequest select(final String value) {
+    @Nonnull
+    public EndpointCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (EndpointCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class EndpointCollectionRequest extends BaseCollectionRequest<EndpointCol
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public EndpointCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (EndpointCollectionRequest)this;
@@ -133,6 +142,7 @@ public class EndpointCollectionRequest extends BaseCollectionRequest<EndpointCol
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public EndpointCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (EndpointCollectionRequest)this;
@@ -144,11 +154,13 @@ public class EndpointCollectionRequest extends BaseCollectionRequest<EndpointCol
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public EndpointCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public EndpointCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (EndpointCollectionRequest)this;
     }
-    public EndpointCollectionPage buildFromResponse(final EndpointCollectionResponse response) {
+    @Nonnull
+    public EndpointCollectionPage buildFromResponse(@Nonnull final EndpointCollectionResponse response) {
         final EndpointCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new EndpointCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

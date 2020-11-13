@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Application;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.ApplicationDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApplicationDeltaCollectionPage;
@@ -34,12 +36,12 @@ public class ApplicationDeltaCollectionRequest extends BaseCollectionRequest<App
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ApplicationDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ApplicationDeltaCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ApplicationDeltaCollectionResponse.class, ApplicationDeltaCollectionPage.class);
     }
 
 
-    public void get(final ICallback<? super ApplicationDeltaCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super ApplicationDeltaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,13 +55,15 @@ public class ApplicationDeltaCollectionRequest extends BaseCollectionRequest<App
         });
     }
 
+    @Nullable
     public ApplicationDeltaCollectionPage get() throws ClientException {
         final ApplicationDeltaCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
 
-    public ApplicationDeltaCollectionPage buildFromResponse(final ApplicationDeltaCollectionResponse response) {
+    @Nonnull
+    public ApplicationDeltaCollectionPage buildFromResponse(@Nonnull final ApplicationDeltaCollectionResponse response) {
         final ApplicationDeltaCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ApplicationDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
@@ -77,7 +81,8 @@ public class ApplicationDeltaCollectionRequest extends BaseCollectionRequest<App
      * @param value the select clause
      * @return the updated request
      */
-    public ApplicationDeltaCollectionRequest select(final String value) {
+    @Nonnull
+    public ApplicationDeltaCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ApplicationDeltaCollectionRequest)this;
     }
@@ -88,6 +93,7 @@ public class ApplicationDeltaCollectionRequest extends BaseCollectionRequest<App
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ApplicationDeltaCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (ApplicationDeltaCollectionRequest)this;
@@ -99,7 +105,8 @@ public class ApplicationDeltaCollectionRequest extends BaseCollectionRequest<App
      * @param value the expand clause
      * @return the updated request
      */
-    public ApplicationDeltaCollectionRequest expand(final String value) {
+    @Nonnull
+    public ApplicationDeltaCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ApplicationDeltaCollectionRequest)this;
     }
@@ -110,7 +117,8 @@ public class ApplicationDeltaCollectionRequest extends BaseCollectionRequest<App
      * @param value the filter clause
      * @return the updated request
      */
-    public ApplicationDeltaCollectionRequest filter(final String value) {
+    @Nonnull
+    public ApplicationDeltaCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ApplicationDeltaCollectionRequest)this;
     }
@@ -121,7 +129,8 @@ public class ApplicationDeltaCollectionRequest extends BaseCollectionRequest<App
      * @param value the order by clause
      * @return the updated request
      */
-    public ApplicationDeltaCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ApplicationDeltaCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ApplicationDeltaCollectionRequest)this;
     }

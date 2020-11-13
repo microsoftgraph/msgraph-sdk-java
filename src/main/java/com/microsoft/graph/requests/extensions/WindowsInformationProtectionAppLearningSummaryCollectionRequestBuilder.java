@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionAppLearningSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLearningSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLearningSummaryRequestBuilder;
@@ -32,7 +34,7 @@ public class WindowsInformationProtectionAppLearningSummaryCollectionRequestBuil
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsInformationProtectionAppLearningSummaryCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsInformationProtectionAppLearningSummaryCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,7 +44,8 @@ public class WindowsInformationProtectionAppLearningSummaryCollectionRequestBuil
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public WindowsInformationProtectionAppLearningSummaryCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WindowsInformationProtectionAppLearningSummaryCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +55,13 @@ public class WindowsInformationProtectionAppLearningSummaryCollectionRequestBuil
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public WindowsInformationProtectionAppLearningSummaryCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WindowsInformationProtectionAppLearningSummaryCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WindowsInformationProtectionAppLearningSummaryCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public WindowsInformationProtectionAppLearningSummaryRequestBuilder byId(final String id) {
+    @Nonnull
+    public WindowsInformationProtectionAppLearningSummaryRequestBuilder byId(@Nonnull final String id) {
         return new WindowsInformationProtectionAppLearningSummaryRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

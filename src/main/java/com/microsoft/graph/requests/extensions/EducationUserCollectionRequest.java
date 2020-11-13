@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.EducationRoot;
 import com.microsoft.graph.models.extensions.EducationUser;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class EducationUserCollectionRequest extends BaseCollectionRequest<Educat
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationUserCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationUserCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EducationUserCollectionResponse.class, EducationUserCollectionPage.class);
     }
 
-    public void get(final ICallback<? super EducationUserCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super EducationUserCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class EducationUserCollectionRequest extends BaseCollectionRequest<Educat
         });
     }
 
+    @Nonnull
     public EducationUserCollectionPage get() throws ClientException {
         final EducationUserCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final EducationUser newEducationUser, final ICallback<? super EducationUser> callback) {
+    public void post(@Nonnull final EducationUser newEducationUser, @Nonnull final ICallback<? super EducationUser> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EducationUserRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newEducationUser, callback);
     }
 
-    public EducationUser post(final EducationUser newEducationUser) throws ClientException {
+    @Nonnull
+    public EducationUser post(@Nonnull final EducationUser newEducationUser) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EducationUserRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class EducationUserCollectionRequest extends BaseCollectionRequest<Educat
      * @param value the expand clause
      * @return the updated request
      */
-    public EducationUserCollectionRequest expand(final String value) {
+    @Nonnull
+    public EducationUserCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (EducationUserCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class EducationUserCollectionRequest extends BaseCollectionRequest<Educat
      * @param value the filter clause
      * @return the updated request
      */
-    public EducationUserCollectionRequest filter(final String value) {
+    @Nonnull
+    public EducationUserCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (EducationUserCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class EducationUserCollectionRequest extends BaseCollectionRequest<Educat
      * @param value the order by clause
      * @return the updated request
      */
-    public EducationUserCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public EducationUserCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (EducationUserCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class EducationUserCollectionRequest extends BaseCollectionRequest<Educat
      * @param value the select clause
      * @return the updated request
      */
-    public EducationUserCollectionRequest select(final String value) {
+    @Nonnull
+    public EducationUserCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (EducationUserCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class EducationUserCollectionRequest extends BaseCollectionRequest<Educat
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public EducationUserCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (EducationUserCollectionRequest)this;
@@ -133,6 +142,7 @@ public class EducationUserCollectionRequest extends BaseCollectionRequest<Educat
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public EducationUserCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (EducationUserCollectionRequest)this;
@@ -144,11 +154,13 @@ public class EducationUserCollectionRequest extends BaseCollectionRequest<Educat
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public EducationUserCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public EducationUserCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (EducationUserCollectionRequest)this;
     }
-    public EducationUserCollectionPage buildFromResponse(final EducationUserCollectionResponse response) {
+    @Nonnull
+    public EducationUserCollectionPage buildFromResponse(@Nonnull final EducationUserCollectionResponse response) {
         final EducationUserCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new EducationUserCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

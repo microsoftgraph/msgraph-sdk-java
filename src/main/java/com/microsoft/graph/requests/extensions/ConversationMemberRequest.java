@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ConversationMember;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,10 +31,10 @@ public class ConversationMemberRequest extends BaseRequest {
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public ConversationMemberRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends ConversationMember> responseClass) {
+    public ConversationMemberRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends ConversationMember> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -43,7 +45,7 @@ public class ConversationMemberRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ConversationMemberRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ConversationMemberRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ConversationMember.class);
     }
 
@@ -52,7 +54,7 @@ public class ConversationMemberRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ConversationMember> callback) {
+    public void get(@Nonnull final ICallback<? super ConversationMember> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -62,6 +64,7 @@ public class ConversationMemberRequest extends BaseRequest {
      * @return the ConversationMember from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ConversationMember get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -71,7 +74,7 @@ public class ConversationMemberRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ConversationMember> callback) {
+    public void delete(@Nonnull final ICallback<? super ConversationMember> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +93,7 @@ public class ConversationMemberRequest extends BaseRequest {
      * @param sourceConversationMember the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ConversationMember sourceConversationMember, final ICallback<? super ConversationMember> callback) {
+    public void patch(@Nonnull final ConversationMember sourceConversationMember, @Nonnull final ICallback<? super ConversationMember> callback) {
         send(HttpMethod.PATCH, callback, sourceConversationMember);
     }
 
@@ -101,7 +104,8 @@ public class ConversationMemberRequest extends BaseRequest {
      * @return the updated ConversationMember
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ConversationMember patch(final ConversationMember sourceConversationMember) throws ClientException {
+    @Nullable
+    public ConversationMember patch(@Nonnull final ConversationMember sourceConversationMember) throws ClientException {
         return send(HttpMethod.PATCH, sourceConversationMember);
     }
 
@@ -111,7 +115,7 @@ public class ConversationMemberRequest extends BaseRequest {
      * @param newConversationMember the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ConversationMember newConversationMember, final ICallback<? super ConversationMember> callback) {
+    public void post(@Nonnull final ConversationMember newConversationMember, @Nonnull final ICallback<? super ConversationMember> callback) {
         send(HttpMethod.POST, callback, newConversationMember);
     }
 
@@ -122,7 +126,8 @@ public class ConversationMemberRequest extends BaseRequest {
      * @return the created ConversationMember
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ConversationMember post(final ConversationMember newConversationMember) throws ClientException {
+    @Nullable
+    public ConversationMember post(@Nonnull final ConversationMember newConversationMember) throws ClientException {
         return send(HttpMethod.POST, newConversationMember);
     }
 
@@ -132,7 +137,7 @@ public class ConversationMemberRequest extends BaseRequest {
      * @param newConversationMember the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ConversationMember newConversationMember, final ICallback<? super ConversationMember> callback) {
+    public void put(@Nonnull final ConversationMember newConversationMember, @Nonnull final ICallback<? super ConversationMember> callback) {
         send(HttpMethod.PUT, callback, newConversationMember);
     }
 
@@ -143,7 +148,8 @@ public class ConversationMemberRequest extends BaseRequest {
      * @return the created ConversationMember
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ConversationMember put(final ConversationMember newConversationMember) throws ClientException {
+    @Nullable
+    public ConversationMember put(@Nonnull final ConversationMember newConversationMember) throws ClientException {
         return send(HttpMethod.PUT, newConversationMember);
     }
 
@@ -153,7 +159,8 @@ public class ConversationMemberRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ConversationMemberRequest select(final String value) {
+     @Nonnull
+     public ConversationMemberRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ConversationMemberRequest)this;
      }
@@ -164,7 +171,8 @@ public class ConversationMemberRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ConversationMemberRequest expand(final String value) {
+     @Nonnull
+     public ConversationMemberRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ConversationMemberRequest)this;
      }

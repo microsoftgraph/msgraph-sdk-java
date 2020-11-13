@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.TeamsTemplate;
 import com.microsoft.graph.requests.extensions.TeamsTemplateCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.TeamsTemplateCollectionPage;
 import com.microsoft.graph.requests.extensions.TeamsTemplateCollectionResponse;
@@ -22,7 +24,7 @@ public class TeamsTemplateCollectionPage extends BaseCollectionPage<TeamsTemplat
      * @param response the serialized TeamsTemplateCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TeamsTemplateCollectionPage(final TeamsTemplateCollectionResponse response, final TeamsTemplateCollectionRequestBuilder builder) {
+    public TeamsTemplateCollectionPage(@Nonnull final TeamsTemplateCollectionResponse response, @Nonnull final TeamsTemplateCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

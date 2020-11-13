@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.RoleAssignmentCollectionRequestBu
 import com.microsoft.graph.requests.extensions.RoleAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
@@ -33,15 +35,16 @@ public class RoleDefinitionWithReferenceRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RoleDefinitionWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RoleDefinitionWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, RoleDefinition.class);
     }
 
-    public void post(final RoleDefinition newRoleDefinition, final IJsonBackedObject payload, final ICallback<? super RoleDefinition> callback) {
+    public void post(@Nonnull final RoleDefinition newRoleDefinition, @Nullable final IJsonBackedObject payload, @Nonnull final ICallback<? super RoleDefinition> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
-    public RoleDefinition post(final RoleDefinition newRoleDefinition, final IJsonBackedObject payload) throws ClientException {
+    @Nullable
+    public RoleDefinition post(@Nonnull final RoleDefinition newRoleDefinition, @Nullable final IJsonBackedObject payload) throws ClientException {
         IJsonBackedObject response = send(HttpMethod.POST, payload);
         if (response != null){
             return newRoleDefinition;
@@ -49,15 +52,16 @@ public class RoleDefinitionWithReferenceRequest extends BaseRequest {
         return null;
     }
 
-    public void get(final ICallback<? super RoleDefinition> callback) {
+    public void get(@Nonnull final ICallback<? super RoleDefinition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
+    @Nullable
     public RoleDefinition get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<? super RoleDefinition> callback) {
+	public void delete(@Nonnull final ICallback<? super RoleDefinition> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -65,11 +69,12 @@ public class RoleDefinitionWithReferenceRequest extends BaseRequest {
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final RoleDefinition sourceRoleDefinition, final ICallback<? super RoleDefinition> callback) {
+	public void patch(@Nonnull final RoleDefinition sourceRoleDefinition, @Nonnull final ICallback<? super RoleDefinition> callback) {
 		send(HttpMethod.PATCH, callback, sourceRoleDefinition);
 	}
 
-	public RoleDefinition patch(final RoleDefinition sourceRoleDefinition) throws ClientException {
+    @Nullable
+	public RoleDefinition patch(@Nonnull final RoleDefinition sourceRoleDefinition) throws ClientException {
 		return send(HttpMethod.PATCH, sourceRoleDefinition);
 	}
 
@@ -80,7 +85,8 @@ public class RoleDefinitionWithReferenceRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public RoleDefinitionWithReferenceRequest select(final String value) {
+    @Nonnull
+    public RoleDefinitionWithReferenceRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (RoleDefinitionWithReferenceRequest)this;
     }
@@ -91,7 +97,8 @@ public class RoleDefinitionWithReferenceRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public RoleDefinitionWithReferenceRequest expand(final String value) {
+    @Nonnull
+    public RoleDefinitionWithReferenceRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (RoleDefinitionWithReferenceRequest)this;
     }

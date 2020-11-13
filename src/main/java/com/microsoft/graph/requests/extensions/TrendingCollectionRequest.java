@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.OfficeGraphInsights;
 import com.microsoft.graph.models.extensions.Trending;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class TrendingCollectionRequest extends BaseCollectionRequest<TrendingCol
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TrendingCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TrendingCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TrendingCollectionResponse.class, TrendingCollectionPage.class);
     }
 
-    public void get(final ICallback<? super TrendingCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super TrendingCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class TrendingCollectionRequest extends BaseCollectionRequest<TrendingCol
         });
     }
 
+    @Nonnull
     public TrendingCollectionPage get() throws ClientException {
         final TrendingCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final Trending newTrending, final ICallback<? super Trending> callback) {
+    public void post(@Nonnull final Trending newTrending, @Nonnull final ICallback<? super Trending> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TrendingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newTrending, callback);
     }
 
-    public Trending post(final Trending newTrending) throws ClientException {
+    @Nonnull
+    public Trending post(@Nonnull final Trending newTrending) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TrendingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class TrendingCollectionRequest extends BaseCollectionRequest<TrendingCol
      * @param value the expand clause
      * @return the updated request
      */
-    public TrendingCollectionRequest expand(final String value) {
+    @Nonnull
+    public TrendingCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (TrendingCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class TrendingCollectionRequest extends BaseCollectionRequest<TrendingCol
      * @param value the filter clause
      * @return the updated request
      */
-    public TrendingCollectionRequest filter(final String value) {
+    @Nonnull
+    public TrendingCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (TrendingCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class TrendingCollectionRequest extends BaseCollectionRequest<TrendingCol
      * @param value the order by clause
      * @return the updated request
      */
-    public TrendingCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public TrendingCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (TrendingCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class TrendingCollectionRequest extends BaseCollectionRequest<TrendingCol
      * @param value the select clause
      * @return the updated request
      */
-    public TrendingCollectionRequest select(final String value) {
+    @Nonnull
+    public TrendingCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (TrendingCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class TrendingCollectionRequest extends BaseCollectionRequest<TrendingCol
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public TrendingCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (TrendingCollectionRequest)this;
@@ -133,6 +142,7 @@ public class TrendingCollectionRequest extends BaseCollectionRequest<TrendingCol
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public TrendingCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (TrendingCollectionRequest)this;
@@ -144,11 +154,13 @@ public class TrendingCollectionRequest extends BaseCollectionRequest<TrendingCol
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public TrendingCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public TrendingCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (TrendingCollectionRequest)this;
     }
-    public TrendingCollectionPage buildFromResponse(final TrendingCollectionResponse response) {
+    @Nonnull
+    public TrendingCollectionPage buildFromResponse(@Nonnull final TrendingCollectionResponse response) {
         final TrendingCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new TrendingCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

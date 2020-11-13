@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.AdministrativeUnit;
 import com.microsoft.graph.requests.extensions.AdministrativeUnitCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.AdministrativeUnitCollectionPage;
 import com.microsoft.graph.requests.extensions.AdministrativeUnitCollectionResponse;
@@ -22,7 +24,7 @@ public class AdministrativeUnitCollectionPage extends BaseCollectionPage<Adminis
      * @param response the serialized AdministrativeUnitCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public AdministrativeUnitCollectionPage(final AdministrativeUnitCollectionResponse response, final AdministrativeUnitCollectionRequestBuilder builder) {
+    public AdministrativeUnitCollectionPage(@Nonnull final AdministrativeUnitCollectionResponse response, @Nonnull final AdministrativeUnitCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

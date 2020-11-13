@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Security;
 import com.microsoft.graph.models.extensions.Alert;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class AlertCollectionRequest extends BaseCollectionRequest<AlertCollectio
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AlertCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AlertCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AlertCollectionResponse.class, AlertCollectionPage.class);
     }
 
-    public void get(final ICallback<? super AlertCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super AlertCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class AlertCollectionRequest extends BaseCollectionRequest<AlertCollectio
         });
     }
 
+    @Nonnull
     public AlertCollectionPage get() throws ClientException {
         final AlertCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final Alert newAlert, final ICallback<? super Alert> callback) {
+    public void post(@Nonnull final Alert newAlert, @Nonnull final ICallback<? super Alert> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AlertRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newAlert, callback);
     }
 
-    public Alert post(final Alert newAlert) throws ClientException {
+    @Nonnull
+    public Alert post(@Nonnull final Alert newAlert) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AlertRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class AlertCollectionRequest extends BaseCollectionRequest<AlertCollectio
      * @param value the expand clause
      * @return the updated request
      */
-    public AlertCollectionRequest expand(final String value) {
+    @Nonnull
+    public AlertCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (AlertCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class AlertCollectionRequest extends BaseCollectionRequest<AlertCollectio
      * @param value the filter clause
      * @return the updated request
      */
-    public AlertCollectionRequest filter(final String value) {
+    @Nonnull
+    public AlertCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (AlertCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class AlertCollectionRequest extends BaseCollectionRequest<AlertCollectio
      * @param value the order by clause
      * @return the updated request
      */
-    public AlertCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public AlertCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AlertCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class AlertCollectionRequest extends BaseCollectionRequest<AlertCollectio
      * @param value the select clause
      * @return the updated request
      */
-    public AlertCollectionRequest select(final String value) {
+    @Nonnull
+    public AlertCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (AlertCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class AlertCollectionRequest extends BaseCollectionRequest<AlertCollectio
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public AlertCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (AlertCollectionRequest)this;
@@ -133,6 +142,7 @@ public class AlertCollectionRequest extends BaseCollectionRequest<AlertCollectio
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public AlertCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (AlertCollectionRequest)this;
@@ -144,11 +154,13 @@ public class AlertCollectionRequest extends BaseCollectionRequest<AlertCollectio
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public AlertCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public AlertCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (AlertCollectionRequest)this;
     }
-    public AlertCollectionPage buildFromResponse(final AlertCollectionResponse response) {
+    @Nonnull
+    public AlertCollectionPage buildFromResponse(@Nonnull final AlertCollectionResponse response) {
         final AlertCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new AlertCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

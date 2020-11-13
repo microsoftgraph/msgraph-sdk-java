@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.OfferShiftRequest;
 import com.microsoft.graph.requests.extensions.OfferShiftRequestCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.OfferShiftRequestCollectionPage;
 import com.microsoft.graph.requests.extensions.OfferShiftRequestCollectionResponse;
@@ -22,7 +24,7 @@ public class OfferShiftRequestCollectionPage extends BaseCollectionPage<OfferShi
      * @param response the serialized OfferShiftRequestCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public OfferShiftRequestCollectionPage(final OfferShiftRequestCollectionResponse response, final OfferShiftRequestCollectionRequestBuilder builder) {
+    public OfferShiftRequestCollectionPage(@Nonnull final OfferShiftRequestCollectionResponse response, @Nonnull final OfferShiftRequestCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

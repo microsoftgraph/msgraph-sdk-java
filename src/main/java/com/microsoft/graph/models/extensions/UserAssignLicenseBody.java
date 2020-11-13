@@ -8,6 +8,8 @@ import com.microsoft.graph.models.extensions.AssignedLicense;
 import com.microsoft.graph.models.extensions.User;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
 import java.util.EnumSet;
@@ -25,6 +27,7 @@ public class UserAssignLicenseBody {
      */
     @SerializedName(value = "addLicenses", alternate = {"AddLicenses"})
     @Expose
+	@Nullable
     public java.util.List<AssignedLicense> addLicenses;
 
     /**
@@ -33,6 +36,7 @@ public class UserAssignLicenseBody {
      */
     @SerializedName(value = "removeLicenses", alternate = {"RemoveLicenses"})
     @Expose
+	@Nullable
     public java.util.List<java.util.UUID> removeLicenses;
 
 
@@ -51,6 +55,7 @@ public class UserAssignLicenseBody {
      *
      * @return the raw representation of this class
      */
+    @Nullable
     public JsonObject getRawObject() {
         return rawObject;
     }
@@ -60,6 +65,7 @@ public class UserAssignLicenseBody {
      *
      * @return the serializer
      */
+    @Nullable
     protected ISerializer getSerializer() {
         return serializer;
     }
@@ -70,7 +76,7 @@ public class UserAssignLicenseBody {
      * @param serializer the serializer
      * @param json the JSON object to set this object to
      */
-    public void setRawObject(final ISerializer serializer, final JsonObject json) {
+    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
         this.serializer = serializer;
         rawObject = json;
 

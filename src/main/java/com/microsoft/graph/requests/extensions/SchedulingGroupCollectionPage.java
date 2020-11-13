@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.SchedulingGroup;
 import com.microsoft.graph.requests.extensions.SchedulingGroupCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.SchedulingGroupCollectionPage;
 import com.microsoft.graph.requests.extensions.SchedulingGroupCollectionResponse;
@@ -22,7 +24,7 @@ public class SchedulingGroupCollectionPage extends BaseCollectionPage<Scheduling
      * @param response the serialized SchedulingGroupCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public SchedulingGroupCollectionPage(final SchedulingGroupCollectionResponse response, final SchedulingGroupCollectionRequestBuilder builder) {
+    public SchedulingGroupCollectionPage(@Nonnull final SchedulingGroupCollectionResponse response, @Nonnull final SchedulingGroupCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

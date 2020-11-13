@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Domain;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,11 +36,11 @@ public class DomainCollectionRequest extends BaseCollectionRequest<DomainCollect
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DomainCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DomainCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DomainCollectionResponse.class, DomainCollectionPage.class);
     }
 
-    public void get(final ICallback<? super DomainCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super DomainCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -52,19 +54,21 @@ public class DomainCollectionRequest extends BaseCollectionRequest<DomainCollect
         });
     }
 
+    @Nonnull
     public DomainCollectionPage get() throws ClientException {
         final DomainCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final Domain newDomain, final ICallback<? super Domain> callback) {
+    public void post(@Nonnull final Domain newDomain, @Nonnull final ICallback<? super Domain> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DomainRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newDomain, callback);
     }
 
-    public Domain post(final Domain newDomain) throws ClientException {
+    @Nonnull
+    public Domain post(@Nonnull final Domain newDomain) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DomainRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -77,7 +81,8 @@ public class DomainCollectionRequest extends BaseCollectionRequest<DomainCollect
      * @param value the expand clause
      * @return the updated request
      */
-    public DomainCollectionRequest expand(final String value) {
+    @Nonnull
+    public DomainCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DomainCollectionRequest)this;
     }
@@ -88,7 +93,8 @@ public class DomainCollectionRequest extends BaseCollectionRequest<DomainCollect
      * @param value the filter clause
      * @return the updated request
      */
-    public DomainCollectionRequest filter(final String value) {
+    @Nonnull
+    public DomainCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DomainCollectionRequest)this;
     }
@@ -99,7 +105,8 @@ public class DomainCollectionRequest extends BaseCollectionRequest<DomainCollect
      * @param value the order by clause
      * @return the updated request
      */
-    public DomainCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DomainCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DomainCollectionRequest)this;
     }
@@ -110,7 +117,8 @@ public class DomainCollectionRequest extends BaseCollectionRequest<DomainCollect
      * @param value the select clause
      * @return the updated request
      */
-    public DomainCollectionRequest select(final String value) {
+    @Nonnull
+    public DomainCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DomainCollectionRequest)this;
     }
@@ -121,6 +129,7 @@ public class DomainCollectionRequest extends BaseCollectionRequest<DomainCollect
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DomainCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (DomainCollectionRequest)this;
@@ -132,6 +141,7 @@ public class DomainCollectionRequest extends BaseCollectionRequest<DomainCollect
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public DomainCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (DomainCollectionRequest)this;
@@ -143,11 +153,13 @@ public class DomainCollectionRequest extends BaseCollectionRequest<DomainCollect
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public DomainCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public DomainCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (DomainCollectionRequest)this;
     }
-    public DomainCollectionPage buildFromResponse(final DomainCollectionResponse response) {
+    @Nonnull
+    public DomainCollectionPage buildFromResponse(@Nonnull final DomainCollectionResponse response) {
         final DomainCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new DomainCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

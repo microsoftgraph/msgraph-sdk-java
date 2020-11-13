@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.extensions.CalendarGroup;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class CalendarGroupCollectionRequest extends BaseCollectionRequest<Calend
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CalendarGroupCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CalendarGroupCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CalendarGroupCollectionResponse.class, CalendarGroupCollectionPage.class);
     }
 
-    public void get(final ICallback<? super CalendarGroupCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super CalendarGroupCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class CalendarGroupCollectionRequest extends BaseCollectionRequest<Calend
         });
     }
 
+    @Nonnull
     public CalendarGroupCollectionPage get() throws ClientException {
         final CalendarGroupCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final CalendarGroup newCalendarGroup, final ICallback<? super CalendarGroup> callback) {
+    public void post(@Nonnull final CalendarGroup newCalendarGroup, @Nonnull final ICallback<? super CalendarGroup> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CalendarGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newCalendarGroup, callback);
     }
 
-    public CalendarGroup post(final CalendarGroup newCalendarGroup) throws ClientException {
+    @Nonnull
+    public CalendarGroup post(@Nonnull final CalendarGroup newCalendarGroup) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CalendarGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class CalendarGroupCollectionRequest extends BaseCollectionRequest<Calend
      * @param value the expand clause
      * @return the updated request
      */
-    public CalendarGroupCollectionRequest expand(final String value) {
+    @Nonnull
+    public CalendarGroupCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (CalendarGroupCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class CalendarGroupCollectionRequest extends BaseCollectionRequest<Calend
      * @param value the filter clause
      * @return the updated request
      */
-    public CalendarGroupCollectionRequest filter(final String value) {
+    @Nonnull
+    public CalendarGroupCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (CalendarGroupCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class CalendarGroupCollectionRequest extends BaseCollectionRequest<Calend
      * @param value the order by clause
      * @return the updated request
      */
-    public CalendarGroupCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public CalendarGroupCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (CalendarGroupCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class CalendarGroupCollectionRequest extends BaseCollectionRequest<Calend
      * @param value the select clause
      * @return the updated request
      */
-    public CalendarGroupCollectionRequest select(final String value) {
+    @Nonnull
+    public CalendarGroupCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (CalendarGroupCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class CalendarGroupCollectionRequest extends BaseCollectionRequest<Calend
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public CalendarGroupCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (CalendarGroupCollectionRequest)this;
@@ -133,6 +142,7 @@ public class CalendarGroupCollectionRequest extends BaseCollectionRequest<Calend
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public CalendarGroupCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (CalendarGroupCollectionRequest)this;
@@ -144,11 +154,13 @@ public class CalendarGroupCollectionRequest extends BaseCollectionRequest<Calend
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public CalendarGroupCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public CalendarGroupCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (CalendarGroupCollectionRequest)this;
     }
-    public CalendarGroupCollectionPage buildFromResponse(final CalendarGroupCollectionResponse response) {
+    @Nonnull
+    public CalendarGroupCollectionPage buildFromResponse(@Nonnull final CalendarGroupCollectionResponse response) {
         final CalendarGroupCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new CalendarGroupCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

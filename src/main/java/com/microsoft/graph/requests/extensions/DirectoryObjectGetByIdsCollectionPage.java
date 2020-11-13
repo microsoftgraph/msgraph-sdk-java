@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetByIdsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetByIdsCollectionPage;
@@ -33,7 +35,7 @@ public class DirectoryObjectGetByIdsCollectionPage extends BaseCollectionPage<Di
      * @param response The serialized DirectoryObjectGetByIdsCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public DirectoryObjectGetByIdsCollectionPage(final DirectoryObjectGetByIdsCollectionResponse response, final DirectoryObjectGetByIdsCollectionRequestBuilder builder) {
+    public DirectoryObjectGetByIdsCollectionPage(@Nonnull final DirectoryObjectGetByIdsCollectionResponse response, @Nonnull final DirectoryObjectGetByIdsCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

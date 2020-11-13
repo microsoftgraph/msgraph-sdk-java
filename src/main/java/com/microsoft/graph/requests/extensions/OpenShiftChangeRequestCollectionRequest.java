@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Schedule;
 import com.microsoft.graph.models.extensions.OpenShiftChangeRequest;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class OpenShiftChangeRequestCollectionRequest extends BaseCollectionReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OpenShiftChangeRequestCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OpenShiftChangeRequestCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OpenShiftChangeRequestCollectionResponse.class, OpenShiftChangeRequestCollectionPage.class);
     }
 
-    public void get(final ICallback<? super OpenShiftChangeRequestCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super OpenShiftChangeRequestCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class OpenShiftChangeRequestCollectionRequest extends BaseCollectionReque
         });
     }
 
+    @Nonnull
     public OpenShiftChangeRequestCollectionPage get() throws ClientException {
         final OpenShiftChangeRequestCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final OpenShiftChangeRequest newOpenShiftChangeRequest, final ICallback<? super OpenShiftChangeRequest> callback) {
+    public void post(@Nonnull final OpenShiftChangeRequest newOpenShiftChangeRequest, @Nonnull final ICallback<? super OpenShiftChangeRequest> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OpenShiftChangeRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newOpenShiftChangeRequest, callback);
     }
 
-    public OpenShiftChangeRequest post(final OpenShiftChangeRequest newOpenShiftChangeRequest) throws ClientException {
+    @Nonnull
+    public OpenShiftChangeRequest post(@Nonnull final OpenShiftChangeRequest newOpenShiftChangeRequest) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OpenShiftChangeRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class OpenShiftChangeRequestCollectionRequest extends BaseCollectionReque
      * @param value the expand clause
      * @return the updated request
      */
-    public OpenShiftChangeRequestCollectionRequest expand(final String value) {
+    @Nonnull
+    public OpenShiftChangeRequestCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (OpenShiftChangeRequestCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class OpenShiftChangeRequestCollectionRequest extends BaseCollectionReque
      * @param value the filter clause
      * @return the updated request
      */
-    public OpenShiftChangeRequestCollectionRequest filter(final String value) {
+    @Nonnull
+    public OpenShiftChangeRequestCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (OpenShiftChangeRequestCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class OpenShiftChangeRequestCollectionRequest extends BaseCollectionReque
      * @param value the order by clause
      * @return the updated request
      */
-    public OpenShiftChangeRequestCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public OpenShiftChangeRequestCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (OpenShiftChangeRequestCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class OpenShiftChangeRequestCollectionRequest extends BaseCollectionReque
      * @param value the select clause
      * @return the updated request
      */
-    public OpenShiftChangeRequestCollectionRequest select(final String value) {
+    @Nonnull
+    public OpenShiftChangeRequestCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (OpenShiftChangeRequestCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class OpenShiftChangeRequestCollectionRequest extends BaseCollectionReque
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public OpenShiftChangeRequestCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (OpenShiftChangeRequestCollectionRequest)this;
@@ -133,6 +142,7 @@ public class OpenShiftChangeRequestCollectionRequest extends BaseCollectionReque
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public OpenShiftChangeRequestCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (OpenShiftChangeRequestCollectionRequest)this;
@@ -144,11 +154,13 @@ public class OpenShiftChangeRequestCollectionRequest extends BaseCollectionReque
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public OpenShiftChangeRequestCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public OpenShiftChangeRequestCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (OpenShiftChangeRequestCollectionRequest)this;
     }
-    public OpenShiftChangeRequestCollectionPage buildFromResponse(final OpenShiftChangeRequestCollectionResponse response) {
+    @Nonnull
+    public OpenShiftChangeRequestCollectionPage buildFromResponse(@Nonnull final OpenShiftChangeRequestCollectionResponse response) {
         final OpenShiftChangeRequestCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new OpenShiftChangeRequestCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

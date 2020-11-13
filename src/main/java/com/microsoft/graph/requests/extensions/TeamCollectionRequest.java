@@ -14,6 +14,8 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ChatMessage;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -38,11 +40,11 @@ public class TeamCollectionRequest extends BaseCollectionRequest<TeamCollectionR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TeamCollectionResponse.class, TeamCollectionPage.class);
     }
 
-    public void get(final ICallback<? super TeamCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super TeamCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -56,19 +58,21 @@ public class TeamCollectionRequest extends BaseCollectionRequest<TeamCollectionR
         });
     }
 
+    @Nonnull
     public TeamCollectionPage get() throws ClientException {
         final TeamCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final Team newTeam, final ICallback<? super Team> callback) {
+    public void post(@Nonnull final Team newTeam, @Nonnull final ICallback<? super Team> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TeamRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newTeam, callback);
     }
 
-    public Team post(final Team newTeam) throws ClientException {
+    @Nonnull
+    public Team post(@Nonnull final Team newTeam) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TeamRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -81,7 +85,8 @@ public class TeamCollectionRequest extends BaseCollectionRequest<TeamCollectionR
      * @param value the expand clause
      * @return the updated request
      */
-    public TeamCollectionRequest expand(final String value) {
+    @Nonnull
+    public TeamCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (TeamCollectionRequest)this;
     }
@@ -92,7 +97,8 @@ public class TeamCollectionRequest extends BaseCollectionRequest<TeamCollectionR
      * @param value the filter clause
      * @return the updated request
      */
-    public TeamCollectionRequest filter(final String value) {
+    @Nonnull
+    public TeamCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (TeamCollectionRequest)this;
     }
@@ -103,7 +109,8 @@ public class TeamCollectionRequest extends BaseCollectionRequest<TeamCollectionR
      * @param value the order by clause
      * @return the updated request
      */
-    public TeamCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public TeamCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (TeamCollectionRequest)this;
     }
@@ -114,7 +121,8 @@ public class TeamCollectionRequest extends BaseCollectionRequest<TeamCollectionR
      * @param value the select clause
      * @return the updated request
      */
-    public TeamCollectionRequest select(final String value) {
+    @Nonnull
+    public TeamCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (TeamCollectionRequest)this;
     }
@@ -125,6 +133,7 @@ public class TeamCollectionRequest extends BaseCollectionRequest<TeamCollectionR
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public TeamCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (TeamCollectionRequest)this;
@@ -136,6 +145,7 @@ public class TeamCollectionRequest extends BaseCollectionRequest<TeamCollectionR
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public TeamCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (TeamCollectionRequest)this;
@@ -147,11 +157,13 @@ public class TeamCollectionRequest extends BaseCollectionRequest<TeamCollectionR
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public TeamCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public TeamCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (TeamCollectionRequest)this;
     }
-    public TeamCollectionPage buildFromResponse(final TeamCollectionResponse response) {
+    @Nonnull
+    public TeamCollectionPage buildFromResponse(@Nonnull final TeamCollectionResponse response) {
         final TeamCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new TeamCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

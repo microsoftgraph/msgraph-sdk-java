@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.WorkbookWorksheet;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -36,11 +38,11 @@ public class WorkbookWorksheetCollectionRequest extends BaseCollectionRequest<Wo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookWorksheetCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookWorksheetCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookWorksheetCollectionResponse.class, WorkbookWorksheetCollectionPage.class);
     }
 
-    public void get(final ICallback<? super WorkbookWorksheetCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookWorksheetCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -54,19 +56,21 @@ public class WorkbookWorksheetCollectionRequest extends BaseCollectionRequest<Wo
         });
     }
 
+    @Nonnull
     public WorkbookWorksheetCollectionPage get() throws ClientException {
         final WorkbookWorksheetCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final WorkbookWorksheet newWorkbookWorksheet, final ICallback<? super WorkbookWorksheet> callback) {
+    public void post(@Nonnull final WorkbookWorksheet newWorkbookWorksheet, @Nonnull final ICallback<? super WorkbookWorksheet> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookWorksheetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newWorkbookWorksheet, callback);
     }
 
-    public WorkbookWorksheet post(final WorkbookWorksheet newWorkbookWorksheet) throws ClientException {
+    @Nonnull
+    public WorkbookWorksheet post(@Nonnull final WorkbookWorksheet newWorkbookWorksheet) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookWorksheetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -79,7 +83,8 @@ public class WorkbookWorksheetCollectionRequest extends BaseCollectionRequest<Wo
      * @param value the expand clause
      * @return the updated request
      */
-    public WorkbookWorksheetCollectionRequest expand(final String value) {
+    @Nonnull
+    public WorkbookWorksheetCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookWorksheetCollectionRequest)this;
     }
@@ -90,7 +95,8 @@ public class WorkbookWorksheetCollectionRequest extends BaseCollectionRequest<Wo
      * @param value the filter clause
      * @return the updated request
      */
-    public WorkbookWorksheetCollectionRequest filter(final String value) {
+    @Nonnull
+    public WorkbookWorksheetCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookWorksheetCollectionRequest)this;
     }
@@ -101,7 +107,8 @@ public class WorkbookWorksheetCollectionRequest extends BaseCollectionRequest<Wo
      * @param value the order by clause
      * @return the updated request
      */
-    public WorkbookWorksheetCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public WorkbookWorksheetCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookWorksheetCollectionRequest)this;
     }
@@ -112,7 +119,8 @@ public class WorkbookWorksheetCollectionRequest extends BaseCollectionRequest<Wo
      * @param value the select clause
      * @return the updated request
      */
-    public WorkbookWorksheetCollectionRequest select(final String value) {
+    @Nonnull
+    public WorkbookWorksheetCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookWorksheetCollectionRequest)this;
     }
@@ -123,6 +131,7 @@ public class WorkbookWorksheetCollectionRequest extends BaseCollectionRequest<Wo
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public WorkbookWorksheetCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (WorkbookWorksheetCollectionRequest)this;
@@ -134,6 +143,7 @@ public class WorkbookWorksheetCollectionRequest extends BaseCollectionRequest<Wo
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public WorkbookWorksheetCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (WorkbookWorksheetCollectionRequest)this;
@@ -145,11 +155,13 @@ public class WorkbookWorksheetCollectionRequest extends BaseCollectionRequest<Wo
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public WorkbookWorksheetCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public WorkbookWorksheetCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (WorkbookWorksheetCollectionRequest)this;
     }
-    public WorkbookWorksheetCollectionPage buildFromResponse(final WorkbookWorksheetCollectionResponse response) {
+    @Nonnull
+    public WorkbookWorksheetCollectionPage buildFromResponse(@Nonnull final WorkbookWorksheetCollectionResponse response) {
         final WorkbookWorksheetCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new WorkbookWorksheetCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

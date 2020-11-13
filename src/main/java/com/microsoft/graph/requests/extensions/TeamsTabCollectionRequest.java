@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Channel;
 import com.microsoft.graph.models.extensions.TeamsTab;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class TeamsTabCollectionRequest extends BaseCollectionRequest<TeamsTabCol
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamsTabCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsTabCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TeamsTabCollectionResponse.class, TeamsTabCollectionPage.class);
     }
 
-    public void get(final ICallback<? super TeamsTabCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super TeamsTabCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class TeamsTabCollectionRequest extends BaseCollectionRequest<TeamsTabCol
         });
     }
 
+    @Nonnull
     public TeamsTabCollectionPage get() throws ClientException {
         final TeamsTabCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final TeamsTab newTeamsTab, final ICallback<? super TeamsTab> callback) {
+    public void post(@Nonnull final TeamsTab newTeamsTab, @Nonnull final ICallback<? super TeamsTab> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TeamsTabRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newTeamsTab, callback);
     }
 
-    public TeamsTab post(final TeamsTab newTeamsTab) throws ClientException {
+    @Nonnull
+    public TeamsTab post(@Nonnull final TeamsTab newTeamsTab) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TeamsTabRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class TeamsTabCollectionRequest extends BaseCollectionRequest<TeamsTabCol
      * @param value the expand clause
      * @return the updated request
      */
-    public TeamsTabCollectionRequest expand(final String value) {
+    @Nonnull
+    public TeamsTabCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (TeamsTabCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class TeamsTabCollectionRequest extends BaseCollectionRequest<TeamsTabCol
      * @param value the filter clause
      * @return the updated request
      */
-    public TeamsTabCollectionRequest filter(final String value) {
+    @Nonnull
+    public TeamsTabCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (TeamsTabCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class TeamsTabCollectionRequest extends BaseCollectionRequest<TeamsTabCol
      * @param value the order by clause
      * @return the updated request
      */
-    public TeamsTabCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public TeamsTabCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (TeamsTabCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class TeamsTabCollectionRequest extends BaseCollectionRequest<TeamsTabCol
      * @param value the select clause
      * @return the updated request
      */
-    public TeamsTabCollectionRequest select(final String value) {
+    @Nonnull
+    public TeamsTabCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (TeamsTabCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class TeamsTabCollectionRequest extends BaseCollectionRequest<TeamsTabCol
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public TeamsTabCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (TeamsTabCollectionRequest)this;
@@ -133,6 +142,7 @@ public class TeamsTabCollectionRequest extends BaseCollectionRequest<TeamsTabCol
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public TeamsTabCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (TeamsTabCollectionRequest)this;
@@ -144,11 +154,13 @@ public class TeamsTabCollectionRequest extends BaseCollectionRequest<TeamsTabCol
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public TeamsTabCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public TeamsTabCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (TeamsTabCollectionRequest)this;
     }
-    public TeamsTabCollectionPage buildFromResponse(final TeamsTabCollectionResponse response) {
+    @Nonnull
+    public TeamsTabCollectionPage buildFromResponse(@Nonnull final TeamsTabCollectionResponse response) {
         final TeamsTabCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new TeamsTabCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

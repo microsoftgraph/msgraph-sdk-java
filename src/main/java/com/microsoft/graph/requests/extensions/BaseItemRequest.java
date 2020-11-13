@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.BaseItem;
 import com.microsoft.graph.requests.extensions.UserRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -30,10 +32,10 @@ public class BaseItemRequest extends BaseRequest {
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public BaseItemRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends BaseItem> responseClass) {
+    public BaseItemRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends BaseItem> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class BaseItemRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public BaseItemRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public BaseItemRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseItem.class);
     }
 
@@ -53,7 +55,7 @@ public class BaseItemRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super BaseItem> callback) {
+    public void get(@Nonnull final ICallback<? super BaseItem> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class BaseItemRequest extends BaseRequest {
      * @return the BaseItem from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public BaseItem get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class BaseItemRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super BaseItem> callback) {
+    public void delete(@Nonnull final ICallback<? super BaseItem> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class BaseItemRequest extends BaseRequest {
      * @param sourceBaseItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final BaseItem sourceBaseItem, final ICallback<? super BaseItem> callback) {
+    public void patch(@Nonnull final BaseItem sourceBaseItem, @Nonnull final ICallback<? super BaseItem> callback) {
         send(HttpMethod.PATCH, callback, sourceBaseItem);
     }
 
@@ -102,7 +105,8 @@ public class BaseItemRequest extends BaseRequest {
      * @return the updated BaseItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public BaseItem patch(final BaseItem sourceBaseItem) throws ClientException {
+    @Nullable
+    public BaseItem patch(@Nonnull final BaseItem sourceBaseItem) throws ClientException {
         return send(HttpMethod.PATCH, sourceBaseItem);
     }
 
@@ -112,7 +116,7 @@ public class BaseItemRequest extends BaseRequest {
      * @param newBaseItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final BaseItem newBaseItem, final ICallback<? super BaseItem> callback) {
+    public void post(@Nonnull final BaseItem newBaseItem, @Nonnull final ICallback<? super BaseItem> callback) {
         send(HttpMethod.POST, callback, newBaseItem);
     }
 
@@ -123,7 +127,8 @@ public class BaseItemRequest extends BaseRequest {
      * @return the created BaseItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public BaseItem post(final BaseItem newBaseItem) throws ClientException {
+    @Nullable
+    public BaseItem post(@Nonnull final BaseItem newBaseItem) throws ClientException {
         return send(HttpMethod.POST, newBaseItem);
     }
 
@@ -133,7 +138,7 @@ public class BaseItemRequest extends BaseRequest {
      * @param newBaseItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final BaseItem newBaseItem, final ICallback<? super BaseItem> callback) {
+    public void put(@Nonnull final BaseItem newBaseItem, @Nonnull final ICallback<? super BaseItem> callback) {
         send(HttpMethod.PUT, callback, newBaseItem);
     }
 
@@ -144,7 +149,8 @@ public class BaseItemRequest extends BaseRequest {
      * @return the created BaseItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public BaseItem put(final BaseItem newBaseItem) throws ClientException {
+    @Nullable
+    public BaseItem put(@Nonnull final BaseItem newBaseItem) throws ClientException {
         return send(HttpMethod.PUT, newBaseItem);
     }
 
@@ -154,7 +160,8 @@ public class BaseItemRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public BaseItemRequest select(final String value) {
+     @Nonnull
+     public BaseItemRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (BaseItemRequest)this;
      }
@@ -165,7 +172,8 @@ public class BaseItemRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public BaseItemRequest expand(final String value) {
+     @Nonnull
+     public BaseItemRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (BaseItemRequest)this;
      }

@@ -9,6 +9,8 @@ import com.microsoft.graph.models.extensions.MailTips;
 import java.util.EnumSet;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
 import java.util.EnumSet;
@@ -26,6 +28,7 @@ public class UserGetMailTipsBody {
      */
     @SerializedName(value = "emailAddresses", alternate = {"EmailAddresses"})
     @Expose
+	@Nullable
     public java.util.List<String> emailAddresses;
 
     /**
@@ -34,6 +37,7 @@ public class UserGetMailTipsBody {
      */
     @SerializedName(value = "mailTipsOptions", alternate = {"MailTipsOptions"})
     @Expose
+	@Nullable
     public EnumSet<MailTipsType> mailTipsOptions;
 
 
@@ -52,6 +56,7 @@ public class UserGetMailTipsBody {
      *
      * @return the raw representation of this class
      */
+    @Nullable
     public JsonObject getRawObject() {
         return rawObject;
     }
@@ -61,6 +66,7 @@ public class UserGetMailTipsBody {
      *
      * @return the serializer
      */
+    @Nullable
     protected ISerializer getSerializer() {
         return serializer;
     }
@@ -71,7 +77,7 @@ public class UserGetMailTipsBody {
      * @param serializer the serializer
      * @param json the JSON object to set this object to
      */
-    public void setRawObject(final ISerializer serializer, final JsonObject json) {
+    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
         this.serializer = serializer;
         rawObject = json;
 

@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.PolicyRoot;
 import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class TokenLifetimePolicyCollectionRequest extends BaseCollectionRequest<
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TokenLifetimePolicyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TokenLifetimePolicyCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TokenLifetimePolicyCollectionResponse.class, TokenLifetimePolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<? super TokenLifetimePolicyCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super TokenLifetimePolicyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class TokenLifetimePolicyCollectionRequest extends BaseCollectionRequest<
         });
     }
 
+    @Nonnull
     public TokenLifetimePolicyCollectionPage get() throws ClientException {
         final TokenLifetimePolicyCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final TokenLifetimePolicy newTokenLifetimePolicy, final ICallback<? super TokenLifetimePolicy> callback) {
+    public void post(@Nonnull final TokenLifetimePolicy newTokenLifetimePolicy, @Nonnull final ICallback<? super TokenLifetimePolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TokenLifetimePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newTokenLifetimePolicy, callback);
     }
 
-    public TokenLifetimePolicy post(final TokenLifetimePolicy newTokenLifetimePolicy) throws ClientException {
+    @Nonnull
+    public TokenLifetimePolicy post(@Nonnull final TokenLifetimePolicy newTokenLifetimePolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TokenLifetimePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class TokenLifetimePolicyCollectionRequest extends BaseCollectionRequest<
      * @param value the expand clause
      * @return the updated request
      */
-    public TokenLifetimePolicyCollectionRequest expand(final String value) {
+    @Nonnull
+    public TokenLifetimePolicyCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (TokenLifetimePolicyCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class TokenLifetimePolicyCollectionRequest extends BaseCollectionRequest<
      * @param value the filter clause
      * @return the updated request
      */
-    public TokenLifetimePolicyCollectionRequest filter(final String value) {
+    @Nonnull
+    public TokenLifetimePolicyCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (TokenLifetimePolicyCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class TokenLifetimePolicyCollectionRequest extends BaseCollectionRequest<
      * @param value the order by clause
      * @return the updated request
      */
-    public TokenLifetimePolicyCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public TokenLifetimePolicyCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (TokenLifetimePolicyCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class TokenLifetimePolicyCollectionRequest extends BaseCollectionRequest<
      * @param value the select clause
      * @return the updated request
      */
-    public TokenLifetimePolicyCollectionRequest select(final String value) {
+    @Nonnull
+    public TokenLifetimePolicyCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (TokenLifetimePolicyCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class TokenLifetimePolicyCollectionRequest extends BaseCollectionRequest<
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public TokenLifetimePolicyCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (TokenLifetimePolicyCollectionRequest)this;
@@ -133,6 +142,7 @@ public class TokenLifetimePolicyCollectionRequest extends BaseCollectionRequest<
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public TokenLifetimePolicyCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (TokenLifetimePolicyCollectionRequest)this;
@@ -144,11 +154,13 @@ public class TokenLifetimePolicyCollectionRequest extends BaseCollectionRequest<
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public TokenLifetimePolicyCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public TokenLifetimePolicyCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (TokenLifetimePolicyCollectionRequest)this;
     }
-    public TokenLifetimePolicyCollectionPage buildFromResponse(final TokenLifetimePolicyCollectionResponse response) {
+    @Nonnull
+    public TokenLifetimePolicyCollectionPage buildFromResponse(@Nonnull final TokenLifetimePolicyCollectionResponse response) {
         final TokenLifetimePolicyCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new TokenLifetimePolicyCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

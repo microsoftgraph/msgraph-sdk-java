@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionPage;
 import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionResponse;
@@ -22,7 +24,7 @@ public class ServicePrincipalCollectionPage extends BaseCollectionPage<ServicePr
      * @param response the serialized ServicePrincipalCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ServicePrincipalCollectionPage(final ServicePrincipalCollectionResponse response, final ServicePrincipalCollectionRequestBuilder builder) {
+    public ServicePrincipalCollectionPage(@Nonnull final ServicePrincipalCollectionResponse response, @Nonnull final ServicePrincipalCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

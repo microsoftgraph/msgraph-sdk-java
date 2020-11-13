@@ -14,6 +14,8 @@ import com.microsoft.graph.models.extensions.CopyNotebookModel;
 import com.microsoft.graph.models.extensions.RecentNotebook;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.NotebookCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.NotebookRequestBuilder;
@@ -37,7 +39,7 @@ public class NotebookCollectionRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public NotebookCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public NotebookCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,7 +49,8 @@ public class NotebookCollectionRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public NotebookCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public NotebookCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -57,21 +60,25 @@ public class NotebookCollectionRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public NotebookCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public NotebookCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new NotebookCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public NotebookRequestBuilder byId(final String id) {
+    @Nonnull
+    public NotebookRequestBuilder byId(@Nonnull final String id) {
         return new NotebookRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
-    public NotebookGetNotebookFromWebUrlRequestBuilder getNotebookFromWebUrl(final String webUrl) {
+    @Nonnull
+    public NotebookGetNotebookFromWebUrlRequestBuilder getNotebookFromWebUrl(@Nullable final String webUrl) {
         return new NotebookGetNotebookFromWebUrlRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getNotebookFromWebUrl"), getClient(), null, webUrl);
     }
 
-    public NotebookGetRecentNotebooksCollectionRequestBuilder getRecentNotebooks(final Boolean includePersonalNotebooks) {
+    @Nonnull
+    public NotebookGetRecentNotebooksCollectionRequestBuilder getRecentNotebooks(@Nullable final Boolean includePersonalNotebooks) {
         return new NotebookGetRecentNotebooksCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getRecentNotebooks"), getClient(), null, includePersonalNotebooks);
     }
 }

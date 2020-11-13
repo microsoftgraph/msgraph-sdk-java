@@ -6,6 +6,8 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookTableColumn;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnItemAtRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.core.ClientException;
@@ -27,7 +29,7 @@ public class WorkbookTableColumnItemAtRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookTableColumnItemAtRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableColumnItemAtRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookTableColumn.class);
     }
 
@@ -36,7 +38,7 @@ public class WorkbookTableColumnItemAtRequest extends BaseRequest {
      * @param srcWorkbookTableColumn the WorkbookTableColumn with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    public void patch(WorkbookTableColumn srcWorkbookTableColumn, final ICallback<? super WorkbookTableColumn> callback) {
+    public void patch(@Nonnull WorkbookTableColumn srcWorkbookTableColumn, @Nonnull final ICallback<? super WorkbookTableColumn> callback) {
         send(HttpMethod.PATCH, callback, srcWorkbookTableColumn);
     }
 
@@ -47,7 +49,8 @@ public class WorkbookTableColumnItemAtRequest extends BaseRequest {
      * @return the WorkbookTableColumn
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-     public WorkbookTableColumn patch(WorkbookTableColumn srcWorkbookTableColumn) throws ClientException {
+     @Nullable
+     public WorkbookTableColumn patch(@Nonnull final WorkbookTableColumn srcWorkbookTableColumn) throws ClientException {
         return this.send(HttpMethod.PATCH, srcWorkbookTableColumn);
     }
 
@@ -57,7 +60,7 @@ public class WorkbookTableColumnItemAtRequest extends BaseRequest {
      * @param srcWorkbookTableColumn the WorkbookTableColumn to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(WorkbookTableColumn srcWorkbookTableColumn, final ICallback<? super WorkbookTableColumn> callback) {
+    public void put(@Nonnull final WorkbookTableColumn srcWorkbookTableColumn, @Nonnull final ICallback<? super WorkbookTableColumn> callback) {
         send(HttpMethod.PUT, callback, srcWorkbookTableColumn);
     }
 
@@ -68,7 +71,8 @@ public class WorkbookTableColumnItemAtRequest extends BaseRequest {
      * @return the WorkbookTableColumn
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-     public WorkbookTableColumn put(WorkbookTableColumn srcWorkbookTableColumn) throws ClientException {
+     @Nullable
+     public WorkbookTableColumn put(@Nonnull final WorkbookTableColumn srcWorkbookTableColumn) throws ClientException {
         return this.send(HttpMethod.PUT, srcWorkbookTableColumn);
     }
     /**
@@ -76,7 +80,7 @@ public class WorkbookTableColumnItemAtRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookTableColumn> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookTableColumn> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -86,6 +90,7 @@ public class WorkbookTableColumnItemAtRequest extends BaseRequest {
      * @return the WorkbookTableColumn
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
+    @Nullable
     public WorkbookTableColumn get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -96,7 +101,8 @@ public class WorkbookTableColumnItemAtRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public WorkbookTableColumnItemAtRequest select(final String value) {
+    @Nonnull
+    public WorkbookTableColumnItemAtRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookTableColumnItemAtRequest)this;
     }
@@ -107,7 +113,8 @@ public class WorkbookTableColumnItemAtRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public WorkbookTableColumnItemAtRequest expand(final String value) {
+    @Nonnull
+    public WorkbookTableColumnItemAtRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookTableColumnItemAtRequest)this;
     }
@@ -118,7 +125,8 @@ public class WorkbookTableColumnItemAtRequest extends BaseRequest {
      * @param value the filter clause
      * @return the updated request
      */
-    public WorkbookTableColumnItemAtRequest filter(final String value) {
+    @Nonnull
+    public WorkbookTableColumnItemAtRequest filter(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookTableColumnItemAtRequest)this;
     }
@@ -129,7 +137,8 @@ public class WorkbookTableColumnItemAtRequest extends BaseRequest {
      * @param value the order by clause
      * @return the updated request
      */
-    public WorkbookTableColumnItemAtRequest orderBy(final String value) {
+    @Nonnull
+    public WorkbookTableColumnItemAtRequest orderBy(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookTableColumnItemAtRequest)this;
     }

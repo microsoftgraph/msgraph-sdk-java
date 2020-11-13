@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ContactFolder;
 import com.microsoft.graph.models.extensions.Contact;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class ContactCollectionRequest extends BaseCollectionRequest<ContactColle
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ContactCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ContactCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ContactCollectionResponse.class, ContactCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ContactCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super ContactCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class ContactCollectionRequest extends BaseCollectionRequest<ContactColle
         });
     }
 
+    @Nonnull
     public ContactCollectionPage get() throws ClientException {
         final ContactCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final Contact newContact, final ICallback<? super Contact> callback) {
+    public void post(@Nonnull final Contact newContact, @Nonnull final ICallback<? super Contact> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ContactRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newContact, callback);
     }
 
-    public Contact post(final Contact newContact) throws ClientException {
+    @Nonnull
+    public Contact post(@Nonnull final Contact newContact) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ContactRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class ContactCollectionRequest extends BaseCollectionRequest<ContactColle
      * @param value the expand clause
      * @return the updated request
      */
-    public ContactCollectionRequest expand(final String value) {
+    @Nonnull
+    public ContactCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ContactCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class ContactCollectionRequest extends BaseCollectionRequest<ContactColle
      * @param value the filter clause
      * @return the updated request
      */
-    public ContactCollectionRequest filter(final String value) {
+    @Nonnull
+    public ContactCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ContactCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class ContactCollectionRequest extends BaseCollectionRequest<ContactColle
      * @param value the order by clause
      * @return the updated request
      */
-    public ContactCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ContactCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ContactCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class ContactCollectionRequest extends BaseCollectionRequest<ContactColle
      * @param value the select clause
      * @return the updated request
      */
-    public ContactCollectionRequest select(final String value) {
+    @Nonnull
+    public ContactCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ContactCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class ContactCollectionRequest extends BaseCollectionRequest<ContactColle
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ContactCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ContactCollectionRequest)this;
@@ -133,6 +142,7 @@ public class ContactCollectionRequest extends BaseCollectionRequest<ContactColle
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ContactCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (ContactCollectionRequest)this;
@@ -144,11 +154,13 @@ public class ContactCollectionRequest extends BaseCollectionRequest<ContactColle
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ContactCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ContactCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (ContactCollectionRequest)this;
     }
-    public ContactCollectionPage buildFromResponse(final ContactCollectionResponse response) {
+    @Nonnull
+    public ContactCollectionPage buildFromResponse(@Nonnull final ContactCollectionResponse response) {
         final ContactCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ContactCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

@@ -8,6 +8,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Event;
+import com.microsoft.graph.models.extensions.Recipient;
 import com.microsoft.graph.models.extensions.DateTimeTimeZone;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AttachmentRequestBuilder;
@@ -22,6 +23,8 @@ import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedProperty
 import com.microsoft.graph.requests.extensions.CalendarRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -40,7 +43,7 @@ public class EventRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EventRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EventRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Event.class);
     }
 
@@ -49,7 +52,7 @@ public class EventRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Event> callback) {
+    public void get(@Nonnull final ICallback<? super Event> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -59,6 +62,7 @@ public class EventRequest extends BaseRequest {
      * @return the Event from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Event get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -68,7 +72,7 @@ public class EventRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Event> callback) {
+    public void delete(@Nonnull final ICallback<? super Event> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -87,7 +91,7 @@ public class EventRequest extends BaseRequest {
      * @param sourceEvent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Event sourceEvent, final ICallback<? super Event> callback) {
+    public void patch(@Nonnull final Event sourceEvent, @Nonnull final ICallback<? super Event> callback) {
         send(HttpMethod.PATCH, callback, sourceEvent);
     }
 
@@ -98,7 +102,8 @@ public class EventRequest extends BaseRequest {
      * @return the updated Event
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Event patch(final Event sourceEvent) throws ClientException {
+    @Nullable
+    public Event patch(@Nonnull final Event sourceEvent) throws ClientException {
         return send(HttpMethod.PATCH, sourceEvent);
     }
 
@@ -108,7 +113,7 @@ public class EventRequest extends BaseRequest {
      * @param newEvent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Event newEvent, final ICallback<? super Event> callback) {
+    public void post(@Nonnull final Event newEvent, @Nonnull final ICallback<? super Event> callback) {
         send(HttpMethod.POST, callback, newEvent);
     }
 
@@ -119,7 +124,8 @@ public class EventRequest extends BaseRequest {
      * @return the created Event
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Event post(final Event newEvent) throws ClientException {
+    @Nullable
+    public Event post(@Nonnull final Event newEvent) throws ClientException {
         return send(HttpMethod.POST, newEvent);
     }
 
@@ -129,7 +135,7 @@ public class EventRequest extends BaseRequest {
      * @param newEvent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Event newEvent, final ICallback<? super Event> callback) {
+    public void put(@Nonnull final Event newEvent, @Nonnull final ICallback<? super Event> callback) {
         send(HttpMethod.PUT, callback, newEvent);
     }
 
@@ -140,7 +146,8 @@ public class EventRequest extends BaseRequest {
      * @return the created Event
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Event put(final Event newEvent) throws ClientException {
+    @Nullable
+    public Event put(@Nonnull final Event newEvent) throws ClientException {
         return send(HttpMethod.PUT, newEvent);
     }
 
@@ -150,7 +157,8 @@ public class EventRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public EventRequest select(final String value) {
+     @Nonnull
+     public EventRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (EventRequest)this;
      }
@@ -161,7 +169,8 @@ public class EventRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public EventRequest expand(final String value) {
+     @Nonnull
+     public EventRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (EventRequest)this;
      }

@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EnrollmentConfigurationAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class EnrollmentConfigurationAssignmentRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EnrollmentConfigurationAssignmentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EnrollmentConfigurationAssignmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EnrollmentConfigurationAssignment.class);
     }
 
@@ -37,7 +39,7 @@ public class EnrollmentConfigurationAssignmentRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super EnrollmentConfigurationAssignment> callback) {
+    public void get(@Nonnull final ICallback<? super EnrollmentConfigurationAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class EnrollmentConfigurationAssignmentRequest extends BaseRequest {
      * @return the EnrollmentConfigurationAssignment from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public EnrollmentConfigurationAssignment get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class EnrollmentConfigurationAssignmentRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super EnrollmentConfigurationAssignment> callback) {
+    public void delete(@Nonnull final ICallback<? super EnrollmentConfigurationAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class EnrollmentConfigurationAssignmentRequest extends BaseRequest {
      * @param sourceEnrollmentConfigurationAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EnrollmentConfigurationAssignment sourceEnrollmentConfigurationAssignment, final ICallback<? super EnrollmentConfigurationAssignment> callback) {
+    public void patch(@Nonnull final EnrollmentConfigurationAssignment sourceEnrollmentConfigurationAssignment, @Nonnull final ICallback<? super EnrollmentConfigurationAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceEnrollmentConfigurationAssignment);
     }
 
@@ -86,7 +89,8 @@ public class EnrollmentConfigurationAssignmentRequest extends BaseRequest {
      * @return the updated EnrollmentConfigurationAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EnrollmentConfigurationAssignment patch(final EnrollmentConfigurationAssignment sourceEnrollmentConfigurationAssignment) throws ClientException {
+    @Nullable
+    public EnrollmentConfigurationAssignment patch(@Nonnull final EnrollmentConfigurationAssignment sourceEnrollmentConfigurationAssignment) throws ClientException {
         return send(HttpMethod.PATCH, sourceEnrollmentConfigurationAssignment);
     }
 
@@ -96,7 +100,7 @@ public class EnrollmentConfigurationAssignmentRequest extends BaseRequest {
      * @param newEnrollmentConfigurationAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment, final ICallback<? super EnrollmentConfigurationAssignment> callback) {
+    public void post(@Nonnull final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment, @Nonnull final ICallback<? super EnrollmentConfigurationAssignment> callback) {
         send(HttpMethod.POST, callback, newEnrollmentConfigurationAssignment);
     }
 
@@ -107,7 +111,8 @@ public class EnrollmentConfigurationAssignmentRequest extends BaseRequest {
      * @return the created EnrollmentConfigurationAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EnrollmentConfigurationAssignment post(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment) throws ClientException {
+    @Nullable
+    public EnrollmentConfigurationAssignment post(@Nonnull final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment) throws ClientException {
         return send(HttpMethod.POST, newEnrollmentConfigurationAssignment);
     }
 
@@ -117,7 +122,7 @@ public class EnrollmentConfigurationAssignmentRequest extends BaseRequest {
      * @param newEnrollmentConfigurationAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment, final ICallback<? super EnrollmentConfigurationAssignment> callback) {
+    public void put(@Nonnull final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment, @Nonnull final ICallback<? super EnrollmentConfigurationAssignment> callback) {
         send(HttpMethod.PUT, callback, newEnrollmentConfigurationAssignment);
     }
 
@@ -128,7 +133,8 @@ public class EnrollmentConfigurationAssignmentRequest extends BaseRequest {
      * @return the created EnrollmentConfigurationAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EnrollmentConfigurationAssignment put(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment) throws ClientException {
+    @Nullable
+    public EnrollmentConfigurationAssignment put(@Nonnull final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment) throws ClientException {
         return send(HttpMethod.PUT, newEnrollmentConfigurationAssignment);
     }
 
@@ -138,7 +144,8 @@ public class EnrollmentConfigurationAssignmentRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public EnrollmentConfigurationAssignmentRequest select(final String value) {
+     @Nonnull
+     public EnrollmentConfigurationAssignmentRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (EnrollmentConfigurationAssignmentRequest)this;
      }
@@ -149,7 +156,8 @@ public class EnrollmentConfigurationAssignmentRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public EnrollmentConfigurationAssignmentRequest expand(final String value) {
+     @Nonnull
+     public EnrollmentConfigurationAssignmentRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (EnrollmentConfigurationAssignmentRequest)this;
      }

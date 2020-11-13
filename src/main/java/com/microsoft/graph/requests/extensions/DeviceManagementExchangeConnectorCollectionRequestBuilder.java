@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.DeviceManagementExchangeConnector;
 import com.microsoft.graph.models.generated.DeviceManagementExchangeConnectorSyncType;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DeviceManagementExchangeConnectorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementExchangeConnectorRequestBuilder;
@@ -33,7 +35,7 @@ public class DeviceManagementExchangeConnectorCollectionRequestBuilder extends B
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementExchangeConnectorCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementExchangeConnectorCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -43,7 +45,8 @@ public class DeviceManagementExchangeConnectorCollectionRequestBuilder extends B
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public DeviceManagementExchangeConnectorCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DeviceManagementExchangeConnectorCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -53,11 +56,13 @@ public class DeviceManagementExchangeConnectorCollectionRequestBuilder extends B
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public DeviceManagementExchangeConnectorCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DeviceManagementExchangeConnectorCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceManagementExchangeConnectorCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public DeviceManagementExchangeConnectorRequestBuilder byId(final String id) {
+    @Nonnull
+    public DeviceManagementExchangeConnectorRequestBuilder byId(@Nonnull final String id) {
         return new DeviceManagementExchangeConnectorRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

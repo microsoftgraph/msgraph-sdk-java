@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CancelMediaProcessingOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class CancelMediaProcessingOperationRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CancelMediaProcessingOperationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CancelMediaProcessingOperationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CancelMediaProcessingOperation.class);
     }
 
@@ -37,7 +39,7 @@ public class CancelMediaProcessingOperationRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super CancelMediaProcessingOperation> callback) {
+    public void get(@Nonnull final ICallback<? super CancelMediaProcessingOperation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class CancelMediaProcessingOperationRequest extends BaseRequest {
      * @return the CancelMediaProcessingOperation from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public CancelMediaProcessingOperation get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class CancelMediaProcessingOperationRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super CancelMediaProcessingOperation> callback) {
+    public void delete(@Nonnull final ICallback<? super CancelMediaProcessingOperation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class CancelMediaProcessingOperationRequest extends BaseRequest {
      * @param sourceCancelMediaProcessingOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CancelMediaProcessingOperation sourceCancelMediaProcessingOperation, final ICallback<? super CancelMediaProcessingOperation> callback) {
+    public void patch(@Nonnull final CancelMediaProcessingOperation sourceCancelMediaProcessingOperation, @Nonnull final ICallback<? super CancelMediaProcessingOperation> callback) {
         send(HttpMethod.PATCH, callback, sourceCancelMediaProcessingOperation);
     }
 
@@ -86,7 +89,8 @@ public class CancelMediaProcessingOperationRequest extends BaseRequest {
      * @return the updated CancelMediaProcessingOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CancelMediaProcessingOperation patch(final CancelMediaProcessingOperation sourceCancelMediaProcessingOperation) throws ClientException {
+    @Nullable
+    public CancelMediaProcessingOperation patch(@Nonnull final CancelMediaProcessingOperation sourceCancelMediaProcessingOperation) throws ClientException {
         return send(HttpMethod.PATCH, sourceCancelMediaProcessingOperation);
     }
 
@@ -96,7 +100,7 @@ public class CancelMediaProcessingOperationRequest extends BaseRequest {
      * @param newCancelMediaProcessingOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CancelMediaProcessingOperation newCancelMediaProcessingOperation, final ICallback<? super CancelMediaProcessingOperation> callback) {
+    public void post(@Nonnull final CancelMediaProcessingOperation newCancelMediaProcessingOperation, @Nonnull final ICallback<? super CancelMediaProcessingOperation> callback) {
         send(HttpMethod.POST, callback, newCancelMediaProcessingOperation);
     }
 
@@ -107,7 +111,8 @@ public class CancelMediaProcessingOperationRequest extends BaseRequest {
      * @return the created CancelMediaProcessingOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CancelMediaProcessingOperation post(final CancelMediaProcessingOperation newCancelMediaProcessingOperation) throws ClientException {
+    @Nullable
+    public CancelMediaProcessingOperation post(@Nonnull final CancelMediaProcessingOperation newCancelMediaProcessingOperation) throws ClientException {
         return send(HttpMethod.POST, newCancelMediaProcessingOperation);
     }
 
@@ -117,7 +122,7 @@ public class CancelMediaProcessingOperationRequest extends BaseRequest {
      * @param newCancelMediaProcessingOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CancelMediaProcessingOperation newCancelMediaProcessingOperation, final ICallback<? super CancelMediaProcessingOperation> callback) {
+    public void put(@Nonnull final CancelMediaProcessingOperation newCancelMediaProcessingOperation, @Nonnull final ICallback<? super CancelMediaProcessingOperation> callback) {
         send(HttpMethod.PUT, callback, newCancelMediaProcessingOperation);
     }
 
@@ -128,7 +133,8 @@ public class CancelMediaProcessingOperationRequest extends BaseRequest {
      * @return the created CancelMediaProcessingOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CancelMediaProcessingOperation put(final CancelMediaProcessingOperation newCancelMediaProcessingOperation) throws ClientException {
+    @Nullable
+    public CancelMediaProcessingOperation put(@Nonnull final CancelMediaProcessingOperation newCancelMediaProcessingOperation) throws ClientException {
         return send(HttpMethod.PUT, newCancelMediaProcessingOperation);
     }
 
@@ -138,7 +144,8 @@ public class CancelMediaProcessingOperationRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public CancelMediaProcessingOperationRequest select(final String value) {
+     @Nonnull
+     public CancelMediaProcessingOperationRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (CancelMediaProcessingOperationRequest)this;
      }
@@ -149,7 +156,8 @@ public class CancelMediaProcessingOperationRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public CancelMediaProcessingOperationRequest expand(final String value) {
+     @Nonnull
+     public CancelMediaProcessingOperationRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (CancelMediaProcessingOperationRequest)this;
      }

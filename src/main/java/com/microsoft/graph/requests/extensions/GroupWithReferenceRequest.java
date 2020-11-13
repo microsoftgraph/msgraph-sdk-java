@@ -37,6 +37,8 @@ import com.microsoft.graph.requests.extensions.OnenoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
@@ -58,15 +60,16 @@ public class GroupWithReferenceRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Group.class);
     }
 
-    public void post(final Group newGroup, final IJsonBackedObject payload, final ICallback<? super Group> callback) {
+    public void post(@Nonnull final Group newGroup, @Nullable final IJsonBackedObject payload, @Nonnull final ICallback<? super Group> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
-    public Group post(final Group newGroup, final IJsonBackedObject payload) throws ClientException {
+    @Nullable
+    public Group post(@Nonnull final Group newGroup, @Nullable final IJsonBackedObject payload) throws ClientException {
         IJsonBackedObject response = send(HttpMethod.POST, payload);
         if (response != null){
             return newGroup;
@@ -74,15 +77,16 @@ public class GroupWithReferenceRequest extends BaseRequest {
         return null;
     }
 
-    public void get(final ICallback<? super Group> callback) {
+    public void get(@Nonnull final ICallback<? super Group> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
+    @Nullable
     public Group get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<? super Group> callback) {
+	public void delete(@Nonnull final ICallback<? super Group> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -90,11 +94,12 @@ public class GroupWithReferenceRequest extends BaseRequest {
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final Group sourceGroup, final ICallback<? super Group> callback) {
+	public void patch(@Nonnull final Group sourceGroup, @Nonnull final ICallback<? super Group> callback) {
 		send(HttpMethod.PATCH, callback, sourceGroup);
 	}
 
-	public Group patch(final Group sourceGroup) throws ClientException {
+    @Nullable
+	public Group patch(@Nonnull final Group sourceGroup) throws ClientException {
 		return send(HttpMethod.PATCH, sourceGroup);
 	}
 
@@ -105,7 +110,8 @@ public class GroupWithReferenceRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public GroupWithReferenceRequest select(final String value) {
+    @Nonnull
+    public GroupWithReferenceRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (GroupWithReferenceRequest)this;
     }
@@ -116,7 +122,8 @@ public class GroupWithReferenceRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public GroupWithReferenceRequest expand(final String value) {
+    @Nonnull
+    public GroupWithReferenceRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (GroupWithReferenceRequest)this;
     }

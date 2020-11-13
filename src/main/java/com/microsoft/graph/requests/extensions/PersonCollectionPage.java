@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Person;
 import com.microsoft.graph.requests.extensions.PersonCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.PersonCollectionPage;
 import com.microsoft.graph.requests.extensions.PersonCollectionResponse;
@@ -22,7 +24,7 @@ public class PersonCollectionPage extends BaseCollectionPage<Person, PersonColle
      * @param response the serialized PersonCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public PersonCollectionPage(final PersonCollectionResponse response, final PersonCollectionRequestBuilder builder) {
+    public PersonCollectionPage(@Nonnull final PersonCollectionResponse response, @Nonnull final PersonCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

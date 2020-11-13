@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ContentType;
 import com.microsoft.graph.requests.extensions.ContentTypeCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ContentTypeCollectionPage;
 import com.microsoft.graph.requests.extensions.ContentTypeCollectionResponse;
@@ -22,7 +24,7 @@ public class ContentTypeCollectionPage extends BaseCollectionPage<ContentType, C
      * @param response the serialized ContentTypeCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ContentTypeCollectionPage(final ContentTypeCollectionResponse response, final ContentTypeCollectionRequestBuilder builder) {
+    public ContentTypeCollectionPage(@Nonnull final ContentTypeCollectionResponse response, @Nonnull final ContentTypeCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

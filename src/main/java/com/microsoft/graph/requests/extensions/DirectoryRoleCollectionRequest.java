@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DirectoryRole;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,11 +36,11 @@ public class DirectoryRoleCollectionRequest extends BaseCollectionRequest<Direct
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DirectoryRoleCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryRoleCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DirectoryRoleCollectionResponse.class, DirectoryRoleCollectionPage.class);
     }
 
-    public void get(final ICallback<? super DirectoryRoleCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super DirectoryRoleCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -52,19 +54,21 @@ public class DirectoryRoleCollectionRequest extends BaseCollectionRequest<Direct
         });
     }
 
+    @Nonnull
     public DirectoryRoleCollectionPage get() throws ClientException {
         final DirectoryRoleCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final DirectoryRole newDirectoryRole, final ICallback<? super DirectoryRole> callback) {
+    public void post(@Nonnull final DirectoryRole newDirectoryRole, @Nonnull final ICallback<? super DirectoryRole> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DirectoryRoleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newDirectoryRole, callback);
     }
 
-    public DirectoryRole post(final DirectoryRole newDirectoryRole) throws ClientException {
+    @Nonnull
+    public DirectoryRole post(@Nonnull final DirectoryRole newDirectoryRole) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DirectoryRoleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -77,7 +81,8 @@ public class DirectoryRoleCollectionRequest extends BaseCollectionRequest<Direct
      * @param value the expand clause
      * @return the updated request
      */
-    public DirectoryRoleCollectionRequest expand(final String value) {
+    @Nonnull
+    public DirectoryRoleCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DirectoryRoleCollectionRequest)this;
     }
@@ -88,7 +93,8 @@ public class DirectoryRoleCollectionRequest extends BaseCollectionRequest<Direct
      * @param value the filter clause
      * @return the updated request
      */
-    public DirectoryRoleCollectionRequest filter(final String value) {
+    @Nonnull
+    public DirectoryRoleCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DirectoryRoleCollectionRequest)this;
     }
@@ -99,7 +105,8 @@ public class DirectoryRoleCollectionRequest extends BaseCollectionRequest<Direct
      * @param value the order by clause
      * @return the updated request
      */
-    public DirectoryRoleCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DirectoryRoleCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DirectoryRoleCollectionRequest)this;
     }
@@ -110,7 +117,8 @@ public class DirectoryRoleCollectionRequest extends BaseCollectionRequest<Direct
      * @param value the select clause
      * @return the updated request
      */
-    public DirectoryRoleCollectionRequest select(final String value) {
+    @Nonnull
+    public DirectoryRoleCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DirectoryRoleCollectionRequest)this;
     }
@@ -121,6 +129,7 @@ public class DirectoryRoleCollectionRequest extends BaseCollectionRequest<Direct
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DirectoryRoleCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (DirectoryRoleCollectionRequest)this;
@@ -132,6 +141,7 @@ public class DirectoryRoleCollectionRequest extends BaseCollectionRequest<Direct
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public DirectoryRoleCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (DirectoryRoleCollectionRequest)this;
@@ -143,11 +153,13 @@ public class DirectoryRoleCollectionRequest extends BaseCollectionRequest<Direct
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public DirectoryRoleCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public DirectoryRoleCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (DirectoryRoleCollectionRequest)this;
     }
-    public DirectoryRoleCollectionPage buildFromResponse(final DirectoryRoleCollectionResponse response) {
+    @Nonnull
+    public DirectoryRoleCollectionPage buildFromResponse(@Nonnull final DirectoryRoleCollectionResponse response) {
         final DirectoryRoleCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new DirectoryRoleCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

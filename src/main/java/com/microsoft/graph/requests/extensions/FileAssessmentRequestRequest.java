@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.FileAssessmentRequest;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class FileAssessmentRequestRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public FileAssessmentRequestRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public FileAssessmentRequestRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, FileAssessmentRequest.class);
     }
 
@@ -37,7 +39,7 @@ public class FileAssessmentRequestRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super FileAssessmentRequest> callback) {
+    public void get(@Nonnull final ICallback<? super FileAssessmentRequest> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class FileAssessmentRequestRequest extends BaseRequest {
      * @return the FileAssessmentRequest from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public FileAssessmentRequest get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class FileAssessmentRequestRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super FileAssessmentRequest> callback) {
+    public void delete(@Nonnull final ICallback<? super FileAssessmentRequest> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class FileAssessmentRequestRequest extends BaseRequest {
      * @param sourceFileAssessmentRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final FileAssessmentRequest sourceFileAssessmentRequest, final ICallback<? super FileAssessmentRequest> callback) {
+    public void patch(@Nonnull final FileAssessmentRequest sourceFileAssessmentRequest, @Nonnull final ICallback<? super FileAssessmentRequest> callback) {
         send(HttpMethod.PATCH, callback, sourceFileAssessmentRequest);
     }
 
@@ -86,7 +89,8 @@ public class FileAssessmentRequestRequest extends BaseRequest {
      * @return the updated FileAssessmentRequest
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public FileAssessmentRequest patch(final FileAssessmentRequest sourceFileAssessmentRequest) throws ClientException {
+    @Nullable
+    public FileAssessmentRequest patch(@Nonnull final FileAssessmentRequest sourceFileAssessmentRequest) throws ClientException {
         return send(HttpMethod.PATCH, sourceFileAssessmentRequest);
     }
 
@@ -96,7 +100,7 @@ public class FileAssessmentRequestRequest extends BaseRequest {
      * @param newFileAssessmentRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final FileAssessmentRequest newFileAssessmentRequest, final ICallback<? super FileAssessmentRequest> callback) {
+    public void post(@Nonnull final FileAssessmentRequest newFileAssessmentRequest, @Nonnull final ICallback<? super FileAssessmentRequest> callback) {
         send(HttpMethod.POST, callback, newFileAssessmentRequest);
     }
 
@@ -107,7 +111,8 @@ public class FileAssessmentRequestRequest extends BaseRequest {
      * @return the created FileAssessmentRequest
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public FileAssessmentRequest post(final FileAssessmentRequest newFileAssessmentRequest) throws ClientException {
+    @Nullable
+    public FileAssessmentRequest post(@Nonnull final FileAssessmentRequest newFileAssessmentRequest) throws ClientException {
         return send(HttpMethod.POST, newFileAssessmentRequest);
     }
 
@@ -117,7 +122,7 @@ public class FileAssessmentRequestRequest extends BaseRequest {
      * @param newFileAssessmentRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final FileAssessmentRequest newFileAssessmentRequest, final ICallback<? super FileAssessmentRequest> callback) {
+    public void put(@Nonnull final FileAssessmentRequest newFileAssessmentRequest, @Nonnull final ICallback<? super FileAssessmentRequest> callback) {
         send(HttpMethod.PUT, callback, newFileAssessmentRequest);
     }
 
@@ -128,7 +133,8 @@ public class FileAssessmentRequestRequest extends BaseRequest {
      * @return the created FileAssessmentRequest
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public FileAssessmentRequest put(final FileAssessmentRequest newFileAssessmentRequest) throws ClientException {
+    @Nullable
+    public FileAssessmentRequest put(@Nonnull final FileAssessmentRequest newFileAssessmentRequest) throws ClientException {
         return send(HttpMethod.PUT, newFileAssessmentRequest);
     }
 
@@ -138,7 +144,8 @@ public class FileAssessmentRequestRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public FileAssessmentRequestRequest select(final String value) {
+     @Nonnull
+     public FileAssessmentRequestRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (FileAssessmentRequestRequest)this;
      }
@@ -149,7 +156,8 @@ public class FileAssessmentRequestRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public FileAssessmentRequestRequest expand(final String value) {
+     @Nonnull
+     public FileAssessmentRequestRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (FileAssessmentRequestRequest)this;
      }

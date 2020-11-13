@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.models.extensions.AssignedLicense;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -33,11 +35,11 @@ public class GroupCollectionReferenceRequest extends BaseCollectionRequest<Group
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupCollectionReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupCollectionResponse.class, GroupCollectionPage.class);
     }
 
-    public void post(final Group newGroup, final ICallback<? super Group> callback) {
+    public void post(@Nonnull final Group newGroup, @Nonnull final ICallback<? super Group> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/groups/" + newGroup.id);
         new GroupWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -45,7 +47,8 @@ public class GroupCollectionReferenceRequest extends BaseCollectionRequest<Group
             .post(newGroup, body, callback);
     }
 
-    public Group post(final Group newGroup) throws ClientException {
+    @Nonnull
+    public Group post(@Nonnull final Group newGroup) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/groups/" + newGroup.id);
         return new GroupWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
@@ -58,7 +61,8 @@ public class GroupCollectionReferenceRequest extends BaseCollectionRequest<Group
      * @param value the expand clause
      * @return the updated request
      */
-    public GroupCollectionReferenceRequest expand(final String value) {
+    @Nonnull
+    public GroupCollectionReferenceRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (GroupCollectionReferenceRequest)this;
     }
@@ -69,7 +73,8 @@ public class GroupCollectionReferenceRequest extends BaseCollectionRequest<Group
      * @param value the filter clause
      * @return the updated request
      */
-    public GroupCollectionReferenceRequest filter(final String value) {
+    @Nonnull
+    public GroupCollectionReferenceRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (GroupCollectionReferenceRequest)this;
     }
@@ -80,7 +85,8 @@ public class GroupCollectionReferenceRequest extends BaseCollectionRequest<Group
      * @param value the sort clause
      * @return the updated request
      */
-    public GroupCollectionReferenceRequest orderBy(final String value) {
+    @Nonnull
+    public GroupCollectionReferenceRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (GroupCollectionReferenceRequest)this;
     }
@@ -91,7 +97,8 @@ public class GroupCollectionReferenceRequest extends BaseCollectionRequest<Group
      * @param value the select clause
      * @return the updated request
      */
-    public GroupCollectionReferenceRequest select(final String value) {
+    @Nonnull
+    public GroupCollectionReferenceRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (GroupCollectionReferenceRequest)this;
     }
@@ -102,6 +109,7 @@ public class GroupCollectionReferenceRequest extends BaseCollectionRequest<Group
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public GroupCollectionReferenceRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (GroupCollectionReferenceRequest)this;

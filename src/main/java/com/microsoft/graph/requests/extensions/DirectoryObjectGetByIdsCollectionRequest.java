@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetByIdsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetByIdsCollectionPage;
@@ -38,13 +40,13 @@ public class DirectoryObjectGetByIdsCollectionRequest extends BaseCollectionRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DirectoryObjectGetByIdsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryObjectGetByIdsCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DirectoryObjectGetByIdsCollectionResponse.class, DirectoryObjectGetByIdsCollectionPage.class);
         body = new DirectoryObjectGetByIdsBody();
     }
 
 
-    public void post(final ICallback<? super DirectoryObjectGetByIdsCollectionPage> callback) {
+    public void post(@Nonnull final ICallback<? super DirectoryObjectGetByIdsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,13 +60,15 @@ public class DirectoryObjectGetByIdsCollectionRequest extends BaseCollectionRequ
         });
     }
 
+    @Nullable
     public DirectoryObjectGetByIdsCollectionPage post() throws ClientException {
         final DirectoryObjectGetByIdsCollectionResponse response = post(body);
         return buildFromResponse(response);
     }
 
 
-    public DirectoryObjectGetByIdsCollectionPage buildFromResponse(final DirectoryObjectGetByIdsCollectionResponse response) {
+    @Nonnull
+    public DirectoryObjectGetByIdsCollectionPage buildFromResponse(@Nonnull final DirectoryObjectGetByIdsCollectionResponse response) {
         final DirectoryObjectGetByIdsCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new DirectoryObjectGetByIdsCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, (java.util.List<String>) null, (java.util.List<String>) null);
@@ -82,7 +86,8 @@ public class DirectoryObjectGetByIdsCollectionRequest extends BaseCollectionRequ
      * @param value the select clause
      * @return the updated request
      */
-    public DirectoryObjectGetByIdsCollectionRequest select(final String value) {
+    @Nonnull
+    public DirectoryObjectGetByIdsCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DirectoryObjectGetByIdsCollectionRequest)this;
     }
@@ -93,6 +98,7 @@ public class DirectoryObjectGetByIdsCollectionRequest extends BaseCollectionRequ
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DirectoryObjectGetByIdsCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (DirectoryObjectGetByIdsCollectionRequest)this;
@@ -104,7 +110,8 @@ public class DirectoryObjectGetByIdsCollectionRequest extends BaseCollectionRequ
      * @param value the expand clause
      * @return the updated request
      */
-    public DirectoryObjectGetByIdsCollectionRequest expand(final String value) {
+    @Nonnull
+    public DirectoryObjectGetByIdsCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DirectoryObjectGetByIdsCollectionRequest)this;
     }
@@ -115,7 +122,8 @@ public class DirectoryObjectGetByIdsCollectionRequest extends BaseCollectionRequ
      * @param value the filter clause
      * @return the updated request
      */
-    public DirectoryObjectGetByIdsCollectionRequest filter(final String value) {
+    @Nonnull
+    public DirectoryObjectGetByIdsCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DirectoryObjectGetByIdsCollectionRequest)this;
     }
@@ -126,7 +134,8 @@ public class DirectoryObjectGetByIdsCollectionRequest extends BaseCollectionRequ
      * @param value the order by clause
      * @return the updated request
      */
-    public DirectoryObjectGetByIdsCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DirectoryObjectGetByIdsCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DirectoryObjectGetByIdsCollectionRequest)this;
     }
