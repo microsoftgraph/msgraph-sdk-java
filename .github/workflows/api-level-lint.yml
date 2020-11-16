@@ -22,6 +22,12 @@ jobs:
         run: chmod +x gradlew
         working-directory: ./android
       - name: Build SDK with Android project configuration
+        id: lint
         run: ./gradlew --no-daemon build
         working-directory: ./android
-
+      - name: Upload linting results
+        if: failure() && steps.lint.outcome == 'failure'
+        uses: actions/upload-artifact@v2
+        with:
+          name: lint-report
+          path: ./android/build/reports
