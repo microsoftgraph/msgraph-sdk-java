@@ -28,6 +28,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 
 import java.util.List;
 
+import javax.annotation.Nullable;
+
 /**
  * A page of results from a collection
  * 
@@ -42,6 +44,7 @@ public interface IBaseCollectionPage<T1, T2 extends IRequestBuilder> extends IJs
      * 
      * @return the raw representation of this class
      */
+    @Nullable
     JsonObject getRawObject();
 
     /**
@@ -49,6 +52,7 @@ public interface IBaseCollectionPage<T1, T2 extends IRequestBuilder> extends IJs
      * 
      * @return the next page request builder
      */
+    @Nullable
     T2 getNextPage();
 
     /**
@@ -56,5 +60,6 @@ public interface IBaseCollectionPage<T1, T2 extends IRequestBuilder> extends IJs
      * 
      * @return the current page
      */
+    @Nullable
     List<T1> getCurrentPage();
 }

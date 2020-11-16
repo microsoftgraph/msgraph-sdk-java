@@ -22,6 +22,9 @@
 
 package com.microsoft.graph.logger;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 /**
  * The logger for the service client
  */
@@ -32,13 +35,14 @@ public interface ILogger {
      * 
      * @param level the level to log at
      */
-    void setLoggingLevel(final LoggerLevel level);
+    void setLoggingLevel(@Nonnull final LoggerLevel level);
 
     /**
      * Gets the logging level of this logger
      * 
      * @return the level the logger is set to
      */
+    @Nonnull
     LoggerLevel getLoggingLevel();
 
     /**
@@ -46,7 +50,7 @@ public interface ILogger {
      * 
      * @param message the message
      */
-    void logDebug(final String message);
+    void logDebug(@Nonnull final String message);
 
     /**
      * Log an error message with throwable
@@ -54,6 +58,6 @@ public interface ILogger {
      * @param message   the message
      * @param throwable the throwable
      */
-    void logError(final String message, final Throwable throwable);
+    void logError(@Nonnull final String message, @Nullable final Throwable throwable);
 }
 

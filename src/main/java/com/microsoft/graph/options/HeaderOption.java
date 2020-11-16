@@ -22,6 +22,9 @@
 
 package com.microsoft.graph.options;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 /**
  * A header value
  */
@@ -33,7 +36,7 @@ public class HeaderOption extends Option {
      * @param name  the name of the header
      * @param value the value of the header
      */
-    public HeaderOption(final  String name, final String value) {
+    public HeaderOption(@Nonnull final String name, @Nonnull final String value) {
         super(name, value);
     }
 }

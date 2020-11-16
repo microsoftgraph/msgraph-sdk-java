@@ -23,6 +23,9 @@
 package com.microsoft.graph.http;
 
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 import com.microsoft.graph.core.IBaseClient;
 
 /**
@@ -35,6 +38,7 @@ public interface IRequestBuilder {
      * 
      * @return the client for this request builder
      */
+    @Nullable
     IBaseClient getClient();
 
     /**
@@ -42,6 +46,7 @@ public interface IRequestBuilder {
      * 
      * @return the request URL
      */
+    @Nullable
     String getRequestUrl();
 
     /**
@@ -50,5 +55,6 @@ public interface IRequestBuilder {
      * @param urlSegment the segment to add to the URL
      * @return           the new request URL
      */
-    String getRequestUrlWithAdditionalSegment(final String urlSegment);
+    @Nonnull
+    String getRequestUrlWithAdditionalSegment(@Nonnull final String urlSegment);
 }

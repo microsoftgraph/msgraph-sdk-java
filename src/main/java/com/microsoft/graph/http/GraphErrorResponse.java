@@ -25,6 +25,10 @@ package com.microsoft.graph.http;
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.ISerializer;
@@ -35,23 +39,26 @@ public class GraphErrorResponse implements IJsonBackedObject {
 
     @SerializedName("error")
     @Expose()
+    @Nullable
     public GraphError error;
 
     /**
      * The raw representation of this class when deserialized
      */
     @Expose(serialize = false, deserialize = false)
+    @Nullable
     public JsonObject rawObject;
 
     /**
      * Sets the raw JSON object
      */
     @Override
-    public void setRawObject(final ISerializer serializer, final JsonObject json) {
+    public void setRawObject(@Nullable final ISerializer serializer, @Nonnull final JsonObject json) {
         rawObject = json;
     }
 
     @Override
+    @Nullable
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }

@@ -28,6 +28,9 @@ import java.lang.reflect.Type;
 import java.util.EnumSet;
 import java.util.Iterator;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 /**
  * Serializes and deserializes EnumSets
  * The Graph service expects a single enum value as a comma-delimited string
@@ -49,7 +52,8 @@ public class EnumSetSerializer {
      * @param jsonStrToDeserialize the string to deserialize
      * @return                     EnumSet of values
      */
-    public static EnumSet<?> deserialize(Type type, String jsonStrToDeserialize) {
+    @Nullable
+    public static EnumSet<?> deserialize(@Nonnull final Type type, @Nonnull final String jsonStrToDeserialize) {
             Gson gson = new Gson();
             String arrayString = "[" + jsonStrToDeserialize + "]";
             return jsonStrToDeserialize == null ? null : (EnumSet<?>) gson.fromJson(arrayString, type);
@@ -61,7 +65,8 @@ public class EnumSetSerializer {
      * @param src the source EnumSet
      * @return    a comma-delimited string of enum values
      */
-    public static JsonPrimitive serialize(EnumSet<?> src) {
+    @Nullable
+    public static JsonPrimitive serialize(@Nonnull final EnumSet<?> src) {
         String serializedString = "";
 
         Iterator<?> i = src.iterator();

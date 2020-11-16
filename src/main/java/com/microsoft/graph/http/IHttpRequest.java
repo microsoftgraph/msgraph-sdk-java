@@ -34,6 +34,9 @@ import okhttp3.Request;
 import java.net.URL;
 import java.util.List;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 /**
  * An HTTP request
  */
@@ -44,6 +47,7 @@ public interface IHttpRequest {
      * 
      * @return the request URL
      */
+    @Nullable
     URL getRequestUrl();
 
     /**
@@ -51,6 +55,7 @@ public interface IHttpRequest {
      * 
      * @return the HTTP method
      */
+    @Nullable
     HttpMethod getHttpMethod();
 
     /**
@@ -58,6 +63,7 @@ public interface IHttpRequest {
      * 
      * @return the headers
      */
+    @Nullable
     List<HeaderOption> getHeaders();
 
     /**
@@ -65,6 +71,7 @@ public interface IHttpRequest {
      * 
      * @return the options
      */
+    @Nullable
     List<Option> getOptions();
 
     /**
@@ -73,7 +80,7 @@ public interface IHttpRequest {
      * @param header the name of the header
      * @param value  the value of the header
      */
-    void addHeader(String header, String value);
+    void addHeader(@Nonnull String header, @Nonnull String value);
 
     /**
      * Sets useCaches parameter to cache the response
@@ -108,13 +115,14 @@ public interface IHttpRequest {
      * 
      * @param shouldRedirect Callback called before doing a redirect
      */
-    void setShouldRedirect(IShouldRedirect shouldRedirect);
+    void setShouldRedirect(@Nonnull IShouldRedirect shouldRedirect);
     
     /**
      * Gets the should redirect callback
      * 
      * @return Callback which is called before redirect
      */
+    @Nullable
     IShouldRedirect getShouldRedirect();
     
     /**
@@ -122,13 +130,14 @@ public interface IHttpRequest {
      * 
      * @param shouldretry The callback called before retry
      */
-    void setShouldRetry(IShouldRetry shouldretry);
+    void setShouldRetry(@Nonnull IShouldRetry shouldretry);
     
     /**
      * Gets the should retry callback
      * 
      * @return Callback called before retry
      */
+    @Nullable
     IShouldRetry getShouldRetry();
     
     /**
@@ -165,12 +174,14 @@ public interface IHttpRequest {
      * @param httpMethod the HTTP method
      * @return the current request
      */
-    IHttpRequest withHttpMethod(final HttpMethod httpMethod);
+    @Nullable
+    IHttpRequest withHttpMethod(@Nonnull final HttpMethod httpMethod);
     
     /**
      * Returns the Request object to be executed
      * @return the Request object to be executed
      */
+    @Nullable
     Request getHttpRequest() throws ClientException;
 
     /**
@@ -179,7 +190,8 @@ public interface IHttpRequest {
      * @param <requestBodyType> the type of the serialized object
      * @return the Request object to be executed
      */
-    <requestBodyType> Request getHttpRequest(final requestBodyType serializedObject) throws ClientException;
+    @Nullable
+    <requestBodyType> Request getHttpRequest(@Nonnull final requestBodyType serializedObject) throws ClientException;
 
     /**
      * Returns the Request object to be executed
@@ -189,6 +201,7 @@ public interface IHttpRequest {
      * @param <responseType> the type of the response object
      * @return the Request object to be executed
      */
-    <requestBodyType, responseType> Request getHttpRequest(final requestBodyType serializedObject, final IProgressCallback<responseType> progress) throws ClientException;
+    @Nullable
+    <requestBodyType, responseType> Request getHttpRequest(@Nonnull final requestBodyType serializedObject, @Nonnull final IProgressCallback<responseType> progress) throws ClientException;
 }
 

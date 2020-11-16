@@ -22,6 +22,7 @@
 
 package com.microsoft.graph.options;
 
+import javax.annotation.Nonnull;
 
 public class FunctionOption extends Option {
 
@@ -31,7 +32,7 @@ public class FunctionOption extends Option {
      * @param name  the name of the option
      * @param value the value of the option
      */
-    public FunctionOption(final String name, final Object value) {
+    public FunctionOption(@Nonnull final String name, @Nonnull final Object value) {
         super(name, value != null ? value : null);
     }
 }

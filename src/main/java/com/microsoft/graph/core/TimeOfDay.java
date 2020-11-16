@@ -1,6 +1,9 @@
 package com.microsoft.graph.core;
 
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 import java.math.BigDecimal;
 import java.text.ParseException;
 import java.util.Locale;
@@ -32,7 +35,8 @@ public class TimeOfDay {
      * @return the parsed DateOnly instance
      * @exception ParseException If there was a failure parsing the dateStr
      */
-    public static TimeOfDay parse(final String timeStr) throws ParseException {
+    @Nullable
+    public static TimeOfDay parse(@Nonnull final String timeStr) throws ParseException {
         // break the date up into its constituent parts
         final String[] timeInfo = timeStr.split(":");
 
@@ -98,6 +102,7 @@ public class TimeOfDay {
     }
 
     @Override
+    @Nonnull
     public String toString() {
         return String.format(
                 Locale.ROOT,

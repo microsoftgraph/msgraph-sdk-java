@@ -4,6 +4,9 @@ package com.microsoft.graph.core;
 import java.text.ParseException;
 import java.util.Locale;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 /**
  * A timezone-nonspecific date
  */
@@ -31,9 +34,10 @@ public class DateOnly {
      * @return the parsed DateOnly instance
      * @exception ParseException If there was a failure parsing the dateStr
      */
-    public static DateOnly parse(final String dateStr) throws ParseException {
+    @Nullable
+    public static DateOnly parse(@Nonnull final String dateStr) throws ParseException {
         // break the date up into its constituent parts
-        String[] dateInfo = dateStr.split("-");
+        final String[] dateInfo = dateStr.split("-");
 
         // validate the split date string
         final int expectedLength = 3;

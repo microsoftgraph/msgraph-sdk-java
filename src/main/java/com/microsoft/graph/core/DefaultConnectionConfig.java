@@ -22,6 +22,9 @@
 
 package com.microsoft.graph.core;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 import com.microsoft.graph.httpcore.middlewareoption.IShouldRedirect;
 import com.microsoft.graph.httpcore.middlewareoption.IShouldRetry;
 import com.microsoft.graph.httpcore.middlewareoption.RedirectOptions;
@@ -127,7 +130,7 @@ public class DefaultConnectionConfig implements IConnectionConfig{
      * 
      * @param shouldRedirect Callback called before doing a redirect
      */
-    public void setShouldRedirect(IShouldRedirect shouldRedirect) {
+    public void setShouldRedirect(@Nonnull final IShouldRedirect shouldRedirect) {
     	DefaultConnectionConfig.shouldRedirect = shouldRedirect;
     }
     
@@ -136,6 +139,7 @@ public class DefaultConnectionConfig implements IConnectionConfig{
      * 
      * @return Callback which is called before redirect
      */
+    @Nullable
     public IShouldRedirect getShouldRedirect() {
     	return shouldRedirect;
     }
@@ -145,7 +149,7 @@ public class DefaultConnectionConfig implements IConnectionConfig{
      * 
      * @param shouldretry The callback called before retry
      */
-    public void setShouldRetry(IShouldRetry shouldretry) {
+    public void setShouldRetry(@Nonnull final IShouldRetry shouldretry) {
     	DefaultConnectionConfig.shouldRetry = shouldretry;
     }
     
@@ -154,6 +158,7 @@ public class DefaultConnectionConfig implements IConnectionConfig{
      * 
      * @return Callback called before retry
      */
+    @Nullable
     public IShouldRetry getShouldRetry() {
     	return shouldRetry;
     }
@@ -163,7 +168,7 @@ public class DefaultConnectionConfig implements IConnectionConfig{
      * 
      * @param maxRetries Max retries for a request
      */
-    public void setMaxRetries(int maxRetries) {
+    public void setMaxRetries(final int maxRetries) {
     	DefaultConnectionConfig.maxRetries = maxRetries;
     }
     

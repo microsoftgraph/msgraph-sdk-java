@@ -25,6 +25,9 @@ package com.microsoft.graph.serializer;
 import java.util.List;
 import java.util.Map;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 /**
  * Serializes and deserializes items from strings into their types
  */
@@ -38,7 +41,8 @@ public interface ISerializer {
      * @param <T>         the type of the item to be deserialized
      * @return            the deserialized item from the input string
      */
-    <T> T deserializeObject(final String inputString, Class<T> clazz);
+    @Nullable
+    <T> T deserializeObject(@Nonnull final String inputString, @Nonnull final Class<T> clazz);
     
     /**
      * Deserialize an object from the input string
@@ -49,7 +53,8 @@ public interface ISerializer {
      * @param <T>             the type of the item to be deserialized
      * @return                the deserialized item from the input string
      */
-    <T> T deserializeObject(final String inputString, Class<T> clazz, Map<String, List<String>> responseHeaders);
+    @Nullable
+    <T> T deserializeObject(@Nonnull final String inputString, @Nonnull final Class<T> clazz, @Nonnull final Map<String, List<String>> responseHeaders);
 
     /**
      * Serializes an object into a string
@@ -58,5 +63,6 @@ public interface ISerializer {
      * @param <T>                the type of the item to be serialized
      * @return                   the string representation of that item
      */
-    <T> String serializeObject(final T serializableObject);
+    @Nullable
+    <T> String serializeObject(@Nonnull final T serializableObject);
 }
