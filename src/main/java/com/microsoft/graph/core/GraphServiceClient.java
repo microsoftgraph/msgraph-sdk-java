@@ -246,7 +246,7 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
 		}
 	}
 	
-	private static void checkNotNull(Object o, String name) {
+	protected static void checkNotNull(@Nullable final Object o, @Nonnull final String name) {
 		if (o==null) {
 			throw new NullPointerException(name + " cannot be null");
 		}

@@ -144,6 +144,7 @@ public class ChunkedUploadProvider<UploadType> {
      *                 size and [1] should be the maxRetry for upload retry.
      * @throws IOException the IO exception that occurred during upload
      */
+    @SuppressWarnings("LambdaLast")
     public void upload(@Nullable final List<Option> options,
                        @Nullable final IProgressCallback<UploadType> callback,
                        @Nullable final int... configs)
@@ -211,6 +212,7 @@ public class ChunkedUploadProvider<UploadType> {
      *                 size and [1] should be the maxRetry for upload retry.
      * @throws IOException the IO exception that occurred during upload
      */
+    @SuppressWarnings("LambdaLast")
     public void upload(@Nullable final IProgressCallback<UploadType> callback,
     		@Nullable final int...configs)
     				throws IOException {

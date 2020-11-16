@@ -82,7 +82,7 @@ public class CoreHttpProvider implements IHttpProvider {
 	/**
 	 * The executors
 	 */
-	private final IExecutors executors;
+	protected final IExecutors executors;
 
 	/**
 	 * The logger
@@ -380,12 +380,13 @@ public class CoreHttpProvider implements IHttpProvider {
 	 * @return                  the result from the request
 	 * @throws ClientException an exception occurs if the request was unable to complete for any reason
 	 */
-	@SuppressWarnings("unchecked")
-	private <Result, Body, DeserializeType> Result sendRequestInternal(final IHttpRequest request,
-			final Class<Result> resultClass,
-			final Body serializable,
-			final IProgressCallback<? super Result> progress,
-			final IStatefulResponseHandler<Result, DeserializeType> handler)
+	@SuppressWarnings({"unchecked", "LambdaLast"})
+	@Nullable
+	protected <Result, Body, DeserializeType> Result sendRequestInternal(@Nonnull final IHttpRequest request,
+			@Nonnull final Class<Result> resultClass,
+			@Nullable final Body serializable,
+			@Nullable final IProgressCallback<? super Result> progress,
+			@Nullable final IStatefulResponseHandler<Result, DeserializeType> handler)
 					throws ClientException {
 
 		try {
