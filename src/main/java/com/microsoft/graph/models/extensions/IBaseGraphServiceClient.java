@@ -105,6 +105,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the request builder for the collection of Invitations objects
      */
+    @Nonnull
     InvitationCollectionRequestBuilder invitations();
 
     /**
@@ -113,6 +114,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id the id of the Invitations to retrieve
      * @return the request builder for the Invitations object
      */
+    @Nonnull
     InvitationRequestBuilder invitations(@Nonnull final String id);
 
     /**
@@ -120,6 +122,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the request builder for the collection of Users objects
      */
+    @Nonnull
     UserCollectionRequestBuilder users();
 
     /**
@@ -128,6 +131,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id the id of the Users to retrieve
      * @return the request builder for the Users object
      */
+    @Nonnull
     UserRequestBuilder users(@Nonnull final String id);
 
     /**
@@ -135,6 +139,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the request builder for the collection of IdentityProviders objects
      */
+    @Nonnull
     IdentityProviderCollectionRequestBuilder identityProviders();
 
     /**
@@ -143,6 +148,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id the id of the IdentityProviders to retrieve
      * @return the request builder for the IdentityProviders object
      */
+    @Nonnull
     IdentityProviderRequestBuilder identityProviders(@Nonnull final String id);
 
     /**
@@ -150,6 +156,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the request builder for the collection of Applications objects
      */
+    @Nonnull
     ApplicationCollectionRequestBuilder applications();
 
     /**
@@ -158,6 +165,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id the id of the Applications to retrieve
      * @return the request builder for the Applications object
      */
+    @Nonnull
     ApplicationRequestBuilder applications(@Nonnull final String id);
 
     /**
@@ -165,6 +173,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the request builder for the collection of CertificateBasedAuthConfiguration objects
      */
+    @Nonnull
     CertificateBasedAuthConfigurationCollectionRequestBuilder certificateBasedAuthConfiguration();
 
     /**
@@ -173,6 +182,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id the id of the CertificateBasedAuthConfiguration to retrieve
      * @return the request builder for the CertificateBasedAuthConfiguration object
      */
+    @Nonnull
     CertificateBasedAuthConfigurationRequestBuilder certificateBasedAuthConfiguration(@Nonnull final String id);
 
     /**
@@ -180,6 +190,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the request builder for the collection of Contacts objects
      */
+    @Nonnull
     OrgContactCollectionRequestBuilder contacts();
 
     /**
@@ -188,6 +199,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id the id of the Contacts to retrieve
      * @return the request builder for the Contacts object
      */
+    @Nonnull
     OrgContactRequestBuilder contacts(@Nonnull final String id);
 
     /**
@@ -195,6 +207,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the request builder for the collection of Contracts objects
      */
+    @Nonnull
     ContractCollectionRequestBuilder contracts();
 
     /**
@@ -203,6 +216,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id the id of the Contracts to retrieve
      * @return the request builder for the Contracts object
      */
+    @Nonnull
     ContractRequestBuilder contracts(@Nonnull final String id);
 
     /**
@@ -210,6 +224,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the request builder for the collection of Devices objects
      */
+    @Nonnull
     DeviceCollectionRequestBuilder devices();
 
     /**
@@ -218,6 +233,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id the id of the Devices to retrieve
      * @return the request builder for the Devices object
      */
+    @Nonnull
     DeviceRequestBuilder devices(@Nonnull final String id);
 
     /**
@@ -225,6 +241,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the request builder for the collection of DirectoryObjects objects
      */
+    @Nonnull
     DirectoryObjectCollectionRequestBuilder directoryObjects();
 
     /**
@@ -233,6 +250,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id the id of the DirectoryObjects to retrieve
      * @return the request builder for the DirectoryObjects object
      */
+    @Nonnull
     DirectoryObjectRequestBuilder directoryObjects(@Nonnull final String id);
 
     /**
@@ -240,6 +258,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the request builder for the collection of DirectoryRoles objects
      */
+    @Nonnull
     DirectoryRoleCollectionRequestBuilder directoryRoles();
 
     /**
@@ -248,6 +267,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id the id of the DirectoryRoles to retrieve
      * @return the request builder for the DirectoryRoles object
      */
+    @Nonnull
     DirectoryRoleRequestBuilder directoryRoles(@Nonnull final String id);
 
     /**
@@ -255,6 +275,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the request builder for the collection of DirectoryRoleTemplates objects
      */
+    @Nonnull
     DirectoryRoleTemplateCollectionRequestBuilder directoryRoleTemplates();
 
     /**
@@ -263,6 +284,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id the id of the DirectoryRoleTemplates to retrieve
      * @return the request builder for the DirectoryRoleTemplates object
      */
+    @Nonnull
     DirectoryRoleTemplateRequestBuilder directoryRoleTemplates(@Nonnull final String id);
 
     /**
@@ -270,6 +292,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the request builder for the collection of DomainDnsRecords objects
      */
+    @Nonnull
     DomainDnsRecordCollectionRequestBuilder domainDnsRecords();
 
     /**
@@ -278,6 +301,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id the id of the DomainDnsRecords to retrieve
      * @return the request builder for the DomainDnsRecords object
      */
+    @Nonnull
     DomainDnsRecordRequestBuilder domainDnsRecords(@Nonnull final String id);
 
     /**
@@ -285,6 +309,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the request builder for the collection of Domains objects
      */
+    @Nonnull
     DomainCollectionRequestBuilder domains();
 
     /**
@@ -293,6 +318,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id the id of the Domains to retrieve
      * @return the request builder for the Domains object
      */
+    @Nonnull
     DomainRequestBuilder domains(@Nonnull final String id);
 
     /**
@@ -300,6 +326,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the request builder for the collection of Groups objects
      */
+    @Nonnull
     GroupCollectionRequestBuilder groups();
 
     /**
@@ -308,6 +335,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id the id of the Groups to retrieve
      * @return the request builder for the Groups object
      */
+    @Nonnull
     GroupRequestBuilder groups(@Nonnull final String id);
 
     /**
@@ -315,6 +343,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the request builder for the collection of GroupSettings objects
      */
+    @Nonnull
     GroupSettingCollectionRequestBuilder groupSettings();
 
     /**
@@ -323,6 +352,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id the id of the GroupSettings to retrieve
      * @return the request builder for the GroupSettings object
      */
+    @Nonnull
     GroupSettingRequestBuilder groupSettings(@Nonnull final String id);
 
     /**
@@ -330,6 +360,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the request builder for the collection of GroupSettingTemplates objects
      */
+    @Nonnull
     GroupSettingTemplateCollectionRequestBuilder groupSettingTemplates();
 
     /**
@@ -338,6 +369,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id the id of the GroupSettingTemplates to retrieve
      * @return the request builder for the GroupSettingTemplates object
      */
+    @Nonnull
     GroupSettingTemplateRequestBuilder groupSettingTemplates(@Nonnull final String id);
 
     /**
@@ -345,6 +377,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the request builder for the collection of Oauth2PermissionGrants objects
      */
+    @Nonnull
     OAuth2PermissionGrantCollectionRequestBuilder oauth2PermissionGrants();
 
     /**
@@ -353,6 +386,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id the id of the Oauth2PermissionGrants to retrieve
      * @return the request builder for the Oauth2PermissionGrants object
      */
+    @Nonnull
     OAuth2PermissionGrantRequestBuilder oauth2PermissionGrants(@Nonnull final String id);
 
     /**
@@ -360,6 +394,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the request builder for the collection of Organization objects
      */
+    @Nonnull
     OrganizationCollectionRequestBuilder organization();
 
     /**
@@ -368,6 +403,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id the id of the Organization to retrieve
      * @return the request builder for the Organization object
      */
+    @Nonnull
     OrganizationRequestBuilder organization(@Nonnull final String id);
 
     /**
@@ -375,6 +411,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the request builder for the collection of ScopedRoleMemberships objects
      */
+    @Nonnull
     ScopedRoleMembershipCollectionRequestBuilder scopedRoleMemberships();
 
     /**
@@ -383,6 +420,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id the id of the ScopedRoleMemberships to retrieve
      * @return the request builder for the ScopedRoleMemberships object
      */
+    @Nonnull
     ScopedRoleMembershipRequestBuilder scopedRoleMemberships(@Nonnull final String id);
 
     /**
@@ -390,6 +428,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the request builder for the collection of ServicePrincipals objects
      */
+    @Nonnull
     ServicePrincipalCollectionRequestBuilder servicePrincipals();
 
     /**
@@ -398,6 +437,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id the id of the ServicePrincipals to retrieve
      * @return the request builder for the ServicePrincipals object
      */
+    @Nonnull
     ServicePrincipalRequestBuilder servicePrincipals(@Nonnull final String id);
 
     /**
@@ -405,6 +445,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the request builder for the collection of SubscribedSkus objects
      */
+    @Nonnull
     SubscribedSkuCollectionRequestBuilder subscribedSkus();
 
     /**
@@ -413,6 +454,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id the id of the SubscribedSkus to retrieve
      * @return the request builder for the SubscribedSkus object
      */
+    @Nonnull
     SubscribedSkuRequestBuilder subscribedSkus(@Nonnull final String id);
 
     /**
@@ -420,6 +462,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the request builder for the collection of Workbooks objects
      */
+    @Nonnull
     DriveItemCollectionRequestBuilder workbooks();
 
     /**
@@ -428,6 +471,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id the id of the Workbooks to retrieve
      * @return the request builder for the Workbooks object
      */
+    @Nonnull
     DriveItemRequestBuilder workbooks(@Nonnull final String id);
 
     /**
@@ -435,6 +479,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the request builder for the collection of Places objects
      */
+    @Nonnull
     PlaceCollectionRequestBuilder places();
 
     /**
@@ -443,6 +488,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id the id of the Places to retrieve
      * @return the request builder for the Places object
      */
+    @Nonnull
     PlaceRequestBuilder places(@Nonnull final String id);
 
     /**
@@ -450,6 +496,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the request builder for the collection of Drives objects
      */
+    @Nonnull
     DriveCollectionRequestBuilder drives();
 
     /**
@@ -458,6 +505,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id the id of the Drives to retrieve
      * @return the request builder for the Drives object
      */
+    @Nonnull
     DriveRequestBuilder drives(@Nonnull final String id);
 
     /**
@@ -465,6 +513,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the request builder for the collection of Shares objects
      */
+    @Nonnull
     SharedDriveItemCollectionRequestBuilder shares();
 
     /**
@@ -473,6 +522,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id the id of the Shares to retrieve
      * @return the request builder for the Shares object
      */
+    @Nonnull
     SharedDriveItemRequestBuilder shares(@Nonnull final String id);
 
     /**
@@ -480,6 +530,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the request builder for the collection of Sites objects
      */
+    @Nonnull
     SiteCollectionRequestBuilder sites();
 
     /**
@@ -488,6 +539,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id the id of the Sites to retrieve
      * @return the request builder for the Sites object
      */
+    @Nonnull
     SiteRequestBuilder sites(@Nonnull final String id);
 
     /**
@@ -495,6 +547,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the request builder for the collection of SchemaExtensions objects
      */
+    @Nonnull
     SchemaExtensionCollectionRequestBuilder schemaExtensions();
 
     /**
@@ -503,6 +556,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id the id of the SchemaExtensions to retrieve
      * @return the request builder for the SchemaExtensions object
      */
+    @Nonnull
     SchemaExtensionRequestBuilder schemaExtensions(@Nonnull final String id);
 
     /**
@@ -510,6 +564,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the request builder for the collection of GroupLifecyclePolicies objects
      */
+    @Nonnull
     GroupLifecyclePolicyCollectionRequestBuilder groupLifecyclePolicies();
 
     /**
@@ -518,6 +573,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id the id of the GroupLifecyclePolicies to retrieve
      * @return the request builder for the GroupLifecyclePolicies object
      */
+    @Nonnull
     GroupLifecyclePolicyRequestBuilder groupLifecyclePolicies(@Nonnull final String id);
 
     /**
@@ -525,6 +581,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the request builder for the collection of DataPolicyOperations objects
      */
+    @Nonnull
     DataPolicyOperationCollectionRequestBuilder dataPolicyOperations();
 
     /**
@@ -533,6 +590,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id the id of the DataPolicyOperations to retrieve
      * @return the request builder for the DataPolicyOperations object
      */
+    @Nonnull
     DataPolicyOperationRequestBuilder dataPolicyOperations(@Nonnull final String id);
 
     /**
@@ -540,6 +598,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the request builder for the collection of Subscriptions objects
      */
+    @Nonnull
     SubscriptionCollectionRequestBuilder subscriptions();
 
     /**
@@ -548,6 +607,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id the id of the Subscriptions to retrieve
      * @return the request builder for the Subscriptions object
      */
+    @Nonnull
     SubscriptionRequestBuilder subscriptions(@Nonnull final String id);
 
     /**
@@ -555,6 +615,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the request builder for the collection of Chats objects
      */
+    @Nonnull
     ChatCollectionRequestBuilder chats();
 
     /**
@@ -563,6 +624,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id the id of the Chats to retrieve
      * @return the request builder for the Chats object
      */
+    @Nonnull
     ChatRequestBuilder chats(@Nonnull final String id);
 
     /**
@@ -570,6 +632,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the request builder for the collection of Teams objects
      */
+    @Nonnull
     TeamCollectionRequestBuilder teams();
 
     /**
@@ -578,6 +641,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id the id of the Teams to retrieve
      * @return the request builder for the Teams object
      */
+    @Nonnull
     TeamRequestBuilder teams(@Nonnull final String id);
 
     /**
@@ -585,6 +649,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the request builder for the collection of TeamsTemplates objects
      */
+    @Nonnull
     TeamsTemplateCollectionRequestBuilder teamsTemplates();
 
     /**
@@ -593,6 +658,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id the id of the TeamsTemplates to retrieve
      * @return the request builder for the TeamsTemplates object
      */
+    @Nonnull
     TeamsTemplateRequestBuilder teamsTemplates(@Nonnull final String id);
 
     /**
@@ -600,6 +666,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the AuditLogRoot
      */
+    @Nonnull
     AuditLogRootRequestBuilder auditLogs();
 
     /**
@@ -607,6 +674,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the IdentityContainer
      */
+    @Nonnull
     IdentityContainerRequestBuilder identity();
 
     /**
@@ -614,6 +682,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the Directory
      */
+    @Nonnull
     DirectoryRequestBuilder directory();
 
     /**
@@ -621,6 +690,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the User
      */
+    @Nonnull
     UserRequestBuilder me();
 
     /**
@@ -628,6 +698,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the PolicyRoot
      */
+    @Nonnull
     PolicyRootRequestBuilder policies();
 
     /**
@@ -635,6 +706,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the EducationRoot
      */
+    @Nonnull
     EducationRootRequestBuilder education();
 
     /**
@@ -642,6 +714,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the Drive
      */
+    @Nonnull
     DriveRequestBuilder drive();
 
     /**
@@ -649,6 +722,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the CloudCommunications
      */
+    @Nonnull
     CloudCommunicationsRequestBuilder communications();
 
     /**
@@ -656,6 +730,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the DeviceAppManagement
      */
+    @Nonnull
     DeviceAppManagementRequestBuilder deviceAppManagement();
 
     /**
@@ -663,6 +738,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the DeviceManagement
      */
+    @Nonnull
     DeviceManagementRequestBuilder deviceManagement();
 
     /**
@@ -670,6 +746,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the ReportRoot
      */
+    @Nonnull
     ReportRootRequestBuilder reports();
 
     /**
@@ -677,6 +754,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the Planner
      */
+    @Nonnull
     PlannerRequestBuilder planner();
 
     /**
@@ -684,6 +762,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the Security
      */
+    @Nonnull
     SecurityRequestBuilder Security();
 
     /**
@@ -691,6 +770,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the AppCatalogs
      */
+    @Nonnull
     AppCatalogsRequestBuilder appCatalogs();
 
     /**
@@ -698,6 +778,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the Teamwork
      */
+    @Nonnull
     TeamworkRequestBuilder teamwork();
 
     /**
@@ -705,6 +786,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the InformationProtection
      */
+    @Nonnull
     InformationProtectionRequestBuilder informationProtection();
 
 }
