@@ -125,7 +125,17 @@ public final class CalendarSerializer {
         final SimpleDateFormat dateFormat = new SimpleDateFormat(datePattern, Locale.ROOT);
         dateFormat.setTimeZone(TimeZone.getDefault());
 
-        final Date date = dateFormat.parse(modifiedStrVal);
+        Date date;
+        try {
+            date = dateFormat.parse(modifiedStrVal);
+        } catch (IllegalArgumentException ex) {
+            // this is a failsafe as 'X' is not available < API level 24 https://developer.android.com/reference/java/text/SimpleDateFormat
+            final String backwardCompatibleDatePattern = datePattern.replace("XXX", "Z").replace("X", "Z");
+            final SimpleDateFormat backwardCompatibleDateFormat = new SimpleDateFormat(backwardCompatibleDatePattern, Locale.ROOT);
+            backwardCompatibleDateFormat.setTimeZone(TimeZone.getDefault());
+            final String backwardCompatibleStringRepresentation = modifiedStrVal.replaceFirst("([+-])(\\d{2}):?(\\d{2})", "$1$2$3"); // removes the colons so the date can be parsed with Z
+            date = backwardCompatibleDateFormat.parse(backwardCompatibleStringRepresentation);
+        }
 
         final Calendar calendar = java.util.Calendar.getInstance();
         calendar.setTime(date);
