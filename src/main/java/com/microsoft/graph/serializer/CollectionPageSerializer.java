@@ -109,14 +109,14 @@ public class CollectionPageSerializer {
 	@SuppressWarnings("unchecked")
 	@Nullable
 	public static <T1, T2 extends IRequestBuilder> BaseCollectionPage<T1, T2> deserialize(@Nonnull final JsonElement json, @Nonnull Type typeOfT, @Nonnull final ILogger logger) throws JsonParseException {
-		if (json == null || !json.isJsonArray()) {
+		if (json == null || !json.isJsonArray() || !typeOfT.getClass().equals(Class.class)) {
 			return null;
 		}
 		serializer = new DefaultSerializer(logger);
 		final JsonArray sourceArray = json.getAsJsonArray();
 		final ArrayList<T1> list = new ArrayList<T1>(sourceArray.size());
 		/** eg: com.microsoft.graph.requests.extensions.AttachmentCollectionPage */
-		final String collectionPageClassCanonicalName = typeOfT.getTypeName();
+		final String collectionPageClassCanonicalName = ((Class<?>)typeOfT).getName();
 		/** eg: com.microsoft.graph.models.extensions.Attachment */
 		final String baseEntityClassCanonicalName = collectionPageClassCanonicalName
 					.substring(0, collectionPageClassCanonicalName.length() - pageLength - collectionLength)
