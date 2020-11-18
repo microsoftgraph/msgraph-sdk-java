@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - '**/*.java'
+      - '**/*.yml'
 
 jobs:
   update-type-summary:
