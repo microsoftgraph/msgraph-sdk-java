@@ -36,6 +36,7 @@ public class App {
         final List<String> classNames = getOrderedClassNames();
         serializeEnums(writer, classNames);
         serializeClasses(writer, classNames);
+        serializeInterfaces(writer, classNames);
     }
     private static void serializeEnums(final ILogWriter writer, final List<String> classNames) throws Exception {
         for (String c : classNames) {
@@ -60,10 +61,25 @@ public class App {
         classNames.sort(Comparator.naturalOrder());
         return classNames;
     }
+    private static void serializeInterfaces(final ILogWriter writer, final List<String> classNames) throws Exception {
+        for (String c : classNames) {
+            Class<?> clazz = Class.forName(c);
+            if(clazz.isInterface()) {
+                String classHeadLine = "interface " + clazz.getName();
+                Class<?> superClass = clazz.getSuperclass();
+                if(superClass != null && superClass != Object.class) {
+                    classHeadLine += " : " + superClass.getName();
+                }
+                writer.write(classHeadLine);
+                serializeFields(clazz, writer);
+                serializeMethods(clazz, writer);
+            }
+        }
+    }
     private static void serializeClasses(final ILogWriter writer, final List<String> classNames) throws Exception {
         for (String c : classNames) {
             Class<?> clazz = Class.forName(c);
-            if(!clazz.isEnum()) {
+            if(!clazz.isEnum() && !clazz.isInterface()) {
                 String classHeadLine = "class " + clazz.getName();
                 Class<?> superClass = clazz.getSuperclass();
                 if(superClass != null && superClass != Object.class) {
