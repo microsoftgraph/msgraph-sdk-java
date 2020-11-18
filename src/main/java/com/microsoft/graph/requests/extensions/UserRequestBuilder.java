@@ -75,6 +75,7 @@ import com.microsoft.graph.requests.extensions.OfficeGraphInsightsRequestBuilder
 import com.microsoft.graph.requests.extensions.UserSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserTeamworkRequestBuilder;
+import com.microsoft.graph.requests.extensions.TodoRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -1189,6 +1190,15 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      */
     public UserTeamworkRequestBuilder teamwork() {
         return new UserTeamworkRequestBuilder(getRequestUrlWithAdditionalSegment("teamwork"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for Todo
+     *
+     * @return the TodoRequestBuilder instance
+     */
+    public TodoRequestBuilder todo() {
+        return new TodoRequestBuilder(getRequestUrlWithAdditionalSegment("todo"), getClient(), null);
     }
 
     /**

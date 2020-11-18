@@ -17,6 +17,8 @@ import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionRequ
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.DelegatedPermissionClassificationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DelegatedPermissionClassificationRequestBuilder;
 import com.microsoft.graph.requests.extensions.EndpointCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EndpointRequestBuilder;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionRequestBuilder;

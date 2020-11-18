@@ -150,7 +150,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Mail Nickname.
-     * The mail alias for the group, unique in the organization. This property must be specified when a group is created. These characters cannot be used in the mailNickName: @()/[]';:.&amp;lt;&amp;gt;,SPACE. Returned by default. Supports $filter.
+     * 
      */
     @SerializedName(value = "mailNickname", alternate = {"MailNickname"})
     @Expose
@@ -174,7 +174,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Domain Name.
-     * Contains the on-premises domain FQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect.Returned by default. Read-only.
+     * 
      */
     @SerializedName(value = "onPremisesDomainName", alternate = {"OnPremisesDomainName"})
     @Expose
@@ -182,7 +182,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Last Sync Date Time.
-     * Indicates the last time at which the group was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only. Supports $filter.
+     * 
      */
     @SerializedName(value = "onPremisesLastSyncDateTime", alternate = {"OnPremisesLastSyncDateTime"})
     @Expose
@@ -190,7 +190,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Net Bios Name.
-     * Contains the on-premises netBios name synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect.Returned by default. Read-only.
+     * 
      */
     @SerializedName(value = "onPremisesNetBiosName", alternate = {"OnPremisesNetBiosName"})
     @Expose
@@ -198,7 +198,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Provisioning Errors.
-     * Errors when using Microsoft synchronization product during provisioning. Returned by default.
+     * 
      */
     @SerializedName(value = "onPremisesProvisioningErrors", alternate = {"OnPremisesProvisioningErrors"})
     @Expose

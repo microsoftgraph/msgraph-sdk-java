@@ -16,6 +16,8 @@ import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionRequ
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.DelegatedPermissionClassificationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DelegatedPermissionClassificationRequestBuilder;
 import com.microsoft.graph.requests.extensions.EndpointCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EndpointRequestBuilder;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionRequestBuilder;
@@ -159,6 +161,24 @@ public class ServicePrincipalRequestBuilder extends BaseRequestBuilder<ServicePr
      */
     public ServicePrincipalWithReferenceRequestBuilder createdObjectsAsServicePrincipal(final String id) {
         return new ServicePrincipalWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdObjects") + "/" + id + "/microsoft.graph.servicePrincipal", getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the DelegatedPermissionClassification collection
+     *
+     * @return the collection request builder
+     */
+    public DelegatedPermissionClassificationCollectionRequestBuilder delegatedPermissionClassifications() {
+        return new DelegatedPermissionClassificationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("delegatedPermissionClassifications"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the DelegatedPermissionClassification item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    public DelegatedPermissionClassificationRequestBuilder delegatedPermissionClassifications(final String id) {
+        return new DelegatedPermissionClassificationRequestBuilder(getRequestUrlWithAdditionalSegment("delegatedPermissionClassifications") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Endpoint collection
