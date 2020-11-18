@@ -19,6 +19,7 @@ import com.google.common.reflect.ClassPath.ClassInfo;
 import com.google.common.reflect.ClassPath;
 
 public class App {
+    // -o absolutepathpath.txt to output to text file instead of console
     public static void main(String[] args) throws Exception {
         final String[] mNames = { //those are default java language methods that every object will have
             "equals",
@@ -30,13 +31,19 @@ public class App {
             "wait"
         };
         methodsNameToSkip = Arrays.asList(mNames);
-        final ILogWriter writer = new ConsoleLogWriter();
+        final Boolean isFileMode = args.length > 0 && args[0].equals("-o");
+
+        final ILogWriter writer = isFileMode ? new TextFileLogWriter(args[1]) : new ConsoleLogWriter();
 
         
         final List<String> classNames = getOrderedClassNames();
         serializeEnums(writer, classNames);
         serializeClasses(writer, classNames);
         serializeInterfaces(writer, classNames);
+
+        if(isFileMode) {
+            ((TextFileLogWriter)writer).flush();
+        }
     }
     private static void serializeEnums(final ILogWriter writer, final List<String> classNames) throws Exception {
         for (String c : classNames) {
