@@ -7,6 +7,12 @@ import com.microsoft.graph.models.extensions.User;
 
 import java.util.Set;
 import java.util.stream.Collectors;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.lang.reflect.Parameter;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 import com.google.common.reflect.ClassPath.ClassInfo;
@@ -14,11 +20,59 @@ import com.google.common.reflect.ClassPath;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Set<ClassInfo> classInfos = ClassPath.from(User.class.getClassLoader()).getTopLevelClassesRecursive("com.microsoft.graph");
-        List<String> classNames = classInfos.stream().map(classInfo -> classInfo.getName()).distinct().collect(Collectors.toList());
+        final String[] mNames = { //those are default java language methods that every object will have
+            "equals",
+            "getClass",
+            "hashCode",
+            "notify",
+            "notifyAll",
+            "toString",
+            "wait"
+        };
+        methodsNameToSkip = Arrays.asList(mNames);
+        final ILogWriter writer = new ConsoleLogWriter();
+
+
+        final Set<ClassInfo> classInfos = ClassPath.from(User.class.getClassLoader()).getTopLevelClassesRecursive("com.microsoft.graph");
+        final List<String> classNames = classInfos.stream()
+                                            .map(classInfo -> classInfo.getName())
+                                            .distinct()
+                                            .collect(Collectors.toList());
+        classNames.sort(Comparator.naturalOrder());
         for (String c : classNames) {
             Class<?> clazz = Class.forName(c);
-            System.out.println(clazz.getName());
+            String classHeadLine = "class " + clazz.getName();
+            Class<?> superClass = clazz.getSuperclass();
+            if(superClass != null && superClass != Object.class) {
+                classHeadLine += " : " + superClass.getName();
+            }
+            writer.write(classHeadLine);
+            serializeFields(clazz, writer);
+            serializeMethods(clazz, writer);
+        }
+    }
+    private static void serializeFields(final Class<?> clazz, final ILogWriter writer) {
+        final Field[] fields = clazz.getFields();
+        Arrays.sort(fields, (o1, o2) -> o1.getName().compareTo(o2.getName()));
+        for(Field field : fields) {
+            writer.write("property " + field.getName() + " : " + field.getType().getName(), 2);
+        }
+    }
+    private static List<String> methodsNameToSkip;
+    private static void serializeMethods(final Class<?> clazz, final ILogWriter writer) {
+        final Method[] methods = clazz.getMethods();
+        Arrays.sort(methods, (o1, o2) -> o1.getName().compareTo(o2.getName()));
+        for(Method method : methods) {
+            if(!methodsNameToSkip.contains(method.getName())) {
+                writer.write("method " + method.getName(), 2);
+                writer.write("return type " +method.getReturnType().getName(), 4);
+                serializeParameters(method, writer);
+            }
+        }
+    }
+    private static void serializeParameters(final Method method, final ILogWriter writer) {
+        for(Parameter parameter: method.getParameters()) {
+            writer.write("param " + parameter.getName() + " : " + parameter.getType().getName(), 4);
         }
     }
 }
