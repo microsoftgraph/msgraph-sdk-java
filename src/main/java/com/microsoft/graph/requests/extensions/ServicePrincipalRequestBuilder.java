@@ -16,6 +16,8 @@ import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionRequ
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.DelegatedPermissionClassificationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DelegatedPermissionClassificationRequestBuilder;
 import com.microsoft.graph.requests.extensions.EndpointCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EndpointRequestBuilder;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionRequestBuilder;
@@ -104,6 +106,13 @@ public class ServicePrincipalRequestBuilder extends BaseRequestBuilder {
 
     public ServicePrincipalWithReferenceRequestBuilder createdObjectsAsServicePrincipal(final String id) {
         return new ServicePrincipalWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdObjects") + "/" + id + "/microsoft.graph.servicePrincipal", getClient(), null);
+    }
+    public DelegatedPermissionClassificationCollectionRequestBuilder delegatedPermissionClassifications() {
+        return new DelegatedPermissionClassificationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("delegatedPermissionClassifications"), getClient(), null);
+    }
+
+    public DelegatedPermissionClassificationRequestBuilder delegatedPermissionClassifications(final String id) {
+        return new DelegatedPermissionClassificationRequestBuilder(getRequestUrlWithAdditionalSegment("delegatedPermissionClassifications") + "/" + id, getClient(), null);
     }
     public EndpointCollectionRequestBuilder endpoints() {
         return new EndpointCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("endpoints"), getClient(), null);

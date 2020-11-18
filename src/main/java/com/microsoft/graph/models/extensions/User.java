@@ -45,6 +45,8 @@ import com.microsoft.graph.models.extensions.Onenote;
 import com.microsoft.graph.models.extensions.UserActivity;
 import com.microsoft.graph.models.extensions.OnlineMeeting;
 import com.microsoft.graph.models.extensions.Team;
+import com.microsoft.graph.models.extensions.UserTeamwork;
+import com.microsoft.graph.models.extensions.Todo;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionPage;
@@ -188,7 +190,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Employee Id.
-     * The employee identifier assigned to the user by the organization. Supports $filter.
+     * The employee identifier assigned to the user by the organization. Returned only on $select. Supports $filter.
      */
     @SerializedName(value = "employeeId", alternate = {"EmployeeId"})
     @Expose
@@ -252,7 +254,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Job Title.
-     * The user’s job title. Supports $filter.
+     * The user's job title. Supports $filter.
      */
     @SerializedName(value = "jobTitle", alternate = {"JobTitle"})
     @Expose
@@ -340,7 +342,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Immutable Id.
-     * This property is used to associate an on-premises Active Directory user account to their Azure AD user object. This property must be specified when creating a new user account in the Graph if you are using a federated domain for the user’s userPrincipalName (UPN) property. Important: The $ and _ characters cannot be used when specifying this property. Supports $filter.
+     * This property is used to associate an on-premises Active Directory user account to their Azure AD user object. This property must be specified when creating a new user account in the Graph if you are using a federated domain for the user's userPrincipalName (UPN) property. Important: The $ and _ characters cannot be used when specifying this property. Supports $filter.
      */
     @SerializedName(value = "onPremisesImmutableId", alternate = {"OnPremisesImmutableId"})
     @Expose
@@ -412,7 +414,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Password Profile.
-     * Specifies the password profile for the user. The profile contains the user’s password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
+     * Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
      */
     @SerializedName(value = "passwordProfile", alternate = {"PasswordProfile"})
     @Expose
@@ -500,7 +502,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant’s collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Supports $filter and $orderby.
+     * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Supports $filter and $orderby.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
@@ -548,7 +550,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Hire Date.
-     * The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned only on $select.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
      */
     @SerializedName(value = "hireDate", alternate = {"HireDate"})
     @Expose
@@ -640,7 +642,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Manager.
-     * The user or contact that is this user’s manager. Read-only. (HTTP Methods: GET, PUT, DELETE.)
+     * The user or contact that is this user's manager. Read-only. (HTTP Methods: GET, PUT, DELETE.)
      */
     @SerializedName(value = "manager", alternate = {"Manager"})
     @Expose
@@ -909,6 +911,22 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "joinedTeams", alternate = {"JoinedTeams"})
     @Expose
     public TeamCollectionPage joinedTeams;
+
+    /**
+     * The Teamwork.
+     * 
+     */
+    @SerializedName(value = "teamwork", alternate = {"Teamwork"})
+    @Expose
+    public UserTeamwork teamwork;
+
+    /**
+     * The Todo.
+     * 
+     */
+    @SerializedName(value = "todo", alternate = {"Todo"})
+    @Expose
+    public Todo todo;
 
 
     /**

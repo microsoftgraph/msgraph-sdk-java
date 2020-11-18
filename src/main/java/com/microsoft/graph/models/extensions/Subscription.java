@@ -88,7 +88,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Latest Supported Tls Version.
-     * 
+     * Specifies the latest version of Transport Layer Security (TLS) that the notification endpoint, specified by notificationUrl, supports. The possible values are: v1_0, v1_1, v1_2, v1_3. For subscribers whose notification endpoint supports a version lower than the currently recommended version (TLS 1.2), specifying this property by a set timeline allows them to temporarily use their deprecated version of TLS before completing their upgrade to TLS 1.2. For these subscribers, not setting this property per the timeline would result in subscription operations failing. For subscribers whose notification endpoint already supports TLS 1.2, setting this property is optional. In such cases, Microsoft Graph defaults the property to v1_2.
      */
     @SerializedName(value = "latestSupportedTlsVersion", alternate = {"LatestSupportedTlsVersion"})
     @Expose
@@ -96,7 +96,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Lifecycle Notification Url.
-     * 
+     * The URL of the endpoint that receives lifecycle notifications, including subscriptionRemoved and missed notifications. This URL must make use of the HTTPS protocol. Optional. Read more about how Outlook resources use lifecycle notifications.
      */
     @SerializedName(value = "lifecycleNotificationUrl", alternate = {"LifecycleNotificationUrl"})
     @Expose

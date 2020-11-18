@@ -90,6 +90,22 @@ public class Calendar extends Entity implements IJsonBackedObject {
     public OnlineMeetingProviderType defaultOnlineMeetingProvider;
 
     /**
+     * The Hex Color.
+     * 
+     */
+    @SerializedName(value = "hexColor", alternate = {"HexColor"})
+    @Expose
+    public String hexColor;
+
+    /**
+     * The Is Default Calendar.
+     * 
+     */
+    @SerializedName(value = "isDefaultCalendar", alternate = {"IsDefaultCalendar"})
+    @Expose
+    public Boolean isDefaultCalendar;
+
+    /**
      * The Is Removable.
      * Indicates whether this user calendar can be deleted from the user mailbox.
      */

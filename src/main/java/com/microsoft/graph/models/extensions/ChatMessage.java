@@ -132,7 +132,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Policy Violation.
-     * 
+     * Defines the properties of a policy violation set by a data loss prevention (DLP) application.
      */
     @SerializedName(value = "policyViolation", alternate = {"PolicyViolation"})
     @Expose

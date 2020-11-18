@@ -69,7 +69,7 @@ public class ChangeNotification implements IJsonBackedObject {
 
     /**
      * The Lifecycle Event.
-     * 
+     * The type of lifecycle notification if the current notification is a lifecycle notification. Optional. Supported values are missed, removed, reauthorizationRequired.
      */
     @SerializedName(value = "lifecycleEvent", alternate = {"LifecycleEvent"})
     @Expose

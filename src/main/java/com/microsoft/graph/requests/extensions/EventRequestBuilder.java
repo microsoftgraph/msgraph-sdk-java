@@ -8,6 +8,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Event;
+import com.microsoft.graph.models.extensions.Recipient;
 import com.microsoft.graph.models.extensions.DateTimeTimeZone;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AttachmentRequestBuilder;
@@ -113,12 +114,20 @@ public class EventRequestBuilder extends BaseRequestBuilder {
         return new EventAcceptRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.accept"), getClient(), null, comment, sendResponse);
     }
 
+    public EventCancelRequestBuilder cancel(final String comment) {
+        return new EventCancelRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cancel"), getClient(), null, comment);
+    }
+
     public EventDeclineRequestBuilder decline(final String comment, final Boolean sendResponse) {
         return new EventDeclineRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.decline"), getClient(), null, comment, sendResponse);
     }
 
     public EventDismissReminderRequestBuilder dismissReminder() {
         return new EventDismissReminderRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dismissReminder"), getClient(), null);
+    }
+
+    public EventForwardRequestBuilder forward(final java.util.List<Recipient> toRecipients, final String comment) {
+        return new EventForwardRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.forward"), getClient(), null, toRecipients, comment);
     }
 
     public EventSnoozeReminderRequestBuilder snoozeReminder(final DateTimeTimeZone newReminderTime) {

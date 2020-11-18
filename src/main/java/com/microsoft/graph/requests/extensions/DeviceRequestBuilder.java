@@ -231,46 +231,4 @@ public class DeviceRequestBuilder extends BaseRequestBuilder {
     public ExtensionRequestBuilder extensions(final String id) {
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
-    public UserCollectionRequestBuilder extensionsAsUser() {
-        return new UserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/microsoft.graph.user", getClient(), null);
-    }
-
-    public UserRequestBuilder extensionsAsUser(final String id) {
-        return new UserRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id + "/microsoft.graph.user", getClient(), null);
-    }
-    public GroupCollectionRequestBuilder extensionsAsGroup() {
-        return new GroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/microsoft.graph.group", getClient(), null);
-    }
-
-    public GroupRequestBuilder extensionsAsGroup(final String id) {
-        return new GroupRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id + "/microsoft.graph.group", getClient(), null);
-    }
-    public ApplicationCollectionRequestBuilder extensionsAsApplication() {
-        return new ApplicationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/microsoft.graph.application", getClient(), null);
-    }
-
-    public ApplicationRequestBuilder extensionsAsApplication(final String id) {
-        return new ApplicationRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id + "/microsoft.graph.application", getClient(), null);
-    }
-    public ServicePrincipalCollectionRequestBuilder extensionsAsServicePrincipal() {
-        return new ServicePrincipalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/microsoft.graph.servicePrincipal", getClient(), null);
-    }
-
-    public ServicePrincipalRequestBuilder extensionsAsServicePrincipal(final String id) {
-        return new ServicePrincipalRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id + "/microsoft.graph.servicePrincipal", getClient(), null);
-    }
-    public DeviceCollectionRequestBuilder extensionsAsDevice() {
-        return new DeviceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/microsoft.graph.device", getClient(), null);
-    }
-
-    public DeviceRequestBuilder extensionsAsDevice(final String id) {
-        return new DeviceRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id + "/microsoft.graph.device", getClient(), null);
-    }
-    public OrgContactCollectionRequestBuilder extensionsAsOrgContact() {
-        return new OrgContactCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/microsoft.graph.orgContact", getClient(), null);
-    }
-
-    public OrgContactRequestBuilder extensionsAsOrgContact(final String id) {
-        return new OrgContactRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id + "/microsoft.graph.orgContact", getClient(), null);
-    }
 }
