@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.UserTeamwork;
 import com.microsoft.graph.models.extensions.UserScopeTeamsAppInstallation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.UserScopeTeamsAppInstallationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserScopeTeamsAppInstallationRequestBuilder;
@@ -32,7 +34,7 @@ public class UserScopeTeamsAppInstallationCollectionRequestBuilder extends BaseR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserScopeTeamsAppInstallationCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserScopeTeamsAppInstallationCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,7 +44,8 @@ public class UserScopeTeamsAppInstallationCollectionRequestBuilder extends BaseR
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public UserScopeTeamsAppInstallationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public UserScopeTeamsAppInstallationCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +55,13 @@ public class UserScopeTeamsAppInstallationCollectionRequestBuilder extends BaseR
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public UserScopeTeamsAppInstallationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public UserScopeTeamsAppInstallationCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new UserScopeTeamsAppInstallationCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public UserScopeTeamsAppInstallationRequestBuilder byId(final String id) {
+    @Nonnull
+    public UserScopeTeamsAppInstallationRequestBuilder byId(@Nonnull final String id) {
         return new UserScopeTeamsAppInstallationRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

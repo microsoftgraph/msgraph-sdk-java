@@ -15,6 +15,8 @@ import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionReques
 import com.microsoft.graph.requests.extensions.MobileAppCategoryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -32,7 +34,7 @@ public class MobileAppRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MobileAppRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,7 +44,8 @@ public class MobileAppRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the MobileAppRequest instance
      */
-    public MobileAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public MobileAppRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,27 +55,33 @@ public class MobileAppRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the MobileAppRequest instance
      */
-    public MobileAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public MobileAppRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.MobileAppRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    @Nonnull
     public MobileAppAssignmentCollectionRequestBuilder assignments() {
         return new MobileAppAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
-    public MobileAppAssignmentRequestBuilder assignments(final String id) {
+    @Nonnull
+    public MobileAppAssignmentRequestBuilder assignments(@Nonnull final String id) {
         return new MobileAppAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public MobileAppCategoryCollectionWithReferencesRequestBuilder categories() {
         return new MobileAppCategoryCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
     }
 
-    public MobileAppCategoryWithReferenceRequestBuilder categories(final String id) {
+    @Nonnull
+    public MobileAppCategoryWithReferenceRequestBuilder categories(@Nonnull final String id) {
         return new MobileAppCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
     }
 
-    public MobileAppAssignRequestBuilder assign(final java.util.List<MobileAppAssignment> mobileAppAssignments) {
+    @Nonnull
+    public MobileAppAssignRequestBuilder assign(@Nullable final java.util.List<MobileAppAssignment> mobileAppAssignments) {
         return new MobileAppAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, mobileAppAssignments);
     }
 }

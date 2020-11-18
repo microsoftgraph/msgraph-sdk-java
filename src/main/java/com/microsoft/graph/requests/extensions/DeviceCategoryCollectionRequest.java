@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.DeviceCategory;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class DeviceCategoryCollectionRequest extends BaseCollectionRequest<Devic
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceCategoryCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceCategoryCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceCategoryCollectionResponse.class, DeviceCategoryCollectionPage.class);
     }
 
-    public void get(final ICallback<? super DeviceCategoryCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceCategoryCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class DeviceCategoryCollectionRequest extends BaseCollectionRequest<Devic
         });
     }
 
+    @Nonnull
     public DeviceCategoryCollectionPage get() throws ClientException {
         final DeviceCategoryCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceCategory newDeviceCategory, final ICallback<? super DeviceCategory> callback) {
+    public void post(@Nonnull final DeviceCategory newDeviceCategory, @Nonnull final ICallback<? super DeviceCategory> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceCategory, callback);
     }
 
-    public DeviceCategory post(final DeviceCategory newDeviceCategory) throws ClientException {
+    @Nonnull
+    public DeviceCategory post(@Nonnull final DeviceCategory newDeviceCategory) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class DeviceCategoryCollectionRequest extends BaseCollectionRequest<Devic
      * @param value the expand clause
      * @return the updated request
      */
-    public DeviceCategoryCollectionRequest expand(final String value) {
+    @Nonnull
+    public DeviceCategoryCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DeviceCategoryCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class DeviceCategoryCollectionRequest extends BaseCollectionRequest<Devic
      * @param value the filter clause
      * @return the updated request
      */
-    public DeviceCategoryCollectionRequest filter(final String value) {
+    @Nonnull
+    public DeviceCategoryCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DeviceCategoryCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class DeviceCategoryCollectionRequest extends BaseCollectionRequest<Devic
      * @param value the order by clause
      * @return the updated request
      */
-    public DeviceCategoryCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DeviceCategoryCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceCategoryCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class DeviceCategoryCollectionRequest extends BaseCollectionRequest<Devic
      * @param value the select clause
      * @return the updated request
      */
-    public DeviceCategoryCollectionRequest select(final String value) {
+    @Nonnull
+    public DeviceCategoryCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DeviceCategoryCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class DeviceCategoryCollectionRequest extends BaseCollectionRequest<Devic
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DeviceCategoryCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (DeviceCategoryCollectionRequest)this;
@@ -133,6 +142,7 @@ public class DeviceCategoryCollectionRequest extends BaseCollectionRequest<Devic
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public DeviceCategoryCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (DeviceCategoryCollectionRequest)this;
@@ -144,11 +154,13 @@ public class DeviceCategoryCollectionRequest extends BaseCollectionRequest<Devic
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public DeviceCategoryCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public DeviceCategoryCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (DeviceCategoryCollectionRequest)this;
     }
-    public DeviceCategoryCollectionPage buildFromResponse(final DeviceCategoryCollectionResponse response) {
+    @Nonnull
+    public DeviceCategoryCollectionPage buildFromResponse(@Nonnull final DeviceCategoryCollectionResponse response) {
         final DeviceCategoryCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new DeviceCategoryCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

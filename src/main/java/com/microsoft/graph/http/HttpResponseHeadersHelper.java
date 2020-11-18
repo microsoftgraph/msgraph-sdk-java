@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
+import javax.annotation.Nonnull;
+
 import okhttp3.Headers;
 import okhttp3.Response;
 
@@ -16,10 +18,11 @@ public class HttpResponseHeadersHelper {
 	 * @param response the OkHttp response
 	 * @return           the set of headers names and value
 	 */
-	public Map<String, String> getResponseHeadersAsMapStringString(final Response response) {
+	@Nonnull
+	public Map<String, String> getResponseHeadersAsMapStringString(@Nonnull final Response response) {
 		final Map<String, String> headers = new TreeMap<>(String.CASE_INSENSITIVE_ORDER);
 		int index = 0;
-		Headers responseHeaders = response.headers();
+		final Headers responseHeaders = response.headers();
 		while (index < responseHeaders.size()) {
 			final String headerName = responseHeaders.name(index);
 			final String headerValue = responseHeaders.value(index);
@@ -38,11 +41,12 @@ public class HttpResponseHeadersHelper {
 	 * @param response the OkHttp response
 	 * @return           the set of headers names and value
 	 */
-	public Map<String, List<String>> getResponseHeadersAsMapOfStringList(Response response) {
+	@Nonnull
+	public Map<String, List<String>> getResponseHeadersAsMapOfStringList(@Nonnull final Response response) {
 		Map<String, List<String>> headerFields = response.headers().toMultimap();
 		// Add the response code
 		List<String> list = new ArrayList<>();
-		list.add(String.format("%d", response.code()));
+		list.add(Integer.toString(response.code()));
 		headerFields.put("responseCode", list);
 		return headerFields;
 	}

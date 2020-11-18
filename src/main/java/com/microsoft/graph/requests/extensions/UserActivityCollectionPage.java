@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.UserActivity;
 import com.microsoft.graph.requests.extensions.UserActivityCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.UserActivityCollectionPage;
 import com.microsoft.graph.requests.extensions.UserActivityCollectionResponse;
@@ -22,7 +24,7 @@ public class UserActivityCollectionPage extends BaseCollectionPage<UserActivity,
      * @param response the serialized UserActivityCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public UserActivityCollectionPage(final UserActivityCollectionResponse response, final UserActivityCollectionRequestBuilder builder) {
+    public UserActivityCollectionPage(@Nonnull final UserActivityCollectionResponse response, @Nonnull final UserActivityCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

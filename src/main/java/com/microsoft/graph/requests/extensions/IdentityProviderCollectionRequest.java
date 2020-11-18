@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IdentityProvider;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,11 +36,11 @@ public class IdentityProviderCollectionRequest extends BaseCollectionRequest<Ide
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IdentityProviderCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IdentityProviderCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IdentityProviderCollectionResponse.class, IdentityProviderCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IdentityProviderCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super IdentityProviderCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -52,19 +54,21 @@ public class IdentityProviderCollectionRequest extends BaseCollectionRequest<Ide
         });
     }
 
+    @Nonnull
     public IdentityProviderCollectionPage get() throws ClientException {
         final IdentityProviderCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final IdentityProvider newIdentityProvider, final ICallback<? super IdentityProvider> callback) {
+    public void post(@Nonnull final IdentityProvider newIdentityProvider, @Nonnull final ICallback<? super IdentityProvider> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new IdentityProviderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newIdentityProvider, callback);
     }
 
-    public IdentityProvider post(final IdentityProvider newIdentityProvider) throws ClientException {
+    @Nonnull
+    public IdentityProvider post(@Nonnull final IdentityProvider newIdentityProvider) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new IdentityProviderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -77,7 +81,8 @@ public class IdentityProviderCollectionRequest extends BaseCollectionRequest<Ide
      * @param value the expand clause
      * @return the updated request
      */
-    public IdentityProviderCollectionRequest expand(final String value) {
+    @Nonnull
+    public IdentityProviderCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (IdentityProviderCollectionRequest)this;
     }
@@ -88,7 +93,8 @@ public class IdentityProviderCollectionRequest extends BaseCollectionRequest<Ide
      * @param value the filter clause
      * @return the updated request
      */
-    public IdentityProviderCollectionRequest filter(final String value) {
+    @Nonnull
+    public IdentityProviderCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (IdentityProviderCollectionRequest)this;
     }
@@ -99,7 +105,8 @@ public class IdentityProviderCollectionRequest extends BaseCollectionRequest<Ide
      * @param value the order by clause
      * @return the updated request
      */
-    public IdentityProviderCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public IdentityProviderCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IdentityProviderCollectionRequest)this;
     }
@@ -110,7 +117,8 @@ public class IdentityProviderCollectionRequest extends BaseCollectionRequest<Ide
      * @param value the select clause
      * @return the updated request
      */
-    public IdentityProviderCollectionRequest select(final String value) {
+    @Nonnull
+    public IdentityProviderCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (IdentityProviderCollectionRequest)this;
     }
@@ -121,6 +129,7 @@ public class IdentityProviderCollectionRequest extends BaseCollectionRequest<Ide
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public IdentityProviderCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (IdentityProviderCollectionRequest)this;
@@ -132,6 +141,7 @@ public class IdentityProviderCollectionRequest extends BaseCollectionRequest<Ide
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public IdentityProviderCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (IdentityProviderCollectionRequest)this;
@@ -143,11 +153,13 @@ public class IdentityProviderCollectionRequest extends BaseCollectionRequest<Ide
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public IdentityProviderCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public IdentityProviderCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (IdentityProviderCollectionRequest)this;
     }
-    public IdentityProviderCollectionPage buildFromResponse(final IdentityProviderCollectionResponse response) {
+    @Nonnull
+    public IdentityProviderCollectionPage buildFromResponse(@Nonnull final IdentityProviderCollectionResponse response) {
         final IdentityProviderCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new IdentityProviderCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

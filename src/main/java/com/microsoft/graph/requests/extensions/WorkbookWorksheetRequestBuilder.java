@@ -20,6 +20,8 @@ import com.microsoft.graph.requests.extensions.WorkbookTableRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetProtectionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -37,7 +39,7 @@ public class WorkbookWorksheetRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookWorksheetRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookWorksheetRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,7 +49,8 @@ public class WorkbookWorksheetRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the WorkbookWorksheetRequest instance
      */
-    public WorkbookWorksheetRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WorkbookWorksheetRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -57,30 +60,37 @@ public class WorkbookWorksheetRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the WorkbookWorksheetRequest instance
      */
-    public WorkbookWorksheetRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WorkbookWorksheetRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookWorksheetRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    @Nonnull
     public WorkbookChartCollectionRequestBuilder charts() {
         return new WorkbookChartCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("charts"), getClient(), null);
     }
 
-    public WorkbookChartRequestBuilder charts(final String id) {
+    @Nonnull
+    public WorkbookChartRequestBuilder charts(@Nonnull final String id) {
         return new WorkbookChartRequestBuilder(getRequestUrlWithAdditionalSegment("charts") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public WorkbookNamedItemCollectionRequestBuilder names() {
         return new WorkbookNamedItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("names"), getClient(), null);
     }
 
-    public WorkbookNamedItemRequestBuilder names(final String id) {
+    @Nonnull
+    public WorkbookNamedItemRequestBuilder names(@Nonnull final String id) {
         return new WorkbookNamedItemRequestBuilder(getRequestUrlWithAdditionalSegment("names") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public WorkbookPivotTableCollectionRequestBuilder pivotTables() {
         return new WorkbookPivotTableCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("pivotTables"), getClient(), null);
     }
 
-    public WorkbookPivotTableRequestBuilder pivotTables(final String id) {
+    @Nonnull
+    public WorkbookPivotTableRequestBuilder pivotTables(@Nonnull final String id) {
         return new WorkbookPivotTableRequestBuilder(getRequestUrlWithAdditionalSegment("pivotTables") + "/" + id, getClient(), null);
     }
 
@@ -89,34 +99,42 @@ public class WorkbookWorksheetRequestBuilder extends BaseRequestBuilder {
      *
      * @return the WorkbookWorksheetProtectionRequestBuilder instance
      */
+    @Nonnull
     public WorkbookWorksheetProtectionRequestBuilder protection() {
         return new WorkbookWorksheetProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("protection"), getClient(), null);
     }
+    @Nonnull
     public WorkbookTableCollectionRequestBuilder tables() {
         return new WorkbookTableCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tables"), getClient(), null);
     }
 
-    public WorkbookTableRequestBuilder tables(final String id) {
+    @Nonnull
+    public WorkbookTableRequestBuilder tables(@Nonnull final String id) {
         return new WorkbookTableRequestBuilder(getRequestUrlWithAdditionalSegment("tables") + "/" + id, getClient(), null);
     }
 
-    public WorkbookWorksheetCellRequestBuilder cell(final Integer row, final Integer column) {
+    @Nonnull
+    public WorkbookWorksheetCellRequestBuilder cell(@Nullable final Integer row, @Nullable final Integer column) {
         return new WorkbookWorksheetCellRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cell"), getClient(), null, row, column);
     }
 
+    @Nonnull
     public WorkbookWorksheetUsedRangeRequestBuilder usedRange() {
         return new WorkbookWorksheetUsedRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.usedRange"), getClient(), null);
     }
 
-    public WorkbookWorksheetUsedRangeRequestBuilder usedRange(final Boolean valuesOnly) {
+    @Nonnull
+    public WorkbookWorksheetUsedRangeRequestBuilder usedRange(@Nullable final Boolean valuesOnly) {
         return new WorkbookWorksheetUsedRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.usedRange"), getClient(), null, valuesOnly);
     }
 
+    @Nonnull
     public WorkbookWorksheetRangeRequestBuilder range() {
         return new WorkbookWorksheetRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.range"), getClient(), null);
     }
 
-    public WorkbookWorksheetRangeRequestBuilder range(final String address) {
+    @Nonnull
+    public WorkbookWorksheetRangeRequestBuilder range(@Nullable final String address) {
         return new WorkbookWorksheetRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.range"), getClient(), null, address);
     }
 }

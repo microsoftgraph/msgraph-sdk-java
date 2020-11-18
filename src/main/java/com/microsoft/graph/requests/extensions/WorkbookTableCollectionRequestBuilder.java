@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.WorkbookTable;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.WorkbookTableCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookTableRequestBuilder;
@@ -36,7 +38,7 @@ public class WorkbookTableCollectionRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookTableCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +48,8 @@ public class WorkbookTableCollectionRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public WorkbookTableCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WorkbookTableCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -56,25 +59,30 @@ public class WorkbookTableCollectionRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public WorkbookTableCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WorkbookTableCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookTableCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public WorkbookTableRequestBuilder byId(final String id) {
+    @Nonnull
+    public WorkbookTableRequestBuilder byId(@Nonnull final String id) {
         return new WorkbookTableRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
-    public WorkbookTableAddRequestBuilder add(final String address, final Boolean hasHeaders) {
+    @Nonnull
+    public WorkbookTableAddRequestBuilder add(@Nullable final String address, @Nullable final Boolean hasHeaders) {
         return new WorkbookTableAddRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.add"), getClient(), null, address, hasHeaders);
     }
 
+    @Nonnull
     public WorkbookTableCountRequestBuilder count() {
         return new WorkbookTableCountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.count"), getClient(), null);
     }
 
-    public WorkbookTableItemAtRequestBuilder itemAt(final Integer index) {
+    @Nonnull
+    public WorkbookTableItemAtRequestBuilder itemAt(@Nullable final Integer index) {
         return new WorkbookTableItemAtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.itemAt"), getClient(), null, index);
     }
 }

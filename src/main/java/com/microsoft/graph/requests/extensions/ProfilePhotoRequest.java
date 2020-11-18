@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ProfilePhoto;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class ProfilePhotoRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ProfilePhotoRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ProfilePhotoRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ProfilePhoto.class);
     }
 
@@ -37,7 +39,7 @@ public class ProfilePhotoRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ProfilePhoto> callback) {
+    public void get(@Nonnull final ICallback<? super ProfilePhoto> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class ProfilePhotoRequest extends BaseRequest {
      * @return the ProfilePhoto from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ProfilePhoto get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class ProfilePhotoRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ProfilePhoto> callback) {
+    public void delete(@Nonnull final ICallback<? super ProfilePhoto> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class ProfilePhotoRequest extends BaseRequest {
      * @param sourceProfilePhoto the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ProfilePhoto sourceProfilePhoto, final ICallback<? super ProfilePhoto> callback) {
+    public void patch(@Nonnull final ProfilePhoto sourceProfilePhoto, @Nonnull final ICallback<? super ProfilePhoto> callback) {
         send(HttpMethod.PATCH, callback, sourceProfilePhoto);
     }
 
@@ -86,7 +89,8 @@ public class ProfilePhotoRequest extends BaseRequest {
      * @return the updated ProfilePhoto
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ProfilePhoto patch(final ProfilePhoto sourceProfilePhoto) throws ClientException {
+    @Nullable
+    public ProfilePhoto patch(@Nonnull final ProfilePhoto sourceProfilePhoto) throws ClientException {
         return send(HttpMethod.PATCH, sourceProfilePhoto);
     }
 
@@ -96,7 +100,7 @@ public class ProfilePhotoRequest extends BaseRequest {
      * @param newProfilePhoto the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ProfilePhoto newProfilePhoto, final ICallback<? super ProfilePhoto> callback) {
+    public void post(@Nonnull final ProfilePhoto newProfilePhoto, @Nonnull final ICallback<? super ProfilePhoto> callback) {
         send(HttpMethod.POST, callback, newProfilePhoto);
     }
 
@@ -107,7 +111,8 @@ public class ProfilePhotoRequest extends BaseRequest {
      * @return the created ProfilePhoto
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ProfilePhoto post(final ProfilePhoto newProfilePhoto) throws ClientException {
+    @Nullable
+    public ProfilePhoto post(@Nonnull final ProfilePhoto newProfilePhoto) throws ClientException {
         return send(HttpMethod.POST, newProfilePhoto);
     }
 
@@ -117,7 +122,7 @@ public class ProfilePhotoRequest extends BaseRequest {
      * @param newProfilePhoto the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ProfilePhoto newProfilePhoto, final ICallback<? super ProfilePhoto> callback) {
+    public void put(@Nonnull final ProfilePhoto newProfilePhoto, @Nonnull final ICallback<? super ProfilePhoto> callback) {
         send(HttpMethod.PUT, callback, newProfilePhoto);
     }
 
@@ -128,7 +133,8 @@ public class ProfilePhotoRequest extends BaseRequest {
      * @return the created ProfilePhoto
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ProfilePhoto put(final ProfilePhoto newProfilePhoto) throws ClientException {
+    @Nullable
+    public ProfilePhoto put(@Nonnull final ProfilePhoto newProfilePhoto) throws ClientException {
         return send(HttpMethod.PUT, newProfilePhoto);
     }
 
@@ -138,7 +144,8 @@ public class ProfilePhotoRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ProfilePhotoRequest select(final String value) {
+     @Nonnull
+     public ProfilePhotoRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ProfilePhotoRequest)this;
      }
@@ -149,7 +156,8 @@ public class ProfilePhotoRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ProfilePhotoRequest expand(final String value) {
+     @Nonnull
+     public ProfilePhotoRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ProfilePhotoRequest)this;
      }

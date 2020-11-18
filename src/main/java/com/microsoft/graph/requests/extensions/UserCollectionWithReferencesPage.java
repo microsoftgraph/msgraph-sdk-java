@@ -25,6 +25,8 @@ import com.microsoft.graph.models.extensions.ManagedAppDiagnosticStatus;
 import com.microsoft.graph.models.extensions.ManagedAppPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.UserCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserCollectionWithReferencesPage;
@@ -48,7 +50,7 @@ public class UserCollectionWithReferencesPage extends BaseCollectionPage<User, U
      * @param response the serialized UserCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public UserCollectionWithReferencesPage(final UserCollectionResponse response, final UserCollectionWithReferencesRequestBuilder builder) {
+    public UserCollectionWithReferencesPage(@Nonnull final UserCollectionResponse response, @Nonnull  final UserCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ThreatAssessmentRequest;
 import com.microsoft.graph.models.extensions.ThreatAssessmentResult;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.ThreatAssessmentResultCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentResultRequestBuilder;
@@ -32,7 +34,7 @@ public class ThreatAssessmentResultCollectionRequestBuilder extends BaseRequestB
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ThreatAssessmentResultCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ThreatAssessmentResultCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,7 +44,8 @@ public class ThreatAssessmentResultCollectionRequestBuilder extends BaseRequestB
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ThreatAssessmentResultCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ThreatAssessmentResultCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +55,13 @@ public class ThreatAssessmentResultCollectionRequestBuilder extends BaseRequestB
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ThreatAssessmentResultCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ThreatAssessmentResultCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ThreatAssessmentResultCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ThreatAssessmentResultRequestBuilder byId(final String id) {
+    @Nonnull
+    public ThreatAssessmentResultRequestBuilder byId(@Nonnull final String id) {
         return new ThreatAssessmentResultRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

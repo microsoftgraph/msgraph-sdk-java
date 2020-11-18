@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DriveItemGetActivitiesByIntervalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemGetActivitiesByIntervalCollectionPage;
@@ -33,7 +35,7 @@ public class DriveItemGetActivitiesByIntervalCollectionPage extends BaseCollecti
      * @param response The serialized DriveItemGetActivitiesByIntervalCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public DriveItemGetActivitiesByIntervalCollectionPage(final DriveItemGetActivitiesByIntervalCollectionResponse response, final DriveItemGetActivitiesByIntervalCollectionRequestBuilder builder) {
+    public DriveItemGetActivitiesByIntervalCollectionPage(@Nonnull final DriveItemGetActivitiesByIntervalCollectionResponse response, @Nonnull final DriveItemGetActivitiesByIntervalCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

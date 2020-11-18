@@ -36,21 +36,7 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
-    // This dependency is used internally, and not exposed to consumers on their own compile classpath.
-    implementation 'com.google.guava:guava:23.0'
-
-    // Use JUnit test framework
-    testImplementation 'junit:junit:4.13.1'
-    testImplementation 'org.mockito:mockito-inline:+'
-    
-    api 'com.google.code.gson:gson:2.8.6'
-    
-    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
-    
-    // Core Http library 
-    api 'com.microsoft.graph:microsoft-graph-core:1.0.5'
-}
+apply from: "gradle/dependencies.gradle"
 
 def pomConfig = {
     licenses {

@@ -7,6 +7,8 @@ import com.microsoft.graph.models.extensions.CallUpdateRecordingStatusBody;
 import com.microsoft.graph.models.extensions.UpdateRecordingStatusOperation;
 import com.microsoft.graph.requests.extensions.CallUpdateRecordingStatusRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,15 +31,16 @@ public class CallUpdateRecordingStatusRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CallUpdateRecordingStatusRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CallUpdateRecordingStatusRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UpdateRecordingStatusOperation.class);
         body = new CallUpdateRecordingStatusBody();
     }
 
-    public void post(final ICallback<? super UpdateRecordingStatusOperation> callback) {
+    public void post(@Nonnull final ICallback<? super UpdateRecordingStatusOperation> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    @Nullable
     public UpdateRecordingStatusOperation post() throws ClientException {
         return send(HttpMethod.POST, body);
     }
@@ -48,7 +51,8 @@ public class CallUpdateRecordingStatusRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public CallUpdateRecordingStatusRequest select(final String value) {
+    @Nonnull
+    public CallUpdateRecordingStatusRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (CallUpdateRecordingStatusRequest)this;
     }
@@ -59,6 +63,7 @@ public class CallUpdateRecordingStatusRequest extends BaseRequest {
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public CallUpdateRecordingStatusRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (CallUpdateRecordingStatusRequest)this;
@@ -70,7 +75,8 @@ public class CallUpdateRecordingStatusRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public CallUpdateRecordingStatusRequest expand(final String value) {
+    @Nonnull
+    public CallUpdateRecordingStatusRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (CallUpdateRecordingStatusRequest)this;
     }

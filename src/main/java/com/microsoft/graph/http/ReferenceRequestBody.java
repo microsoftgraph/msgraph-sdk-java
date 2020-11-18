@@ -25,6 +25,10 @@ package com.microsoft.graph.http;
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.ISerializer;
@@ -35,6 +39,7 @@ public class ReferenceRequestBody implements IJsonBackedObject {
 
     @SerializedName("@odata.id")
     @Expose
+    @Nonnull
     public String odataId;
 
     /**
@@ -47,7 +52,7 @@ public class ReferenceRequestBody implements IJsonBackedObject {
      */
     private ISerializer serializer;
 
-    public ReferenceRequestBody(final String payload) {
+    public ReferenceRequestBody(@Nonnull final String payload) {
         odataId = payload;
     }
 
@@ -56,6 +61,7 @@ public class ReferenceRequestBody implements IJsonBackedObject {
      *
      * @return the raw representation of this class
      */
+    @Nullable
     public JsonObject getRawObject() {
         return rawObject;
     }
@@ -65,6 +71,7 @@ public class ReferenceRequestBody implements IJsonBackedObject {
      *
      * @return the serializer
      */
+    @Nullable
     protected ISerializer getSerializer() {
         return serializer;
     }
@@ -75,12 +82,13 @@ public class ReferenceRequestBody implements IJsonBackedObject {
      * @param serializer the serializer
      * @param json       the JSON object to set this object to
      */
-    public void setRawObject(final ISerializer serializer, final JsonObject json) {
+    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
         this.serializer = serializer;
         this.rawObject = json;
     }
 
     @Override
+    @Nonnull
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }

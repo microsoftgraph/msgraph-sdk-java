@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ManagedEBook;
 import com.microsoft.graph.models.extensions.UserInstallStateSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class UserInstallStateSummaryCollectionRequest extends BaseCollectionRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserInstallStateSummaryCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserInstallStateSummaryCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserInstallStateSummaryCollectionResponse.class, UserInstallStateSummaryCollectionPage.class);
     }
 
-    public void get(final ICallback<? super UserInstallStateSummaryCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super UserInstallStateSummaryCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class UserInstallStateSummaryCollectionRequest extends BaseCollectionRequ
         });
     }
 
+    @Nonnull
     public UserInstallStateSummaryCollectionPage get() throws ClientException {
         final UserInstallStateSummaryCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final UserInstallStateSummary newUserInstallStateSummary, final ICallback<? super UserInstallStateSummary> callback) {
+    public void post(@Nonnull final UserInstallStateSummary newUserInstallStateSummary, @Nonnull final ICallback<? super UserInstallStateSummary> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserInstallStateSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newUserInstallStateSummary, callback);
     }
 
-    public UserInstallStateSummary post(final UserInstallStateSummary newUserInstallStateSummary) throws ClientException {
+    @Nonnull
+    public UserInstallStateSummary post(@Nonnull final UserInstallStateSummary newUserInstallStateSummary) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UserInstallStateSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class UserInstallStateSummaryCollectionRequest extends BaseCollectionRequ
      * @param value the expand clause
      * @return the updated request
      */
-    public UserInstallStateSummaryCollectionRequest expand(final String value) {
+    @Nonnull
+    public UserInstallStateSummaryCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (UserInstallStateSummaryCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class UserInstallStateSummaryCollectionRequest extends BaseCollectionRequ
      * @param value the filter clause
      * @return the updated request
      */
-    public UserInstallStateSummaryCollectionRequest filter(final String value) {
+    @Nonnull
+    public UserInstallStateSummaryCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (UserInstallStateSummaryCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class UserInstallStateSummaryCollectionRequest extends BaseCollectionRequ
      * @param value the order by clause
      * @return the updated request
      */
-    public UserInstallStateSummaryCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public UserInstallStateSummaryCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (UserInstallStateSummaryCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class UserInstallStateSummaryCollectionRequest extends BaseCollectionRequ
      * @param value the select clause
      * @return the updated request
      */
-    public UserInstallStateSummaryCollectionRequest select(final String value) {
+    @Nonnull
+    public UserInstallStateSummaryCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (UserInstallStateSummaryCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class UserInstallStateSummaryCollectionRequest extends BaseCollectionRequ
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public UserInstallStateSummaryCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (UserInstallStateSummaryCollectionRequest)this;
@@ -133,6 +142,7 @@ public class UserInstallStateSummaryCollectionRequest extends BaseCollectionRequ
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public UserInstallStateSummaryCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (UserInstallStateSummaryCollectionRequest)this;
@@ -144,11 +154,13 @@ public class UserInstallStateSummaryCollectionRequest extends BaseCollectionRequ
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public UserInstallStateSummaryCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public UserInstallStateSummaryCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (UserInstallStateSummaryCollectionRequest)this;
     }
-    public UserInstallStateSummaryCollectionPage buildFromResponse(final UserInstallStateSummaryCollectionResponse response) {
+    @Nonnull
+    public UserInstallStateSummaryCollectionPage buildFromResponse(@Nonnull final UserInstallStateSummaryCollectionResponse response) {
         final UserInstallStateSummaryCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new UserInstallStateSummaryCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Chat;
 import com.microsoft.graph.models.extensions.ChatMessage;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
@@ -32,15 +34,16 @@ public class ChatWithReferenceRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ChatWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ChatWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Chat.class);
     }
 
-    public void post(final Chat newChat, final IJsonBackedObject payload, final ICallback<? super Chat> callback) {
+    public void post(@Nonnull final Chat newChat, @Nullable final IJsonBackedObject payload, @Nonnull final ICallback<? super Chat> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
-    public Chat post(final Chat newChat, final IJsonBackedObject payload) throws ClientException {
+    @Nullable
+    public Chat post(@Nonnull final Chat newChat, @Nullable final IJsonBackedObject payload) throws ClientException {
         IJsonBackedObject response = send(HttpMethod.POST, payload);
         if (response != null){
             return newChat;
@@ -48,15 +51,16 @@ public class ChatWithReferenceRequest extends BaseRequest {
         return null;
     }
 
-    public void get(final ICallback<? super Chat> callback) {
+    public void get(@Nonnull final ICallback<? super Chat> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
+    @Nullable
     public Chat get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<? super Chat> callback) {
+	public void delete(@Nonnull final ICallback<? super Chat> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -64,11 +68,12 @@ public class ChatWithReferenceRequest extends BaseRequest {
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final Chat sourceChat, final ICallback<? super Chat> callback) {
+	public void patch(@Nonnull final Chat sourceChat, @Nonnull final ICallback<? super Chat> callback) {
 		send(HttpMethod.PATCH, callback, sourceChat);
 	}
 
-	public Chat patch(final Chat sourceChat) throws ClientException {
+    @Nullable
+	public Chat patch(@Nonnull final Chat sourceChat) throws ClientException {
 		return send(HttpMethod.PATCH, sourceChat);
 	}
 
@@ -79,7 +84,8 @@ public class ChatWithReferenceRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public ChatWithReferenceRequest select(final String value) {
+    @Nonnull
+    public ChatWithReferenceRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ChatWithReferenceRequest)this;
     }
@@ -90,7 +96,8 @@ public class ChatWithReferenceRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public ChatWithReferenceRequest expand(final String value) {
+    @Nonnull
+    public ChatWithReferenceRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ChatWithReferenceRequest)this;
     }

@@ -14,6 +14,8 @@ import com.microsoft.graph.models.extensions.InviteParticipantsOperation;
 import com.microsoft.graph.models.extensions.MuteParticipantOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -38,11 +40,11 @@ public class ParticipantCollectionRequest extends BaseCollectionRequest<Particip
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ParticipantCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ParticipantCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ParticipantCollectionResponse.class, ParticipantCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ParticipantCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super ParticipantCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -56,19 +58,21 @@ public class ParticipantCollectionRequest extends BaseCollectionRequest<Particip
         });
     }
 
+    @Nonnull
     public ParticipantCollectionPage get() throws ClientException {
         final ParticipantCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final Participant newParticipant, final ICallback<? super Participant> callback) {
+    public void post(@Nonnull final Participant newParticipant, @Nonnull final ICallback<? super Participant> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ParticipantRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newParticipant, callback);
     }
 
-    public Participant post(final Participant newParticipant) throws ClientException {
+    @Nonnull
+    public Participant post(@Nonnull final Participant newParticipant) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ParticipantRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -81,7 +85,8 @@ public class ParticipantCollectionRequest extends BaseCollectionRequest<Particip
      * @param value the expand clause
      * @return the updated request
      */
-    public ParticipantCollectionRequest expand(final String value) {
+    @Nonnull
+    public ParticipantCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ParticipantCollectionRequest)this;
     }
@@ -92,7 +97,8 @@ public class ParticipantCollectionRequest extends BaseCollectionRequest<Particip
      * @param value the filter clause
      * @return the updated request
      */
-    public ParticipantCollectionRequest filter(final String value) {
+    @Nonnull
+    public ParticipantCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ParticipantCollectionRequest)this;
     }
@@ -103,7 +109,8 @@ public class ParticipantCollectionRequest extends BaseCollectionRequest<Particip
      * @param value the order by clause
      * @return the updated request
      */
-    public ParticipantCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ParticipantCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ParticipantCollectionRequest)this;
     }
@@ -114,7 +121,8 @@ public class ParticipantCollectionRequest extends BaseCollectionRequest<Particip
      * @param value the select clause
      * @return the updated request
      */
-    public ParticipantCollectionRequest select(final String value) {
+    @Nonnull
+    public ParticipantCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ParticipantCollectionRequest)this;
     }
@@ -125,6 +133,7 @@ public class ParticipantCollectionRequest extends BaseCollectionRequest<Particip
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ParticipantCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ParticipantCollectionRequest)this;
@@ -136,6 +145,7 @@ public class ParticipantCollectionRequest extends BaseCollectionRequest<Particip
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ParticipantCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (ParticipantCollectionRequest)this;
@@ -147,11 +157,13 @@ public class ParticipantCollectionRequest extends BaseCollectionRequest<Particip
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ParticipantCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ParticipantCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (ParticipantCollectionRequest)this;
     }
-    public ParticipantCollectionPage buildFromResponse(final ParticipantCollectionResponse response) {
+    @Nonnull
+    public ParticipantCollectionPage buildFromResponse(@Nonnull final ParticipantCollectionResponse response) {
         final ParticipantCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ParticipantCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

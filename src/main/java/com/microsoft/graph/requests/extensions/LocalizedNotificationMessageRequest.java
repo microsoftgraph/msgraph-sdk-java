@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.LocalizedNotificationMessage;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class LocalizedNotificationMessageRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public LocalizedNotificationMessageRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public LocalizedNotificationMessageRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, LocalizedNotificationMessage.class);
     }
 
@@ -37,7 +39,7 @@ public class LocalizedNotificationMessageRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super LocalizedNotificationMessage> callback) {
+    public void get(@Nonnull final ICallback<? super LocalizedNotificationMessage> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class LocalizedNotificationMessageRequest extends BaseRequest {
      * @return the LocalizedNotificationMessage from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public LocalizedNotificationMessage get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class LocalizedNotificationMessageRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super LocalizedNotificationMessage> callback) {
+    public void delete(@Nonnull final ICallback<? super LocalizedNotificationMessage> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class LocalizedNotificationMessageRequest extends BaseRequest {
      * @param sourceLocalizedNotificationMessage the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final LocalizedNotificationMessage sourceLocalizedNotificationMessage, final ICallback<? super LocalizedNotificationMessage> callback) {
+    public void patch(@Nonnull final LocalizedNotificationMessage sourceLocalizedNotificationMessage, @Nonnull final ICallback<? super LocalizedNotificationMessage> callback) {
         send(HttpMethod.PATCH, callback, sourceLocalizedNotificationMessage);
     }
 
@@ -86,7 +89,8 @@ public class LocalizedNotificationMessageRequest extends BaseRequest {
      * @return the updated LocalizedNotificationMessage
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public LocalizedNotificationMessage patch(final LocalizedNotificationMessage sourceLocalizedNotificationMessage) throws ClientException {
+    @Nullable
+    public LocalizedNotificationMessage patch(@Nonnull final LocalizedNotificationMessage sourceLocalizedNotificationMessage) throws ClientException {
         return send(HttpMethod.PATCH, sourceLocalizedNotificationMessage);
     }
 
@@ -96,7 +100,7 @@ public class LocalizedNotificationMessageRequest extends BaseRequest {
      * @param newLocalizedNotificationMessage the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final LocalizedNotificationMessage newLocalizedNotificationMessage, final ICallback<? super LocalizedNotificationMessage> callback) {
+    public void post(@Nonnull final LocalizedNotificationMessage newLocalizedNotificationMessage, @Nonnull final ICallback<? super LocalizedNotificationMessage> callback) {
         send(HttpMethod.POST, callback, newLocalizedNotificationMessage);
     }
 
@@ -107,7 +111,8 @@ public class LocalizedNotificationMessageRequest extends BaseRequest {
      * @return the created LocalizedNotificationMessage
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public LocalizedNotificationMessage post(final LocalizedNotificationMessage newLocalizedNotificationMessage) throws ClientException {
+    @Nullable
+    public LocalizedNotificationMessage post(@Nonnull final LocalizedNotificationMessage newLocalizedNotificationMessage) throws ClientException {
         return send(HttpMethod.POST, newLocalizedNotificationMessage);
     }
 
@@ -117,7 +122,7 @@ public class LocalizedNotificationMessageRequest extends BaseRequest {
      * @param newLocalizedNotificationMessage the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final LocalizedNotificationMessage newLocalizedNotificationMessage, final ICallback<? super LocalizedNotificationMessage> callback) {
+    public void put(@Nonnull final LocalizedNotificationMessage newLocalizedNotificationMessage, @Nonnull final ICallback<? super LocalizedNotificationMessage> callback) {
         send(HttpMethod.PUT, callback, newLocalizedNotificationMessage);
     }
 
@@ -128,7 +133,8 @@ public class LocalizedNotificationMessageRequest extends BaseRequest {
      * @return the created LocalizedNotificationMessage
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public LocalizedNotificationMessage put(final LocalizedNotificationMessage newLocalizedNotificationMessage) throws ClientException {
+    @Nullable
+    public LocalizedNotificationMessage put(@Nonnull final LocalizedNotificationMessage newLocalizedNotificationMessage) throws ClientException {
         return send(HttpMethod.PUT, newLocalizedNotificationMessage);
     }
 
@@ -138,7 +144,8 @@ public class LocalizedNotificationMessageRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public LocalizedNotificationMessageRequest select(final String value) {
+     @Nonnull
+     public LocalizedNotificationMessageRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (LocalizedNotificationMessageRequest)this;
      }
@@ -149,7 +156,8 @@ public class LocalizedNotificationMessageRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public LocalizedNotificationMessageRequest expand(final String value) {
+     @Nonnull
+     public LocalizedNotificationMessageRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (LocalizedNotificationMessageRequest)this;
      }

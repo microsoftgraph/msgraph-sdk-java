@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SchedulingGroup;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class SchedulingGroupRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SchedulingGroupRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SchedulingGroupRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SchedulingGroup.class);
     }
 
@@ -37,7 +39,7 @@ public class SchedulingGroupRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SchedulingGroup> callback) {
+    public void get(@Nonnull final ICallback<? super SchedulingGroup> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class SchedulingGroupRequest extends BaseRequest {
      * @return the SchedulingGroup from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SchedulingGroup get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class SchedulingGroupRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SchedulingGroup> callback) {
+    public void delete(@Nonnull final ICallback<? super SchedulingGroup> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class SchedulingGroupRequest extends BaseRequest {
      * @param sourceSchedulingGroup the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SchedulingGroup sourceSchedulingGroup, final ICallback<? super SchedulingGroup> callback) {
+    public void patch(@Nonnull final SchedulingGroup sourceSchedulingGroup, @Nonnull final ICallback<? super SchedulingGroup> callback) {
         send(HttpMethod.PATCH, callback, sourceSchedulingGroup);
     }
 
@@ -86,7 +89,8 @@ public class SchedulingGroupRequest extends BaseRequest {
      * @return the updated SchedulingGroup
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SchedulingGroup patch(final SchedulingGroup sourceSchedulingGroup) throws ClientException {
+    @Nullable
+    public SchedulingGroup patch(@Nonnull final SchedulingGroup sourceSchedulingGroup) throws ClientException {
         return send(HttpMethod.PATCH, sourceSchedulingGroup);
     }
 
@@ -96,7 +100,7 @@ public class SchedulingGroupRequest extends BaseRequest {
      * @param newSchedulingGroup the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SchedulingGroup newSchedulingGroup, final ICallback<? super SchedulingGroup> callback) {
+    public void post(@Nonnull final SchedulingGroup newSchedulingGroup, @Nonnull final ICallback<? super SchedulingGroup> callback) {
         send(HttpMethod.POST, callback, newSchedulingGroup);
     }
 
@@ -107,7 +111,8 @@ public class SchedulingGroupRequest extends BaseRequest {
      * @return the created SchedulingGroup
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SchedulingGroup post(final SchedulingGroup newSchedulingGroup) throws ClientException {
+    @Nullable
+    public SchedulingGroup post(@Nonnull final SchedulingGroup newSchedulingGroup) throws ClientException {
         return send(HttpMethod.POST, newSchedulingGroup);
     }
 
@@ -117,7 +122,7 @@ public class SchedulingGroupRequest extends BaseRequest {
      * @param newSchedulingGroup the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SchedulingGroup newSchedulingGroup, final ICallback<? super SchedulingGroup> callback) {
+    public void put(@Nonnull final SchedulingGroup newSchedulingGroup, @Nonnull final ICallback<? super SchedulingGroup> callback) {
         send(HttpMethod.PUT, callback, newSchedulingGroup);
     }
 
@@ -128,7 +133,8 @@ public class SchedulingGroupRequest extends BaseRequest {
      * @return the created SchedulingGroup
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SchedulingGroup put(final SchedulingGroup newSchedulingGroup) throws ClientException {
+    @Nullable
+    public SchedulingGroup put(@Nonnull final SchedulingGroup newSchedulingGroup) throws ClientException {
         return send(HttpMethod.PUT, newSchedulingGroup);
     }
 
@@ -138,7 +144,8 @@ public class SchedulingGroupRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public SchedulingGroupRequest select(final String value) {
+     @Nonnull
+     public SchedulingGroupRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (SchedulingGroupRequest)this;
      }
@@ -149,7 +156,8 @@ public class SchedulingGroupRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public SchedulingGroupRequest expand(final String value) {
+     @Nonnull
+     public SchedulingGroupRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (SchedulingGroupRequest)this;
      }

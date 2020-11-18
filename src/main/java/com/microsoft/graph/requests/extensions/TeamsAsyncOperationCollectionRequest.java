@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Team;
 import com.microsoft.graph.models.extensions.TeamsAsyncOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class TeamsAsyncOperationCollectionRequest extends BaseCollectionRequest<
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamsAsyncOperationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsAsyncOperationCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TeamsAsyncOperationCollectionResponse.class, TeamsAsyncOperationCollectionPage.class);
     }
 
-    public void get(final ICallback<? super TeamsAsyncOperationCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super TeamsAsyncOperationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class TeamsAsyncOperationCollectionRequest extends BaseCollectionRequest<
         });
     }
 
+    @Nonnull
     public TeamsAsyncOperationCollectionPage get() throws ClientException {
         final TeamsAsyncOperationCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final TeamsAsyncOperation newTeamsAsyncOperation, final ICallback<? super TeamsAsyncOperation> callback) {
+    public void post(@Nonnull final TeamsAsyncOperation newTeamsAsyncOperation, @Nonnull final ICallback<? super TeamsAsyncOperation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TeamsAsyncOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newTeamsAsyncOperation, callback);
     }
 
-    public TeamsAsyncOperation post(final TeamsAsyncOperation newTeamsAsyncOperation) throws ClientException {
+    @Nonnull
+    public TeamsAsyncOperation post(@Nonnull final TeamsAsyncOperation newTeamsAsyncOperation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TeamsAsyncOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class TeamsAsyncOperationCollectionRequest extends BaseCollectionRequest<
      * @param value the expand clause
      * @return the updated request
      */
-    public TeamsAsyncOperationCollectionRequest expand(final String value) {
+    @Nonnull
+    public TeamsAsyncOperationCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (TeamsAsyncOperationCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class TeamsAsyncOperationCollectionRequest extends BaseCollectionRequest<
      * @param value the filter clause
      * @return the updated request
      */
-    public TeamsAsyncOperationCollectionRequest filter(final String value) {
+    @Nonnull
+    public TeamsAsyncOperationCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (TeamsAsyncOperationCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class TeamsAsyncOperationCollectionRequest extends BaseCollectionRequest<
      * @param value the order by clause
      * @return the updated request
      */
-    public TeamsAsyncOperationCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public TeamsAsyncOperationCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (TeamsAsyncOperationCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class TeamsAsyncOperationCollectionRequest extends BaseCollectionRequest<
      * @param value the select clause
      * @return the updated request
      */
-    public TeamsAsyncOperationCollectionRequest select(final String value) {
+    @Nonnull
+    public TeamsAsyncOperationCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (TeamsAsyncOperationCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class TeamsAsyncOperationCollectionRequest extends BaseCollectionRequest<
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public TeamsAsyncOperationCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (TeamsAsyncOperationCollectionRequest)this;
@@ -133,6 +142,7 @@ public class TeamsAsyncOperationCollectionRequest extends BaseCollectionRequest<
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public TeamsAsyncOperationCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (TeamsAsyncOperationCollectionRequest)this;
@@ -144,11 +154,13 @@ public class TeamsAsyncOperationCollectionRequest extends BaseCollectionRequest<
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public TeamsAsyncOperationCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public TeamsAsyncOperationCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (TeamsAsyncOperationCollectionRequest)this;
     }
-    public TeamsAsyncOperationCollectionPage buildFromResponse(final TeamsAsyncOperationCollectionResponse response) {
+    @Nonnull
+    public TeamsAsyncOperationCollectionPage buildFromResponse(@Nonnull final TeamsAsyncOperationCollectionResponse response) {
         final TeamsAsyncOperationCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new TeamsAsyncOperationCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

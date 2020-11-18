@@ -24,6 +24,10 @@ import com.microsoft.graph.requests.extensions.BaseGraphServiceClient;
 
 import okhttp3.OkHttpClient;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
+
 /**
  * The class for the Graph Service Client.
  */
@@ -44,7 +48,8 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
 	 *			the response class to deserialize the response into
 	 * @return the instance of this builder
 	 */
-	public <T> CustomRequestBuilder<T> customRequest(final String url, final Class<T> responseType) {
+	@Nonnull
+	public <T> CustomRequestBuilder<T> customRequest(@Nonnull final String url, @Nonnull final Class<T> responseType) {
 		return new CustomRequestBuilder<T>(getServiceRoot() + url, this, null, responseType);
 	}
 
@@ -55,11 +60,13 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
 	 *			the full URL to make a request with
 	 * @return the instance of this builder
 	 */
-	public CustomRequestBuilder<JsonObject> customRequest(final String url) {
+	@Nonnull
+	public CustomRequestBuilder<JsonObject> customRequest(@Nonnull final String url) {
 		return new CustomRequestBuilder<JsonObject>(getServiceRoot() + url, this, null,
 				JsonObject.class);
 	}
 
+	@Nonnull
 	public static Builder<OkHttpClient> builder() {
 		return new Builder<OkHttpClient>();
 	}
@@ -131,7 +138,8 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
 		 *			the serializer
 		 * @return the instance of this builder
 		 */
-		public Builder<httpClientType> serializer(final ISerializer serializer) {
+		@Nonnull
+		public Builder<httpClientType> serializer(@Nonnull final ISerializer serializer) {
 			checkNotNull(serializer, "serializer");
 			this.serializer = serializer;
 			return this;
@@ -144,7 +152,8 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
 		 *			the httpProvider
 		 * @return the instance of this builder
 		 */
-		public Builder<httpClientType> httpProvider(final IHttpProvider httpProvider) {
+		@Nonnull
+		public Builder<httpClientType> httpProvider(@Nonnull final IHttpProvider httpProvider) {
 			checkNotNull(httpProvider, "httpProvider");
 			this.httpProvider = httpProvider;
 			return this;
@@ -157,7 +166,8 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
 		 *			the executors
 		 * @return the instance of this builder
 		 */
-		public Builder<httpClientType> executors(final IExecutors executors) {
+		@Nonnull
+		public Builder<httpClientType> executors(@Nonnull final IExecutors executors) {
 			checkNotNull(executors, "executors");
 			this.executors = executors;
 			return this;
@@ -170,7 +180,8 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
 		 *			the logger
 		 * @return the instance of this builder
 		 */
-		public Builder<httpClientType> logger(final ILogger logger) {
+		@Nonnull
+		public Builder<httpClientType> logger(@Nonnull final ILogger logger) {
 			checkNotNull(logger, "logger");
 			this.logger = logger;
 			return this;
@@ -183,7 +194,8 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
 		 * 
 		 * @return the instance of this builder
 		 */
-		public Builder<httpClientType> httpClient(final httpClientType client) {
+		@Nonnull
+		public Builder<httpClientType> httpClient(@Nonnull final httpClientType client) {
 			checkNotNull(client, "client");
 			this.httpClient = client;
 			return this;
@@ -196,7 +208,8 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
 		 * 
 		 * @return the instance of this builder
 		 */
-		public Builder<httpClientType> connectionConfig(final IConnectionConfig config) {
+		@Nonnull
+		public Builder<httpClientType> connectionConfig(@Nonnull final IConnectionConfig config) {
 			checkNotNull(config, "config");
 			this.connConfig = config;
 			return this;
@@ -207,7 +220,8 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
 		 * @param auth the authentication provider
 		 * @return the instance of this builder
 		 */
-		public Builder<httpClientType> authenticationProvider(final ICoreAuthenticationProvider auth) {
+		@Nonnull
+		public Builder<httpClientType> authenticationProvider(@Nonnull final ICoreAuthenticationProvider auth) {
 			checkNotNull(auth, "auth");
 			this.auth = auth;
 			return this;
@@ -220,6 +234,7 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
 		 * @throws ClientException
 		 *			 if there was an exception creating the client
 		 */
+		@Nonnull
 		public IGraphServiceClient buildClient() throws ClientException {
 			GraphServiceClient client = new GraphServiceClient();
 			client.setExecutors(this.getExecutors());
@@ -231,7 +246,7 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
 		}
 	}
 	
-	private static void checkNotNull(Object o, String name) {
+	protected static void checkNotNull(@Nullable final Object o, @Nonnull final String name) {
 		if (o==null) {
 			throw new NullPointerException(name + " cannot be null");
 		}

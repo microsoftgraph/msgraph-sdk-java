@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationAssignment;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse;
@@ -22,7 +24,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionPage extends
      * @param response the serialized ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ManagedDeviceMobileAppConfigurationAssignmentCollectionPage(final ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse response, final ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder builder) {
+    public ManagedDeviceMobileAppConfigurationAssignmentCollectionPage(@Nonnull final ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse response, @Nonnull final ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

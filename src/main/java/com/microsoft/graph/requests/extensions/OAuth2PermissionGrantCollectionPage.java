@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionPage;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionResponse;
@@ -22,7 +24,7 @@ public class OAuth2PermissionGrantCollectionPage extends BaseCollectionPage<OAut
      * @param response the serialized OAuth2PermissionGrantCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public OAuth2PermissionGrantCollectionPage(final OAuth2PermissionGrantCollectionResponse response, final OAuth2PermissionGrantCollectionRequestBuilder builder) {
+    public OAuth2PermissionGrantCollectionPage(@Nonnull final OAuth2PermissionGrantCollectionResponse response, @Nonnull final OAuth2PermissionGrantCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

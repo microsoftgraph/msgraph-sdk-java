@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicySettingStateSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class DeviceCompliancePolicySettingStateSummaryCollectionRequest extends 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceCompliancePolicySettingStateSummaryCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceCompliancePolicySettingStateSummaryCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceCompliancePolicySettingStateSummaryCollectionResponse.class, DeviceCompliancePolicySettingStateSummaryCollectionPage.class);
     }
 
-    public void get(final ICallback<? super DeviceCompliancePolicySettingStateSummaryCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceCompliancePolicySettingStateSummaryCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class DeviceCompliancePolicySettingStateSummaryCollectionRequest extends 
         });
     }
 
+    @Nonnull
     public DeviceCompliancePolicySettingStateSummaryCollectionPage get() throws ClientException {
         final DeviceCompliancePolicySettingStateSummaryCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceCompliancePolicySettingStateSummary newDeviceCompliancePolicySettingStateSummary, final ICallback<? super DeviceCompliancePolicySettingStateSummary> callback) {
+    public void post(@Nonnull final DeviceCompliancePolicySettingStateSummary newDeviceCompliancePolicySettingStateSummary, @Nonnull final ICallback<? super DeviceCompliancePolicySettingStateSummary> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceCompliancePolicySettingStateSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceCompliancePolicySettingStateSummary, callback);
     }
 
-    public DeviceCompliancePolicySettingStateSummary post(final DeviceCompliancePolicySettingStateSummary newDeviceCompliancePolicySettingStateSummary) throws ClientException {
+    @Nonnull
+    public DeviceCompliancePolicySettingStateSummary post(@Nonnull final DeviceCompliancePolicySettingStateSummary newDeviceCompliancePolicySettingStateSummary) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceCompliancePolicySettingStateSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class DeviceCompliancePolicySettingStateSummaryCollectionRequest extends 
      * @param value the expand clause
      * @return the updated request
      */
-    public DeviceCompliancePolicySettingStateSummaryCollectionRequest expand(final String value) {
+    @Nonnull
+    public DeviceCompliancePolicySettingStateSummaryCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DeviceCompliancePolicySettingStateSummaryCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class DeviceCompliancePolicySettingStateSummaryCollectionRequest extends 
      * @param value the filter clause
      * @return the updated request
      */
-    public DeviceCompliancePolicySettingStateSummaryCollectionRequest filter(final String value) {
+    @Nonnull
+    public DeviceCompliancePolicySettingStateSummaryCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DeviceCompliancePolicySettingStateSummaryCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class DeviceCompliancePolicySettingStateSummaryCollectionRequest extends 
      * @param value the order by clause
      * @return the updated request
      */
-    public DeviceCompliancePolicySettingStateSummaryCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DeviceCompliancePolicySettingStateSummaryCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceCompliancePolicySettingStateSummaryCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class DeviceCompliancePolicySettingStateSummaryCollectionRequest extends 
      * @param value the select clause
      * @return the updated request
      */
-    public DeviceCompliancePolicySettingStateSummaryCollectionRequest select(final String value) {
+    @Nonnull
+    public DeviceCompliancePolicySettingStateSummaryCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DeviceCompliancePolicySettingStateSummaryCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class DeviceCompliancePolicySettingStateSummaryCollectionRequest extends 
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DeviceCompliancePolicySettingStateSummaryCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (DeviceCompliancePolicySettingStateSummaryCollectionRequest)this;
@@ -133,6 +142,7 @@ public class DeviceCompliancePolicySettingStateSummaryCollectionRequest extends 
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public DeviceCompliancePolicySettingStateSummaryCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (DeviceCompliancePolicySettingStateSummaryCollectionRequest)this;
@@ -144,11 +154,13 @@ public class DeviceCompliancePolicySettingStateSummaryCollectionRequest extends 
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public DeviceCompliancePolicySettingStateSummaryCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public DeviceCompliancePolicySettingStateSummaryCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (DeviceCompliancePolicySettingStateSummaryCollectionRequest)this;
     }
-    public DeviceCompliancePolicySettingStateSummaryCollectionPage buildFromResponse(final DeviceCompliancePolicySettingStateSummaryCollectionResponse response) {
+    @Nonnull
+    public DeviceCompliancePolicySettingStateSummaryCollectionPage buildFromResponse(@Nonnull final DeviceCompliancePolicySettingStateSummaryCollectionResponse response) {
         final DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

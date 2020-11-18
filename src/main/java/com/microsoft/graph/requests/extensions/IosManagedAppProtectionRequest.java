@@ -13,6 +13,8 @@ import com.microsoft.graph.requests.extensions.ManagedMobileAppRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppPolicyDeploymentSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -31,7 +33,7 @@ public class IosManagedAppProtectionRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosManagedAppProtectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IosManagedAppProtectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IosManagedAppProtection.class);
     }
 
@@ -40,7 +42,7 @@ public class IosManagedAppProtectionRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IosManagedAppProtection> callback) {
+    public void get(@Nonnull final ICallback<? super IosManagedAppProtection> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +52,7 @@ public class IosManagedAppProtectionRequest extends BaseRequest {
      * @return the IosManagedAppProtection from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public IosManagedAppProtection get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +62,7 @@ public class IosManagedAppProtectionRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IosManagedAppProtection> callback) {
+    public void delete(@Nonnull final ICallback<? super IosManagedAppProtection> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +81,7 @@ public class IosManagedAppProtectionRequest extends BaseRequest {
      * @param sourceIosManagedAppProtection the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosManagedAppProtection sourceIosManagedAppProtection, final ICallback<? super IosManagedAppProtection> callback) {
+    public void patch(@Nonnull final IosManagedAppProtection sourceIosManagedAppProtection, @Nonnull final ICallback<? super IosManagedAppProtection> callback) {
         send(HttpMethod.PATCH, callback, sourceIosManagedAppProtection);
     }
 
@@ -89,7 +92,8 @@ public class IosManagedAppProtectionRequest extends BaseRequest {
      * @return the updated IosManagedAppProtection
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosManagedAppProtection patch(final IosManagedAppProtection sourceIosManagedAppProtection) throws ClientException {
+    @Nullable
+    public IosManagedAppProtection patch(@Nonnull final IosManagedAppProtection sourceIosManagedAppProtection) throws ClientException {
         return send(HttpMethod.PATCH, sourceIosManagedAppProtection);
     }
 
@@ -99,7 +103,7 @@ public class IosManagedAppProtectionRequest extends BaseRequest {
      * @param newIosManagedAppProtection the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosManagedAppProtection newIosManagedAppProtection, final ICallback<? super IosManagedAppProtection> callback) {
+    public void post(@Nonnull final IosManagedAppProtection newIosManagedAppProtection, @Nonnull final ICallback<? super IosManagedAppProtection> callback) {
         send(HttpMethod.POST, callback, newIosManagedAppProtection);
     }
 
@@ -110,7 +114,8 @@ public class IosManagedAppProtectionRequest extends BaseRequest {
      * @return the created IosManagedAppProtection
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosManagedAppProtection post(final IosManagedAppProtection newIosManagedAppProtection) throws ClientException {
+    @Nullable
+    public IosManagedAppProtection post(@Nonnull final IosManagedAppProtection newIosManagedAppProtection) throws ClientException {
         return send(HttpMethod.POST, newIosManagedAppProtection);
     }
 
@@ -120,7 +125,7 @@ public class IosManagedAppProtectionRequest extends BaseRequest {
      * @param newIosManagedAppProtection the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosManagedAppProtection newIosManagedAppProtection, final ICallback<? super IosManagedAppProtection> callback) {
+    public void put(@Nonnull final IosManagedAppProtection newIosManagedAppProtection, @Nonnull final ICallback<? super IosManagedAppProtection> callback) {
         send(HttpMethod.PUT, callback, newIosManagedAppProtection);
     }
 
@@ -131,7 +136,8 @@ public class IosManagedAppProtectionRequest extends BaseRequest {
      * @return the created IosManagedAppProtection
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosManagedAppProtection put(final IosManagedAppProtection newIosManagedAppProtection) throws ClientException {
+    @Nullable
+    public IosManagedAppProtection put(@Nonnull final IosManagedAppProtection newIosManagedAppProtection) throws ClientException {
         return send(HttpMethod.PUT, newIosManagedAppProtection);
     }
 
@@ -141,7 +147,8 @@ public class IosManagedAppProtectionRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IosManagedAppProtectionRequest select(final String value) {
+     @Nonnull
+     public IosManagedAppProtectionRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (IosManagedAppProtectionRequest)this;
      }
@@ -152,7 +159,8 @@ public class IosManagedAppProtectionRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IosManagedAppProtectionRequest expand(final String value) {
+     @Nonnull
+     public IosManagedAppProtectionRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (IosManagedAppProtectionRequest)this;
      }

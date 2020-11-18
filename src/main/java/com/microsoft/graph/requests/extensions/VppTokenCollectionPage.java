@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.VppToken;
 import com.microsoft.graph.requests.extensions.VppTokenCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.VppTokenCollectionPage;
 import com.microsoft.graph.requests.extensions.VppTokenCollectionResponse;
@@ -22,7 +24,7 @@ public class VppTokenCollectionPage extends BaseCollectionPage<VppToken, VppToke
      * @param response the serialized VppTokenCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public VppTokenCollectionPage(final VppTokenCollectionResponse response, final VppTokenCollectionRequestBuilder builder) {
+    public VppTokenCollectionPage(@Nonnull final VppTokenCollectionResponse response, @Nonnull final VppTokenCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

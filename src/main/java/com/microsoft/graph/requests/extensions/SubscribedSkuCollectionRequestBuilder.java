@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SubscribedSku;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.SubscribedSkuCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SubscribedSkuRequestBuilder;
@@ -31,7 +33,7 @@ public class SubscribedSkuCollectionRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SubscribedSkuCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SubscribedSkuCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -41,7 +43,8 @@ public class SubscribedSkuCollectionRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public SubscribedSkuCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public SubscribedSkuCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,11 +54,13 @@ public class SubscribedSkuCollectionRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public SubscribedSkuCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public SubscribedSkuCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SubscribedSkuCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public SubscribedSkuRequestBuilder byId(final String id) {
+    @Nonnull
+    public SubscribedSkuRequestBuilder byId(@Nonnull final String id) {
         return new SubscribedSkuRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

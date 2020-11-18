@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Team;
 import com.microsoft.graph.models.extensions.TeamsAppInstallation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class TeamsAppInstallationCollectionRequest extends BaseCollectionRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamsAppInstallationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsAppInstallationCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TeamsAppInstallationCollectionResponse.class, TeamsAppInstallationCollectionPage.class);
     }
 
-    public void get(final ICallback<? super TeamsAppInstallationCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super TeamsAppInstallationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class TeamsAppInstallationCollectionRequest extends BaseCollectionRequest
         });
     }
 
+    @Nonnull
     public TeamsAppInstallationCollectionPage get() throws ClientException {
         final TeamsAppInstallationCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final TeamsAppInstallation newTeamsAppInstallation, final ICallback<? super TeamsAppInstallation> callback) {
+    public void post(@Nonnull final TeamsAppInstallation newTeamsAppInstallation, @Nonnull final ICallback<? super TeamsAppInstallation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TeamsAppInstallationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newTeamsAppInstallation, callback);
     }
 
-    public TeamsAppInstallation post(final TeamsAppInstallation newTeamsAppInstallation) throws ClientException {
+    @Nonnull
+    public TeamsAppInstallation post(@Nonnull final TeamsAppInstallation newTeamsAppInstallation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TeamsAppInstallationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class TeamsAppInstallationCollectionRequest extends BaseCollectionRequest
      * @param value the expand clause
      * @return the updated request
      */
-    public TeamsAppInstallationCollectionRequest expand(final String value) {
+    @Nonnull
+    public TeamsAppInstallationCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (TeamsAppInstallationCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class TeamsAppInstallationCollectionRequest extends BaseCollectionRequest
      * @param value the filter clause
      * @return the updated request
      */
-    public TeamsAppInstallationCollectionRequest filter(final String value) {
+    @Nonnull
+    public TeamsAppInstallationCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (TeamsAppInstallationCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class TeamsAppInstallationCollectionRequest extends BaseCollectionRequest
      * @param value the order by clause
      * @return the updated request
      */
-    public TeamsAppInstallationCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public TeamsAppInstallationCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (TeamsAppInstallationCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class TeamsAppInstallationCollectionRequest extends BaseCollectionRequest
      * @param value the select clause
      * @return the updated request
      */
-    public TeamsAppInstallationCollectionRequest select(final String value) {
+    @Nonnull
+    public TeamsAppInstallationCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (TeamsAppInstallationCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class TeamsAppInstallationCollectionRequest extends BaseCollectionRequest
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public TeamsAppInstallationCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (TeamsAppInstallationCollectionRequest)this;
@@ -133,6 +142,7 @@ public class TeamsAppInstallationCollectionRequest extends BaseCollectionRequest
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public TeamsAppInstallationCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (TeamsAppInstallationCollectionRequest)this;
@@ -144,11 +154,13 @@ public class TeamsAppInstallationCollectionRequest extends BaseCollectionRequest
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public TeamsAppInstallationCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public TeamsAppInstallationCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (TeamsAppInstallationCollectionRequest)this;
     }
-    public TeamsAppInstallationCollectionPage buildFromResponse(final TeamsAppInstallationCollectionResponse response) {
+    @Nonnull
+    public TeamsAppInstallationCollectionPage buildFromResponse(@Nonnull final TeamsAppInstallationCollectionResponse response) {
         final TeamsAppInstallationCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new TeamsAppInstallationCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

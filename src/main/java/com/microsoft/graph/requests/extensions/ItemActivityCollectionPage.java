@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ItemActivity;
 import com.microsoft.graph.requests.extensions.ItemActivityCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ItemActivityCollectionPage;
 import com.microsoft.graph.requests.extensions.ItemActivityCollectionResponse;
@@ -22,7 +24,7 @@ public class ItemActivityCollectionPage extends BaseCollectionPage<ItemActivity,
      * @param response the serialized ItemActivityCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ItemActivityCollectionPage(final ItemActivityCollectionResponse response, final ItemActivityCollectionRequestBuilder builder) {
+    public ItemActivityCollectionPage(@Nonnull final ItemActivityCollectionResponse response, @Nonnull final ItemActivityCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

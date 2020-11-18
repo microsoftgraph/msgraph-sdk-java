@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.MobileApp;
 import com.microsoft.graph.models.extensions.MobileAppAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.MobileAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppRequestBuilder;
@@ -33,7 +35,7 @@ public class MobileAppCollectionRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MobileAppCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -43,7 +45,8 @@ public class MobileAppCollectionRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public MobileAppCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public MobileAppCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -53,11 +56,13 @@ public class MobileAppCollectionRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public MobileAppCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public MobileAppCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new MobileAppCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public MobileAppRequestBuilder byId(final String id) {
+    @Nonnull
+    public MobileAppRequestBuilder byId(@Nonnull final String id) {
         return new MobileAppRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

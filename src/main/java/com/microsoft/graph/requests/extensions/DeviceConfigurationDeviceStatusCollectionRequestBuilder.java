@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceConfiguration;
 import com.microsoft.graph.models.extensions.DeviceConfigurationDeviceStatus;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceStatusRequestBuilder;
@@ -32,7 +34,7 @@ public class DeviceConfigurationDeviceStatusCollectionRequestBuilder extends Bas
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceConfigurationDeviceStatusCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceConfigurationDeviceStatusCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,7 +44,8 @@ public class DeviceConfigurationDeviceStatusCollectionRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public DeviceConfigurationDeviceStatusCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DeviceConfigurationDeviceStatusCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +55,13 @@ public class DeviceConfigurationDeviceStatusCollectionRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public DeviceConfigurationDeviceStatusCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DeviceConfigurationDeviceStatusCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceConfigurationDeviceStatusCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public DeviceConfigurationDeviceStatusRequestBuilder byId(final String id) {
+    @Nonnull
+    public DeviceConfigurationDeviceStatusRequestBuilder byId(@Nonnull final String id) {
         return new DeviceConfigurationDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

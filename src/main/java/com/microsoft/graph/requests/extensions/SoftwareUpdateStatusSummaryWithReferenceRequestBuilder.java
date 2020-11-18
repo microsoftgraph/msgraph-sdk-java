@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SoftwareUpdateStatusSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
@@ -28,7 +30,7 @@ public class SoftwareUpdateStatusSummaryWithReferenceRequestBuilder extends Base
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SoftwareUpdateStatusSummaryWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SoftwareUpdateStatusSummaryWithReferenceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,7 +40,8 @@ public class SoftwareUpdateStatusSummaryWithReferenceRequestBuilder extends Base
      * @param requestOptions the options for this request
      * @return the SoftwareUpdateStatusSummaryWithReferenceRequest instance
      */
-    public SoftwareUpdateStatusSummaryWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public SoftwareUpdateStatusSummaryWithReferenceRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,10 +51,12 @@ public class SoftwareUpdateStatusSummaryWithReferenceRequestBuilder extends Base
      * @param requestOptions the options for this request
      * @return the SoftwareUpdateStatusSummaryWithReferenceRequest instance
      */
-    public SoftwareUpdateStatusSummaryWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public SoftwareUpdateStatusSummaryWithReferenceRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SoftwareUpdateStatusSummaryWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
+    @Nonnull
     public SoftwareUpdateStatusSummaryReferenceRequestBuilder reference(){
         return new SoftwareUpdateStatusSummaryReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }

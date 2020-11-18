@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfiguration
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationDeviceStatus;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder;
@@ -32,7 +34,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBui
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,7 +44,8 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBui
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +55,13 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBui
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder byId(final String id) {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder byId(@Nonnull final String id) {
         return new ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

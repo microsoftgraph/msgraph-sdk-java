@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.SignIn;
 import com.microsoft.graph.requests.extensions.SignInCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.SignInCollectionPage;
 import com.microsoft.graph.requests.extensions.SignInCollectionResponse;
@@ -22,7 +24,7 @@ public class SignInCollectionPage extends BaseCollectionPage<SignIn, SignInColle
      * @param response the serialized SignInCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public SignInCollectionPage(final SignInCollectionResponse response, final SignInCollectionRequestBuilder builder) {
+    public SignInCollectionPage(@Nonnull final SignInCollectionResponse response, @Nonnull final SignInCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

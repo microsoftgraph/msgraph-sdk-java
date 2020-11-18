@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
@@ -28,7 +30,7 @@ public class TokenLifetimePolicyWithReferenceRequestBuilder extends BaseRequestB
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TokenLifetimePolicyWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TokenLifetimePolicyWithReferenceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,7 +40,8 @@ public class TokenLifetimePolicyWithReferenceRequestBuilder extends BaseRequestB
      * @param requestOptions the options for this request
      * @return the TokenLifetimePolicyWithReferenceRequest instance
      */
-    public TokenLifetimePolicyWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public TokenLifetimePolicyWithReferenceRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,10 +51,12 @@ public class TokenLifetimePolicyWithReferenceRequestBuilder extends BaseRequestB
      * @param requestOptions the options for this request
      * @return the TokenLifetimePolicyWithReferenceRequest instance
      */
-    public TokenLifetimePolicyWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public TokenLifetimePolicyWithReferenceRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TokenLifetimePolicyWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
+    @Nonnull
     public TokenLifetimePolicyReferenceRequestBuilder reference(){
         return new TokenLifetimePolicyReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }

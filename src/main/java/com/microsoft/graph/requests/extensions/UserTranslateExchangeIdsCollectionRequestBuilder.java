@@ -11,6 +11,8 @@ import com.microsoft.graph.models.generated.ExchangeIdFormat;
 import com.microsoft.graph.models.extensions.ConvertIdResult;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.UserTranslateExchangeIdsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserTranslateExchangeIdsCollectionRequest;
@@ -35,7 +37,7 @@ public class UserTranslateExchangeIdsCollectionRequestBuilder extends BaseAction
      * @param targetIdType the targetIdType
      * @param sourceIdType the sourceIdType
      */
-    public UserTranslateExchangeIdsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<String> inputIds, final ExchangeIdFormat targetIdType, final ExchangeIdFormat sourceIdType) {
+    public UserTranslateExchangeIdsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final java.util.List<String> inputIds, @Nullable final ExchangeIdFormat targetIdType, @Nullable final ExchangeIdFormat sourceIdType) {
         super(requestUrl, client, requestOptions);
   	 if(inputIds!=null){
 			bodyParams.put("inputIds", inputIds);
@@ -54,7 +56,8 @@ public class UserTranslateExchangeIdsCollectionRequestBuilder extends BaseAction
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public UserTranslateExchangeIdsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public UserTranslateExchangeIdsCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -64,7 +67,8 @@ public class UserTranslateExchangeIdsCollectionRequestBuilder extends BaseAction
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public UserTranslateExchangeIdsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public UserTranslateExchangeIdsCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         UserTranslateExchangeIdsCollectionRequest request = new UserTranslateExchangeIdsCollectionRequest(
                 getRequestUrl(),
                 getClient(),

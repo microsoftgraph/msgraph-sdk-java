@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SharedPCConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -27,7 +29,7 @@ public class SharedPCConfigurationRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SharedPCConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SharedPCConfigurationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -37,7 +39,8 @@ public class SharedPCConfigurationRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the SharedPCConfigurationRequest instance
      */
-    public SharedPCConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public SharedPCConfigurationRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,30 +50,37 @@ public class SharedPCConfigurationRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the SharedPCConfigurationRequest instance
      */
-    public SharedPCConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public SharedPCConfigurationRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.SharedPCConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    @Nonnull
     public DeviceConfigurationAssignmentCollectionRequestBuilder assignments() {
         return new DeviceConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
-    public DeviceConfigurationAssignmentRequestBuilder assignments(final String id) {
+    @Nonnull
+    public DeviceConfigurationAssignmentRequestBuilder assignments(@Nonnull final String id) {
         return new DeviceConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public SettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
         return new SettingStateDeviceSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries"), getClient(), null);
     }
 
-    public SettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id) {
+    @Nonnull
+    public SettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(@Nonnull final String id) {
         return new SettingStateDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public DeviceConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses() {
         return new DeviceConfigurationDeviceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
     }
 
-    public DeviceConfigurationDeviceStatusRequestBuilder deviceStatuses(final String id) {
+    @Nonnull
+    public DeviceConfigurationDeviceStatusRequestBuilder deviceStatuses(@Nonnull final String id) {
         return new DeviceConfigurationDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
     }
 
@@ -79,14 +89,17 @@ public class SharedPCConfigurationRequestBuilder extends BaseRequestBuilder {
      *
      * @return the DeviceConfigurationDeviceOverviewRequestBuilder instance
      */
+    @Nonnull
     public DeviceConfigurationDeviceOverviewRequestBuilder deviceStatusOverview() {
         return new DeviceConfigurationDeviceOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatusOverview"), getClient(), null);
     }
+    @Nonnull
     public DeviceConfigurationUserStatusCollectionRequestBuilder userStatuses() {
         return new DeviceConfigurationUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
     }
 
-    public DeviceConfigurationUserStatusRequestBuilder userStatuses(final String id) {
+    @Nonnull
+    public DeviceConfigurationUserStatusRequestBuilder userStatuses(@Nonnull final String id) {
         return new DeviceConfigurationUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
     }
 
@@ -95,6 +108,7 @@ public class SharedPCConfigurationRequestBuilder extends BaseRequestBuilder {
      *
      * @return the DeviceConfigurationUserOverviewRequestBuilder instance
      */
+    @Nonnull
     public DeviceConfigurationUserOverviewRequestBuilder userStatusOverview() {
         return new DeviceConfigurationUserOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("userStatusOverview"), getClient(), null);
     }

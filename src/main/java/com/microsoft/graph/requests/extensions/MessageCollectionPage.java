@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.requests.extensions.MessageCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.MessageCollectionPage;
 import com.microsoft.graph.requests.extensions.MessageCollectionResponse;
@@ -22,7 +24,7 @@ public class MessageCollectionPage extends BaseCollectionPage<Message, MessageCo
      * @param response the serialized MessageCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public MessageCollectionPage(final MessageCollectionResponse response, final MessageCollectionRequestBuilder builder) {
+    public MessageCollectionPage(@Nonnull final MessageCollectionResponse response, @Nonnull final MessageCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

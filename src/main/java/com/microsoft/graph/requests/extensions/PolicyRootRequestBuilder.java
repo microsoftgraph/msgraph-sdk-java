@@ -25,6 +25,8 @@ import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyRequestBui
 import com.microsoft.graph.requests.extensions.IdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -42,7 +44,7 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PolicyRootRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PolicyRootRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -52,7 +54,8 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the PolicyRootRequest instance
      */
-    public PolicyRootRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public PolicyRootRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -62,58 +65,73 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the PolicyRootRequest instance
      */
-    public PolicyRootRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public PolicyRootRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PolicyRootRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    @Nonnull
     public ActivityBasedTimeoutPolicyCollectionRequestBuilder activityBasedTimeoutPolicies() {
         return new ActivityBasedTimeoutPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("activityBasedTimeoutPolicies"), getClient(), null);
     }
 
-    public ActivityBasedTimeoutPolicyRequestBuilder activityBasedTimeoutPolicies(final String id) {
+    @Nonnull
+    public ActivityBasedTimeoutPolicyRequestBuilder activityBasedTimeoutPolicies(@Nonnull final String id) {
         return new ActivityBasedTimeoutPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("activityBasedTimeoutPolicies") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public ClaimsMappingPolicyCollectionRequestBuilder claimsMappingPolicies() {
         return new ClaimsMappingPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("claimsMappingPolicies"), getClient(), null);
     }
 
-    public ClaimsMappingPolicyRequestBuilder claimsMappingPolicies(final String id) {
+    @Nonnull
+    public ClaimsMappingPolicyRequestBuilder claimsMappingPolicies(@Nonnull final String id) {
         return new ClaimsMappingPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("claimsMappingPolicies") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public HomeRealmDiscoveryPolicyCollectionRequestBuilder homeRealmDiscoveryPolicies() {
         return new HomeRealmDiscoveryPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("homeRealmDiscoveryPolicies"), getClient(), null);
     }
 
-    public HomeRealmDiscoveryPolicyRequestBuilder homeRealmDiscoveryPolicies(final String id) {
+    @Nonnull
+    public HomeRealmDiscoveryPolicyRequestBuilder homeRealmDiscoveryPolicies(@Nonnull final String id) {
         return new HomeRealmDiscoveryPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("homeRealmDiscoveryPolicies") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public PermissionGrantPolicyCollectionRequestBuilder permissionGrantPolicies() {
         return new PermissionGrantPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("permissionGrantPolicies"), getClient(), null);
     }
 
-    public PermissionGrantPolicyRequestBuilder permissionGrantPolicies(final String id) {
+    @Nonnull
+    public PermissionGrantPolicyRequestBuilder permissionGrantPolicies(@Nonnull final String id) {
         return new PermissionGrantPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("permissionGrantPolicies") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public TokenIssuancePolicyCollectionRequestBuilder tokenIssuancePolicies() {
         return new TokenIssuancePolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tokenIssuancePolicies"), getClient(), null);
     }
 
-    public TokenIssuancePolicyRequestBuilder tokenIssuancePolicies(final String id) {
+    @Nonnull
+    public TokenIssuancePolicyRequestBuilder tokenIssuancePolicies(@Nonnull final String id) {
         return new TokenIssuancePolicyRequestBuilder(getRequestUrlWithAdditionalSegment("tokenIssuancePolicies") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public TokenLifetimePolicyCollectionRequestBuilder tokenLifetimePolicies() {
         return new TokenLifetimePolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tokenLifetimePolicies"), getClient(), null);
     }
 
-    public TokenLifetimePolicyRequestBuilder tokenLifetimePolicies(final String id) {
+    @Nonnull
+    public TokenLifetimePolicyRequestBuilder tokenLifetimePolicies(@Nonnull final String id) {
         return new TokenLifetimePolicyRequestBuilder(getRequestUrlWithAdditionalSegment("tokenLifetimePolicies") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public ConditionalAccessPolicyCollectionRequestBuilder conditionalAccessPolicies() {
         return new ConditionalAccessPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccessPolicies"), getClient(), null);
     }
 
-    public ConditionalAccessPolicyRequestBuilder conditionalAccessPolicies(final String id) {
+    @Nonnull
+    public ConditionalAccessPolicyRequestBuilder conditionalAccessPolicies(@Nonnull final String id) {
         return new ConditionalAccessPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccessPolicies") + "/" + id, getClient(), null);
     }
 
@@ -122,6 +140,7 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder {
      *
      * @return the IdentitySecurityDefaultsEnforcementPolicyRequestBuilder instance
      */
+    @Nonnull
     public IdentitySecurityDefaultsEnforcementPolicyRequestBuilder identitySecurityDefaultsEnforcementPolicy() {
         return new IdentitySecurityDefaultsEnforcementPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("identitySecurityDefaultsEnforcementPolicy"), getClient(), null);
     }

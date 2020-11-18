@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TodoTaskList;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.TodoTaskListDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TodoTaskListDeltaCollectionPage;
@@ -31,6 +33,7 @@ public class TodoTaskListDeltaCollectionPage extends BaseCollectionPage<TodoTask
      * The opaque link to query delta after the 
      * initial request
      */
+    @Nullable
     public String deltaLink;
 
     /**
@@ -39,7 +42,7 @@ public class TodoTaskListDeltaCollectionPage extends BaseCollectionPage<TodoTask
      * @param response The serialized TodoTaskListDeltaCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public TodoTaskListDeltaCollectionPage(final TodoTaskListDeltaCollectionResponse response, final TodoTaskListDeltaCollectionRequestBuilder builder) {
+    public TodoTaskListDeltaCollectionPage(@Nonnull final TodoTaskListDeltaCollectionResponse response, @Nonnull final TodoTaskListDeltaCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
 
         if (response.getRawObject().get("@odata.deltaLink") != null) {
@@ -53,6 +56,7 @@ public class TodoTaskListDeltaCollectionPage extends BaseCollectionPage<TodoTask
      *
      * @return String The deltaLink URL
      */
+    @Nullable
     public String deltaLink() {
         return deltaLink;
     }

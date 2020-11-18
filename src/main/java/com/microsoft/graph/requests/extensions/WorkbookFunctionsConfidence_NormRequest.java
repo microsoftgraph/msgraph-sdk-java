@@ -7,6 +7,8 @@ import com.microsoft.graph.models.extensions.WorkbookFunctionsConfidence_NormBod
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsConfidence_NormRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,15 +31,16 @@ public class WorkbookFunctionsConfidence_NormRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookFunctionsConfidence_NormRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsConfidence_NormRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsConfidence_NormBody();
     }
 
-    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
+    public void post(@Nonnull final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    @Nullable
     public WorkbookFunctionResult post() throws ClientException {
         return send(HttpMethod.POST, body);
     }
@@ -48,7 +51,8 @@ public class WorkbookFunctionsConfidence_NormRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public WorkbookFunctionsConfidence_NormRequest select(final String value) {
+    @Nonnull
+    public WorkbookFunctionsConfidence_NormRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookFunctionsConfidence_NormRequest)this;
     }
@@ -59,6 +63,7 @@ public class WorkbookFunctionsConfidence_NormRequest extends BaseRequest {
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public WorkbookFunctionsConfidence_NormRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (WorkbookFunctionsConfidence_NormRequest)this;
@@ -70,7 +75,8 @@ public class WorkbookFunctionsConfidence_NormRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public WorkbookFunctionsConfidence_NormRequest expand(final String value) {
+    @Nonnull
+    public WorkbookFunctionsConfidence_NormRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookFunctionsConfidence_NormRequest)this;
     }

@@ -6,6 +6,8 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookChartSeries;
 import com.microsoft.graph.requests.extensions.WorkbookChartSeriesItemAtRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.core.ClientException;
@@ -27,7 +29,7 @@ public class WorkbookChartSeriesItemAtRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartSeriesItemAtRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartSeriesItemAtRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChartSeries.class);
     }
 
@@ -36,7 +38,7 @@ public class WorkbookChartSeriesItemAtRequest extends BaseRequest {
      * @param srcWorkbookChartSeries the WorkbookChartSeries with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    public void patch(WorkbookChartSeries srcWorkbookChartSeries, final ICallback<? super WorkbookChartSeries> callback) {
+    public void patch(@Nonnull WorkbookChartSeries srcWorkbookChartSeries, @Nonnull final ICallback<? super WorkbookChartSeries> callback) {
         send(HttpMethod.PATCH, callback, srcWorkbookChartSeries);
     }
 
@@ -47,7 +49,8 @@ public class WorkbookChartSeriesItemAtRequest extends BaseRequest {
      * @return the WorkbookChartSeries
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-     public WorkbookChartSeries patch(WorkbookChartSeries srcWorkbookChartSeries) throws ClientException {
+     @Nullable
+     public WorkbookChartSeries patch(@Nonnull final WorkbookChartSeries srcWorkbookChartSeries) throws ClientException {
         return this.send(HttpMethod.PATCH, srcWorkbookChartSeries);
     }
 
@@ -57,7 +60,7 @@ public class WorkbookChartSeriesItemAtRequest extends BaseRequest {
      * @param srcWorkbookChartSeries the WorkbookChartSeries to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(WorkbookChartSeries srcWorkbookChartSeries, final ICallback<? super WorkbookChartSeries> callback) {
+    public void put(@Nonnull final WorkbookChartSeries srcWorkbookChartSeries, @Nonnull final ICallback<? super WorkbookChartSeries> callback) {
         send(HttpMethod.PUT, callback, srcWorkbookChartSeries);
     }
 
@@ -68,7 +71,8 @@ public class WorkbookChartSeriesItemAtRequest extends BaseRequest {
      * @return the WorkbookChartSeries
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-     public WorkbookChartSeries put(WorkbookChartSeries srcWorkbookChartSeries) throws ClientException {
+     @Nullable
+     public WorkbookChartSeries put(@Nonnull final WorkbookChartSeries srcWorkbookChartSeries) throws ClientException {
         return this.send(HttpMethod.PUT, srcWorkbookChartSeries);
     }
     /**
@@ -76,7 +80,7 @@ public class WorkbookChartSeriesItemAtRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookChartSeries> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookChartSeries> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -86,6 +90,7 @@ public class WorkbookChartSeriesItemAtRequest extends BaseRequest {
      * @return the WorkbookChartSeries
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
+    @Nullable
     public WorkbookChartSeries get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -96,7 +101,8 @@ public class WorkbookChartSeriesItemAtRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public WorkbookChartSeriesItemAtRequest select(final String value) {
+    @Nonnull
+    public WorkbookChartSeriesItemAtRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookChartSeriesItemAtRequest)this;
     }
@@ -107,7 +113,8 @@ public class WorkbookChartSeriesItemAtRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public WorkbookChartSeriesItemAtRequest expand(final String value) {
+    @Nonnull
+    public WorkbookChartSeriesItemAtRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookChartSeriesItemAtRequest)this;
     }
@@ -118,7 +125,8 @@ public class WorkbookChartSeriesItemAtRequest extends BaseRequest {
      * @param value the filter clause
      * @return the updated request
      */
-    public WorkbookChartSeriesItemAtRequest filter(final String value) {
+    @Nonnull
+    public WorkbookChartSeriesItemAtRequest filter(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookChartSeriesItemAtRequest)this;
     }
@@ -129,7 +137,8 @@ public class WorkbookChartSeriesItemAtRequest extends BaseRequest {
      * @param value the order by clause
      * @return the updated request
      */
-    public WorkbookChartSeriesItemAtRequest orderBy(final String value) {
+    @Nonnull
+    public WorkbookChartSeriesItemAtRequest orderBy(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookChartSeriesItemAtRequest)this;
     }

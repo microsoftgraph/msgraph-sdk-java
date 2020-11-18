@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignment;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignmentCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignmentCollectionResponse;
@@ -22,7 +24,7 @@ public class DeviceCompliancePolicyAssignmentCollectionPage extends BaseCollecti
      * @param response the serialized DeviceCompliancePolicyAssignmentCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DeviceCompliancePolicyAssignmentCollectionPage(final DeviceCompliancePolicyAssignmentCollectionResponse response, final DeviceCompliancePolicyAssignmentCollectionRequestBuilder builder) {
+    public DeviceCompliancePolicyAssignmentCollectionPage(@Nonnull final DeviceCompliancePolicyAssignmentCollectionResponse response, @Nonnull final DeviceCompliancePolicyAssignmentCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

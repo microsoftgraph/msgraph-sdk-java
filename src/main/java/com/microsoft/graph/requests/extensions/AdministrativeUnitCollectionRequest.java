@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Directory;
 import com.microsoft.graph.models.extensions.AdministrativeUnit;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<A
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AdministrativeUnitCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AdministrativeUnitCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AdministrativeUnitCollectionResponse.class, AdministrativeUnitCollectionPage.class);
     }
 
-    public void get(final ICallback<? super AdministrativeUnitCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super AdministrativeUnitCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<A
         });
     }
 
+    @Nonnull
     public AdministrativeUnitCollectionPage get() throws ClientException {
         final AdministrativeUnitCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final AdministrativeUnit newAdministrativeUnit, final ICallback<? super AdministrativeUnit> callback) {
+    public void post(@Nonnull final AdministrativeUnit newAdministrativeUnit, @Nonnull final ICallback<? super AdministrativeUnit> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AdministrativeUnitRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newAdministrativeUnit, callback);
     }
 
-    public AdministrativeUnit post(final AdministrativeUnit newAdministrativeUnit) throws ClientException {
+    @Nonnull
+    public AdministrativeUnit post(@Nonnull final AdministrativeUnit newAdministrativeUnit) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AdministrativeUnitRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<A
      * @param value the expand clause
      * @return the updated request
      */
-    public AdministrativeUnitCollectionRequest expand(final String value) {
+    @Nonnull
+    public AdministrativeUnitCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (AdministrativeUnitCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<A
      * @param value the filter clause
      * @return the updated request
      */
-    public AdministrativeUnitCollectionRequest filter(final String value) {
+    @Nonnull
+    public AdministrativeUnitCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (AdministrativeUnitCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<A
      * @param value the order by clause
      * @return the updated request
      */
-    public AdministrativeUnitCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public AdministrativeUnitCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AdministrativeUnitCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<A
      * @param value the select clause
      * @return the updated request
      */
-    public AdministrativeUnitCollectionRequest select(final String value) {
+    @Nonnull
+    public AdministrativeUnitCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (AdministrativeUnitCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<A
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public AdministrativeUnitCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (AdministrativeUnitCollectionRequest)this;
@@ -133,6 +142,7 @@ public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<A
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public AdministrativeUnitCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (AdministrativeUnitCollectionRequest)this;
@@ -144,11 +154,13 @@ public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<A
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public AdministrativeUnitCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public AdministrativeUnitCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (AdministrativeUnitCollectionRequest)this;
     }
-    public AdministrativeUnitCollectionPage buildFromResponse(final AdministrativeUnitCollectionResponse response) {
+    @Nonnull
+    public AdministrativeUnitCollectionPage buildFromResponse(@Nonnull final AdministrativeUnitCollectionResponse response) {
         final AdministrativeUnitCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new AdministrativeUnitCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

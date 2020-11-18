@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ColumnDefinition;
 import com.microsoft.graph.requests.extensions.ColumnDefinitionCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ColumnDefinitionCollectionPage;
 import com.microsoft.graph.requests.extensions.ColumnDefinitionCollectionResponse;
@@ -22,7 +24,7 @@ public class ColumnDefinitionCollectionPage extends BaseCollectionPage<ColumnDef
      * @param response the serialized ColumnDefinitionCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ColumnDefinitionCollectionPage(final ColumnDefinitionCollectionResponse response, final ColumnDefinitionCollectionRequestBuilder builder) {
+    public ColumnDefinitionCollectionPage(@Nonnull final ColumnDefinitionCollectionResponse response, @Nonnull final ColumnDefinitionCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -22,6 +22,9 @@
 
 package com.microsoft.graph.concurrency;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 import com.microsoft.graph.core.ClientException;
 
 /**
@@ -34,7 +37,7 @@ public interface IExecutors {
      * 
      * @param runnable the Runnable to execute
      */
-    void performOnBackground(final Runnable runnable);
+    void performOnBackground(@Nonnull final Runnable runnable);
 
     /**
      * Performs the given callback with the result object
@@ -43,8 +46,8 @@ public interface IExecutors {
      * @param callback the callback to call on the foreground with this result
      * @param <Result> the result type
      */
-    <Result> void performOnForeground(final Result result,
-                                      final ICallback<Result> callback);
+    <Result> void performOnForeground(@Nullable final Result result,
+                                      @Nonnull final ICallback<Result> callback);
 
     /**
      * Performs the given callback with the result object
@@ -56,7 +59,7 @@ public interface IExecutors {
      */
     <Result> void performOnForeground(final int progress,
                                       final int progressMax,
-                                      final IProgressCallback<Result> callback);
+                                      @Nonnull final IProgressCallback<Result> callback);
 
     /**
      * Performs the given callback with the exception object
@@ -65,8 +68,8 @@ public interface IExecutors {
      * @param callback the callback to call on the foreground with this exception
      * @param <Result> the result type
      */
-    <Result> void performOnForeground(final ClientException exception,
-                                      final ICallback<Result> callback);
+    <Result> void performOnForeground(@Nonnull final ClientException exception,
+                                      @Nonnull final ICallback<Result> callback);
     
     /**
      * Shuts down the background executors

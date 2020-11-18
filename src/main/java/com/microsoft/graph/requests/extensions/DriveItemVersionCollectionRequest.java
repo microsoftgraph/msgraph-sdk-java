@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.DriveItemVersion;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class DriveItemVersionCollectionRequest extends BaseCollectionRequest<Dri
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DriveItemVersionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveItemVersionCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DriveItemVersionCollectionResponse.class, DriveItemVersionCollectionPage.class);
     }
 
-    public void get(final ICallback<? super DriveItemVersionCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super DriveItemVersionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class DriveItemVersionCollectionRequest extends BaseCollectionRequest<Dri
         });
     }
 
+    @Nonnull
     public DriveItemVersionCollectionPage get() throws ClientException {
         final DriveItemVersionCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final DriveItemVersion newDriveItemVersion, final ICallback<? super DriveItemVersion> callback) {
+    public void post(@Nonnull final DriveItemVersion newDriveItemVersion, @Nonnull final ICallback<? super DriveItemVersion> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DriveItemVersionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newDriveItemVersion, callback);
     }
 
-    public DriveItemVersion post(final DriveItemVersion newDriveItemVersion) throws ClientException {
+    @Nonnull
+    public DriveItemVersion post(@Nonnull final DriveItemVersion newDriveItemVersion) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DriveItemVersionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class DriveItemVersionCollectionRequest extends BaseCollectionRequest<Dri
      * @param value the expand clause
      * @return the updated request
      */
-    public DriveItemVersionCollectionRequest expand(final String value) {
+    @Nonnull
+    public DriveItemVersionCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DriveItemVersionCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class DriveItemVersionCollectionRequest extends BaseCollectionRequest<Dri
      * @param value the filter clause
      * @return the updated request
      */
-    public DriveItemVersionCollectionRequest filter(final String value) {
+    @Nonnull
+    public DriveItemVersionCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DriveItemVersionCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class DriveItemVersionCollectionRequest extends BaseCollectionRequest<Dri
      * @param value the order by clause
      * @return the updated request
      */
-    public DriveItemVersionCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DriveItemVersionCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DriveItemVersionCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class DriveItemVersionCollectionRequest extends BaseCollectionRequest<Dri
      * @param value the select clause
      * @return the updated request
      */
-    public DriveItemVersionCollectionRequest select(final String value) {
+    @Nonnull
+    public DriveItemVersionCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DriveItemVersionCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class DriveItemVersionCollectionRequest extends BaseCollectionRequest<Dri
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DriveItemVersionCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (DriveItemVersionCollectionRequest)this;
@@ -133,6 +142,7 @@ public class DriveItemVersionCollectionRequest extends BaseCollectionRequest<Dri
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public DriveItemVersionCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (DriveItemVersionCollectionRequest)this;
@@ -144,11 +154,13 @@ public class DriveItemVersionCollectionRequest extends BaseCollectionRequest<Dri
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public DriveItemVersionCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public DriveItemVersionCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (DriveItemVersionCollectionRequest)this;
     }
-    public DriveItemVersionCollectionPage buildFromResponse(final DriveItemVersionCollectionResponse response) {
+    @Nonnull
+    public DriveItemVersionCollectionPage buildFromResponse(@Nonnull final DriveItemVersionCollectionResponse response) {
         final DriveItemVersionCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new DriveItemVersionCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

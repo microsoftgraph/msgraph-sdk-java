@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OrgContact;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.OrgContactDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OrgContactDeltaCollectionPage;
@@ -34,12 +36,12 @@ public class OrgContactDeltaCollectionRequest extends BaseCollectionRequest<OrgC
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OrgContactDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OrgContactDeltaCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OrgContactDeltaCollectionResponse.class, OrgContactDeltaCollectionPage.class);
     }
 
 
-    public void get(final ICallback<? super OrgContactDeltaCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super OrgContactDeltaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,13 +55,15 @@ public class OrgContactDeltaCollectionRequest extends BaseCollectionRequest<OrgC
         });
     }
 
+    @Nullable
     public OrgContactDeltaCollectionPage get() throws ClientException {
         final OrgContactDeltaCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
 
-    public OrgContactDeltaCollectionPage buildFromResponse(final OrgContactDeltaCollectionResponse response) {
+    @Nonnull
+    public OrgContactDeltaCollectionPage buildFromResponse(@Nonnull final OrgContactDeltaCollectionResponse response) {
         final OrgContactDeltaCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new OrgContactDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
@@ -77,7 +81,8 @@ public class OrgContactDeltaCollectionRequest extends BaseCollectionRequest<OrgC
      * @param value the select clause
      * @return the updated request
      */
-    public OrgContactDeltaCollectionRequest select(final String value) {
+    @Nonnull
+    public OrgContactDeltaCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (OrgContactDeltaCollectionRequest)this;
     }
@@ -88,6 +93,7 @@ public class OrgContactDeltaCollectionRequest extends BaseCollectionRequest<OrgC
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public OrgContactDeltaCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (OrgContactDeltaCollectionRequest)this;
@@ -99,7 +105,8 @@ public class OrgContactDeltaCollectionRequest extends BaseCollectionRequest<OrgC
      * @param value the expand clause
      * @return the updated request
      */
-    public OrgContactDeltaCollectionRequest expand(final String value) {
+    @Nonnull
+    public OrgContactDeltaCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (OrgContactDeltaCollectionRequest)this;
     }
@@ -110,7 +117,8 @@ public class OrgContactDeltaCollectionRequest extends BaseCollectionRequest<OrgC
      * @param value the filter clause
      * @return the updated request
      */
-    public OrgContactDeltaCollectionRequest filter(final String value) {
+    @Nonnull
+    public OrgContactDeltaCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (OrgContactDeltaCollectionRequest)this;
     }
@@ -121,7 +129,8 @@ public class OrgContactDeltaCollectionRequest extends BaseCollectionRequest<OrgC
      * @param value the order by clause
      * @return the updated request
      */
-    public OrgContactDeltaCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public OrgContactDeltaCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (OrgContactDeltaCollectionRequest)this;
     }

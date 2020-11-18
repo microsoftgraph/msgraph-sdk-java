@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.WorkbookRangeView;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class WorkbookRangeViewCollectionRequest extends BaseCollectionRequest<Wo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookRangeViewCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeViewCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookRangeViewCollectionResponse.class, WorkbookRangeViewCollectionPage.class);
     }
 
-    public void get(final ICallback<? super WorkbookRangeViewCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookRangeViewCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class WorkbookRangeViewCollectionRequest extends BaseCollectionRequest<Wo
         });
     }
 
+    @Nonnull
     public WorkbookRangeViewCollectionPage get() throws ClientException {
         final WorkbookRangeViewCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final WorkbookRangeView newWorkbookRangeView, final ICallback<? super WorkbookRangeView> callback) {
+    public void post(@Nonnull final WorkbookRangeView newWorkbookRangeView, @Nonnull final ICallback<? super WorkbookRangeView> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookRangeViewRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newWorkbookRangeView, callback);
     }
 
-    public WorkbookRangeView post(final WorkbookRangeView newWorkbookRangeView) throws ClientException {
+    @Nonnull
+    public WorkbookRangeView post(@Nonnull final WorkbookRangeView newWorkbookRangeView) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookRangeViewRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class WorkbookRangeViewCollectionRequest extends BaseCollectionRequest<Wo
      * @param value the expand clause
      * @return the updated request
      */
-    public WorkbookRangeViewCollectionRequest expand(final String value) {
+    @Nonnull
+    public WorkbookRangeViewCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookRangeViewCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class WorkbookRangeViewCollectionRequest extends BaseCollectionRequest<Wo
      * @param value the filter clause
      * @return the updated request
      */
-    public WorkbookRangeViewCollectionRequest filter(final String value) {
+    @Nonnull
+    public WorkbookRangeViewCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookRangeViewCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class WorkbookRangeViewCollectionRequest extends BaseCollectionRequest<Wo
      * @param value the order by clause
      * @return the updated request
      */
-    public WorkbookRangeViewCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public WorkbookRangeViewCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookRangeViewCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class WorkbookRangeViewCollectionRequest extends BaseCollectionRequest<Wo
      * @param value the select clause
      * @return the updated request
      */
-    public WorkbookRangeViewCollectionRequest select(final String value) {
+    @Nonnull
+    public WorkbookRangeViewCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookRangeViewCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class WorkbookRangeViewCollectionRequest extends BaseCollectionRequest<Wo
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public WorkbookRangeViewCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (WorkbookRangeViewCollectionRequest)this;
@@ -133,6 +142,7 @@ public class WorkbookRangeViewCollectionRequest extends BaseCollectionRequest<Wo
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public WorkbookRangeViewCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (WorkbookRangeViewCollectionRequest)this;
@@ -144,11 +154,13 @@ public class WorkbookRangeViewCollectionRequest extends BaseCollectionRequest<Wo
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public WorkbookRangeViewCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public WorkbookRangeViewCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (WorkbookRangeViewCollectionRequest)this;
     }
-    public WorkbookRangeViewCollectionPage buildFromResponse(final WorkbookRangeViewCollectionResponse response) {
+    @Nonnull
+    public WorkbookRangeViewCollectionPage buildFromResponse(@Nonnull final WorkbookRangeViewCollectionResponse response) {
         final WorkbookRangeViewCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new WorkbookRangeViewCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

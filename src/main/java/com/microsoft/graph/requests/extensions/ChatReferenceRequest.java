@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Chat;
 import com.microsoft.graph.models.extensions.ChatMessage;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
@@ -31,14 +33,15 @@ public class ChatReferenceRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ChatReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ChatReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Chat.class);
     }
 
-    public void delete(final ICallback<? super Chat> callback) {
+    public void delete(@Nonnull final ICallback<? super Chat> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
+    @Nullable
     public Chat delete() throws ClientException {
        return send(HttpMethod.DELETE, null);
     }
@@ -49,7 +52,8 @@ public class ChatReferenceRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public ChatReferenceRequest select(final String value) {
+    @Nonnull
+    public ChatReferenceRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ChatReferenceRequest)this;
     }
@@ -60,7 +64,8 @@ public class ChatReferenceRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public ChatReferenceRequest expand(final String value) {
+    @Nonnull
+    public ChatReferenceRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ChatReferenceRequest)this;
     }
@@ -70,7 +75,7 @@ public class ChatReferenceRequest extends BaseRequest {
      * @param srcChat the Chat reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(Chat srcChat, final ICallback<? super Chat> callback) {
+    public void put(@Nonnull final Chat srcChat, @Nonnull final ICallback<? super Chat> callback) {
         send(HttpMethod.PUT, callback, srcChat);
     }
 
@@ -81,7 +86,8 @@ public class ChatReferenceRequest extends BaseRequest {
      * @return the Chat
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    public Chat put(Chat srcChat) throws ClientException {
+    @Nullable
+    public Chat put(@Nonnull final Chat srcChat) throws ClientException {
         return send(HttpMethod.PUT, srcChat);
     }
 }

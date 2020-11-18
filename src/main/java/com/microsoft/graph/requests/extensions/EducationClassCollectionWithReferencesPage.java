@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.EducationSchool;
 import com.microsoft.graph.models.extensions.EducationClass;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.EducationClassCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationClassCollectionWithReferencesPage;
@@ -34,7 +36,7 @@ public class EducationClassCollectionWithReferencesPage extends BaseCollectionPa
      * @param response the serialized EducationClassCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public EducationClassCollectionWithReferencesPage(final EducationClassCollectionResponse response, final EducationClassCollectionWithReferencesRequestBuilder builder) {
+    public EducationClassCollectionWithReferencesPage(@Nonnull final EducationClassCollectionResponse response, @Nonnull  final EducationClassCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

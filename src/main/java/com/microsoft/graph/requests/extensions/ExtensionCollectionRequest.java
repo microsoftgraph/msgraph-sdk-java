@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.TodoTask;
 import com.microsoft.graph.models.extensions.Extension;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class ExtensionCollectionRequest extends BaseCollectionRequest<ExtensionC
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ExtensionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ExtensionCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ExtensionCollectionResponse.class, ExtensionCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ExtensionCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super ExtensionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class ExtensionCollectionRequest extends BaseCollectionRequest<ExtensionC
         });
     }
 
+    @Nonnull
     public ExtensionCollectionPage get() throws ClientException {
         final ExtensionCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final Extension newExtension, final ICallback<? super Extension> callback) {
+    public void post(@Nonnull final Extension newExtension, @Nonnull final ICallback<? super Extension> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ExtensionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newExtension, callback);
     }
 
-    public Extension post(final Extension newExtension) throws ClientException {
+    @Nonnull
+    public Extension post(@Nonnull final Extension newExtension) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ExtensionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class ExtensionCollectionRequest extends BaseCollectionRequest<ExtensionC
      * @param value the expand clause
      * @return the updated request
      */
-    public ExtensionCollectionRequest expand(final String value) {
+    @Nonnull
+    public ExtensionCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ExtensionCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class ExtensionCollectionRequest extends BaseCollectionRequest<ExtensionC
      * @param value the filter clause
      * @return the updated request
      */
-    public ExtensionCollectionRequest filter(final String value) {
+    @Nonnull
+    public ExtensionCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ExtensionCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class ExtensionCollectionRequest extends BaseCollectionRequest<ExtensionC
      * @param value the order by clause
      * @return the updated request
      */
-    public ExtensionCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ExtensionCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ExtensionCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class ExtensionCollectionRequest extends BaseCollectionRequest<ExtensionC
      * @param value the select clause
      * @return the updated request
      */
-    public ExtensionCollectionRequest select(final String value) {
+    @Nonnull
+    public ExtensionCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ExtensionCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class ExtensionCollectionRequest extends BaseCollectionRequest<ExtensionC
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ExtensionCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ExtensionCollectionRequest)this;
@@ -133,6 +142,7 @@ public class ExtensionCollectionRequest extends BaseCollectionRequest<ExtensionC
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ExtensionCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (ExtensionCollectionRequest)this;
@@ -144,11 +154,13 @@ public class ExtensionCollectionRequest extends BaseCollectionRequest<ExtensionC
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ExtensionCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ExtensionCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (ExtensionCollectionRequest)this;
     }
-    public ExtensionCollectionPage buildFromResponse(final ExtensionCollectionResponse response) {
+    @Nonnull
+    public ExtensionCollectionPage buildFromResponse(@Nonnull final ExtensionCollectionResponse response) {
         final ExtensionCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ExtensionCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

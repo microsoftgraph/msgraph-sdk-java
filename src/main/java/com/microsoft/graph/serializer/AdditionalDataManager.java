@@ -32,6 +32,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import javax.annotation.Nullable;
 
 public class AdditionalDataManager extends HashMap<String, JsonElement> {
 
@@ -39,7 +40,7 @@ public class AdditionalDataManager extends HashMap<String, JsonElement> {
     
     private final transient IJsonBackedObject jsonBackedObject;
 
-    public AdditionalDataManager(IJsonBackedObject jsonBackedObject) {
+    public AdditionalDataManager(@Nullable final IJsonBackedObject jsonBackedObject) {
         this.jsonBackedObject = jsonBackedObject;
     }
 

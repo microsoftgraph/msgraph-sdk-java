@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ManagedAppStatus;
 import com.microsoft.graph.requests.extensions.ManagedAppStatusCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedAppStatusCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedAppStatusCollectionResponse;
@@ -22,7 +24,7 @@ public class ManagedAppStatusCollectionPage extends BaseCollectionPage<ManagedAp
      * @param response the serialized ManagedAppStatusCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ManagedAppStatusCollectionPage(final ManagedAppStatusCollectionResponse response, final ManagedAppStatusCollectionRequestBuilder builder) {
+    public ManagedAppStatusCollectionPage(@Nonnull final ManagedAppStatusCollectionResponse response, @Nonnull final ManagedAppStatusCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

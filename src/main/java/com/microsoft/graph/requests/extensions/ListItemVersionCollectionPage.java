@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ListItemVersion;
 import com.microsoft.graph.requests.extensions.ListItemVersionCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ListItemVersionCollectionPage;
 import com.microsoft.graph.requests.extensions.ListItemVersionCollectionResponse;
@@ -22,7 +24,7 @@ public class ListItemVersionCollectionPage extends BaseCollectionPage<ListItemVe
      * @param response the serialized ListItemVersionCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ListItemVersionCollectionPage(final ListItemVersionCollectionResponse response, final ListItemVersionCollectionRequestBuilder builder) {
+    public ListItemVersionCollectionPage(@Nonnull final ListItemVersionCollectionResponse response, @Nonnull final ListItemVersionCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

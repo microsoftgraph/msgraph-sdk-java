@@ -29,6 +29,9 @@ import com.microsoft.graph.serializer.ISerializer;
 import java.util.Collections;
 import java.util.List;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 /**
  * A page of results from a collection
  *
@@ -65,7 +68,7 @@ public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> impleme
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public BaseCollectionPage(final List<T1> pageContents, final T2 nextRequestBuilder) {
+    public BaseCollectionPage(@Nonnull final List<T1> pageContents, @Nullable final T2 nextRequestBuilder) {
         // CollectionPages are never directly modifiable, either 'update'/'delete' the specific child or 'add' the new
         // object to the 'children' of the collection.
         this.pageContents = Collections.unmodifiableList(pageContents);
@@ -79,7 +82,7 @@ public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> impleme
      * @param nextRequestBuilder the request builder for the next page
      * @param responseAdditionalData the additional data returned by the response
      */
-    public BaseCollectionPage(final List<T1> pageContents, final T2 nextRequestBuilder, final AdditionalDataManager responseAdditionalData) {
+    public BaseCollectionPage(@Nonnull final List<T1> pageContents, @Nullable final T2 nextRequestBuilder, @Nonnull final AdditionalDataManager responseAdditionalData) {
         this(pageContents, nextRequestBuilder);
         this.additionalDataManager().putAll(responseAdditionalData);
     }
@@ -89,6 +92,7 @@ public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> impleme
      *
      * @return the next page request builder
      */
+    @Nullable
     public T2 getNextPage() {
         return requestBuilder;
     }
@@ -98,6 +102,7 @@ public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> impleme
      *
      * @return the current page
      */
+    @Nonnull
     public List<T1> getCurrentPage() {
         return pageContents;
     }
@@ -107,6 +112,7 @@ public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> impleme
      *
      * @return the raw representation of this class
      */
+    @Nullable
     public JsonObject getRawObject() {
         return rawObject;
     }
@@ -116,6 +122,7 @@ public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> impleme
      *
      * @return the serializer
      */
+    @Nullable
     protected ISerializer getSerializer() {
         return serializer;
     }
@@ -126,12 +133,13 @@ public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> impleme
      * @param serializer the serializer
      * @param json       the JSON object to set this object to
      */
-    public void setRawObject(final ISerializer serializer, final JsonObject json) {
+    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
         this.serializer = serializer;
         rawObject = json;
     }
 
     @Override
+    @Nullable
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }

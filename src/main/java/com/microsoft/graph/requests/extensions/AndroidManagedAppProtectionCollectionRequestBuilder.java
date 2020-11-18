@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceAppManagement;
 import com.microsoft.graph.models.extensions.AndroidManagedAppProtection;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.AndroidManagedAppProtectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AndroidManagedAppProtectionRequestBuilder;
@@ -32,7 +34,7 @@ public class AndroidManagedAppProtectionCollectionRequestBuilder extends BaseReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidManagedAppProtectionCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidManagedAppProtectionCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,7 +44,8 @@ public class AndroidManagedAppProtectionCollectionRequestBuilder extends BaseReq
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public AndroidManagedAppProtectionCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public AndroidManagedAppProtectionCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +55,13 @@ public class AndroidManagedAppProtectionCollectionRequestBuilder extends BaseReq
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public AndroidManagedAppProtectionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public AndroidManagedAppProtectionCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AndroidManagedAppProtectionCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public AndroidManagedAppProtectionRequestBuilder byId(final String id) {
+    @Nonnull
+    public AndroidManagedAppProtectionRequestBuilder byId(@Nonnull final String id) {
         return new AndroidManagedAppProtectionRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

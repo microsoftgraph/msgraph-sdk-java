@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ItemAnalytics;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class ItemActivityStatCollectionRequest extends BaseCollectionRequest<Ite
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ItemActivityStatCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ItemActivityStatCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ItemActivityStatCollectionResponse.class, ItemActivityStatCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ItemActivityStatCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super ItemActivityStatCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class ItemActivityStatCollectionRequest extends BaseCollectionRequest<Ite
         });
     }
 
+    @Nonnull
     public ItemActivityStatCollectionPage get() throws ClientException {
         final ItemActivityStatCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final ItemActivityStat newItemActivityStat, final ICallback<? super ItemActivityStat> callback) {
+    public void post(@Nonnull final ItemActivityStat newItemActivityStat, @Nonnull final ICallback<? super ItemActivityStat> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ItemActivityStatRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newItemActivityStat, callback);
     }
 
-    public ItemActivityStat post(final ItemActivityStat newItemActivityStat) throws ClientException {
+    @Nonnull
+    public ItemActivityStat post(@Nonnull final ItemActivityStat newItemActivityStat) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ItemActivityStatRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class ItemActivityStatCollectionRequest extends BaseCollectionRequest<Ite
      * @param value the expand clause
      * @return the updated request
      */
-    public ItemActivityStatCollectionRequest expand(final String value) {
+    @Nonnull
+    public ItemActivityStatCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ItemActivityStatCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class ItemActivityStatCollectionRequest extends BaseCollectionRequest<Ite
      * @param value the filter clause
      * @return the updated request
      */
-    public ItemActivityStatCollectionRequest filter(final String value) {
+    @Nonnull
+    public ItemActivityStatCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ItemActivityStatCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class ItemActivityStatCollectionRequest extends BaseCollectionRequest<Ite
      * @param value the order by clause
      * @return the updated request
      */
-    public ItemActivityStatCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ItemActivityStatCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ItemActivityStatCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class ItemActivityStatCollectionRequest extends BaseCollectionRequest<Ite
      * @param value the select clause
      * @return the updated request
      */
-    public ItemActivityStatCollectionRequest select(final String value) {
+    @Nonnull
+    public ItemActivityStatCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ItemActivityStatCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class ItemActivityStatCollectionRequest extends BaseCollectionRequest<Ite
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ItemActivityStatCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ItemActivityStatCollectionRequest)this;
@@ -133,6 +142,7 @@ public class ItemActivityStatCollectionRequest extends BaseCollectionRequest<Ite
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ItemActivityStatCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (ItemActivityStatCollectionRequest)this;
@@ -144,11 +154,13 @@ public class ItemActivityStatCollectionRequest extends BaseCollectionRequest<Ite
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ItemActivityStatCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ItemActivityStatCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (ItemActivityStatCollectionRequest)this;
     }
-    public ItemActivityStatCollectionPage buildFromResponse(final ItemActivityStatCollectionResponse response) {
+    @Nonnull
+    public ItemActivityStatCollectionPage buildFromResponse(@Nonnull final ItemActivityStatCollectionResponse response) {
         final ItemActivityStatCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ItemActivityStatCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

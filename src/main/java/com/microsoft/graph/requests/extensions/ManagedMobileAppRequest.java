@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedMobileApp;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class ManagedMobileAppRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedMobileAppRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedMobileAppRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedMobileApp.class);
     }
 
@@ -37,7 +39,7 @@ public class ManagedMobileAppRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ManagedMobileApp> callback) {
+    public void get(@Nonnull final ICallback<? super ManagedMobileApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class ManagedMobileAppRequest extends BaseRequest {
      * @return the ManagedMobileApp from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ManagedMobileApp get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class ManagedMobileAppRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ManagedMobileApp> callback) {
+    public void delete(@Nonnull final ICallback<? super ManagedMobileApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class ManagedMobileAppRequest extends BaseRequest {
      * @param sourceManagedMobileApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedMobileApp sourceManagedMobileApp, final ICallback<? super ManagedMobileApp> callback) {
+    public void patch(@Nonnull final ManagedMobileApp sourceManagedMobileApp, @Nonnull final ICallback<? super ManagedMobileApp> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedMobileApp);
     }
 
@@ -86,7 +89,8 @@ public class ManagedMobileAppRequest extends BaseRequest {
      * @return the updated ManagedMobileApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedMobileApp patch(final ManagedMobileApp sourceManagedMobileApp) throws ClientException {
+    @Nullable
+    public ManagedMobileApp patch(@Nonnull final ManagedMobileApp sourceManagedMobileApp) throws ClientException {
         return send(HttpMethod.PATCH, sourceManagedMobileApp);
     }
 
@@ -96,7 +100,7 @@ public class ManagedMobileAppRequest extends BaseRequest {
      * @param newManagedMobileApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedMobileApp newManagedMobileApp, final ICallback<? super ManagedMobileApp> callback) {
+    public void post(@Nonnull final ManagedMobileApp newManagedMobileApp, @Nonnull final ICallback<? super ManagedMobileApp> callback) {
         send(HttpMethod.POST, callback, newManagedMobileApp);
     }
 
@@ -107,7 +111,8 @@ public class ManagedMobileAppRequest extends BaseRequest {
      * @return the created ManagedMobileApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedMobileApp post(final ManagedMobileApp newManagedMobileApp) throws ClientException {
+    @Nullable
+    public ManagedMobileApp post(@Nonnull final ManagedMobileApp newManagedMobileApp) throws ClientException {
         return send(HttpMethod.POST, newManagedMobileApp);
     }
 
@@ -117,7 +122,7 @@ public class ManagedMobileAppRequest extends BaseRequest {
      * @param newManagedMobileApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedMobileApp newManagedMobileApp, final ICallback<? super ManagedMobileApp> callback) {
+    public void put(@Nonnull final ManagedMobileApp newManagedMobileApp, @Nonnull final ICallback<? super ManagedMobileApp> callback) {
         send(HttpMethod.PUT, callback, newManagedMobileApp);
     }
 
@@ -128,7 +133,8 @@ public class ManagedMobileAppRequest extends BaseRequest {
      * @return the created ManagedMobileApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedMobileApp put(final ManagedMobileApp newManagedMobileApp) throws ClientException {
+    @Nullable
+    public ManagedMobileApp put(@Nonnull final ManagedMobileApp newManagedMobileApp) throws ClientException {
         return send(HttpMethod.PUT, newManagedMobileApp);
     }
 
@@ -138,7 +144,8 @@ public class ManagedMobileAppRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ManagedMobileAppRequest select(final String value) {
+     @Nonnull
+     public ManagedMobileAppRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ManagedMobileAppRequest)this;
      }
@@ -149,7 +156,8 @@ public class ManagedMobileAppRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ManagedMobileAppRequest expand(final String value) {
+     @Nonnull
+     public ManagedMobileAppRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ManagedMobileAppRequest)this;
      }

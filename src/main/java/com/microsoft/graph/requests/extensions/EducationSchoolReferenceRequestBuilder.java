@@ -15,6 +15,8 @@ import com.microsoft.graph.requests.extensions.EducationUserCollectionRequestBui
 import com.microsoft.graph.requests.extensions.EducationUserRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
@@ -33,7 +35,7 @@ public class EducationSchoolReferenceRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationSchoolReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationSchoolReferenceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -43,7 +45,8 @@ public class EducationSchoolReferenceRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return The EducationSchoolReferenceRequest instance
      */
-    public EducationSchoolReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public EducationSchoolReferenceRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -53,7 +56,8 @@ public class EducationSchoolReferenceRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the EducationSchoolReferenceRequest instance
      */
-    public EducationSchoolReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public EducationSchoolReferenceRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new EducationSchoolReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

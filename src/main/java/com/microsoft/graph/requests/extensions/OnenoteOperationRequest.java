@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class OnenoteOperationRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnenoteOperationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnenoteOperationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OnenoteOperation.class);
     }
 
@@ -37,7 +39,7 @@ public class OnenoteOperationRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super OnenoteOperation> callback) {
+    public void get(@Nonnull final ICallback<? super OnenoteOperation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class OnenoteOperationRequest extends BaseRequest {
      * @return the OnenoteOperation from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public OnenoteOperation get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class OnenoteOperationRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super OnenoteOperation> callback) {
+    public void delete(@Nonnull final ICallback<? super OnenoteOperation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class OnenoteOperationRequest extends BaseRequest {
      * @param sourceOnenoteOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OnenoteOperation sourceOnenoteOperation, final ICallback<? super OnenoteOperation> callback) {
+    public void patch(@Nonnull final OnenoteOperation sourceOnenoteOperation, @Nonnull final ICallback<? super OnenoteOperation> callback) {
         send(HttpMethod.PATCH, callback, sourceOnenoteOperation);
     }
 
@@ -86,7 +89,8 @@ public class OnenoteOperationRequest extends BaseRequest {
      * @return the updated OnenoteOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OnenoteOperation patch(final OnenoteOperation sourceOnenoteOperation) throws ClientException {
+    @Nullable
+    public OnenoteOperation patch(@Nonnull final OnenoteOperation sourceOnenoteOperation) throws ClientException {
         return send(HttpMethod.PATCH, sourceOnenoteOperation);
     }
 
@@ -96,7 +100,7 @@ public class OnenoteOperationRequest extends BaseRequest {
      * @param newOnenoteOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OnenoteOperation newOnenoteOperation, final ICallback<? super OnenoteOperation> callback) {
+    public void post(@Nonnull final OnenoteOperation newOnenoteOperation, @Nonnull final ICallback<? super OnenoteOperation> callback) {
         send(HttpMethod.POST, callback, newOnenoteOperation);
     }
 
@@ -107,7 +111,8 @@ public class OnenoteOperationRequest extends BaseRequest {
      * @return the created OnenoteOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OnenoteOperation post(final OnenoteOperation newOnenoteOperation) throws ClientException {
+    @Nullable
+    public OnenoteOperation post(@Nonnull final OnenoteOperation newOnenoteOperation) throws ClientException {
         return send(HttpMethod.POST, newOnenoteOperation);
     }
 
@@ -117,7 +122,7 @@ public class OnenoteOperationRequest extends BaseRequest {
      * @param newOnenoteOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OnenoteOperation newOnenoteOperation, final ICallback<? super OnenoteOperation> callback) {
+    public void put(@Nonnull final OnenoteOperation newOnenoteOperation, @Nonnull final ICallback<? super OnenoteOperation> callback) {
         send(HttpMethod.PUT, callback, newOnenoteOperation);
     }
 
@@ -128,7 +133,8 @@ public class OnenoteOperationRequest extends BaseRequest {
      * @return the created OnenoteOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OnenoteOperation put(final OnenoteOperation newOnenoteOperation) throws ClientException {
+    @Nullable
+    public OnenoteOperation put(@Nonnull final OnenoteOperation newOnenoteOperation) throws ClientException {
         return send(HttpMethod.PUT, newOnenoteOperation);
     }
 
@@ -138,7 +144,8 @@ public class OnenoteOperationRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public OnenoteOperationRequest select(final String value) {
+     @Nonnull
+     public OnenoteOperationRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (OnenoteOperationRequest)this;
      }
@@ -149,7 +156,8 @@ public class OnenoteOperationRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public OnenoteOperationRequest expand(final String value) {
+     @Nonnull
+     public OnenoteOperationRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (OnenoteOperationRequest)this;
      }

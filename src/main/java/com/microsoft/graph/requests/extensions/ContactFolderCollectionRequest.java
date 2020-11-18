@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ContactFolder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,11 +36,11 @@ public class ContactFolderCollectionRequest extends BaseCollectionRequest<Contac
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ContactFolderCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ContactFolderCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ContactFolderCollectionResponse.class, ContactFolderCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ContactFolderCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super ContactFolderCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -52,19 +54,21 @@ public class ContactFolderCollectionRequest extends BaseCollectionRequest<Contac
         });
     }
 
+    @Nonnull
     public ContactFolderCollectionPage get() throws ClientException {
         final ContactFolderCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final ContactFolder newContactFolder, final ICallback<? super ContactFolder> callback) {
+    public void post(@Nonnull final ContactFolder newContactFolder, @Nonnull final ICallback<? super ContactFolder> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ContactFolderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newContactFolder, callback);
     }
 
-    public ContactFolder post(final ContactFolder newContactFolder) throws ClientException {
+    @Nonnull
+    public ContactFolder post(@Nonnull final ContactFolder newContactFolder) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ContactFolderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -77,7 +81,8 @@ public class ContactFolderCollectionRequest extends BaseCollectionRequest<Contac
      * @param value the expand clause
      * @return the updated request
      */
-    public ContactFolderCollectionRequest expand(final String value) {
+    @Nonnull
+    public ContactFolderCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ContactFolderCollectionRequest)this;
     }
@@ -88,7 +93,8 @@ public class ContactFolderCollectionRequest extends BaseCollectionRequest<Contac
      * @param value the filter clause
      * @return the updated request
      */
-    public ContactFolderCollectionRequest filter(final String value) {
+    @Nonnull
+    public ContactFolderCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ContactFolderCollectionRequest)this;
     }
@@ -99,7 +105,8 @@ public class ContactFolderCollectionRequest extends BaseCollectionRequest<Contac
      * @param value the order by clause
      * @return the updated request
      */
-    public ContactFolderCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ContactFolderCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ContactFolderCollectionRequest)this;
     }
@@ -110,7 +117,8 @@ public class ContactFolderCollectionRequest extends BaseCollectionRequest<Contac
      * @param value the select clause
      * @return the updated request
      */
-    public ContactFolderCollectionRequest select(final String value) {
+    @Nonnull
+    public ContactFolderCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ContactFolderCollectionRequest)this;
     }
@@ -121,6 +129,7 @@ public class ContactFolderCollectionRequest extends BaseCollectionRequest<Contac
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ContactFolderCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ContactFolderCollectionRequest)this;
@@ -132,6 +141,7 @@ public class ContactFolderCollectionRequest extends BaseCollectionRequest<Contac
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ContactFolderCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (ContactFolderCollectionRequest)this;
@@ -143,11 +153,13 @@ public class ContactFolderCollectionRequest extends BaseCollectionRequest<Contac
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ContactFolderCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ContactFolderCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (ContactFolderCollectionRequest)this;
     }
-    public ContactFolderCollectionPage buildFromResponse(final ContactFolderCollectionResponse response) {
+    @Nonnull
+    public ContactFolderCollectionPage buildFromResponse(@Nonnull final ContactFolderCollectionResponse response) {
         final ContactFolderCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ContactFolderCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

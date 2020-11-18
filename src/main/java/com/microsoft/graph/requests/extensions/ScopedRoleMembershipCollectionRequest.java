@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ScopedRoleMembership;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,11 +36,11 @@ public class ScopedRoleMembershipCollectionRequest extends BaseCollectionRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ScopedRoleMembershipCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ScopedRoleMembershipCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ScopedRoleMembershipCollectionResponse.class, ScopedRoleMembershipCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ScopedRoleMembershipCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super ScopedRoleMembershipCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -52,19 +54,21 @@ public class ScopedRoleMembershipCollectionRequest extends BaseCollectionRequest
         });
     }
 
+    @Nonnull
     public ScopedRoleMembershipCollectionPage get() throws ClientException {
         final ScopedRoleMembershipCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final ScopedRoleMembership newScopedRoleMembership, final ICallback<? super ScopedRoleMembership> callback) {
+    public void post(@Nonnull final ScopedRoleMembership newScopedRoleMembership, @Nonnull final ICallback<? super ScopedRoleMembership> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ScopedRoleMembershipRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newScopedRoleMembership, callback);
     }
 
-    public ScopedRoleMembership post(final ScopedRoleMembership newScopedRoleMembership) throws ClientException {
+    @Nonnull
+    public ScopedRoleMembership post(@Nonnull final ScopedRoleMembership newScopedRoleMembership) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ScopedRoleMembershipRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -77,7 +81,8 @@ public class ScopedRoleMembershipCollectionRequest extends BaseCollectionRequest
      * @param value the expand clause
      * @return the updated request
      */
-    public ScopedRoleMembershipCollectionRequest expand(final String value) {
+    @Nonnull
+    public ScopedRoleMembershipCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ScopedRoleMembershipCollectionRequest)this;
     }
@@ -88,7 +93,8 @@ public class ScopedRoleMembershipCollectionRequest extends BaseCollectionRequest
      * @param value the filter clause
      * @return the updated request
      */
-    public ScopedRoleMembershipCollectionRequest filter(final String value) {
+    @Nonnull
+    public ScopedRoleMembershipCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ScopedRoleMembershipCollectionRequest)this;
     }
@@ -99,7 +105,8 @@ public class ScopedRoleMembershipCollectionRequest extends BaseCollectionRequest
      * @param value the order by clause
      * @return the updated request
      */
-    public ScopedRoleMembershipCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ScopedRoleMembershipCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ScopedRoleMembershipCollectionRequest)this;
     }
@@ -110,7 +117,8 @@ public class ScopedRoleMembershipCollectionRequest extends BaseCollectionRequest
      * @param value the select clause
      * @return the updated request
      */
-    public ScopedRoleMembershipCollectionRequest select(final String value) {
+    @Nonnull
+    public ScopedRoleMembershipCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ScopedRoleMembershipCollectionRequest)this;
     }
@@ -121,6 +129,7 @@ public class ScopedRoleMembershipCollectionRequest extends BaseCollectionRequest
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ScopedRoleMembershipCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ScopedRoleMembershipCollectionRequest)this;
@@ -132,6 +141,7 @@ public class ScopedRoleMembershipCollectionRequest extends BaseCollectionRequest
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ScopedRoleMembershipCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (ScopedRoleMembershipCollectionRequest)this;
@@ -143,11 +153,13 @@ public class ScopedRoleMembershipCollectionRequest extends BaseCollectionRequest
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ScopedRoleMembershipCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ScopedRoleMembershipCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (ScopedRoleMembershipCollectionRequest)this;
     }
-    public ScopedRoleMembershipCollectionPage buildFromResponse(final ScopedRoleMembershipCollectionResponse response) {
+    @Nonnull
+    public ScopedRoleMembershipCollectionPage buildFromResponse(@Nonnull final ScopedRoleMembershipCollectionResponse response) {
         final ScopedRoleMembershipCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ScopedRoleMembershipCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

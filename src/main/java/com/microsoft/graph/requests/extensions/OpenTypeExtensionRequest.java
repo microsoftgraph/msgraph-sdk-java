@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OpenTypeExtension;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class OpenTypeExtensionRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OpenTypeExtensionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OpenTypeExtensionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OpenTypeExtension.class);
     }
 
@@ -37,7 +39,7 @@ public class OpenTypeExtensionRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super OpenTypeExtension> callback) {
+    public void get(@Nonnull final ICallback<? super OpenTypeExtension> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class OpenTypeExtensionRequest extends BaseRequest {
      * @return the OpenTypeExtension from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public OpenTypeExtension get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class OpenTypeExtensionRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super OpenTypeExtension> callback) {
+    public void delete(@Nonnull final ICallback<? super OpenTypeExtension> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class OpenTypeExtensionRequest extends BaseRequest {
      * @param sourceOpenTypeExtension the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OpenTypeExtension sourceOpenTypeExtension, final ICallback<? super OpenTypeExtension> callback) {
+    public void patch(@Nonnull final OpenTypeExtension sourceOpenTypeExtension, @Nonnull final ICallback<? super OpenTypeExtension> callback) {
         send(HttpMethod.PATCH, callback, sourceOpenTypeExtension);
     }
 
@@ -86,7 +89,8 @@ public class OpenTypeExtensionRequest extends BaseRequest {
      * @return the updated OpenTypeExtension
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OpenTypeExtension patch(final OpenTypeExtension sourceOpenTypeExtension) throws ClientException {
+    @Nullable
+    public OpenTypeExtension patch(@Nonnull final OpenTypeExtension sourceOpenTypeExtension) throws ClientException {
         return send(HttpMethod.PATCH, sourceOpenTypeExtension);
     }
 
@@ -96,7 +100,7 @@ public class OpenTypeExtensionRequest extends BaseRequest {
      * @param newOpenTypeExtension the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OpenTypeExtension newOpenTypeExtension, final ICallback<? super OpenTypeExtension> callback) {
+    public void post(@Nonnull final OpenTypeExtension newOpenTypeExtension, @Nonnull final ICallback<? super OpenTypeExtension> callback) {
         send(HttpMethod.POST, callback, newOpenTypeExtension);
     }
 
@@ -107,7 +111,8 @@ public class OpenTypeExtensionRequest extends BaseRequest {
      * @return the created OpenTypeExtension
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OpenTypeExtension post(final OpenTypeExtension newOpenTypeExtension) throws ClientException {
+    @Nullable
+    public OpenTypeExtension post(@Nonnull final OpenTypeExtension newOpenTypeExtension) throws ClientException {
         return send(HttpMethod.POST, newOpenTypeExtension);
     }
 
@@ -117,7 +122,7 @@ public class OpenTypeExtensionRequest extends BaseRequest {
      * @param newOpenTypeExtension the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OpenTypeExtension newOpenTypeExtension, final ICallback<? super OpenTypeExtension> callback) {
+    public void put(@Nonnull final OpenTypeExtension newOpenTypeExtension, @Nonnull final ICallback<? super OpenTypeExtension> callback) {
         send(HttpMethod.PUT, callback, newOpenTypeExtension);
     }
 
@@ -128,7 +133,8 @@ public class OpenTypeExtensionRequest extends BaseRequest {
      * @return the created OpenTypeExtension
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OpenTypeExtension put(final OpenTypeExtension newOpenTypeExtension) throws ClientException {
+    @Nullable
+    public OpenTypeExtension put(@Nonnull final OpenTypeExtension newOpenTypeExtension) throws ClientException {
         return send(HttpMethod.PUT, newOpenTypeExtension);
     }
 
@@ -138,7 +144,8 @@ public class OpenTypeExtensionRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public OpenTypeExtensionRequest select(final String value) {
+     @Nonnull
+     public OpenTypeExtensionRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (OpenTypeExtensionRequest)this;
      }
@@ -149,7 +156,8 @@ public class OpenTypeExtensionRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public OpenTypeExtensionRequest expand(final String value) {
+     @Nonnull
+     public OpenTypeExtensionRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (OpenTypeExtensionRequest)this;
      }

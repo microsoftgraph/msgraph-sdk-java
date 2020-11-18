@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.TimeOffRequest;import com.microsoft
 import com.microsoft.graph.models.extensions.TimeOffRequest;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.TimeOffRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TimeOffRequestRequestBuilder;
@@ -33,7 +35,7 @@ public class TimeOffRequestCollectionRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TimeOffRequestCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TimeOffRequestCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -43,7 +45,8 @@ public class TimeOffRequestCollectionRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public TimeOffRequestCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public TimeOffRequestCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -53,11 +56,13 @@ public class TimeOffRequestCollectionRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public TimeOffRequestCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public TimeOffRequestCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TimeOffRequestCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public TimeOffRequestRequestBuilder byId(final String id) {
+    @Nonnull
+    public TimeOffRequestRequestBuilder byId(@Nonnull final String id) {
         return new TimeOffRequestRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

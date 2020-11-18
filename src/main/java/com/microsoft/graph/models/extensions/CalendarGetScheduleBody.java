@@ -8,6 +8,8 @@ import com.microsoft.graph.models.extensions.DateTimeTimeZone;
 import com.microsoft.graph.models.extensions.ScheduleInformation;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
 import java.util.EnumSet;
@@ -25,6 +27,7 @@ public class CalendarGetScheduleBody {
      */
     @SerializedName(value = "schedules", alternate = {"Schedules"})
     @Expose
+	@Nullable
     public java.util.List<String> schedules;
 
     /**
@@ -33,6 +36,7 @@ public class CalendarGetScheduleBody {
      */
     @SerializedName(value = "endTime", alternate = {"EndTime"})
     @Expose
+	@Nullable
     public DateTimeTimeZone endTime;
 
     /**
@@ -41,6 +45,7 @@ public class CalendarGetScheduleBody {
      */
     @SerializedName(value = "startTime", alternate = {"StartTime"})
     @Expose
+	@Nullable
     public DateTimeTimeZone startTime;
 
     /**
@@ -49,6 +54,7 @@ public class CalendarGetScheduleBody {
      */
     @SerializedName(value = "availabilityViewInterval", alternate = {"AvailabilityViewInterval"})
     @Expose
+	@Nullable
     public Integer availabilityViewInterval;
 
 
@@ -67,6 +73,7 @@ public class CalendarGetScheduleBody {
      *
      * @return the raw representation of this class
      */
+    @Nullable
     public JsonObject getRawObject() {
         return rawObject;
     }
@@ -76,6 +83,7 @@ public class CalendarGetScheduleBody {
      *
      * @return the serializer
      */
+    @Nullable
     protected ISerializer getSerializer() {
         return serializer;
     }
@@ -86,7 +94,7 @@ public class CalendarGetScheduleBody {
      * @param serializer the serializer
      * @param json the JSON object to set this object to
      */
-    public void setRawObject(final ISerializer serializer, final JsonObject json) {
+    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
         this.serializer = serializer;
         rawObject = json;
 

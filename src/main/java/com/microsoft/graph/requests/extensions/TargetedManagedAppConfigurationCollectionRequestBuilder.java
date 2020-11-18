@@ -13,6 +13,8 @@ import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
 import com.microsoft.graph.models.extensions.ManagedMobileApp;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationRequestBuilder;
@@ -34,7 +36,7 @@ public class TargetedManagedAppConfigurationCollectionRequestBuilder extends Bas
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TargetedManagedAppConfigurationCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TargetedManagedAppConfigurationCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +46,8 @@ public class TargetedManagedAppConfigurationCollectionRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public TargetedManagedAppConfigurationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public TargetedManagedAppConfigurationCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -54,11 +57,13 @@ public class TargetedManagedAppConfigurationCollectionRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public TargetedManagedAppConfigurationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public TargetedManagedAppConfigurationCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TargetedManagedAppConfigurationCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public TargetedManagedAppConfigurationRequestBuilder byId(final String id) {
+    @Nonnull
+    public TargetedManagedAppConfigurationRequestBuilder byId(@Nonnull final String id) {
         return new TargetedManagedAppConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

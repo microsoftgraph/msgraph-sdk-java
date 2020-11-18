@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.DeviceAndAppManagementRoleAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceAndAppManagementRoleAssignmentRequestBuilder;
@@ -32,7 +34,7 @@ public class DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder extend
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,7 +44,8 @@ public class DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder extend
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public DeviceAndAppManagementRoleAssignmentCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DeviceAndAppManagementRoleAssignmentCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +55,13 @@ public class DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder extend
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public DeviceAndAppManagementRoleAssignmentCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DeviceAndAppManagementRoleAssignmentCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceAndAppManagementRoleAssignmentCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public DeviceAndAppManagementRoleAssignmentRequestBuilder byId(final String id) {
+    @Nonnull
+    public DeviceAndAppManagementRoleAssignmentRequestBuilder byId(@Nonnull final String id) {
         return new DeviceAndAppManagementRoleAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

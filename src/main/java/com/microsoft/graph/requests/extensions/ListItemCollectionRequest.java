@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.ListItem;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -36,11 +38,11 @@ public class ListItemCollectionRequest extends BaseCollectionRequest<ListItemCol
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ListItemCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ListItemCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ListItemCollectionResponse.class, ListItemCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ListItemCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super ListItemCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -54,19 +56,21 @@ public class ListItemCollectionRequest extends BaseCollectionRequest<ListItemCol
         });
     }
 
+    @Nonnull
     public ListItemCollectionPage get() throws ClientException {
         final ListItemCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final ListItem newListItem, final ICallback<? super ListItem> callback) {
+    public void post(@Nonnull final ListItem newListItem, @Nonnull final ICallback<? super ListItem> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ListItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newListItem, callback);
     }
 
-    public ListItem post(final ListItem newListItem) throws ClientException {
+    @Nonnull
+    public ListItem post(@Nonnull final ListItem newListItem) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ListItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -79,7 +83,8 @@ public class ListItemCollectionRequest extends BaseCollectionRequest<ListItemCol
      * @param value the expand clause
      * @return the updated request
      */
-    public ListItemCollectionRequest expand(final String value) {
+    @Nonnull
+    public ListItemCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ListItemCollectionRequest)this;
     }
@@ -90,7 +95,8 @@ public class ListItemCollectionRequest extends BaseCollectionRequest<ListItemCol
      * @param value the filter clause
      * @return the updated request
      */
-    public ListItemCollectionRequest filter(final String value) {
+    @Nonnull
+    public ListItemCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ListItemCollectionRequest)this;
     }
@@ -101,7 +107,8 @@ public class ListItemCollectionRequest extends BaseCollectionRequest<ListItemCol
      * @param value the order by clause
      * @return the updated request
      */
-    public ListItemCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ListItemCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ListItemCollectionRequest)this;
     }
@@ -112,7 +119,8 @@ public class ListItemCollectionRequest extends BaseCollectionRequest<ListItemCol
      * @param value the select clause
      * @return the updated request
      */
-    public ListItemCollectionRequest select(final String value) {
+    @Nonnull
+    public ListItemCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ListItemCollectionRequest)this;
     }
@@ -123,6 +131,7 @@ public class ListItemCollectionRequest extends BaseCollectionRequest<ListItemCol
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ListItemCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ListItemCollectionRequest)this;
@@ -134,6 +143,7 @@ public class ListItemCollectionRequest extends BaseCollectionRequest<ListItemCol
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ListItemCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (ListItemCollectionRequest)this;
@@ -145,11 +155,13 @@ public class ListItemCollectionRequest extends BaseCollectionRequest<ListItemCol
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ListItemCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ListItemCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (ListItemCollectionRequest)this;
     }
-    public ListItemCollectionPage buildFromResponse(final ListItemCollectionResponse response) {
+    @Nonnull
+    public ListItemCollectionPage buildFromResponse(@Nonnull final ListItemCollectionResponse response) {
         final ListItemCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ListItemCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

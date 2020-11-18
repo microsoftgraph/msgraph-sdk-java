@@ -6,6 +6,8 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRangeView;
 import com.microsoft.graph.requests.extensions.WorkbookRangeViewItemAtRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.core.ClientException;
@@ -27,7 +29,7 @@ public class WorkbookRangeViewItemAtRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookRangeViewItemAtRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeViewItemAtRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookRangeView.class);
     }
 
@@ -36,7 +38,7 @@ public class WorkbookRangeViewItemAtRequest extends BaseRequest {
      * @param srcWorkbookRangeView the WorkbookRangeView with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    public void patch(WorkbookRangeView srcWorkbookRangeView, final ICallback<? super WorkbookRangeView> callback) {
+    public void patch(@Nonnull WorkbookRangeView srcWorkbookRangeView, @Nonnull final ICallback<? super WorkbookRangeView> callback) {
         send(HttpMethod.PATCH, callback, srcWorkbookRangeView);
     }
 
@@ -47,7 +49,8 @@ public class WorkbookRangeViewItemAtRequest extends BaseRequest {
      * @return the WorkbookRangeView
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-     public WorkbookRangeView patch(WorkbookRangeView srcWorkbookRangeView) throws ClientException {
+     @Nullable
+     public WorkbookRangeView patch(@Nonnull final WorkbookRangeView srcWorkbookRangeView) throws ClientException {
         return this.send(HttpMethod.PATCH, srcWorkbookRangeView);
     }
 
@@ -57,7 +60,7 @@ public class WorkbookRangeViewItemAtRequest extends BaseRequest {
      * @param srcWorkbookRangeView the WorkbookRangeView to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(WorkbookRangeView srcWorkbookRangeView, final ICallback<? super WorkbookRangeView> callback) {
+    public void put(@Nonnull final WorkbookRangeView srcWorkbookRangeView, @Nonnull final ICallback<? super WorkbookRangeView> callback) {
         send(HttpMethod.PUT, callback, srcWorkbookRangeView);
     }
 
@@ -68,7 +71,8 @@ public class WorkbookRangeViewItemAtRequest extends BaseRequest {
      * @return the WorkbookRangeView
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-     public WorkbookRangeView put(WorkbookRangeView srcWorkbookRangeView) throws ClientException {
+     @Nullable
+     public WorkbookRangeView put(@Nonnull final WorkbookRangeView srcWorkbookRangeView) throws ClientException {
         return this.send(HttpMethod.PUT, srcWorkbookRangeView);
     }
     /**
@@ -76,7 +80,7 @@ public class WorkbookRangeViewItemAtRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookRangeView> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookRangeView> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -86,6 +90,7 @@ public class WorkbookRangeViewItemAtRequest extends BaseRequest {
      * @return the WorkbookRangeView
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
+    @Nullable
     public WorkbookRangeView get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -96,7 +101,8 @@ public class WorkbookRangeViewItemAtRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public WorkbookRangeViewItemAtRequest select(final String value) {
+    @Nonnull
+    public WorkbookRangeViewItemAtRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookRangeViewItemAtRequest)this;
     }
@@ -107,7 +113,8 @@ public class WorkbookRangeViewItemAtRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public WorkbookRangeViewItemAtRequest expand(final String value) {
+    @Nonnull
+    public WorkbookRangeViewItemAtRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookRangeViewItemAtRequest)this;
     }
@@ -118,7 +125,8 @@ public class WorkbookRangeViewItemAtRequest extends BaseRequest {
      * @param value the filter clause
      * @return the updated request
      */
-    public WorkbookRangeViewItemAtRequest filter(final String value) {
+    @Nonnull
+    public WorkbookRangeViewItemAtRequest filter(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookRangeViewItemAtRequest)this;
     }
@@ -129,7 +137,8 @@ public class WorkbookRangeViewItemAtRequest extends BaseRequest {
      * @param value the order by clause
      * @return the updated request
      */
-    public WorkbookRangeViewItemAtRequest orderBy(final String value) {
+    @Nonnull
+    public WorkbookRangeViewItemAtRequest orderBy(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookRangeViewItemAtRequest)this;
     }

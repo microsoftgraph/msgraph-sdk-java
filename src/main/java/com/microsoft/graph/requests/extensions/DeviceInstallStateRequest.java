@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceInstallState;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class DeviceInstallStateRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceInstallStateRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceInstallStateRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceInstallState.class);
     }
 
@@ -37,7 +39,7 @@ public class DeviceInstallStateRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceInstallState> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceInstallState> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class DeviceInstallStateRequest extends BaseRequest {
      * @return the DeviceInstallState from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceInstallState get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class DeviceInstallStateRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceInstallState> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceInstallState> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class DeviceInstallStateRequest extends BaseRequest {
      * @param sourceDeviceInstallState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceInstallState sourceDeviceInstallState, final ICallback<? super DeviceInstallState> callback) {
+    public void patch(@Nonnull final DeviceInstallState sourceDeviceInstallState, @Nonnull final ICallback<? super DeviceInstallState> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceInstallState);
     }
 
@@ -86,7 +89,8 @@ public class DeviceInstallStateRequest extends BaseRequest {
      * @return the updated DeviceInstallState
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceInstallState patch(final DeviceInstallState sourceDeviceInstallState) throws ClientException {
+    @Nullable
+    public DeviceInstallState patch(@Nonnull final DeviceInstallState sourceDeviceInstallState) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceInstallState);
     }
 
@@ -96,7 +100,7 @@ public class DeviceInstallStateRequest extends BaseRequest {
      * @param newDeviceInstallState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceInstallState newDeviceInstallState, final ICallback<? super DeviceInstallState> callback) {
+    public void post(@Nonnull final DeviceInstallState newDeviceInstallState, @Nonnull final ICallback<? super DeviceInstallState> callback) {
         send(HttpMethod.POST, callback, newDeviceInstallState);
     }
 
@@ -107,7 +111,8 @@ public class DeviceInstallStateRequest extends BaseRequest {
      * @return the created DeviceInstallState
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceInstallState post(final DeviceInstallState newDeviceInstallState) throws ClientException {
+    @Nullable
+    public DeviceInstallState post(@Nonnull final DeviceInstallState newDeviceInstallState) throws ClientException {
         return send(HttpMethod.POST, newDeviceInstallState);
     }
 
@@ -117,7 +122,7 @@ public class DeviceInstallStateRequest extends BaseRequest {
      * @param newDeviceInstallState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceInstallState newDeviceInstallState, final ICallback<? super DeviceInstallState> callback) {
+    public void put(@Nonnull final DeviceInstallState newDeviceInstallState, @Nonnull final ICallback<? super DeviceInstallState> callback) {
         send(HttpMethod.PUT, callback, newDeviceInstallState);
     }
 
@@ -128,7 +133,8 @@ public class DeviceInstallStateRequest extends BaseRequest {
      * @return the created DeviceInstallState
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceInstallState put(final DeviceInstallState newDeviceInstallState) throws ClientException {
+    @Nullable
+    public DeviceInstallState put(@Nonnull final DeviceInstallState newDeviceInstallState) throws ClientException {
         return send(HttpMethod.PUT, newDeviceInstallState);
     }
 
@@ -138,7 +144,8 @@ public class DeviceInstallStateRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public DeviceInstallStateRequest select(final String value) {
+     @Nonnull
+     public DeviceInstallStateRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (DeviceInstallStateRequest)this;
      }
@@ -149,7 +156,8 @@ public class DeviceInstallStateRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public DeviceInstallStateRequest expand(final String value) {
+     @Nonnull
+     public DeviceInstallStateRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (DeviceInstallStateRequest)this;
      }

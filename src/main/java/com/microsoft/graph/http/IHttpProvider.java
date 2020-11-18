@@ -22,6 +22,9 @@
 
 package com.microsoft.graph.http;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
@@ -39,6 +42,7 @@ public interface IHttpProvider {
      *
      * @return the serializer for this provider
      */
+    @Nullable
     ISerializer getSerializer();
     
     /**
@@ -51,10 +55,10 @@ public interface IHttpProvider {
      * @param <Result>     the type of the response object
      * @param <BodyType>   the type of the object to send to the service in the body of the request
      */
-    <Result, BodyType> void send(final IHttpRequest request,
-                                 final ICallback<? super Result> callback,
-                                 final Class<Result> resultClass,
-                                 final BodyType serializable);
+    <Result, BodyType> void send(@Nonnull final IHttpRequest request,
+                                 @Nonnull final ICallback<? super Result> callback,
+                                 @Nonnull final Class<Result> resultClass,
+                                 @Nullable final BodyType serializable);
 
 
     /**
@@ -68,9 +72,10 @@ public interface IHttpProvider {
      * @return             the result from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    <Result, BodyType> Result send(final IHttpRequest request,
-                                   final Class<Result> resultClass,
-                                   final BodyType serializable)
+    @Nullable
+    <Result, BodyType> Result send(@Nonnull final IHttpRequest request,
+                                   @Nonnull final Class<Result> resultClass,
+                                   @Nullable final BodyType serializable)
             throws ClientException;
 
     /**
@@ -86,10 +91,11 @@ public interface IHttpProvider {
      * @return                  the expected result object for the request
      * @throws ClientException  this exception occurs if the request was unable to complete for any reason
      */
-    <Result, BodyType, DeserializeType> Result send(final IHttpRequest request,
-                                                    final Class<Result> resultClass,
-                                                    final BodyType serializable,
-                                                    final IStatefulResponseHandler<Result, DeserializeType> handler)
+     @Nullable
+    <Result, BodyType, DeserializeType> Result send(@Nonnull final IHttpRequest request,
+                                                    @Nonnull final Class<Result> resultClass,
+                                                    @Nullable final BodyType serializable,
+                                                    @Nonnull final IStatefulResponseHandler<Result, DeserializeType> handler)
             throws ClientException;
     /**
 	 * Sends the HTTP request
@@ -103,9 +109,10 @@ public interface IHttpProvider {
 	 * @return                  the result from the request
 	 * @throws ClientException an exception occurs if the request was unable to complete for any reason
 	 */
-    <Result, BodyType> Request getHttpRequest(final IHttpRequest request,
-                                              final Class<Result> resultClass,
-                                              final BodyType serializable,
-                                              final IProgressCallback<? super Result> progress)
+    @Nullable
+    <Result, BodyType> Request getHttpRequest(@Nonnull final IHttpRequest request,
+                                              @Nonnull final Class<Result> resultClass,
+                                              @Nullable final BodyType serializable,
+                                              @Nonnull final IProgressCallback<? super Result> progress)
             throws ClientException;
 }

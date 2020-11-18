@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OutlookItem;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,10 +31,10 @@ public class OutlookItemRequest extends BaseRequest {
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public OutlookItemRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends OutlookItem> responseClass) {
+    public OutlookItemRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends OutlookItem> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -43,7 +45,7 @@ public class OutlookItemRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OutlookItemRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OutlookItemRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OutlookItem.class);
     }
 
@@ -52,7 +54,7 @@ public class OutlookItemRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super OutlookItem> callback) {
+    public void get(@Nonnull final ICallback<? super OutlookItem> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -62,6 +64,7 @@ public class OutlookItemRequest extends BaseRequest {
      * @return the OutlookItem from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public OutlookItem get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -71,7 +74,7 @@ public class OutlookItemRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super OutlookItem> callback) {
+    public void delete(@Nonnull final ICallback<? super OutlookItem> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +93,7 @@ public class OutlookItemRequest extends BaseRequest {
      * @param sourceOutlookItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OutlookItem sourceOutlookItem, final ICallback<? super OutlookItem> callback) {
+    public void patch(@Nonnull final OutlookItem sourceOutlookItem, @Nonnull final ICallback<? super OutlookItem> callback) {
         send(HttpMethod.PATCH, callback, sourceOutlookItem);
     }
 
@@ -101,7 +104,8 @@ public class OutlookItemRequest extends BaseRequest {
      * @return the updated OutlookItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OutlookItem patch(final OutlookItem sourceOutlookItem) throws ClientException {
+    @Nullable
+    public OutlookItem patch(@Nonnull final OutlookItem sourceOutlookItem) throws ClientException {
         return send(HttpMethod.PATCH, sourceOutlookItem);
     }
 
@@ -111,7 +115,7 @@ public class OutlookItemRequest extends BaseRequest {
      * @param newOutlookItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OutlookItem newOutlookItem, final ICallback<? super OutlookItem> callback) {
+    public void post(@Nonnull final OutlookItem newOutlookItem, @Nonnull final ICallback<? super OutlookItem> callback) {
         send(HttpMethod.POST, callback, newOutlookItem);
     }
 
@@ -122,7 +126,8 @@ public class OutlookItemRequest extends BaseRequest {
      * @return the created OutlookItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OutlookItem post(final OutlookItem newOutlookItem) throws ClientException {
+    @Nullable
+    public OutlookItem post(@Nonnull final OutlookItem newOutlookItem) throws ClientException {
         return send(HttpMethod.POST, newOutlookItem);
     }
 
@@ -132,7 +137,7 @@ public class OutlookItemRequest extends BaseRequest {
      * @param newOutlookItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OutlookItem newOutlookItem, final ICallback<? super OutlookItem> callback) {
+    public void put(@Nonnull final OutlookItem newOutlookItem, @Nonnull final ICallback<? super OutlookItem> callback) {
         send(HttpMethod.PUT, callback, newOutlookItem);
     }
 
@@ -143,7 +148,8 @@ public class OutlookItemRequest extends BaseRequest {
      * @return the created OutlookItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OutlookItem put(final OutlookItem newOutlookItem) throws ClientException {
+    @Nullable
+    public OutlookItem put(@Nonnull final OutlookItem newOutlookItem) throws ClientException {
         return send(HttpMethod.PUT, newOutlookItem);
     }
 
@@ -153,7 +159,8 @@ public class OutlookItemRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public OutlookItemRequest select(final String value) {
+     @Nonnull
+     public OutlookItemRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (OutlookItemRequest)this;
      }
@@ -164,7 +171,8 @@ public class OutlookItemRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public OutlookItemRequest expand(final String value) {
+     @Nonnull
+     public OutlookItemRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (OutlookItemRequest)this;
      }

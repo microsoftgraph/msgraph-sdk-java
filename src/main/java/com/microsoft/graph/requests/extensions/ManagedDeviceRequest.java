@@ -16,6 +16,8 @@ import com.microsoft.graph.requests.extensions.DeviceConfigurationStateRequestBu
 import com.microsoft.graph.requests.extensions.DeviceCategoryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -34,7 +36,7 @@ public class ManagedDeviceRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedDevice.class);
     }
 
@@ -43,7 +45,7 @@ public class ManagedDeviceRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ManagedDevice> callback) {
+    public void get(@Nonnull final ICallback<? super ManagedDevice> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -53,6 +55,7 @@ public class ManagedDeviceRequest extends BaseRequest {
      * @return the ManagedDevice from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ManagedDevice get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -62,7 +65,7 @@ public class ManagedDeviceRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ManagedDevice> callback) {
+    public void delete(@Nonnull final ICallback<? super ManagedDevice> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -81,7 +84,7 @@ public class ManagedDeviceRequest extends BaseRequest {
      * @param sourceManagedDevice the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedDevice sourceManagedDevice, final ICallback<? super ManagedDevice> callback) {
+    public void patch(@Nonnull final ManagedDevice sourceManagedDevice, @Nonnull final ICallback<? super ManagedDevice> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedDevice);
     }
 
@@ -92,7 +95,8 @@ public class ManagedDeviceRequest extends BaseRequest {
      * @return the updated ManagedDevice
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedDevice patch(final ManagedDevice sourceManagedDevice) throws ClientException {
+    @Nullable
+    public ManagedDevice patch(@Nonnull final ManagedDevice sourceManagedDevice) throws ClientException {
         return send(HttpMethod.PATCH, sourceManagedDevice);
     }
 
@@ -102,7 +106,7 @@ public class ManagedDeviceRequest extends BaseRequest {
      * @param newManagedDevice the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedDevice newManagedDevice, final ICallback<? super ManagedDevice> callback) {
+    public void post(@Nonnull final ManagedDevice newManagedDevice, @Nonnull final ICallback<? super ManagedDevice> callback) {
         send(HttpMethod.POST, callback, newManagedDevice);
     }
 
@@ -113,7 +117,8 @@ public class ManagedDeviceRequest extends BaseRequest {
      * @return the created ManagedDevice
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedDevice post(final ManagedDevice newManagedDevice) throws ClientException {
+    @Nullable
+    public ManagedDevice post(@Nonnull final ManagedDevice newManagedDevice) throws ClientException {
         return send(HttpMethod.POST, newManagedDevice);
     }
 
@@ -123,7 +128,7 @@ public class ManagedDeviceRequest extends BaseRequest {
      * @param newManagedDevice the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedDevice newManagedDevice, final ICallback<? super ManagedDevice> callback) {
+    public void put(@Nonnull final ManagedDevice newManagedDevice, @Nonnull final ICallback<? super ManagedDevice> callback) {
         send(HttpMethod.PUT, callback, newManagedDevice);
     }
 
@@ -134,7 +139,8 @@ public class ManagedDeviceRequest extends BaseRequest {
      * @return the created ManagedDevice
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedDevice put(final ManagedDevice newManagedDevice) throws ClientException {
+    @Nullable
+    public ManagedDevice put(@Nonnull final ManagedDevice newManagedDevice) throws ClientException {
         return send(HttpMethod.PUT, newManagedDevice);
     }
 
@@ -144,7 +150,8 @@ public class ManagedDeviceRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ManagedDeviceRequest select(final String value) {
+     @Nonnull
+     public ManagedDeviceRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ManagedDeviceRequest)this;
      }
@@ -155,7 +162,8 @@ public class ManagedDeviceRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ManagedDeviceRequest expand(final String value) {
+     @Nonnull
+     public ManagedDeviceRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ManagedDeviceRequest)this;
      }

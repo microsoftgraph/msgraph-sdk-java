@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceAppManagement;
 import com.microsoft.graph.models.extensions.MobileLobApp;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class MobileLobAppCollectionRequest extends BaseCollectionRequest<MobileL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MobileLobAppCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileLobAppCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MobileLobAppCollectionResponse.class, MobileLobAppCollectionPage.class);
     }
 
-    public void get(final ICallback<? super MobileLobAppCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super MobileLobAppCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class MobileLobAppCollectionRequest extends BaseCollectionRequest<MobileL
         });
     }
 
+    @Nonnull
     public MobileLobAppCollectionPage get() throws ClientException {
         final MobileLobAppCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final MobileLobApp newMobileLobApp, final ICallback<? super MobileLobApp> callback) {
+    public void post(@Nonnull final MobileLobApp newMobileLobApp, @Nonnull final ICallback<? super MobileLobApp> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileLobAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newMobileLobApp, callback);
     }
 
-    public MobileLobApp post(final MobileLobApp newMobileLobApp) throws ClientException {
+    @Nonnull
+    public MobileLobApp post(@Nonnull final MobileLobApp newMobileLobApp) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MobileLobAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class MobileLobAppCollectionRequest extends BaseCollectionRequest<MobileL
      * @param value the expand clause
      * @return the updated request
      */
-    public MobileLobAppCollectionRequest expand(final String value) {
+    @Nonnull
+    public MobileLobAppCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (MobileLobAppCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class MobileLobAppCollectionRequest extends BaseCollectionRequest<MobileL
      * @param value the filter clause
      * @return the updated request
      */
-    public MobileLobAppCollectionRequest filter(final String value) {
+    @Nonnull
+    public MobileLobAppCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (MobileLobAppCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class MobileLobAppCollectionRequest extends BaseCollectionRequest<MobileL
      * @param value the order by clause
      * @return the updated request
      */
-    public MobileLobAppCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public MobileLobAppCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (MobileLobAppCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class MobileLobAppCollectionRequest extends BaseCollectionRequest<MobileL
      * @param value the select clause
      * @return the updated request
      */
-    public MobileLobAppCollectionRequest select(final String value) {
+    @Nonnull
+    public MobileLobAppCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (MobileLobAppCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class MobileLobAppCollectionRequest extends BaseCollectionRequest<MobileL
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public MobileLobAppCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (MobileLobAppCollectionRequest)this;
@@ -133,6 +142,7 @@ public class MobileLobAppCollectionRequest extends BaseCollectionRequest<MobileL
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public MobileLobAppCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (MobileLobAppCollectionRequest)this;
@@ -144,11 +154,13 @@ public class MobileLobAppCollectionRequest extends BaseCollectionRequest<MobileL
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public MobileLobAppCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public MobileLobAppCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (MobileLobAppCollectionRequest)this;
     }
-    public MobileLobAppCollectionPage buildFromResponse(final MobileLobAppCollectionResponse response) {
+    @Nonnull
+    public MobileLobAppCollectionPage buildFromResponse(@Nonnull final MobileLobAppCollectionResponse response) {
         final MobileLobAppCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new MobileLobAppCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

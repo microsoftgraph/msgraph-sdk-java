@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.WorkbookWorksheet;
 import com.microsoft.graph.models.extensions.WorkbookChart;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class WorkbookChartCollectionRequest extends BaseCollectionRequest<Workbo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChartCollectionResponse.class, WorkbookChartCollectionPage.class);
     }
 
-    public void get(final ICallback<? super WorkbookChartCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookChartCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class WorkbookChartCollectionRequest extends BaseCollectionRequest<Workbo
         });
     }
 
+    @Nonnull
     public WorkbookChartCollectionPage get() throws ClientException {
         final WorkbookChartCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final WorkbookChart newWorkbookChart, final ICallback<? super WorkbookChart> callback) {
+    public void post(@Nonnull final WorkbookChart newWorkbookChart, @Nonnull final ICallback<? super WorkbookChart> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookChartRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newWorkbookChart, callback);
     }
 
-    public WorkbookChart post(final WorkbookChart newWorkbookChart) throws ClientException {
+    @Nonnull
+    public WorkbookChart post(@Nonnull final WorkbookChart newWorkbookChart) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookChartRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class WorkbookChartCollectionRequest extends BaseCollectionRequest<Workbo
      * @param value the expand clause
      * @return the updated request
      */
-    public WorkbookChartCollectionRequest expand(final String value) {
+    @Nonnull
+    public WorkbookChartCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookChartCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class WorkbookChartCollectionRequest extends BaseCollectionRequest<Workbo
      * @param value the filter clause
      * @return the updated request
      */
-    public WorkbookChartCollectionRequest filter(final String value) {
+    @Nonnull
+    public WorkbookChartCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookChartCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class WorkbookChartCollectionRequest extends BaseCollectionRequest<Workbo
      * @param value the order by clause
      * @return the updated request
      */
-    public WorkbookChartCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public WorkbookChartCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookChartCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class WorkbookChartCollectionRequest extends BaseCollectionRequest<Workbo
      * @param value the select clause
      * @return the updated request
      */
-    public WorkbookChartCollectionRequest select(final String value) {
+    @Nonnull
+    public WorkbookChartCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookChartCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class WorkbookChartCollectionRequest extends BaseCollectionRequest<Workbo
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public WorkbookChartCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (WorkbookChartCollectionRequest)this;
@@ -133,6 +142,7 @@ public class WorkbookChartCollectionRequest extends BaseCollectionRequest<Workbo
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public WorkbookChartCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (WorkbookChartCollectionRequest)this;
@@ -144,11 +154,13 @@ public class WorkbookChartCollectionRequest extends BaseCollectionRequest<Workbo
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public WorkbookChartCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public WorkbookChartCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (WorkbookChartCollectionRequest)this;
     }
-    public WorkbookChartCollectionPage buildFromResponse(final WorkbookChartCollectionResponse response) {
+    @Nonnull
+    public WorkbookChartCollectionPage buildFromResponse(@Nonnull final WorkbookChartCollectionResponse response) {
         final WorkbookChartCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new WorkbookChartCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

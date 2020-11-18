@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.TermsAndConditionsAssignment;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentCollectionResponse;
@@ -22,7 +24,7 @@ public class TermsAndConditionsAssignmentCollectionPage extends BaseCollectionPa
      * @param response the serialized TermsAndConditionsAssignmentCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TermsAndConditionsAssignmentCollectionPage(final TermsAndConditionsAssignmentCollectionResponse response, final TermsAndConditionsAssignmentCollectionRequestBuilder builder) {
+    public TermsAndConditionsAssignmentCollectionPage(@Nonnull final TermsAndConditionsAssignmentCollectionResponse response, @Nonnull final TermsAndConditionsAssignmentCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.NamedLocation;
 import com.microsoft.graph.requests.extensions.NamedLocationCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.NamedLocationCollectionPage;
 import com.microsoft.graph.requests.extensions.NamedLocationCollectionResponse;
@@ -22,7 +24,7 @@ public class NamedLocationCollectionPage extends BaseCollectionPage<NamedLocatio
      * @param response the serialized NamedLocationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public NamedLocationCollectionPage(final NamedLocationCollectionResponse response, final NamedLocationCollectionRequestBuilder builder) {
+    public NamedLocationCollectionPage(@Nonnull final NamedLocationCollectionResponse response, @Nonnull final NamedLocationCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionResponse;
@@ -22,7 +24,7 @@ public class HomeRealmDiscoveryPolicyCollectionPage extends BaseCollectionPage<H
      * @param response the serialized HomeRealmDiscoveryPolicyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public HomeRealmDiscoveryPolicyCollectionPage(final HomeRealmDiscoveryPolicyCollectionResponse response, final HomeRealmDiscoveryPolicyCollectionRequestBuilder builder) {
+    public HomeRealmDiscoveryPolicyCollectionPage(@Nonnull final HomeRealmDiscoveryPolicyCollectionResponse response, @Nonnull final HomeRealmDiscoveryPolicyCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

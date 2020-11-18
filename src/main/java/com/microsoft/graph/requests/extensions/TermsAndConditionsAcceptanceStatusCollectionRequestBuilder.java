@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.TermsAndConditions;
 import com.microsoft.graph.models.extensions.TermsAndConditionsAcceptanceStatus;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusRequestBuilder;
@@ -32,7 +34,7 @@ public class TermsAndConditionsAcceptanceStatusCollectionRequestBuilder extends 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TermsAndConditionsAcceptanceStatusCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TermsAndConditionsAcceptanceStatusCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,7 +44,8 @@ public class TermsAndConditionsAcceptanceStatusCollectionRequestBuilder extends 
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public TermsAndConditionsAcceptanceStatusCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public TermsAndConditionsAcceptanceStatusCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +55,13 @@ public class TermsAndConditionsAcceptanceStatusCollectionRequestBuilder extends 
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public TermsAndConditionsAcceptanceStatusCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public TermsAndConditionsAcceptanceStatusCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TermsAndConditionsAcceptanceStatusCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public TermsAndConditionsAcceptanceStatusRequestBuilder byId(final String id) {
+    @Nonnull
+    public TermsAndConditionsAcceptanceStatusRequestBuilder byId(@Nonnull final String id) {
         return new TermsAndConditionsAcceptanceStatusRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

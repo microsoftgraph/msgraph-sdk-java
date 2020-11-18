@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosGeneralDeviceConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class IosGeneralDeviceConfigurationRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosGeneralDeviceConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IosGeneralDeviceConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IosGeneralDeviceConfiguration.class);
     }
 
@@ -37,7 +39,7 @@ public class IosGeneralDeviceConfigurationRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IosGeneralDeviceConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super IosGeneralDeviceConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class IosGeneralDeviceConfigurationRequest extends BaseRequest {
      * @return the IosGeneralDeviceConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public IosGeneralDeviceConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class IosGeneralDeviceConfigurationRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IosGeneralDeviceConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super IosGeneralDeviceConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class IosGeneralDeviceConfigurationRequest extends BaseRequest {
      * @param sourceIosGeneralDeviceConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosGeneralDeviceConfiguration sourceIosGeneralDeviceConfiguration, final ICallback<? super IosGeneralDeviceConfiguration> callback) {
+    public void patch(@Nonnull final IosGeneralDeviceConfiguration sourceIosGeneralDeviceConfiguration, @Nonnull final ICallback<? super IosGeneralDeviceConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceIosGeneralDeviceConfiguration);
     }
 
@@ -86,7 +89,8 @@ public class IosGeneralDeviceConfigurationRequest extends BaseRequest {
      * @return the updated IosGeneralDeviceConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosGeneralDeviceConfiguration patch(final IosGeneralDeviceConfiguration sourceIosGeneralDeviceConfiguration) throws ClientException {
+    @Nullable
+    public IosGeneralDeviceConfiguration patch(@Nonnull final IosGeneralDeviceConfiguration sourceIosGeneralDeviceConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceIosGeneralDeviceConfiguration);
     }
 
@@ -96,7 +100,7 @@ public class IosGeneralDeviceConfigurationRequest extends BaseRequest {
      * @param newIosGeneralDeviceConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosGeneralDeviceConfiguration newIosGeneralDeviceConfiguration, final ICallback<? super IosGeneralDeviceConfiguration> callback) {
+    public void post(@Nonnull final IosGeneralDeviceConfiguration newIosGeneralDeviceConfiguration, @Nonnull final ICallback<? super IosGeneralDeviceConfiguration> callback) {
         send(HttpMethod.POST, callback, newIosGeneralDeviceConfiguration);
     }
 
@@ -107,7 +111,8 @@ public class IosGeneralDeviceConfigurationRequest extends BaseRequest {
      * @return the created IosGeneralDeviceConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosGeneralDeviceConfiguration post(final IosGeneralDeviceConfiguration newIosGeneralDeviceConfiguration) throws ClientException {
+    @Nullable
+    public IosGeneralDeviceConfiguration post(@Nonnull final IosGeneralDeviceConfiguration newIosGeneralDeviceConfiguration) throws ClientException {
         return send(HttpMethod.POST, newIosGeneralDeviceConfiguration);
     }
 
@@ -117,7 +122,7 @@ public class IosGeneralDeviceConfigurationRequest extends BaseRequest {
      * @param newIosGeneralDeviceConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosGeneralDeviceConfiguration newIosGeneralDeviceConfiguration, final ICallback<? super IosGeneralDeviceConfiguration> callback) {
+    public void put(@Nonnull final IosGeneralDeviceConfiguration newIosGeneralDeviceConfiguration, @Nonnull final ICallback<? super IosGeneralDeviceConfiguration> callback) {
         send(HttpMethod.PUT, callback, newIosGeneralDeviceConfiguration);
     }
 
@@ -128,7 +133,8 @@ public class IosGeneralDeviceConfigurationRequest extends BaseRequest {
      * @return the created IosGeneralDeviceConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosGeneralDeviceConfiguration put(final IosGeneralDeviceConfiguration newIosGeneralDeviceConfiguration) throws ClientException {
+    @Nullable
+    public IosGeneralDeviceConfiguration put(@Nonnull final IosGeneralDeviceConfiguration newIosGeneralDeviceConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newIosGeneralDeviceConfiguration);
     }
 
@@ -138,7 +144,8 @@ public class IosGeneralDeviceConfigurationRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IosGeneralDeviceConfigurationRequest select(final String value) {
+     @Nonnull
+     public IosGeneralDeviceConfigurationRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (IosGeneralDeviceConfigurationRequest)this;
      }
@@ -149,7 +156,8 @@ public class IosGeneralDeviceConfigurationRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IosGeneralDeviceConfigurationRequest expand(final String value) {
+     @Nonnull
+     public IosGeneralDeviceConfigurationRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (IosGeneralDeviceConfigurationRequest)this;
      }

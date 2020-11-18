@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MailFolder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.MailFolderDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MailFolderDeltaCollectionPage;
@@ -34,12 +36,12 @@ public class MailFolderDeltaCollectionRequest extends BaseCollectionRequest<Mail
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MailFolderDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MailFolderDeltaCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MailFolderDeltaCollectionResponse.class, MailFolderDeltaCollectionPage.class);
     }
 
 
-    public void get(final ICallback<? super MailFolderDeltaCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super MailFolderDeltaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,13 +55,15 @@ public class MailFolderDeltaCollectionRequest extends BaseCollectionRequest<Mail
         });
     }
 
+    @Nullable
     public MailFolderDeltaCollectionPage get() throws ClientException {
         final MailFolderDeltaCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
 
-    public MailFolderDeltaCollectionPage buildFromResponse(final MailFolderDeltaCollectionResponse response) {
+    @Nonnull
+    public MailFolderDeltaCollectionPage buildFromResponse(@Nonnull final MailFolderDeltaCollectionResponse response) {
         final MailFolderDeltaCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new MailFolderDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
@@ -77,7 +81,8 @@ public class MailFolderDeltaCollectionRequest extends BaseCollectionRequest<Mail
      * @param value the select clause
      * @return the updated request
      */
-    public MailFolderDeltaCollectionRequest select(final String value) {
+    @Nonnull
+    public MailFolderDeltaCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (MailFolderDeltaCollectionRequest)this;
     }
@@ -88,6 +93,7 @@ public class MailFolderDeltaCollectionRequest extends BaseCollectionRequest<Mail
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public MailFolderDeltaCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (MailFolderDeltaCollectionRequest)this;
@@ -99,7 +105,8 @@ public class MailFolderDeltaCollectionRequest extends BaseCollectionRequest<Mail
      * @param value the expand clause
      * @return the updated request
      */
-    public MailFolderDeltaCollectionRequest expand(final String value) {
+    @Nonnull
+    public MailFolderDeltaCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (MailFolderDeltaCollectionRequest)this;
     }
@@ -110,7 +117,8 @@ public class MailFolderDeltaCollectionRequest extends BaseCollectionRequest<Mail
      * @param value the filter clause
      * @return the updated request
      */
-    public MailFolderDeltaCollectionRequest filter(final String value) {
+    @Nonnull
+    public MailFolderDeltaCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (MailFolderDeltaCollectionRequest)this;
     }
@@ -121,7 +129,8 @@ public class MailFolderDeltaCollectionRequest extends BaseCollectionRequest<Mail
      * @param value the order by clause
      * @return the updated request
      */
-    public MailFolderDeltaCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public MailFolderDeltaCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (MailFolderDeltaCollectionRequest)this;
     }

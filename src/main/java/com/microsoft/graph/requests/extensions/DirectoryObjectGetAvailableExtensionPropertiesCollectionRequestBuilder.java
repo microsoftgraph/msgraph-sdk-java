@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ExtensionProperty;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest;
@@ -32,7 +34,7 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuil
      * @param requestOptions the options for this request
      * @param isSyncedFromOnPremises the isSyncedFromOnPremises
      */
-    public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final Boolean isSyncedFromOnPremises) {
+    public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final Boolean isSyncedFromOnPremises) {
         super(requestUrl, client, requestOptions);
   	 if(isSyncedFromOnPremises!=null){
 			bodyParams.put("isSyncedFromOnPremises", isSyncedFromOnPremises);
@@ -45,7 +47,8 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuil
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -55,7 +58,8 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuil
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest request = new DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest(
                 getRequestUrl(),
                 getClient(),

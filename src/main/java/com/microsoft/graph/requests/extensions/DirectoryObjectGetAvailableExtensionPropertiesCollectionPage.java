@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ExtensionProperty;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetAvailableExtensionPropertiesCollectionPage;
@@ -33,7 +35,7 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionPage extend
      * @param response The serialized DirectoryObjectGetAvailableExtensionPropertiesCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public DirectoryObjectGetAvailableExtensionPropertiesCollectionPage(final DirectoryObjectGetAvailableExtensionPropertiesCollectionResponse response, final DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder builder) {
+    public DirectoryObjectGetAvailableExtensionPropertiesCollectionPage(@Nonnull final DirectoryObjectGetAvailableExtensionPropertiesCollectionResponse response, @Nonnull final DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

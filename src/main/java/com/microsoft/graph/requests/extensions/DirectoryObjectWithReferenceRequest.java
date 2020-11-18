@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.ExtensionProperty;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
@@ -32,15 +34,16 @@ public class DirectoryObjectWithReferenceRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DirectoryObjectWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryObjectWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DirectoryObject.class);
     }
 
-    public void post(final DirectoryObject newDirectoryObject, final IJsonBackedObject payload, final ICallback<? super DirectoryObject> callback) {
+    public void post(@Nonnull final DirectoryObject newDirectoryObject, @Nullable final IJsonBackedObject payload, @Nonnull final ICallback<? super DirectoryObject> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
-    public DirectoryObject post(final DirectoryObject newDirectoryObject, final IJsonBackedObject payload) throws ClientException {
+    @Nullable
+    public DirectoryObject post(@Nonnull final DirectoryObject newDirectoryObject, @Nullable final IJsonBackedObject payload) throws ClientException {
         IJsonBackedObject response = send(HttpMethod.POST, payload);
         if (response != null){
             return newDirectoryObject;
@@ -48,15 +51,16 @@ public class DirectoryObjectWithReferenceRequest extends BaseRequest {
         return null;
     }
 
-    public void get(final ICallback<? super DirectoryObject> callback) {
+    public void get(@Nonnull final ICallback<? super DirectoryObject> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
+    @Nullable
     public DirectoryObject get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<? super DirectoryObject> callback) {
+	public void delete(@Nonnull final ICallback<? super DirectoryObject> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -64,11 +68,12 @@ public class DirectoryObjectWithReferenceRequest extends BaseRequest {
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final DirectoryObject sourceDirectoryObject, final ICallback<? super DirectoryObject> callback) {
+	public void patch(@Nonnull final DirectoryObject sourceDirectoryObject, @Nonnull final ICallback<? super DirectoryObject> callback) {
 		send(HttpMethod.PATCH, callback, sourceDirectoryObject);
 	}
 
-	public DirectoryObject patch(final DirectoryObject sourceDirectoryObject) throws ClientException {
+    @Nullable
+	public DirectoryObject patch(@Nonnull final DirectoryObject sourceDirectoryObject) throws ClientException {
 		return send(HttpMethod.PATCH, sourceDirectoryObject);
 	}
 
@@ -79,7 +84,8 @@ public class DirectoryObjectWithReferenceRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public DirectoryObjectWithReferenceRequest select(final String value) {
+    @Nonnull
+    public DirectoryObjectWithReferenceRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DirectoryObjectWithReferenceRequest)this;
     }
@@ -90,7 +96,8 @@ public class DirectoryObjectWithReferenceRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public DirectoryObjectWithReferenceRequest expand(final String value) {
+    @Nonnull
+    public DirectoryObjectWithReferenceRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DirectoryObjectWithReferenceRequest)this;
     }

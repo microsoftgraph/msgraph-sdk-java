@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.requests.extensions.WorkbookFilterRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -29,7 +31,7 @@ public class WorkbookTableColumnRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookTableColumnRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableColumnRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +41,8 @@ public class WorkbookTableColumnRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the WorkbookTableColumnRequest instance
      */
-    public WorkbookTableColumnRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WorkbookTableColumnRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,7 +52,8 @@ public class WorkbookTableColumnRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the WorkbookTableColumnRequest instance
      */
-    public WorkbookTableColumnRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WorkbookTableColumnRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookTableColumnRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -60,22 +64,27 @@ public class WorkbookTableColumnRequestBuilder extends BaseRequestBuilder {
      *
      * @return the WorkbookFilterRequestBuilder instance
      */
+    @Nonnull
     public WorkbookFilterRequestBuilder filter() {
         return new WorkbookFilterRequestBuilder(getRequestUrlWithAdditionalSegment("filter"), getClient(), null);
     }
 
+    @Nonnull
     public WorkbookTableColumnDataBodyRangeRequestBuilder dataBodyRange() {
         return new WorkbookTableColumnDataBodyRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dataBodyRange"), getClient(), null);
     }
 
+    @Nonnull
     public WorkbookTableColumnHeaderRowRangeRequestBuilder headerRowRange() {
         return new WorkbookTableColumnHeaderRowRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.headerRowRange"), getClient(), null);
     }
 
+    @Nonnull
     public WorkbookTableColumnRangeRequestBuilder range() {
         return new WorkbookTableColumnRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.range"), getClient(), null);
     }
 
+    @Nonnull
     public WorkbookTableColumnTotalRowRangeRequestBuilder totalRowRange() {
         return new WorkbookTableColumnTotalRowRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.totalRowRange"), getClient(), null);
     }

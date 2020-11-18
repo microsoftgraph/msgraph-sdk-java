@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.SchemaExtension;
 import com.microsoft.graph.requests.extensions.SchemaExtensionCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.SchemaExtensionCollectionPage;
 import com.microsoft.graph.requests.extensions.SchemaExtensionCollectionResponse;
@@ -22,7 +24,7 @@ public class SchemaExtensionCollectionPage extends BaseCollectionPage<SchemaExte
      * @param response the serialized SchemaExtensionCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public SchemaExtensionCollectionPage(final SchemaExtensionCollectionResponse response, final SchemaExtensionCollectionRequestBuilder builder) {
+    public SchemaExtensionCollectionPage(@Nonnull final SchemaExtensionCollectionResponse response, @Nonnull final SchemaExtensionCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

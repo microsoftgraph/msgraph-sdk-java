@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionResponse;
@@ -22,7 +24,7 @@ public class DirectoryObjectCollectionPage extends BaseCollectionPage<DirectoryO
      * @param response the serialized DirectoryObjectCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DirectoryObjectCollectionPage(final DirectoryObjectCollectionResponse response, final DirectoryObjectCollectionRequestBuilder builder) {
+    public DirectoryObjectCollectionPage(@Nonnull final DirectoryObjectCollectionResponse response, @Nonnull final DirectoryObjectCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

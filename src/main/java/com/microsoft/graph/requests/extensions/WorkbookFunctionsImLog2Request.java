@@ -7,6 +7,8 @@ import com.microsoft.graph.models.extensions.WorkbookFunctionsImLog2Body;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsImLog2Request;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,15 +31,16 @@ public class WorkbookFunctionsImLog2Request extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookFunctionsImLog2Request(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsImLog2Request(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsImLog2Body();
     }
 
-    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
+    public void post(@Nonnull final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    @Nullable
     public WorkbookFunctionResult post() throws ClientException {
         return send(HttpMethod.POST, body);
     }
@@ -48,7 +51,8 @@ public class WorkbookFunctionsImLog2Request extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public WorkbookFunctionsImLog2Request select(final String value) {
+    @Nonnull
+    public WorkbookFunctionsImLog2Request select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookFunctionsImLog2Request)this;
     }
@@ -59,6 +63,7 @@ public class WorkbookFunctionsImLog2Request extends BaseRequest {
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public WorkbookFunctionsImLog2Request top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (WorkbookFunctionsImLog2Request)this;
@@ -70,7 +75,8 @@ public class WorkbookFunctionsImLog2Request extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public WorkbookFunctionsImLog2Request expand(final String value) {
+    @Nonnull
+    public WorkbookFunctionsImLog2Request expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookFunctionsImLog2Request)this;
     }

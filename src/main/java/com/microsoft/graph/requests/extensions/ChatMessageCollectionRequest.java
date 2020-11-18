@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ChatMessage;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,11 +36,11 @@ public class ChatMessageCollectionRequest extends BaseCollectionRequest<ChatMess
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ChatMessageCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ChatMessageCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ChatMessageCollectionResponse.class, ChatMessageCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ChatMessageCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super ChatMessageCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -52,19 +54,21 @@ public class ChatMessageCollectionRequest extends BaseCollectionRequest<ChatMess
         });
     }
 
+    @Nonnull
     public ChatMessageCollectionPage get() throws ClientException {
         final ChatMessageCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final ChatMessage newChatMessage, final ICallback<? super ChatMessage> callback) {
+    public void post(@Nonnull final ChatMessage newChatMessage, @Nonnull final ICallback<? super ChatMessage> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ChatMessageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newChatMessage, callback);
     }
 
-    public ChatMessage post(final ChatMessage newChatMessage) throws ClientException {
+    @Nonnull
+    public ChatMessage post(@Nonnull final ChatMessage newChatMessage) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ChatMessageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -77,7 +81,8 @@ public class ChatMessageCollectionRequest extends BaseCollectionRequest<ChatMess
      * @param value the expand clause
      * @return the updated request
      */
-    public ChatMessageCollectionRequest expand(final String value) {
+    @Nonnull
+    public ChatMessageCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ChatMessageCollectionRequest)this;
     }
@@ -88,7 +93,8 @@ public class ChatMessageCollectionRequest extends BaseCollectionRequest<ChatMess
      * @param value the filter clause
      * @return the updated request
      */
-    public ChatMessageCollectionRequest filter(final String value) {
+    @Nonnull
+    public ChatMessageCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ChatMessageCollectionRequest)this;
     }
@@ -99,7 +105,8 @@ public class ChatMessageCollectionRequest extends BaseCollectionRequest<ChatMess
      * @param value the order by clause
      * @return the updated request
      */
-    public ChatMessageCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ChatMessageCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ChatMessageCollectionRequest)this;
     }
@@ -110,7 +117,8 @@ public class ChatMessageCollectionRequest extends BaseCollectionRequest<ChatMess
      * @param value the select clause
      * @return the updated request
      */
-    public ChatMessageCollectionRequest select(final String value) {
+    @Nonnull
+    public ChatMessageCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ChatMessageCollectionRequest)this;
     }
@@ -121,6 +129,7 @@ public class ChatMessageCollectionRequest extends BaseCollectionRequest<ChatMess
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ChatMessageCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ChatMessageCollectionRequest)this;
@@ -132,6 +141,7 @@ public class ChatMessageCollectionRequest extends BaseCollectionRequest<ChatMess
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ChatMessageCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (ChatMessageCollectionRequest)this;
@@ -143,11 +153,13 @@ public class ChatMessageCollectionRequest extends BaseCollectionRequest<ChatMess
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ChatMessageCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ChatMessageCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (ChatMessageCollectionRequest)this;
     }
-    public ChatMessageCollectionPage buildFromResponse(final ChatMessageCollectionResponse response) {
+    @Nonnull
+    public ChatMessageCollectionPage buildFromResponse(@Nonnull final ChatMessageCollectionResponse response) {
         final ChatMessageCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ChatMessageCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

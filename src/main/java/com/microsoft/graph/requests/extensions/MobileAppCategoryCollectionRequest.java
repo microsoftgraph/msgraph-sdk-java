@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceAppManagement;
 import com.microsoft.graph.models.extensions.MobileAppCategory;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class MobileAppCategoryCollectionRequest extends BaseCollectionRequest<Mo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MobileAppCategoryCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppCategoryCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MobileAppCategoryCollectionResponse.class, MobileAppCategoryCollectionPage.class);
     }
 
-    public void get(final ICallback<? super MobileAppCategoryCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super MobileAppCategoryCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class MobileAppCategoryCollectionRequest extends BaseCollectionRequest<Mo
         });
     }
 
+    @Nonnull
     public MobileAppCategoryCollectionPage get() throws ClientException {
         final MobileAppCategoryCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final MobileAppCategory newMobileAppCategory, final ICallback<? super MobileAppCategory> callback) {
+    public void post(@Nonnull final MobileAppCategory newMobileAppCategory, @Nonnull final ICallback<? super MobileAppCategory> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileAppCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newMobileAppCategory, callback);
     }
 
-    public MobileAppCategory post(final MobileAppCategory newMobileAppCategory) throws ClientException {
+    @Nonnull
+    public MobileAppCategory post(@Nonnull final MobileAppCategory newMobileAppCategory) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MobileAppCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class MobileAppCategoryCollectionRequest extends BaseCollectionRequest<Mo
      * @param value the expand clause
      * @return the updated request
      */
-    public MobileAppCategoryCollectionRequest expand(final String value) {
+    @Nonnull
+    public MobileAppCategoryCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (MobileAppCategoryCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class MobileAppCategoryCollectionRequest extends BaseCollectionRequest<Mo
      * @param value the filter clause
      * @return the updated request
      */
-    public MobileAppCategoryCollectionRequest filter(final String value) {
+    @Nonnull
+    public MobileAppCategoryCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (MobileAppCategoryCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class MobileAppCategoryCollectionRequest extends BaseCollectionRequest<Mo
      * @param value the order by clause
      * @return the updated request
      */
-    public MobileAppCategoryCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public MobileAppCategoryCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (MobileAppCategoryCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class MobileAppCategoryCollectionRequest extends BaseCollectionRequest<Mo
      * @param value the select clause
      * @return the updated request
      */
-    public MobileAppCategoryCollectionRequest select(final String value) {
+    @Nonnull
+    public MobileAppCategoryCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (MobileAppCategoryCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class MobileAppCategoryCollectionRequest extends BaseCollectionRequest<Mo
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public MobileAppCategoryCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (MobileAppCategoryCollectionRequest)this;
@@ -133,6 +142,7 @@ public class MobileAppCategoryCollectionRequest extends BaseCollectionRequest<Mo
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public MobileAppCategoryCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (MobileAppCategoryCollectionRequest)this;
@@ -144,11 +154,13 @@ public class MobileAppCategoryCollectionRequest extends BaseCollectionRequest<Mo
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public MobileAppCategoryCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public MobileAppCategoryCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (MobileAppCategoryCollectionRequest)this;
     }
-    public MobileAppCategoryCollectionPage buildFromResponse(final MobileAppCategoryCollectionResponse response) {
+    @Nonnull
+    public MobileAppCategoryCollectionPage buildFromResponse(@Nonnull final MobileAppCategoryCollectionResponse response) {
         final MobileAppCategoryCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new MobileAppCategoryCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

@@ -24,23 +24,32 @@ package com.microsoft.graph.http;
 
 import com.google.gson.annotations.SerializedName;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 public class GraphInnerError {
 
     @SerializedName("code")
+    @Nullable
     public String code;
 
     @SerializedName("errorType")
+    @Nullable
     public String errorType;
 
     @SerializedName("debugMessage")
+    @Nullable
     public String debugMessage;
 
     @SerializedName("stackTrace")
+    @Nullable
     public String stackTrace;
 
     @SerializedName("throwSite")
+    @Nullable
     public String throwSite;
 
     @SerializedName("innererror")
+    @Nullable
     public GraphInnerError innererror;
 }

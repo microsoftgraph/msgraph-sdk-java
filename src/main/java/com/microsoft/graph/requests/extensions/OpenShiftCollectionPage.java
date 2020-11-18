@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.OpenShift;
 import com.microsoft.graph.requests.extensions.OpenShiftCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.OpenShiftCollectionPage;
 import com.microsoft.graph.requests.extensions.OpenShiftCollectionResponse;
@@ -22,7 +24,7 @@ public class OpenShiftCollectionPage extends BaseCollectionPage<OpenShift, OpenS
      * @param response the serialized OpenShiftCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public OpenShiftCollectionPage(final OpenShiftCollectionResponse response, final OpenShiftCollectionRequestBuilder builder) {
+    public OpenShiftCollectionPage(@Nonnull final OpenShiftCollectionResponse response, @Nonnull final OpenShiftCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

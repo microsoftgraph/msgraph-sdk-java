@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DriveItem;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DriveItemDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemDeltaCollectionPage;
@@ -34,12 +36,12 @@ public class DriveItemDeltaCollectionRequest extends BaseCollectionRequest<Drive
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DriveItemDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveItemDeltaCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DriveItemDeltaCollectionResponse.class, DriveItemDeltaCollectionPage.class);
     }
 
 
-    public void get(final ICallback<? super DriveItemDeltaCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super DriveItemDeltaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,13 +55,15 @@ public class DriveItemDeltaCollectionRequest extends BaseCollectionRequest<Drive
         });
     }
 
+    @Nullable
     public DriveItemDeltaCollectionPage get() throws ClientException {
         final DriveItemDeltaCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
 
-    public DriveItemDeltaCollectionPage buildFromResponse(final DriveItemDeltaCollectionResponse response) {
+    @Nonnull
+    public DriveItemDeltaCollectionPage buildFromResponse(@Nonnull final DriveItemDeltaCollectionResponse response) {
         final DriveItemDeltaCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new DriveItemDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
@@ -77,7 +81,8 @@ public class DriveItemDeltaCollectionRequest extends BaseCollectionRequest<Drive
      * @param value the select clause
      * @return the updated request
      */
-    public DriveItemDeltaCollectionRequest select(final String value) {
+    @Nonnull
+    public DriveItemDeltaCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DriveItemDeltaCollectionRequest)this;
     }
@@ -88,6 +93,7 @@ public class DriveItemDeltaCollectionRequest extends BaseCollectionRequest<Drive
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DriveItemDeltaCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (DriveItemDeltaCollectionRequest)this;
@@ -99,7 +105,8 @@ public class DriveItemDeltaCollectionRequest extends BaseCollectionRequest<Drive
      * @param value the expand clause
      * @return the updated request
      */
-    public DriveItemDeltaCollectionRequest expand(final String value) {
+    @Nonnull
+    public DriveItemDeltaCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DriveItemDeltaCollectionRequest)this;
     }
@@ -110,7 +117,8 @@ public class DriveItemDeltaCollectionRequest extends BaseCollectionRequest<Drive
      * @param value the filter clause
      * @return the updated request
      */
-    public DriveItemDeltaCollectionRequest filter(final String value) {
+    @Nonnull
+    public DriveItemDeltaCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DriveItemDeltaCollectionRequest)this;
     }
@@ -121,7 +129,8 @@ public class DriveItemDeltaCollectionRequest extends BaseCollectionRequest<Drive
      * @param value the order by clause
      * @return the updated request
      */
-    public DriveItemDeltaCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DriveItemDeltaCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DriveItemDeltaCollectionRequest)this;
     }

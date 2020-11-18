@@ -6,6 +6,8 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsNowRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.core.ClientException;
@@ -27,7 +29,7 @@ public class WorkbookFunctionsNowRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookFunctionsNowRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsNowRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
     }
 
@@ -36,7 +38,7 @@ public class WorkbookFunctionsNowRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
+    public void post(@Nonnull final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, null);
     }
 
@@ -46,6 +48,7 @@ public class WorkbookFunctionsNowRequest extends BaseRequest {
      * @return the WorkbookFunctionResult
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
+    @Nullable
     public WorkbookFunctionResult post() throws ClientException {
        return send(HttpMethod.POST, null);
     }
@@ -56,7 +59,8 @@ public class WorkbookFunctionsNowRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public WorkbookFunctionsNowRequest select(final String value) {
+    @Nonnull
+    public WorkbookFunctionsNowRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookFunctionsNowRequest)this;
     }
@@ -67,7 +71,8 @@ public class WorkbookFunctionsNowRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public WorkbookFunctionsNowRequest expand(final String value) {
+    @Nonnull
+    public WorkbookFunctionsNowRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookFunctionsNowRequest)this;
     }

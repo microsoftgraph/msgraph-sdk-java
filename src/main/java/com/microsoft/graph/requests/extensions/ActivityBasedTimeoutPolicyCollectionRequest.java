@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.PolicyRoot;
 import com.microsoft.graph.models.extensions.ActivityBasedTimeoutPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class ActivityBasedTimeoutPolicyCollectionRequest extends BaseCollectionR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ActivityBasedTimeoutPolicyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ActivityBasedTimeoutPolicyCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ActivityBasedTimeoutPolicyCollectionResponse.class, ActivityBasedTimeoutPolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ActivityBasedTimeoutPolicyCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super ActivityBasedTimeoutPolicyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class ActivityBasedTimeoutPolicyCollectionRequest extends BaseCollectionR
         });
     }
 
+    @Nonnull
     public ActivityBasedTimeoutPolicyCollectionPage get() throws ClientException {
         final ActivityBasedTimeoutPolicyCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy, final ICallback<? super ActivityBasedTimeoutPolicy> callback) {
+    public void post(@Nonnull final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy, @Nonnull final ICallback<? super ActivityBasedTimeoutPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ActivityBasedTimeoutPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newActivityBasedTimeoutPolicy, callback);
     }
 
-    public ActivityBasedTimeoutPolicy post(final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy) throws ClientException {
+    @Nonnull
+    public ActivityBasedTimeoutPolicy post(@Nonnull final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ActivityBasedTimeoutPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class ActivityBasedTimeoutPolicyCollectionRequest extends BaseCollectionR
      * @param value the expand clause
      * @return the updated request
      */
-    public ActivityBasedTimeoutPolicyCollectionRequest expand(final String value) {
+    @Nonnull
+    public ActivityBasedTimeoutPolicyCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ActivityBasedTimeoutPolicyCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class ActivityBasedTimeoutPolicyCollectionRequest extends BaseCollectionR
      * @param value the filter clause
      * @return the updated request
      */
-    public ActivityBasedTimeoutPolicyCollectionRequest filter(final String value) {
+    @Nonnull
+    public ActivityBasedTimeoutPolicyCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ActivityBasedTimeoutPolicyCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class ActivityBasedTimeoutPolicyCollectionRequest extends BaseCollectionR
      * @param value the order by clause
      * @return the updated request
      */
-    public ActivityBasedTimeoutPolicyCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ActivityBasedTimeoutPolicyCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ActivityBasedTimeoutPolicyCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class ActivityBasedTimeoutPolicyCollectionRequest extends BaseCollectionR
      * @param value the select clause
      * @return the updated request
      */
-    public ActivityBasedTimeoutPolicyCollectionRequest select(final String value) {
+    @Nonnull
+    public ActivityBasedTimeoutPolicyCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ActivityBasedTimeoutPolicyCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class ActivityBasedTimeoutPolicyCollectionRequest extends BaseCollectionR
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ActivityBasedTimeoutPolicyCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ActivityBasedTimeoutPolicyCollectionRequest)this;
@@ -133,6 +142,7 @@ public class ActivityBasedTimeoutPolicyCollectionRequest extends BaseCollectionR
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ActivityBasedTimeoutPolicyCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (ActivityBasedTimeoutPolicyCollectionRequest)this;
@@ -144,11 +154,13 @@ public class ActivityBasedTimeoutPolicyCollectionRequest extends BaseCollectionR
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ActivityBasedTimeoutPolicyCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ActivityBasedTimeoutPolicyCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (ActivityBasedTimeoutPolicyCollectionRequest)this;
     }
-    public ActivityBasedTimeoutPolicyCollectionPage buildFromResponse(final ActivityBasedTimeoutPolicyCollectionResponse response) {
+    @Nonnull
+    public ActivityBasedTimeoutPolicyCollectionPage buildFromResponse(@Nonnull final ActivityBasedTimeoutPolicyCollectionResponse response) {
         final ActivityBasedTimeoutPolicyCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ActivityBasedTimeoutPolicyCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

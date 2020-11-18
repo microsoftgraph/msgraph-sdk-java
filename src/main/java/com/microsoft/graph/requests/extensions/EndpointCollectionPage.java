@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Endpoint;
 import com.microsoft.graph.requests.extensions.EndpointCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.EndpointCollectionPage;
 import com.microsoft.graph.requests.extensions.EndpointCollectionResponse;
@@ -22,7 +24,7 @@ public class EndpointCollectionPage extends BaseCollectionPage<Endpoint, Endpoin
      * @param response the serialized EndpointCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public EndpointCollectionPage(final EndpointCollectionResponse response, final EndpointCollectionRequestBuilder builder) {
+    public EndpointCollectionPage(@Nonnull final EndpointCollectionResponse response, @Nonnull final EndpointCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

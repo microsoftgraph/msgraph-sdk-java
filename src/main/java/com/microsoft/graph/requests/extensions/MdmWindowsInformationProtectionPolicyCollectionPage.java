@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.MdmWindowsInformationProtectionPolicy;
 import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyCollectionResponse;
@@ -22,7 +24,7 @@ public class MdmWindowsInformationProtectionPolicyCollectionPage extends BaseCol
      * @param response the serialized MdmWindowsInformationProtectionPolicyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public MdmWindowsInformationProtectionPolicyCollectionPage(final MdmWindowsInformationProtectionPolicyCollectionResponse response, final MdmWindowsInformationProtectionPolicyCollectionRequestBuilder builder) {
+    public MdmWindowsInformationProtectionPolicyCollectionPage(@Nonnull final MdmWindowsInformationProtectionPolicyCollectionResponse response, @Nonnull final MdmWindowsInformationProtectionPolicyCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -7,6 +7,8 @@ import com.microsoft.graph.models.extensions.WorkbookFunctionsQuartile_IncBody;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsQuartile_IncRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,15 +31,16 @@ public class WorkbookFunctionsQuartile_IncRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookFunctionsQuartile_IncRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsQuartile_IncRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsQuartile_IncBody();
     }
 
-    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
+    public void post(@Nonnull final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    @Nullable
     public WorkbookFunctionResult post() throws ClientException {
         return send(HttpMethod.POST, body);
     }
@@ -48,7 +51,8 @@ public class WorkbookFunctionsQuartile_IncRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public WorkbookFunctionsQuartile_IncRequest select(final String value) {
+    @Nonnull
+    public WorkbookFunctionsQuartile_IncRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookFunctionsQuartile_IncRequest)this;
     }
@@ -59,6 +63,7 @@ public class WorkbookFunctionsQuartile_IncRequest extends BaseRequest {
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public WorkbookFunctionsQuartile_IncRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (WorkbookFunctionsQuartile_IncRequest)this;
@@ -70,7 +75,8 @@ public class WorkbookFunctionsQuartile_IncRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public WorkbookFunctionsQuartile_IncRequest expand(final String value) {
+    @Nonnull
+    public WorkbookFunctionsQuartile_IncRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookFunctionsQuartile_IncRequest)this;
     }

@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Schedule;
 import com.microsoft.graph.models.extensions.SwapShiftsChangeRequest;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class SwapShiftsChangeRequestCollectionRequest extends BaseCollectionRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SwapShiftsChangeRequestCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SwapShiftsChangeRequestCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SwapShiftsChangeRequestCollectionResponse.class, SwapShiftsChangeRequestCollectionPage.class);
     }
 
-    public void get(final ICallback<? super SwapShiftsChangeRequestCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super SwapShiftsChangeRequestCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class SwapShiftsChangeRequestCollectionRequest extends BaseCollectionRequ
         });
     }
 
+    @Nonnull
     public SwapShiftsChangeRequestCollectionPage get() throws ClientException {
         final SwapShiftsChangeRequestCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final SwapShiftsChangeRequest newSwapShiftsChangeRequest, final ICallback<? super SwapShiftsChangeRequest> callback) {
+    public void post(@Nonnull final SwapShiftsChangeRequest newSwapShiftsChangeRequest, @Nonnull final ICallback<? super SwapShiftsChangeRequest> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SwapShiftsChangeRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newSwapShiftsChangeRequest, callback);
     }
 
-    public SwapShiftsChangeRequest post(final SwapShiftsChangeRequest newSwapShiftsChangeRequest) throws ClientException {
+    @Nonnull
+    public SwapShiftsChangeRequest post(@Nonnull final SwapShiftsChangeRequest newSwapShiftsChangeRequest) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SwapShiftsChangeRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class SwapShiftsChangeRequestCollectionRequest extends BaseCollectionRequ
      * @param value the expand clause
      * @return the updated request
      */
-    public SwapShiftsChangeRequestCollectionRequest expand(final String value) {
+    @Nonnull
+    public SwapShiftsChangeRequestCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (SwapShiftsChangeRequestCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class SwapShiftsChangeRequestCollectionRequest extends BaseCollectionRequ
      * @param value the filter clause
      * @return the updated request
      */
-    public SwapShiftsChangeRequestCollectionRequest filter(final String value) {
+    @Nonnull
+    public SwapShiftsChangeRequestCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (SwapShiftsChangeRequestCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class SwapShiftsChangeRequestCollectionRequest extends BaseCollectionRequ
      * @param value the order by clause
      * @return the updated request
      */
-    public SwapShiftsChangeRequestCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public SwapShiftsChangeRequestCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SwapShiftsChangeRequestCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class SwapShiftsChangeRequestCollectionRequest extends BaseCollectionRequ
      * @param value the select clause
      * @return the updated request
      */
-    public SwapShiftsChangeRequestCollectionRequest select(final String value) {
+    @Nonnull
+    public SwapShiftsChangeRequestCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (SwapShiftsChangeRequestCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class SwapShiftsChangeRequestCollectionRequest extends BaseCollectionRequ
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public SwapShiftsChangeRequestCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (SwapShiftsChangeRequestCollectionRequest)this;
@@ -133,6 +142,7 @@ public class SwapShiftsChangeRequestCollectionRequest extends BaseCollectionRequ
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public SwapShiftsChangeRequestCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (SwapShiftsChangeRequestCollectionRequest)this;
@@ -144,11 +154,13 @@ public class SwapShiftsChangeRequestCollectionRequest extends BaseCollectionRequ
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public SwapShiftsChangeRequestCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public SwapShiftsChangeRequestCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (SwapShiftsChangeRequestCollectionRequest)this;
     }
-    public SwapShiftsChangeRequestCollectionPage buildFromResponse(final SwapShiftsChangeRequestCollectionResponse response) {
+    @Nonnull
+    public SwapShiftsChangeRequestCollectionPage buildFromResponse(@Nonnull final SwapShiftsChangeRequestCollectionResponse response) {
         final SwapShiftsChangeRequestCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new SwapShiftsChangeRequestCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

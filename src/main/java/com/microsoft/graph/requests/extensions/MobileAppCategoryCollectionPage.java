@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.MobileAppCategory;
 import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionPage;
 import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionResponse;
@@ -22,7 +24,7 @@ public class MobileAppCategoryCollectionPage extends BaseCollectionPage<MobileAp
      * @param response the serialized MobileAppCategoryCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public MobileAppCategoryCollectionPage(final MobileAppCategoryCollectionResponse response, final MobileAppCategoryCollectionRequestBuilder builder) {
+    public MobileAppCategoryCollectionPage(@Nonnull final MobileAppCategoryCollectionResponse response, @Nonnull final MobileAppCategoryCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

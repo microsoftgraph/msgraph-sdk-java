@@ -16,6 +16,8 @@ import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionRequestBui
 import com.microsoft.graph.requests.extensions.OnlineMeetingRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -34,7 +36,7 @@ public class CloudCommunicationsRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CloudCommunicationsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CloudCommunicationsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CloudCommunications.class);
     }
 
@@ -43,7 +45,7 @@ public class CloudCommunicationsRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super CloudCommunications> callback) {
+    public void get(@Nonnull final ICallback<? super CloudCommunications> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -53,6 +55,7 @@ public class CloudCommunicationsRequest extends BaseRequest {
      * @return the CloudCommunications from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public CloudCommunications get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -62,7 +65,7 @@ public class CloudCommunicationsRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super CloudCommunications> callback) {
+    public void delete(@Nonnull final ICallback<? super CloudCommunications> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -81,7 +84,7 @@ public class CloudCommunicationsRequest extends BaseRequest {
      * @param sourceCloudCommunications the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CloudCommunications sourceCloudCommunications, final ICallback<? super CloudCommunications> callback) {
+    public void patch(@Nonnull final CloudCommunications sourceCloudCommunications, @Nonnull final ICallback<? super CloudCommunications> callback) {
         send(HttpMethod.PATCH, callback, sourceCloudCommunications);
     }
 
@@ -92,7 +95,8 @@ public class CloudCommunicationsRequest extends BaseRequest {
      * @return the updated CloudCommunications
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CloudCommunications patch(final CloudCommunications sourceCloudCommunications) throws ClientException {
+    @Nullable
+    public CloudCommunications patch(@Nonnull final CloudCommunications sourceCloudCommunications) throws ClientException {
         return send(HttpMethod.PATCH, sourceCloudCommunications);
     }
 
@@ -102,7 +106,7 @@ public class CloudCommunicationsRequest extends BaseRequest {
      * @param newCloudCommunications the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CloudCommunications newCloudCommunications, final ICallback<? super CloudCommunications> callback) {
+    public void post(@Nonnull final CloudCommunications newCloudCommunications, @Nonnull final ICallback<? super CloudCommunications> callback) {
         send(HttpMethod.POST, callback, newCloudCommunications);
     }
 
@@ -113,7 +117,8 @@ public class CloudCommunicationsRequest extends BaseRequest {
      * @return the created CloudCommunications
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CloudCommunications post(final CloudCommunications newCloudCommunications) throws ClientException {
+    @Nullable
+    public CloudCommunications post(@Nonnull final CloudCommunications newCloudCommunications) throws ClientException {
         return send(HttpMethod.POST, newCloudCommunications);
     }
 
@@ -123,7 +128,7 @@ public class CloudCommunicationsRequest extends BaseRequest {
      * @param newCloudCommunications the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CloudCommunications newCloudCommunications, final ICallback<? super CloudCommunications> callback) {
+    public void put(@Nonnull final CloudCommunications newCloudCommunications, @Nonnull final ICallback<? super CloudCommunications> callback) {
         send(HttpMethod.PUT, callback, newCloudCommunications);
     }
 
@@ -134,7 +139,8 @@ public class CloudCommunicationsRequest extends BaseRequest {
      * @return the created CloudCommunications
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CloudCommunications put(final CloudCommunications newCloudCommunications) throws ClientException {
+    @Nullable
+    public CloudCommunications put(@Nonnull final CloudCommunications newCloudCommunications) throws ClientException {
         return send(HttpMethod.PUT, newCloudCommunications);
     }
 
@@ -144,7 +150,8 @@ public class CloudCommunicationsRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public CloudCommunicationsRequest select(final String value) {
+     @Nonnull
+     public CloudCommunicationsRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (CloudCommunicationsRequest)this;
      }
@@ -155,7 +162,8 @@ public class CloudCommunicationsRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public CloudCommunicationsRequest expand(final String value) {
+     @Nonnull
+     public CloudCommunicationsRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (CloudCommunicationsRequest)this;
      }

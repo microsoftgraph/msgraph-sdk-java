@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookTableColumn;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnCollectionResponse;
@@ -22,7 +24,7 @@ public class WorkbookTableColumnCollectionPage extends BaseCollectionPage<Workbo
      * @param response the serialized WorkbookTableColumnCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public WorkbookTableColumnCollectionPage(final WorkbookTableColumnCollectionResponse response, final WorkbookTableColumnCollectionRequestBuilder builder) {
+    public WorkbookTableColumnCollectionPage(@Nonnull final WorkbookTableColumnCollectionResponse response, @Nonnull final WorkbookTableColumnCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

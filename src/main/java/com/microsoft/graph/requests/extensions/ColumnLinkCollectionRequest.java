@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ContentType;
 import com.microsoft.graph.models.extensions.ColumnLink;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class ColumnLinkCollectionRequest extends BaseCollectionRequest<ColumnLin
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ColumnLinkCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ColumnLinkCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ColumnLinkCollectionResponse.class, ColumnLinkCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ColumnLinkCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super ColumnLinkCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class ColumnLinkCollectionRequest extends BaseCollectionRequest<ColumnLin
         });
     }
 
+    @Nonnull
     public ColumnLinkCollectionPage get() throws ClientException {
         final ColumnLinkCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final ColumnLink newColumnLink, final ICallback<? super ColumnLink> callback) {
+    public void post(@Nonnull final ColumnLink newColumnLink, @Nonnull final ICallback<? super ColumnLink> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ColumnLinkRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newColumnLink, callback);
     }
 
-    public ColumnLink post(final ColumnLink newColumnLink) throws ClientException {
+    @Nonnull
+    public ColumnLink post(@Nonnull final ColumnLink newColumnLink) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ColumnLinkRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class ColumnLinkCollectionRequest extends BaseCollectionRequest<ColumnLin
      * @param value the expand clause
      * @return the updated request
      */
-    public ColumnLinkCollectionRequest expand(final String value) {
+    @Nonnull
+    public ColumnLinkCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ColumnLinkCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class ColumnLinkCollectionRequest extends BaseCollectionRequest<ColumnLin
      * @param value the filter clause
      * @return the updated request
      */
-    public ColumnLinkCollectionRequest filter(final String value) {
+    @Nonnull
+    public ColumnLinkCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ColumnLinkCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class ColumnLinkCollectionRequest extends BaseCollectionRequest<ColumnLin
      * @param value the order by clause
      * @return the updated request
      */
-    public ColumnLinkCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ColumnLinkCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ColumnLinkCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class ColumnLinkCollectionRequest extends BaseCollectionRequest<ColumnLin
      * @param value the select clause
      * @return the updated request
      */
-    public ColumnLinkCollectionRequest select(final String value) {
+    @Nonnull
+    public ColumnLinkCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ColumnLinkCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class ColumnLinkCollectionRequest extends BaseCollectionRequest<ColumnLin
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ColumnLinkCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ColumnLinkCollectionRequest)this;
@@ -133,6 +142,7 @@ public class ColumnLinkCollectionRequest extends BaseCollectionRequest<ColumnLin
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ColumnLinkCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (ColumnLinkCollectionRequest)this;
@@ -144,11 +154,13 @@ public class ColumnLinkCollectionRequest extends BaseCollectionRequest<ColumnLin
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ColumnLinkCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ColumnLinkCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (ColumnLinkCollectionRequest)this;
     }
-    public ColumnLinkCollectionPage buildFromResponse(final ColumnLinkCollectionResponse response) {
+    @Nonnull
+    public ColumnLinkCollectionPage buildFromResponse(@Nonnull final ColumnLinkCollectionResponse response) {
         final ColumnLinkCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ColumnLinkCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

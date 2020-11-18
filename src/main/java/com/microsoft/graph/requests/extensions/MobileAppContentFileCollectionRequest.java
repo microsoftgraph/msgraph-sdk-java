@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.MobileAppContentFile;
 import com.microsoft.graph.models.extensions.FileEncryptionInfo;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -36,11 +38,11 @@ public class MobileAppContentFileCollectionRequest extends BaseCollectionRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MobileAppContentFileCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppContentFileCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MobileAppContentFileCollectionResponse.class, MobileAppContentFileCollectionPage.class);
     }
 
-    public void get(final ICallback<? super MobileAppContentFileCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super MobileAppContentFileCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -54,19 +56,21 @@ public class MobileAppContentFileCollectionRequest extends BaseCollectionRequest
         });
     }
 
+    @Nonnull
     public MobileAppContentFileCollectionPage get() throws ClientException {
         final MobileAppContentFileCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final MobileAppContentFile newMobileAppContentFile, final ICallback<? super MobileAppContentFile> callback) {
+    public void post(@Nonnull final MobileAppContentFile newMobileAppContentFile, @Nonnull final ICallback<? super MobileAppContentFile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileAppContentFileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newMobileAppContentFile, callback);
     }
 
-    public MobileAppContentFile post(final MobileAppContentFile newMobileAppContentFile) throws ClientException {
+    @Nonnull
+    public MobileAppContentFile post(@Nonnull final MobileAppContentFile newMobileAppContentFile) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MobileAppContentFileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -79,7 +83,8 @@ public class MobileAppContentFileCollectionRequest extends BaseCollectionRequest
      * @param value the expand clause
      * @return the updated request
      */
-    public MobileAppContentFileCollectionRequest expand(final String value) {
+    @Nonnull
+    public MobileAppContentFileCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (MobileAppContentFileCollectionRequest)this;
     }
@@ -90,7 +95,8 @@ public class MobileAppContentFileCollectionRequest extends BaseCollectionRequest
      * @param value the filter clause
      * @return the updated request
      */
-    public MobileAppContentFileCollectionRequest filter(final String value) {
+    @Nonnull
+    public MobileAppContentFileCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (MobileAppContentFileCollectionRequest)this;
     }
@@ -101,7 +107,8 @@ public class MobileAppContentFileCollectionRequest extends BaseCollectionRequest
      * @param value the order by clause
      * @return the updated request
      */
-    public MobileAppContentFileCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public MobileAppContentFileCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (MobileAppContentFileCollectionRequest)this;
     }
@@ -112,7 +119,8 @@ public class MobileAppContentFileCollectionRequest extends BaseCollectionRequest
      * @param value the select clause
      * @return the updated request
      */
-    public MobileAppContentFileCollectionRequest select(final String value) {
+    @Nonnull
+    public MobileAppContentFileCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (MobileAppContentFileCollectionRequest)this;
     }
@@ -123,6 +131,7 @@ public class MobileAppContentFileCollectionRequest extends BaseCollectionRequest
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public MobileAppContentFileCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (MobileAppContentFileCollectionRequest)this;
@@ -134,6 +143,7 @@ public class MobileAppContentFileCollectionRequest extends BaseCollectionRequest
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public MobileAppContentFileCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (MobileAppContentFileCollectionRequest)this;
@@ -145,11 +155,13 @@ public class MobileAppContentFileCollectionRequest extends BaseCollectionRequest
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public MobileAppContentFileCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public MobileAppContentFileCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (MobileAppContentFileCollectionRequest)this;
     }
-    public MobileAppContentFileCollectionPage buildFromResponse(final MobileAppContentFileCollectionResponse response) {
+    @Nonnull
+    public MobileAppContentFileCollectionPage buildFromResponse(@Nonnull final MobileAppContentFileCollectionResponse response) {
         final MobileAppContentFileCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new MobileAppContentFileCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

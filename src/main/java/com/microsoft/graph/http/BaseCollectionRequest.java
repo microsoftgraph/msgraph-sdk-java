@@ -24,6 +24,8 @@ package com.microsoft.graph.http;
 
 import java.net.URL;
 import java.util.List;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
@@ -70,11 +72,11 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      * @param responseClass       the class for the response
      * @param collectionPageClass the class for the collection page
      */
-    public BaseCollectionRequest(final String requestUrl,
-                                 final IBaseClient client,
-                                 final List<? extends Option> options,
-                                 final Class<T1> responseClass,
-                                 final Class<T2> collectionPageClass) {
+    public BaseCollectionRequest(@Nonnull final String requestUrl,
+                                 @Nonnull final IBaseClient client,
+                                 @Nullable final List<? extends Option> options,
+                                 @Nonnull final Class<T1> responseClass,
+                                 @Nonnull final Class<T2> collectionPageClass) {
         this.responseClass = responseClass;
         this.collectionPageClass = collectionPageClass;
         baseRequest = new BaseRequest(requestUrl, client, options, responseClass) {
@@ -87,6 +89,7 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      * @return the response object
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
+    @Nullable
     protected T1 send() throws ClientException {
         baseRequest.setHttpMethod(HttpMethod.GET);
         return baseRequest.getClient().getHttpProvider().send(this, responseClass, /* serialization object */ null);
@@ -100,7 +103,8 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      * @return the response object
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    protected <BodyType> T1 post(final BodyType serializedObject) throws ClientException {
+    @Nullable
+    protected <BodyType> T1 post(@Nonnull final BodyType serializedObject) throws ClientException {
         baseRequest.setHttpMethod(HttpMethod.POST);
         return (T1) baseRequest.getClient().getHttpProvider().send(this, responseClass, serializedObject);
     }
@@ -111,6 +115,7 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      * @return the request URL
      */
     @Override
+    @Nonnull
     public URL getRequestUrl() {
         return baseRequest.getRequestUrl();
     }
@@ -121,6 +126,7 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      * @return the HTTP method
      */
     @Override
+    @Nullable
     public HttpMethod getHttpMethod() {
         return baseRequest.getHttpMethod();
     }
@@ -131,6 +137,7 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      * @return the headers
      */
     @Override
+    @Nullable
     public List<HeaderOption> getHeaders() {
         return baseRequest.getHeaders();
     }
@@ -142,7 +149,7 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      * @param value  the value of the header
      */
     @Override
-    public void addHeader(final String header, final String value) {
+    public void addHeader(@Nonnull final String header, @Nonnull final String value) {
         baseRequest.addHeader(header, value);
     }
 
@@ -171,6 +178,7 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      *
      * @return the full list of options for this request
      */
+    @Nullable
     public List<Option> getOptions() {
         return baseRequest.getOptions();
     }
@@ -180,7 +188,7 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      *
      * @param option the query option to add
      */
-    public void addQueryOption(final QueryOption option) {
+    public void addQueryOption(@Nonnull final QueryOption option) {
         baseRequest.getQueryOptions().add(option);
     }
 
@@ -189,7 +197,7 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      *
      * @param option the query option to add
      */
-    public void addFunctionOption(final FunctionOption option) {
+    public void addFunctionOption(@Nonnull final FunctionOption option) {
         baseRequest.getFunctionOptions().add(option);
     }
 
@@ -198,6 +206,7 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      *
      * @return the base request for this collection request
      */
+    @Nonnull
     protected BaseRequest getBaseRequest() {
         return baseRequest;
     }
@@ -207,6 +216,7 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      *
      * @return the class for the collection page
      */
+    @Nonnull
     public Class<T2> getCollectionPageClass() {
         return collectionPageClass;
     }
@@ -234,7 +244,7 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      * 
      * @param shouldRedirect Callback called before doing a redirect
      */
-    public void setShouldRedirect(IShouldRedirect shouldRedirect) {
+    public void setShouldRedirect(@Nonnull IShouldRedirect shouldRedirect) {
     	baseRequest.setShouldRedirect(shouldRedirect);
     }
     
@@ -243,6 +253,7 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      * 
      * @return Callback which is called before redirect
      */
+    @Nullable
     public IShouldRedirect getShouldRedirect() {
     	return baseRequest.getShouldRedirect();
     }
@@ -252,7 +263,7 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      * 
      * @param shouldretry The callback called before retry
      */
-    public void setShouldRetry(IShouldRetry shouldretry) {
+    public void setShouldRetry(@Nonnull IShouldRetry shouldretry) {
     	baseRequest.setShouldRetry(shouldretry);
     }
     
@@ -261,6 +272,7 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      * 
      * @return Callback called before retry
      */
+    @Nullable
     public IShouldRetry getShouldRetry() {
     	return baseRequest.getShouldRetry();
     }
@@ -307,7 +319,8 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      * @param httpMethod the HTTP method
      * @return the current request
      */
-    public IHttpRequest withHttpMethod(final HttpMethod httpMethod) {
+    @Nullable
+    public IHttpRequest withHttpMethod(@Nonnull final HttpMethod httpMethod) {
         baseRequest.setHttpMethod(httpMethod);
         return this;
     }
@@ -316,6 +329,7 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      * @return the Request object to be executed
      */
     @Override
+    @Nullable
     public Request getHttpRequest() throws ClientException {
         return baseRequest.getHttpRequest();
     }
@@ -327,7 +341,8 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      * @return the Request object to be executed
      */
     @Override
-    public <requestBodyType> Request getHttpRequest(final requestBodyType serializedObject) throws ClientException {
+    @Nullable
+    public <requestBodyType> Request getHttpRequest(@Nonnull final requestBodyType serializedObject) throws ClientException {
         return baseRequest.getHttpRequest(serializedObject);
     }
 
@@ -340,7 +355,8 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      * @return the Request object to be executed
      */
     @Override
-    public <requestBodyType, responseType> Request getHttpRequest(final requestBodyType serializedObject, final IProgressCallback<responseType> progress) throws ClientException {
+    @Nullable
+    public <requestBodyType, responseType> Request getHttpRequest(@Nonnull final requestBodyType serializedObject, @Nonnull final IProgressCallback<responseType> progress) throws ClientException {
         return baseRequest.getHttpRequest(serializedObject, progress);
     }
 }

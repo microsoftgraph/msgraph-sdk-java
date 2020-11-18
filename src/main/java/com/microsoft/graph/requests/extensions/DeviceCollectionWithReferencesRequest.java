@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.Device;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -31,11 +33,11 @@ public class DeviceCollectionWithReferencesRequest extends BaseCollectionRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceCollectionWithReferencesRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceCollectionResponse.class, DeviceCollectionPage.class);
     }
 
-    public void get(final ICallback<? super DeviceCollectionWithReferencesPage> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -49,37 +51,44 @@ public class DeviceCollectionWithReferencesRequest extends BaseCollectionRequest
         });
     }
 
+    @Nonnull
     public DeviceCollectionWithReferencesPage get() throws ClientException {
         final DeviceCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public DeviceCollectionWithReferencesRequest expand(final String value) {
+    @Nonnull
+    public DeviceCollectionWithReferencesRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return this;
     }
 
-    public DeviceCollectionWithReferencesRequest filter(final String value) {
+    @Nonnull
+    public DeviceCollectionWithReferencesRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return this;
     }
 
-    public DeviceCollectionWithReferencesRequest orderBy(final String value) {
+    @Nonnull
+    public DeviceCollectionWithReferencesRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return this;
     }
 
-    public DeviceCollectionWithReferencesRequest select(final String value) {
+    @Nonnull
+    public DeviceCollectionWithReferencesRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return this;
     }
 
+    @Nonnull
     public DeviceCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return this;
     }
 
-    public DeviceCollectionWithReferencesPage buildFromResponse(final DeviceCollectionResponse response) {
+    @Nonnull
+    public DeviceCollectionWithReferencesPage buildFromResponse(@Nonnull final DeviceCollectionResponse response) {
         final DeviceCollectionWithReferencesRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new DeviceCollectionWithReferencesRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.TeamsAppDefinitionCollectionReque
 import com.microsoft.graph.requests.extensions.TeamsAppDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
@@ -32,14 +34,15 @@ public class TeamsAppReferenceRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamsAppReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsAppReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TeamsApp.class);
     }
 
-    public void delete(final ICallback<? super TeamsApp> callback) {
+    public void delete(@Nonnull final ICallback<? super TeamsApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
+    @Nullable
     public TeamsApp delete() throws ClientException {
        return send(HttpMethod.DELETE, null);
     }
@@ -50,7 +53,8 @@ public class TeamsAppReferenceRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public TeamsAppReferenceRequest select(final String value) {
+    @Nonnull
+    public TeamsAppReferenceRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (TeamsAppReferenceRequest)this;
     }
@@ -61,7 +65,8 @@ public class TeamsAppReferenceRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public TeamsAppReferenceRequest expand(final String value) {
+    @Nonnull
+    public TeamsAppReferenceRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (TeamsAppReferenceRequest)this;
     }
@@ -71,7 +76,7 @@ public class TeamsAppReferenceRequest extends BaseRequest {
      * @param srcTeamsApp the TeamsApp reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(TeamsApp srcTeamsApp, final ICallback<? super TeamsApp> callback) {
+    public void put(@Nonnull final TeamsApp srcTeamsApp, @Nonnull final ICallback<? super TeamsApp> callback) {
         send(HttpMethod.PUT, callback, srcTeamsApp);
     }
 
@@ -82,7 +87,8 @@ public class TeamsAppReferenceRequest extends BaseRequest {
      * @return the TeamsApp
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    public TeamsApp put(TeamsApp srcTeamsApp) throws ClientException {
+    @Nullable
+    public TeamsApp put(@Nonnull final TeamsApp srcTeamsApp) throws ClientException {
         return send(HttpMethod.PUT, srcTeamsApp);
     }
 }

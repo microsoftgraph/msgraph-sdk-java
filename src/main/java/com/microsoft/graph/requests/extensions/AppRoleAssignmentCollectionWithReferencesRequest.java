@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.AppRoleAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -31,11 +33,11 @@ public class AppRoleAssignmentCollectionWithReferencesRequest extends BaseCollec
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AppRoleAssignmentCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AppRoleAssignmentCollectionWithReferencesRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AppRoleAssignmentCollectionResponse.class, AppRoleAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<? super AppRoleAssignmentCollectionWithReferencesPage> callback) {
+    public void get(@Nonnull final ICallback<? super AppRoleAssignmentCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -49,37 +51,44 @@ public class AppRoleAssignmentCollectionWithReferencesRequest extends BaseCollec
         });
     }
 
+    @Nonnull
     public AppRoleAssignmentCollectionWithReferencesPage get() throws ClientException {
         final AppRoleAssignmentCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public AppRoleAssignmentCollectionWithReferencesRequest expand(final String value) {
+    @Nonnull
+    public AppRoleAssignmentCollectionWithReferencesRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return this;
     }
 
-    public AppRoleAssignmentCollectionWithReferencesRequest filter(final String value) {
+    @Nonnull
+    public AppRoleAssignmentCollectionWithReferencesRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return this;
     }
 
-    public AppRoleAssignmentCollectionWithReferencesRequest orderBy(final String value) {
+    @Nonnull
+    public AppRoleAssignmentCollectionWithReferencesRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return this;
     }
 
-    public AppRoleAssignmentCollectionWithReferencesRequest select(final String value) {
+    @Nonnull
+    public AppRoleAssignmentCollectionWithReferencesRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return this;
     }
 
+    @Nonnull
     public AppRoleAssignmentCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return this;
     }
 
-    public AppRoleAssignmentCollectionWithReferencesPage buildFromResponse(final AppRoleAssignmentCollectionResponse response) {
+    @Nonnull
+    public AppRoleAssignmentCollectionWithReferencesPage buildFromResponse(@Nonnull final AppRoleAssignmentCollectionResponse response) {
         final AppRoleAssignmentCollectionWithReferencesRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new AppRoleAssignmentCollectionWithReferencesRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

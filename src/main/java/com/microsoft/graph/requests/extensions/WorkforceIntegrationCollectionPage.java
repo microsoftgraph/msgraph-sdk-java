@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkforceIntegration;
 import com.microsoft.graph.requests.extensions.WorkforceIntegrationCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkforceIntegrationCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkforceIntegrationCollectionResponse;
@@ -22,7 +24,7 @@ public class WorkforceIntegrationCollectionPage extends BaseCollectionPage<Workf
      * @param response the serialized WorkforceIntegrationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public WorkforceIntegrationCollectionPage(final WorkforceIntegrationCollectionResponse response, final WorkforceIntegrationCollectionRequestBuilder builder) {
+    public WorkforceIntegrationCollectionPage(@Nonnull final WorkforceIntegrationCollectionResponse response, @Nonnull final WorkforceIntegrationCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

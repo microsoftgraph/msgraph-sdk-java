@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.WorkbookRangeSort;
 import com.microsoft.graph.models.extensions.WorkbookSortField;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -28,7 +30,7 @@ public class WorkbookRangeSortRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookRangeSortRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeSortRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,7 +40,8 @@ public class WorkbookRangeSortRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the WorkbookRangeSortRequest instance
      */
-    public WorkbookRangeSortRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WorkbookRangeSortRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,13 +51,15 @@ public class WorkbookRangeSortRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the WorkbookRangeSortRequest instance
      */
-    public WorkbookRangeSortRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WorkbookRangeSortRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookRangeSortRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
 
-    public WorkbookRangeSortApplyRequestBuilder apply(final java.util.List<WorkbookSortField> fields, final Boolean matchCase, final Boolean hasHeaders, final String orientation, final String method) {
+    @Nonnull
+    public WorkbookRangeSortApplyRequestBuilder apply(@Nullable final java.util.List<WorkbookSortField> fields, @Nullable final Boolean matchCase, @Nullable final Boolean hasHeaders, @Nullable final String orientation, @Nullable final String method) {
         return new WorkbookRangeSortApplyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.apply"), getClient(), null, fields, matchCase, hasHeaders, orientation, method);
     }
 }

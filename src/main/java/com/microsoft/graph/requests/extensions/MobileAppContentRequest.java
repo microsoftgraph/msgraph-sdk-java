@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.MobileAppContentFileCollectionReq
 import com.microsoft.graph.requests.extensions.MobileAppContentFileRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -30,7 +32,7 @@ public class MobileAppContentRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MobileAppContentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppContentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MobileAppContent.class);
     }
 
@@ -39,7 +41,7 @@ public class MobileAppContentRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MobileAppContent> callback) {
+    public void get(@Nonnull final ICallback<? super MobileAppContent> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -49,6 +51,7 @@ public class MobileAppContentRequest extends BaseRequest {
      * @return the MobileAppContent from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MobileAppContent get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -58,7 +61,7 @@ public class MobileAppContentRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MobileAppContent> callback) {
+    public void delete(@Nonnull final ICallback<? super MobileAppContent> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +80,7 @@ public class MobileAppContentRequest extends BaseRequest {
      * @param sourceMobileAppContent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MobileAppContent sourceMobileAppContent, final ICallback<? super MobileAppContent> callback) {
+    public void patch(@Nonnull final MobileAppContent sourceMobileAppContent, @Nonnull final ICallback<? super MobileAppContent> callback) {
         send(HttpMethod.PATCH, callback, sourceMobileAppContent);
     }
 
@@ -88,7 +91,8 @@ public class MobileAppContentRequest extends BaseRequest {
      * @return the updated MobileAppContent
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MobileAppContent patch(final MobileAppContent sourceMobileAppContent) throws ClientException {
+    @Nullable
+    public MobileAppContent patch(@Nonnull final MobileAppContent sourceMobileAppContent) throws ClientException {
         return send(HttpMethod.PATCH, sourceMobileAppContent);
     }
 
@@ -98,7 +102,7 @@ public class MobileAppContentRequest extends BaseRequest {
      * @param newMobileAppContent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MobileAppContent newMobileAppContent, final ICallback<? super MobileAppContent> callback) {
+    public void post(@Nonnull final MobileAppContent newMobileAppContent, @Nonnull final ICallback<? super MobileAppContent> callback) {
         send(HttpMethod.POST, callback, newMobileAppContent);
     }
 
@@ -109,7 +113,8 @@ public class MobileAppContentRequest extends BaseRequest {
      * @return the created MobileAppContent
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MobileAppContent post(final MobileAppContent newMobileAppContent) throws ClientException {
+    @Nullable
+    public MobileAppContent post(@Nonnull final MobileAppContent newMobileAppContent) throws ClientException {
         return send(HttpMethod.POST, newMobileAppContent);
     }
 
@@ -119,7 +124,7 @@ public class MobileAppContentRequest extends BaseRequest {
      * @param newMobileAppContent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MobileAppContent newMobileAppContent, final ICallback<? super MobileAppContent> callback) {
+    public void put(@Nonnull final MobileAppContent newMobileAppContent, @Nonnull final ICallback<? super MobileAppContent> callback) {
         send(HttpMethod.PUT, callback, newMobileAppContent);
     }
 
@@ -130,7 +135,8 @@ public class MobileAppContentRequest extends BaseRequest {
      * @return the created MobileAppContent
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MobileAppContent put(final MobileAppContent newMobileAppContent) throws ClientException {
+    @Nullable
+    public MobileAppContent put(@Nonnull final MobileAppContent newMobileAppContent) throws ClientException {
         return send(HttpMethod.PUT, newMobileAppContent);
     }
 
@@ -140,7 +146,8 @@ public class MobileAppContentRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public MobileAppContentRequest select(final String value) {
+     @Nonnull
+     public MobileAppContentRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (MobileAppContentRequest)this;
      }
@@ -151,7 +158,8 @@ public class MobileAppContentRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public MobileAppContentRequest expand(final String value) {
+     @Nonnull
+     public MobileAppContentRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (MobileAppContentRequest)this;
      }

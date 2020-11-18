@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.UserActivity;
 import com.microsoft.graph.models.extensions.ActivityHistoryItem;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class ActivityHistoryItemCollectionRequest extends BaseCollectionRequest<
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ActivityHistoryItemCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ActivityHistoryItemCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ActivityHistoryItemCollectionResponse.class, ActivityHistoryItemCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ActivityHistoryItemCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super ActivityHistoryItemCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class ActivityHistoryItemCollectionRequest extends BaseCollectionRequest<
         });
     }
 
+    @Nonnull
     public ActivityHistoryItemCollectionPage get() throws ClientException {
         final ActivityHistoryItemCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final ActivityHistoryItem newActivityHistoryItem, final ICallback<? super ActivityHistoryItem> callback) {
+    public void post(@Nonnull final ActivityHistoryItem newActivityHistoryItem, @Nonnull final ICallback<? super ActivityHistoryItem> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ActivityHistoryItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newActivityHistoryItem, callback);
     }
 
-    public ActivityHistoryItem post(final ActivityHistoryItem newActivityHistoryItem) throws ClientException {
+    @Nonnull
+    public ActivityHistoryItem post(@Nonnull final ActivityHistoryItem newActivityHistoryItem) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ActivityHistoryItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class ActivityHistoryItemCollectionRequest extends BaseCollectionRequest<
      * @param value the expand clause
      * @return the updated request
      */
-    public ActivityHistoryItemCollectionRequest expand(final String value) {
+    @Nonnull
+    public ActivityHistoryItemCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ActivityHistoryItemCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class ActivityHistoryItemCollectionRequest extends BaseCollectionRequest<
      * @param value the filter clause
      * @return the updated request
      */
-    public ActivityHistoryItemCollectionRequest filter(final String value) {
+    @Nonnull
+    public ActivityHistoryItemCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ActivityHistoryItemCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class ActivityHistoryItemCollectionRequest extends BaseCollectionRequest<
      * @param value the order by clause
      * @return the updated request
      */
-    public ActivityHistoryItemCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ActivityHistoryItemCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ActivityHistoryItemCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class ActivityHistoryItemCollectionRequest extends BaseCollectionRequest<
      * @param value the select clause
      * @return the updated request
      */
-    public ActivityHistoryItemCollectionRequest select(final String value) {
+    @Nonnull
+    public ActivityHistoryItemCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ActivityHistoryItemCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class ActivityHistoryItemCollectionRequest extends BaseCollectionRequest<
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ActivityHistoryItemCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ActivityHistoryItemCollectionRequest)this;
@@ -133,6 +142,7 @@ public class ActivityHistoryItemCollectionRequest extends BaseCollectionRequest<
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ActivityHistoryItemCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (ActivityHistoryItemCollectionRequest)this;
@@ -144,11 +154,13 @@ public class ActivityHistoryItemCollectionRequest extends BaseCollectionRequest<
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ActivityHistoryItemCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ActivityHistoryItemCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (ActivityHistoryItemCollectionRequest)this;
     }
-    public ActivityHistoryItemCollectionPage buildFromResponse(final ActivityHistoryItemCollectionResponse response) {
+    @Nonnull
+    public ActivityHistoryItemCollectionPage buildFromResponse(@Nonnull final ActivityHistoryItemCollectionResponse response) {
         final ActivityHistoryItemCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ActivityHistoryItemCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

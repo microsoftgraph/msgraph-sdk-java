@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.PolicyRoot;
 import com.microsoft.graph.models.extensions.ConditionalAccessPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class ConditionalAccessPolicyCollectionRequest extends BaseCollectionRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ConditionalAccessPolicyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ConditionalAccessPolicyCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ConditionalAccessPolicyCollectionResponse.class, ConditionalAccessPolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ConditionalAccessPolicyCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super ConditionalAccessPolicyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class ConditionalAccessPolicyCollectionRequest extends BaseCollectionRequ
         });
     }
 
+    @Nonnull
     public ConditionalAccessPolicyCollectionPage get() throws ClientException {
         final ConditionalAccessPolicyCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final ConditionalAccessPolicy newConditionalAccessPolicy, final ICallback<? super ConditionalAccessPolicy> callback) {
+    public void post(@Nonnull final ConditionalAccessPolicy newConditionalAccessPolicy, @Nonnull final ICallback<? super ConditionalAccessPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ConditionalAccessPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newConditionalAccessPolicy, callback);
     }
 
-    public ConditionalAccessPolicy post(final ConditionalAccessPolicy newConditionalAccessPolicy) throws ClientException {
+    @Nonnull
+    public ConditionalAccessPolicy post(@Nonnull final ConditionalAccessPolicy newConditionalAccessPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ConditionalAccessPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class ConditionalAccessPolicyCollectionRequest extends BaseCollectionRequ
      * @param value the expand clause
      * @return the updated request
      */
-    public ConditionalAccessPolicyCollectionRequest expand(final String value) {
+    @Nonnull
+    public ConditionalAccessPolicyCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ConditionalAccessPolicyCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class ConditionalAccessPolicyCollectionRequest extends BaseCollectionRequ
      * @param value the filter clause
      * @return the updated request
      */
-    public ConditionalAccessPolicyCollectionRequest filter(final String value) {
+    @Nonnull
+    public ConditionalAccessPolicyCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ConditionalAccessPolicyCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class ConditionalAccessPolicyCollectionRequest extends BaseCollectionRequ
      * @param value the order by clause
      * @return the updated request
      */
-    public ConditionalAccessPolicyCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ConditionalAccessPolicyCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ConditionalAccessPolicyCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class ConditionalAccessPolicyCollectionRequest extends BaseCollectionRequ
      * @param value the select clause
      * @return the updated request
      */
-    public ConditionalAccessPolicyCollectionRequest select(final String value) {
+    @Nonnull
+    public ConditionalAccessPolicyCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ConditionalAccessPolicyCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class ConditionalAccessPolicyCollectionRequest extends BaseCollectionRequ
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ConditionalAccessPolicyCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ConditionalAccessPolicyCollectionRequest)this;
@@ -133,6 +142,7 @@ public class ConditionalAccessPolicyCollectionRequest extends BaseCollectionRequ
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ConditionalAccessPolicyCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (ConditionalAccessPolicyCollectionRequest)this;
@@ -144,11 +154,13 @@ public class ConditionalAccessPolicyCollectionRequest extends BaseCollectionRequ
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ConditionalAccessPolicyCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ConditionalAccessPolicyCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (ConditionalAccessPolicyCollectionRequest)this;
     }
-    public ConditionalAccessPolicyCollectionPage buildFromResponse(final ConditionalAccessPolicyCollectionResponse response) {
+    @Nonnull
+    public ConditionalAccessPolicyCollectionPage buildFromResponse(@Nonnull final ConditionalAccessPolicyCollectionResponse response) {
         final ConditionalAccessPolicyCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ConditionalAccessPolicyCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

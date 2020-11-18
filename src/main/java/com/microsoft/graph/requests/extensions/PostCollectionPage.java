@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Post;
 import com.microsoft.graph.requests.extensions.PostCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.PostCollectionPage;
 import com.microsoft.graph.requests.extensions.PostCollectionResponse;
@@ -22,7 +24,7 @@ public class PostCollectionPage extends BaseCollectionPage<Post, PostCollectionR
      * @param response the serialized PostCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public PostCollectionPage(final PostCollectionResponse response, final PostCollectionRequestBuilder builder) {
+    public PostCollectionPage(@Nonnull final PostCollectionResponse response, @Nonnull final PostCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

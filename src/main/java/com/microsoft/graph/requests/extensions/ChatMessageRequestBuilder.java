@@ -14,6 +14,8 @@ import com.microsoft.graph.requests.extensions.ChatMessageCollectionRequestBuild
 import com.microsoft.graph.requests.extensions.ChatMessageRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -31,7 +33,7 @@ public class ChatMessageRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ChatMessageRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ChatMessageRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -41,7 +43,8 @@ public class ChatMessageRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ChatMessageRequest instance
      */
-    public ChatMessageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ChatMessageRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,23 +54,28 @@ public class ChatMessageRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ChatMessageRequest instance
      */
-    public ChatMessageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ChatMessageRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ChatMessageRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    @Nonnull
     public ChatMessageHostedContentCollectionRequestBuilder hostedContents() {
         return new ChatMessageHostedContentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("hostedContents"), getClient(), null);
     }
 
-    public ChatMessageHostedContentRequestBuilder hostedContents(final String id) {
+    @Nonnull
+    public ChatMessageHostedContentRequestBuilder hostedContents(@Nonnull final String id) {
         return new ChatMessageHostedContentRequestBuilder(getRequestUrlWithAdditionalSegment("hostedContents") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public ChatMessageCollectionRequestBuilder replies() {
         return new ChatMessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("replies"), getClient(), null);
     }
 
-    public ChatMessageRequestBuilder replies(final String id) {
+    @Nonnull
+    public ChatMessageRequestBuilder replies(@Nonnull final String id) {
         return new ChatMessageRequestBuilder(getRequestUrlWithAdditionalSegment("replies") + "/" + id, getClient(), null);
     }
 }

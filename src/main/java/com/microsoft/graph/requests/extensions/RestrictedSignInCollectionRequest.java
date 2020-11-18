@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.AuditLogRoot;
 import com.microsoft.graph.models.extensions.RestrictedSignIn;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class RestrictedSignInCollectionRequest extends BaseCollectionRequest<Res
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RestrictedSignInCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RestrictedSignInCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, RestrictedSignInCollectionResponse.class, RestrictedSignInCollectionPage.class);
     }
 
-    public void get(final ICallback<? super RestrictedSignInCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super RestrictedSignInCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class RestrictedSignInCollectionRequest extends BaseCollectionRequest<Res
         });
     }
 
+    @Nonnull
     public RestrictedSignInCollectionPage get() throws ClientException {
         final RestrictedSignInCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final RestrictedSignIn newRestrictedSignIn, final ICallback<? super RestrictedSignIn> callback) {
+    public void post(@Nonnull final RestrictedSignIn newRestrictedSignIn, @Nonnull final ICallback<? super RestrictedSignIn> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RestrictedSignInRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newRestrictedSignIn, callback);
     }
 
-    public RestrictedSignIn post(final RestrictedSignIn newRestrictedSignIn) throws ClientException {
+    @Nonnull
+    public RestrictedSignIn post(@Nonnull final RestrictedSignIn newRestrictedSignIn) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new RestrictedSignInRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class RestrictedSignInCollectionRequest extends BaseCollectionRequest<Res
      * @param value the expand clause
      * @return the updated request
      */
-    public RestrictedSignInCollectionRequest expand(final String value) {
+    @Nonnull
+    public RestrictedSignInCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (RestrictedSignInCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class RestrictedSignInCollectionRequest extends BaseCollectionRequest<Res
      * @param value the filter clause
      * @return the updated request
      */
-    public RestrictedSignInCollectionRequest filter(final String value) {
+    @Nonnull
+    public RestrictedSignInCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (RestrictedSignInCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class RestrictedSignInCollectionRequest extends BaseCollectionRequest<Res
      * @param value the order by clause
      * @return the updated request
      */
-    public RestrictedSignInCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public RestrictedSignInCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (RestrictedSignInCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class RestrictedSignInCollectionRequest extends BaseCollectionRequest<Res
      * @param value the select clause
      * @return the updated request
      */
-    public RestrictedSignInCollectionRequest select(final String value) {
+    @Nonnull
+    public RestrictedSignInCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (RestrictedSignInCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class RestrictedSignInCollectionRequest extends BaseCollectionRequest<Res
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public RestrictedSignInCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (RestrictedSignInCollectionRequest)this;
@@ -133,6 +142,7 @@ public class RestrictedSignInCollectionRequest extends BaseCollectionRequest<Res
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public RestrictedSignInCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (RestrictedSignInCollectionRequest)this;
@@ -144,11 +154,13 @@ public class RestrictedSignInCollectionRequest extends BaseCollectionRequest<Res
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public RestrictedSignInCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public RestrictedSignInCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (RestrictedSignInCollectionRequest)this;
     }
-    public RestrictedSignInCollectionPage buildFromResponse(final RestrictedSignInCollectionResponse response) {
+    @Nonnull
+    public RestrictedSignInCollectionPage buildFromResponse(@Nonnull final RestrictedSignInCollectionResponse response) {
         final RestrictedSignInCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new RestrictedSignInCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

@@ -30,6 +30,9 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Collections;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.microsoft.graph.core.ClientException;
@@ -132,14 +135,14 @@ public class GraphServiceException extends ClientException {
      * @param error           the error response if available
      * @param verbose         the error response log level
      */
-    protected GraphServiceException(final String method,
-                                    final String url,
-                                    final List<String> requestHeaders,
-                                    final String requestBody,
+    protected GraphServiceException(@Nonnull final String method,
+                                    @Nonnull final String url,
+                                    @Nonnull final List<String> requestHeaders,
+                                    @Nullable final String requestBody,
                                     final int responseCode,
-                                    final String responseMessage,
-                                    final List<String> responseHeaders,
-                                    final GraphErrorResponse error,
+                                    @Nullable final String responseMessage,
+                                    @Nonnull final List<String> responseHeaders,
+                                    @Nullable final GraphErrorResponse error,
                                     final boolean verbose) {
         super(responseMessage, null);
         this.method = method;
@@ -166,11 +169,13 @@ public class GraphServiceException extends ClientException {
      *
      * @return The HTTP response message
      */
+    @Nullable
     public String getResponseMessage() {
     	return responseMessage;
     }
 
     @Override
+    @Nullable
     public String getMessage() {
         return getMessage(verbose);
     }
@@ -188,6 +193,7 @@ public class GraphServiceException extends ClientException {
      * Gets the response headers
      * @return the response headers
      */
+    @Nonnull
     public List<String> getResponseHeaders() {
         return responseHeaders;
     }
@@ -196,6 +202,7 @@ public class GraphServiceException extends ClientException {
      * Gets the error returned by the service
      * @return the error returned by the service
      */
+    @Nullable
     public GraphErrorResponse getError() {
         return error;
     }
@@ -204,6 +211,7 @@ public class GraphServiceException extends ClientException {
      * Gets the HTTP method of the request
      * @return the HTTP method of the request
      */
+    @Nonnull
     public String getMethod() {
         return method;
     }
@@ -212,6 +220,7 @@ public class GraphServiceException extends ClientException {
      * Gets the URL of the request
      * @return the URL of the request
      */
+    @Nonnull
     public String getUrl() {
         return url;
     }
@@ -220,6 +229,7 @@ public class GraphServiceException extends ClientException {
      * Gets the request headers
      * @return the request headers
      */
+    @Nonnull
     public List<String> getRequestHeaders() {
         return requestHeaders;
     }
@@ -230,6 +240,7 @@ public class GraphServiceException extends ClientException {
      * @param verbose if the message should be brief or more verbose
      * @return        the message.
      */
+    @Nullable
     public String getMessage(final boolean verbose) {
         final StringBuilder sb = new StringBuilder();
         if (error != null && error.error != null) {
@@ -297,6 +308,7 @@ public class GraphServiceException extends ClientException {
      *
      * @return the error message
      */
+    @Nullable
     public GraphError getServiceError() {
         return error.error;
     }
@@ -313,11 +325,12 @@ public class GraphServiceException extends ClientException {
      * @return             the new GraphServiceException instance
      * @throws IOException an exception occurs if there were any problems processing the connection
      */
-    public static <T> GraphServiceException createFromResponse(final IHttpRequest request,
-                                                                 final T serializable,
-                                                                 final ISerializer serializer,
-                                                                 final Response response,
-                                                                 final ILogger logger)
+    @Nonnull
+    public static <T> GraphServiceException createFromResponse(@Nonnull final IHttpRequest request,
+                                                                 @Nullable final T serializable,
+                                                                 @Nonnull final ISerializer serializer,
+                                                                 @Nullable final Response response,
+                                                                 @Nonnull final ILogger logger)
             throws IOException {
         final String method = response.request().method();
         final String url = request.getRequestUrl().toString();

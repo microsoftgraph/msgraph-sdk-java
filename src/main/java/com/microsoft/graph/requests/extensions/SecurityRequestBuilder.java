@@ -16,6 +16,8 @@ import com.microsoft.graph.requests.extensions.SecureScoreCollectionRequestBuild
 import com.microsoft.graph.requests.extensions.SecureScoreRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -33,7 +35,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SecurityRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SecurityRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -43,7 +45,8 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the SecurityRequest instance
      */
-    public SecurityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public SecurityRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -53,30 +56,37 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the SecurityRequest instance
      */
-    public SecurityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public SecurityRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.SecurityRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    @Nonnull
     public AlertCollectionRequestBuilder alerts() {
         return new AlertCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("alerts"), getClient(), null);
     }
 
-    public AlertRequestBuilder alerts(final String id) {
+    @Nonnull
+    public AlertRequestBuilder alerts(@Nonnull final String id) {
         return new AlertRequestBuilder(getRequestUrlWithAdditionalSegment("alerts") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public SecureScoreControlProfileCollectionRequestBuilder secureScoreControlProfiles() {
         return new SecureScoreControlProfileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("secureScoreControlProfiles"), getClient(), null);
     }
 
-    public SecureScoreControlProfileRequestBuilder secureScoreControlProfiles(final String id) {
+    @Nonnull
+    public SecureScoreControlProfileRequestBuilder secureScoreControlProfiles(@Nonnull final String id) {
         return new SecureScoreControlProfileRequestBuilder(getRequestUrlWithAdditionalSegment("secureScoreControlProfiles") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public SecureScoreCollectionRequestBuilder secureScores() {
         return new SecureScoreCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("secureScores"), getClient(), null);
     }
 
-    public SecureScoreRequestBuilder secureScores(final String id) {
+    @Nonnull
+    public SecureScoreRequestBuilder secureScores(@Nonnull final String id) {
         return new SecureScoreRequestBuilder(getRequestUrlWithAdditionalSegment("secureScores") + "/" + id, getClient(), null);
     }
 }

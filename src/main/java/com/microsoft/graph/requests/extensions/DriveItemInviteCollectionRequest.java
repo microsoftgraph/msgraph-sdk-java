@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DriveRecipient;
 import com.microsoft.graph.models.extensions.Permission;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DriveItemInviteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemInviteCollectionPage;
@@ -39,13 +41,13 @@ public class DriveItemInviteCollectionRequest extends BaseCollectionRequest<Driv
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DriveItemInviteCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveItemInviteCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DriveItemInviteCollectionResponse.class, DriveItemInviteCollectionPage.class);
         body = new DriveItemInviteBody();
     }
 
 
-    public void post(final ICallback<? super DriveItemInviteCollectionPage> callback) {
+    public void post(@Nonnull final ICallback<? super DriveItemInviteCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,13 +61,15 @@ public class DriveItemInviteCollectionRequest extends BaseCollectionRequest<Driv
         });
     }
 
+    @Nullable
     public DriveItemInviteCollectionPage post() throws ClientException {
         final DriveItemInviteCollectionResponse response = post(body);
         return buildFromResponse(response);
     }
 
 
-    public DriveItemInviteCollectionPage buildFromResponse(final DriveItemInviteCollectionResponse response) {
+    @Nonnull
+    public DriveItemInviteCollectionPage buildFromResponse(@Nonnull final DriveItemInviteCollectionResponse response) {
         final DriveItemInviteCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new DriveItemInviteCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, (Boolean) null, (java.util.List<String>) null, (Boolean) null, (String) null, (java.util.List<DriveRecipient>) null, (String) null, (String) null);
@@ -83,7 +87,8 @@ public class DriveItemInviteCollectionRequest extends BaseCollectionRequest<Driv
      * @param value the select clause
      * @return the updated request
      */
-    public DriveItemInviteCollectionRequest select(final String value) {
+    @Nonnull
+    public DriveItemInviteCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DriveItemInviteCollectionRequest)this;
     }
@@ -94,6 +99,7 @@ public class DriveItemInviteCollectionRequest extends BaseCollectionRequest<Driv
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DriveItemInviteCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (DriveItemInviteCollectionRequest)this;
@@ -105,7 +111,8 @@ public class DriveItemInviteCollectionRequest extends BaseCollectionRequest<Driv
      * @param value the expand clause
      * @return the updated request
      */
-    public DriveItemInviteCollectionRequest expand(final String value) {
+    @Nonnull
+    public DriveItemInviteCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DriveItemInviteCollectionRequest)this;
     }
@@ -116,7 +123,8 @@ public class DriveItemInviteCollectionRequest extends BaseCollectionRequest<Driv
      * @param value the filter clause
      * @return the updated request
      */
-    public DriveItemInviteCollectionRequest filter(final String value) {
+    @Nonnull
+    public DriveItemInviteCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DriveItemInviteCollectionRequest)this;
     }
@@ -127,7 +135,8 @@ public class DriveItemInviteCollectionRequest extends BaseCollectionRequest<Driv
      * @param value the order by clause
      * @return the updated request
      */
-    public DriveItemInviteCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DriveItemInviteCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DriveItemInviteCollectionRequest)this;
     }

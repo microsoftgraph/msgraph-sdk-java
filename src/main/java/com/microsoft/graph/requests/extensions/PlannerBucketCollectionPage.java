@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.PlannerBucket;
 import com.microsoft.graph.requests.extensions.PlannerBucketCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.PlannerBucketCollectionPage;
 import com.microsoft.graph.requests.extensions.PlannerBucketCollectionResponse;
@@ -22,7 +24,7 @@ public class PlannerBucketCollectionPage extends BaseCollectionPage<PlannerBucke
      * @param response the serialized PlannerBucketCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public PlannerBucketCollectionPage(final PlannerBucketCollectionResponse response, final PlannerBucketCollectionRequestBuilder builder) {
+    public PlannerBucketCollectionPage(@Nonnull final PlannerBucketCollectionResponse response, @Nonnull final PlannerBucketCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SoftwareUpdateStatusSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
@@ -31,15 +33,16 @@ public class SoftwareUpdateStatusSummaryWithReferenceRequest extends BaseRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SoftwareUpdateStatusSummaryWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SoftwareUpdateStatusSummaryWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SoftwareUpdateStatusSummary.class);
     }
 
-    public void post(final SoftwareUpdateStatusSummary newSoftwareUpdateStatusSummary, final IJsonBackedObject payload, final ICallback<? super SoftwareUpdateStatusSummary> callback) {
+    public void post(@Nonnull final SoftwareUpdateStatusSummary newSoftwareUpdateStatusSummary, @Nullable final IJsonBackedObject payload, @Nonnull final ICallback<? super SoftwareUpdateStatusSummary> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
-    public SoftwareUpdateStatusSummary post(final SoftwareUpdateStatusSummary newSoftwareUpdateStatusSummary, final IJsonBackedObject payload) throws ClientException {
+    @Nullable
+    public SoftwareUpdateStatusSummary post(@Nonnull final SoftwareUpdateStatusSummary newSoftwareUpdateStatusSummary, @Nullable final IJsonBackedObject payload) throws ClientException {
         IJsonBackedObject response = send(HttpMethod.POST, payload);
         if (response != null){
             return newSoftwareUpdateStatusSummary;
@@ -47,15 +50,16 @@ public class SoftwareUpdateStatusSummaryWithReferenceRequest extends BaseRequest
         return null;
     }
 
-    public void get(final ICallback<? super SoftwareUpdateStatusSummary> callback) {
+    public void get(@Nonnull final ICallback<? super SoftwareUpdateStatusSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
+    @Nullable
     public SoftwareUpdateStatusSummary get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<? super SoftwareUpdateStatusSummary> callback) {
+	public void delete(@Nonnull final ICallback<? super SoftwareUpdateStatusSummary> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,11 +67,12 @@ public class SoftwareUpdateStatusSummaryWithReferenceRequest extends BaseRequest
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final SoftwareUpdateStatusSummary sourceSoftwareUpdateStatusSummary, final ICallback<? super SoftwareUpdateStatusSummary> callback) {
+	public void patch(@Nonnull final SoftwareUpdateStatusSummary sourceSoftwareUpdateStatusSummary, @Nonnull final ICallback<? super SoftwareUpdateStatusSummary> callback) {
 		send(HttpMethod.PATCH, callback, sourceSoftwareUpdateStatusSummary);
 	}
 
-	public SoftwareUpdateStatusSummary patch(final SoftwareUpdateStatusSummary sourceSoftwareUpdateStatusSummary) throws ClientException {
+    @Nullable
+	public SoftwareUpdateStatusSummary patch(@Nonnull final SoftwareUpdateStatusSummary sourceSoftwareUpdateStatusSummary) throws ClientException {
 		return send(HttpMethod.PATCH, sourceSoftwareUpdateStatusSummary);
 	}
 
@@ -78,7 +83,8 @@ public class SoftwareUpdateStatusSummaryWithReferenceRequest extends BaseRequest
      * @param value the select clause
      * @return the updated request
      */
-    public SoftwareUpdateStatusSummaryWithReferenceRequest select(final String value) {
+    @Nonnull
+    public SoftwareUpdateStatusSummaryWithReferenceRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (SoftwareUpdateStatusSummaryWithReferenceRequest)this;
     }
@@ -89,7 +95,8 @@ public class SoftwareUpdateStatusSummaryWithReferenceRequest extends BaseRequest
      * @param value the expand clause
      * @return the updated request
      */
-    public SoftwareUpdateStatusSummaryWithReferenceRequest expand(final String value) {
+    @Nonnull
+    public SoftwareUpdateStatusSummaryWithReferenceRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (SoftwareUpdateStatusSummaryWithReferenceRequest)this;
     }

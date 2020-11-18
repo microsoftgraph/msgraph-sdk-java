@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Shift;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class ShiftRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ShiftRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ShiftRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Shift.class);
     }
 
@@ -37,7 +39,7 @@ public class ShiftRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Shift> callback) {
+    public void get(@Nonnull final ICallback<? super Shift> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class ShiftRequest extends BaseRequest {
      * @return the Shift from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Shift get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class ShiftRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Shift> callback) {
+    public void delete(@Nonnull final ICallback<? super Shift> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class ShiftRequest extends BaseRequest {
      * @param sourceShift the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Shift sourceShift, final ICallback<? super Shift> callback) {
+    public void patch(@Nonnull final Shift sourceShift, @Nonnull final ICallback<? super Shift> callback) {
         send(HttpMethod.PATCH, callback, sourceShift);
     }
 
@@ -86,7 +89,8 @@ public class ShiftRequest extends BaseRequest {
      * @return the updated Shift
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Shift patch(final Shift sourceShift) throws ClientException {
+    @Nullable
+    public Shift patch(@Nonnull final Shift sourceShift) throws ClientException {
         return send(HttpMethod.PATCH, sourceShift);
     }
 
@@ -96,7 +100,7 @@ public class ShiftRequest extends BaseRequest {
      * @param newShift the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Shift newShift, final ICallback<? super Shift> callback) {
+    public void post(@Nonnull final Shift newShift, @Nonnull final ICallback<? super Shift> callback) {
         send(HttpMethod.POST, callback, newShift);
     }
 
@@ -107,7 +111,8 @@ public class ShiftRequest extends BaseRequest {
      * @return the created Shift
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Shift post(final Shift newShift) throws ClientException {
+    @Nullable
+    public Shift post(@Nonnull final Shift newShift) throws ClientException {
         return send(HttpMethod.POST, newShift);
     }
 
@@ -117,7 +122,7 @@ public class ShiftRequest extends BaseRequest {
      * @param newShift the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Shift newShift, final ICallback<? super Shift> callback) {
+    public void put(@Nonnull final Shift newShift, @Nonnull final ICallback<? super Shift> callback) {
         send(HttpMethod.PUT, callback, newShift);
     }
 
@@ -128,7 +133,8 @@ public class ShiftRequest extends BaseRequest {
      * @return the created Shift
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Shift put(final Shift newShift) throws ClientException {
+    @Nullable
+    public Shift put(@Nonnull final Shift newShift) throws ClientException {
         return send(HttpMethod.PUT, newShift);
     }
 
@@ -138,7 +144,8 @@ public class ShiftRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ShiftRequest select(final String value) {
+     @Nonnull
+     public ShiftRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ShiftRequest)this;
      }
@@ -149,7 +156,8 @@ public class ShiftRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ShiftRequest expand(final String value) {
+     @Nonnull
+     public ShiftRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ShiftRequest)this;
      }

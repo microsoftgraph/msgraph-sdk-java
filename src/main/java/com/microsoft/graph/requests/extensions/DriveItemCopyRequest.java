@@ -7,6 +7,8 @@ import com.microsoft.graph.models.extensions.DriveItemCopyBody;
 import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.requests.extensions.DriveItemCopyRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,15 +31,16 @@ public class DriveItemCopyRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DriveItemCopyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveItemCopyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DriveItem.class);
         body = new DriveItemCopyBody();
     }
 
-    public void post(final ICallback<? super DriveItem> callback) {
+    public void post(@Nonnull final ICallback<? super DriveItem> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    @Nullable
     public DriveItem post() throws ClientException {
         return send(HttpMethod.POST, body);
     }
@@ -48,7 +51,8 @@ public class DriveItemCopyRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public DriveItemCopyRequest select(final String value) {
+    @Nonnull
+    public DriveItemCopyRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DriveItemCopyRequest)this;
     }
@@ -59,6 +63,7 @@ public class DriveItemCopyRequest extends BaseRequest {
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DriveItemCopyRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (DriveItemCopyRequest)this;
@@ -70,7 +75,8 @@ public class DriveItemCopyRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public DriveItemCopyRequest expand(final String value) {
+    @Nonnull
+    public DriveItemCopyRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DriveItemCopyRequest)this;
     }

@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DirectoryObjectPartnerReference;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class DirectoryObjectPartnerReferenceRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DirectoryObjectPartnerReferenceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryObjectPartnerReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DirectoryObjectPartnerReference.class);
     }
 
@@ -37,7 +39,7 @@ public class DirectoryObjectPartnerReferenceRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DirectoryObjectPartnerReference> callback) {
+    public void get(@Nonnull final ICallback<? super DirectoryObjectPartnerReference> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class DirectoryObjectPartnerReferenceRequest extends BaseRequest {
      * @return the DirectoryObjectPartnerReference from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DirectoryObjectPartnerReference get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class DirectoryObjectPartnerReferenceRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DirectoryObjectPartnerReference> callback) {
+    public void delete(@Nonnull final ICallback<? super DirectoryObjectPartnerReference> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class DirectoryObjectPartnerReferenceRequest extends BaseRequest {
      * @param sourceDirectoryObjectPartnerReference the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DirectoryObjectPartnerReference sourceDirectoryObjectPartnerReference, final ICallback<? super DirectoryObjectPartnerReference> callback) {
+    public void patch(@Nonnull final DirectoryObjectPartnerReference sourceDirectoryObjectPartnerReference, @Nonnull final ICallback<? super DirectoryObjectPartnerReference> callback) {
         send(HttpMethod.PATCH, callback, sourceDirectoryObjectPartnerReference);
     }
 
@@ -86,7 +89,8 @@ public class DirectoryObjectPartnerReferenceRequest extends BaseRequest {
      * @return the updated DirectoryObjectPartnerReference
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DirectoryObjectPartnerReference patch(final DirectoryObjectPartnerReference sourceDirectoryObjectPartnerReference) throws ClientException {
+    @Nullable
+    public DirectoryObjectPartnerReference patch(@Nonnull final DirectoryObjectPartnerReference sourceDirectoryObjectPartnerReference) throws ClientException {
         return send(HttpMethod.PATCH, sourceDirectoryObjectPartnerReference);
     }
 
@@ -96,7 +100,7 @@ public class DirectoryObjectPartnerReferenceRequest extends BaseRequest {
      * @param newDirectoryObjectPartnerReference the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DirectoryObjectPartnerReference newDirectoryObjectPartnerReference, final ICallback<? super DirectoryObjectPartnerReference> callback) {
+    public void post(@Nonnull final DirectoryObjectPartnerReference newDirectoryObjectPartnerReference, @Nonnull final ICallback<? super DirectoryObjectPartnerReference> callback) {
         send(HttpMethod.POST, callback, newDirectoryObjectPartnerReference);
     }
 
@@ -107,7 +111,8 @@ public class DirectoryObjectPartnerReferenceRequest extends BaseRequest {
      * @return the created DirectoryObjectPartnerReference
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DirectoryObjectPartnerReference post(final DirectoryObjectPartnerReference newDirectoryObjectPartnerReference) throws ClientException {
+    @Nullable
+    public DirectoryObjectPartnerReference post(@Nonnull final DirectoryObjectPartnerReference newDirectoryObjectPartnerReference) throws ClientException {
         return send(HttpMethod.POST, newDirectoryObjectPartnerReference);
     }
 
@@ -117,7 +122,7 @@ public class DirectoryObjectPartnerReferenceRequest extends BaseRequest {
      * @param newDirectoryObjectPartnerReference the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DirectoryObjectPartnerReference newDirectoryObjectPartnerReference, final ICallback<? super DirectoryObjectPartnerReference> callback) {
+    public void put(@Nonnull final DirectoryObjectPartnerReference newDirectoryObjectPartnerReference, @Nonnull final ICallback<? super DirectoryObjectPartnerReference> callback) {
         send(HttpMethod.PUT, callback, newDirectoryObjectPartnerReference);
     }
 
@@ -128,7 +133,8 @@ public class DirectoryObjectPartnerReferenceRequest extends BaseRequest {
      * @return the created DirectoryObjectPartnerReference
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DirectoryObjectPartnerReference put(final DirectoryObjectPartnerReference newDirectoryObjectPartnerReference) throws ClientException {
+    @Nullable
+    public DirectoryObjectPartnerReference put(@Nonnull final DirectoryObjectPartnerReference newDirectoryObjectPartnerReference) throws ClientException {
         return send(HttpMethod.PUT, newDirectoryObjectPartnerReference);
     }
 
@@ -138,7 +144,8 @@ public class DirectoryObjectPartnerReferenceRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public DirectoryObjectPartnerReferenceRequest select(final String value) {
+     @Nonnull
+     public DirectoryObjectPartnerReferenceRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (DirectoryObjectPartnerReferenceRequest)this;
      }
@@ -149,7 +156,8 @@ public class DirectoryObjectPartnerReferenceRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public DirectoryObjectPartnerReferenceRequest expand(final String value) {
+     @Nonnull
+     public DirectoryObjectPartnerReferenceRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (DirectoryObjectPartnerReferenceRequest)this;
      }

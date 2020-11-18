@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberGroupsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberGroupsCollectionPage;
@@ -33,7 +35,7 @@ public class DirectoryObjectCheckMemberGroupsCollectionPage extends BaseCollecti
      * @param response The serialized DirectoryObjectCheckMemberGroupsCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public DirectoryObjectCheckMemberGroupsCollectionPage(final DirectoryObjectCheckMemberGroupsCollectionResponse response, final DirectoryObjectCheckMemberGroupsCollectionRequestBuilder builder) {
+    public DirectoryObjectCheckMemberGroupsCollectionPage(@Nonnull final DirectoryObjectCheckMemberGroupsCollectionResponse response, @Nonnull final DirectoryObjectCheckMemberGroupsCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

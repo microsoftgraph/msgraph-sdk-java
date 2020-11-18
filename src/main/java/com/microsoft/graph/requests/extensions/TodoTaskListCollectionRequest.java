@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Todo;
 import com.microsoft.graph.models.extensions.TodoTaskList;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class TodoTaskListCollectionRequest extends BaseCollectionRequest<TodoTas
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TodoTaskListCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TodoTaskListCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TodoTaskListCollectionResponse.class, TodoTaskListCollectionPage.class);
     }
 
-    public void get(final ICallback<? super TodoTaskListCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super TodoTaskListCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class TodoTaskListCollectionRequest extends BaseCollectionRequest<TodoTas
         });
     }
 
+    @Nonnull
     public TodoTaskListCollectionPage get() throws ClientException {
         final TodoTaskListCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final TodoTaskList newTodoTaskList, final ICallback<? super TodoTaskList> callback) {
+    public void post(@Nonnull final TodoTaskList newTodoTaskList, @Nonnull final ICallback<? super TodoTaskList> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TodoTaskListRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newTodoTaskList, callback);
     }
 
-    public TodoTaskList post(final TodoTaskList newTodoTaskList) throws ClientException {
+    @Nonnull
+    public TodoTaskList post(@Nonnull final TodoTaskList newTodoTaskList) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TodoTaskListRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class TodoTaskListCollectionRequest extends BaseCollectionRequest<TodoTas
      * @param value the expand clause
      * @return the updated request
      */
-    public TodoTaskListCollectionRequest expand(final String value) {
+    @Nonnull
+    public TodoTaskListCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (TodoTaskListCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class TodoTaskListCollectionRequest extends BaseCollectionRequest<TodoTas
      * @param value the filter clause
      * @return the updated request
      */
-    public TodoTaskListCollectionRequest filter(final String value) {
+    @Nonnull
+    public TodoTaskListCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (TodoTaskListCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class TodoTaskListCollectionRequest extends BaseCollectionRequest<TodoTas
      * @param value the order by clause
      * @return the updated request
      */
-    public TodoTaskListCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public TodoTaskListCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (TodoTaskListCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class TodoTaskListCollectionRequest extends BaseCollectionRequest<TodoTas
      * @param value the select clause
      * @return the updated request
      */
-    public TodoTaskListCollectionRequest select(final String value) {
+    @Nonnull
+    public TodoTaskListCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (TodoTaskListCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class TodoTaskListCollectionRequest extends BaseCollectionRequest<TodoTas
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public TodoTaskListCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (TodoTaskListCollectionRequest)this;
@@ -133,6 +142,7 @@ public class TodoTaskListCollectionRequest extends BaseCollectionRequest<TodoTas
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public TodoTaskListCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (TodoTaskListCollectionRequest)this;
@@ -144,11 +154,13 @@ public class TodoTaskListCollectionRequest extends BaseCollectionRequest<TodoTas
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public TodoTaskListCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public TodoTaskListCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (TodoTaskListCollectionRequest)this;
     }
-    public TodoTaskListCollectionPage buildFromResponse(final TodoTaskListCollectionResponse response) {
+    @Nonnull
+    public TodoTaskListCollectionPage buildFromResponse(@Nonnull final TodoTaskListCollectionResponse response) {
         final TodoTaskListCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new TodoTaskListCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

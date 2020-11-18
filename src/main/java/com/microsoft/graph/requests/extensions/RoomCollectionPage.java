@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Room;
 import com.microsoft.graph.requests.extensions.RoomCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.RoomCollectionPage;
 import com.microsoft.graph.requests.extensions.RoomCollectionResponse;
@@ -22,7 +24,7 @@ public class RoomCollectionPage extends BaseCollectionPage<Room, RoomCollectionR
      * @param response the serialized RoomCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public RoomCollectionPage(final RoomCollectionResponse response, final RoomCollectionRequestBuilder builder) {
+    public RoomCollectionPage(@Nonnull final RoomCollectionResponse response, @Nonnull final RoomCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

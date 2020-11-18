@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceConfiguration;
 import com.microsoft.graph.models.extensions.DeviceConfigurationUserStatus;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DeviceConfigurationUserStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationUserStatusRequestBuilder;
@@ -32,7 +34,7 @@ public class DeviceConfigurationUserStatusCollectionRequestBuilder extends BaseR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceConfigurationUserStatusCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceConfigurationUserStatusCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,7 +44,8 @@ public class DeviceConfigurationUserStatusCollectionRequestBuilder extends BaseR
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public DeviceConfigurationUserStatusCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DeviceConfigurationUserStatusCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +55,13 @@ public class DeviceConfigurationUserStatusCollectionRequestBuilder extends BaseR
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public DeviceConfigurationUserStatusCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DeviceConfigurationUserStatusCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceConfigurationUserStatusCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public DeviceConfigurationUserStatusRequestBuilder byId(final String id) {
+    @Nonnull
+    public DeviceConfigurationUserStatusRequestBuilder byId(@Nonnull final String id) {
         return new DeviceConfigurationUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

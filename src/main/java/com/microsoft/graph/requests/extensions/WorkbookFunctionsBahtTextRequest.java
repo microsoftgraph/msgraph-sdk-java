@@ -7,6 +7,8 @@ import com.microsoft.graph.models.extensions.WorkbookFunctionsBahtTextBody;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsBahtTextRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,15 +31,16 @@ public class WorkbookFunctionsBahtTextRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookFunctionsBahtTextRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsBahtTextRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsBahtTextBody();
     }
 
-    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
+    public void post(@Nonnull final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    @Nullable
     public WorkbookFunctionResult post() throws ClientException {
         return send(HttpMethod.POST, body);
     }
@@ -48,7 +51,8 @@ public class WorkbookFunctionsBahtTextRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public WorkbookFunctionsBahtTextRequest select(final String value) {
+    @Nonnull
+    public WorkbookFunctionsBahtTextRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookFunctionsBahtTextRequest)this;
     }
@@ -59,6 +63,7 @@ public class WorkbookFunctionsBahtTextRequest extends BaseRequest {
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public WorkbookFunctionsBahtTextRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (WorkbookFunctionsBahtTextRequest)this;
@@ -70,7 +75,8 @@ public class WorkbookFunctionsBahtTextRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public WorkbookFunctionsBahtTextRequest expand(final String value) {
+    @Nonnull
+    public WorkbookFunctionsBahtTextRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookFunctionsBahtTextRequest)this;
     }

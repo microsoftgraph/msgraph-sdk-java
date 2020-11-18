@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.WorkbookChartFillRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartLineFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -29,7 +31,7 @@ public class WorkbookChartSeriesFormatRequestBuilder extends BaseRequestBuilder 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartSeriesFormatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartSeriesFormatRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +41,8 @@ public class WorkbookChartSeriesFormatRequestBuilder extends BaseRequestBuilder 
      * @param requestOptions the options for this request
      * @return the WorkbookChartSeriesFormatRequest instance
      */
-    public WorkbookChartSeriesFormatRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WorkbookChartSeriesFormatRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,7 +52,8 @@ public class WorkbookChartSeriesFormatRequestBuilder extends BaseRequestBuilder 
      * @param requestOptions the options for this request
      * @return the WorkbookChartSeriesFormatRequest instance
      */
-    public WorkbookChartSeriesFormatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WorkbookChartSeriesFormatRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookChartSeriesFormatRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -60,6 +64,7 @@ public class WorkbookChartSeriesFormatRequestBuilder extends BaseRequestBuilder 
      *
      * @return the WorkbookChartFillRequestBuilder instance
      */
+    @Nonnull
     public WorkbookChartFillRequestBuilder fill() {
         return new WorkbookChartFillRequestBuilder(getRequestUrlWithAdditionalSegment("fill"), getClient(), null);
     }
@@ -69,6 +74,7 @@ public class WorkbookChartSeriesFormatRequestBuilder extends BaseRequestBuilder 
      *
      * @return the WorkbookChartLineFormatRequestBuilder instance
      */
+    @Nonnull
     public WorkbookChartLineFormatRequestBuilder line() {
         return new WorkbookChartLineFormatRequestBuilder(getRequestUrlWithAdditionalSegment("line"), getClient(), null);
     }

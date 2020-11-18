@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupSettingTemplate;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,11 +36,11 @@ public class GroupSettingTemplateCollectionRequest extends BaseCollectionRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupSettingTemplateCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupSettingTemplateCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupSettingTemplateCollectionResponse.class, GroupSettingTemplateCollectionPage.class);
     }
 
-    public void get(final ICallback<? super GroupSettingTemplateCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super GroupSettingTemplateCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -52,19 +54,21 @@ public class GroupSettingTemplateCollectionRequest extends BaseCollectionRequest
         });
     }
 
+    @Nonnull
     public GroupSettingTemplateCollectionPage get() throws ClientException {
         final GroupSettingTemplateCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final GroupSettingTemplate newGroupSettingTemplate, final ICallback<? super GroupSettingTemplate> callback) {
+    public void post(@Nonnull final GroupSettingTemplate newGroupSettingTemplate, @Nonnull final ICallback<? super GroupSettingTemplate> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GroupSettingTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newGroupSettingTemplate, callback);
     }
 
-    public GroupSettingTemplate post(final GroupSettingTemplate newGroupSettingTemplate) throws ClientException {
+    @Nonnull
+    public GroupSettingTemplate post(@Nonnull final GroupSettingTemplate newGroupSettingTemplate) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new GroupSettingTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -77,7 +81,8 @@ public class GroupSettingTemplateCollectionRequest extends BaseCollectionRequest
      * @param value the expand clause
      * @return the updated request
      */
-    public GroupSettingTemplateCollectionRequest expand(final String value) {
+    @Nonnull
+    public GroupSettingTemplateCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (GroupSettingTemplateCollectionRequest)this;
     }
@@ -88,7 +93,8 @@ public class GroupSettingTemplateCollectionRequest extends BaseCollectionRequest
      * @param value the filter clause
      * @return the updated request
      */
-    public GroupSettingTemplateCollectionRequest filter(final String value) {
+    @Nonnull
+    public GroupSettingTemplateCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (GroupSettingTemplateCollectionRequest)this;
     }
@@ -99,7 +105,8 @@ public class GroupSettingTemplateCollectionRequest extends BaseCollectionRequest
      * @param value the order by clause
      * @return the updated request
      */
-    public GroupSettingTemplateCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public GroupSettingTemplateCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (GroupSettingTemplateCollectionRequest)this;
     }
@@ -110,7 +117,8 @@ public class GroupSettingTemplateCollectionRequest extends BaseCollectionRequest
      * @param value the select clause
      * @return the updated request
      */
-    public GroupSettingTemplateCollectionRequest select(final String value) {
+    @Nonnull
+    public GroupSettingTemplateCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (GroupSettingTemplateCollectionRequest)this;
     }
@@ -121,6 +129,7 @@ public class GroupSettingTemplateCollectionRequest extends BaseCollectionRequest
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public GroupSettingTemplateCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (GroupSettingTemplateCollectionRequest)this;
@@ -132,6 +141,7 @@ public class GroupSettingTemplateCollectionRequest extends BaseCollectionRequest
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public GroupSettingTemplateCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (GroupSettingTemplateCollectionRequest)this;
@@ -143,11 +153,13 @@ public class GroupSettingTemplateCollectionRequest extends BaseCollectionRequest
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public GroupSettingTemplateCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public GroupSettingTemplateCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (GroupSettingTemplateCollectionRequest)this;
     }
-    public GroupSettingTemplateCollectionPage buildFromResponse(final GroupSettingTemplateCollectionResponse response) {
+    @Nonnull
+    public GroupSettingTemplateCollectionPage buildFromResponse(@Nonnull final GroupSettingTemplateCollectionResponse response) {
         final GroupSettingTemplateCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new GroupSettingTemplateCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

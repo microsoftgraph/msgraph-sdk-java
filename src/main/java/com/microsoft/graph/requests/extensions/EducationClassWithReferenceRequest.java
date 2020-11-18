@@ -15,6 +15,8 @@ import com.microsoft.graph.requests.extensions.EducationSchoolRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
@@ -36,15 +38,16 @@ public class EducationClassWithReferenceRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationClassWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationClassWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EducationClass.class);
     }
 
-    public void post(final EducationClass newEducationClass, final IJsonBackedObject payload, final ICallback<? super EducationClass> callback) {
+    public void post(@Nonnull final EducationClass newEducationClass, @Nullable final IJsonBackedObject payload, @Nonnull final ICallback<? super EducationClass> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
-    public EducationClass post(final EducationClass newEducationClass, final IJsonBackedObject payload) throws ClientException {
+    @Nullable
+    public EducationClass post(@Nonnull final EducationClass newEducationClass, @Nullable final IJsonBackedObject payload) throws ClientException {
         IJsonBackedObject response = send(HttpMethod.POST, payload);
         if (response != null){
             return newEducationClass;
@@ -52,15 +55,16 @@ public class EducationClassWithReferenceRequest extends BaseRequest {
         return null;
     }
 
-    public void get(final ICallback<? super EducationClass> callback) {
+    public void get(@Nonnull final ICallback<? super EducationClass> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
+    @Nullable
     public EducationClass get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<? super EducationClass> callback) {
+	public void delete(@Nonnull final ICallback<? super EducationClass> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -68,11 +72,12 @@ public class EducationClassWithReferenceRequest extends BaseRequest {
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final EducationClass sourceEducationClass, final ICallback<? super EducationClass> callback) {
+	public void patch(@Nonnull final EducationClass sourceEducationClass, @Nonnull final ICallback<? super EducationClass> callback) {
 		send(HttpMethod.PATCH, callback, sourceEducationClass);
 	}
 
-	public EducationClass patch(final EducationClass sourceEducationClass) throws ClientException {
+    @Nullable
+	public EducationClass patch(@Nonnull final EducationClass sourceEducationClass) throws ClientException {
 		return send(HttpMethod.PATCH, sourceEducationClass);
 	}
 
@@ -83,7 +88,8 @@ public class EducationClassWithReferenceRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public EducationClassWithReferenceRequest select(final String value) {
+    @Nonnull
+    public EducationClassWithReferenceRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (EducationClassWithReferenceRequest)this;
     }
@@ -94,7 +100,8 @@ public class EducationClassWithReferenceRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public EducationClassWithReferenceRequest expand(final String value) {
+    @Nonnull
+    public EducationClassWithReferenceRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (EducationClassWithReferenceRequest)this;
     }

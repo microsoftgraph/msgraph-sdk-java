@@ -7,6 +7,8 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
 import java.util.EnumSet;
@@ -24,6 +26,7 @@ public class WorkbookFunctionsVlookupBody {
      */
     @SerializedName(value = "lookupValue", alternate = {"LookupValue"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement lookupValue;
 
     /**
@@ -32,6 +35,7 @@ public class WorkbookFunctionsVlookupBody {
      */
     @SerializedName(value = "tableArray", alternate = {"TableArray"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement tableArray;
 
     /**
@@ -40,6 +44,7 @@ public class WorkbookFunctionsVlookupBody {
      */
     @SerializedName(value = "colIndexNum", alternate = {"ColIndexNum"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement colIndexNum;
 
     /**
@@ -48,6 +53,7 @@ public class WorkbookFunctionsVlookupBody {
      */
     @SerializedName(value = "rangeLookup", alternate = {"RangeLookup"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement rangeLookup;
 
 
@@ -66,6 +72,7 @@ public class WorkbookFunctionsVlookupBody {
      *
      * @return the raw representation of this class
      */
+    @Nullable
     public JsonObject getRawObject() {
         return rawObject;
     }
@@ -75,6 +82,7 @@ public class WorkbookFunctionsVlookupBody {
      *
      * @return the serializer
      */
+    @Nullable
     protected ISerializer getSerializer() {
         return serializer;
     }
@@ -85,7 +93,7 @@ public class WorkbookFunctionsVlookupBody {
      * @param serializer the serializer
      * @param json the JSON object to set this object to
      */
-    public void setRawObject(final ISerializer serializer, final JsonObject json) {
+    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
         this.serializer = serializer;
         rawObject = json;
 

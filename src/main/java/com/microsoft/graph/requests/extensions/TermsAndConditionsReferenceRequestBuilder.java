@@ -15,6 +15,8 @@ import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentColle
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
@@ -33,7 +35,7 @@ public class TermsAndConditionsReferenceRequestBuilder extends BaseRequestBuilde
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TermsAndConditionsReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TermsAndConditionsReferenceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -43,7 +45,8 @@ public class TermsAndConditionsReferenceRequestBuilder extends BaseRequestBuilde
      * @param requestOptions the options for this request
      * @return The TermsAndConditionsReferenceRequest instance
      */
-    public TermsAndConditionsReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public TermsAndConditionsReferenceRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -53,7 +56,8 @@ public class TermsAndConditionsReferenceRequestBuilder extends BaseRequestBuilde
      * @param requestOptions the options for this request
      * @return the TermsAndConditionsReferenceRequest instance
      */
-    public TermsAndConditionsReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public TermsAndConditionsReferenceRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TermsAndConditionsReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

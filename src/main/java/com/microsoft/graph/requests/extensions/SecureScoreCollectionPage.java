@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.SecureScore;
 import com.microsoft.graph.requests.extensions.SecureScoreCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.SecureScoreCollectionPage;
 import com.microsoft.graph.requests.extensions.SecureScoreCollectionResponse;
@@ -22,7 +24,7 @@ public class SecureScoreCollectionPage extends BaseCollectionPage<SecureScore, S
      * @param response the serialized SecureScoreCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public SecureScoreCollectionPage(final SecureScoreCollectionResponse response, final SecureScoreCollectionRequestBuilder builder) {
+    public SecureScoreCollectionPage(@Nonnull final SecureScoreCollectionResponse response, @Nonnull final SecureScoreCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

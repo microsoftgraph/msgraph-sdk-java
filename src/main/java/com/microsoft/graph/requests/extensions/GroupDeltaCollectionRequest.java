@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Group;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.GroupDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupDeltaCollectionPage;
@@ -34,12 +36,12 @@ public class GroupDeltaCollectionRequest extends BaseCollectionRequest<GroupDelt
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupDeltaCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupDeltaCollectionResponse.class, GroupDeltaCollectionPage.class);
     }
 
 
-    public void get(final ICallback<? super GroupDeltaCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super GroupDeltaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,13 +55,15 @@ public class GroupDeltaCollectionRequest extends BaseCollectionRequest<GroupDelt
         });
     }
 
+    @Nullable
     public GroupDeltaCollectionPage get() throws ClientException {
         final GroupDeltaCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
 
-    public GroupDeltaCollectionPage buildFromResponse(final GroupDeltaCollectionResponse response) {
+    @Nonnull
+    public GroupDeltaCollectionPage buildFromResponse(@Nonnull final GroupDeltaCollectionResponse response) {
         final GroupDeltaCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new GroupDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
@@ -77,7 +81,8 @@ public class GroupDeltaCollectionRequest extends BaseCollectionRequest<GroupDelt
      * @param value the select clause
      * @return the updated request
      */
-    public GroupDeltaCollectionRequest select(final String value) {
+    @Nonnull
+    public GroupDeltaCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (GroupDeltaCollectionRequest)this;
     }
@@ -88,6 +93,7 @@ public class GroupDeltaCollectionRequest extends BaseCollectionRequest<GroupDelt
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public GroupDeltaCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (GroupDeltaCollectionRequest)this;
@@ -99,7 +105,8 @@ public class GroupDeltaCollectionRequest extends BaseCollectionRequest<GroupDelt
      * @param value the expand clause
      * @return the updated request
      */
-    public GroupDeltaCollectionRequest expand(final String value) {
+    @Nonnull
+    public GroupDeltaCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (GroupDeltaCollectionRequest)this;
     }
@@ -110,7 +117,8 @@ public class GroupDeltaCollectionRequest extends BaseCollectionRequest<GroupDelt
      * @param value the filter clause
      * @return the updated request
      */
-    public GroupDeltaCollectionRequest filter(final String value) {
+    @Nonnull
+    public GroupDeltaCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (GroupDeltaCollectionRequest)this;
     }
@@ -121,7 +129,8 @@ public class GroupDeltaCollectionRequest extends BaseCollectionRequest<GroupDelt
      * @param value the order by clause
      * @return the updated request
      */
-    public GroupDeltaCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public GroupDeltaCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (GroupDeltaCollectionRequest)this;
     }

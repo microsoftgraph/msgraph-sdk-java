@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.DeviceAndAppManagementRoleAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class DeviceAndAppManagementRoleAssignmentCollectionRequest extends BaseC
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceAndAppManagementRoleAssignmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceAndAppManagementRoleAssignmentCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceAndAppManagementRoleAssignmentCollectionResponse.class, DeviceAndAppManagementRoleAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<? super DeviceAndAppManagementRoleAssignmentCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceAndAppManagementRoleAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class DeviceAndAppManagementRoleAssignmentCollectionRequest extends BaseC
         });
     }
 
+    @Nonnull
     public DeviceAndAppManagementRoleAssignmentCollectionPage get() throws ClientException {
         final DeviceAndAppManagementRoleAssignmentCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment, final ICallback<? super DeviceAndAppManagementRoleAssignment> callback) {
+    public void post(@Nonnull final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment, @Nonnull final ICallback<? super DeviceAndAppManagementRoleAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceAndAppManagementRoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceAndAppManagementRoleAssignment, callback);
     }
 
-    public DeviceAndAppManagementRoleAssignment post(final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment) throws ClientException {
+    @Nonnull
+    public DeviceAndAppManagementRoleAssignment post(@Nonnull final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceAndAppManagementRoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class DeviceAndAppManagementRoleAssignmentCollectionRequest extends BaseC
      * @param value the expand clause
      * @return the updated request
      */
-    public DeviceAndAppManagementRoleAssignmentCollectionRequest expand(final String value) {
+    @Nonnull
+    public DeviceAndAppManagementRoleAssignmentCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DeviceAndAppManagementRoleAssignmentCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class DeviceAndAppManagementRoleAssignmentCollectionRequest extends BaseC
      * @param value the filter clause
      * @return the updated request
      */
-    public DeviceAndAppManagementRoleAssignmentCollectionRequest filter(final String value) {
+    @Nonnull
+    public DeviceAndAppManagementRoleAssignmentCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DeviceAndAppManagementRoleAssignmentCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class DeviceAndAppManagementRoleAssignmentCollectionRequest extends BaseC
      * @param value the order by clause
      * @return the updated request
      */
-    public DeviceAndAppManagementRoleAssignmentCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DeviceAndAppManagementRoleAssignmentCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceAndAppManagementRoleAssignmentCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class DeviceAndAppManagementRoleAssignmentCollectionRequest extends BaseC
      * @param value the select clause
      * @return the updated request
      */
-    public DeviceAndAppManagementRoleAssignmentCollectionRequest select(final String value) {
+    @Nonnull
+    public DeviceAndAppManagementRoleAssignmentCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DeviceAndAppManagementRoleAssignmentCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class DeviceAndAppManagementRoleAssignmentCollectionRequest extends BaseC
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DeviceAndAppManagementRoleAssignmentCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (DeviceAndAppManagementRoleAssignmentCollectionRequest)this;
@@ -133,6 +142,7 @@ public class DeviceAndAppManagementRoleAssignmentCollectionRequest extends BaseC
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public DeviceAndAppManagementRoleAssignmentCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (DeviceAndAppManagementRoleAssignmentCollectionRequest)this;
@@ -144,11 +154,13 @@ public class DeviceAndAppManagementRoleAssignmentCollectionRequest extends BaseC
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public DeviceAndAppManagementRoleAssignmentCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public DeviceAndAppManagementRoleAssignmentCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (DeviceAndAppManagementRoleAssignmentCollectionRequest)this;
     }
-    public DeviceAndAppManagementRoleAssignmentCollectionPage buildFromResponse(final DeviceAndAppManagementRoleAssignmentCollectionResponse response) {
+    @Nonnull
+    public DeviceAndAppManagementRoleAssignmentCollectionPage buildFromResponse(@Nonnull final DeviceAndAppManagementRoleAssignmentCollectionResponse response) {
         final DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

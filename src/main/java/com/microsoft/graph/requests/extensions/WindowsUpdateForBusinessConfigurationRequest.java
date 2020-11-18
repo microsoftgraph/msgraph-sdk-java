@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsUpdateForBusinessConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class WindowsUpdateForBusinessConfigurationRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsUpdateForBusinessConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsUpdateForBusinessConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsUpdateForBusinessConfiguration.class);
     }
 
@@ -37,7 +39,7 @@ public class WindowsUpdateForBusinessConfigurationRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WindowsUpdateForBusinessConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super WindowsUpdateForBusinessConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class WindowsUpdateForBusinessConfigurationRequest extends BaseRequest {
      * @return the WindowsUpdateForBusinessConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WindowsUpdateForBusinessConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class WindowsUpdateForBusinessConfigurationRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WindowsUpdateForBusinessConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super WindowsUpdateForBusinessConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class WindowsUpdateForBusinessConfigurationRequest extends BaseRequest {
      * @param sourceWindowsUpdateForBusinessConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsUpdateForBusinessConfiguration sourceWindowsUpdateForBusinessConfiguration, final ICallback<? super WindowsUpdateForBusinessConfiguration> callback) {
+    public void patch(@Nonnull final WindowsUpdateForBusinessConfiguration sourceWindowsUpdateForBusinessConfiguration, @Nonnull final ICallback<? super WindowsUpdateForBusinessConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsUpdateForBusinessConfiguration);
     }
 
@@ -86,7 +89,8 @@ public class WindowsUpdateForBusinessConfigurationRequest extends BaseRequest {
      * @return the updated WindowsUpdateForBusinessConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsUpdateForBusinessConfiguration patch(final WindowsUpdateForBusinessConfiguration sourceWindowsUpdateForBusinessConfiguration) throws ClientException {
+    @Nullable
+    public WindowsUpdateForBusinessConfiguration patch(@Nonnull final WindowsUpdateForBusinessConfiguration sourceWindowsUpdateForBusinessConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindowsUpdateForBusinessConfiguration);
     }
 
@@ -96,7 +100,7 @@ public class WindowsUpdateForBusinessConfigurationRequest extends BaseRequest {
      * @param newWindowsUpdateForBusinessConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsUpdateForBusinessConfiguration newWindowsUpdateForBusinessConfiguration, final ICallback<? super WindowsUpdateForBusinessConfiguration> callback) {
+    public void post(@Nonnull final WindowsUpdateForBusinessConfiguration newWindowsUpdateForBusinessConfiguration, @Nonnull final ICallback<? super WindowsUpdateForBusinessConfiguration> callback) {
         send(HttpMethod.POST, callback, newWindowsUpdateForBusinessConfiguration);
     }
 
@@ -107,7 +111,8 @@ public class WindowsUpdateForBusinessConfigurationRequest extends BaseRequest {
      * @return the created WindowsUpdateForBusinessConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsUpdateForBusinessConfiguration post(final WindowsUpdateForBusinessConfiguration newWindowsUpdateForBusinessConfiguration) throws ClientException {
+    @Nullable
+    public WindowsUpdateForBusinessConfiguration post(@Nonnull final WindowsUpdateForBusinessConfiguration newWindowsUpdateForBusinessConfiguration) throws ClientException {
         return send(HttpMethod.POST, newWindowsUpdateForBusinessConfiguration);
     }
 
@@ -117,7 +122,7 @@ public class WindowsUpdateForBusinessConfigurationRequest extends BaseRequest {
      * @param newWindowsUpdateForBusinessConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsUpdateForBusinessConfiguration newWindowsUpdateForBusinessConfiguration, final ICallback<? super WindowsUpdateForBusinessConfiguration> callback) {
+    public void put(@Nonnull final WindowsUpdateForBusinessConfiguration newWindowsUpdateForBusinessConfiguration, @Nonnull final ICallback<? super WindowsUpdateForBusinessConfiguration> callback) {
         send(HttpMethod.PUT, callback, newWindowsUpdateForBusinessConfiguration);
     }
 
@@ -128,7 +133,8 @@ public class WindowsUpdateForBusinessConfigurationRequest extends BaseRequest {
      * @return the created WindowsUpdateForBusinessConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsUpdateForBusinessConfiguration put(final WindowsUpdateForBusinessConfiguration newWindowsUpdateForBusinessConfiguration) throws ClientException {
+    @Nullable
+    public WindowsUpdateForBusinessConfiguration put(@Nonnull final WindowsUpdateForBusinessConfiguration newWindowsUpdateForBusinessConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newWindowsUpdateForBusinessConfiguration);
     }
 
@@ -138,7 +144,8 @@ public class WindowsUpdateForBusinessConfigurationRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public WindowsUpdateForBusinessConfigurationRequest select(final String value) {
+     @Nonnull
+     public WindowsUpdateForBusinessConfigurationRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (WindowsUpdateForBusinessConfigurationRequest)this;
      }
@@ -149,7 +156,8 @@ public class WindowsUpdateForBusinessConfigurationRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public WindowsUpdateForBusinessConfigurationRequest expand(final String value) {
+     @Nonnull
+     public WindowsUpdateForBusinessConfigurationRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (WindowsUpdateForBusinessConfigurationRequest)this;
      }

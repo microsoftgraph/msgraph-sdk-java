@@ -29,6 +29,9 @@ import com.microsoft.graph.core.ClientException;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 /**
  * The default executors implementation for the SDK
  */
@@ -54,7 +57,7 @@ public class DefaultExecutors implements IExecutors {
      * 
      * @param logger the logger
      */
-    public DefaultExecutors(final ILogger logger) {
+    public DefaultExecutors(@Nonnull final ILogger logger) {
     	this.logger = logger;
         backgroundExecutor = (ThreadPoolExecutor)Executors.newCachedThreadPool();
         foregroundExecutor = new SynchronousExecutor();
@@ -66,7 +69,7 @@ public class DefaultExecutors implements IExecutors {
      * @param runnable the Runnable to execute
      */
     @Override
-    public void performOnBackground(final Runnable runnable) {
+    public void performOnBackground(@Nonnull final Runnable runnable) {
     	logger.logDebug("Starting background task, current active count: "
                 + backgroundExecutor.getActiveCount());
         backgroundExecutor.execute(runnable);
@@ -80,8 +83,9 @@ public class DefaultExecutors implements IExecutors {
      * @param <Result> the result type
      */
     @Override
-    public <Result> void performOnForeground(final Result result,
-                                             final ICallback<Result> callback) {
+    @Nullable
+    public <Result> void performOnForeground(@Nullable final Result result,
+                                             @Nonnull final ICallback<Result> callback) {
     	logger.logDebug("Starting foreground task, current active count:"
                 + foregroundExecutor.getActiveCount()
                 + ", with result "
@@ -104,7 +108,7 @@ public class DefaultExecutors implements IExecutors {
      */
     public <Result> void performOnForeground(final int progress,
                                              final int progressMax,
-                                             final IProgressCallback<Result> callback) {
+                                             @Nonnull final IProgressCallback<Result> callback) {
     	logger.logDebug("Starting foreground task, current active count:"
                 + foregroundExecutor.getActiveCount()
                 + ", with progress  "
@@ -126,8 +130,8 @@ public class DefaultExecutors implements IExecutors {
      * @param <Result>  the result type
      */
     @Override
-    public <Result> void performOnForeground(final ClientException exception,
-                                             final ICallback<Result> callback) {
+    public <Result> void performOnForeground(@Nonnull final ClientException exception,
+                                             @Nonnull final ICallback<Result> callback) {
     	logger.logDebug("Starting foreground task, current active count:"
                 + foregroundExecutor.getActiveCount()
                 + ", with exception "
@@ -141,6 +145,7 @@ public class DefaultExecutors implements IExecutors {
     }
 
     @VisibleForTesting
+    @Nullable
     public ILogger getLogger() {
         return logger;
     }

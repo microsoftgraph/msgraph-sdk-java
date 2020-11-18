@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberGroupsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberGroupsCollectionPage;
@@ -38,13 +40,13 @@ public class DirectoryObjectCheckMemberGroupsCollectionRequest extends BaseColle
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DirectoryObjectCheckMemberGroupsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryObjectCheckMemberGroupsCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DirectoryObjectCheckMemberGroupsCollectionResponse.class, DirectoryObjectCheckMemberGroupsCollectionPage.class);
         body = new DirectoryObjectCheckMemberGroupsBody();
     }
 
 
-    public void post(final ICallback<? super DirectoryObjectCheckMemberGroupsCollectionPage> callback) {
+    public void post(@Nonnull final ICallback<? super DirectoryObjectCheckMemberGroupsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,13 +60,15 @@ public class DirectoryObjectCheckMemberGroupsCollectionRequest extends BaseColle
         });
     }
 
+    @Nullable
     public DirectoryObjectCheckMemberGroupsCollectionPage post() throws ClientException {
         final DirectoryObjectCheckMemberGroupsCollectionResponse response = post(body);
         return buildFromResponse(response);
     }
 
 
-    public DirectoryObjectCheckMemberGroupsCollectionPage buildFromResponse(final DirectoryObjectCheckMemberGroupsCollectionResponse response) {
+    @Nonnull
+    public DirectoryObjectCheckMemberGroupsCollectionPage buildFromResponse(@Nonnull final DirectoryObjectCheckMemberGroupsCollectionResponse response) {
         final DirectoryObjectCheckMemberGroupsCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new DirectoryObjectCheckMemberGroupsCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, (java.util.List<String>) null);
@@ -82,7 +86,8 @@ public class DirectoryObjectCheckMemberGroupsCollectionRequest extends BaseColle
      * @param value the select clause
      * @return the updated request
      */
-    public DirectoryObjectCheckMemberGroupsCollectionRequest select(final String value) {
+    @Nonnull
+    public DirectoryObjectCheckMemberGroupsCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DirectoryObjectCheckMemberGroupsCollectionRequest)this;
     }
@@ -93,6 +98,7 @@ public class DirectoryObjectCheckMemberGroupsCollectionRequest extends BaseColle
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DirectoryObjectCheckMemberGroupsCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (DirectoryObjectCheckMemberGroupsCollectionRequest)this;
@@ -104,7 +110,8 @@ public class DirectoryObjectCheckMemberGroupsCollectionRequest extends BaseColle
      * @param value the expand clause
      * @return the updated request
      */
-    public DirectoryObjectCheckMemberGroupsCollectionRequest expand(final String value) {
+    @Nonnull
+    public DirectoryObjectCheckMemberGroupsCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DirectoryObjectCheckMemberGroupsCollectionRequest)this;
     }
@@ -115,7 +122,8 @@ public class DirectoryObjectCheckMemberGroupsCollectionRequest extends BaseColle
      * @param value the filter clause
      * @return the updated request
      */
-    public DirectoryObjectCheckMemberGroupsCollectionRequest filter(final String value) {
+    @Nonnull
+    public DirectoryObjectCheckMemberGroupsCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DirectoryObjectCheckMemberGroupsCollectionRequest)this;
     }
@@ -126,7 +134,8 @@ public class DirectoryObjectCheckMemberGroupsCollectionRequest extends BaseColle
      * @param value the order by clause
      * @return the updated request
      */
-    public DirectoryObjectCheckMemberGroupsCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DirectoryObjectCheckMemberGroupsCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DirectoryObjectCheckMemberGroupsCollectionRequest)this;
     }

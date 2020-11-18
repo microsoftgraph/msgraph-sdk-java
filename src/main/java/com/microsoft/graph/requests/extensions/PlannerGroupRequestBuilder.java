@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.PlannerPlanCollectionRequestBuild
 import com.microsoft.graph.requests.extensions.PlannerPlanRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -29,7 +31,7 @@ public class PlannerGroupRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PlannerGroupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PlannerGroupRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +41,8 @@ public class PlannerGroupRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the PlannerGroupRequest instance
      */
-    public PlannerGroupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public PlannerGroupRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,16 +52,19 @@ public class PlannerGroupRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the PlannerGroupRequest instance
      */
-    public PlannerGroupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public PlannerGroupRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PlannerGroupRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    @Nonnull
     public PlannerPlanCollectionRequestBuilder plans() {
         return new PlannerPlanCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("plans"), getClient(), null);
     }
 
-    public PlannerPlanRequestBuilder plans(final String id) {
+    @Nonnull
+    public PlannerPlanRequestBuilder plans(@Nonnull final String id) {
         return new PlannerPlanRequestBuilder(getRequestUrlWithAdditionalSegment("plans") + "/" + id, getClient(), null);
     }
 }

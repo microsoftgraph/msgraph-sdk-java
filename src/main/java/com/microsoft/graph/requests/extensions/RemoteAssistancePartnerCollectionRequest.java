@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.RemoteAssistancePartner;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class RemoteAssistancePartnerCollectionRequest extends BaseCollectionRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RemoteAssistancePartnerCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RemoteAssistancePartnerCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, RemoteAssistancePartnerCollectionResponse.class, RemoteAssistancePartnerCollectionPage.class);
     }
 
-    public void get(final ICallback<? super RemoteAssistancePartnerCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super RemoteAssistancePartnerCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class RemoteAssistancePartnerCollectionRequest extends BaseCollectionRequ
         });
     }
 
+    @Nonnull
     public RemoteAssistancePartnerCollectionPage get() throws ClientException {
         final RemoteAssistancePartnerCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final RemoteAssistancePartner newRemoteAssistancePartner, final ICallback<? super RemoteAssistancePartner> callback) {
+    public void post(@Nonnull final RemoteAssistancePartner newRemoteAssistancePartner, @Nonnull final ICallback<? super RemoteAssistancePartner> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RemoteAssistancePartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newRemoteAssistancePartner, callback);
     }
 
-    public RemoteAssistancePartner post(final RemoteAssistancePartner newRemoteAssistancePartner) throws ClientException {
+    @Nonnull
+    public RemoteAssistancePartner post(@Nonnull final RemoteAssistancePartner newRemoteAssistancePartner) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new RemoteAssistancePartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class RemoteAssistancePartnerCollectionRequest extends BaseCollectionRequ
      * @param value the expand clause
      * @return the updated request
      */
-    public RemoteAssistancePartnerCollectionRequest expand(final String value) {
+    @Nonnull
+    public RemoteAssistancePartnerCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (RemoteAssistancePartnerCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class RemoteAssistancePartnerCollectionRequest extends BaseCollectionRequ
      * @param value the filter clause
      * @return the updated request
      */
-    public RemoteAssistancePartnerCollectionRequest filter(final String value) {
+    @Nonnull
+    public RemoteAssistancePartnerCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (RemoteAssistancePartnerCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class RemoteAssistancePartnerCollectionRequest extends BaseCollectionRequ
      * @param value the order by clause
      * @return the updated request
      */
-    public RemoteAssistancePartnerCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public RemoteAssistancePartnerCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (RemoteAssistancePartnerCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class RemoteAssistancePartnerCollectionRequest extends BaseCollectionRequ
      * @param value the select clause
      * @return the updated request
      */
-    public RemoteAssistancePartnerCollectionRequest select(final String value) {
+    @Nonnull
+    public RemoteAssistancePartnerCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (RemoteAssistancePartnerCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class RemoteAssistancePartnerCollectionRequest extends BaseCollectionRequ
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public RemoteAssistancePartnerCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (RemoteAssistancePartnerCollectionRequest)this;
@@ -133,6 +142,7 @@ public class RemoteAssistancePartnerCollectionRequest extends BaseCollectionRequ
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public RemoteAssistancePartnerCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (RemoteAssistancePartnerCollectionRequest)this;
@@ -144,11 +154,13 @@ public class RemoteAssistancePartnerCollectionRequest extends BaseCollectionRequ
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public RemoteAssistancePartnerCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public RemoteAssistancePartnerCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (RemoteAssistancePartnerCollectionRequest)this;
     }
-    public RemoteAssistancePartnerCollectionPage buildFromResponse(final RemoteAssistancePartnerCollectionResponse response) {
+    @Nonnull
+    public RemoteAssistancePartnerCollectionPage buildFromResponse(@Nonnull final RemoteAssistancePartnerCollectionResponse response) {
         final RemoteAssistancePartnerCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new RemoteAssistancePartnerCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

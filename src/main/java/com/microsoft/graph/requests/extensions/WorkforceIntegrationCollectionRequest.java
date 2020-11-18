@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Teamwork;
 import com.microsoft.graph.models.extensions.WorkforceIntegration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class WorkforceIntegrationCollectionRequest extends BaseCollectionRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkforceIntegrationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkforceIntegrationCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkforceIntegrationCollectionResponse.class, WorkforceIntegrationCollectionPage.class);
     }
 
-    public void get(final ICallback<? super WorkforceIntegrationCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super WorkforceIntegrationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class WorkforceIntegrationCollectionRequest extends BaseCollectionRequest
         });
     }
 
+    @Nonnull
     public WorkforceIntegrationCollectionPage get() throws ClientException {
         final WorkforceIntegrationCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final WorkforceIntegration newWorkforceIntegration, final ICallback<? super WorkforceIntegration> callback) {
+    public void post(@Nonnull final WorkforceIntegration newWorkforceIntegration, @Nonnull final ICallback<? super WorkforceIntegration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkforceIntegrationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newWorkforceIntegration, callback);
     }
 
-    public WorkforceIntegration post(final WorkforceIntegration newWorkforceIntegration) throws ClientException {
+    @Nonnull
+    public WorkforceIntegration post(@Nonnull final WorkforceIntegration newWorkforceIntegration) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkforceIntegrationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class WorkforceIntegrationCollectionRequest extends BaseCollectionRequest
      * @param value the expand clause
      * @return the updated request
      */
-    public WorkforceIntegrationCollectionRequest expand(final String value) {
+    @Nonnull
+    public WorkforceIntegrationCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkforceIntegrationCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class WorkforceIntegrationCollectionRequest extends BaseCollectionRequest
      * @param value the filter clause
      * @return the updated request
      */
-    public WorkforceIntegrationCollectionRequest filter(final String value) {
+    @Nonnull
+    public WorkforceIntegrationCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkforceIntegrationCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class WorkforceIntegrationCollectionRequest extends BaseCollectionRequest
      * @param value the order by clause
      * @return the updated request
      */
-    public WorkforceIntegrationCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public WorkforceIntegrationCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkforceIntegrationCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class WorkforceIntegrationCollectionRequest extends BaseCollectionRequest
      * @param value the select clause
      * @return the updated request
      */
-    public WorkforceIntegrationCollectionRequest select(final String value) {
+    @Nonnull
+    public WorkforceIntegrationCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkforceIntegrationCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class WorkforceIntegrationCollectionRequest extends BaseCollectionRequest
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public WorkforceIntegrationCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (WorkforceIntegrationCollectionRequest)this;
@@ -133,6 +142,7 @@ public class WorkforceIntegrationCollectionRequest extends BaseCollectionRequest
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public WorkforceIntegrationCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (WorkforceIntegrationCollectionRequest)this;
@@ -144,11 +154,13 @@ public class WorkforceIntegrationCollectionRequest extends BaseCollectionRequest
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public WorkforceIntegrationCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public WorkforceIntegrationCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (WorkforceIntegrationCollectionRequest)this;
     }
-    public WorkforceIntegrationCollectionPage buildFromResponse(final WorkforceIntegrationCollectionResponse response) {
+    @Nonnull
+    public WorkforceIntegrationCollectionPage buildFromResponse(@Nonnull final WorkforceIntegrationCollectionResponse response) {
         final WorkforceIntegrationCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new WorkforceIntegrationCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.UserRevokeSignInSessionsRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.core.ClientException;
@@ -26,7 +28,7 @@ public class UserRevokeSignInSessionsRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserRevokeSignInSessionsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserRevokeSignInSessionsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Boolean.class);
     }
 
@@ -35,7 +37,7 @@ public class UserRevokeSignInSessionsRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<? super Boolean> callback) {
+    public void post(@Nonnull final ICallback<? super Boolean> callback) {
         send(HttpMethod.POST, callback, null);
     }
 
@@ -45,6 +47,7 @@ public class UserRevokeSignInSessionsRequest extends BaseRequest {
      * @return the Boolean
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
+    @Nullable
     public Boolean post() throws ClientException {
        return send(HttpMethod.POST, null);
     }
@@ -55,7 +58,8 @@ public class UserRevokeSignInSessionsRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public UserRevokeSignInSessionsRequest select(final String value) {
+    @Nonnull
+    public UserRevokeSignInSessionsRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (UserRevokeSignInSessionsRequest)this;
     }
@@ -66,7 +70,8 @@ public class UserRevokeSignInSessionsRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public UserRevokeSignInSessionsRequest expand(final String value) {
+    @Nonnull
+    public UserRevokeSignInSessionsRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (UserRevokeSignInSessionsRequest)this;
     }

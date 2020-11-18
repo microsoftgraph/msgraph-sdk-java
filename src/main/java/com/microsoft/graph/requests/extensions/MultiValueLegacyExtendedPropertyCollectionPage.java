@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.MultiValueLegacyExtendedProperty;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionPage;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionResponse;
@@ -22,7 +24,7 @@ public class MultiValueLegacyExtendedPropertyCollectionPage extends BaseCollecti
      * @param response the serialized MultiValueLegacyExtendedPropertyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public MultiValueLegacyExtendedPropertyCollectionPage(final MultiValueLegacyExtendedPropertyCollectionResponse response, final MultiValueLegacyExtendedPropertyCollectionRequestBuilder builder) {
+    public MultiValueLegacyExtendedPropertyCollectionPage(@Nonnull final MultiValueLegacyExtendedPropertyCollectionResponse response, @Nonnull final MultiValueLegacyExtendedPropertyCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

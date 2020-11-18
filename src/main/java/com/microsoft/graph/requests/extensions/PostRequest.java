@@ -20,6 +20,8 @@ import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedProperty
 import com.microsoft.graph.requests.extensions.PostRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -38,7 +40,7 @@ public class PostRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PostRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PostRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Post.class);
     }
 
@@ -47,7 +49,7 @@ public class PostRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Post> callback) {
+    public void get(@Nonnull final ICallback<? super Post> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -57,6 +59,7 @@ public class PostRequest extends BaseRequest {
      * @return the Post from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Post get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -66,7 +69,7 @@ public class PostRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Post> callback) {
+    public void delete(@Nonnull final ICallback<? super Post> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -85,7 +88,7 @@ public class PostRequest extends BaseRequest {
      * @param sourcePost the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Post sourcePost, final ICallback<? super Post> callback) {
+    public void patch(@Nonnull final Post sourcePost, @Nonnull final ICallback<? super Post> callback) {
         send(HttpMethod.PATCH, callback, sourcePost);
     }
 
@@ -96,7 +99,8 @@ public class PostRequest extends BaseRequest {
      * @return the updated Post
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Post patch(final Post sourcePost) throws ClientException {
+    @Nullable
+    public Post patch(@Nonnull final Post sourcePost) throws ClientException {
         return send(HttpMethod.PATCH, sourcePost);
     }
 
@@ -106,7 +110,7 @@ public class PostRequest extends BaseRequest {
      * @param newPost the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Post newPost, final ICallback<? super Post> callback) {
+    public void post(@Nonnull final Post newPost, @Nonnull final ICallback<? super Post> callback) {
         send(HttpMethod.POST, callback, newPost);
     }
 
@@ -117,7 +121,8 @@ public class PostRequest extends BaseRequest {
      * @return the created Post
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Post post(final Post newPost) throws ClientException {
+    @Nullable
+    public Post post(@Nonnull final Post newPost) throws ClientException {
         return send(HttpMethod.POST, newPost);
     }
 
@@ -127,7 +132,7 @@ public class PostRequest extends BaseRequest {
      * @param newPost the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Post newPost, final ICallback<? super Post> callback) {
+    public void put(@Nonnull final Post newPost, @Nonnull final ICallback<? super Post> callback) {
         send(HttpMethod.PUT, callback, newPost);
     }
 
@@ -138,7 +143,8 @@ public class PostRequest extends BaseRequest {
      * @return the created Post
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Post put(final Post newPost) throws ClientException {
+    @Nullable
+    public Post put(@Nonnull final Post newPost) throws ClientException {
         return send(HttpMethod.PUT, newPost);
     }
 
@@ -148,7 +154,8 @@ public class PostRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public PostRequest select(final String value) {
+     @Nonnull
+     public PostRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (PostRequest)this;
      }
@@ -159,7 +166,8 @@ public class PostRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public PostRequest expand(final String value) {
+     @Nonnull
+     public PostRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (PostRequest)this;
      }

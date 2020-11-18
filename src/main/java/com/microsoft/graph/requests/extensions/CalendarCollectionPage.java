@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Calendar;
 import com.microsoft.graph.requests.extensions.CalendarCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.CalendarCollectionPage;
 import com.microsoft.graph.requests.extensions.CalendarCollectionResponse;
@@ -22,7 +24,7 @@ public class CalendarCollectionPage extends BaseCollectionPage<Calendar, Calenda
      * @param response the serialized CalendarCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public CalendarCollectionPage(final CalendarCollectionResponse response, final CalendarCollectionRequestBuilder builder) {
+    public CalendarCollectionPage(@Nonnull final CalendarCollectionResponse response, @Nonnull final CalendarCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

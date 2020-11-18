@@ -22,6 +22,9 @@
 
 package com.microsoft.graph.core;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 import com.microsoft.graph.httpcore.middlewareoption.IShouldRedirect;
 import com.microsoft.graph.httpcore.middlewareoption.IShouldRetry;
 
@@ -74,13 +77,14 @@ public interface IConnectionConfig {
      * 
      * @param shouldRedirect Callback called before doing a redirect
      */
-    void setShouldRedirect(IShouldRedirect shouldRedirect);
+    void setShouldRedirect(@Nonnull IShouldRedirect shouldRedirect);
     
     /**
      * Gets the should redirect callback
      * 
      * @return Callback which is called before redirect
      */
+    @Nullable
     IShouldRedirect getShouldRedirect();
     
     /**
@@ -88,13 +92,14 @@ public interface IConnectionConfig {
      * 
      * @param shouldretry The callback called before retry
      */
-    void setShouldRetry(IShouldRetry shouldretry);
+    void setShouldRetry(@Nonnull IShouldRetry shouldretry);
     
     /**
      * Gets the should retry callback
      * 
      * @return Callback called before retry
      */
+    @Nullable
     IShouldRetry getShouldRetry();
     
     /**

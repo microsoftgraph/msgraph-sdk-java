@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.PolicyRoot;
 import com.microsoft.graph.models.extensions.ClaimsMappingPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyRequestBuilder;
@@ -32,7 +34,7 @@ public class ClaimsMappingPolicyCollectionRequestBuilder extends BaseRequestBuil
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ClaimsMappingPolicyCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ClaimsMappingPolicyCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,7 +44,8 @@ public class ClaimsMappingPolicyCollectionRequestBuilder extends BaseRequestBuil
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ClaimsMappingPolicyCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ClaimsMappingPolicyCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +55,13 @@ public class ClaimsMappingPolicyCollectionRequestBuilder extends BaseRequestBuil
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ClaimsMappingPolicyCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ClaimsMappingPolicyCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ClaimsMappingPolicyCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ClaimsMappingPolicyRequestBuilder byId(final String id) {
+    @Nonnull
+    public ClaimsMappingPolicyRequestBuilder byId(@Nonnull final String id) {
         return new ClaimsMappingPolicyRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

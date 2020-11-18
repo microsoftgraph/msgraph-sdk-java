@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Site;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.SiteAddCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteAddCollectionPage;
@@ -38,13 +40,13 @@ public class SiteAddCollectionRequest extends BaseCollectionRequest<SiteAddColle
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SiteAddCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SiteAddCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SiteAddCollectionResponse.class, SiteAddCollectionPage.class);
         body = new SiteAddBody();
     }
 
 
-    public void post(final ICallback<? super SiteAddCollectionPage> callback) {
+    public void post(@Nonnull final ICallback<? super SiteAddCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,13 +60,15 @@ public class SiteAddCollectionRequest extends BaseCollectionRequest<SiteAddColle
         });
     }
 
+    @Nullable
     public SiteAddCollectionPage post() throws ClientException {
         final SiteAddCollectionResponse response = post(body);
         return buildFromResponse(response);
     }
 
 
-    public SiteAddCollectionPage buildFromResponse(final SiteAddCollectionResponse response) {
+    @Nonnull
+    public SiteAddCollectionPage buildFromResponse(@Nonnull final SiteAddCollectionResponse response) {
         final SiteAddCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new SiteAddCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, (java.util.List<Site>) null);
@@ -82,7 +86,8 @@ public class SiteAddCollectionRequest extends BaseCollectionRequest<SiteAddColle
      * @param value the select clause
      * @return the updated request
      */
-    public SiteAddCollectionRequest select(final String value) {
+    @Nonnull
+    public SiteAddCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (SiteAddCollectionRequest)this;
     }
@@ -93,6 +98,7 @@ public class SiteAddCollectionRequest extends BaseCollectionRequest<SiteAddColle
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public SiteAddCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (SiteAddCollectionRequest)this;
@@ -104,7 +110,8 @@ public class SiteAddCollectionRequest extends BaseCollectionRequest<SiteAddColle
      * @param value the expand clause
      * @return the updated request
      */
-    public SiteAddCollectionRequest expand(final String value) {
+    @Nonnull
+    public SiteAddCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (SiteAddCollectionRequest)this;
     }
@@ -115,7 +122,8 @@ public class SiteAddCollectionRequest extends BaseCollectionRequest<SiteAddColle
      * @param value the filter clause
      * @return the updated request
      */
-    public SiteAddCollectionRequest filter(final String value) {
+    @Nonnull
+    public SiteAddCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (SiteAddCollectionRequest)this;
     }
@@ -126,7 +134,8 @@ public class SiteAddCollectionRequest extends BaseCollectionRequest<SiteAddColle
      * @param value the order by clause
      * @return the updated request
      */
-    public SiteAddCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public SiteAddCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SiteAddCollectionRequest)this;
     }

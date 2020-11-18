@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ConversationThread;
 import com.microsoft.graph.requests.extensions.ConversationThreadCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ConversationThreadCollectionPage;
 import com.microsoft.graph.requests.extensions.ConversationThreadCollectionResponse;
@@ -22,7 +24,7 @@ public class ConversationThreadCollectionPage extends BaseCollectionPage<Convers
      * @param response the serialized ConversationThreadCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ConversationThreadCollectionPage(final ConversationThreadCollectionResponse response, final ConversationThreadCollectionRequestBuilder builder) {
+    public ConversationThreadCollectionPage(@Nonnull final ConversationThreadCollectionResponse response, @Nonnull final ConversationThreadCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

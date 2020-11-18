@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.RoleDefinition;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class RoleDefinitionCollectionRequest extends BaseCollectionRequest<RoleD
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RoleDefinitionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RoleDefinitionCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, RoleDefinitionCollectionResponse.class, RoleDefinitionCollectionPage.class);
     }
 
-    public void get(final ICallback<? super RoleDefinitionCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super RoleDefinitionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class RoleDefinitionCollectionRequest extends BaseCollectionRequest<RoleD
         });
     }
 
+    @Nonnull
     public RoleDefinitionCollectionPage get() throws ClientException {
         final RoleDefinitionCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final RoleDefinition newRoleDefinition, final ICallback<? super RoleDefinition> callback) {
+    public void post(@Nonnull final RoleDefinition newRoleDefinition, @Nonnull final ICallback<? super RoleDefinition> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RoleDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newRoleDefinition, callback);
     }
 
-    public RoleDefinition post(final RoleDefinition newRoleDefinition) throws ClientException {
+    @Nonnull
+    public RoleDefinition post(@Nonnull final RoleDefinition newRoleDefinition) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new RoleDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class RoleDefinitionCollectionRequest extends BaseCollectionRequest<RoleD
      * @param value the expand clause
      * @return the updated request
      */
-    public RoleDefinitionCollectionRequest expand(final String value) {
+    @Nonnull
+    public RoleDefinitionCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (RoleDefinitionCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class RoleDefinitionCollectionRequest extends BaseCollectionRequest<RoleD
      * @param value the filter clause
      * @return the updated request
      */
-    public RoleDefinitionCollectionRequest filter(final String value) {
+    @Nonnull
+    public RoleDefinitionCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (RoleDefinitionCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class RoleDefinitionCollectionRequest extends BaseCollectionRequest<RoleD
      * @param value the order by clause
      * @return the updated request
      */
-    public RoleDefinitionCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public RoleDefinitionCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (RoleDefinitionCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class RoleDefinitionCollectionRequest extends BaseCollectionRequest<RoleD
      * @param value the select clause
      * @return the updated request
      */
-    public RoleDefinitionCollectionRequest select(final String value) {
+    @Nonnull
+    public RoleDefinitionCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (RoleDefinitionCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class RoleDefinitionCollectionRequest extends BaseCollectionRequest<RoleD
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public RoleDefinitionCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (RoleDefinitionCollectionRequest)this;
@@ -133,6 +142,7 @@ public class RoleDefinitionCollectionRequest extends BaseCollectionRequest<RoleD
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public RoleDefinitionCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (RoleDefinitionCollectionRequest)this;
@@ -144,11 +154,13 @@ public class RoleDefinitionCollectionRequest extends BaseCollectionRequest<RoleD
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public RoleDefinitionCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public RoleDefinitionCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (RoleDefinitionCollectionRequest)this;
     }
-    public RoleDefinitionCollectionPage buildFromResponse(final RoleDefinitionCollectionResponse response) {
+    @Nonnull
+    public RoleDefinitionCollectionPage buildFromResponse(@Nonnull final RoleDefinitionCollectionResponse response) {
         final RoleDefinitionCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new RoleDefinitionCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

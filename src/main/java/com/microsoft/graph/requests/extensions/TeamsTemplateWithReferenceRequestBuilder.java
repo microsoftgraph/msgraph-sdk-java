@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TeamsTemplate;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
@@ -28,7 +30,7 @@ public class TeamsTemplateWithReferenceRequestBuilder extends BaseRequestBuilder
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamsTemplateWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsTemplateWithReferenceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,7 +40,8 @@ public class TeamsTemplateWithReferenceRequestBuilder extends BaseRequestBuilder
      * @param requestOptions the options for this request
      * @return the TeamsTemplateWithReferenceRequest instance
      */
-    public TeamsTemplateWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public TeamsTemplateWithReferenceRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,10 +51,12 @@ public class TeamsTemplateWithReferenceRequestBuilder extends BaseRequestBuilder
      * @param requestOptions the options for this request
      * @return the TeamsTemplateWithReferenceRequest instance
      */
-    public TeamsTemplateWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public TeamsTemplateWithReferenceRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TeamsTemplateWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
+    @Nonnull
     public TeamsTemplateReferenceRequestBuilder reference(){
         return new TeamsTemplateReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }

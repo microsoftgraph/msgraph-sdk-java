@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.OnenoteSection;
 import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionPage;
 import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionResponse;
@@ -22,7 +24,7 @@ public class OnenoteSectionCollectionPage extends BaseCollectionPage<OnenoteSect
      * @param response the serialized OnenoteSectionCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public OnenoteSectionCollectionPage(final OnenoteSectionCollectionResponse response, final OnenoteSectionCollectionRequestBuilder builder) {
+    public OnenoteSectionCollectionPage(@Nonnull final OnenoteSectionCollectionResponse response, @Nonnull final OnenoteSectionCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

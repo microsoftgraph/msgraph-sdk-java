@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Call;
 import com.microsoft.graph.requests.extensions.CallCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.CallCollectionPage;
 import com.microsoft.graph.requests.extensions.CallCollectionResponse;
@@ -22,7 +24,7 @@ public class CallCollectionPage extends BaseCollectionPage<Call, CallCollectionR
      * @param response the serialized CallCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public CallCollectionPage(final CallCollectionResponse response, final CallCollectionRequestBuilder builder) {
+    public CallCollectionPage(@Nonnull final CallCollectionResponse response, @Nonnull final CallCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

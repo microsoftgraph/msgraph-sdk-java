@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.models.extensions.ProfilePhoto;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class ProfilePhotoCollectionRequest extends BaseCollectionRequest<Profile
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ProfilePhotoCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ProfilePhotoCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ProfilePhotoCollectionResponse.class, ProfilePhotoCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ProfilePhotoCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super ProfilePhotoCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class ProfilePhotoCollectionRequest extends BaseCollectionRequest<Profile
         });
     }
 
+    @Nonnull
     public ProfilePhotoCollectionPage get() throws ClientException {
         final ProfilePhotoCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final ProfilePhoto newProfilePhoto, final ICallback<? super ProfilePhoto> callback) {
+    public void post(@Nonnull final ProfilePhoto newProfilePhoto, @Nonnull final ICallback<? super ProfilePhoto> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ProfilePhotoRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newProfilePhoto, callback);
     }
 
-    public ProfilePhoto post(final ProfilePhoto newProfilePhoto) throws ClientException {
+    @Nonnull
+    public ProfilePhoto post(@Nonnull final ProfilePhoto newProfilePhoto) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ProfilePhotoRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class ProfilePhotoCollectionRequest extends BaseCollectionRequest<Profile
      * @param value the expand clause
      * @return the updated request
      */
-    public ProfilePhotoCollectionRequest expand(final String value) {
+    @Nonnull
+    public ProfilePhotoCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ProfilePhotoCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class ProfilePhotoCollectionRequest extends BaseCollectionRequest<Profile
      * @param value the filter clause
      * @return the updated request
      */
-    public ProfilePhotoCollectionRequest filter(final String value) {
+    @Nonnull
+    public ProfilePhotoCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ProfilePhotoCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class ProfilePhotoCollectionRequest extends BaseCollectionRequest<Profile
      * @param value the order by clause
      * @return the updated request
      */
-    public ProfilePhotoCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ProfilePhotoCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ProfilePhotoCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class ProfilePhotoCollectionRequest extends BaseCollectionRequest<Profile
      * @param value the select clause
      * @return the updated request
      */
-    public ProfilePhotoCollectionRequest select(final String value) {
+    @Nonnull
+    public ProfilePhotoCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ProfilePhotoCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class ProfilePhotoCollectionRequest extends BaseCollectionRequest<Profile
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ProfilePhotoCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ProfilePhotoCollectionRequest)this;
@@ -133,6 +142,7 @@ public class ProfilePhotoCollectionRequest extends BaseCollectionRequest<Profile
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ProfilePhotoCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (ProfilePhotoCollectionRequest)this;
@@ -144,11 +154,13 @@ public class ProfilePhotoCollectionRequest extends BaseCollectionRequest<Profile
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ProfilePhotoCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ProfilePhotoCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (ProfilePhotoCollectionRequest)this;
     }
-    public ProfilePhotoCollectionPage buildFromResponse(final ProfilePhotoCollectionResponse response) {
+    @Nonnull
+    public ProfilePhotoCollectionPage buildFromResponse(@Nonnull final ProfilePhotoCollectionResponse response) {
         final ProfilePhotoCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ProfilePhotoCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

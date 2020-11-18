@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SubscribedSku;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,11 +36,11 @@ public class SubscribedSkuCollectionRequest extends BaseCollectionRequest<Subscr
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SubscribedSkuCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SubscribedSkuCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SubscribedSkuCollectionResponse.class, SubscribedSkuCollectionPage.class);
     }
 
-    public void get(final ICallback<? super SubscribedSkuCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super SubscribedSkuCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -52,19 +54,21 @@ public class SubscribedSkuCollectionRequest extends BaseCollectionRequest<Subscr
         });
     }
 
+    @Nonnull
     public SubscribedSkuCollectionPage get() throws ClientException {
         final SubscribedSkuCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final SubscribedSku newSubscribedSku, final ICallback<? super SubscribedSku> callback) {
+    public void post(@Nonnull final SubscribedSku newSubscribedSku, @Nonnull final ICallback<? super SubscribedSku> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SubscribedSkuRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newSubscribedSku, callback);
     }
 
-    public SubscribedSku post(final SubscribedSku newSubscribedSku) throws ClientException {
+    @Nonnull
+    public SubscribedSku post(@Nonnull final SubscribedSku newSubscribedSku) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SubscribedSkuRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -77,7 +81,8 @@ public class SubscribedSkuCollectionRequest extends BaseCollectionRequest<Subscr
      * @param value the expand clause
      * @return the updated request
      */
-    public SubscribedSkuCollectionRequest expand(final String value) {
+    @Nonnull
+    public SubscribedSkuCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (SubscribedSkuCollectionRequest)this;
     }
@@ -88,7 +93,8 @@ public class SubscribedSkuCollectionRequest extends BaseCollectionRequest<Subscr
      * @param value the filter clause
      * @return the updated request
      */
-    public SubscribedSkuCollectionRequest filter(final String value) {
+    @Nonnull
+    public SubscribedSkuCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (SubscribedSkuCollectionRequest)this;
     }
@@ -99,7 +105,8 @@ public class SubscribedSkuCollectionRequest extends BaseCollectionRequest<Subscr
      * @param value the order by clause
      * @return the updated request
      */
-    public SubscribedSkuCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public SubscribedSkuCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SubscribedSkuCollectionRequest)this;
     }
@@ -110,7 +117,8 @@ public class SubscribedSkuCollectionRequest extends BaseCollectionRequest<Subscr
      * @param value the select clause
      * @return the updated request
      */
-    public SubscribedSkuCollectionRequest select(final String value) {
+    @Nonnull
+    public SubscribedSkuCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (SubscribedSkuCollectionRequest)this;
     }
@@ -121,6 +129,7 @@ public class SubscribedSkuCollectionRequest extends BaseCollectionRequest<Subscr
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public SubscribedSkuCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (SubscribedSkuCollectionRequest)this;
@@ -132,6 +141,7 @@ public class SubscribedSkuCollectionRequest extends BaseCollectionRequest<Subscr
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public SubscribedSkuCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (SubscribedSkuCollectionRequest)this;
@@ -143,11 +153,13 @@ public class SubscribedSkuCollectionRequest extends BaseCollectionRequest<Subscr
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public SubscribedSkuCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public SubscribedSkuCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (SubscribedSkuCollectionRequest)this;
     }
-    public SubscribedSkuCollectionPage buildFromResponse(final SubscribedSkuCollectionResponse response) {
+    @Nonnull
+    public SubscribedSkuCollectionPage buildFromResponse(@Nonnull final SubscribedSkuCollectionResponse response) {
         final SubscribedSkuCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new SubscribedSkuCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

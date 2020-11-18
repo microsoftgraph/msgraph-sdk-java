@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.AppRoleAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -32,11 +34,11 @@ public class AppRoleAssignmentCollectionReferenceRequest extends BaseCollectionR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AppRoleAssignmentCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AppRoleAssignmentCollectionReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AppRoleAssignmentCollectionResponse.class, AppRoleAssignmentCollectionPage.class);
     }
 
-    public void post(final AppRoleAssignment newAppRoleAssignment, final ICallback<? super AppRoleAssignment> callback) {
+    public void post(@Nonnull final AppRoleAssignment newAppRoleAssignment, @Nonnull final ICallback<? super AppRoleAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/me/ownersAsAppRoleAssignment/" + newAppRoleAssignment.id);
         new AppRoleAssignmentWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -44,7 +46,8 @@ public class AppRoleAssignmentCollectionReferenceRequest extends BaseCollectionR
             .post(newAppRoleAssignment, body, callback);
     }
 
-    public AppRoleAssignment post(final AppRoleAssignment newAppRoleAssignment) throws ClientException {
+    @Nonnull
+    public AppRoleAssignment post(@Nonnull final AppRoleAssignment newAppRoleAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/me/ownersAsAppRoleAssignment/" + newAppRoleAssignment.id);
         return new AppRoleAssignmentWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
@@ -57,7 +60,8 @@ public class AppRoleAssignmentCollectionReferenceRequest extends BaseCollectionR
      * @param value the expand clause
      * @return the updated request
      */
-    public AppRoleAssignmentCollectionReferenceRequest expand(final String value) {
+    @Nonnull
+    public AppRoleAssignmentCollectionReferenceRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (AppRoleAssignmentCollectionReferenceRequest)this;
     }
@@ -68,7 +72,8 @@ public class AppRoleAssignmentCollectionReferenceRequest extends BaseCollectionR
      * @param value the filter clause
      * @return the updated request
      */
-    public AppRoleAssignmentCollectionReferenceRequest filter(final String value) {
+    @Nonnull
+    public AppRoleAssignmentCollectionReferenceRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (AppRoleAssignmentCollectionReferenceRequest)this;
     }
@@ -79,7 +84,8 @@ public class AppRoleAssignmentCollectionReferenceRequest extends BaseCollectionR
      * @param value the sort clause
      * @return the updated request
      */
-    public AppRoleAssignmentCollectionReferenceRequest orderBy(final String value) {
+    @Nonnull
+    public AppRoleAssignmentCollectionReferenceRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AppRoleAssignmentCollectionReferenceRequest)this;
     }
@@ -90,7 +96,8 @@ public class AppRoleAssignmentCollectionReferenceRequest extends BaseCollectionR
      * @param value the select clause
      * @return the updated request
      */
-    public AppRoleAssignmentCollectionReferenceRequest select(final String value) {
+    @Nonnull
+    public AppRoleAssignmentCollectionReferenceRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (AppRoleAssignmentCollectionReferenceRequest)this;
     }
@@ -101,6 +108,7 @@ public class AppRoleAssignmentCollectionReferenceRequest extends BaseCollectionR
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public AppRoleAssignmentCollectionReferenceRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (AppRoleAssignmentCollectionReferenceRequest)this;

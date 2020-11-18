@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.MobileApp;
 import com.microsoft.graph.requests.extensions.MobileAppCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.MobileAppCollectionPage;
 import com.microsoft.graph.requests.extensions.MobileAppCollectionResponse;
@@ -22,7 +24,7 @@ public class MobileAppCollectionPage extends BaseCollectionPage<MobileApp, Mobil
      * @param response the serialized MobileAppCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public MobileAppCollectionPage(final MobileAppCollectionResponse response, final MobileAppCollectionRequestBuilder builder) {
+    public MobileAppCollectionPage(@Nonnull final MobileAppCollectionResponse response, @Nonnull final MobileAppCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

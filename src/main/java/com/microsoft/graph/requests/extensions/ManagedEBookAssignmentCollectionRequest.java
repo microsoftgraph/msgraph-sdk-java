@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ManagedEBook;
 import com.microsoft.graph.models.extensions.ManagedEBookAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class ManagedEBookAssignmentCollectionRequest extends BaseCollectionReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedEBookAssignmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedEBookAssignmentCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedEBookAssignmentCollectionResponse.class, ManagedEBookAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ManagedEBookAssignmentCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super ManagedEBookAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class ManagedEBookAssignmentCollectionRequest extends BaseCollectionReque
         });
     }
 
+    @Nonnull
     public ManagedEBookAssignmentCollectionPage get() throws ClientException {
         final ManagedEBookAssignmentCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final ManagedEBookAssignment newManagedEBookAssignment, final ICallback<? super ManagedEBookAssignment> callback) {
+    public void post(@Nonnull final ManagedEBookAssignment newManagedEBookAssignment, @Nonnull final ICallback<? super ManagedEBookAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedEBookAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedEBookAssignment, callback);
     }
 
-    public ManagedEBookAssignment post(final ManagedEBookAssignment newManagedEBookAssignment) throws ClientException {
+    @Nonnull
+    public ManagedEBookAssignment post(@Nonnull final ManagedEBookAssignment newManagedEBookAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedEBookAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class ManagedEBookAssignmentCollectionRequest extends BaseCollectionReque
      * @param value the expand clause
      * @return the updated request
      */
-    public ManagedEBookAssignmentCollectionRequest expand(final String value) {
+    @Nonnull
+    public ManagedEBookAssignmentCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ManagedEBookAssignmentCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class ManagedEBookAssignmentCollectionRequest extends BaseCollectionReque
      * @param value the filter clause
      * @return the updated request
      */
-    public ManagedEBookAssignmentCollectionRequest filter(final String value) {
+    @Nonnull
+    public ManagedEBookAssignmentCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ManagedEBookAssignmentCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class ManagedEBookAssignmentCollectionRequest extends BaseCollectionReque
      * @param value the order by clause
      * @return the updated request
      */
-    public ManagedEBookAssignmentCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ManagedEBookAssignmentCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ManagedEBookAssignmentCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class ManagedEBookAssignmentCollectionRequest extends BaseCollectionReque
      * @param value the select clause
      * @return the updated request
      */
-    public ManagedEBookAssignmentCollectionRequest select(final String value) {
+    @Nonnull
+    public ManagedEBookAssignmentCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ManagedEBookAssignmentCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class ManagedEBookAssignmentCollectionRequest extends BaseCollectionReque
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ManagedEBookAssignmentCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ManagedEBookAssignmentCollectionRequest)this;
@@ -133,6 +142,7 @@ public class ManagedEBookAssignmentCollectionRequest extends BaseCollectionReque
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ManagedEBookAssignmentCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (ManagedEBookAssignmentCollectionRequest)this;
@@ -144,11 +154,13 @@ public class ManagedEBookAssignmentCollectionRequest extends BaseCollectionReque
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ManagedEBookAssignmentCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ManagedEBookAssignmentCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (ManagedEBookAssignmentCollectionRequest)this;
     }
-    public ManagedEBookAssignmentCollectionPage buildFromResponse(final ManagedEBookAssignmentCollectionResponse response) {
+    @Nonnull
+    public ManagedEBookAssignmentCollectionPage buildFromResponse(@Nonnull final ManagedEBookAssignmentCollectionResponse response) {
         final ManagedEBookAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ManagedEBookAssignmentCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

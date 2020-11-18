@@ -6,6 +6,8 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.requests.extensions.WorkbookTableHeaderRowRangeRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.core.ClientException;
@@ -27,7 +29,7 @@ public class WorkbookTableHeaderRowRangeRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookTableHeaderRowRangeRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableHeaderRowRangeRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookRange.class);
     }
 
@@ -36,7 +38,7 @@ public class WorkbookTableHeaderRowRangeRequest extends BaseRequest {
      * @param srcWorkbookRange the WorkbookRange with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    public void patch(WorkbookRange srcWorkbookRange, final ICallback<? super WorkbookRange> callback) {
+    public void patch(@Nonnull WorkbookRange srcWorkbookRange, @Nonnull final ICallback<? super WorkbookRange> callback) {
         send(HttpMethod.PATCH, callback, srcWorkbookRange);
     }
 
@@ -47,7 +49,8 @@ public class WorkbookTableHeaderRowRangeRequest extends BaseRequest {
      * @return the WorkbookRange
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-     public WorkbookRange patch(WorkbookRange srcWorkbookRange) throws ClientException {
+     @Nullable
+     public WorkbookRange patch(@Nonnull final WorkbookRange srcWorkbookRange) throws ClientException {
         return this.send(HttpMethod.PATCH, srcWorkbookRange);
     }
 
@@ -57,7 +60,7 @@ public class WorkbookTableHeaderRowRangeRequest extends BaseRequest {
      * @param srcWorkbookRange the WorkbookRange to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(WorkbookRange srcWorkbookRange, final ICallback<? super WorkbookRange> callback) {
+    public void put(@Nonnull final WorkbookRange srcWorkbookRange, @Nonnull final ICallback<? super WorkbookRange> callback) {
         send(HttpMethod.PUT, callback, srcWorkbookRange);
     }
 
@@ -68,7 +71,8 @@ public class WorkbookTableHeaderRowRangeRequest extends BaseRequest {
      * @return the WorkbookRange
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-     public WorkbookRange put(WorkbookRange srcWorkbookRange) throws ClientException {
+     @Nullable
+     public WorkbookRange put(@Nonnull final WorkbookRange srcWorkbookRange) throws ClientException {
         return this.send(HttpMethod.PUT, srcWorkbookRange);
     }
     /**
@@ -76,7 +80,7 @@ public class WorkbookTableHeaderRowRangeRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookRange> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookRange> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -86,6 +90,7 @@ public class WorkbookTableHeaderRowRangeRequest extends BaseRequest {
      * @return the WorkbookRange
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
+    @Nullable
     public WorkbookRange get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -96,7 +101,8 @@ public class WorkbookTableHeaderRowRangeRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public WorkbookTableHeaderRowRangeRequest select(final String value) {
+    @Nonnull
+    public WorkbookTableHeaderRowRangeRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookTableHeaderRowRangeRequest)this;
     }
@@ -107,7 +113,8 @@ public class WorkbookTableHeaderRowRangeRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public WorkbookTableHeaderRowRangeRequest expand(final String value) {
+    @Nonnull
+    public WorkbookTableHeaderRowRangeRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookTableHeaderRowRangeRequest)this;
     }
@@ -118,7 +125,8 @@ public class WorkbookTableHeaderRowRangeRequest extends BaseRequest {
      * @param value the filter clause
      * @return the updated request
      */
-    public WorkbookTableHeaderRowRangeRequest filter(final String value) {
+    @Nonnull
+    public WorkbookTableHeaderRowRangeRequest filter(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookTableHeaderRowRangeRequest)this;
     }
@@ -129,7 +137,8 @@ public class WorkbookTableHeaderRowRangeRequest extends BaseRequest {
      * @param value the order by clause
      * @return the updated request
      */
-    public WorkbookTableHeaderRowRangeRequest orderBy(final String value) {
+    @Nonnull
+    public WorkbookTableHeaderRowRangeRequest orderBy(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookTableHeaderRowRangeRequest)this;
     }

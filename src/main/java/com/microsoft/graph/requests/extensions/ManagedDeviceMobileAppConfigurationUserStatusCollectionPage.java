@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationUserStatus;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserStatusCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse;
@@ -22,7 +24,7 @@ public class ManagedDeviceMobileAppConfigurationUserStatusCollectionPage extends
      * @param response the serialized ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ManagedDeviceMobileAppConfigurationUserStatusCollectionPage(final ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse response, final ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder builder) {
+    public ManagedDeviceMobileAppConfigurationUserStatusCollectionPage(@Nonnull final ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse response, @Nonnull final ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

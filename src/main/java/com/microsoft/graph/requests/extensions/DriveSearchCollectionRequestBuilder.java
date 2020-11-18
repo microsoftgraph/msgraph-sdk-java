@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DriveItem;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DriveSearchCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveSearchCollectionRequest;
@@ -32,7 +34,7 @@ public class DriveSearchCollectionRequestBuilder extends BaseFunctionRequestBuil
      * @param requestOptions the options for this request
      * @param q the q
      */
-    public DriveSearchCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String q) {
+    public DriveSearchCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final String q) {
         super(requestUrl, client, requestOptions);
      	 if(q!=null){
 			functionOptions.add(new com.microsoft.graph.options.FunctionOption("q", q));
@@ -45,7 +47,8 @@ public class DriveSearchCollectionRequestBuilder extends BaseFunctionRequestBuil
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public DriveSearchCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DriveSearchCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -55,7 +58,8 @@ public class DriveSearchCollectionRequestBuilder extends BaseFunctionRequestBuil
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public DriveSearchCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DriveSearchCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DriveSearchCollectionRequest request = new DriveSearchCollectionRequest(
                 getRequestUrl(),
                 getClient(),

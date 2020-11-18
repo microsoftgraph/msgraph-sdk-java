@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DriveItem;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DriveSharedWithMeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveSharedWithMeCollectionPage;
@@ -33,7 +35,7 @@ public class DriveSharedWithMeCollectionPage extends BaseCollectionPage<DriveIte
      * @param response The serialized DriveSharedWithMeCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public DriveSharedWithMeCollectionPage(final DriveSharedWithMeCollectionResponse response, final DriveSharedWithMeCollectionRequestBuilder builder) {
+    public DriveSharedWithMeCollectionPage(@Nonnull final DriveSharedWithMeCollectionResponse response, @Nonnull final DriveSharedWithMeCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Call;
 import com.microsoft.graph.models.extensions.CommsOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class CommsOperationCollectionRequest extends BaseCollectionRequest<Comms
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CommsOperationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CommsOperationCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CommsOperationCollectionResponse.class, CommsOperationCollectionPage.class);
     }
 
-    public void get(final ICallback<? super CommsOperationCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super CommsOperationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class CommsOperationCollectionRequest extends BaseCollectionRequest<Comms
         });
     }
 
+    @Nonnull
     public CommsOperationCollectionPage get() throws ClientException {
         final CommsOperationCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final CommsOperation newCommsOperation, final ICallback<? super CommsOperation> callback) {
+    public void post(@Nonnull final CommsOperation newCommsOperation, @Nonnull final ICallback<? super CommsOperation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CommsOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newCommsOperation, callback);
     }
 
-    public CommsOperation post(final CommsOperation newCommsOperation) throws ClientException {
+    @Nonnull
+    public CommsOperation post(@Nonnull final CommsOperation newCommsOperation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CommsOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class CommsOperationCollectionRequest extends BaseCollectionRequest<Comms
      * @param value the expand clause
      * @return the updated request
      */
-    public CommsOperationCollectionRequest expand(final String value) {
+    @Nonnull
+    public CommsOperationCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (CommsOperationCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class CommsOperationCollectionRequest extends BaseCollectionRequest<Comms
      * @param value the filter clause
      * @return the updated request
      */
-    public CommsOperationCollectionRequest filter(final String value) {
+    @Nonnull
+    public CommsOperationCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (CommsOperationCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class CommsOperationCollectionRequest extends BaseCollectionRequest<Comms
      * @param value the order by clause
      * @return the updated request
      */
-    public CommsOperationCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public CommsOperationCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (CommsOperationCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class CommsOperationCollectionRequest extends BaseCollectionRequest<Comms
      * @param value the select clause
      * @return the updated request
      */
-    public CommsOperationCollectionRequest select(final String value) {
+    @Nonnull
+    public CommsOperationCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (CommsOperationCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class CommsOperationCollectionRequest extends BaseCollectionRequest<Comms
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public CommsOperationCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (CommsOperationCollectionRequest)this;
@@ -133,6 +142,7 @@ public class CommsOperationCollectionRequest extends BaseCollectionRequest<Comms
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public CommsOperationCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (CommsOperationCollectionRequest)this;
@@ -144,11 +154,13 @@ public class CommsOperationCollectionRequest extends BaseCollectionRequest<Comms
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public CommsOperationCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public CommsOperationCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (CommsOperationCollectionRequest)this;
     }
-    public CommsOperationCollectionPage buildFromResponse(final CommsOperationCollectionResponse response) {
+    @Nonnull
+    public CommsOperationCollectionPage buildFromResponse(@Nonnull final CommsOperationCollectionResponse response) {
         final CommsOperationCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new CommsOperationCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

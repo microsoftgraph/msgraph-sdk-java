@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupSettingTemplate;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.GroupSettingTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupSettingTemplateRequestBuilder;
@@ -31,7 +33,7 @@ public class GroupSettingTemplateCollectionRequestBuilder extends BaseRequestBui
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupSettingTemplateCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupSettingTemplateCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -41,7 +43,8 @@ public class GroupSettingTemplateCollectionRequestBuilder extends BaseRequestBui
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public GroupSettingTemplateCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public GroupSettingTemplateCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,11 +54,13 @@ public class GroupSettingTemplateCollectionRequestBuilder extends BaseRequestBui
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public GroupSettingTemplateCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public GroupSettingTemplateCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new GroupSettingTemplateCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public GroupSettingTemplateRequestBuilder byId(final String id) {
+    @Nonnull
+    public GroupSettingTemplateRequestBuilder byId(@Nonnull final String id) {
         return new GroupSettingTemplateRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

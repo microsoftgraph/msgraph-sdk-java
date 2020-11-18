@@ -8,6 +8,8 @@ import com.microsoft.graph.models.extensions.DriveRecipient;
 import com.microsoft.graph.models.extensions.Permission;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
 import java.util.EnumSet;
@@ -25,6 +27,7 @@ public class DriveItemInviteBody {
      */
     @SerializedName(value = "requireSignIn", alternate = {"RequireSignIn"})
     @Expose
+	@Nullable
     public Boolean requireSignIn;
 
     /**
@@ -33,6 +36,7 @@ public class DriveItemInviteBody {
      */
     @SerializedName(value = "roles", alternate = {"Roles"})
     @Expose
+	@Nullable
     public java.util.List<String> roles;
 
     /**
@@ -41,6 +45,7 @@ public class DriveItemInviteBody {
      */
     @SerializedName(value = "sendInvitation", alternate = {"SendInvitation"})
     @Expose
+	@Nullable
     public Boolean sendInvitation;
 
     /**
@@ -49,6 +54,7 @@ public class DriveItemInviteBody {
      */
     @SerializedName(value = "message", alternate = {"Message"})
     @Expose
+	@Nullable
     public String message;
 
     /**
@@ -57,6 +63,7 @@ public class DriveItemInviteBody {
      */
     @SerializedName(value = "recipients", alternate = {"Recipients"})
     @Expose
+	@Nullable
     public java.util.List<DriveRecipient> recipients;
 
     /**
@@ -65,6 +72,7 @@ public class DriveItemInviteBody {
      */
     @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
+	@Nullable
     public String expirationDateTime;
 
     /**
@@ -73,6 +81,7 @@ public class DriveItemInviteBody {
      */
     @SerializedName(value = "password", alternate = {"Password"})
     @Expose
+	@Nullable
     public String password;
 
 
@@ -91,6 +100,7 @@ public class DriveItemInviteBody {
      *
      * @return the raw representation of this class
      */
+    @Nullable
     public JsonObject getRawObject() {
         return rawObject;
     }
@@ -100,6 +110,7 @@ public class DriveItemInviteBody {
      *
      * @return the serializer
      */
+    @Nullable
     protected ISerializer getSerializer() {
         return serializer;
     }
@@ -110,7 +121,7 @@ public class DriveItemInviteBody {
      * @param serializer the serializer
      * @param json the JSON object to set this object to
      */
-    public void setRawObject(final ISerializer serializer, final JsonObject json) {
+    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
         this.serializer = serializer;
         rawObject = json;
 

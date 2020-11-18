@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ContactFolder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.ContactFolderDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContactFolderDeltaCollectionPage;
@@ -34,12 +36,12 @@ public class ContactFolderDeltaCollectionRequest extends BaseCollectionRequest<C
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ContactFolderDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ContactFolderDeltaCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ContactFolderDeltaCollectionResponse.class, ContactFolderDeltaCollectionPage.class);
     }
 
 
-    public void get(final ICallback<? super ContactFolderDeltaCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super ContactFolderDeltaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,13 +55,15 @@ public class ContactFolderDeltaCollectionRequest extends BaseCollectionRequest<C
         });
     }
 
+    @Nullable
     public ContactFolderDeltaCollectionPage get() throws ClientException {
         final ContactFolderDeltaCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
 
-    public ContactFolderDeltaCollectionPage buildFromResponse(final ContactFolderDeltaCollectionResponse response) {
+    @Nonnull
+    public ContactFolderDeltaCollectionPage buildFromResponse(@Nonnull final ContactFolderDeltaCollectionResponse response) {
         final ContactFolderDeltaCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ContactFolderDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
@@ -77,7 +81,8 @@ public class ContactFolderDeltaCollectionRequest extends BaseCollectionRequest<C
      * @param value the select clause
      * @return the updated request
      */
-    public ContactFolderDeltaCollectionRequest select(final String value) {
+    @Nonnull
+    public ContactFolderDeltaCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ContactFolderDeltaCollectionRequest)this;
     }
@@ -88,6 +93,7 @@ public class ContactFolderDeltaCollectionRequest extends BaseCollectionRequest<C
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ContactFolderDeltaCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (ContactFolderDeltaCollectionRequest)this;
@@ -99,7 +105,8 @@ public class ContactFolderDeltaCollectionRequest extends BaseCollectionRequest<C
      * @param value the expand clause
      * @return the updated request
      */
-    public ContactFolderDeltaCollectionRequest expand(final String value) {
+    @Nonnull
+    public ContactFolderDeltaCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ContactFolderDeltaCollectionRequest)this;
     }
@@ -110,7 +117,8 @@ public class ContactFolderDeltaCollectionRequest extends BaseCollectionRequest<C
      * @param value the filter clause
      * @return the updated request
      */
-    public ContactFolderDeltaCollectionRequest filter(final String value) {
+    @Nonnull
+    public ContactFolderDeltaCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ContactFolderDeltaCollectionRequest)this;
     }
@@ -121,7 +129,8 @@ public class ContactFolderDeltaCollectionRequest extends BaseCollectionRequest<C
      * @param value the order by clause
      * @return the updated request
      */
-    public ContactFolderDeltaCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ContactFolderDeltaCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ContactFolderDeltaCollectionRequest)this;
     }

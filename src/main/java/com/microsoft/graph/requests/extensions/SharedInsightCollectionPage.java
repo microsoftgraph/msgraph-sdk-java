@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.SharedInsight;
 import com.microsoft.graph.requests.extensions.SharedInsightCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.SharedInsightCollectionPage;
 import com.microsoft.graph.requests.extensions.SharedInsightCollectionResponse;
@@ -22,7 +24,7 @@ public class SharedInsightCollectionPage extends BaseCollectionPage<SharedInsigh
      * @param response the serialized SharedInsightCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public SharedInsightCollectionPage(final SharedInsightCollectionResponse response, final SharedInsightCollectionRequestBuilder builder) {
+    public SharedInsightCollectionPage(@Nonnull final SharedInsightCollectionResponse response, @Nonnull final SharedInsightCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

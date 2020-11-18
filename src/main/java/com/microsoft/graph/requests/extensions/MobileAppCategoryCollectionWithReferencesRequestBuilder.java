@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.MobileApp;
 import com.microsoft.graph.models.extensions.MobileAppCategory;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
@@ -29,7 +31,7 @@ public class MobileAppCategoryCollectionWithReferencesRequestBuilder extends Bas
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MobileAppCategoryCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppCategoryCollectionWithReferencesRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +41,8 @@ public class MobileAppCategoryCollectionWithReferencesRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public MobileAppCategoryCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public MobileAppCategoryCollectionWithReferencesRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,14 +52,17 @@ public class MobileAppCategoryCollectionWithReferencesRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public MobileAppCategoryCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public MobileAppCategoryCollectionWithReferencesRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new MobileAppCategoryCollectionWithReferencesRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public MobileAppCategoryWithReferenceRequestBuilder byId(final String id) {
+    @Nonnull
+    public MobileAppCategoryWithReferenceRequestBuilder byId(@Nonnull final String id) {
         return new MobileAppCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
+    @Nonnull
     public MobileAppCategoryCollectionReferenceRequestBuilder references(){
         return new MobileAppCategoryCollectionReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }

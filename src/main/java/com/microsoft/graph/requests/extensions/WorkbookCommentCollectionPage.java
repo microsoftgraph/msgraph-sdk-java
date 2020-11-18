@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookComment;
 import com.microsoft.graph.requests.extensions.WorkbookCommentCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkbookCommentCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkbookCommentCollectionResponse;
@@ -22,7 +24,7 @@ public class WorkbookCommentCollectionPage extends BaseCollectionPage<WorkbookCo
      * @param response the serialized WorkbookCommentCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public WorkbookCommentCollectionPage(final WorkbookCommentCollectionResponse response, final WorkbookCommentCollectionRequestBuilder builder) {
+    public WorkbookCommentCollectionPage(@Nonnull final WorkbookCommentCollectionResponse response, @Nonnull final WorkbookCommentCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

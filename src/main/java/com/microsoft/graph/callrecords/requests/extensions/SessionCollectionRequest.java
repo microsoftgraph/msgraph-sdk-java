@@ -11,6 +11,8 @@ import com.microsoft.graph.callrecords.models.extensions.CallRecord;
 import com.microsoft.graph.callrecords.models.extensions.Session;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class SessionCollectionRequest extends BaseCollectionRequest<SessionColle
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SessionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SessionCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SessionCollectionResponse.class, SessionCollectionPage.class);
     }
 
-    public void get(final ICallback<? super SessionCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super SessionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class SessionCollectionRequest extends BaseCollectionRequest<SessionColle
         });
     }
 
+    @Nonnull
     public SessionCollectionPage get() throws ClientException {
         final SessionCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final Session newSession, final ICallback<? super Session> callback) {
+    public void post(@Nonnull final Session newSession, @Nonnull final ICallback<? super Session> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SessionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newSession, callback);
     }
 
-    public Session post(final Session newSession) throws ClientException {
+    @Nonnull
+    public Session post(@Nonnull final Session newSession) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SessionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class SessionCollectionRequest extends BaseCollectionRequest<SessionColle
      * @param value the expand clause
      * @return the updated request
      */
-    public SessionCollectionRequest expand(final String value) {
+    @Nonnull
+    public SessionCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (SessionCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class SessionCollectionRequest extends BaseCollectionRequest<SessionColle
      * @param value the filter clause
      * @return the updated request
      */
-    public SessionCollectionRequest filter(final String value) {
+    @Nonnull
+    public SessionCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (SessionCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class SessionCollectionRequest extends BaseCollectionRequest<SessionColle
      * @param value the order by clause
      * @return the updated request
      */
-    public SessionCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public SessionCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SessionCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class SessionCollectionRequest extends BaseCollectionRequest<SessionColle
      * @param value the select clause
      * @return the updated request
      */
-    public SessionCollectionRequest select(final String value) {
+    @Nonnull
+    public SessionCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (SessionCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class SessionCollectionRequest extends BaseCollectionRequest<SessionColle
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public SessionCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (SessionCollectionRequest)this;
@@ -133,6 +142,7 @@ public class SessionCollectionRequest extends BaseCollectionRequest<SessionColle
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public SessionCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (SessionCollectionRequest)this;
@@ -144,11 +154,13 @@ public class SessionCollectionRequest extends BaseCollectionRequest<SessionColle
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public SessionCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public SessionCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (SessionCollectionRequest)this;
     }
-    public SessionCollectionPage buildFromResponse(final SessionCollectionResponse response) {
+    @Nonnull
+    public SessionCollectionPage buildFromResponse(@Nonnull final SessionCollectionResponse response) {
         final SessionCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new SessionCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

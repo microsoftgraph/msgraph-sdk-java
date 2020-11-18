@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.extensions.ManagedAppRegistration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -32,11 +34,11 @@ public class ManagedAppRegistrationCollectionReferenceRequest extends BaseCollec
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedAppRegistrationCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppRegistrationCollectionReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedAppRegistrationCollectionResponse.class, ManagedAppRegistrationCollectionPage.class);
     }
 
-    public void post(final ManagedAppRegistration newManagedAppRegistration, final ICallback<? super ManagedAppRegistration> callback) {
+    public void post(@Nonnull final ManagedAppRegistration newManagedAppRegistration, @Nonnull final ICallback<? super ManagedAppRegistration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceAppManagement/managedAppRegistrations/" + newManagedAppRegistration.id);
         new ManagedAppRegistrationWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -44,7 +46,8 @@ public class ManagedAppRegistrationCollectionReferenceRequest extends BaseCollec
             .post(newManagedAppRegistration, body, callback);
     }
 
-    public ManagedAppRegistration post(final ManagedAppRegistration newManagedAppRegistration) throws ClientException {
+    @Nonnull
+    public ManagedAppRegistration post(@Nonnull final ManagedAppRegistration newManagedAppRegistration) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceAppManagement/managedAppRegistrations/" + newManagedAppRegistration.id);
         return new ManagedAppRegistrationWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
@@ -57,7 +60,8 @@ public class ManagedAppRegistrationCollectionReferenceRequest extends BaseCollec
      * @param value the expand clause
      * @return the updated request
      */
-    public ManagedAppRegistrationCollectionReferenceRequest expand(final String value) {
+    @Nonnull
+    public ManagedAppRegistrationCollectionReferenceRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ManagedAppRegistrationCollectionReferenceRequest)this;
     }
@@ -68,7 +72,8 @@ public class ManagedAppRegistrationCollectionReferenceRequest extends BaseCollec
      * @param value the filter clause
      * @return the updated request
      */
-    public ManagedAppRegistrationCollectionReferenceRequest filter(final String value) {
+    @Nonnull
+    public ManagedAppRegistrationCollectionReferenceRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ManagedAppRegistrationCollectionReferenceRequest)this;
     }
@@ -79,7 +84,8 @@ public class ManagedAppRegistrationCollectionReferenceRequest extends BaseCollec
      * @param value the sort clause
      * @return the updated request
      */
-    public ManagedAppRegistrationCollectionReferenceRequest orderBy(final String value) {
+    @Nonnull
+    public ManagedAppRegistrationCollectionReferenceRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ManagedAppRegistrationCollectionReferenceRequest)this;
     }
@@ -90,7 +96,8 @@ public class ManagedAppRegistrationCollectionReferenceRequest extends BaseCollec
      * @param value the select clause
      * @return the updated request
      */
-    public ManagedAppRegistrationCollectionReferenceRequest select(final String value) {
+    @Nonnull
+    public ManagedAppRegistrationCollectionReferenceRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ManagedAppRegistrationCollectionReferenceRequest)this;
     }
@@ -101,6 +108,7 @@ public class ManagedAppRegistrationCollectionReferenceRequest extends BaseCollec
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ManagedAppRegistrationCollectionReferenceRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ManagedAppRegistrationCollectionReferenceRequest)this;

@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.DetectedApp;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class DetectedAppCollectionRequest extends BaseCollectionRequest<Detected
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DetectedAppCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DetectedAppCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DetectedAppCollectionResponse.class, DetectedAppCollectionPage.class);
     }
 
-    public void get(final ICallback<? super DetectedAppCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super DetectedAppCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class DetectedAppCollectionRequest extends BaseCollectionRequest<Detected
         });
     }
 
+    @Nonnull
     public DetectedAppCollectionPage get() throws ClientException {
         final DetectedAppCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final DetectedApp newDetectedApp, final ICallback<? super DetectedApp> callback) {
+    public void post(@Nonnull final DetectedApp newDetectedApp, @Nonnull final ICallback<? super DetectedApp> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DetectedAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newDetectedApp, callback);
     }
 
-    public DetectedApp post(final DetectedApp newDetectedApp) throws ClientException {
+    @Nonnull
+    public DetectedApp post(@Nonnull final DetectedApp newDetectedApp) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DetectedAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class DetectedAppCollectionRequest extends BaseCollectionRequest<Detected
      * @param value the expand clause
      * @return the updated request
      */
-    public DetectedAppCollectionRequest expand(final String value) {
+    @Nonnull
+    public DetectedAppCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DetectedAppCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class DetectedAppCollectionRequest extends BaseCollectionRequest<Detected
      * @param value the filter clause
      * @return the updated request
      */
-    public DetectedAppCollectionRequest filter(final String value) {
+    @Nonnull
+    public DetectedAppCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DetectedAppCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class DetectedAppCollectionRequest extends BaseCollectionRequest<Detected
      * @param value the order by clause
      * @return the updated request
      */
-    public DetectedAppCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DetectedAppCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DetectedAppCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class DetectedAppCollectionRequest extends BaseCollectionRequest<Detected
      * @param value the select clause
      * @return the updated request
      */
-    public DetectedAppCollectionRequest select(final String value) {
+    @Nonnull
+    public DetectedAppCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DetectedAppCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class DetectedAppCollectionRequest extends BaseCollectionRequest<Detected
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DetectedAppCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (DetectedAppCollectionRequest)this;
@@ -133,6 +142,7 @@ public class DetectedAppCollectionRequest extends BaseCollectionRequest<Detected
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public DetectedAppCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (DetectedAppCollectionRequest)this;
@@ -144,11 +154,13 @@ public class DetectedAppCollectionRequest extends BaseCollectionRequest<Detected
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public DetectedAppCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public DetectedAppCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (DetectedAppCollectionRequest)this;
     }
-    public DetectedAppCollectionPage buildFromResponse(final DetectedAppCollectionResponse response) {
+    @Nonnull
+    public DetectedAppCollectionPage buildFromResponse(@Nonnull final DetectedAppCollectionResponse response) {
         final DetectedAppCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new DetectedAppCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

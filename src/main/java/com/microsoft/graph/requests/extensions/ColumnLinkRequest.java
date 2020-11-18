@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ColumnLink;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class ColumnLinkRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ColumnLinkRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ColumnLinkRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ColumnLink.class);
     }
 
@@ -37,7 +39,7 @@ public class ColumnLinkRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ColumnLink> callback) {
+    public void get(@Nonnull final ICallback<? super ColumnLink> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class ColumnLinkRequest extends BaseRequest {
      * @return the ColumnLink from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ColumnLink get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class ColumnLinkRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ColumnLink> callback) {
+    public void delete(@Nonnull final ICallback<? super ColumnLink> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class ColumnLinkRequest extends BaseRequest {
      * @param sourceColumnLink the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ColumnLink sourceColumnLink, final ICallback<? super ColumnLink> callback) {
+    public void patch(@Nonnull final ColumnLink sourceColumnLink, @Nonnull final ICallback<? super ColumnLink> callback) {
         send(HttpMethod.PATCH, callback, sourceColumnLink);
     }
 
@@ -86,7 +89,8 @@ public class ColumnLinkRequest extends BaseRequest {
      * @return the updated ColumnLink
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ColumnLink patch(final ColumnLink sourceColumnLink) throws ClientException {
+    @Nullable
+    public ColumnLink patch(@Nonnull final ColumnLink sourceColumnLink) throws ClientException {
         return send(HttpMethod.PATCH, sourceColumnLink);
     }
 
@@ -96,7 +100,7 @@ public class ColumnLinkRequest extends BaseRequest {
      * @param newColumnLink the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ColumnLink newColumnLink, final ICallback<? super ColumnLink> callback) {
+    public void post(@Nonnull final ColumnLink newColumnLink, @Nonnull final ICallback<? super ColumnLink> callback) {
         send(HttpMethod.POST, callback, newColumnLink);
     }
 
@@ -107,7 +111,8 @@ public class ColumnLinkRequest extends BaseRequest {
      * @return the created ColumnLink
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ColumnLink post(final ColumnLink newColumnLink) throws ClientException {
+    @Nullable
+    public ColumnLink post(@Nonnull final ColumnLink newColumnLink) throws ClientException {
         return send(HttpMethod.POST, newColumnLink);
     }
 
@@ -117,7 +122,7 @@ public class ColumnLinkRequest extends BaseRequest {
      * @param newColumnLink the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ColumnLink newColumnLink, final ICallback<? super ColumnLink> callback) {
+    public void put(@Nonnull final ColumnLink newColumnLink, @Nonnull final ICallback<? super ColumnLink> callback) {
         send(HttpMethod.PUT, callback, newColumnLink);
     }
 
@@ -128,7 +133,8 @@ public class ColumnLinkRequest extends BaseRequest {
      * @return the created ColumnLink
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ColumnLink put(final ColumnLink newColumnLink) throws ClientException {
+    @Nullable
+    public ColumnLink put(@Nonnull final ColumnLink newColumnLink) throws ClientException {
         return send(HttpMethod.PUT, newColumnLink);
     }
 
@@ -138,7 +144,8 @@ public class ColumnLinkRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ColumnLinkRequest select(final String value) {
+     @Nonnull
+     public ColumnLinkRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ColumnLinkRequest)this;
      }
@@ -149,7 +156,8 @@ public class ColumnLinkRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ColumnLinkRequest expand(final String value) {
+     @Nonnull
+     public ColumnLinkRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ColumnLinkRequest)this;
      }

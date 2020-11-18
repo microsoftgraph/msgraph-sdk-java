@@ -6,6 +6,8 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.TargetedManagedAppConfigurationTargetAppsBody;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationTargetAppsRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,15 +30,16 @@ public class TargetedManagedAppConfigurationTargetAppsRequest extends BaseReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TargetedManagedAppConfigurationTargetAppsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TargetedManagedAppConfigurationTargetAppsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new TargetedManagedAppConfigurationTargetAppsBody();
     }
 
-    public void post(final ICallback<? super Void> callback) {
+    public void post(@Nonnull final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    @Nullable
     public Void post() throws ClientException {
         return send(HttpMethod.POST, body);
     }
@@ -47,7 +50,8 @@ public class TargetedManagedAppConfigurationTargetAppsRequest extends BaseReques
      * @param value the select clause
      * @return the updated request
      */
-    public TargetedManagedAppConfigurationTargetAppsRequest select(final String value) {
+    @Nonnull
+    public TargetedManagedAppConfigurationTargetAppsRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (TargetedManagedAppConfigurationTargetAppsRequest)this;
     }
@@ -58,6 +62,7 @@ public class TargetedManagedAppConfigurationTargetAppsRequest extends BaseReques
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public TargetedManagedAppConfigurationTargetAppsRequest top(final int value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (TargetedManagedAppConfigurationTargetAppsRequest)this;
@@ -69,7 +74,8 @@ public class TargetedManagedAppConfigurationTargetAppsRequest extends BaseReques
      * @param value the expand clause
      * @return the updated request
      */
-    public TargetedManagedAppConfigurationTargetAppsRequest expand(final String value) {
+    @Nonnull
+    public TargetedManagedAppConfigurationTargetAppsRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (TargetedManagedAppConfigurationTargetAppsRequest)this;
     }

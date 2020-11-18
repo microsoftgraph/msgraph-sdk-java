@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DriveRecipient;
 import com.microsoft.graph.models.extensions.Permission;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DriveItemInviteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemInviteCollectionRequest;
@@ -39,7 +41,7 @@ public class DriveItemInviteCollectionRequestBuilder extends BaseActionRequestBu
      * @param expirationDateTime the expirationDateTime
      * @param password the password
      */
-    public DriveItemInviteCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final Boolean requireSignIn, final java.util.List<String> roles, final Boolean sendInvitation, final String message, final java.util.List<DriveRecipient> recipients, final String expirationDateTime, final String password) {
+    public DriveItemInviteCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final Boolean requireSignIn, @Nullable final java.util.List<String> roles, @Nullable final Boolean sendInvitation, @Nullable final String message, @Nullable final java.util.List<DriveRecipient> recipients, @Nullable final String expirationDateTime, @Nullable final String password) {
         super(requestUrl, client, requestOptions);
   	 if(requireSignIn!=null){
 			bodyParams.put("requireSignIn", requireSignIn);
@@ -70,7 +72,8 @@ public class DriveItemInviteCollectionRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public DriveItemInviteCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DriveItemInviteCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -80,7 +83,8 @@ public class DriveItemInviteCollectionRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public DriveItemInviteCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DriveItemInviteCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DriveItemInviteCollectionRequest request = new DriveItemInviteCollectionRequest(
                 getRequestUrl(),
                 getClient(),

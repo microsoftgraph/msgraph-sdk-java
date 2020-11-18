@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ActivityBasedTimeoutPolicy;
 import com.microsoft.graph.requests.extensions.ActivityBasedTimeoutPolicyCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ActivityBasedTimeoutPolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.ActivityBasedTimeoutPolicyCollectionResponse;
@@ -22,7 +24,7 @@ public class ActivityBasedTimeoutPolicyCollectionPage extends BaseCollectionPage
      * @param response the serialized ActivityBasedTimeoutPolicyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ActivityBasedTimeoutPolicyCollectionPage(final ActivityBasedTimeoutPolicyCollectionResponse response, final ActivityBasedTimeoutPolicyCollectionRequestBuilder builder) {
+    public ActivityBasedTimeoutPolicyCollectionPage(@Nonnull final ActivityBasedTimeoutPolicyCollectionResponse response, @Nonnull final ActivityBasedTimeoutPolicyCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

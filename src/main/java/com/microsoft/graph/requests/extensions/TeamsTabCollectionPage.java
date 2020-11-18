@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.TeamsTab;
 import com.microsoft.graph.requests.extensions.TeamsTabCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.TeamsTabCollectionPage;
 import com.microsoft.graph.requests.extensions.TeamsTabCollectionResponse;
@@ -22,7 +24,7 @@ public class TeamsTabCollectionPage extends BaseCollectionPage<TeamsTab, TeamsTa
      * @param response the serialized TeamsTabCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TeamsTabCollectionPage(final TeamsTabCollectionResponse response, final TeamsTabCollectionRequestBuilder builder) {
+    public TeamsTabCollectionPage(@Nonnull final TeamsTabCollectionResponse response, @Nonnull final TeamsTabCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

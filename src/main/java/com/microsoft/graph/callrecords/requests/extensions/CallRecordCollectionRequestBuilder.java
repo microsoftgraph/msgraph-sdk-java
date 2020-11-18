@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.CloudCommunications;
 import com.microsoft.graph.callrecords.models.extensions.CallRecord;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.callrecords.requests.extensions.CallRecordCollectionRequestBuilder;
 import com.microsoft.graph.callrecords.requests.extensions.CallRecordRequestBuilder;
@@ -32,7 +34,7 @@ public class CallRecordCollectionRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CallRecordCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CallRecordCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,7 +44,8 @@ public class CallRecordCollectionRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public CallRecordCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public CallRecordCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +55,13 @@ public class CallRecordCollectionRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public CallRecordCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public CallRecordCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new CallRecordCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public CallRecordRequestBuilder byId(final String id) {
+    @Nonnull
+    public CallRecordRequestBuilder byId(@Nonnull final String id) {
         return new CallRecordRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

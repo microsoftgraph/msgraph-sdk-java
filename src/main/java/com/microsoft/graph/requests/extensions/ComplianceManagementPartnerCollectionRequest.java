@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.ComplianceManagementPartner;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class ComplianceManagementPartnerCollectionRequest extends BaseCollection
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ComplianceManagementPartnerCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ComplianceManagementPartnerCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ComplianceManagementPartnerCollectionResponse.class, ComplianceManagementPartnerCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ComplianceManagementPartnerCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super ComplianceManagementPartnerCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class ComplianceManagementPartnerCollectionRequest extends BaseCollection
         });
     }
 
+    @Nonnull
     public ComplianceManagementPartnerCollectionPage get() throws ClientException {
         final ComplianceManagementPartnerCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final ComplianceManagementPartner newComplianceManagementPartner, final ICallback<? super ComplianceManagementPartner> callback) {
+    public void post(@Nonnull final ComplianceManagementPartner newComplianceManagementPartner, @Nonnull final ICallback<? super ComplianceManagementPartner> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ComplianceManagementPartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newComplianceManagementPartner, callback);
     }
 
-    public ComplianceManagementPartner post(final ComplianceManagementPartner newComplianceManagementPartner) throws ClientException {
+    @Nonnull
+    public ComplianceManagementPartner post(@Nonnull final ComplianceManagementPartner newComplianceManagementPartner) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ComplianceManagementPartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class ComplianceManagementPartnerCollectionRequest extends BaseCollection
      * @param value the expand clause
      * @return the updated request
      */
-    public ComplianceManagementPartnerCollectionRequest expand(final String value) {
+    @Nonnull
+    public ComplianceManagementPartnerCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ComplianceManagementPartnerCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class ComplianceManagementPartnerCollectionRequest extends BaseCollection
      * @param value the filter clause
      * @return the updated request
      */
-    public ComplianceManagementPartnerCollectionRequest filter(final String value) {
+    @Nonnull
+    public ComplianceManagementPartnerCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ComplianceManagementPartnerCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class ComplianceManagementPartnerCollectionRequest extends BaseCollection
      * @param value the order by clause
      * @return the updated request
      */
-    public ComplianceManagementPartnerCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ComplianceManagementPartnerCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ComplianceManagementPartnerCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class ComplianceManagementPartnerCollectionRequest extends BaseCollection
      * @param value the select clause
      * @return the updated request
      */
-    public ComplianceManagementPartnerCollectionRequest select(final String value) {
+    @Nonnull
+    public ComplianceManagementPartnerCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ComplianceManagementPartnerCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class ComplianceManagementPartnerCollectionRequest extends BaseCollection
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ComplianceManagementPartnerCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ComplianceManagementPartnerCollectionRequest)this;
@@ -133,6 +142,7 @@ public class ComplianceManagementPartnerCollectionRequest extends BaseCollection
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ComplianceManagementPartnerCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (ComplianceManagementPartnerCollectionRequest)this;
@@ -144,11 +154,13 @@ public class ComplianceManagementPartnerCollectionRequest extends BaseCollection
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ComplianceManagementPartnerCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ComplianceManagementPartnerCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (ComplianceManagementPartnerCollectionRequest)this;
     }
-    public ComplianceManagementPartnerCollectionPage buildFromResponse(final ComplianceManagementPartnerCollectionResponse response) {
+    @Nonnull
+    public ComplianceManagementPartnerCollectionPage buildFromResponse(@Nonnull final ComplianceManagementPartnerCollectionResponse response) {
         final ComplianceManagementPartnerCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ComplianceManagementPartnerCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

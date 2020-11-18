@@ -14,6 +14,8 @@ import com.microsoft.graph.requests.extensions.ManagedAppOperationCollectionRequ
 import com.microsoft.graph.requests.extensions.ManagedAppOperationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
@@ -35,15 +37,16 @@ public class ManagedAppRegistrationWithReferenceRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedAppRegistrationWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppRegistrationWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedAppRegistration.class);
     }
 
-    public void post(final ManagedAppRegistration newManagedAppRegistration, final IJsonBackedObject payload, final ICallback<? super ManagedAppRegistration> callback) {
+    public void post(@Nonnull final ManagedAppRegistration newManagedAppRegistration, @Nullable final IJsonBackedObject payload, @Nonnull final ICallback<? super ManagedAppRegistration> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
-    public ManagedAppRegistration post(final ManagedAppRegistration newManagedAppRegistration, final IJsonBackedObject payload) throws ClientException {
+    @Nullable
+    public ManagedAppRegistration post(@Nonnull final ManagedAppRegistration newManagedAppRegistration, @Nullable final IJsonBackedObject payload) throws ClientException {
         IJsonBackedObject response = send(HttpMethod.POST, payload);
         if (response != null){
             return newManagedAppRegistration;
@@ -51,15 +54,16 @@ public class ManagedAppRegistrationWithReferenceRequest extends BaseRequest {
         return null;
     }
 
-    public void get(final ICallback<? super ManagedAppRegistration> callback) {
+    public void get(@Nonnull final ICallback<? super ManagedAppRegistration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
+    @Nullable
     public ManagedAppRegistration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<? super ManagedAppRegistration> callback) {
+	public void delete(@Nonnull final ICallback<? super ManagedAppRegistration> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -67,11 +71,12 @@ public class ManagedAppRegistrationWithReferenceRequest extends BaseRequest {
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final ManagedAppRegistration sourceManagedAppRegistration, final ICallback<? super ManagedAppRegistration> callback) {
+	public void patch(@Nonnull final ManagedAppRegistration sourceManagedAppRegistration, @Nonnull final ICallback<? super ManagedAppRegistration> callback) {
 		send(HttpMethod.PATCH, callback, sourceManagedAppRegistration);
 	}
 
-	public ManagedAppRegistration patch(final ManagedAppRegistration sourceManagedAppRegistration) throws ClientException {
+    @Nullable
+	public ManagedAppRegistration patch(@Nonnull final ManagedAppRegistration sourceManagedAppRegistration) throws ClientException {
 		return send(HttpMethod.PATCH, sourceManagedAppRegistration);
 	}
 
@@ -82,7 +87,8 @@ public class ManagedAppRegistrationWithReferenceRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public ManagedAppRegistrationWithReferenceRequest select(final String value) {
+    @Nonnull
+    public ManagedAppRegistrationWithReferenceRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ManagedAppRegistrationWithReferenceRequest)this;
     }
@@ -93,7 +99,8 @@ public class ManagedAppRegistrationWithReferenceRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public ManagedAppRegistrationWithReferenceRequest expand(final String value) {
+    @Nonnull
+    public ManagedAppRegistrationWithReferenceRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ManagedAppRegistrationWithReferenceRequest)this;
     }

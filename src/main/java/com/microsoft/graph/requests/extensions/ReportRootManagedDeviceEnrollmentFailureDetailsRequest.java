@@ -6,6 +6,8 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.requests.extensions.ReportRootManagedDeviceEnrollmentFailureDetailsRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.core.ClientException;
@@ -27,7 +29,7 @@ public class ReportRootManagedDeviceEnrollmentFailureDetailsRequest extends Base
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ReportRootManagedDeviceEnrollmentFailureDetailsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootManagedDeviceEnrollmentFailureDetailsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Report.class);
     }
 
@@ -36,7 +38,7 @@ public class ReportRootManagedDeviceEnrollmentFailureDetailsRequest extends Base
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Report> callback) {
+    public void get(@Nonnull final ICallback<? super Report> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -46,6 +48,7 @@ public class ReportRootManagedDeviceEnrollmentFailureDetailsRequest extends Base
      * @return the Report
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
+    @Nullable
     public Report get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,8 @@ public class ReportRootManagedDeviceEnrollmentFailureDetailsRequest extends Base
      * @param value the select clause
      * @return the updated request
      */
-    public ReportRootManagedDeviceEnrollmentFailureDetailsRequest select(final String value) {
+    @Nonnull
+    public ReportRootManagedDeviceEnrollmentFailureDetailsRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ReportRootManagedDeviceEnrollmentFailureDetailsRequest)this;
     }
@@ -67,7 +71,8 @@ public class ReportRootManagedDeviceEnrollmentFailureDetailsRequest extends Base
      * @param value the expand clause
      * @return the updated request
      */
-    public ReportRootManagedDeviceEnrollmentFailureDetailsRequest expand(final String value) {
+    @Nonnull
+    public ReportRootManagedDeviceEnrollmentFailureDetailsRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ReportRootManagedDeviceEnrollmentFailureDetailsRequest)this;
     }
@@ -78,7 +83,8 @@ public class ReportRootManagedDeviceEnrollmentFailureDetailsRequest extends Base
      * @param value the filter clause
      * @return the updated request
      */
-    public ReportRootManagedDeviceEnrollmentFailureDetailsRequest filter(final String value) {
+    @Nonnull
+    public ReportRootManagedDeviceEnrollmentFailureDetailsRequest filter(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ReportRootManagedDeviceEnrollmentFailureDetailsRequest)this;
     }
@@ -89,7 +95,8 @@ public class ReportRootManagedDeviceEnrollmentFailureDetailsRequest extends Base
      * @param value the order by clause
      * @return the updated request
      */
-    public ReportRootManagedDeviceEnrollmentFailureDetailsRequest orderBy(final String value) {
+    @Nonnull
+    public ReportRootManagedDeviceEnrollmentFailureDetailsRequest orderBy(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ReportRootManagedDeviceEnrollmentFailureDetailsRequest)this;
     }

@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Workbook;
 import com.microsoft.graph.models.extensions.WorkbookComment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class WorkbookCommentCollectionRequest extends BaseCollectionRequest<Work
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookCommentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookCommentCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookCommentCollectionResponse.class, WorkbookCommentCollectionPage.class);
     }
 
-    public void get(final ICallback<? super WorkbookCommentCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookCommentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class WorkbookCommentCollectionRequest extends BaseCollectionRequest<Work
         });
     }
 
+    @Nonnull
     public WorkbookCommentCollectionPage get() throws ClientException {
         final WorkbookCommentCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final WorkbookComment newWorkbookComment, final ICallback<? super WorkbookComment> callback) {
+    public void post(@Nonnull final WorkbookComment newWorkbookComment, @Nonnull final ICallback<? super WorkbookComment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookCommentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newWorkbookComment, callback);
     }
 
-    public WorkbookComment post(final WorkbookComment newWorkbookComment) throws ClientException {
+    @Nonnull
+    public WorkbookComment post(@Nonnull final WorkbookComment newWorkbookComment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookCommentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class WorkbookCommentCollectionRequest extends BaseCollectionRequest<Work
      * @param value the expand clause
      * @return the updated request
      */
-    public WorkbookCommentCollectionRequest expand(final String value) {
+    @Nonnull
+    public WorkbookCommentCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookCommentCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class WorkbookCommentCollectionRequest extends BaseCollectionRequest<Work
      * @param value the filter clause
      * @return the updated request
      */
-    public WorkbookCommentCollectionRequest filter(final String value) {
+    @Nonnull
+    public WorkbookCommentCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookCommentCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class WorkbookCommentCollectionRequest extends BaseCollectionRequest<Work
      * @param value the order by clause
      * @return the updated request
      */
-    public WorkbookCommentCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public WorkbookCommentCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookCommentCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class WorkbookCommentCollectionRequest extends BaseCollectionRequest<Work
      * @param value the select clause
      * @return the updated request
      */
-    public WorkbookCommentCollectionRequest select(final String value) {
+    @Nonnull
+    public WorkbookCommentCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookCommentCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class WorkbookCommentCollectionRequest extends BaseCollectionRequest<Work
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public WorkbookCommentCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (WorkbookCommentCollectionRequest)this;
@@ -133,6 +142,7 @@ public class WorkbookCommentCollectionRequest extends BaseCollectionRequest<Work
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public WorkbookCommentCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (WorkbookCommentCollectionRequest)this;
@@ -144,11 +154,13 @@ public class WorkbookCommentCollectionRequest extends BaseCollectionRequest<Work
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public WorkbookCommentCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public WorkbookCommentCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (WorkbookCommentCollectionRequest)this;
     }
-    public WorkbookCommentCollectionPage buildFromResponse(final WorkbookCommentCollectionResponse response) {
+    @Nonnull
+    public WorkbookCommentCollectionPage buildFromResponse(@Nonnull final WorkbookCommentCollectionResponse response) {
         final WorkbookCommentCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new WorkbookCommentCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartFill;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -27,7 +29,7 @@ public class WorkbookChartFillRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartFillRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartFillRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -37,7 +39,8 @@ public class WorkbookChartFillRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the WorkbookChartFillRequest instance
      */
-    public WorkbookChartFillRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WorkbookChartFillRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,17 +50,20 @@ public class WorkbookChartFillRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the WorkbookChartFillRequest instance
      */
-    public WorkbookChartFillRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WorkbookChartFillRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookChartFillRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
 
+    @Nonnull
     public WorkbookChartFillClearRequestBuilder clear() {
         return new WorkbookChartFillClearRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.clear"), getClient(), null);
     }
 
-    public WorkbookChartFillSetSolidColorRequestBuilder setSolidColor(final String color) {
+    @Nonnull
+    public WorkbookChartFillSetSolidColorRequestBuilder setSolidColor(@Nullable final String color) {
         return new WorkbookChartFillSetSolidColorRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setSolidColor"), getClient(), null, color);
     }
 }

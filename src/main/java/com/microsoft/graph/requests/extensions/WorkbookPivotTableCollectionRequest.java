@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.WorkbookWorksheet;
 import com.microsoft.graph.models.extensions.WorkbookPivotTable;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class WorkbookPivotTableCollectionRequest extends BaseCollectionRequest<W
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookPivotTableCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookPivotTableCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookPivotTableCollectionResponse.class, WorkbookPivotTableCollectionPage.class);
     }
 
-    public void get(final ICallback<? super WorkbookPivotTableCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookPivotTableCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class WorkbookPivotTableCollectionRequest extends BaseCollectionRequest<W
         });
     }
 
+    @Nonnull
     public WorkbookPivotTableCollectionPage get() throws ClientException {
         final WorkbookPivotTableCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final WorkbookPivotTable newWorkbookPivotTable, final ICallback<? super WorkbookPivotTable> callback) {
+    public void post(@Nonnull final WorkbookPivotTable newWorkbookPivotTable, @Nonnull final ICallback<? super WorkbookPivotTable> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookPivotTableRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newWorkbookPivotTable, callback);
     }
 
-    public WorkbookPivotTable post(final WorkbookPivotTable newWorkbookPivotTable) throws ClientException {
+    @Nonnull
+    public WorkbookPivotTable post(@Nonnull final WorkbookPivotTable newWorkbookPivotTable) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookPivotTableRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class WorkbookPivotTableCollectionRequest extends BaseCollectionRequest<W
      * @param value the expand clause
      * @return the updated request
      */
-    public WorkbookPivotTableCollectionRequest expand(final String value) {
+    @Nonnull
+    public WorkbookPivotTableCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookPivotTableCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class WorkbookPivotTableCollectionRequest extends BaseCollectionRequest<W
      * @param value the filter clause
      * @return the updated request
      */
-    public WorkbookPivotTableCollectionRequest filter(final String value) {
+    @Nonnull
+    public WorkbookPivotTableCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookPivotTableCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class WorkbookPivotTableCollectionRequest extends BaseCollectionRequest<W
      * @param value the order by clause
      * @return the updated request
      */
-    public WorkbookPivotTableCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public WorkbookPivotTableCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookPivotTableCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class WorkbookPivotTableCollectionRequest extends BaseCollectionRequest<W
      * @param value the select clause
      * @return the updated request
      */
-    public WorkbookPivotTableCollectionRequest select(final String value) {
+    @Nonnull
+    public WorkbookPivotTableCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookPivotTableCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class WorkbookPivotTableCollectionRequest extends BaseCollectionRequest<W
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public WorkbookPivotTableCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (WorkbookPivotTableCollectionRequest)this;
@@ -133,6 +142,7 @@ public class WorkbookPivotTableCollectionRequest extends BaseCollectionRequest<W
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public WorkbookPivotTableCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (WorkbookPivotTableCollectionRequest)this;
@@ -144,11 +154,13 @@ public class WorkbookPivotTableCollectionRequest extends BaseCollectionRequest<W
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public WorkbookPivotTableCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public WorkbookPivotTableCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (WorkbookPivotTableCollectionRequest)this;
     }
-    public WorkbookPivotTableCollectionPage buildFromResponse(final WorkbookPivotTableCollectionResponse response) {
+    @Nonnull
+    public WorkbookPivotTableCollectionPage buildFromResponse(@Nonnull final WorkbookPivotTableCollectionResponse response) {
         final WorkbookPivotTableCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new WorkbookPivotTableCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DriveItem;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DriveItemDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemDeltaCollectionPage;
@@ -31,6 +33,7 @@ public class DriveItemDeltaCollectionPage extends BaseCollectionPage<DriveItem, 
      * The opaque link to query delta after the 
      * initial request
      */
+    @Nullable
     public String deltaLink;
 
     /**
@@ -39,7 +42,7 @@ public class DriveItemDeltaCollectionPage extends BaseCollectionPage<DriveItem, 
      * @param response The serialized DriveItemDeltaCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public DriveItemDeltaCollectionPage(final DriveItemDeltaCollectionResponse response, final DriveItemDeltaCollectionRequestBuilder builder) {
+    public DriveItemDeltaCollectionPage(@Nonnull final DriveItemDeltaCollectionResponse response, @Nonnull final DriveItemDeltaCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
 
         if (response.getRawObject().get("@odata.deltaLink") != null) {
@@ -53,6 +56,7 @@ public class DriveItemDeltaCollectionPage extends BaseCollectionPage<DriveItem, 
      *
      * @return String The deltaLink URL
      */
+    @Nullable
     public String deltaLink() {
         return deltaLink;
     }

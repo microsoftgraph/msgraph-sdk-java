@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceEnrollmentConfiguration;
 import com.microsoft.graph.models.extensions.EnrollmentConfigurationAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseColl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EnrollmentConfigurationAssignmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EnrollmentConfigurationAssignmentCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EnrollmentConfigurationAssignmentCollectionResponse.class, EnrollmentConfigurationAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<? super EnrollmentConfigurationAssignmentCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super EnrollmentConfigurationAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseColl
         });
     }
 
+    @Nonnull
     public EnrollmentConfigurationAssignmentCollectionPage get() throws ClientException {
         final EnrollmentConfigurationAssignmentCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment, final ICallback<? super EnrollmentConfigurationAssignment> callback) {
+    public void post(@Nonnull final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment, @Nonnull final ICallback<? super EnrollmentConfigurationAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EnrollmentConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newEnrollmentConfigurationAssignment, callback);
     }
 
-    public EnrollmentConfigurationAssignment post(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment) throws ClientException {
+    @Nonnull
+    public EnrollmentConfigurationAssignment post(@Nonnull final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EnrollmentConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseColl
      * @param value the expand clause
      * @return the updated request
      */
-    public EnrollmentConfigurationAssignmentCollectionRequest expand(final String value) {
+    @Nonnull
+    public EnrollmentConfigurationAssignmentCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (EnrollmentConfigurationAssignmentCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseColl
      * @param value the filter clause
      * @return the updated request
      */
-    public EnrollmentConfigurationAssignmentCollectionRequest filter(final String value) {
+    @Nonnull
+    public EnrollmentConfigurationAssignmentCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (EnrollmentConfigurationAssignmentCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseColl
      * @param value the order by clause
      * @return the updated request
      */
-    public EnrollmentConfigurationAssignmentCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public EnrollmentConfigurationAssignmentCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (EnrollmentConfigurationAssignmentCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseColl
      * @param value the select clause
      * @return the updated request
      */
-    public EnrollmentConfigurationAssignmentCollectionRequest select(final String value) {
+    @Nonnull
+    public EnrollmentConfigurationAssignmentCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (EnrollmentConfigurationAssignmentCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseColl
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public EnrollmentConfigurationAssignmentCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (EnrollmentConfigurationAssignmentCollectionRequest)this;
@@ -133,6 +142,7 @@ public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseColl
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public EnrollmentConfigurationAssignmentCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (EnrollmentConfigurationAssignmentCollectionRequest)this;
@@ -144,11 +154,13 @@ public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseColl
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public EnrollmentConfigurationAssignmentCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public EnrollmentConfigurationAssignmentCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (EnrollmentConfigurationAssignmentCollectionRequest)this;
     }
-    public EnrollmentConfigurationAssignmentCollectionPage buildFromResponse(final EnrollmentConfigurationAssignmentCollectionResponse response) {
+    @Nonnull
+    public EnrollmentConfigurationAssignmentCollectionPage buildFromResponse(@Nonnull final EnrollmentConfigurationAssignmentCollectionResponse response) {
         final EnrollmentConfigurationAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new EnrollmentConfigurationAssignmentCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

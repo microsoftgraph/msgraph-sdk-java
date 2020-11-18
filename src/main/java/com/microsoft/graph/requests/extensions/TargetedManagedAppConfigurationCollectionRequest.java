@@ -13,6 +13,8 @@ import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
 import com.microsoft.graph.models.extensions.ManagedMobileApp;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -37,11 +39,11 @@ public class TargetedManagedAppConfigurationCollectionRequest extends BaseCollec
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TargetedManagedAppConfigurationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TargetedManagedAppConfigurationCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TargetedManagedAppConfigurationCollectionResponse.class, TargetedManagedAppConfigurationCollectionPage.class);
     }
 
-    public void get(final ICallback<? super TargetedManagedAppConfigurationCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super TargetedManagedAppConfigurationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -55,19 +57,21 @@ public class TargetedManagedAppConfigurationCollectionRequest extends BaseCollec
         });
     }
 
+    @Nonnull
     public TargetedManagedAppConfigurationCollectionPage get() throws ClientException {
         final TargetedManagedAppConfigurationCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration, final ICallback<? super TargetedManagedAppConfiguration> callback) {
+    public void post(@Nonnull final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration, @Nonnull final ICallback<? super TargetedManagedAppConfiguration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TargetedManagedAppConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newTargetedManagedAppConfiguration, callback);
     }
 
-    public TargetedManagedAppConfiguration post(final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration) throws ClientException {
+    @Nonnull
+    public TargetedManagedAppConfiguration post(@Nonnull final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TargetedManagedAppConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -80,7 +84,8 @@ public class TargetedManagedAppConfigurationCollectionRequest extends BaseCollec
      * @param value the expand clause
      * @return the updated request
      */
-    public TargetedManagedAppConfigurationCollectionRequest expand(final String value) {
+    @Nonnull
+    public TargetedManagedAppConfigurationCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (TargetedManagedAppConfigurationCollectionRequest)this;
     }
@@ -91,7 +96,8 @@ public class TargetedManagedAppConfigurationCollectionRequest extends BaseCollec
      * @param value the filter clause
      * @return the updated request
      */
-    public TargetedManagedAppConfigurationCollectionRequest filter(final String value) {
+    @Nonnull
+    public TargetedManagedAppConfigurationCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (TargetedManagedAppConfigurationCollectionRequest)this;
     }
@@ -102,7 +108,8 @@ public class TargetedManagedAppConfigurationCollectionRequest extends BaseCollec
      * @param value the order by clause
      * @return the updated request
      */
-    public TargetedManagedAppConfigurationCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public TargetedManagedAppConfigurationCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (TargetedManagedAppConfigurationCollectionRequest)this;
     }
@@ -113,7 +120,8 @@ public class TargetedManagedAppConfigurationCollectionRequest extends BaseCollec
      * @param value the select clause
      * @return the updated request
      */
-    public TargetedManagedAppConfigurationCollectionRequest select(final String value) {
+    @Nonnull
+    public TargetedManagedAppConfigurationCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (TargetedManagedAppConfigurationCollectionRequest)this;
     }
@@ -124,6 +132,7 @@ public class TargetedManagedAppConfigurationCollectionRequest extends BaseCollec
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public TargetedManagedAppConfigurationCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (TargetedManagedAppConfigurationCollectionRequest)this;
@@ -135,6 +144,7 @@ public class TargetedManagedAppConfigurationCollectionRequest extends BaseCollec
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public TargetedManagedAppConfigurationCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (TargetedManagedAppConfigurationCollectionRequest)this;
@@ -146,11 +156,13 @@ public class TargetedManagedAppConfigurationCollectionRequest extends BaseCollec
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public TargetedManagedAppConfigurationCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public TargetedManagedAppConfigurationCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (TargetedManagedAppConfigurationCollectionRequest)this;
     }
-    public TargetedManagedAppConfigurationCollectionPage buildFromResponse(final TargetedManagedAppConfigurationCollectionResponse response) {
+    @Nonnull
+    public TargetedManagedAppConfigurationCollectionPage buildFromResponse(@Nonnull final TargetedManagedAppConfigurationCollectionResponse response) {
         final TargetedManagedAppConfigurationCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new TargetedManagedAppConfigurationCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

@@ -6,6 +6,8 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.requests.extensions.ReportRootGetOffice365GroupsActivityDetailRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.core.ClientException;
@@ -27,7 +29,7 @@ public class ReportRootGetOffice365GroupsActivityDetailRequest extends BaseReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ReportRootGetOffice365GroupsActivityDetailRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootGetOffice365GroupsActivityDetailRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Report.class);
     }
 
@@ -36,7 +38,7 @@ public class ReportRootGetOffice365GroupsActivityDetailRequest extends BaseReque
      * @param srcReport the Report with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    public void patch(Report srcReport, final ICallback<? super Report> callback) {
+    public void patch(@Nonnull Report srcReport, @Nonnull final ICallback<? super Report> callback) {
         send(HttpMethod.PATCH, callback, srcReport);
     }
 
@@ -47,7 +49,8 @@ public class ReportRootGetOffice365GroupsActivityDetailRequest extends BaseReque
      * @return the Report
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-     public Report patch(Report srcReport) throws ClientException {
+     @Nullable
+     public Report patch(@Nonnull final Report srcReport) throws ClientException {
         return this.send(HttpMethod.PATCH, srcReport);
     }
 
@@ -57,7 +60,7 @@ public class ReportRootGetOffice365GroupsActivityDetailRequest extends BaseReque
      * @param srcReport the Report to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(Report srcReport, final ICallback<? super Report> callback) {
+    public void put(@Nonnull final Report srcReport, @Nonnull final ICallback<? super Report> callback) {
         send(HttpMethod.PUT, callback, srcReport);
     }
 
@@ -68,7 +71,8 @@ public class ReportRootGetOffice365GroupsActivityDetailRequest extends BaseReque
      * @return the Report
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-     public Report put(Report srcReport) throws ClientException {
+     @Nullable
+     public Report put(@Nonnull final Report srcReport) throws ClientException {
         return this.send(HttpMethod.PUT, srcReport);
     }
     /**
@@ -76,7 +80,7 @@ public class ReportRootGetOffice365GroupsActivityDetailRequest extends BaseReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Report> callback) {
+    public void get(@Nonnull final ICallback<? super Report> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -86,6 +90,7 @@ public class ReportRootGetOffice365GroupsActivityDetailRequest extends BaseReque
      * @return the Report
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
+    @Nullable
     public Report get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -96,7 +101,8 @@ public class ReportRootGetOffice365GroupsActivityDetailRequest extends BaseReque
      * @param value the select clause
      * @return the updated request
      */
-    public ReportRootGetOffice365GroupsActivityDetailRequest select(final String value) {
+    @Nonnull
+    public ReportRootGetOffice365GroupsActivityDetailRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ReportRootGetOffice365GroupsActivityDetailRequest)this;
     }
@@ -107,7 +113,8 @@ public class ReportRootGetOffice365GroupsActivityDetailRequest extends BaseReque
      * @param value the expand clause
      * @return the updated request
      */
-    public ReportRootGetOffice365GroupsActivityDetailRequest expand(final String value) {
+    @Nonnull
+    public ReportRootGetOffice365GroupsActivityDetailRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ReportRootGetOffice365GroupsActivityDetailRequest)this;
     }
@@ -118,7 +125,8 @@ public class ReportRootGetOffice365GroupsActivityDetailRequest extends BaseReque
      * @param value the filter clause
      * @return the updated request
      */
-    public ReportRootGetOffice365GroupsActivityDetailRequest filter(final String value) {
+    @Nonnull
+    public ReportRootGetOffice365GroupsActivityDetailRequest filter(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ReportRootGetOffice365GroupsActivityDetailRequest)this;
     }
@@ -129,7 +137,8 @@ public class ReportRootGetOffice365GroupsActivityDetailRequest extends BaseReque
      * @param value the order by clause
      * @return the updated request
      */
-    public ReportRootGetOffice365GroupsActivityDetailRequest orderBy(final String value) {
+    @Nonnull
+    public ReportRootGetOffice365GroupsActivityDetailRequest orderBy(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ReportRootGetOffice365GroupsActivityDetailRequest)this;
     }

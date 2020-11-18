@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.PermissionGrantPolicy;
 import com.microsoft.graph.models.extensions.PermissionGrantConditionSet;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class PermissionGrantConditionSetCollectionRequest extends BaseCollection
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PermissionGrantConditionSetCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PermissionGrantConditionSetCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PermissionGrantConditionSetCollectionResponse.class, PermissionGrantConditionSetCollectionPage.class);
     }
 
-    public void get(final ICallback<? super PermissionGrantConditionSetCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super PermissionGrantConditionSetCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class PermissionGrantConditionSetCollectionRequest extends BaseCollection
         });
     }
 
+    @Nonnull
     public PermissionGrantConditionSetCollectionPage get() throws ClientException {
         final PermissionGrantConditionSetCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final PermissionGrantConditionSet newPermissionGrantConditionSet, final ICallback<? super PermissionGrantConditionSet> callback) {
+    public void post(@Nonnull final PermissionGrantConditionSet newPermissionGrantConditionSet, @Nonnull final ICallback<? super PermissionGrantConditionSet> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PermissionGrantConditionSetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newPermissionGrantConditionSet, callback);
     }
 
-    public PermissionGrantConditionSet post(final PermissionGrantConditionSet newPermissionGrantConditionSet) throws ClientException {
+    @Nonnull
+    public PermissionGrantConditionSet post(@Nonnull final PermissionGrantConditionSet newPermissionGrantConditionSet) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PermissionGrantConditionSetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class PermissionGrantConditionSetCollectionRequest extends BaseCollection
      * @param value the expand clause
      * @return the updated request
      */
-    public PermissionGrantConditionSetCollectionRequest expand(final String value) {
+    @Nonnull
+    public PermissionGrantConditionSetCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (PermissionGrantConditionSetCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class PermissionGrantConditionSetCollectionRequest extends BaseCollection
      * @param value the filter clause
      * @return the updated request
      */
-    public PermissionGrantConditionSetCollectionRequest filter(final String value) {
+    @Nonnull
+    public PermissionGrantConditionSetCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (PermissionGrantConditionSetCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class PermissionGrantConditionSetCollectionRequest extends BaseCollection
      * @param value the order by clause
      * @return the updated request
      */
-    public PermissionGrantConditionSetCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public PermissionGrantConditionSetCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PermissionGrantConditionSetCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class PermissionGrantConditionSetCollectionRequest extends BaseCollection
      * @param value the select clause
      * @return the updated request
      */
-    public PermissionGrantConditionSetCollectionRequest select(final String value) {
+    @Nonnull
+    public PermissionGrantConditionSetCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (PermissionGrantConditionSetCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class PermissionGrantConditionSetCollectionRequest extends BaseCollection
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public PermissionGrantConditionSetCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (PermissionGrantConditionSetCollectionRequest)this;
@@ -133,6 +142,7 @@ public class PermissionGrantConditionSetCollectionRequest extends BaseCollection
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public PermissionGrantConditionSetCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (PermissionGrantConditionSetCollectionRequest)this;
@@ -144,11 +154,13 @@ public class PermissionGrantConditionSetCollectionRequest extends BaseCollection
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public PermissionGrantConditionSetCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public PermissionGrantConditionSetCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (PermissionGrantConditionSetCollectionRequest)this;
     }
-    public PermissionGrantConditionSetCollectionPage buildFromResponse(final PermissionGrantConditionSetCollectionResponse response) {
+    @Nonnull
+    public PermissionGrantConditionSetCollectionPage buildFromResponse(@Nonnull final PermissionGrantConditionSetCollectionResponse response) {
         final PermissionGrantConditionSetCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new PermissionGrantConditionSetCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

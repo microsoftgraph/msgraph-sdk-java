@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.extensions.LicenseDetails;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.LicenseDetailsRequestBuilder;
@@ -32,7 +34,7 @@ public class LicenseDetailsCollectionRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public LicenseDetailsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public LicenseDetailsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,7 +44,8 @@ public class LicenseDetailsCollectionRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public LicenseDetailsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public LicenseDetailsCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +55,13 @@ public class LicenseDetailsCollectionRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public LicenseDetailsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public LicenseDetailsCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new LicenseDetailsCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public LicenseDetailsRequestBuilder byId(final String id) {
+    @Nonnull
+    public LicenseDetailsRequestBuilder byId(@Nonnull final String id) {
         return new LicenseDetailsRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

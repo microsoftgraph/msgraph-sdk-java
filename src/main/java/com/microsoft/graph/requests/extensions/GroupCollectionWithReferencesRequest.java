@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.models.extensions.AssignedLicense;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -32,11 +34,11 @@ public class GroupCollectionWithReferencesRequest extends BaseCollectionRequest<
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupCollectionWithReferencesRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupCollectionResponse.class, GroupCollectionPage.class);
     }
 
-    public void get(final ICallback<? super GroupCollectionWithReferencesPage> callback) {
+    public void get(@Nonnull final ICallback<? super GroupCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -50,37 +52,44 @@ public class GroupCollectionWithReferencesRequest extends BaseCollectionRequest<
         });
     }
 
+    @Nonnull
     public GroupCollectionWithReferencesPage get() throws ClientException {
         final GroupCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public GroupCollectionWithReferencesRequest expand(final String value) {
+    @Nonnull
+    public GroupCollectionWithReferencesRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return this;
     }
 
-    public GroupCollectionWithReferencesRequest filter(final String value) {
+    @Nonnull
+    public GroupCollectionWithReferencesRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return this;
     }
 
-    public GroupCollectionWithReferencesRequest orderBy(final String value) {
+    @Nonnull
+    public GroupCollectionWithReferencesRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return this;
     }
 
-    public GroupCollectionWithReferencesRequest select(final String value) {
+    @Nonnull
+    public GroupCollectionWithReferencesRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return this;
     }
 
+    @Nonnull
     public GroupCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return this;
     }
 
-    public GroupCollectionWithReferencesPage buildFromResponse(final GroupCollectionResponse response) {
+    @Nonnull
+    public GroupCollectionWithReferencesPage buildFromResponse(@Nonnull final GroupCollectionResponse response) {
         final GroupCollectionWithReferencesRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new GroupCollectionWithReferencesRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

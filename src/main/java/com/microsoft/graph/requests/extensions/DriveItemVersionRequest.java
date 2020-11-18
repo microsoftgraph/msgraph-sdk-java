@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DriveItemVersion;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class DriveItemVersionRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DriveItemVersionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveItemVersionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DriveItemVersion.class);
     }
 
@@ -37,7 +39,7 @@ public class DriveItemVersionRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DriveItemVersion> callback) {
+    public void get(@Nonnull final ICallback<? super DriveItemVersion> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class DriveItemVersionRequest extends BaseRequest {
      * @return the DriveItemVersion from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DriveItemVersion get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class DriveItemVersionRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DriveItemVersion> callback) {
+    public void delete(@Nonnull final ICallback<? super DriveItemVersion> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class DriveItemVersionRequest extends BaseRequest {
      * @param sourceDriveItemVersion the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DriveItemVersion sourceDriveItemVersion, final ICallback<? super DriveItemVersion> callback) {
+    public void patch(@Nonnull final DriveItemVersion sourceDriveItemVersion, @Nonnull final ICallback<? super DriveItemVersion> callback) {
         send(HttpMethod.PATCH, callback, sourceDriveItemVersion);
     }
 
@@ -86,7 +89,8 @@ public class DriveItemVersionRequest extends BaseRequest {
      * @return the updated DriveItemVersion
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DriveItemVersion patch(final DriveItemVersion sourceDriveItemVersion) throws ClientException {
+    @Nullable
+    public DriveItemVersion patch(@Nonnull final DriveItemVersion sourceDriveItemVersion) throws ClientException {
         return send(HttpMethod.PATCH, sourceDriveItemVersion);
     }
 
@@ -96,7 +100,7 @@ public class DriveItemVersionRequest extends BaseRequest {
      * @param newDriveItemVersion the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DriveItemVersion newDriveItemVersion, final ICallback<? super DriveItemVersion> callback) {
+    public void post(@Nonnull final DriveItemVersion newDriveItemVersion, @Nonnull final ICallback<? super DriveItemVersion> callback) {
         send(HttpMethod.POST, callback, newDriveItemVersion);
     }
 
@@ -107,7 +111,8 @@ public class DriveItemVersionRequest extends BaseRequest {
      * @return the created DriveItemVersion
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DriveItemVersion post(final DriveItemVersion newDriveItemVersion) throws ClientException {
+    @Nullable
+    public DriveItemVersion post(@Nonnull final DriveItemVersion newDriveItemVersion) throws ClientException {
         return send(HttpMethod.POST, newDriveItemVersion);
     }
 
@@ -117,7 +122,7 @@ public class DriveItemVersionRequest extends BaseRequest {
      * @param newDriveItemVersion the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DriveItemVersion newDriveItemVersion, final ICallback<? super DriveItemVersion> callback) {
+    public void put(@Nonnull final DriveItemVersion newDriveItemVersion, @Nonnull final ICallback<? super DriveItemVersion> callback) {
         send(HttpMethod.PUT, callback, newDriveItemVersion);
     }
 
@@ -128,7 +133,8 @@ public class DriveItemVersionRequest extends BaseRequest {
      * @return the created DriveItemVersion
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DriveItemVersion put(final DriveItemVersion newDriveItemVersion) throws ClientException {
+    @Nullable
+    public DriveItemVersion put(@Nonnull final DriveItemVersion newDriveItemVersion) throws ClientException {
         return send(HttpMethod.PUT, newDriveItemVersion);
     }
 
@@ -138,7 +144,8 @@ public class DriveItemVersionRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public DriveItemVersionRequest select(final String value) {
+     @Nonnull
+     public DriveItemVersionRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (DriveItemVersionRequest)this;
      }
@@ -149,7 +156,8 @@ public class DriveItemVersionRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public DriveItemVersionRequest expand(final String value) {
+     @Nonnull
+     public DriveItemVersionRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (DriveItemVersionRequest)this;
      }

@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Organization;
 import com.microsoft.graph.models.extensions.CertificateBasedAuthConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -31,11 +33,11 @@ public class CertificateBasedAuthConfigurationCollectionWithReferencesRequest ex
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CertificateBasedAuthConfigurationCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CertificateBasedAuthConfigurationCollectionWithReferencesRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CertificateBasedAuthConfigurationCollectionResponse.class, CertificateBasedAuthConfigurationCollectionPage.class);
     }
 
-    public void get(final ICallback<? super CertificateBasedAuthConfigurationCollectionWithReferencesPage> callback) {
+    public void get(@Nonnull final ICallback<? super CertificateBasedAuthConfigurationCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -49,37 +51,44 @@ public class CertificateBasedAuthConfigurationCollectionWithReferencesRequest ex
         });
     }
 
+    @Nonnull
     public CertificateBasedAuthConfigurationCollectionWithReferencesPage get() throws ClientException {
         final CertificateBasedAuthConfigurationCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public CertificateBasedAuthConfigurationCollectionWithReferencesRequest expand(final String value) {
+    @Nonnull
+    public CertificateBasedAuthConfigurationCollectionWithReferencesRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return this;
     }
 
-    public CertificateBasedAuthConfigurationCollectionWithReferencesRequest filter(final String value) {
+    @Nonnull
+    public CertificateBasedAuthConfigurationCollectionWithReferencesRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return this;
     }
 
-    public CertificateBasedAuthConfigurationCollectionWithReferencesRequest orderBy(final String value) {
+    @Nonnull
+    public CertificateBasedAuthConfigurationCollectionWithReferencesRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return this;
     }
 
-    public CertificateBasedAuthConfigurationCollectionWithReferencesRequest select(final String value) {
+    @Nonnull
+    public CertificateBasedAuthConfigurationCollectionWithReferencesRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return this;
     }
 
+    @Nonnull
     public CertificateBasedAuthConfigurationCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return this;
     }
 
-    public CertificateBasedAuthConfigurationCollectionWithReferencesPage buildFromResponse(final CertificateBasedAuthConfigurationCollectionResponse response) {
+    @Nonnull
+    public CertificateBasedAuthConfigurationCollectionWithReferencesPage buildFromResponse(@Nonnull final CertificateBasedAuthConfigurationCollectionResponse response) {
         final CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

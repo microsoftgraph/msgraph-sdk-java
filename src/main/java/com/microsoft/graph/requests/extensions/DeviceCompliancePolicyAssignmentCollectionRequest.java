@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceCompliancePolicy;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class DeviceCompliancePolicyAssignmentCollectionRequest extends BaseColle
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceCompliancePolicyAssignmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceCompliancePolicyAssignmentCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceCompliancePolicyAssignmentCollectionResponse.class, DeviceCompliancePolicyAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<? super DeviceCompliancePolicyAssignmentCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceCompliancePolicyAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class DeviceCompliancePolicyAssignmentCollectionRequest extends BaseColle
         });
     }
 
+    @Nonnull
     public DeviceCompliancePolicyAssignmentCollectionPage get() throws ClientException {
         final DeviceCompliancePolicyAssignmentCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceCompliancePolicyAssignment newDeviceCompliancePolicyAssignment, final ICallback<? super DeviceCompliancePolicyAssignment> callback) {
+    public void post(@Nonnull final DeviceCompliancePolicyAssignment newDeviceCompliancePolicyAssignment, @Nonnull final ICallback<? super DeviceCompliancePolicyAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceCompliancePolicyAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceCompliancePolicyAssignment, callback);
     }
 
-    public DeviceCompliancePolicyAssignment post(final DeviceCompliancePolicyAssignment newDeviceCompliancePolicyAssignment) throws ClientException {
+    @Nonnull
+    public DeviceCompliancePolicyAssignment post(@Nonnull final DeviceCompliancePolicyAssignment newDeviceCompliancePolicyAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceCompliancePolicyAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class DeviceCompliancePolicyAssignmentCollectionRequest extends BaseColle
      * @param value the expand clause
      * @return the updated request
      */
-    public DeviceCompliancePolicyAssignmentCollectionRequest expand(final String value) {
+    @Nonnull
+    public DeviceCompliancePolicyAssignmentCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DeviceCompliancePolicyAssignmentCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class DeviceCompliancePolicyAssignmentCollectionRequest extends BaseColle
      * @param value the filter clause
      * @return the updated request
      */
-    public DeviceCompliancePolicyAssignmentCollectionRequest filter(final String value) {
+    @Nonnull
+    public DeviceCompliancePolicyAssignmentCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DeviceCompliancePolicyAssignmentCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class DeviceCompliancePolicyAssignmentCollectionRequest extends BaseColle
      * @param value the order by clause
      * @return the updated request
      */
-    public DeviceCompliancePolicyAssignmentCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DeviceCompliancePolicyAssignmentCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceCompliancePolicyAssignmentCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class DeviceCompliancePolicyAssignmentCollectionRequest extends BaseColle
      * @param value the select clause
      * @return the updated request
      */
-    public DeviceCompliancePolicyAssignmentCollectionRequest select(final String value) {
+    @Nonnull
+    public DeviceCompliancePolicyAssignmentCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DeviceCompliancePolicyAssignmentCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class DeviceCompliancePolicyAssignmentCollectionRequest extends BaseColle
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DeviceCompliancePolicyAssignmentCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (DeviceCompliancePolicyAssignmentCollectionRequest)this;
@@ -133,6 +142,7 @@ public class DeviceCompliancePolicyAssignmentCollectionRequest extends BaseColle
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public DeviceCompliancePolicyAssignmentCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (DeviceCompliancePolicyAssignmentCollectionRequest)this;
@@ -144,11 +154,13 @@ public class DeviceCompliancePolicyAssignmentCollectionRequest extends BaseColle
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public DeviceCompliancePolicyAssignmentCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public DeviceCompliancePolicyAssignmentCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (DeviceCompliancePolicyAssignmentCollectionRequest)this;
     }
-    public DeviceCompliancePolicyAssignmentCollectionPage buildFromResponse(final DeviceCompliancePolicyAssignmentCollectionResponse response) {
+    @Nonnull
+    public DeviceCompliancePolicyAssignmentCollectionPage buildFromResponse(@Nonnull final DeviceCompliancePolicyAssignmentCollectionResponse response) {
         final DeviceCompliancePolicyAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new DeviceCompliancePolicyAssignmentCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

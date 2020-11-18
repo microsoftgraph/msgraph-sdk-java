@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ClaimsMappingPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
@@ -31,15 +33,16 @@ public class ClaimsMappingPolicyWithReferenceRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ClaimsMappingPolicyWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ClaimsMappingPolicyWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ClaimsMappingPolicy.class);
     }
 
-    public void post(final ClaimsMappingPolicy newClaimsMappingPolicy, final IJsonBackedObject payload, final ICallback<? super ClaimsMappingPolicy> callback) {
+    public void post(@Nonnull final ClaimsMappingPolicy newClaimsMappingPolicy, @Nullable final IJsonBackedObject payload, @Nonnull final ICallback<? super ClaimsMappingPolicy> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
-    public ClaimsMappingPolicy post(final ClaimsMappingPolicy newClaimsMappingPolicy, final IJsonBackedObject payload) throws ClientException {
+    @Nullable
+    public ClaimsMappingPolicy post(@Nonnull final ClaimsMappingPolicy newClaimsMappingPolicy, @Nullable final IJsonBackedObject payload) throws ClientException {
         IJsonBackedObject response = send(HttpMethod.POST, payload);
         if (response != null){
             return newClaimsMappingPolicy;
@@ -47,15 +50,16 @@ public class ClaimsMappingPolicyWithReferenceRequest extends BaseRequest {
         return null;
     }
 
-    public void get(final ICallback<? super ClaimsMappingPolicy> callback) {
+    public void get(@Nonnull final ICallback<? super ClaimsMappingPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
+    @Nullable
     public ClaimsMappingPolicy get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<? super ClaimsMappingPolicy> callback) {
+	public void delete(@Nonnull final ICallback<? super ClaimsMappingPolicy> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,11 +67,12 @@ public class ClaimsMappingPolicyWithReferenceRequest extends BaseRequest {
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final ClaimsMappingPolicy sourceClaimsMappingPolicy, final ICallback<? super ClaimsMappingPolicy> callback) {
+	public void patch(@Nonnull final ClaimsMappingPolicy sourceClaimsMappingPolicy, @Nonnull final ICallback<? super ClaimsMappingPolicy> callback) {
 		send(HttpMethod.PATCH, callback, sourceClaimsMappingPolicy);
 	}
 
-	public ClaimsMappingPolicy patch(final ClaimsMappingPolicy sourceClaimsMappingPolicy) throws ClientException {
+    @Nullable
+	public ClaimsMappingPolicy patch(@Nonnull final ClaimsMappingPolicy sourceClaimsMappingPolicy) throws ClientException {
 		return send(HttpMethod.PATCH, sourceClaimsMappingPolicy);
 	}
 
@@ -78,7 +83,8 @@ public class ClaimsMappingPolicyWithReferenceRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public ClaimsMappingPolicyWithReferenceRequest select(final String value) {
+    @Nonnull
+    public ClaimsMappingPolicyWithReferenceRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ClaimsMappingPolicyWithReferenceRequest)this;
     }
@@ -89,7 +95,8 @@ public class ClaimsMappingPolicyWithReferenceRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public ClaimsMappingPolicyWithReferenceRequest expand(final String value) {
+    @Nonnull
+    public ClaimsMappingPolicyWithReferenceRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ClaimsMappingPolicyWithReferenceRequest)this;
     }

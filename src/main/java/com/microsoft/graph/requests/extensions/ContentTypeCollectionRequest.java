@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.List;
 import com.microsoft.graph.models.extensions.ContentType;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class ContentTypeCollectionRequest extends BaseCollectionRequest<ContentT
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ContentTypeCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ContentTypeCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ContentTypeCollectionResponse.class, ContentTypeCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ContentTypeCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super ContentTypeCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class ContentTypeCollectionRequest extends BaseCollectionRequest<ContentT
         });
     }
 
+    @Nonnull
     public ContentTypeCollectionPage get() throws ClientException {
         final ContentTypeCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final ContentType newContentType, final ICallback<? super ContentType> callback) {
+    public void post(@Nonnull final ContentType newContentType, @Nonnull final ICallback<? super ContentType> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ContentTypeRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newContentType, callback);
     }
 
-    public ContentType post(final ContentType newContentType) throws ClientException {
+    @Nonnull
+    public ContentType post(@Nonnull final ContentType newContentType) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ContentTypeRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class ContentTypeCollectionRequest extends BaseCollectionRequest<ContentT
      * @param value the expand clause
      * @return the updated request
      */
-    public ContentTypeCollectionRequest expand(final String value) {
+    @Nonnull
+    public ContentTypeCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ContentTypeCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class ContentTypeCollectionRequest extends BaseCollectionRequest<ContentT
      * @param value the filter clause
      * @return the updated request
      */
-    public ContentTypeCollectionRequest filter(final String value) {
+    @Nonnull
+    public ContentTypeCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ContentTypeCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class ContentTypeCollectionRequest extends BaseCollectionRequest<ContentT
      * @param value the order by clause
      * @return the updated request
      */
-    public ContentTypeCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ContentTypeCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ContentTypeCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class ContentTypeCollectionRequest extends BaseCollectionRequest<ContentT
      * @param value the select clause
      * @return the updated request
      */
-    public ContentTypeCollectionRequest select(final String value) {
+    @Nonnull
+    public ContentTypeCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ContentTypeCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class ContentTypeCollectionRequest extends BaseCollectionRequest<ContentT
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ContentTypeCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ContentTypeCollectionRequest)this;
@@ -133,6 +142,7 @@ public class ContentTypeCollectionRequest extends BaseCollectionRequest<ContentT
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ContentTypeCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (ContentTypeCollectionRequest)this;
@@ -144,11 +154,13 @@ public class ContentTypeCollectionRequest extends BaseCollectionRequest<ContentT
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ContentTypeCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ContentTypeCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (ContentTypeCollectionRequest)this;
     }
-    public ContentTypeCollectionPage buildFromResponse(final ContentTypeCollectionResponse response) {
+    @Nonnull
+    public ContentTypeCollectionPage buildFromResponse(@Nonnull final ContentTypeCollectionResponse response) {
         final ContentTypeCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ContentTypeCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

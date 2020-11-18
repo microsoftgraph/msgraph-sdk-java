@@ -16,6 +16,8 @@ import com.microsoft.graph.requests.extensions.SignInCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SignInRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -33,7 +35,7 @@ public class AuditLogRootRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AuditLogRootRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AuditLogRootRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -43,7 +45,8 @@ public class AuditLogRootRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the AuditLogRootRequest instance
      */
-    public AuditLogRootRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public AuditLogRootRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -53,30 +56,37 @@ public class AuditLogRootRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the AuditLogRootRequest instance
      */
-    public AuditLogRootRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public AuditLogRootRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.AuditLogRootRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    @Nonnull
     public DirectoryAuditCollectionRequestBuilder directoryAudits() {
         return new DirectoryAuditCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("directoryAudits"), getClient(), null);
     }
 
-    public DirectoryAuditRequestBuilder directoryAudits(final String id) {
+    @Nonnull
+    public DirectoryAuditRequestBuilder directoryAudits(@Nonnull final String id) {
         return new DirectoryAuditRequestBuilder(getRequestUrlWithAdditionalSegment("directoryAudits") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public RestrictedSignInCollectionRequestBuilder restrictedSignIns() {
         return new RestrictedSignInCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("restrictedSignIns"), getClient(), null);
     }
 
-    public RestrictedSignInRequestBuilder restrictedSignIns(final String id) {
+    @Nonnull
+    public RestrictedSignInRequestBuilder restrictedSignIns(@Nonnull final String id) {
         return new RestrictedSignInRequestBuilder(getRequestUrlWithAdditionalSegment("restrictedSignIns") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public SignInCollectionRequestBuilder signIns() {
         return new SignInCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("signIns"), getClient(), null);
     }
 
-    public SignInRequestBuilder signIns(final String id) {
+    @Nonnull
+    public SignInRequestBuilder signIns(@Nonnull final String id) {
         return new SignInRequestBuilder(getRequestUrlWithAdditionalSegment("signIns") + "/" + id, getClient(), null);
     }
 }

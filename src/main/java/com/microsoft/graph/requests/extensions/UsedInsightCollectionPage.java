@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.UsedInsight;
 import com.microsoft.graph.requests.extensions.UsedInsightCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.UsedInsightCollectionPage;
 import com.microsoft.graph.requests.extensions.UsedInsightCollectionResponse;
@@ -22,7 +24,7 @@ public class UsedInsightCollectionPage extends BaseCollectionPage<UsedInsight, U
      * @param response the serialized UsedInsightCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public UsedInsightCollectionPage(final UsedInsightCollectionResponse response, final UsedInsightCollectionRequestBuilder builder) {
+    public UsedInsightCollectionPage(@Nonnull final UsedInsightCollectionResponse response, @Nonnull final UsedInsightCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Group;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.GroupDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupDeltaCollectionPage;
@@ -31,6 +33,7 @@ public class GroupDeltaCollectionPage extends BaseCollectionPage<Group, GroupDel
      * The opaque link to query delta after the 
      * initial request
      */
+    @Nullable
     public String deltaLink;
 
     /**
@@ -39,7 +42,7 @@ public class GroupDeltaCollectionPage extends BaseCollectionPage<Group, GroupDel
      * @param response The serialized GroupDeltaCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public GroupDeltaCollectionPage(final GroupDeltaCollectionResponse response, final GroupDeltaCollectionRequestBuilder builder) {
+    public GroupDeltaCollectionPage(@Nonnull final GroupDeltaCollectionResponse response, @Nonnull final GroupDeltaCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
 
         if (response.getRawObject().get("@odata.deltaLink") != null) {
@@ -53,6 +56,7 @@ public class GroupDeltaCollectionPage extends BaseCollectionPage<Group, GroupDel
      *
      * @return String The deltaLink URL
      */
+    @Nullable
     public String deltaLink() {
         return deltaLink;
     }

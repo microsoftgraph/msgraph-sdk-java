@@ -7,6 +7,8 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
 import java.util.EnumSet;
@@ -24,6 +26,7 @@ public class WorkbookFunctionsAmorDegrcBody {
      */
     @SerializedName(value = "cost", alternate = {"Cost"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement cost;
 
     /**
@@ -32,6 +35,7 @@ public class WorkbookFunctionsAmorDegrcBody {
      */
     @SerializedName(value = "datePurchased", alternate = {"DatePurchased"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement datePurchased;
 
     /**
@@ -40,6 +44,7 @@ public class WorkbookFunctionsAmorDegrcBody {
      */
     @SerializedName(value = "firstPeriod", alternate = {"FirstPeriod"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement firstPeriod;
 
     /**
@@ -48,6 +53,7 @@ public class WorkbookFunctionsAmorDegrcBody {
      */
     @SerializedName(value = "salvage", alternate = {"Salvage"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement salvage;
 
     /**
@@ -56,6 +62,7 @@ public class WorkbookFunctionsAmorDegrcBody {
      */
     @SerializedName(value = "period", alternate = {"Period"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement period;
 
     /**
@@ -64,6 +71,7 @@ public class WorkbookFunctionsAmorDegrcBody {
      */
     @SerializedName(value = "rate", alternate = {"Rate"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement rate;
 
     /**
@@ -72,6 +80,7 @@ public class WorkbookFunctionsAmorDegrcBody {
      */
     @SerializedName(value = "basis", alternate = {"Basis"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement basis;
 
 
@@ -90,6 +99,7 @@ public class WorkbookFunctionsAmorDegrcBody {
      *
      * @return the raw representation of this class
      */
+    @Nullable
     public JsonObject getRawObject() {
         return rawObject;
     }
@@ -99,6 +109,7 @@ public class WorkbookFunctionsAmorDegrcBody {
      *
      * @return the serializer
      */
+    @Nullable
     protected ISerializer getSerializer() {
         return serializer;
     }
@@ -109,7 +120,7 @@ public class WorkbookFunctionsAmorDegrcBody {
      * @param serializer the serializer
      * @param json the JSON object to set this object to
      */
-    public void setRawObject(final ISerializer serializer, final JsonObject json) {
+    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
         this.serializer = serializer;
         rawObject = json;
 

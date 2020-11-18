@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DeviceManagementPartner;
 import com.microsoft.graph.requests.extensions.DeviceManagementPartnerCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceManagementPartnerCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceManagementPartnerCollectionResponse;
@@ -22,7 +24,7 @@ public class DeviceManagementPartnerCollectionPage extends BaseCollectionPage<De
      * @param response the serialized DeviceManagementPartnerCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DeviceManagementPartnerCollectionPage(final DeviceManagementPartnerCollectionResponse response, final DeviceManagementPartnerCollectionRequestBuilder builder) {
+    public DeviceManagementPartnerCollectionPage(@Nonnull final DeviceManagementPartnerCollectionResponse response, @Nonnull final DeviceManagementPartnerCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -14,6 +14,8 @@ import com.microsoft.graph.requests.extensions.TodoTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TodoTaskRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -31,7 +33,7 @@ public class TodoTaskListRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TodoTaskListRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TodoTaskListRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -41,7 +43,8 @@ public class TodoTaskListRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the TodoTaskListRequest instance
      */
-    public TodoTaskListRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public TodoTaskListRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,23 +54,28 @@ public class TodoTaskListRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the TodoTaskListRequest instance
      */
-    public TodoTaskListRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public TodoTaskListRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.TodoTaskListRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    @Nonnull
     public ExtensionCollectionRequestBuilder extensions() {
         return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
     }
 
-    public ExtensionRequestBuilder extensions(final String id) {
+    @Nonnull
+    public ExtensionRequestBuilder extensions(@Nonnull final String id) {
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public TodoTaskCollectionRequestBuilder tasks() {
         return new TodoTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);
     }
 
-    public TodoTaskRequestBuilder tasks(final String id) {
+    @Nonnull
+    public TodoTaskRequestBuilder tasks(@Nonnull final String id) {
         return new TodoTaskRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);
     }
 }

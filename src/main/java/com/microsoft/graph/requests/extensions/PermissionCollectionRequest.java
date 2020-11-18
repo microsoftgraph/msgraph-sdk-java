@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.Permission;
 import com.microsoft.graph.models.extensions.DriveRecipient;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -36,11 +38,11 @@ public class PermissionCollectionRequest extends BaseCollectionRequest<Permissio
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PermissionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PermissionCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PermissionCollectionResponse.class, PermissionCollectionPage.class);
     }
 
-    public void get(final ICallback<? super PermissionCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super PermissionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -54,19 +56,21 @@ public class PermissionCollectionRequest extends BaseCollectionRequest<Permissio
         });
     }
 
+    @Nonnull
     public PermissionCollectionPage get() throws ClientException {
         final PermissionCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final Permission newPermission, final ICallback<? super Permission> callback) {
+    public void post(@Nonnull final Permission newPermission, @Nonnull final ICallback<? super Permission> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PermissionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newPermission, callback);
     }
 
-    public Permission post(final Permission newPermission) throws ClientException {
+    @Nonnull
+    public Permission post(@Nonnull final Permission newPermission) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PermissionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -79,7 +83,8 @@ public class PermissionCollectionRequest extends BaseCollectionRequest<Permissio
      * @param value the expand clause
      * @return the updated request
      */
-    public PermissionCollectionRequest expand(final String value) {
+    @Nonnull
+    public PermissionCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (PermissionCollectionRequest)this;
     }
@@ -90,7 +95,8 @@ public class PermissionCollectionRequest extends BaseCollectionRequest<Permissio
      * @param value the filter clause
      * @return the updated request
      */
-    public PermissionCollectionRequest filter(final String value) {
+    @Nonnull
+    public PermissionCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (PermissionCollectionRequest)this;
     }
@@ -101,7 +107,8 @@ public class PermissionCollectionRequest extends BaseCollectionRequest<Permissio
      * @param value the order by clause
      * @return the updated request
      */
-    public PermissionCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public PermissionCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PermissionCollectionRequest)this;
     }
@@ -112,7 +119,8 @@ public class PermissionCollectionRequest extends BaseCollectionRequest<Permissio
      * @param value the select clause
      * @return the updated request
      */
-    public PermissionCollectionRequest select(final String value) {
+    @Nonnull
+    public PermissionCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (PermissionCollectionRequest)this;
     }
@@ -123,6 +131,7 @@ public class PermissionCollectionRequest extends BaseCollectionRequest<Permissio
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public PermissionCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (PermissionCollectionRequest)this;
@@ -134,6 +143,7 @@ public class PermissionCollectionRequest extends BaseCollectionRequest<Permissio
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public PermissionCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (PermissionCollectionRequest)this;
@@ -145,11 +155,13 @@ public class PermissionCollectionRequest extends BaseCollectionRequest<Permissio
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public PermissionCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public PermissionCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (PermissionCollectionRequest)this;
     }
-    public PermissionCollectionPage buildFromResponse(final PermissionCollectionResponse response) {
+    @Nonnull
+    public PermissionCollectionPage buildFromResponse(@Nonnull final PermissionCollectionResponse response) {
         final PermissionCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new PermissionCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

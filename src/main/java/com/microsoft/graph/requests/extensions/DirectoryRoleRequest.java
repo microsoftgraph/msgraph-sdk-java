@@ -14,6 +14,8 @@ import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionReq
 import com.microsoft.graph.requests.extensions.ScopedRoleMembershipRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -32,7 +34,7 @@ public class DirectoryRoleRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DirectoryRoleRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryRoleRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DirectoryRole.class);
     }
 
@@ -41,7 +43,7 @@ public class DirectoryRoleRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DirectoryRole> callback) {
+    public void get(@Nonnull final ICallback<? super DirectoryRole> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -51,6 +53,7 @@ public class DirectoryRoleRequest extends BaseRequest {
      * @return the DirectoryRole from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DirectoryRole get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -60,7 +63,7 @@ public class DirectoryRoleRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DirectoryRole> callback) {
+    public void delete(@Nonnull final ICallback<? super DirectoryRole> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +82,7 @@ public class DirectoryRoleRequest extends BaseRequest {
      * @param sourceDirectoryRole the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DirectoryRole sourceDirectoryRole, final ICallback<? super DirectoryRole> callback) {
+    public void patch(@Nonnull final DirectoryRole sourceDirectoryRole, @Nonnull final ICallback<? super DirectoryRole> callback) {
         send(HttpMethod.PATCH, callback, sourceDirectoryRole);
     }
 
@@ -90,7 +93,8 @@ public class DirectoryRoleRequest extends BaseRequest {
      * @return the updated DirectoryRole
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DirectoryRole patch(final DirectoryRole sourceDirectoryRole) throws ClientException {
+    @Nullable
+    public DirectoryRole patch(@Nonnull final DirectoryRole sourceDirectoryRole) throws ClientException {
         return send(HttpMethod.PATCH, sourceDirectoryRole);
     }
 
@@ -100,7 +104,7 @@ public class DirectoryRoleRequest extends BaseRequest {
      * @param newDirectoryRole the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DirectoryRole newDirectoryRole, final ICallback<? super DirectoryRole> callback) {
+    public void post(@Nonnull final DirectoryRole newDirectoryRole, @Nonnull final ICallback<? super DirectoryRole> callback) {
         send(HttpMethod.POST, callback, newDirectoryRole);
     }
 
@@ -111,7 +115,8 @@ public class DirectoryRoleRequest extends BaseRequest {
      * @return the created DirectoryRole
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DirectoryRole post(final DirectoryRole newDirectoryRole) throws ClientException {
+    @Nullable
+    public DirectoryRole post(@Nonnull final DirectoryRole newDirectoryRole) throws ClientException {
         return send(HttpMethod.POST, newDirectoryRole);
     }
 
@@ -121,7 +126,7 @@ public class DirectoryRoleRequest extends BaseRequest {
      * @param newDirectoryRole the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DirectoryRole newDirectoryRole, final ICallback<? super DirectoryRole> callback) {
+    public void put(@Nonnull final DirectoryRole newDirectoryRole, @Nonnull final ICallback<? super DirectoryRole> callback) {
         send(HttpMethod.PUT, callback, newDirectoryRole);
     }
 
@@ -132,7 +137,8 @@ public class DirectoryRoleRequest extends BaseRequest {
      * @return the created DirectoryRole
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DirectoryRole put(final DirectoryRole newDirectoryRole) throws ClientException {
+    @Nullable
+    public DirectoryRole put(@Nonnull final DirectoryRole newDirectoryRole) throws ClientException {
         return send(HttpMethod.PUT, newDirectoryRole);
     }
 
@@ -142,7 +148,8 @@ public class DirectoryRoleRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public DirectoryRoleRequest select(final String value) {
+     @Nonnull
+     public DirectoryRoleRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (DirectoryRoleRequest)this;
      }
@@ -153,7 +160,8 @@ public class DirectoryRoleRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public DirectoryRoleRequest expand(final String value) {
+     @Nonnull
+     public DirectoryRoleRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (DirectoryRoleRequest)this;
      }

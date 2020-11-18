@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.TodoTaskList;
 import com.microsoft.graph.models.extensions.TodoTask;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class TodoTaskCollectionRequest extends BaseCollectionRequest<TodoTaskCol
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TodoTaskCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TodoTaskCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TodoTaskCollectionResponse.class, TodoTaskCollectionPage.class);
     }
 
-    public void get(final ICallback<? super TodoTaskCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super TodoTaskCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class TodoTaskCollectionRequest extends BaseCollectionRequest<TodoTaskCol
         });
     }
 
+    @Nonnull
     public TodoTaskCollectionPage get() throws ClientException {
         final TodoTaskCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final TodoTask newTodoTask, final ICallback<? super TodoTask> callback) {
+    public void post(@Nonnull final TodoTask newTodoTask, @Nonnull final ICallback<? super TodoTask> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TodoTaskRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newTodoTask, callback);
     }
 
-    public TodoTask post(final TodoTask newTodoTask) throws ClientException {
+    @Nonnull
+    public TodoTask post(@Nonnull final TodoTask newTodoTask) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TodoTaskRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class TodoTaskCollectionRequest extends BaseCollectionRequest<TodoTaskCol
      * @param value the expand clause
      * @return the updated request
      */
-    public TodoTaskCollectionRequest expand(final String value) {
+    @Nonnull
+    public TodoTaskCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (TodoTaskCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class TodoTaskCollectionRequest extends BaseCollectionRequest<TodoTaskCol
      * @param value the filter clause
      * @return the updated request
      */
-    public TodoTaskCollectionRequest filter(final String value) {
+    @Nonnull
+    public TodoTaskCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (TodoTaskCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class TodoTaskCollectionRequest extends BaseCollectionRequest<TodoTaskCol
      * @param value the order by clause
      * @return the updated request
      */
-    public TodoTaskCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public TodoTaskCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (TodoTaskCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class TodoTaskCollectionRequest extends BaseCollectionRequest<TodoTaskCol
      * @param value the select clause
      * @return the updated request
      */
-    public TodoTaskCollectionRequest select(final String value) {
+    @Nonnull
+    public TodoTaskCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (TodoTaskCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class TodoTaskCollectionRequest extends BaseCollectionRequest<TodoTaskCol
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public TodoTaskCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (TodoTaskCollectionRequest)this;
@@ -133,6 +142,7 @@ public class TodoTaskCollectionRequest extends BaseCollectionRequest<TodoTaskCol
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public TodoTaskCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (TodoTaskCollectionRequest)this;
@@ -144,11 +154,13 @@ public class TodoTaskCollectionRequest extends BaseCollectionRequest<TodoTaskCol
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public TodoTaskCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public TodoTaskCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (TodoTaskCollectionRequest)this;
     }
-    public TodoTaskCollectionPage buildFromResponse(final TodoTaskCollectionResponse response) {
+    @Nonnull
+    public TodoTaskCollectionPage buildFromResponse(@Nonnull final TodoTaskCollectionResponse response) {
         final TodoTaskCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new TodoTaskCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

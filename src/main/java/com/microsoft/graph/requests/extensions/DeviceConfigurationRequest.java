@@ -21,6 +21,8 @@ import com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceOverview
 import com.microsoft.graph.requests.extensions.DeviceConfigurationUserOverviewRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -40,10 +42,10 @@ public class DeviceConfigurationRequest extends BaseRequest {
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public DeviceConfigurationRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends DeviceConfiguration> responseClass) {
+    public DeviceConfigurationRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends DeviceConfiguration> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -54,7 +56,7 @@ public class DeviceConfigurationRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceConfiguration.class);
     }
 
@@ -63,7 +65,7 @@ public class DeviceConfigurationRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -73,6 +75,7 @@ public class DeviceConfigurationRequest extends BaseRequest {
      * @return the DeviceConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -82,7 +85,7 @@ public class DeviceConfigurationRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -101,7 +104,7 @@ public class DeviceConfigurationRequest extends BaseRequest {
      * @param sourceDeviceConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceConfiguration sourceDeviceConfiguration, final ICallback<? super DeviceConfiguration> callback) {
+    public void patch(@Nonnull final DeviceConfiguration sourceDeviceConfiguration, @Nonnull final ICallback<? super DeviceConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceConfiguration);
     }
 
@@ -112,7 +115,8 @@ public class DeviceConfigurationRequest extends BaseRequest {
      * @return the updated DeviceConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceConfiguration patch(final DeviceConfiguration sourceDeviceConfiguration) throws ClientException {
+    @Nullable
+    public DeviceConfiguration patch(@Nonnull final DeviceConfiguration sourceDeviceConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceConfiguration);
     }
 
@@ -122,7 +126,7 @@ public class DeviceConfigurationRequest extends BaseRequest {
      * @param newDeviceConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceConfiguration newDeviceConfiguration, final ICallback<? super DeviceConfiguration> callback) {
+    public void post(@Nonnull final DeviceConfiguration newDeviceConfiguration, @Nonnull final ICallback<? super DeviceConfiguration> callback) {
         send(HttpMethod.POST, callback, newDeviceConfiguration);
     }
 
@@ -133,7 +137,8 @@ public class DeviceConfigurationRequest extends BaseRequest {
      * @return the created DeviceConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceConfiguration post(final DeviceConfiguration newDeviceConfiguration) throws ClientException {
+    @Nullable
+    public DeviceConfiguration post(@Nonnull final DeviceConfiguration newDeviceConfiguration) throws ClientException {
         return send(HttpMethod.POST, newDeviceConfiguration);
     }
 
@@ -143,7 +148,7 @@ public class DeviceConfigurationRequest extends BaseRequest {
      * @param newDeviceConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceConfiguration newDeviceConfiguration, final ICallback<? super DeviceConfiguration> callback) {
+    public void put(@Nonnull final DeviceConfiguration newDeviceConfiguration, @Nonnull final ICallback<? super DeviceConfiguration> callback) {
         send(HttpMethod.PUT, callback, newDeviceConfiguration);
     }
 
@@ -154,7 +159,8 @@ public class DeviceConfigurationRequest extends BaseRequest {
      * @return the created DeviceConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceConfiguration put(final DeviceConfiguration newDeviceConfiguration) throws ClientException {
+    @Nullable
+    public DeviceConfiguration put(@Nonnull final DeviceConfiguration newDeviceConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newDeviceConfiguration);
     }
 
@@ -164,7 +170,8 @@ public class DeviceConfigurationRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public DeviceConfigurationRequest select(final String value) {
+     @Nonnull
+     public DeviceConfigurationRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (DeviceConfigurationRequest)this;
      }
@@ -175,7 +182,8 @@ public class DeviceConfigurationRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public DeviceConfigurationRequest expand(final String value) {
+     @Nonnull
+     public DeviceConfigurationRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (DeviceConfigurationRequest)this;
      }

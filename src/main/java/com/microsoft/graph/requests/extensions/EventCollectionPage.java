@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Event;
 import com.microsoft.graph.requests.extensions.EventCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.EventCollectionPage;
 import com.microsoft.graph.requests.extensions.EventCollectionResponse;
@@ -22,7 +24,7 @@ public class EventCollectionPage extends BaseCollectionPage<Event, EventCollecti
      * @param response the serialized EventCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public EventCollectionPage(final EventCollectionResponse response, final EventCollectionRequestBuilder builder) {
+    public EventCollectionPage(@Nonnull final EventCollectionResponse response, @Nonnull final EventCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

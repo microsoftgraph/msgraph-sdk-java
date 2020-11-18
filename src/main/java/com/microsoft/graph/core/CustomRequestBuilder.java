@@ -2,6 +2,9 @@ package com.microsoft.graph.core;
 
 import java.util.List;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.http.CustomRequest;
@@ -15,16 +18,18 @@ import com.microsoft.graph.options.Option;
 public class CustomRequestBuilder<T> extends BaseRequestBuilder {
 	public final Class<T> responseType; 
 	
-	public CustomRequestBuilder(final String requestUrl, final IBaseClient client, final List<? extends Option> requestOptions, final Class<T> responseType) {
+	public CustomRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final List<? extends Option> requestOptions, @Nonnull final Class<T> responseType) {
 		super(requestUrl, client, requestOptions);
 		this.responseType = responseType;
 	}
 	
-	public CustomRequest<T> buildRequest() {
-		return buildRequest(getOptions());
+	@Nonnull
+	public CustomRequest<T> buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
+		return buildRequest(getOptions(requestOptions));
 	}
 	
-	public CustomRequest<T> buildRequest(final List<? extends Option> requestOptions) {
+	@Nonnull
+	public CustomRequest<T> buildRequest(@Nullable final List<? extends Option> requestOptions) {
 		return new CustomRequest<T>(getRequestUrl(), getClient(), requestOptions, responseType);
 	}
 }

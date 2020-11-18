@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedAppPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.UserGetManagedAppPoliciesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserGetManagedAppPoliciesCollectionPage;
@@ -33,7 +35,7 @@ public class UserGetManagedAppPoliciesCollectionPage extends BaseCollectionPage<
      * @param response The serialized UserGetManagedAppPoliciesCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public UserGetManagedAppPoliciesCollectionPage(final UserGetManagedAppPoliciesCollectionResponse response, final UserGetManagedAppPoliciesCollectionRequestBuilder builder) {
+    public UserGetManagedAppPoliciesCollectionPage(@Nonnull final UserGetManagedAppPoliciesCollectionResponse response, @Nonnull final UserGetManagedAppPoliciesCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

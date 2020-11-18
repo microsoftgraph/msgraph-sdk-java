@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedAppDiagnosticStatus;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserGetManagedAppDiagnosticStatusesCollectionPage;
@@ -33,7 +35,7 @@ public class UserGetManagedAppDiagnosticStatusesCollectionPage extends BaseColle
      * @param response The serialized UserGetManagedAppDiagnosticStatusesCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public UserGetManagedAppDiagnosticStatusesCollectionPage(final UserGetManagedAppDiagnosticStatusesCollectionResponse response, final UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder builder) {
+    public UserGetManagedAppDiagnosticStatusesCollectionPage(@Nonnull final UserGetManagedAppDiagnosticStatusesCollectionResponse response, @Nonnull final UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

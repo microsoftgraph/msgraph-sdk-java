@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.Device;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -32,11 +34,11 @@ public class DeviceCollectionReferenceRequest extends BaseCollectionRequest<Devi
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceCollectionReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceCollectionResponse.class, DeviceCollectionPage.class);
     }
 
-    public void post(final Device newDevice, final ICallback<? super Device> callback) {
+    public void post(@Nonnull final Device newDevice, @Nonnull final ICallback<? super Device> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/devices/" + newDevice.id);
         new DeviceWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -44,7 +46,8 @@ public class DeviceCollectionReferenceRequest extends BaseCollectionRequest<Devi
             .post(newDevice, body, callback);
     }
 
-    public Device post(final Device newDevice) throws ClientException {
+    @Nonnull
+    public Device post(@Nonnull final Device newDevice) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/devices/" + newDevice.id);
         return new DeviceWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
@@ -57,7 +60,8 @@ public class DeviceCollectionReferenceRequest extends BaseCollectionRequest<Devi
      * @param value the expand clause
      * @return the updated request
      */
-    public DeviceCollectionReferenceRequest expand(final String value) {
+    @Nonnull
+    public DeviceCollectionReferenceRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DeviceCollectionReferenceRequest)this;
     }
@@ -68,7 +72,8 @@ public class DeviceCollectionReferenceRequest extends BaseCollectionRequest<Devi
      * @param value the filter clause
      * @return the updated request
      */
-    public DeviceCollectionReferenceRequest filter(final String value) {
+    @Nonnull
+    public DeviceCollectionReferenceRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DeviceCollectionReferenceRequest)this;
     }
@@ -79,7 +84,8 @@ public class DeviceCollectionReferenceRequest extends BaseCollectionRequest<Devi
      * @param value the sort clause
      * @return the updated request
      */
-    public DeviceCollectionReferenceRequest orderBy(final String value) {
+    @Nonnull
+    public DeviceCollectionReferenceRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceCollectionReferenceRequest)this;
     }
@@ -90,7 +96,8 @@ public class DeviceCollectionReferenceRequest extends BaseCollectionRequest<Devi
      * @param value the select clause
      * @return the updated request
      */
-    public DeviceCollectionReferenceRequest select(final String value) {
+    @Nonnull
+    public DeviceCollectionReferenceRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DeviceCollectionReferenceRequest)this;
     }
@@ -101,6 +108,7 @@ public class DeviceCollectionReferenceRequest extends BaseCollectionRequest<Devi
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DeviceCollectionReferenceRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (DeviceCollectionReferenceRequest)this;

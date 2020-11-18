@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CertificateBasedAuthConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
@@ -29,7 +31,7 @@ public class CertificateBasedAuthConfigurationReferenceRequestBuilder extends Ba
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CertificateBasedAuthConfigurationReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CertificateBasedAuthConfigurationReferenceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +41,8 @@ public class CertificateBasedAuthConfigurationReferenceRequestBuilder extends Ba
      * @param requestOptions the options for this request
      * @return The CertificateBasedAuthConfigurationReferenceRequest instance
      */
-    public CertificateBasedAuthConfigurationReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public CertificateBasedAuthConfigurationReferenceRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,7 +52,8 @@ public class CertificateBasedAuthConfigurationReferenceRequestBuilder extends Ba
      * @param requestOptions the options for this request
      * @return the CertificateBasedAuthConfigurationReferenceRequest instance
      */
-    public CertificateBasedAuthConfigurationReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public CertificateBasedAuthConfigurationReferenceRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new CertificateBasedAuthConfigurationReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionWithReferencesPage;
@@ -34,7 +36,7 @@ public class TokenIssuancePolicyCollectionWithReferencesPage extends BaseCollect
      * @param response the serialized TokenIssuancePolicyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TokenIssuancePolicyCollectionWithReferencesPage(final TokenIssuancePolicyCollectionResponse response, final TokenIssuancePolicyCollectionWithReferencesRequestBuilder builder) {
+    public TokenIssuancePolicyCollectionWithReferencesPage(@Nonnull final TokenIssuancePolicyCollectionResponse response, @Nonnull  final TokenIssuancePolicyCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

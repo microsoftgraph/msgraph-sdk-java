@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PermissionGrantConditionSet;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class PermissionGrantConditionSetRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PermissionGrantConditionSetRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PermissionGrantConditionSetRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PermissionGrantConditionSet.class);
     }
 
@@ -37,7 +39,7 @@ public class PermissionGrantConditionSetRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PermissionGrantConditionSet> callback) {
+    public void get(@Nonnull final ICallback<? super PermissionGrantConditionSet> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class PermissionGrantConditionSetRequest extends BaseRequest {
      * @return the PermissionGrantConditionSet from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PermissionGrantConditionSet get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class PermissionGrantConditionSetRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PermissionGrantConditionSet> callback) {
+    public void delete(@Nonnull final ICallback<? super PermissionGrantConditionSet> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class PermissionGrantConditionSetRequest extends BaseRequest {
      * @param sourcePermissionGrantConditionSet the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PermissionGrantConditionSet sourcePermissionGrantConditionSet, final ICallback<? super PermissionGrantConditionSet> callback) {
+    public void patch(@Nonnull final PermissionGrantConditionSet sourcePermissionGrantConditionSet, @Nonnull final ICallback<? super PermissionGrantConditionSet> callback) {
         send(HttpMethod.PATCH, callback, sourcePermissionGrantConditionSet);
     }
 
@@ -86,7 +89,8 @@ public class PermissionGrantConditionSetRequest extends BaseRequest {
      * @return the updated PermissionGrantConditionSet
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PermissionGrantConditionSet patch(final PermissionGrantConditionSet sourcePermissionGrantConditionSet) throws ClientException {
+    @Nullable
+    public PermissionGrantConditionSet patch(@Nonnull final PermissionGrantConditionSet sourcePermissionGrantConditionSet) throws ClientException {
         return send(HttpMethod.PATCH, sourcePermissionGrantConditionSet);
     }
 
@@ -96,7 +100,7 @@ public class PermissionGrantConditionSetRequest extends BaseRequest {
      * @param newPermissionGrantConditionSet the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PermissionGrantConditionSet newPermissionGrantConditionSet, final ICallback<? super PermissionGrantConditionSet> callback) {
+    public void post(@Nonnull final PermissionGrantConditionSet newPermissionGrantConditionSet, @Nonnull final ICallback<? super PermissionGrantConditionSet> callback) {
         send(HttpMethod.POST, callback, newPermissionGrantConditionSet);
     }
 
@@ -107,7 +111,8 @@ public class PermissionGrantConditionSetRequest extends BaseRequest {
      * @return the created PermissionGrantConditionSet
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PermissionGrantConditionSet post(final PermissionGrantConditionSet newPermissionGrantConditionSet) throws ClientException {
+    @Nullable
+    public PermissionGrantConditionSet post(@Nonnull final PermissionGrantConditionSet newPermissionGrantConditionSet) throws ClientException {
         return send(HttpMethod.POST, newPermissionGrantConditionSet);
     }
 
@@ -117,7 +122,7 @@ public class PermissionGrantConditionSetRequest extends BaseRequest {
      * @param newPermissionGrantConditionSet the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PermissionGrantConditionSet newPermissionGrantConditionSet, final ICallback<? super PermissionGrantConditionSet> callback) {
+    public void put(@Nonnull final PermissionGrantConditionSet newPermissionGrantConditionSet, @Nonnull final ICallback<? super PermissionGrantConditionSet> callback) {
         send(HttpMethod.PUT, callback, newPermissionGrantConditionSet);
     }
 
@@ -128,7 +133,8 @@ public class PermissionGrantConditionSetRequest extends BaseRequest {
      * @return the created PermissionGrantConditionSet
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PermissionGrantConditionSet put(final PermissionGrantConditionSet newPermissionGrantConditionSet) throws ClientException {
+    @Nullable
+    public PermissionGrantConditionSet put(@Nonnull final PermissionGrantConditionSet newPermissionGrantConditionSet) throws ClientException {
         return send(HttpMethod.PUT, newPermissionGrantConditionSet);
     }
 
@@ -138,7 +144,8 @@ public class PermissionGrantConditionSetRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public PermissionGrantConditionSetRequest select(final String value) {
+     @Nonnull
+     public PermissionGrantConditionSetRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (PermissionGrantConditionSetRequest)this;
      }
@@ -149,7 +156,8 @@ public class PermissionGrantConditionSetRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public PermissionGrantConditionSetRequest expand(final String value) {
+     @Nonnull
+     public PermissionGrantConditionSetRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (PermissionGrantConditionSetRequest)this;
      }

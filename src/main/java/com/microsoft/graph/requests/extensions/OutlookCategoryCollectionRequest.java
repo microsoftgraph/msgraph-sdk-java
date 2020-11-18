@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.OutlookUser;
 import com.microsoft.graph.models.extensions.OutlookCategory;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class OutlookCategoryCollectionRequest extends BaseCollectionRequest<Outl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OutlookCategoryCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OutlookCategoryCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OutlookCategoryCollectionResponse.class, OutlookCategoryCollectionPage.class);
     }
 
-    public void get(final ICallback<? super OutlookCategoryCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super OutlookCategoryCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class OutlookCategoryCollectionRequest extends BaseCollectionRequest<Outl
         });
     }
 
+    @Nonnull
     public OutlookCategoryCollectionPage get() throws ClientException {
         final OutlookCategoryCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final OutlookCategory newOutlookCategory, final ICallback<? super OutlookCategory> callback) {
+    public void post(@Nonnull final OutlookCategory newOutlookCategory, @Nonnull final ICallback<? super OutlookCategory> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OutlookCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newOutlookCategory, callback);
     }
 
-    public OutlookCategory post(final OutlookCategory newOutlookCategory) throws ClientException {
+    @Nonnull
+    public OutlookCategory post(@Nonnull final OutlookCategory newOutlookCategory) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OutlookCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class OutlookCategoryCollectionRequest extends BaseCollectionRequest<Outl
      * @param value the expand clause
      * @return the updated request
      */
-    public OutlookCategoryCollectionRequest expand(final String value) {
+    @Nonnull
+    public OutlookCategoryCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (OutlookCategoryCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class OutlookCategoryCollectionRequest extends BaseCollectionRequest<Outl
      * @param value the filter clause
      * @return the updated request
      */
-    public OutlookCategoryCollectionRequest filter(final String value) {
+    @Nonnull
+    public OutlookCategoryCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (OutlookCategoryCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class OutlookCategoryCollectionRequest extends BaseCollectionRequest<Outl
      * @param value the order by clause
      * @return the updated request
      */
-    public OutlookCategoryCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public OutlookCategoryCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (OutlookCategoryCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class OutlookCategoryCollectionRequest extends BaseCollectionRequest<Outl
      * @param value the select clause
      * @return the updated request
      */
-    public OutlookCategoryCollectionRequest select(final String value) {
+    @Nonnull
+    public OutlookCategoryCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (OutlookCategoryCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class OutlookCategoryCollectionRequest extends BaseCollectionRequest<Outl
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public OutlookCategoryCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (OutlookCategoryCollectionRequest)this;
@@ -133,6 +142,7 @@ public class OutlookCategoryCollectionRequest extends BaseCollectionRequest<Outl
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public OutlookCategoryCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (OutlookCategoryCollectionRequest)this;
@@ -144,11 +154,13 @@ public class OutlookCategoryCollectionRequest extends BaseCollectionRequest<Outl
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public OutlookCategoryCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public OutlookCategoryCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (OutlookCategoryCollectionRequest)this;
     }
-    public OutlookCategoryCollectionPage buildFromResponse(final OutlookCategoryCollectionResponse response) {
+    @Nonnull
+    public OutlookCategoryCollectionPage buildFromResponse(@Nonnull final OutlookCategoryCollectionResponse response) {
         final OutlookCategoryCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new OutlookCategoryCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

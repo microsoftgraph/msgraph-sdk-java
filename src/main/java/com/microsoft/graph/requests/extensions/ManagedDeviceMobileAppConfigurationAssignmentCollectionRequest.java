@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfiguration
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest exte
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse.class, ManagedDeviceMobileAppConfigurationAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ManagedDeviceMobileAppConfigurationAssignmentCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super ManagedDeviceMobileAppConfigurationAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest exte
         });
     }
 
+    @Nonnull
     public ManagedDeviceMobileAppConfigurationAssignmentCollectionPage get() throws ClientException {
         final ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final ManagedDeviceMobileAppConfigurationAssignment newManagedDeviceMobileAppConfigurationAssignment, final ICallback<? super ManagedDeviceMobileAppConfigurationAssignment> callback) {
+    public void post(@Nonnull final ManagedDeviceMobileAppConfigurationAssignment newManagedDeviceMobileAppConfigurationAssignment, @Nonnull final ICallback<? super ManagedDeviceMobileAppConfigurationAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedDeviceMobileAppConfigurationAssignment, callback);
     }
 
-    public ManagedDeviceMobileAppConfigurationAssignment post(final ManagedDeviceMobileAppConfigurationAssignment newManagedDeviceMobileAppConfigurationAssignment) throws ClientException {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationAssignment post(@Nonnull final ManagedDeviceMobileAppConfigurationAssignment newManagedDeviceMobileAppConfigurationAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest exte
      * @param value the expand clause
      * @return the updated request
      */
-    public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest expand(final String value) {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest exte
      * @param value the filter clause
      * @return the updated request
      */
-    public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest filter(final String value) {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest exte
      * @param value the order by clause
      * @return the updated request
      */
-    public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest exte
      * @param value the select clause
      * @return the updated request
      */
-    public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest select(final String value) {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest exte
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest)this;
@@ -133,6 +142,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest exte
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest)this;
@@ -144,11 +154,13 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest exte
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest)this;
     }
-    public ManagedDeviceMobileAppConfigurationAssignmentCollectionPage buildFromResponse(final ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse response) {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationAssignmentCollectionPage buildFromResponse(@Nonnull final ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse response) {
         final ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

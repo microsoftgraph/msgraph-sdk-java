@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceCompliancePolicy;
 import com.microsoft.graph.models.extensions.DeviceComplianceScheduledActionForRule;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class DeviceComplianceScheduledActionForRuleCollectionRequest extends Bas
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceComplianceScheduledActionForRuleCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceComplianceScheduledActionForRuleCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceComplianceScheduledActionForRuleCollectionResponse.class, DeviceComplianceScheduledActionForRuleCollectionPage.class);
     }
 
-    public void get(final ICallback<? super DeviceComplianceScheduledActionForRuleCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceComplianceScheduledActionForRuleCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class DeviceComplianceScheduledActionForRuleCollectionRequest extends Bas
         });
     }
 
+    @Nonnull
     public DeviceComplianceScheduledActionForRuleCollectionPage get() throws ClientException {
         final DeviceComplianceScheduledActionForRuleCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceComplianceScheduledActionForRule newDeviceComplianceScheduledActionForRule, final ICallback<? super DeviceComplianceScheduledActionForRule> callback) {
+    public void post(@Nonnull final DeviceComplianceScheduledActionForRule newDeviceComplianceScheduledActionForRule, @Nonnull final ICallback<? super DeviceComplianceScheduledActionForRule> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceComplianceScheduledActionForRuleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceComplianceScheduledActionForRule, callback);
     }
 
-    public DeviceComplianceScheduledActionForRule post(final DeviceComplianceScheduledActionForRule newDeviceComplianceScheduledActionForRule) throws ClientException {
+    @Nonnull
+    public DeviceComplianceScheduledActionForRule post(@Nonnull final DeviceComplianceScheduledActionForRule newDeviceComplianceScheduledActionForRule) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceComplianceScheduledActionForRuleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class DeviceComplianceScheduledActionForRuleCollectionRequest extends Bas
      * @param value the expand clause
      * @return the updated request
      */
-    public DeviceComplianceScheduledActionForRuleCollectionRequest expand(final String value) {
+    @Nonnull
+    public DeviceComplianceScheduledActionForRuleCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DeviceComplianceScheduledActionForRuleCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class DeviceComplianceScheduledActionForRuleCollectionRequest extends Bas
      * @param value the filter clause
      * @return the updated request
      */
-    public DeviceComplianceScheduledActionForRuleCollectionRequest filter(final String value) {
+    @Nonnull
+    public DeviceComplianceScheduledActionForRuleCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DeviceComplianceScheduledActionForRuleCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class DeviceComplianceScheduledActionForRuleCollectionRequest extends Bas
      * @param value the order by clause
      * @return the updated request
      */
-    public DeviceComplianceScheduledActionForRuleCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DeviceComplianceScheduledActionForRuleCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceComplianceScheduledActionForRuleCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class DeviceComplianceScheduledActionForRuleCollectionRequest extends Bas
      * @param value the select clause
      * @return the updated request
      */
-    public DeviceComplianceScheduledActionForRuleCollectionRequest select(final String value) {
+    @Nonnull
+    public DeviceComplianceScheduledActionForRuleCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DeviceComplianceScheduledActionForRuleCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class DeviceComplianceScheduledActionForRuleCollectionRequest extends Bas
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DeviceComplianceScheduledActionForRuleCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (DeviceComplianceScheduledActionForRuleCollectionRequest)this;
@@ -133,6 +142,7 @@ public class DeviceComplianceScheduledActionForRuleCollectionRequest extends Bas
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public DeviceComplianceScheduledActionForRuleCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (DeviceComplianceScheduledActionForRuleCollectionRequest)this;
@@ -144,11 +154,13 @@ public class DeviceComplianceScheduledActionForRuleCollectionRequest extends Bas
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public DeviceComplianceScheduledActionForRuleCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public DeviceComplianceScheduledActionForRuleCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (DeviceComplianceScheduledActionForRuleCollectionRequest)this;
     }
-    public DeviceComplianceScheduledActionForRuleCollectionPage buildFromResponse(final DeviceComplianceScheduledActionForRuleCollectionResponse response) {
+    @Nonnull
+    public DeviceComplianceScheduledActionForRuleCollectionPage buildFromResponse(@Nonnull final DeviceComplianceScheduledActionForRuleCollectionResponse response) {
         final DeviceComplianceScheduledActionForRuleCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new DeviceComplianceScheduledActionForRuleCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

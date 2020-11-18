@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserActivity;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.UserActivityRecentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserActivityRecentCollectionPage;
@@ -33,7 +35,7 @@ public class UserActivityRecentCollectionPage extends BaseCollectionPage<UserAct
      * @param response The serialized UserActivityRecentCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public UserActivityRecentCollectionPage(final UserActivityRecentCollectionResponse response, final UserActivityRecentCollectionRequestBuilder builder) {
+    public UserActivityRecentCollectionPage(@Nonnull final UserActivityRecentCollectionResponse response, @Nonnull final UserActivityRecentCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

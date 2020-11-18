@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,11 +36,11 @@ public class OAuth2PermissionGrantCollectionRequest extends BaseCollectionReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OAuth2PermissionGrantCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OAuth2PermissionGrantCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OAuth2PermissionGrantCollectionResponse.class, OAuth2PermissionGrantCollectionPage.class);
     }
 
-    public void get(final ICallback<? super OAuth2PermissionGrantCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super OAuth2PermissionGrantCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -52,19 +54,21 @@ public class OAuth2PermissionGrantCollectionRequest extends BaseCollectionReques
         });
     }
 
+    @Nonnull
     public OAuth2PermissionGrantCollectionPage get() throws ClientException {
         final OAuth2PermissionGrantCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final OAuth2PermissionGrant newOAuth2PermissionGrant, final ICallback<? super OAuth2PermissionGrant> callback) {
+    public void post(@Nonnull final OAuth2PermissionGrant newOAuth2PermissionGrant, @Nonnull final ICallback<? super OAuth2PermissionGrant> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OAuth2PermissionGrantRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newOAuth2PermissionGrant, callback);
     }
 
-    public OAuth2PermissionGrant post(final OAuth2PermissionGrant newOAuth2PermissionGrant) throws ClientException {
+    @Nonnull
+    public OAuth2PermissionGrant post(@Nonnull final OAuth2PermissionGrant newOAuth2PermissionGrant) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OAuth2PermissionGrantRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -77,7 +81,8 @@ public class OAuth2PermissionGrantCollectionRequest extends BaseCollectionReques
      * @param value the expand clause
      * @return the updated request
      */
-    public OAuth2PermissionGrantCollectionRequest expand(final String value) {
+    @Nonnull
+    public OAuth2PermissionGrantCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (OAuth2PermissionGrantCollectionRequest)this;
     }
@@ -88,7 +93,8 @@ public class OAuth2PermissionGrantCollectionRequest extends BaseCollectionReques
      * @param value the filter clause
      * @return the updated request
      */
-    public OAuth2PermissionGrantCollectionRequest filter(final String value) {
+    @Nonnull
+    public OAuth2PermissionGrantCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (OAuth2PermissionGrantCollectionRequest)this;
     }
@@ -99,7 +105,8 @@ public class OAuth2PermissionGrantCollectionRequest extends BaseCollectionReques
      * @param value the order by clause
      * @return the updated request
      */
-    public OAuth2PermissionGrantCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public OAuth2PermissionGrantCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (OAuth2PermissionGrantCollectionRequest)this;
     }
@@ -110,7 +117,8 @@ public class OAuth2PermissionGrantCollectionRequest extends BaseCollectionReques
      * @param value the select clause
      * @return the updated request
      */
-    public OAuth2PermissionGrantCollectionRequest select(final String value) {
+    @Nonnull
+    public OAuth2PermissionGrantCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (OAuth2PermissionGrantCollectionRequest)this;
     }
@@ -121,6 +129,7 @@ public class OAuth2PermissionGrantCollectionRequest extends BaseCollectionReques
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public OAuth2PermissionGrantCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (OAuth2PermissionGrantCollectionRequest)this;
@@ -132,6 +141,7 @@ public class OAuth2PermissionGrantCollectionRequest extends BaseCollectionReques
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public OAuth2PermissionGrantCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (OAuth2PermissionGrantCollectionRequest)this;
@@ -143,11 +153,13 @@ public class OAuth2PermissionGrantCollectionRequest extends BaseCollectionReques
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public OAuth2PermissionGrantCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public OAuth2PermissionGrantCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (OAuth2PermissionGrantCollectionRequest)this;
     }
-    public OAuth2PermissionGrantCollectionPage buildFromResponse(final OAuth2PermissionGrantCollectionResponse response) {
+    @Nonnull
+    public OAuth2PermissionGrantCollectionPage buildFromResponse(@Nonnull final OAuth2PermissionGrantCollectionResponse response) {
         final OAuth2PermissionGrantCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new OAuth2PermissionGrantCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

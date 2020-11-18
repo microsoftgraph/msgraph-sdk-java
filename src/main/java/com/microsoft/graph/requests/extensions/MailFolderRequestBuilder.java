@@ -20,6 +20,8 @@ import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedProperty
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -37,7 +39,7 @@ public class MailFolderRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MailFolderRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MailFolderRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,7 +49,8 @@ public class MailFolderRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the MailFolderRequest instance
      */
-    public MailFolderRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public MailFolderRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -57,52 +60,65 @@ public class MailFolderRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the MailFolderRequest instance
      */
-    public MailFolderRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public MailFolderRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.MailFolderRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    @Nonnull
     public MailFolderCollectionRequestBuilder childFolders() {
         return new MailFolderCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("childFolders"), getClient(), null);
     }
 
-    public MailFolderRequestBuilder childFolders(final String id) {
+    @Nonnull
+    public MailFolderRequestBuilder childFolders(@Nonnull final String id) {
         return new MailFolderRequestBuilder(getRequestUrlWithAdditionalSegment("childFolders") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public MessageRuleCollectionRequestBuilder messageRules() {
         return new MessageRuleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("messageRules"), getClient(), null);
     }
 
-    public MessageRuleRequestBuilder messageRules(final String id) {
+    @Nonnull
+    public MessageRuleRequestBuilder messageRules(@Nonnull final String id) {
         return new MessageRuleRequestBuilder(getRequestUrlWithAdditionalSegment("messageRules") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public MessageCollectionRequestBuilder messages() {
         return new MessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("messages"), getClient(), null);
     }
 
-    public MessageRequestBuilder messages(final String id) {
+    @Nonnull
+    public MessageRequestBuilder messages(@Nonnull final String id) {
         return new MessageRequestBuilder(getRequestUrlWithAdditionalSegment("messages") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public MultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties() {
         return new MultiValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties"), getClient(), null);
     }
 
-    public MultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id) {
+    @Nonnull
+    public MultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(@Nonnull final String id) {
         return new MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties") + "/" + id, getClient(), null);
     }
+    @Nonnull
     public SingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
         return new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties"), getClient(), null);
     }
 
-    public SingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id) {
+    @Nonnull
+    public SingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(@Nonnull final String id) {
         return new SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);
     }
 
-    public MailFolderCopyRequestBuilder copy(final String destinationId) {
+    @Nonnull
+    public MailFolderCopyRequestBuilder copy(@Nullable final String destinationId) {
         return new MailFolderCopyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copy"), getClient(), null, destinationId);
     }
 
-    public MailFolderMoveRequestBuilder move(final String destinationId) {
+    @Nonnull
+    public MailFolderMoveRequestBuilder move(@Nullable final String destinationId) {
         return new MailFolderMoveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.move"), getClient(), null, destinationId);
     }
 }

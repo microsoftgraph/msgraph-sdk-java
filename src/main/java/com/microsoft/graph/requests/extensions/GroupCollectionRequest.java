@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.models.extensions.AssignedLicense;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class GroupCollectionRequest extends BaseCollectionRequest<GroupCollectio
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupCollectionResponse.class, GroupCollectionPage.class);
     }
 
-    public void get(final ICallback<? super GroupCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super GroupCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class GroupCollectionRequest extends BaseCollectionRequest<GroupCollectio
         });
     }
 
+    @Nonnull
     public GroupCollectionPage get() throws ClientException {
         final GroupCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final Group newGroup, final ICallback<? super Group> callback) {
+    public void post(@Nonnull final Group newGroup, @Nonnull final ICallback<? super Group> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newGroup, callback);
     }
 
-    public Group post(final Group newGroup) throws ClientException {
+    @Nonnull
+    public Group post(@Nonnull final Group newGroup) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new GroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class GroupCollectionRequest extends BaseCollectionRequest<GroupCollectio
      * @param value the expand clause
      * @return the updated request
      */
-    public GroupCollectionRequest expand(final String value) {
+    @Nonnull
+    public GroupCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (GroupCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class GroupCollectionRequest extends BaseCollectionRequest<GroupCollectio
      * @param value the filter clause
      * @return the updated request
      */
-    public GroupCollectionRequest filter(final String value) {
+    @Nonnull
+    public GroupCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (GroupCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class GroupCollectionRequest extends BaseCollectionRequest<GroupCollectio
      * @param value the order by clause
      * @return the updated request
      */
-    public GroupCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public GroupCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (GroupCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class GroupCollectionRequest extends BaseCollectionRequest<GroupCollectio
      * @param value the select clause
      * @return the updated request
      */
-    public GroupCollectionRequest select(final String value) {
+    @Nonnull
+    public GroupCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (GroupCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class GroupCollectionRequest extends BaseCollectionRequest<GroupCollectio
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public GroupCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (GroupCollectionRequest)this;
@@ -133,6 +142,7 @@ public class GroupCollectionRequest extends BaseCollectionRequest<GroupCollectio
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public GroupCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (GroupCollectionRequest)this;
@@ -144,11 +154,13 @@ public class GroupCollectionRequest extends BaseCollectionRequest<GroupCollectio
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public GroupCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public GroupCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (GroupCollectionRequest)this;
     }
-    public GroupCollectionPage buildFromResponse(final GroupCollectionResponse response) {
+    @Nonnull
+    public GroupCollectionPage buildFromResponse(@Nonnull final GroupCollectionResponse response) {
         final GroupCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new GroupCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

@@ -13,6 +13,8 @@ import com.microsoft.graph.models.extensions.AttachmentItem;
 import com.microsoft.graph.models.extensions.UploadSession;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -37,11 +39,11 @@ public class AttachmentCollectionRequest extends BaseCollectionRequest<Attachmen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AttachmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AttachmentCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AttachmentCollectionResponse.class, AttachmentCollectionPage.class);
     }
 
-    public void get(final ICallback<? super AttachmentCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super AttachmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -55,19 +57,21 @@ public class AttachmentCollectionRequest extends BaseCollectionRequest<Attachmen
         });
     }
 
+    @Nonnull
     public AttachmentCollectionPage get() throws ClientException {
         final AttachmentCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final Attachment newAttachment, final ICallback<? super Attachment> callback) {
+    public void post(@Nonnull final Attachment newAttachment, @Nonnull final ICallback<? super Attachment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AttachmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newAttachment, callback);
     }
 
-    public Attachment post(final Attachment newAttachment) throws ClientException {
+    @Nonnull
+    public Attachment post(@Nonnull final Attachment newAttachment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AttachmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -80,7 +84,8 @@ public class AttachmentCollectionRequest extends BaseCollectionRequest<Attachmen
      * @param value the expand clause
      * @return the updated request
      */
-    public AttachmentCollectionRequest expand(final String value) {
+    @Nonnull
+    public AttachmentCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (AttachmentCollectionRequest)this;
     }
@@ -91,7 +96,8 @@ public class AttachmentCollectionRequest extends BaseCollectionRequest<Attachmen
      * @param value the filter clause
      * @return the updated request
      */
-    public AttachmentCollectionRequest filter(final String value) {
+    @Nonnull
+    public AttachmentCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (AttachmentCollectionRequest)this;
     }
@@ -102,7 +108,8 @@ public class AttachmentCollectionRequest extends BaseCollectionRequest<Attachmen
      * @param value the order by clause
      * @return the updated request
      */
-    public AttachmentCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public AttachmentCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AttachmentCollectionRequest)this;
     }
@@ -113,7 +120,8 @@ public class AttachmentCollectionRequest extends BaseCollectionRequest<Attachmen
      * @param value the select clause
      * @return the updated request
      */
-    public AttachmentCollectionRequest select(final String value) {
+    @Nonnull
+    public AttachmentCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (AttachmentCollectionRequest)this;
     }
@@ -124,6 +132,7 @@ public class AttachmentCollectionRequest extends BaseCollectionRequest<Attachmen
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public AttachmentCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (AttachmentCollectionRequest)this;
@@ -135,6 +144,7 @@ public class AttachmentCollectionRequest extends BaseCollectionRequest<Attachmen
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public AttachmentCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (AttachmentCollectionRequest)this;
@@ -146,11 +156,13 @@ public class AttachmentCollectionRequest extends BaseCollectionRequest<Attachmen
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public AttachmentCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public AttachmentCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (AttachmentCollectionRequest)this;
     }
-    public AttachmentCollectionPage buildFromResponse(final AttachmentCollectionResponse response) {
+    @Nonnull
+    public AttachmentCollectionPage buildFromResponse(@Nonnull final AttachmentCollectionResponse response) {
         final AttachmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new AttachmentCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

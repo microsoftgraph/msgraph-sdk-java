@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Site;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.SiteRemoveCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteRemoveCollectionPage;
@@ -33,7 +35,7 @@ public class SiteRemoveCollectionPage extends BaseCollectionPage<Site, SiteRemov
      * @param response The serialized SiteRemoveCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public SiteRemoveCollectionPage(final SiteRemoveCollectionResponse response, final SiteRemoveCollectionRequestBuilder builder) {
+    public SiteRemoveCollectionPage(@Nonnull final SiteRemoveCollectionResponse response, @Nonnull final SiteRemoveCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

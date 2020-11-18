@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.DeviceComplianceSettingStateColle
 import com.microsoft.graph.requests.extensions.DeviceComplianceSettingStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -29,7 +31,7 @@ public class DeviceCompliancePolicySettingStateSummaryRequestBuilder extends Bas
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceCompliancePolicySettingStateSummaryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceCompliancePolicySettingStateSummaryRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +41,8 @@ public class DeviceCompliancePolicySettingStateSummaryRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @return the DeviceCompliancePolicySettingStateSummaryRequest instance
      */
-    public DeviceCompliancePolicySettingStateSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DeviceCompliancePolicySettingStateSummaryRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,16 +52,19 @@ public class DeviceCompliancePolicySettingStateSummaryRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @return the DeviceCompliancePolicySettingStateSummaryRequest instance
      */
-    public DeviceCompliancePolicySettingStateSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DeviceCompliancePolicySettingStateSummaryRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceCompliancePolicySettingStateSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    @Nonnull
     public DeviceComplianceSettingStateCollectionRequestBuilder deviceComplianceSettingStates() {
         return new DeviceComplianceSettingStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceComplianceSettingStates"), getClient(), null);
     }
 
-    public DeviceComplianceSettingStateRequestBuilder deviceComplianceSettingStates(final String id) {
+    @Nonnull
+    public DeviceComplianceSettingStateRequestBuilder deviceComplianceSettingStates(@Nonnull final String id) {
         return new DeviceComplianceSettingStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceComplianceSettingStates") + "/" + id, getClient(), null);
     }
 }

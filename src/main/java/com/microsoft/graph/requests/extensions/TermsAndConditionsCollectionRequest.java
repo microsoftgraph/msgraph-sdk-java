@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.TermsAndConditions;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class TermsAndConditionsCollectionRequest extends BaseCollectionRequest<T
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TermsAndConditionsCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TermsAndConditionsCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TermsAndConditionsCollectionResponse.class, TermsAndConditionsCollectionPage.class);
     }
 
-    public void get(final ICallback<? super TermsAndConditionsCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super TermsAndConditionsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class TermsAndConditionsCollectionRequest extends BaseCollectionRequest<T
         });
     }
 
+    @Nonnull
     public TermsAndConditionsCollectionPage get() throws ClientException {
         final TermsAndConditionsCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final TermsAndConditions newTermsAndConditions, final ICallback<? super TermsAndConditions> callback) {
+    public void post(@Nonnull final TermsAndConditions newTermsAndConditions, @Nonnull final ICallback<? super TermsAndConditions> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TermsAndConditionsRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newTermsAndConditions, callback);
     }
 
-    public TermsAndConditions post(final TermsAndConditions newTermsAndConditions) throws ClientException {
+    @Nonnull
+    public TermsAndConditions post(@Nonnull final TermsAndConditions newTermsAndConditions) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TermsAndConditionsRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class TermsAndConditionsCollectionRequest extends BaseCollectionRequest<T
      * @param value the expand clause
      * @return the updated request
      */
-    public TermsAndConditionsCollectionRequest expand(final String value) {
+    @Nonnull
+    public TermsAndConditionsCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (TermsAndConditionsCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class TermsAndConditionsCollectionRequest extends BaseCollectionRequest<T
      * @param value the filter clause
      * @return the updated request
      */
-    public TermsAndConditionsCollectionRequest filter(final String value) {
+    @Nonnull
+    public TermsAndConditionsCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (TermsAndConditionsCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class TermsAndConditionsCollectionRequest extends BaseCollectionRequest<T
      * @param value the order by clause
      * @return the updated request
      */
-    public TermsAndConditionsCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public TermsAndConditionsCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (TermsAndConditionsCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class TermsAndConditionsCollectionRequest extends BaseCollectionRequest<T
      * @param value the select clause
      * @return the updated request
      */
-    public TermsAndConditionsCollectionRequest select(final String value) {
+    @Nonnull
+    public TermsAndConditionsCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (TermsAndConditionsCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class TermsAndConditionsCollectionRequest extends BaseCollectionRequest<T
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public TermsAndConditionsCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (TermsAndConditionsCollectionRequest)this;
@@ -133,6 +142,7 @@ public class TermsAndConditionsCollectionRequest extends BaseCollectionRequest<T
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public TermsAndConditionsCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (TermsAndConditionsCollectionRequest)this;
@@ -144,11 +154,13 @@ public class TermsAndConditionsCollectionRequest extends BaseCollectionRequest<T
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public TermsAndConditionsCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public TermsAndConditionsCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (TermsAndConditionsCollectionRequest)this;
     }
-    public TermsAndConditionsCollectionPage buildFromResponse(final TermsAndConditionsCollectionResponse response) {
+    @Nonnull
+    public TermsAndConditionsCollectionPage buildFromResponse(@Nonnull final TermsAndConditionsCollectionResponse response) {
         final TermsAndConditionsCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new TermsAndConditionsCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

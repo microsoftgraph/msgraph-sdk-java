@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TodoTaskList;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.TodoTaskListDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TodoTaskListDeltaCollectionRequest;
@@ -31,7 +33,7 @@ public class TodoTaskListDeltaCollectionRequestBuilder extends BaseFunctionReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TodoTaskListDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TodoTaskListDeltaCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
     
@@ -41,7 +43,8 @@ public class TodoTaskListDeltaCollectionRequestBuilder extends BaseFunctionReque
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public TodoTaskListDeltaCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public TodoTaskListDeltaCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,7 +54,8 @@ public class TodoTaskListDeltaCollectionRequestBuilder extends BaseFunctionReque
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public TodoTaskListDeltaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public TodoTaskListDeltaCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         TodoTaskListDeltaCollectionRequest request = new TodoTaskListDeltaCollectionRequest(
                 getRequestUrl(),
                 getClient(),

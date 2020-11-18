@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.EducationSchool;
 import com.microsoft.graph.requests.extensions.EducationSchoolCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.EducationSchoolCollectionPage;
 import com.microsoft.graph.requests.extensions.EducationSchoolCollectionResponse;
@@ -22,7 +24,7 @@ public class EducationSchoolCollectionPage extends BaseCollectionPage<EducationS
      * @param response the serialized EducationSchoolCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public EducationSchoolCollectionPage(final EducationSchoolCollectionResponse response, final EducationSchoolCollectionRequestBuilder builder) {
+    public EducationSchoolCollectionPage(@Nonnull final EducationSchoolCollectionResponse response, @Nonnull final EducationSchoolCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

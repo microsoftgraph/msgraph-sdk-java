@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Contact;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.ContactDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContactDeltaCollectionPage;
@@ -31,6 +33,7 @@ public class ContactDeltaCollectionPage extends BaseCollectionPage<Contact, Cont
      * The opaque link to query delta after the 
      * initial request
      */
+    @Nullable
     public String deltaLink;
 
     /**
@@ -39,7 +42,7 @@ public class ContactDeltaCollectionPage extends BaseCollectionPage<Contact, Cont
      * @param response The serialized ContactDeltaCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public ContactDeltaCollectionPage(final ContactDeltaCollectionResponse response, final ContactDeltaCollectionRequestBuilder builder) {
+    public ContactDeltaCollectionPage(@Nonnull final ContactDeltaCollectionResponse response, @Nonnull final ContactDeltaCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
 
         if (response.getRawObject().get("@odata.deltaLink") != null) {
@@ -53,6 +56,7 @@ public class ContactDeltaCollectionPage extends BaseCollectionPage<Contact, Cont
      *
      * @return String The deltaLink URL
      */
+    @Nullable
     public String deltaLink() {
         return deltaLink;
     }

@@ -14,6 +14,8 @@ import com.microsoft.graph.models.extensions.InviteParticipantsOperation;
 import com.microsoft.graph.models.extensions.MuteParticipantOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.ParticipantCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ParticipantRequestBuilder;
@@ -36,7 +38,7 @@ public class ParticipantCollectionRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ParticipantCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ParticipantCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +48,8 @@ public class ParticipantCollectionRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ParticipantCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ParticipantCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -56,17 +59,20 @@ public class ParticipantCollectionRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ParticipantCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ParticipantCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ParticipantCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ParticipantRequestBuilder byId(final String id) {
+    @Nonnull
+    public ParticipantRequestBuilder byId(@Nonnull final String id) {
         return new ParticipantRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
-    public ParticipantInviteRequestBuilder invite(final java.util.List<InvitationParticipantInfo> participants, final String clientContext) {
+    @Nonnull
+    public ParticipantInviteRequestBuilder invite(@Nullable final java.util.List<InvitationParticipantInfo> participants, @Nullable final String clientContext) {
         return new ParticipantInviteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.invite"), getClient(), null, participants, clientContext);
     }
 }

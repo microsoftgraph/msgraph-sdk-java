@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupLifecyclePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,11 +36,11 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupLifecyclePolicyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupLifecyclePolicyCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupLifecyclePolicyCollectionResponse.class, GroupLifecyclePolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<? super GroupLifecyclePolicyCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super GroupLifecyclePolicyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -52,19 +54,21 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
         });
     }
 
+    @Nonnull
     public GroupLifecyclePolicyCollectionPage get() throws ClientException {
         final GroupLifecyclePolicyCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final GroupLifecyclePolicy newGroupLifecyclePolicy, final ICallback<? super GroupLifecyclePolicy> callback) {
+    public void post(@Nonnull final GroupLifecyclePolicy newGroupLifecyclePolicy, @Nonnull final ICallback<? super GroupLifecyclePolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GroupLifecyclePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newGroupLifecyclePolicy, callback);
     }
 
-    public GroupLifecyclePolicy post(final GroupLifecyclePolicy newGroupLifecyclePolicy) throws ClientException {
+    @Nonnull
+    public GroupLifecyclePolicy post(@Nonnull final GroupLifecyclePolicy newGroupLifecyclePolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new GroupLifecyclePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -77,7 +81,8 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
      * @param value the expand clause
      * @return the updated request
      */
-    public GroupLifecyclePolicyCollectionRequest expand(final String value) {
+    @Nonnull
+    public GroupLifecyclePolicyCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (GroupLifecyclePolicyCollectionRequest)this;
     }
@@ -88,7 +93,8 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
      * @param value the filter clause
      * @return the updated request
      */
-    public GroupLifecyclePolicyCollectionRequest filter(final String value) {
+    @Nonnull
+    public GroupLifecyclePolicyCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (GroupLifecyclePolicyCollectionRequest)this;
     }
@@ -99,7 +105,8 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
      * @param value the order by clause
      * @return the updated request
      */
-    public GroupLifecyclePolicyCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public GroupLifecyclePolicyCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (GroupLifecyclePolicyCollectionRequest)this;
     }
@@ -110,7 +117,8 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
      * @param value the select clause
      * @return the updated request
      */
-    public GroupLifecyclePolicyCollectionRequest select(final String value) {
+    @Nonnull
+    public GroupLifecyclePolicyCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (GroupLifecyclePolicyCollectionRequest)this;
     }
@@ -121,6 +129,7 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public GroupLifecyclePolicyCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (GroupLifecyclePolicyCollectionRequest)this;
@@ -132,6 +141,7 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public GroupLifecyclePolicyCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (GroupLifecyclePolicyCollectionRequest)this;
@@ -143,11 +153,13 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public GroupLifecyclePolicyCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public GroupLifecyclePolicyCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (GroupLifecyclePolicyCollectionRequest)this;
     }
-    public GroupLifecyclePolicyCollectionPage buildFromResponse(final GroupLifecyclePolicyCollectionResponse response) {
+    @Nonnull
+    public GroupLifecyclePolicyCollectionPage buildFromResponse(@Nonnull final GroupLifecyclePolicyCollectionResponse response) {
         final GroupLifecyclePolicyCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new GroupLifecyclePolicyCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

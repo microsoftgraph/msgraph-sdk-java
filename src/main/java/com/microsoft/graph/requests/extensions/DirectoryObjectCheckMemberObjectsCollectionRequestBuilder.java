@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberObjectsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberObjectsCollectionRequest;
@@ -32,7 +34,7 @@ public class DirectoryObjectCheckMemberObjectsCollectionRequestBuilder extends B
      * @param requestOptions the options for this request
      * @param ids the ids
      */
-    public DirectoryObjectCheckMemberObjectsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<String> ids) {
+    public DirectoryObjectCheckMemberObjectsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final java.util.List<String> ids) {
         super(requestUrl, client, requestOptions);
   	 if(ids!=null){
 			bodyParams.put("ids", ids);
@@ -45,7 +47,8 @@ public class DirectoryObjectCheckMemberObjectsCollectionRequestBuilder extends B
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public DirectoryObjectCheckMemberObjectsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DirectoryObjectCheckMemberObjectsCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -55,7 +58,8 @@ public class DirectoryObjectCheckMemberObjectsCollectionRequestBuilder extends B
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public DirectoryObjectCheckMemberObjectsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DirectoryObjectCheckMemberObjectsCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DirectoryObjectCheckMemberObjectsCollectionRequest request = new DirectoryObjectCheckMemberObjectsCollectionRequest(
                 getRequestUrl(),
                 getClient(),

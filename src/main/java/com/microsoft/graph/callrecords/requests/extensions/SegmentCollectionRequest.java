@@ -11,6 +11,8 @@ import com.microsoft.graph.callrecords.models.extensions.Session;
 import com.microsoft.graph.callrecords.models.extensions.Segment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class SegmentCollectionRequest extends BaseCollectionRequest<SegmentColle
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SegmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SegmentCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SegmentCollectionResponse.class, SegmentCollectionPage.class);
     }
 
-    public void get(final ICallback<? super SegmentCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super SegmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class SegmentCollectionRequest extends BaseCollectionRequest<SegmentColle
         });
     }
 
+    @Nonnull
     public SegmentCollectionPage get() throws ClientException {
         final SegmentCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final Segment newSegment, final ICallback<? super Segment> callback) {
+    public void post(@Nonnull final Segment newSegment, @Nonnull final ICallback<? super Segment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SegmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newSegment, callback);
     }
 
-    public Segment post(final Segment newSegment) throws ClientException {
+    @Nonnull
+    public Segment post(@Nonnull final Segment newSegment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SegmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class SegmentCollectionRequest extends BaseCollectionRequest<SegmentColle
      * @param value the expand clause
      * @return the updated request
      */
-    public SegmentCollectionRequest expand(final String value) {
+    @Nonnull
+    public SegmentCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (SegmentCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class SegmentCollectionRequest extends BaseCollectionRequest<SegmentColle
      * @param value the filter clause
      * @return the updated request
      */
-    public SegmentCollectionRequest filter(final String value) {
+    @Nonnull
+    public SegmentCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (SegmentCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class SegmentCollectionRequest extends BaseCollectionRequest<SegmentColle
      * @param value the order by clause
      * @return the updated request
      */
-    public SegmentCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public SegmentCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SegmentCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class SegmentCollectionRequest extends BaseCollectionRequest<SegmentColle
      * @param value the select clause
      * @return the updated request
      */
-    public SegmentCollectionRequest select(final String value) {
+    @Nonnull
+    public SegmentCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (SegmentCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class SegmentCollectionRequest extends BaseCollectionRequest<SegmentColle
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public SegmentCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (SegmentCollectionRequest)this;
@@ -133,6 +142,7 @@ public class SegmentCollectionRequest extends BaseCollectionRequest<SegmentColle
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public SegmentCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (SegmentCollectionRequest)this;
@@ -144,11 +154,13 @@ public class SegmentCollectionRequest extends BaseCollectionRequest<SegmentColle
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public SegmentCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public SegmentCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (SegmentCollectionRequest)this;
     }
-    public SegmentCollectionPage buildFromResponse(final SegmentCollectionResponse response) {
+    @Nonnull
+    public SegmentCollectionPage buildFromResponse(@Nonnull final SegmentCollectionResponse response) {
         final SegmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new SegmentCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

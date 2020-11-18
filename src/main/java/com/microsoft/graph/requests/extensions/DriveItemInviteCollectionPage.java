@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DriveRecipient;
 import com.microsoft.graph.models.extensions.Permission;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DriveItemInviteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemInviteCollectionPage;
@@ -34,7 +36,7 @@ public class DriveItemInviteCollectionPage extends BaseCollectionPage<Permission
      * @param response The serialized DriveItemInviteCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public DriveItemInviteCollectionPage(final DriveItemInviteCollectionResponse response, final DriveItemInviteCollectionRequestBuilder builder) {
+    public DriveItemInviteCollectionPage(@Nonnull final DriveItemInviteCollectionResponse response, @Nonnull final DriveItemInviteCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

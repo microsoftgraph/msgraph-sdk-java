@@ -22,6 +22,9 @@
 
 package com.microsoft.graph.concurrency;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 import com.microsoft.graph.core.ClientException;
 
 /**
@@ -35,12 +38,12 @@ public interface ICallback<Result> {
      * 
      * @param result the result
      */
-    void success(final Result result);
+    void success(@Nullable final Result result);
 
     /**
      * How failures are handled
      * 
      * @param ex the exception
      */
-    void failure(final ClientException ex);
+    void failure(@Nonnull final ClientException ex);
 }

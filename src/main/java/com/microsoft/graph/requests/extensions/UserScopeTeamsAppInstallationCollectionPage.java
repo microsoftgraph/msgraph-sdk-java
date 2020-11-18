@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.UserScopeTeamsAppInstallation;
 import com.microsoft.graph.requests.extensions.UserScopeTeamsAppInstallationCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.UserScopeTeamsAppInstallationCollectionPage;
 import com.microsoft.graph.requests.extensions.UserScopeTeamsAppInstallationCollectionResponse;
@@ -22,7 +24,7 @@ public class UserScopeTeamsAppInstallationCollectionPage extends BaseCollectionP
      * @param response the serialized UserScopeTeamsAppInstallationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public UserScopeTeamsAppInstallationCollectionPage(final UserScopeTeamsAppInstallationCollectionResponse response, final UserScopeTeamsAppInstallationCollectionRequestBuilder builder) {
+    public UserScopeTeamsAppInstallationCollectionPage(@Nonnull final UserScopeTeamsAppInstallationCollectionResponse response, @Nonnull final UserScopeTeamsAppInstallationCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

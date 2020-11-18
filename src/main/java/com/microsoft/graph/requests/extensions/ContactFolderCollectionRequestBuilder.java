@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ContactFolder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.ContactFolderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContactFolderRequestBuilder;
@@ -32,7 +34,7 @@ public class ContactFolderCollectionRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ContactFolderCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ContactFolderCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,7 +44,8 @@ public class ContactFolderCollectionRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ContactFolderCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ContactFolderCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,21 +55,25 @@ public class ContactFolderCollectionRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ContactFolderCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ContactFolderCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ContactFolderCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ContactFolderRequestBuilder byId(final String id) {
+    @Nonnull
+    public ContactFolderRequestBuilder byId(@Nonnull final String id) {
         return new ContactFolderRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
+    @Nonnull
     public ContactFolderDeltaCollectionRequestBuilder delta() {
         return new ContactFolderDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
 
-	public ContactFolderDeltaCollectionRequestBuilder delta(final String deltaLink) {
+    @Nonnull
+	public ContactFolderDeltaCollectionRequestBuilder delta(@Nonnull final String deltaLink) {
         return new ContactFolderDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }
 }

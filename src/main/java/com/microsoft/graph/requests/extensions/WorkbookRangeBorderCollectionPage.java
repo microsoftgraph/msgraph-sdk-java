@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRangeBorder;
 import com.microsoft.graph.requests.extensions.WorkbookRangeBorderCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkbookRangeBorderCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkbookRangeBorderCollectionResponse;
@@ -22,7 +24,7 @@ public class WorkbookRangeBorderCollectionPage extends BaseCollectionPage<Workbo
      * @param response the serialized WorkbookRangeBorderCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public WorkbookRangeBorderCollectionPage(final WorkbookRangeBorderCollectionResponse response, final WorkbookRangeBorderCollectionRequestBuilder builder) {
+    public WorkbookRangeBorderCollectionPage(@Nonnull final WorkbookRangeBorderCollectionResponse response, @Nonnull final WorkbookRangeBorderCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

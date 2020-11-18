@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Todo;
 import com.microsoft.graph.models.extensions.TodoTaskList;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.TodoTaskListCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TodoTaskListRequestBuilder;
@@ -33,7 +35,7 @@ public class TodoTaskListCollectionRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TodoTaskListCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TodoTaskListCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -43,7 +45,8 @@ public class TodoTaskListCollectionRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public TodoTaskListCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public TodoTaskListCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -53,21 +56,25 @@ public class TodoTaskListCollectionRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public TodoTaskListCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public TodoTaskListCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TodoTaskListCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public TodoTaskListRequestBuilder byId(final String id) {
+    @Nonnull
+    public TodoTaskListRequestBuilder byId(@Nonnull final String id) {
         return new TodoTaskListRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
+    @Nonnull
     public TodoTaskListDeltaCollectionRequestBuilder delta() {
         return new TodoTaskListDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
 
-	public TodoTaskListDeltaCollectionRequestBuilder delta(final String deltaLink) {
+    @Nonnull
+	public TodoTaskListDeltaCollectionRequestBuilder delta(@Nonnull final String deltaLink) {
         return new TodoTaskListDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }
 }

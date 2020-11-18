@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.EducationUser;
 import com.microsoft.graph.models.extensions.EducationSchool;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -32,11 +34,11 @@ public class EducationSchoolCollectionReferenceRequest extends BaseCollectionReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationSchoolCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationSchoolCollectionReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EducationSchoolCollectionResponse.class, EducationSchoolCollectionPage.class);
     }
 
-    public void post(final EducationSchool newEducationSchool, final ICallback<? super EducationSchool> callback) {
+    public void post(@Nonnull final EducationSchool newEducationSchool, @Nonnull final ICallback<? super EducationSchool> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/education/schools/" + newEducationSchool.id);
         new EducationSchoolWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -44,7 +46,8 @@ public class EducationSchoolCollectionReferenceRequest extends BaseCollectionReq
             .post(newEducationSchool, body, callback);
     }
 
-    public EducationSchool post(final EducationSchool newEducationSchool) throws ClientException {
+    @Nonnull
+    public EducationSchool post(@Nonnull final EducationSchool newEducationSchool) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/education/schools/" + newEducationSchool.id);
         return new EducationSchoolWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
@@ -57,7 +60,8 @@ public class EducationSchoolCollectionReferenceRequest extends BaseCollectionReq
      * @param value the expand clause
      * @return the updated request
      */
-    public EducationSchoolCollectionReferenceRequest expand(final String value) {
+    @Nonnull
+    public EducationSchoolCollectionReferenceRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (EducationSchoolCollectionReferenceRequest)this;
     }
@@ -68,7 +72,8 @@ public class EducationSchoolCollectionReferenceRequest extends BaseCollectionReq
      * @param value the filter clause
      * @return the updated request
      */
-    public EducationSchoolCollectionReferenceRequest filter(final String value) {
+    @Nonnull
+    public EducationSchoolCollectionReferenceRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (EducationSchoolCollectionReferenceRequest)this;
     }
@@ -79,7 +84,8 @@ public class EducationSchoolCollectionReferenceRequest extends BaseCollectionReq
      * @param value the sort clause
      * @return the updated request
      */
-    public EducationSchoolCollectionReferenceRequest orderBy(final String value) {
+    @Nonnull
+    public EducationSchoolCollectionReferenceRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (EducationSchoolCollectionReferenceRequest)this;
     }
@@ -90,7 +96,8 @@ public class EducationSchoolCollectionReferenceRequest extends BaseCollectionReq
      * @param value the select clause
      * @return the updated request
      */
-    public EducationSchoolCollectionReferenceRequest select(final String value) {
+    @Nonnull
+    public EducationSchoolCollectionReferenceRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (EducationSchoolCollectionReferenceRequest)this;
     }
@@ -101,6 +108,7 @@ public class EducationSchoolCollectionReferenceRequest extends BaseCollectionReq
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public EducationSchoolCollectionReferenceRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (EducationSchoolCollectionReferenceRequest)this;

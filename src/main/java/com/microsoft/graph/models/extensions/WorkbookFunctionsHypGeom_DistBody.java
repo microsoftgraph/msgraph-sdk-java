@@ -7,6 +7,8 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
 import java.util.EnumSet;
@@ -24,6 +26,7 @@ public class WorkbookFunctionsHypGeom_DistBody {
      */
     @SerializedName(value = "sampleS", alternate = {"SampleS"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement sampleS;
 
     /**
@@ -32,6 +35,7 @@ public class WorkbookFunctionsHypGeom_DistBody {
      */
     @SerializedName(value = "numberSample", alternate = {"NumberSample"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement numberSample;
 
     /**
@@ -40,6 +44,7 @@ public class WorkbookFunctionsHypGeom_DistBody {
      */
     @SerializedName(value = "populationS", alternate = {"PopulationS"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement populationS;
 
     /**
@@ -48,6 +53,7 @@ public class WorkbookFunctionsHypGeom_DistBody {
      */
     @SerializedName(value = "numberPop", alternate = {"NumberPop"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement numberPop;
 
     /**
@@ -56,6 +62,7 @@ public class WorkbookFunctionsHypGeom_DistBody {
      */
     @SerializedName(value = "cumulative", alternate = {"Cumulative"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement cumulative;
 
 
@@ -74,6 +81,7 @@ public class WorkbookFunctionsHypGeom_DistBody {
      *
      * @return the raw representation of this class
      */
+    @Nullable
     public JsonObject getRawObject() {
         return rawObject;
     }
@@ -83,6 +91,7 @@ public class WorkbookFunctionsHypGeom_DistBody {
      *
      * @return the serializer
      */
+    @Nullable
     protected ISerializer getSerializer() {
         return serializer;
     }
@@ -93,7 +102,7 @@ public class WorkbookFunctionsHypGeom_DistBody {
      * @param serializer the serializer
      * @param json the JSON object to set this object to
      */
-    public void setRawObject(final ISerializer serializer, final JsonObject json) {
+    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
         this.serializer = serializer;
         rawObject = json;
 

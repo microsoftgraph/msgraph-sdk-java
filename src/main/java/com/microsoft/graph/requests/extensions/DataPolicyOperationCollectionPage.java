@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DataPolicyOperation;
 import com.microsoft.graph.requests.extensions.DataPolicyOperationCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.DataPolicyOperationCollectionPage;
 import com.microsoft.graph.requests.extensions.DataPolicyOperationCollectionResponse;
@@ -22,7 +24,7 @@ public class DataPolicyOperationCollectionPage extends BaseCollectionPage<DataPo
      * @param response the serialized DataPolicyOperationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DataPolicyOperationCollectionPage(final DataPolicyOperationCollectionResponse response, final DataPolicyOperationCollectionRequestBuilder builder) {
+    public DataPolicyOperationCollectionPage(@Nonnull final DataPolicyOperationCollectionResponse response, @Nonnull final DataPolicyOperationCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

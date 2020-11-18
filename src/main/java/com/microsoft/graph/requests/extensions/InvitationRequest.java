@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Invitation;
 import com.microsoft.graph.requests.extensions.UserRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,7 +31,7 @@ public class InvitationRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public InvitationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public InvitationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Invitation.class);
     }
 
@@ -38,7 +40,7 @@ public class InvitationRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Invitation> callback) {
+    public void get(@Nonnull final ICallback<? super Invitation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class InvitationRequest extends BaseRequest {
      * @return the Invitation from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Invitation get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class InvitationRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Invitation> callback) {
+    public void delete(@Nonnull final ICallback<? super Invitation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class InvitationRequest extends BaseRequest {
      * @param sourceInvitation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Invitation sourceInvitation, final ICallback<? super Invitation> callback) {
+    public void patch(@Nonnull final Invitation sourceInvitation, @Nonnull final ICallback<? super Invitation> callback) {
         send(HttpMethod.PATCH, callback, sourceInvitation);
     }
 
@@ -87,7 +90,8 @@ public class InvitationRequest extends BaseRequest {
      * @return the updated Invitation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Invitation patch(final Invitation sourceInvitation) throws ClientException {
+    @Nullable
+    public Invitation patch(@Nonnull final Invitation sourceInvitation) throws ClientException {
         return send(HttpMethod.PATCH, sourceInvitation);
     }
 
@@ -97,7 +101,7 @@ public class InvitationRequest extends BaseRequest {
      * @param newInvitation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Invitation newInvitation, final ICallback<? super Invitation> callback) {
+    public void post(@Nonnull final Invitation newInvitation, @Nonnull final ICallback<? super Invitation> callback) {
         send(HttpMethod.POST, callback, newInvitation);
     }
 
@@ -108,7 +112,8 @@ public class InvitationRequest extends BaseRequest {
      * @return the created Invitation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Invitation post(final Invitation newInvitation) throws ClientException {
+    @Nullable
+    public Invitation post(@Nonnull final Invitation newInvitation) throws ClientException {
         return send(HttpMethod.POST, newInvitation);
     }
 
@@ -118,7 +123,7 @@ public class InvitationRequest extends BaseRequest {
      * @param newInvitation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Invitation newInvitation, final ICallback<? super Invitation> callback) {
+    public void put(@Nonnull final Invitation newInvitation, @Nonnull final ICallback<? super Invitation> callback) {
         send(HttpMethod.PUT, callback, newInvitation);
     }
 
@@ -129,7 +134,8 @@ public class InvitationRequest extends BaseRequest {
      * @return the created Invitation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Invitation put(final Invitation newInvitation) throws ClientException {
+    @Nullable
+    public Invitation put(@Nonnull final Invitation newInvitation) throws ClientException {
         return send(HttpMethod.PUT, newInvitation);
     }
 
@@ -139,7 +145,8 @@ public class InvitationRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public InvitationRequest select(final String value) {
+     @Nonnull
+     public InvitationRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (InvitationRequest)this;
      }
@@ -150,7 +157,8 @@ public class InvitationRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public InvitationRequest expand(final String value) {
+     @Nonnull
+     public InvitationRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (InvitationRequest)this;
      }

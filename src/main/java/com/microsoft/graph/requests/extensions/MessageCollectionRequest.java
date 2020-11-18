@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.models.extensions.Recipient;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -36,11 +38,11 @@ public class MessageCollectionRequest extends BaseCollectionRequest<MessageColle
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MessageCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MessageCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MessageCollectionResponse.class, MessageCollectionPage.class);
     }
 
-    public void get(final ICallback<? super MessageCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super MessageCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -54,19 +56,21 @@ public class MessageCollectionRequest extends BaseCollectionRequest<MessageColle
         });
     }
 
+    @Nonnull
     public MessageCollectionPage get() throws ClientException {
         final MessageCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final Message newMessage, final ICallback<? super Message> callback) {
+    public void post(@Nonnull final Message newMessage, @Nonnull final ICallback<? super Message> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MessageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newMessage, callback);
     }
 
-    public Message post(final Message newMessage) throws ClientException {
+    @Nonnull
+    public Message post(@Nonnull final Message newMessage) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MessageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -79,7 +83,8 @@ public class MessageCollectionRequest extends BaseCollectionRequest<MessageColle
      * @param value the expand clause
      * @return the updated request
      */
-    public MessageCollectionRequest expand(final String value) {
+    @Nonnull
+    public MessageCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (MessageCollectionRequest)this;
     }
@@ -90,7 +95,8 @@ public class MessageCollectionRequest extends BaseCollectionRequest<MessageColle
      * @param value the filter clause
      * @return the updated request
      */
-    public MessageCollectionRequest filter(final String value) {
+    @Nonnull
+    public MessageCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (MessageCollectionRequest)this;
     }
@@ -101,7 +107,8 @@ public class MessageCollectionRequest extends BaseCollectionRequest<MessageColle
      * @param value the order by clause
      * @return the updated request
      */
-    public MessageCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public MessageCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (MessageCollectionRequest)this;
     }
@@ -112,7 +119,8 @@ public class MessageCollectionRequest extends BaseCollectionRequest<MessageColle
      * @param value the select clause
      * @return the updated request
      */
-    public MessageCollectionRequest select(final String value) {
+    @Nonnull
+    public MessageCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (MessageCollectionRequest)this;
     }
@@ -123,6 +131,7 @@ public class MessageCollectionRequest extends BaseCollectionRequest<MessageColle
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public MessageCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (MessageCollectionRequest)this;
@@ -134,6 +143,7 @@ public class MessageCollectionRequest extends BaseCollectionRequest<MessageColle
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public MessageCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (MessageCollectionRequest)this;
@@ -145,11 +155,13 @@ public class MessageCollectionRequest extends BaseCollectionRequest<MessageColle
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public MessageCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public MessageCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (MessageCollectionRequest)this;
     }
-    public MessageCollectionPage buildFromResponse(final MessageCollectionResponse response) {
+    @Nonnull
+    public MessageCollectionPage buildFromResponse(@Nonnull final MessageCollectionResponse response) {
         final MessageCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new MessageCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

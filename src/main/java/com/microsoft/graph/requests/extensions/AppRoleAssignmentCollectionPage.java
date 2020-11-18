@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.AppRoleAssignment;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionResponse;
@@ -22,7 +24,7 @@ public class AppRoleAssignmentCollectionPage extends BaseCollectionPage<AppRoleA
      * @param response the serialized AppRoleAssignmentCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public AppRoleAssignmentCollectionPage(final AppRoleAssignmentCollectionResponse response, final AppRoleAssignmentCollectionRequestBuilder builder) {
+    public AppRoleAssignmentCollectionPage(@Nonnull final AppRoleAssignmentCollectionResponse response, @Nonnull final AppRoleAssignmentCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

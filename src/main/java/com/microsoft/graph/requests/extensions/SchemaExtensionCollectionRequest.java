@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SchemaExtension;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,11 +36,11 @@ public class SchemaExtensionCollectionRequest extends BaseCollectionRequest<Sche
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SchemaExtensionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SchemaExtensionCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SchemaExtensionCollectionResponse.class, SchemaExtensionCollectionPage.class);
     }
 
-    public void get(final ICallback<? super SchemaExtensionCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super SchemaExtensionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -52,19 +54,21 @@ public class SchemaExtensionCollectionRequest extends BaseCollectionRequest<Sche
         });
     }
 
+    @Nonnull
     public SchemaExtensionCollectionPage get() throws ClientException {
         final SchemaExtensionCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final SchemaExtension newSchemaExtension, final ICallback<? super SchemaExtension> callback) {
+    public void post(@Nonnull final SchemaExtension newSchemaExtension, @Nonnull final ICallback<? super SchemaExtension> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SchemaExtensionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newSchemaExtension, callback);
     }
 
-    public SchemaExtension post(final SchemaExtension newSchemaExtension) throws ClientException {
+    @Nonnull
+    public SchemaExtension post(@Nonnull final SchemaExtension newSchemaExtension) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SchemaExtensionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -77,7 +81,8 @@ public class SchemaExtensionCollectionRequest extends BaseCollectionRequest<Sche
      * @param value the expand clause
      * @return the updated request
      */
-    public SchemaExtensionCollectionRequest expand(final String value) {
+    @Nonnull
+    public SchemaExtensionCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (SchemaExtensionCollectionRequest)this;
     }
@@ -88,7 +93,8 @@ public class SchemaExtensionCollectionRequest extends BaseCollectionRequest<Sche
      * @param value the filter clause
      * @return the updated request
      */
-    public SchemaExtensionCollectionRequest filter(final String value) {
+    @Nonnull
+    public SchemaExtensionCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (SchemaExtensionCollectionRequest)this;
     }
@@ -99,7 +105,8 @@ public class SchemaExtensionCollectionRequest extends BaseCollectionRequest<Sche
      * @param value the order by clause
      * @return the updated request
      */
-    public SchemaExtensionCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public SchemaExtensionCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SchemaExtensionCollectionRequest)this;
     }
@@ -110,7 +117,8 @@ public class SchemaExtensionCollectionRequest extends BaseCollectionRequest<Sche
      * @param value the select clause
      * @return the updated request
      */
-    public SchemaExtensionCollectionRequest select(final String value) {
+    @Nonnull
+    public SchemaExtensionCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (SchemaExtensionCollectionRequest)this;
     }
@@ -121,6 +129,7 @@ public class SchemaExtensionCollectionRequest extends BaseCollectionRequest<Sche
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public SchemaExtensionCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (SchemaExtensionCollectionRequest)this;
@@ -132,6 +141,7 @@ public class SchemaExtensionCollectionRequest extends BaseCollectionRequest<Sche
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public SchemaExtensionCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (SchemaExtensionCollectionRequest)this;
@@ -143,11 +153,13 @@ public class SchemaExtensionCollectionRequest extends BaseCollectionRequest<Sche
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public SchemaExtensionCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public SchemaExtensionCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (SchemaExtensionCollectionRequest)this;
     }
-    public SchemaExtensionCollectionPage buildFromResponse(final SchemaExtensionCollectionResponse response) {
+    @Nonnull
+    public SchemaExtensionCollectionPage buildFromResponse(@Nonnull final SchemaExtensionCollectionResponse response) {
         final SchemaExtensionCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new SchemaExtensionCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

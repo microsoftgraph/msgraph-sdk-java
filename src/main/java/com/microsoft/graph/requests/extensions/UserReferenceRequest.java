@@ -78,6 +78,8 @@ import com.microsoft.graph.requests.extensions.UserTeamworkRequestBuilder;
 import com.microsoft.graph.requests.extensions.TodoRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
@@ -98,14 +100,15 @@ public class UserReferenceRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, User.class);
     }
 
-    public void delete(final ICallback<? super User> callback) {
+    public void delete(@Nonnull final ICallback<? super User> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
+    @Nullable
     public User delete() throws ClientException {
        return send(HttpMethod.DELETE, null);
     }
@@ -116,7 +119,8 @@ public class UserReferenceRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public UserReferenceRequest select(final String value) {
+    @Nonnull
+    public UserReferenceRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (UserReferenceRequest)this;
     }
@@ -127,7 +131,8 @@ public class UserReferenceRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public UserReferenceRequest expand(final String value) {
+    @Nonnull
+    public UserReferenceRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (UserReferenceRequest)this;
     }
@@ -137,7 +142,7 @@ public class UserReferenceRequest extends BaseRequest {
      * @param srcUser the User reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(User srcUser, final ICallback<? super User> callback) {
+    public void put(@Nonnull final User srcUser, @Nonnull final ICallback<? super User> callback) {
         send(HttpMethod.PUT, callback, srcUser);
     }
 
@@ -148,7 +153,8 @@ public class UserReferenceRequest extends BaseRequest {
      * @return the User
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    public User put(User srcUser) throws ClientException {
+    @Nullable
+    public User put(@Nonnull final User srcUser) throws ClientException {
         return send(HttpMethod.PUT, srcUser);
     }
 }

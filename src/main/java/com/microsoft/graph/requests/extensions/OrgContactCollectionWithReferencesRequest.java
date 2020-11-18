@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.OrgContact;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -31,11 +33,11 @@ public class OrgContactCollectionWithReferencesRequest extends BaseCollectionReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OrgContactCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OrgContactCollectionWithReferencesRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OrgContactCollectionResponse.class, OrgContactCollectionPage.class);
     }
 
-    public void get(final ICallback<? super OrgContactCollectionWithReferencesPage> callback) {
+    public void get(@Nonnull final ICallback<? super OrgContactCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -49,37 +51,44 @@ public class OrgContactCollectionWithReferencesRequest extends BaseCollectionReq
         });
     }
 
+    @Nonnull
     public OrgContactCollectionWithReferencesPage get() throws ClientException {
         final OrgContactCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public OrgContactCollectionWithReferencesRequest expand(final String value) {
+    @Nonnull
+    public OrgContactCollectionWithReferencesRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return this;
     }
 
-    public OrgContactCollectionWithReferencesRequest filter(final String value) {
+    @Nonnull
+    public OrgContactCollectionWithReferencesRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return this;
     }
 
-    public OrgContactCollectionWithReferencesRequest orderBy(final String value) {
+    @Nonnull
+    public OrgContactCollectionWithReferencesRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return this;
     }
 
-    public OrgContactCollectionWithReferencesRequest select(final String value) {
+    @Nonnull
+    public OrgContactCollectionWithReferencesRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return this;
     }
 
+    @Nonnull
     public OrgContactCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return this;
     }
 
-    public OrgContactCollectionWithReferencesPage buildFromResponse(final OrgContactCollectionResponse response) {
+    @Nonnull
+    public OrgContactCollectionWithReferencesPage buildFromResponse(@Nonnull final OrgContactCollectionResponse response) {
         final OrgContactCollectionWithReferencesRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new OrgContactCollectionWithReferencesRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

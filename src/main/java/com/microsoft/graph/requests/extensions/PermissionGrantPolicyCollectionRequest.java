@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.PolicyRoot;
 import com.microsoft.graph.models.extensions.PermissionGrantPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class PermissionGrantPolicyCollectionRequest extends BaseCollectionReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PermissionGrantPolicyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PermissionGrantPolicyCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PermissionGrantPolicyCollectionResponse.class, PermissionGrantPolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<? super PermissionGrantPolicyCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super PermissionGrantPolicyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class PermissionGrantPolicyCollectionRequest extends BaseCollectionReques
         });
     }
 
+    @Nonnull
     public PermissionGrantPolicyCollectionPage get() throws ClientException {
         final PermissionGrantPolicyCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final PermissionGrantPolicy newPermissionGrantPolicy, final ICallback<? super PermissionGrantPolicy> callback) {
+    public void post(@Nonnull final PermissionGrantPolicy newPermissionGrantPolicy, @Nonnull final ICallback<? super PermissionGrantPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PermissionGrantPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newPermissionGrantPolicy, callback);
     }
 
-    public PermissionGrantPolicy post(final PermissionGrantPolicy newPermissionGrantPolicy) throws ClientException {
+    @Nonnull
+    public PermissionGrantPolicy post(@Nonnull final PermissionGrantPolicy newPermissionGrantPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PermissionGrantPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class PermissionGrantPolicyCollectionRequest extends BaseCollectionReques
      * @param value the expand clause
      * @return the updated request
      */
-    public PermissionGrantPolicyCollectionRequest expand(final String value) {
+    @Nonnull
+    public PermissionGrantPolicyCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (PermissionGrantPolicyCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class PermissionGrantPolicyCollectionRequest extends BaseCollectionReques
      * @param value the filter clause
      * @return the updated request
      */
-    public PermissionGrantPolicyCollectionRequest filter(final String value) {
+    @Nonnull
+    public PermissionGrantPolicyCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (PermissionGrantPolicyCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class PermissionGrantPolicyCollectionRequest extends BaseCollectionReques
      * @param value the order by clause
      * @return the updated request
      */
-    public PermissionGrantPolicyCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public PermissionGrantPolicyCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PermissionGrantPolicyCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class PermissionGrantPolicyCollectionRequest extends BaseCollectionReques
      * @param value the select clause
      * @return the updated request
      */
-    public PermissionGrantPolicyCollectionRequest select(final String value) {
+    @Nonnull
+    public PermissionGrantPolicyCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (PermissionGrantPolicyCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class PermissionGrantPolicyCollectionRequest extends BaseCollectionReques
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public PermissionGrantPolicyCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (PermissionGrantPolicyCollectionRequest)this;
@@ -133,6 +142,7 @@ public class PermissionGrantPolicyCollectionRequest extends BaseCollectionReques
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public PermissionGrantPolicyCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (PermissionGrantPolicyCollectionRequest)this;
@@ -144,11 +154,13 @@ public class PermissionGrantPolicyCollectionRequest extends BaseCollectionReques
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public PermissionGrantPolicyCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public PermissionGrantPolicyCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (PermissionGrantPolicyCollectionRequest)this;
     }
-    public PermissionGrantPolicyCollectionPage buildFromResponse(final PermissionGrantPolicyCollectionResponse response) {
+    @Nonnull
+    public PermissionGrantPolicyCollectionPage buildFromResponse(@Nonnull final PermissionGrantPolicyCollectionResponse response) {
         final PermissionGrantPolicyCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new PermissionGrantPolicyCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ResourceOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class ResourceOperationRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ResourceOperationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ResourceOperationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ResourceOperation.class);
     }
 
@@ -37,7 +39,7 @@ public class ResourceOperationRequest extends BaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ResourceOperation> callback) {
+    public void get(@Nonnull final ICallback<? super ResourceOperation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class ResourceOperationRequest extends BaseRequest {
      * @return the ResourceOperation from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ResourceOperation get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class ResourceOperationRequest extends BaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ResourceOperation> callback) {
+    public void delete(@Nonnull final ICallback<? super ResourceOperation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class ResourceOperationRequest extends BaseRequest {
      * @param sourceResourceOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ResourceOperation sourceResourceOperation, final ICallback<? super ResourceOperation> callback) {
+    public void patch(@Nonnull final ResourceOperation sourceResourceOperation, @Nonnull final ICallback<? super ResourceOperation> callback) {
         send(HttpMethod.PATCH, callback, sourceResourceOperation);
     }
 
@@ -86,7 +89,8 @@ public class ResourceOperationRequest extends BaseRequest {
      * @return the updated ResourceOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ResourceOperation patch(final ResourceOperation sourceResourceOperation) throws ClientException {
+    @Nullable
+    public ResourceOperation patch(@Nonnull final ResourceOperation sourceResourceOperation) throws ClientException {
         return send(HttpMethod.PATCH, sourceResourceOperation);
     }
 
@@ -96,7 +100,7 @@ public class ResourceOperationRequest extends BaseRequest {
      * @param newResourceOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ResourceOperation newResourceOperation, final ICallback<? super ResourceOperation> callback) {
+    public void post(@Nonnull final ResourceOperation newResourceOperation, @Nonnull final ICallback<? super ResourceOperation> callback) {
         send(HttpMethod.POST, callback, newResourceOperation);
     }
 
@@ -107,7 +111,8 @@ public class ResourceOperationRequest extends BaseRequest {
      * @return the created ResourceOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ResourceOperation post(final ResourceOperation newResourceOperation) throws ClientException {
+    @Nullable
+    public ResourceOperation post(@Nonnull final ResourceOperation newResourceOperation) throws ClientException {
         return send(HttpMethod.POST, newResourceOperation);
     }
 
@@ -117,7 +122,7 @@ public class ResourceOperationRequest extends BaseRequest {
      * @param newResourceOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ResourceOperation newResourceOperation, final ICallback<? super ResourceOperation> callback) {
+    public void put(@Nonnull final ResourceOperation newResourceOperation, @Nonnull final ICallback<? super ResourceOperation> callback) {
         send(HttpMethod.PUT, callback, newResourceOperation);
     }
 
@@ -128,7 +133,8 @@ public class ResourceOperationRequest extends BaseRequest {
      * @return the created ResourceOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ResourceOperation put(final ResourceOperation newResourceOperation) throws ClientException {
+    @Nullable
+    public ResourceOperation put(@Nonnull final ResourceOperation newResourceOperation) throws ClientException {
         return send(HttpMethod.PUT, newResourceOperation);
     }
 
@@ -138,7 +144,8 @@ public class ResourceOperationRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ResourceOperationRequest select(final String value) {
+     @Nonnull
+     public ResourceOperationRequest select(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ResourceOperationRequest)this;
      }
@@ -149,7 +156,8 @@ public class ResourceOperationRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ResourceOperationRequest expand(final String value) {
+     @Nonnull
+     public ResourceOperationRequest expand(@Nonnull final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ResourceOperationRequest)this;
      }

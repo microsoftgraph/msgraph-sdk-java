@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ItemActivityStat;
 import com.microsoft.graph.models.extensions.ItemActivity;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class ItemActivityCollectionRequest extends BaseCollectionRequest<ItemAct
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ItemActivityCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ItemActivityCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ItemActivityCollectionResponse.class, ItemActivityCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ItemActivityCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super ItemActivityCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class ItemActivityCollectionRequest extends BaseCollectionRequest<ItemAct
         });
     }
 
+    @Nonnull
     public ItemActivityCollectionPage get() throws ClientException {
         final ItemActivityCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final ItemActivity newItemActivity, final ICallback<? super ItemActivity> callback) {
+    public void post(@Nonnull final ItemActivity newItemActivity, @Nonnull final ICallback<? super ItemActivity> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ItemActivityRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newItemActivity, callback);
     }
 
-    public ItemActivity post(final ItemActivity newItemActivity) throws ClientException {
+    @Nonnull
+    public ItemActivity post(@Nonnull final ItemActivity newItemActivity) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ItemActivityRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class ItemActivityCollectionRequest extends BaseCollectionRequest<ItemAct
      * @param value the expand clause
      * @return the updated request
      */
-    public ItemActivityCollectionRequest expand(final String value) {
+    @Nonnull
+    public ItemActivityCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ItemActivityCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class ItemActivityCollectionRequest extends BaseCollectionRequest<ItemAct
      * @param value the filter clause
      * @return the updated request
      */
-    public ItemActivityCollectionRequest filter(final String value) {
+    @Nonnull
+    public ItemActivityCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ItemActivityCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class ItemActivityCollectionRequest extends BaseCollectionRequest<ItemAct
      * @param value the order by clause
      * @return the updated request
      */
-    public ItemActivityCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ItemActivityCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ItemActivityCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class ItemActivityCollectionRequest extends BaseCollectionRequest<ItemAct
      * @param value the select clause
      * @return the updated request
      */
-    public ItemActivityCollectionRequest select(final String value) {
+    @Nonnull
+    public ItemActivityCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ItemActivityCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class ItemActivityCollectionRequest extends BaseCollectionRequest<ItemAct
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ItemActivityCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ItemActivityCollectionRequest)this;
@@ -133,6 +142,7 @@ public class ItemActivityCollectionRequest extends BaseCollectionRequest<ItemAct
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ItemActivityCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (ItemActivityCollectionRequest)this;
@@ -144,11 +154,13 @@ public class ItemActivityCollectionRequest extends BaseCollectionRequest<ItemAct
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ItemActivityCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ItemActivityCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (ItemActivityCollectionRequest)this;
     }
-    public ItemActivityCollectionPage buildFromResponse(final ItemActivityCollectionResponse response) {
+    @Nonnull
+    public ItemActivityCollectionPage buildFromResponse(@Nonnull final ItemActivityCollectionResponse response) {
         final ItemActivityCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ItemActivityCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

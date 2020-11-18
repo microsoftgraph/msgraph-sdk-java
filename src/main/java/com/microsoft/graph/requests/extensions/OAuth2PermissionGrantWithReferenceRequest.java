@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
@@ -31,15 +33,16 @@ public class OAuth2PermissionGrantWithReferenceRequest extends BaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OAuth2PermissionGrantWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OAuth2PermissionGrantWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OAuth2PermissionGrant.class);
     }
 
-    public void post(final OAuth2PermissionGrant newOAuth2PermissionGrant, final IJsonBackedObject payload, final ICallback<? super OAuth2PermissionGrant> callback) {
+    public void post(@Nonnull final OAuth2PermissionGrant newOAuth2PermissionGrant, @Nullable final IJsonBackedObject payload, @Nonnull final ICallback<? super OAuth2PermissionGrant> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
-    public OAuth2PermissionGrant post(final OAuth2PermissionGrant newOAuth2PermissionGrant, final IJsonBackedObject payload) throws ClientException {
+    @Nullable
+    public OAuth2PermissionGrant post(@Nonnull final OAuth2PermissionGrant newOAuth2PermissionGrant, @Nullable final IJsonBackedObject payload) throws ClientException {
         IJsonBackedObject response = send(HttpMethod.POST, payload);
         if (response != null){
             return newOAuth2PermissionGrant;
@@ -47,15 +50,16 @@ public class OAuth2PermissionGrantWithReferenceRequest extends BaseRequest {
         return null;
     }
 
-    public void get(final ICallback<? super OAuth2PermissionGrant> callback) {
+    public void get(@Nonnull final ICallback<? super OAuth2PermissionGrant> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
+    @Nullable
     public OAuth2PermissionGrant get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<? super OAuth2PermissionGrant> callback) {
+	public void delete(@Nonnull final ICallback<? super OAuth2PermissionGrant> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,11 +67,12 @@ public class OAuth2PermissionGrantWithReferenceRequest extends BaseRequest {
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final OAuth2PermissionGrant sourceOAuth2PermissionGrant, final ICallback<? super OAuth2PermissionGrant> callback) {
+	public void patch(@Nonnull final OAuth2PermissionGrant sourceOAuth2PermissionGrant, @Nonnull final ICallback<? super OAuth2PermissionGrant> callback) {
 		send(HttpMethod.PATCH, callback, sourceOAuth2PermissionGrant);
 	}
 
-	public OAuth2PermissionGrant patch(final OAuth2PermissionGrant sourceOAuth2PermissionGrant) throws ClientException {
+    @Nullable
+	public OAuth2PermissionGrant patch(@Nonnull final OAuth2PermissionGrant sourceOAuth2PermissionGrant) throws ClientException {
 		return send(HttpMethod.PATCH, sourceOAuth2PermissionGrant);
 	}
 
@@ -78,7 +83,8 @@ public class OAuth2PermissionGrantWithReferenceRequest extends BaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-    public OAuth2PermissionGrantWithReferenceRequest select(final String value) {
+    @Nonnull
+    public OAuth2PermissionGrantWithReferenceRequest select(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (OAuth2PermissionGrantWithReferenceRequest)this;
     }
@@ -89,7 +95,8 @@ public class OAuth2PermissionGrantWithReferenceRequest extends BaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-    public OAuth2PermissionGrantWithReferenceRequest expand(final String value) {
+    @Nonnull
+    public OAuth2PermissionGrantWithReferenceRequest expand(@Nonnull final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (OAuth2PermissionGrantWithReferenceRequest)this;
     }

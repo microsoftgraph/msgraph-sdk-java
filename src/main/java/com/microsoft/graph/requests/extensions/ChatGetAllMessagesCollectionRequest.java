@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ChatMessage;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.ChatGetAllMessagesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatGetAllMessagesCollectionPage;
@@ -34,12 +36,12 @@ public class ChatGetAllMessagesCollectionRequest extends BaseCollectionRequest<C
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ChatGetAllMessagesCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ChatGetAllMessagesCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ChatGetAllMessagesCollectionResponse.class, ChatGetAllMessagesCollectionPage.class);
     }
 
 
-    public void get(final ICallback<? super ChatGetAllMessagesCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super ChatGetAllMessagesCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,13 +55,15 @@ public class ChatGetAllMessagesCollectionRequest extends BaseCollectionRequest<C
         });
     }
 
+    @Nullable
     public ChatGetAllMessagesCollectionPage get() throws ClientException {
         final ChatGetAllMessagesCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
 
-    public ChatGetAllMessagesCollectionPage buildFromResponse(final ChatGetAllMessagesCollectionResponse response) {
+    @Nonnull
+    public ChatGetAllMessagesCollectionPage buildFromResponse(@Nonnull final ChatGetAllMessagesCollectionResponse response) {
         final ChatGetAllMessagesCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ChatGetAllMessagesCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
@@ -77,7 +81,8 @@ public class ChatGetAllMessagesCollectionRequest extends BaseCollectionRequest<C
      * @param value the select clause
      * @return the updated request
      */
-    public ChatGetAllMessagesCollectionRequest select(final String value) {
+    @Nonnull
+    public ChatGetAllMessagesCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ChatGetAllMessagesCollectionRequest)this;
     }
@@ -88,6 +93,7 @@ public class ChatGetAllMessagesCollectionRequest extends BaseCollectionRequest<C
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ChatGetAllMessagesCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (ChatGetAllMessagesCollectionRequest)this;
@@ -99,7 +105,8 @@ public class ChatGetAllMessagesCollectionRequest extends BaseCollectionRequest<C
      * @param value the expand clause
      * @return the updated request
      */
-    public ChatGetAllMessagesCollectionRequest expand(final String value) {
+    @Nonnull
+    public ChatGetAllMessagesCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ChatGetAllMessagesCollectionRequest)this;
     }
@@ -110,7 +117,8 @@ public class ChatGetAllMessagesCollectionRequest extends BaseCollectionRequest<C
      * @param value the filter clause
      * @return the updated request
      */
-    public ChatGetAllMessagesCollectionRequest filter(final String value) {
+    @Nonnull
+    public ChatGetAllMessagesCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ChatGetAllMessagesCollectionRequest)this;
     }
@@ -121,7 +129,8 @@ public class ChatGetAllMessagesCollectionRequest extends BaseCollectionRequest<C
      * @param value the order by clause
      * @return the updated request
      */
-    public ChatGetAllMessagesCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ChatGetAllMessagesCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ChatGetAllMessagesCollectionRequest)this;
     }

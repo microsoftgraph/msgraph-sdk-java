@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.List;
 import com.microsoft.graph.models.extensions.ColumnDefinition;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class ColumnDefinitionCollectionRequest extends BaseCollectionRequest<Col
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ColumnDefinitionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ColumnDefinitionCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ColumnDefinitionCollectionResponse.class, ColumnDefinitionCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ColumnDefinitionCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super ColumnDefinitionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class ColumnDefinitionCollectionRequest extends BaseCollectionRequest<Col
         });
     }
 
+    @Nonnull
     public ColumnDefinitionCollectionPage get() throws ClientException {
         final ColumnDefinitionCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final ColumnDefinition newColumnDefinition, final ICallback<? super ColumnDefinition> callback) {
+    public void post(@Nonnull final ColumnDefinition newColumnDefinition, @Nonnull final ICallback<? super ColumnDefinition> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ColumnDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newColumnDefinition, callback);
     }
 
-    public ColumnDefinition post(final ColumnDefinition newColumnDefinition) throws ClientException {
+    @Nonnull
+    public ColumnDefinition post(@Nonnull final ColumnDefinition newColumnDefinition) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ColumnDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class ColumnDefinitionCollectionRequest extends BaseCollectionRequest<Col
      * @param value the expand clause
      * @return the updated request
      */
-    public ColumnDefinitionCollectionRequest expand(final String value) {
+    @Nonnull
+    public ColumnDefinitionCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ColumnDefinitionCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class ColumnDefinitionCollectionRequest extends BaseCollectionRequest<Col
      * @param value the filter clause
      * @return the updated request
      */
-    public ColumnDefinitionCollectionRequest filter(final String value) {
+    @Nonnull
+    public ColumnDefinitionCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ColumnDefinitionCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class ColumnDefinitionCollectionRequest extends BaseCollectionRequest<Col
      * @param value the order by clause
      * @return the updated request
      */
-    public ColumnDefinitionCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ColumnDefinitionCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ColumnDefinitionCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class ColumnDefinitionCollectionRequest extends BaseCollectionRequest<Col
      * @param value the select clause
      * @return the updated request
      */
-    public ColumnDefinitionCollectionRequest select(final String value) {
+    @Nonnull
+    public ColumnDefinitionCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ColumnDefinitionCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class ColumnDefinitionCollectionRequest extends BaseCollectionRequest<Col
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ColumnDefinitionCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ColumnDefinitionCollectionRequest)this;
@@ -133,6 +142,7 @@ public class ColumnDefinitionCollectionRequest extends BaseCollectionRequest<Col
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ColumnDefinitionCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (ColumnDefinitionCollectionRequest)this;
@@ -144,11 +154,13 @@ public class ColumnDefinitionCollectionRequest extends BaseCollectionRequest<Col
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ColumnDefinitionCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ColumnDefinitionCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (ColumnDefinitionCollectionRequest)this;
     }
-    public ColumnDefinitionCollectionPage buildFromResponse(final ColumnDefinitionCollectionResponse response) {
+    @Nonnull
+    public ColumnDefinitionCollectionPage buildFromResponse(@Nonnull final ColumnDefinitionCollectionResponse response) {
         final ColumnDefinitionCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ColumnDefinitionCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

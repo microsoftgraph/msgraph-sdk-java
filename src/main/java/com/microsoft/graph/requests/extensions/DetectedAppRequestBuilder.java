@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionRequestBui
 import com.microsoft.graph.requests.extensions.ManagedDeviceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -29,7 +31,7 @@ public class DetectedAppRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DetectedAppRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DetectedAppRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +41,8 @@ public class DetectedAppRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the DetectedAppRequest instance
      */
-    public DetectedAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DetectedAppRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,16 +52,19 @@ public class DetectedAppRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the DetectedAppRequest instance
      */
-    public DetectedAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DetectedAppRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DetectedAppRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    @Nonnull
     public ManagedDeviceCollectionWithReferencesRequestBuilder managedDevices() {
         return new ManagedDeviceCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("managedDevices"), getClient(), null);
     }
 
-    public ManagedDeviceWithReferenceRequestBuilder managedDevices(final String id) {
+    @Nonnull
+    public ManagedDeviceWithReferenceRequestBuilder managedDevices(@Nonnull final String id) {
         return new ManagedDeviceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("managedDevices") + "/" + id, getClient(), null);
     }
 }

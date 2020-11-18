@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionNetworkLearningSummary;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionNetworkLearningSummaryCollectionPage;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionNetworkLearningSummaryCollectionResponse;
@@ -22,7 +24,7 @@ public class WindowsInformationProtectionNetworkLearningSummaryCollectionPage ex
      * @param response the serialized WindowsInformationProtectionNetworkLearningSummaryCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public WindowsInformationProtectionNetworkLearningSummaryCollectionPage(final WindowsInformationProtectionNetworkLearningSummaryCollectionResponse response, final WindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder builder) {
+    public WindowsInformationProtectionNetworkLearningSummaryCollectionPage(@Nonnull final WindowsInformationProtectionNetworkLearningSummaryCollectionResponse response, @Nonnull final WindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

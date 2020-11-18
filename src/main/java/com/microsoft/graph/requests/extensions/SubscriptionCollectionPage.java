@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Subscription;
 import com.microsoft.graph.requests.extensions.SubscriptionCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.SubscriptionCollectionPage;
 import com.microsoft.graph.requests.extensions.SubscriptionCollectionResponse;
@@ -22,7 +24,7 @@ public class SubscriptionCollectionPage extends BaseCollectionPage<Subscription,
      * @param response the serialized SubscriptionCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public SubscriptionCollectionPage(final SubscriptionCollectionResponse response, final SubscriptionCollectionRequestBuilder builder) {
+    public SubscriptionCollectionPage(@Nonnull final SubscriptionCollectionResponse response, @Nonnull final SubscriptionCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

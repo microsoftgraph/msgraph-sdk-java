@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignCollectionPage;
@@ -38,13 +40,13 @@ public class DeviceCompliancePolicyAssignCollectionRequest extends BaseCollectio
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceCompliancePolicyAssignCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceCompliancePolicyAssignCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceCompliancePolicyAssignCollectionResponse.class, DeviceCompliancePolicyAssignCollectionPage.class);
         body = new DeviceCompliancePolicyAssignBody();
     }
 
 
-    public void post(final ICallback<? super DeviceCompliancePolicyAssignCollectionPage> callback) {
+    public void post(@Nonnull final ICallback<? super DeviceCompliancePolicyAssignCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,13 +60,15 @@ public class DeviceCompliancePolicyAssignCollectionRequest extends BaseCollectio
         });
     }
 
+    @Nullable
     public DeviceCompliancePolicyAssignCollectionPage post() throws ClientException {
         final DeviceCompliancePolicyAssignCollectionResponse response = post(body);
         return buildFromResponse(response);
     }
 
 
-    public DeviceCompliancePolicyAssignCollectionPage buildFromResponse(final DeviceCompliancePolicyAssignCollectionResponse response) {
+    @Nonnull
+    public DeviceCompliancePolicyAssignCollectionPage buildFromResponse(@Nonnull final DeviceCompliancePolicyAssignCollectionResponse response) {
         final DeviceCompliancePolicyAssignCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new DeviceCompliancePolicyAssignCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, (java.util.List<DeviceCompliancePolicyAssignment>) null);
@@ -82,7 +86,8 @@ public class DeviceCompliancePolicyAssignCollectionRequest extends BaseCollectio
      * @param value the select clause
      * @return the updated request
      */
-    public DeviceCompliancePolicyAssignCollectionRequest select(final String value) {
+    @Nonnull
+    public DeviceCompliancePolicyAssignCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DeviceCompliancePolicyAssignCollectionRequest)this;
     }
@@ -93,6 +98,7 @@ public class DeviceCompliancePolicyAssignCollectionRequest extends BaseCollectio
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DeviceCompliancePolicyAssignCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (DeviceCompliancePolicyAssignCollectionRequest)this;
@@ -104,7 +110,8 @@ public class DeviceCompliancePolicyAssignCollectionRequest extends BaseCollectio
      * @param value the expand clause
      * @return the updated request
      */
-    public DeviceCompliancePolicyAssignCollectionRequest expand(final String value) {
+    @Nonnull
+    public DeviceCompliancePolicyAssignCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DeviceCompliancePolicyAssignCollectionRequest)this;
     }
@@ -115,7 +122,8 @@ public class DeviceCompliancePolicyAssignCollectionRequest extends BaseCollectio
      * @param value the filter clause
      * @return the updated request
      */
-    public DeviceCompliancePolicyAssignCollectionRequest filter(final String value) {
+    @Nonnull
+    public DeviceCompliancePolicyAssignCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DeviceCompliancePolicyAssignCollectionRequest)this;
     }
@@ -126,7 +134,8 @@ public class DeviceCompliancePolicyAssignCollectionRequest extends BaseCollectio
      * @param value the order by clause
      * @return the updated request
      */
-    public DeviceCompliancePolicyAssignCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DeviceCompliancePolicyAssignCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceCompliancePolicyAssignCollectionRequest)this;
     }

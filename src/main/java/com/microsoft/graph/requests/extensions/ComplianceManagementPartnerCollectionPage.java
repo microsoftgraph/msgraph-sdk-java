@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ComplianceManagementPartner;
 import com.microsoft.graph.requests.extensions.ComplianceManagementPartnerCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ComplianceManagementPartnerCollectionPage;
 import com.microsoft.graph.requests.extensions.ComplianceManagementPartnerCollectionResponse;
@@ -22,7 +24,7 @@ public class ComplianceManagementPartnerCollectionPage extends BaseCollectionPag
      * @param response the serialized ComplianceManagementPartnerCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ComplianceManagementPartnerCollectionPage(final ComplianceManagementPartnerCollectionResponse response, final ComplianceManagementPartnerCollectionRequestBuilder builder) {
+    public ComplianceManagementPartnerCollectionPage(@Nonnull final ComplianceManagementPartnerCollectionResponse response, @Nonnull final ComplianceManagementPartnerCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

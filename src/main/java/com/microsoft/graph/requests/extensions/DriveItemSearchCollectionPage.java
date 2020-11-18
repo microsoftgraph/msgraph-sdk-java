@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DriveItem;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DriveItemSearchCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemSearchCollectionPage;
@@ -33,7 +35,7 @@ public class DriveItemSearchCollectionPage extends BaseCollectionPage<DriveItem,
      * @param response The serialized DriveItemSearchCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public DriveItemSearchCollectionPage(final DriveItemSearchCollectionResponse response, final DriveItemSearchCollectionRequestBuilder builder) {
+    public DriveItemSearchCollectionPage(@Nonnull final DriveItemSearchCollectionResponse response, @Nonnull final DriveItemSearchCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DeviceEnrollmentConfiguration;
 import com.microsoft.graph.requests.extensions.DeviceEnrollmentConfigurationCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceEnrollmentConfigurationCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceEnrollmentConfigurationCollectionResponse;
@@ -22,7 +24,7 @@ public class DeviceEnrollmentConfigurationCollectionPage extends BaseCollectionP
      * @param response the serialized DeviceEnrollmentConfigurationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DeviceEnrollmentConfigurationCollectionPage(final DeviceEnrollmentConfigurationCollectionResponse response, final DeviceEnrollmentConfigurationCollectionRequestBuilder builder) {
+    public DeviceEnrollmentConfigurationCollectionPage(@Nonnull final DeviceEnrollmentConfigurationCollectionResponse response, @Nonnull final DeviceEnrollmentConfigurationCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

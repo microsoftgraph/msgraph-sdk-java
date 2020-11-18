@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.PasswordCredential;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionWithReferencesPage;
@@ -35,7 +37,7 @@ public class ServicePrincipalCollectionWithReferencesPage extends BaseCollection
      * @param response the serialized ServicePrincipalCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ServicePrincipalCollectionWithReferencesPage(final ServicePrincipalCollectionResponse response, final ServicePrincipalCollectionWithReferencesRequestBuilder builder) {
+    public ServicePrincipalCollectionWithReferencesPage(@Nonnull final ServicePrincipalCollectionResponse response, @Nonnull  final ServicePrincipalCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

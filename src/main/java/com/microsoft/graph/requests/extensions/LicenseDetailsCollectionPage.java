@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.LicenseDetails;
 import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionPage;
 import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionResponse;
@@ -22,7 +24,7 @@ public class LicenseDetailsCollectionPage extends BaseCollectionPage<LicenseDeta
      * @param response the serialized LicenseDetailsCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public LicenseDetailsCollectionPage(final LicenseDetailsCollectionResponse response, final LicenseDetailsCollectionRequestBuilder builder) {
+    public LicenseDetailsCollectionPage(@Nonnull final LicenseDetailsCollectionResponse response, @Nonnull final LicenseDetailsCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

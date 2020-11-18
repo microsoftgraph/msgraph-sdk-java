@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ChatMessageHostedContent;
 import com.microsoft.graph.requests.extensions.ChatMessageHostedContentCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ChatMessageHostedContentCollectionPage;
 import com.microsoft.graph.requests.extensions.ChatMessageHostedContentCollectionResponse;
@@ -22,7 +24,7 @@ public class ChatMessageHostedContentCollectionPage extends BaseCollectionPage<C
      * @param response the serialized ChatMessageHostedContentCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ChatMessageHostedContentCollectionPage(final ChatMessageHostedContentCollectionResponse response, final ChatMessageHostedContentCollectionRequestBuilder builder) {
+    public ChatMessageHostedContentCollectionPage(@Nonnull final ChatMessageHostedContentCollectionResponse response, @Nonnull final ChatMessageHostedContentCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.PasswordCredential;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -36,11 +38,11 @@ public class ServicePrincipalCollectionRequest extends BaseCollectionRequest<Ser
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ServicePrincipalCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ServicePrincipalCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ServicePrincipalCollectionResponse.class, ServicePrincipalCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ServicePrincipalCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super ServicePrincipalCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -54,19 +56,21 @@ public class ServicePrincipalCollectionRequest extends BaseCollectionRequest<Ser
         });
     }
 
+    @Nonnull
     public ServicePrincipalCollectionPage get() throws ClientException {
         final ServicePrincipalCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final ServicePrincipal newServicePrincipal, final ICallback<? super ServicePrincipal> callback) {
+    public void post(@Nonnull final ServicePrincipal newServicePrincipal, @Nonnull final ICallback<? super ServicePrincipal> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ServicePrincipalRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newServicePrincipal, callback);
     }
 
-    public ServicePrincipal post(final ServicePrincipal newServicePrincipal) throws ClientException {
+    @Nonnull
+    public ServicePrincipal post(@Nonnull final ServicePrincipal newServicePrincipal) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ServicePrincipalRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -79,7 +83,8 @@ public class ServicePrincipalCollectionRequest extends BaseCollectionRequest<Ser
      * @param value the expand clause
      * @return the updated request
      */
-    public ServicePrincipalCollectionRequest expand(final String value) {
+    @Nonnull
+    public ServicePrincipalCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ServicePrincipalCollectionRequest)this;
     }
@@ -90,7 +95,8 @@ public class ServicePrincipalCollectionRequest extends BaseCollectionRequest<Ser
      * @param value the filter clause
      * @return the updated request
      */
-    public ServicePrincipalCollectionRequest filter(final String value) {
+    @Nonnull
+    public ServicePrincipalCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ServicePrincipalCollectionRequest)this;
     }
@@ -101,7 +107,8 @@ public class ServicePrincipalCollectionRequest extends BaseCollectionRequest<Ser
      * @param value the order by clause
      * @return the updated request
      */
-    public ServicePrincipalCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ServicePrincipalCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ServicePrincipalCollectionRequest)this;
     }
@@ -112,7 +119,8 @@ public class ServicePrincipalCollectionRequest extends BaseCollectionRequest<Ser
      * @param value the select clause
      * @return the updated request
      */
-    public ServicePrincipalCollectionRequest select(final String value) {
+    @Nonnull
+    public ServicePrincipalCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ServicePrincipalCollectionRequest)this;
     }
@@ -123,6 +131,7 @@ public class ServicePrincipalCollectionRequest extends BaseCollectionRequest<Ser
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ServicePrincipalCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ServicePrincipalCollectionRequest)this;
@@ -134,6 +143,7 @@ public class ServicePrincipalCollectionRequest extends BaseCollectionRequest<Ser
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ServicePrincipalCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (ServicePrincipalCollectionRequest)this;
@@ -145,11 +155,13 @@ public class ServicePrincipalCollectionRequest extends BaseCollectionRequest<Ser
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ServicePrincipalCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ServicePrincipalCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (ServicePrincipalCollectionRequest)this;
     }
-    public ServicePrincipalCollectionPage buildFromResponse(final ServicePrincipalCollectionResponse response) {
+    @Nonnull
+    public ServicePrincipalCollectionPage buildFromResponse(@Nonnull final ServicePrincipalCollectionResponse response) {
         final ServicePrincipalCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ServicePrincipalCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

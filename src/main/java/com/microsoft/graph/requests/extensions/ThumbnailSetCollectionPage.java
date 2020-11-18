@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ThumbnailSet;
 import com.microsoft.graph.requests.extensions.ThumbnailSetCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ThumbnailSetCollectionPage;
 import com.microsoft.graph.requests.extensions.ThumbnailSetCollectionResponse;
@@ -22,7 +24,7 @@ public class ThumbnailSetCollectionPage extends BaseCollectionPage<ThumbnailSet,
      * @param response the serialized ThumbnailSetCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ThumbnailSetCollectionPage(final ThumbnailSetCollectionResponse response, final ThumbnailSetCollectionRequestBuilder builder) {
+    public ThumbnailSetCollectionPage(@Nonnull final ThumbnailSetCollectionResponse response, @Nonnull final ThumbnailSetCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

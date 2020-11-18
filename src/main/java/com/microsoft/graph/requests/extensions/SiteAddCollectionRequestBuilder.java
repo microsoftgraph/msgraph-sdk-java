@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Site;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.SiteAddCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteAddCollectionRequest;
@@ -32,7 +34,7 @@ public class SiteAddCollectionRequestBuilder extends BaseActionRequestBuilder {
      * @param requestOptions the options for this request
      * @param value the value
      */
-    public SiteAddCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<Site> value) {
+    public SiteAddCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final java.util.List<Site> value) {
         super(requestUrl, client, requestOptions);
   	 if(value!=null){
 			bodyParams.put("value", value);
@@ -45,7 +47,8 @@ public class SiteAddCollectionRequestBuilder extends BaseActionRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public SiteAddCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public SiteAddCollectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -55,7 +58,8 @@ public class SiteAddCollectionRequestBuilder extends BaseActionRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public SiteAddCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public SiteAddCollectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         SiteAddCollectionRequest request = new SiteAddCollectionRequest(
                 getRequestUrl(),
                 getClient(),

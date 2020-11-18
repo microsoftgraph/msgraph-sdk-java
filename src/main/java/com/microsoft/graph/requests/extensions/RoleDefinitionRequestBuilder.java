@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.RoleAssignmentCollectionRequestBu
 import com.microsoft.graph.requests.extensions.RoleAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -29,7 +31,7 @@ public class RoleDefinitionRequestBuilder extends BaseRequestBuilder {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RoleDefinitionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RoleDefinitionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +41,8 @@ public class RoleDefinitionRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the RoleDefinitionRequest instance
      */
-    public RoleDefinitionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public RoleDefinitionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,16 +52,19 @@ public class RoleDefinitionRequestBuilder extends BaseRequestBuilder {
      * @param requestOptions the options for this request
      * @return the RoleDefinitionRequest instance
      */
-    public RoleDefinitionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public RoleDefinitionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.RoleDefinitionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    @Nonnull
     public RoleAssignmentCollectionRequestBuilder roleAssignments() {
         return new RoleAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments"), getClient(), null);
     }
 
-    public RoleAssignmentRequestBuilder roleAssignments(final String id) {
+    @Nonnull
+    public RoleAssignmentRequestBuilder roleAssignments(@Nonnull final String id) {
         return new RoleAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments") + "/" + id, getClient(), null);
     }
 }

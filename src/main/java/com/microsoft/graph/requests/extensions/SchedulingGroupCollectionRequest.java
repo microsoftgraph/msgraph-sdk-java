@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Schedule;
 import com.microsoft.graph.models.extensions.SchedulingGroup;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class SchedulingGroupCollectionRequest extends BaseCollectionRequest<Sche
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SchedulingGroupCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SchedulingGroupCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SchedulingGroupCollectionResponse.class, SchedulingGroupCollectionPage.class);
     }
 
-    public void get(final ICallback<? super SchedulingGroupCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super SchedulingGroupCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class SchedulingGroupCollectionRequest extends BaseCollectionRequest<Sche
         });
     }
 
+    @Nonnull
     public SchedulingGroupCollectionPage get() throws ClientException {
         final SchedulingGroupCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final SchedulingGroup newSchedulingGroup, final ICallback<? super SchedulingGroup> callback) {
+    public void post(@Nonnull final SchedulingGroup newSchedulingGroup, @Nonnull final ICallback<? super SchedulingGroup> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SchedulingGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newSchedulingGroup, callback);
     }
 
-    public SchedulingGroup post(final SchedulingGroup newSchedulingGroup) throws ClientException {
+    @Nonnull
+    public SchedulingGroup post(@Nonnull final SchedulingGroup newSchedulingGroup) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SchedulingGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class SchedulingGroupCollectionRequest extends BaseCollectionRequest<Sche
      * @param value the expand clause
      * @return the updated request
      */
-    public SchedulingGroupCollectionRequest expand(final String value) {
+    @Nonnull
+    public SchedulingGroupCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (SchedulingGroupCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class SchedulingGroupCollectionRequest extends BaseCollectionRequest<Sche
      * @param value the filter clause
      * @return the updated request
      */
-    public SchedulingGroupCollectionRequest filter(final String value) {
+    @Nonnull
+    public SchedulingGroupCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (SchedulingGroupCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class SchedulingGroupCollectionRequest extends BaseCollectionRequest<Sche
      * @param value the order by clause
      * @return the updated request
      */
-    public SchedulingGroupCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public SchedulingGroupCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SchedulingGroupCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class SchedulingGroupCollectionRequest extends BaseCollectionRequest<Sche
      * @param value the select clause
      * @return the updated request
      */
-    public SchedulingGroupCollectionRequest select(final String value) {
+    @Nonnull
+    public SchedulingGroupCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (SchedulingGroupCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class SchedulingGroupCollectionRequest extends BaseCollectionRequest<Sche
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public SchedulingGroupCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (SchedulingGroupCollectionRequest)this;
@@ -133,6 +142,7 @@ public class SchedulingGroupCollectionRequest extends BaseCollectionRequest<Sche
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public SchedulingGroupCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (SchedulingGroupCollectionRequest)this;
@@ -144,11 +154,13 @@ public class SchedulingGroupCollectionRequest extends BaseCollectionRequest<Sche
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public SchedulingGroupCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public SchedulingGroupCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (SchedulingGroupCollectionRequest)this;
     }
-    public SchedulingGroupCollectionPage buildFromResponse(final SchedulingGroupCollectionResponse response) {
+    @Nonnull
+    public SchedulingGroupCollectionPage buildFromResponse(@Nonnull final SchedulingGroupCollectionResponse response) {
         final SchedulingGroupCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new SchedulingGroupCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

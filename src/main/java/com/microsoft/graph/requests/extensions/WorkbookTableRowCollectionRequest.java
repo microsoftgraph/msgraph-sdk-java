@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.WorkbookTableRow;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -36,11 +38,11 @@ public class WorkbookTableRowCollectionRequest extends BaseCollectionRequest<Wor
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookTableRowCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableRowCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookTableRowCollectionResponse.class, WorkbookTableRowCollectionPage.class);
     }
 
-    public void get(final ICallback<? super WorkbookTableRowCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookTableRowCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -54,19 +56,21 @@ public class WorkbookTableRowCollectionRequest extends BaseCollectionRequest<Wor
         });
     }
 
+    @Nonnull
     public WorkbookTableRowCollectionPage get() throws ClientException {
         final WorkbookTableRowCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final WorkbookTableRow newWorkbookTableRow, final ICallback<? super WorkbookTableRow> callback) {
+    public void post(@Nonnull final WorkbookTableRow newWorkbookTableRow, @Nonnull final ICallback<? super WorkbookTableRow> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookTableRowRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newWorkbookTableRow, callback);
     }
 
-    public WorkbookTableRow post(final WorkbookTableRow newWorkbookTableRow) throws ClientException {
+    @Nonnull
+    public WorkbookTableRow post(@Nonnull final WorkbookTableRow newWorkbookTableRow) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookTableRowRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -79,7 +83,8 @@ public class WorkbookTableRowCollectionRequest extends BaseCollectionRequest<Wor
      * @param value the expand clause
      * @return the updated request
      */
-    public WorkbookTableRowCollectionRequest expand(final String value) {
+    @Nonnull
+    public WorkbookTableRowCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookTableRowCollectionRequest)this;
     }
@@ -90,7 +95,8 @@ public class WorkbookTableRowCollectionRequest extends BaseCollectionRequest<Wor
      * @param value the filter clause
      * @return the updated request
      */
-    public WorkbookTableRowCollectionRequest filter(final String value) {
+    @Nonnull
+    public WorkbookTableRowCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookTableRowCollectionRequest)this;
     }
@@ -101,7 +107,8 @@ public class WorkbookTableRowCollectionRequest extends BaseCollectionRequest<Wor
      * @param value the order by clause
      * @return the updated request
      */
-    public WorkbookTableRowCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public WorkbookTableRowCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookTableRowCollectionRequest)this;
     }
@@ -112,7 +119,8 @@ public class WorkbookTableRowCollectionRequest extends BaseCollectionRequest<Wor
      * @param value the select clause
      * @return the updated request
      */
-    public WorkbookTableRowCollectionRequest select(final String value) {
+    @Nonnull
+    public WorkbookTableRowCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookTableRowCollectionRequest)this;
     }
@@ -123,6 +131,7 @@ public class WorkbookTableRowCollectionRequest extends BaseCollectionRequest<Wor
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public WorkbookTableRowCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (WorkbookTableRowCollectionRequest)this;
@@ -134,6 +143,7 @@ public class WorkbookTableRowCollectionRequest extends BaseCollectionRequest<Wor
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public WorkbookTableRowCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (WorkbookTableRowCollectionRequest)this;
@@ -145,11 +155,13 @@ public class WorkbookTableRowCollectionRequest extends BaseCollectionRequest<Wor
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public WorkbookTableRowCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public WorkbookTableRowCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (WorkbookTableRowCollectionRequest)this;
     }
-    public WorkbookTableRowCollectionPage buildFromResponse(final WorkbookTableRowCollectionResponse response) {
+    @Nonnull
+    public WorkbookTableRowCollectionPage buildFromResponse(@Nonnull final WorkbookTableRowCollectionResponse response) {
         final WorkbookTableRowCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new WorkbookTableRowCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

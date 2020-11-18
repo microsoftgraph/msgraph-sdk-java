@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.TelecomExpenseManagementPartner;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class TelecomExpenseManagementPartnerCollectionRequest extends BaseCollec
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TelecomExpenseManagementPartnerCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TelecomExpenseManagementPartnerCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TelecomExpenseManagementPartnerCollectionResponse.class, TelecomExpenseManagementPartnerCollectionPage.class);
     }
 
-    public void get(final ICallback<? super TelecomExpenseManagementPartnerCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super TelecomExpenseManagementPartnerCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class TelecomExpenseManagementPartnerCollectionRequest extends BaseCollec
         });
     }
 
+    @Nonnull
     public TelecomExpenseManagementPartnerCollectionPage get() throws ClientException {
         final TelecomExpenseManagementPartnerCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner, final ICallback<? super TelecomExpenseManagementPartner> callback) {
+    public void post(@Nonnull final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner, @Nonnull final ICallback<? super TelecomExpenseManagementPartner> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TelecomExpenseManagementPartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newTelecomExpenseManagementPartner, callback);
     }
 
-    public TelecomExpenseManagementPartner post(final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner) throws ClientException {
+    @Nonnull
+    public TelecomExpenseManagementPartner post(@Nonnull final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TelecomExpenseManagementPartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class TelecomExpenseManagementPartnerCollectionRequest extends BaseCollec
      * @param value the expand clause
      * @return the updated request
      */
-    public TelecomExpenseManagementPartnerCollectionRequest expand(final String value) {
+    @Nonnull
+    public TelecomExpenseManagementPartnerCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (TelecomExpenseManagementPartnerCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class TelecomExpenseManagementPartnerCollectionRequest extends BaseCollec
      * @param value the filter clause
      * @return the updated request
      */
-    public TelecomExpenseManagementPartnerCollectionRequest filter(final String value) {
+    @Nonnull
+    public TelecomExpenseManagementPartnerCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (TelecomExpenseManagementPartnerCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class TelecomExpenseManagementPartnerCollectionRequest extends BaseCollec
      * @param value the order by clause
      * @return the updated request
      */
-    public TelecomExpenseManagementPartnerCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public TelecomExpenseManagementPartnerCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (TelecomExpenseManagementPartnerCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class TelecomExpenseManagementPartnerCollectionRequest extends BaseCollec
      * @param value the select clause
      * @return the updated request
      */
-    public TelecomExpenseManagementPartnerCollectionRequest select(final String value) {
+    @Nonnull
+    public TelecomExpenseManagementPartnerCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (TelecomExpenseManagementPartnerCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class TelecomExpenseManagementPartnerCollectionRequest extends BaseCollec
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public TelecomExpenseManagementPartnerCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (TelecomExpenseManagementPartnerCollectionRequest)this;
@@ -133,6 +142,7 @@ public class TelecomExpenseManagementPartnerCollectionRequest extends BaseCollec
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public TelecomExpenseManagementPartnerCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (TelecomExpenseManagementPartnerCollectionRequest)this;
@@ -144,11 +154,13 @@ public class TelecomExpenseManagementPartnerCollectionRequest extends BaseCollec
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public TelecomExpenseManagementPartnerCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public TelecomExpenseManagementPartnerCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (TelecomExpenseManagementPartnerCollectionRequest)this;
     }
-    public TelecomExpenseManagementPartnerCollectionPage buildFromResponse(final TelecomExpenseManagementPartnerCollectionResponse response) {
+    @Nonnull
+    public TelecomExpenseManagementPartnerCollectionPage buildFromResponse(@Nonnull final TelecomExpenseManagementPartnerCollectionResponse response) {
         final TelecomExpenseManagementPartnerCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new TelecomExpenseManagementPartnerCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.PlannerPlan;
 import com.microsoft.graph.models.extensions.PlannerBucket;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,11 +37,11 @@ public class PlannerBucketCollectionRequest extends BaseCollectionRequest<Planne
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PlannerBucketCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PlannerBucketCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PlannerBucketCollectionResponse.class, PlannerBucketCollectionPage.class);
     }
 
-    public void get(final ICallback<? super PlannerBucketCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super PlannerBucketCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,19 +55,21 @@ public class PlannerBucketCollectionRequest extends BaseCollectionRequest<Planne
         });
     }
 
+    @Nonnull
     public PlannerBucketCollectionPage get() throws ClientException {
         final PlannerBucketCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final PlannerBucket newPlannerBucket, final ICallback<? super PlannerBucket> callback) {
+    public void post(@Nonnull final PlannerBucket newPlannerBucket, @Nonnull final ICallback<? super PlannerBucket> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PlannerBucketRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newPlannerBucket, callback);
     }
 
-    public PlannerBucket post(final PlannerBucket newPlannerBucket) throws ClientException {
+    @Nonnull
+    public PlannerBucket post(@Nonnull final PlannerBucket newPlannerBucket) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PlannerBucketRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -78,7 +82,8 @@ public class PlannerBucketCollectionRequest extends BaseCollectionRequest<Planne
      * @param value the expand clause
      * @return the updated request
      */
-    public PlannerBucketCollectionRequest expand(final String value) {
+    @Nonnull
+    public PlannerBucketCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (PlannerBucketCollectionRequest)this;
     }
@@ -89,7 +94,8 @@ public class PlannerBucketCollectionRequest extends BaseCollectionRequest<Planne
      * @param value the filter clause
      * @return the updated request
      */
-    public PlannerBucketCollectionRequest filter(final String value) {
+    @Nonnull
+    public PlannerBucketCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (PlannerBucketCollectionRequest)this;
     }
@@ -100,7 +106,8 @@ public class PlannerBucketCollectionRequest extends BaseCollectionRequest<Planne
      * @param value the order by clause
      * @return the updated request
      */
-    public PlannerBucketCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public PlannerBucketCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PlannerBucketCollectionRequest)this;
     }
@@ -111,7 +118,8 @@ public class PlannerBucketCollectionRequest extends BaseCollectionRequest<Planne
      * @param value the select clause
      * @return the updated request
      */
-    public PlannerBucketCollectionRequest select(final String value) {
+    @Nonnull
+    public PlannerBucketCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (PlannerBucketCollectionRequest)this;
     }
@@ -122,6 +130,7 @@ public class PlannerBucketCollectionRequest extends BaseCollectionRequest<Planne
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public PlannerBucketCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (PlannerBucketCollectionRequest)this;
@@ -133,6 +142,7 @@ public class PlannerBucketCollectionRequest extends BaseCollectionRequest<Planne
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public PlannerBucketCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (PlannerBucketCollectionRequest)this;
@@ -144,11 +154,13 @@ public class PlannerBucketCollectionRequest extends BaseCollectionRequest<Planne
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public PlannerBucketCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public PlannerBucketCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (PlannerBucketCollectionRequest)this;
     }
-    public PlannerBucketCollectionPage buildFromResponse(final PlannerBucketCollectionResponse response) {
+    @Nonnull
+    public PlannerBucketCollectionPage buildFromResponse(@Nonnull final PlannerBucketCollectionResponse response) {
         final PlannerBucketCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new PlannerBucketCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

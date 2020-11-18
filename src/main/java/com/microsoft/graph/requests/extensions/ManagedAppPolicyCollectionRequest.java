@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.ManagedAppPolicy;
 import com.microsoft.graph.models.extensions.ManagedMobileApp;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -36,11 +38,11 @@ public class ManagedAppPolicyCollectionRequest extends BaseCollectionRequest<Man
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedAppPolicyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppPolicyCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedAppPolicyCollectionResponse.class, ManagedAppPolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ManagedAppPolicyCollectionPage> callback) {
+    public void get(@Nonnull final ICallback<? super ManagedAppPolicyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -54,19 +56,21 @@ public class ManagedAppPolicyCollectionRequest extends BaseCollectionRequest<Man
         });
     }
 
+    @Nonnull
     public ManagedAppPolicyCollectionPage get() throws ClientException {
         final ManagedAppPolicyCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public void post(final ManagedAppPolicy newManagedAppPolicy, final ICallback<? super ManagedAppPolicy> callback) {
+    public void post(@Nonnull final ManagedAppPolicy newManagedAppPolicy, @Nonnull final ICallback<? super ManagedAppPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedAppPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedAppPolicy, callback);
     }
 
-    public ManagedAppPolicy post(final ManagedAppPolicy newManagedAppPolicy) throws ClientException {
+    @Nonnull
+    public ManagedAppPolicy post(@Nonnull final ManagedAppPolicy newManagedAppPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedAppPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -79,7 +83,8 @@ public class ManagedAppPolicyCollectionRequest extends BaseCollectionRequest<Man
      * @param value the expand clause
      * @return the updated request
      */
-    public ManagedAppPolicyCollectionRequest expand(final String value) {
+    @Nonnull
+    public ManagedAppPolicyCollectionRequest expand(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ManagedAppPolicyCollectionRequest)this;
     }
@@ -90,7 +95,8 @@ public class ManagedAppPolicyCollectionRequest extends BaseCollectionRequest<Man
      * @param value the filter clause
      * @return the updated request
      */
-    public ManagedAppPolicyCollectionRequest filter(final String value) {
+    @Nonnull
+    public ManagedAppPolicyCollectionRequest filter(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ManagedAppPolicyCollectionRequest)this;
     }
@@ -101,7 +107,8 @@ public class ManagedAppPolicyCollectionRequest extends BaseCollectionRequest<Man
      * @param value the order by clause
      * @return the updated request
      */
-    public ManagedAppPolicyCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ManagedAppPolicyCollectionRequest orderBy(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ManagedAppPolicyCollectionRequest)this;
     }
@@ -112,7 +119,8 @@ public class ManagedAppPolicyCollectionRequest extends BaseCollectionRequest<Man
      * @param value the select clause
      * @return the updated request
      */
-    public ManagedAppPolicyCollectionRequest select(final String value) {
+    @Nonnull
+    public ManagedAppPolicyCollectionRequest select(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ManagedAppPolicyCollectionRequest)this;
     }
@@ -123,6 +131,7 @@ public class ManagedAppPolicyCollectionRequest extends BaseCollectionRequest<Man
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ManagedAppPolicyCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ManagedAppPolicyCollectionRequest)this;
@@ -134,6 +143,7 @@ public class ManagedAppPolicyCollectionRequest extends BaseCollectionRequest<Man
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ManagedAppPolicyCollectionRequest skip(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
         return (ManagedAppPolicyCollectionRequest)this;
@@ -145,11 +155,13 @@ public class ManagedAppPolicyCollectionRequest extends BaseCollectionRequest<Man
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ManagedAppPolicyCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ManagedAppPolicyCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
         return (ManagedAppPolicyCollectionRequest)this;
     }
-    public ManagedAppPolicyCollectionPage buildFromResponse(final ManagedAppPolicyCollectionResponse response) {
+    @Nonnull
+    public ManagedAppPolicyCollectionPage buildFromResponse(@Nonnull final ManagedAppPolicyCollectionResponse response) {
         final ManagedAppPolicyCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ManagedAppPolicyCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);

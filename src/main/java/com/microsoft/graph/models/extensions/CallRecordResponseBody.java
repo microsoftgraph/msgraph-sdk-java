@@ -8,6 +8,8 @@ import com.microsoft.graph.models.extensions.Prompt;
 import com.microsoft.graph.models.extensions.RecordOperation;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
 import java.util.EnumSet;
@@ -25,6 +27,7 @@ public class CallRecordResponseBody {
      */
     @SerializedName(value = "prompts", alternate = {"Prompts"})
     @Expose
+	@Nullable
     public java.util.List<Prompt> prompts;
 
     /**
@@ -33,6 +36,7 @@ public class CallRecordResponseBody {
      */
     @SerializedName(value = "bargeInAllowed", alternate = {"BargeInAllowed"})
     @Expose
+	@Nullable
     public Boolean bargeInAllowed;
 
     /**
@@ -41,6 +45,7 @@ public class CallRecordResponseBody {
      */
     @SerializedName(value = "initialSilenceTimeoutInSeconds", alternate = {"InitialSilenceTimeoutInSeconds"})
     @Expose
+	@Nullable
     public Integer initialSilenceTimeoutInSeconds;
 
     /**
@@ -49,6 +54,7 @@ public class CallRecordResponseBody {
      */
     @SerializedName(value = "maxSilenceTimeoutInSeconds", alternate = {"MaxSilenceTimeoutInSeconds"})
     @Expose
+	@Nullable
     public Integer maxSilenceTimeoutInSeconds;
 
     /**
@@ -57,6 +63,7 @@ public class CallRecordResponseBody {
      */
     @SerializedName(value = "maxRecordDurationInSeconds", alternate = {"MaxRecordDurationInSeconds"})
     @Expose
+	@Nullable
     public Integer maxRecordDurationInSeconds;
 
     /**
@@ -65,6 +72,7 @@ public class CallRecordResponseBody {
      */
     @SerializedName(value = "playBeep", alternate = {"PlayBeep"})
     @Expose
+	@Nullable
     public Boolean playBeep;
 
     /**
@@ -73,6 +81,7 @@ public class CallRecordResponseBody {
      */
     @SerializedName(value = "stopTones", alternate = {"StopTones"})
     @Expose
+	@Nullable
     public java.util.List<String> stopTones;
 
     /**
@@ -81,6 +90,7 @@ public class CallRecordResponseBody {
      */
     @SerializedName(value = "clientContext", alternate = {"ClientContext"})
     @Expose
+	@Nullable
     public String clientContext;
 
 
@@ -99,6 +109,7 @@ public class CallRecordResponseBody {
      *
      * @return the raw representation of this class
      */
+    @Nullable
     public JsonObject getRawObject() {
         return rawObject;
     }
@@ -108,6 +119,7 @@ public class CallRecordResponseBody {
      *
      * @return the serializer
      */
+    @Nullable
     protected ISerializer getSerializer() {
         return serializer;
     }
@@ -118,7 +130,7 @@ public class CallRecordResponseBody {
      * @param serializer the serializer
      * @param json the JSON object to set this object to
      */
-    public void setRawObject(final ISerializer serializer, final JsonObject json) {
+    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
         this.serializer = serializer;
         rawObject = json;
 
