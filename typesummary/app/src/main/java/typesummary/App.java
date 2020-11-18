@@ -32,23 +32,47 @@ public class App {
         methodsNameToSkip = Arrays.asList(mNames);
         final ILogWriter writer = new ConsoleLogWriter();
 
-
+        
+        final List<String> classNames = getOrderedClassNames();
+        serializeEnums(writer, classNames);
+        serializeClasses(writer, classNames);
+    }
+    private static void serializeEnums(final ILogWriter writer, final List<String> classNames) throws Exception {
+        for (String c : classNames) {
+            Class<?> clazz = Class.forName(c);
+            if(clazz.isEnum()) {
+                writer.write("enum " + clazz.getName());
+                serializeEnumValue(clazz.getEnumConstants(), writer);
+            }
+        }
+    }
+    private static void serializeEnumValue(final Object[] enumVals, final ILogWriter writer) {
+        for(Object enumVal: enumVals) {
+            writer.write(enumVal.toString(), 2);
+        }
+    }
+    private static List<String> getOrderedClassNames() throws Exception {
         final Set<ClassInfo> classInfos = ClassPath.from(User.class.getClassLoader()).getTopLevelClassesRecursive("com.microsoft.graph");
         final List<String> classNames = classInfos.stream()
                                             .map(classInfo -> classInfo.getName())
                                             .distinct()
                                             .collect(Collectors.toList());
         classNames.sort(Comparator.naturalOrder());
+        return classNames;
+    }
+    private static void serializeClasses(final ILogWriter writer, final List<String> classNames) throws Exception {
         for (String c : classNames) {
             Class<?> clazz = Class.forName(c);
-            String classHeadLine = "class " + clazz.getName();
-            Class<?> superClass = clazz.getSuperclass();
-            if(superClass != null && superClass != Object.class) {
-                classHeadLine += " : " + superClass.getName();
+            if(!clazz.isEnum()) {
+                String classHeadLine = "class " + clazz.getName();
+                Class<?> superClass = clazz.getSuperclass();
+                if(superClass != null && superClass != Object.class) {
+                    classHeadLine += " : " + superClass.getName();
+                }
+                writer.write(classHeadLine);
+                serializeFields(clazz, writer);
+                serializeMethods(clazz, writer);
             }
-            writer.write(classHeadLine);
-            serializeFields(clazz, writer);
-            serializeMethods(clazz, writer);
         }
     }
     private static void serializeFields(final Class<?> clazz, final ILogWriter writer) {
