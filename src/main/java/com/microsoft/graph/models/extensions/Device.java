@@ -75,7 +75,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Device Metadata.
-     * For interal use only. Set to null.
+     * For internal use only. Set to null.
      */
     @SerializedName(value = "deviceMetadata", alternate = {"DeviceMetadata"})
     @Expose
@@ -84,7 +84,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Device Version.
-     * For interal use only.
+     * For internal use only.
      */
     @SerializedName(value = "deviceVersion", alternate = {"DeviceVersion"})
     @Expose
@@ -129,7 +129,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Last Sync Date Time.
-     * The last time at which the object was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z' Read-only.
+     * The last time at which the object was synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z' Read-only.
      */
     @SerializedName(value = "onPremisesLastSyncDateTime", alternate = {"OnPremisesLastSyncDateTime"})
     @Expose
@@ -165,7 +165,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Physical Ids.
-     * For interal use only. Not nullable.
+     * For internal use only. Not nullable.
      */
     @SerializedName(value = "physicalIds", alternate = {"PhysicalIds"})
     @Expose

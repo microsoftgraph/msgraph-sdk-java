@@ -107,7 +107,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Lifecycle Notification Url.
-     * 
+     * The URL of the endpoint that receives lifecycle notifications, including subscriptionRemoved and missed notifications. This URL must make use of the HTTPS protocol. Optional. Read more about how Outlook resources use lifecycle notifications.
      */
     @SerializedName(value = "lifecycleNotificationUrl", alternate = {"LifecycleNotificationUrl"})
     @Expose
