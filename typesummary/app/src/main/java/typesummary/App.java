@@ -17,7 +17,7 @@ import java.util.List;
 
 import com.google.common.reflect.ClassPath.ClassInfo;
 import com.google.common.reflect.ClassPath;
-
+import com.google.common.base.Joiner;
 public class App {
     // -o absolutepathpath.txt to output to text file instead of console
     public static void main(String[] args) throws Exception {
@@ -106,9 +106,26 @@ public class App {
         }
     }
     private static List<String> methodsNameToSkip;
+    private static String delimiter = " ";
     private static void serializeMethods(final Class<?> clazz, final ILogWriter writer) {
         final Method[] methods = clazz.getMethods();
-        Arrays.sort(methods, (o1, o2) -> o1.getName().compareTo(o2.getName()));
+        Arrays.sort(methods, (o1, o2) -> (o1.getName() + 
+                                            Joiner.on(delimiter)
+                                                .useForNull("")
+                                                .join(Arrays.asList(o1.getParameters())
+                                                            .stream()
+                                                            .sequential()
+                                                            .map(x -> x.getName() + x.getType().getName())
+                                                            .collect(Collectors.toList())))
+                                        .compareTo(o2.getName() +
+                                            Joiner.on(delimiter)
+                                                    .useForNull("")
+                                                    .join(Arrays.asList(o2.getParameters())
+                                                                .stream()
+                                                                .sequential()
+                                                                .map(x -> x.getName() + x.getType().getName())
+                                                                .collect(Collectors.toList())))
+                                            );
         for(Method method : methods) {
             if(!methodsNameToSkip.contains(method.getName())) {
                 writer.write("method " + method.getName(), 2);
