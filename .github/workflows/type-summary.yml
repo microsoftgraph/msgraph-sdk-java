@@ -1,0 +1,37 @@
+name: "update type summary"
+
+on:
+  push:
+    paths:
+      - '**/*.java'
+      - '**/*.yml'
+
+jobs:
+  update-type-summary:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-java@v1
+      with:
+        java-version: 15
+    - name: Add execution right to the script
+      run: chmod +x gradlew
+      working-directory: ./typesummary
+    - name: Build and run type summary project
+      run: ./gradlew --no-daemon run --args='-o ${{ github.workspace }}/typeSummary.txt'
+      working-directory: ./typesummary
+    - name: Get branch name
+      run: |
+        $branchName = $Env:GITHUB_REF.replace("refs/heads/", "")
+        echo "CURRENT_BRANCH=${branchName}" | Out-File -FilePath $Env:GITHUB_ENV -Encoding utf8 -Append
+      shell: pwsh
+    - name: push
+      uses: github-actions-x/commit@v2.7
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        push-branch: ${{ env.CURRENT_BRANCH }}
+        commit-message: '- updates types summary'
+        force-add: 'true'
+        files: typeSummary.txt
+        name: Microsoft Graph DevX Tooling
+        email: GraphTooling@service.microsoft.com
