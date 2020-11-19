@@ -225,6 +225,7 @@ bintray {
 }
 
 compileJava {
+  options.compilerArgs << "-parameters"
   sourceCompatibility = 1.8
   targetCompatibility = 1.8
 }

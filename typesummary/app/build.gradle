@@ -14,35 +14,17 @@ plugins {
 repositories {
     // Use JCenter for resolving dependencies.
     jcenter()
-}
-
-sourceSets {
-    main {
-        java {
-            srcDirs 'src'
-            srcDirs '../../src/main'
-        }
+    flatDir {
+        dirs '../../build/libs'
     }
-
-
 }
 
-compileJava  {
-    options.compilerArgs << "-parameters"
-}
-
-dependencies { // TODO replace by reference to dependencies.gradle in v3
-    // Use JUnit test framework.
-    testImplementation 'junit:junit:4.13'
-
-    // This dependency is used by the application.
+dependencies {
     implementation 'com.google.guava:guava:29.0-jre'
 
-    implementation 'com.google.code.gson:gson:2.8.6'
-
-    implementation 'com.squareup.okhttp3:okhttp:3.12.1'
-
     implementation 'com.microsoft.graph:microsoft-graph-core:1.0.5'
+
+    implementation name: 'msgraph-sdk-java'
 }
 
 application {
