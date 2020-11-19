@@ -83,7 +83,7 @@ public class Reminder implements IJsonBackedObject {
 
     /**
      * The Event Web Link.
-     * The URL to open the event in Outlook on the web.The event will open in the browser if you are logged in to your mailbox via Outlook on the web. You will be prompted to login if you are not already logged in with the browser.This URL can be accessed from within an iFrame.
+     * The URL to open the event in Outlook on the web.The event will open in the browser if you are logged in to your mailbox via Outlook on the web. You will be prompted to login if you are not already logged in with the browser.This URL cannot be accessed from within an iFrame.
      */
     @SerializedName(value = "eventWebLink", alternate = {"EventWebLink"})
     @Expose

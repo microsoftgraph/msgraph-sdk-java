@@ -7,9 +7,11 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.OnlineMeetingPresenters;
 import com.microsoft.graph.models.extensions.AudioConferencing;
 import com.microsoft.graph.models.extensions.ChatInfo;
 import com.microsoft.graph.models.extensions.ItemBody;
+import com.microsoft.graph.models.extensions.LobbyBypassSettings;
 import com.microsoft.graph.models.extensions.MeetingParticipants;
 import com.microsoft.graph.models.extensions.Entity;
 
@@ -25,6 +27,14 @@ import com.google.gson.annotations.Expose;
  */
 public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Allowed Presenters.
+     * Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
+     */
+    @SerializedName(value = "allowedPresenters", alternate = {"AllowedPresenters"})
+    @Expose
+    public OnlineMeetingPresenters allowedPresenters;
 
     /**
      * The Audio Conferencing.
@@ -67,6 +77,14 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     public String externalId;
 
     /**
+     * The Is Entry Exit Announced.
+     * Whether or not to announce when callers join or leave.
+     */
+    @SerializedName(value = "isEntryExitAnnounced", alternate = {"IsEntryExitAnnounced"})
+    @Expose
+    public Boolean isEntryExitAnnounced;
+
+    /**
      * The Join Information.
      * The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.
      */
@@ -81,6 +99,14 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     @SerializedName(value = "joinWebUrl", alternate = {"JoinWebUrl"})
     @Expose
     public String joinWebUrl;
+
+    /**
+     * The Lobby Bypass Settings.
+     * Specifies which participants can bypass the meeting   lobby.
+     */
+    @SerializedName(value = "lobbyBypassSettings", alternate = {"LobbyBypassSettings"})
+    @Expose
+    public LobbyBypassSettings lobbyBypassSettings;
 
     /**
      * The Participants.

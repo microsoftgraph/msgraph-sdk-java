@@ -320,7 +320,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Web Link.
-     * The URL to open the event in Outlook on the web.Outlook on the web opens the event in the browser if you are signed in to your mailbox. Otherwise, Outlook on the web prompts you to sign in.This URL can be accessed from within an iFrame.
+     * The URL to open the event in Outlook on the web.Outlook on the web opens the event in the browser if you are signed in to your mailbox. Otherwise, Outlook on the web prompts you to sign in.This URL cannot be accessed from within an iFrame.
      */
     @SerializedName(value = "webLink", alternate = {"WebLink"})
     @Expose

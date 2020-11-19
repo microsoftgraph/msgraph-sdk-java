@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.IdentitySet;
+import com.microsoft.graph.models.generated.OnlineMeetingRole;
 
 
 import com.google.gson.JsonObject;
@@ -39,6 +40,14 @@ public class MeetingParticipantInfo implements IJsonBackedObject {
     @SerializedName(value = "identity", alternate = {"Identity"})
     @Expose
     public IdentitySet identity;
+
+    /**
+     * The Role.
+     * Specifies the participant's role in the meeting.  Possible values are listed in the following table.
+     */
+    @SerializedName(value = "role", alternate = {"Role"})
+    @Expose
+    public OnlineMeetingRole role;
 
     /**
      * The Upn.

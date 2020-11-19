@@ -118,7 +118,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Business Phones.
-     * The telephone numbers for the user. NOTE: Although this is a string collection, only one number can be set for this property.
+     * The telephone numbers for the user. NOTE: Although this is a string collection, only one number can be set for this property. Read-only for users synced from on-premises directory.
      */
     @SerializedName(value = "businessPhones", alternate = {"BusinessPhones"})
     @Expose
@@ -302,7 +302,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Mobile Phone.
-     * The primary cellular telephone number for the user.
+     * The primary cellular telephone number for the user. Read-only for users synced from on-premises directory.
      */
     @SerializedName(value = "mobilePhone", alternate = {"MobilePhone"})
     @Expose
@@ -414,7 +414,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Password Profile.
-     * Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
+     * Specifies the password profile for the user. The profile contains the user’s password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
      */
     @SerializedName(value = "passwordProfile", alternate = {"PasswordProfile"})
     @Expose
@@ -922,7 +922,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Todo.
-     * 
+     * Represents the To Do services available to a user.
      */
     @SerializedName(value = "todo", alternate = {"Todo"})
     @Expose
