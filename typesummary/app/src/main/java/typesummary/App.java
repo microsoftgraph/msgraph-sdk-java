@@ -125,7 +125,7 @@ public class App {
                                                                 .sequential()
                                                                 .map(x -> x.getName() + x.getType().getName())
                                                                 .collect(Collectors.toList())))
-                                            );
+                                            );// we want a deterministic sort of the methods to avoid getting false changes, using methodname paramNameparamType... as sorting value
         for(Method method : methods) {
             if(!methodsNameToSkip.contains(method.getName())) {
                 writer.write("method " + method.getName(), 2);
