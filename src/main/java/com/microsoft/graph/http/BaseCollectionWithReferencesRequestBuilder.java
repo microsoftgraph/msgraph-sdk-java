@@ -45,8 +45,6 @@ public abstract class BaseCollectionWithReferencesRequestBuilder<T, T2 extends B
                             T6 extends BaseCollectionPage<T, ? extends BaseRequestBuilder<T>>,
                             T7 extends BaseCollectionWithReferencesRequest<T, T2, T3, T4, T5, T6, ? extends BaseCollectionRequest<T, T5, T6>>,
                             T8 extends BaseCollectionReferenceRequestBuilder<T, T3, T5, T6, T7>> extends BaseCollectionRequestBuilder<T, T3, T5, T6, T7> {
-    private final Class<T3> refRequestBuilderClass;
-    private final Class<T7> collRequestClass;
     private final Class<T8> collWithRefRequestBuilderClass;
     /**
      * The request builder for this collection
@@ -56,14 +54,13 @@ public abstract class BaseCollectionWithReferencesRequestBuilder<T, T2 extends B
      * @param requestOptions the options for this request
      * @param referenceRequestBuilderClass the class for the request builder
      * @param collectionWithReferencesRequestClass the class for the collection request
+     * @param collectionWithReferenceRequestBuilderClass the class for the collection request builder
      */
     public BaseCollectionWithReferencesRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
                                                     @Nonnull final Class<T3> referenceRequestBuilderClass,
                                                     @Nonnull final Class<T7> collectionWithReferencesRequestClass,
                                                     @Nonnull final Class<T8> collectionWithReferenceRequestBuilderClass) {
         super(requestUrl, client, requestOptions, referenceRequestBuilderClass, collectionWithReferencesRequestClass);
-        this.refRequestBuilderClass = referenceRequestBuilderClass;
-        this.collRequestClass = collectionWithReferencesRequestClass;
         this.collWithRefRequestBuilderClass = collectionWithReferenceRequestBuilderClass;
     }
 
@@ -76,8 +73,8 @@ public abstract class BaseCollectionWithReferencesRequestBuilder<T, T2 extends B
     public T8 references() {
         try {
             return this.collWithRefRequestBuilderClass
-                    .getConstructor(String.class, IBaseClient.class, java.util.List.class, Class.class, Class.class)
-                    .newInstance(getRequestUrl() + "/$ref", getClient(), getOptions(), refRequestBuilderClass, collRequestClass);
+                    .getConstructor(String.class, IBaseClient.class, java.util.List.class)
+                    .newInstance(getRequestUrl() + "/$ref", getClient(), getOptions());
         } catch(IllegalArgumentException | InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException | SecurityException ex) {
             return null;
         }

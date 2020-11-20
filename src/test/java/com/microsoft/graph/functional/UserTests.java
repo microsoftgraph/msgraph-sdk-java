@@ -246,4 +246,9 @@ public class UserTests {
 		.get();
 		assertNotNull(user);
 	}
+	@Test
+	public void getMeTransitiveReferences() {
+		DirectoryObjectCollectionWithReferencesPage page = graphServiceClient.me().transitiveMemberOf().references().buildRequest().get();
+		assertNotNull(page);
+	}
 }
