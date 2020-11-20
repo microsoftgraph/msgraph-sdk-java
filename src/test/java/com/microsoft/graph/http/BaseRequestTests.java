@@ -50,9 +50,8 @@ public class BaseRequestTests {
                 .request(new Request.Builder().url("https://a.b.c").build())
                 .protocol(Protocol.HTTP_1_1)
                 .code(200).message("OK").body(
-                   ResponseBody.create(
-                        "{ \"id\": \"zzz\" }",
-                        MediaType.parse("application/json")
+                   ResponseBody.create(MediaType.parse("application/json"), 
+                        "{ \"id\": \"zzz\" }"
                 ))
                 .addHeader("Content-Type", "application/json")
                 .build();
