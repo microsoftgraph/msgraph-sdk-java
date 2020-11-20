@@ -30,6 +30,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 
 import java.util.List;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 /**
  * An HTTP request.
  * 
@@ -45,8 +48,8 @@ public abstract class BaseWithReferenceRequest<T> extends BaseRequest<T> {
      * @param requestOptions the options for this request
      * @param entityClass     the class for the entity
      */
-    public BaseWithReferenceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-                                    Class<T> entityClass) {
+    public BaseWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+                                    @Nonnull final Class<T> entityClass) {
         super(requestUrl, client, requestOptions, entityClass);
     }
 
@@ -57,7 +60,7 @@ public abstract class BaseWithReferenceRequest<T> extends BaseRequest<T> {
      * @param newEntity entity to return
      * @param callback callback to invoke once request is executed
      */
-    public void post(final T newEntity, final IJsonBackedObject payload, final ICallback<? super T> callback) {
+    public void post(@Nullable final T newEntity, @Nonnull final IJsonBackedObject payload, @Nonnull final ICallback<? super T> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -68,7 +71,8 @@ public abstract class BaseWithReferenceRequest<T> extends BaseRequest<T> {
      * @param newEntity entity to return
      * @return the entity once request is executed
      */
-    public T post(final T newEntity, final IJsonBackedObject payload) throws ClientException {
+    @Nullable
+    public T post(@Nonnull final T newEntity, @Nonnull final IJsonBackedObject payload) throws ClientException {
         final T response = send(HttpMethod.POST, payload);
         if (response != null){
             return newEntity;
@@ -80,7 +84,7 @@ public abstract class BaseWithReferenceRequest<T> extends BaseRequest<T> {
      * Gets the entity an invokes the callback with it
      * @param callback callback to be invoked with the returned entity
      */
-    public void get(final ICallback<? super T> callback) {
+    public void get(@Nonnull final ICallback<? super T> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -88,6 +92,7 @@ public abstract class BaseWithReferenceRequest<T> extends BaseRequest<T> {
      * Gets the entity
      * @return the obtained entity
      */
+    @Nullable
     public T get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -96,7 +101,7 @@ public abstract class BaseWithReferenceRequest<T> extends BaseRequest<T> {
      * Deletes the entity and invokes the callback
      * @param callback callback to be invoked once the entity is deleted
      */
-	public void delete(final ICallback<? super T> callback) {
+	public void delete(@Nonnull final ICallback<? super T> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -113,7 +118,7 @@ public abstract class BaseWithReferenceRequest<T> extends BaseRequest<T> {
      * @param sourceObject object to update
      * @param callback callback to be invoked once the entity is updated
      */
-	public void patch(final T sourceObject, final ICallback<? super T> callback) {
+	public void patch(@Nonnull final T sourceObject, @Nonnull final ICallback<? super T> callback) {
 		send(HttpMethod.PATCH, callback, sourceObject);
 	}
 
@@ -123,7 +128,8 @@ public abstract class BaseWithReferenceRequest<T> extends BaseRequest<T> {
      * @param sourceObject object to update
      * @return the udpated entity
      */
-	public T patch(final T sourceObject) throws ClientException {
+    @Nullable
+	public T patch(@Nonnull final T sourceObject) throws ClientException {
 		return send(HttpMethod.PATCH, sourceObject);
 	}
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionWithReferencesPage;
@@ -34,7 +36,7 @@ public class OAuth2PermissionGrantCollectionWithReferencesPage extends BaseColle
      * @param response the serialized OAuth2PermissionGrantCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public OAuth2PermissionGrantCollectionWithReferencesPage(final OAuth2PermissionGrantCollectionResponse response, final OAuth2PermissionGrantCollectionWithReferencesRequestBuilder builder) {
+    public OAuth2PermissionGrantCollectionWithReferencesPage(@Nonnull final OAuth2PermissionGrantCollectionResponse response, @Nullable final OAuth2PermissionGrantCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 
@@ -44,7 +46,7 @@ public class OAuth2PermissionGrantCollectionWithReferencesPage extends BaseColle
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public OAuth2PermissionGrantCollectionWithReferencesPage(final java.util.List<OAuth2PermissionGrant> pageContents, final OAuth2PermissionGrantCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+    public OAuth2PermissionGrantCollectionWithReferencesPage(@Nonnull final java.util.List<OAuth2PermissionGrant> pageContents, @Nullable final OAuth2PermissionGrantCollectionWithReferencesRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.SchedulingGroup;
 import com.microsoft.graph.requests.extensions.SchedulingGroupCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.SchedulingGroupCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class SchedulingGroupCollectionPage extends BaseCollectionPage<Scheduling
      * @param response the serialized SchedulingGroupCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public SchedulingGroupCollectionPage(final SchedulingGroupCollectionResponse response, final SchedulingGroupCollectionRequestBuilder builder) {
+    public SchedulingGroupCollectionPage(@Nonnull final SchedulingGroupCollectionResponse response, @Nonnull final SchedulingGroupCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class SchedulingGroupCollectionPage extends BaseCollectionPage<Scheduling
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public SchedulingGroupCollectionPage(final java.util.List<SchedulingGroup> pageContents, final SchedulingGroupCollectionRequestBuilder nextRequestBuilder) {
+    public SchedulingGroupCollectionPage(@Nonnull final java.util.List<SchedulingGroup> pageContents, @Nullable final SchedulingGroupCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

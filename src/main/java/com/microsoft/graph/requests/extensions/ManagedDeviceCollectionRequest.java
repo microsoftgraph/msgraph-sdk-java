@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.models.extensions.UpdateWindowsDeviceAccountActionParameter;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,7 +37,7 @@ public class ManagedDeviceCollectionRequest extends BaseCollectionRequest<Manage
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedDeviceCollectionResponse.class, ManagedDeviceCollectionPage.class, ManagedDeviceCollectionRequestBuilder.class);
     }
 
@@ -44,7 +46,7 @@ public class ManagedDeviceCollectionRequest extends BaseCollectionRequest<Manage
      * @param newManagedDevice the ManagedDevice to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final ManagedDevice newManagedDevice, final ICallback<? super ManagedDevice> callback) {
+    public void post(@Nonnull final ManagedDevice newManagedDevice, @Nonnull final ICallback<? super ManagedDevice> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedDeviceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -56,7 +58,8 @@ public class ManagedDeviceCollectionRequest extends BaseCollectionRequest<Manage
      * @param newManagedDevice the ManagedDevice to create
      * @return the newly created object
      */
-    public ManagedDevice post(final ManagedDevice newManagedDevice) throws ClientException {
+    @Nonnull
+    public ManagedDevice post(@Nonnull final ManagedDevice newManagedDevice) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedDeviceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -69,7 +72,8 @@ public class ManagedDeviceCollectionRequest extends BaseCollectionRequest<Manage
      * @param value the expand clause
      * @return the updated request
      */
-    public ManagedDeviceCollectionRequest expand(final String value) {
+    @Nonnull
+    public ManagedDeviceCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -80,7 +84,8 @@ public class ManagedDeviceCollectionRequest extends BaseCollectionRequest<Manage
      * @param value the filter clause
      * @return the updated request
      */
-    public ManagedDeviceCollectionRequest filter(final String value) {
+    @Nonnull
+    public ManagedDeviceCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -91,7 +96,8 @@ public class ManagedDeviceCollectionRequest extends BaseCollectionRequest<Manage
      * @param value the order by clause
      * @return the updated request
      */
-    public ManagedDeviceCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ManagedDeviceCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -102,7 +108,8 @@ public class ManagedDeviceCollectionRequest extends BaseCollectionRequest<Manage
      * @param value the select clause
      * @return the updated request
      */
-    public ManagedDeviceCollectionRequest select(final String value) {
+    @Nonnull
+    public ManagedDeviceCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -113,6 +120,7 @@ public class ManagedDeviceCollectionRequest extends BaseCollectionRequest<Manage
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ManagedDeviceCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -124,6 +132,7 @@ public class ManagedDeviceCollectionRequest extends BaseCollectionRequest<Manage
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ManagedDeviceCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -135,7 +144,8 @@ public class ManagedDeviceCollectionRequest extends BaseCollectionRequest<Manage
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ManagedDeviceCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ManagedDeviceCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

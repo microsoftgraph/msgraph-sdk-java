@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.ClaimsMappingPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyWithReferenceRequest;
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyReferenceRequestBuilder;
@@ -38,7 +40,7 @@ public class ClaimsMappingPolicyCollectionReferenceRequest extends BaseCollectio
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ClaimsMappingPolicyCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ClaimsMappingPolicyCollectionReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ClaimsMappingPolicyCollectionResponse.class, ClaimsMappingPolicyCollectionWithReferencesPage.class, ClaimsMappingPolicyCollectionWithReferencesRequestBuilder.class);
     }
 
@@ -47,7 +49,7 @@ public class ClaimsMappingPolicyCollectionReferenceRequest extends BaseCollectio
      * @param newClaimsMappingPolicy the ClaimsMappingPolicy to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final ClaimsMappingPolicy newClaimsMappingPolicy, final ICallback<? super ClaimsMappingPolicy> callback) {
+    public void post(@Nonnull final ClaimsMappingPolicy newClaimsMappingPolicy, @Nonnull final ICallback<? super ClaimsMappingPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/policies/claimsMappingPolicies/" + newClaimsMappingPolicy.id);
         new ClaimsMappingPolicyWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -60,7 +62,8 @@ public class ClaimsMappingPolicyCollectionReferenceRequest extends BaseCollectio
      * @param newClaimsMappingPolicy the ClaimsMappingPolicy to create
      * @return the newly created object
      */
-    public ClaimsMappingPolicy post(final ClaimsMappingPolicy newClaimsMappingPolicy) throws ClientException {
+    @Nonnull
+    public ClaimsMappingPolicy post(@Nonnull final ClaimsMappingPolicy newClaimsMappingPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/policies/claimsMappingPolicies/" + newClaimsMappingPolicy.id);
         return new ClaimsMappingPolicyWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
@@ -73,7 +76,8 @@ public class ClaimsMappingPolicyCollectionReferenceRequest extends BaseCollectio
      * @param value the expand clause
      * @return the updated request
      */
-    public ClaimsMappingPolicyCollectionReferenceRequest expand(final String value) {
+    @Nonnull
+    public ClaimsMappingPolicyCollectionReferenceRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -84,7 +88,8 @@ public class ClaimsMappingPolicyCollectionReferenceRequest extends BaseCollectio
      * @param value the filter clause
      * @return the updated request
      */
-    public ClaimsMappingPolicyCollectionReferenceRequest filter(final String value) {
+    @Nonnull
+    public ClaimsMappingPolicyCollectionReferenceRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -95,7 +100,8 @@ public class ClaimsMappingPolicyCollectionReferenceRequest extends BaseCollectio
      * @param value the sort clause
      * @return the updated request
      */
-    public ClaimsMappingPolicyCollectionReferenceRequest orderBy(final String value) {
+    @Nonnull
+    public ClaimsMappingPolicyCollectionReferenceRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -106,7 +112,8 @@ public class ClaimsMappingPolicyCollectionReferenceRequest extends BaseCollectio
      * @param value the select clause
      * @return the updated request
      */
-    public ClaimsMappingPolicyCollectionReferenceRequest select(final String value) {
+    @Nonnull
+    public ClaimsMappingPolicyCollectionReferenceRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -117,6 +124,7 @@ public class ClaimsMappingPolicyCollectionReferenceRequest extends BaseCollectio
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ClaimsMappingPolicyCollectionReferenceRequest top(final int value) {
         addTopOption(value);
         return this;

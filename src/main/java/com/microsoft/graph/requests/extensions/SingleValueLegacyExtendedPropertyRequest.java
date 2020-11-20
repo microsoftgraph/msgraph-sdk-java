@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class SingleValueLegacyExtendedPropertyRequest extends BaseRequest<Single
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SingleValueLegacyExtendedPropertyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SingleValueLegacyExtendedPropertyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SingleValueLegacyExtendedProperty.class);
     }
 
@@ -37,7 +39,7 @@ public class SingleValueLegacyExtendedPropertyRequest extends BaseRequest<Single
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SingleValueLegacyExtendedProperty> callback) {
+    public void get(@Nonnull final ICallback<? super SingleValueLegacyExtendedProperty> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class SingleValueLegacyExtendedPropertyRequest extends BaseRequest<Single
      * @return the SingleValueLegacyExtendedProperty from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SingleValueLegacyExtendedProperty get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class SingleValueLegacyExtendedPropertyRequest extends BaseRequest<Single
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SingleValueLegacyExtendedProperty> callback) {
+    public void delete(@Nonnull final ICallback<? super SingleValueLegacyExtendedProperty> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class SingleValueLegacyExtendedPropertyRequest extends BaseRequest<Single
      * @param sourceSingleValueLegacyExtendedProperty the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SingleValueLegacyExtendedProperty sourceSingleValueLegacyExtendedProperty, final ICallback<? super SingleValueLegacyExtendedProperty> callback) {
+    public void patch(@Nonnull final SingleValueLegacyExtendedProperty sourceSingleValueLegacyExtendedProperty, @Nonnull final ICallback<? super SingleValueLegacyExtendedProperty> callback) {
         send(HttpMethod.PATCH, callback, sourceSingleValueLegacyExtendedProperty);
     }
 
@@ -86,7 +89,8 @@ public class SingleValueLegacyExtendedPropertyRequest extends BaseRequest<Single
      * @return the updated SingleValueLegacyExtendedProperty
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SingleValueLegacyExtendedProperty patch(final SingleValueLegacyExtendedProperty sourceSingleValueLegacyExtendedProperty) throws ClientException {
+    @Nullable
+    public SingleValueLegacyExtendedProperty patch(@Nonnull final SingleValueLegacyExtendedProperty sourceSingleValueLegacyExtendedProperty) throws ClientException {
         return send(HttpMethod.PATCH, sourceSingleValueLegacyExtendedProperty);
     }
 
@@ -96,7 +100,7 @@ public class SingleValueLegacyExtendedPropertyRequest extends BaseRequest<Single
      * @param newSingleValueLegacyExtendedProperty the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty, final ICallback<? super SingleValueLegacyExtendedProperty> callback) {
+    public void post(@Nonnull final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty, @Nonnull final ICallback<? super SingleValueLegacyExtendedProperty> callback) {
         send(HttpMethod.POST, callback, newSingleValueLegacyExtendedProperty);
     }
 
@@ -107,7 +111,8 @@ public class SingleValueLegacyExtendedPropertyRequest extends BaseRequest<Single
      * @return the created SingleValueLegacyExtendedProperty
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SingleValueLegacyExtendedProperty post(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty) throws ClientException {
+    @Nullable
+    public SingleValueLegacyExtendedProperty post(@Nonnull final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty) throws ClientException {
         return send(HttpMethod.POST, newSingleValueLegacyExtendedProperty);
     }
 
@@ -117,7 +122,7 @@ public class SingleValueLegacyExtendedPropertyRequest extends BaseRequest<Single
      * @param newSingleValueLegacyExtendedProperty the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty, final ICallback<? super SingleValueLegacyExtendedProperty> callback) {
+    public void put(@Nonnull final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty, @Nonnull final ICallback<? super SingleValueLegacyExtendedProperty> callback) {
         send(HttpMethod.PUT, callback, newSingleValueLegacyExtendedProperty);
     }
 
@@ -128,7 +133,8 @@ public class SingleValueLegacyExtendedPropertyRequest extends BaseRequest<Single
      * @return the created SingleValueLegacyExtendedProperty
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SingleValueLegacyExtendedProperty put(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty) throws ClientException {
+    @Nullable
+    public SingleValueLegacyExtendedProperty put(@Nonnull final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty) throws ClientException {
         return send(HttpMethod.PUT, newSingleValueLegacyExtendedProperty);
     }
 
@@ -138,7 +144,8 @@ public class SingleValueLegacyExtendedPropertyRequest extends BaseRequest<Single
      * @param value the select clause
      * @return the updated request
      */
-     public SingleValueLegacyExtendedPropertyRequest select(final String value) {
+     @Nonnull
+     public SingleValueLegacyExtendedPropertyRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class SingleValueLegacyExtendedPropertyRequest extends BaseRequest<Single
      * @param value the expand clause
      * @return the updated request
      */
-     public SingleValueLegacyExtendedPropertyRequest expand(final String value) {
+     @Nonnull
+     public SingleValueLegacyExtendedPropertyRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

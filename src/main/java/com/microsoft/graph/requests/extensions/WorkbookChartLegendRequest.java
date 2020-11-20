@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.WorkbookChartLegend;
 import com.microsoft.graph.requests.extensions.WorkbookChartLegendFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,7 +31,7 @@ public class WorkbookChartLegendRequest extends BaseRequest<WorkbookChartLegend>
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartLegendRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartLegendRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChartLegend.class);
     }
 
@@ -38,7 +40,7 @@ public class WorkbookChartLegendRequest extends BaseRequest<WorkbookChartLegend>
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookChartLegend> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookChartLegend> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class WorkbookChartLegendRequest extends BaseRequest<WorkbookChartLegend>
      * @return the WorkbookChartLegend from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WorkbookChartLegend get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class WorkbookChartLegendRequest extends BaseRequest<WorkbookChartLegend>
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookChartLegend> callback) {
+    public void delete(@Nonnull final ICallback<? super WorkbookChartLegend> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class WorkbookChartLegendRequest extends BaseRequest<WorkbookChartLegend>
      * @param sourceWorkbookChartLegend the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookChartLegend sourceWorkbookChartLegend, final ICallback<? super WorkbookChartLegend> callback) {
+    public void patch(@Nonnull final WorkbookChartLegend sourceWorkbookChartLegend, @Nonnull final ICallback<? super WorkbookChartLegend> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartLegend);
     }
 
@@ -87,7 +90,8 @@ public class WorkbookChartLegendRequest extends BaseRequest<WorkbookChartLegend>
      * @return the updated WorkbookChartLegend
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartLegend patch(final WorkbookChartLegend sourceWorkbookChartLegend) throws ClientException {
+    @Nullable
+    public WorkbookChartLegend patch(@Nonnull final WorkbookChartLegend sourceWorkbookChartLegend) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookChartLegend);
     }
 
@@ -97,7 +101,7 @@ public class WorkbookChartLegendRequest extends BaseRequest<WorkbookChartLegend>
      * @param newWorkbookChartLegend the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookChartLegend newWorkbookChartLegend, final ICallback<? super WorkbookChartLegend> callback) {
+    public void post(@Nonnull final WorkbookChartLegend newWorkbookChartLegend, @Nonnull final ICallback<? super WorkbookChartLegend> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartLegend);
     }
 
@@ -108,7 +112,8 @@ public class WorkbookChartLegendRequest extends BaseRequest<WorkbookChartLegend>
      * @return the created WorkbookChartLegend
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartLegend post(final WorkbookChartLegend newWorkbookChartLegend) throws ClientException {
+    @Nullable
+    public WorkbookChartLegend post(@Nonnull final WorkbookChartLegend newWorkbookChartLegend) throws ClientException {
         return send(HttpMethod.POST, newWorkbookChartLegend);
     }
 
@@ -118,7 +123,7 @@ public class WorkbookChartLegendRequest extends BaseRequest<WorkbookChartLegend>
      * @param newWorkbookChartLegend the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookChartLegend newWorkbookChartLegend, final ICallback<? super WorkbookChartLegend> callback) {
+    public void put(@Nonnull final WorkbookChartLegend newWorkbookChartLegend, @Nonnull final ICallback<? super WorkbookChartLegend> callback) {
         send(HttpMethod.PUT, callback, newWorkbookChartLegend);
     }
 
@@ -129,7 +134,8 @@ public class WorkbookChartLegendRequest extends BaseRequest<WorkbookChartLegend>
      * @return the created WorkbookChartLegend
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartLegend put(final WorkbookChartLegend newWorkbookChartLegend) throws ClientException {
+    @Nullable
+    public WorkbookChartLegend put(@Nonnull final WorkbookChartLegend newWorkbookChartLegend) throws ClientException {
         return send(HttpMethod.PUT, newWorkbookChartLegend);
     }
 
@@ -139,7 +145,8 @@ public class WorkbookChartLegendRequest extends BaseRequest<WorkbookChartLegend>
      * @param value the select clause
      * @return the updated request
      */
-     public WorkbookChartLegendRequest select(final String value) {
+     @Nonnull
+     public WorkbookChartLegendRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -150,7 +157,8 @@ public class WorkbookChartLegendRequest extends BaseRequest<WorkbookChartLegend>
      * @param value the expand clause
      * @return the updated request
      */
-     public WorkbookChartLegendRequest expand(final String value) {
+     @Nonnull
+     public WorkbookChartLegendRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupSettingTemplate;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class GroupSettingTemplateRequest extends BaseRequest<GroupSettingTemplat
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupSettingTemplateRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupSettingTemplateRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupSettingTemplate.class);
     }
 
@@ -37,7 +39,7 @@ public class GroupSettingTemplateRequest extends BaseRequest<GroupSettingTemplat
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super GroupSettingTemplate> callback) {
+    public void get(@Nonnull final ICallback<? super GroupSettingTemplate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class GroupSettingTemplateRequest extends BaseRequest<GroupSettingTemplat
      * @return the GroupSettingTemplate from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public GroupSettingTemplate get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class GroupSettingTemplateRequest extends BaseRequest<GroupSettingTemplat
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super GroupSettingTemplate> callback) {
+    public void delete(@Nonnull final ICallback<? super GroupSettingTemplate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class GroupSettingTemplateRequest extends BaseRequest<GroupSettingTemplat
      * @param sourceGroupSettingTemplate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GroupSettingTemplate sourceGroupSettingTemplate, final ICallback<? super GroupSettingTemplate> callback) {
+    public void patch(@Nonnull final GroupSettingTemplate sourceGroupSettingTemplate, @Nonnull final ICallback<? super GroupSettingTemplate> callback) {
         send(HttpMethod.PATCH, callback, sourceGroupSettingTemplate);
     }
 
@@ -86,7 +89,8 @@ public class GroupSettingTemplateRequest extends BaseRequest<GroupSettingTemplat
      * @return the updated GroupSettingTemplate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupSettingTemplate patch(final GroupSettingTemplate sourceGroupSettingTemplate) throws ClientException {
+    @Nullable
+    public GroupSettingTemplate patch(@Nonnull final GroupSettingTemplate sourceGroupSettingTemplate) throws ClientException {
         return send(HttpMethod.PATCH, sourceGroupSettingTemplate);
     }
 
@@ -96,7 +100,7 @@ public class GroupSettingTemplateRequest extends BaseRequest<GroupSettingTemplat
      * @param newGroupSettingTemplate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GroupSettingTemplate newGroupSettingTemplate, final ICallback<? super GroupSettingTemplate> callback) {
+    public void post(@Nonnull final GroupSettingTemplate newGroupSettingTemplate, @Nonnull final ICallback<? super GroupSettingTemplate> callback) {
         send(HttpMethod.POST, callback, newGroupSettingTemplate);
     }
 
@@ -107,7 +111,8 @@ public class GroupSettingTemplateRequest extends BaseRequest<GroupSettingTemplat
      * @return the created GroupSettingTemplate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupSettingTemplate post(final GroupSettingTemplate newGroupSettingTemplate) throws ClientException {
+    @Nullable
+    public GroupSettingTemplate post(@Nonnull final GroupSettingTemplate newGroupSettingTemplate) throws ClientException {
         return send(HttpMethod.POST, newGroupSettingTemplate);
     }
 
@@ -117,7 +122,7 @@ public class GroupSettingTemplateRequest extends BaseRequest<GroupSettingTemplat
      * @param newGroupSettingTemplate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GroupSettingTemplate newGroupSettingTemplate, final ICallback<? super GroupSettingTemplate> callback) {
+    public void put(@Nonnull final GroupSettingTemplate newGroupSettingTemplate, @Nonnull final ICallback<? super GroupSettingTemplate> callback) {
         send(HttpMethod.PUT, callback, newGroupSettingTemplate);
     }
 
@@ -128,7 +133,8 @@ public class GroupSettingTemplateRequest extends BaseRequest<GroupSettingTemplat
      * @return the created GroupSettingTemplate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupSettingTemplate put(final GroupSettingTemplate newGroupSettingTemplate) throws ClientException {
+    @Nullable
+    public GroupSettingTemplate put(@Nonnull final GroupSettingTemplate newGroupSettingTemplate) throws ClientException {
         return send(HttpMethod.PUT, newGroupSettingTemplate);
     }
 
@@ -138,7 +144,8 @@ public class GroupSettingTemplateRequest extends BaseRequest<GroupSettingTemplat
      * @param value the select clause
      * @return the updated request
      */
-     public GroupSettingTemplateRequest select(final String value) {
+     @Nonnull
+     public GroupSettingTemplateRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class GroupSettingTemplateRequest extends BaseRequest<GroupSettingTemplat
      * @param value the expand clause
      * @return the updated request
      */
-     public GroupSettingTemplateRequest expand(final String value) {
+     @Nonnull
+     public GroupSettingTemplateRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

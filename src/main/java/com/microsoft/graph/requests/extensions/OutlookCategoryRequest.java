@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OutlookCategory;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class OutlookCategoryRequest extends BaseRequest<OutlookCategory> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OutlookCategoryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OutlookCategoryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OutlookCategory.class);
     }
 
@@ -37,7 +39,7 @@ public class OutlookCategoryRequest extends BaseRequest<OutlookCategory> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super OutlookCategory> callback) {
+    public void get(@Nonnull final ICallback<? super OutlookCategory> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class OutlookCategoryRequest extends BaseRequest<OutlookCategory> {
      * @return the OutlookCategory from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public OutlookCategory get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class OutlookCategoryRequest extends BaseRequest<OutlookCategory> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super OutlookCategory> callback) {
+    public void delete(@Nonnull final ICallback<? super OutlookCategory> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class OutlookCategoryRequest extends BaseRequest<OutlookCategory> {
      * @param sourceOutlookCategory the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OutlookCategory sourceOutlookCategory, final ICallback<? super OutlookCategory> callback) {
+    public void patch(@Nonnull final OutlookCategory sourceOutlookCategory, @Nonnull final ICallback<? super OutlookCategory> callback) {
         send(HttpMethod.PATCH, callback, sourceOutlookCategory);
     }
 
@@ -86,7 +89,8 @@ public class OutlookCategoryRequest extends BaseRequest<OutlookCategory> {
      * @return the updated OutlookCategory
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OutlookCategory patch(final OutlookCategory sourceOutlookCategory) throws ClientException {
+    @Nullable
+    public OutlookCategory patch(@Nonnull final OutlookCategory sourceOutlookCategory) throws ClientException {
         return send(HttpMethod.PATCH, sourceOutlookCategory);
     }
 
@@ -96,7 +100,7 @@ public class OutlookCategoryRequest extends BaseRequest<OutlookCategory> {
      * @param newOutlookCategory the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OutlookCategory newOutlookCategory, final ICallback<? super OutlookCategory> callback) {
+    public void post(@Nonnull final OutlookCategory newOutlookCategory, @Nonnull final ICallback<? super OutlookCategory> callback) {
         send(HttpMethod.POST, callback, newOutlookCategory);
     }
 
@@ -107,7 +111,8 @@ public class OutlookCategoryRequest extends BaseRequest<OutlookCategory> {
      * @return the created OutlookCategory
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OutlookCategory post(final OutlookCategory newOutlookCategory) throws ClientException {
+    @Nullable
+    public OutlookCategory post(@Nonnull final OutlookCategory newOutlookCategory) throws ClientException {
         return send(HttpMethod.POST, newOutlookCategory);
     }
 
@@ -117,7 +122,7 @@ public class OutlookCategoryRequest extends BaseRequest<OutlookCategory> {
      * @param newOutlookCategory the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OutlookCategory newOutlookCategory, final ICallback<? super OutlookCategory> callback) {
+    public void put(@Nonnull final OutlookCategory newOutlookCategory, @Nonnull final ICallback<? super OutlookCategory> callback) {
         send(HttpMethod.PUT, callback, newOutlookCategory);
     }
 
@@ -128,7 +133,8 @@ public class OutlookCategoryRequest extends BaseRequest<OutlookCategory> {
      * @return the created OutlookCategory
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OutlookCategory put(final OutlookCategory newOutlookCategory) throws ClientException {
+    @Nullable
+    public OutlookCategory put(@Nonnull final OutlookCategory newOutlookCategory) throws ClientException {
         return send(HttpMethod.PUT, newOutlookCategory);
     }
 
@@ -138,7 +144,8 @@ public class OutlookCategoryRequest extends BaseRequest<OutlookCategory> {
      * @param value the select clause
      * @return the updated request
      */
-     public OutlookCategoryRequest select(final String value) {
+     @Nonnull
+     public OutlookCategoryRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class OutlookCategoryRequest extends BaseRequest<OutlookCategory> {
      * @param value the expand clause
      * @return the updated request
      */
-     public OutlookCategoryRequest expand(final String value) {
+     @Nonnull
+     public OutlookCategoryRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

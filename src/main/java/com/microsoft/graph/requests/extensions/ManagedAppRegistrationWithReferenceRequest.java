@@ -14,6 +14,8 @@ import com.microsoft.graph.requests.extensions.ManagedAppOperationCollectionRequ
 import com.microsoft.graph.requests.extensions.ManagedAppOperationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseWithReferenceRequest;
@@ -35,7 +37,7 @@ public class ManagedAppRegistrationWithReferenceRequest extends BaseWithReferenc
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedAppRegistrationWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppRegistrationWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedAppRegistration.class);
     }
 
@@ -45,7 +47,8 @@ public class ManagedAppRegistrationWithReferenceRequest extends BaseWithReferenc
      * @param value the select clause
      * @return the updated request
      */
-    public ManagedAppRegistrationWithReferenceRequest select(final String value) {
+    @Nonnull
+    public ManagedAppRegistrationWithReferenceRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -56,7 +59,8 @@ public class ManagedAppRegistrationWithReferenceRequest extends BaseWithReferenc
      * @param value the expand clause
      * @return the updated request
      */
-    public ManagedAppRegistrationWithReferenceRequest expand(final String value) {
+    @Nonnull
+    public ManagedAppRegistrationWithReferenceRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }

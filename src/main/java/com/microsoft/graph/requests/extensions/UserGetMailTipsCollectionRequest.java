@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.MailTips;
 import java.util.EnumSet;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.UserGetMailTipsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserGetMailTipsCollectionResponse;
@@ -41,7 +43,7 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<Mail
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserGetMailTipsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserGetMailTipsCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserGetMailTipsCollectionResponse.class, UserGetMailTipsCollectionPage.class, UserGetMailTipsCollectionRequestBuilder.class);
         body = new UserGetMailTipsBody();
     }
@@ -51,7 +53,7 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<Mail
      * Invokes the method and calls the callback with the resulting collection of objects
      * @param callback a callback to be invoked with the resulting collection of objects
      */
-    public void post(final ICallback<? super UserGetMailTipsCollectionPage> callback) {
+    public void post(@Nonnull final ICallback<? super UserGetMailTipsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -69,6 +71,7 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<Mail
      * Invokes the method and returns the resulting collection of objects
      * @return a collection of objects returned by the method
      */
+    @Nullable
     public UserGetMailTipsCollectionPage post() throws ClientException {
         final UserGetMailTipsCollectionResponse response = post(body);
         return buildFromResponse(response);
@@ -81,7 +84,8 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<Mail
      * @param value the select clause
      * @return the updated request
      */
-    public UserGetMailTipsCollectionRequest select(final String value) {
+    @Nonnull
+    public UserGetMailTipsCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -92,6 +96,7 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<Mail
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public UserGetMailTipsCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -103,7 +108,8 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<Mail
      * @param value the expand clause
      * @return the updated request
      */
-    public UserGetMailTipsCollectionRequest expand(final String value) {
+    @Nonnull
+    public UserGetMailTipsCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -114,7 +120,8 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<Mail
      * @param value the filter clause
      * @return the updated request
      */
-    public UserGetMailTipsCollectionRequest filter(final String value) {
+    @Nonnull
+    public UserGetMailTipsCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -125,7 +132,8 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<Mail
      * @param value the order by clause
      * @return the updated request
      */
-    public UserGetMailTipsCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public UserGetMailTipsCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }

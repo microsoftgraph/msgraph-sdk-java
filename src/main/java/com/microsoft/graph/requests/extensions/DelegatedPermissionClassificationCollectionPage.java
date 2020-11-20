@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DelegatedPermissionClassification;
 import com.microsoft.graph.requests.extensions.DelegatedPermissionClassificationCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DelegatedPermissionClassificationCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class DelegatedPermissionClassificationCollectionPage extends BaseCollect
      * @param response the serialized DelegatedPermissionClassificationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DelegatedPermissionClassificationCollectionPage(final DelegatedPermissionClassificationCollectionResponse response, final DelegatedPermissionClassificationCollectionRequestBuilder builder) {
+    public DelegatedPermissionClassificationCollectionPage(@Nonnull final DelegatedPermissionClassificationCollectionResponse response, @Nonnull final DelegatedPermissionClassificationCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class DelegatedPermissionClassificationCollectionPage extends BaseCollect
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public DelegatedPermissionClassificationCollectionPage(final java.util.List<DelegatedPermissionClassification> pageContents, final DelegatedPermissionClassificationCollectionRequestBuilder nextRequestBuilder) {
+    public DelegatedPermissionClassificationCollectionPage(@Nonnull final java.util.List<DelegatedPermissionClassification> pageContents, @Nullable final DelegatedPermissionClassificationCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

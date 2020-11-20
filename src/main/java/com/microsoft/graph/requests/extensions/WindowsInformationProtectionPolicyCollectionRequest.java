@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceAppManagement;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class WindowsInformationProtectionPolicyCollectionRequest extends BaseCol
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsInformationProtectionPolicyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsInformationProtectionPolicyCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsInformationProtectionPolicyCollectionResponse.class, WindowsInformationProtectionPolicyCollectionPage.class, WindowsInformationProtectionPolicyCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class WindowsInformationProtectionPolicyCollectionRequest extends BaseCol
      * @param newWindowsInformationProtectionPolicy the WindowsInformationProtectionPolicy to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final WindowsInformationProtectionPolicy newWindowsInformationProtectionPolicy, final ICallback<? super WindowsInformationProtectionPolicy> callback) {
+    public void post(@Nonnull final WindowsInformationProtectionPolicy newWindowsInformationProtectionPolicy, @Nonnull final ICallback<? super WindowsInformationProtectionPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsInformationProtectionPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class WindowsInformationProtectionPolicyCollectionRequest extends BaseCol
      * @param newWindowsInformationProtectionPolicy the WindowsInformationProtectionPolicy to create
      * @return the newly created object
      */
-    public WindowsInformationProtectionPolicy post(final WindowsInformationProtectionPolicy newWindowsInformationProtectionPolicy) throws ClientException {
+    @Nonnull
+    public WindowsInformationProtectionPolicy post(@Nonnull final WindowsInformationProtectionPolicy newWindowsInformationProtectionPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WindowsInformationProtectionPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class WindowsInformationProtectionPolicyCollectionRequest extends BaseCol
      * @param value the expand clause
      * @return the updated request
      */
-    public WindowsInformationProtectionPolicyCollectionRequest expand(final String value) {
+    @Nonnull
+    public WindowsInformationProtectionPolicyCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class WindowsInformationProtectionPolicyCollectionRequest extends BaseCol
      * @param value the filter clause
      * @return the updated request
      */
-    public WindowsInformationProtectionPolicyCollectionRequest filter(final String value) {
+    @Nonnull
+    public WindowsInformationProtectionPolicyCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class WindowsInformationProtectionPolicyCollectionRequest extends BaseCol
      * @param value the order by clause
      * @return the updated request
      */
-    public WindowsInformationProtectionPolicyCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public WindowsInformationProtectionPolicyCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class WindowsInformationProtectionPolicyCollectionRequest extends BaseCol
      * @param value the select clause
      * @return the updated request
      */
-    public WindowsInformationProtectionPolicyCollectionRequest select(final String value) {
+    @Nonnull
+    public WindowsInformationProtectionPolicyCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class WindowsInformationProtectionPolicyCollectionRequest extends BaseCol
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public WindowsInformationProtectionPolicyCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class WindowsInformationProtectionPolicyCollectionRequest extends BaseCol
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public WindowsInformationProtectionPolicyCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class WindowsInformationProtectionPolicyCollectionRequest extends BaseCol
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public WindowsInformationProtectionPolicyCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public WindowsInformationProtectionPolicyCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

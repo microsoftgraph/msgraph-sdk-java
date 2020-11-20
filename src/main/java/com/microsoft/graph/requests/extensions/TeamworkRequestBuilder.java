@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.WorkforceIntegrationCollectionReq
 import com.microsoft.graph.requests.extensions.WorkforceIntegrationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -29,7 +31,7 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder<Teamwork> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamworkRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamworkRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +41,8 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder<Teamwork> {
      * @param requestOptions the options for this request
      * @return the TeamworkRequest instance
      */
-    public TeamworkRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public TeamworkRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,7 +52,8 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder<Teamwork> {
      * @param requestOptions the options for this request
      * @return the TeamworkRequest instance
      */
-    public TeamworkRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public TeamworkRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.TeamworkRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,6 +63,7 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder<Teamwork> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public WorkforceIntegrationCollectionRequestBuilder workforceIntegrations() {
         return new WorkforceIntegrationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("workforceIntegrations"), getClient(), null);
     }
@@ -69,7 +74,8 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder<Teamwork> {
      * @return the request builder
      * @param id the item identifier
      */
-    public WorkforceIntegrationRequestBuilder workforceIntegrations(final String id) {
+    @Nonnull
+    public WorkforceIntegrationRequestBuilder workforceIntegrations(@Nonnull final String id) {
         return new WorkforceIntegrationRequestBuilder(getRequestUrlWithAdditionalSegment("workforceIntegrations") + "/" + id, getClient(), null);
     }
 }

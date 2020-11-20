@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Organization;
 import com.microsoft.graph.requests.extensions.OrganizationCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.OrganizationCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class OrganizationCollectionPage extends BaseCollectionPage<Organization,
      * @param response the serialized OrganizationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public OrganizationCollectionPage(final OrganizationCollectionResponse response, final OrganizationCollectionRequestBuilder builder) {
+    public OrganizationCollectionPage(@Nonnull final OrganizationCollectionResponse response, @Nonnull final OrganizationCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class OrganizationCollectionPage extends BaseCollectionPage<Organization,
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public OrganizationCollectionPage(final java.util.List<Organization> pageContents, final OrganizationCollectionRequestBuilder nextRequestBuilder) {
+    public OrganizationCollectionPage(@Nonnull final java.util.List<Organization> pageContents, @Nullable final OrganizationCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

@@ -22,6 +22,9 @@
 
 package com.microsoft.graph.core;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.http.IHttpProvider;
 import com.microsoft.graph.logger.ILogger;
@@ -36,6 +39,7 @@ public interface IBaseClient {
      * 
      * @return the service root
      */
+    @Nonnull
     String getServiceRoot();
 
     /**
@@ -43,13 +47,14 @@ public interface IBaseClient {
      * 
      * @param value the service root
      */
-    void setServiceRoot(final String value);
+    void setServiceRoot(@Nonnull final String value);
 
     /**
      * Gets the executors
      * 
      * @return the executors
      */
+    @Nullable
     IExecutors getExecutors();
 
     /**
@@ -57,6 +62,7 @@ public interface IBaseClient {
      * 
      * @return the HTTP provider
      */
+    @Nullable
     IHttpProvider getHttpProvider();
 
     /**
@@ -64,6 +70,7 @@ public interface IBaseClient {
      * 
      * @return the logger
      */
+    @Nullable
     ILogger getLogger();
 
     /**
@@ -71,6 +78,7 @@ public interface IBaseClient {
      * 
      * @return the serializer
      */
+    @Nullable
     ISerializer getSerializer();
 
     /**

@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Post;
 import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseColl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SingleValueLegacyExtendedPropertyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SingleValueLegacyExtendedPropertyCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SingleValueLegacyExtendedPropertyCollectionResponse.class, SingleValueLegacyExtendedPropertyCollectionPage.class, SingleValueLegacyExtendedPropertyCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseColl
      * @param newSingleValueLegacyExtendedProperty the SingleValueLegacyExtendedProperty to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty, final ICallback<? super SingleValueLegacyExtendedProperty> callback) {
+    public void post(@Nonnull final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty, @Nonnull final ICallback<? super SingleValueLegacyExtendedProperty> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SingleValueLegacyExtendedPropertyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseColl
      * @param newSingleValueLegacyExtendedProperty the SingleValueLegacyExtendedProperty to create
      * @return the newly created object
      */
-    public SingleValueLegacyExtendedProperty post(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty) throws ClientException {
+    @Nonnull
+    public SingleValueLegacyExtendedProperty post(@Nonnull final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SingleValueLegacyExtendedPropertyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseColl
      * @param value the expand clause
      * @return the updated request
      */
-    public SingleValueLegacyExtendedPropertyCollectionRequest expand(final String value) {
+    @Nonnull
+    public SingleValueLegacyExtendedPropertyCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseColl
      * @param value the filter clause
      * @return the updated request
      */
-    public SingleValueLegacyExtendedPropertyCollectionRequest filter(final String value) {
+    @Nonnull
+    public SingleValueLegacyExtendedPropertyCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseColl
      * @param value the order by clause
      * @return the updated request
      */
-    public SingleValueLegacyExtendedPropertyCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public SingleValueLegacyExtendedPropertyCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseColl
      * @param value the select clause
      * @return the updated request
      */
-    public SingleValueLegacyExtendedPropertyCollectionRequest select(final String value) {
+    @Nonnull
+    public SingleValueLegacyExtendedPropertyCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseColl
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public SingleValueLegacyExtendedPropertyCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseColl
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public SingleValueLegacyExtendedPropertyCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseColl
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public SingleValueLegacyExtendedPropertyCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public SingleValueLegacyExtendedPropertyCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

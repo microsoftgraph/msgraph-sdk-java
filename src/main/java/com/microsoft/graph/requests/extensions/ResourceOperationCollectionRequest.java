@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.ResourceOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class ResourceOperationCollectionRequest extends BaseCollectionRequest<Re
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ResourceOperationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ResourceOperationCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ResourceOperationCollectionResponse.class, ResourceOperationCollectionPage.class, ResourceOperationCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class ResourceOperationCollectionRequest extends BaseCollectionRequest<Re
      * @param newResourceOperation the ResourceOperation to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final ResourceOperation newResourceOperation, final ICallback<? super ResourceOperation> callback) {
+    public void post(@Nonnull final ResourceOperation newResourceOperation, @Nonnull final ICallback<? super ResourceOperation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ResourceOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class ResourceOperationCollectionRequest extends BaseCollectionRequest<Re
      * @param newResourceOperation the ResourceOperation to create
      * @return the newly created object
      */
-    public ResourceOperation post(final ResourceOperation newResourceOperation) throws ClientException {
+    @Nonnull
+    public ResourceOperation post(@Nonnull final ResourceOperation newResourceOperation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ResourceOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class ResourceOperationCollectionRequest extends BaseCollectionRequest<Re
      * @param value the expand clause
      * @return the updated request
      */
-    public ResourceOperationCollectionRequest expand(final String value) {
+    @Nonnull
+    public ResourceOperationCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class ResourceOperationCollectionRequest extends BaseCollectionRequest<Re
      * @param value the filter clause
      * @return the updated request
      */
-    public ResourceOperationCollectionRequest filter(final String value) {
+    @Nonnull
+    public ResourceOperationCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class ResourceOperationCollectionRequest extends BaseCollectionRequest<Re
      * @param value the order by clause
      * @return the updated request
      */
-    public ResourceOperationCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ResourceOperationCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class ResourceOperationCollectionRequest extends BaseCollectionRequest<Re
      * @param value the select clause
      * @return the updated request
      */
-    public ResourceOperationCollectionRequest select(final String value) {
+    @Nonnull
+    public ResourceOperationCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class ResourceOperationCollectionRequest extends BaseCollectionRequest<Re
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ResourceOperationCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class ResourceOperationCollectionRequest extends BaseCollectionRequest<Re
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ResourceOperationCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class ResourceOperationCollectionRequest extends BaseCollectionRequest<Re
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ResourceOperationCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ResourceOperationCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

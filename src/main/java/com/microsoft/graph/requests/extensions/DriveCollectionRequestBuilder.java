@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Drive;
 import com.microsoft.graph.models.extensions.DriveItem;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DriveCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveRequestBuilder;
@@ -32,7 +34,7 @@ public class DriveCollectionRequestBuilder extends BaseCollectionRequestBuilder<
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DriveCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DriveRequestBuilder.class, DriveCollectionRequest.class);
     }
 

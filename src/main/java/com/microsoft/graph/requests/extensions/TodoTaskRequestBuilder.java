@@ -14,6 +14,8 @@ import com.microsoft.graph.requests.extensions.LinkedResourceCollectionRequestBu
 import com.microsoft.graph.requests.extensions.LinkedResourceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -31,7 +33,7 @@ public class TodoTaskRequestBuilder extends BaseRequestBuilder<TodoTask> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TodoTaskRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TodoTaskRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -41,7 +43,8 @@ public class TodoTaskRequestBuilder extends BaseRequestBuilder<TodoTask> {
      * @param requestOptions the options for this request
      * @return the TodoTaskRequest instance
      */
-    public TodoTaskRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public TodoTaskRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,7 +54,8 @@ public class TodoTaskRequestBuilder extends BaseRequestBuilder<TodoTask> {
      * @param requestOptions the options for this request
      * @return the TodoTaskRequest instance
      */
-    public TodoTaskRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public TodoTaskRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.TodoTaskRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -61,6 +65,7 @@ public class TodoTaskRequestBuilder extends BaseRequestBuilder<TodoTask> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public ExtensionCollectionRequestBuilder extensions() {
         return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
     }
@@ -71,7 +76,8 @@ public class TodoTaskRequestBuilder extends BaseRequestBuilder<TodoTask> {
      * @return the request builder
      * @param id the item identifier
      */
-    public ExtensionRequestBuilder extensions(final String id) {
+    @Nonnull
+    public ExtensionRequestBuilder extensions(@Nonnull final String id) {
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
     /**
@@ -79,6 +85,7 @@ public class TodoTaskRequestBuilder extends BaseRequestBuilder<TodoTask> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public LinkedResourceCollectionRequestBuilder linkedResources() {
         return new LinkedResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("linkedResources"), getClient(), null);
     }
@@ -89,7 +96,8 @@ public class TodoTaskRequestBuilder extends BaseRequestBuilder<TodoTask> {
      * @return the request builder
      * @param id the item identifier
      */
-    public LinkedResourceRequestBuilder linkedResources(final String id) {
+    @Nonnull
+    public LinkedResourceRequestBuilder linkedResources(@Nonnull final String id) {
         return new LinkedResourceRequestBuilder(getRequestUrlWithAdditionalSegment("linkedResources") + "/" + id, getClient(), null);
     }
 }

@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Message;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.MessageDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MessageDeltaCollectionRequest;
@@ -32,7 +34,7 @@ public class MessageDeltaCollectionRequestBuilder extends BaseFunctionCollection
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MessageDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MessageDeltaCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MessageDeltaCollectionRequestBuilder.class, MessageDeltaCollectionRequest.class);
     }
     
@@ -42,8 +44,9 @@ public class MessageDeltaCollectionRequestBuilder extends BaseFunctionCollection
      * @param requestOptions the options for this request
      * @return the MessageDeltaCollectionRequest instance
      */
-     @Override
-    public MessageDeltaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Override
+    @Nonnull
+    public MessageDeltaCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final MessageDeltaCollectionRequest request = super.buildRequest(requestOptions);
 
       for (com.microsoft.graph.options.FunctionOption option : functionOptions) {

@@ -16,6 +16,8 @@ import com.microsoft.graph.requests.extensions.PermissionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -33,7 +35,7 @@ public class SharedDriveItemRequestBuilder extends BaseRequestBuilder<SharedDriv
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SharedDriveItemRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SharedDriveItemRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -43,7 +45,8 @@ public class SharedDriveItemRequestBuilder extends BaseRequestBuilder<SharedDriv
      * @param requestOptions the options for this request
      * @return the SharedDriveItemRequest instance
      */
-    public SharedDriveItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public SharedDriveItemRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -53,7 +56,8 @@ public class SharedDriveItemRequestBuilder extends BaseRequestBuilder<SharedDriv
      * @param requestOptions the options for this request
      * @return the SharedDriveItemRequest instance
      */
-    public SharedDriveItemRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public SharedDriveItemRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.SharedDriveItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -64,6 +68,7 @@ public class SharedDriveItemRequestBuilder extends BaseRequestBuilder<SharedDriv
      *
      * @return the UserWithReferenceRequestBuilder instance
      */
+    @Nonnull
     public UserWithReferenceRequestBuilder createdByUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
     }
@@ -73,6 +78,7 @@ public class SharedDriveItemRequestBuilder extends BaseRequestBuilder<SharedDriv
      *
      * @return the UserWithReferenceRequestBuilder instance
      */
+    @Nonnull
     public UserWithReferenceRequestBuilder lastModifiedByUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
     }
@@ -82,6 +88,7 @@ public class SharedDriveItemRequestBuilder extends BaseRequestBuilder<SharedDriv
      *
      * @return the DriveItemRequestBuilder instance
      */
+    @Nonnull
     public DriveItemRequestBuilder driveItem() {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("driveItem"), getClient(), null);
     }
@@ -90,6 +97,7 @@ public class SharedDriveItemRequestBuilder extends BaseRequestBuilder<SharedDriv
      *
      * @return the collection request builder
      */
+    @Nonnull
     public DriveItemCollectionRequestBuilder items() {
         return new DriveItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
     }
@@ -100,7 +108,8 @@ public class SharedDriveItemRequestBuilder extends BaseRequestBuilder<SharedDriv
      * @return the request builder
      * @param id the item identifier
      */
-    public DriveItemRequestBuilder items(final String id) {
+    @Nonnull
+    public DriveItemRequestBuilder items(@Nonnull final String id) {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("items") + "/" + id, getClient(), null);
     }
 
@@ -109,6 +118,7 @@ public class SharedDriveItemRequestBuilder extends BaseRequestBuilder<SharedDriv
      *
      * @return the ListRequestBuilder instance
      */
+    @Nonnull
     public ListRequestBuilder list() {
         return new ListRequestBuilder(getRequestUrlWithAdditionalSegment("list"), getClient(), null);
     }
@@ -118,6 +128,7 @@ public class SharedDriveItemRequestBuilder extends BaseRequestBuilder<SharedDriv
      *
      * @return the ListItemRequestBuilder instance
      */
+    @Nonnull
     public ListItemRequestBuilder listItem() {
         return new ListItemRequestBuilder(getRequestUrlWithAdditionalSegment("listItem"), getClient(), null);
     }
@@ -127,6 +138,7 @@ public class SharedDriveItemRequestBuilder extends BaseRequestBuilder<SharedDriv
      *
      * @return the PermissionRequestBuilder instance
      */
+    @Nonnull
     public PermissionRequestBuilder permission() {
         return new PermissionRequestBuilder(getRequestUrlWithAdditionalSegment("permission"), getClient(), null);
     }
@@ -136,6 +148,7 @@ public class SharedDriveItemRequestBuilder extends BaseRequestBuilder<SharedDriv
      *
      * @return the DriveItemRequestBuilder instance
      */
+    @Nonnull
     public DriveItemRequestBuilder root() {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("root"), getClient(), null);
     }
@@ -145,6 +158,7 @@ public class SharedDriveItemRequestBuilder extends BaseRequestBuilder<SharedDriv
      *
      * @return the SiteRequestBuilder instance
      */
+    @Nonnull
     public SiteRequestBuilder site() {
         return new SiteRequestBuilder(getRequestUrlWithAdditionalSegment("site"), getClient(), null);
     }

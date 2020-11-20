@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.ListItemGetActivitiesByIntervalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListItemGetActivitiesByIntervalCollectionRequest;
@@ -32,7 +34,7 @@ public class ListItemGetActivitiesByIntervalCollectionRequestBuilder extends Bas
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ListItemGetActivitiesByIntervalCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ListItemGetActivitiesByIntervalCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ListItemGetActivitiesByIntervalCollectionRequestBuilder.class, ListItemGetActivitiesByIntervalCollectionRequest.class);
     }
     /**
@@ -45,7 +47,7 @@ public class ListItemGetActivitiesByIntervalCollectionRequestBuilder extends Bas
      * @param endDateTime the endDateTime
      * @param interval the interval
      */
-    public ListItemGetActivitiesByIntervalCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String startDateTime, final String endDateTime, final String interval) {
+    public ListItemGetActivitiesByIntervalCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final String startDateTime, @Nullable final String endDateTime, @Nullable final String interval) {
         super(requestUrl, client, requestOptions, ListItemGetActivitiesByIntervalCollectionRequestBuilder.class, ListItemGetActivitiesByIntervalCollectionRequest.class);
      	 if(startDateTime!=null){
 			functionOptions.add(new com.microsoft.graph.options.FunctionOption("startDateTime", startDateTime));
@@ -64,8 +66,9 @@ public class ListItemGetActivitiesByIntervalCollectionRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @return the ListItemGetActivitiesByIntervalCollectionRequest instance
      */
-     @Override
-    public ListItemGetActivitiesByIntervalCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Override
+    @Nonnull
+    public ListItemGetActivitiesByIntervalCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final ListItemGetActivitiesByIntervalCollectionRequest request = super.buildRequest(requestOptions);
 
       for (com.microsoft.graph.options.FunctionOption option : functionOptions) {

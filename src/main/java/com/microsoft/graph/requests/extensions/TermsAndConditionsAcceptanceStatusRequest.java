@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.TermsAndConditionsAcceptanceStatus;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,7 +31,7 @@ public class TermsAndConditionsAcceptanceStatusRequest extends BaseRequest<Terms
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TermsAndConditionsAcceptanceStatusRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TermsAndConditionsAcceptanceStatusRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TermsAndConditionsAcceptanceStatus.class);
     }
 
@@ -38,7 +40,7 @@ public class TermsAndConditionsAcceptanceStatusRequest extends BaseRequest<Terms
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super TermsAndConditionsAcceptanceStatus> callback) {
+    public void get(@Nonnull final ICallback<? super TermsAndConditionsAcceptanceStatus> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class TermsAndConditionsAcceptanceStatusRequest extends BaseRequest<Terms
      * @return the TermsAndConditionsAcceptanceStatus from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public TermsAndConditionsAcceptanceStatus get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class TermsAndConditionsAcceptanceStatusRequest extends BaseRequest<Terms
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super TermsAndConditionsAcceptanceStatus> callback) {
+    public void delete(@Nonnull final ICallback<? super TermsAndConditionsAcceptanceStatus> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class TermsAndConditionsAcceptanceStatusRequest extends BaseRequest<Terms
      * @param sourceTermsAndConditionsAcceptanceStatus the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TermsAndConditionsAcceptanceStatus sourceTermsAndConditionsAcceptanceStatus, final ICallback<? super TermsAndConditionsAcceptanceStatus> callback) {
+    public void patch(@Nonnull final TermsAndConditionsAcceptanceStatus sourceTermsAndConditionsAcceptanceStatus, @Nonnull final ICallback<? super TermsAndConditionsAcceptanceStatus> callback) {
         send(HttpMethod.PATCH, callback, sourceTermsAndConditionsAcceptanceStatus);
     }
 
@@ -87,7 +90,8 @@ public class TermsAndConditionsAcceptanceStatusRequest extends BaseRequest<Terms
      * @return the updated TermsAndConditionsAcceptanceStatus
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TermsAndConditionsAcceptanceStatus patch(final TermsAndConditionsAcceptanceStatus sourceTermsAndConditionsAcceptanceStatus) throws ClientException {
+    @Nullable
+    public TermsAndConditionsAcceptanceStatus patch(@Nonnull final TermsAndConditionsAcceptanceStatus sourceTermsAndConditionsAcceptanceStatus) throws ClientException {
         return send(HttpMethod.PATCH, sourceTermsAndConditionsAcceptanceStatus);
     }
 
@@ -97,7 +101,7 @@ public class TermsAndConditionsAcceptanceStatusRequest extends BaseRequest<Terms
      * @param newTermsAndConditionsAcceptanceStatus the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus, final ICallback<? super TermsAndConditionsAcceptanceStatus> callback) {
+    public void post(@Nonnull final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus, @Nonnull final ICallback<? super TermsAndConditionsAcceptanceStatus> callback) {
         send(HttpMethod.POST, callback, newTermsAndConditionsAcceptanceStatus);
     }
 
@@ -108,7 +112,8 @@ public class TermsAndConditionsAcceptanceStatusRequest extends BaseRequest<Terms
      * @return the created TermsAndConditionsAcceptanceStatus
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TermsAndConditionsAcceptanceStatus post(final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus) throws ClientException {
+    @Nullable
+    public TermsAndConditionsAcceptanceStatus post(@Nonnull final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus) throws ClientException {
         return send(HttpMethod.POST, newTermsAndConditionsAcceptanceStatus);
     }
 
@@ -118,7 +123,7 @@ public class TermsAndConditionsAcceptanceStatusRequest extends BaseRequest<Terms
      * @param newTermsAndConditionsAcceptanceStatus the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus, final ICallback<? super TermsAndConditionsAcceptanceStatus> callback) {
+    public void put(@Nonnull final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus, @Nonnull final ICallback<? super TermsAndConditionsAcceptanceStatus> callback) {
         send(HttpMethod.PUT, callback, newTermsAndConditionsAcceptanceStatus);
     }
 
@@ -129,7 +134,8 @@ public class TermsAndConditionsAcceptanceStatusRequest extends BaseRequest<Terms
      * @return the created TermsAndConditionsAcceptanceStatus
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TermsAndConditionsAcceptanceStatus put(final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus) throws ClientException {
+    @Nullable
+    public TermsAndConditionsAcceptanceStatus put(@Nonnull final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus) throws ClientException {
         return send(HttpMethod.PUT, newTermsAndConditionsAcceptanceStatus);
     }
 
@@ -139,7 +145,8 @@ public class TermsAndConditionsAcceptanceStatusRequest extends BaseRequest<Terms
      * @param value the select clause
      * @return the updated request
      */
-     public TermsAndConditionsAcceptanceStatusRequest select(final String value) {
+     @Nonnull
+     public TermsAndConditionsAcceptanceStatusRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -150,7 +157,8 @@ public class TermsAndConditionsAcceptanceStatusRequest extends BaseRequest<Terms
      * @param value the expand clause
      * @return the updated request
      */
-     public TermsAndConditionsAcceptanceStatusRequest expand(final String value) {
+     @Nonnull
+     public TermsAndConditionsAcceptanceStatusRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.EducationUser;
 import com.microsoft.graph.models.extensions.EducationSchool;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.EducationSchoolWithReferenceRequest;
 import com.microsoft.graph.requests.extensions.EducationSchoolReferenceRequestBuilder;
@@ -38,7 +40,7 @@ public class EducationSchoolCollectionReferenceRequest extends BaseCollectionWit
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationSchoolCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationSchoolCollectionReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EducationSchoolCollectionResponse.class, EducationSchoolCollectionWithReferencesPage.class, EducationSchoolCollectionWithReferencesRequestBuilder.class);
     }
 
@@ -47,7 +49,7 @@ public class EducationSchoolCollectionReferenceRequest extends BaseCollectionWit
      * @param newEducationSchool the EducationSchool to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final EducationSchool newEducationSchool, final ICallback<? super EducationSchool> callback) {
+    public void post(@Nonnull final EducationSchool newEducationSchool, @Nonnull final ICallback<? super EducationSchool> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/education/schools/" + newEducationSchool.id);
         new EducationSchoolWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -60,7 +62,8 @@ public class EducationSchoolCollectionReferenceRequest extends BaseCollectionWit
      * @param newEducationSchool the EducationSchool to create
      * @return the newly created object
      */
-    public EducationSchool post(final EducationSchool newEducationSchool) throws ClientException {
+    @Nonnull
+    public EducationSchool post(@Nonnull final EducationSchool newEducationSchool) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/education/schools/" + newEducationSchool.id);
         return new EducationSchoolWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
@@ -73,7 +76,8 @@ public class EducationSchoolCollectionReferenceRequest extends BaseCollectionWit
      * @param value the expand clause
      * @return the updated request
      */
-    public EducationSchoolCollectionReferenceRequest expand(final String value) {
+    @Nonnull
+    public EducationSchoolCollectionReferenceRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -84,7 +88,8 @@ public class EducationSchoolCollectionReferenceRequest extends BaseCollectionWit
      * @param value the filter clause
      * @return the updated request
      */
-    public EducationSchoolCollectionReferenceRequest filter(final String value) {
+    @Nonnull
+    public EducationSchoolCollectionReferenceRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -95,7 +100,8 @@ public class EducationSchoolCollectionReferenceRequest extends BaseCollectionWit
      * @param value the sort clause
      * @return the updated request
      */
-    public EducationSchoolCollectionReferenceRequest orderBy(final String value) {
+    @Nonnull
+    public EducationSchoolCollectionReferenceRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -106,7 +112,8 @@ public class EducationSchoolCollectionReferenceRequest extends BaseCollectionWit
      * @param value the select clause
      * @return the updated request
      */
-    public EducationSchoolCollectionReferenceRequest select(final String value) {
+    @Nonnull
+    public EducationSchoolCollectionReferenceRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -117,6 +124,7 @@ public class EducationSchoolCollectionReferenceRequest extends BaseCollectionWit
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public EducationSchoolCollectionReferenceRequest top(final int value) {
         addTopOption(value);
         return this;

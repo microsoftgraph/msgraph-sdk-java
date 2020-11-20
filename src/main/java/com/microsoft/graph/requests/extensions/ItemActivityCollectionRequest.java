@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ItemActivityStat;
 import com.microsoft.graph.models.extensions.ItemActivity;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class ItemActivityCollectionRequest extends BaseCollectionRequest<ItemAct
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ItemActivityCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ItemActivityCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ItemActivityCollectionResponse.class, ItemActivityCollectionPage.class, ItemActivityCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class ItemActivityCollectionRequest extends BaseCollectionRequest<ItemAct
      * @param newItemActivity the ItemActivity to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final ItemActivity newItemActivity, final ICallback<? super ItemActivity> callback) {
+    public void post(@Nonnull final ItemActivity newItemActivity, @Nonnull final ICallback<? super ItemActivity> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ItemActivityRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class ItemActivityCollectionRequest extends BaseCollectionRequest<ItemAct
      * @param newItemActivity the ItemActivity to create
      * @return the newly created object
      */
-    public ItemActivity post(final ItemActivity newItemActivity) throws ClientException {
+    @Nonnull
+    public ItemActivity post(@Nonnull final ItemActivity newItemActivity) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ItemActivityRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class ItemActivityCollectionRequest extends BaseCollectionRequest<ItemAct
      * @param value the expand clause
      * @return the updated request
      */
-    public ItemActivityCollectionRequest expand(final String value) {
+    @Nonnull
+    public ItemActivityCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class ItemActivityCollectionRequest extends BaseCollectionRequest<ItemAct
      * @param value the filter clause
      * @return the updated request
      */
-    public ItemActivityCollectionRequest filter(final String value) {
+    @Nonnull
+    public ItemActivityCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class ItemActivityCollectionRequest extends BaseCollectionRequest<ItemAct
      * @param value the order by clause
      * @return the updated request
      */
-    public ItemActivityCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ItemActivityCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class ItemActivityCollectionRequest extends BaseCollectionRequest<ItemAct
      * @param value the select clause
      * @return the updated request
      */
-    public ItemActivityCollectionRequest select(final String value) {
+    @Nonnull
+    public ItemActivityCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class ItemActivityCollectionRequest extends BaseCollectionRequest<ItemAct
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ItemActivityCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class ItemActivityCollectionRequest extends BaseCollectionRequest<ItemAct
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ItemActivityCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class ItemActivityCollectionRequest extends BaseCollectionRequest<ItemAct
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ItemActivityCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ItemActivityCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

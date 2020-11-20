@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.MobileAppAssignment;
 import com.microsoft.graph.requests.extensions.MobileAppAssignmentCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.MobileAppAssignmentCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class MobileAppAssignmentCollectionPage extends BaseCollectionPage<Mobile
      * @param response the serialized MobileAppAssignmentCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public MobileAppAssignmentCollectionPage(final MobileAppAssignmentCollectionResponse response, final MobileAppAssignmentCollectionRequestBuilder builder) {
+    public MobileAppAssignmentCollectionPage(@Nonnull final MobileAppAssignmentCollectionResponse response, @Nonnull final MobileAppAssignmentCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class MobileAppAssignmentCollectionPage extends BaseCollectionPage<Mobile
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public MobileAppAssignmentCollectionPage(final java.util.List<MobileAppAssignment> pageContents, final MobileAppAssignmentCollectionRequestBuilder nextRequestBuilder) {
+    public MobileAppAssignmentCollectionPage(@Nonnull final java.util.List<MobileAppAssignment> pageContents, @Nullable final MobileAppAssignmentCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

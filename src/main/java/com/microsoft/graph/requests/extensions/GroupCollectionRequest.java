@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.models.extensions.AssignedLicense;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class GroupCollectionRequest extends BaseCollectionRequest<Group, GroupCo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupCollectionResponse.class, GroupCollectionPage.class, GroupCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class GroupCollectionRequest extends BaseCollectionRequest<Group, GroupCo
      * @param newGroup the Group to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final Group newGroup, final ICallback<? super Group> callback) {
+    public void post(@Nonnull final Group newGroup, @Nonnull final ICallback<? super Group> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class GroupCollectionRequest extends BaseCollectionRequest<Group, GroupCo
      * @param newGroup the Group to create
      * @return the newly created object
      */
-    public Group post(final Group newGroup) throws ClientException {
+    @Nonnull
+    public Group post(@Nonnull final Group newGroup) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new GroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class GroupCollectionRequest extends BaseCollectionRequest<Group, GroupCo
      * @param value the expand clause
      * @return the updated request
      */
-    public GroupCollectionRequest expand(final String value) {
+    @Nonnull
+    public GroupCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class GroupCollectionRequest extends BaseCollectionRequest<Group, GroupCo
      * @param value the filter clause
      * @return the updated request
      */
-    public GroupCollectionRequest filter(final String value) {
+    @Nonnull
+    public GroupCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class GroupCollectionRequest extends BaseCollectionRequest<Group, GroupCo
      * @param value the order by clause
      * @return the updated request
      */
-    public GroupCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public GroupCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class GroupCollectionRequest extends BaseCollectionRequest<Group, GroupCo
      * @param value the select clause
      * @return the updated request
      */
-    public GroupCollectionRequest select(final String value) {
+    @Nonnull
+    public GroupCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class GroupCollectionRequest extends BaseCollectionRequest<Group, GroupCo
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public GroupCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class GroupCollectionRequest extends BaseCollectionRequest<Group, GroupCo
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public GroupCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class GroupCollectionRequest extends BaseCollectionRequest<Group, GroupCo
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public GroupCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public GroupCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

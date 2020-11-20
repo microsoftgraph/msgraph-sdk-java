@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Trending;
 import com.microsoft.graph.requests.extensions.TrendingCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.TrendingCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class TrendingCollectionPage extends BaseCollectionPage<Trending, Trendin
      * @param response the serialized TrendingCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TrendingCollectionPage(final TrendingCollectionResponse response, final TrendingCollectionRequestBuilder builder) {
+    public TrendingCollectionPage(@Nonnull final TrendingCollectionResponse response, @Nonnull final TrendingCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class TrendingCollectionPage extends BaseCollectionPage<Trending, Trendin
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public TrendingCollectionPage(final java.util.List<Trending> pageContents, final TrendingCollectionRequestBuilder nextRequestBuilder) {
+    public TrendingCollectionPage(@Nonnull final java.util.List<Trending> pageContents, @Nullable final TrendingCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

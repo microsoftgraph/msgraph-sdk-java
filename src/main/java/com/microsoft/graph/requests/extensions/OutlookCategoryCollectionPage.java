@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.OutlookCategory;
 import com.microsoft.graph.requests.extensions.OutlookCategoryCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.OutlookCategoryCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class OutlookCategoryCollectionPage extends BaseCollectionPage<OutlookCat
      * @param response the serialized OutlookCategoryCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public OutlookCategoryCollectionPage(final OutlookCategoryCollectionResponse response, final OutlookCategoryCollectionRequestBuilder builder) {
+    public OutlookCategoryCollectionPage(@Nonnull final OutlookCategoryCollectionResponse response, @Nonnull final OutlookCategoryCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class OutlookCategoryCollectionPage extends BaseCollectionPage<OutlookCat
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public OutlookCategoryCollectionPage(final java.util.List<OutlookCategory> pageContents, final OutlookCategoryCollectionRequestBuilder nextRequestBuilder) {
+    public OutlookCategoryCollectionPage(@Nonnull final java.util.List<OutlookCategory> pageContents, @Nullable final OutlookCategoryCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

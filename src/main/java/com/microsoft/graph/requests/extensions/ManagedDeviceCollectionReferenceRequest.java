@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.models.extensions.UpdateWindowsDeviceAccountActionParameter;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.ManagedDeviceWithReferenceRequest;
 import com.microsoft.graph.requests.extensions.ManagedDeviceReferenceRequestBuilder;
@@ -39,7 +41,7 @@ public class ManagedDeviceCollectionReferenceRequest extends BaseCollectionWithR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceCollectionReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedDeviceCollectionResponse.class, ManagedDeviceCollectionWithReferencesPage.class, ManagedDeviceCollectionWithReferencesRequestBuilder.class);
     }
 
@@ -48,7 +50,7 @@ public class ManagedDeviceCollectionReferenceRequest extends BaseCollectionWithR
      * @param newManagedDevice the ManagedDevice to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final ManagedDevice newManagedDevice, final ICallback<? super ManagedDevice> callback) {
+    public void post(@Nonnull final ManagedDevice newManagedDevice, @Nonnull final ICallback<? super ManagedDevice> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/me/managedDevices/" + newManagedDevice.id);
         new ManagedDeviceWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -61,7 +63,8 @@ public class ManagedDeviceCollectionReferenceRequest extends BaseCollectionWithR
      * @param newManagedDevice the ManagedDevice to create
      * @return the newly created object
      */
-    public ManagedDevice post(final ManagedDevice newManagedDevice) throws ClientException {
+    @Nonnull
+    public ManagedDevice post(@Nonnull final ManagedDevice newManagedDevice) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/me/managedDevices/" + newManagedDevice.id);
         return new ManagedDeviceWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
@@ -74,7 +77,8 @@ public class ManagedDeviceCollectionReferenceRequest extends BaseCollectionWithR
      * @param value the expand clause
      * @return the updated request
      */
-    public ManagedDeviceCollectionReferenceRequest expand(final String value) {
+    @Nonnull
+    public ManagedDeviceCollectionReferenceRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -85,7 +89,8 @@ public class ManagedDeviceCollectionReferenceRequest extends BaseCollectionWithR
      * @param value the filter clause
      * @return the updated request
      */
-    public ManagedDeviceCollectionReferenceRequest filter(final String value) {
+    @Nonnull
+    public ManagedDeviceCollectionReferenceRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -96,7 +101,8 @@ public class ManagedDeviceCollectionReferenceRequest extends BaseCollectionWithR
      * @param value the sort clause
      * @return the updated request
      */
-    public ManagedDeviceCollectionReferenceRequest orderBy(final String value) {
+    @Nonnull
+    public ManagedDeviceCollectionReferenceRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -107,7 +113,8 @@ public class ManagedDeviceCollectionReferenceRequest extends BaseCollectionWithR
      * @param value the select clause
      * @return the updated request
      */
-    public ManagedDeviceCollectionReferenceRequest select(final String value) {
+    @Nonnull
+    public ManagedDeviceCollectionReferenceRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -118,6 +125,7 @@ public class ManagedDeviceCollectionReferenceRequest extends BaseCollectionWithR
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ManagedDeviceCollectionReferenceRequest top(final int value) {
         addTopOption(value);
         return this;

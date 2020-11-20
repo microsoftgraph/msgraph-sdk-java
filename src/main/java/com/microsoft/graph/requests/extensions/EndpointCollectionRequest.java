@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.Endpoint;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class EndpointCollectionRequest extends BaseCollectionRequest<Endpoint, E
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EndpointCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EndpointCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EndpointCollectionResponse.class, EndpointCollectionPage.class, EndpointCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class EndpointCollectionRequest extends BaseCollectionRequest<Endpoint, E
      * @param newEndpoint the Endpoint to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final Endpoint newEndpoint, final ICallback<? super Endpoint> callback) {
+    public void post(@Nonnull final Endpoint newEndpoint, @Nonnull final ICallback<? super Endpoint> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EndpointRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class EndpointCollectionRequest extends BaseCollectionRequest<Endpoint, E
      * @param newEndpoint the Endpoint to create
      * @return the newly created object
      */
-    public Endpoint post(final Endpoint newEndpoint) throws ClientException {
+    @Nonnull
+    public Endpoint post(@Nonnull final Endpoint newEndpoint) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EndpointRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class EndpointCollectionRequest extends BaseCollectionRequest<Endpoint, E
      * @param value the expand clause
      * @return the updated request
      */
-    public EndpointCollectionRequest expand(final String value) {
+    @Nonnull
+    public EndpointCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class EndpointCollectionRequest extends BaseCollectionRequest<Endpoint, E
      * @param value the filter clause
      * @return the updated request
      */
-    public EndpointCollectionRequest filter(final String value) {
+    @Nonnull
+    public EndpointCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class EndpointCollectionRequest extends BaseCollectionRequest<Endpoint, E
      * @param value the order by clause
      * @return the updated request
      */
-    public EndpointCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public EndpointCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class EndpointCollectionRequest extends BaseCollectionRequest<Endpoint, E
      * @param value the select clause
      * @return the updated request
      */
-    public EndpointCollectionRequest select(final String value) {
+    @Nonnull
+    public EndpointCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class EndpointCollectionRequest extends BaseCollectionRequest<Endpoint, E
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public EndpointCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class EndpointCollectionRequest extends BaseCollectionRequest<Endpoint, E
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public EndpointCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class EndpointCollectionRequest extends BaseCollectionRequest<Endpoint, E
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public EndpointCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public EndpointCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

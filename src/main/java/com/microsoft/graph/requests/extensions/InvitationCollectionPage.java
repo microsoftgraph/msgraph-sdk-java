@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Invitation;
 import com.microsoft.graph.requests.extensions.InvitationCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.InvitationCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class InvitationCollectionPage extends BaseCollectionPage<Invitation, Inv
      * @param response the serialized InvitationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public InvitationCollectionPage(final InvitationCollectionResponse response, final InvitationCollectionRequestBuilder builder) {
+    public InvitationCollectionPage(@Nonnull final InvitationCollectionResponse response, @Nonnull final InvitationCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class InvitationCollectionPage extends BaseCollectionPage<Invitation, Inv
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public InvitationCollectionPage(final java.util.List<Invitation> pageContents, final InvitationCollectionRequestBuilder nextRequestBuilder) {
+    public InvitationCollectionPage(@Nonnull final java.util.List<Invitation> pageContents, @Nullable final InvitationCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

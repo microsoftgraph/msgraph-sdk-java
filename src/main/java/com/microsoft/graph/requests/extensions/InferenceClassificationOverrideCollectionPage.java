@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.InferenceClassificationOverride;
 import com.microsoft.graph.requests.extensions.InferenceClassificationOverrideCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.InferenceClassificationOverrideCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class InferenceClassificationOverrideCollectionPage extends BaseCollectio
      * @param response the serialized InferenceClassificationOverrideCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public InferenceClassificationOverrideCollectionPage(final InferenceClassificationOverrideCollectionResponse response, final InferenceClassificationOverrideCollectionRequestBuilder builder) {
+    public InferenceClassificationOverrideCollectionPage(@Nonnull final InferenceClassificationOverrideCollectionResponse response, @Nonnull final InferenceClassificationOverrideCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class InferenceClassificationOverrideCollectionPage extends BaseCollectio
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public InferenceClassificationOverrideCollectionPage(final java.util.List<InferenceClassificationOverride> pageContents, final InferenceClassificationOverrideCollectionRequestBuilder nextRequestBuilder) {
+    public InferenceClassificationOverrideCollectionPage(@Nonnull final java.util.List<InferenceClassificationOverride> pageContents, @Nullable final InferenceClassificationOverrideCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

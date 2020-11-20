@@ -15,6 +15,8 @@ import com.microsoft.graph.requests.extensions.EducationSchoolRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseReferenceRequest;
@@ -35,7 +37,7 @@ public class EducationUserReferenceRequest extends BaseReferenceRequest<Educatio
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationUserReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationUserReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EducationUser.class);
     }
 
@@ -45,7 +47,8 @@ public class EducationUserReferenceRequest extends BaseReferenceRequest<Educatio
      * @param value the select clause
      * @return the updated request
      */
-    public EducationUserReferenceRequest select(final String value) {
+    @Nonnull
+    public EducationUserReferenceRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -56,7 +59,8 @@ public class EducationUserReferenceRequest extends BaseReferenceRequest<Educatio
      * @param value the expand clause
      * @return the updated request
      */
-    public EducationUserReferenceRequest expand(final String value) {
+    @Nonnull
+    public EducationUserReferenceRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -66,7 +70,7 @@ public class EducationUserReferenceRequest extends BaseReferenceRequest<Educatio
      * @param srcEducationUser the EducationUser reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(EducationUser srcEducationUser, final ICallback<? super EducationUser> callback) {
+    public void put(@Nonnull final EducationUser srcEducationUser, @Nonnull final ICallback<? super EducationUser> callback) {
         send(HttpMethod.PUT, callback, srcEducationUser);
     }
 
@@ -77,7 +81,8 @@ public class EducationUserReferenceRequest extends BaseReferenceRequest<Educatio
      * @return the EducationUser
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    public EducationUser put(EducationUser srcEducationUser) throws ClientException {
+    @Nullable
+    public EducationUser put(@Nonnull final EducationUser srcEducationUser) throws ClientException {
         return send(HttpMethod.PUT, srcEducationUser);
     }
 }

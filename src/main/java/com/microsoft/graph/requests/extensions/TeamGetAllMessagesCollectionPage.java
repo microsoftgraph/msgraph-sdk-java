@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ChatMessage;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.TeamGetAllMessagesCollectionRequestBuilder;
@@ -29,7 +31,7 @@ public class TeamGetAllMessagesCollectionPage extends BaseCollectionPage<ChatMes
      * @param response The serialized TeamGetAllMessagesCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public TeamGetAllMessagesCollectionPage(final TeamGetAllMessagesCollectionResponse response, final TeamGetAllMessagesCollectionRequestBuilder builder) {
+    public TeamGetAllMessagesCollectionPage(@Nonnull final TeamGetAllMessagesCollectionResponse response, @Nonnull final TeamGetAllMessagesCollectionRequestBuilder builder) {
        super(response, builder);
     }
 
@@ -39,7 +41,7 @@ public class TeamGetAllMessagesCollectionPage extends BaseCollectionPage<ChatMes
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public TeamGetAllMessagesCollectionPage(final java.util.List<ChatMessage> pageContents, final TeamGetAllMessagesCollectionRequestBuilder nextRequestBuilder) {
+    public TeamGetAllMessagesCollectionPage(@Nonnull final java.util.List<ChatMessage> pageContents, @Nullable final TeamGetAllMessagesCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

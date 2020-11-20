@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.IdentityProvider;
 import com.microsoft.graph.requests.extensions.IdentityProviderCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.IdentityProviderCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class IdentityProviderCollectionPage extends BaseCollectionPage<IdentityP
      * @param response the serialized IdentityProviderCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public IdentityProviderCollectionPage(final IdentityProviderCollectionResponse response, final IdentityProviderCollectionRequestBuilder builder) {
+    public IdentityProviderCollectionPage(@Nonnull final IdentityProviderCollectionResponse response, @Nonnull final IdentityProviderCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class IdentityProviderCollectionPage extends BaseCollectionPage<IdentityP
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public IdentityProviderCollectionPage(final java.util.List<IdentityProvider> pageContents, final IdentityProviderCollectionRequestBuilder nextRequestBuilder) {
+    public IdentityProviderCollectionPage(@Nonnull final java.util.List<IdentityProvider> pageContents, @Nullable final IdentityProviderCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

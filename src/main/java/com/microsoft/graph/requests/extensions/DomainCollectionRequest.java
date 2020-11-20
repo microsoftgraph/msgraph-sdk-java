@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Domain;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -33,7 +35,7 @@ public class DomainCollectionRequest extends BaseCollectionRequest<Domain, Domai
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DomainCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DomainCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DomainCollectionResponse.class, DomainCollectionPage.class, DomainCollectionRequestBuilder.class);
     }
 
@@ -42,7 +44,7 @@ public class DomainCollectionRequest extends BaseCollectionRequest<Domain, Domai
      * @param newDomain the Domain to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final Domain newDomain, final ICallback<? super Domain> callback) {
+    public void post(@Nonnull final Domain newDomain, @Nonnull final ICallback<? super Domain> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DomainRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -54,7 +56,8 @@ public class DomainCollectionRequest extends BaseCollectionRequest<Domain, Domai
      * @param newDomain the Domain to create
      * @return the newly created object
      */
-    public Domain post(final Domain newDomain) throws ClientException {
+    @Nonnull
+    public Domain post(@Nonnull final Domain newDomain) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DomainRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -67,7 +70,8 @@ public class DomainCollectionRequest extends BaseCollectionRequest<Domain, Domai
      * @param value the expand clause
      * @return the updated request
      */
-    public DomainCollectionRequest expand(final String value) {
+    @Nonnull
+    public DomainCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -78,7 +82,8 @@ public class DomainCollectionRequest extends BaseCollectionRequest<Domain, Domai
      * @param value the filter clause
      * @return the updated request
      */
-    public DomainCollectionRequest filter(final String value) {
+    @Nonnull
+    public DomainCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -89,7 +94,8 @@ public class DomainCollectionRequest extends BaseCollectionRequest<Domain, Domai
      * @param value the order by clause
      * @return the updated request
      */
-    public DomainCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DomainCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -100,7 +106,8 @@ public class DomainCollectionRequest extends BaseCollectionRequest<Domain, Domai
      * @param value the select clause
      * @return the updated request
      */
-    public DomainCollectionRequest select(final String value) {
+    @Nonnull
+    public DomainCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -111,6 +118,7 @@ public class DomainCollectionRequest extends BaseCollectionRequest<Domain, Domai
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DomainCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -122,6 +130,7 @@ public class DomainCollectionRequest extends BaseCollectionRequest<Domain, Domai
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public DomainCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -133,7 +142,8 @@ public class DomainCollectionRequest extends BaseCollectionRequest<Domain, Domai
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public DomainCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public DomainCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

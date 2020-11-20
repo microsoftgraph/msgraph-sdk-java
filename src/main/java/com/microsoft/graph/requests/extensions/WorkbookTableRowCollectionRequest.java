@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.WorkbookTableRow;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,7 +37,7 @@ public class WorkbookTableRowCollectionRequest extends BaseCollectionRequest<Wor
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookTableRowCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableRowCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookTableRowCollectionResponse.class, WorkbookTableRowCollectionPage.class, WorkbookTableRowCollectionRequestBuilder.class);
     }
 
@@ -44,7 +46,7 @@ public class WorkbookTableRowCollectionRequest extends BaseCollectionRequest<Wor
      * @param newWorkbookTableRow the WorkbookTableRow to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final WorkbookTableRow newWorkbookTableRow, final ICallback<? super WorkbookTableRow> callback) {
+    public void post(@Nonnull final WorkbookTableRow newWorkbookTableRow, @Nonnull final ICallback<? super WorkbookTableRow> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookTableRowRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -56,7 +58,8 @@ public class WorkbookTableRowCollectionRequest extends BaseCollectionRequest<Wor
      * @param newWorkbookTableRow the WorkbookTableRow to create
      * @return the newly created object
      */
-    public WorkbookTableRow post(final WorkbookTableRow newWorkbookTableRow) throws ClientException {
+    @Nonnull
+    public WorkbookTableRow post(@Nonnull final WorkbookTableRow newWorkbookTableRow) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookTableRowRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -69,7 +72,8 @@ public class WorkbookTableRowCollectionRequest extends BaseCollectionRequest<Wor
      * @param value the expand clause
      * @return the updated request
      */
-    public WorkbookTableRowCollectionRequest expand(final String value) {
+    @Nonnull
+    public WorkbookTableRowCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -80,7 +84,8 @@ public class WorkbookTableRowCollectionRequest extends BaseCollectionRequest<Wor
      * @param value the filter clause
      * @return the updated request
      */
-    public WorkbookTableRowCollectionRequest filter(final String value) {
+    @Nonnull
+    public WorkbookTableRowCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -91,7 +96,8 @@ public class WorkbookTableRowCollectionRequest extends BaseCollectionRequest<Wor
      * @param value the order by clause
      * @return the updated request
      */
-    public WorkbookTableRowCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public WorkbookTableRowCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -102,7 +108,8 @@ public class WorkbookTableRowCollectionRequest extends BaseCollectionRequest<Wor
      * @param value the select clause
      * @return the updated request
      */
-    public WorkbookTableRowCollectionRequest select(final String value) {
+    @Nonnull
+    public WorkbookTableRowCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -113,6 +120,7 @@ public class WorkbookTableRowCollectionRequest extends BaseCollectionRequest<Wor
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public WorkbookTableRowCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -124,6 +132,7 @@ public class WorkbookTableRowCollectionRequest extends BaseCollectionRequest<Wor
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public WorkbookTableRowCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -135,7 +144,8 @@ public class WorkbookTableRowCollectionRequest extends BaseCollectionRequest<Wor
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public WorkbookTableRowCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public WorkbookTableRowCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

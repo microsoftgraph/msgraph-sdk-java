@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupLifecyclePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -33,7 +35,7 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupLifecyclePolicyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupLifecyclePolicyCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupLifecyclePolicyCollectionResponse.class, GroupLifecyclePolicyCollectionPage.class, GroupLifecyclePolicyCollectionRequestBuilder.class);
     }
 
@@ -42,7 +44,7 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
      * @param newGroupLifecyclePolicy the GroupLifecyclePolicy to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final GroupLifecyclePolicy newGroupLifecyclePolicy, final ICallback<? super GroupLifecyclePolicy> callback) {
+    public void post(@Nonnull final GroupLifecyclePolicy newGroupLifecyclePolicy, @Nonnull final ICallback<? super GroupLifecyclePolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GroupLifecyclePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -54,7 +56,8 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
      * @param newGroupLifecyclePolicy the GroupLifecyclePolicy to create
      * @return the newly created object
      */
-    public GroupLifecyclePolicy post(final GroupLifecyclePolicy newGroupLifecyclePolicy) throws ClientException {
+    @Nonnull
+    public GroupLifecyclePolicy post(@Nonnull final GroupLifecyclePolicy newGroupLifecyclePolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new GroupLifecyclePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -67,7 +70,8 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
      * @param value the expand clause
      * @return the updated request
      */
-    public GroupLifecyclePolicyCollectionRequest expand(final String value) {
+    @Nonnull
+    public GroupLifecyclePolicyCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -78,7 +82,8 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
      * @param value the filter clause
      * @return the updated request
      */
-    public GroupLifecyclePolicyCollectionRequest filter(final String value) {
+    @Nonnull
+    public GroupLifecyclePolicyCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -89,7 +94,8 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
      * @param value the order by clause
      * @return the updated request
      */
-    public GroupLifecyclePolicyCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public GroupLifecyclePolicyCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -100,7 +106,8 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
      * @param value the select clause
      * @return the updated request
      */
-    public GroupLifecyclePolicyCollectionRequest select(final String value) {
+    @Nonnull
+    public GroupLifecyclePolicyCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -111,6 +118,7 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public GroupLifecyclePolicyCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -122,6 +130,7 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public GroupLifecyclePolicyCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -133,7 +142,8 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public GroupLifecyclePolicyCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public GroupLifecyclePolicyCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

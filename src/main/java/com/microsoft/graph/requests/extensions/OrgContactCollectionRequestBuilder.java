@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OrgContact;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.OrgContactCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OrgContactRequestBuilder;
@@ -32,7 +34,7 @@ public class OrgContactCollectionRequestBuilder extends BaseCollectionRequestBui
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OrgContactCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OrgContactCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OrgContactRequestBuilder.class, OrgContactCollectionRequest.class);
     }
 
@@ -42,6 +44,7 @@ public class OrgContactCollectionRequestBuilder extends BaseCollectionRequestBui
      * Gets a builder to execute the method
      * @return the request builder collection
      */
+    @Nonnull
     public OrgContactDeltaCollectionRequestBuilder delta() {
         return new OrgContactDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
@@ -52,7 +55,8 @@ public class OrgContactCollectionRequestBuilder extends BaseCollectionRequestBui
      * @return a request builder to get the changes
      * @param deltaLink the link returned by the last delta request
      */
-	public OrgContactDeltaCollectionRequestBuilder delta(final String deltaLink) {
+    @Nonnull
+	public OrgContactDeltaCollectionRequestBuilder delta(@Nonnull final String deltaLink) {
         return new OrgContactDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }
 }

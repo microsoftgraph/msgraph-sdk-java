@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class SingleValueLegacyExtendedPropertyCollectionPage extends BaseCollect
      * @param response the serialized SingleValueLegacyExtendedPropertyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public SingleValueLegacyExtendedPropertyCollectionPage(final SingleValueLegacyExtendedPropertyCollectionResponse response, final SingleValueLegacyExtendedPropertyCollectionRequestBuilder builder) {
+    public SingleValueLegacyExtendedPropertyCollectionPage(@Nonnull final SingleValueLegacyExtendedPropertyCollectionResponse response, @Nonnull final SingleValueLegacyExtendedPropertyCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class SingleValueLegacyExtendedPropertyCollectionPage extends BaseCollect
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public SingleValueLegacyExtendedPropertyCollectionPage(final java.util.List<SingleValueLegacyExtendedProperty> pageContents, final SingleValueLegacyExtendedPropertyCollectionRequestBuilder nextRequestBuilder) {
+    public SingleValueLegacyExtendedPropertyCollectionPage(@Nonnull final java.util.List<SingleValueLegacyExtendedProperty> pageContents, @Nullable final SingleValueLegacyExtendedPropertyCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

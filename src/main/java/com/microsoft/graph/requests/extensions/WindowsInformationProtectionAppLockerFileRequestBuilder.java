@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionAppLockerFile;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -27,7 +29,7 @@ public class WindowsInformationProtectionAppLockerFileRequestBuilder extends Bas
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsInformationProtectionAppLockerFileRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsInformationProtectionAppLockerFileRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -37,7 +39,8 @@ public class WindowsInformationProtectionAppLockerFileRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @return the WindowsInformationProtectionAppLockerFileRequest instance
      */
-    public WindowsInformationProtectionAppLockerFileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WindowsInformationProtectionAppLockerFileRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,7 +50,8 @@ public class WindowsInformationProtectionAppLockerFileRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @return the WindowsInformationProtectionAppLockerFileRequest instance
      */
-    public WindowsInformationProtectionAppLockerFileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WindowsInformationProtectionAppLockerFileRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

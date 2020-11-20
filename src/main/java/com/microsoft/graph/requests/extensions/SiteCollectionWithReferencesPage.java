@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.SiteCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteCollectionWithReferencesPage;
@@ -35,7 +37,7 @@ public class SiteCollectionWithReferencesPage extends BaseCollectionPage<Site, S
      * @param response the serialized SiteCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public SiteCollectionWithReferencesPage(final SiteCollectionResponse response, final SiteCollectionWithReferencesRequestBuilder builder) {
+    public SiteCollectionWithReferencesPage(@Nonnull final SiteCollectionResponse response, @Nullable final SiteCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 
@@ -45,7 +47,7 @@ public class SiteCollectionWithReferencesPage extends BaseCollectionPage<Site, S
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public SiteCollectionWithReferencesPage(final java.util.List<Site> pageContents, final SiteCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+    public SiteCollectionWithReferencesPage(@Nonnull final java.util.List<Site> pageContents, @Nullable final SiteCollectionWithReferencesRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

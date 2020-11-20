@@ -25,6 +25,8 @@ import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyRequestBui
 import com.microsoft.graph.requests.extensions.IdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -43,7 +45,7 @@ public class PolicyRootRequest extends BaseRequest<PolicyRoot> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PolicyRootRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PolicyRootRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PolicyRoot.class);
     }
 
@@ -52,7 +54,7 @@ public class PolicyRootRequest extends BaseRequest<PolicyRoot> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PolicyRoot> callback) {
+    public void get(@Nonnull final ICallback<? super PolicyRoot> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -62,6 +64,7 @@ public class PolicyRootRequest extends BaseRequest<PolicyRoot> {
      * @return the PolicyRoot from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PolicyRoot get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -71,7 +74,7 @@ public class PolicyRootRequest extends BaseRequest<PolicyRoot> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PolicyRoot> callback) {
+    public void delete(@Nonnull final ICallback<? super PolicyRoot> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +93,7 @@ public class PolicyRootRequest extends BaseRequest<PolicyRoot> {
      * @param sourcePolicyRoot the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PolicyRoot sourcePolicyRoot, final ICallback<? super PolicyRoot> callback) {
+    public void patch(@Nonnull final PolicyRoot sourcePolicyRoot, @Nonnull final ICallback<? super PolicyRoot> callback) {
         send(HttpMethod.PATCH, callback, sourcePolicyRoot);
     }
 
@@ -101,7 +104,8 @@ public class PolicyRootRequest extends BaseRequest<PolicyRoot> {
      * @return the updated PolicyRoot
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PolicyRoot patch(final PolicyRoot sourcePolicyRoot) throws ClientException {
+    @Nullable
+    public PolicyRoot patch(@Nonnull final PolicyRoot sourcePolicyRoot) throws ClientException {
         return send(HttpMethod.PATCH, sourcePolicyRoot);
     }
 
@@ -111,7 +115,7 @@ public class PolicyRootRequest extends BaseRequest<PolicyRoot> {
      * @param newPolicyRoot the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PolicyRoot newPolicyRoot, final ICallback<? super PolicyRoot> callback) {
+    public void post(@Nonnull final PolicyRoot newPolicyRoot, @Nonnull final ICallback<? super PolicyRoot> callback) {
         send(HttpMethod.POST, callback, newPolicyRoot);
     }
 
@@ -122,7 +126,8 @@ public class PolicyRootRequest extends BaseRequest<PolicyRoot> {
      * @return the created PolicyRoot
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PolicyRoot post(final PolicyRoot newPolicyRoot) throws ClientException {
+    @Nullable
+    public PolicyRoot post(@Nonnull final PolicyRoot newPolicyRoot) throws ClientException {
         return send(HttpMethod.POST, newPolicyRoot);
     }
 
@@ -132,7 +137,7 @@ public class PolicyRootRequest extends BaseRequest<PolicyRoot> {
      * @param newPolicyRoot the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PolicyRoot newPolicyRoot, final ICallback<? super PolicyRoot> callback) {
+    public void put(@Nonnull final PolicyRoot newPolicyRoot, @Nonnull final ICallback<? super PolicyRoot> callback) {
         send(HttpMethod.PUT, callback, newPolicyRoot);
     }
 
@@ -143,7 +148,8 @@ public class PolicyRootRequest extends BaseRequest<PolicyRoot> {
      * @return the created PolicyRoot
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PolicyRoot put(final PolicyRoot newPolicyRoot) throws ClientException {
+    @Nullable
+    public PolicyRoot put(@Nonnull final PolicyRoot newPolicyRoot) throws ClientException {
         return send(HttpMethod.PUT, newPolicyRoot);
     }
 
@@ -153,7 +159,8 @@ public class PolicyRootRequest extends BaseRequest<PolicyRoot> {
      * @param value the select clause
      * @return the updated request
      */
-     public PolicyRootRequest select(final String value) {
+     @Nonnull
+     public PolicyRootRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -164,7 +171,8 @@ public class PolicyRootRequest extends BaseRequest<PolicyRoot> {
      * @param value the expand clause
      * @return the updated request
      */
-     public PolicyRootRequest expand(final String value) {
+     @Nonnull
+     public PolicyRootRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

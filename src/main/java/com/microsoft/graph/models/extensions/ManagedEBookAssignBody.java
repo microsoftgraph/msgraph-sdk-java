@@ -7,6 +7,8 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.models.extensions.ManagedEBookAssignment;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
 import java.util.EnumSet;
@@ -24,6 +26,7 @@ public class ManagedEBookAssignBody {
      */
     @SerializedName(value = "managedEBookAssignments", alternate = {"ManagedEBookAssignments"})
     @Expose
+	@Nullable
     public java.util.List<ManagedEBookAssignment> managedEBookAssignments;
 
 
@@ -42,6 +45,7 @@ public class ManagedEBookAssignBody {
      *
      * @return the raw representation of this class
      */
+    @Nullable
     public JsonObject getRawObject() {
         return rawObject;
     }
@@ -51,6 +55,7 @@ public class ManagedEBookAssignBody {
      *
      * @return the serializer
      */
+    @Nullable
     public ISerializer getSerializer() {
         return serializer;
     }
@@ -61,7 +66,7 @@ public class ManagedEBookAssignBody {
      * @param serializer the serializer
      * @param json the JSON object to set this object to
      */
-    public void setRawObject(final ISerializer serializer, final JsonObject json) {
+    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
         this.serializer = serializer;
         rawObject = json;
 

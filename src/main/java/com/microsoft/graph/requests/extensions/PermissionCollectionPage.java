@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Permission;
 import com.microsoft.graph.requests.extensions.PermissionCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.PermissionCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class PermissionCollectionPage extends BaseCollectionPage<Permission, Per
      * @param response the serialized PermissionCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public PermissionCollectionPage(final PermissionCollectionResponse response, final PermissionCollectionRequestBuilder builder) {
+    public PermissionCollectionPage(@Nonnull final PermissionCollectionResponse response, @Nonnull final PermissionCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class PermissionCollectionPage extends BaseCollectionPage<Permission, Per
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public PermissionCollectionPage(final java.util.List<Permission> pageContents, final PermissionCollectionRequestBuilder nextRequestBuilder) {
+    public PermissionCollectionPage(@Nonnull final java.util.List<Permission> pageContents, @Nullable final PermissionCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

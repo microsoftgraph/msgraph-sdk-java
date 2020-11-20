@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TermsAndConditionsAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class TermsAndConditionsAssignmentRequest extends BaseRequest<TermsAndCon
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TermsAndConditionsAssignmentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TermsAndConditionsAssignmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TermsAndConditionsAssignment.class);
     }
 
@@ -37,7 +39,7 @@ public class TermsAndConditionsAssignmentRequest extends BaseRequest<TermsAndCon
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super TermsAndConditionsAssignment> callback) {
+    public void get(@Nonnull final ICallback<? super TermsAndConditionsAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class TermsAndConditionsAssignmentRequest extends BaseRequest<TermsAndCon
      * @return the TermsAndConditionsAssignment from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public TermsAndConditionsAssignment get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class TermsAndConditionsAssignmentRequest extends BaseRequest<TermsAndCon
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super TermsAndConditionsAssignment> callback) {
+    public void delete(@Nonnull final ICallback<? super TermsAndConditionsAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class TermsAndConditionsAssignmentRequest extends BaseRequest<TermsAndCon
      * @param sourceTermsAndConditionsAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TermsAndConditionsAssignment sourceTermsAndConditionsAssignment, final ICallback<? super TermsAndConditionsAssignment> callback) {
+    public void patch(@Nonnull final TermsAndConditionsAssignment sourceTermsAndConditionsAssignment, @Nonnull final ICallback<? super TermsAndConditionsAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceTermsAndConditionsAssignment);
     }
 
@@ -86,7 +89,8 @@ public class TermsAndConditionsAssignmentRequest extends BaseRequest<TermsAndCon
      * @return the updated TermsAndConditionsAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TermsAndConditionsAssignment patch(final TermsAndConditionsAssignment sourceTermsAndConditionsAssignment) throws ClientException {
+    @Nullable
+    public TermsAndConditionsAssignment patch(@Nonnull final TermsAndConditionsAssignment sourceTermsAndConditionsAssignment) throws ClientException {
         return send(HttpMethod.PATCH, sourceTermsAndConditionsAssignment);
     }
 
@@ -96,7 +100,7 @@ public class TermsAndConditionsAssignmentRequest extends BaseRequest<TermsAndCon
      * @param newTermsAndConditionsAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TermsAndConditionsAssignment newTermsAndConditionsAssignment, final ICallback<? super TermsAndConditionsAssignment> callback) {
+    public void post(@Nonnull final TermsAndConditionsAssignment newTermsAndConditionsAssignment, @Nonnull final ICallback<? super TermsAndConditionsAssignment> callback) {
         send(HttpMethod.POST, callback, newTermsAndConditionsAssignment);
     }
 
@@ -107,7 +111,8 @@ public class TermsAndConditionsAssignmentRequest extends BaseRequest<TermsAndCon
      * @return the created TermsAndConditionsAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TermsAndConditionsAssignment post(final TermsAndConditionsAssignment newTermsAndConditionsAssignment) throws ClientException {
+    @Nullable
+    public TermsAndConditionsAssignment post(@Nonnull final TermsAndConditionsAssignment newTermsAndConditionsAssignment) throws ClientException {
         return send(HttpMethod.POST, newTermsAndConditionsAssignment);
     }
 
@@ -117,7 +122,7 @@ public class TermsAndConditionsAssignmentRequest extends BaseRequest<TermsAndCon
      * @param newTermsAndConditionsAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TermsAndConditionsAssignment newTermsAndConditionsAssignment, final ICallback<? super TermsAndConditionsAssignment> callback) {
+    public void put(@Nonnull final TermsAndConditionsAssignment newTermsAndConditionsAssignment, @Nonnull final ICallback<? super TermsAndConditionsAssignment> callback) {
         send(HttpMethod.PUT, callback, newTermsAndConditionsAssignment);
     }
 
@@ -128,7 +133,8 @@ public class TermsAndConditionsAssignmentRequest extends BaseRequest<TermsAndCon
      * @return the created TermsAndConditionsAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TermsAndConditionsAssignment put(final TermsAndConditionsAssignment newTermsAndConditionsAssignment) throws ClientException {
+    @Nullable
+    public TermsAndConditionsAssignment put(@Nonnull final TermsAndConditionsAssignment newTermsAndConditionsAssignment) throws ClientException {
         return send(HttpMethod.PUT, newTermsAndConditionsAssignment);
     }
 
@@ -138,7 +144,8 @@ public class TermsAndConditionsAssignmentRequest extends BaseRequest<TermsAndCon
      * @param value the select clause
      * @return the updated request
      */
-     public TermsAndConditionsAssignmentRequest select(final String value) {
+     @Nonnull
+     public TermsAndConditionsAssignmentRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class TermsAndConditionsAssignmentRequest extends BaseRequest<TermsAndCon
      * @param value the expand clause
      * @return the updated request
      */
-     public TermsAndConditionsAssignmentRequest expand(final String value) {
+     @Nonnull
+     public TermsAndConditionsAssignmentRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

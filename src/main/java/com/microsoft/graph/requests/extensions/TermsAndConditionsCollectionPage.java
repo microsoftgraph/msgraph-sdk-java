@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.TermsAndConditions;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class TermsAndConditionsCollectionPage extends BaseCollectionPage<TermsAn
      * @param response the serialized TermsAndConditionsCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TermsAndConditionsCollectionPage(final TermsAndConditionsCollectionResponse response, final TermsAndConditionsCollectionRequestBuilder builder) {
+    public TermsAndConditionsCollectionPage(@Nonnull final TermsAndConditionsCollectionResponse response, @Nonnull final TermsAndConditionsCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class TermsAndConditionsCollectionPage extends BaseCollectionPage<TermsAn
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public TermsAndConditionsCollectionPage(final java.util.List<TermsAndConditions> pageContents, final TermsAndConditionsCollectionRequestBuilder nextRequestBuilder) {
+    public TermsAndConditionsCollectionPage(@Nonnull final java.util.List<TermsAndConditions> pageContents, @Nullable final TermsAndConditionsCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

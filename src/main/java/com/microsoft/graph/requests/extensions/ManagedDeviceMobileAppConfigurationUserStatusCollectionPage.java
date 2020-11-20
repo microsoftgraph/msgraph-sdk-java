@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationUserStatus;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class ManagedDeviceMobileAppConfigurationUserStatusCollectionPage extends
      * @param response the serialized ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ManagedDeviceMobileAppConfigurationUserStatusCollectionPage(final ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse response, final ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder builder) {
+    public ManagedDeviceMobileAppConfigurationUserStatusCollectionPage(@Nonnull final ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse response, @Nonnull final ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class ManagedDeviceMobileAppConfigurationUserStatusCollectionPage extends
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public ManagedDeviceMobileAppConfigurationUserStatusCollectionPage(final java.util.List<ManagedDeviceMobileAppConfigurationUserStatus> pageContents, final ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder nextRequestBuilder) {
+    public ManagedDeviceMobileAppConfigurationUserStatusCollectionPage(@Nonnull final java.util.List<ManagedDeviceMobileAppConfigurationUserStatus> pageContents, @Nullable final ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

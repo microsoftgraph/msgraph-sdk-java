@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.WorkbookChartPoint;
 import com.microsoft.graph.requests.extensions.WorkbookChartPointFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -28,7 +30,7 @@ public class WorkbookChartPointRequestBuilder extends BaseRequestBuilder<Workboo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartPointRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartPointRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,7 +40,8 @@ public class WorkbookChartPointRequestBuilder extends BaseRequestBuilder<Workboo
      * @param requestOptions the options for this request
      * @return the WorkbookChartPointRequest instance
      */
-    public WorkbookChartPointRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WorkbookChartPointRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,7 +51,8 @@ public class WorkbookChartPointRequestBuilder extends BaseRequestBuilder<Workboo
      * @param requestOptions the options for this request
      * @return the WorkbookChartPointRequest instance
      */
-    public WorkbookChartPointRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WorkbookChartPointRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookChartPointRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,6 +63,7 @@ public class WorkbookChartPointRequestBuilder extends BaseRequestBuilder<Workboo
      *
      * @return the WorkbookChartPointFormatRequestBuilder instance
      */
+    @Nonnull
     public WorkbookChartPointFormatRequestBuilder format() {
         return new WorkbookChartPointFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }

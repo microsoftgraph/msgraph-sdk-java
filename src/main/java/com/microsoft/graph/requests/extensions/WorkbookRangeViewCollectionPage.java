@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRangeView;
 import com.microsoft.graph.requests.extensions.WorkbookRangeViewCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.WorkbookRangeViewCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class WorkbookRangeViewCollectionPage extends BaseCollectionPage<Workbook
      * @param response the serialized WorkbookRangeViewCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public WorkbookRangeViewCollectionPage(final WorkbookRangeViewCollectionResponse response, final WorkbookRangeViewCollectionRequestBuilder builder) {
+    public WorkbookRangeViewCollectionPage(@Nonnull final WorkbookRangeViewCollectionResponse response, @Nonnull final WorkbookRangeViewCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class WorkbookRangeViewCollectionPage extends BaseCollectionPage<Workbook
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public WorkbookRangeViewCollectionPage(final java.util.List<WorkbookRangeView> pageContents, final WorkbookRangeViewCollectionRequestBuilder nextRequestBuilder) {
+    public WorkbookRangeViewCollectionPage(@Nonnull final java.util.List<WorkbookRangeView> pageContents, @Nullable final WorkbookRangeViewCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

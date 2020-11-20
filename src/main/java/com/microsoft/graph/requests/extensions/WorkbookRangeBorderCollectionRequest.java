@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.WorkbookRangeFormat;
 import com.microsoft.graph.models.extensions.WorkbookRangeBorder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class WorkbookRangeBorderCollectionRequest extends BaseCollectionRequest<
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookRangeBorderCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeBorderCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookRangeBorderCollectionResponse.class, WorkbookRangeBorderCollectionPage.class, WorkbookRangeBorderCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class WorkbookRangeBorderCollectionRequest extends BaseCollectionRequest<
      * @param newWorkbookRangeBorder the WorkbookRangeBorder to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final WorkbookRangeBorder newWorkbookRangeBorder, final ICallback<? super WorkbookRangeBorder> callback) {
+    public void post(@Nonnull final WorkbookRangeBorder newWorkbookRangeBorder, @Nonnull final ICallback<? super WorkbookRangeBorder> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookRangeBorderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class WorkbookRangeBorderCollectionRequest extends BaseCollectionRequest<
      * @param newWorkbookRangeBorder the WorkbookRangeBorder to create
      * @return the newly created object
      */
-    public WorkbookRangeBorder post(final WorkbookRangeBorder newWorkbookRangeBorder) throws ClientException {
+    @Nonnull
+    public WorkbookRangeBorder post(@Nonnull final WorkbookRangeBorder newWorkbookRangeBorder) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookRangeBorderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class WorkbookRangeBorderCollectionRequest extends BaseCollectionRequest<
      * @param value the expand clause
      * @return the updated request
      */
-    public WorkbookRangeBorderCollectionRequest expand(final String value) {
+    @Nonnull
+    public WorkbookRangeBorderCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class WorkbookRangeBorderCollectionRequest extends BaseCollectionRequest<
      * @param value the filter clause
      * @return the updated request
      */
-    public WorkbookRangeBorderCollectionRequest filter(final String value) {
+    @Nonnull
+    public WorkbookRangeBorderCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class WorkbookRangeBorderCollectionRequest extends BaseCollectionRequest<
      * @param value the order by clause
      * @return the updated request
      */
-    public WorkbookRangeBorderCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public WorkbookRangeBorderCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class WorkbookRangeBorderCollectionRequest extends BaseCollectionRequest<
      * @param value the select clause
      * @return the updated request
      */
-    public WorkbookRangeBorderCollectionRequest select(final String value) {
+    @Nonnull
+    public WorkbookRangeBorderCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class WorkbookRangeBorderCollectionRequest extends BaseCollectionRequest<
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public WorkbookRangeBorderCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class WorkbookRangeBorderCollectionRequest extends BaseCollectionRequest<
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public WorkbookRangeBorderCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class WorkbookRangeBorderCollectionRequest extends BaseCollectionRequest<
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public WorkbookRangeBorderCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public WorkbookRangeBorderCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

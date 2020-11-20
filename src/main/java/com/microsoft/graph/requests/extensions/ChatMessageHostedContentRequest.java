@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ChatMessageHostedContent;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class ChatMessageHostedContentRequest extends BaseRequest<ChatMessageHost
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ChatMessageHostedContentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ChatMessageHostedContentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ChatMessageHostedContent.class);
     }
 
@@ -37,7 +39,7 @@ public class ChatMessageHostedContentRequest extends BaseRequest<ChatMessageHost
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ChatMessageHostedContent> callback) {
+    public void get(@Nonnull final ICallback<? super ChatMessageHostedContent> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class ChatMessageHostedContentRequest extends BaseRequest<ChatMessageHost
      * @return the ChatMessageHostedContent from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ChatMessageHostedContent get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class ChatMessageHostedContentRequest extends BaseRequest<ChatMessageHost
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ChatMessageHostedContent> callback) {
+    public void delete(@Nonnull final ICallback<? super ChatMessageHostedContent> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class ChatMessageHostedContentRequest extends BaseRequest<ChatMessageHost
      * @param sourceChatMessageHostedContent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ChatMessageHostedContent sourceChatMessageHostedContent, final ICallback<? super ChatMessageHostedContent> callback) {
+    public void patch(@Nonnull final ChatMessageHostedContent sourceChatMessageHostedContent, @Nonnull final ICallback<? super ChatMessageHostedContent> callback) {
         send(HttpMethod.PATCH, callback, sourceChatMessageHostedContent);
     }
 
@@ -86,7 +89,8 @@ public class ChatMessageHostedContentRequest extends BaseRequest<ChatMessageHost
      * @return the updated ChatMessageHostedContent
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ChatMessageHostedContent patch(final ChatMessageHostedContent sourceChatMessageHostedContent) throws ClientException {
+    @Nullable
+    public ChatMessageHostedContent patch(@Nonnull final ChatMessageHostedContent sourceChatMessageHostedContent) throws ClientException {
         return send(HttpMethod.PATCH, sourceChatMessageHostedContent);
     }
 
@@ -96,7 +100,7 @@ public class ChatMessageHostedContentRequest extends BaseRequest<ChatMessageHost
      * @param newChatMessageHostedContent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ChatMessageHostedContent newChatMessageHostedContent, final ICallback<? super ChatMessageHostedContent> callback) {
+    public void post(@Nonnull final ChatMessageHostedContent newChatMessageHostedContent, @Nonnull final ICallback<? super ChatMessageHostedContent> callback) {
         send(HttpMethod.POST, callback, newChatMessageHostedContent);
     }
 
@@ -107,7 +111,8 @@ public class ChatMessageHostedContentRequest extends BaseRequest<ChatMessageHost
      * @return the created ChatMessageHostedContent
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ChatMessageHostedContent post(final ChatMessageHostedContent newChatMessageHostedContent) throws ClientException {
+    @Nullable
+    public ChatMessageHostedContent post(@Nonnull final ChatMessageHostedContent newChatMessageHostedContent) throws ClientException {
         return send(HttpMethod.POST, newChatMessageHostedContent);
     }
 
@@ -117,7 +122,7 @@ public class ChatMessageHostedContentRequest extends BaseRequest<ChatMessageHost
      * @param newChatMessageHostedContent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ChatMessageHostedContent newChatMessageHostedContent, final ICallback<? super ChatMessageHostedContent> callback) {
+    public void put(@Nonnull final ChatMessageHostedContent newChatMessageHostedContent, @Nonnull final ICallback<? super ChatMessageHostedContent> callback) {
         send(HttpMethod.PUT, callback, newChatMessageHostedContent);
     }
 
@@ -128,7 +133,8 @@ public class ChatMessageHostedContentRequest extends BaseRequest<ChatMessageHost
      * @return the created ChatMessageHostedContent
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ChatMessageHostedContent put(final ChatMessageHostedContent newChatMessageHostedContent) throws ClientException {
+    @Nullable
+    public ChatMessageHostedContent put(@Nonnull final ChatMessageHostedContent newChatMessageHostedContent) throws ClientException {
         return send(HttpMethod.PUT, newChatMessageHostedContent);
     }
 
@@ -138,7 +144,8 @@ public class ChatMessageHostedContentRequest extends BaseRequest<ChatMessageHost
      * @param value the select clause
      * @return the updated request
      */
-     public ChatMessageHostedContentRequest select(final String value) {
+     @Nonnull
+     public ChatMessageHostedContentRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class ChatMessageHostedContentRequest extends BaseRequest<ChatMessageHost
      * @param value the expand clause
      * @return the updated request
      */
-     public ChatMessageHostedContentRequest expand(final String value) {
+     @Nonnull
+     public ChatMessageHostedContentRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

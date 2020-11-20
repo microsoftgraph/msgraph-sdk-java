@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.WorkbookRangeSort;
 import com.microsoft.graph.models.extensions.WorkbookSortField;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,7 +31,7 @@ public class WorkbookRangeSortRequest extends BaseRequest<WorkbookRangeSort> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookRangeSortRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeSortRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookRangeSort.class);
     }
 
@@ -38,7 +40,7 @@ public class WorkbookRangeSortRequest extends BaseRequest<WorkbookRangeSort> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookRangeSort> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookRangeSort> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class WorkbookRangeSortRequest extends BaseRequest<WorkbookRangeSort> {
      * @return the WorkbookRangeSort from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WorkbookRangeSort get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class WorkbookRangeSortRequest extends BaseRequest<WorkbookRangeSort> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookRangeSort> callback) {
+    public void delete(@Nonnull final ICallback<? super WorkbookRangeSort> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class WorkbookRangeSortRequest extends BaseRequest<WorkbookRangeSort> {
      * @param sourceWorkbookRangeSort the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookRangeSort sourceWorkbookRangeSort, final ICallback<? super WorkbookRangeSort> callback) {
+    public void patch(@Nonnull final WorkbookRangeSort sourceWorkbookRangeSort, @Nonnull final ICallback<? super WorkbookRangeSort> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookRangeSort);
     }
 
@@ -87,7 +90,8 @@ public class WorkbookRangeSortRequest extends BaseRequest<WorkbookRangeSort> {
      * @return the updated WorkbookRangeSort
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookRangeSort patch(final WorkbookRangeSort sourceWorkbookRangeSort) throws ClientException {
+    @Nullable
+    public WorkbookRangeSort patch(@Nonnull final WorkbookRangeSort sourceWorkbookRangeSort) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookRangeSort);
     }
 
@@ -97,7 +101,7 @@ public class WorkbookRangeSortRequest extends BaseRequest<WorkbookRangeSort> {
      * @param newWorkbookRangeSort the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookRangeSort newWorkbookRangeSort, final ICallback<? super WorkbookRangeSort> callback) {
+    public void post(@Nonnull final WorkbookRangeSort newWorkbookRangeSort, @Nonnull final ICallback<? super WorkbookRangeSort> callback) {
         send(HttpMethod.POST, callback, newWorkbookRangeSort);
     }
 
@@ -108,7 +112,8 @@ public class WorkbookRangeSortRequest extends BaseRequest<WorkbookRangeSort> {
      * @return the created WorkbookRangeSort
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookRangeSort post(final WorkbookRangeSort newWorkbookRangeSort) throws ClientException {
+    @Nullable
+    public WorkbookRangeSort post(@Nonnull final WorkbookRangeSort newWorkbookRangeSort) throws ClientException {
         return send(HttpMethod.POST, newWorkbookRangeSort);
     }
 
@@ -118,7 +123,7 @@ public class WorkbookRangeSortRequest extends BaseRequest<WorkbookRangeSort> {
      * @param newWorkbookRangeSort the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookRangeSort newWorkbookRangeSort, final ICallback<? super WorkbookRangeSort> callback) {
+    public void put(@Nonnull final WorkbookRangeSort newWorkbookRangeSort, @Nonnull final ICallback<? super WorkbookRangeSort> callback) {
         send(HttpMethod.PUT, callback, newWorkbookRangeSort);
     }
 
@@ -129,7 +134,8 @@ public class WorkbookRangeSortRequest extends BaseRequest<WorkbookRangeSort> {
      * @return the created WorkbookRangeSort
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookRangeSort put(final WorkbookRangeSort newWorkbookRangeSort) throws ClientException {
+    @Nullable
+    public WorkbookRangeSort put(@Nonnull final WorkbookRangeSort newWorkbookRangeSort) throws ClientException {
         return send(HttpMethod.PUT, newWorkbookRangeSort);
     }
 
@@ -139,7 +145,8 @@ public class WorkbookRangeSortRequest extends BaseRequest<WorkbookRangeSort> {
      * @param value the select clause
      * @return the updated request
      */
-     public WorkbookRangeSortRequest select(final String value) {
+     @Nonnull
+     public WorkbookRangeSortRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -150,7 +157,8 @@ public class WorkbookRangeSortRequest extends BaseRequest<WorkbookRangeSort> {
      * @param value the expand clause
      * @return the updated request
      */
-     public WorkbookRangeSortRequest expand(final String value) {
+     @Nonnull
+     public WorkbookRangeSortRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

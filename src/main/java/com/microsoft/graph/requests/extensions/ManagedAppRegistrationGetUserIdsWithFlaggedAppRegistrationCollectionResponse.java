@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.http.BaseCollectionResponse;
@@ -23,7 +25,7 @@ public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectio
      * @param json the JSON object to set this object to
      */
     @Override
-    public void setRawObject(final ISerializer serializer, final JsonObject json) {
+    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
         this.serializer = serializer;
         rawObject = json;
     }

@@ -12,6 +12,9 @@ import com.microsoft.graph.options.Option;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 /**
  * The base method request builder class
  */
@@ -20,6 +23,7 @@ public class BaseFunctionRequestBuilder<T> extends BaseRequestBuilder<T> {
     /**
      * The {@link FunctionOption}s to add to this request
      */
+    @Nonnull
     protected List<FunctionOption> functionOptions = new ArrayList<>();
 
     /**
@@ -30,9 +34,9 @@ public class BaseFunctionRequestBuilder<T> extends BaseRequestBuilder<T> {
      * @param options    {@link List} of {@link Option}s to add to this request
      */
     public BaseFunctionRequestBuilder(
-            final String requestUrl,
-            final IBaseClient client,
-            final List<? extends Option> options
+            @Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final List<? extends Option> options
     ) {
         super(requestUrl, client, options);
     }

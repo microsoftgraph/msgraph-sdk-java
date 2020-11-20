@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Device;
 import com.microsoft.graph.requests.extensions.DeviceCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DeviceCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class DeviceCollectionPage extends BaseCollectionPage<Device, DeviceColle
      * @param response the serialized DeviceCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DeviceCollectionPage(final DeviceCollectionResponse response, final DeviceCollectionRequestBuilder builder) {
+    public DeviceCollectionPage(@Nonnull final DeviceCollectionResponse response, @Nonnull final DeviceCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class DeviceCollectionPage extends BaseCollectionPage<Device, DeviceColle
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public DeviceCollectionPage(final java.util.List<Device> pageContents, final DeviceCollectionRequestBuilder nextRequestBuilder) {
+    public DeviceCollectionPage(@Nonnull final java.util.List<Device> pageContents, @Nullable final DeviceCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

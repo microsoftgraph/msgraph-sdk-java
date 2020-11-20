@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestB
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseReferenceRequest;
@@ -32,7 +34,7 @@ public class OrgContactReferenceRequest extends BaseReferenceRequest<OrgContact>
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OrgContactReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OrgContactReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OrgContact.class);
     }
 
@@ -42,7 +44,8 @@ public class OrgContactReferenceRequest extends BaseReferenceRequest<OrgContact>
      * @param value the select clause
      * @return the updated request
      */
-    public OrgContactReferenceRequest select(final String value) {
+    @Nonnull
+    public OrgContactReferenceRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -53,7 +56,8 @@ public class OrgContactReferenceRequest extends BaseReferenceRequest<OrgContact>
      * @param value the expand clause
      * @return the updated request
      */
-    public OrgContactReferenceRequest expand(final String value) {
+    @Nonnull
+    public OrgContactReferenceRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -63,7 +67,7 @@ public class OrgContactReferenceRequest extends BaseReferenceRequest<OrgContact>
      * @param srcOrgContact the OrgContact reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(OrgContact srcOrgContact, final ICallback<? super OrgContact> callback) {
+    public void put(@Nonnull final OrgContact srcOrgContact, @Nonnull final ICallback<? super OrgContact> callback) {
         send(HttpMethod.PUT, callback, srcOrgContact);
     }
 
@@ -74,7 +78,8 @@ public class OrgContactReferenceRequest extends BaseReferenceRequest<OrgContact>
      * @return the OrgContact
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    public OrgContact put(OrgContact srcOrgContact) throws ClientException {
+    @Nullable
+    public OrgContact put(@Nonnull final OrgContact srcOrgContact) throws ClientException {
         return send(HttpMethod.PUT, srcOrgContact);
     }
 }

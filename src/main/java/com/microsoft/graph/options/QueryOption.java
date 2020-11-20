@@ -22,6 +22,7 @@
 
 package com.microsoft.graph.options;
 
+import javax.annotation.Nonnull;
 /**
  * A query parameter
  */
@@ -33,7 +34,7 @@ public class QueryOption extends Option {
      * @param name  the name of the query parameter
      * @param value the value of the query parameter
      */
-    public QueryOption(final String name, final Object value) {
+    public QueryOption(@Nonnull final String name, @Nonnull final Object value) {
         super(name, value);
     }
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.BaseCollectionReferenceRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
@@ -29,7 +31,7 @@ public class OAuth2PermissionGrantCollectionReferenceRequestBuilder extends Base
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OAuth2PermissionGrantCollectionReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OAuth2PermissionGrantCollectionReferenceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OAuth2PermissionGrantReferenceRequestBuilder.class, OAuth2PermissionGrantCollectionReferenceRequest.class);
     }
 }

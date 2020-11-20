@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class HomeRealmDiscoveryPolicyRequest extends BaseRequest<HomeRealmDiscov
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public HomeRealmDiscoveryPolicyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public HomeRealmDiscoveryPolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicy.class);
     }
 
@@ -37,7 +39,7 @@ public class HomeRealmDiscoveryPolicyRequest extends BaseRequest<HomeRealmDiscov
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
+    public void get(@Nonnull final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class HomeRealmDiscoveryPolicyRequest extends BaseRequest<HomeRealmDiscov
      * @return the HomeRealmDiscoveryPolicy from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public HomeRealmDiscoveryPolicy get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class HomeRealmDiscoveryPolicyRequest extends BaseRequest<HomeRealmDiscov
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
+    public void delete(@Nonnull final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class HomeRealmDiscoveryPolicyRequest extends BaseRequest<HomeRealmDiscov
      * @param sourceHomeRealmDiscoveryPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final HomeRealmDiscoveryPolicy sourceHomeRealmDiscoveryPolicy, final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
+    public void patch(@Nonnull final HomeRealmDiscoveryPolicy sourceHomeRealmDiscoveryPolicy, @Nonnull final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceHomeRealmDiscoveryPolicy);
     }
 
@@ -86,7 +89,8 @@ public class HomeRealmDiscoveryPolicyRequest extends BaseRequest<HomeRealmDiscov
      * @return the updated HomeRealmDiscoveryPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public HomeRealmDiscoveryPolicy patch(final HomeRealmDiscoveryPolicy sourceHomeRealmDiscoveryPolicy) throws ClientException {
+    @Nullable
+    public HomeRealmDiscoveryPolicy patch(@Nonnull final HomeRealmDiscoveryPolicy sourceHomeRealmDiscoveryPolicy) throws ClientException {
         return send(HttpMethod.PATCH, sourceHomeRealmDiscoveryPolicy);
     }
 
@@ -96,7 +100,7 @@ public class HomeRealmDiscoveryPolicyRequest extends BaseRequest<HomeRealmDiscov
      * @param newHomeRealmDiscoveryPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
+    public void post(@Nonnull final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, @Nonnull final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
         send(HttpMethod.POST, callback, newHomeRealmDiscoveryPolicy);
     }
 
@@ -107,7 +111,8 @@ public class HomeRealmDiscoveryPolicyRequest extends BaseRequest<HomeRealmDiscov
      * @return the created HomeRealmDiscoveryPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public HomeRealmDiscoveryPolicy post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy) throws ClientException {
+    @Nullable
+    public HomeRealmDiscoveryPolicy post(@Nonnull final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy) throws ClientException {
         return send(HttpMethod.POST, newHomeRealmDiscoveryPolicy);
     }
 
@@ -117,7 +122,7 @@ public class HomeRealmDiscoveryPolicyRequest extends BaseRequest<HomeRealmDiscov
      * @param newHomeRealmDiscoveryPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
+    public void put(@Nonnull final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, @Nonnull final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
         send(HttpMethod.PUT, callback, newHomeRealmDiscoveryPolicy);
     }
 
@@ -128,7 +133,8 @@ public class HomeRealmDiscoveryPolicyRequest extends BaseRequest<HomeRealmDiscov
      * @return the created HomeRealmDiscoveryPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public HomeRealmDiscoveryPolicy put(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy) throws ClientException {
+    @Nullable
+    public HomeRealmDiscoveryPolicy put(@Nonnull final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy) throws ClientException {
         return send(HttpMethod.PUT, newHomeRealmDiscoveryPolicy);
     }
 
@@ -138,7 +144,8 @@ public class HomeRealmDiscoveryPolicyRequest extends BaseRequest<HomeRealmDiscov
      * @param value the select clause
      * @return the updated request
      */
-     public HomeRealmDiscoveryPolicyRequest select(final String value) {
+     @Nonnull
+     public HomeRealmDiscoveryPolicyRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class HomeRealmDiscoveryPolicyRequest extends BaseRequest<HomeRealmDiscov
      * @param value the expand clause
      * @return the updated request
      */
-     public HomeRealmDiscoveryPolicyRequest expand(final String value) {
+     @Nonnull
+     public HomeRealmDiscoveryPolicyRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

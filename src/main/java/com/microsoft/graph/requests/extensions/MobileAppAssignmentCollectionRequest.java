@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.MobileApp;
 import com.microsoft.graph.models.extensions.MobileAppAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class MobileAppAssignmentCollectionRequest extends BaseCollectionRequest<
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MobileAppAssignmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppAssignmentCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MobileAppAssignmentCollectionResponse.class, MobileAppAssignmentCollectionPage.class, MobileAppAssignmentCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class MobileAppAssignmentCollectionRequest extends BaseCollectionRequest<
      * @param newMobileAppAssignment the MobileAppAssignment to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final MobileAppAssignment newMobileAppAssignment, final ICallback<? super MobileAppAssignment> callback) {
+    public void post(@Nonnull final MobileAppAssignment newMobileAppAssignment, @Nonnull final ICallback<? super MobileAppAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileAppAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class MobileAppAssignmentCollectionRequest extends BaseCollectionRequest<
      * @param newMobileAppAssignment the MobileAppAssignment to create
      * @return the newly created object
      */
-    public MobileAppAssignment post(final MobileAppAssignment newMobileAppAssignment) throws ClientException {
+    @Nonnull
+    public MobileAppAssignment post(@Nonnull final MobileAppAssignment newMobileAppAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MobileAppAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class MobileAppAssignmentCollectionRequest extends BaseCollectionRequest<
      * @param value the expand clause
      * @return the updated request
      */
-    public MobileAppAssignmentCollectionRequest expand(final String value) {
+    @Nonnull
+    public MobileAppAssignmentCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class MobileAppAssignmentCollectionRequest extends BaseCollectionRequest<
      * @param value the filter clause
      * @return the updated request
      */
-    public MobileAppAssignmentCollectionRequest filter(final String value) {
+    @Nonnull
+    public MobileAppAssignmentCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class MobileAppAssignmentCollectionRequest extends BaseCollectionRequest<
      * @param value the order by clause
      * @return the updated request
      */
-    public MobileAppAssignmentCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public MobileAppAssignmentCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class MobileAppAssignmentCollectionRequest extends BaseCollectionRequest<
      * @param value the select clause
      * @return the updated request
      */
-    public MobileAppAssignmentCollectionRequest select(final String value) {
+    @Nonnull
+    public MobileAppAssignmentCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class MobileAppAssignmentCollectionRequest extends BaseCollectionRequest<
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public MobileAppAssignmentCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class MobileAppAssignmentCollectionRequest extends BaseCollectionRequest<
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public MobileAppAssignmentCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class MobileAppAssignmentCollectionRequest extends BaseCollectionRequest<
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public MobileAppAssignmentCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public MobileAppAssignmentCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

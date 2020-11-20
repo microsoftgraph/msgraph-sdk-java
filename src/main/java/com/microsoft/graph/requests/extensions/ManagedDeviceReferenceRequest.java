@@ -16,6 +16,8 @@ import com.microsoft.graph.requests.extensions.DeviceConfigurationStateRequestBu
 import com.microsoft.graph.requests.extensions.DeviceCategoryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseReferenceRequest;
@@ -36,7 +38,7 @@ public class ManagedDeviceReferenceRequest extends BaseReferenceRequest<ManagedD
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedDevice.class);
     }
 
@@ -46,7 +48,8 @@ public class ManagedDeviceReferenceRequest extends BaseReferenceRequest<ManagedD
      * @param value the select clause
      * @return the updated request
      */
-    public ManagedDeviceReferenceRequest select(final String value) {
+    @Nonnull
+    public ManagedDeviceReferenceRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -57,7 +60,8 @@ public class ManagedDeviceReferenceRequest extends BaseReferenceRequest<ManagedD
      * @param value the expand clause
      * @return the updated request
      */
-    public ManagedDeviceReferenceRequest expand(final String value) {
+    @Nonnull
+    public ManagedDeviceReferenceRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -67,7 +71,7 @@ public class ManagedDeviceReferenceRequest extends BaseReferenceRequest<ManagedD
      * @param srcManagedDevice the ManagedDevice reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(ManagedDevice srcManagedDevice, final ICallback<? super ManagedDevice> callback) {
+    public void put(@Nonnull final ManagedDevice srcManagedDevice, @Nonnull final ICallback<? super ManagedDevice> callback) {
         send(HttpMethod.PUT, callback, srcManagedDevice);
     }
 
@@ -78,7 +82,8 @@ public class ManagedDeviceReferenceRequest extends BaseReferenceRequest<ManagedD
      * @return the ManagedDevice
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    public ManagedDevice put(ManagedDevice srcManagedDevice) throws ClientException {
+    @Nullable
+    public ManagedDevice put(@Nonnull final ManagedDevice srcManagedDevice) throws ClientException {
         return send(HttpMethod.PUT, srcManagedDevice);
     }
 }

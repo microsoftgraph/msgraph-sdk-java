@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.LicenseDetails;
 import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class LicenseDetailsCollectionPage extends BaseCollectionPage<LicenseDeta
      * @param response the serialized LicenseDetailsCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public LicenseDetailsCollectionPage(final LicenseDetailsCollectionResponse response, final LicenseDetailsCollectionRequestBuilder builder) {
+    public LicenseDetailsCollectionPage(@Nonnull final LicenseDetailsCollectionResponse response, @Nonnull final LicenseDetailsCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class LicenseDetailsCollectionPage extends BaseCollectionPage<LicenseDeta
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public LicenseDetailsCollectionPage(final java.util.List<LicenseDetails> pageContents, final LicenseDetailsCollectionRequestBuilder nextRequestBuilder) {
+    public LicenseDetailsCollectionPage(@Nonnull final java.util.List<LicenseDetails> pageContents, @Nullable final LicenseDetailsCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

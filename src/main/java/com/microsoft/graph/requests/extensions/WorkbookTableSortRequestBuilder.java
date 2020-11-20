@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.WorkbookTableSort;
 import com.microsoft.graph.models.extensions.WorkbookSortField;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -28,7 +30,7 @@ public class WorkbookTableSortRequestBuilder extends BaseRequestBuilder<Workbook
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookTableSortRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableSortRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,7 +40,8 @@ public class WorkbookTableSortRequestBuilder extends BaseRequestBuilder<Workbook
      * @param requestOptions the options for this request
      * @return the WorkbookTableSortRequest instance
      */
-    public WorkbookTableSortRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WorkbookTableSortRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,7 +51,8 @@ public class WorkbookTableSortRequestBuilder extends BaseRequestBuilder<Workbook
      * @param requestOptions the options for this request
      * @return the WorkbookTableSortRequest instance
      */
-    public WorkbookTableSortRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WorkbookTableSortRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookTableSortRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -61,7 +65,8 @@ public class WorkbookTableSortRequestBuilder extends BaseRequestBuilder<Workbook
      * @param matchCase the matchCase
      * @param method the method
      */
-    public WorkbookTableSortApplyRequestBuilder apply(final java.util.List<WorkbookSortField> fields, final Boolean matchCase, final String method) {
+    @Nonnull
+    public WorkbookTableSortApplyRequestBuilder apply(@Nullable final java.util.List<WorkbookSortField> fields, @Nullable final Boolean matchCase, @Nullable final String method) {
         return new WorkbookTableSortApplyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.apply"), getClient(), null, fields, matchCase, method);
     }
 
@@ -69,6 +74,7 @@ public class WorkbookTableSortRequestBuilder extends BaseRequestBuilder<Workbook
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public WorkbookTableSortClearRequestBuilder clear() {
         return new WorkbookTableSortClearRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.clear"), getClient(), null);
     }
@@ -77,6 +83,7 @@ public class WorkbookTableSortRequestBuilder extends BaseRequestBuilder<Workbook
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public WorkbookTableSortReapplyRequestBuilder reapply() {
         return new WorkbookTableSortReapplyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reapply"), getClient(), null);
     }

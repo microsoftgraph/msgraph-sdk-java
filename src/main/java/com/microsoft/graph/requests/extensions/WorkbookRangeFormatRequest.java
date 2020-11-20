@@ -15,6 +15,8 @@ import com.microsoft.graph.requests.extensions.WorkbookRangeFontRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookFormatProtectionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -33,7 +35,7 @@ public class WorkbookRangeFormatRequest extends BaseRequest<WorkbookRangeFormat>
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookRangeFormatRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeFormatRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookRangeFormat.class);
     }
 
@@ -42,7 +44,7 @@ public class WorkbookRangeFormatRequest extends BaseRequest<WorkbookRangeFormat>
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookRangeFormat> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookRangeFormat> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +54,7 @@ public class WorkbookRangeFormatRequest extends BaseRequest<WorkbookRangeFormat>
      * @return the WorkbookRangeFormat from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WorkbookRangeFormat get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +64,7 @@ public class WorkbookRangeFormatRequest extends BaseRequest<WorkbookRangeFormat>
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookRangeFormat> callback) {
+    public void delete(@Nonnull final ICallback<? super WorkbookRangeFormat> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +83,7 @@ public class WorkbookRangeFormatRequest extends BaseRequest<WorkbookRangeFormat>
      * @param sourceWorkbookRangeFormat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookRangeFormat sourceWorkbookRangeFormat, final ICallback<? super WorkbookRangeFormat> callback) {
+    public void patch(@Nonnull final WorkbookRangeFormat sourceWorkbookRangeFormat, @Nonnull final ICallback<? super WorkbookRangeFormat> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookRangeFormat);
     }
 
@@ -91,7 +94,8 @@ public class WorkbookRangeFormatRequest extends BaseRequest<WorkbookRangeFormat>
      * @return the updated WorkbookRangeFormat
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookRangeFormat patch(final WorkbookRangeFormat sourceWorkbookRangeFormat) throws ClientException {
+    @Nullable
+    public WorkbookRangeFormat patch(@Nonnull final WorkbookRangeFormat sourceWorkbookRangeFormat) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookRangeFormat);
     }
 
@@ -101,7 +105,7 @@ public class WorkbookRangeFormatRequest extends BaseRequest<WorkbookRangeFormat>
      * @param newWorkbookRangeFormat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookRangeFormat newWorkbookRangeFormat, final ICallback<? super WorkbookRangeFormat> callback) {
+    public void post(@Nonnull final WorkbookRangeFormat newWorkbookRangeFormat, @Nonnull final ICallback<? super WorkbookRangeFormat> callback) {
         send(HttpMethod.POST, callback, newWorkbookRangeFormat);
     }
 
@@ -112,7 +116,8 @@ public class WorkbookRangeFormatRequest extends BaseRequest<WorkbookRangeFormat>
      * @return the created WorkbookRangeFormat
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookRangeFormat post(final WorkbookRangeFormat newWorkbookRangeFormat) throws ClientException {
+    @Nullable
+    public WorkbookRangeFormat post(@Nonnull final WorkbookRangeFormat newWorkbookRangeFormat) throws ClientException {
         return send(HttpMethod.POST, newWorkbookRangeFormat);
     }
 
@@ -122,7 +127,7 @@ public class WorkbookRangeFormatRequest extends BaseRequest<WorkbookRangeFormat>
      * @param newWorkbookRangeFormat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookRangeFormat newWorkbookRangeFormat, final ICallback<? super WorkbookRangeFormat> callback) {
+    public void put(@Nonnull final WorkbookRangeFormat newWorkbookRangeFormat, @Nonnull final ICallback<? super WorkbookRangeFormat> callback) {
         send(HttpMethod.PUT, callback, newWorkbookRangeFormat);
     }
 
@@ -133,7 +138,8 @@ public class WorkbookRangeFormatRequest extends BaseRequest<WorkbookRangeFormat>
      * @return the created WorkbookRangeFormat
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookRangeFormat put(final WorkbookRangeFormat newWorkbookRangeFormat) throws ClientException {
+    @Nullable
+    public WorkbookRangeFormat put(@Nonnull final WorkbookRangeFormat newWorkbookRangeFormat) throws ClientException {
         return send(HttpMethod.PUT, newWorkbookRangeFormat);
     }
 
@@ -143,7 +149,8 @@ public class WorkbookRangeFormatRequest extends BaseRequest<WorkbookRangeFormat>
      * @param value the select clause
      * @return the updated request
      */
-     public WorkbookRangeFormatRequest select(final String value) {
+     @Nonnull
+     public WorkbookRangeFormatRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -154,7 +161,8 @@ public class WorkbookRangeFormatRequest extends BaseRequest<WorkbookRangeFormat>
      * @param value the expand clause
      * @return the updated request
      */
-     public WorkbookRangeFormatRequest expand(final String value) {
+     @Nonnull
+     public WorkbookRangeFormatRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

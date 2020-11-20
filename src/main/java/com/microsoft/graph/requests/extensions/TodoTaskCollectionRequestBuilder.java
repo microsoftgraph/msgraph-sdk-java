@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.TodoTaskList;
 import com.microsoft.graph.models.extensions.TodoTask;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.TodoTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TodoTaskRequestBuilder;
@@ -33,7 +35,7 @@ public class TodoTaskCollectionRequestBuilder extends BaseCollectionRequestBuild
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TodoTaskCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TodoTaskCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TodoTaskRequestBuilder.class, TodoTaskCollectionRequest.class);
     }
 
@@ -43,6 +45,7 @@ public class TodoTaskCollectionRequestBuilder extends BaseCollectionRequestBuild
      * Gets a builder to execute the method
      * @return the request builder collection
      */
+    @Nonnull
     public TodoTaskDeltaCollectionRequestBuilder delta() {
         return new TodoTaskDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
@@ -53,7 +56,8 @@ public class TodoTaskCollectionRequestBuilder extends BaseCollectionRequestBuild
      * @return a request builder to get the changes
      * @param deltaLink the link returned by the last delta request
      */
-	public TodoTaskDeltaCollectionRequestBuilder delta(final String deltaLink) {
+    @Nonnull
+	public TodoTaskDeltaCollectionRequestBuilder delta(@Nonnull final String deltaLink) {
         return new TodoTaskDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }
 }

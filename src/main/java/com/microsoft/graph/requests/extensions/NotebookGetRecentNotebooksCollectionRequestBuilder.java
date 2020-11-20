@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RecentNotebook;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.NotebookGetRecentNotebooksCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.NotebookGetRecentNotebooksCollectionRequest;
@@ -33,7 +35,7 @@ public class NotebookGetRecentNotebooksCollectionRequestBuilder extends BaseFunc
      * @param requestOptions the options for this request
      * @param includePersonalNotebooks the includePersonalNotebooks
      */
-    public NotebookGetRecentNotebooksCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final Boolean includePersonalNotebooks) {
+    public NotebookGetRecentNotebooksCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final Boolean includePersonalNotebooks) {
         super(requestUrl, client, requestOptions, NotebookGetRecentNotebooksCollectionRequestBuilder.class, NotebookGetRecentNotebooksCollectionRequest.class);
      	 if(includePersonalNotebooks!=null){
 			functionOptions.add(new com.microsoft.graph.options.FunctionOption("includePersonalNotebooks", includePersonalNotebooks));
@@ -46,8 +48,9 @@ public class NotebookGetRecentNotebooksCollectionRequestBuilder extends BaseFunc
      * @param requestOptions the options for this request
      * @return the NotebookGetRecentNotebooksCollectionRequest instance
      */
-     @Override
-    public NotebookGetRecentNotebooksCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Override
+    @Nonnull
+    public NotebookGetRecentNotebooksCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final NotebookGetRecentNotebooksCollectionRequest request = super.buildRequest(requestOptions);
 
       for (com.microsoft.graph.options.FunctionOption option : functionOptions) {

@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ApplePushNotificationCertificate;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -27,7 +29,7 @@ public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestB
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ApplePushNotificationCertificateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ApplePushNotificationCertificateRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -37,7 +39,8 @@ public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestB
      * @param requestOptions the options for this request
      * @return the ApplePushNotificationCertificateRequest instance
      */
-    public ApplePushNotificationCertificateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ApplePushNotificationCertificateRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,7 +50,8 @@ public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestB
      * @param requestOptions the options for this request
      * @return the ApplePushNotificationCertificateRequest instance
      */
-    public ApplePushNotificationCertificateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ApplePushNotificationCertificateRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ApplePushNotificationCertificateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -57,6 +61,7 @@ public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestB
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequestBuilder downloadApplePushNotificationCertificateSigningRequest() {
         return new ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.downloadApplePushNotificationCertificateSigningRequest"), getClient(), null);
     }

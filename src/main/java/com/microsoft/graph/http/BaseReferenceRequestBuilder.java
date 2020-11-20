@@ -28,6 +28,9 @@ import com.microsoft.graph.options.Option;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 /**
  * A request builder
  */
@@ -43,7 +46,7 @@ public abstract class BaseReferenceRequestBuilder<T, T2 extends BaseReferenceReq
      * @param requestOptions the options for this request
      * @param referenceRequestClass the class to use to build the request
      */
-    public BaseReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final Class<T2> referenceRequestClass) {
+    public BaseReferenceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final Class<T2> referenceRequestClass) {
         super(requestUrl, client, requestOptions);
         this.refRequestClass = referenceRequestClass;
     }
@@ -54,7 +57,8 @@ public abstract class BaseReferenceRequestBuilder<T, T2 extends BaseReferenceReq
      * @param requestOptions the options for this request
      * @return The ReferenceRequest instance
      */
-    public T2 buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nullable
+    public T2 buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -64,7 +68,8 @@ public abstract class BaseReferenceRequestBuilder<T, T2 extends BaseReferenceReq
      * @param requestOptions the options for this request
      * @return the ReferenceRequest instance
      */
-    public T2 buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nullable
+    public T2 buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         try {
             return refRequestClass.getConstructor(String.class, IBaseClient.class, java.util.List.class)
                                 .newInstance(getRequestUrl(), getClient(), requestOptions);

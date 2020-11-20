@@ -13,6 +13,8 @@ import com.microsoft.graph.requests.extensions.WorkbookChartGridlinesRequestBuil
 import com.microsoft.graph.requests.extensions.WorkbookChartAxisTitleRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -30,7 +32,7 @@ public class WorkbookChartAxisRequestBuilder extends BaseRequestBuilder<Workbook
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartAxisRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartAxisRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,7 +42,8 @@ public class WorkbookChartAxisRequestBuilder extends BaseRequestBuilder<Workbook
      * @param requestOptions the options for this request
      * @return the WorkbookChartAxisRequest instance
      */
-    public WorkbookChartAxisRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WorkbookChartAxisRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,7 +53,8 @@ public class WorkbookChartAxisRequestBuilder extends BaseRequestBuilder<Workbook
      * @param requestOptions the options for this request
      * @return the WorkbookChartAxisRequest instance
      */
-    public WorkbookChartAxisRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WorkbookChartAxisRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookChartAxisRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -61,6 +65,7 @@ public class WorkbookChartAxisRequestBuilder extends BaseRequestBuilder<Workbook
      *
      * @return the WorkbookChartAxisFormatRequestBuilder instance
      */
+    @Nonnull
     public WorkbookChartAxisFormatRequestBuilder format() {
         return new WorkbookChartAxisFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
@@ -70,6 +75,7 @@ public class WorkbookChartAxisRequestBuilder extends BaseRequestBuilder<Workbook
      *
      * @return the WorkbookChartGridlinesRequestBuilder instance
      */
+    @Nonnull
     public WorkbookChartGridlinesRequestBuilder majorGridlines() {
         return new WorkbookChartGridlinesRequestBuilder(getRequestUrlWithAdditionalSegment("majorGridlines"), getClient(), null);
     }
@@ -79,6 +85,7 @@ public class WorkbookChartAxisRequestBuilder extends BaseRequestBuilder<Workbook
      *
      * @return the WorkbookChartGridlinesRequestBuilder instance
      */
+    @Nonnull
     public WorkbookChartGridlinesRequestBuilder minorGridlines() {
         return new WorkbookChartGridlinesRequestBuilder(getRequestUrlWithAdditionalSegment("minorGridlines"), getClient(), null);
     }
@@ -88,6 +95,7 @@ public class WorkbookChartAxisRequestBuilder extends BaseRequestBuilder<Workbook
      *
      * @return the WorkbookChartAxisTitleRequestBuilder instance
      */
+    @Nonnull
     public WorkbookChartAxisTitleRequestBuilder title() {
         return new WorkbookChartAxisTitleRequestBuilder(getRequestUrlWithAdditionalSegment("title"), getClient(), null);
     }

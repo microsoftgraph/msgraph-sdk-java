@@ -50,7 +50,7 @@ import javax.xml.datatype.Duration;
  */
 final class GsonFactory {
 
-	private static String PARSING_MESSAGE = "Parsing issue on ";
+	protected static String PARSING_MESSAGE = "Parsing issue on ";
 	
     /**
      * Default constructor

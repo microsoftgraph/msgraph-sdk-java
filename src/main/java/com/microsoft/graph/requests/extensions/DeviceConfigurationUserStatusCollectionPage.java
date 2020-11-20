@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DeviceConfigurationUserStatus;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationUserStatusCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationUserStatusCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class DeviceConfigurationUserStatusCollectionPage extends BaseCollectionP
      * @param response the serialized DeviceConfigurationUserStatusCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DeviceConfigurationUserStatusCollectionPage(final DeviceConfigurationUserStatusCollectionResponse response, final DeviceConfigurationUserStatusCollectionRequestBuilder builder) {
+    public DeviceConfigurationUserStatusCollectionPage(@Nonnull final DeviceConfigurationUserStatusCollectionResponse response, @Nonnull final DeviceConfigurationUserStatusCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class DeviceConfigurationUserStatusCollectionPage extends BaseCollectionP
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public DeviceConfigurationUserStatusCollectionPage(final java.util.List<DeviceConfigurationUserStatus> pageContents, final DeviceConfigurationUserStatusCollectionRequestBuilder nextRequestBuilder) {
+    public DeviceConfigurationUserStatusCollectionPage(@Nonnull final java.util.List<DeviceConfigurationUserStatus> pageContents, @Nullable final DeviceConfigurationUserStatusCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

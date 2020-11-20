@@ -15,6 +15,8 @@ import com.microsoft.graph.requests.extensions.NotebookRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteSectionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -32,7 +34,7 @@ public class OnenotePageRequestBuilder extends BaseRequestBuilder<OnenotePage> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnenotePageRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnenotePageRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,7 +44,8 @@ public class OnenotePageRequestBuilder extends BaseRequestBuilder<OnenotePage> {
      * @param requestOptions the options for this request
      * @return the OnenotePageRequest instance
      */
-    public OnenotePageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public OnenotePageRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,7 +55,8 @@ public class OnenotePageRequestBuilder extends BaseRequestBuilder<OnenotePage> {
      * @param requestOptions the options for this request
      * @return the OnenotePageRequest instance
      */
-    public OnenotePageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public OnenotePageRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.OnenotePageRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -63,6 +67,7 @@ public class OnenotePageRequestBuilder extends BaseRequestBuilder<OnenotePage> {
      *
      * @return the NotebookRequestBuilder instance
      */
+    @Nonnull
     public NotebookRequestBuilder parentNotebook() {
         return new NotebookRequestBuilder(getRequestUrlWithAdditionalSegment("parentNotebook"), getClient(), null);
     }
@@ -72,6 +77,7 @@ public class OnenotePageRequestBuilder extends BaseRequestBuilder<OnenotePage> {
      *
      * @return the OnenoteSectionRequestBuilder instance
      */
+    @Nonnull
     public OnenoteSectionRequestBuilder parentSection() {
         return new OnenoteSectionRequestBuilder(getRequestUrlWithAdditionalSegment("parentSection"), getClient(), null);
     }
@@ -81,6 +87,7 @@ public class OnenotePageRequestBuilder extends BaseRequestBuilder<OnenotePage> {
      *
      * @return the OnenotePageContentStreamRequestBuilder instance
      */
+    @Nonnull
     public OnenotePageContentStreamRequestBuilder content() {
         return new OnenotePageContentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
     }
@@ -93,7 +100,8 @@ public class OnenotePageRequestBuilder extends BaseRequestBuilder<OnenotePage> {
      * @param siteCollectionId the siteCollectionId
      * @param siteId the siteId
      */
-    public OnenotePageCopyToSectionRequestBuilder copyToSection(final String id, final String groupId, final String siteCollectionId, final String siteId) {
+    @Nonnull
+    public OnenotePageCopyToSectionRequestBuilder copyToSection(@Nullable final String id, @Nullable final String groupId, @Nullable final String siteCollectionId, @Nullable final String siteId) {
         return new OnenotePageCopyToSectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copyToSection"), getClient(), null, id, groupId, siteCollectionId, siteId);
     }
 
@@ -102,7 +110,8 @@ public class OnenotePageRequestBuilder extends BaseRequestBuilder<OnenotePage> {
      * @return the request builder 
      * @param commands the commands
      */
-    public OnenotePageOnenotePatchContentRequestBuilder onenotePatchContent(final java.util.List<OnenotePatchContentCommand> commands) {
+    @Nonnull
+    public OnenotePageOnenotePatchContentRequestBuilder onenotePatchContent(@Nullable final java.util.List<OnenotePatchContentCommand> commands) {
         return new OnenotePageOnenotePatchContentRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.onenotePatchContent"), getClient(), null, commands);
     }
 
@@ -110,6 +119,7 @@ public class OnenotePageRequestBuilder extends BaseRequestBuilder<OnenotePage> {
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public OnenotePagePreviewRequestBuilder preview() {
         return new OnenotePagePreviewRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.preview"), getClient(), null);
     }

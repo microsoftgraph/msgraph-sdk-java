@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TodoTaskList;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.DeltaCollectionPage;
 import com.microsoft.graph.requests.extensions.TodoTaskListDeltaCollectionRequestBuilder;
@@ -29,7 +31,7 @@ public class TodoTaskListDeltaCollectionPage extends DeltaCollectionPage<TodoTas
      * @param response The serialized TodoTaskListDeltaCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public TodoTaskListDeltaCollectionPage(final TodoTaskListDeltaCollectionResponse response, final TodoTaskListDeltaCollectionRequestBuilder builder) {
+    public TodoTaskListDeltaCollectionPage(@Nonnull final TodoTaskListDeltaCollectionResponse response, @Nonnull final TodoTaskListDeltaCollectionRequestBuilder builder) {
        super(response, builder);
     }
 
@@ -39,7 +41,7 @@ public class TodoTaskListDeltaCollectionPage extends DeltaCollectionPage<TodoTas
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public TodoTaskListDeltaCollectionPage(final java.util.List<TodoTaskList> pageContents, final TodoTaskListDeltaCollectionRequestBuilder nextRequestBuilder) {
+    public TodoTaskListDeltaCollectionPage(@Nonnull final java.util.List<TodoTaskList> pageContents, @Nullable final TodoTaskListDeltaCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

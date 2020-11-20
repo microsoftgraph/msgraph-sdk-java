@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Domain;
 import com.microsoft.graph.requests.extensions.DomainCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DomainCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class DomainCollectionPage extends BaseCollectionPage<Domain, DomainColle
      * @param response the serialized DomainCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DomainCollectionPage(final DomainCollectionResponse response, final DomainCollectionRequestBuilder builder) {
+    public DomainCollectionPage(@Nonnull final DomainCollectionResponse response, @Nonnull final DomainCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class DomainCollectionPage extends BaseCollectionPage<Domain, DomainColle
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public DomainCollectionPage(final java.util.List<Domain> pageContents, final DomainCollectionRequestBuilder nextRequestBuilder) {
+    public DomainCollectionPage(@Nonnull final java.util.List<Domain> pageContents, @Nullable final DomainCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

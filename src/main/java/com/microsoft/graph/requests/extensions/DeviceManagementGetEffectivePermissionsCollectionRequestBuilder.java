@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RolePermission;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DeviceManagementGetEffectivePermissionsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementGetEffectivePermissionsCollectionRequest;
@@ -33,7 +35,7 @@ public class DeviceManagementGetEffectivePermissionsCollectionRequestBuilder ext
      * @param requestOptions the options for this request
      * @param scope the scope
      */
-    public DeviceManagementGetEffectivePermissionsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String scope) {
+    public DeviceManagementGetEffectivePermissionsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final String scope) {
         super(requestUrl, client, requestOptions, DeviceManagementGetEffectivePermissionsCollectionRequestBuilder.class, DeviceManagementGetEffectivePermissionsCollectionRequest.class);
      	 if(scope!=null){
 			functionOptions.add(new com.microsoft.graph.options.FunctionOption("scope", scope));
@@ -46,8 +48,9 @@ public class DeviceManagementGetEffectivePermissionsCollectionRequestBuilder ext
      * @param requestOptions the options for this request
      * @return the DeviceManagementGetEffectivePermissionsCollectionRequest instance
      */
-     @Override
-    public DeviceManagementGetEffectivePermissionsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Override
+    @Nonnull
+    public DeviceManagementGetEffectivePermissionsCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final DeviceManagementGetEffectivePermissionsCollectionRequest request = super.buildRequest(requestOptions);
 
       for (com.microsoft.graph.options.FunctionOption option : functionOptions) {

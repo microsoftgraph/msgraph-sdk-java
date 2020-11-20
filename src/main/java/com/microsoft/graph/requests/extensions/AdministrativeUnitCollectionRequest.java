@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Directory;
 import com.microsoft.graph.models.extensions.AdministrativeUnit;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<A
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AdministrativeUnitCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AdministrativeUnitCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AdministrativeUnitCollectionResponse.class, AdministrativeUnitCollectionPage.class, AdministrativeUnitCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<A
      * @param newAdministrativeUnit the AdministrativeUnit to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final AdministrativeUnit newAdministrativeUnit, final ICallback<? super AdministrativeUnit> callback) {
+    public void post(@Nonnull final AdministrativeUnit newAdministrativeUnit, @Nonnull final ICallback<? super AdministrativeUnit> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AdministrativeUnitRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<A
      * @param newAdministrativeUnit the AdministrativeUnit to create
      * @return the newly created object
      */
-    public AdministrativeUnit post(final AdministrativeUnit newAdministrativeUnit) throws ClientException {
+    @Nonnull
+    public AdministrativeUnit post(@Nonnull final AdministrativeUnit newAdministrativeUnit) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AdministrativeUnitRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<A
      * @param value the expand clause
      * @return the updated request
      */
-    public AdministrativeUnitCollectionRequest expand(final String value) {
+    @Nonnull
+    public AdministrativeUnitCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<A
      * @param value the filter clause
      * @return the updated request
      */
-    public AdministrativeUnitCollectionRequest filter(final String value) {
+    @Nonnull
+    public AdministrativeUnitCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<A
      * @param value the order by clause
      * @return the updated request
      */
-    public AdministrativeUnitCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public AdministrativeUnitCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<A
      * @param value the select clause
      * @return the updated request
      */
-    public AdministrativeUnitCollectionRequest select(final String value) {
+    @Nonnull
+    public AdministrativeUnitCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<A
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public AdministrativeUnitCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<A
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public AdministrativeUnitCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<A
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public AdministrativeUnitCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public AdministrativeUnitCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

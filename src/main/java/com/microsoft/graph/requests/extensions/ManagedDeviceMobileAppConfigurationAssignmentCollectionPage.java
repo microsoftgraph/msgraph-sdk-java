@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationAssignment;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionPage extends
      * @param response the serialized ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ManagedDeviceMobileAppConfigurationAssignmentCollectionPage(final ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse response, final ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder builder) {
+    public ManagedDeviceMobileAppConfigurationAssignmentCollectionPage(@Nonnull final ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse response, @Nonnull final ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionPage extends
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public ManagedDeviceMobileAppConfigurationAssignmentCollectionPage(final java.util.List<ManagedDeviceMobileAppConfigurationAssignment> pageContents, final ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder nextRequestBuilder) {
+    public ManagedDeviceMobileAppConfigurationAssignmentCollectionPage(@Nonnull final java.util.List<ManagedDeviceMobileAppConfigurationAssignment> pageContents, @Nullable final ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

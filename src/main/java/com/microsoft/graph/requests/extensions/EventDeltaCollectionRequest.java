@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Event;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.EventDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EventDeltaCollectionResponse;
@@ -34,7 +36,7 @@ public class EventDeltaCollectionRequest extends BaseCollectionRequest<Event, Ev
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EventDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EventDeltaCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EventDeltaCollectionResponse.class, EventDeltaCollectionPage.class, EventDeltaCollectionRequestBuilder.class);
     }
 
@@ -45,7 +47,8 @@ public class EventDeltaCollectionRequest extends BaseCollectionRequest<Event, Ev
      * @param value the select clause
      * @return the updated request
      */
-    public EventDeltaCollectionRequest select(final String value) {
+    @Nonnull
+    public EventDeltaCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -56,6 +59,7 @@ public class EventDeltaCollectionRequest extends BaseCollectionRequest<Event, Ev
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public EventDeltaCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -67,7 +71,8 @@ public class EventDeltaCollectionRequest extends BaseCollectionRequest<Event, Ev
      * @param value the expand clause
      * @return the updated request
      */
-    public EventDeltaCollectionRequest expand(final String value) {
+    @Nonnull
+    public EventDeltaCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -78,7 +83,8 @@ public class EventDeltaCollectionRequest extends BaseCollectionRequest<Event, Ev
      * @param value the filter clause
      * @return the updated request
      */
-    public EventDeltaCollectionRequest filter(final String value) {
+    @Nonnull
+    public EventDeltaCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -89,7 +95,8 @@ public class EventDeltaCollectionRequest extends BaseCollectionRequest<Event, Ev
      * @param value the order by clause
      * @return the updated request
      */
-    public EventDeltaCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public EventDeltaCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }

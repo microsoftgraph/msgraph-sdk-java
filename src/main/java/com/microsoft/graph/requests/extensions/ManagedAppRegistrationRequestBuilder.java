@@ -14,6 +14,8 @@ import com.microsoft.graph.requests.extensions.ManagedAppOperationCollectionRequ
 import com.microsoft.graph.requests.extensions.ManagedAppOperationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -31,7 +33,7 @@ public class ManagedAppRegistrationRequestBuilder extends BaseRequestBuilder<Man
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedAppRegistrationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppRegistrationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -41,7 +43,8 @@ public class ManagedAppRegistrationRequestBuilder extends BaseRequestBuilder<Man
      * @param requestOptions the options for this request
      * @return the ManagedAppRegistrationRequest instance
      */
-    public ManagedAppRegistrationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ManagedAppRegistrationRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,7 +54,8 @@ public class ManagedAppRegistrationRequestBuilder extends BaseRequestBuilder<Man
      * @param requestOptions the options for this request
      * @return the ManagedAppRegistrationRequest instance
      */
-    public ManagedAppRegistrationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ManagedAppRegistrationRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ManagedAppRegistrationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -61,6 +65,7 @@ public class ManagedAppRegistrationRequestBuilder extends BaseRequestBuilder<Man
      *
      * @return the collection request builder
      */
+    @Nonnull
     public ManagedAppPolicyCollectionRequestBuilder appliedPolicies() {
         return new ManagedAppPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appliedPolicies"), getClient(), null);
     }
@@ -71,7 +76,8 @@ public class ManagedAppRegistrationRequestBuilder extends BaseRequestBuilder<Man
      * @return the request builder
      * @param id the item identifier
      */
-    public ManagedAppPolicyRequestBuilder appliedPolicies(final String id) {
+    @Nonnull
+    public ManagedAppPolicyRequestBuilder appliedPolicies(@Nonnull final String id) {
         return new ManagedAppPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("appliedPolicies") + "/" + id, getClient(), null);
     }
     /**
@@ -79,6 +85,7 @@ public class ManagedAppRegistrationRequestBuilder extends BaseRequestBuilder<Man
      *
      * @return the collection request builder
      */
+    @Nonnull
     public ManagedAppPolicyCollectionRequestBuilder intendedPolicies() {
         return new ManagedAppPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("intendedPolicies"), getClient(), null);
     }
@@ -89,7 +96,8 @@ public class ManagedAppRegistrationRequestBuilder extends BaseRequestBuilder<Man
      * @return the request builder
      * @param id the item identifier
      */
-    public ManagedAppPolicyRequestBuilder intendedPolicies(final String id) {
+    @Nonnull
+    public ManagedAppPolicyRequestBuilder intendedPolicies(@Nonnull final String id) {
         return new ManagedAppPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("intendedPolicies") + "/" + id, getClient(), null);
     }
     /**
@@ -97,6 +105,7 @@ public class ManagedAppRegistrationRequestBuilder extends BaseRequestBuilder<Man
      *
      * @return the collection request builder
      */
+    @Nonnull
     public ManagedAppOperationCollectionRequestBuilder operations() {
         return new ManagedAppOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
     }
@@ -107,7 +116,8 @@ public class ManagedAppRegistrationRequestBuilder extends BaseRequestBuilder<Man
      * @return the request builder
      * @param id the item identifier
      */
-    public ManagedAppOperationRequestBuilder operations(final String id) {
+    @Nonnull
+    public ManagedAppOperationRequestBuilder operations(@Nonnull final String id) {
         return new ManagedAppOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
 }

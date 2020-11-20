@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.CommsOperation;
 import com.microsoft.graph.requests.extensions.CommsOperationCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.CommsOperationCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class CommsOperationCollectionPage extends BaseCollectionPage<CommsOperat
      * @param response the serialized CommsOperationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public CommsOperationCollectionPage(final CommsOperationCollectionResponse response, final CommsOperationCollectionRequestBuilder builder) {
+    public CommsOperationCollectionPage(@Nonnull final CommsOperationCollectionResponse response, @Nonnull final CommsOperationCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class CommsOperationCollectionPage extends BaseCollectionPage<CommsOperat
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public CommsOperationCollectionPage(final java.util.List<CommsOperation> pageContents, final CommsOperationCollectionRequestBuilder nextRequestBuilder) {
+    public CommsOperationCollectionPage(@Nonnull final java.util.List<CommsOperation> pageContents, @Nullable final CommsOperationCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.TargetedManagedAppConfiguration;
 import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentRequestBuilder;
@@ -32,7 +34,7 @@ public class TargetedManagedAppPolicyAssignmentCollectionRequestBuilder extends 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TargetedManagedAppPolicyAssignmentCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TargetedManagedAppPolicyAssignmentCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TargetedManagedAppPolicyAssignmentRequestBuilder.class, TargetedManagedAppPolicyAssignmentCollectionRequest.class);
     }
 

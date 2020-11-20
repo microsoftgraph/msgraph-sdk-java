@@ -6,6 +6,8 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookChartSeries;
 import com.microsoft.graph.requests.extensions.WorkbookChartSeriesCountRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.core.ClientException;
@@ -27,7 +29,7 @@ public class WorkbookChartSeriesCountRequest extends BaseRequest<Integer> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartSeriesCountRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartSeriesCountRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Integer.class);
     }
 
@@ -36,7 +38,7 @@ public class WorkbookChartSeriesCountRequest extends BaseRequest<Integer> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Integer> callback) {
+    public void get(@Nonnull final ICallback<? super Integer> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -46,6 +48,7 @@ public class WorkbookChartSeriesCountRequest extends BaseRequest<Integer> {
      * @return the Integer
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
+    @Nullable
     public Integer get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,8 @@ public class WorkbookChartSeriesCountRequest extends BaseRequest<Integer> {
      * @param value the select clause
      * @return the updated request
      */
-    public WorkbookChartSeriesCountRequest select(final String value) {
+    @Nonnull
+    public WorkbookChartSeriesCountRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -67,7 +71,8 @@ public class WorkbookChartSeriesCountRequest extends BaseRequest<Integer> {
      * @param value the expand clause
      * @return the updated request
      */
-    public WorkbookChartSeriesCountRequest expand(final String value) {
+    @Nonnull
+    public WorkbookChartSeriesCountRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -78,7 +83,8 @@ public class WorkbookChartSeriesCountRequest extends BaseRequest<Integer> {
      * @param value the filter clause
      * @return the updated request
      */
-    public WorkbookChartSeriesCountRequest filter(final String value) {
+    @Nonnull
+    public WorkbookChartSeriesCountRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -89,7 +95,8 @@ public class WorkbookChartSeriesCountRequest extends BaseRequest<Integer> {
      * @param value the order by clause
      * @return the updated request
      */
-    public WorkbookChartSeriesCountRequest orderBy(final String value) {
+    @Nonnull
+    public WorkbookChartSeriesCountRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }

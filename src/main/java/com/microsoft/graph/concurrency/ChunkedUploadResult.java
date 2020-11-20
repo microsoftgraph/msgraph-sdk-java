@@ -8,6 +8,9 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.http.GraphServiceException;
 import com.microsoft.graph.models.extensions.UploadSession;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 /**
  * Wrapper class for different upload response from server.
  */
@@ -32,7 +35,7 @@ public class ChunkedUploadResult<UploadType> {
      *
      * @param uploaded The created item.
      */
-    public ChunkedUploadResult(UploadType uploaded) {
+    public ChunkedUploadResult(@Nullable final UploadType uploaded) {
         this.uploadedItem = uploaded;
         this.session = null;
         this.error = null;
@@ -43,7 +46,7 @@ public class ChunkedUploadResult<UploadType> {
      *
      * @param session The next session.
      */
-    public ChunkedUploadResult(UploadSession session) {
+    public ChunkedUploadResult(@Nullable final UploadSession session) {
         this.session = session;
         this.uploadedItem = null;
         this.error = null;
@@ -54,7 +57,7 @@ public class ChunkedUploadResult<UploadType> {
      *
      * @param error The error occurred during uploading.
      */
-    public ChunkedUploadResult(ClientException error) {
+    public ChunkedUploadResult(@Nullable final ClientException error) {
         this.error = error;
         this.uploadedItem = null;
         this.session = null;
@@ -65,7 +68,7 @@ public class ChunkedUploadResult<UploadType> {
      *
      * @param exception The exception received from server.
      */
-    public ChunkedUploadResult(GraphServiceException exception) {
+    public ChunkedUploadResult(@Nonnull final GraphServiceException exception) {
         this(new ClientException(exception.getMessage(/* verbose */ true), exception));
     }
 
@@ -101,6 +104,7 @@ public class ChunkedUploadResult<UploadType> {
      *
      * @return The item.
      */
+    @Nullable
     public UploadType getItem() {
         return this.uploadedItem;
     }
@@ -110,6 +114,7 @@ public class ChunkedUploadResult<UploadType> {
      *
      * @return The next session for uploading.
      */
+    @Nullable
     public UploadSession getSession() {
         return this.session;
     }
@@ -119,6 +124,7 @@ public class ChunkedUploadResult<UploadType> {
      *
      * @return The error.
      */
+    @Nullable
     public ClientException getError() {
         return this.error;
     }

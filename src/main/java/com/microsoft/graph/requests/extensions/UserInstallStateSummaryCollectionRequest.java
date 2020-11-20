@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ManagedEBook;
 import com.microsoft.graph.models.extensions.UserInstallStateSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class UserInstallStateSummaryCollectionRequest extends BaseCollectionRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserInstallStateSummaryCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserInstallStateSummaryCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserInstallStateSummaryCollectionResponse.class, UserInstallStateSummaryCollectionPage.class, UserInstallStateSummaryCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class UserInstallStateSummaryCollectionRequest extends BaseCollectionRequ
      * @param newUserInstallStateSummary the UserInstallStateSummary to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final UserInstallStateSummary newUserInstallStateSummary, final ICallback<? super UserInstallStateSummary> callback) {
+    public void post(@Nonnull final UserInstallStateSummary newUserInstallStateSummary, @Nonnull final ICallback<? super UserInstallStateSummary> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserInstallStateSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class UserInstallStateSummaryCollectionRequest extends BaseCollectionRequ
      * @param newUserInstallStateSummary the UserInstallStateSummary to create
      * @return the newly created object
      */
-    public UserInstallStateSummary post(final UserInstallStateSummary newUserInstallStateSummary) throws ClientException {
+    @Nonnull
+    public UserInstallStateSummary post(@Nonnull final UserInstallStateSummary newUserInstallStateSummary) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UserInstallStateSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class UserInstallStateSummaryCollectionRequest extends BaseCollectionRequ
      * @param value the expand clause
      * @return the updated request
      */
-    public UserInstallStateSummaryCollectionRequest expand(final String value) {
+    @Nonnull
+    public UserInstallStateSummaryCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class UserInstallStateSummaryCollectionRequest extends BaseCollectionRequ
      * @param value the filter clause
      * @return the updated request
      */
-    public UserInstallStateSummaryCollectionRequest filter(final String value) {
+    @Nonnull
+    public UserInstallStateSummaryCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class UserInstallStateSummaryCollectionRequest extends BaseCollectionRequ
      * @param value the order by clause
      * @return the updated request
      */
-    public UserInstallStateSummaryCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public UserInstallStateSummaryCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class UserInstallStateSummaryCollectionRequest extends BaseCollectionRequ
      * @param value the select clause
      * @return the updated request
      */
-    public UserInstallStateSummaryCollectionRequest select(final String value) {
+    @Nonnull
+    public UserInstallStateSummaryCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class UserInstallStateSummaryCollectionRequest extends BaseCollectionRequ
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public UserInstallStateSummaryCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class UserInstallStateSummaryCollectionRequest extends BaseCollectionRequ
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public UserInstallStateSummaryCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class UserInstallStateSummaryCollectionRequest extends BaseCollectionRequ
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public UserInstallStateSummaryCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public UserInstallStateSummaryCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

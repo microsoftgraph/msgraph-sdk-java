@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosLobApp;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class IosLobAppRequest extends BaseRequest<IosLobApp> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosLobAppRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IosLobAppRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IosLobApp.class);
     }
 
@@ -37,7 +39,7 @@ public class IosLobAppRequest extends BaseRequest<IosLobApp> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IosLobApp> callback) {
+    public void get(@Nonnull final ICallback<? super IosLobApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class IosLobAppRequest extends BaseRequest<IosLobApp> {
      * @return the IosLobApp from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public IosLobApp get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class IosLobAppRequest extends BaseRequest<IosLobApp> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IosLobApp> callback) {
+    public void delete(@Nonnull final ICallback<? super IosLobApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class IosLobAppRequest extends BaseRequest<IosLobApp> {
      * @param sourceIosLobApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosLobApp sourceIosLobApp, final ICallback<? super IosLobApp> callback) {
+    public void patch(@Nonnull final IosLobApp sourceIosLobApp, @Nonnull final ICallback<? super IosLobApp> callback) {
         send(HttpMethod.PATCH, callback, sourceIosLobApp);
     }
 
@@ -86,7 +89,8 @@ public class IosLobAppRequest extends BaseRequest<IosLobApp> {
      * @return the updated IosLobApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosLobApp patch(final IosLobApp sourceIosLobApp) throws ClientException {
+    @Nullable
+    public IosLobApp patch(@Nonnull final IosLobApp sourceIosLobApp) throws ClientException {
         return send(HttpMethod.PATCH, sourceIosLobApp);
     }
 
@@ -96,7 +100,7 @@ public class IosLobAppRequest extends BaseRequest<IosLobApp> {
      * @param newIosLobApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosLobApp newIosLobApp, final ICallback<? super IosLobApp> callback) {
+    public void post(@Nonnull final IosLobApp newIosLobApp, @Nonnull final ICallback<? super IosLobApp> callback) {
         send(HttpMethod.POST, callback, newIosLobApp);
     }
 
@@ -107,7 +111,8 @@ public class IosLobAppRequest extends BaseRequest<IosLobApp> {
      * @return the created IosLobApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosLobApp post(final IosLobApp newIosLobApp) throws ClientException {
+    @Nullable
+    public IosLobApp post(@Nonnull final IosLobApp newIosLobApp) throws ClientException {
         return send(HttpMethod.POST, newIosLobApp);
     }
 
@@ -117,7 +122,7 @@ public class IosLobAppRequest extends BaseRequest<IosLobApp> {
      * @param newIosLobApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosLobApp newIosLobApp, final ICallback<? super IosLobApp> callback) {
+    public void put(@Nonnull final IosLobApp newIosLobApp, @Nonnull final ICallback<? super IosLobApp> callback) {
         send(HttpMethod.PUT, callback, newIosLobApp);
     }
 
@@ -128,7 +133,8 @@ public class IosLobAppRequest extends BaseRequest<IosLobApp> {
      * @return the created IosLobApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosLobApp put(final IosLobApp newIosLobApp) throws ClientException {
+    @Nullable
+    public IosLobApp put(@Nonnull final IosLobApp newIosLobApp) throws ClientException {
         return send(HttpMethod.PUT, newIosLobApp);
     }
 
@@ -138,7 +144,8 @@ public class IosLobAppRequest extends BaseRequest<IosLobApp> {
      * @param value the select clause
      * @return the updated request
      */
-     public IosLobAppRequest select(final String value) {
+     @Nonnull
+     public IosLobAppRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class IosLobAppRequest extends BaseRequest<IosLobApp> {
      * @param value the expand clause
      * @return the updated request
      */
-     public IosLobAppRequest expand(final String value) {
+     @Nonnull
+     public IosLobAppRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

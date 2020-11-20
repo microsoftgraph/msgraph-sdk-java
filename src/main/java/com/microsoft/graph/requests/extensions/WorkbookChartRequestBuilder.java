@@ -18,6 +18,8 @@ import com.microsoft.graph.requests.extensions.WorkbookChartTitleRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -35,7 +37,7 @@ public class WorkbookChartRequestBuilder extends BaseRequestBuilder<WorkbookChar
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,7 +47,8 @@ public class WorkbookChartRequestBuilder extends BaseRequestBuilder<WorkbookChar
      * @param requestOptions the options for this request
      * @return the WorkbookChartRequest instance
      */
-    public WorkbookChartRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WorkbookChartRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -55,7 +58,8 @@ public class WorkbookChartRequestBuilder extends BaseRequestBuilder<WorkbookChar
      * @param requestOptions the options for this request
      * @return the WorkbookChartRequest instance
      */
-    public WorkbookChartRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WorkbookChartRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookChartRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -66,6 +70,7 @@ public class WorkbookChartRequestBuilder extends BaseRequestBuilder<WorkbookChar
      *
      * @return the WorkbookChartAxesRequestBuilder instance
      */
+    @Nonnull
     public WorkbookChartAxesRequestBuilder axes() {
         return new WorkbookChartAxesRequestBuilder(getRequestUrlWithAdditionalSegment("axes"), getClient(), null);
     }
@@ -75,6 +80,7 @@ public class WorkbookChartRequestBuilder extends BaseRequestBuilder<WorkbookChar
      *
      * @return the WorkbookChartDataLabelsRequestBuilder instance
      */
+    @Nonnull
     public WorkbookChartDataLabelsRequestBuilder dataLabels() {
         return new WorkbookChartDataLabelsRequestBuilder(getRequestUrlWithAdditionalSegment("dataLabels"), getClient(), null);
     }
@@ -84,6 +90,7 @@ public class WorkbookChartRequestBuilder extends BaseRequestBuilder<WorkbookChar
      *
      * @return the WorkbookChartAreaFormatRequestBuilder instance
      */
+    @Nonnull
     public WorkbookChartAreaFormatRequestBuilder format() {
         return new WorkbookChartAreaFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
@@ -93,6 +100,7 @@ public class WorkbookChartRequestBuilder extends BaseRequestBuilder<WorkbookChar
      *
      * @return the WorkbookChartLegendRequestBuilder instance
      */
+    @Nonnull
     public WorkbookChartLegendRequestBuilder legend() {
         return new WorkbookChartLegendRequestBuilder(getRequestUrlWithAdditionalSegment("legend"), getClient(), null);
     }
@@ -101,6 +109,7 @@ public class WorkbookChartRequestBuilder extends BaseRequestBuilder<WorkbookChar
      *
      * @return the collection request builder
      */
+    @Nonnull
     public WorkbookChartSeriesCollectionRequestBuilder series() {
         return new WorkbookChartSeriesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("series"), getClient(), null);
     }
@@ -111,7 +120,8 @@ public class WorkbookChartRequestBuilder extends BaseRequestBuilder<WorkbookChar
      * @return the request builder
      * @param id the item identifier
      */
-    public WorkbookChartSeriesRequestBuilder series(final String id) {
+    @Nonnull
+    public WorkbookChartSeriesRequestBuilder series(@Nonnull final String id) {
         return new WorkbookChartSeriesRequestBuilder(getRequestUrlWithAdditionalSegment("series") + "/" + id, getClient(), null);
     }
 
@@ -120,6 +130,7 @@ public class WorkbookChartRequestBuilder extends BaseRequestBuilder<WorkbookChar
      *
      * @return the WorkbookChartTitleRequestBuilder instance
      */
+    @Nonnull
     public WorkbookChartTitleRequestBuilder title() {
         return new WorkbookChartTitleRequestBuilder(getRequestUrlWithAdditionalSegment("title"), getClient(), null);
     }
@@ -129,6 +140,7 @@ public class WorkbookChartRequestBuilder extends BaseRequestBuilder<WorkbookChar
      *
      * @return the WorkbookWorksheetRequestBuilder instance
      */
+    @Nonnull
     public WorkbookWorksheetRequestBuilder worksheet() {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
     }
@@ -139,7 +151,8 @@ public class WorkbookChartRequestBuilder extends BaseRequestBuilder<WorkbookChar
      * @param sourceData the sourceData
      * @param seriesBy the seriesBy
      */
-    public WorkbookChartSetDataRequestBuilder setData(final com.google.gson.JsonElement sourceData, final String seriesBy) {
+    @Nonnull
+    public WorkbookChartSetDataRequestBuilder setData(@Nullable final com.google.gson.JsonElement sourceData, @Nullable final String seriesBy) {
         return new WorkbookChartSetDataRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setData"), getClient(), null, sourceData, seriesBy);
     }
 
@@ -149,7 +162,8 @@ public class WorkbookChartRequestBuilder extends BaseRequestBuilder<WorkbookChar
      * @param startCell the startCell
      * @param endCell the endCell
      */
-    public WorkbookChartSetPositionRequestBuilder setPosition(final com.google.gson.JsonElement startCell, final com.google.gson.JsonElement endCell) {
+    @Nonnull
+    public WorkbookChartSetPositionRequestBuilder setPosition(@Nullable final com.google.gson.JsonElement startCell, @Nullable final com.google.gson.JsonElement endCell) {
         return new WorkbookChartSetPositionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setPosition"), getClient(), null, startCell, endCell);
     }
 
@@ -157,6 +171,7 @@ public class WorkbookChartRequestBuilder extends BaseRequestBuilder<WorkbookChar
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public WorkbookChartImageRequestBuilder image() {
         return new WorkbookChartImageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.image"), getClient(), null);
     }
@@ -166,7 +181,8 @@ public class WorkbookChartRequestBuilder extends BaseRequestBuilder<WorkbookChar
      * @return the request builder 
      * @param width the width
      */
-    public WorkbookChartImageRequestBuilder image(final Integer width) {
+    @Nonnull
+    public WorkbookChartImageRequestBuilder image(@Nullable final Integer width) {
         return new WorkbookChartImageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.image"), getClient(), null, width);
     }
 
@@ -176,7 +192,8 @@ public class WorkbookChartRequestBuilder extends BaseRequestBuilder<WorkbookChar
      * @param width the width
      * @param height the height
      */
-    public WorkbookChartImageRequestBuilder image(final Integer width, final Integer height) {
+    @Nonnull
+    public WorkbookChartImageRequestBuilder image(@Nullable final Integer width, @Nullable final Integer height) {
         return new WorkbookChartImageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.image"), getClient(), null, width, height);
     }
 
@@ -187,7 +204,8 @@ public class WorkbookChartRequestBuilder extends BaseRequestBuilder<WorkbookChar
      * @param height the height
      * @param fittingMode the fittingMode
      */
-    public WorkbookChartImageRequestBuilder image(final Integer width, final Integer height, final String fittingMode) {
+    @Nonnull
+    public WorkbookChartImageRequestBuilder image(@Nullable final Integer width, @Nullable final Integer height, @Nullable final String fittingMode) {
         return new WorkbookChartImageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.image"), getClient(), null, width, height, fittingMode);
     }
 }

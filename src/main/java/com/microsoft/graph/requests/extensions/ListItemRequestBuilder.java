@@ -16,6 +16,8 @@ import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.FieldValueSetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -33,7 +35,7 @@ public class ListItemRequestBuilder extends BaseRequestBuilder<ListItem> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ListItemRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ListItemRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -43,7 +45,8 @@ public class ListItemRequestBuilder extends BaseRequestBuilder<ListItem> {
      * @param requestOptions the options for this request
      * @return the ListItemRequest instance
      */
-    public ListItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ListItemRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -53,7 +56,8 @@ public class ListItemRequestBuilder extends BaseRequestBuilder<ListItem> {
      * @param requestOptions the options for this request
      * @return the ListItemRequest instance
      */
-    public ListItemRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ListItemRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ListItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -64,6 +68,7 @@ public class ListItemRequestBuilder extends BaseRequestBuilder<ListItem> {
      *
      * @return the UserWithReferenceRequestBuilder instance
      */
+    @Nonnull
     public UserWithReferenceRequestBuilder createdByUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
     }
@@ -73,6 +78,7 @@ public class ListItemRequestBuilder extends BaseRequestBuilder<ListItem> {
      *
      * @return the UserWithReferenceRequestBuilder instance
      */
+    @Nonnull
     public UserWithReferenceRequestBuilder lastModifiedByUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
     }
@@ -82,6 +88,7 @@ public class ListItemRequestBuilder extends BaseRequestBuilder<ListItem> {
      *
      * @return the ItemAnalyticsWithReferenceRequestBuilder instance
      */
+    @Nonnull
     public ItemAnalyticsWithReferenceRequestBuilder analytics() {
         return new ItemAnalyticsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("analytics"), getClient(), null);
     }
@@ -91,6 +98,7 @@ public class ListItemRequestBuilder extends BaseRequestBuilder<ListItem> {
      *
      * @return the DriveItemRequestBuilder instance
      */
+    @Nonnull
     public DriveItemRequestBuilder driveItem() {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("driveItem"), getClient(), null);
     }
@@ -100,6 +108,7 @@ public class ListItemRequestBuilder extends BaseRequestBuilder<ListItem> {
      *
      * @return the FieldValueSetRequestBuilder instance
      */
+    @Nonnull
     public FieldValueSetRequestBuilder fields() {
         return new FieldValueSetRequestBuilder(getRequestUrlWithAdditionalSegment("fields"), getClient(), null);
     }
@@ -108,6 +117,7 @@ public class ListItemRequestBuilder extends BaseRequestBuilder<ListItem> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public ListItemVersionCollectionRequestBuilder versions() {
         return new ListItemVersionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("versions"), getClient(), null);
     }
@@ -118,7 +128,8 @@ public class ListItemRequestBuilder extends BaseRequestBuilder<ListItem> {
      * @return the request builder
      * @param id the item identifier
      */
-    public ListItemVersionRequestBuilder versions(final String id) {
+    @Nonnull
+    public ListItemVersionRequestBuilder versions(@Nonnull final String id) {
         return new ListItemVersionRequestBuilder(getRequestUrlWithAdditionalSegment("versions") + "/" + id, getClient(), null);
     }
 
@@ -126,6 +137,7 @@ public class ListItemRequestBuilder extends BaseRequestBuilder<ListItem> {
      * Gets a builder to execute the method
      * @return the request builder collection
      */
+    @Nonnull
     public ListItemGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval() {
         return new ListItemGetActivitiesByIntervalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getActivitiesByInterval"), getClient(), null);
     }
@@ -137,7 +149,8 @@ public class ListItemRequestBuilder extends BaseRequestBuilder<ListItem> {
      * @param endDateTime the endDateTime
      * @param interval the interval
      */
-    public ListItemGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval(final String startDateTime, final String endDateTime, final String interval) {
+    @Nonnull
+    public ListItemGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval(@Nullable final String startDateTime, @Nullable final String endDateTime, @Nullable final String interval) {
         return new ListItemGetActivitiesByIntervalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getActivitiesByInterval"), getClient(), null, startDateTime, endDateTime, interval);
     }
 }

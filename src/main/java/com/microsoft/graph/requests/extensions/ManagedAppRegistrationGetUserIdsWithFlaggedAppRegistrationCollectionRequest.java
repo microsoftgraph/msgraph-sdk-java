@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionResponse;
@@ -33,7 +35,7 @@ public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectio
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionResponse.class, ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage.class, ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder.class);
     }
 
@@ -44,7 +46,8 @@ public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectio
      * @param value the select clause
      * @return the updated request
      */
-    public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest select(final String value) {
+    @Nonnull
+    public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -55,6 +58,7 @@ public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectio
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -66,7 +70,8 @@ public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectio
      * @param value the expand clause
      * @return the updated request
      */
-    public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest expand(final String value) {
+    @Nonnull
+    public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -77,7 +82,8 @@ public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectio
      * @param value the filter clause
      * @return the updated request
      */
-    public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest filter(final String value) {
+    @Nonnull
+    public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -88,7 +94,8 @@ public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectio
      * @param value the order by clause
      * @return the updated request
      */
-    public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }

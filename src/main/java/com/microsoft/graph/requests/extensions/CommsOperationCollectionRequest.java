@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Call;
 import com.microsoft.graph.models.extensions.CommsOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class CommsOperationCollectionRequest extends BaseCollectionRequest<Comms
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CommsOperationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CommsOperationCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CommsOperationCollectionResponse.class, CommsOperationCollectionPage.class, CommsOperationCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class CommsOperationCollectionRequest extends BaseCollectionRequest<Comms
      * @param newCommsOperation the CommsOperation to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final CommsOperation newCommsOperation, final ICallback<? super CommsOperation> callback) {
+    public void post(@Nonnull final CommsOperation newCommsOperation, @Nonnull final ICallback<? super CommsOperation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CommsOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class CommsOperationCollectionRequest extends BaseCollectionRequest<Comms
      * @param newCommsOperation the CommsOperation to create
      * @return the newly created object
      */
-    public CommsOperation post(final CommsOperation newCommsOperation) throws ClientException {
+    @Nonnull
+    public CommsOperation post(@Nonnull final CommsOperation newCommsOperation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CommsOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class CommsOperationCollectionRequest extends BaseCollectionRequest<Comms
      * @param value the expand clause
      * @return the updated request
      */
-    public CommsOperationCollectionRequest expand(final String value) {
+    @Nonnull
+    public CommsOperationCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class CommsOperationCollectionRequest extends BaseCollectionRequest<Comms
      * @param value the filter clause
      * @return the updated request
      */
-    public CommsOperationCollectionRequest filter(final String value) {
+    @Nonnull
+    public CommsOperationCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class CommsOperationCollectionRequest extends BaseCollectionRequest<Comms
      * @param value the order by clause
      * @return the updated request
      */
-    public CommsOperationCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public CommsOperationCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class CommsOperationCollectionRequest extends BaseCollectionRequest<Comms
      * @param value the select clause
      * @return the updated request
      */
-    public CommsOperationCollectionRequest select(final String value) {
+    @Nonnull
+    public CommsOperationCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class CommsOperationCollectionRequest extends BaseCollectionRequest<Comms
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public CommsOperationCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class CommsOperationCollectionRequest extends BaseCollectionRequest<Comms
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public CommsOperationCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class CommsOperationCollectionRequest extends BaseCollectionRequest<Comms
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public CommsOperationCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public CommsOperationCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

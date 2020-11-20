@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.LicenseDetails;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class LicenseDetailsRequest extends BaseRequest<LicenseDetails> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public LicenseDetailsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public LicenseDetailsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, LicenseDetails.class);
     }
 
@@ -37,7 +39,7 @@ public class LicenseDetailsRequest extends BaseRequest<LicenseDetails> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super LicenseDetails> callback) {
+    public void get(@Nonnull final ICallback<? super LicenseDetails> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class LicenseDetailsRequest extends BaseRequest<LicenseDetails> {
      * @return the LicenseDetails from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public LicenseDetails get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class LicenseDetailsRequest extends BaseRequest<LicenseDetails> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super LicenseDetails> callback) {
+    public void delete(@Nonnull final ICallback<? super LicenseDetails> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class LicenseDetailsRequest extends BaseRequest<LicenseDetails> {
      * @param sourceLicenseDetails the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final LicenseDetails sourceLicenseDetails, final ICallback<? super LicenseDetails> callback) {
+    public void patch(@Nonnull final LicenseDetails sourceLicenseDetails, @Nonnull final ICallback<? super LicenseDetails> callback) {
         send(HttpMethod.PATCH, callback, sourceLicenseDetails);
     }
 
@@ -86,7 +89,8 @@ public class LicenseDetailsRequest extends BaseRequest<LicenseDetails> {
      * @return the updated LicenseDetails
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public LicenseDetails patch(final LicenseDetails sourceLicenseDetails) throws ClientException {
+    @Nullable
+    public LicenseDetails patch(@Nonnull final LicenseDetails sourceLicenseDetails) throws ClientException {
         return send(HttpMethod.PATCH, sourceLicenseDetails);
     }
 
@@ -96,7 +100,7 @@ public class LicenseDetailsRequest extends BaseRequest<LicenseDetails> {
      * @param newLicenseDetails the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final LicenseDetails newLicenseDetails, final ICallback<? super LicenseDetails> callback) {
+    public void post(@Nonnull final LicenseDetails newLicenseDetails, @Nonnull final ICallback<? super LicenseDetails> callback) {
         send(HttpMethod.POST, callback, newLicenseDetails);
     }
 
@@ -107,7 +111,8 @@ public class LicenseDetailsRequest extends BaseRequest<LicenseDetails> {
      * @return the created LicenseDetails
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public LicenseDetails post(final LicenseDetails newLicenseDetails) throws ClientException {
+    @Nullable
+    public LicenseDetails post(@Nonnull final LicenseDetails newLicenseDetails) throws ClientException {
         return send(HttpMethod.POST, newLicenseDetails);
     }
 
@@ -117,7 +122,7 @@ public class LicenseDetailsRequest extends BaseRequest<LicenseDetails> {
      * @param newLicenseDetails the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final LicenseDetails newLicenseDetails, final ICallback<? super LicenseDetails> callback) {
+    public void put(@Nonnull final LicenseDetails newLicenseDetails, @Nonnull final ICallback<? super LicenseDetails> callback) {
         send(HttpMethod.PUT, callback, newLicenseDetails);
     }
 
@@ -128,7 +133,8 @@ public class LicenseDetailsRequest extends BaseRequest<LicenseDetails> {
      * @return the created LicenseDetails
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public LicenseDetails put(final LicenseDetails newLicenseDetails) throws ClientException {
+    @Nullable
+    public LicenseDetails put(@Nonnull final LicenseDetails newLicenseDetails) throws ClientException {
         return send(HttpMethod.PUT, newLicenseDetails);
     }
 
@@ -138,7 +144,8 @@ public class LicenseDetailsRequest extends BaseRequest<LicenseDetails> {
      * @param value the select clause
      * @return the updated request
      */
-     public LicenseDetailsRequest select(final String value) {
+     @Nonnull
+     public LicenseDetailsRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class LicenseDetailsRequest extends BaseRequest<LicenseDetails> {
      * @param value the expand clause
      * @return the updated request
      */
-     public LicenseDetailsRequest expand(final String value) {
+     @Nonnull
+     public LicenseDetailsRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

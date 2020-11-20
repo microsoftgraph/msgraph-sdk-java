@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberGroupsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberGroupsCollectionRequest;
@@ -33,7 +35,7 @@ public class DirectoryObjectCheckMemberGroupsCollectionRequestBuilder extends Ba
      * @param requestOptions the options for this request
      * @param groupIds the groupIds
      */
-    public DirectoryObjectCheckMemberGroupsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<String> groupIds) {
+    public DirectoryObjectCheckMemberGroupsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final java.util.List<String> groupIds) {
         super(requestUrl, client, requestOptions, DirectoryObjectCheckMemberGroupsCollectionRequestBuilder.class, DirectoryObjectCheckMemberGroupsCollectionRequest.class);
   	 if(groupIds!=null){
 			bodyParams.put("groupIds", groupIds);
@@ -46,8 +48,9 @@ public class DirectoryObjectCheckMemberGroupsCollectionRequestBuilder extends Ba
      * @param requestOptions the options for this request
      * @return the DirectoryObjectCheckMemberGroupsCollectionRequest instance
      */
-     @Override
-    public DirectoryObjectCheckMemberGroupsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Override
+    @Nonnull
+    public DirectoryObjectCheckMemberGroupsCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final DirectoryObjectCheckMemberGroupsCollectionRequest request = super.buildRequest(requestOptions);
 
         if (hasParameter("groupIds")) {

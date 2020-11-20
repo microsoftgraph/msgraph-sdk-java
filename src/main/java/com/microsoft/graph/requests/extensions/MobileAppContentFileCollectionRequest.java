@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.MobileAppContentFile;
 import com.microsoft.graph.models.extensions.FileEncryptionInfo;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,7 +37,7 @@ public class MobileAppContentFileCollectionRequest extends BaseCollectionRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MobileAppContentFileCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppContentFileCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MobileAppContentFileCollectionResponse.class, MobileAppContentFileCollectionPage.class, MobileAppContentFileCollectionRequestBuilder.class);
     }
 
@@ -44,7 +46,7 @@ public class MobileAppContentFileCollectionRequest extends BaseCollectionRequest
      * @param newMobileAppContentFile the MobileAppContentFile to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final MobileAppContentFile newMobileAppContentFile, final ICallback<? super MobileAppContentFile> callback) {
+    public void post(@Nonnull final MobileAppContentFile newMobileAppContentFile, @Nonnull final ICallback<? super MobileAppContentFile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileAppContentFileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -56,7 +58,8 @@ public class MobileAppContentFileCollectionRequest extends BaseCollectionRequest
      * @param newMobileAppContentFile the MobileAppContentFile to create
      * @return the newly created object
      */
-    public MobileAppContentFile post(final MobileAppContentFile newMobileAppContentFile) throws ClientException {
+    @Nonnull
+    public MobileAppContentFile post(@Nonnull final MobileAppContentFile newMobileAppContentFile) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MobileAppContentFileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -69,7 +72,8 @@ public class MobileAppContentFileCollectionRequest extends BaseCollectionRequest
      * @param value the expand clause
      * @return the updated request
      */
-    public MobileAppContentFileCollectionRequest expand(final String value) {
+    @Nonnull
+    public MobileAppContentFileCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -80,7 +84,8 @@ public class MobileAppContentFileCollectionRequest extends BaseCollectionRequest
      * @param value the filter clause
      * @return the updated request
      */
-    public MobileAppContentFileCollectionRequest filter(final String value) {
+    @Nonnull
+    public MobileAppContentFileCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -91,7 +96,8 @@ public class MobileAppContentFileCollectionRequest extends BaseCollectionRequest
      * @param value the order by clause
      * @return the updated request
      */
-    public MobileAppContentFileCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public MobileAppContentFileCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -102,7 +108,8 @@ public class MobileAppContentFileCollectionRequest extends BaseCollectionRequest
      * @param value the select clause
      * @return the updated request
      */
-    public MobileAppContentFileCollectionRequest select(final String value) {
+    @Nonnull
+    public MobileAppContentFileCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -113,6 +120,7 @@ public class MobileAppContentFileCollectionRequest extends BaseCollectionRequest
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public MobileAppContentFileCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -124,6 +132,7 @@ public class MobileAppContentFileCollectionRequest extends BaseCollectionRequest
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public MobileAppContentFileCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -135,7 +144,8 @@ public class MobileAppContentFileCollectionRequest extends BaseCollectionRequest
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public MobileAppContentFileCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public MobileAppContentFileCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

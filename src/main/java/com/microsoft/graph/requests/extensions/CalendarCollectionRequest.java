@@ -14,6 +14,8 @@ import com.microsoft.graph.models.extensions.ScheduleInformation;
 import com.microsoft.graph.models.generated.CalendarRoleType;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -37,7 +39,7 @@ public class CalendarCollectionRequest extends BaseCollectionRequest<Calendar, C
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CalendarCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CalendarCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CalendarCollectionResponse.class, CalendarCollectionPage.class, CalendarCollectionRequestBuilder.class);
     }
 
@@ -46,7 +48,7 @@ public class CalendarCollectionRequest extends BaseCollectionRequest<Calendar, C
      * @param newCalendar the Calendar to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final Calendar newCalendar, final ICallback<? super Calendar> callback) {
+    public void post(@Nonnull final Calendar newCalendar, @Nonnull final ICallback<? super Calendar> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CalendarRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -58,7 +60,8 @@ public class CalendarCollectionRequest extends BaseCollectionRequest<Calendar, C
      * @param newCalendar the Calendar to create
      * @return the newly created object
      */
-    public Calendar post(final Calendar newCalendar) throws ClientException {
+    @Nonnull
+    public Calendar post(@Nonnull final Calendar newCalendar) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CalendarRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -71,7 +74,8 @@ public class CalendarCollectionRequest extends BaseCollectionRequest<Calendar, C
      * @param value the expand clause
      * @return the updated request
      */
-    public CalendarCollectionRequest expand(final String value) {
+    @Nonnull
+    public CalendarCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -82,7 +86,8 @@ public class CalendarCollectionRequest extends BaseCollectionRequest<Calendar, C
      * @param value the filter clause
      * @return the updated request
      */
-    public CalendarCollectionRequest filter(final String value) {
+    @Nonnull
+    public CalendarCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -93,7 +98,8 @@ public class CalendarCollectionRequest extends BaseCollectionRequest<Calendar, C
      * @param value the order by clause
      * @return the updated request
      */
-    public CalendarCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public CalendarCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -104,7 +110,8 @@ public class CalendarCollectionRequest extends BaseCollectionRequest<Calendar, C
      * @param value the select clause
      * @return the updated request
      */
-    public CalendarCollectionRequest select(final String value) {
+    @Nonnull
+    public CalendarCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -115,6 +122,7 @@ public class CalendarCollectionRequest extends BaseCollectionRequest<Calendar, C
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public CalendarCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -126,6 +134,7 @@ public class CalendarCollectionRequest extends BaseCollectionRequest<Calendar, C
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public CalendarCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -137,7 +146,8 @@ public class CalendarCollectionRequest extends BaseCollectionRequest<Calendar, C
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public CalendarCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public CalendarCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

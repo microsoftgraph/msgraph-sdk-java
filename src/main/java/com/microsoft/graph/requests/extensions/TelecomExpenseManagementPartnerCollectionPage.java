@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.TelecomExpenseManagementPartner;
 import com.microsoft.graph.requests.extensions.TelecomExpenseManagementPartnerCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.TelecomExpenseManagementPartnerCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class TelecomExpenseManagementPartnerCollectionPage extends BaseCollectio
      * @param response the serialized TelecomExpenseManagementPartnerCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TelecomExpenseManagementPartnerCollectionPage(final TelecomExpenseManagementPartnerCollectionResponse response, final TelecomExpenseManagementPartnerCollectionRequestBuilder builder) {
+    public TelecomExpenseManagementPartnerCollectionPage(@Nonnull final TelecomExpenseManagementPartnerCollectionResponse response, @Nonnull final TelecomExpenseManagementPartnerCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class TelecomExpenseManagementPartnerCollectionPage extends BaseCollectio
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public TelecomExpenseManagementPartnerCollectionPage(final java.util.List<TelecomExpenseManagementPartner> pageContents, final TelecomExpenseManagementPartnerCollectionRequestBuilder nextRequestBuilder) {
+    public TelecomExpenseManagementPartnerCollectionPage(@Nonnull final java.util.List<TelecomExpenseManagementPartner> pageContents, @Nullable final TelecomExpenseManagementPartnerCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

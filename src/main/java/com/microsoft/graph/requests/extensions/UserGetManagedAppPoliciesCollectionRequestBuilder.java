@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedAppPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.UserGetManagedAppPoliciesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserGetManagedAppPoliciesCollectionRequest;
@@ -32,7 +34,7 @@ public class UserGetManagedAppPoliciesCollectionRequestBuilder extends BaseFunct
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserGetManagedAppPoliciesCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserGetManagedAppPoliciesCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserGetManagedAppPoliciesCollectionRequestBuilder.class, UserGetManagedAppPoliciesCollectionRequest.class);
     }
     
@@ -42,8 +44,9 @@ public class UserGetManagedAppPoliciesCollectionRequestBuilder extends BaseFunct
      * @param requestOptions the options for this request
      * @return the UserGetManagedAppPoliciesCollectionRequest instance
      */
-     @Override
-    public UserGetManagedAppPoliciesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Override
+    @Nonnull
+    public UserGetManagedAppPoliciesCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final UserGetManagedAppPoliciesCollectionRequest request = super.buildRequest(requestOptions);
 
       for (com.microsoft.graph.options.FunctionOption option : functionOptions) {

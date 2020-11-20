@@ -51,6 +51,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 /**
  * An HTTP request.
  * 
@@ -141,10 +144,10 @@ public abstract class BaseRequest<T> implements IHttpRequest {
      * @param options       the options for this request
      * @param responseClass the class for the response
      */
-    public BaseRequest(final String requestUrl,
-                       final IBaseClient client,
-                       final List<? extends Option> options,
-                       final Class<? extends T> responseClass) {
+    public BaseRequest(@Nonnull final String requestUrl,
+                       @Nonnull final IBaseClient client,
+                       @Nullable final List<? extends Option> options,
+                       @Nonnull final Class<? extends T> responseClass) {
         this.requestUrl = requestUrl;
         this.client = client;
         this.responseClass = responseClass;
@@ -178,6 +181,7 @@ public abstract class BaseRequest<T> implements IHttpRequest {
      * @return the request URL
      */
     @Override
+    @Nullable
     public URL getRequestUrl() {
         String requestUrl = addFunctionParameters();
         final Builder uriBuilder = HttpUrl.parse(requestUrl).newBuilder();
@@ -203,6 +207,7 @@ public abstract class BaseRequest<T> implements IHttpRequest {
      * @return the Request object to be executed
      */
     @Override
+    @Nullable
     public Request getHttpRequest() throws ClientException {
         return getHttpRequest(null);
     }
@@ -214,7 +219,8 @@ public abstract class BaseRequest<T> implements IHttpRequest {
      * @return the Request object to be executed
      */
     @Override
-    public <requestBodyType> Request getHttpRequest(final requestBodyType serializedObject) throws ClientException {
+    @Nullable
+    public <requestBodyType> Request getHttpRequest(@Nonnull final requestBodyType serializedObject) throws ClientException {
         return getHttpRequest(serializedObject, null);
     }
 
@@ -228,7 +234,8 @@ public abstract class BaseRequest<T> implements IHttpRequest {
      */
     @SuppressWarnings("unchecked")
     @Override
-    public <requestBodyType, responseType> Request getHttpRequest(final requestBodyType serializedObject, final IProgressCallback<responseType> progress) throws ClientException {
+    @Nullable
+    public <requestBodyType, responseType> Request getHttpRequest(@Nonnull final requestBodyType serializedObject, @Nonnull final IProgressCallback<responseType> progress) throws ClientException {
         return client.getHttpProvider().getHttpRequest(this, (Class<responseType>) responseClass, serializedObject, progress);
     }
 
@@ -268,6 +275,7 @@ public abstract class BaseRequest<T> implements IHttpRequest {
      * @return the HTTP method
      */
     @Override
+    @Nullable
     public HttpMethod getHttpMethod() {
         return method;
     }
@@ -278,6 +286,7 @@ public abstract class BaseRequest<T> implements IHttpRequest {
      * @return the headers
      */
     @Override
+    @Nullable
     public List<HeaderOption> getHeaders() {
         return headersOptions;
     }
@@ -289,7 +298,7 @@ public abstract class BaseRequest<T> implements IHttpRequest {
      * @param value  the value of the header
      */
     @Override
-    public void addHeader(final String header, final String value) {
+    public void addHeader(@Nonnull final String header, @Nonnull final String value) {
         headersOptions.add(new HeaderOption(header, value));
     }
 
@@ -321,9 +330,10 @@ public abstract class BaseRequest<T> implements IHttpRequest {
      * @param serializedObject the object to serialize as the body
      * @param <T1>             the type of the serialized body
      */
-    protected <T1> void send(final HttpMethod method,
-                                 final ICallback<? super T> callback,
-                                 final T1 serializedObject) {
+    @Nullable
+    protected <T1> void send(@Nonnull final HttpMethod method,
+                                 @Nonnull final ICallback<? super T> callback,
+                                 @Nullable final T1 serializedObject) {
         this.method = method;
         client.getHttpProvider().send(this, callback, responseClass, serializedObject);
     }
@@ -337,8 +347,9 @@ public abstract class BaseRequest<T> implements IHttpRequest {
      * @return the response object
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    protected <T1> T send(final HttpMethod method,
-                               final T1 serializedObject) throws ClientException {
+    @Nullable
+    protected <T1> T send(@Nullable final HttpMethod method,
+                               @Nullable final T1 serializedObject) throws ClientException {
         this.method = method;
         return client.getHttpProvider().send(this, responseClass, serializedObject);
     }
@@ -348,6 +359,7 @@ public abstract class BaseRequest<T> implements IHttpRequest {
      *
      * @return the query options for this request
      */
+    @Nullable
     public List<QueryOption> getQueryOptions() {
         return queryOptions;
     }
@@ -357,6 +369,7 @@ public abstract class BaseRequest<T> implements IHttpRequest {
      *
      * @return the function options for this request
      */
+    @Nullable
     public List<FunctionOption> getFunctionOptions() {
         return functionOptions;
     }
@@ -366,6 +379,7 @@ public abstract class BaseRequest<T> implements IHttpRequest {
      *
      * @return the full list of options for this request
      */
+    @Nullable
     public List<Option> getOptions() {
         final LinkedList<Option> list = new LinkedList<>();
         list.addAll(headersOptions);
@@ -379,7 +393,7 @@ public abstract class BaseRequest<T> implements IHttpRequest {
      *
      * @param option the query option to add
      */
-    public void addQueryOption(final QueryOption option) {
+    public void addQueryOption(@Nonnull final QueryOption option) {
         getQueryOptions().add(option);
     }
 
@@ -388,7 +402,7 @@ public abstract class BaseRequest<T> implements IHttpRequest {
      *
      * @param option the function option to add
      */
-    public void addFunctionOption(final FunctionOption option) {
+    public void addFunctionOption(@Nonnull final FunctionOption option) {
         getFunctionOptions().add(option);
     }
     
@@ -397,7 +411,7 @@ public abstract class BaseRequest<T> implements IHttpRequest {
      *
      * @param value the expand clause
      */
-    protected void addExpandOption(final String value) {
+    protected void addExpandOption(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
     }
 
@@ -406,7 +420,7 @@ public abstract class BaseRequest<T> implements IHttpRequest {
      *
      * @param value the filter clause
      */
-    protected void addFilterOption(final String value) {
+    protected void addFilterOption(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
     }
 
@@ -415,7 +429,7 @@ public abstract class BaseRequest<T> implements IHttpRequest {
      *
      * @param value the order by clause
      */
-    protected void addOrderByOption(final String value) {
+    protected void addOrderByOption(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
     }
 
@@ -424,7 +438,7 @@ public abstract class BaseRequest<T> implements IHttpRequest {
      *
      * @param value the select clause
      */
-    protected void addSelectOption(final String value) {
+    protected void addSelectOption(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
     }
 
@@ -451,7 +465,7 @@ public abstract class BaseRequest<T> implements IHttpRequest {
      * Add Skip token for pagination
      * @param skipToken - Token for pagination
      */
-    protected void addSkipTokenOption(final String skipToken) {
+    protected void addSkipTokenOption(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
     }
 
@@ -460,7 +474,7 @@ public abstract class BaseRequest<T> implements IHttpRequest {
      *
      * @param httpMethod the HTTP method
      */
-    public void setHttpMethod(final HttpMethod httpMethod) {
+    public void setHttpMethod(@Nonnull final HttpMethod httpMethod) {
         method = httpMethod;
     }
 
@@ -470,7 +484,8 @@ public abstract class BaseRequest<T> implements IHttpRequest {
      * @param httpMethod the HTTP method
      * @return the current request
      */
-    public IHttpRequest withHttpMethod(final HttpMethod httpMethod) {
+    @Nullable
+    public IHttpRequest withHttpMethod(@Nonnull final HttpMethod httpMethod) {
         method = httpMethod;
         return this;
     }
@@ -480,6 +495,7 @@ public abstract class BaseRequest<T> implements IHttpRequest {
      *
      * @return the client
      */
+    @Nonnull
     public IBaseClient getClient() {
         return client;
     }
@@ -489,6 +505,7 @@ public abstract class BaseRequest<T> implements IHttpRequest {
      *
      * @return the response type
      */
+    @Nullable
     public Class<? extends T> getResponseType() {
         return responseClass;
     }
@@ -516,7 +533,7 @@ public abstract class BaseRequest<T> implements IHttpRequest {
      * 
      * @param shouldRedirect Callback called before doing a redirect
      */
-    public void setShouldRedirect(IShouldRedirect shouldRedirect) {
+    public void setShouldRedirect(@Nonnull IShouldRedirect shouldRedirect) {
     	this.shouldRedirect = shouldRedirect;
     }
     
@@ -525,6 +542,7 @@ public abstract class BaseRequest<T> implements IHttpRequest {
      * 
      * @return Callback which is called before redirect
      */
+    @Nullable
     public IShouldRedirect getShouldRedirect() {
     	return shouldRedirect;
     }
@@ -534,7 +552,7 @@ public abstract class BaseRequest<T> implements IHttpRequest {
      * 
      * @param shouldretry The callback called before retry
      */
-    public void setShouldRetry(IShouldRetry shouldretry) {
+    public void setShouldRetry(@Nonnull IShouldRetry shouldretry) {
     	this.shouldRetry = shouldretry;
     }
     
@@ -543,6 +561,7 @@ public abstract class BaseRequest<T> implements IHttpRequest {
      * 
      * @return Callback called before retry
      */
+    @Nullable
     public IShouldRetry getShouldRetry() {
     	return shouldRetry;
     }

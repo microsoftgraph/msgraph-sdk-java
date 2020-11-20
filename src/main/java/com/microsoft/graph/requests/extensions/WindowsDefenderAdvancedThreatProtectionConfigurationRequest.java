@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsDefenderAdvancedThreatProtectionConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfigurationRequest extends
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsDefenderAdvancedThreatProtectionConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsDefenderAdvancedThreatProtectionConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsDefenderAdvancedThreatProtectionConfiguration.class);
     }
 
@@ -37,7 +39,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfigurationRequest extends
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WindowsDefenderAdvancedThreatProtectionConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super WindowsDefenderAdvancedThreatProtectionConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfigurationRequest extends
      * @return the WindowsDefenderAdvancedThreatProtectionConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WindowsDefenderAdvancedThreatProtectionConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfigurationRequest extends
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WindowsDefenderAdvancedThreatProtectionConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super WindowsDefenderAdvancedThreatProtectionConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfigurationRequest extends
      * @param sourceWindowsDefenderAdvancedThreatProtectionConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsDefenderAdvancedThreatProtectionConfiguration sourceWindowsDefenderAdvancedThreatProtectionConfiguration, final ICallback<? super WindowsDefenderAdvancedThreatProtectionConfiguration> callback) {
+    public void patch(@Nonnull final WindowsDefenderAdvancedThreatProtectionConfiguration sourceWindowsDefenderAdvancedThreatProtectionConfiguration, @Nonnull final ICallback<? super WindowsDefenderAdvancedThreatProtectionConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsDefenderAdvancedThreatProtectionConfiguration);
     }
 
@@ -86,7 +89,8 @@ public class WindowsDefenderAdvancedThreatProtectionConfigurationRequest extends
      * @return the updated WindowsDefenderAdvancedThreatProtectionConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsDefenderAdvancedThreatProtectionConfiguration patch(final WindowsDefenderAdvancedThreatProtectionConfiguration sourceWindowsDefenderAdvancedThreatProtectionConfiguration) throws ClientException {
+    @Nullable
+    public WindowsDefenderAdvancedThreatProtectionConfiguration patch(@Nonnull final WindowsDefenderAdvancedThreatProtectionConfiguration sourceWindowsDefenderAdvancedThreatProtectionConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindowsDefenderAdvancedThreatProtectionConfiguration);
     }
 
@@ -96,7 +100,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfigurationRequest extends
      * @param newWindowsDefenderAdvancedThreatProtectionConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsDefenderAdvancedThreatProtectionConfiguration newWindowsDefenderAdvancedThreatProtectionConfiguration, final ICallback<? super WindowsDefenderAdvancedThreatProtectionConfiguration> callback) {
+    public void post(@Nonnull final WindowsDefenderAdvancedThreatProtectionConfiguration newWindowsDefenderAdvancedThreatProtectionConfiguration, @Nonnull final ICallback<? super WindowsDefenderAdvancedThreatProtectionConfiguration> callback) {
         send(HttpMethod.POST, callback, newWindowsDefenderAdvancedThreatProtectionConfiguration);
     }
 
@@ -107,7 +111,8 @@ public class WindowsDefenderAdvancedThreatProtectionConfigurationRequest extends
      * @return the created WindowsDefenderAdvancedThreatProtectionConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsDefenderAdvancedThreatProtectionConfiguration post(final WindowsDefenderAdvancedThreatProtectionConfiguration newWindowsDefenderAdvancedThreatProtectionConfiguration) throws ClientException {
+    @Nullable
+    public WindowsDefenderAdvancedThreatProtectionConfiguration post(@Nonnull final WindowsDefenderAdvancedThreatProtectionConfiguration newWindowsDefenderAdvancedThreatProtectionConfiguration) throws ClientException {
         return send(HttpMethod.POST, newWindowsDefenderAdvancedThreatProtectionConfiguration);
     }
 
@@ -117,7 +122,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfigurationRequest extends
      * @param newWindowsDefenderAdvancedThreatProtectionConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsDefenderAdvancedThreatProtectionConfiguration newWindowsDefenderAdvancedThreatProtectionConfiguration, final ICallback<? super WindowsDefenderAdvancedThreatProtectionConfiguration> callback) {
+    public void put(@Nonnull final WindowsDefenderAdvancedThreatProtectionConfiguration newWindowsDefenderAdvancedThreatProtectionConfiguration, @Nonnull final ICallback<? super WindowsDefenderAdvancedThreatProtectionConfiguration> callback) {
         send(HttpMethod.PUT, callback, newWindowsDefenderAdvancedThreatProtectionConfiguration);
     }
 
@@ -128,7 +133,8 @@ public class WindowsDefenderAdvancedThreatProtectionConfigurationRequest extends
      * @return the created WindowsDefenderAdvancedThreatProtectionConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsDefenderAdvancedThreatProtectionConfiguration put(final WindowsDefenderAdvancedThreatProtectionConfiguration newWindowsDefenderAdvancedThreatProtectionConfiguration) throws ClientException {
+    @Nullable
+    public WindowsDefenderAdvancedThreatProtectionConfiguration put(@Nonnull final WindowsDefenderAdvancedThreatProtectionConfiguration newWindowsDefenderAdvancedThreatProtectionConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newWindowsDefenderAdvancedThreatProtectionConfiguration);
     }
 
@@ -138,7 +144,8 @@ public class WindowsDefenderAdvancedThreatProtectionConfigurationRequest extends
      * @param value the select clause
      * @return the updated request
      */
-     public WindowsDefenderAdvancedThreatProtectionConfigurationRequest select(final String value) {
+     @Nonnull
+     public WindowsDefenderAdvancedThreatProtectionConfigurationRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class WindowsDefenderAdvancedThreatProtectionConfigurationRequest extends
      * @param value the expand clause
      * @return the updated request
      */
-     public WindowsDefenderAdvancedThreatProtectionConfigurationRequest expand(final String value) {
+     @Nonnull
+     public WindowsDefenderAdvancedThreatProtectionConfigurationRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

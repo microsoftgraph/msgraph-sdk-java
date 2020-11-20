@@ -24,6 +24,9 @@ package com.microsoft.graph.http;
 
 import com.google.gson.annotations.SerializedName;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 /**
  * Represents an inner error returned by the service
  */
@@ -31,25 +34,31 @@ public class GraphInnerError {
 
     /** The error code */
     @SerializedName("code")
+    @Nullable
     public String code;
 
     /** The error type */
     @SerializedName("errorType")
+    @Nullable
     public String errorType;
 
     /** The debug message */
     @SerializedName("debugMessage")
+    @Nullable
     public String debugMessage;
 
     /** The stacktrace */
     @SerializedName("stackTrace")
+    @Nullable
     public String stackTrace;
 
     /** The throw site */
     @SerializedName("throwSite")
+    @Nullable
     public String throwSite;
 
     /** The inner error */
     @SerializedName("innererror")
+    @Nullable
     public GraphInnerError innererror;
 }

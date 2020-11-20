@@ -14,6 +14,8 @@ import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionRequestB
 import com.microsoft.graph.requests.extensions.DomainDnsRecordRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -31,7 +33,7 @@ public class DomainRequestBuilder extends BaseRequestBuilder<Domain> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DomainRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DomainRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -41,7 +43,8 @@ public class DomainRequestBuilder extends BaseRequestBuilder<Domain> {
      * @param requestOptions the options for this request
      * @return the DomainRequest instance
      */
-    public DomainRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DomainRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,7 +54,8 @@ public class DomainRequestBuilder extends BaseRequestBuilder<Domain> {
      * @param requestOptions the options for this request
      * @return the DomainRequest instance
      */
-    public DomainRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DomainRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DomainRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -61,6 +65,7 @@ public class DomainRequestBuilder extends BaseRequestBuilder<Domain> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public DirectoryObjectCollectionWithReferencesRequestBuilder domainNameReferences() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("domainNameReferences"), getClient(), null);
     }
@@ -71,7 +76,8 @@ public class DomainRequestBuilder extends BaseRequestBuilder<Domain> {
      * @return the request builder
      * @param id the item identifier
      */
-    public DirectoryObjectWithReferenceRequestBuilder domainNameReferences(final String id) {
+    @Nonnull
+    public DirectoryObjectWithReferenceRequestBuilder domainNameReferences(@Nonnull final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("domainNameReferences") + "/" + id, getClient(), null);
     }
     /**
@@ -79,6 +85,7 @@ public class DomainRequestBuilder extends BaseRequestBuilder<Domain> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public DomainDnsRecordCollectionRequestBuilder serviceConfigurationRecords() {
         return new DomainDnsRecordCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("serviceConfigurationRecords"), getClient(), null);
     }
@@ -89,7 +96,8 @@ public class DomainRequestBuilder extends BaseRequestBuilder<Domain> {
      * @return the request builder
      * @param id the item identifier
      */
-    public DomainDnsRecordRequestBuilder serviceConfigurationRecords(final String id) {
+    @Nonnull
+    public DomainDnsRecordRequestBuilder serviceConfigurationRecords(@Nonnull final String id) {
         return new DomainDnsRecordRequestBuilder(getRequestUrlWithAdditionalSegment("serviceConfigurationRecords") + "/" + id, getClient(), null);
     }
     /**
@@ -97,6 +105,7 @@ public class DomainRequestBuilder extends BaseRequestBuilder<Domain> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public DomainDnsRecordCollectionRequestBuilder verificationDnsRecords() {
         return new DomainDnsRecordCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("verificationDnsRecords"), getClient(), null);
     }
@@ -107,7 +116,8 @@ public class DomainRequestBuilder extends BaseRequestBuilder<Domain> {
      * @return the request builder
      * @param id the item identifier
      */
-    public DomainDnsRecordRequestBuilder verificationDnsRecords(final String id) {
+    @Nonnull
+    public DomainDnsRecordRequestBuilder verificationDnsRecords(@Nonnull final String id) {
         return new DomainDnsRecordRequestBuilder(getRequestUrlWithAdditionalSegment("verificationDnsRecords") + "/" + id, getClient(), null);
     }
 
@@ -116,7 +126,8 @@ public class DomainRequestBuilder extends BaseRequestBuilder<Domain> {
      * @return the request builder 
      * @param disableUserAccounts the disableUserAccounts
      */
-    public DomainForceDeleteRequestBuilder forceDelete(final Boolean disableUserAccounts) {
+    @Nonnull
+    public DomainForceDeleteRequestBuilder forceDelete(@Nullable final Boolean disableUserAccounts) {
         return new DomainForceDeleteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.forceDelete"), getClient(), null, disableUserAccounts);
     }
 
@@ -124,6 +135,7 @@ public class DomainRequestBuilder extends BaseRequestBuilder<Domain> {
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public DomainVerifyRequestBuilder verify() {
         return new DomainVerifyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.verify"), getClient(), null);
     }

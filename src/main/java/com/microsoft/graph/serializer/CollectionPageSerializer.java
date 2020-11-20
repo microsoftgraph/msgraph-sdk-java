@@ -28,6 +28,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -75,7 +78,8 @@ public class CollectionPageSerializer {
 	 * @param <T2> the collection request builder interface type
      * @return       JsonElement of CollectionPage
      */
-	public static <T1, T2 extends BaseRequestBuilder<T1>> JsonElement serialize(final BaseCollectionPage<T1, T2> src, final ILogger logger) {
+	@Nullable
+	public static <T1, T2 extends BaseRequestBuilder<T1>> JsonElement serialize(@Nonnull final BaseCollectionPage<T1, T2> src, @Nonnull final ILogger logger) {
 		if(src == null) {
 			return null;
 		}
@@ -105,15 +109,16 @@ public class CollectionPageSerializer {
      * @return    the deserialized CollectionPage
      */
 	@SuppressWarnings("unchecked")
-	public static <T1, T2 extends BaseRequestBuilder<T1>> BaseCollectionPage<T1, T2> deserialize(final JsonElement json, Type typeOfT, final ILogger logger) throws JsonParseException {
-		if (json == null || !json.isJsonArray()) {
+	@Nullable
+	public static <T1, T2 extends BaseRequestBuilder<T1>> BaseCollectionPage<T1, T2> deserialize(@Nonnull final JsonElement json, @Nonnull final Type typeOfT, @Nonnull final ILogger logger) throws JsonParseException {
+		if (json == null || !json.isJsonArray() || !typeOfT.getClass().equals(Class.class)) {
 			return null;
 		}
 		serializer = new DefaultSerializer(logger);
 		final JsonArray sourceArray = json.getAsJsonArray();
 		final ArrayList<T1> list = new ArrayList<T1>(sourceArray.size());
 		/** eg: com.microsoft.graph.requests.extensions.AttachmentCollectionPage */
-		final String collectionPageClassCanonicalName = typeOfT.getTypeName();
+		final String collectionPageClassCanonicalName = ((Class<?>)typeOfT).getName();
 		/** eg: com.microsoft.graph.models.extensions.Attachment */
 		final String baseEntityClassCanonicalName = collectionPageClassCanonicalName
 					.substring(0, collectionPageClassCanonicalName.length() - pageLength - collectionLength)

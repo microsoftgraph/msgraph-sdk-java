@@ -14,6 +14,8 @@ import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -31,7 +33,7 @@ public class DriveRequestBuilder extends BaseRequestBuilder<Drive> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DriveRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -41,7 +43,8 @@ public class DriveRequestBuilder extends BaseRequestBuilder<Drive> {
      * @param requestOptions the options for this request
      * @return the DriveRequest instance
      */
-    public DriveRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DriveRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,7 +54,8 @@ public class DriveRequestBuilder extends BaseRequestBuilder<Drive> {
      * @param requestOptions the options for this request
      * @return the DriveRequest instance
      */
-    public DriveRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DriveRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DriveRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -62,6 +66,7 @@ public class DriveRequestBuilder extends BaseRequestBuilder<Drive> {
      *
      * @return the UserWithReferenceRequestBuilder instance
      */
+    @Nonnull
     public UserWithReferenceRequestBuilder createdByUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
     }
@@ -71,6 +76,7 @@ public class DriveRequestBuilder extends BaseRequestBuilder<Drive> {
      *
      * @return the UserWithReferenceRequestBuilder instance
      */
+    @Nonnull
     public UserWithReferenceRequestBuilder lastModifiedByUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
     }
@@ -79,6 +85,7 @@ public class DriveRequestBuilder extends BaseRequestBuilder<Drive> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public DriveItemCollectionRequestBuilder following() {
         return new DriveItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("following"), getClient(), null);
     }
@@ -89,7 +96,8 @@ public class DriveRequestBuilder extends BaseRequestBuilder<Drive> {
      * @return the request builder
      * @param id the item identifier
      */
-    public DriveItemRequestBuilder following(final String id) {
+    @Nonnull
+    public DriveItemRequestBuilder following(@Nonnull final String id) {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("following") + "/" + id, getClient(), null);
     }
     /**
@@ -97,6 +105,7 @@ public class DriveRequestBuilder extends BaseRequestBuilder<Drive> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public DriveItemCollectionRequestBuilder items() {
         return new DriveItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
     }
@@ -107,7 +116,8 @@ public class DriveRequestBuilder extends BaseRequestBuilder<Drive> {
      * @return the request builder
      * @param id the item identifier
      */
-    public DriveItemRequestBuilder items(final String id) {
+    @Nonnull
+    public DriveItemRequestBuilder items(@Nonnull final String id) {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("items") + "/" + id, getClient(), null);
     }
 
@@ -116,6 +126,7 @@ public class DriveRequestBuilder extends BaseRequestBuilder<Drive> {
      *
      * @return the ListRequestBuilder instance
      */
+    @Nonnull
     public ListRequestBuilder list() {
         return new ListRequestBuilder(getRequestUrlWithAdditionalSegment("list"), getClient(), null);
     }
@@ -125,6 +136,7 @@ public class DriveRequestBuilder extends BaseRequestBuilder<Drive> {
      *
      * @return the DriveItemRequestBuilder instance
      */
+    @Nonnull
     public DriveItemRequestBuilder root() {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("root"), getClient(), null);
     }
@@ -133,6 +145,7 @@ public class DriveRequestBuilder extends BaseRequestBuilder<Drive> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public DriveItemCollectionRequestBuilder special() {
         return new DriveItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("special"), getClient(), null);
     }
@@ -143,7 +156,8 @@ public class DriveRequestBuilder extends BaseRequestBuilder<Drive> {
      * @return the request builder
      * @param id the item identifier
      */
-    public DriveItemRequestBuilder special(final String id) {
+    @Nonnull
+    public DriveItemRequestBuilder special(@Nonnull final String id) {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("special") + "/" + id, getClient(), null);
     }
 
@@ -152,7 +166,8 @@ public class DriveRequestBuilder extends BaseRequestBuilder<Drive> {
      * @return the request builder collection
      * @param q the q
      */
-    public DriveSearchCollectionRequestBuilder search(final String q) {
+    @Nonnull
+    public DriveSearchCollectionRequestBuilder search(@Nullable final String q) {
         return new DriveSearchCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.search"), getClient(), null, q);
     }
 
@@ -160,6 +175,7 @@ public class DriveRequestBuilder extends BaseRequestBuilder<Drive> {
      * Gets a builder to execute the method
      * @return the request builder collection
      */
+    @Nonnull
     public DriveRecentCollectionRequestBuilder recent() {
         return new DriveRecentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.recent"), getClient(), null);
     }
@@ -168,6 +184,7 @@ public class DriveRequestBuilder extends BaseRequestBuilder<Drive> {
      * Gets a builder to execute the method
      * @return the request builder collection
      */
+    @Nonnull
     public DriveSharedWithMeCollectionRequestBuilder sharedWithMe() {
         return new DriveSharedWithMeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sharedWithMe"), getClient(), null);
     }

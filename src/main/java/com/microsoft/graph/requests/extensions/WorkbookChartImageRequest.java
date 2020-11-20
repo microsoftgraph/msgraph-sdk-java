@@ -6,6 +6,8 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookChart;
 import com.microsoft.graph.requests.extensions.WorkbookChartImageRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.core.ClientException;
@@ -27,7 +29,7 @@ public class WorkbookChartImageRequest extends BaseRequest<String> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartImageRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartImageRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, String.class);
     }
 
@@ -36,7 +38,7 @@ public class WorkbookChartImageRequest extends BaseRequest<String> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super String> callback) {
+    public void get(@Nonnull final ICallback<? super String> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -46,6 +48,7 @@ public class WorkbookChartImageRequest extends BaseRequest<String> {
      * @return the String
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
+    @Nullable
     public String get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,8 @@ public class WorkbookChartImageRequest extends BaseRequest<String> {
      * @param value the select clause
      * @return the updated request
      */
-    public WorkbookChartImageRequest select(final String value) {
+    @Nonnull
+    public WorkbookChartImageRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -67,7 +71,8 @@ public class WorkbookChartImageRequest extends BaseRequest<String> {
      * @param value the expand clause
      * @return the updated request
      */
-    public WorkbookChartImageRequest expand(final String value) {
+    @Nonnull
+    public WorkbookChartImageRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -78,7 +83,8 @@ public class WorkbookChartImageRequest extends BaseRequest<String> {
      * @param value the filter clause
      * @return the updated request
      */
-    public WorkbookChartImageRequest filter(final String value) {
+    @Nonnull
+    public WorkbookChartImageRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -89,7 +95,8 @@ public class WorkbookChartImageRequest extends BaseRequest<String> {
      * @param value the order by clause
      * @return the updated request
      */
-    public WorkbookChartImageRequest orderBy(final String value) {
+    @Nonnull
+    public WorkbookChartImageRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }

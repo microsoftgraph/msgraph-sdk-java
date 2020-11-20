@@ -11,6 +11,8 @@ import com.microsoft.graph.models.generated.ExchangeIdFormat;
 import com.microsoft.graph.models.extensions.ConvertIdResult;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.UserTranslateExchangeIdsCollectionRequestBuilder;
@@ -30,7 +32,7 @@ public class UserTranslateExchangeIdsCollectionPage extends BaseCollectionPage<C
      * @param response The serialized UserTranslateExchangeIdsCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public UserTranslateExchangeIdsCollectionPage(final UserTranslateExchangeIdsCollectionResponse response, final UserTranslateExchangeIdsCollectionRequestBuilder builder) {
+    public UserTranslateExchangeIdsCollectionPage(@Nonnull final UserTranslateExchangeIdsCollectionResponse response, @Nonnull final UserTranslateExchangeIdsCollectionRequestBuilder builder) {
        super(response, builder);
     }
 
@@ -40,7 +42,7 @@ public class UserTranslateExchangeIdsCollectionPage extends BaseCollectionPage<C
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public UserTranslateExchangeIdsCollectionPage(final java.util.List<ConvertIdResult> pageContents, final UserTranslateExchangeIdsCollectionRequestBuilder nextRequestBuilder) {
+    public UserTranslateExchangeIdsCollectionPage(@Nonnull final java.util.List<ConvertIdResult> pageContents, @Nullable final UserTranslateExchangeIdsCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IpNamedLocation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class IpNamedLocationRequest extends BaseRequest<IpNamedLocation> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IpNamedLocationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IpNamedLocationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IpNamedLocation.class);
     }
 
@@ -37,7 +39,7 @@ public class IpNamedLocationRequest extends BaseRequest<IpNamedLocation> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IpNamedLocation> callback) {
+    public void get(@Nonnull final ICallback<? super IpNamedLocation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class IpNamedLocationRequest extends BaseRequest<IpNamedLocation> {
      * @return the IpNamedLocation from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public IpNamedLocation get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class IpNamedLocationRequest extends BaseRequest<IpNamedLocation> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IpNamedLocation> callback) {
+    public void delete(@Nonnull final ICallback<? super IpNamedLocation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class IpNamedLocationRequest extends BaseRequest<IpNamedLocation> {
      * @param sourceIpNamedLocation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IpNamedLocation sourceIpNamedLocation, final ICallback<? super IpNamedLocation> callback) {
+    public void patch(@Nonnull final IpNamedLocation sourceIpNamedLocation, @Nonnull final ICallback<? super IpNamedLocation> callback) {
         send(HttpMethod.PATCH, callback, sourceIpNamedLocation);
     }
 
@@ -86,7 +89,8 @@ public class IpNamedLocationRequest extends BaseRequest<IpNamedLocation> {
      * @return the updated IpNamedLocation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IpNamedLocation patch(final IpNamedLocation sourceIpNamedLocation) throws ClientException {
+    @Nullable
+    public IpNamedLocation patch(@Nonnull final IpNamedLocation sourceIpNamedLocation) throws ClientException {
         return send(HttpMethod.PATCH, sourceIpNamedLocation);
     }
 
@@ -96,7 +100,7 @@ public class IpNamedLocationRequest extends BaseRequest<IpNamedLocation> {
      * @param newIpNamedLocation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IpNamedLocation newIpNamedLocation, final ICallback<? super IpNamedLocation> callback) {
+    public void post(@Nonnull final IpNamedLocation newIpNamedLocation, @Nonnull final ICallback<? super IpNamedLocation> callback) {
         send(HttpMethod.POST, callback, newIpNamedLocation);
     }
 
@@ -107,7 +111,8 @@ public class IpNamedLocationRequest extends BaseRequest<IpNamedLocation> {
      * @return the created IpNamedLocation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IpNamedLocation post(final IpNamedLocation newIpNamedLocation) throws ClientException {
+    @Nullable
+    public IpNamedLocation post(@Nonnull final IpNamedLocation newIpNamedLocation) throws ClientException {
         return send(HttpMethod.POST, newIpNamedLocation);
     }
 
@@ -117,7 +122,7 @@ public class IpNamedLocationRequest extends BaseRequest<IpNamedLocation> {
      * @param newIpNamedLocation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IpNamedLocation newIpNamedLocation, final ICallback<? super IpNamedLocation> callback) {
+    public void put(@Nonnull final IpNamedLocation newIpNamedLocation, @Nonnull final ICallback<? super IpNamedLocation> callback) {
         send(HttpMethod.PUT, callback, newIpNamedLocation);
     }
 
@@ -128,7 +133,8 @@ public class IpNamedLocationRequest extends BaseRequest<IpNamedLocation> {
      * @return the created IpNamedLocation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IpNamedLocation put(final IpNamedLocation newIpNamedLocation) throws ClientException {
+    @Nullable
+    public IpNamedLocation put(@Nonnull final IpNamedLocation newIpNamedLocation) throws ClientException {
         return send(HttpMethod.PUT, newIpNamedLocation);
     }
 
@@ -138,7 +144,8 @@ public class IpNamedLocationRequest extends BaseRequest<IpNamedLocation> {
      * @param value the select clause
      * @return the updated request
      */
-     public IpNamedLocationRequest select(final String value) {
+     @Nonnull
+     public IpNamedLocationRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class IpNamedLocationRequest extends BaseRequest<IpNamedLocation> {
      * @param value the expand clause
      * @return the updated request
      */
-     public IpNamedLocationRequest expand(final String value) {
+     @Nonnull
+     public IpNamedLocationRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

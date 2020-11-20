@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Reminder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.UserReminderViewCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserReminderViewCollectionRequest;
@@ -34,7 +36,7 @@ public class UserReminderViewCollectionRequestBuilder extends BaseFunctionCollec
      * @param startDateTime the startDateTime
      * @param endDateTime the endDateTime
      */
-    public UserReminderViewCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String startDateTime, final String endDateTime) {
+    public UserReminderViewCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final String startDateTime, @Nullable final String endDateTime) {
         super(requestUrl, client, requestOptions, UserReminderViewCollectionRequestBuilder.class, UserReminderViewCollectionRequest.class);
      	 if(startDateTime!=null){
 			functionOptions.add(new com.microsoft.graph.options.FunctionOption("startDateTime", startDateTime));
@@ -50,8 +52,9 @@ public class UserReminderViewCollectionRequestBuilder extends BaseFunctionCollec
      * @param requestOptions the options for this request
      * @return the UserReminderViewCollectionRequest instance
      */
-     @Override
-    public UserReminderViewCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Override
+    @Nonnull
+    public UserReminderViewCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final UserReminderViewCollectionRequest request = super.buildRequest(requestOptions);
 
       for (com.microsoft.graph.options.FunctionOption option : functionOptions) {

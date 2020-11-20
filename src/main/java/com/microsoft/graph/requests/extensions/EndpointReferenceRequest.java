@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Endpoint;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseReferenceRequest;
@@ -30,7 +32,7 @@ public class EndpointReferenceRequest extends BaseReferenceRequest<Endpoint> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EndpointReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EndpointReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Endpoint.class);
     }
 
@@ -40,7 +42,8 @@ public class EndpointReferenceRequest extends BaseReferenceRequest<Endpoint> {
      * @param value the select clause
      * @return the updated request
      */
-    public EndpointReferenceRequest select(final String value) {
+    @Nonnull
+    public EndpointReferenceRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -51,7 +54,8 @@ public class EndpointReferenceRequest extends BaseReferenceRequest<Endpoint> {
      * @param value the expand clause
      * @return the updated request
      */
-    public EndpointReferenceRequest expand(final String value) {
+    @Nonnull
+    public EndpointReferenceRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -61,7 +65,7 @@ public class EndpointReferenceRequest extends BaseReferenceRequest<Endpoint> {
      * @param srcEndpoint the Endpoint reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(Endpoint srcEndpoint, final ICallback<? super Endpoint> callback) {
+    public void put(@Nonnull final Endpoint srcEndpoint, @Nonnull final ICallback<? super Endpoint> callback) {
         send(HttpMethod.PUT, callback, srcEndpoint);
     }
 
@@ -72,7 +76,8 @@ public class EndpointReferenceRequest extends BaseReferenceRequest<Endpoint> {
      * @return the Endpoint
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    public Endpoint put(Endpoint srcEndpoint) throws ClientException {
+    @Nullable
+    public Endpoint put(@Nonnull final Endpoint srcEndpoint) throws ClientException {
         return send(HttpMethod.PUT, srcEndpoint);
     }
 }

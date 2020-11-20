@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfiguration
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationDeviceStatus;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest ex
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse.class, ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage.class, ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest ex
      * @param newManagedDeviceMobileAppConfigurationDeviceStatus the ManagedDeviceMobileAppConfigurationDeviceStatus to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final ManagedDeviceMobileAppConfigurationDeviceStatus newManagedDeviceMobileAppConfigurationDeviceStatus, final ICallback<? super ManagedDeviceMobileAppConfigurationDeviceStatus> callback) {
+    public void post(@Nonnull final ManagedDeviceMobileAppConfigurationDeviceStatus newManagedDeviceMobileAppConfigurationDeviceStatus, @Nonnull final ICallback<? super ManagedDeviceMobileAppConfigurationDeviceStatus> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest ex
      * @param newManagedDeviceMobileAppConfigurationDeviceStatus the ManagedDeviceMobileAppConfigurationDeviceStatus to create
      * @return the newly created object
      */
-    public ManagedDeviceMobileAppConfigurationDeviceStatus post(final ManagedDeviceMobileAppConfigurationDeviceStatus newManagedDeviceMobileAppConfigurationDeviceStatus) throws ClientException {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationDeviceStatus post(@Nonnull final ManagedDeviceMobileAppConfigurationDeviceStatus newManagedDeviceMobileAppConfigurationDeviceStatus) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest ex
      * @param value the expand clause
      * @return the updated request
      */
-    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest expand(final String value) {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest ex
      * @param value the filter clause
      * @return the updated request
      */
-    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest filter(final String value) {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest ex
      * @param value the order by clause
      * @return the updated request
      */
-    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest ex
      * @param value the select clause
      * @return the updated request
      */
-    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest select(final String value) {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest ex
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest ex
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest ex
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

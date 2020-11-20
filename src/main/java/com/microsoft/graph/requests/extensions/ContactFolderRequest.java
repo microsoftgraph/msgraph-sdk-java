@@ -18,6 +18,8 @@ import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedProperty
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -36,7 +38,7 @@ public class ContactFolderRequest extends BaseRequest<ContactFolder> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ContactFolderRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ContactFolderRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ContactFolder.class);
     }
 
@@ -45,7 +47,7 @@ public class ContactFolderRequest extends BaseRequest<ContactFolder> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ContactFolder> callback) {
+    public void get(@Nonnull final ICallback<? super ContactFolder> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,6 +57,7 @@ public class ContactFolderRequest extends BaseRequest<ContactFolder> {
      * @return the ContactFolder from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ContactFolder get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -64,7 +67,7 @@ public class ContactFolderRequest extends BaseRequest<ContactFolder> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ContactFolder> callback) {
+    public void delete(@Nonnull final ICallback<? super ContactFolder> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -83,7 +86,7 @@ public class ContactFolderRequest extends BaseRequest<ContactFolder> {
      * @param sourceContactFolder the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ContactFolder sourceContactFolder, final ICallback<? super ContactFolder> callback) {
+    public void patch(@Nonnull final ContactFolder sourceContactFolder, @Nonnull final ICallback<? super ContactFolder> callback) {
         send(HttpMethod.PATCH, callback, sourceContactFolder);
     }
 
@@ -94,7 +97,8 @@ public class ContactFolderRequest extends BaseRequest<ContactFolder> {
      * @return the updated ContactFolder
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ContactFolder patch(final ContactFolder sourceContactFolder) throws ClientException {
+    @Nullable
+    public ContactFolder patch(@Nonnull final ContactFolder sourceContactFolder) throws ClientException {
         return send(HttpMethod.PATCH, sourceContactFolder);
     }
 
@@ -104,7 +108,7 @@ public class ContactFolderRequest extends BaseRequest<ContactFolder> {
      * @param newContactFolder the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ContactFolder newContactFolder, final ICallback<? super ContactFolder> callback) {
+    public void post(@Nonnull final ContactFolder newContactFolder, @Nonnull final ICallback<? super ContactFolder> callback) {
         send(HttpMethod.POST, callback, newContactFolder);
     }
 
@@ -115,7 +119,8 @@ public class ContactFolderRequest extends BaseRequest<ContactFolder> {
      * @return the created ContactFolder
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ContactFolder post(final ContactFolder newContactFolder) throws ClientException {
+    @Nullable
+    public ContactFolder post(@Nonnull final ContactFolder newContactFolder) throws ClientException {
         return send(HttpMethod.POST, newContactFolder);
     }
 
@@ -125,7 +130,7 @@ public class ContactFolderRequest extends BaseRequest<ContactFolder> {
      * @param newContactFolder the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ContactFolder newContactFolder, final ICallback<? super ContactFolder> callback) {
+    public void put(@Nonnull final ContactFolder newContactFolder, @Nonnull final ICallback<? super ContactFolder> callback) {
         send(HttpMethod.PUT, callback, newContactFolder);
     }
 
@@ -136,7 +141,8 @@ public class ContactFolderRequest extends BaseRequest<ContactFolder> {
      * @return the created ContactFolder
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ContactFolder put(final ContactFolder newContactFolder) throws ClientException {
+    @Nullable
+    public ContactFolder put(@Nonnull final ContactFolder newContactFolder) throws ClientException {
         return send(HttpMethod.PUT, newContactFolder);
     }
 
@@ -146,7 +152,8 @@ public class ContactFolderRequest extends BaseRequest<ContactFolder> {
      * @param value the select clause
      * @return the updated request
      */
-     public ContactFolderRequest select(final String value) {
+     @Nonnull
+     public ContactFolderRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -157,7 +164,8 @@ public class ContactFolderRequest extends BaseRequest<ContactFolder> {
      * @param value the expand clause
      * @return the updated request
      */
-     public ContactFolderRequest expand(final String value) {
+     @Nonnull
+     public ContactFolderRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OpenShiftChangeRequest;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -27,7 +29,7 @@ public class OpenShiftChangeRequestRequestBuilder extends BaseRequestBuilder<Ope
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OpenShiftChangeRequestRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OpenShiftChangeRequestRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -37,7 +39,8 @@ public class OpenShiftChangeRequestRequestBuilder extends BaseRequestBuilder<Ope
      * @param requestOptions the options for this request
      * @return the OpenShiftChangeRequestRequest instance
      */
-    public OpenShiftChangeRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public OpenShiftChangeRequestRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,7 +50,8 @@ public class OpenShiftChangeRequestRequestBuilder extends BaseRequestBuilder<Ope
      * @param requestOptions the options for this request
      * @return the OpenShiftChangeRequestRequest instance
      */
-    public OpenShiftChangeRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public OpenShiftChangeRequestRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.OpenShiftChangeRequestRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

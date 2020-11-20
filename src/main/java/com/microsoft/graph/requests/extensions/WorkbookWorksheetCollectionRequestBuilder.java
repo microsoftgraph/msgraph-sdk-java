@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.WorkbookWorksheet;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetRequestBuilder;
@@ -34,7 +36,7 @@ public class WorkbookWorksheetCollectionRequestBuilder extends BaseCollectionReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookWorksheetCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookWorksheetCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookWorksheetRequestBuilder.class, WorkbookWorksheetCollectionRequest.class);
     }
 
@@ -45,7 +47,8 @@ public class WorkbookWorksheetCollectionRequestBuilder extends BaseCollectionReq
      * @return the request builder 
      * @param name the name
      */
-    public WorkbookWorksheetAddRequestBuilder add(final String name) {
+    @Nonnull
+    public WorkbookWorksheetAddRequestBuilder add(@Nullable final String name) {
         return new WorkbookWorksheetAddRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.add"), getClient(), null, name);
     }
 }

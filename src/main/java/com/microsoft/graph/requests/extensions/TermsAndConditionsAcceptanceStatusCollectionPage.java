@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.TermsAndConditionsAcceptanceStatus;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class TermsAndConditionsAcceptanceStatusCollectionPage extends BaseCollec
      * @param response the serialized TermsAndConditionsAcceptanceStatusCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TermsAndConditionsAcceptanceStatusCollectionPage(final TermsAndConditionsAcceptanceStatusCollectionResponse response, final TermsAndConditionsAcceptanceStatusCollectionRequestBuilder builder) {
+    public TermsAndConditionsAcceptanceStatusCollectionPage(@Nonnull final TermsAndConditionsAcceptanceStatusCollectionResponse response, @Nonnull final TermsAndConditionsAcceptanceStatusCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class TermsAndConditionsAcceptanceStatusCollectionPage extends BaseCollec
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public TermsAndConditionsAcceptanceStatusCollectionPage(final java.util.List<TermsAndConditionsAcceptanceStatus> pageContents, final TermsAndConditionsAcceptanceStatusCollectionRequestBuilder nextRequestBuilder) {
+    public TermsAndConditionsAcceptanceStatusCollectionPage(@Nonnull final java.util.List<TermsAndConditionsAcceptanceStatus> pageContents, @Nullable final TermsAndConditionsAcceptanceStatusCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

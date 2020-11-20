@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Alert;
 import com.microsoft.graph.requests.extensions.AlertCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.AlertCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class AlertCollectionPage extends BaseCollectionPage<Alert, AlertCollecti
      * @param response the serialized AlertCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public AlertCollectionPage(final AlertCollectionResponse response, final AlertCollectionRequestBuilder builder) {
+    public AlertCollectionPage(@Nonnull final AlertCollectionResponse response, @Nonnull final AlertCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class AlertCollectionPage extends BaseCollectionPage<Alert, AlertCollecti
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public AlertCollectionPage(final java.util.List<Alert> pageContents, final AlertCollectionRequestBuilder nextRequestBuilder) {
+    public AlertCollectionPage(@Nonnull final java.util.List<Alert> pageContents, @Nullable final AlertCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

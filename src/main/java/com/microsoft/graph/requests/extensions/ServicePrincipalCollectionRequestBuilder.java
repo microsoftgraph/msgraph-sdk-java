@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.PasswordCredential;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ServicePrincipalRequestBuilder;
@@ -34,7 +36,7 @@ public class ServicePrincipalCollectionRequestBuilder extends BaseCollectionRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ServicePrincipalCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ServicePrincipalCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ServicePrincipalRequestBuilder.class, ServicePrincipalCollectionRequest.class);
     }
 
@@ -44,6 +46,7 @@ public class ServicePrincipalCollectionRequestBuilder extends BaseCollectionRequ
      * Gets a builder to execute the method
      * @return the request builder collection
      */
+    @Nonnull
     public ServicePrincipalDeltaCollectionRequestBuilder delta() {
         return new ServicePrincipalDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
@@ -54,7 +57,8 @@ public class ServicePrincipalCollectionRequestBuilder extends BaseCollectionRequ
      * @return a request builder to get the changes
      * @param deltaLink the link returned by the last delta request
      */
-	public ServicePrincipalDeltaCollectionRequestBuilder delta(final String deltaLink) {
+    @Nonnull
+	public ServicePrincipalDeltaCollectionRequestBuilder delta(@Nonnull final String deltaLink) {
         return new ServicePrincipalDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }
 }

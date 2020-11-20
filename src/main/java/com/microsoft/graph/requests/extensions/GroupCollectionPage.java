@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.requests.extensions.GroupCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.GroupCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class GroupCollectionPage extends BaseCollectionPage<Group, GroupCollecti
      * @param response the serialized GroupCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public GroupCollectionPage(final GroupCollectionResponse response, final GroupCollectionRequestBuilder builder) {
+    public GroupCollectionPage(@Nonnull final GroupCollectionResponse response, @Nonnull final GroupCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class GroupCollectionPage extends BaseCollectionPage<Group, GroupCollecti
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public GroupCollectionPage(final java.util.List<Group> pageContents, final GroupCollectionRequestBuilder nextRequestBuilder) {
+    public GroupCollectionPage(@Nonnull final java.util.List<Group> pageContents, @Nullable final GroupCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

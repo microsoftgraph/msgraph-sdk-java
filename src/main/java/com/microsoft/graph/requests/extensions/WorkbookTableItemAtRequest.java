@@ -6,6 +6,8 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookTable;
 import com.microsoft.graph.requests.extensions.WorkbookTableItemAtRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.core.ClientException;
@@ -27,7 +29,7 @@ public class WorkbookTableItemAtRequest extends BaseRequest<WorkbookTable> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookTableItemAtRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableItemAtRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookTable.class);
     }
 
@@ -36,7 +38,7 @@ public class WorkbookTableItemAtRequest extends BaseRequest<WorkbookTable> {
      * @param srcWorkbookTable the WorkbookTable with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    public void patch(WorkbookTable srcWorkbookTable, final ICallback<? super WorkbookTable> callback) {
+    public void patch(@Nonnull WorkbookTable srcWorkbookTable, @Nonnull final ICallback<? super WorkbookTable> callback) {
         send(HttpMethod.PATCH, callback, srcWorkbookTable);
     }
 
@@ -47,7 +49,8 @@ public class WorkbookTableItemAtRequest extends BaseRequest<WorkbookTable> {
      * @return the WorkbookTable
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-     public WorkbookTable patch(WorkbookTable srcWorkbookTable) throws ClientException {
+     @Nullable
+     public WorkbookTable patch(@Nonnull final WorkbookTable srcWorkbookTable) throws ClientException {
         return this.send(HttpMethod.PATCH, srcWorkbookTable);
     }
 
@@ -57,7 +60,7 @@ public class WorkbookTableItemAtRequest extends BaseRequest<WorkbookTable> {
      * @param srcWorkbookTable the WorkbookTable to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(WorkbookTable srcWorkbookTable, final ICallback<? super WorkbookTable> callback) {
+    public void put(@Nonnull final WorkbookTable srcWorkbookTable, @Nonnull final ICallback<? super WorkbookTable> callback) {
         send(HttpMethod.PUT, callback, srcWorkbookTable);
     }
 
@@ -68,7 +71,8 @@ public class WorkbookTableItemAtRequest extends BaseRequest<WorkbookTable> {
      * @return the WorkbookTable
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-     public WorkbookTable put(WorkbookTable srcWorkbookTable) throws ClientException {
+     @Nullable
+     public WorkbookTable put(@Nonnull final WorkbookTable srcWorkbookTable) throws ClientException {
         return this.send(HttpMethod.PUT, srcWorkbookTable);
     }
     /**
@@ -76,7 +80,7 @@ public class WorkbookTableItemAtRequest extends BaseRequest<WorkbookTable> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookTable> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookTable> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -86,6 +90,7 @@ public class WorkbookTableItemAtRequest extends BaseRequest<WorkbookTable> {
      * @return the WorkbookTable
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
+    @Nullable
     public WorkbookTable get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -96,7 +101,8 @@ public class WorkbookTableItemAtRequest extends BaseRequest<WorkbookTable> {
      * @param value the select clause
      * @return the updated request
      */
-    public WorkbookTableItemAtRequest select(final String value) {
+    @Nonnull
+    public WorkbookTableItemAtRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -107,7 +113,8 @@ public class WorkbookTableItemAtRequest extends BaseRequest<WorkbookTable> {
      * @param value the expand clause
      * @return the updated request
      */
-    public WorkbookTableItemAtRequest expand(final String value) {
+    @Nonnull
+    public WorkbookTableItemAtRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -118,7 +125,8 @@ public class WorkbookTableItemAtRequest extends BaseRequest<WorkbookTable> {
      * @param value the filter clause
      * @return the updated request
      */
-    public WorkbookTableItemAtRequest filter(final String value) {
+    @Nonnull
+    public WorkbookTableItemAtRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -129,7 +137,8 @@ public class WorkbookTableItemAtRequest extends BaseRequest<WorkbookTable> {
      * @param value the order by clause
      * @return the updated request
      */
-    public WorkbookTableItemAtRequest orderBy(final String value) {
+    @Nonnull
+    public WorkbookTableItemAtRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }

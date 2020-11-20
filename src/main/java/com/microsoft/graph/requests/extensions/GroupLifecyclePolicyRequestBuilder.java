@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupLifecyclePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -27,7 +29,7 @@ public class GroupLifecyclePolicyRequestBuilder extends BaseRequestBuilder<Group
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupLifecyclePolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupLifecyclePolicyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -37,7 +39,8 @@ public class GroupLifecyclePolicyRequestBuilder extends BaseRequestBuilder<Group
      * @param requestOptions the options for this request
      * @return the GroupLifecyclePolicyRequest instance
      */
-    public GroupLifecyclePolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public GroupLifecyclePolicyRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,7 +50,8 @@ public class GroupLifecyclePolicyRequestBuilder extends BaseRequestBuilder<Group
      * @param requestOptions the options for this request
      * @return the GroupLifecyclePolicyRequest instance
      */
-    public GroupLifecyclePolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public GroupLifecyclePolicyRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.GroupLifecyclePolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -58,7 +62,8 @@ public class GroupLifecyclePolicyRequestBuilder extends BaseRequestBuilder<Group
      * @return the request builder 
      * @param groupId the groupId
      */
-    public GroupLifecyclePolicyAddGroupRequestBuilder addGroup(final String groupId) {
+    @Nonnull
+    public GroupLifecyclePolicyAddGroupRequestBuilder addGroup(@Nullable final String groupId) {
         return new GroupLifecyclePolicyAddGroupRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.addGroup"), getClient(), null, groupId);
     }
 
@@ -67,7 +72,8 @@ public class GroupLifecyclePolicyRequestBuilder extends BaseRequestBuilder<Group
      * @return the request builder 
      * @param groupId the groupId
      */
-    public GroupLifecyclePolicyRemoveGroupRequestBuilder removeGroup(final String groupId) {
+    @Nonnull
+    public GroupLifecyclePolicyRemoveGroupRequestBuilder removeGroup(@Nullable final String groupId) {
         return new GroupLifecyclePolicyRemoveGroupRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.removeGroup"), getClient(), null, groupId);
     }
 }

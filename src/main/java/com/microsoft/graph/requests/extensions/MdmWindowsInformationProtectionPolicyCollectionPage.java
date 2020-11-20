@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.MdmWindowsInformationProtectionPolicy;
 import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class MdmWindowsInformationProtectionPolicyCollectionPage extends BaseCol
      * @param response the serialized MdmWindowsInformationProtectionPolicyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public MdmWindowsInformationProtectionPolicyCollectionPage(final MdmWindowsInformationProtectionPolicyCollectionResponse response, final MdmWindowsInformationProtectionPolicyCollectionRequestBuilder builder) {
+    public MdmWindowsInformationProtectionPolicyCollectionPage(@Nonnull final MdmWindowsInformationProtectionPolicyCollectionResponse response, @Nonnull final MdmWindowsInformationProtectionPolicyCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class MdmWindowsInformationProtectionPolicyCollectionPage extends BaseCol
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public MdmWindowsInformationProtectionPolicyCollectionPage(final java.util.List<MdmWindowsInformationProtectionPolicy> pageContents, final MdmWindowsInformationProtectionPolicyCollectionRequestBuilder nextRequestBuilder) {
+    public MdmWindowsInformationProtectionPolicyCollectionPage(@Nonnull final java.util.List<MdmWindowsInformationProtectionPolicy> pageContents, @Nullable final MdmWindowsInformationProtectionPolicyCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

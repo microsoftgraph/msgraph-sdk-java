@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyWithReferenceRequest;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyReferenceRequestBuilder;
@@ -38,7 +40,7 @@ public class TokenLifetimePolicyCollectionReferenceRequest extends BaseCollectio
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TokenLifetimePolicyCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TokenLifetimePolicyCollectionReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TokenLifetimePolicyCollectionResponse.class, TokenLifetimePolicyCollectionWithReferencesPage.class, TokenLifetimePolicyCollectionWithReferencesRequestBuilder.class);
     }
 
@@ -47,7 +49,7 @@ public class TokenLifetimePolicyCollectionReferenceRequest extends BaseCollectio
      * @param newTokenLifetimePolicy the TokenLifetimePolicy to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final TokenLifetimePolicy newTokenLifetimePolicy, final ICallback<? super TokenLifetimePolicy> callback) {
+    public void post(@Nonnull final TokenLifetimePolicy newTokenLifetimePolicy, @Nonnull final ICallback<? super TokenLifetimePolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/policies/tokenLifetimePolicies/" + newTokenLifetimePolicy.id);
         new TokenLifetimePolicyWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -60,7 +62,8 @@ public class TokenLifetimePolicyCollectionReferenceRequest extends BaseCollectio
      * @param newTokenLifetimePolicy the TokenLifetimePolicy to create
      * @return the newly created object
      */
-    public TokenLifetimePolicy post(final TokenLifetimePolicy newTokenLifetimePolicy) throws ClientException {
+    @Nonnull
+    public TokenLifetimePolicy post(@Nonnull final TokenLifetimePolicy newTokenLifetimePolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/policies/tokenLifetimePolicies/" + newTokenLifetimePolicy.id);
         return new TokenLifetimePolicyWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
@@ -73,7 +76,8 @@ public class TokenLifetimePolicyCollectionReferenceRequest extends BaseCollectio
      * @param value the expand clause
      * @return the updated request
      */
-    public TokenLifetimePolicyCollectionReferenceRequest expand(final String value) {
+    @Nonnull
+    public TokenLifetimePolicyCollectionReferenceRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -84,7 +88,8 @@ public class TokenLifetimePolicyCollectionReferenceRequest extends BaseCollectio
      * @param value the filter clause
      * @return the updated request
      */
-    public TokenLifetimePolicyCollectionReferenceRequest filter(final String value) {
+    @Nonnull
+    public TokenLifetimePolicyCollectionReferenceRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -95,7 +100,8 @@ public class TokenLifetimePolicyCollectionReferenceRequest extends BaseCollectio
      * @param value the sort clause
      * @return the updated request
      */
-    public TokenLifetimePolicyCollectionReferenceRequest orderBy(final String value) {
+    @Nonnull
+    public TokenLifetimePolicyCollectionReferenceRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -106,7 +112,8 @@ public class TokenLifetimePolicyCollectionReferenceRequest extends BaseCollectio
      * @param value the select clause
      * @return the updated request
      */
-    public TokenLifetimePolicyCollectionReferenceRequest select(final String value) {
+    @Nonnull
+    public TokenLifetimePolicyCollectionReferenceRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -117,6 +124,7 @@ public class TokenLifetimePolicyCollectionReferenceRequest extends BaseCollectio
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public TokenLifetimePolicyCollectionReferenceRequest top(final int value) {
         addTopOption(value);
         return this;

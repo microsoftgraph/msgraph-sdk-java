@@ -16,6 +16,8 @@ import com.microsoft.graph.requests.extensions.DeviceConfigurationStateRequestBu
 import com.microsoft.graph.requests.extensions.DeviceCategoryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseWithReferenceRequest;
@@ -37,7 +39,7 @@ public class ManagedDeviceWithReferenceRequest extends BaseWithReferenceRequest<
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedDevice.class);
     }
 
@@ -47,7 +49,8 @@ public class ManagedDeviceWithReferenceRequest extends BaseWithReferenceRequest<
      * @param value the select clause
      * @return the updated request
      */
-    public ManagedDeviceWithReferenceRequest select(final String value) {
+    @Nonnull
+    public ManagedDeviceWithReferenceRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -58,7 +61,8 @@ public class ManagedDeviceWithReferenceRequest extends BaseWithReferenceRequest<
      * @param value the expand clause
      * @return the updated request
      */
-    public ManagedDeviceWithReferenceRequest expand(final String value) {
+    @Nonnull
+    public ManagedDeviceWithReferenceRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }

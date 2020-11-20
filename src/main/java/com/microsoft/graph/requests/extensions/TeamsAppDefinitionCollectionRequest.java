@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.TeamsApp;
 import com.microsoft.graph.models.extensions.TeamsAppDefinition;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class TeamsAppDefinitionCollectionRequest extends BaseCollectionRequest<T
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamsAppDefinitionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsAppDefinitionCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TeamsAppDefinitionCollectionResponse.class, TeamsAppDefinitionCollectionPage.class, TeamsAppDefinitionCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class TeamsAppDefinitionCollectionRequest extends BaseCollectionRequest<T
      * @param newTeamsAppDefinition the TeamsAppDefinition to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final TeamsAppDefinition newTeamsAppDefinition, final ICallback<? super TeamsAppDefinition> callback) {
+    public void post(@Nonnull final TeamsAppDefinition newTeamsAppDefinition, @Nonnull final ICallback<? super TeamsAppDefinition> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TeamsAppDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class TeamsAppDefinitionCollectionRequest extends BaseCollectionRequest<T
      * @param newTeamsAppDefinition the TeamsAppDefinition to create
      * @return the newly created object
      */
-    public TeamsAppDefinition post(final TeamsAppDefinition newTeamsAppDefinition) throws ClientException {
+    @Nonnull
+    public TeamsAppDefinition post(@Nonnull final TeamsAppDefinition newTeamsAppDefinition) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TeamsAppDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class TeamsAppDefinitionCollectionRequest extends BaseCollectionRequest<T
      * @param value the expand clause
      * @return the updated request
      */
-    public TeamsAppDefinitionCollectionRequest expand(final String value) {
+    @Nonnull
+    public TeamsAppDefinitionCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class TeamsAppDefinitionCollectionRequest extends BaseCollectionRequest<T
      * @param value the filter clause
      * @return the updated request
      */
-    public TeamsAppDefinitionCollectionRequest filter(final String value) {
+    @Nonnull
+    public TeamsAppDefinitionCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class TeamsAppDefinitionCollectionRequest extends BaseCollectionRequest<T
      * @param value the order by clause
      * @return the updated request
      */
-    public TeamsAppDefinitionCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public TeamsAppDefinitionCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class TeamsAppDefinitionCollectionRequest extends BaseCollectionRequest<T
      * @param value the select clause
      * @return the updated request
      */
-    public TeamsAppDefinitionCollectionRequest select(final String value) {
+    @Nonnull
+    public TeamsAppDefinitionCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class TeamsAppDefinitionCollectionRequest extends BaseCollectionRequest<T
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public TeamsAppDefinitionCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class TeamsAppDefinitionCollectionRequest extends BaseCollectionRequest<T
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public TeamsAppDefinitionCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class TeamsAppDefinitionCollectionRequest extends BaseCollectionRequest<T
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public TeamsAppDefinitionCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public TeamsAppDefinitionCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

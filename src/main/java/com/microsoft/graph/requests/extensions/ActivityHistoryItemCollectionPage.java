@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ActivityHistoryItem;
 import com.microsoft.graph.requests.extensions.ActivityHistoryItemCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.ActivityHistoryItemCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class ActivityHistoryItemCollectionPage extends BaseCollectionPage<Activi
      * @param response the serialized ActivityHistoryItemCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ActivityHistoryItemCollectionPage(final ActivityHistoryItemCollectionResponse response, final ActivityHistoryItemCollectionRequestBuilder builder) {
+    public ActivityHistoryItemCollectionPage(@Nonnull final ActivityHistoryItemCollectionResponse response, @Nonnull final ActivityHistoryItemCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class ActivityHistoryItemCollectionPage extends BaseCollectionPage<Activi
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public ActivityHistoryItemCollectionPage(final java.util.List<ActivityHistoryItem> pageContents, final ActivityHistoryItemCollectionRequestBuilder nextRequestBuilder) {
+    public ActivityHistoryItemCollectionPage(@Nonnull final java.util.List<ActivityHistoryItem> pageContents, @Nullable final ActivityHistoryItemCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

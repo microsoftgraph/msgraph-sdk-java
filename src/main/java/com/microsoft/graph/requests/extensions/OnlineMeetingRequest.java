@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.ChatInfo;
 import com.microsoft.graph.models.extensions.MeetingParticipants;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -30,7 +32,7 @@ public class OnlineMeetingRequest extends BaseRequest<OnlineMeeting> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnlineMeetingRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnlineMeetingRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OnlineMeeting.class);
     }
 
@@ -39,7 +41,7 @@ public class OnlineMeetingRequest extends BaseRequest<OnlineMeeting> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super OnlineMeeting> callback) {
+    public void get(@Nonnull final ICallback<? super OnlineMeeting> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -49,6 +51,7 @@ public class OnlineMeetingRequest extends BaseRequest<OnlineMeeting> {
      * @return the OnlineMeeting from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public OnlineMeeting get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -58,7 +61,7 @@ public class OnlineMeetingRequest extends BaseRequest<OnlineMeeting> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super OnlineMeeting> callback) {
+    public void delete(@Nonnull final ICallback<? super OnlineMeeting> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +80,7 @@ public class OnlineMeetingRequest extends BaseRequest<OnlineMeeting> {
      * @param sourceOnlineMeeting the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OnlineMeeting sourceOnlineMeeting, final ICallback<? super OnlineMeeting> callback) {
+    public void patch(@Nonnull final OnlineMeeting sourceOnlineMeeting, @Nonnull final ICallback<? super OnlineMeeting> callback) {
         send(HttpMethod.PATCH, callback, sourceOnlineMeeting);
     }
 
@@ -88,7 +91,8 @@ public class OnlineMeetingRequest extends BaseRequest<OnlineMeeting> {
      * @return the updated OnlineMeeting
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OnlineMeeting patch(final OnlineMeeting sourceOnlineMeeting) throws ClientException {
+    @Nullable
+    public OnlineMeeting patch(@Nonnull final OnlineMeeting sourceOnlineMeeting) throws ClientException {
         return send(HttpMethod.PATCH, sourceOnlineMeeting);
     }
 
@@ -98,7 +102,7 @@ public class OnlineMeetingRequest extends BaseRequest<OnlineMeeting> {
      * @param newOnlineMeeting the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OnlineMeeting newOnlineMeeting, final ICallback<? super OnlineMeeting> callback) {
+    public void post(@Nonnull final OnlineMeeting newOnlineMeeting, @Nonnull final ICallback<? super OnlineMeeting> callback) {
         send(HttpMethod.POST, callback, newOnlineMeeting);
     }
 
@@ -109,7 +113,8 @@ public class OnlineMeetingRequest extends BaseRequest<OnlineMeeting> {
      * @return the created OnlineMeeting
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OnlineMeeting post(final OnlineMeeting newOnlineMeeting) throws ClientException {
+    @Nullable
+    public OnlineMeeting post(@Nonnull final OnlineMeeting newOnlineMeeting) throws ClientException {
         return send(HttpMethod.POST, newOnlineMeeting);
     }
 
@@ -119,7 +124,7 @@ public class OnlineMeetingRequest extends BaseRequest<OnlineMeeting> {
      * @param newOnlineMeeting the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OnlineMeeting newOnlineMeeting, final ICallback<? super OnlineMeeting> callback) {
+    public void put(@Nonnull final OnlineMeeting newOnlineMeeting, @Nonnull final ICallback<? super OnlineMeeting> callback) {
         send(HttpMethod.PUT, callback, newOnlineMeeting);
     }
 
@@ -130,7 +135,8 @@ public class OnlineMeetingRequest extends BaseRequest<OnlineMeeting> {
      * @return the created OnlineMeeting
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OnlineMeeting put(final OnlineMeeting newOnlineMeeting) throws ClientException {
+    @Nullable
+    public OnlineMeeting put(@Nonnull final OnlineMeeting newOnlineMeeting) throws ClientException {
         return send(HttpMethod.PUT, newOnlineMeeting);
     }
 
@@ -140,7 +146,8 @@ public class OnlineMeetingRequest extends BaseRequest<OnlineMeeting> {
      * @param value the select clause
      * @return the updated request
      */
-     public OnlineMeetingRequest select(final String value) {
+     @Nonnull
+     public OnlineMeetingRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -151,7 +158,8 @@ public class OnlineMeetingRequest extends BaseRequest<OnlineMeeting> {
      * @param value the expand clause
      * @return the updated request
      */
-     public OnlineMeetingRequest expand(final String value) {
+     @Nonnull
+     public OnlineMeetingRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

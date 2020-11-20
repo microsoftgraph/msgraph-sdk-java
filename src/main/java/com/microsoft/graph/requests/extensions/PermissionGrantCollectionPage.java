@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DriveRecipient;
 import com.microsoft.graph.models.extensions.Permission;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.PermissionGrantCollectionRequestBuilder;
@@ -30,7 +32,7 @@ public class PermissionGrantCollectionPage extends BaseCollectionPage<Permission
      * @param response The serialized PermissionGrantCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public PermissionGrantCollectionPage(final PermissionGrantCollectionResponse response, final PermissionGrantCollectionRequestBuilder builder) {
+    public PermissionGrantCollectionPage(@Nonnull final PermissionGrantCollectionResponse response, @Nonnull final PermissionGrantCollectionRequestBuilder builder) {
        super(response, builder);
     }
 
@@ -40,7 +42,7 @@ public class PermissionGrantCollectionPage extends BaseCollectionPage<Permission
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public PermissionGrantCollectionPage(final java.util.List<Permission> pageContents, final PermissionGrantCollectionRequestBuilder nextRequestBuilder) {
+    public PermissionGrantCollectionPage(@Nonnull final java.util.List<Permission> pageContents, @Nullable final PermissionGrantCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionReque
 import com.microsoft.graph.requests.extensions.DeviceInstallStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -30,7 +32,7 @@ public class UserInstallStateSummaryRequest extends BaseRequest<UserInstallState
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserInstallStateSummaryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserInstallStateSummaryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserInstallStateSummary.class);
     }
 
@@ -39,7 +41,7 @@ public class UserInstallStateSummaryRequest extends BaseRequest<UserInstallState
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super UserInstallStateSummary> callback) {
+    public void get(@Nonnull final ICallback<? super UserInstallStateSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -49,6 +51,7 @@ public class UserInstallStateSummaryRequest extends BaseRequest<UserInstallState
      * @return the UserInstallStateSummary from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public UserInstallStateSummary get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -58,7 +61,7 @@ public class UserInstallStateSummaryRequest extends BaseRequest<UserInstallState
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super UserInstallStateSummary> callback) {
+    public void delete(@Nonnull final ICallback<? super UserInstallStateSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +80,7 @@ public class UserInstallStateSummaryRequest extends BaseRequest<UserInstallState
      * @param sourceUserInstallStateSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserInstallStateSummary sourceUserInstallStateSummary, final ICallback<? super UserInstallStateSummary> callback) {
+    public void patch(@Nonnull final UserInstallStateSummary sourceUserInstallStateSummary, @Nonnull final ICallback<? super UserInstallStateSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceUserInstallStateSummary);
     }
 
@@ -88,7 +91,8 @@ public class UserInstallStateSummaryRequest extends BaseRequest<UserInstallState
      * @return the updated UserInstallStateSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserInstallStateSummary patch(final UserInstallStateSummary sourceUserInstallStateSummary) throws ClientException {
+    @Nullable
+    public UserInstallStateSummary patch(@Nonnull final UserInstallStateSummary sourceUserInstallStateSummary) throws ClientException {
         return send(HttpMethod.PATCH, sourceUserInstallStateSummary);
     }
 
@@ -98,7 +102,7 @@ public class UserInstallStateSummaryRequest extends BaseRequest<UserInstallState
      * @param newUserInstallStateSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserInstallStateSummary newUserInstallStateSummary, final ICallback<? super UserInstallStateSummary> callback) {
+    public void post(@Nonnull final UserInstallStateSummary newUserInstallStateSummary, @Nonnull final ICallback<? super UserInstallStateSummary> callback) {
         send(HttpMethod.POST, callback, newUserInstallStateSummary);
     }
 
@@ -109,7 +113,8 @@ public class UserInstallStateSummaryRequest extends BaseRequest<UserInstallState
      * @return the created UserInstallStateSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserInstallStateSummary post(final UserInstallStateSummary newUserInstallStateSummary) throws ClientException {
+    @Nullable
+    public UserInstallStateSummary post(@Nonnull final UserInstallStateSummary newUserInstallStateSummary) throws ClientException {
         return send(HttpMethod.POST, newUserInstallStateSummary);
     }
 
@@ -119,7 +124,7 @@ public class UserInstallStateSummaryRequest extends BaseRequest<UserInstallState
      * @param newUserInstallStateSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserInstallStateSummary newUserInstallStateSummary, final ICallback<? super UserInstallStateSummary> callback) {
+    public void put(@Nonnull final UserInstallStateSummary newUserInstallStateSummary, @Nonnull final ICallback<? super UserInstallStateSummary> callback) {
         send(HttpMethod.PUT, callback, newUserInstallStateSummary);
     }
 
@@ -130,7 +135,8 @@ public class UserInstallStateSummaryRequest extends BaseRequest<UserInstallState
      * @return the created UserInstallStateSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserInstallStateSummary put(final UserInstallStateSummary newUserInstallStateSummary) throws ClientException {
+    @Nullable
+    public UserInstallStateSummary put(@Nonnull final UserInstallStateSummary newUserInstallStateSummary) throws ClientException {
         return send(HttpMethod.PUT, newUserInstallStateSummary);
     }
 
@@ -140,7 +146,8 @@ public class UserInstallStateSummaryRequest extends BaseRequest<UserInstallState
      * @param value the select clause
      * @return the updated request
      */
-     public UserInstallStateSummaryRequest select(final String value) {
+     @Nonnull
+     public UserInstallStateSummaryRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -151,7 +158,8 @@ public class UserInstallStateSummaryRequest extends BaseRequest<UserInstallState
      * @param value the expand clause
      * @return the updated request
      */
-     public UserInstallStateSummaryRequest expand(final String value) {
+     @Nonnull
+     public UserInstallStateSummaryRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

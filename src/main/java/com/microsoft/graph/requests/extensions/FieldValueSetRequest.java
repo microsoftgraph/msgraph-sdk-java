@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.FieldValueSet;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class FieldValueSetRequest extends BaseRequest<FieldValueSet> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public FieldValueSetRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public FieldValueSetRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, FieldValueSet.class);
     }
 
@@ -37,7 +39,7 @@ public class FieldValueSetRequest extends BaseRequest<FieldValueSet> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super FieldValueSet> callback) {
+    public void get(@Nonnull final ICallback<? super FieldValueSet> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class FieldValueSetRequest extends BaseRequest<FieldValueSet> {
      * @return the FieldValueSet from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public FieldValueSet get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class FieldValueSetRequest extends BaseRequest<FieldValueSet> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super FieldValueSet> callback) {
+    public void delete(@Nonnull final ICallback<? super FieldValueSet> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class FieldValueSetRequest extends BaseRequest<FieldValueSet> {
      * @param sourceFieldValueSet the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final FieldValueSet sourceFieldValueSet, final ICallback<? super FieldValueSet> callback) {
+    public void patch(@Nonnull final FieldValueSet sourceFieldValueSet, @Nonnull final ICallback<? super FieldValueSet> callback) {
         send(HttpMethod.PATCH, callback, sourceFieldValueSet);
     }
 
@@ -86,7 +89,8 @@ public class FieldValueSetRequest extends BaseRequest<FieldValueSet> {
      * @return the updated FieldValueSet
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public FieldValueSet patch(final FieldValueSet sourceFieldValueSet) throws ClientException {
+    @Nullable
+    public FieldValueSet patch(@Nonnull final FieldValueSet sourceFieldValueSet) throws ClientException {
         return send(HttpMethod.PATCH, sourceFieldValueSet);
     }
 
@@ -96,7 +100,7 @@ public class FieldValueSetRequest extends BaseRequest<FieldValueSet> {
      * @param newFieldValueSet the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final FieldValueSet newFieldValueSet, final ICallback<? super FieldValueSet> callback) {
+    public void post(@Nonnull final FieldValueSet newFieldValueSet, @Nonnull final ICallback<? super FieldValueSet> callback) {
         send(HttpMethod.POST, callback, newFieldValueSet);
     }
 
@@ -107,7 +111,8 @@ public class FieldValueSetRequest extends BaseRequest<FieldValueSet> {
      * @return the created FieldValueSet
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public FieldValueSet post(final FieldValueSet newFieldValueSet) throws ClientException {
+    @Nullable
+    public FieldValueSet post(@Nonnull final FieldValueSet newFieldValueSet) throws ClientException {
         return send(HttpMethod.POST, newFieldValueSet);
     }
 
@@ -117,7 +122,7 @@ public class FieldValueSetRequest extends BaseRequest<FieldValueSet> {
      * @param newFieldValueSet the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final FieldValueSet newFieldValueSet, final ICallback<? super FieldValueSet> callback) {
+    public void put(@Nonnull final FieldValueSet newFieldValueSet, @Nonnull final ICallback<? super FieldValueSet> callback) {
         send(HttpMethod.PUT, callback, newFieldValueSet);
     }
 
@@ -128,7 +133,8 @@ public class FieldValueSetRequest extends BaseRequest<FieldValueSet> {
      * @return the created FieldValueSet
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public FieldValueSet put(final FieldValueSet newFieldValueSet) throws ClientException {
+    @Nullable
+    public FieldValueSet put(@Nonnull final FieldValueSet newFieldValueSet) throws ClientException {
         return send(HttpMethod.PUT, newFieldValueSet);
     }
 
@@ -138,7 +144,8 @@ public class FieldValueSetRequest extends BaseRequest<FieldValueSet> {
      * @param value the select clause
      * @return the updated request
      */
-     public FieldValueSetRequest select(final String value) {
+     @Nonnull
+     public FieldValueSetRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class FieldValueSetRequest extends BaseRequest<FieldValueSet> {
      * @param value the expand clause
      * @return the updated request
      */
-     public FieldValueSetRequest expand(final String value) {
+     @Nonnull
+     public FieldValueSetRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

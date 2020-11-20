@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ManagedAppOperation;
 import com.microsoft.graph.requests.extensions.ManagedAppOperationCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.ManagedAppOperationCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class ManagedAppOperationCollectionPage extends BaseCollectionPage<Manage
      * @param response the serialized ManagedAppOperationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ManagedAppOperationCollectionPage(final ManagedAppOperationCollectionResponse response, final ManagedAppOperationCollectionRequestBuilder builder) {
+    public ManagedAppOperationCollectionPage(@Nonnull final ManagedAppOperationCollectionResponse response, @Nonnull final ManagedAppOperationCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class ManagedAppOperationCollectionPage extends BaseCollectionPage<Manage
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public ManagedAppOperationCollectionPage(final java.util.List<ManagedAppOperation> pageContents, final ManagedAppOperationCollectionRequestBuilder nextRequestBuilder) {
+    public ManagedAppOperationCollectionPage(@Nonnull final java.util.List<ManagedAppOperation> pageContents, @Nullable final ManagedAppOperationCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

@@ -8,6 +8,8 @@ import com.microsoft.graph.models.extensions.Prompt;
 import com.microsoft.graph.models.extensions.PlayPromptOperation;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
 import java.util.EnumSet;
@@ -25,6 +27,7 @@ public class CallPlayPromptBody {
      */
     @SerializedName(value = "prompts", alternate = {"Prompts"})
     @Expose
+	@Nullable
     public java.util.List<Prompt> prompts;
 
     /**
@@ -33,6 +36,7 @@ public class CallPlayPromptBody {
      */
     @SerializedName(value = "clientContext", alternate = {"ClientContext"})
     @Expose
+	@Nullable
     public String clientContext;
 
 
@@ -51,6 +55,7 @@ public class CallPlayPromptBody {
      *
      * @return the raw representation of this class
      */
+    @Nullable
     public JsonObject getRawObject() {
         return rawObject;
     }
@@ -60,6 +65,7 @@ public class CallPlayPromptBody {
      *
      * @return the serializer
      */
+    @Nullable
     public ISerializer getSerializer() {
         return serializer;
     }
@@ -70,7 +76,7 @@ public class CallPlayPromptBody {
      * @param serializer the serializer
      * @param json the JSON object to set this object to
      */
-    public void setRawObject(final ISerializer serializer, final JsonObject json) {
+    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
         this.serializer = serializer;
         rawObject = json;
 

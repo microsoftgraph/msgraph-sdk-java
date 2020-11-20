@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Windows10SecureAssessmentConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class Windows10SecureAssessmentConfigurationRequest extends BaseRequest<W
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Windows10SecureAssessmentConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public Windows10SecureAssessmentConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Windows10SecureAssessmentConfiguration.class);
     }
 
@@ -37,7 +39,7 @@ public class Windows10SecureAssessmentConfigurationRequest extends BaseRequest<W
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Windows10SecureAssessmentConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super Windows10SecureAssessmentConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class Windows10SecureAssessmentConfigurationRequest extends BaseRequest<W
      * @return the Windows10SecureAssessmentConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Windows10SecureAssessmentConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class Windows10SecureAssessmentConfigurationRequest extends BaseRequest<W
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Windows10SecureAssessmentConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super Windows10SecureAssessmentConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class Windows10SecureAssessmentConfigurationRequest extends BaseRequest<W
      * @param sourceWindows10SecureAssessmentConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Windows10SecureAssessmentConfiguration sourceWindows10SecureAssessmentConfiguration, final ICallback<? super Windows10SecureAssessmentConfiguration> callback) {
+    public void patch(@Nonnull final Windows10SecureAssessmentConfiguration sourceWindows10SecureAssessmentConfiguration, @Nonnull final ICallback<? super Windows10SecureAssessmentConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceWindows10SecureAssessmentConfiguration);
     }
 
@@ -86,7 +89,8 @@ public class Windows10SecureAssessmentConfigurationRequest extends BaseRequest<W
      * @return the updated Windows10SecureAssessmentConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10SecureAssessmentConfiguration patch(final Windows10SecureAssessmentConfiguration sourceWindows10SecureAssessmentConfiguration) throws ClientException {
+    @Nullable
+    public Windows10SecureAssessmentConfiguration patch(@Nonnull final Windows10SecureAssessmentConfiguration sourceWindows10SecureAssessmentConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindows10SecureAssessmentConfiguration);
     }
 
@@ -96,7 +100,7 @@ public class Windows10SecureAssessmentConfigurationRequest extends BaseRequest<W
      * @param newWindows10SecureAssessmentConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Windows10SecureAssessmentConfiguration newWindows10SecureAssessmentConfiguration, final ICallback<? super Windows10SecureAssessmentConfiguration> callback) {
+    public void post(@Nonnull final Windows10SecureAssessmentConfiguration newWindows10SecureAssessmentConfiguration, @Nonnull final ICallback<? super Windows10SecureAssessmentConfiguration> callback) {
         send(HttpMethod.POST, callback, newWindows10SecureAssessmentConfiguration);
     }
 
@@ -107,7 +111,8 @@ public class Windows10SecureAssessmentConfigurationRequest extends BaseRequest<W
      * @return the created Windows10SecureAssessmentConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10SecureAssessmentConfiguration post(final Windows10SecureAssessmentConfiguration newWindows10SecureAssessmentConfiguration) throws ClientException {
+    @Nullable
+    public Windows10SecureAssessmentConfiguration post(@Nonnull final Windows10SecureAssessmentConfiguration newWindows10SecureAssessmentConfiguration) throws ClientException {
         return send(HttpMethod.POST, newWindows10SecureAssessmentConfiguration);
     }
 
@@ -117,7 +122,7 @@ public class Windows10SecureAssessmentConfigurationRequest extends BaseRequest<W
      * @param newWindows10SecureAssessmentConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Windows10SecureAssessmentConfiguration newWindows10SecureAssessmentConfiguration, final ICallback<? super Windows10SecureAssessmentConfiguration> callback) {
+    public void put(@Nonnull final Windows10SecureAssessmentConfiguration newWindows10SecureAssessmentConfiguration, @Nonnull final ICallback<? super Windows10SecureAssessmentConfiguration> callback) {
         send(HttpMethod.PUT, callback, newWindows10SecureAssessmentConfiguration);
     }
 
@@ -128,7 +133,8 @@ public class Windows10SecureAssessmentConfigurationRequest extends BaseRequest<W
      * @return the created Windows10SecureAssessmentConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10SecureAssessmentConfiguration put(final Windows10SecureAssessmentConfiguration newWindows10SecureAssessmentConfiguration) throws ClientException {
+    @Nullable
+    public Windows10SecureAssessmentConfiguration put(@Nonnull final Windows10SecureAssessmentConfiguration newWindows10SecureAssessmentConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newWindows10SecureAssessmentConfiguration);
     }
 
@@ -138,7 +144,8 @@ public class Windows10SecureAssessmentConfigurationRequest extends BaseRequest<W
      * @param value the select clause
      * @return the updated request
      */
-     public Windows10SecureAssessmentConfigurationRequest select(final String value) {
+     @Nonnull
+     public Windows10SecureAssessmentConfigurationRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class Windows10SecureAssessmentConfigurationRequest extends BaseRequest<W
      * @param value the expand clause
      * @return the updated request
      */
-     public Windows10SecureAssessmentConfigurationRequest expand(final String value) {
+     @Nonnull
+     public Windows10SecureAssessmentConfigurationRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

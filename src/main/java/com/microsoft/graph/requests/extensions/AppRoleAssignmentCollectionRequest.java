@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.AppRoleAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class AppRoleAssignmentCollectionRequest extends BaseCollectionRequest<Ap
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AppRoleAssignmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AppRoleAssignmentCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AppRoleAssignmentCollectionResponse.class, AppRoleAssignmentCollectionPage.class, AppRoleAssignmentCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class AppRoleAssignmentCollectionRequest extends BaseCollectionRequest<Ap
      * @param newAppRoleAssignment the AppRoleAssignment to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final AppRoleAssignment newAppRoleAssignment, final ICallback<? super AppRoleAssignment> callback) {
+    public void post(@Nonnull final AppRoleAssignment newAppRoleAssignment, @Nonnull final ICallback<? super AppRoleAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AppRoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class AppRoleAssignmentCollectionRequest extends BaseCollectionRequest<Ap
      * @param newAppRoleAssignment the AppRoleAssignment to create
      * @return the newly created object
      */
-    public AppRoleAssignment post(final AppRoleAssignment newAppRoleAssignment) throws ClientException {
+    @Nonnull
+    public AppRoleAssignment post(@Nonnull final AppRoleAssignment newAppRoleAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AppRoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class AppRoleAssignmentCollectionRequest extends BaseCollectionRequest<Ap
      * @param value the expand clause
      * @return the updated request
      */
-    public AppRoleAssignmentCollectionRequest expand(final String value) {
+    @Nonnull
+    public AppRoleAssignmentCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class AppRoleAssignmentCollectionRequest extends BaseCollectionRequest<Ap
      * @param value the filter clause
      * @return the updated request
      */
-    public AppRoleAssignmentCollectionRequest filter(final String value) {
+    @Nonnull
+    public AppRoleAssignmentCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class AppRoleAssignmentCollectionRequest extends BaseCollectionRequest<Ap
      * @param value the order by clause
      * @return the updated request
      */
-    public AppRoleAssignmentCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public AppRoleAssignmentCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class AppRoleAssignmentCollectionRequest extends BaseCollectionRequest<Ap
      * @param value the select clause
      * @return the updated request
      */
-    public AppRoleAssignmentCollectionRequest select(final String value) {
+    @Nonnull
+    public AppRoleAssignmentCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class AppRoleAssignmentCollectionRequest extends BaseCollectionRequest<Ap
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public AppRoleAssignmentCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class AppRoleAssignmentCollectionRequest extends BaseCollectionRequest<Ap
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public AppRoleAssignmentCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class AppRoleAssignmentCollectionRequest extends BaseCollectionRequest<Ap
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public AppRoleAssignmentCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public AppRoleAssignmentCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

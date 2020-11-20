@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DriveRecipient;
 import com.microsoft.graph.models.extensions.Permission;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.PermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PermissionGrantCollectionRequest;
@@ -35,7 +37,7 @@ public class PermissionGrantCollectionRequestBuilder extends BaseActionCollectio
      * @param roles the roles
      * @param recipients the recipients
      */
-    public PermissionGrantCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<String> roles, final java.util.List<DriveRecipient> recipients) {
+    public PermissionGrantCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final java.util.List<String> roles, @Nullable final java.util.List<DriveRecipient> recipients) {
         super(requestUrl, client, requestOptions, PermissionGrantCollectionRequestBuilder.class, PermissionGrantCollectionRequest.class);
   	 if(roles!=null){
 			bodyParams.put("roles", roles);
@@ -51,8 +53,9 @@ public class PermissionGrantCollectionRequestBuilder extends BaseActionCollectio
      * @param requestOptions the options for this request
      * @return the PermissionGrantCollectionRequest instance
      */
-     @Override
-    public PermissionGrantCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Override
+    @Nonnull
+    public PermissionGrantCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final PermissionGrantCollectionRequest request = super.buildRequest(requestOptions);
 
         if (hasParameter("roles")) {

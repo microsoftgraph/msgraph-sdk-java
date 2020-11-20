@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Security;
 import com.microsoft.graph.models.extensions.SecureScoreControlProfile;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class SecureScoreControlProfileCollectionRequest extends BaseCollectionRe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SecureScoreControlProfileCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SecureScoreControlProfileCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SecureScoreControlProfileCollectionResponse.class, SecureScoreControlProfileCollectionPage.class, SecureScoreControlProfileCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class SecureScoreControlProfileCollectionRequest extends BaseCollectionRe
      * @param newSecureScoreControlProfile the SecureScoreControlProfile to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final SecureScoreControlProfile newSecureScoreControlProfile, final ICallback<? super SecureScoreControlProfile> callback) {
+    public void post(@Nonnull final SecureScoreControlProfile newSecureScoreControlProfile, @Nonnull final ICallback<? super SecureScoreControlProfile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SecureScoreControlProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class SecureScoreControlProfileCollectionRequest extends BaseCollectionRe
      * @param newSecureScoreControlProfile the SecureScoreControlProfile to create
      * @return the newly created object
      */
-    public SecureScoreControlProfile post(final SecureScoreControlProfile newSecureScoreControlProfile) throws ClientException {
+    @Nonnull
+    public SecureScoreControlProfile post(@Nonnull final SecureScoreControlProfile newSecureScoreControlProfile) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SecureScoreControlProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class SecureScoreControlProfileCollectionRequest extends BaseCollectionRe
      * @param value the expand clause
      * @return the updated request
      */
-    public SecureScoreControlProfileCollectionRequest expand(final String value) {
+    @Nonnull
+    public SecureScoreControlProfileCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class SecureScoreControlProfileCollectionRequest extends BaseCollectionRe
      * @param value the filter clause
      * @return the updated request
      */
-    public SecureScoreControlProfileCollectionRequest filter(final String value) {
+    @Nonnull
+    public SecureScoreControlProfileCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class SecureScoreControlProfileCollectionRequest extends BaseCollectionRe
      * @param value the order by clause
      * @return the updated request
      */
-    public SecureScoreControlProfileCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public SecureScoreControlProfileCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class SecureScoreControlProfileCollectionRequest extends BaseCollectionRe
      * @param value the select clause
      * @return the updated request
      */
-    public SecureScoreControlProfileCollectionRequest select(final String value) {
+    @Nonnull
+    public SecureScoreControlProfileCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class SecureScoreControlProfileCollectionRequest extends BaseCollectionRe
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public SecureScoreControlProfileCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class SecureScoreControlProfileCollectionRequest extends BaseCollectionRe
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public SecureScoreControlProfileCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class SecureScoreControlProfileCollectionRequest extends BaseCollectionRe
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public SecureScoreControlProfileCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public SecureScoreControlProfileCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

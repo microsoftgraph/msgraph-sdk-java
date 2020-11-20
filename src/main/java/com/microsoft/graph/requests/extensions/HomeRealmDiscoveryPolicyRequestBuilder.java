@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -27,7 +29,7 @@ public class HomeRealmDiscoveryPolicyRequestBuilder extends BaseRequestBuilder<H
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public HomeRealmDiscoveryPolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public HomeRealmDiscoveryPolicyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -37,7 +39,8 @@ public class HomeRealmDiscoveryPolicyRequestBuilder extends BaseRequestBuilder<H
      * @param requestOptions the options for this request
      * @return the HomeRealmDiscoveryPolicyRequest instance
      */
-    public HomeRealmDiscoveryPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public HomeRealmDiscoveryPolicyRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,7 +50,8 @@ public class HomeRealmDiscoveryPolicyRequestBuilder extends BaseRequestBuilder<H
      * @param requestOptions the options for this request
      * @return the HomeRealmDiscoveryPolicyRequest instance
      */
-    public HomeRealmDiscoveryPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public HomeRealmDiscoveryPolicyRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -57,6 +61,7 @@ public class HomeRealmDiscoveryPolicyRequestBuilder extends BaseRequestBuilder<H
      *
      * @return the collection request builder
      */
+    @Nonnull
     public DirectoryObjectCollectionWithReferencesRequestBuilder appliesTo() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("appliesTo"), getClient(), null);
     }
@@ -67,7 +72,8 @@ public class HomeRealmDiscoveryPolicyRequestBuilder extends BaseRequestBuilder<H
      * @return the request builder
      * @param id the item identifier
      */
-    public DirectoryObjectWithReferenceRequestBuilder appliesTo(final String id) {
+    @Nonnull
+    public DirectoryObjectWithReferenceRequestBuilder appliesTo(@Nonnull final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("appliesTo") + "/" + id, getClient(), null);
     }
 }

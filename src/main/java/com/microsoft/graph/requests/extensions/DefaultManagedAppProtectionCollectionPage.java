@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DefaultManagedAppProtection;
 import com.microsoft.graph.requests.extensions.DefaultManagedAppProtectionCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DefaultManagedAppProtectionCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class DefaultManagedAppProtectionCollectionPage extends BaseCollectionPag
      * @param response the serialized DefaultManagedAppProtectionCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DefaultManagedAppProtectionCollectionPage(final DefaultManagedAppProtectionCollectionResponse response, final DefaultManagedAppProtectionCollectionRequestBuilder builder) {
+    public DefaultManagedAppProtectionCollectionPage(@Nonnull final DefaultManagedAppProtectionCollectionResponse response, @Nonnull final DefaultManagedAppProtectionCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class DefaultManagedAppProtectionCollectionPage extends BaseCollectionPag
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public DefaultManagedAppProtectionCollectionPage(final java.util.List<DefaultManagedAppProtection> pageContents, final DefaultManagedAppProtectionCollectionRequestBuilder nextRequestBuilder) {
+    public DefaultManagedAppProtectionCollectionPage(@Nonnull final java.util.List<DefaultManagedAppProtection> pageContents, @Nullable final DefaultManagedAppProtectionCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

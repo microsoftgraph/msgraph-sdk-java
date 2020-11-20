@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.models.extensions.List;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class ListCollectionRequest extends BaseCollectionRequest<List, ListColle
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ListCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ListCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ListCollectionResponse.class, ListCollectionPage.class, ListCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class ListCollectionRequest extends BaseCollectionRequest<List, ListColle
      * @param newList the List to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final List newList, final ICallback<? super List> callback) {
+    public void post(@Nonnull final List newList, @Nonnull final ICallback<? super List> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ListRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class ListCollectionRequest extends BaseCollectionRequest<List, ListColle
      * @param newList the List to create
      * @return the newly created object
      */
-    public List post(final List newList) throws ClientException {
+    @Nonnull
+    public List post(@Nonnull final List newList) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ListRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class ListCollectionRequest extends BaseCollectionRequest<List, ListColle
      * @param value the expand clause
      * @return the updated request
      */
-    public ListCollectionRequest expand(final String value) {
+    @Nonnull
+    public ListCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class ListCollectionRequest extends BaseCollectionRequest<List, ListColle
      * @param value the filter clause
      * @return the updated request
      */
-    public ListCollectionRequest filter(final String value) {
+    @Nonnull
+    public ListCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class ListCollectionRequest extends BaseCollectionRequest<List, ListColle
      * @param value the order by clause
      * @return the updated request
      */
-    public ListCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ListCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class ListCollectionRequest extends BaseCollectionRequest<List, ListColle
      * @param value the select clause
      * @return the updated request
      */
-    public ListCollectionRequest select(final String value) {
+    @Nonnull
+    public ListCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class ListCollectionRequest extends BaseCollectionRequest<List, ListColle
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ListCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class ListCollectionRequest extends BaseCollectionRequest<List, ListColle
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ListCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class ListCollectionRequest extends BaseCollectionRequest<List, ListColle
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ListCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ListCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

@@ -15,6 +15,8 @@ import com.microsoft.graph.requests.extensions.PlannerTaskRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerPlanDetailsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -32,7 +34,7 @@ public class PlannerPlanRequestBuilder extends BaseRequestBuilder<PlannerPlan> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PlannerPlanRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PlannerPlanRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,7 +44,8 @@ public class PlannerPlanRequestBuilder extends BaseRequestBuilder<PlannerPlan> {
      * @param requestOptions the options for this request
      * @return the PlannerPlanRequest instance
      */
-    public PlannerPlanRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public PlannerPlanRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,7 +55,8 @@ public class PlannerPlanRequestBuilder extends BaseRequestBuilder<PlannerPlan> {
      * @param requestOptions the options for this request
      * @return the PlannerPlanRequest instance
      */
-    public PlannerPlanRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public PlannerPlanRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PlannerPlanRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -62,6 +66,7 @@ public class PlannerPlanRequestBuilder extends BaseRequestBuilder<PlannerPlan> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public PlannerBucketCollectionRequestBuilder buckets() {
         return new PlannerBucketCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("buckets"), getClient(), null);
     }
@@ -72,7 +77,8 @@ public class PlannerPlanRequestBuilder extends BaseRequestBuilder<PlannerPlan> {
      * @return the request builder
      * @param id the item identifier
      */
-    public PlannerBucketRequestBuilder buckets(final String id) {
+    @Nonnull
+    public PlannerBucketRequestBuilder buckets(@Nonnull final String id) {
         return new PlannerBucketRequestBuilder(getRequestUrlWithAdditionalSegment("buckets") + "/" + id, getClient(), null);
     }
 
@@ -81,6 +87,7 @@ public class PlannerPlanRequestBuilder extends BaseRequestBuilder<PlannerPlan> {
      *
      * @return the PlannerPlanDetailsRequestBuilder instance
      */
+    @Nonnull
     public PlannerPlanDetailsRequestBuilder details() {
         return new PlannerPlanDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("details"), getClient(), null);
     }
@@ -89,6 +96,7 @@ public class PlannerPlanRequestBuilder extends BaseRequestBuilder<PlannerPlan> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public PlannerTaskCollectionRequestBuilder tasks() {
         return new PlannerTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);
     }
@@ -99,7 +107,8 @@ public class PlannerPlanRequestBuilder extends BaseRequestBuilder<PlannerPlan> {
      * @return the request builder
      * @param id the item identifier
      */
-    public PlannerTaskRequestBuilder tasks(final String id) {
+    @Nonnull
+    public PlannerTaskRequestBuilder tasks(@Nonnull final String id) {
         return new PlannerTaskRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);
     }
 }

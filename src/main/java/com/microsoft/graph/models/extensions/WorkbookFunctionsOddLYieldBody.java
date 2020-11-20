@@ -7,6 +7,8 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
 import java.util.EnumSet;
@@ -24,6 +26,7 @@ public class WorkbookFunctionsOddLYieldBody {
      */
     @SerializedName(value = "settlement", alternate = {"Settlement"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement settlement;
 
     /**
@@ -32,6 +35,7 @@ public class WorkbookFunctionsOddLYieldBody {
      */
     @SerializedName(value = "maturity", alternate = {"Maturity"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement maturity;
 
     /**
@@ -40,6 +44,7 @@ public class WorkbookFunctionsOddLYieldBody {
      */
     @SerializedName(value = "lastInterest", alternate = {"LastInterest"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement lastInterest;
 
     /**
@@ -48,6 +53,7 @@ public class WorkbookFunctionsOddLYieldBody {
      */
     @SerializedName(value = "rate", alternate = {"Rate"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement rate;
 
     /**
@@ -56,6 +62,7 @@ public class WorkbookFunctionsOddLYieldBody {
      */
     @SerializedName(value = "pr", alternate = {"Pr"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement pr;
 
     /**
@@ -64,6 +71,7 @@ public class WorkbookFunctionsOddLYieldBody {
      */
     @SerializedName(value = "redemption", alternate = {"Redemption"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement redemption;
 
     /**
@@ -72,6 +80,7 @@ public class WorkbookFunctionsOddLYieldBody {
      */
     @SerializedName(value = "frequency", alternate = {"Frequency"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement frequency;
 
     /**
@@ -80,6 +89,7 @@ public class WorkbookFunctionsOddLYieldBody {
      */
     @SerializedName(value = "basis", alternate = {"Basis"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement basis;
 
 
@@ -98,6 +108,7 @@ public class WorkbookFunctionsOddLYieldBody {
      *
      * @return the raw representation of this class
      */
+    @Nullable
     public JsonObject getRawObject() {
         return rawObject;
     }
@@ -107,6 +118,7 @@ public class WorkbookFunctionsOddLYieldBody {
      *
      * @return the serializer
      */
+    @Nullable
     public ISerializer getSerializer() {
         return serializer;
     }
@@ -117,7 +129,7 @@ public class WorkbookFunctionsOddLYieldBody {
      * @param serializer the serializer
      * @param json the JSON object to set this object to
      */
-    public void setRawObject(final ISerializer serializer, final JsonObject json) {
+    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
         this.serializer = serializer;
         rawObject = json;
 

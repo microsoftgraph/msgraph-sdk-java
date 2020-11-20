@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.TodoTaskListCollectionRequestBuil
 import com.microsoft.graph.requests.extensions.TodoTaskListRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -30,7 +32,7 @@ public class TodoRequest extends BaseRequest<Todo> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TodoRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TodoRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Todo.class);
     }
 
@@ -39,7 +41,7 @@ public class TodoRequest extends BaseRequest<Todo> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Todo> callback) {
+    public void get(@Nonnull final ICallback<? super Todo> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -49,6 +51,7 @@ public class TodoRequest extends BaseRequest<Todo> {
      * @return the Todo from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Todo get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -58,7 +61,7 @@ public class TodoRequest extends BaseRequest<Todo> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Todo> callback) {
+    public void delete(@Nonnull final ICallback<? super Todo> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +80,7 @@ public class TodoRequest extends BaseRequest<Todo> {
      * @param sourceTodo the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Todo sourceTodo, final ICallback<? super Todo> callback) {
+    public void patch(@Nonnull final Todo sourceTodo, @Nonnull final ICallback<? super Todo> callback) {
         send(HttpMethod.PATCH, callback, sourceTodo);
     }
 
@@ -88,7 +91,8 @@ public class TodoRequest extends BaseRequest<Todo> {
      * @return the updated Todo
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Todo patch(final Todo sourceTodo) throws ClientException {
+    @Nullable
+    public Todo patch(@Nonnull final Todo sourceTodo) throws ClientException {
         return send(HttpMethod.PATCH, sourceTodo);
     }
 
@@ -98,7 +102,7 @@ public class TodoRequest extends BaseRequest<Todo> {
      * @param newTodo the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Todo newTodo, final ICallback<? super Todo> callback) {
+    public void post(@Nonnull final Todo newTodo, @Nonnull final ICallback<? super Todo> callback) {
         send(HttpMethod.POST, callback, newTodo);
     }
 
@@ -109,7 +113,8 @@ public class TodoRequest extends BaseRequest<Todo> {
      * @return the created Todo
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Todo post(final Todo newTodo) throws ClientException {
+    @Nullable
+    public Todo post(@Nonnull final Todo newTodo) throws ClientException {
         return send(HttpMethod.POST, newTodo);
     }
 
@@ -119,7 +124,7 @@ public class TodoRequest extends BaseRequest<Todo> {
      * @param newTodo the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Todo newTodo, final ICallback<? super Todo> callback) {
+    public void put(@Nonnull final Todo newTodo, @Nonnull final ICallback<? super Todo> callback) {
         send(HttpMethod.PUT, callback, newTodo);
     }
 
@@ -130,7 +135,8 @@ public class TodoRequest extends BaseRequest<Todo> {
      * @return the created Todo
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Todo put(final Todo newTodo) throws ClientException {
+    @Nullable
+    public Todo put(@Nonnull final Todo newTodo) throws ClientException {
         return send(HttpMethod.PUT, newTodo);
     }
 
@@ -140,7 +146,8 @@ public class TodoRequest extends BaseRequest<Todo> {
      * @param value the select clause
      * @return the updated request
      */
-     public TodoRequest select(final String value) {
+     @Nonnull
+     public TodoRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -151,7 +158,8 @@ public class TodoRequest extends BaseRequest<Todo> {
      * @param value the expand clause
      * @return the updated request
      */
-     public TodoRequest expand(final String value) {
+     @Nonnull
+     public TodoRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

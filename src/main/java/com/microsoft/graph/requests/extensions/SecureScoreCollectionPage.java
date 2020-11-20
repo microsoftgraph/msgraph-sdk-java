@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.SecureScore;
 import com.microsoft.graph.requests.extensions.SecureScoreCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.SecureScoreCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class SecureScoreCollectionPage extends BaseCollectionPage<SecureScore, S
      * @param response the serialized SecureScoreCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public SecureScoreCollectionPage(final SecureScoreCollectionResponse response, final SecureScoreCollectionRequestBuilder builder) {
+    public SecureScoreCollectionPage(@Nonnull final SecureScoreCollectionResponse response, @Nonnull final SecureScoreCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class SecureScoreCollectionPage extends BaseCollectionPage<SecureScore, S
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public SecureScoreCollectionPage(final java.util.List<SecureScore> pageContents, final SecureScoreCollectionRequestBuilder nextRequestBuilder) {
+    public SecureScoreCollectionPage(@Nonnull final java.util.List<SecureScore> pageContents, @Nullable final SecureScoreCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

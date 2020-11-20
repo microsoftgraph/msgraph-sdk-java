@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.Device;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DeviceWithReferenceRequest;
 import com.microsoft.graph.requests.extensions.DeviceReferenceRequestBuilder;
@@ -38,7 +40,7 @@ public class DeviceCollectionReferenceRequest extends BaseCollectionWithReferenc
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceCollectionReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceCollectionResponse.class, DeviceCollectionWithReferencesPage.class, DeviceCollectionWithReferencesRequestBuilder.class);
     }
 
@@ -47,7 +49,7 @@ public class DeviceCollectionReferenceRequest extends BaseCollectionWithReferenc
      * @param newDevice the Device to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final Device newDevice, final ICallback<? super Device> callback) {
+    public void post(@Nonnull final Device newDevice, @Nonnull final ICallback<? super Device> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/devices/" + newDevice.id);
         new DeviceWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -60,7 +62,8 @@ public class DeviceCollectionReferenceRequest extends BaseCollectionWithReferenc
      * @param newDevice the Device to create
      * @return the newly created object
      */
-    public Device post(final Device newDevice) throws ClientException {
+    @Nonnull
+    public Device post(@Nonnull final Device newDevice) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/devices/" + newDevice.id);
         return new DeviceWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
@@ -73,7 +76,8 @@ public class DeviceCollectionReferenceRequest extends BaseCollectionWithReferenc
      * @param value the expand clause
      * @return the updated request
      */
-    public DeviceCollectionReferenceRequest expand(final String value) {
+    @Nonnull
+    public DeviceCollectionReferenceRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -84,7 +88,8 @@ public class DeviceCollectionReferenceRequest extends BaseCollectionWithReferenc
      * @param value the filter clause
      * @return the updated request
      */
-    public DeviceCollectionReferenceRequest filter(final String value) {
+    @Nonnull
+    public DeviceCollectionReferenceRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -95,7 +100,8 @@ public class DeviceCollectionReferenceRequest extends BaseCollectionWithReferenc
      * @param value the sort clause
      * @return the updated request
      */
-    public DeviceCollectionReferenceRequest orderBy(final String value) {
+    @Nonnull
+    public DeviceCollectionReferenceRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -106,7 +112,8 @@ public class DeviceCollectionReferenceRequest extends BaseCollectionWithReferenc
      * @param value the select clause
      * @return the updated request
      */
-    public DeviceCollectionReferenceRequest select(final String value) {
+    @Nonnull
+    public DeviceCollectionReferenceRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -117,6 +124,7 @@ public class DeviceCollectionReferenceRequest extends BaseCollectionWithReferenc
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DeviceCollectionReferenceRequest top(final int value) {
         addTopOption(value);
         return this;

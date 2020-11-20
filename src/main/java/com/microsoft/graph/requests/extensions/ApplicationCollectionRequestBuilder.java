@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.PasswordCredential;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.ApplicationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApplicationRequestBuilder;
@@ -34,7 +36,7 @@ public class ApplicationCollectionRequestBuilder extends BaseCollectionRequestBu
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ApplicationCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ApplicationCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ApplicationRequestBuilder.class, ApplicationCollectionRequest.class);
     }
 
@@ -44,6 +46,7 @@ public class ApplicationCollectionRequestBuilder extends BaseCollectionRequestBu
      * Gets a builder to execute the method
      * @return the request builder collection
      */
+    @Nonnull
     public ApplicationDeltaCollectionRequestBuilder delta() {
         return new ApplicationDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
@@ -54,7 +57,8 @@ public class ApplicationCollectionRequestBuilder extends BaseCollectionRequestBu
      * @return a request builder to get the changes
      * @param deltaLink the link returned by the last delta request
      */
-	public ApplicationDeltaCollectionRequestBuilder delta(final String deltaLink) {
+    @Nonnull
+	public ApplicationDeltaCollectionRequestBuilder delta(@Nonnull final String deltaLink) {
         return new ApplicationDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }
 }

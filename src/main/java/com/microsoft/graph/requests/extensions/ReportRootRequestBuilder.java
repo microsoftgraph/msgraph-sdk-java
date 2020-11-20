@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.models.extensions.Report;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -28,7 +30,7 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ReportRootRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,7 +40,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @param requestOptions the options for this request
      * @return the ReportRootRequest instance
      */
-    public ReportRootRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ReportRootRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,7 +51,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @param requestOptions the options for this request
      * @return the ReportRootRequest instance
      */
-    public ReportRootRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ReportRootRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ReportRootRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -58,6 +62,7 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public ReportRootDeviceConfigurationDeviceActivityRequestBuilder deviceConfigurationDeviceActivity() {
         return new ReportRootDeviceConfigurationDeviceActivityRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.deviceConfigurationDeviceActivity"), getClient(), null);
     }
@@ -66,6 +71,7 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public ReportRootDeviceConfigurationUserActivityRequestBuilder deviceConfigurationUserActivity() {
         return new ReportRootDeviceConfigurationUserActivityRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.deviceConfigurationUserActivity"), getClient(), null);
     }
@@ -74,6 +80,7 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public ReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder managedDeviceEnrollmentFailureDetails() {
         return new ReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.managedDeviceEnrollmentFailureDetails"), getClient(), null);
     }
@@ -86,7 +93,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @param filter the filter
      * @param skipToken the skipToken
      */
-    public ReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder managedDeviceEnrollmentFailureDetails(final Integer skip, final Integer top, final String filter, final String skipToken) {
+    @Nonnull
+    public ReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder managedDeviceEnrollmentFailureDetails(@Nullable final Integer skip, @Nullable final Integer top, @Nullable final String filter, @Nullable final String skipToken) {
         return new ReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.managedDeviceEnrollmentFailureDetails"), getClient(), null, skip, top, filter, skipToken);
     }
 
@@ -94,6 +102,7 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public ReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder managedDeviceEnrollmentTopFailures() {
         return new ReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.managedDeviceEnrollmentTopFailures"), getClient(), null);
     }
@@ -103,7 +112,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder managedDeviceEnrollmentTopFailures(final String period) {
+    @Nonnull
+    public ReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder managedDeviceEnrollmentTopFailures(@Nullable final String period) {
         return new ReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.managedDeviceEnrollmentTopFailures"), getClient(), null, period);
     }
 
@@ -112,7 +122,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetEmailActivityCountsRequestBuilder getEmailActivityCounts(final String period) {
+    @Nonnull
+    public ReportRootGetEmailActivityCountsRequestBuilder getEmailActivityCounts(@Nullable final String period) {
         return new ReportRootGetEmailActivityCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getEmailActivityCounts"), getClient(), null, period);
     }
 
@@ -121,7 +132,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetEmailActivityUserCountsRequestBuilder getEmailActivityUserCounts(final String period) {
+    @Nonnull
+    public ReportRootGetEmailActivityUserCountsRequestBuilder getEmailActivityUserCounts(@Nullable final String period) {
         return new ReportRootGetEmailActivityUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getEmailActivityUserCounts"), getClient(), null, period);
     }
 
@@ -130,7 +142,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param date the date
      */
-    public ReportRootGetEmailActivityUserDetailRequestBuilder getEmailActivityUserDetail(final com.microsoft.graph.core.DateOnly date) {
+    @Nonnull
+    public ReportRootGetEmailActivityUserDetailRequestBuilder getEmailActivityUserDetail(@Nullable final com.microsoft.graph.core.DateOnly date) {
         return new ReportRootGetEmailActivityUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getEmailActivityUserDetail"), getClient(), null, date);
     }
 
@@ -139,7 +152,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetEmailActivityUserDetailRequestBuilder getEmailActivityUserDetail(final String period) {
+    @Nonnull
+    public ReportRootGetEmailActivityUserDetailRequestBuilder getEmailActivityUserDetail(@Nullable final String period) {
         return new ReportRootGetEmailActivityUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getEmailActivityUserDetail"), getClient(), null, period);
     }
 
@@ -148,7 +162,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetEmailAppUsageAppsUserCountsRequestBuilder getEmailAppUsageAppsUserCounts(final String period) {
+    @Nonnull
+    public ReportRootGetEmailAppUsageAppsUserCountsRequestBuilder getEmailAppUsageAppsUserCounts(@Nullable final String period) {
         return new ReportRootGetEmailAppUsageAppsUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getEmailAppUsageAppsUserCounts"), getClient(), null, period);
     }
 
@@ -157,7 +172,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetEmailAppUsageUserCountsRequestBuilder getEmailAppUsageUserCounts(final String period) {
+    @Nonnull
+    public ReportRootGetEmailAppUsageUserCountsRequestBuilder getEmailAppUsageUserCounts(@Nullable final String period) {
         return new ReportRootGetEmailAppUsageUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getEmailAppUsageUserCounts"), getClient(), null, period);
     }
 
@@ -166,7 +182,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param date the date
      */
-    public ReportRootGetEmailAppUsageUserDetailRequestBuilder getEmailAppUsageUserDetail(final com.microsoft.graph.core.DateOnly date) {
+    @Nonnull
+    public ReportRootGetEmailAppUsageUserDetailRequestBuilder getEmailAppUsageUserDetail(@Nullable final com.microsoft.graph.core.DateOnly date) {
         return new ReportRootGetEmailAppUsageUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getEmailAppUsageUserDetail"), getClient(), null, date);
     }
 
@@ -175,7 +192,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetEmailAppUsageUserDetailRequestBuilder getEmailAppUsageUserDetail(final String period) {
+    @Nonnull
+    public ReportRootGetEmailAppUsageUserDetailRequestBuilder getEmailAppUsageUserDetail(@Nullable final String period) {
         return new ReportRootGetEmailAppUsageUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getEmailAppUsageUserDetail"), getClient(), null, period);
     }
 
@@ -184,7 +202,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetEmailAppUsageVersionsUserCountsRequestBuilder getEmailAppUsageVersionsUserCounts(final String period) {
+    @Nonnull
+    public ReportRootGetEmailAppUsageVersionsUserCountsRequestBuilder getEmailAppUsageVersionsUserCounts(@Nullable final String period) {
         return new ReportRootGetEmailAppUsageVersionsUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getEmailAppUsageVersionsUserCounts"), getClient(), null, period);
     }
 
@@ -193,7 +212,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetMailboxUsageDetailRequestBuilder getMailboxUsageDetail(final String period) {
+    @Nonnull
+    public ReportRootGetMailboxUsageDetailRequestBuilder getMailboxUsageDetail(@Nullable final String period) {
         return new ReportRootGetMailboxUsageDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getMailboxUsageDetail"), getClient(), null, period);
     }
 
@@ -202,7 +222,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetMailboxUsageMailboxCountsRequestBuilder getMailboxUsageMailboxCounts(final String period) {
+    @Nonnull
+    public ReportRootGetMailboxUsageMailboxCountsRequestBuilder getMailboxUsageMailboxCounts(@Nullable final String period) {
         return new ReportRootGetMailboxUsageMailboxCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getMailboxUsageMailboxCounts"), getClient(), null, period);
     }
 
@@ -211,7 +232,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequestBuilder getMailboxUsageQuotaStatusMailboxCounts(final String period) {
+    @Nonnull
+    public ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequestBuilder getMailboxUsageQuotaStatusMailboxCounts(@Nullable final String period) {
         return new ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getMailboxUsageQuotaStatusMailboxCounts"), getClient(), null, period);
     }
 
@@ -220,7 +242,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetMailboxUsageStorageRequestBuilder getMailboxUsageStorage(final String period) {
+    @Nonnull
+    public ReportRootGetMailboxUsageStorageRequestBuilder getMailboxUsageStorage(@Nullable final String period) {
         return new ReportRootGetMailboxUsageStorageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getMailboxUsageStorage"), getClient(), null, period);
     }
 
@@ -228,6 +251,7 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public ReportRootGetOffice365ActivationCountsRequestBuilder getOffice365ActivationCounts() {
         return new ReportRootGetOffice365ActivationCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOffice365ActivationCounts"), getClient(), null);
     }
@@ -236,6 +260,7 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public ReportRootGetOffice365ActivationsUserCountsRequestBuilder getOffice365ActivationsUserCounts() {
         return new ReportRootGetOffice365ActivationsUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOffice365ActivationsUserCounts"), getClient(), null);
     }
@@ -244,6 +269,7 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public ReportRootGetOffice365ActivationsUserDetailRequestBuilder getOffice365ActivationsUserDetail() {
         return new ReportRootGetOffice365ActivationsUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOffice365ActivationsUserDetail"), getClient(), null);
     }
@@ -253,7 +279,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetOffice365ActiveUserCountsRequestBuilder getOffice365ActiveUserCounts(final String period) {
+    @Nonnull
+    public ReportRootGetOffice365ActiveUserCountsRequestBuilder getOffice365ActiveUserCounts(@Nullable final String period) {
         return new ReportRootGetOffice365ActiveUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOffice365ActiveUserCounts"), getClient(), null, period);
     }
 
@@ -262,7 +289,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param date the date
      */
-    public ReportRootGetOffice365ActiveUserDetailRequestBuilder getOffice365ActiveUserDetail(final com.microsoft.graph.core.DateOnly date) {
+    @Nonnull
+    public ReportRootGetOffice365ActiveUserDetailRequestBuilder getOffice365ActiveUserDetail(@Nullable final com.microsoft.graph.core.DateOnly date) {
         return new ReportRootGetOffice365ActiveUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOffice365ActiveUserDetail"), getClient(), null, date);
     }
 
@@ -271,7 +299,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetOffice365ActiveUserDetailRequestBuilder getOffice365ActiveUserDetail(final String period) {
+    @Nonnull
+    public ReportRootGetOffice365ActiveUserDetailRequestBuilder getOffice365ActiveUserDetail(@Nullable final String period) {
         return new ReportRootGetOffice365ActiveUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOffice365ActiveUserDetail"), getClient(), null, period);
     }
 
@@ -280,7 +309,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetOffice365GroupsActivityCountsRequestBuilder getOffice365GroupsActivityCounts(final String period) {
+    @Nonnull
+    public ReportRootGetOffice365GroupsActivityCountsRequestBuilder getOffice365GroupsActivityCounts(@Nullable final String period) {
         return new ReportRootGetOffice365GroupsActivityCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOffice365GroupsActivityCounts"), getClient(), null, period);
     }
 
@@ -289,7 +319,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param date the date
      */
-    public ReportRootGetOffice365GroupsActivityDetailRequestBuilder getOffice365GroupsActivityDetail(final com.microsoft.graph.core.DateOnly date) {
+    @Nonnull
+    public ReportRootGetOffice365GroupsActivityDetailRequestBuilder getOffice365GroupsActivityDetail(@Nullable final com.microsoft.graph.core.DateOnly date) {
         return new ReportRootGetOffice365GroupsActivityDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOffice365GroupsActivityDetail"), getClient(), null, date);
     }
 
@@ -298,7 +329,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetOffice365GroupsActivityDetailRequestBuilder getOffice365GroupsActivityDetail(final String period) {
+    @Nonnull
+    public ReportRootGetOffice365GroupsActivityDetailRequestBuilder getOffice365GroupsActivityDetail(@Nullable final String period) {
         return new ReportRootGetOffice365GroupsActivityDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOffice365GroupsActivityDetail"), getClient(), null, period);
     }
 
@@ -307,7 +339,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetOffice365GroupsActivityFileCountsRequestBuilder getOffice365GroupsActivityFileCounts(final String period) {
+    @Nonnull
+    public ReportRootGetOffice365GroupsActivityFileCountsRequestBuilder getOffice365GroupsActivityFileCounts(@Nullable final String period) {
         return new ReportRootGetOffice365GroupsActivityFileCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOffice365GroupsActivityFileCounts"), getClient(), null, period);
     }
 
@@ -316,7 +349,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetOffice365GroupsActivityGroupCountsRequestBuilder getOffice365GroupsActivityGroupCounts(final String period) {
+    @Nonnull
+    public ReportRootGetOffice365GroupsActivityGroupCountsRequestBuilder getOffice365GroupsActivityGroupCounts(@Nullable final String period) {
         return new ReportRootGetOffice365GroupsActivityGroupCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOffice365GroupsActivityGroupCounts"), getClient(), null, period);
     }
 
@@ -325,7 +359,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetOffice365GroupsActivityStorageRequestBuilder getOffice365GroupsActivityStorage(final String period) {
+    @Nonnull
+    public ReportRootGetOffice365GroupsActivityStorageRequestBuilder getOffice365GroupsActivityStorage(@Nullable final String period) {
         return new ReportRootGetOffice365GroupsActivityStorageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOffice365GroupsActivityStorage"), getClient(), null, period);
     }
 
@@ -334,7 +369,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetOffice365ServicesUserCountsRequestBuilder getOffice365ServicesUserCounts(final String period) {
+    @Nonnull
+    public ReportRootGetOffice365ServicesUserCountsRequestBuilder getOffice365ServicesUserCounts(@Nullable final String period) {
         return new ReportRootGetOffice365ServicesUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOffice365ServicesUserCounts"), getClient(), null, period);
     }
 
@@ -343,7 +379,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetOneDriveActivityFileCountsRequestBuilder getOneDriveActivityFileCounts(final String period) {
+    @Nonnull
+    public ReportRootGetOneDriveActivityFileCountsRequestBuilder getOneDriveActivityFileCounts(@Nullable final String period) {
         return new ReportRootGetOneDriveActivityFileCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOneDriveActivityFileCounts"), getClient(), null, period);
     }
 
@@ -352,7 +389,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetOneDriveActivityUserCountsRequestBuilder getOneDriveActivityUserCounts(final String period) {
+    @Nonnull
+    public ReportRootGetOneDriveActivityUserCountsRequestBuilder getOneDriveActivityUserCounts(@Nullable final String period) {
         return new ReportRootGetOneDriveActivityUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOneDriveActivityUserCounts"), getClient(), null, period);
     }
 
@@ -361,7 +399,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param date the date
      */
-    public ReportRootGetOneDriveActivityUserDetailRequestBuilder getOneDriveActivityUserDetail(final com.microsoft.graph.core.DateOnly date) {
+    @Nonnull
+    public ReportRootGetOneDriveActivityUserDetailRequestBuilder getOneDriveActivityUserDetail(@Nullable final com.microsoft.graph.core.DateOnly date) {
         return new ReportRootGetOneDriveActivityUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOneDriveActivityUserDetail"), getClient(), null, date);
     }
 
@@ -370,7 +409,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetOneDriveActivityUserDetailRequestBuilder getOneDriveActivityUserDetail(final String period) {
+    @Nonnull
+    public ReportRootGetOneDriveActivityUserDetailRequestBuilder getOneDriveActivityUserDetail(@Nullable final String period) {
         return new ReportRootGetOneDriveActivityUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOneDriveActivityUserDetail"), getClient(), null, period);
     }
 
@@ -379,7 +419,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetOneDriveUsageAccountCountsRequestBuilder getOneDriveUsageAccountCounts(final String period) {
+    @Nonnull
+    public ReportRootGetOneDriveUsageAccountCountsRequestBuilder getOneDriveUsageAccountCounts(@Nullable final String period) {
         return new ReportRootGetOneDriveUsageAccountCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOneDriveUsageAccountCounts"), getClient(), null, period);
     }
 
@@ -388,7 +429,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param date the date
      */
-    public ReportRootGetOneDriveUsageAccountDetailRequestBuilder getOneDriveUsageAccountDetail(final com.microsoft.graph.core.DateOnly date) {
+    @Nonnull
+    public ReportRootGetOneDriveUsageAccountDetailRequestBuilder getOneDriveUsageAccountDetail(@Nullable final com.microsoft.graph.core.DateOnly date) {
         return new ReportRootGetOneDriveUsageAccountDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOneDriveUsageAccountDetail"), getClient(), null, date);
     }
 
@@ -397,7 +439,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetOneDriveUsageAccountDetailRequestBuilder getOneDriveUsageAccountDetail(final String period) {
+    @Nonnull
+    public ReportRootGetOneDriveUsageAccountDetailRequestBuilder getOneDriveUsageAccountDetail(@Nullable final String period) {
         return new ReportRootGetOneDriveUsageAccountDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOneDriveUsageAccountDetail"), getClient(), null, period);
     }
 
@@ -406,7 +449,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetOneDriveUsageFileCountsRequestBuilder getOneDriveUsageFileCounts(final String period) {
+    @Nonnull
+    public ReportRootGetOneDriveUsageFileCountsRequestBuilder getOneDriveUsageFileCounts(@Nullable final String period) {
         return new ReportRootGetOneDriveUsageFileCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOneDriveUsageFileCounts"), getClient(), null, period);
     }
 
@@ -415,7 +459,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetOneDriveUsageStorageRequestBuilder getOneDriveUsageStorage(final String period) {
+    @Nonnull
+    public ReportRootGetOneDriveUsageStorageRequestBuilder getOneDriveUsageStorage(@Nullable final String period) {
         return new ReportRootGetOneDriveUsageStorageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOneDriveUsageStorage"), getClient(), null, period);
     }
 
@@ -424,7 +469,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetSharePointActivityFileCountsRequestBuilder getSharePointActivityFileCounts(final String period) {
+    @Nonnull
+    public ReportRootGetSharePointActivityFileCountsRequestBuilder getSharePointActivityFileCounts(@Nullable final String period) {
         return new ReportRootGetSharePointActivityFileCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointActivityFileCounts"), getClient(), null, period);
     }
 
@@ -433,7 +479,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetSharePointActivityPagesRequestBuilder getSharePointActivityPages(final String period) {
+    @Nonnull
+    public ReportRootGetSharePointActivityPagesRequestBuilder getSharePointActivityPages(@Nullable final String period) {
         return new ReportRootGetSharePointActivityPagesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointActivityPages"), getClient(), null, period);
     }
 
@@ -442,7 +489,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetSharePointActivityUserCountsRequestBuilder getSharePointActivityUserCounts(final String period) {
+    @Nonnull
+    public ReportRootGetSharePointActivityUserCountsRequestBuilder getSharePointActivityUserCounts(@Nullable final String period) {
         return new ReportRootGetSharePointActivityUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointActivityUserCounts"), getClient(), null, period);
     }
 
@@ -451,7 +499,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param date the date
      */
-    public ReportRootGetSharePointActivityUserDetailRequestBuilder getSharePointActivityUserDetail(final com.microsoft.graph.core.DateOnly date) {
+    @Nonnull
+    public ReportRootGetSharePointActivityUserDetailRequestBuilder getSharePointActivityUserDetail(@Nullable final com.microsoft.graph.core.DateOnly date) {
         return new ReportRootGetSharePointActivityUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointActivityUserDetail"), getClient(), null, date);
     }
 
@@ -460,7 +509,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetSharePointActivityUserDetailRequestBuilder getSharePointActivityUserDetail(final String period) {
+    @Nonnull
+    public ReportRootGetSharePointActivityUserDetailRequestBuilder getSharePointActivityUserDetail(@Nullable final String period) {
         return new ReportRootGetSharePointActivityUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointActivityUserDetail"), getClient(), null, period);
     }
 
@@ -469,7 +519,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param date the date
      */
-    public ReportRootGetSharePointSiteUsageDetailRequestBuilder getSharePointSiteUsageDetail(final com.microsoft.graph.core.DateOnly date) {
+    @Nonnull
+    public ReportRootGetSharePointSiteUsageDetailRequestBuilder getSharePointSiteUsageDetail(@Nullable final com.microsoft.graph.core.DateOnly date) {
         return new ReportRootGetSharePointSiteUsageDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointSiteUsageDetail"), getClient(), null, date);
     }
 
@@ -478,7 +529,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetSharePointSiteUsageDetailRequestBuilder getSharePointSiteUsageDetail(final String period) {
+    @Nonnull
+    public ReportRootGetSharePointSiteUsageDetailRequestBuilder getSharePointSiteUsageDetail(@Nullable final String period) {
         return new ReportRootGetSharePointSiteUsageDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointSiteUsageDetail"), getClient(), null, period);
     }
 
@@ -487,7 +539,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetSharePointSiteUsageFileCountsRequestBuilder getSharePointSiteUsageFileCounts(final String period) {
+    @Nonnull
+    public ReportRootGetSharePointSiteUsageFileCountsRequestBuilder getSharePointSiteUsageFileCounts(@Nullable final String period) {
         return new ReportRootGetSharePointSiteUsageFileCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointSiteUsageFileCounts"), getClient(), null, period);
     }
 
@@ -496,7 +549,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetSharePointSiteUsagePagesRequestBuilder getSharePointSiteUsagePages(final String period) {
+    @Nonnull
+    public ReportRootGetSharePointSiteUsagePagesRequestBuilder getSharePointSiteUsagePages(@Nullable final String period) {
         return new ReportRootGetSharePointSiteUsagePagesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointSiteUsagePages"), getClient(), null, period);
     }
 
@@ -505,7 +559,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetSharePointSiteUsageSiteCountsRequestBuilder getSharePointSiteUsageSiteCounts(final String period) {
+    @Nonnull
+    public ReportRootGetSharePointSiteUsageSiteCountsRequestBuilder getSharePointSiteUsageSiteCounts(@Nullable final String period) {
         return new ReportRootGetSharePointSiteUsageSiteCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointSiteUsageSiteCounts"), getClient(), null, period);
     }
 
@@ -514,7 +569,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetSharePointSiteUsageStorageRequestBuilder getSharePointSiteUsageStorage(final String period) {
+    @Nonnull
+    public ReportRootGetSharePointSiteUsageStorageRequestBuilder getSharePointSiteUsageStorage(@Nullable final String period) {
         return new ReportRootGetSharePointSiteUsageStorageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointSiteUsageStorage"), getClient(), null, period);
     }
 
@@ -523,7 +579,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetSkypeForBusinessActivityCountsRequestBuilder getSkypeForBusinessActivityCounts(final String period) {
+    @Nonnull
+    public ReportRootGetSkypeForBusinessActivityCountsRequestBuilder getSkypeForBusinessActivityCounts(@Nullable final String period) {
         return new ReportRootGetSkypeForBusinessActivityCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessActivityCounts"), getClient(), null, period);
     }
 
@@ -532,7 +589,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetSkypeForBusinessActivityUserCountsRequestBuilder getSkypeForBusinessActivityUserCounts(final String period) {
+    @Nonnull
+    public ReportRootGetSkypeForBusinessActivityUserCountsRequestBuilder getSkypeForBusinessActivityUserCounts(@Nullable final String period) {
         return new ReportRootGetSkypeForBusinessActivityUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessActivityUserCounts"), getClient(), null, period);
     }
 
@@ -541,7 +599,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param date the date
      */
-    public ReportRootGetSkypeForBusinessActivityUserDetailRequestBuilder getSkypeForBusinessActivityUserDetail(final com.microsoft.graph.core.DateOnly date) {
+    @Nonnull
+    public ReportRootGetSkypeForBusinessActivityUserDetailRequestBuilder getSkypeForBusinessActivityUserDetail(@Nullable final com.microsoft.graph.core.DateOnly date) {
         return new ReportRootGetSkypeForBusinessActivityUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessActivityUserDetail"), getClient(), null, date);
     }
 
@@ -550,7 +609,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetSkypeForBusinessActivityUserDetailRequestBuilder getSkypeForBusinessActivityUserDetail(final String period) {
+    @Nonnull
+    public ReportRootGetSkypeForBusinessActivityUserDetailRequestBuilder getSkypeForBusinessActivityUserDetail(@Nullable final String period) {
         return new ReportRootGetSkypeForBusinessActivityUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessActivityUserDetail"), getClient(), null, period);
     }
 
@@ -559,7 +619,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsRequestBuilder getSkypeForBusinessDeviceUsageDistributionUserCounts(final String period) {
+    @Nonnull
+    public ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsRequestBuilder getSkypeForBusinessDeviceUsageDistributionUserCounts(@Nullable final String period) {
         return new ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessDeviceUsageDistributionUserCounts"), getClient(), null, period);
     }
 
@@ -568,7 +629,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequestBuilder getSkypeForBusinessDeviceUsageUserCounts(final String period) {
+    @Nonnull
+    public ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequestBuilder getSkypeForBusinessDeviceUsageUserCounts(@Nullable final String period) {
         return new ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessDeviceUsageUserCounts"), getClient(), null, period);
     }
 
@@ -577,7 +639,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param date the date
      */
-    public ReportRootGetSkypeForBusinessDeviceUsageUserDetailRequestBuilder getSkypeForBusinessDeviceUsageUserDetail(final com.microsoft.graph.core.DateOnly date) {
+    @Nonnull
+    public ReportRootGetSkypeForBusinessDeviceUsageUserDetailRequestBuilder getSkypeForBusinessDeviceUsageUserDetail(@Nullable final com.microsoft.graph.core.DateOnly date) {
         return new ReportRootGetSkypeForBusinessDeviceUsageUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessDeviceUsageUserDetail"), getClient(), null, date);
     }
 
@@ -586,7 +649,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetSkypeForBusinessDeviceUsageUserDetailRequestBuilder getSkypeForBusinessDeviceUsageUserDetail(final String period) {
+    @Nonnull
+    public ReportRootGetSkypeForBusinessDeviceUsageUserDetailRequestBuilder getSkypeForBusinessDeviceUsageUserDetail(@Nullable final String period) {
         return new ReportRootGetSkypeForBusinessDeviceUsageUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessDeviceUsageUserDetail"), getClient(), null, period);
     }
 
@@ -595,7 +659,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetSkypeForBusinessOrganizerActivityCountsRequestBuilder getSkypeForBusinessOrganizerActivityCounts(final String period) {
+    @Nonnull
+    public ReportRootGetSkypeForBusinessOrganizerActivityCountsRequestBuilder getSkypeForBusinessOrganizerActivityCounts(@Nullable final String period) {
         return new ReportRootGetSkypeForBusinessOrganizerActivityCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessOrganizerActivityCounts"), getClient(), null, period);
     }
 
@@ -604,7 +669,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetSkypeForBusinessOrganizerActivityMinuteCountsRequestBuilder getSkypeForBusinessOrganizerActivityMinuteCounts(final String period) {
+    @Nonnull
+    public ReportRootGetSkypeForBusinessOrganizerActivityMinuteCountsRequestBuilder getSkypeForBusinessOrganizerActivityMinuteCounts(@Nullable final String period) {
         return new ReportRootGetSkypeForBusinessOrganizerActivityMinuteCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessOrganizerActivityMinuteCounts"), getClient(), null, period);
     }
 
@@ -613,7 +679,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetSkypeForBusinessOrganizerActivityUserCountsRequestBuilder getSkypeForBusinessOrganizerActivityUserCounts(final String period) {
+    @Nonnull
+    public ReportRootGetSkypeForBusinessOrganizerActivityUserCountsRequestBuilder getSkypeForBusinessOrganizerActivityUserCounts(@Nullable final String period) {
         return new ReportRootGetSkypeForBusinessOrganizerActivityUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessOrganizerActivityUserCounts"), getClient(), null, period);
     }
 
@@ -622,7 +689,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetSkypeForBusinessParticipantActivityCountsRequestBuilder getSkypeForBusinessParticipantActivityCounts(final String period) {
+    @Nonnull
+    public ReportRootGetSkypeForBusinessParticipantActivityCountsRequestBuilder getSkypeForBusinessParticipantActivityCounts(@Nullable final String period) {
         return new ReportRootGetSkypeForBusinessParticipantActivityCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessParticipantActivityCounts"), getClient(), null, period);
     }
 
@@ -631,7 +699,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetSkypeForBusinessParticipantActivityMinuteCountsRequestBuilder getSkypeForBusinessParticipantActivityMinuteCounts(final String period) {
+    @Nonnull
+    public ReportRootGetSkypeForBusinessParticipantActivityMinuteCountsRequestBuilder getSkypeForBusinessParticipantActivityMinuteCounts(@Nullable final String period) {
         return new ReportRootGetSkypeForBusinessParticipantActivityMinuteCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessParticipantActivityMinuteCounts"), getClient(), null, period);
     }
 
@@ -640,7 +709,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetSkypeForBusinessParticipantActivityUserCountsRequestBuilder getSkypeForBusinessParticipantActivityUserCounts(final String period) {
+    @Nonnull
+    public ReportRootGetSkypeForBusinessParticipantActivityUserCountsRequestBuilder getSkypeForBusinessParticipantActivityUserCounts(@Nullable final String period) {
         return new ReportRootGetSkypeForBusinessParticipantActivityUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessParticipantActivityUserCounts"), getClient(), null, period);
     }
 
@@ -649,7 +719,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetSkypeForBusinessPeerToPeerActivityCountsRequestBuilder getSkypeForBusinessPeerToPeerActivityCounts(final String period) {
+    @Nonnull
+    public ReportRootGetSkypeForBusinessPeerToPeerActivityCountsRequestBuilder getSkypeForBusinessPeerToPeerActivityCounts(@Nullable final String period) {
         return new ReportRootGetSkypeForBusinessPeerToPeerActivityCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessPeerToPeerActivityCounts"), getClient(), null, period);
     }
 
@@ -658,7 +729,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequestBuilder getSkypeForBusinessPeerToPeerActivityMinuteCounts(final String period) {
+    @Nonnull
+    public ReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequestBuilder getSkypeForBusinessPeerToPeerActivityMinuteCounts(@Nullable final String period) {
         return new ReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessPeerToPeerActivityMinuteCounts"), getClient(), null, period);
     }
 
@@ -667,7 +739,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsRequestBuilder getSkypeForBusinessPeerToPeerActivityUserCounts(final String period) {
+    @Nonnull
+    public ReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsRequestBuilder getSkypeForBusinessPeerToPeerActivityUserCounts(@Nullable final String period) {
         return new ReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessPeerToPeerActivityUserCounts"), getClient(), null, period);
     }
 
@@ -676,7 +749,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetTeamsDeviceUsageDistributionUserCountsRequestBuilder getTeamsDeviceUsageDistributionUserCounts(final String period) {
+    @Nonnull
+    public ReportRootGetTeamsDeviceUsageDistributionUserCountsRequestBuilder getTeamsDeviceUsageDistributionUserCounts(@Nullable final String period) {
         return new ReportRootGetTeamsDeviceUsageDistributionUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getTeamsDeviceUsageDistributionUserCounts"), getClient(), null, period);
     }
 
@@ -685,7 +759,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetTeamsDeviceUsageUserCountsRequestBuilder getTeamsDeviceUsageUserCounts(final String period) {
+    @Nonnull
+    public ReportRootGetTeamsDeviceUsageUserCountsRequestBuilder getTeamsDeviceUsageUserCounts(@Nullable final String period) {
         return new ReportRootGetTeamsDeviceUsageUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getTeamsDeviceUsageUserCounts"), getClient(), null, period);
     }
 
@@ -694,7 +769,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param date the date
      */
-    public ReportRootGetTeamsDeviceUsageUserDetailRequestBuilder getTeamsDeviceUsageUserDetail(final com.microsoft.graph.core.DateOnly date) {
+    @Nonnull
+    public ReportRootGetTeamsDeviceUsageUserDetailRequestBuilder getTeamsDeviceUsageUserDetail(@Nullable final com.microsoft.graph.core.DateOnly date) {
         return new ReportRootGetTeamsDeviceUsageUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getTeamsDeviceUsageUserDetail"), getClient(), null, date);
     }
 
@@ -703,7 +779,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetTeamsDeviceUsageUserDetailRequestBuilder getTeamsDeviceUsageUserDetail(final String period) {
+    @Nonnull
+    public ReportRootGetTeamsDeviceUsageUserDetailRequestBuilder getTeamsDeviceUsageUserDetail(@Nullable final String period) {
         return new ReportRootGetTeamsDeviceUsageUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getTeamsDeviceUsageUserDetail"), getClient(), null, period);
     }
 
@@ -712,7 +789,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetTeamsUserActivityCountsRequestBuilder getTeamsUserActivityCounts(final String period) {
+    @Nonnull
+    public ReportRootGetTeamsUserActivityCountsRequestBuilder getTeamsUserActivityCounts(@Nullable final String period) {
         return new ReportRootGetTeamsUserActivityCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getTeamsUserActivityCounts"), getClient(), null, period);
     }
 
@@ -721,7 +799,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetTeamsUserActivityUserCountsRequestBuilder getTeamsUserActivityUserCounts(final String period) {
+    @Nonnull
+    public ReportRootGetTeamsUserActivityUserCountsRequestBuilder getTeamsUserActivityUserCounts(@Nullable final String period) {
         return new ReportRootGetTeamsUserActivityUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getTeamsUserActivityUserCounts"), getClient(), null, period);
     }
 
@@ -730,7 +809,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param date the date
      */
-    public ReportRootGetTeamsUserActivityUserDetailRequestBuilder getTeamsUserActivityUserDetail(final com.microsoft.graph.core.DateOnly date) {
+    @Nonnull
+    public ReportRootGetTeamsUserActivityUserDetailRequestBuilder getTeamsUserActivityUserDetail(@Nullable final com.microsoft.graph.core.DateOnly date) {
         return new ReportRootGetTeamsUserActivityUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getTeamsUserActivityUserDetail"), getClient(), null, date);
     }
 
@@ -739,7 +819,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetTeamsUserActivityUserDetailRequestBuilder getTeamsUserActivityUserDetail(final String period) {
+    @Nonnull
+    public ReportRootGetTeamsUserActivityUserDetailRequestBuilder getTeamsUserActivityUserDetail(@Nullable final String period) {
         return new ReportRootGetTeamsUserActivityUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getTeamsUserActivityUserDetail"), getClient(), null, period);
     }
 
@@ -748,7 +829,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetYammerActivityCountsRequestBuilder getYammerActivityCounts(final String period) {
+    @Nonnull
+    public ReportRootGetYammerActivityCountsRequestBuilder getYammerActivityCounts(@Nullable final String period) {
         return new ReportRootGetYammerActivityCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerActivityCounts"), getClient(), null, period);
     }
 
@@ -757,7 +839,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetYammerActivityUserCountsRequestBuilder getYammerActivityUserCounts(final String period) {
+    @Nonnull
+    public ReportRootGetYammerActivityUserCountsRequestBuilder getYammerActivityUserCounts(@Nullable final String period) {
         return new ReportRootGetYammerActivityUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerActivityUserCounts"), getClient(), null, period);
     }
 
@@ -766,7 +849,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param date the date
      */
-    public ReportRootGetYammerActivityUserDetailRequestBuilder getYammerActivityUserDetail(final com.microsoft.graph.core.DateOnly date) {
+    @Nonnull
+    public ReportRootGetYammerActivityUserDetailRequestBuilder getYammerActivityUserDetail(@Nullable final com.microsoft.graph.core.DateOnly date) {
         return new ReportRootGetYammerActivityUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerActivityUserDetail"), getClient(), null, date);
     }
 
@@ -775,7 +859,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetYammerActivityUserDetailRequestBuilder getYammerActivityUserDetail(final String period) {
+    @Nonnull
+    public ReportRootGetYammerActivityUserDetailRequestBuilder getYammerActivityUserDetail(@Nullable final String period) {
         return new ReportRootGetYammerActivityUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerActivityUserDetail"), getClient(), null, period);
     }
 
@@ -784,7 +869,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetYammerDeviceUsageDistributionUserCountsRequestBuilder getYammerDeviceUsageDistributionUserCounts(final String period) {
+    @Nonnull
+    public ReportRootGetYammerDeviceUsageDistributionUserCountsRequestBuilder getYammerDeviceUsageDistributionUserCounts(@Nullable final String period) {
         return new ReportRootGetYammerDeviceUsageDistributionUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerDeviceUsageDistributionUserCounts"), getClient(), null, period);
     }
 
@@ -793,7 +879,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetYammerDeviceUsageUserCountsRequestBuilder getYammerDeviceUsageUserCounts(final String period) {
+    @Nonnull
+    public ReportRootGetYammerDeviceUsageUserCountsRequestBuilder getYammerDeviceUsageUserCounts(@Nullable final String period) {
         return new ReportRootGetYammerDeviceUsageUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerDeviceUsageUserCounts"), getClient(), null, period);
     }
 
@@ -802,7 +889,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param date the date
      */
-    public ReportRootGetYammerDeviceUsageUserDetailRequestBuilder getYammerDeviceUsageUserDetail(final com.microsoft.graph.core.DateOnly date) {
+    @Nonnull
+    public ReportRootGetYammerDeviceUsageUserDetailRequestBuilder getYammerDeviceUsageUserDetail(@Nullable final com.microsoft.graph.core.DateOnly date) {
         return new ReportRootGetYammerDeviceUsageUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerDeviceUsageUserDetail"), getClient(), null, date);
     }
 
@@ -811,7 +899,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetYammerDeviceUsageUserDetailRequestBuilder getYammerDeviceUsageUserDetail(final String period) {
+    @Nonnull
+    public ReportRootGetYammerDeviceUsageUserDetailRequestBuilder getYammerDeviceUsageUserDetail(@Nullable final String period) {
         return new ReportRootGetYammerDeviceUsageUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerDeviceUsageUserDetail"), getClient(), null, period);
     }
 
@@ -820,7 +909,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetYammerGroupsActivityCountsRequestBuilder getYammerGroupsActivityCounts(final String period) {
+    @Nonnull
+    public ReportRootGetYammerGroupsActivityCountsRequestBuilder getYammerGroupsActivityCounts(@Nullable final String period) {
         return new ReportRootGetYammerGroupsActivityCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerGroupsActivityCounts"), getClient(), null, period);
     }
 
@@ -829,7 +919,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param date the date
      */
-    public ReportRootGetYammerGroupsActivityDetailRequestBuilder getYammerGroupsActivityDetail(final com.microsoft.graph.core.DateOnly date) {
+    @Nonnull
+    public ReportRootGetYammerGroupsActivityDetailRequestBuilder getYammerGroupsActivityDetail(@Nullable final com.microsoft.graph.core.DateOnly date) {
         return new ReportRootGetYammerGroupsActivityDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerGroupsActivityDetail"), getClient(), null, date);
     }
 
@@ -838,7 +929,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetYammerGroupsActivityDetailRequestBuilder getYammerGroupsActivityDetail(final String period) {
+    @Nonnull
+    public ReportRootGetYammerGroupsActivityDetailRequestBuilder getYammerGroupsActivityDetail(@Nullable final String period) {
         return new ReportRootGetYammerGroupsActivityDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerGroupsActivityDetail"), getClient(), null, period);
     }
 
@@ -847,7 +939,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the request builder 
      * @param period the period
      */
-    public ReportRootGetYammerGroupsActivityGroupCountsRequestBuilder getYammerGroupsActivityGroupCounts(final String period) {
+    @Nonnull
+    public ReportRootGetYammerGroupsActivityGroupCountsRequestBuilder getYammerGroupsActivityGroupCounts(@Nullable final String period) {
         return new ReportRootGetYammerGroupsActivityGroupCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerGroupsActivityGroupCounts"), getClient(), null, period);
     }
 }

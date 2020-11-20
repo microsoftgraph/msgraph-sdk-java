@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.DeviceManagementExchangeConnector;
 import com.microsoft.graph.models.generated.DeviceManagementExchangeConnectorSyncType;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,7 +37,7 @@ public class DeviceManagementExchangeConnectorCollectionRequest extends BaseColl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementExchangeConnectorCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementExchangeConnectorCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagementExchangeConnectorCollectionResponse.class, DeviceManagementExchangeConnectorCollectionPage.class, DeviceManagementExchangeConnectorCollectionRequestBuilder.class);
     }
 
@@ -44,7 +46,7 @@ public class DeviceManagementExchangeConnectorCollectionRequest extends BaseColl
      * @param newDeviceManagementExchangeConnector the DeviceManagementExchangeConnector to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector, final ICallback<? super DeviceManagementExchangeConnector> callback) {
+    public void post(@Nonnull final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector, @Nonnull final ICallback<? super DeviceManagementExchangeConnector> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementExchangeConnectorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -56,7 +58,8 @@ public class DeviceManagementExchangeConnectorCollectionRequest extends BaseColl
      * @param newDeviceManagementExchangeConnector the DeviceManagementExchangeConnector to create
      * @return the newly created object
      */
-    public DeviceManagementExchangeConnector post(final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector) throws ClientException {
+    @Nonnull
+    public DeviceManagementExchangeConnector post(@Nonnull final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceManagementExchangeConnectorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -69,7 +72,8 @@ public class DeviceManagementExchangeConnectorCollectionRequest extends BaseColl
      * @param value the expand clause
      * @return the updated request
      */
-    public DeviceManagementExchangeConnectorCollectionRequest expand(final String value) {
+    @Nonnull
+    public DeviceManagementExchangeConnectorCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -80,7 +84,8 @@ public class DeviceManagementExchangeConnectorCollectionRequest extends BaseColl
      * @param value the filter clause
      * @return the updated request
      */
-    public DeviceManagementExchangeConnectorCollectionRequest filter(final String value) {
+    @Nonnull
+    public DeviceManagementExchangeConnectorCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -91,7 +96,8 @@ public class DeviceManagementExchangeConnectorCollectionRequest extends BaseColl
      * @param value the order by clause
      * @return the updated request
      */
-    public DeviceManagementExchangeConnectorCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DeviceManagementExchangeConnectorCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -102,7 +108,8 @@ public class DeviceManagementExchangeConnectorCollectionRequest extends BaseColl
      * @param value the select clause
      * @return the updated request
      */
-    public DeviceManagementExchangeConnectorCollectionRequest select(final String value) {
+    @Nonnull
+    public DeviceManagementExchangeConnectorCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -113,6 +120,7 @@ public class DeviceManagementExchangeConnectorCollectionRequest extends BaseColl
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DeviceManagementExchangeConnectorCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -124,6 +132,7 @@ public class DeviceManagementExchangeConnectorCollectionRequest extends BaseColl
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public DeviceManagementExchangeConnectorCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -135,7 +144,8 @@ public class DeviceManagementExchangeConnectorCollectionRequest extends BaseColl
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public DeviceManagementExchangeConnectorCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public DeviceManagementExchangeConnectorCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

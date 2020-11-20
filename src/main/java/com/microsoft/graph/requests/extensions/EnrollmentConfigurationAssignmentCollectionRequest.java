@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceEnrollmentConfiguration;
 import com.microsoft.graph.models.extensions.EnrollmentConfigurationAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseColl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EnrollmentConfigurationAssignmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EnrollmentConfigurationAssignmentCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EnrollmentConfigurationAssignmentCollectionResponse.class, EnrollmentConfigurationAssignmentCollectionPage.class, EnrollmentConfigurationAssignmentCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseColl
      * @param newEnrollmentConfigurationAssignment the EnrollmentConfigurationAssignment to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment, final ICallback<? super EnrollmentConfigurationAssignment> callback) {
+    public void post(@Nonnull final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment, @Nonnull final ICallback<? super EnrollmentConfigurationAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EnrollmentConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseColl
      * @param newEnrollmentConfigurationAssignment the EnrollmentConfigurationAssignment to create
      * @return the newly created object
      */
-    public EnrollmentConfigurationAssignment post(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment) throws ClientException {
+    @Nonnull
+    public EnrollmentConfigurationAssignment post(@Nonnull final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EnrollmentConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseColl
      * @param value the expand clause
      * @return the updated request
      */
-    public EnrollmentConfigurationAssignmentCollectionRequest expand(final String value) {
+    @Nonnull
+    public EnrollmentConfigurationAssignmentCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseColl
      * @param value the filter clause
      * @return the updated request
      */
-    public EnrollmentConfigurationAssignmentCollectionRequest filter(final String value) {
+    @Nonnull
+    public EnrollmentConfigurationAssignmentCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseColl
      * @param value the order by clause
      * @return the updated request
      */
-    public EnrollmentConfigurationAssignmentCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public EnrollmentConfigurationAssignmentCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseColl
      * @param value the select clause
      * @return the updated request
      */
-    public EnrollmentConfigurationAssignmentCollectionRequest select(final String value) {
+    @Nonnull
+    public EnrollmentConfigurationAssignmentCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseColl
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public EnrollmentConfigurationAssignmentCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseColl
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public EnrollmentConfigurationAssignmentCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseColl
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public EnrollmentConfigurationAssignmentCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public EnrollmentConfigurationAssignmentCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

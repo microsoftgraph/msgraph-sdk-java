@@ -12,6 +12,8 @@ import com.microsoft.graph.callrecords.requests.extensions.SessionCollectionRequ
 import com.microsoft.graph.callrecords.requests.extensions.SessionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -30,7 +32,7 @@ public class CallRecordRequest extends BaseRequest<CallRecord> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CallRecordRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CallRecordRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CallRecord.class);
     }
 
@@ -39,7 +41,7 @@ public class CallRecordRequest extends BaseRequest<CallRecord> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super CallRecord> callback) {
+    public void get(@Nonnull final ICallback<? super CallRecord> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -49,6 +51,7 @@ public class CallRecordRequest extends BaseRequest<CallRecord> {
      * @return the CallRecord from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public CallRecord get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -58,7 +61,7 @@ public class CallRecordRequest extends BaseRequest<CallRecord> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super CallRecord> callback) {
+    public void delete(@Nonnull final ICallback<? super CallRecord> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +80,7 @@ public class CallRecordRequest extends BaseRequest<CallRecord> {
      * @param sourceCallRecord the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CallRecord sourceCallRecord, final ICallback<? super CallRecord> callback) {
+    public void patch(@Nonnull final CallRecord sourceCallRecord, @Nonnull final ICallback<? super CallRecord> callback) {
         send(HttpMethod.PATCH, callback, sourceCallRecord);
     }
 
@@ -88,7 +91,8 @@ public class CallRecordRequest extends BaseRequest<CallRecord> {
      * @return the updated CallRecord
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CallRecord patch(final CallRecord sourceCallRecord) throws ClientException {
+    @Nullable
+    public CallRecord patch(@Nonnull final CallRecord sourceCallRecord) throws ClientException {
         return send(HttpMethod.PATCH, sourceCallRecord);
     }
 
@@ -98,7 +102,7 @@ public class CallRecordRequest extends BaseRequest<CallRecord> {
      * @param newCallRecord the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CallRecord newCallRecord, final ICallback<? super CallRecord> callback) {
+    public void post(@Nonnull final CallRecord newCallRecord, @Nonnull final ICallback<? super CallRecord> callback) {
         send(HttpMethod.POST, callback, newCallRecord);
     }
 
@@ -109,7 +113,8 @@ public class CallRecordRequest extends BaseRequest<CallRecord> {
      * @return the created CallRecord
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CallRecord post(final CallRecord newCallRecord) throws ClientException {
+    @Nullable
+    public CallRecord post(@Nonnull final CallRecord newCallRecord) throws ClientException {
         return send(HttpMethod.POST, newCallRecord);
     }
 
@@ -119,7 +124,7 @@ public class CallRecordRequest extends BaseRequest<CallRecord> {
      * @param newCallRecord the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CallRecord newCallRecord, final ICallback<? super CallRecord> callback) {
+    public void put(@Nonnull final CallRecord newCallRecord, @Nonnull final ICallback<? super CallRecord> callback) {
         send(HttpMethod.PUT, callback, newCallRecord);
     }
 
@@ -130,7 +135,8 @@ public class CallRecordRequest extends BaseRequest<CallRecord> {
      * @return the created CallRecord
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CallRecord put(final CallRecord newCallRecord) throws ClientException {
+    @Nullable
+    public CallRecord put(@Nonnull final CallRecord newCallRecord) throws ClientException {
         return send(HttpMethod.PUT, newCallRecord);
     }
 
@@ -140,7 +146,8 @@ public class CallRecordRequest extends BaseRequest<CallRecord> {
      * @param value the select clause
      * @return the updated request
      */
-     public CallRecordRequest select(final String value) {
+     @Nonnull
+     public CallRecordRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -151,7 +158,8 @@ public class CallRecordRequest extends BaseRequest<CallRecord> {
      * @param value the expand clause
      * @return the updated request
      */
-     public CallRecordRequest expand(final String value) {
+     @Nonnull
+     public CallRecordRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

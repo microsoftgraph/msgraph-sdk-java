@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedAndroidLobApp;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class ManagedAndroidLobAppRequest extends BaseRequest<ManagedAndroidLobAp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedAndroidLobAppRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAndroidLobAppRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedAndroidLobApp.class);
     }
 
@@ -37,7 +39,7 @@ public class ManagedAndroidLobAppRequest extends BaseRequest<ManagedAndroidLobAp
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ManagedAndroidLobApp> callback) {
+    public void get(@Nonnull final ICallback<? super ManagedAndroidLobApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class ManagedAndroidLobAppRequest extends BaseRequest<ManagedAndroidLobAp
      * @return the ManagedAndroidLobApp from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ManagedAndroidLobApp get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class ManagedAndroidLobAppRequest extends BaseRequest<ManagedAndroidLobAp
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ManagedAndroidLobApp> callback) {
+    public void delete(@Nonnull final ICallback<? super ManagedAndroidLobApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class ManagedAndroidLobAppRequest extends BaseRequest<ManagedAndroidLobAp
      * @param sourceManagedAndroidLobApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedAndroidLobApp sourceManagedAndroidLobApp, final ICallback<? super ManagedAndroidLobApp> callback) {
+    public void patch(@Nonnull final ManagedAndroidLobApp sourceManagedAndroidLobApp, @Nonnull final ICallback<? super ManagedAndroidLobApp> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedAndroidLobApp);
     }
 
@@ -86,7 +89,8 @@ public class ManagedAndroidLobAppRequest extends BaseRequest<ManagedAndroidLobAp
      * @return the updated ManagedAndroidLobApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedAndroidLobApp patch(final ManagedAndroidLobApp sourceManagedAndroidLobApp) throws ClientException {
+    @Nullable
+    public ManagedAndroidLobApp patch(@Nonnull final ManagedAndroidLobApp sourceManagedAndroidLobApp) throws ClientException {
         return send(HttpMethod.PATCH, sourceManagedAndroidLobApp);
     }
 
@@ -96,7 +100,7 @@ public class ManagedAndroidLobAppRequest extends BaseRequest<ManagedAndroidLobAp
      * @param newManagedAndroidLobApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedAndroidLobApp newManagedAndroidLobApp, final ICallback<? super ManagedAndroidLobApp> callback) {
+    public void post(@Nonnull final ManagedAndroidLobApp newManagedAndroidLobApp, @Nonnull final ICallback<? super ManagedAndroidLobApp> callback) {
         send(HttpMethod.POST, callback, newManagedAndroidLobApp);
     }
 
@@ -107,7 +111,8 @@ public class ManagedAndroidLobAppRequest extends BaseRequest<ManagedAndroidLobAp
      * @return the created ManagedAndroidLobApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedAndroidLobApp post(final ManagedAndroidLobApp newManagedAndroidLobApp) throws ClientException {
+    @Nullable
+    public ManagedAndroidLobApp post(@Nonnull final ManagedAndroidLobApp newManagedAndroidLobApp) throws ClientException {
         return send(HttpMethod.POST, newManagedAndroidLobApp);
     }
 
@@ -117,7 +122,7 @@ public class ManagedAndroidLobAppRequest extends BaseRequest<ManagedAndroidLobAp
      * @param newManagedAndroidLobApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedAndroidLobApp newManagedAndroidLobApp, final ICallback<? super ManagedAndroidLobApp> callback) {
+    public void put(@Nonnull final ManagedAndroidLobApp newManagedAndroidLobApp, @Nonnull final ICallback<? super ManagedAndroidLobApp> callback) {
         send(HttpMethod.PUT, callback, newManagedAndroidLobApp);
     }
 
@@ -128,7 +133,8 @@ public class ManagedAndroidLobAppRequest extends BaseRequest<ManagedAndroidLobAp
      * @return the created ManagedAndroidLobApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedAndroidLobApp put(final ManagedAndroidLobApp newManagedAndroidLobApp) throws ClientException {
+    @Nullable
+    public ManagedAndroidLobApp put(@Nonnull final ManagedAndroidLobApp newManagedAndroidLobApp) throws ClientException {
         return send(HttpMethod.PUT, newManagedAndroidLobApp);
     }
 
@@ -138,7 +144,8 @@ public class ManagedAndroidLobAppRequest extends BaseRequest<ManagedAndroidLobAp
      * @param value the select clause
      * @return the updated request
      */
-     public ManagedAndroidLobAppRequest select(final String value) {
+     @Nonnull
+     public ManagedAndroidLobAppRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class ManagedAndroidLobAppRequest extends BaseRequest<ManagedAndroidLobAp
      * @param value the expand clause
      * @return the updated request
      */
-     public ManagedAndroidLobAppRequest expand(final String value) {
+     @Nonnull
+     public ManagedAndroidLobAppRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

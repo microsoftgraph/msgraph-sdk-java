@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfiguration
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationDeviceStatus;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder;
@@ -32,7 +34,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBui
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder.class, ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest.class);
     }
 

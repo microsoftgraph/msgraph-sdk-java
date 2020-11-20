@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceAppManagement;
 import com.microsoft.graph.models.extensions.AndroidManagedAppProtection;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class AndroidManagedAppProtectionCollectionRequest extends BaseCollection
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidManagedAppProtectionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidManagedAppProtectionCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidManagedAppProtectionCollectionResponse.class, AndroidManagedAppProtectionCollectionPage.class, AndroidManagedAppProtectionCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class AndroidManagedAppProtectionCollectionRequest extends BaseCollection
      * @param newAndroidManagedAppProtection the AndroidManagedAppProtection to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final AndroidManagedAppProtection newAndroidManagedAppProtection, final ICallback<? super AndroidManagedAppProtection> callback) {
+    public void post(@Nonnull final AndroidManagedAppProtection newAndroidManagedAppProtection, @Nonnull final ICallback<? super AndroidManagedAppProtection> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AndroidManagedAppProtectionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class AndroidManagedAppProtectionCollectionRequest extends BaseCollection
      * @param newAndroidManagedAppProtection the AndroidManagedAppProtection to create
      * @return the newly created object
      */
-    public AndroidManagedAppProtection post(final AndroidManagedAppProtection newAndroidManagedAppProtection) throws ClientException {
+    @Nonnull
+    public AndroidManagedAppProtection post(@Nonnull final AndroidManagedAppProtection newAndroidManagedAppProtection) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AndroidManagedAppProtectionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class AndroidManagedAppProtectionCollectionRequest extends BaseCollection
      * @param value the expand clause
      * @return the updated request
      */
-    public AndroidManagedAppProtectionCollectionRequest expand(final String value) {
+    @Nonnull
+    public AndroidManagedAppProtectionCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class AndroidManagedAppProtectionCollectionRequest extends BaseCollection
      * @param value the filter clause
      * @return the updated request
      */
-    public AndroidManagedAppProtectionCollectionRequest filter(final String value) {
+    @Nonnull
+    public AndroidManagedAppProtectionCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class AndroidManagedAppProtectionCollectionRequest extends BaseCollection
      * @param value the order by clause
      * @return the updated request
      */
-    public AndroidManagedAppProtectionCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public AndroidManagedAppProtectionCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class AndroidManagedAppProtectionCollectionRequest extends BaseCollection
      * @param value the select clause
      * @return the updated request
      */
-    public AndroidManagedAppProtectionCollectionRequest select(final String value) {
+    @Nonnull
+    public AndroidManagedAppProtectionCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class AndroidManagedAppProtectionCollectionRequest extends BaseCollection
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public AndroidManagedAppProtectionCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class AndroidManagedAppProtectionCollectionRequest extends BaseCollection
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public AndroidManagedAppProtectionCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class AndroidManagedAppProtectionCollectionRequest extends BaseCollection
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public AndroidManagedAppProtectionCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public AndroidManagedAppProtectionCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

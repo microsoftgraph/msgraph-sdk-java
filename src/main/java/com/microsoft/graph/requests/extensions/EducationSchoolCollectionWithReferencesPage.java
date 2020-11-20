@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.EducationUser;
 import com.microsoft.graph.models.extensions.EducationSchool;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.EducationSchoolCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSchoolCollectionWithReferencesPage;
@@ -34,7 +36,7 @@ public class EducationSchoolCollectionWithReferencesPage extends BaseCollectionP
      * @param response the serialized EducationSchoolCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public EducationSchoolCollectionWithReferencesPage(final EducationSchoolCollectionResponse response, final EducationSchoolCollectionWithReferencesRequestBuilder builder) {
+    public EducationSchoolCollectionWithReferencesPage(@Nonnull final EducationSchoolCollectionResponse response, @Nullable final EducationSchoolCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 
@@ -44,7 +46,7 @@ public class EducationSchoolCollectionWithReferencesPage extends BaseCollectionP
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public EducationSchoolCollectionWithReferencesPage(final java.util.List<EducationSchool> pageContents, final EducationSchoolCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+    public EducationSchoolCollectionWithReferencesPage(@Nonnull final java.util.List<EducationSchool> pageContents, @Nullable final EducationSchoolCollectionWithReferencesRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

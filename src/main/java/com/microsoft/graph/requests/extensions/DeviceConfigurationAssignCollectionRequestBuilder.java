@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceConfigurationAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignCollectionRequest;
@@ -33,7 +35,7 @@ public class DeviceConfigurationAssignCollectionRequestBuilder extends BaseActio
      * @param requestOptions the options for this request
      * @param assignments the assignments
      */
-    public DeviceConfigurationAssignCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<DeviceConfigurationAssignment> assignments) {
+    public DeviceConfigurationAssignCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final java.util.List<DeviceConfigurationAssignment> assignments) {
         super(requestUrl, client, requestOptions, DeviceConfigurationAssignCollectionRequestBuilder.class, DeviceConfigurationAssignCollectionRequest.class);
   	 if(assignments!=null){
 			bodyParams.put("assignments", assignments);
@@ -46,8 +48,9 @@ public class DeviceConfigurationAssignCollectionRequestBuilder extends BaseActio
      * @param requestOptions the options for this request
      * @return the DeviceConfigurationAssignCollectionRequest instance
      */
-     @Override
-    public DeviceConfigurationAssignCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Override
+    @Nonnull
+    public DeviceConfigurationAssignCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final DeviceConfigurationAssignCollectionRequest request = super.buildRequest(requestOptions);
 
         if (hasParameter("assignments")) {

@@ -4,6 +4,10 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
+
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.AdditionalDataManager;
@@ -21,6 +25,7 @@ public abstract class BaseCollectionResponse<T> implements ICollectionResponse<T
      */
 	@SerializedName("value")
     @Expose
+    @Nullable
 	public java.util.List<T> value;
 	
 
@@ -28,6 +33,7 @@ public abstract class BaseCollectionResponse<T> implements ICollectionResponse<T
      * The list of items within this collection page
      */
     @Override
+    @Nullable
     public java.util.List<T> values() {
         return value;
 	}
@@ -35,9 +41,11 @@ public abstract class BaseCollectionResponse<T> implements ICollectionResponse<T
     /** The link to the next page returned by the initial request if any. */
 	@SerializedName("@odata.nextLink")
     @Expose(serialize = false)
+    @Nullable
     public String nextLink;
 	
-	@Override
+    @Override
+    @Nullable
     public String nextLink() {
         return nextLink;
     }
@@ -45,6 +53,7 @@ public abstract class BaseCollectionResponse<T> implements ICollectionResponse<T
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
+    @Nonnull
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
@@ -52,11 +61,13 @@ public abstract class BaseCollectionResponse<T> implements ICollectionResponse<T
     /**
      * The raw representation of this class
      */
+    @Nullable
     protected JsonObject rawObject;
 
     /**
      * The serializer
      */
+    @Nullable
 	protected ISerializer serializer;
 	
 	/**
@@ -64,6 +75,7 @@ public abstract class BaseCollectionResponse<T> implements ICollectionResponse<T
      *
      * @return the raw representation of this class
      */
+    @Nullable
     public JsonObject getRawObject() {
         return rawObject;
     }
@@ -73,7 +85,8 @@ public abstract class BaseCollectionResponse<T> implements ICollectionResponse<T
      *
      * @return the serializer
      */
-	@Override
+    @Override
+    @Nullable
     public ISerializer getSerializer() {
         return serializer;
 	}
@@ -84,7 +97,7 @@ public abstract class BaseCollectionResponse<T> implements ICollectionResponse<T
      * @param serializer the serializer
      * @param json the JSON object to set this object to
      */
-    public void setRawObject(final ISerializer serializer, final JsonObject json) {
+    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
         this.serializer = serializer;
         rawObject = json;
         if (json.has("value")) {

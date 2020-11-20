@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.WorkbookRangeFormat;
 import com.microsoft.graph.models.extensions.WorkbookRangeBorder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.WorkbookRangeBorderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRangeBorderRequestBuilder;
@@ -34,7 +36,7 @@ public class WorkbookRangeBorderCollectionRequestBuilder extends BaseCollectionR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookRangeBorderCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeBorderCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookRangeBorderRequestBuilder.class, WorkbookRangeBorderCollectionRequest.class);
     }
 
@@ -44,6 +46,7 @@ public class WorkbookRangeBorderCollectionRequestBuilder extends BaseCollectionR
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public WorkbookRangeBorderCountRequestBuilder count() {
         return new WorkbookRangeBorderCountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.count"), getClient(), null);
     }
@@ -53,7 +56,8 @@ public class WorkbookRangeBorderCollectionRequestBuilder extends BaseCollectionR
      * @return the request builder 
      * @param index the index
      */
-    public WorkbookRangeBorderItemAtRequestBuilder itemAt(final Integer index) {
+    @Nonnull
+    public WorkbookRangeBorderItemAtRequestBuilder itemAt(@Nullable final Integer index) {
         return new WorkbookRangeBorderItemAtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.itemAt"), getClient(), null, index);
     }
 }

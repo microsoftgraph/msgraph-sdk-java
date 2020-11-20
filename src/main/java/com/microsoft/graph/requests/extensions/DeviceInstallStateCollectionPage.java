@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DeviceInstallState;
 import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class DeviceInstallStateCollectionPage extends BaseCollectionPage<DeviceI
      * @param response the serialized DeviceInstallStateCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DeviceInstallStateCollectionPage(final DeviceInstallStateCollectionResponse response, final DeviceInstallStateCollectionRequestBuilder builder) {
+    public DeviceInstallStateCollectionPage(@Nonnull final DeviceInstallStateCollectionResponse response, @Nonnull final DeviceInstallStateCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class DeviceInstallStateCollectionPage extends BaseCollectionPage<DeviceI
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public DeviceInstallStateCollectionPage(final java.util.List<DeviceInstallState> pageContents, final DeviceInstallStateCollectionRequestBuilder nextRequestBuilder) {
+    public DeviceInstallStateCollectionPage(@Nonnull final java.util.List<DeviceInstallState> pageContents, @Nullable final DeviceInstallStateCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

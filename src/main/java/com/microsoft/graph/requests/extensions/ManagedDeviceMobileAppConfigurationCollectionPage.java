@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfiguration;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class ManagedDeviceMobileAppConfigurationCollectionPage extends BaseColle
      * @param response the serialized ManagedDeviceMobileAppConfigurationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ManagedDeviceMobileAppConfigurationCollectionPage(final ManagedDeviceMobileAppConfigurationCollectionResponse response, final ManagedDeviceMobileAppConfigurationCollectionRequestBuilder builder) {
+    public ManagedDeviceMobileAppConfigurationCollectionPage(@Nonnull final ManagedDeviceMobileAppConfigurationCollectionResponse response, @Nonnull final ManagedDeviceMobileAppConfigurationCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class ManagedDeviceMobileAppConfigurationCollectionPage extends BaseColle
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public ManagedDeviceMobileAppConfigurationCollectionPage(final java.util.List<ManagedDeviceMobileAppConfiguration> pageContents, final ManagedDeviceMobileAppConfigurationCollectionRequestBuilder nextRequestBuilder) {
+    public ManagedDeviceMobileAppConfigurationCollectionPage(@Nonnull final java.util.List<ManagedDeviceMobileAppConfiguration> pageContents, @Nullable final ManagedDeviceMobileAppConfigurationCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

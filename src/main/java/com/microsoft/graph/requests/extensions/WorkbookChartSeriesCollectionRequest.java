@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.WorkbookChart;
 import com.microsoft.graph.models.extensions.WorkbookChartSeries;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class WorkbookChartSeriesCollectionRequest extends BaseCollectionRequest<
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartSeriesCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartSeriesCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChartSeriesCollectionResponse.class, WorkbookChartSeriesCollectionPage.class, WorkbookChartSeriesCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class WorkbookChartSeriesCollectionRequest extends BaseCollectionRequest<
      * @param newWorkbookChartSeries the WorkbookChartSeries to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final WorkbookChartSeries newWorkbookChartSeries, final ICallback<? super WorkbookChartSeries> callback) {
+    public void post(@Nonnull final WorkbookChartSeries newWorkbookChartSeries, @Nonnull final ICallback<? super WorkbookChartSeries> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookChartSeriesRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class WorkbookChartSeriesCollectionRequest extends BaseCollectionRequest<
      * @param newWorkbookChartSeries the WorkbookChartSeries to create
      * @return the newly created object
      */
-    public WorkbookChartSeries post(final WorkbookChartSeries newWorkbookChartSeries) throws ClientException {
+    @Nonnull
+    public WorkbookChartSeries post(@Nonnull final WorkbookChartSeries newWorkbookChartSeries) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookChartSeriesRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class WorkbookChartSeriesCollectionRequest extends BaseCollectionRequest<
      * @param value the expand clause
      * @return the updated request
      */
-    public WorkbookChartSeriesCollectionRequest expand(final String value) {
+    @Nonnull
+    public WorkbookChartSeriesCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class WorkbookChartSeriesCollectionRequest extends BaseCollectionRequest<
      * @param value the filter clause
      * @return the updated request
      */
-    public WorkbookChartSeriesCollectionRequest filter(final String value) {
+    @Nonnull
+    public WorkbookChartSeriesCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class WorkbookChartSeriesCollectionRequest extends BaseCollectionRequest<
      * @param value the order by clause
      * @return the updated request
      */
-    public WorkbookChartSeriesCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public WorkbookChartSeriesCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class WorkbookChartSeriesCollectionRequest extends BaseCollectionRequest<
      * @param value the select clause
      * @return the updated request
      */
-    public WorkbookChartSeriesCollectionRequest select(final String value) {
+    @Nonnull
+    public WorkbookChartSeriesCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class WorkbookChartSeriesCollectionRequest extends BaseCollectionRequest<
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public WorkbookChartSeriesCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class WorkbookChartSeriesCollectionRequest extends BaseCollectionRequest<
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public WorkbookChartSeriesCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class WorkbookChartSeriesCollectionRequest extends BaseCollectionRequest<
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public WorkbookChartSeriesCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public WorkbookChartSeriesCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

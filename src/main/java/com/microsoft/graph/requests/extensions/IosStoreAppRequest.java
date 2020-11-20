@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosStoreApp;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class IosStoreAppRequest extends BaseRequest<IosStoreApp> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosStoreAppRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IosStoreAppRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IosStoreApp.class);
     }
 
@@ -37,7 +39,7 @@ public class IosStoreAppRequest extends BaseRequest<IosStoreApp> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IosStoreApp> callback) {
+    public void get(@Nonnull final ICallback<? super IosStoreApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class IosStoreAppRequest extends BaseRequest<IosStoreApp> {
      * @return the IosStoreApp from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public IosStoreApp get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class IosStoreAppRequest extends BaseRequest<IosStoreApp> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IosStoreApp> callback) {
+    public void delete(@Nonnull final ICallback<? super IosStoreApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class IosStoreAppRequest extends BaseRequest<IosStoreApp> {
      * @param sourceIosStoreApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosStoreApp sourceIosStoreApp, final ICallback<? super IosStoreApp> callback) {
+    public void patch(@Nonnull final IosStoreApp sourceIosStoreApp, @Nonnull final ICallback<? super IosStoreApp> callback) {
         send(HttpMethod.PATCH, callback, sourceIosStoreApp);
     }
 
@@ -86,7 +89,8 @@ public class IosStoreAppRequest extends BaseRequest<IosStoreApp> {
      * @return the updated IosStoreApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosStoreApp patch(final IosStoreApp sourceIosStoreApp) throws ClientException {
+    @Nullable
+    public IosStoreApp patch(@Nonnull final IosStoreApp sourceIosStoreApp) throws ClientException {
         return send(HttpMethod.PATCH, sourceIosStoreApp);
     }
 
@@ -96,7 +100,7 @@ public class IosStoreAppRequest extends BaseRequest<IosStoreApp> {
      * @param newIosStoreApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosStoreApp newIosStoreApp, final ICallback<? super IosStoreApp> callback) {
+    public void post(@Nonnull final IosStoreApp newIosStoreApp, @Nonnull final ICallback<? super IosStoreApp> callback) {
         send(HttpMethod.POST, callback, newIosStoreApp);
     }
 
@@ -107,7 +111,8 @@ public class IosStoreAppRequest extends BaseRequest<IosStoreApp> {
      * @return the created IosStoreApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosStoreApp post(final IosStoreApp newIosStoreApp) throws ClientException {
+    @Nullable
+    public IosStoreApp post(@Nonnull final IosStoreApp newIosStoreApp) throws ClientException {
         return send(HttpMethod.POST, newIosStoreApp);
     }
 
@@ -117,7 +122,7 @@ public class IosStoreAppRequest extends BaseRequest<IosStoreApp> {
      * @param newIosStoreApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosStoreApp newIosStoreApp, final ICallback<? super IosStoreApp> callback) {
+    public void put(@Nonnull final IosStoreApp newIosStoreApp, @Nonnull final ICallback<? super IosStoreApp> callback) {
         send(HttpMethod.PUT, callback, newIosStoreApp);
     }
 
@@ -128,7 +133,8 @@ public class IosStoreAppRequest extends BaseRequest<IosStoreApp> {
      * @return the created IosStoreApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosStoreApp put(final IosStoreApp newIosStoreApp) throws ClientException {
+    @Nullable
+    public IosStoreApp put(@Nonnull final IosStoreApp newIosStoreApp) throws ClientException {
         return send(HttpMethod.PUT, newIosStoreApp);
     }
 
@@ -138,7 +144,8 @@ public class IosStoreAppRequest extends BaseRequest<IosStoreApp> {
      * @param value the select clause
      * @return the updated request
      */
-     public IosStoreAppRequest select(final String value) {
+     @Nonnull
+     public IosStoreAppRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class IosStoreAppRequest extends BaseRequest<IosStoreApp> {
      * @param value the expand clause
      * @return the updated request
      */
-     public IosStoreAppRequest expand(final String value) {
+     @Nonnull
+     public IosStoreAppRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

@@ -24,6 +24,8 @@ import com.microsoft.graph.models.extensions.ManagedAppDiagnosticStatus;
 import com.microsoft.graph.models.extensions.ManagedAppPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.UserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserRequestBuilder;
@@ -46,7 +48,7 @@ public class UserCollectionRequestBuilder extends BaseCollectionRequestBuilder<U
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserRequestBuilder.class, UserCollectionRequest.class);
     }
 
@@ -56,6 +58,7 @@ public class UserCollectionRequestBuilder extends BaseCollectionRequestBuilder<U
      * Gets a builder to execute the method
      * @return the request builder collection
      */
+    @Nonnull
     public UserDeltaCollectionRequestBuilder delta() {
         return new UserDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
@@ -66,7 +69,8 @@ public class UserCollectionRequestBuilder extends BaseCollectionRequestBuilder<U
      * @return a request builder to get the changes
      * @param deltaLink the link returned by the last delta request
      */
-	public UserDeltaCollectionRequestBuilder delta(final String deltaLink) {
+    @Nonnull
+	public UserDeltaCollectionRequestBuilder delta(@Nonnull final String deltaLink) {
         return new UserDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }
 }

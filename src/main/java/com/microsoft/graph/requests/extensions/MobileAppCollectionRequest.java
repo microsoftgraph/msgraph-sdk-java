@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.MobileApp;
 import com.microsoft.graph.models.extensions.MobileAppAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,7 +37,7 @@ public class MobileAppCollectionRequest extends BaseCollectionRequest<MobileApp,
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MobileAppCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MobileAppCollectionResponse.class, MobileAppCollectionPage.class, MobileAppCollectionRequestBuilder.class);
     }
 
@@ -44,7 +46,7 @@ public class MobileAppCollectionRequest extends BaseCollectionRequest<MobileApp,
      * @param newMobileApp the MobileApp to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final MobileApp newMobileApp, final ICallback<? super MobileApp> callback) {
+    public void post(@Nonnull final MobileApp newMobileApp, @Nonnull final ICallback<? super MobileApp> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -56,7 +58,8 @@ public class MobileAppCollectionRequest extends BaseCollectionRequest<MobileApp,
      * @param newMobileApp the MobileApp to create
      * @return the newly created object
      */
-    public MobileApp post(final MobileApp newMobileApp) throws ClientException {
+    @Nonnull
+    public MobileApp post(@Nonnull final MobileApp newMobileApp) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MobileAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -69,7 +72,8 @@ public class MobileAppCollectionRequest extends BaseCollectionRequest<MobileApp,
      * @param value the expand clause
      * @return the updated request
      */
-    public MobileAppCollectionRequest expand(final String value) {
+    @Nonnull
+    public MobileAppCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -80,7 +84,8 @@ public class MobileAppCollectionRequest extends BaseCollectionRequest<MobileApp,
      * @param value the filter clause
      * @return the updated request
      */
-    public MobileAppCollectionRequest filter(final String value) {
+    @Nonnull
+    public MobileAppCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -91,7 +96,8 @@ public class MobileAppCollectionRequest extends BaseCollectionRequest<MobileApp,
      * @param value the order by clause
      * @return the updated request
      */
-    public MobileAppCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public MobileAppCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -102,7 +108,8 @@ public class MobileAppCollectionRequest extends BaseCollectionRequest<MobileApp,
      * @param value the select clause
      * @return the updated request
      */
-    public MobileAppCollectionRequest select(final String value) {
+    @Nonnull
+    public MobileAppCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -113,6 +120,7 @@ public class MobileAppCollectionRequest extends BaseCollectionRequest<MobileApp,
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public MobileAppCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -124,6 +132,7 @@ public class MobileAppCollectionRequest extends BaseCollectionRequest<MobileApp,
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public MobileAppCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -135,7 +144,8 @@ public class MobileAppCollectionRequest extends BaseCollectionRequest<MobileApp,
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public MobileAppCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public MobileAppCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

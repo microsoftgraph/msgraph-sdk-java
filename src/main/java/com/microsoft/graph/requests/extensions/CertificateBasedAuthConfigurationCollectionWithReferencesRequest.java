@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Organization;
 import com.microsoft.graph.models.extensions.CertificateBasedAuthConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.models.extensions.CertificateBasedAuthConfiguration;
 import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationWithReferenceRequest;
@@ -39,7 +41,7 @@ public class CertificateBasedAuthConfigurationCollectionWithReferencesRequest ex
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CertificateBasedAuthConfigurationCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CertificateBasedAuthConfigurationCollectionWithReferencesRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CertificateBasedAuthConfigurationCollectionResponse.class, CertificateBasedAuthConfigurationCollectionWithReferencesPage.class, CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder.class);
     }
 
@@ -49,7 +51,8 @@ public class CertificateBasedAuthConfigurationCollectionWithReferencesRequest ex
      * @param value the expand clause
      * @return the updated request
      */
-    public CertificateBasedAuthConfigurationCollectionWithReferencesRequest expand(final String value) {
+    @Nonnull
+    public CertificateBasedAuthConfigurationCollectionWithReferencesRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -60,7 +63,8 @@ public class CertificateBasedAuthConfigurationCollectionWithReferencesRequest ex
      * @param value the filter clause
      * @return the updated request
      */
-    public CertificateBasedAuthConfigurationCollectionWithReferencesRequest filter(final String value) {
+    @Nonnull
+    public CertificateBasedAuthConfigurationCollectionWithReferencesRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -71,7 +75,8 @@ public class CertificateBasedAuthConfigurationCollectionWithReferencesRequest ex
      * @param value the order by clause
      * @return the updated request
      */
-    public CertificateBasedAuthConfigurationCollectionWithReferencesRequest orderBy(final String value) {
+    @Nonnull
+    public CertificateBasedAuthConfigurationCollectionWithReferencesRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -82,7 +87,8 @@ public class CertificateBasedAuthConfigurationCollectionWithReferencesRequest ex
      * @param value the select clause
      * @return the updated request
      */
-    public CertificateBasedAuthConfigurationCollectionWithReferencesRequest select(final String value) {
+    @Nonnull
+    public CertificateBasedAuthConfigurationCollectionWithReferencesRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -93,6 +99,7 @@ public class CertificateBasedAuthConfigurationCollectionWithReferencesRequest ex
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public CertificateBasedAuthConfigurationCollectionWithReferencesRequest top(final int value) {
         addTopOption(value);
         return this;

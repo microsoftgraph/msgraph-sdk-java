@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DriveItem;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.DeltaCollectionPage;
 import com.microsoft.graph.requests.extensions.DriveItemDeltaCollectionRequestBuilder;
@@ -29,7 +31,7 @@ public class DriveItemDeltaCollectionPage extends DeltaCollectionPage<DriveItem,
      * @param response The serialized DriveItemDeltaCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public DriveItemDeltaCollectionPage(final DriveItemDeltaCollectionResponse response, final DriveItemDeltaCollectionRequestBuilder builder) {
+    public DriveItemDeltaCollectionPage(@Nonnull final DriveItemDeltaCollectionResponse response, @Nonnull final DriveItemDeltaCollectionRequestBuilder builder) {
        super(response, builder);
     }
 
@@ -39,7 +41,7 @@ public class DriveItemDeltaCollectionPage extends DeltaCollectionPage<DriveItem,
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public DriveItemDeltaCollectionPage(final java.util.List<DriveItem> pageContents, final DriveItemDeltaCollectionRequestBuilder nextRequestBuilder) {
+    public DriveItemDeltaCollectionPage(@Nonnull final java.util.List<DriveItem> pageContents, @Nullable final DriveItemDeltaCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

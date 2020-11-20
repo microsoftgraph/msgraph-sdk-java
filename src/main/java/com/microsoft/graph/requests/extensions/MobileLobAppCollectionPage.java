@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.MobileLobApp;
 import com.microsoft.graph.requests.extensions.MobileLobAppCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.MobileLobAppCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class MobileLobAppCollectionPage extends BaseCollectionPage<MobileLobApp,
      * @param response the serialized MobileLobAppCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public MobileLobAppCollectionPage(final MobileLobAppCollectionResponse response, final MobileLobAppCollectionRequestBuilder builder) {
+    public MobileLobAppCollectionPage(@Nonnull final MobileLobAppCollectionResponse response, @Nonnull final MobileLobAppCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class MobileLobAppCollectionPage extends BaseCollectionPage<MobileLobApp,
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public MobileLobAppCollectionPage(final java.util.List<MobileLobApp> pageContents, final MobileLobAppCollectionRequestBuilder nextRequestBuilder) {
+    public MobileLobAppCollectionPage(@Nonnull final java.util.List<MobileLobApp> pageContents, @Nullable final MobileLobAppCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

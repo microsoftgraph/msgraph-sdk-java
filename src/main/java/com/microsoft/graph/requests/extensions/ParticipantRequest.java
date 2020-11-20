@@ -13,6 +13,8 @@ import com.microsoft.graph.models.extensions.InviteParticipantsOperation;
 import com.microsoft.graph.models.extensions.MuteParticipantOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -31,7 +33,7 @@ public class ParticipantRequest extends BaseRequest<Participant> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ParticipantRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ParticipantRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Participant.class);
     }
 
@@ -40,7 +42,7 @@ public class ParticipantRequest extends BaseRequest<Participant> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Participant> callback) {
+    public void get(@Nonnull final ICallback<? super Participant> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +52,7 @@ public class ParticipantRequest extends BaseRequest<Participant> {
      * @return the Participant from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Participant get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +62,7 @@ public class ParticipantRequest extends BaseRequest<Participant> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Participant> callback) {
+    public void delete(@Nonnull final ICallback<? super Participant> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +81,7 @@ public class ParticipantRequest extends BaseRequest<Participant> {
      * @param sourceParticipant the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Participant sourceParticipant, final ICallback<? super Participant> callback) {
+    public void patch(@Nonnull final Participant sourceParticipant, @Nonnull final ICallback<? super Participant> callback) {
         send(HttpMethod.PATCH, callback, sourceParticipant);
     }
 
@@ -89,7 +92,8 @@ public class ParticipantRequest extends BaseRequest<Participant> {
      * @return the updated Participant
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Participant patch(final Participant sourceParticipant) throws ClientException {
+    @Nullable
+    public Participant patch(@Nonnull final Participant sourceParticipant) throws ClientException {
         return send(HttpMethod.PATCH, sourceParticipant);
     }
 
@@ -99,7 +103,7 @@ public class ParticipantRequest extends BaseRequest<Participant> {
      * @param newParticipant the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Participant newParticipant, final ICallback<? super Participant> callback) {
+    public void post(@Nonnull final Participant newParticipant, @Nonnull final ICallback<? super Participant> callback) {
         send(HttpMethod.POST, callback, newParticipant);
     }
 
@@ -110,7 +114,8 @@ public class ParticipantRequest extends BaseRequest<Participant> {
      * @return the created Participant
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Participant post(final Participant newParticipant) throws ClientException {
+    @Nullable
+    public Participant post(@Nonnull final Participant newParticipant) throws ClientException {
         return send(HttpMethod.POST, newParticipant);
     }
 
@@ -120,7 +125,7 @@ public class ParticipantRequest extends BaseRequest<Participant> {
      * @param newParticipant the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Participant newParticipant, final ICallback<? super Participant> callback) {
+    public void put(@Nonnull final Participant newParticipant, @Nonnull final ICallback<? super Participant> callback) {
         send(HttpMethod.PUT, callback, newParticipant);
     }
 
@@ -131,7 +136,8 @@ public class ParticipantRequest extends BaseRequest<Participant> {
      * @return the created Participant
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Participant put(final Participant newParticipant) throws ClientException {
+    @Nullable
+    public Participant put(@Nonnull final Participant newParticipant) throws ClientException {
         return send(HttpMethod.PUT, newParticipant);
     }
 
@@ -141,7 +147,8 @@ public class ParticipantRequest extends BaseRequest<Participant> {
      * @param value the select clause
      * @return the updated request
      */
-     public ParticipantRequest select(final String value) {
+     @Nonnull
+     public ParticipantRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -152,7 +159,8 @@ public class ParticipantRequest extends BaseRequest<Participant> {
      * @param value the expand clause
      * @return the updated request
      */
-     public ParticipantRequest expand(final String value) {
+     @Nonnull
+     public ParticipantRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

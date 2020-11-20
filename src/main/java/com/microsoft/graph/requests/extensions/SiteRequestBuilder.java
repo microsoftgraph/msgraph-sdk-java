@@ -25,6 +25,8 @@ import com.microsoft.graph.requests.extensions.ItemAnalyticsRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -42,7 +44,7 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SiteRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SiteRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -52,7 +54,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @param requestOptions the options for this request
      * @return the SiteRequest instance
      */
-    public SiteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public SiteRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -62,7 +65,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @param requestOptions the options for this request
      * @return the SiteRequest instance
      */
-    public SiteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public SiteRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.SiteRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -73,6 +77,7 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      *
      * @return the UserWithReferenceRequestBuilder instance
      */
+    @Nonnull
     public UserWithReferenceRequestBuilder createdByUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
     }
@@ -82,6 +87,7 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      *
      * @return the UserWithReferenceRequestBuilder instance
      */
+    @Nonnull
     public UserWithReferenceRequestBuilder lastModifiedByUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
     }
@@ -91,6 +97,7 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      *
      * @return the ItemAnalyticsWithReferenceRequestBuilder instance
      */
+    @Nonnull
     public ItemAnalyticsWithReferenceRequestBuilder analytics() {
         return new ItemAnalyticsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("analytics"), getClient(), null);
     }
@@ -99,6 +106,7 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public ColumnDefinitionCollectionRequestBuilder columns() {
         return new ColumnDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("columns"), getClient(), null);
     }
@@ -109,7 +117,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @return the request builder
      * @param id the item identifier
      */
-    public ColumnDefinitionRequestBuilder columns(final String id) {
+    @Nonnull
+    public ColumnDefinitionRequestBuilder columns(@Nonnull final String id) {
         return new ColumnDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("columns") + "/" + id, getClient(), null);
     }
     /**
@@ -117,6 +126,7 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public ContentTypeCollectionRequestBuilder contentTypes() {
         return new ContentTypeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contentTypes"), getClient(), null);
     }
@@ -127,7 +137,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @return the request builder
      * @param id the item identifier
      */
-    public ContentTypeRequestBuilder contentTypes(final String id) {
+    @Nonnull
+    public ContentTypeRequestBuilder contentTypes(@Nonnull final String id) {
         return new ContentTypeRequestBuilder(getRequestUrlWithAdditionalSegment("contentTypes") + "/" + id, getClient(), null);
     }
 
@@ -136,6 +147,7 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      *
      * @return the DriveRequestBuilder instance
      */
+    @Nonnull
     public DriveRequestBuilder drive() {
         return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drive"), getClient(), null);
     }
@@ -144,6 +156,7 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public DriveCollectionRequestBuilder drives() {
         return new DriveCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("drives"), getClient(), null);
     }
@@ -154,7 +167,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @return the request builder
      * @param id the item identifier
      */
-    public DriveRequestBuilder drives(final String id) {
+    @Nonnull
+    public DriveRequestBuilder drives(@Nonnull final String id) {
         return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drives") + "/" + id, getClient(), null);
     }
     /**
@@ -162,6 +176,7 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public BaseItemCollectionRequestBuilder items() {
         return new BaseItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
     }
@@ -172,7 +187,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @return the request builder
      * @param id the item identifier
      */
-    public BaseItemRequestBuilder items(final String id) {
+    @Nonnull
+    public BaseItemRequestBuilder items(@Nonnull final String id) {
         return new BaseItemRequestBuilder(getRequestUrlWithAdditionalSegment("items") + "/" + id, getClient(), null);
     }
     /**
@@ -180,6 +196,7 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public ListCollectionRequestBuilder lists() {
         return new ListCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("lists"), getClient(), null);
     }
@@ -190,7 +207,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @return the request builder
      * @param id the item identifier
      */
-    public ListRequestBuilder lists(final String id) {
+    @Nonnull
+    public ListRequestBuilder lists(@Nonnull final String id) {
         return new ListRequestBuilder(getRequestUrlWithAdditionalSegment("lists") + "/" + id, getClient(), null);
     }
     /**
@@ -198,6 +216,7 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public SiteCollectionRequestBuilder sites() {
         return new SiteCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sites"), getClient(), null);
     }
@@ -208,7 +227,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @return the request builder
      * @param id the item identifier
      */
-    public SiteRequestBuilder sites(final String id) {
+    @Nonnull
+    public SiteRequestBuilder sites(@Nonnull final String id) {
         return new SiteRequestBuilder(getRequestUrlWithAdditionalSegment("sites") + "/" + id, getClient(), null);
     }
 
@@ -217,6 +237,7 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      *
      * @return the OnenoteRequestBuilder instance
      */
+    @Nonnull
     public OnenoteRequestBuilder onenote() {
         return new OnenoteRequestBuilder(getRequestUrlWithAdditionalSegment("onenote"), getClient(), null);
     }
@@ -225,6 +246,7 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * Gets a builder to execute the method
      * @return the request builder collection
      */
+    @Nonnull
     public SiteGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval() {
         return new SiteGetActivitiesByIntervalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getActivitiesByInterval"), getClient(), null);
     }
@@ -236,7 +258,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @param endDateTime the endDateTime
      * @param interval the interval
      */
-    public SiteGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval(final String startDateTime, final String endDateTime, final String interval) {
+    @Nonnull
+    public SiteGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval(@Nullable final String startDateTime, @Nullable final String endDateTime, @Nullable final String interval) {
         return new SiteGetActivitiesByIntervalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getActivitiesByInterval"), getClient(), null, startDateTime, endDateTime, interval);
     }
 
@@ -245,7 +268,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @return the request builder 
      * @param path the path
      */
-    public SiteGetByPathRequestBuilder getByPath(final String path) {
+    @Nonnull
+    public SiteGetByPathRequestBuilder getByPath(@Nullable final String path) {
         return new SiteGetByPathRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getByPath"), getClient(), null, path);
     }
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.MobileApp;
 import com.microsoft.graph.models.extensions.MobileAppCategory;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionWithReferencesPage;
@@ -34,7 +36,7 @@ public class MobileAppCategoryCollectionWithReferencesPage extends BaseCollectio
      * @param response the serialized MobileAppCategoryCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public MobileAppCategoryCollectionWithReferencesPage(final MobileAppCategoryCollectionResponse response, final MobileAppCategoryCollectionWithReferencesRequestBuilder builder) {
+    public MobileAppCategoryCollectionWithReferencesPage(@Nonnull final MobileAppCategoryCollectionResponse response, @Nullable final MobileAppCategoryCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 
@@ -44,7 +46,7 @@ public class MobileAppCategoryCollectionWithReferencesPage extends BaseCollectio
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public MobileAppCategoryCollectionWithReferencesPage(final java.util.List<MobileAppCategory> pageContents, final MobileAppCategoryCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+    public MobileAppCategoryCollectionWithReferencesPage(@Nonnull final java.util.List<MobileAppCategory> pageContents, @Nullable final MobileAppCategoryCollectionWithReferencesRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

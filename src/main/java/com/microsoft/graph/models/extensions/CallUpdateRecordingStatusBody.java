@@ -8,6 +8,8 @@ import com.microsoft.graph.models.generated.RecordingStatus;
 import com.microsoft.graph.models.extensions.UpdateRecordingStatusOperation;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
 import java.util.EnumSet;
@@ -25,6 +27,7 @@ public class CallUpdateRecordingStatusBody {
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
+	@Nullable
     public RecordingStatus status;
 
     /**
@@ -33,6 +36,7 @@ public class CallUpdateRecordingStatusBody {
      */
     @SerializedName(value = "clientContext", alternate = {"ClientContext"})
     @Expose
+	@Nullable
     public String clientContext;
 
 
@@ -51,6 +55,7 @@ public class CallUpdateRecordingStatusBody {
      *
      * @return the raw representation of this class
      */
+    @Nullable
     public JsonObject getRawObject() {
         return rawObject;
     }
@@ -60,6 +65,7 @@ public class CallUpdateRecordingStatusBody {
      *
      * @return the serializer
      */
+    @Nullable
     public ISerializer getSerializer() {
         return serializer;
     }
@@ -70,7 +76,7 @@ public class CallUpdateRecordingStatusBody {
      * @param serializer the serializer
      * @param json the JSON object to set this object to
      */
-    public void setRawObject(final ISerializer serializer, final JsonObject json) {
+    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
         this.serializer = serializer;
         rawObject = json;
 

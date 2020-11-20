@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookTableColumn;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class WorkbookTableColumnCollectionPage extends BaseCollectionPage<Workbo
      * @param response the serialized WorkbookTableColumnCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public WorkbookTableColumnCollectionPage(final WorkbookTableColumnCollectionResponse response, final WorkbookTableColumnCollectionRequestBuilder builder) {
+    public WorkbookTableColumnCollectionPage(@Nonnull final WorkbookTableColumnCollectionResponse response, @Nonnull final WorkbookTableColumnCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class WorkbookTableColumnCollectionPage extends BaseCollectionPage<Workbo
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public WorkbookTableColumnCollectionPage(final java.util.List<WorkbookTableColumn> pageContents, final WorkbookTableColumnCollectionRequestBuilder nextRequestBuilder) {
+    public WorkbookTableColumnCollectionPage(@Nonnull final java.util.List<WorkbookTableColumn> pageContents, @Nullable final WorkbookTableColumnCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

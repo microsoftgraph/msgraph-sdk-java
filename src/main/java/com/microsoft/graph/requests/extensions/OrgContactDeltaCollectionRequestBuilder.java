@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OrgContact;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.OrgContactDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OrgContactDeltaCollectionRequest;
@@ -32,7 +34,7 @@ public class OrgContactDeltaCollectionRequestBuilder extends BaseFunctionCollect
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OrgContactDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OrgContactDeltaCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OrgContactDeltaCollectionRequestBuilder.class, OrgContactDeltaCollectionRequest.class);
     }
     
@@ -42,8 +44,9 @@ public class OrgContactDeltaCollectionRequestBuilder extends BaseFunctionCollect
      * @param requestOptions the options for this request
      * @return the OrgContactDeltaCollectionRequest instance
      */
-     @Override
-    public OrgContactDeltaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Override
+    @Nonnull
+    public OrgContactDeltaCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final OrgContactDeltaCollectionRequest request = super.buildRequest(requestOptions);
 
       for (com.microsoft.graph.options.FunctionOption option : functionOptions) {

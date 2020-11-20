@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CommsOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,10 +31,10 @@ public class CommsOperationRequest extends BaseRequest<CommsOperation> {
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public CommsOperationRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends CommsOperation> responseClass) {
+    public CommsOperationRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends CommsOperation> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -43,7 +45,7 @@ public class CommsOperationRequest extends BaseRequest<CommsOperation> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CommsOperationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CommsOperationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CommsOperation.class);
     }
 
@@ -52,7 +54,7 @@ public class CommsOperationRequest extends BaseRequest<CommsOperation> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super CommsOperation> callback) {
+    public void get(@Nonnull final ICallback<? super CommsOperation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -62,6 +64,7 @@ public class CommsOperationRequest extends BaseRequest<CommsOperation> {
      * @return the CommsOperation from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public CommsOperation get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -71,7 +74,7 @@ public class CommsOperationRequest extends BaseRequest<CommsOperation> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super CommsOperation> callback) {
+    public void delete(@Nonnull final ICallback<? super CommsOperation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +93,7 @@ public class CommsOperationRequest extends BaseRequest<CommsOperation> {
      * @param sourceCommsOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CommsOperation sourceCommsOperation, final ICallback<? super CommsOperation> callback) {
+    public void patch(@Nonnull final CommsOperation sourceCommsOperation, @Nonnull final ICallback<? super CommsOperation> callback) {
         send(HttpMethod.PATCH, callback, sourceCommsOperation);
     }
 
@@ -101,7 +104,8 @@ public class CommsOperationRequest extends BaseRequest<CommsOperation> {
      * @return the updated CommsOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CommsOperation patch(final CommsOperation sourceCommsOperation) throws ClientException {
+    @Nullable
+    public CommsOperation patch(@Nonnull final CommsOperation sourceCommsOperation) throws ClientException {
         return send(HttpMethod.PATCH, sourceCommsOperation);
     }
 
@@ -111,7 +115,7 @@ public class CommsOperationRequest extends BaseRequest<CommsOperation> {
      * @param newCommsOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CommsOperation newCommsOperation, final ICallback<? super CommsOperation> callback) {
+    public void post(@Nonnull final CommsOperation newCommsOperation, @Nonnull final ICallback<? super CommsOperation> callback) {
         send(HttpMethod.POST, callback, newCommsOperation);
     }
 
@@ -122,7 +126,8 @@ public class CommsOperationRequest extends BaseRequest<CommsOperation> {
      * @return the created CommsOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CommsOperation post(final CommsOperation newCommsOperation) throws ClientException {
+    @Nullable
+    public CommsOperation post(@Nonnull final CommsOperation newCommsOperation) throws ClientException {
         return send(HttpMethod.POST, newCommsOperation);
     }
 
@@ -132,7 +137,7 @@ public class CommsOperationRequest extends BaseRequest<CommsOperation> {
      * @param newCommsOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CommsOperation newCommsOperation, final ICallback<? super CommsOperation> callback) {
+    public void put(@Nonnull final CommsOperation newCommsOperation, @Nonnull final ICallback<? super CommsOperation> callback) {
         send(HttpMethod.PUT, callback, newCommsOperation);
     }
 
@@ -143,7 +148,8 @@ public class CommsOperationRequest extends BaseRequest<CommsOperation> {
      * @return the created CommsOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CommsOperation put(final CommsOperation newCommsOperation) throws ClientException {
+    @Nullable
+    public CommsOperation put(@Nonnull final CommsOperation newCommsOperation) throws ClientException {
         return send(HttpMethod.PUT, newCommsOperation);
     }
 
@@ -153,7 +159,8 @@ public class CommsOperationRequest extends BaseRequest<CommsOperation> {
      * @param value the select clause
      * @return the updated request
      */
-     public CommsOperationRequest select(final String value) {
+     @Nonnull
+     public CommsOperationRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -164,7 +171,8 @@ public class CommsOperationRequest extends BaseRequest<CommsOperation> {
      * @param value the expand clause
      * @return the updated request
      */
-     public CommsOperationRequest expand(final String value) {
+     @Nonnull
+     public CommsOperationRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.PlannerTaskCollectionRequestBuild
 import com.microsoft.graph.requests.extensions.PlannerTaskRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -30,7 +32,7 @@ public class PlannerBucketRequest extends BaseRequest<PlannerBucket> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PlannerBucketRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PlannerBucketRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PlannerBucket.class);
     }
 
@@ -39,7 +41,7 @@ public class PlannerBucketRequest extends BaseRequest<PlannerBucket> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PlannerBucket> callback) {
+    public void get(@Nonnull final ICallback<? super PlannerBucket> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -49,6 +51,7 @@ public class PlannerBucketRequest extends BaseRequest<PlannerBucket> {
      * @return the PlannerBucket from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PlannerBucket get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -58,7 +61,7 @@ public class PlannerBucketRequest extends BaseRequest<PlannerBucket> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PlannerBucket> callback) {
+    public void delete(@Nonnull final ICallback<? super PlannerBucket> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +80,7 @@ public class PlannerBucketRequest extends BaseRequest<PlannerBucket> {
      * @param sourcePlannerBucket the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PlannerBucket sourcePlannerBucket, final ICallback<? super PlannerBucket> callback) {
+    public void patch(@Nonnull final PlannerBucket sourcePlannerBucket, @Nonnull final ICallback<? super PlannerBucket> callback) {
         send(HttpMethod.PATCH, callback, sourcePlannerBucket);
     }
 
@@ -88,7 +91,8 @@ public class PlannerBucketRequest extends BaseRequest<PlannerBucket> {
      * @return the updated PlannerBucket
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PlannerBucket patch(final PlannerBucket sourcePlannerBucket) throws ClientException {
+    @Nullable
+    public PlannerBucket patch(@Nonnull final PlannerBucket sourcePlannerBucket) throws ClientException {
         return send(HttpMethod.PATCH, sourcePlannerBucket);
     }
 
@@ -98,7 +102,7 @@ public class PlannerBucketRequest extends BaseRequest<PlannerBucket> {
      * @param newPlannerBucket the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PlannerBucket newPlannerBucket, final ICallback<? super PlannerBucket> callback) {
+    public void post(@Nonnull final PlannerBucket newPlannerBucket, @Nonnull final ICallback<? super PlannerBucket> callback) {
         send(HttpMethod.POST, callback, newPlannerBucket);
     }
 
@@ -109,7 +113,8 @@ public class PlannerBucketRequest extends BaseRequest<PlannerBucket> {
      * @return the created PlannerBucket
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PlannerBucket post(final PlannerBucket newPlannerBucket) throws ClientException {
+    @Nullable
+    public PlannerBucket post(@Nonnull final PlannerBucket newPlannerBucket) throws ClientException {
         return send(HttpMethod.POST, newPlannerBucket);
     }
 
@@ -119,7 +124,7 @@ public class PlannerBucketRequest extends BaseRequest<PlannerBucket> {
      * @param newPlannerBucket the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PlannerBucket newPlannerBucket, final ICallback<? super PlannerBucket> callback) {
+    public void put(@Nonnull final PlannerBucket newPlannerBucket, @Nonnull final ICallback<? super PlannerBucket> callback) {
         send(HttpMethod.PUT, callback, newPlannerBucket);
     }
 
@@ -130,7 +135,8 @@ public class PlannerBucketRequest extends BaseRequest<PlannerBucket> {
      * @return the created PlannerBucket
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PlannerBucket put(final PlannerBucket newPlannerBucket) throws ClientException {
+    @Nullable
+    public PlannerBucket put(@Nonnull final PlannerBucket newPlannerBucket) throws ClientException {
         return send(HttpMethod.PUT, newPlannerBucket);
     }
 
@@ -140,7 +146,8 @@ public class PlannerBucketRequest extends BaseRequest<PlannerBucket> {
      * @param value the select clause
      * @return the updated request
      */
-     public PlannerBucketRequest select(final String value) {
+     @Nonnull
+     public PlannerBucketRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -151,7 +158,8 @@ public class PlannerBucketRequest extends BaseRequest<PlannerBucket> {
      * @param value the expand clause
      * @return the updated request
      */
-     public PlannerBucketRequest expand(final String value) {
+     @Nonnull
+     public PlannerBucketRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

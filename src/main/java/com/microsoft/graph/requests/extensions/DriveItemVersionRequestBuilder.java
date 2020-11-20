@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DriveItemVersion;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -27,7 +29,7 @@ public class DriveItemVersionRequestBuilder extends BaseRequestBuilder<DriveItem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DriveItemVersionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveItemVersionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -37,7 +39,8 @@ public class DriveItemVersionRequestBuilder extends BaseRequestBuilder<DriveItem
      * @param requestOptions the options for this request
      * @return the DriveItemVersionRequest instance
      */
-    public DriveItemVersionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DriveItemVersionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,7 +50,8 @@ public class DriveItemVersionRequestBuilder extends BaseRequestBuilder<DriveItem
      * @param requestOptions the options for this request
      * @return the DriveItemVersionRequest instance
      */
-    public DriveItemVersionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DriveItemVersionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DriveItemVersionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -58,6 +62,7 @@ public class DriveItemVersionRequestBuilder extends BaseRequestBuilder<DriveItem
      *
      * @return the DriveItemVersionContentStreamRequestBuilder instance
      */
+    @Nonnull
     public DriveItemVersionContentStreamRequestBuilder content() {
         return new DriveItemVersionContentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
     }
@@ -66,6 +71,7 @@ public class DriveItemVersionRequestBuilder extends BaseRequestBuilder<DriveItem
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public DriveItemVersionRestoreVersionRequestBuilder restoreVersion() {
         return new DriveItemVersionRestoreVersionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.restoreVersion"), getClient(), null);
     }

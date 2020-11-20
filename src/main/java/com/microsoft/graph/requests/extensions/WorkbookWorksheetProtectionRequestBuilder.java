@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.WorkbookWorksheetProtection;
 import com.microsoft.graph.models.extensions.WorkbookWorksheetProtectionOptions;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -28,7 +30,7 @@ public class WorkbookWorksheetProtectionRequestBuilder extends BaseRequestBuilde
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookWorksheetProtectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookWorksheetProtectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,7 +40,8 @@ public class WorkbookWorksheetProtectionRequestBuilder extends BaseRequestBuilde
      * @param requestOptions the options for this request
      * @return the WorkbookWorksheetProtectionRequest instance
      */
-    public WorkbookWorksheetProtectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WorkbookWorksheetProtectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,7 +51,8 @@ public class WorkbookWorksheetProtectionRequestBuilder extends BaseRequestBuilde
      * @param requestOptions the options for this request
      * @return the WorkbookWorksheetProtectionRequest instance
      */
-    public WorkbookWorksheetProtectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WorkbookWorksheetProtectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookWorksheetProtectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,7 +63,8 @@ public class WorkbookWorksheetProtectionRequestBuilder extends BaseRequestBuilde
      * @return the request builder 
      * @param options the options
      */
-    public WorkbookWorksheetProtectionProtectRequestBuilder protect(final WorkbookWorksheetProtectionOptions options) {
+    @Nonnull
+    public WorkbookWorksheetProtectionProtectRequestBuilder protect(@Nullable final WorkbookWorksheetProtectionOptions options) {
         return new WorkbookWorksheetProtectionProtectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.protect"), getClient(), null, options);
     }
 
@@ -67,6 +72,7 @@ public class WorkbookWorksheetProtectionRequestBuilder extends BaseRequestBuilde
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public WorkbookWorksheetProtectionUnprotectRequestBuilder unprotect() {
         return new WorkbookWorksheetProtectionUnprotectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unprotect"), getClient(), null);
     }

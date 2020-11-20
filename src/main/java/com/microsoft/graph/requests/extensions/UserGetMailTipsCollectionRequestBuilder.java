@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.MailTips;
 import java.util.EnumSet;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.UserGetMailTipsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserGetMailTipsCollectionRequest;
@@ -36,7 +38,7 @@ public class UserGetMailTipsCollectionRequestBuilder extends BaseActionCollectio
      * @param emailAddresses the emailAddresses
      * @param mailTipsOptions the mailTipsOptions
      */
-    public UserGetMailTipsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<String> emailAddresses, final EnumSet<MailTipsType> mailTipsOptions) {
+    public UserGetMailTipsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final java.util.List<String> emailAddresses, @Nullable final EnumSet<MailTipsType> mailTipsOptions) {
         super(requestUrl, client, requestOptions, UserGetMailTipsCollectionRequestBuilder.class, UserGetMailTipsCollectionRequest.class);
   	 if(emailAddresses!=null){
 			bodyParams.put("emailAddresses", emailAddresses);
@@ -52,8 +54,9 @@ public class UserGetMailTipsCollectionRequestBuilder extends BaseActionCollectio
      * @param requestOptions the options for this request
      * @return the UserGetMailTipsCollectionRequest instance
      */
-     @Override
-    public UserGetMailTipsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Override
+    @Nonnull
+    public UserGetMailTipsCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final UserGetMailTipsCollectionRequest request = super.buildRequest(requestOptions);
 
         if (hasParameter("emailAddresses")) {

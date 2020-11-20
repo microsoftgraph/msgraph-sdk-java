@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.ExtensionProperty;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class DirectoryObjectCollectionRequest extends BaseCollectionRequest<Dire
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DirectoryObjectCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryObjectCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DirectoryObjectCollectionResponse.class, DirectoryObjectCollectionPage.class, DirectoryObjectCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class DirectoryObjectCollectionRequest extends BaseCollectionRequest<Dire
      * @param newDirectoryObject the DirectoryObject to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final DirectoryObject newDirectoryObject, final ICallback<? super DirectoryObject> callback) {
+    public void post(@Nonnull final DirectoryObject newDirectoryObject, @Nonnull final ICallback<? super DirectoryObject> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DirectoryObjectRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class DirectoryObjectCollectionRequest extends BaseCollectionRequest<Dire
      * @param newDirectoryObject the DirectoryObject to create
      * @return the newly created object
      */
-    public DirectoryObject post(final DirectoryObject newDirectoryObject) throws ClientException {
+    @Nonnull
+    public DirectoryObject post(@Nonnull final DirectoryObject newDirectoryObject) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DirectoryObjectRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class DirectoryObjectCollectionRequest extends BaseCollectionRequest<Dire
      * @param value the expand clause
      * @return the updated request
      */
-    public DirectoryObjectCollectionRequest expand(final String value) {
+    @Nonnull
+    public DirectoryObjectCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class DirectoryObjectCollectionRequest extends BaseCollectionRequest<Dire
      * @param value the filter clause
      * @return the updated request
      */
-    public DirectoryObjectCollectionRequest filter(final String value) {
+    @Nonnull
+    public DirectoryObjectCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class DirectoryObjectCollectionRequest extends BaseCollectionRequest<Dire
      * @param value the order by clause
      * @return the updated request
      */
-    public DirectoryObjectCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DirectoryObjectCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class DirectoryObjectCollectionRequest extends BaseCollectionRequest<Dire
      * @param value the select clause
      * @return the updated request
      */
-    public DirectoryObjectCollectionRequest select(final String value) {
+    @Nonnull
+    public DirectoryObjectCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class DirectoryObjectCollectionRequest extends BaseCollectionRequest<Dire
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DirectoryObjectCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class DirectoryObjectCollectionRequest extends BaseCollectionRequest<Dire
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public DirectoryObjectCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class DirectoryObjectCollectionRequest extends BaseCollectionRequest<Dire
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public DirectoryObjectCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public DirectoryObjectCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

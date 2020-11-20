@@ -32,6 +32,9 @@ import java.util.List;
 import java.util.Arrays;
 import java.lang.reflect.InvocationTargetException;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 /**
  * A request builder
  */
@@ -54,10 +57,10 @@ public abstract class BaseCollectionWithReferencesRequestBuilder<T, T2 extends B
      * @param referenceRequestBuilderClass the class for the request builder
      * @param collectionWithReferencesRequestClass the class for the collection request
      */
-    public BaseCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-                                                    final Class<T3> referenceRequestBuilderClass,
-                                                    final Class<T7> collectionWithReferencesRequestClass,
-                                                    final Class<T8> collectionWithReferenceRequestBuilderClass) {
+    public BaseCollectionWithReferencesRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+                                                    @Nonnull final Class<T3> referenceRequestBuilderClass,
+                                                    @Nonnull final Class<T7> collectionWithReferencesRequestClass,
+                                                    @Nonnull final Class<T8> collectionWithReferenceRequestBuilderClass) {
         super(requestUrl, client, requestOptions, referenceRequestBuilderClass, collectionWithReferencesRequestClass);
         this.refRequestBuilderClass = referenceRequestBuilderClass;
         this.collRequestClass = collectionWithReferencesRequestClass;
@@ -69,6 +72,7 @@ public abstract class BaseCollectionWithReferencesRequestBuilder<T, T2 extends B
      * 
      * @return a request builder to get the references to this collection
      */
+    @Nullable
     public T8 references() {
         try {
             return this.collWithRefRequestBuilderClass

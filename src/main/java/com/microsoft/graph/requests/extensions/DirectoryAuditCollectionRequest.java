@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.AuditLogRoot;
 import com.microsoft.graph.models.extensions.DirectoryAudit;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<Direc
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DirectoryAuditCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryAuditCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DirectoryAuditCollectionResponse.class, DirectoryAuditCollectionPage.class, DirectoryAuditCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<Direc
      * @param newDirectoryAudit the DirectoryAudit to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final DirectoryAudit newDirectoryAudit, final ICallback<? super DirectoryAudit> callback) {
+    public void post(@Nonnull final DirectoryAudit newDirectoryAudit, @Nonnull final ICallback<? super DirectoryAudit> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DirectoryAuditRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<Direc
      * @param newDirectoryAudit the DirectoryAudit to create
      * @return the newly created object
      */
-    public DirectoryAudit post(final DirectoryAudit newDirectoryAudit) throws ClientException {
+    @Nonnull
+    public DirectoryAudit post(@Nonnull final DirectoryAudit newDirectoryAudit) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DirectoryAuditRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<Direc
      * @param value the expand clause
      * @return the updated request
      */
-    public DirectoryAuditCollectionRequest expand(final String value) {
+    @Nonnull
+    public DirectoryAuditCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<Direc
      * @param value the filter clause
      * @return the updated request
      */
-    public DirectoryAuditCollectionRequest filter(final String value) {
+    @Nonnull
+    public DirectoryAuditCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<Direc
      * @param value the order by clause
      * @return the updated request
      */
-    public DirectoryAuditCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DirectoryAuditCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<Direc
      * @param value the select clause
      * @return the updated request
      */
-    public DirectoryAuditCollectionRequest select(final String value) {
+    @Nonnull
+    public DirectoryAuditCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<Direc
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DirectoryAuditCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<Direc
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public DirectoryAuditCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<Direc
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public DirectoryAuditCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public DirectoryAuditCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

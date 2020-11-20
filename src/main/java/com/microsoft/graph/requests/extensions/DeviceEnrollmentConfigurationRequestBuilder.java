@@ -13,6 +13,8 @@ import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignment
 import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -30,7 +32,7 @@ public class DeviceEnrollmentConfigurationRequestBuilder extends BaseRequestBuil
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceEnrollmentConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceEnrollmentConfigurationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,7 +42,8 @@ public class DeviceEnrollmentConfigurationRequestBuilder extends BaseRequestBuil
      * @param requestOptions the options for this request
      * @return the DeviceEnrollmentConfigurationRequest instance
      */
-    public DeviceEnrollmentConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DeviceEnrollmentConfigurationRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,7 +53,8 @@ public class DeviceEnrollmentConfigurationRequestBuilder extends BaseRequestBuil
      * @param requestOptions the options for this request
      * @return the DeviceEnrollmentConfigurationRequest instance
      */
-    public DeviceEnrollmentConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DeviceEnrollmentConfigurationRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceEnrollmentConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -60,6 +64,7 @@ public class DeviceEnrollmentConfigurationRequestBuilder extends BaseRequestBuil
      *
      * @return the collection request builder
      */
+    @Nonnull
     public EnrollmentConfigurationAssignmentCollectionRequestBuilder assignments() {
         return new EnrollmentConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
@@ -70,7 +75,8 @@ public class DeviceEnrollmentConfigurationRequestBuilder extends BaseRequestBuil
      * @return the request builder
      * @param id the item identifier
      */
-    public EnrollmentConfigurationAssignmentRequestBuilder assignments(final String id) {
+    @Nonnull
+    public EnrollmentConfigurationAssignmentRequestBuilder assignments(@Nonnull final String id) {
         return new EnrollmentConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 
@@ -79,7 +85,8 @@ public class DeviceEnrollmentConfigurationRequestBuilder extends BaseRequestBuil
      * @return the request builder 
      * @param enrollmentConfigurationAssignments the enrollmentConfigurationAssignments
      */
-    public DeviceEnrollmentConfigurationAssignRequestBuilder assign(final java.util.List<EnrollmentConfigurationAssignment> enrollmentConfigurationAssignments) {
+    @Nonnull
+    public DeviceEnrollmentConfigurationAssignRequestBuilder assign(@Nullable final java.util.List<EnrollmentConfigurationAssignment> enrollmentConfigurationAssignments) {
         return new DeviceEnrollmentConfigurationAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, enrollmentConfigurationAssignments);
     }
 
@@ -88,7 +95,8 @@ public class DeviceEnrollmentConfigurationRequestBuilder extends BaseRequestBuil
      * @return the request builder 
      * @param priority the priority
      */
-    public DeviceEnrollmentConfigurationSetPriorityRequestBuilder setPriority(final Integer priority) {
+    @Nonnull
+    public DeviceEnrollmentConfigurationSetPriorityRequestBuilder setPriority(@Nullable final Integer priority) {
         return new DeviceEnrollmentConfigurationSetPriorityRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setPriority"), getClient(), null, priority);
     }
 }

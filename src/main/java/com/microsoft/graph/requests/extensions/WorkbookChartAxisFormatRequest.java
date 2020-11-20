@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.WorkbookChartFontRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartLineFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -30,7 +32,7 @@ public class WorkbookChartAxisFormatRequest extends BaseRequest<WorkbookChartAxi
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartAxisFormatRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartAxisFormatRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChartAxisFormat.class);
     }
 
@@ -39,7 +41,7 @@ public class WorkbookChartAxisFormatRequest extends BaseRequest<WorkbookChartAxi
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookChartAxisFormat> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookChartAxisFormat> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -49,6 +51,7 @@ public class WorkbookChartAxisFormatRequest extends BaseRequest<WorkbookChartAxi
      * @return the WorkbookChartAxisFormat from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WorkbookChartAxisFormat get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -58,7 +61,7 @@ public class WorkbookChartAxisFormatRequest extends BaseRequest<WorkbookChartAxi
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookChartAxisFormat> callback) {
+    public void delete(@Nonnull final ICallback<? super WorkbookChartAxisFormat> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +80,7 @@ public class WorkbookChartAxisFormatRequest extends BaseRequest<WorkbookChartAxi
      * @param sourceWorkbookChartAxisFormat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookChartAxisFormat sourceWorkbookChartAxisFormat, final ICallback<? super WorkbookChartAxisFormat> callback) {
+    public void patch(@Nonnull final WorkbookChartAxisFormat sourceWorkbookChartAxisFormat, @Nonnull final ICallback<? super WorkbookChartAxisFormat> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartAxisFormat);
     }
 
@@ -88,7 +91,8 @@ public class WorkbookChartAxisFormatRequest extends BaseRequest<WorkbookChartAxi
      * @return the updated WorkbookChartAxisFormat
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartAxisFormat patch(final WorkbookChartAxisFormat sourceWorkbookChartAxisFormat) throws ClientException {
+    @Nullable
+    public WorkbookChartAxisFormat patch(@Nonnull final WorkbookChartAxisFormat sourceWorkbookChartAxisFormat) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookChartAxisFormat);
     }
 
@@ -98,7 +102,7 @@ public class WorkbookChartAxisFormatRequest extends BaseRequest<WorkbookChartAxi
      * @param newWorkbookChartAxisFormat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookChartAxisFormat newWorkbookChartAxisFormat, final ICallback<? super WorkbookChartAxisFormat> callback) {
+    public void post(@Nonnull final WorkbookChartAxisFormat newWorkbookChartAxisFormat, @Nonnull final ICallback<? super WorkbookChartAxisFormat> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartAxisFormat);
     }
 
@@ -109,7 +113,8 @@ public class WorkbookChartAxisFormatRequest extends BaseRequest<WorkbookChartAxi
      * @return the created WorkbookChartAxisFormat
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartAxisFormat post(final WorkbookChartAxisFormat newWorkbookChartAxisFormat) throws ClientException {
+    @Nullable
+    public WorkbookChartAxisFormat post(@Nonnull final WorkbookChartAxisFormat newWorkbookChartAxisFormat) throws ClientException {
         return send(HttpMethod.POST, newWorkbookChartAxisFormat);
     }
 
@@ -119,7 +124,7 @@ public class WorkbookChartAxisFormatRequest extends BaseRequest<WorkbookChartAxi
      * @param newWorkbookChartAxisFormat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookChartAxisFormat newWorkbookChartAxisFormat, final ICallback<? super WorkbookChartAxisFormat> callback) {
+    public void put(@Nonnull final WorkbookChartAxisFormat newWorkbookChartAxisFormat, @Nonnull final ICallback<? super WorkbookChartAxisFormat> callback) {
         send(HttpMethod.PUT, callback, newWorkbookChartAxisFormat);
     }
 
@@ -130,7 +135,8 @@ public class WorkbookChartAxisFormatRequest extends BaseRequest<WorkbookChartAxi
      * @return the created WorkbookChartAxisFormat
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartAxisFormat put(final WorkbookChartAxisFormat newWorkbookChartAxisFormat) throws ClientException {
+    @Nullable
+    public WorkbookChartAxisFormat put(@Nonnull final WorkbookChartAxisFormat newWorkbookChartAxisFormat) throws ClientException {
         return send(HttpMethod.PUT, newWorkbookChartAxisFormat);
     }
 
@@ -140,7 +146,8 @@ public class WorkbookChartAxisFormatRequest extends BaseRequest<WorkbookChartAxi
      * @param value the select clause
      * @return the updated request
      */
-     public WorkbookChartAxisFormatRequest select(final String value) {
+     @Nonnull
+     public WorkbookChartAxisFormatRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -151,7 +158,8 @@ public class WorkbookChartAxisFormatRequest extends BaseRequest<WorkbookChartAxi
      * @param value the expand clause
      * @return the updated request
      */
-     public WorkbookChartAxisFormatRequest expand(final String value) {
+     @Nonnull
+     public WorkbookChartAxisFormatRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

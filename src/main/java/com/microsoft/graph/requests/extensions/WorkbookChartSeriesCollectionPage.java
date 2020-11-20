@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookChartSeries;
 import com.microsoft.graph.requests.extensions.WorkbookChartSeriesCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.WorkbookChartSeriesCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class WorkbookChartSeriesCollectionPage extends BaseCollectionPage<Workbo
      * @param response the serialized WorkbookChartSeriesCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public WorkbookChartSeriesCollectionPage(final WorkbookChartSeriesCollectionResponse response, final WorkbookChartSeriesCollectionRequestBuilder builder) {
+    public WorkbookChartSeriesCollectionPage(@Nonnull final WorkbookChartSeriesCollectionResponse response, @Nonnull final WorkbookChartSeriesCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class WorkbookChartSeriesCollectionPage extends BaseCollectionPage<Workbo
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public WorkbookChartSeriesCollectionPage(final java.util.List<WorkbookChartSeries> pageContents, final WorkbookChartSeriesCollectionRequestBuilder nextRequestBuilder) {
+    public WorkbookChartSeriesCollectionPage(@Nonnull final java.util.List<WorkbookChartSeries> pageContents, @Nullable final WorkbookChartSeriesCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

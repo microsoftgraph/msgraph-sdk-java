@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.EducationSchool;
 import com.microsoft.graph.models.extensions.EducationUser;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.BaseCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
@@ -29,7 +31,7 @@ public class EducationUserCollectionWithReferencesRequestBuilder extends BaseCol
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationUserCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationUserCollectionWithReferencesRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EducationUserReferenceRequestBuilder.class, EducationUserCollectionReferenceRequest.class, EducationUserCollectionReferenceRequestBuilder.class);
     }
 }

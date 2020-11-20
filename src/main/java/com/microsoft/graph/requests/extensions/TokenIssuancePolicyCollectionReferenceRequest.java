@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyWithReferenceRequest;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyReferenceRequestBuilder;
@@ -38,7 +40,7 @@ public class TokenIssuancePolicyCollectionReferenceRequest extends BaseCollectio
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TokenIssuancePolicyCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TokenIssuancePolicyCollectionReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TokenIssuancePolicyCollectionResponse.class, TokenIssuancePolicyCollectionWithReferencesPage.class, TokenIssuancePolicyCollectionWithReferencesRequestBuilder.class);
     }
 
@@ -47,7 +49,7 @@ public class TokenIssuancePolicyCollectionReferenceRequest extends BaseCollectio
      * @param newTokenIssuancePolicy the TokenIssuancePolicy to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final TokenIssuancePolicy newTokenIssuancePolicy, final ICallback<? super TokenIssuancePolicy> callback) {
+    public void post(@Nonnull final TokenIssuancePolicy newTokenIssuancePolicy, @Nonnull final ICallback<? super TokenIssuancePolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/policies/tokenIssuancePolicies/" + newTokenIssuancePolicy.id);
         new TokenIssuancePolicyWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -60,7 +62,8 @@ public class TokenIssuancePolicyCollectionReferenceRequest extends BaseCollectio
      * @param newTokenIssuancePolicy the TokenIssuancePolicy to create
      * @return the newly created object
      */
-    public TokenIssuancePolicy post(final TokenIssuancePolicy newTokenIssuancePolicy) throws ClientException {
+    @Nonnull
+    public TokenIssuancePolicy post(@Nonnull final TokenIssuancePolicy newTokenIssuancePolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/policies/tokenIssuancePolicies/" + newTokenIssuancePolicy.id);
         return new TokenIssuancePolicyWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
@@ -73,7 +76,8 @@ public class TokenIssuancePolicyCollectionReferenceRequest extends BaseCollectio
      * @param value the expand clause
      * @return the updated request
      */
-    public TokenIssuancePolicyCollectionReferenceRequest expand(final String value) {
+    @Nonnull
+    public TokenIssuancePolicyCollectionReferenceRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -84,7 +88,8 @@ public class TokenIssuancePolicyCollectionReferenceRequest extends BaseCollectio
      * @param value the filter clause
      * @return the updated request
      */
-    public TokenIssuancePolicyCollectionReferenceRequest filter(final String value) {
+    @Nonnull
+    public TokenIssuancePolicyCollectionReferenceRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -95,7 +100,8 @@ public class TokenIssuancePolicyCollectionReferenceRequest extends BaseCollectio
      * @param value the sort clause
      * @return the updated request
      */
-    public TokenIssuancePolicyCollectionReferenceRequest orderBy(final String value) {
+    @Nonnull
+    public TokenIssuancePolicyCollectionReferenceRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -106,7 +112,8 @@ public class TokenIssuancePolicyCollectionReferenceRequest extends BaseCollectio
      * @param value the select clause
      * @return the updated request
      */
-    public TokenIssuancePolicyCollectionReferenceRequest select(final String value) {
+    @Nonnull
+    public TokenIssuancePolicyCollectionReferenceRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -117,6 +124,7 @@ public class TokenIssuancePolicyCollectionReferenceRequest extends BaseCollectio
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public TokenIssuancePolicyCollectionReferenceRequest top(final int value) {
         addTopOption(value);
         return this;

@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetMemberGroupsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetMemberGroupsCollectionResponse;
@@ -38,7 +40,7 @@ public class DirectoryObjectGetMemberGroupsCollectionRequest extends BaseCollect
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DirectoryObjectGetMemberGroupsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryObjectGetMemberGroupsCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DirectoryObjectGetMemberGroupsCollectionResponse.class, DirectoryObjectGetMemberGroupsCollectionPage.class, DirectoryObjectGetMemberGroupsCollectionRequestBuilder.class);
         body = new DirectoryObjectGetMemberGroupsBody();
     }
@@ -48,7 +50,7 @@ public class DirectoryObjectGetMemberGroupsCollectionRequest extends BaseCollect
      * Invokes the method and calls the callback with the resulting collection of objects
      * @param callback a callback to be invoked with the resulting collection of objects
      */
-    public void post(final ICallback<? super DirectoryObjectGetMemberGroupsCollectionPage> callback) {
+    public void post(@Nonnull final ICallback<? super DirectoryObjectGetMemberGroupsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -66,6 +68,7 @@ public class DirectoryObjectGetMemberGroupsCollectionRequest extends BaseCollect
      * Invokes the method and returns the resulting collection of objects
      * @return a collection of objects returned by the method
      */
+    @Nullable
     public DirectoryObjectGetMemberGroupsCollectionPage post() throws ClientException {
         final DirectoryObjectGetMemberGroupsCollectionResponse response = post(body);
         return buildFromResponse(response);
@@ -78,7 +81,8 @@ public class DirectoryObjectGetMemberGroupsCollectionRequest extends BaseCollect
      * @param value the select clause
      * @return the updated request
      */
-    public DirectoryObjectGetMemberGroupsCollectionRequest select(final String value) {
+    @Nonnull
+    public DirectoryObjectGetMemberGroupsCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -89,6 +93,7 @@ public class DirectoryObjectGetMemberGroupsCollectionRequest extends BaseCollect
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DirectoryObjectGetMemberGroupsCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -100,7 +105,8 @@ public class DirectoryObjectGetMemberGroupsCollectionRequest extends BaseCollect
      * @param value the expand clause
      * @return the updated request
      */
-    public DirectoryObjectGetMemberGroupsCollectionRequest expand(final String value) {
+    @Nonnull
+    public DirectoryObjectGetMemberGroupsCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -111,7 +117,8 @@ public class DirectoryObjectGetMemberGroupsCollectionRequest extends BaseCollect
      * @param value the filter clause
      * @return the updated request
      */
-    public DirectoryObjectGetMemberGroupsCollectionRequest filter(final String value) {
+    @Nonnull
+    public DirectoryObjectGetMemberGroupsCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -122,7 +129,8 @@ public class DirectoryObjectGetMemberGroupsCollectionRequest extends BaseCollect
      * @param value the order by clause
      * @return the updated request
      */
-    public DirectoryObjectGetMemberGroupsCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DirectoryObjectGetMemberGroupsCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }

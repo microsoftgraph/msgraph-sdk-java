@@ -7,6 +7,8 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.models.extensions.Permission;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
 import java.util.EnumSet;
@@ -24,6 +26,7 @@ public class DriveItemCreateLinkBody {
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose
+	@Nullable
     public String type;
 
     /**
@@ -32,6 +35,7 @@ public class DriveItemCreateLinkBody {
      */
     @SerializedName(value = "scope", alternate = {"Scope"})
     @Expose
+	@Nullable
     public String scope;
 
     /**
@@ -40,6 +44,7 @@ public class DriveItemCreateLinkBody {
      */
     @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
+	@Nullable
     public java.util.Calendar expirationDateTime;
 
     /**
@@ -48,6 +53,7 @@ public class DriveItemCreateLinkBody {
      */
     @SerializedName(value = "password", alternate = {"Password"})
     @Expose
+	@Nullable
     public String password;
 
     /**
@@ -56,6 +62,7 @@ public class DriveItemCreateLinkBody {
      */
     @SerializedName(value = "message", alternate = {"Message"})
     @Expose
+	@Nullable
     public String message;
 
 
@@ -74,6 +81,7 @@ public class DriveItemCreateLinkBody {
      *
      * @return the raw representation of this class
      */
+    @Nullable
     public JsonObject getRawObject() {
         return rawObject;
     }
@@ -83,6 +91,7 @@ public class DriveItemCreateLinkBody {
      *
      * @return the serializer
      */
+    @Nullable
     public ISerializer getSerializer() {
         return serializer;
     }
@@ -93,7 +102,7 @@ public class DriveItemCreateLinkBody {
      * @param serializer the serializer
      * @param json the JSON object to set this object to
      */
-    public void setRawObject(final ISerializer serializer, final JsonObject json) {
+    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
         this.serializer = serializer;
         rawObject = json;
 

@@ -7,6 +7,8 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.models.extensions.WorkbookSortField;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
 import java.util.EnumSet;
@@ -24,6 +26,7 @@ public class WorkbookRangeSortApplyBody {
      */
     @SerializedName(value = "fields", alternate = {"Fields"})
     @Expose
+	@Nullable
     public java.util.List<WorkbookSortField> fields;
 
     /**
@@ -32,6 +35,7 @@ public class WorkbookRangeSortApplyBody {
      */
     @SerializedName(value = "matchCase", alternate = {"MatchCase"})
     @Expose
+	@Nullable
     public Boolean matchCase;
 
     /**
@@ -40,6 +44,7 @@ public class WorkbookRangeSortApplyBody {
      */
     @SerializedName(value = "hasHeaders", alternate = {"HasHeaders"})
     @Expose
+	@Nullable
     public Boolean hasHeaders;
 
     /**
@@ -48,6 +53,7 @@ public class WorkbookRangeSortApplyBody {
      */
     @SerializedName(value = "orientation", alternate = {"Orientation"})
     @Expose
+	@Nullable
     public String orientation;
 
     /**
@@ -56,6 +62,7 @@ public class WorkbookRangeSortApplyBody {
      */
     @SerializedName(value = "method", alternate = {"Method"})
     @Expose
+	@Nullable
     public String method;
 
 
@@ -74,6 +81,7 @@ public class WorkbookRangeSortApplyBody {
      *
      * @return the raw representation of this class
      */
+    @Nullable
     public JsonObject getRawObject() {
         return rawObject;
     }
@@ -83,6 +91,7 @@ public class WorkbookRangeSortApplyBody {
      *
      * @return the serializer
      */
+    @Nullable
     public ISerializer getSerializer() {
         return serializer;
     }
@@ -93,7 +102,7 @@ public class WorkbookRangeSortApplyBody {
      * @param serializer the serializer
      * @param json the JSON object to set this object to
      */
-    public void setRawObject(final ISerializer serializer, final JsonObject json) {
+    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
         this.serializer = serializer;
         rawObject = json;
 

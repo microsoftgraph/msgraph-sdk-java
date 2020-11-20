@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceAppManagement;
 import com.microsoft.graph.models.extensions.MdmWindowsInformationProtectionPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyRequestBuilder;
@@ -32,7 +34,7 @@ public class MdmWindowsInformationProtectionPolicyCollectionRequestBuilder exten
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MdmWindowsInformationProtectionPolicyCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MdmWindowsInformationProtectionPolicyCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MdmWindowsInformationProtectionPolicyRequestBuilder.class, MdmWindowsInformationProtectionPolicyCollectionRequest.class);
     }
 

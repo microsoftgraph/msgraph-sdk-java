@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceComplianceDeviceStatus;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class DeviceComplianceDeviceStatusRequest extends BaseRequest<DeviceCompl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceComplianceDeviceStatusRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceComplianceDeviceStatusRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceComplianceDeviceStatus.class);
     }
 
@@ -37,7 +39,7 @@ public class DeviceComplianceDeviceStatusRequest extends BaseRequest<DeviceCompl
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceComplianceDeviceStatus> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceComplianceDeviceStatus> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class DeviceComplianceDeviceStatusRequest extends BaseRequest<DeviceCompl
      * @return the DeviceComplianceDeviceStatus from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceComplianceDeviceStatus get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class DeviceComplianceDeviceStatusRequest extends BaseRequest<DeviceCompl
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceComplianceDeviceStatus> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceComplianceDeviceStatus> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class DeviceComplianceDeviceStatusRequest extends BaseRequest<DeviceCompl
      * @param sourceDeviceComplianceDeviceStatus the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceComplianceDeviceStatus sourceDeviceComplianceDeviceStatus, final ICallback<? super DeviceComplianceDeviceStatus> callback) {
+    public void patch(@Nonnull final DeviceComplianceDeviceStatus sourceDeviceComplianceDeviceStatus, @Nonnull final ICallback<? super DeviceComplianceDeviceStatus> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceComplianceDeviceStatus);
     }
 
@@ -86,7 +89,8 @@ public class DeviceComplianceDeviceStatusRequest extends BaseRequest<DeviceCompl
      * @return the updated DeviceComplianceDeviceStatus
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceComplianceDeviceStatus patch(final DeviceComplianceDeviceStatus sourceDeviceComplianceDeviceStatus) throws ClientException {
+    @Nullable
+    public DeviceComplianceDeviceStatus patch(@Nonnull final DeviceComplianceDeviceStatus sourceDeviceComplianceDeviceStatus) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceComplianceDeviceStatus);
     }
 
@@ -96,7 +100,7 @@ public class DeviceComplianceDeviceStatusRequest extends BaseRequest<DeviceCompl
      * @param newDeviceComplianceDeviceStatus the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceComplianceDeviceStatus newDeviceComplianceDeviceStatus, final ICallback<? super DeviceComplianceDeviceStatus> callback) {
+    public void post(@Nonnull final DeviceComplianceDeviceStatus newDeviceComplianceDeviceStatus, @Nonnull final ICallback<? super DeviceComplianceDeviceStatus> callback) {
         send(HttpMethod.POST, callback, newDeviceComplianceDeviceStatus);
     }
 
@@ -107,7 +111,8 @@ public class DeviceComplianceDeviceStatusRequest extends BaseRequest<DeviceCompl
      * @return the created DeviceComplianceDeviceStatus
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceComplianceDeviceStatus post(final DeviceComplianceDeviceStatus newDeviceComplianceDeviceStatus) throws ClientException {
+    @Nullable
+    public DeviceComplianceDeviceStatus post(@Nonnull final DeviceComplianceDeviceStatus newDeviceComplianceDeviceStatus) throws ClientException {
         return send(HttpMethod.POST, newDeviceComplianceDeviceStatus);
     }
 
@@ -117,7 +122,7 @@ public class DeviceComplianceDeviceStatusRequest extends BaseRequest<DeviceCompl
      * @param newDeviceComplianceDeviceStatus the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceComplianceDeviceStatus newDeviceComplianceDeviceStatus, final ICallback<? super DeviceComplianceDeviceStatus> callback) {
+    public void put(@Nonnull final DeviceComplianceDeviceStatus newDeviceComplianceDeviceStatus, @Nonnull final ICallback<? super DeviceComplianceDeviceStatus> callback) {
         send(HttpMethod.PUT, callback, newDeviceComplianceDeviceStatus);
     }
 
@@ -128,7 +133,8 @@ public class DeviceComplianceDeviceStatusRequest extends BaseRequest<DeviceCompl
      * @return the created DeviceComplianceDeviceStatus
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceComplianceDeviceStatus put(final DeviceComplianceDeviceStatus newDeviceComplianceDeviceStatus) throws ClientException {
+    @Nullable
+    public DeviceComplianceDeviceStatus put(@Nonnull final DeviceComplianceDeviceStatus newDeviceComplianceDeviceStatus) throws ClientException {
         return send(HttpMethod.PUT, newDeviceComplianceDeviceStatus);
     }
 
@@ -138,7 +144,8 @@ public class DeviceComplianceDeviceStatusRequest extends BaseRequest<DeviceCompl
      * @param value the select clause
      * @return the updated request
      */
-     public DeviceComplianceDeviceStatusRequest select(final String value) {
+     @Nonnull
+     public DeviceComplianceDeviceStatusRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class DeviceComplianceDeviceStatusRequest extends BaseRequest<DeviceCompl
      * @param value the expand clause
      * @return the updated request
      */
-     public DeviceComplianceDeviceStatusRequest expand(final String value) {
+     @Nonnull
+     public DeviceComplianceDeviceStatusRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

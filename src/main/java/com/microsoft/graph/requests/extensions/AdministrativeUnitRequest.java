@@ -16,6 +16,8 @@ import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder
 import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -34,7 +36,7 @@ public class AdministrativeUnitRequest extends BaseRequest<AdministrativeUnit> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AdministrativeUnitRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AdministrativeUnitRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AdministrativeUnit.class);
     }
 
@@ -43,7 +45,7 @@ public class AdministrativeUnitRequest extends BaseRequest<AdministrativeUnit> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AdministrativeUnit> callback) {
+    public void get(@Nonnull final ICallback<? super AdministrativeUnit> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -53,6 +55,7 @@ public class AdministrativeUnitRequest extends BaseRequest<AdministrativeUnit> {
      * @return the AdministrativeUnit from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AdministrativeUnit get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -62,7 +65,7 @@ public class AdministrativeUnitRequest extends BaseRequest<AdministrativeUnit> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AdministrativeUnit> callback) {
+    public void delete(@Nonnull final ICallback<? super AdministrativeUnit> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -81,7 +84,7 @@ public class AdministrativeUnitRequest extends BaseRequest<AdministrativeUnit> {
      * @param sourceAdministrativeUnit the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AdministrativeUnit sourceAdministrativeUnit, final ICallback<? super AdministrativeUnit> callback) {
+    public void patch(@Nonnull final AdministrativeUnit sourceAdministrativeUnit, @Nonnull final ICallback<? super AdministrativeUnit> callback) {
         send(HttpMethod.PATCH, callback, sourceAdministrativeUnit);
     }
 
@@ -92,7 +95,8 @@ public class AdministrativeUnitRequest extends BaseRequest<AdministrativeUnit> {
      * @return the updated AdministrativeUnit
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AdministrativeUnit patch(final AdministrativeUnit sourceAdministrativeUnit) throws ClientException {
+    @Nullable
+    public AdministrativeUnit patch(@Nonnull final AdministrativeUnit sourceAdministrativeUnit) throws ClientException {
         return send(HttpMethod.PATCH, sourceAdministrativeUnit);
     }
 
@@ -102,7 +106,7 @@ public class AdministrativeUnitRequest extends BaseRequest<AdministrativeUnit> {
      * @param newAdministrativeUnit the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AdministrativeUnit newAdministrativeUnit, final ICallback<? super AdministrativeUnit> callback) {
+    public void post(@Nonnull final AdministrativeUnit newAdministrativeUnit, @Nonnull final ICallback<? super AdministrativeUnit> callback) {
         send(HttpMethod.POST, callback, newAdministrativeUnit);
     }
 
@@ -113,7 +117,8 @@ public class AdministrativeUnitRequest extends BaseRequest<AdministrativeUnit> {
      * @return the created AdministrativeUnit
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AdministrativeUnit post(final AdministrativeUnit newAdministrativeUnit) throws ClientException {
+    @Nullable
+    public AdministrativeUnit post(@Nonnull final AdministrativeUnit newAdministrativeUnit) throws ClientException {
         return send(HttpMethod.POST, newAdministrativeUnit);
     }
 
@@ -123,7 +128,7 @@ public class AdministrativeUnitRequest extends BaseRequest<AdministrativeUnit> {
      * @param newAdministrativeUnit the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AdministrativeUnit newAdministrativeUnit, final ICallback<? super AdministrativeUnit> callback) {
+    public void put(@Nonnull final AdministrativeUnit newAdministrativeUnit, @Nonnull final ICallback<? super AdministrativeUnit> callback) {
         send(HttpMethod.PUT, callback, newAdministrativeUnit);
     }
 
@@ -134,7 +139,8 @@ public class AdministrativeUnitRequest extends BaseRequest<AdministrativeUnit> {
      * @return the created AdministrativeUnit
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AdministrativeUnit put(final AdministrativeUnit newAdministrativeUnit) throws ClientException {
+    @Nullable
+    public AdministrativeUnit put(@Nonnull final AdministrativeUnit newAdministrativeUnit) throws ClientException {
         return send(HttpMethod.PUT, newAdministrativeUnit);
     }
 
@@ -144,7 +150,8 @@ public class AdministrativeUnitRequest extends BaseRequest<AdministrativeUnit> {
      * @param value the select clause
      * @return the updated request
      */
-     public AdministrativeUnitRequest select(final String value) {
+     @Nonnull
+     public AdministrativeUnitRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -155,7 +162,8 @@ public class AdministrativeUnitRequest extends BaseRequest<AdministrativeUnit> {
      * @param value the expand clause
      * @return the updated request
      */
-     public AdministrativeUnitRequest expand(final String value) {
+     @Nonnull
+     public AdministrativeUnitRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

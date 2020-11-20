@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsPhone81CustomConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -27,7 +29,7 @@ public class WindowsPhone81CustomConfigurationRequestBuilder extends BaseRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsPhone81CustomConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsPhone81CustomConfigurationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -37,7 +39,8 @@ public class WindowsPhone81CustomConfigurationRequestBuilder extends BaseRequest
      * @param requestOptions the options for this request
      * @return the WindowsPhone81CustomConfigurationRequest instance
      */
-    public WindowsPhone81CustomConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WindowsPhone81CustomConfigurationRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,7 +50,8 @@ public class WindowsPhone81CustomConfigurationRequestBuilder extends BaseRequest
      * @param requestOptions the options for this request
      * @return the WindowsPhone81CustomConfigurationRequest instance
      */
-    public WindowsPhone81CustomConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WindowsPhone81CustomConfigurationRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WindowsPhone81CustomConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -57,6 +61,7 @@ public class WindowsPhone81CustomConfigurationRequestBuilder extends BaseRequest
      *
      * @return the collection request builder
      */
+    @Nonnull
     public DeviceConfigurationAssignmentCollectionRequestBuilder assignments() {
         return new DeviceConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
@@ -67,7 +72,8 @@ public class WindowsPhone81CustomConfigurationRequestBuilder extends BaseRequest
      * @return the request builder
      * @param id the item identifier
      */
-    public DeviceConfigurationAssignmentRequestBuilder assignments(final String id) {
+    @Nonnull
+    public DeviceConfigurationAssignmentRequestBuilder assignments(@Nonnull final String id) {
         return new DeviceConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
     /**
@@ -75,6 +81,7 @@ public class WindowsPhone81CustomConfigurationRequestBuilder extends BaseRequest
      *
      * @return the collection request builder
      */
+    @Nonnull
     public SettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
         return new SettingStateDeviceSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries"), getClient(), null);
     }
@@ -85,7 +92,8 @@ public class WindowsPhone81CustomConfigurationRequestBuilder extends BaseRequest
      * @return the request builder
      * @param id the item identifier
      */
-    public SettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id) {
+    @Nonnull
+    public SettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(@Nonnull final String id) {
         return new SettingStateDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries") + "/" + id, getClient(), null);
     }
     /**
@@ -93,6 +101,7 @@ public class WindowsPhone81CustomConfigurationRequestBuilder extends BaseRequest
      *
      * @return the collection request builder
      */
+    @Nonnull
     public DeviceConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses() {
         return new DeviceConfigurationDeviceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
     }
@@ -103,7 +112,8 @@ public class WindowsPhone81CustomConfigurationRequestBuilder extends BaseRequest
      * @return the request builder
      * @param id the item identifier
      */
-    public DeviceConfigurationDeviceStatusRequestBuilder deviceStatuses(final String id) {
+    @Nonnull
+    public DeviceConfigurationDeviceStatusRequestBuilder deviceStatuses(@Nonnull final String id) {
         return new DeviceConfigurationDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
     }
 
@@ -112,6 +122,7 @@ public class WindowsPhone81CustomConfigurationRequestBuilder extends BaseRequest
      *
      * @return the DeviceConfigurationDeviceOverviewRequestBuilder instance
      */
+    @Nonnull
     public DeviceConfigurationDeviceOverviewRequestBuilder deviceStatusOverview() {
         return new DeviceConfigurationDeviceOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatusOverview"), getClient(), null);
     }
@@ -120,6 +131,7 @@ public class WindowsPhone81CustomConfigurationRequestBuilder extends BaseRequest
      *
      * @return the collection request builder
      */
+    @Nonnull
     public DeviceConfigurationUserStatusCollectionRequestBuilder userStatuses() {
         return new DeviceConfigurationUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
     }
@@ -130,7 +142,8 @@ public class WindowsPhone81CustomConfigurationRequestBuilder extends BaseRequest
      * @return the request builder
      * @param id the item identifier
      */
-    public DeviceConfigurationUserStatusRequestBuilder userStatuses(final String id) {
+    @Nonnull
+    public DeviceConfigurationUserStatusRequestBuilder userStatuses(@Nonnull final String id) {
         return new DeviceConfigurationUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
     }
 
@@ -139,6 +152,7 @@ public class WindowsPhone81CustomConfigurationRequestBuilder extends BaseRequest
      *
      * @return the DeviceConfigurationUserOverviewRequestBuilder instance
      */
+    @Nonnull
     public DeviceConfigurationUserOverviewRequestBuilder userStatusOverview() {
         return new DeviceConfigurationUserOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("userStatusOverview"), getClient(), null);
     }

@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TodoTask;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.TodoTaskDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TodoTaskDeltaCollectionRequest;
@@ -32,7 +34,7 @@ public class TodoTaskDeltaCollectionRequestBuilder extends BaseFunctionCollectio
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TodoTaskDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TodoTaskDeltaCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TodoTaskDeltaCollectionRequestBuilder.class, TodoTaskDeltaCollectionRequest.class);
     }
     
@@ -42,8 +44,9 @@ public class TodoTaskDeltaCollectionRequestBuilder extends BaseFunctionCollectio
      * @param requestOptions the options for this request
      * @return the TodoTaskDeltaCollectionRequest instance
      */
-     @Override
-    public TodoTaskDeltaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Override
+    @Nonnull
+    public TodoTaskDeltaCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final TodoTaskDeltaCollectionRequest request = super.buildRequest(requestOptions);
 
       for (com.microsoft.graph.options.FunctionOption option : functionOptions) {

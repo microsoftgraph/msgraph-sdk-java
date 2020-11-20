@@ -78,6 +78,8 @@ import com.microsoft.graph.requests.extensions.UserTeamworkRequestBuilder;
 import com.microsoft.graph.requests.extensions.TodoRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseWithReferenceRequest;
@@ -99,7 +101,7 @@ public class UserWithReferenceRequest extends BaseWithReferenceRequest<User> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, User.class);
     }
 
@@ -109,7 +111,8 @@ public class UserWithReferenceRequest extends BaseWithReferenceRequest<User> {
      * @param value the select clause
      * @return the updated request
      */
-    public UserWithReferenceRequest select(final String value) {
+    @Nonnull
+    public UserWithReferenceRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -120,7 +123,8 @@ public class UserWithReferenceRequest extends BaseWithReferenceRequest<User> {
      * @param value the expand clause
      * @return the updated request
      */
-    public UserWithReferenceRequest expand(final String value) {
+    @Nonnull
+    public UserWithReferenceRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }

@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.PolicyRoot;
 import com.microsoft.graph.models.extensions.ActivityBasedTimeoutPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.ActivityBasedTimeoutPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ActivityBasedTimeoutPolicyRequestBuilder;
@@ -32,7 +34,7 @@ public class ActivityBasedTimeoutPolicyCollectionRequestBuilder extends BaseColl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ActivityBasedTimeoutPolicyCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ActivityBasedTimeoutPolicyCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ActivityBasedTimeoutPolicyRequestBuilder.class, ActivityBasedTimeoutPolicyCollectionRequest.class);
     }
 

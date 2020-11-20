@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.TeamsAsyncOperation;
 import com.microsoft.graph.requests.extensions.TeamsAsyncOperationCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.TeamsAsyncOperationCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class TeamsAsyncOperationCollectionPage extends BaseCollectionPage<TeamsA
      * @param response the serialized TeamsAsyncOperationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TeamsAsyncOperationCollectionPage(final TeamsAsyncOperationCollectionResponse response, final TeamsAsyncOperationCollectionRequestBuilder builder) {
+    public TeamsAsyncOperationCollectionPage(@Nonnull final TeamsAsyncOperationCollectionResponse response, @Nonnull final TeamsAsyncOperationCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class TeamsAsyncOperationCollectionPage extends BaseCollectionPage<TeamsA
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public TeamsAsyncOperationCollectionPage(final java.util.List<TeamsAsyncOperation> pageContents, final TeamsAsyncOperationCollectionRequestBuilder nextRequestBuilder) {
+    public TeamsAsyncOperationCollectionPage(@Nonnull final java.util.List<TeamsAsyncOperation> pageContents, @Nullable final TeamsAsyncOperationCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

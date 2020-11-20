@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.models.extensions.Recipient;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,7 +37,7 @@ public class MessageCollectionRequest extends BaseCollectionRequest<Message, Mes
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MessageCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MessageCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MessageCollectionResponse.class, MessageCollectionPage.class, MessageCollectionRequestBuilder.class);
     }
 
@@ -44,7 +46,7 @@ public class MessageCollectionRequest extends BaseCollectionRequest<Message, Mes
      * @param newMessage the Message to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final Message newMessage, final ICallback<? super Message> callback) {
+    public void post(@Nonnull final Message newMessage, @Nonnull final ICallback<? super Message> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MessageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -56,7 +58,8 @@ public class MessageCollectionRequest extends BaseCollectionRequest<Message, Mes
      * @param newMessage the Message to create
      * @return the newly created object
      */
-    public Message post(final Message newMessage) throws ClientException {
+    @Nonnull
+    public Message post(@Nonnull final Message newMessage) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MessageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -69,7 +72,8 @@ public class MessageCollectionRequest extends BaseCollectionRequest<Message, Mes
      * @param value the expand clause
      * @return the updated request
      */
-    public MessageCollectionRequest expand(final String value) {
+    @Nonnull
+    public MessageCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -80,7 +84,8 @@ public class MessageCollectionRequest extends BaseCollectionRequest<Message, Mes
      * @param value the filter clause
      * @return the updated request
      */
-    public MessageCollectionRequest filter(final String value) {
+    @Nonnull
+    public MessageCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -91,7 +96,8 @@ public class MessageCollectionRequest extends BaseCollectionRequest<Message, Mes
      * @param value the order by clause
      * @return the updated request
      */
-    public MessageCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public MessageCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -102,7 +108,8 @@ public class MessageCollectionRequest extends BaseCollectionRequest<Message, Mes
      * @param value the select clause
      * @return the updated request
      */
-    public MessageCollectionRequest select(final String value) {
+    @Nonnull
+    public MessageCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -113,6 +120,7 @@ public class MessageCollectionRequest extends BaseCollectionRequest<Message, Mes
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public MessageCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -124,6 +132,7 @@ public class MessageCollectionRequest extends BaseCollectionRequest<Message, Mes
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public MessageCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -135,7 +144,8 @@ public class MessageCollectionRequest extends BaseCollectionRequest<Message, Mes
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public MessageCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public MessageCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

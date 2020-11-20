@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.RoleAssignment;
 import com.microsoft.graph.requests.extensions.RoleAssignmentCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.RoleAssignmentCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class RoleAssignmentCollectionPage extends BaseCollectionPage<RoleAssignm
      * @param response the serialized RoleAssignmentCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public RoleAssignmentCollectionPage(final RoleAssignmentCollectionResponse response, final RoleAssignmentCollectionRequestBuilder builder) {
+    public RoleAssignmentCollectionPage(@Nonnull final RoleAssignmentCollectionResponse response, @Nonnull final RoleAssignmentCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class RoleAssignmentCollectionPage extends BaseCollectionPage<RoleAssignm
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public RoleAssignmentCollectionPage(final java.util.List<RoleAssignment> pageContents, final RoleAssignmentCollectionRequestBuilder nextRequestBuilder) {
+    public RoleAssignmentCollectionPage(@Nonnull final java.util.List<RoleAssignment> pageContents, @Nullable final RoleAssignmentCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

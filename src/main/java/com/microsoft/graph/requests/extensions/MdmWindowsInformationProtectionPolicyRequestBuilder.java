@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MdmWindowsInformationProtectionPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -27,7 +29,7 @@ public class MdmWindowsInformationProtectionPolicyRequestBuilder extends BaseReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MdmWindowsInformationProtectionPolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MdmWindowsInformationProtectionPolicyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -37,7 +39,8 @@ public class MdmWindowsInformationProtectionPolicyRequestBuilder extends BaseReq
      * @param requestOptions the options for this request
      * @return the MdmWindowsInformationProtectionPolicyRequest instance
      */
-    public MdmWindowsInformationProtectionPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public MdmWindowsInformationProtectionPolicyRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,7 +50,8 @@ public class MdmWindowsInformationProtectionPolicyRequestBuilder extends BaseReq
      * @param requestOptions the options for this request
      * @return the MdmWindowsInformationProtectionPolicyRequest instance
      */
-    public MdmWindowsInformationProtectionPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public MdmWindowsInformationProtectionPolicyRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -57,6 +61,7 @@ public class MdmWindowsInformationProtectionPolicyRequestBuilder extends BaseReq
      *
      * @return the collection request builder
      */
+    @Nonnull
     public TargetedManagedAppPolicyAssignmentCollectionRequestBuilder assignments() {
         return new TargetedManagedAppPolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
@@ -67,7 +72,8 @@ public class MdmWindowsInformationProtectionPolicyRequestBuilder extends BaseReq
      * @return the request builder
      * @param id the item identifier
      */
-    public TargetedManagedAppPolicyAssignmentRequestBuilder assignments(final String id) {
+    @Nonnull
+    public TargetedManagedAppPolicyAssignmentRequestBuilder assignments(@Nonnull final String id) {
         return new TargetedManagedAppPolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
     /**
@@ -75,6 +81,7 @@ public class MdmWindowsInformationProtectionPolicyRequestBuilder extends BaseReq
      *
      * @return the collection request builder
      */
+    @Nonnull
     public WindowsInformationProtectionAppLockerFileCollectionRequestBuilder exemptAppLockerFiles() {
         return new WindowsInformationProtectionAppLockerFileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("exemptAppLockerFiles"), getClient(), null);
     }
@@ -85,7 +92,8 @@ public class MdmWindowsInformationProtectionPolicyRequestBuilder extends BaseReq
      * @return the request builder
      * @param id the item identifier
      */
-    public WindowsInformationProtectionAppLockerFileRequestBuilder exemptAppLockerFiles(final String id) {
+    @Nonnull
+    public WindowsInformationProtectionAppLockerFileRequestBuilder exemptAppLockerFiles(@Nonnull final String id) {
         return new WindowsInformationProtectionAppLockerFileRequestBuilder(getRequestUrlWithAdditionalSegment("exemptAppLockerFiles") + "/" + id, getClient(), null);
     }
     /**
@@ -93,6 +101,7 @@ public class MdmWindowsInformationProtectionPolicyRequestBuilder extends BaseReq
      *
      * @return the collection request builder
      */
+    @Nonnull
     public WindowsInformationProtectionAppLockerFileCollectionRequestBuilder protectedAppLockerFiles() {
         return new WindowsInformationProtectionAppLockerFileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("protectedAppLockerFiles"), getClient(), null);
     }
@@ -103,7 +112,8 @@ public class MdmWindowsInformationProtectionPolicyRequestBuilder extends BaseReq
      * @return the request builder
      * @param id the item identifier
      */
-    public WindowsInformationProtectionAppLockerFileRequestBuilder protectedAppLockerFiles(final String id) {
+    @Nonnull
+    public WindowsInformationProtectionAppLockerFileRequestBuilder protectedAppLockerFiles(@Nonnull final String id) {
         return new WindowsInformationProtectionAppLockerFileRequestBuilder(getRequestUrlWithAdditionalSegment("protectedAppLockerFiles") + "/" + id, getClient(), null);
     }
 }

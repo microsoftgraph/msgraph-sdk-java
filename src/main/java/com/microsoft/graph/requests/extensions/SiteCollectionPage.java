@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.requests.extensions.SiteCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.SiteCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class SiteCollectionPage extends BaseCollectionPage<Site, SiteCollectionR
      * @param response the serialized SiteCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public SiteCollectionPage(final SiteCollectionResponse response, final SiteCollectionRequestBuilder builder) {
+    public SiteCollectionPage(@Nonnull final SiteCollectionResponse response, @Nonnull final SiteCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class SiteCollectionPage extends BaseCollectionPage<Site, SiteCollectionR
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public SiteCollectionPage(final java.util.List<Site> pageContents, final SiteCollectionRequestBuilder nextRequestBuilder) {
+    public SiteCollectionPage(@Nonnull final java.util.List<Site> pageContents, @Nullable final SiteCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.EducationSchool;
 import com.microsoft.graph.models.extensions.EducationUser;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.models.extensions.EducationUser;
 import com.microsoft.graph.requests.extensions.EducationUserWithReferenceRequest;
@@ -39,7 +41,7 @@ public class EducationUserCollectionWithReferencesRequest extends BaseCollection
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationUserCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationUserCollectionWithReferencesRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EducationUserCollectionResponse.class, EducationUserCollectionWithReferencesPage.class, EducationUserCollectionWithReferencesRequestBuilder.class);
     }
 
@@ -49,7 +51,8 @@ public class EducationUserCollectionWithReferencesRequest extends BaseCollection
      * @param value the expand clause
      * @return the updated request
      */
-    public EducationUserCollectionWithReferencesRequest expand(final String value) {
+    @Nonnull
+    public EducationUserCollectionWithReferencesRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -60,7 +63,8 @@ public class EducationUserCollectionWithReferencesRequest extends BaseCollection
      * @param value the filter clause
      * @return the updated request
      */
-    public EducationUserCollectionWithReferencesRequest filter(final String value) {
+    @Nonnull
+    public EducationUserCollectionWithReferencesRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -71,7 +75,8 @@ public class EducationUserCollectionWithReferencesRequest extends BaseCollection
      * @param value the order by clause
      * @return the updated request
      */
-    public EducationUserCollectionWithReferencesRequest orderBy(final String value) {
+    @Nonnull
+    public EducationUserCollectionWithReferencesRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -82,7 +87,8 @@ public class EducationUserCollectionWithReferencesRequest extends BaseCollection
      * @param value the select clause
      * @return the updated request
      */
-    public EducationUserCollectionWithReferencesRequest select(final String value) {
+    @Nonnull
+    public EducationUserCollectionWithReferencesRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -93,6 +99,7 @@ public class EducationUserCollectionWithReferencesRequest extends BaseCollection
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public EducationUserCollectionWithReferencesRequest top(final int value) {
         addTopOption(value);
         return this;

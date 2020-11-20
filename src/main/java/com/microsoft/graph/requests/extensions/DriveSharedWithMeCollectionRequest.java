@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DriveItem;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DriveSharedWithMeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveSharedWithMeCollectionResponse;
@@ -34,7 +36,7 @@ public class DriveSharedWithMeCollectionRequest extends BaseCollectionRequest<Dr
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DriveSharedWithMeCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveSharedWithMeCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DriveSharedWithMeCollectionResponse.class, DriveSharedWithMeCollectionPage.class, DriveSharedWithMeCollectionRequestBuilder.class);
     }
 
@@ -45,7 +47,8 @@ public class DriveSharedWithMeCollectionRequest extends BaseCollectionRequest<Dr
      * @param value the select clause
      * @return the updated request
      */
-    public DriveSharedWithMeCollectionRequest select(final String value) {
+    @Nonnull
+    public DriveSharedWithMeCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -56,6 +59,7 @@ public class DriveSharedWithMeCollectionRequest extends BaseCollectionRequest<Dr
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DriveSharedWithMeCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -67,7 +71,8 @@ public class DriveSharedWithMeCollectionRequest extends BaseCollectionRequest<Dr
      * @param value the expand clause
      * @return the updated request
      */
-    public DriveSharedWithMeCollectionRequest expand(final String value) {
+    @Nonnull
+    public DriveSharedWithMeCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -78,7 +83,8 @@ public class DriveSharedWithMeCollectionRequest extends BaseCollectionRequest<Dr
      * @param value the filter clause
      * @return the updated request
      */
-    public DriveSharedWithMeCollectionRequest filter(final String value) {
+    @Nonnull
+    public DriveSharedWithMeCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -89,7 +95,8 @@ public class DriveSharedWithMeCollectionRequest extends BaseCollectionRequest<Dr
      * @param value the order by clause
      * @return the updated request
      */
-    public DriveSharedWithMeCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DriveSharedWithMeCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }

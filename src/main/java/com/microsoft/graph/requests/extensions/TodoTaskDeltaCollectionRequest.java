@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TodoTask;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.TodoTaskDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TodoTaskDeltaCollectionResponse;
@@ -34,7 +36,7 @@ public class TodoTaskDeltaCollectionRequest extends BaseCollectionRequest<TodoTa
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TodoTaskDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TodoTaskDeltaCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TodoTaskDeltaCollectionResponse.class, TodoTaskDeltaCollectionPage.class, TodoTaskDeltaCollectionRequestBuilder.class);
     }
 
@@ -45,7 +47,8 @@ public class TodoTaskDeltaCollectionRequest extends BaseCollectionRequest<TodoTa
      * @param value the select clause
      * @return the updated request
      */
-    public TodoTaskDeltaCollectionRequest select(final String value) {
+    @Nonnull
+    public TodoTaskDeltaCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -56,6 +59,7 @@ public class TodoTaskDeltaCollectionRequest extends BaseCollectionRequest<TodoTa
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public TodoTaskDeltaCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -67,7 +71,8 @@ public class TodoTaskDeltaCollectionRequest extends BaseCollectionRequest<TodoTa
      * @param value the expand clause
      * @return the updated request
      */
-    public TodoTaskDeltaCollectionRequest expand(final String value) {
+    @Nonnull
+    public TodoTaskDeltaCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -78,7 +83,8 @@ public class TodoTaskDeltaCollectionRequest extends BaseCollectionRequest<TodoTa
      * @param value the filter clause
      * @return the updated request
      */
-    public TodoTaskDeltaCollectionRequest filter(final String value) {
+    @Nonnull
+    public TodoTaskDeltaCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -89,7 +95,8 @@ public class TodoTaskDeltaCollectionRequest extends BaseCollectionRequest<TodoTa
      * @param value the order by clause
      * @return the updated request
      */
-    public TodoTaskDeltaCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public TodoTaskDeltaCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }

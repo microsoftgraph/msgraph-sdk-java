@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantWithReferenceRequest;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantReferenceRequestBuilder;
@@ -38,7 +40,7 @@ public class OAuth2PermissionGrantCollectionReferenceRequest extends BaseCollect
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OAuth2PermissionGrantCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OAuth2PermissionGrantCollectionReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OAuth2PermissionGrantCollectionResponse.class, OAuth2PermissionGrantCollectionWithReferencesPage.class, OAuth2PermissionGrantCollectionWithReferencesRequestBuilder.class);
     }
 
@@ -47,7 +49,7 @@ public class OAuth2PermissionGrantCollectionReferenceRequest extends BaseCollect
      * @param newOAuth2PermissionGrant the OAuth2PermissionGrant to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final OAuth2PermissionGrant newOAuth2PermissionGrant, final ICallback<? super OAuth2PermissionGrant> callback) {
+    public void post(@Nonnull final OAuth2PermissionGrant newOAuth2PermissionGrant, @Nonnull final ICallback<? super OAuth2PermissionGrant> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/oauth2PermissionGrants/" + newOAuth2PermissionGrant.id);
         new OAuth2PermissionGrantWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -60,7 +62,8 @@ public class OAuth2PermissionGrantCollectionReferenceRequest extends BaseCollect
      * @param newOAuth2PermissionGrant the OAuth2PermissionGrant to create
      * @return the newly created object
      */
-    public OAuth2PermissionGrant post(final OAuth2PermissionGrant newOAuth2PermissionGrant) throws ClientException {
+    @Nonnull
+    public OAuth2PermissionGrant post(@Nonnull final OAuth2PermissionGrant newOAuth2PermissionGrant) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/oauth2PermissionGrants/" + newOAuth2PermissionGrant.id);
         return new OAuth2PermissionGrantWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
@@ -73,7 +76,8 @@ public class OAuth2PermissionGrantCollectionReferenceRequest extends BaseCollect
      * @param value the expand clause
      * @return the updated request
      */
-    public OAuth2PermissionGrantCollectionReferenceRequest expand(final String value) {
+    @Nonnull
+    public OAuth2PermissionGrantCollectionReferenceRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -84,7 +88,8 @@ public class OAuth2PermissionGrantCollectionReferenceRequest extends BaseCollect
      * @param value the filter clause
      * @return the updated request
      */
-    public OAuth2PermissionGrantCollectionReferenceRequest filter(final String value) {
+    @Nonnull
+    public OAuth2PermissionGrantCollectionReferenceRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -95,7 +100,8 @@ public class OAuth2PermissionGrantCollectionReferenceRequest extends BaseCollect
      * @param value the sort clause
      * @return the updated request
      */
-    public OAuth2PermissionGrantCollectionReferenceRequest orderBy(final String value) {
+    @Nonnull
+    public OAuth2PermissionGrantCollectionReferenceRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -106,7 +112,8 @@ public class OAuth2PermissionGrantCollectionReferenceRequest extends BaseCollect
      * @param value the select clause
      * @return the updated request
      */
-    public OAuth2PermissionGrantCollectionReferenceRequest select(final String value) {
+    @Nonnull
+    public OAuth2PermissionGrantCollectionReferenceRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -117,6 +124,7 @@ public class OAuth2PermissionGrantCollectionReferenceRequest extends BaseCollect
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public OAuth2PermissionGrantCollectionReferenceRequest top(final int value) {
         addTopOption(value);
         return this;

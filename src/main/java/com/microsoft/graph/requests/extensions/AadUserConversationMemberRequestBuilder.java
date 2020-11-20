@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.AadUserConversationMember;
 import com.microsoft.graph.requests.extensions.UserRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -28,7 +30,7 @@ public class AadUserConversationMemberRequestBuilder extends BaseRequestBuilder<
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AadUserConversationMemberRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AadUserConversationMemberRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,7 +40,8 @@ public class AadUserConversationMemberRequestBuilder extends BaseRequestBuilder<
      * @param requestOptions the options for this request
      * @return the AadUserConversationMemberRequest instance
      */
-    public AadUserConversationMemberRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public AadUserConversationMemberRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,7 +51,8 @@ public class AadUserConversationMemberRequestBuilder extends BaseRequestBuilder<
      * @param requestOptions the options for this request
      * @return the AadUserConversationMemberRequest instance
      */
-    public AadUserConversationMemberRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public AadUserConversationMemberRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.AadUserConversationMemberRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,6 +63,7 @@ public class AadUserConversationMemberRequestBuilder extends BaseRequestBuilder<
      *
      * @return the UserWithReferenceRequestBuilder instance
      */
+    @Nonnull
     public UserWithReferenceRequestBuilder user() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("user"), getClient(), null);
     }

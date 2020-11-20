@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.ClaimsMappingPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionWithReferencesPage;
@@ -34,7 +36,7 @@ public class ClaimsMappingPolicyCollectionWithReferencesPage extends BaseCollect
      * @param response the serialized ClaimsMappingPolicyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ClaimsMappingPolicyCollectionWithReferencesPage(final ClaimsMappingPolicyCollectionResponse response, final ClaimsMappingPolicyCollectionWithReferencesRequestBuilder builder) {
+    public ClaimsMappingPolicyCollectionWithReferencesPage(@Nonnull final ClaimsMappingPolicyCollectionResponse response, @Nullable final ClaimsMappingPolicyCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 
@@ -44,7 +46,7 @@ public class ClaimsMappingPolicyCollectionWithReferencesPage extends BaseCollect
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public ClaimsMappingPolicyCollectionWithReferencesPage(final java.util.List<ClaimsMappingPolicy> pageContents, final ClaimsMappingPolicyCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+    public ClaimsMappingPolicyCollectionWithReferencesPage(@Nonnull final java.util.List<ClaimsMappingPolicy> pageContents, @Nullable final ClaimsMappingPolicyCollectionWithReferencesRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

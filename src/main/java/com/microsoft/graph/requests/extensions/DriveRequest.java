@@ -14,6 +14,8 @@ import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -32,7 +34,7 @@ public class DriveRequest extends BaseRequest<Drive> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DriveRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Drive.class);
     }
 
@@ -41,7 +43,7 @@ public class DriveRequest extends BaseRequest<Drive> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Drive> callback) {
+    public void get(@Nonnull final ICallback<? super Drive> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -51,6 +53,7 @@ public class DriveRequest extends BaseRequest<Drive> {
      * @return the Drive from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Drive get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -60,7 +63,7 @@ public class DriveRequest extends BaseRequest<Drive> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Drive> callback) {
+    public void delete(@Nonnull final ICallback<? super Drive> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +82,7 @@ public class DriveRequest extends BaseRequest<Drive> {
      * @param sourceDrive the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Drive sourceDrive, final ICallback<? super Drive> callback) {
+    public void patch(@Nonnull final Drive sourceDrive, @Nonnull final ICallback<? super Drive> callback) {
         send(HttpMethod.PATCH, callback, sourceDrive);
     }
 
@@ -90,7 +93,8 @@ public class DriveRequest extends BaseRequest<Drive> {
      * @return the updated Drive
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Drive patch(final Drive sourceDrive) throws ClientException {
+    @Nullable
+    public Drive patch(@Nonnull final Drive sourceDrive) throws ClientException {
         return send(HttpMethod.PATCH, sourceDrive);
     }
 
@@ -100,7 +104,7 @@ public class DriveRequest extends BaseRequest<Drive> {
      * @param newDrive the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Drive newDrive, final ICallback<? super Drive> callback) {
+    public void post(@Nonnull final Drive newDrive, @Nonnull final ICallback<? super Drive> callback) {
         send(HttpMethod.POST, callback, newDrive);
     }
 
@@ -111,7 +115,8 @@ public class DriveRequest extends BaseRequest<Drive> {
      * @return the created Drive
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Drive post(final Drive newDrive) throws ClientException {
+    @Nullable
+    public Drive post(@Nonnull final Drive newDrive) throws ClientException {
         return send(HttpMethod.POST, newDrive);
     }
 
@@ -121,7 +126,7 @@ public class DriveRequest extends BaseRequest<Drive> {
      * @param newDrive the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Drive newDrive, final ICallback<? super Drive> callback) {
+    public void put(@Nonnull final Drive newDrive, @Nonnull final ICallback<? super Drive> callback) {
         send(HttpMethod.PUT, callback, newDrive);
     }
 
@@ -132,7 +137,8 @@ public class DriveRequest extends BaseRequest<Drive> {
      * @return the created Drive
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Drive put(final Drive newDrive) throws ClientException {
+    @Nullable
+    public Drive put(@Nonnull final Drive newDrive) throws ClientException {
         return send(HttpMethod.PUT, newDrive);
     }
 
@@ -142,7 +148,8 @@ public class DriveRequest extends BaseRequest<Drive> {
      * @param value the select clause
      * @return the updated request
      */
-     public DriveRequest select(final String value) {
+     @Nonnull
+     public DriveRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -153,7 +160,8 @@ public class DriveRequest extends BaseRequest<Drive> {
      * @param value the expand clause
      * @return the updated request
      */
-     public DriveRequest expand(final String value) {
+     @Nonnull
+     public DriveRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

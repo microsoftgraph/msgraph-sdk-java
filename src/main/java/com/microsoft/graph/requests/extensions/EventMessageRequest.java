@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.EventMessage;
 import com.microsoft.graph.requests.extensions.EventRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -30,10 +32,10 @@ public class EventMessageRequest extends BaseRequest<EventMessage> {
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public EventMessageRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends EventMessage> responseClass) {
+    public EventMessageRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends EventMessage> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class EventMessageRequest extends BaseRequest<EventMessage> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EventMessageRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EventMessageRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EventMessage.class);
     }
 
@@ -53,7 +55,7 @@ public class EventMessageRequest extends BaseRequest<EventMessage> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super EventMessage> callback) {
+    public void get(@Nonnull final ICallback<? super EventMessage> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class EventMessageRequest extends BaseRequest<EventMessage> {
      * @return the EventMessage from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public EventMessage get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class EventMessageRequest extends BaseRequest<EventMessage> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super EventMessage> callback) {
+    public void delete(@Nonnull final ICallback<? super EventMessage> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class EventMessageRequest extends BaseRequest<EventMessage> {
      * @param sourceEventMessage the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EventMessage sourceEventMessage, final ICallback<? super EventMessage> callback) {
+    public void patch(@Nonnull final EventMessage sourceEventMessage, @Nonnull final ICallback<? super EventMessage> callback) {
         send(HttpMethod.PATCH, callback, sourceEventMessage);
     }
 
@@ -102,7 +105,8 @@ public class EventMessageRequest extends BaseRequest<EventMessage> {
      * @return the updated EventMessage
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EventMessage patch(final EventMessage sourceEventMessage) throws ClientException {
+    @Nullable
+    public EventMessage patch(@Nonnull final EventMessage sourceEventMessage) throws ClientException {
         return send(HttpMethod.PATCH, sourceEventMessage);
     }
 
@@ -112,7 +116,7 @@ public class EventMessageRequest extends BaseRequest<EventMessage> {
      * @param newEventMessage the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EventMessage newEventMessage, final ICallback<? super EventMessage> callback) {
+    public void post(@Nonnull final EventMessage newEventMessage, @Nonnull final ICallback<? super EventMessage> callback) {
         send(HttpMethod.POST, callback, newEventMessage);
     }
 
@@ -123,7 +127,8 @@ public class EventMessageRequest extends BaseRequest<EventMessage> {
      * @return the created EventMessage
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EventMessage post(final EventMessage newEventMessage) throws ClientException {
+    @Nullable
+    public EventMessage post(@Nonnull final EventMessage newEventMessage) throws ClientException {
         return send(HttpMethod.POST, newEventMessage);
     }
 
@@ -133,7 +138,7 @@ public class EventMessageRequest extends BaseRequest<EventMessage> {
      * @param newEventMessage the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EventMessage newEventMessage, final ICallback<? super EventMessage> callback) {
+    public void put(@Nonnull final EventMessage newEventMessage, @Nonnull final ICallback<? super EventMessage> callback) {
         send(HttpMethod.PUT, callback, newEventMessage);
     }
 
@@ -144,7 +149,8 @@ public class EventMessageRequest extends BaseRequest<EventMessage> {
      * @return the created EventMessage
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EventMessage put(final EventMessage newEventMessage) throws ClientException {
+    @Nullable
+    public EventMessage put(@Nonnull final EventMessage newEventMessage) throws ClientException {
         return send(HttpMethod.PUT, newEventMessage);
     }
 
@@ -154,7 +160,8 @@ public class EventMessageRequest extends BaseRequest<EventMessage> {
      * @param value the select clause
      * @return the updated request
      */
-     public EventMessageRequest select(final String value) {
+     @Nonnull
+     public EventMessageRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -165,7 +172,8 @@ public class EventMessageRequest extends BaseRequest<EventMessage> {
      * @param value the expand clause
      * @return the updated request
      */
-     public EventMessageRequest expand(final String value) {
+     @Nonnull
+     public EventMessageRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

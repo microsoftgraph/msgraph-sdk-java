@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationDeviceStatus;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage exten
      * @param response the serialized ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage(final ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse response, final ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder builder) {
+    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage(@Nonnull final ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse response, @Nonnull final ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage exten
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage(final java.util.List<ManagedDeviceMobileAppConfigurationDeviceStatus> pageContents, final ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder nextRequestBuilder) {
+    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage(@Nonnull final java.util.List<ManagedDeviceMobileAppConfigurationDeviceStatus> pageContents, @Nullable final ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

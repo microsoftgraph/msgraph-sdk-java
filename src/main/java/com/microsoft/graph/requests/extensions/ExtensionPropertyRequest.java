@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ExtensionProperty;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class ExtensionPropertyRequest extends BaseRequest<ExtensionProperty> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ExtensionPropertyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ExtensionPropertyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ExtensionProperty.class);
     }
 
@@ -37,7 +39,7 @@ public class ExtensionPropertyRequest extends BaseRequest<ExtensionProperty> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ExtensionProperty> callback) {
+    public void get(@Nonnull final ICallback<? super ExtensionProperty> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class ExtensionPropertyRequest extends BaseRequest<ExtensionProperty> {
      * @return the ExtensionProperty from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ExtensionProperty get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class ExtensionPropertyRequest extends BaseRequest<ExtensionProperty> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ExtensionProperty> callback) {
+    public void delete(@Nonnull final ICallback<? super ExtensionProperty> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class ExtensionPropertyRequest extends BaseRequest<ExtensionProperty> {
      * @param sourceExtensionProperty the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ExtensionProperty sourceExtensionProperty, final ICallback<? super ExtensionProperty> callback) {
+    public void patch(@Nonnull final ExtensionProperty sourceExtensionProperty, @Nonnull final ICallback<? super ExtensionProperty> callback) {
         send(HttpMethod.PATCH, callback, sourceExtensionProperty);
     }
 
@@ -86,7 +89,8 @@ public class ExtensionPropertyRequest extends BaseRequest<ExtensionProperty> {
      * @return the updated ExtensionProperty
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ExtensionProperty patch(final ExtensionProperty sourceExtensionProperty) throws ClientException {
+    @Nullable
+    public ExtensionProperty patch(@Nonnull final ExtensionProperty sourceExtensionProperty) throws ClientException {
         return send(HttpMethod.PATCH, sourceExtensionProperty);
     }
 
@@ -96,7 +100,7 @@ public class ExtensionPropertyRequest extends BaseRequest<ExtensionProperty> {
      * @param newExtensionProperty the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ExtensionProperty newExtensionProperty, final ICallback<? super ExtensionProperty> callback) {
+    public void post(@Nonnull final ExtensionProperty newExtensionProperty, @Nonnull final ICallback<? super ExtensionProperty> callback) {
         send(HttpMethod.POST, callback, newExtensionProperty);
     }
 
@@ -107,7 +111,8 @@ public class ExtensionPropertyRequest extends BaseRequest<ExtensionProperty> {
      * @return the created ExtensionProperty
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ExtensionProperty post(final ExtensionProperty newExtensionProperty) throws ClientException {
+    @Nullable
+    public ExtensionProperty post(@Nonnull final ExtensionProperty newExtensionProperty) throws ClientException {
         return send(HttpMethod.POST, newExtensionProperty);
     }
 
@@ -117,7 +122,7 @@ public class ExtensionPropertyRequest extends BaseRequest<ExtensionProperty> {
      * @param newExtensionProperty the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ExtensionProperty newExtensionProperty, final ICallback<? super ExtensionProperty> callback) {
+    public void put(@Nonnull final ExtensionProperty newExtensionProperty, @Nonnull final ICallback<? super ExtensionProperty> callback) {
         send(HttpMethod.PUT, callback, newExtensionProperty);
     }
 
@@ -128,7 +133,8 @@ public class ExtensionPropertyRequest extends BaseRequest<ExtensionProperty> {
      * @return the created ExtensionProperty
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ExtensionProperty put(final ExtensionProperty newExtensionProperty) throws ClientException {
+    @Nullable
+    public ExtensionProperty put(@Nonnull final ExtensionProperty newExtensionProperty) throws ClientException {
         return send(HttpMethod.PUT, newExtensionProperty);
     }
 
@@ -138,7 +144,8 @@ public class ExtensionPropertyRequest extends BaseRequest<ExtensionProperty> {
      * @param value the select clause
      * @return the updated request
      */
-     public ExtensionPropertyRequest select(final String value) {
+     @Nonnull
+     public ExtensionPropertyRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class ExtensionPropertyRequest extends BaseRequest<ExtensionProperty> {
      * @param value the expand clause
      * @return the updated request
      */
-     public ExtensionPropertyRequest expand(final String value) {
+     @Nonnull
+     public ExtensionPropertyRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

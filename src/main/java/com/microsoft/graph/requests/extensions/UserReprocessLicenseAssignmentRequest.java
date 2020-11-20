@@ -6,6 +6,8 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.requests.extensions.UserReprocessLicenseAssignmentRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.core.ClientException;
@@ -27,7 +29,7 @@ public class UserReprocessLicenseAssignmentRequest extends BaseRequest<User> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserReprocessLicenseAssignmentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserReprocessLicenseAssignmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, User.class);
     }
 
@@ -36,7 +38,7 @@ public class UserReprocessLicenseAssignmentRequest extends BaseRequest<User> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<? super User> callback) {
+    public void post(@Nonnull final ICallback<? super User> callback) {
         send(HttpMethod.POST, callback, null);
     }
 
@@ -46,6 +48,7 @@ public class UserReprocessLicenseAssignmentRequest extends BaseRequest<User> {
      * @return the User
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
+    @Nullable
     public User post() throws ClientException {
        return send(HttpMethod.POST, null);
     }
@@ -56,7 +59,8 @@ public class UserReprocessLicenseAssignmentRequest extends BaseRequest<User> {
      * @param value the select clause
      * @return the updated request
      */
-    public UserReprocessLicenseAssignmentRequest select(final String value) {
+    @Nonnull
+    public UserReprocessLicenseAssignmentRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -67,7 +71,8 @@ public class UserReprocessLicenseAssignmentRequest extends BaseRequest<User> {
      * @param value the expand clause
      * @return the updated request
      */
-    public UserReprocessLicenseAssignmentRequest expand(final String value) {
+    @Nonnull
+    public UserReprocessLicenseAssignmentRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }

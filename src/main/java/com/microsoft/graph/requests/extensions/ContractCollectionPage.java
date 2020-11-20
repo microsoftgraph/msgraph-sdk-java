@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Contract;
 import com.microsoft.graph.requests.extensions.ContractCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.ContractCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class ContractCollectionPage extends BaseCollectionPage<Contract, Contrac
      * @param response the serialized ContractCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ContractCollectionPage(final ContractCollectionResponse response, final ContractCollectionRequestBuilder builder) {
+    public ContractCollectionPage(@Nonnull final ContractCollectionResponse response, @Nonnull final ContractCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class ContractCollectionPage extends BaseCollectionPage<Contract, Contrac
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public ContractCollectionPage(final java.util.List<Contract> pageContents, final ContractCollectionRequestBuilder nextRequestBuilder) {
+    public ContractCollectionPage(@Nonnull final java.util.List<Contract> pageContents, @Nullable final ContractCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MultiValueLegacyExtendedProperty;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class MultiValueLegacyExtendedPropertyRequest extends BaseRequest<MultiVa
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MultiValueLegacyExtendedPropertyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MultiValueLegacyExtendedPropertyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MultiValueLegacyExtendedProperty.class);
     }
 
@@ -37,7 +39,7 @@ public class MultiValueLegacyExtendedPropertyRequest extends BaseRequest<MultiVa
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MultiValueLegacyExtendedProperty> callback) {
+    public void get(@Nonnull final ICallback<? super MultiValueLegacyExtendedProperty> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class MultiValueLegacyExtendedPropertyRequest extends BaseRequest<MultiVa
      * @return the MultiValueLegacyExtendedProperty from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MultiValueLegacyExtendedProperty get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class MultiValueLegacyExtendedPropertyRequest extends BaseRequest<MultiVa
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MultiValueLegacyExtendedProperty> callback) {
+    public void delete(@Nonnull final ICallback<? super MultiValueLegacyExtendedProperty> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class MultiValueLegacyExtendedPropertyRequest extends BaseRequest<MultiVa
      * @param sourceMultiValueLegacyExtendedProperty the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MultiValueLegacyExtendedProperty sourceMultiValueLegacyExtendedProperty, final ICallback<? super MultiValueLegacyExtendedProperty> callback) {
+    public void patch(@Nonnull final MultiValueLegacyExtendedProperty sourceMultiValueLegacyExtendedProperty, @Nonnull final ICallback<? super MultiValueLegacyExtendedProperty> callback) {
         send(HttpMethod.PATCH, callback, sourceMultiValueLegacyExtendedProperty);
     }
 
@@ -86,7 +89,8 @@ public class MultiValueLegacyExtendedPropertyRequest extends BaseRequest<MultiVa
      * @return the updated MultiValueLegacyExtendedProperty
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MultiValueLegacyExtendedProperty patch(final MultiValueLegacyExtendedProperty sourceMultiValueLegacyExtendedProperty) throws ClientException {
+    @Nullable
+    public MultiValueLegacyExtendedProperty patch(@Nonnull final MultiValueLegacyExtendedProperty sourceMultiValueLegacyExtendedProperty) throws ClientException {
         return send(HttpMethod.PATCH, sourceMultiValueLegacyExtendedProperty);
     }
 
@@ -96,7 +100,7 @@ public class MultiValueLegacyExtendedPropertyRequest extends BaseRequest<MultiVa
      * @param newMultiValueLegacyExtendedProperty the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty, final ICallback<? super MultiValueLegacyExtendedProperty> callback) {
+    public void post(@Nonnull final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty, @Nonnull final ICallback<? super MultiValueLegacyExtendedProperty> callback) {
         send(HttpMethod.POST, callback, newMultiValueLegacyExtendedProperty);
     }
 
@@ -107,7 +111,8 @@ public class MultiValueLegacyExtendedPropertyRequest extends BaseRequest<MultiVa
      * @return the created MultiValueLegacyExtendedProperty
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MultiValueLegacyExtendedProperty post(final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty) throws ClientException {
+    @Nullable
+    public MultiValueLegacyExtendedProperty post(@Nonnull final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty) throws ClientException {
         return send(HttpMethod.POST, newMultiValueLegacyExtendedProperty);
     }
 
@@ -117,7 +122,7 @@ public class MultiValueLegacyExtendedPropertyRequest extends BaseRequest<MultiVa
      * @param newMultiValueLegacyExtendedProperty the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty, final ICallback<? super MultiValueLegacyExtendedProperty> callback) {
+    public void put(@Nonnull final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty, @Nonnull final ICallback<? super MultiValueLegacyExtendedProperty> callback) {
         send(HttpMethod.PUT, callback, newMultiValueLegacyExtendedProperty);
     }
 
@@ -128,7 +133,8 @@ public class MultiValueLegacyExtendedPropertyRequest extends BaseRequest<MultiVa
      * @return the created MultiValueLegacyExtendedProperty
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MultiValueLegacyExtendedProperty put(final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty) throws ClientException {
+    @Nullable
+    public MultiValueLegacyExtendedProperty put(@Nonnull final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty) throws ClientException {
         return send(HttpMethod.PUT, newMultiValueLegacyExtendedProperty);
     }
 
@@ -138,7 +144,8 @@ public class MultiValueLegacyExtendedPropertyRequest extends BaseRequest<MultiVa
      * @param value the select clause
      * @return the updated request
      */
-     public MultiValueLegacyExtendedPropertyRequest select(final String value) {
+     @Nonnull
+     public MultiValueLegacyExtendedPropertyRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class MultiValueLegacyExtendedPropertyRequest extends BaseRequest<MultiVa
      * @param value the expand clause
      * @return the updated request
      */
-     public MultiValueLegacyExtendedPropertyRequest expand(final String value) {
+     @Nonnull
+     public MultiValueLegacyExtendedPropertyRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

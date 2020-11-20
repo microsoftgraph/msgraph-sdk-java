@@ -7,6 +7,8 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
 import java.util.EnumSet;
@@ -24,6 +26,7 @@ public class WorkbookFunctionsAccrIntBody {
      */
     @SerializedName(value = "issue", alternate = {"Issue"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement issue;
 
     /**
@@ -32,6 +35,7 @@ public class WorkbookFunctionsAccrIntBody {
      */
     @SerializedName(value = "firstInterest", alternate = {"FirstInterest"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement firstInterest;
 
     /**
@@ -40,6 +44,7 @@ public class WorkbookFunctionsAccrIntBody {
      */
     @SerializedName(value = "settlement", alternate = {"Settlement"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement settlement;
 
     /**
@@ -48,6 +53,7 @@ public class WorkbookFunctionsAccrIntBody {
      */
     @SerializedName(value = "rate", alternate = {"Rate"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement rate;
 
     /**
@@ -56,6 +62,7 @@ public class WorkbookFunctionsAccrIntBody {
      */
     @SerializedName(value = "par", alternate = {"Par"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement par;
 
     /**
@@ -64,6 +71,7 @@ public class WorkbookFunctionsAccrIntBody {
      */
     @SerializedName(value = "frequency", alternate = {"Frequency"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement frequency;
 
     /**
@@ -72,6 +80,7 @@ public class WorkbookFunctionsAccrIntBody {
      */
     @SerializedName(value = "basis", alternate = {"Basis"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement basis;
 
     /**
@@ -80,6 +89,7 @@ public class WorkbookFunctionsAccrIntBody {
      */
     @SerializedName(value = "calcMethod", alternate = {"CalcMethod"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement calcMethod;
 
 
@@ -98,6 +108,7 @@ public class WorkbookFunctionsAccrIntBody {
      *
      * @return the raw representation of this class
      */
+    @Nullable
     public JsonObject getRawObject() {
         return rawObject;
     }
@@ -107,6 +118,7 @@ public class WorkbookFunctionsAccrIntBody {
      *
      * @return the serializer
      */
+    @Nullable
     public ISerializer getSerializer() {
         return serializer;
     }
@@ -117,7 +129,7 @@ public class WorkbookFunctionsAccrIntBody {
      * @param serializer the serializer
      * @param json the JSON object to set this object to
      */
-    public void setRawObject(final ISerializer serializer, final JsonObject json) {
+    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
         this.serializer = serializer;
         rawObject = json;
 

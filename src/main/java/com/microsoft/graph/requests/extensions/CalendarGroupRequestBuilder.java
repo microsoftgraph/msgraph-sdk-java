@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.CalendarCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CalendarRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -29,7 +31,7 @@ public class CalendarGroupRequestBuilder extends BaseRequestBuilder<CalendarGrou
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CalendarGroupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CalendarGroupRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +41,8 @@ public class CalendarGroupRequestBuilder extends BaseRequestBuilder<CalendarGrou
      * @param requestOptions the options for this request
      * @return the CalendarGroupRequest instance
      */
-    public CalendarGroupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public CalendarGroupRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,7 +52,8 @@ public class CalendarGroupRequestBuilder extends BaseRequestBuilder<CalendarGrou
      * @param requestOptions the options for this request
      * @return the CalendarGroupRequest instance
      */
-    public CalendarGroupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public CalendarGroupRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.CalendarGroupRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,6 +63,7 @@ public class CalendarGroupRequestBuilder extends BaseRequestBuilder<CalendarGrou
      *
      * @return the collection request builder
      */
+    @Nonnull
     public CalendarCollectionRequestBuilder calendars() {
         return new CalendarCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calendars"), getClient(), null);
     }
@@ -69,7 +74,8 @@ public class CalendarGroupRequestBuilder extends BaseRequestBuilder<CalendarGrou
      * @return the request builder
      * @param id the item identifier
      */
-    public CalendarRequestBuilder calendars(final String id) {
+    @Nonnull
+    public CalendarRequestBuilder calendars(@Nonnull final String id) {
         return new CalendarRequestBuilder(getRequestUrlWithAdditionalSegment("calendars") + "/" + id, getClient(), null);
     }
 }

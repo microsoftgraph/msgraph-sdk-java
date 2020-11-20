@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Call;
 import com.microsoft.graph.models.extensions.CommsOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.CommsOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CommsOperationRequestBuilder;
@@ -32,7 +34,7 @@ public class CommsOperationCollectionRequestBuilder extends BaseCollectionReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CommsOperationCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CommsOperationCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CommsOperationRequestBuilder.class, CommsOperationCollectionRequest.class);
     }
 

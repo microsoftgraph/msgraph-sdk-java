@@ -27,6 +27,9 @@ import com.google.gson.annotations.SerializedName;
 import com.microsoft.graph.core.GraphErrorCodes;
 import com.google.gson.annotations.Expose;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 /**
  * Represents an error returned by the service
  */
@@ -35,15 +38,18 @@ public class GraphError {
     /** The error message */
     @SerializedName("message")
     @Expose()
+    @Nullable
     public String message;
 
     /** The error code */
     @SerializedName("code")
     @Expose()
+    @Nullable
     public String code;
 
     /** The inner error */
     @SerializedName("innererror")
+    @Nullable
     public GraphInnerError innererror;
 
     /**
@@ -52,7 +58,7 @@ public class GraphError {
      * @param expectedCode the expected error code
      * @return <b>true</b> if the error code matches, and <b>false</b> if there was no match
      */
-    public boolean isError(final GraphErrorCodes expectedCode) {
+    public boolean isError(@Nonnull final GraphErrorCodes expectedCode) {
         if (code.equalsIgnoreCase(expectedCode.toString())) {
             return true;
         }

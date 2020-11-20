@@ -10,6 +10,8 @@ import com.microsoft.graph.models.extensions.TimeConstraint;
 import com.microsoft.graph.models.extensions.MeetingTimeSuggestionsResult;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
 import java.util.EnumSet;
@@ -27,6 +29,7 @@ public class UserFindMeetingTimesBody {
      */
     @SerializedName(value = "attendees", alternate = {"Attendees"})
     @Expose
+	@Nullable
     public java.util.List<AttendeeBase> attendees;
 
     /**
@@ -35,6 +38,7 @@ public class UserFindMeetingTimesBody {
      */
     @SerializedName(value = "locationConstraint", alternate = {"LocationConstraint"})
     @Expose
+	@Nullable
     public LocationConstraint locationConstraint;
 
     /**
@@ -43,6 +47,7 @@ public class UserFindMeetingTimesBody {
      */
     @SerializedName(value = "timeConstraint", alternate = {"TimeConstraint"})
     @Expose
+	@Nullable
     public TimeConstraint timeConstraint;
 
     /**
@@ -51,6 +56,7 @@ public class UserFindMeetingTimesBody {
      */
     @SerializedName(value = "meetingDuration", alternate = {"MeetingDuration"})
     @Expose
+	@Nullable
     public javax.xml.datatype.Duration meetingDuration;
 
     /**
@@ -59,6 +65,7 @@ public class UserFindMeetingTimesBody {
      */
     @SerializedName(value = "maxCandidates", alternate = {"MaxCandidates"})
     @Expose
+	@Nullable
     public Integer maxCandidates;
 
     /**
@@ -67,6 +74,7 @@ public class UserFindMeetingTimesBody {
      */
     @SerializedName(value = "isOrganizerOptional", alternate = {"IsOrganizerOptional"})
     @Expose
+	@Nullable
     public Boolean isOrganizerOptional;
 
     /**
@@ -75,6 +83,7 @@ public class UserFindMeetingTimesBody {
      */
     @SerializedName(value = "returnSuggestionReasons", alternate = {"ReturnSuggestionReasons"})
     @Expose
+	@Nullable
     public Boolean returnSuggestionReasons;
 
     /**
@@ -83,6 +92,7 @@ public class UserFindMeetingTimesBody {
      */
     @SerializedName(value = "minimumAttendeePercentage", alternate = {"MinimumAttendeePercentage"})
     @Expose
+	@Nullable
     public Double minimumAttendeePercentage;
 
 
@@ -101,6 +111,7 @@ public class UserFindMeetingTimesBody {
      *
      * @return the raw representation of this class
      */
+    @Nullable
     public JsonObject getRawObject() {
         return rawObject;
     }
@@ -110,6 +121,7 @@ public class UserFindMeetingTimesBody {
      *
      * @return the serializer
      */
+    @Nullable
     public ISerializer getSerializer() {
         return serializer;
     }
@@ -120,7 +132,7 @@ public class UserFindMeetingTimesBody {
      * @param serializer the serializer
      * @param json the JSON object to set this object to
      */
-    public void setRawObject(final ISerializer serializer, final JsonObject json) {
+    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
         this.serializer = serializer;
         rawObject = json;
 

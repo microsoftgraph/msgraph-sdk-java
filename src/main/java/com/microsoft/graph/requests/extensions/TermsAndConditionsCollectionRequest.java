@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.TermsAndConditions;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class TermsAndConditionsCollectionRequest extends BaseCollectionRequest<T
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TermsAndConditionsCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TermsAndConditionsCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TermsAndConditionsCollectionResponse.class, TermsAndConditionsCollectionPage.class, TermsAndConditionsCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class TermsAndConditionsCollectionRequest extends BaseCollectionRequest<T
      * @param newTermsAndConditions the TermsAndConditions to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final TermsAndConditions newTermsAndConditions, final ICallback<? super TermsAndConditions> callback) {
+    public void post(@Nonnull final TermsAndConditions newTermsAndConditions, @Nonnull final ICallback<? super TermsAndConditions> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TermsAndConditionsRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class TermsAndConditionsCollectionRequest extends BaseCollectionRequest<T
      * @param newTermsAndConditions the TermsAndConditions to create
      * @return the newly created object
      */
-    public TermsAndConditions post(final TermsAndConditions newTermsAndConditions) throws ClientException {
+    @Nonnull
+    public TermsAndConditions post(@Nonnull final TermsAndConditions newTermsAndConditions) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TermsAndConditionsRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class TermsAndConditionsCollectionRequest extends BaseCollectionRequest<T
      * @param value the expand clause
      * @return the updated request
      */
-    public TermsAndConditionsCollectionRequest expand(final String value) {
+    @Nonnull
+    public TermsAndConditionsCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class TermsAndConditionsCollectionRequest extends BaseCollectionRequest<T
      * @param value the filter clause
      * @return the updated request
      */
-    public TermsAndConditionsCollectionRequest filter(final String value) {
+    @Nonnull
+    public TermsAndConditionsCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class TermsAndConditionsCollectionRequest extends BaseCollectionRequest<T
      * @param value the order by clause
      * @return the updated request
      */
-    public TermsAndConditionsCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public TermsAndConditionsCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class TermsAndConditionsCollectionRequest extends BaseCollectionRequest<T
      * @param value the select clause
      * @return the updated request
      */
-    public TermsAndConditionsCollectionRequest select(final String value) {
+    @Nonnull
+    public TermsAndConditionsCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class TermsAndConditionsCollectionRequest extends BaseCollectionRequest<T
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public TermsAndConditionsCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class TermsAndConditionsCollectionRequest extends BaseCollectionRequest<T
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public TermsAndConditionsCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class TermsAndConditionsCollectionRequest extends BaseCollectionRequest<T
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public TermsAndConditionsCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public TermsAndConditionsCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

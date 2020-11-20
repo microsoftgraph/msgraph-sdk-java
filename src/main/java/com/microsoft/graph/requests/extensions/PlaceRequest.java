@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Place;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,10 +31,10 @@ public class PlaceRequest extends BaseRequest<Place> {
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public PlaceRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends Place> responseClass) {
+    public PlaceRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends Place> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -43,7 +45,7 @@ public class PlaceRequest extends BaseRequest<Place> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PlaceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PlaceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Place.class);
     }
 
@@ -52,7 +54,7 @@ public class PlaceRequest extends BaseRequest<Place> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Place> callback) {
+    public void get(@Nonnull final ICallback<? super Place> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -62,6 +64,7 @@ public class PlaceRequest extends BaseRequest<Place> {
      * @return the Place from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Place get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -71,7 +74,7 @@ public class PlaceRequest extends BaseRequest<Place> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Place> callback) {
+    public void delete(@Nonnull final ICallback<? super Place> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +93,7 @@ public class PlaceRequest extends BaseRequest<Place> {
      * @param sourcePlace the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Place sourcePlace, final ICallback<? super Place> callback) {
+    public void patch(@Nonnull final Place sourcePlace, @Nonnull final ICallback<? super Place> callback) {
         send(HttpMethod.PATCH, callback, sourcePlace);
     }
 
@@ -101,7 +104,8 @@ public class PlaceRequest extends BaseRequest<Place> {
      * @return the updated Place
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Place patch(final Place sourcePlace) throws ClientException {
+    @Nullable
+    public Place patch(@Nonnull final Place sourcePlace) throws ClientException {
         return send(HttpMethod.PATCH, sourcePlace);
     }
 
@@ -111,7 +115,7 @@ public class PlaceRequest extends BaseRequest<Place> {
      * @param newPlace the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Place newPlace, final ICallback<? super Place> callback) {
+    public void post(@Nonnull final Place newPlace, @Nonnull final ICallback<? super Place> callback) {
         send(HttpMethod.POST, callback, newPlace);
     }
 
@@ -122,7 +126,8 @@ public class PlaceRequest extends BaseRequest<Place> {
      * @return the created Place
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Place post(final Place newPlace) throws ClientException {
+    @Nullable
+    public Place post(@Nonnull final Place newPlace) throws ClientException {
         return send(HttpMethod.POST, newPlace);
     }
 
@@ -132,7 +137,7 @@ public class PlaceRequest extends BaseRequest<Place> {
      * @param newPlace the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Place newPlace, final ICallback<? super Place> callback) {
+    public void put(@Nonnull final Place newPlace, @Nonnull final ICallback<? super Place> callback) {
         send(HttpMethod.PUT, callback, newPlace);
     }
 
@@ -143,7 +148,8 @@ public class PlaceRequest extends BaseRequest<Place> {
      * @return the created Place
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Place put(final Place newPlace) throws ClientException {
+    @Nullable
+    public Place put(@Nonnull final Place newPlace) throws ClientException {
         return send(HttpMethod.PUT, newPlace);
     }
 
@@ -153,7 +159,8 @@ public class PlaceRequest extends BaseRequest<Place> {
      * @param value the select clause
      * @return the updated request
      */
-     public PlaceRequest select(final String value) {
+     @Nonnull
+     public PlaceRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -164,7 +171,8 @@ public class PlaceRequest extends BaseRequest<Place> {
      * @param value the expand clause
      * @return the updated request
      */
-     public PlaceRequest expand(final String value) {
+     @Nonnull
+     public PlaceRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

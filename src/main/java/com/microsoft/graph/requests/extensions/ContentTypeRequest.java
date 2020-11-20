@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.ColumnLinkCollectionRequestBuilde
 import com.microsoft.graph.requests.extensions.ColumnLinkRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -30,7 +32,7 @@ public class ContentTypeRequest extends BaseRequest<ContentType> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ContentTypeRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ContentTypeRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ContentType.class);
     }
 
@@ -39,7 +41,7 @@ public class ContentTypeRequest extends BaseRequest<ContentType> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ContentType> callback) {
+    public void get(@Nonnull final ICallback<? super ContentType> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -49,6 +51,7 @@ public class ContentTypeRequest extends BaseRequest<ContentType> {
      * @return the ContentType from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ContentType get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -58,7 +61,7 @@ public class ContentTypeRequest extends BaseRequest<ContentType> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ContentType> callback) {
+    public void delete(@Nonnull final ICallback<? super ContentType> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +80,7 @@ public class ContentTypeRequest extends BaseRequest<ContentType> {
      * @param sourceContentType the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ContentType sourceContentType, final ICallback<? super ContentType> callback) {
+    public void patch(@Nonnull final ContentType sourceContentType, @Nonnull final ICallback<? super ContentType> callback) {
         send(HttpMethod.PATCH, callback, sourceContentType);
     }
 
@@ -88,7 +91,8 @@ public class ContentTypeRequest extends BaseRequest<ContentType> {
      * @return the updated ContentType
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ContentType patch(final ContentType sourceContentType) throws ClientException {
+    @Nullable
+    public ContentType patch(@Nonnull final ContentType sourceContentType) throws ClientException {
         return send(HttpMethod.PATCH, sourceContentType);
     }
 
@@ -98,7 +102,7 @@ public class ContentTypeRequest extends BaseRequest<ContentType> {
      * @param newContentType the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ContentType newContentType, final ICallback<? super ContentType> callback) {
+    public void post(@Nonnull final ContentType newContentType, @Nonnull final ICallback<? super ContentType> callback) {
         send(HttpMethod.POST, callback, newContentType);
     }
 
@@ -109,7 +113,8 @@ public class ContentTypeRequest extends BaseRequest<ContentType> {
      * @return the created ContentType
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ContentType post(final ContentType newContentType) throws ClientException {
+    @Nullable
+    public ContentType post(@Nonnull final ContentType newContentType) throws ClientException {
         return send(HttpMethod.POST, newContentType);
     }
 
@@ -119,7 +124,7 @@ public class ContentTypeRequest extends BaseRequest<ContentType> {
      * @param newContentType the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ContentType newContentType, final ICallback<? super ContentType> callback) {
+    public void put(@Nonnull final ContentType newContentType, @Nonnull final ICallback<? super ContentType> callback) {
         send(HttpMethod.PUT, callback, newContentType);
     }
 
@@ -130,7 +135,8 @@ public class ContentTypeRequest extends BaseRequest<ContentType> {
      * @return the created ContentType
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ContentType put(final ContentType newContentType) throws ClientException {
+    @Nullable
+    public ContentType put(@Nonnull final ContentType newContentType) throws ClientException {
         return send(HttpMethod.PUT, newContentType);
     }
 
@@ -140,7 +146,8 @@ public class ContentTypeRequest extends BaseRequest<ContentType> {
      * @param value the select clause
      * @return the updated request
      */
-     public ContentTypeRequest select(final String value) {
+     @Nonnull
+     public ContentTypeRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -151,7 +158,8 @@ public class ContentTypeRequest extends BaseRequest<ContentType> {
      * @param value the expand clause
      * @return the updated request
      */
-     public ContentTypeRequest expand(final String value) {
+     @Nonnull
+     public ContentTypeRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

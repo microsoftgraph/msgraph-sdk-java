@@ -13,6 +13,8 @@ import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.PasswordCredential;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.ApplicationWithReferenceRequest;
 import com.microsoft.graph.requests.extensions.ApplicationReferenceRequestBuilder;
@@ -40,7 +42,7 @@ public class ApplicationCollectionReferenceRequest extends BaseCollectionWithRef
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ApplicationCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ApplicationCollectionReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ApplicationCollectionResponse.class, ApplicationCollectionWithReferencesPage.class, ApplicationCollectionWithReferencesRequestBuilder.class);
     }
 
@@ -49,7 +51,7 @@ public class ApplicationCollectionReferenceRequest extends BaseCollectionWithRef
      * @param newApplication the Application to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final Application newApplication, final ICallback<? super Application> callback) {
+    public void post(@Nonnull final Application newApplication, @Nonnull final ICallback<? super Application> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/applications/" + newApplication.id);
         new ApplicationWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -62,7 +64,8 @@ public class ApplicationCollectionReferenceRequest extends BaseCollectionWithRef
      * @param newApplication the Application to create
      * @return the newly created object
      */
-    public Application post(final Application newApplication) throws ClientException {
+    @Nonnull
+    public Application post(@Nonnull final Application newApplication) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/applications/" + newApplication.id);
         return new ApplicationWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
@@ -75,7 +78,8 @@ public class ApplicationCollectionReferenceRequest extends BaseCollectionWithRef
      * @param value the expand clause
      * @return the updated request
      */
-    public ApplicationCollectionReferenceRequest expand(final String value) {
+    @Nonnull
+    public ApplicationCollectionReferenceRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -86,7 +90,8 @@ public class ApplicationCollectionReferenceRequest extends BaseCollectionWithRef
      * @param value the filter clause
      * @return the updated request
      */
-    public ApplicationCollectionReferenceRequest filter(final String value) {
+    @Nonnull
+    public ApplicationCollectionReferenceRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -97,7 +102,8 @@ public class ApplicationCollectionReferenceRequest extends BaseCollectionWithRef
      * @param value the sort clause
      * @return the updated request
      */
-    public ApplicationCollectionReferenceRequest orderBy(final String value) {
+    @Nonnull
+    public ApplicationCollectionReferenceRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -108,7 +114,8 @@ public class ApplicationCollectionReferenceRequest extends BaseCollectionWithRef
      * @param value the select clause
      * @return the updated request
      */
-    public ApplicationCollectionReferenceRequest select(final String value) {
+    @Nonnull
+    public ApplicationCollectionReferenceRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -119,6 +126,7 @@ public class ApplicationCollectionReferenceRequest extends BaseCollectionWithRef
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ApplicationCollectionReferenceRequest top(final int value) {
         addTopOption(value);
         return this;

@@ -17,6 +17,8 @@ import com.microsoft.graph.models.extensions.ItemPreviewInfo;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DriveItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
@@ -38,7 +40,7 @@ public class DriveItemCollectionRequestBuilder extends BaseCollectionRequestBuil
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DriveItemCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveItemCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DriveItemRequestBuilder.class, DriveItemCollectionRequest.class);
     }
 
@@ -46,6 +48,7 @@ public class DriveItemCollectionRequestBuilder extends BaseCollectionRequestBuil
      * Gets a request builder to the AppRoot folder.
      * @return a request builder to the AppRoot folder
      */
+    @Nonnull
     public DriveItemRequestBuilder appRoot() {
     	return new DriveItemRequestBuilder(this.getRequestUrlWithAdditionalSegment("approot"), this.getClient(), null);
     }

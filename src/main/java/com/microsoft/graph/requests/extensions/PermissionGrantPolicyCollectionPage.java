@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.PermissionGrantPolicy;
 import com.microsoft.graph.requests.extensions.PermissionGrantPolicyCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.PermissionGrantPolicyCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class PermissionGrantPolicyCollectionPage extends BaseCollectionPage<Perm
      * @param response the serialized PermissionGrantPolicyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public PermissionGrantPolicyCollectionPage(final PermissionGrantPolicyCollectionResponse response, final PermissionGrantPolicyCollectionRequestBuilder builder) {
+    public PermissionGrantPolicyCollectionPage(@Nonnull final PermissionGrantPolicyCollectionResponse response, @Nonnull final PermissionGrantPolicyCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class PermissionGrantPolicyCollectionPage extends BaseCollectionPage<Perm
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public PermissionGrantPolicyCollectionPage(final java.util.List<PermissionGrantPolicy> pageContents, final PermissionGrantPolicyCollectionRequestBuilder nextRequestBuilder) {
+    public PermissionGrantPolicyCollectionPage(@Nonnull final java.util.List<PermissionGrantPolicy> pageContents, @Nullable final PermissionGrantPolicyCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

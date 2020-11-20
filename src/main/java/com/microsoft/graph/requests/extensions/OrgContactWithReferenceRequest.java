@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestB
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseWithReferenceRequest;
@@ -33,7 +35,7 @@ public class OrgContactWithReferenceRequest extends BaseWithReferenceRequest<Org
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OrgContactWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OrgContactWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OrgContact.class);
     }
 
@@ -43,7 +45,8 @@ public class OrgContactWithReferenceRequest extends BaseWithReferenceRequest<Org
      * @param value the select clause
      * @return the updated request
      */
-    public OrgContactWithReferenceRequest select(final String value) {
+    @Nonnull
+    public OrgContactWithReferenceRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -54,7 +57,8 @@ public class OrgContactWithReferenceRequest extends BaseWithReferenceRequest<Org
      * @param value the expand clause
      * @return the updated request
      */
-    public OrgContactWithReferenceRequest expand(final String value) {
+    @Nonnull
+    public OrgContactWithReferenceRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }

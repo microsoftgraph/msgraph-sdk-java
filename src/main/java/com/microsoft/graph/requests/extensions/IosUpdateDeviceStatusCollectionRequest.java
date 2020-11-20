@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.IosUpdateDeviceStatus;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class IosUpdateDeviceStatusCollectionRequest extends BaseCollectionReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosUpdateDeviceStatusCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IosUpdateDeviceStatusCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IosUpdateDeviceStatusCollectionResponse.class, IosUpdateDeviceStatusCollectionPage.class, IosUpdateDeviceStatusCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class IosUpdateDeviceStatusCollectionRequest extends BaseCollectionReques
      * @param newIosUpdateDeviceStatus the IosUpdateDeviceStatus to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final IosUpdateDeviceStatus newIosUpdateDeviceStatus, final ICallback<? super IosUpdateDeviceStatus> callback) {
+    public void post(@Nonnull final IosUpdateDeviceStatus newIosUpdateDeviceStatus, @Nonnull final ICallback<? super IosUpdateDeviceStatus> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new IosUpdateDeviceStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class IosUpdateDeviceStatusCollectionRequest extends BaseCollectionReques
      * @param newIosUpdateDeviceStatus the IosUpdateDeviceStatus to create
      * @return the newly created object
      */
-    public IosUpdateDeviceStatus post(final IosUpdateDeviceStatus newIosUpdateDeviceStatus) throws ClientException {
+    @Nonnull
+    public IosUpdateDeviceStatus post(@Nonnull final IosUpdateDeviceStatus newIosUpdateDeviceStatus) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new IosUpdateDeviceStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class IosUpdateDeviceStatusCollectionRequest extends BaseCollectionReques
      * @param value the expand clause
      * @return the updated request
      */
-    public IosUpdateDeviceStatusCollectionRequest expand(final String value) {
+    @Nonnull
+    public IosUpdateDeviceStatusCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class IosUpdateDeviceStatusCollectionRequest extends BaseCollectionReques
      * @param value the filter clause
      * @return the updated request
      */
-    public IosUpdateDeviceStatusCollectionRequest filter(final String value) {
+    @Nonnull
+    public IosUpdateDeviceStatusCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class IosUpdateDeviceStatusCollectionRequest extends BaseCollectionReques
      * @param value the order by clause
      * @return the updated request
      */
-    public IosUpdateDeviceStatusCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public IosUpdateDeviceStatusCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class IosUpdateDeviceStatusCollectionRequest extends BaseCollectionReques
      * @param value the select clause
      * @return the updated request
      */
-    public IosUpdateDeviceStatusCollectionRequest select(final String value) {
+    @Nonnull
+    public IosUpdateDeviceStatusCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class IosUpdateDeviceStatusCollectionRequest extends BaseCollectionReques
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public IosUpdateDeviceStatusCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class IosUpdateDeviceStatusCollectionRequest extends BaseCollectionReques
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public IosUpdateDeviceStatusCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class IosUpdateDeviceStatusCollectionRequest extends BaseCollectionReques
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public IosUpdateDeviceStatusCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public IosUpdateDeviceStatusCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Schedule;
 import com.microsoft.graph.models.extensions.SchedulingGroup;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.SchedulingGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SchedulingGroupRequestBuilder;
@@ -32,7 +34,7 @@ public class SchedulingGroupCollectionRequestBuilder extends BaseCollectionReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SchedulingGroupCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SchedulingGroupCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SchedulingGroupRequestBuilder.class, SchedulingGroupCollectionRequest.class);
     }
 

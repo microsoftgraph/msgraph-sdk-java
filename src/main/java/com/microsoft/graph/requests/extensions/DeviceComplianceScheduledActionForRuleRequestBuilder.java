@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.DeviceComplianceActionItemCollect
 import com.microsoft.graph.requests.extensions.DeviceComplianceActionItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -29,7 +31,7 @@ public class DeviceComplianceScheduledActionForRuleRequestBuilder extends BaseRe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceComplianceScheduledActionForRuleRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceComplianceScheduledActionForRuleRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +41,8 @@ public class DeviceComplianceScheduledActionForRuleRequestBuilder extends BaseRe
      * @param requestOptions the options for this request
      * @return the DeviceComplianceScheduledActionForRuleRequest instance
      */
-    public DeviceComplianceScheduledActionForRuleRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DeviceComplianceScheduledActionForRuleRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,7 +52,8 @@ public class DeviceComplianceScheduledActionForRuleRequestBuilder extends BaseRe
      * @param requestOptions the options for this request
      * @return the DeviceComplianceScheduledActionForRuleRequest instance
      */
-    public DeviceComplianceScheduledActionForRuleRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DeviceComplianceScheduledActionForRuleRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceComplianceScheduledActionForRuleRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,6 +63,7 @@ public class DeviceComplianceScheduledActionForRuleRequestBuilder extends BaseRe
      *
      * @return the collection request builder
      */
+    @Nonnull
     public DeviceComplianceActionItemCollectionRequestBuilder scheduledActionConfigurations() {
         return new DeviceComplianceActionItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionConfigurations"), getClient(), null);
     }
@@ -69,7 +74,8 @@ public class DeviceComplianceScheduledActionForRuleRequestBuilder extends BaseRe
      * @return the request builder
      * @param id the item identifier
      */
-    public DeviceComplianceActionItemRequestBuilder scheduledActionConfigurations(final String id) {
+    @Nonnull
+    public DeviceComplianceActionItemRequestBuilder scheduledActionConfigurations(@Nonnull final String id) {
         return new DeviceComplianceActionItemRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionConfigurations") + "/" + id, getClient(), null);
     }
 }

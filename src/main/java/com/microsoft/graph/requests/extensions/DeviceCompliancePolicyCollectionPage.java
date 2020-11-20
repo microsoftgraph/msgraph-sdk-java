@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicy;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class DeviceCompliancePolicyCollectionPage extends BaseCollectionPage<Dev
      * @param response the serialized DeviceCompliancePolicyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DeviceCompliancePolicyCollectionPage(final DeviceCompliancePolicyCollectionResponse response, final DeviceCompliancePolicyCollectionRequestBuilder builder) {
+    public DeviceCompliancePolicyCollectionPage(@Nonnull final DeviceCompliancePolicyCollectionResponse response, @Nonnull final DeviceCompliancePolicyCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class DeviceCompliancePolicyCollectionPage extends BaseCollectionPage<Dev
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public DeviceCompliancePolicyCollectionPage(final java.util.List<DeviceCompliancePolicy> pageContents, final DeviceCompliancePolicyCollectionRequestBuilder nextRequestBuilder) {
+    public DeviceCompliancePolicyCollectionPage(@Nonnull final java.util.List<DeviceCompliancePolicy> pageContents, @Nullable final DeviceCompliancePolicyCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

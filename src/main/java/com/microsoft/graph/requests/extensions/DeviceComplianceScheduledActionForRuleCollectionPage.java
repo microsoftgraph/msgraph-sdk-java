@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DeviceComplianceScheduledActionForRule;
 import com.microsoft.graph.requests.extensions.DeviceComplianceScheduledActionForRuleCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DeviceComplianceScheduledActionForRuleCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class DeviceComplianceScheduledActionForRuleCollectionPage extends BaseCo
      * @param response the serialized DeviceComplianceScheduledActionForRuleCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DeviceComplianceScheduledActionForRuleCollectionPage(final DeviceComplianceScheduledActionForRuleCollectionResponse response, final DeviceComplianceScheduledActionForRuleCollectionRequestBuilder builder) {
+    public DeviceComplianceScheduledActionForRuleCollectionPage(@Nonnull final DeviceComplianceScheduledActionForRuleCollectionResponse response, @Nonnull final DeviceComplianceScheduledActionForRuleCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class DeviceComplianceScheduledActionForRuleCollectionPage extends BaseCo
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public DeviceComplianceScheduledActionForRuleCollectionPage(final java.util.List<DeviceComplianceScheduledActionForRule> pageContents, final DeviceComplianceScheduledActionForRuleCollectionRequestBuilder nextRequestBuilder) {
+    public DeviceComplianceScheduledActionForRuleCollectionPage(@Nonnull final java.util.List<DeviceComplianceScheduledActionForRule> pageContents, @Nullable final DeviceComplianceScheduledActionForRuleCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

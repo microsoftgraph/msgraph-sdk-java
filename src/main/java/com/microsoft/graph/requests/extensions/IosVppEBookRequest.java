@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosVppEBook;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class IosVppEBookRequest extends BaseRequest<IosVppEBook> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosVppEBookRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IosVppEBookRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IosVppEBook.class);
     }
 
@@ -37,7 +39,7 @@ public class IosVppEBookRequest extends BaseRequest<IosVppEBook> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IosVppEBook> callback) {
+    public void get(@Nonnull final ICallback<? super IosVppEBook> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class IosVppEBookRequest extends BaseRequest<IosVppEBook> {
      * @return the IosVppEBook from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public IosVppEBook get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class IosVppEBookRequest extends BaseRequest<IosVppEBook> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IosVppEBook> callback) {
+    public void delete(@Nonnull final ICallback<? super IosVppEBook> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class IosVppEBookRequest extends BaseRequest<IosVppEBook> {
      * @param sourceIosVppEBook the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosVppEBook sourceIosVppEBook, final ICallback<? super IosVppEBook> callback) {
+    public void patch(@Nonnull final IosVppEBook sourceIosVppEBook, @Nonnull final ICallback<? super IosVppEBook> callback) {
         send(HttpMethod.PATCH, callback, sourceIosVppEBook);
     }
 
@@ -86,7 +89,8 @@ public class IosVppEBookRequest extends BaseRequest<IosVppEBook> {
      * @return the updated IosVppEBook
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosVppEBook patch(final IosVppEBook sourceIosVppEBook) throws ClientException {
+    @Nullable
+    public IosVppEBook patch(@Nonnull final IosVppEBook sourceIosVppEBook) throws ClientException {
         return send(HttpMethod.PATCH, sourceIosVppEBook);
     }
 
@@ -96,7 +100,7 @@ public class IosVppEBookRequest extends BaseRequest<IosVppEBook> {
      * @param newIosVppEBook the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosVppEBook newIosVppEBook, final ICallback<? super IosVppEBook> callback) {
+    public void post(@Nonnull final IosVppEBook newIosVppEBook, @Nonnull final ICallback<? super IosVppEBook> callback) {
         send(HttpMethod.POST, callback, newIosVppEBook);
     }
 
@@ -107,7 +111,8 @@ public class IosVppEBookRequest extends BaseRequest<IosVppEBook> {
      * @return the created IosVppEBook
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosVppEBook post(final IosVppEBook newIosVppEBook) throws ClientException {
+    @Nullable
+    public IosVppEBook post(@Nonnull final IosVppEBook newIosVppEBook) throws ClientException {
         return send(HttpMethod.POST, newIosVppEBook);
     }
 
@@ -117,7 +122,7 @@ public class IosVppEBookRequest extends BaseRequest<IosVppEBook> {
      * @param newIosVppEBook the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosVppEBook newIosVppEBook, final ICallback<? super IosVppEBook> callback) {
+    public void put(@Nonnull final IosVppEBook newIosVppEBook, @Nonnull final ICallback<? super IosVppEBook> callback) {
         send(HttpMethod.PUT, callback, newIosVppEBook);
     }
 
@@ -128,7 +133,8 @@ public class IosVppEBookRequest extends BaseRequest<IosVppEBook> {
      * @return the created IosVppEBook
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosVppEBook put(final IosVppEBook newIosVppEBook) throws ClientException {
+    @Nullable
+    public IosVppEBook put(@Nonnull final IosVppEBook newIosVppEBook) throws ClientException {
         return send(HttpMethod.PUT, newIosVppEBook);
     }
 
@@ -138,7 +144,8 @@ public class IosVppEBookRequest extends BaseRequest<IosVppEBook> {
      * @param value the select clause
      * @return the updated request
      */
-     public IosVppEBookRequest select(final String value) {
+     @Nonnull
+     public IosVppEBookRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class IosVppEBookRequest extends BaseRequest<IosVppEBook> {
      * @param value the expand clause
      * @return the updated request
      */
-     public IosVppEBookRequest expand(final String value) {
+     @Nonnull
+     public IosVppEBookRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ProfilePhoto;
 import com.microsoft.graph.requests.extensions.ProfilePhotoCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.ProfilePhotoCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class ProfilePhotoCollectionPage extends BaseCollectionPage<ProfilePhoto,
      * @param response the serialized ProfilePhotoCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ProfilePhotoCollectionPage(final ProfilePhotoCollectionResponse response, final ProfilePhotoCollectionRequestBuilder builder) {
+    public ProfilePhotoCollectionPage(@Nonnull final ProfilePhotoCollectionResponse response, @Nonnull final ProfilePhotoCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class ProfilePhotoCollectionPage extends BaseCollectionPage<ProfilePhoto,
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public ProfilePhotoCollectionPage(final java.util.List<ProfilePhoto> pageContents, final ProfilePhotoCollectionRequestBuilder nextRequestBuilder) {
+    public ProfilePhotoCollectionPage(@Nonnull final java.util.List<ProfilePhoto> pageContents, @Nullable final ProfilePhotoCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

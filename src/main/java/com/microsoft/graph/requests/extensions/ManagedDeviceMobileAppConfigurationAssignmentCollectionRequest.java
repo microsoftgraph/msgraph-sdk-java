@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfiguration
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest exte
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse.class, ManagedDeviceMobileAppConfigurationAssignmentCollectionPage.class, ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest exte
      * @param newManagedDeviceMobileAppConfigurationAssignment the ManagedDeviceMobileAppConfigurationAssignment to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final ManagedDeviceMobileAppConfigurationAssignment newManagedDeviceMobileAppConfigurationAssignment, final ICallback<? super ManagedDeviceMobileAppConfigurationAssignment> callback) {
+    public void post(@Nonnull final ManagedDeviceMobileAppConfigurationAssignment newManagedDeviceMobileAppConfigurationAssignment, @Nonnull final ICallback<? super ManagedDeviceMobileAppConfigurationAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest exte
      * @param newManagedDeviceMobileAppConfigurationAssignment the ManagedDeviceMobileAppConfigurationAssignment to create
      * @return the newly created object
      */
-    public ManagedDeviceMobileAppConfigurationAssignment post(final ManagedDeviceMobileAppConfigurationAssignment newManagedDeviceMobileAppConfigurationAssignment) throws ClientException {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationAssignment post(@Nonnull final ManagedDeviceMobileAppConfigurationAssignment newManagedDeviceMobileAppConfigurationAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest exte
      * @param value the expand clause
      * @return the updated request
      */
-    public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest expand(final String value) {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest exte
      * @param value the filter clause
      * @return the updated request
      */
-    public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest filter(final String value) {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest exte
      * @param value the order by clause
      * @return the updated request
      */
-    public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest exte
      * @param value the select clause
      * @return the updated request
      */
-    public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest select(final String value) {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest exte
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest exte
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest exte
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

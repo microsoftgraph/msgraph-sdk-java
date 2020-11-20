@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.WorkbookRangeView;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.WorkbookRangeViewCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRangeViewRequestBuilder;
@@ -33,7 +35,7 @@ public class WorkbookRangeViewCollectionRequestBuilder extends BaseCollectionReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookRangeViewCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeViewCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookRangeViewRequestBuilder.class, WorkbookRangeViewCollectionRequest.class);
     }
 
@@ -44,7 +46,8 @@ public class WorkbookRangeViewCollectionRequestBuilder extends BaseCollectionReq
      * @return the request builder 
      * @param index the index
      */
-    public WorkbookRangeViewItemAtRequestBuilder itemAt(final Integer index) {
+    @Nonnull
+    public WorkbookRangeViewItemAtRequestBuilder itemAt(@Nullable final Integer index) {
         return new WorkbookRangeViewItemAtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.itemAt"), getClient(), null, index);
     }
 }

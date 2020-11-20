@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ListItem;
 import com.microsoft.graph.models.extensions.ListItemVersion;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class ListItemVersionCollectionRequest extends BaseCollectionRequest<List
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ListItemVersionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ListItemVersionCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ListItemVersionCollectionResponse.class, ListItemVersionCollectionPage.class, ListItemVersionCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class ListItemVersionCollectionRequest extends BaseCollectionRequest<List
      * @param newListItemVersion the ListItemVersion to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final ListItemVersion newListItemVersion, final ICallback<? super ListItemVersion> callback) {
+    public void post(@Nonnull final ListItemVersion newListItemVersion, @Nonnull final ICallback<? super ListItemVersion> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ListItemVersionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class ListItemVersionCollectionRequest extends BaseCollectionRequest<List
      * @param newListItemVersion the ListItemVersion to create
      * @return the newly created object
      */
-    public ListItemVersion post(final ListItemVersion newListItemVersion) throws ClientException {
+    @Nonnull
+    public ListItemVersion post(@Nonnull final ListItemVersion newListItemVersion) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ListItemVersionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class ListItemVersionCollectionRequest extends BaseCollectionRequest<List
      * @param value the expand clause
      * @return the updated request
      */
-    public ListItemVersionCollectionRequest expand(final String value) {
+    @Nonnull
+    public ListItemVersionCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class ListItemVersionCollectionRequest extends BaseCollectionRequest<List
      * @param value the filter clause
      * @return the updated request
      */
-    public ListItemVersionCollectionRequest filter(final String value) {
+    @Nonnull
+    public ListItemVersionCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class ListItemVersionCollectionRequest extends BaseCollectionRequest<List
      * @param value the order by clause
      * @return the updated request
      */
-    public ListItemVersionCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ListItemVersionCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class ListItemVersionCollectionRequest extends BaseCollectionRequest<List
      * @param value the select clause
      * @return the updated request
      */
-    public ListItemVersionCollectionRequest select(final String value) {
+    @Nonnull
+    public ListItemVersionCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class ListItemVersionCollectionRequest extends BaseCollectionRequest<List
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ListItemVersionCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class ListItemVersionCollectionRequest extends BaseCollectionRequest<List
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ListItemVersionCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class ListItemVersionCollectionRequest extends BaseCollectionRequest<List
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ListItemVersionCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ListItemVersionCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

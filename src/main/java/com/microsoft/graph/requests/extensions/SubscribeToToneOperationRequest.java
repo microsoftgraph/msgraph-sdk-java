@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SubscribeToToneOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class SubscribeToToneOperationRequest extends BaseRequest<SubscribeToTone
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SubscribeToToneOperationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SubscribeToToneOperationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SubscribeToToneOperation.class);
     }
 
@@ -37,7 +39,7 @@ public class SubscribeToToneOperationRequest extends BaseRequest<SubscribeToTone
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SubscribeToToneOperation> callback) {
+    public void get(@Nonnull final ICallback<? super SubscribeToToneOperation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class SubscribeToToneOperationRequest extends BaseRequest<SubscribeToTone
      * @return the SubscribeToToneOperation from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SubscribeToToneOperation get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class SubscribeToToneOperationRequest extends BaseRequest<SubscribeToTone
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SubscribeToToneOperation> callback) {
+    public void delete(@Nonnull final ICallback<? super SubscribeToToneOperation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class SubscribeToToneOperationRequest extends BaseRequest<SubscribeToTone
      * @param sourceSubscribeToToneOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SubscribeToToneOperation sourceSubscribeToToneOperation, final ICallback<? super SubscribeToToneOperation> callback) {
+    public void patch(@Nonnull final SubscribeToToneOperation sourceSubscribeToToneOperation, @Nonnull final ICallback<? super SubscribeToToneOperation> callback) {
         send(HttpMethod.PATCH, callback, sourceSubscribeToToneOperation);
     }
 
@@ -86,7 +89,8 @@ public class SubscribeToToneOperationRequest extends BaseRequest<SubscribeToTone
      * @return the updated SubscribeToToneOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SubscribeToToneOperation patch(final SubscribeToToneOperation sourceSubscribeToToneOperation) throws ClientException {
+    @Nullable
+    public SubscribeToToneOperation patch(@Nonnull final SubscribeToToneOperation sourceSubscribeToToneOperation) throws ClientException {
         return send(HttpMethod.PATCH, sourceSubscribeToToneOperation);
     }
 
@@ -96,7 +100,7 @@ public class SubscribeToToneOperationRequest extends BaseRequest<SubscribeToTone
      * @param newSubscribeToToneOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SubscribeToToneOperation newSubscribeToToneOperation, final ICallback<? super SubscribeToToneOperation> callback) {
+    public void post(@Nonnull final SubscribeToToneOperation newSubscribeToToneOperation, @Nonnull final ICallback<? super SubscribeToToneOperation> callback) {
         send(HttpMethod.POST, callback, newSubscribeToToneOperation);
     }
 
@@ -107,7 +111,8 @@ public class SubscribeToToneOperationRequest extends BaseRequest<SubscribeToTone
      * @return the created SubscribeToToneOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SubscribeToToneOperation post(final SubscribeToToneOperation newSubscribeToToneOperation) throws ClientException {
+    @Nullable
+    public SubscribeToToneOperation post(@Nonnull final SubscribeToToneOperation newSubscribeToToneOperation) throws ClientException {
         return send(HttpMethod.POST, newSubscribeToToneOperation);
     }
 
@@ -117,7 +122,7 @@ public class SubscribeToToneOperationRequest extends BaseRequest<SubscribeToTone
      * @param newSubscribeToToneOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SubscribeToToneOperation newSubscribeToToneOperation, final ICallback<? super SubscribeToToneOperation> callback) {
+    public void put(@Nonnull final SubscribeToToneOperation newSubscribeToToneOperation, @Nonnull final ICallback<? super SubscribeToToneOperation> callback) {
         send(HttpMethod.PUT, callback, newSubscribeToToneOperation);
     }
 
@@ -128,7 +133,8 @@ public class SubscribeToToneOperationRequest extends BaseRequest<SubscribeToTone
      * @return the created SubscribeToToneOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SubscribeToToneOperation put(final SubscribeToToneOperation newSubscribeToToneOperation) throws ClientException {
+    @Nullable
+    public SubscribeToToneOperation put(@Nonnull final SubscribeToToneOperation newSubscribeToToneOperation) throws ClientException {
         return send(HttpMethod.PUT, newSubscribeToToneOperation);
     }
 
@@ -138,7 +144,8 @@ public class SubscribeToToneOperationRequest extends BaseRequest<SubscribeToTone
      * @param value the select clause
      * @return the updated request
      */
-     public SubscribeToToneOperationRequest select(final String value) {
+     @Nonnull
+     public SubscribeToToneOperationRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class SubscribeToToneOperationRequest extends BaseRequest<SubscribeToTone
      * @param value the expand clause
      * @return the updated request
      */
-     public SubscribeToToneOperationRequest expand(final String value) {
+     @Nonnull
+     public SubscribeToToneOperationRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

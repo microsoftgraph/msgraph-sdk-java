@@ -15,6 +15,8 @@ import com.microsoft.graph.requests.extensions.PlannerTaskRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerPlanDetailsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -33,7 +35,7 @@ public class PlannerPlanRequest extends BaseRequest<PlannerPlan> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PlannerPlanRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PlannerPlanRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PlannerPlan.class);
     }
 
@@ -42,7 +44,7 @@ public class PlannerPlanRequest extends BaseRequest<PlannerPlan> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PlannerPlan> callback) {
+    public void get(@Nonnull final ICallback<? super PlannerPlan> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +54,7 @@ public class PlannerPlanRequest extends BaseRequest<PlannerPlan> {
      * @return the PlannerPlan from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PlannerPlan get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +64,7 @@ public class PlannerPlanRequest extends BaseRequest<PlannerPlan> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PlannerPlan> callback) {
+    public void delete(@Nonnull final ICallback<? super PlannerPlan> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +83,7 @@ public class PlannerPlanRequest extends BaseRequest<PlannerPlan> {
      * @param sourcePlannerPlan the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PlannerPlan sourcePlannerPlan, final ICallback<? super PlannerPlan> callback) {
+    public void patch(@Nonnull final PlannerPlan sourcePlannerPlan, @Nonnull final ICallback<? super PlannerPlan> callback) {
         send(HttpMethod.PATCH, callback, sourcePlannerPlan);
     }
 
@@ -91,7 +94,8 @@ public class PlannerPlanRequest extends BaseRequest<PlannerPlan> {
      * @return the updated PlannerPlan
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PlannerPlan patch(final PlannerPlan sourcePlannerPlan) throws ClientException {
+    @Nullable
+    public PlannerPlan patch(@Nonnull final PlannerPlan sourcePlannerPlan) throws ClientException {
         return send(HttpMethod.PATCH, sourcePlannerPlan);
     }
 
@@ -101,7 +105,7 @@ public class PlannerPlanRequest extends BaseRequest<PlannerPlan> {
      * @param newPlannerPlan the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PlannerPlan newPlannerPlan, final ICallback<? super PlannerPlan> callback) {
+    public void post(@Nonnull final PlannerPlan newPlannerPlan, @Nonnull final ICallback<? super PlannerPlan> callback) {
         send(HttpMethod.POST, callback, newPlannerPlan);
     }
 
@@ -112,7 +116,8 @@ public class PlannerPlanRequest extends BaseRequest<PlannerPlan> {
      * @return the created PlannerPlan
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PlannerPlan post(final PlannerPlan newPlannerPlan) throws ClientException {
+    @Nullable
+    public PlannerPlan post(@Nonnull final PlannerPlan newPlannerPlan) throws ClientException {
         return send(HttpMethod.POST, newPlannerPlan);
     }
 
@@ -122,7 +127,7 @@ public class PlannerPlanRequest extends BaseRequest<PlannerPlan> {
      * @param newPlannerPlan the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PlannerPlan newPlannerPlan, final ICallback<? super PlannerPlan> callback) {
+    public void put(@Nonnull final PlannerPlan newPlannerPlan, @Nonnull final ICallback<? super PlannerPlan> callback) {
         send(HttpMethod.PUT, callback, newPlannerPlan);
     }
 
@@ -133,7 +138,8 @@ public class PlannerPlanRequest extends BaseRequest<PlannerPlan> {
      * @return the created PlannerPlan
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PlannerPlan put(final PlannerPlan newPlannerPlan) throws ClientException {
+    @Nullable
+    public PlannerPlan put(@Nonnull final PlannerPlan newPlannerPlan) throws ClientException {
         return send(HttpMethod.PUT, newPlannerPlan);
     }
 
@@ -143,7 +149,8 @@ public class PlannerPlanRequest extends BaseRequest<PlannerPlan> {
      * @param value the select clause
      * @return the updated request
      */
-     public PlannerPlanRequest select(final String value) {
+     @Nonnull
+     public PlannerPlanRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -154,7 +161,8 @@ public class PlannerPlanRequest extends BaseRequest<PlannerPlan> {
      * @param value the expand clause
      * @return the updated request
      */
-     public PlannerPlanRequest expand(final String value) {
+     @Nonnull
+     public PlannerPlanRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

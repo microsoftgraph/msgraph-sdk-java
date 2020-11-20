@@ -15,6 +15,8 @@ import com.microsoft.graph.requests.extensions.EducationSchoolRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -33,7 +35,7 @@ public class EducationUserRequest extends BaseRequest<EducationUser> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationUserRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationUserRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EducationUser.class);
     }
 
@@ -42,7 +44,7 @@ public class EducationUserRequest extends BaseRequest<EducationUser> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super EducationUser> callback) {
+    public void get(@Nonnull final ICallback<? super EducationUser> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +54,7 @@ public class EducationUserRequest extends BaseRequest<EducationUser> {
      * @return the EducationUser from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public EducationUser get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +64,7 @@ public class EducationUserRequest extends BaseRequest<EducationUser> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super EducationUser> callback) {
+    public void delete(@Nonnull final ICallback<? super EducationUser> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +83,7 @@ public class EducationUserRequest extends BaseRequest<EducationUser> {
      * @param sourceEducationUser the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EducationUser sourceEducationUser, final ICallback<? super EducationUser> callback) {
+    public void patch(@Nonnull final EducationUser sourceEducationUser, @Nonnull final ICallback<? super EducationUser> callback) {
         send(HttpMethod.PATCH, callback, sourceEducationUser);
     }
 
@@ -91,7 +94,8 @@ public class EducationUserRequest extends BaseRequest<EducationUser> {
      * @return the updated EducationUser
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EducationUser patch(final EducationUser sourceEducationUser) throws ClientException {
+    @Nullable
+    public EducationUser patch(@Nonnull final EducationUser sourceEducationUser) throws ClientException {
         return send(HttpMethod.PATCH, sourceEducationUser);
     }
 
@@ -101,7 +105,7 @@ public class EducationUserRequest extends BaseRequest<EducationUser> {
      * @param newEducationUser the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EducationUser newEducationUser, final ICallback<? super EducationUser> callback) {
+    public void post(@Nonnull final EducationUser newEducationUser, @Nonnull final ICallback<? super EducationUser> callback) {
         send(HttpMethod.POST, callback, newEducationUser);
     }
 
@@ -112,7 +116,8 @@ public class EducationUserRequest extends BaseRequest<EducationUser> {
      * @return the created EducationUser
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EducationUser post(final EducationUser newEducationUser) throws ClientException {
+    @Nullable
+    public EducationUser post(@Nonnull final EducationUser newEducationUser) throws ClientException {
         return send(HttpMethod.POST, newEducationUser);
     }
 
@@ -122,7 +127,7 @@ public class EducationUserRequest extends BaseRequest<EducationUser> {
      * @param newEducationUser the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EducationUser newEducationUser, final ICallback<? super EducationUser> callback) {
+    public void put(@Nonnull final EducationUser newEducationUser, @Nonnull final ICallback<? super EducationUser> callback) {
         send(HttpMethod.PUT, callback, newEducationUser);
     }
 
@@ -133,7 +138,8 @@ public class EducationUserRequest extends BaseRequest<EducationUser> {
      * @return the created EducationUser
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EducationUser put(final EducationUser newEducationUser) throws ClientException {
+    @Nullable
+    public EducationUser put(@Nonnull final EducationUser newEducationUser) throws ClientException {
         return send(HttpMethod.PUT, newEducationUser);
     }
 
@@ -143,7 +149,8 @@ public class EducationUserRequest extends BaseRequest<EducationUser> {
      * @param value the select clause
      * @return the updated request
      */
-     public EducationUserRequest select(final String value) {
+     @Nonnull
+     public EducationUserRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -154,7 +161,8 @@ public class EducationUserRequest extends BaseRequest<EducationUser> {
      * @param value the expand clause
      * @return the updated request
      */
-     public EducationUserRequest expand(final String value) {
+     @Nonnull
+     public EducationUserRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

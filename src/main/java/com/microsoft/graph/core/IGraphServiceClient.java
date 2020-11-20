@@ -5,6 +5,9 @@
 package com.microsoft.graph.core;
 
 import com.google.gson.JsonObject;
+
+import javax.annotation.Nonnull;
+
 import com.microsoft.graph.models.extensions.IBaseGraphServiceClient;
 import com.microsoft.graph.core.CustomRequestBuilder;
 
@@ -21,7 +24,8 @@ public interface IGraphServiceClient extends IBaseGraphServiceClient {
      * @param responseType the class to deserialize the response to
      * @param <T> the type to deserialize the response to
      */
-    <T> CustomRequestBuilder<T> customRequest(final String url, final Class<T> responseType);
+    @Nonnull
+    <T> CustomRequestBuilder<T> customRequest(@Nonnull final String url, @Nonnull final Class<T> responseType);
     
     /**
      * Gets a builder to execute a custom request with a generic JSONObject response
@@ -29,5 +33,6 @@ public interface IGraphServiceClient extends IBaseGraphServiceClient {
      * @return the custom request builder
      * @param url the url to send the request to
      */
-    CustomRequestBuilder<JsonObject> customRequest(final String url);
+    @Nonnull
+    CustomRequestBuilder<JsonObject> customRequest(@Nonnull final String url);
 }

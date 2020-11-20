@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.CalendarSharingMessage;
 import com.microsoft.graph.models.extensions.Calendar;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,7 +31,7 @@ public class CalendarSharingMessageRequest extends BaseRequest<CalendarSharingMe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CalendarSharingMessageRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CalendarSharingMessageRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CalendarSharingMessage.class);
     }
 
@@ -38,7 +40,7 @@ public class CalendarSharingMessageRequest extends BaseRequest<CalendarSharingMe
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super CalendarSharingMessage> callback) {
+    public void get(@Nonnull final ICallback<? super CalendarSharingMessage> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class CalendarSharingMessageRequest extends BaseRequest<CalendarSharingMe
      * @return the CalendarSharingMessage from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public CalendarSharingMessage get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class CalendarSharingMessageRequest extends BaseRequest<CalendarSharingMe
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super CalendarSharingMessage> callback) {
+    public void delete(@Nonnull final ICallback<? super CalendarSharingMessage> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class CalendarSharingMessageRequest extends BaseRequest<CalendarSharingMe
      * @param sourceCalendarSharingMessage the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CalendarSharingMessage sourceCalendarSharingMessage, final ICallback<? super CalendarSharingMessage> callback) {
+    public void patch(@Nonnull final CalendarSharingMessage sourceCalendarSharingMessage, @Nonnull final ICallback<? super CalendarSharingMessage> callback) {
         send(HttpMethod.PATCH, callback, sourceCalendarSharingMessage);
     }
 
@@ -87,7 +90,8 @@ public class CalendarSharingMessageRequest extends BaseRequest<CalendarSharingMe
      * @return the updated CalendarSharingMessage
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CalendarSharingMessage patch(final CalendarSharingMessage sourceCalendarSharingMessage) throws ClientException {
+    @Nullable
+    public CalendarSharingMessage patch(@Nonnull final CalendarSharingMessage sourceCalendarSharingMessage) throws ClientException {
         return send(HttpMethod.PATCH, sourceCalendarSharingMessage);
     }
 
@@ -97,7 +101,7 @@ public class CalendarSharingMessageRequest extends BaseRequest<CalendarSharingMe
      * @param newCalendarSharingMessage the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CalendarSharingMessage newCalendarSharingMessage, final ICallback<? super CalendarSharingMessage> callback) {
+    public void post(@Nonnull final CalendarSharingMessage newCalendarSharingMessage, @Nonnull final ICallback<? super CalendarSharingMessage> callback) {
         send(HttpMethod.POST, callback, newCalendarSharingMessage);
     }
 
@@ -108,7 +112,8 @@ public class CalendarSharingMessageRequest extends BaseRequest<CalendarSharingMe
      * @return the created CalendarSharingMessage
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CalendarSharingMessage post(final CalendarSharingMessage newCalendarSharingMessage) throws ClientException {
+    @Nullable
+    public CalendarSharingMessage post(@Nonnull final CalendarSharingMessage newCalendarSharingMessage) throws ClientException {
         return send(HttpMethod.POST, newCalendarSharingMessage);
     }
 
@@ -118,7 +123,7 @@ public class CalendarSharingMessageRequest extends BaseRequest<CalendarSharingMe
      * @param newCalendarSharingMessage the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CalendarSharingMessage newCalendarSharingMessage, final ICallback<? super CalendarSharingMessage> callback) {
+    public void put(@Nonnull final CalendarSharingMessage newCalendarSharingMessage, @Nonnull final ICallback<? super CalendarSharingMessage> callback) {
         send(HttpMethod.PUT, callback, newCalendarSharingMessage);
     }
 
@@ -129,7 +134,8 @@ public class CalendarSharingMessageRequest extends BaseRequest<CalendarSharingMe
      * @return the created CalendarSharingMessage
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CalendarSharingMessage put(final CalendarSharingMessage newCalendarSharingMessage) throws ClientException {
+    @Nullable
+    public CalendarSharingMessage put(@Nonnull final CalendarSharingMessage newCalendarSharingMessage) throws ClientException {
         return send(HttpMethod.PUT, newCalendarSharingMessage);
     }
 
@@ -139,7 +145,8 @@ public class CalendarSharingMessageRequest extends BaseRequest<CalendarSharingMe
      * @param value the select clause
      * @return the updated request
      */
-     public CalendarSharingMessageRequest select(final String value) {
+     @Nonnull
+     public CalendarSharingMessageRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -150,7 +157,8 @@ public class CalendarSharingMessageRequest extends BaseRequest<CalendarSharingMe
      * @param value the expand clause
      * @return the updated request
      */
-     public CalendarSharingMessageRequest expand(final String value) {
+     @Nonnull
+     public CalendarSharingMessageRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

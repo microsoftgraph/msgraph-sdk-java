@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ScopedRoleMembership;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -33,7 +35,7 @@ public class ScopedRoleMembershipCollectionRequest extends BaseCollectionRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ScopedRoleMembershipCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ScopedRoleMembershipCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ScopedRoleMembershipCollectionResponse.class, ScopedRoleMembershipCollectionPage.class, ScopedRoleMembershipCollectionRequestBuilder.class);
     }
 
@@ -42,7 +44,7 @@ public class ScopedRoleMembershipCollectionRequest extends BaseCollectionRequest
      * @param newScopedRoleMembership the ScopedRoleMembership to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final ScopedRoleMembership newScopedRoleMembership, final ICallback<? super ScopedRoleMembership> callback) {
+    public void post(@Nonnull final ScopedRoleMembership newScopedRoleMembership, @Nonnull final ICallback<? super ScopedRoleMembership> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ScopedRoleMembershipRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -54,7 +56,8 @@ public class ScopedRoleMembershipCollectionRequest extends BaseCollectionRequest
      * @param newScopedRoleMembership the ScopedRoleMembership to create
      * @return the newly created object
      */
-    public ScopedRoleMembership post(final ScopedRoleMembership newScopedRoleMembership) throws ClientException {
+    @Nonnull
+    public ScopedRoleMembership post(@Nonnull final ScopedRoleMembership newScopedRoleMembership) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ScopedRoleMembershipRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -67,7 +70,8 @@ public class ScopedRoleMembershipCollectionRequest extends BaseCollectionRequest
      * @param value the expand clause
      * @return the updated request
      */
-    public ScopedRoleMembershipCollectionRequest expand(final String value) {
+    @Nonnull
+    public ScopedRoleMembershipCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -78,7 +82,8 @@ public class ScopedRoleMembershipCollectionRequest extends BaseCollectionRequest
      * @param value the filter clause
      * @return the updated request
      */
-    public ScopedRoleMembershipCollectionRequest filter(final String value) {
+    @Nonnull
+    public ScopedRoleMembershipCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -89,7 +94,8 @@ public class ScopedRoleMembershipCollectionRequest extends BaseCollectionRequest
      * @param value the order by clause
      * @return the updated request
      */
-    public ScopedRoleMembershipCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ScopedRoleMembershipCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -100,7 +106,8 @@ public class ScopedRoleMembershipCollectionRequest extends BaseCollectionRequest
      * @param value the select clause
      * @return the updated request
      */
-    public ScopedRoleMembershipCollectionRequest select(final String value) {
+    @Nonnull
+    public ScopedRoleMembershipCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -111,6 +118,7 @@ public class ScopedRoleMembershipCollectionRequest extends BaseCollectionRequest
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ScopedRoleMembershipCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -122,6 +130,7 @@ public class ScopedRoleMembershipCollectionRequest extends BaseCollectionRequest
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ScopedRoleMembershipCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -133,7 +142,8 @@ public class ScopedRoleMembershipCollectionRequest extends BaseCollectionRequest
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ScopedRoleMembershipCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ScopedRoleMembershipCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

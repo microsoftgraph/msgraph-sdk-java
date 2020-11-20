@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SchemaExtension;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -33,7 +35,7 @@ public class SchemaExtensionCollectionRequest extends BaseCollectionRequest<Sche
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SchemaExtensionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SchemaExtensionCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SchemaExtensionCollectionResponse.class, SchemaExtensionCollectionPage.class, SchemaExtensionCollectionRequestBuilder.class);
     }
 
@@ -42,7 +44,7 @@ public class SchemaExtensionCollectionRequest extends BaseCollectionRequest<Sche
      * @param newSchemaExtension the SchemaExtension to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final SchemaExtension newSchemaExtension, final ICallback<? super SchemaExtension> callback) {
+    public void post(@Nonnull final SchemaExtension newSchemaExtension, @Nonnull final ICallback<? super SchemaExtension> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SchemaExtensionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -54,7 +56,8 @@ public class SchemaExtensionCollectionRequest extends BaseCollectionRequest<Sche
      * @param newSchemaExtension the SchemaExtension to create
      * @return the newly created object
      */
-    public SchemaExtension post(final SchemaExtension newSchemaExtension) throws ClientException {
+    @Nonnull
+    public SchemaExtension post(@Nonnull final SchemaExtension newSchemaExtension) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SchemaExtensionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -67,7 +70,8 @@ public class SchemaExtensionCollectionRequest extends BaseCollectionRequest<Sche
      * @param value the expand clause
      * @return the updated request
      */
-    public SchemaExtensionCollectionRequest expand(final String value) {
+    @Nonnull
+    public SchemaExtensionCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -78,7 +82,8 @@ public class SchemaExtensionCollectionRequest extends BaseCollectionRequest<Sche
      * @param value the filter clause
      * @return the updated request
      */
-    public SchemaExtensionCollectionRequest filter(final String value) {
+    @Nonnull
+    public SchemaExtensionCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -89,7 +94,8 @@ public class SchemaExtensionCollectionRequest extends BaseCollectionRequest<Sche
      * @param value the order by clause
      * @return the updated request
      */
-    public SchemaExtensionCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public SchemaExtensionCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -100,7 +106,8 @@ public class SchemaExtensionCollectionRequest extends BaseCollectionRequest<Sche
      * @param value the select clause
      * @return the updated request
      */
-    public SchemaExtensionCollectionRequest select(final String value) {
+    @Nonnull
+    public SchemaExtensionCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -111,6 +118,7 @@ public class SchemaExtensionCollectionRequest extends BaseCollectionRequest<Sche
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public SchemaExtensionCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -122,6 +130,7 @@ public class SchemaExtensionCollectionRequest extends BaseCollectionRequest<Sche
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public SchemaExtensionCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -133,7 +142,8 @@ public class SchemaExtensionCollectionRequest extends BaseCollectionRequest<Sche
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public SchemaExtensionCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public SchemaExtensionCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

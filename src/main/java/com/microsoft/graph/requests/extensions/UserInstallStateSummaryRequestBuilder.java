@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionReque
 import com.microsoft.graph.requests.extensions.DeviceInstallStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -29,7 +31,7 @@ public class UserInstallStateSummaryRequestBuilder extends BaseRequestBuilder<Us
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserInstallStateSummaryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserInstallStateSummaryRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +41,8 @@ public class UserInstallStateSummaryRequestBuilder extends BaseRequestBuilder<Us
      * @param requestOptions the options for this request
      * @return the UserInstallStateSummaryRequest instance
      */
-    public UserInstallStateSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public UserInstallStateSummaryRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,7 +52,8 @@ public class UserInstallStateSummaryRequestBuilder extends BaseRequestBuilder<Us
      * @param requestOptions the options for this request
      * @return the UserInstallStateSummaryRequest instance
      */
-    public UserInstallStateSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public UserInstallStateSummaryRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.UserInstallStateSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,6 +63,7 @@ public class UserInstallStateSummaryRequestBuilder extends BaseRequestBuilder<Us
      *
      * @return the collection request builder
      */
+    @Nonnull
     public DeviceInstallStateCollectionRequestBuilder deviceStates() {
         return new DeviceInstallStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates"), getClient(), null);
     }
@@ -69,7 +74,8 @@ public class UserInstallStateSummaryRequestBuilder extends BaseRequestBuilder<Us
      * @return the request builder
      * @param id the item identifier
      */
-    public DeviceInstallStateRequestBuilder deviceStates(final String id) {
+    @Nonnull
+    public DeviceInstallStateRequestBuilder deviceStates(@Nonnull final String id) {
         return new DeviceInstallStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates") + "/" + id, getClient(), null);
     }
 }

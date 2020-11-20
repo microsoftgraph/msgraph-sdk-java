@@ -23,6 +23,10 @@
 package com.microsoft.graph.http;
 
 import com.google.gson.JsonObject;
+
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;
@@ -44,7 +48,7 @@ public class CustomRequest<T> extends BaseRequest<T> {
      * @param requestOptions the options to apply to the request
      * @param responseClass the class for response deserialization
      */
-	public CustomRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Class<T> responseClass) {
+	public CustomRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends Option> requestOptions, @Nonnull final Class<T> responseClass) {
 		super(requestUrl, client, requestOptions, responseClass);
     }
 	
@@ -56,7 +60,8 @@ public class CustomRequest<T> extends BaseRequest<T> {
      * @param requestOptions the options to apply to the request
      * @return the request to execute against the service
      */
-    public static CustomRequest<JsonObject> create(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    @Nonnull
+    public static CustomRequest<JsonObject> create(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends Option> requestOptions) {
         return new CustomRequest<JsonObject>(requestUrl, client, requestOptions, JsonObject.class);
     }
 
@@ -65,6 +70,7 @@ public class CustomRequest<T> extends BaseRequest<T> {
      * 
      * @return the deserialized resource
      */
+    @Nullable
     public T get() throws ClientException {
         return send(HttpMethod.GET, null);
     }
@@ -74,7 +80,7 @@ public class CustomRequest<T> extends BaseRequest<T> {
      * 
      * @param callback callback to be invoked with the deserialized resource
      */
-    public void get(final ICallback<T> callback) {
+    public void get(@Nonnull final ICallback<T> callback) {
     	send(HttpMethod.GET, callback, null);
     }
     
@@ -84,7 +90,7 @@ public class CustomRequest<T> extends BaseRequest<T> {
      * @param callback the callback when the deletion action has completed
      */
     @SuppressWarnings("unchecked")
-    public void delete(final ICallback<Void> callback) {
+    public void delete(@Nonnull final ICallback<Void> callback) {
         // the callback should called with the null object
         send(HttpMethod.DELETE, (ICallback<T>) callback, null);
     }
@@ -103,7 +109,7 @@ public class CustomRequest<T> extends BaseRequest<T> {
      * 
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ICallback<T> callback) {
+    public void patch(@Nonnull final ICallback<T> callback) {
         send(HttpMethod.PATCH, callback, super.getResponseType());
     }
 
@@ -114,7 +120,8 @@ public class CustomRequest<T> extends BaseRequest<T> {
      * @return                 the updated item
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public T patch(final T sourceObject) throws ClientException {
+    @Nullable
+    public T patch(@Nonnull final T sourceObject) throws ClientException {
         return send(HttpMethod.PATCH, sourceObject);
     }
 
@@ -124,7 +131,7 @@ public class CustomRequest<T> extends BaseRequest<T> {
      * @param newObject the new object to create
      * @param callback  the callback to be called after success or failure
      */
-    public void post(final T newObject, final ICallback<T> callback) {
+    public void post(@Nonnull final T newObject, @Nonnull final ICallback<T> callback) {
         send(HttpMethod.POST, callback, newObject);
     }
 
@@ -135,7 +142,8 @@ public class CustomRequest<T> extends BaseRequest<T> {
      * @return                 the created object
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public T post(final T newObject) throws ClientException {
+    @Nullable
+    public T post(@Nonnull final T newObject) throws ClientException {
         return send(HttpMethod.POST, newObject);
     }
     
@@ -145,7 +153,7 @@ public class CustomRequest<T> extends BaseRequest<T> {
      * @param putObject the new object to create
      * @param callback  the callback to be called after success or failure
      */
-    public void put(final T putObject, final ICallback<T> callback) {
+    public void put(@Nonnull final T putObject, @Nonnull final ICallback<T> callback) {
         send(HttpMethod.PUT, callback, putObject);
     }
     
@@ -156,7 +164,8 @@ public class CustomRequest<T> extends BaseRequest<T> {
      * @return                 the created object
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public T put(final T putObject) throws ClientException {
+    @Nullable
+    public T put(@Nonnull final T putObject) throws ClientException {
         return send(HttpMethod.PUT, putObject);
     }
 
@@ -166,7 +175,8 @@ public class CustomRequest<T> extends BaseRequest<T> {
      * @param value the select clause
      * @return      the updated request
      */
-     public CustomRequest<T> select(final String value) {
+     @Nonnull
+     public CustomRequest<T> select(@Nonnull final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
          return this;
      }
@@ -177,7 +187,8 @@ public class CustomRequest<T> extends BaseRequest<T> {
      * @param value the expand clause
      * @return      the updated request
      */
-     public CustomRequest<T> expand(final String value) {
+     @Nonnull
+     public CustomRequest<T> expand(@Nonnull final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));
          return this;
      }

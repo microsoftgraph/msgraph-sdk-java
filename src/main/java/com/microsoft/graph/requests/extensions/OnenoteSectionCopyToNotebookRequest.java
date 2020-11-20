@@ -7,6 +7,8 @@ import com.microsoft.graph.models.extensions.OnenoteSectionCopyToNotebookBody;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
 import com.microsoft.graph.requests.extensions.OnenoteSectionCopyToNotebookRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -30,7 +32,7 @@ public class OnenoteSectionCopyToNotebookRequest extends BaseRequest<OnenoteOper
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnenoteSectionCopyToNotebookRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnenoteSectionCopyToNotebookRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OnenoteOperation.class);
         body = new OnenoteSectionCopyToNotebookBody();
     }
@@ -39,7 +41,7 @@ public class OnenoteSectionCopyToNotebookRequest extends BaseRequest<OnenoteOper
      * Invokes the method and invokes the callback with the result
      * @param callback callback to be invoked after executing the request
      */
-    public void post(final ICallback<? super OnenoteOperation> callback) {
+    public void post(@Nonnull final ICallback<? super OnenoteOperation> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -47,6 +49,7 @@ public class OnenoteSectionCopyToNotebookRequest extends BaseRequest<OnenoteOper
      * Invokes the method and returns the result
      * @return result of the method invocation
      */
+    @Nullable
     public OnenoteOperation post() throws ClientException {
         return send(HttpMethod.POST, body);
     }
@@ -57,7 +60,8 @@ public class OnenoteSectionCopyToNotebookRequest extends BaseRequest<OnenoteOper
      * @param value the select clause
      * @return the updated request
      */
-    public OnenoteSectionCopyToNotebookRequest select(final String value) {
+    @Nonnull
+    public OnenoteSectionCopyToNotebookRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -68,6 +72,7 @@ public class OnenoteSectionCopyToNotebookRequest extends BaseRequest<OnenoteOper
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public OnenoteSectionCopyToNotebookRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -79,7 +84,8 @@ public class OnenoteSectionCopyToNotebookRequest extends BaseRequest<OnenoteOper
      * @param value the expand clause
      * @return the updated request
      */
-    public OnenoteSectionCopyToNotebookRequest expand(final String value) {
+    @Nonnull
+    public OnenoteSectionCopyToNotebookRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }

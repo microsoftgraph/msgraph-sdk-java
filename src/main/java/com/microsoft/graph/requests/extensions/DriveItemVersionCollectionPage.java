@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DriveItemVersion;
 import com.microsoft.graph.requests.extensions.DriveItemVersionCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DriveItemVersionCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class DriveItemVersionCollectionPage extends BaseCollectionPage<DriveItem
      * @param response the serialized DriveItemVersionCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DriveItemVersionCollectionPage(final DriveItemVersionCollectionResponse response, final DriveItemVersionCollectionRequestBuilder builder) {
+    public DriveItemVersionCollectionPage(@Nonnull final DriveItemVersionCollectionResponse response, @Nonnull final DriveItemVersionCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class DriveItemVersionCollectionPage extends BaseCollectionPage<DriveItem
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public DriveItemVersionCollectionPage(final java.util.List<DriveItemVersion> pageContents, final DriveItemVersionCollectionRequestBuilder nextRequestBuilder) {
+    public DriveItemVersionCollectionPage(@Nonnull final java.util.List<DriveItemVersion> pageContents, @Nullable final DriveItemVersionCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

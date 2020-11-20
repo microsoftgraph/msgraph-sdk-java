@@ -29,6 +29,9 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.TimeZone;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 /**
  * Serializes and deserializes a string
  * 
@@ -50,7 +53,8 @@ public final class CalendarSerializer {
      * @return       the calendar
      * @throws java.text.ParseException the parse exception
      */
-    public static Calendar deserialize(final String strVal) throws ParseException {
+    @Nullable
+    public static Calendar deserialize(@Nonnull final String strVal) throws ParseException {
         // Change Z to adapt the string to a format
         // that can be parsed in Java
         final boolean hasZ = strVal.indexOf('Z') != -1;
@@ -118,10 +122,20 @@ public final class CalendarSerializer {
         }
 
         
-        final SimpleDateFormat dateFormat = new SimpleDateFormat(datePattern);
+        final SimpleDateFormat dateFormat = new SimpleDateFormat(datePattern, Locale.ROOT);
         dateFormat.setTimeZone(TimeZone.getDefault());
 
-        final Date date = dateFormat.parse(modifiedStrVal);
+        Date date;
+        try {
+            date = dateFormat.parse(modifiedStrVal);
+        } catch (IllegalArgumentException ex) {
+            // this is a failsafe as 'X' is not available < API level 24 https://developer.android.com/reference/java/text/SimpleDateFormat
+            final String backwardCompatibleDatePattern = datePattern.replace("XXX", "Z").replace("X", "Z");
+            final SimpleDateFormat backwardCompatibleDateFormat = new SimpleDateFormat(backwardCompatibleDatePattern, Locale.ROOT);
+            backwardCompatibleDateFormat.setTimeZone(TimeZone.getDefault());
+            final String backwardCompatibleStringRepresentation = modifiedStrVal.replaceFirst("([+-])(\\d{2}):?(\\d{2})", "$1$2$3"); // removes the colons so the date can be parsed with Z
+            date = backwardCompatibleDateFormat.parse(backwardCompatibleStringRepresentation);
+        }
 
         final Calendar calendar = java.util.Calendar.getInstance();
         calendar.setTime(date);
@@ -134,7 +148,8 @@ public final class CalendarSerializer {
      * @param src the source calendar
      * @return    the string
      */
-    public static String serialize(final Calendar src) {
+    @Nonnull
+    public static String serialize(@Nonnull final Calendar src) {
         final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'.'SSS'Z'", Locale.ROOT);
         dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
         return dateFormat.format(src.getTime());

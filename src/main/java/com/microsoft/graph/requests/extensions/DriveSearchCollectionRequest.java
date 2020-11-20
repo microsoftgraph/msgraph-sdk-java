@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DriveItem;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DriveSearchCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveSearchCollectionResponse;
@@ -34,7 +36,7 @@ public class DriveSearchCollectionRequest extends BaseCollectionRequest<DriveIte
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DriveSearchCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveSearchCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DriveSearchCollectionResponse.class, DriveSearchCollectionPage.class, DriveSearchCollectionRequestBuilder.class);
     }
 
@@ -45,7 +47,8 @@ public class DriveSearchCollectionRequest extends BaseCollectionRequest<DriveIte
      * @param value the select clause
      * @return the updated request
      */
-    public DriveSearchCollectionRequest select(final String value) {
+    @Nonnull
+    public DriveSearchCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -56,6 +59,7 @@ public class DriveSearchCollectionRequest extends BaseCollectionRequest<DriveIte
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DriveSearchCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -67,7 +71,8 @@ public class DriveSearchCollectionRequest extends BaseCollectionRequest<DriveIte
      * @param value the expand clause
      * @return the updated request
      */
-    public DriveSearchCollectionRequest expand(final String value) {
+    @Nonnull
+    public DriveSearchCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -78,7 +83,8 @@ public class DriveSearchCollectionRequest extends BaseCollectionRequest<DriveIte
      * @param value the filter clause
      * @return the updated request
      */
-    public DriveSearchCollectionRequest filter(final String value) {
+    @Nonnull
+    public DriveSearchCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -89,7 +95,8 @@ public class DriveSearchCollectionRequest extends BaseCollectionRequest<DriveIte
      * @param value the order by clause
      * @return the updated request
      */
-    public DriveSearchCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DriveSearchCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }

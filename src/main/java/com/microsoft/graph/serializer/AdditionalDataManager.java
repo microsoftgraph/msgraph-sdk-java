@@ -32,6 +32,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import javax.annotation.Nullable;
 
 /** Holds additional properties that are not part of the default object's schema */
 public class AdditionalDataManager extends HashMap<String, JsonElement> {
@@ -45,7 +46,7 @@ public class AdditionalDataManager extends HashMap<String, JsonElement> {
      * 
      * @param jsonBackedObject the object to read values from
      */
-    public AdditionalDataManager(IJsonBackedObject jsonBackedObject) {
+    public AdditionalDataManager(@Nullable final IJsonBackedObject jsonBackedObject) {
         this.jsonBackedObject = jsonBackedObject;
     }
 

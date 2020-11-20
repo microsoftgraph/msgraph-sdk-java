@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.OrgContact;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.OrgContactWithReferenceRequest;
 import com.microsoft.graph.requests.extensions.OrgContactReferenceRequestBuilder;
@@ -38,7 +40,7 @@ public class OrgContactCollectionReferenceRequest extends BaseCollectionWithRefe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OrgContactCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OrgContactCollectionReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OrgContactCollectionResponse.class, OrgContactCollectionWithReferencesPage.class, OrgContactCollectionWithReferencesRequestBuilder.class);
     }
 
@@ -47,7 +49,7 @@ public class OrgContactCollectionReferenceRequest extends BaseCollectionWithRefe
      * @param newOrgContact the OrgContact to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final OrgContact newOrgContact, final ICallback<? super OrgContact> callback) {
+    public void post(@Nonnull final OrgContact newOrgContact, @Nonnull final ICallback<? super OrgContact> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/contacts/" + newOrgContact.id);
         new OrgContactWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -60,7 +62,8 @@ public class OrgContactCollectionReferenceRequest extends BaseCollectionWithRefe
      * @param newOrgContact the OrgContact to create
      * @return the newly created object
      */
-    public OrgContact post(final OrgContact newOrgContact) throws ClientException {
+    @Nonnull
+    public OrgContact post(@Nonnull final OrgContact newOrgContact) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/contacts/" + newOrgContact.id);
         return new OrgContactWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
@@ -73,7 +76,8 @@ public class OrgContactCollectionReferenceRequest extends BaseCollectionWithRefe
      * @param value the expand clause
      * @return the updated request
      */
-    public OrgContactCollectionReferenceRequest expand(final String value) {
+    @Nonnull
+    public OrgContactCollectionReferenceRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -84,7 +88,8 @@ public class OrgContactCollectionReferenceRequest extends BaseCollectionWithRefe
      * @param value the filter clause
      * @return the updated request
      */
-    public OrgContactCollectionReferenceRequest filter(final String value) {
+    @Nonnull
+    public OrgContactCollectionReferenceRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -95,7 +100,8 @@ public class OrgContactCollectionReferenceRequest extends BaseCollectionWithRefe
      * @param value the sort clause
      * @return the updated request
      */
-    public OrgContactCollectionReferenceRequest orderBy(final String value) {
+    @Nonnull
+    public OrgContactCollectionReferenceRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -106,7 +112,8 @@ public class OrgContactCollectionReferenceRequest extends BaseCollectionWithRefe
      * @param value the select clause
      * @return the updated request
      */
-    public OrgContactCollectionReferenceRequest select(final String value) {
+    @Nonnull
+    public OrgContactCollectionReferenceRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -117,6 +124,7 @@ public class OrgContactCollectionReferenceRequest extends BaseCollectionWithRefe
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public OrgContactCollectionReferenceRequest top(final int value) {
         addTopOption(value);
         return this;

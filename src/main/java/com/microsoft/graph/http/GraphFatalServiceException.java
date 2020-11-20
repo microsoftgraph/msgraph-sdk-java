@@ -24,6 +24,9 @@ package com.microsoft.graph.http;
 
 import java.util.List;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 /**
  * An unexpected exception from the Graph service
  */
@@ -44,19 +47,20 @@ public class GraphFatalServiceException extends GraphServiceException {
      * @param error           the error response if available
      * @param verbose         whether or not to log verbosely
      */
-    protected GraphFatalServiceException(final String method,
-                                         final String url,
-                                         final List<String> requestHeaders,
-                                         final String requestBody,
+    protected GraphFatalServiceException(@Nonnull final String method,
+                                         @Nonnull final String url,
+                                         @Nonnull final List<String> requestHeaders,
+                                         @Nullable final String requestBody,
                                          final int responseCode,
-                                         final String responseMessage,
-                                         final List<String> responseHeaders,
-                                         final GraphErrorResponse error,
+                                         @Nullable final String responseMessage,
+                                         @Nonnull final List<String> responseHeaders,
+                                         @Nullable final GraphErrorResponse error,
                                          final boolean verbose) {
         super(method, url, requestHeaders, requestBody, responseCode, responseMessage, responseHeaders, error, verbose);
     }
 
     @Override
+    @Nullable
     public String getMessage(final boolean verbose) {
         //no inspection StringBufferReplaceableByString
         final StringBuilder sb = new StringBuilder();

@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MailSearchFolder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -27,7 +29,7 @@ public class MailSearchFolderRequestBuilder extends BaseRequestBuilder<MailSearc
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MailSearchFolderRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MailSearchFolderRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -37,7 +39,8 @@ public class MailSearchFolderRequestBuilder extends BaseRequestBuilder<MailSearc
      * @param requestOptions the options for this request
      * @return the MailSearchFolderRequest instance
      */
-    public MailSearchFolderRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public MailSearchFolderRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,7 +50,8 @@ public class MailSearchFolderRequestBuilder extends BaseRequestBuilder<MailSearc
      * @param requestOptions the options for this request
      * @return the MailSearchFolderRequest instance
      */
-    public MailSearchFolderRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public MailSearchFolderRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.MailSearchFolderRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -57,6 +61,7 @@ public class MailSearchFolderRequestBuilder extends BaseRequestBuilder<MailSearc
      *
      * @return the collection request builder
      */
+    @Nonnull
     public MailFolderCollectionRequestBuilder childFolders() {
         return new MailFolderCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("childFolders"), getClient(), null);
     }
@@ -67,7 +72,8 @@ public class MailSearchFolderRequestBuilder extends BaseRequestBuilder<MailSearc
      * @return the request builder
      * @param id the item identifier
      */
-    public MailFolderRequestBuilder childFolders(final String id) {
+    @Nonnull
+    public MailFolderRequestBuilder childFolders(@Nonnull final String id) {
         return new MailFolderRequestBuilder(getRequestUrlWithAdditionalSegment("childFolders") + "/" + id, getClient(), null);
     }
     /**
@@ -75,6 +81,7 @@ public class MailSearchFolderRequestBuilder extends BaseRequestBuilder<MailSearc
      *
      * @return the collection request builder
      */
+    @Nonnull
     public MessageRuleCollectionRequestBuilder messageRules() {
         return new MessageRuleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("messageRules"), getClient(), null);
     }
@@ -85,7 +92,8 @@ public class MailSearchFolderRequestBuilder extends BaseRequestBuilder<MailSearc
      * @return the request builder
      * @param id the item identifier
      */
-    public MessageRuleRequestBuilder messageRules(final String id) {
+    @Nonnull
+    public MessageRuleRequestBuilder messageRules(@Nonnull final String id) {
         return new MessageRuleRequestBuilder(getRequestUrlWithAdditionalSegment("messageRules") + "/" + id, getClient(), null);
     }
     /**
@@ -93,6 +101,7 @@ public class MailSearchFolderRequestBuilder extends BaseRequestBuilder<MailSearc
      *
      * @return the collection request builder
      */
+    @Nonnull
     public MessageCollectionRequestBuilder messages() {
         return new MessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("messages"), getClient(), null);
     }
@@ -103,7 +112,8 @@ public class MailSearchFolderRequestBuilder extends BaseRequestBuilder<MailSearc
      * @return the request builder
      * @param id the item identifier
      */
-    public MessageRequestBuilder messages(final String id) {
+    @Nonnull
+    public MessageRequestBuilder messages(@Nonnull final String id) {
         return new MessageRequestBuilder(getRequestUrlWithAdditionalSegment("messages") + "/" + id, getClient(), null);
     }
     /**
@@ -111,6 +121,7 @@ public class MailSearchFolderRequestBuilder extends BaseRequestBuilder<MailSearc
      *
      * @return the collection request builder
      */
+    @Nonnull
     public MultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties() {
         return new MultiValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties"), getClient(), null);
     }
@@ -121,7 +132,8 @@ public class MailSearchFolderRequestBuilder extends BaseRequestBuilder<MailSearc
      * @return the request builder
      * @param id the item identifier
      */
-    public MultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id) {
+    @Nonnull
+    public MultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(@Nonnull final String id) {
         return new MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties") + "/" + id, getClient(), null);
     }
     /**
@@ -129,6 +141,7 @@ public class MailSearchFolderRequestBuilder extends BaseRequestBuilder<MailSearc
      *
      * @return the collection request builder
      */
+    @Nonnull
     public SingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
         return new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties"), getClient(), null);
     }
@@ -139,7 +152,8 @@ public class MailSearchFolderRequestBuilder extends BaseRequestBuilder<MailSearc
      * @return the request builder
      * @param id the item identifier
      */
-    public SingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id) {
+    @Nonnull
+    public SingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(@Nonnull final String id) {
         return new SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);
     }
 }

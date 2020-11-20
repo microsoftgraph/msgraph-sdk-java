@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicySettingStateSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicySettingStateSummaryRequestBuilder;
@@ -32,7 +34,7 @@ public class DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder e
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceCompliancePolicySettingStateSummaryRequestBuilder.class, DeviceCompliancePolicySettingStateSummaryCollectionRequest.class);
     }
 

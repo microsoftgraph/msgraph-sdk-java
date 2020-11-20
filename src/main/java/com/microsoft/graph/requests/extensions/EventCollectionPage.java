@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Event;
 import com.microsoft.graph.requests.extensions.EventCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.EventCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class EventCollectionPage extends BaseCollectionPage<Event, EventCollecti
      * @param response the serialized EventCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public EventCollectionPage(final EventCollectionResponse response, final EventCollectionRequestBuilder builder) {
+    public EventCollectionPage(@Nonnull final EventCollectionResponse response, @Nonnull final EventCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class EventCollectionPage extends BaseCollectionPage<Event, EventCollecti
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public EventCollectionPage(final java.util.List<Event> pageContents, final EventCollectionRequestBuilder nextRequestBuilder) {
+    public EventCollectionPage(@Nonnull final java.util.List<Event> pageContents, @Nullable final EventCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

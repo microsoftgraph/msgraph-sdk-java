@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.ActivityHistoryItemCollectionRequ
 import com.microsoft.graph.requests.extensions.ActivityHistoryItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -29,7 +31,7 @@ public class UserActivityRequestBuilder extends BaseRequestBuilder<UserActivity>
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserActivityRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserActivityRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +41,8 @@ public class UserActivityRequestBuilder extends BaseRequestBuilder<UserActivity>
      * @param requestOptions the options for this request
      * @return the UserActivityRequest instance
      */
-    public UserActivityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public UserActivityRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,7 +52,8 @@ public class UserActivityRequestBuilder extends BaseRequestBuilder<UserActivity>
      * @param requestOptions the options for this request
      * @return the UserActivityRequest instance
      */
-    public UserActivityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public UserActivityRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.UserActivityRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,6 +63,7 @@ public class UserActivityRequestBuilder extends BaseRequestBuilder<UserActivity>
      *
      * @return the collection request builder
      */
+    @Nonnull
     public ActivityHistoryItemCollectionRequestBuilder historyItems() {
         return new ActivityHistoryItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("historyItems"), getClient(), null);
     }
@@ -69,7 +74,8 @@ public class UserActivityRequestBuilder extends BaseRequestBuilder<UserActivity>
      * @return the request builder
      * @param id the item identifier
      */
-    public ActivityHistoryItemRequestBuilder historyItems(final String id) {
+    @Nonnull
+    public ActivityHistoryItemRequestBuilder historyItems(@Nonnull final String id) {
         return new ActivityHistoryItemRequestBuilder(getRequestUrlWithAdditionalSegment("historyItems") + "/" + id, getClient(), null);
     }
 }

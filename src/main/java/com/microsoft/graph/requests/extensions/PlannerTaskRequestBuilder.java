@@ -14,6 +14,8 @@ import com.microsoft.graph.requests.extensions.PlannerTaskDetailsRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerProgressTaskBoardTaskFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -31,7 +33,7 @@ public class PlannerTaskRequestBuilder extends BaseRequestBuilder<PlannerTask> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PlannerTaskRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PlannerTaskRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -41,7 +43,8 @@ public class PlannerTaskRequestBuilder extends BaseRequestBuilder<PlannerTask> {
      * @param requestOptions the options for this request
      * @return the PlannerTaskRequest instance
      */
-    public PlannerTaskRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public PlannerTaskRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,7 +54,8 @@ public class PlannerTaskRequestBuilder extends BaseRequestBuilder<PlannerTask> {
      * @param requestOptions the options for this request
      * @return the PlannerTaskRequest instance
      */
-    public PlannerTaskRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public PlannerTaskRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PlannerTaskRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -62,6 +66,7 @@ public class PlannerTaskRequestBuilder extends BaseRequestBuilder<PlannerTask> {
      *
      * @return the PlannerAssignedToTaskBoardTaskFormatRequestBuilder instance
      */
+    @Nonnull
     public PlannerAssignedToTaskBoardTaskFormatRequestBuilder assignedToTaskBoardFormat() {
         return new PlannerAssignedToTaskBoardTaskFormatRequestBuilder(getRequestUrlWithAdditionalSegment("assignedToTaskBoardFormat"), getClient(), null);
     }
@@ -71,6 +76,7 @@ public class PlannerTaskRequestBuilder extends BaseRequestBuilder<PlannerTask> {
      *
      * @return the PlannerBucketTaskBoardTaskFormatRequestBuilder instance
      */
+    @Nonnull
     public PlannerBucketTaskBoardTaskFormatRequestBuilder bucketTaskBoardFormat() {
         return new PlannerBucketTaskBoardTaskFormatRequestBuilder(getRequestUrlWithAdditionalSegment("bucketTaskBoardFormat"), getClient(), null);
     }
@@ -80,6 +86,7 @@ public class PlannerTaskRequestBuilder extends BaseRequestBuilder<PlannerTask> {
      *
      * @return the PlannerTaskDetailsRequestBuilder instance
      */
+    @Nonnull
     public PlannerTaskDetailsRequestBuilder details() {
         return new PlannerTaskDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("details"), getClient(), null);
     }
@@ -89,6 +96,7 @@ public class PlannerTaskRequestBuilder extends BaseRequestBuilder<PlannerTask> {
      *
      * @return the PlannerProgressTaskBoardTaskFormatRequestBuilder instance
      */
+    @Nonnull
     public PlannerProgressTaskBoardTaskFormatRequestBuilder progressTaskBoardFormat() {
         return new PlannerProgressTaskBoardTaskFormatRequestBuilder(getRequestUrlWithAdditionalSegment("progressTaskBoardFormat"), getClient(), null);
     }

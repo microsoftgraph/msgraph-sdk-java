@@ -22,6 +22,8 @@ import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionRequestBu
 import com.microsoft.graph.requests.extensions.OnenoteSectionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -39,7 +41,7 @@ public class OnenoteRequestBuilder extends BaseRequestBuilder<Onenote> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnenoteRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnenoteRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +51,8 @@ public class OnenoteRequestBuilder extends BaseRequestBuilder<Onenote> {
      * @param requestOptions the options for this request
      * @return the OnenoteRequest instance
      */
-    public OnenoteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public OnenoteRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -59,7 +62,8 @@ public class OnenoteRequestBuilder extends BaseRequestBuilder<Onenote> {
      * @param requestOptions the options for this request
      * @return the OnenoteRequest instance
      */
-    public OnenoteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public OnenoteRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.OnenoteRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -69,6 +73,7 @@ public class OnenoteRequestBuilder extends BaseRequestBuilder<Onenote> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public NotebookCollectionRequestBuilder notebooks() {
         return new NotebookCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("notebooks"), getClient(), null);
     }
@@ -79,7 +84,8 @@ public class OnenoteRequestBuilder extends BaseRequestBuilder<Onenote> {
      * @return the request builder
      * @param id the item identifier
      */
-    public NotebookRequestBuilder notebooks(final String id) {
+    @Nonnull
+    public NotebookRequestBuilder notebooks(@Nonnull final String id) {
         return new NotebookRequestBuilder(getRequestUrlWithAdditionalSegment("notebooks") + "/" + id, getClient(), null);
     }
     /**
@@ -87,6 +93,7 @@ public class OnenoteRequestBuilder extends BaseRequestBuilder<Onenote> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public OnenoteOperationCollectionRequestBuilder operations() {
         return new OnenoteOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
     }
@@ -97,7 +104,8 @@ public class OnenoteRequestBuilder extends BaseRequestBuilder<Onenote> {
      * @return the request builder
      * @param id the item identifier
      */
-    public OnenoteOperationRequestBuilder operations(final String id) {
+    @Nonnull
+    public OnenoteOperationRequestBuilder operations(@Nonnull final String id) {
         return new OnenoteOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
     /**
@@ -105,6 +113,7 @@ public class OnenoteRequestBuilder extends BaseRequestBuilder<Onenote> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public OnenotePageCollectionRequestBuilder pages() {
         return new OnenotePageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("pages"), getClient(), null);
     }
@@ -115,7 +124,8 @@ public class OnenoteRequestBuilder extends BaseRequestBuilder<Onenote> {
      * @return the request builder
      * @param id the item identifier
      */
-    public OnenotePageRequestBuilder pages(final String id) {
+    @Nonnull
+    public OnenotePageRequestBuilder pages(@Nonnull final String id) {
         return new OnenotePageRequestBuilder(getRequestUrlWithAdditionalSegment("pages") + "/" + id, getClient(), null);
     }
     /**
@@ -123,6 +133,7 @@ public class OnenoteRequestBuilder extends BaseRequestBuilder<Onenote> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public OnenoteResourceCollectionRequestBuilder resources() {
         return new OnenoteResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("resources"), getClient(), null);
     }
@@ -133,7 +144,8 @@ public class OnenoteRequestBuilder extends BaseRequestBuilder<Onenote> {
      * @return the request builder
      * @param id the item identifier
      */
-    public OnenoteResourceRequestBuilder resources(final String id) {
+    @Nonnull
+    public OnenoteResourceRequestBuilder resources(@Nonnull final String id) {
         return new OnenoteResourceRequestBuilder(getRequestUrlWithAdditionalSegment("resources") + "/" + id, getClient(), null);
     }
     /**
@@ -141,6 +153,7 @@ public class OnenoteRequestBuilder extends BaseRequestBuilder<Onenote> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public SectionGroupCollectionRequestBuilder sectionGroups() {
         return new SectionGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sectionGroups"), getClient(), null);
     }
@@ -151,7 +164,8 @@ public class OnenoteRequestBuilder extends BaseRequestBuilder<Onenote> {
      * @return the request builder
      * @param id the item identifier
      */
-    public SectionGroupRequestBuilder sectionGroups(final String id) {
+    @Nonnull
+    public SectionGroupRequestBuilder sectionGroups(@Nonnull final String id) {
         return new SectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("sectionGroups") + "/" + id, getClient(), null);
     }
     /**
@@ -159,6 +173,7 @@ public class OnenoteRequestBuilder extends BaseRequestBuilder<Onenote> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public OnenoteSectionCollectionRequestBuilder sections() {
         return new OnenoteSectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sections"), getClient(), null);
     }
@@ -169,7 +184,8 @@ public class OnenoteRequestBuilder extends BaseRequestBuilder<Onenote> {
      * @return the request builder
      * @param id the item identifier
      */
-    public OnenoteSectionRequestBuilder sections(final String id) {
+    @Nonnull
+    public OnenoteSectionRequestBuilder sections(@Nonnull final String id) {
         return new OnenoteSectionRequestBuilder(getRequestUrlWithAdditionalSegment("sections") + "/" + id, getClient(), null);
     }
 }

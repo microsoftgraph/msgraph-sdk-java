@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetByIdsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetByIdsCollectionRequest;
@@ -34,7 +36,7 @@ public class DirectoryObjectGetByIdsCollectionRequestBuilder extends BaseActionC
      * @param ids the ids
      * @param types the types
      */
-    public DirectoryObjectGetByIdsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<String> ids, final java.util.List<String> types) {
+    public DirectoryObjectGetByIdsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final java.util.List<String> ids, @Nullable final java.util.List<String> types) {
         super(requestUrl, client, requestOptions, DirectoryObjectGetByIdsCollectionRequestBuilder.class, DirectoryObjectGetByIdsCollectionRequest.class);
   	 if(ids!=null){
 			bodyParams.put("ids", ids);
@@ -50,8 +52,9 @@ public class DirectoryObjectGetByIdsCollectionRequestBuilder extends BaseActionC
      * @param requestOptions the options for this request
      * @return the DirectoryObjectGetByIdsCollectionRequest instance
      */
-     @Override
-    public DirectoryObjectGetByIdsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Override
+    @Nonnull
+    public DirectoryObjectGetByIdsCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final DirectoryObjectGetByIdsCollectionRequest request = super.buildRequest(requestOptions);
 
         if (hasParameter("ids")) {

@@ -24,6 +24,9 @@ package com.microsoft.graph.logger;
 
 import java.util.logging.Logger;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 /**
  * The default logger for the service client
  */
@@ -41,7 +44,7 @@ public class DefaultLogger implements ILogger {
      * 
      * @param level the level to log at
      */
-    public void setLoggingLevel(final LoggerLevel level) {
+    public void setLoggingLevel(@Nonnull final LoggerLevel level) {
     	LOGGER.info("Setting logging level to " + level);
     	this.level = level;
     }
@@ -51,6 +54,7 @@ public class DefaultLogger implements ILogger {
      * 
      * @return the level the logger is set to
      */
+    @Nonnull
     public LoggerLevel getLoggingLevel() {
         return level;
     }
@@ -61,6 +65,7 @@ public class DefaultLogger implements ILogger {
      * @return the tag for the current method
      * Sourced from https://gist.github.com/eefret/a9c7ac052854a10a8936
      */
+    @Nullable
     private String getTag() {
         try {
             final StringBuilder sb = new StringBuilder();
@@ -84,7 +89,7 @@ public class DefaultLogger implements ILogger {
      * @param message the message
      */
     @Override
-    public void logDebug(final String message) {
+    public void logDebug(@Nonnull final String message) {
     	if(this.level == LoggerLevel.DEBUG)
                 for (final String line : message.split("\n")) {
                 	LOGGER.info(line);
@@ -99,7 +104,7 @@ public class DefaultLogger implements ILogger {
      * @param throwable the throwable
      */
     @Override
-    public void logError(final String message, final Throwable throwable) {
+    public void logError(@Nonnull final String message, @Nonnull final Throwable throwable) {
         switch (level) {
             case DEBUG:
             case ERROR:

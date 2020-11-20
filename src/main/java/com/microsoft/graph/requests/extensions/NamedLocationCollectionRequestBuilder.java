@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ConditionalAccessRoot;
 import com.microsoft.graph.models.extensions.NamedLocation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.NamedLocationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.NamedLocationRequestBuilder;
@@ -32,7 +34,7 @@ public class NamedLocationCollectionRequestBuilder extends BaseCollectionRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public NamedLocationCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public NamedLocationCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, NamedLocationRequestBuilder.class, NamedLocationCollectionRequest.class);
     }
 

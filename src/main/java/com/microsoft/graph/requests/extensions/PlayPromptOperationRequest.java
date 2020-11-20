@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PlayPromptOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class PlayPromptOperationRequest extends BaseRequest<PlayPromptOperation>
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PlayPromptOperationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PlayPromptOperationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PlayPromptOperation.class);
     }
 
@@ -37,7 +39,7 @@ public class PlayPromptOperationRequest extends BaseRequest<PlayPromptOperation>
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PlayPromptOperation> callback) {
+    public void get(@Nonnull final ICallback<? super PlayPromptOperation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class PlayPromptOperationRequest extends BaseRequest<PlayPromptOperation>
      * @return the PlayPromptOperation from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PlayPromptOperation get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class PlayPromptOperationRequest extends BaseRequest<PlayPromptOperation>
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PlayPromptOperation> callback) {
+    public void delete(@Nonnull final ICallback<? super PlayPromptOperation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class PlayPromptOperationRequest extends BaseRequest<PlayPromptOperation>
      * @param sourcePlayPromptOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PlayPromptOperation sourcePlayPromptOperation, final ICallback<? super PlayPromptOperation> callback) {
+    public void patch(@Nonnull final PlayPromptOperation sourcePlayPromptOperation, @Nonnull final ICallback<? super PlayPromptOperation> callback) {
         send(HttpMethod.PATCH, callback, sourcePlayPromptOperation);
     }
 
@@ -86,7 +89,8 @@ public class PlayPromptOperationRequest extends BaseRequest<PlayPromptOperation>
      * @return the updated PlayPromptOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PlayPromptOperation patch(final PlayPromptOperation sourcePlayPromptOperation) throws ClientException {
+    @Nullable
+    public PlayPromptOperation patch(@Nonnull final PlayPromptOperation sourcePlayPromptOperation) throws ClientException {
         return send(HttpMethod.PATCH, sourcePlayPromptOperation);
     }
 
@@ -96,7 +100,7 @@ public class PlayPromptOperationRequest extends BaseRequest<PlayPromptOperation>
      * @param newPlayPromptOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PlayPromptOperation newPlayPromptOperation, final ICallback<? super PlayPromptOperation> callback) {
+    public void post(@Nonnull final PlayPromptOperation newPlayPromptOperation, @Nonnull final ICallback<? super PlayPromptOperation> callback) {
         send(HttpMethod.POST, callback, newPlayPromptOperation);
     }
 
@@ -107,7 +111,8 @@ public class PlayPromptOperationRequest extends BaseRequest<PlayPromptOperation>
      * @return the created PlayPromptOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PlayPromptOperation post(final PlayPromptOperation newPlayPromptOperation) throws ClientException {
+    @Nullable
+    public PlayPromptOperation post(@Nonnull final PlayPromptOperation newPlayPromptOperation) throws ClientException {
         return send(HttpMethod.POST, newPlayPromptOperation);
     }
 
@@ -117,7 +122,7 @@ public class PlayPromptOperationRequest extends BaseRequest<PlayPromptOperation>
      * @param newPlayPromptOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PlayPromptOperation newPlayPromptOperation, final ICallback<? super PlayPromptOperation> callback) {
+    public void put(@Nonnull final PlayPromptOperation newPlayPromptOperation, @Nonnull final ICallback<? super PlayPromptOperation> callback) {
         send(HttpMethod.PUT, callback, newPlayPromptOperation);
     }
 
@@ -128,7 +133,8 @@ public class PlayPromptOperationRequest extends BaseRequest<PlayPromptOperation>
      * @return the created PlayPromptOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PlayPromptOperation put(final PlayPromptOperation newPlayPromptOperation) throws ClientException {
+    @Nullable
+    public PlayPromptOperation put(@Nonnull final PlayPromptOperation newPlayPromptOperation) throws ClientException {
         return send(HttpMethod.PUT, newPlayPromptOperation);
     }
 
@@ -138,7 +144,8 @@ public class PlayPromptOperationRequest extends BaseRequest<PlayPromptOperation>
      * @param value the select clause
      * @return the updated request
      */
-     public PlayPromptOperationRequest select(final String value) {
+     @Nonnull
+     public PlayPromptOperationRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class PlayPromptOperationRequest extends BaseRequest<PlayPromptOperation>
      * @param value the expand clause
      * @return the updated request
      */
-     public PlayPromptOperationRequest expand(final String value) {
+     @Nonnull
+     public PlayPromptOperationRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

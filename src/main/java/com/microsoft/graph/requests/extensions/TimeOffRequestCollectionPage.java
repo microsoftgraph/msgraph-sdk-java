@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.TimeOffRequest;
 import com.microsoft.graph.requests.extensions.TimeOffRequestCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.TimeOffRequestCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class TimeOffRequestCollectionPage extends BaseCollectionPage<TimeOffRequ
      * @param response the serialized TimeOffRequestCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TimeOffRequestCollectionPage(final TimeOffRequestCollectionResponse response, final TimeOffRequestCollectionRequestBuilder builder) {
+    public TimeOffRequestCollectionPage(@Nonnull final TimeOffRequestCollectionResponse response, @Nonnull final TimeOffRequestCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class TimeOffRequestCollectionPage extends BaseCollectionPage<TimeOffRequ
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public TimeOffRequestCollectionPage(final java.util.List<TimeOffRequest> pageContents, final TimeOffRequestCollectionRequestBuilder nextRequestBuilder) {
+    public TimeOffRequestCollectionPage(@Nonnull final java.util.List<TimeOffRequest> pageContents, @Nullable final TimeOffRequestCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

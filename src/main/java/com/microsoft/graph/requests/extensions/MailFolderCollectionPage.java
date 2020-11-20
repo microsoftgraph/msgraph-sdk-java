@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.MailFolder;
 import com.microsoft.graph.requests.extensions.MailFolderCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.MailFolderCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class MailFolderCollectionPage extends BaseCollectionPage<MailFolder, Mai
      * @param response the serialized MailFolderCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public MailFolderCollectionPage(final MailFolderCollectionResponse response, final MailFolderCollectionRequestBuilder builder) {
+    public MailFolderCollectionPage(@Nonnull final MailFolderCollectionResponse response, @Nonnull final MailFolderCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class MailFolderCollectionPage extends BaseCollectionPage<MailFolder, Mai
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public MailFolderCollectionPage(final java.util.List<MailFolder> pageContents, final MailFolderCollectionRequestBuilder nextRequestBuilder) {
+    public MailFolderCollectionPage(@Nonnull final java.util.List<MailFolder> pageContents, @Nullable final MailFolderCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

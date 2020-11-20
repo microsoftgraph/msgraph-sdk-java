@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DriveItem;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DriveSharedWithMeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveSharedWithMeCollectionRequest;
@@ -32,7 +34,7 @@ public class DriveSharedWithMeCollectionRequestBuilder extends BaseFunctionColle
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DriveSharedWithMeCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveSharedWithMeCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DriveSharedWithMeCollectionRequestBuilder.class, DriveSharedWithMeCollectionRequest.class);
     }
     
@@ -42,8 +44,9 @@ public class DriveSharedWithMeCollectionRequestBuilder extends BaseFunctionColle
      * @param requestOptions the options for this request
      * @return the DriveSharedWithMeCollectionRequest instance
      */
-     @Override
-    public DriveSharedWithMeCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Override
+    @Nonnull
+    public DriveSharedWithMeCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final DriveSharedWithMeCollectionRequest request = super.buildRequest(requestOptions);
 
       for (com.microsoft.graph.options.FunctionOption option : functionOptions) {

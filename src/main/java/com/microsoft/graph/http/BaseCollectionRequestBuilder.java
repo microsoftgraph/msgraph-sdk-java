@@ -4,6 +4,9 @@ import com.microsoft.graph.core.IBaseClient;
 
 import java.lang.reflect.InvocationTargetException;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 /**
  * The basic implementation of a collection request builder
  * @param <T> the entity or complex type
@@ -27,9 +30,9 @@ public class BaseCollectionRequestBuilder<T, T2 extends BaseRequestBuilder<T>,
      * @param requestBuilderClass the class for the request builder
      * @param collectionRequestClass the class for the collection request
      */
-	public BaseCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-                                        final Class<T2> requestBuilderClass,
-										final Class<T5> collectionRequestClass) {
+	public BaseCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+                                        @Nonnull final Class<T2> requestBuilderClass,
+										@Nonnull final Class<T5> collectionRequestClass) {
         super(requestUrl, client, requestOptions);
 		this.collRequestClass = collectionRequestClass;
         this.reqBuilderClass = requestBuilderClass;
@@ -41,7 +44,8 @@ public class BaseCollectionRequestBuilder<T, T2 extends BaseRequestBuilder<T>,
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public T5 buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nullable
+    public T5 buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,7 +55,8 @@ public class BaseCollectionRequestBuilder<T, T2 extends BaseRequestBuilder<T>,
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public T5 buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nullable
+    public T5 buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         try {
             return collRequestClass.getConstructor(String.class, IBaseClient.class, java.util.List.class)
                                     .newInstance(getRequestUrl(), getClient(), requestOptions);
@@ -66,7 +71,8 @@ public class BaseCollectionRequestBuilder<T, T2 extends BaseRequestBuilder<T>,
      * @return builder to request an item within a collection
      * @param id identifier for the item
      */
-    public T2 byId(final String id) {
+    @Nullable
+    public T2 byId(@Nonnull final String id) {
         try {
             return reqBuilderClass.getConstructor(String.class, IBaseClient.class, java.util.List.class)
                                 .newInstance(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());

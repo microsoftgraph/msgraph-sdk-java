@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestCollection
 import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -29,7 +31,7 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder<Info
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public InformationProtectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public InformationProtectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +41,8 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder<Info
      * @param requestOptions the options for this request
      * @return the InformationProtectionRequest instance
      */
-    public InformationProtectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public InformationProtectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,7 +52,8 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder<Info
      * @param requestOptions the options for this request
      * @return the InformationProtectionRequest instance
      */
-    public InformationProtectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public InformationProtectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.InformationProtectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,6 +63,7 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder<Info
      *
      * @return the collection request builder
      */
+    @Nonnull
     public ThreatAssessmentRequestCollectionRequestBuilder threatAssessmentRequests() {
         return new ThreatAssessmentRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("threatAssessmentRequests"), getClient(), null);
     }
@@ -69,7 +74,8 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder<Info
      * @return the request builder
      * @param id the item identifier
      */
-    public ThreatAssessmentRequestRequestBuilder threatAssessmentRequests(final String id) {
+    @Nonnull
+    public ThreatAssessmentRequestRequestBuilder threatAssessmentRequests(@Nonnull final String id) {
         return new ThreatAssessmentRequestRequestBuilder(getRequestUrlWithAdditionalSegment("threatAssessmentRequests") + "/" + id, getClient(), null);
     }
 }

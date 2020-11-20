@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DeviceComplianceSettingState;
 import com.microsoft.graph.requests.extensions.DeviceComplianceSettingStateCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DeviceComplianceSettingStateCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class DeviceComplianceSettingStateCollectionPage extends BaseCollectionPa
      * @param response the serialized DeviceComplianceSettingStateCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DeviceComplianceSettingStateCollectionPage(final DeviceComplianceSettingStateCollectionResponse response, final DeviceComplianceSettingStateCollectionRequestBuilder builder) {
+    public DeviceComplianceSettingStateCollectionPage(@Nonnull final DeviceComplianceSettingStateCollectionResponse response, @Nonnull final DeviceComplianceSettingStateCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class DeviceComplianceSettingStateCollectionPage extends BaseCollectionPa
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public DeviceComplianceSettingStateCollectionPage(final java.util.List<DeviceComplianceSettingState> pageContents, final DeviceComplianceSettingStateCollectionRequestBuilder nextRequestBuilder) {
+    public DeviceComplianceSettingStateCollectionPage(@Nonnull final java.util.List<DeviceComplianceSettingState> pageContents, @Nullable final DeviceComplianceSettingStateCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

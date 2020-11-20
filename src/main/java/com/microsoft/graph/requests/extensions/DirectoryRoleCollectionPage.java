@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DirectoryRole;
 import com.microsoft.graph.requests.extensions.DirectoryRoleCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DirectoryRoleCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class DirectoryRoleCollectionPage extends BaseCollectionPage<DirectoryRol
      * @param response the serialized DirectoryRoleCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DirectoryRoleCollectionPage(final DirectoryRoleCollectionResponse response, final DirectoryRoleCollectionRequestBuilder builder) {
+    public DirectoryRoleCollectionPage(@Nonnull final DirectoryRoleCollectionResponse response, @Nonnull final DirectoryRoleCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class DirectoryRoleCollectionPage extends BaseCollectionPage<DirectoryRol
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public DirectoryRoleCollectionPage(final java.util.List<DirectoryRole> pageContents, final DirectoryRoleCollectionRequestBuilder nextRequestBuilder) {
+    public DirectoryRoleCollectionPage(@Nonnull final java.util.List<DirectoryRole> pageContents, @Nullable final DirectoryRoleCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

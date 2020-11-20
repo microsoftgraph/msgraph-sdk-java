@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionAppLockerFile;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class WindowsInformationProtectionAppLockerFileCollectionPage extends Bas
      * @param response the serialized WindowsInformationProtectionAppLockerFileCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public WindowsInformationProtectionAppLockerFileCollectionPage(final WindowsInformationProtectionAppLockerFileCollectionResponse response, final WindowsInformationProtectionAppLockerFileCollectionRequestBuilder builder) {
+    public WindowsInformationProtectionAppLockerFileCollectionPage(@Nonnull final WindowsInformationProtectionAppLockerFileCollectionResponse response, @Nonnull final WindowsInformationProtectionAppLockerFileCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class WindowsInformationProtectionAppLockerFileCollectionPage extends Bas
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public WindowsInformationProtectionAppLockerFileCollectionPage(final java.util.List<WindowsInformationProtectionAppLockerFile> pageContents, final WindowsInformationProtectionAppLockerFileCollectionRequestBuilder nextRequestBuilder) {
+    public WindowsInformationProtectionAppLockerFileCollectionPage(@Nonnull final java.util.List<WindowsInformationProtectionAppLockerFile> pageContents, @Nullable final WindowsInformationProtectionAppLockerFileCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

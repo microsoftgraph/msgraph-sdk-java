@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OfferShiftRequest;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,10 +31,10 @@ public class OfferShiftRequestRequest extends BaseRequest<OfferShiftRequest> {
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public OfferShiftRequestRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends OfferShiftRequest> responseClass) {
+    public OfferShiftRequestRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends OfferShiftRequest> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -43,7 +45,7 @@ public class OfferShiftRequestRequest extends BaseRequest<OfferShiftRequest> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OfferShiftRequestRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OfferShiftRequestRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OfferShiftRequest.class);
     }
 
@@ -52,7 +54,7 @@ public class OfferShiftRequestRequest extends BaseRequest<OfferShiftRequest> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super OfferShiftRequest> callback) {
+    public void get(@Nonnull final ICallback<? super OfferShiftRequest> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -62,6 +64,7 @@ public class OfferShiftRequestRequest extends BaseRequest<OfferShiftRequest> {
      * @return the OfferShiftRequest from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public OfferShiftRequest get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -71,7 +74,7 @@ public class OfferShiftRequestRequest extends BaseRequest<OfferShiftRequest> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super OfferShiftRequest> callback) {
+    public void delete(@Nonnull final ICallback<? super OfferShiftRequest> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +93,7 @@ public class OfferShiftRequestRequest extends BaseRequest<OfferShiftRequest> {
      * @param sourceOfferShiftRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OfferShiftRequest sourceOfferShiftRequest, final ICallback<? super OfferShiftRequest> callback) {
+    public void patch(@Nonnull final OfferShiftRequest sourceOfferShiftRequest, @Nonnull final ICallback<? super OfferShiftRequest> callback) {
         send(HttpMethod.PATCH, callback, sourceOfferShiftRequest);
     }
 
@@ -101,7 +104,8 @@ public class OfferShiftRequestRequest extends BaseRequest<OfferShiftRequest> {
      * @return the updated OfferShiftRequest
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OfferShiftRequest patch(final OfferShiftRequest sourceOfferShiftRequest) throws ClientException {
+    @Nullable
+    public OfferShiftRequest patch(@Nonnull final OfferShiftRequest sourceOfferShiftRequest) throws ClientException {
         return send(HttpMethod.PATCH, sourceOfferShiftRequest);
     }
 
@@ -111,7 +115,7 @@ public class OfferShiftRequestRequest extends BaseRequest<OfferShiftRequest> {
      * @param newOfferShiftRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OfferShiftRequest newOfferShiftRequest, final ICallback<? super OfferShiftRequest> callback) {
+    public void post(@Nonnull final OfferShiftRequest newOfferShiftRequest, @Nonnull final ICallback<? super OfferShiftRequest> callback) {
         send(HttpMethod.POST, callback, newOfferShiftRequest);
     }
 
@@ -122,7 +126,8 @@ public class OfferShiftRequestRequest extends BaseRequest<OfferShiftRequest> {
      * @return the created OfferShiftRequest
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OfferShiftRequest post(final OfferShiftRequest newOfferShiftRequest) throws ClientException {
+    @Nullable
+    public OfferShiftRequest post(@Nonnull final OfferShiftRequest newOfferShiftRequest) throws ClientException {
         return send(HttpMethod.POST, newOfferShiftRequest);
     }
 
@@ -132,7 +137,7 @@ public class OfferShiftRequestRequest extends BaseRequest<OfferShiftRequest> {
      * @param newOfferShiftRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OfferShiftRequest newOfferShiftRequest, final ICallback<? super OfferShiftRequest> callback) {
+    public void put(@Nonnull final OfferShiftRequest newOfferShiftRequest, @Nonnull final ICallback<? super OfferShiftRequest> callback) {
         send(HttpMethod.PUT, callback, newOfferShiftRequest);
     }
 
@@ -143,7 +148,8 @@ public class OfferShiftRequestRequest extends BaseRequest<OfferShiftRequest> {
      * @return the created OfferShiftRequest
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OfferShiftRequest put(final OfferShiftRequest newOfferShiftRequest) throws ClientException {
+    @Nullable
+    public OfferShiftRequest put(@Nonnull final OfferShiftRequest newOfferShiftRequest) throws ClientException {
         return send(HttpMethod.PUT, newOfferShiftRequest);
     }
 
@@ -153,7 +159,8 @@ public class OfferShiftRequestRequest extends BaseRequest<OfferShiftRequest> {
      * @param value the select clause
      * @return the updated request
      */
-     public OfferShiftRequestRequest select(final String value) {
+     @Nonnull
+     public OfferShiftRequestRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -164,7 +171,8 @@ public class OfferShiftRequestRequest extends BaseRequest<OfferShiftRequest> {
      * @param value the expand clause
      * @return the updated request
      */
-     public OfferShiftRequestRequest expand(final String value) {
+     @Nonnull
+     public OfferShiftRequestRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

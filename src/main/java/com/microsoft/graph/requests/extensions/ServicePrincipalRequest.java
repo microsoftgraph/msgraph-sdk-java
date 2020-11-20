@@ -30,6 +30,8 @@ import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionRequ
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -48,7 +50,7 @@ public class ServicePrincipalRequest extends BaseRequest<ServicePrincipal> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ServicePrincipalRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ServicePrincipalRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ServicePrincipal.class);
     }
 
@@ -57,7 +59,7 @@ public class ServicePrincipalRequest extends BaseRequest<ServicePrincipal> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ServicePrincipal> callback) {
+    public void get(@Nonnull final ICallback<? super ServicePrincipal> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -67,6 +69,7 @@ public class ServicePrincipalRequest extends BaseRequest<ServicePrincipal> {
      * @return the ServicePrincipal from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ServicePrincipal get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -76,7 +79,7 @@ public class ServicePrincipalRequest extends BaseRequest<ServicePrincipal> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ServicePrincipal> callback) {
+    public void delete(@Nonnull final ICallback<? super ServicePrincipal> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -95,7 +98,7 @@ public class ServicePrincipalRequest extends BaseRequest<ServicePrincipal> {
      * @param sourceServicePrincipal the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ServicePrincipal sourceServicePrincipal, final ICallback<? super ServicePrincipal> callback) {
+    public void patch(@Nonnull final ServicePrincipal sourceServicePrincipal, @Nonnull final ICallback<? super ServicePrincipal> callback) {
         send(HttpMethod.PATCH, callback, sourceServicePrincipal);
     }
 
@@ -106,7 +109,8 @@ public class ServicePrincipalRequest extends BaseRequest<ServicePrincipal> {
      * @return the updated ServicePrincipal
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ServicePrincipal patch(final ServicePrincipal sourceServicePrincipal) throws ClientException {
+    @Nullable
+    public ServicePrincipal patch(@Nonnull final ServicePrincipal sourceServicePrincipal) throws ClientException {
         return send(HttpMethod.PATCH, sourceServicePrincipal);
     }
 
@@ -116,7 +120,7 @@ public class ServicePrincipalRequest extends BaseRequest<ServicePrincipal> {
      * @param newServicePrincipal the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ServicePrincipal newServicePrincipal, final ICallback<? super ServicePrincipal> callback) {
+    public void post(@Nonnull final ServicePrincipal newServicePrincipal, @Nonnull final ICallback<? super ServicePrincipal> callback) {
         send(HttpMethod.POST, callback, newServicePrincipal);
     }
 
@@ -127,7 +131,8 @@ public class ServicePrincipalRequest extends BaseRequest<ServicePrincipal> {
      * @return the created ServicePrincipal
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ServicePrincipal post(final ServicePrincipal newServicePrincipal) throws ClientException {
+    @Nullable
+    public ServicePrincipal post(@Nonnull final ServicePrincipal newServicePrincipal) throws ClientException {
         return send(HttpMethod.POST, newServicePrincipal);
     }
 
@@ -137,7 +142,7 @@ public class ServicePrincipalRequest extends BaseRequest<ServicePrincipal> {
      * @param newServicePrincipal the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ServicePrincipal newServicePrincipal, final ICallback<? super ServicePrincipal> callback) {
+    public void put(@Nonnull final ServicePrincipal newServicePrincipal, @Nonnull final ICallback<? super ServicePrincipal> callback) {
         send(HttpMethod.PUT, callback, newServicePrincipal);
     }
 
@@ -148,7 +153,8 @@ public class ServicePrincipalRequest extends BaseRequest<ServicePrincipal> {
      * @return the created ServicePrincipal
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ServicePrincipal put(final ServicePrincipal newServicePrincipal) throws ClientException {
+    @Nullable
+    public ServicePrincipal put(@Nonnull final ServicePrincipal newServicePrincipal) throws ClientException {
         return send(HttpMethod.PUT, newServicePrincipal);
     }
 
@@ -158,7 +164,8 @@ public class ServicePrincipalRequest extends BaseRequest<ServicePrincipal> {
      * @param value the select clause
      * @return the updated request
      */
-     public ServicePrincipalRequest select(final String value) {
+     @Nonnull
+     public ServicePrincipalRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -169,7 +176,8 @@ public class ServicePrincipalRequest extends BaseRequest<ServicePrincipal> {
      * @param value the expand clause
      * @return the updated request
      */
-     public ServicePrincipalRequest expand(final String value) {
+     @Nonnull
+     public ServicePrincipalRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

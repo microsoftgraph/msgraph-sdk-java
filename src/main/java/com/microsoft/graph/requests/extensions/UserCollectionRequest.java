@@ -24,6 +24,8 @@ import com.microsoft.graph.models.extensions.ManagedAppDiagnosticStatus;
 import com.microsoft.graph.models.extensions.ManagedAppPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -47,7 +49,7 @@ public class UserCollectionRequest extends BaseCollectionRequest<User, UserColle
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserCollectionResponse.class, UserCollectionPage.class, UserCollectionRequestBuilder.class);
     }
 
@@ -56,7 +58,7 @@ public class UserCollectionRequest extends BaseCollectionRequest<User, UserColle
      * @param newUser the User to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final User newUser, final ICallback<? super User> callback) {
+    public void post(@Nonnull final User newUser, @Nonnull final ICallback<? super User> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +70,8 @@ public class UserCollectionRequest extends BaseCollectionRequest<User, UserColle
      * @param newUser the User to create
      * @return the newly created object
      */
-    public User post(final User newUser) throws ClientException {
+    @Nonnull
+    public User post(@Nonnull final User newUser) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UserRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -81,7 +84,8 @@ public class UserCollectionRequest extends BaseCollectionRequest<User, UserColle
      * @param value the expand clause
      * @return the updated request
      */
-    public UserCollectionRequest expand(final String value) {
+    @Nonnull
+    public UserCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -92,7 +96,8 @@ public class UserCollectionRequest extends BaseCollectionRequest<User, UserColle
      * @param value the filter clause
      * @return the updated request
      */
-    public UserCollectionRequest filter(final String value) {
+    @Nonnull
+    public UserCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -103,7 +108,8 @@ public class UserCollectionRequest extends BaseCollectionRequest<User, UserColle
      * @param value the order by clause
      * @return the updated request
      */
-    public UserCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public UserCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -114,7 +120,8 @@ public class UserCollectionRequest extends BaseCollectionRequest<User, UserColle
      * @param value the select clause
      * @return the updated request
      */
-    public UserCollectionRequest select(final String value) {
+    @Nonnull
+    public UserCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -125,6 +132,7 @@ public class UserCollectionRequest extends BaseCollectionRequest<User, UserColle
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public UserCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -136,6 +144,7 @@ public class UserCollectionRequest extends BaseCollectionRequest<User, UserColle
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public UserCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -147,7 +156,8 @@ public class UserCollectionRequest extends BaseCollectionRequest<User, UserColle
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public UserCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public UserCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

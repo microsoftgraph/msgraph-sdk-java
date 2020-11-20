@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ScopedRoleMembership;
 import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class ScopedRoleMembershipCollectionPage extends BaseCollectionPage<Scope
      * @param response the serialized ScopedRoleMembershipCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ScopedRoleMembershipCollectionPage(final ScopedRoleMembershipCollectionResponse response, final ScopedRoleMembershipCollectionRequestBuilder builder) {
+    public ScopedRoleMembershipCollectionPage(@Nonnull final ScopedRoleMembershipCollectionResponse response, @Nonnull final ScopedRoleMembershipCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class ScopedRoleMembershipCollectionPage extends BaseCollectionPage<Scope
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public ScopedRoleMembershipCollectionPage(final java.util.List<ScopedRoleMembership> pageContents, final ScopedRoleMembershipCollectionRequestBuilder nextRequestBuilder) {
+    public ScopedRoleMembershipCollectionPage(@Nonnull final java.util.List<ScopedRoleMembership> pageContents, @Nullable final ScopedRoleMembershipCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

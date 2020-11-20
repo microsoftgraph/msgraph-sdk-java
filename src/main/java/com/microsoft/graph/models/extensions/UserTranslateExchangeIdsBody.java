@@ -8,6 +8,8 @@ import com.microsoft.graph.models.generated.ExchangeIdFormat;
 import com.microsoft.graph.models.extensions.ConvertIdResult;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
 import java.util.EnumSet;
@@ -25,6 +27,7 @@ public class UserTranslateExchangeIdsBody {
      */
     @SerializedName(value = "inputIds", alternate = {"InputIds"})
     @Expose
+	@Nullable
     public java.util.List<String> inputIds;
 
     /**
@@ -33,6 +36,7 @@ public class UserTranslateExchangeIdsBody {
      */
     @SerializedName(value = "targetIdType", alternate = {"TargetIdType"})
     @Expose
+	@Nullable
     public ExchangeIdFormat targetIdType;
 
     /**
@@ -41,6 +45,7 @@ public class UserTranslateExchangeIdsBody {
      */
     @SerializedName(value = "sourceIdType", alternate = {"SourceIdType"})
     @Expose
+	@Nullable
     public ExchangeIdFormat sourceIdType;
 
 
@@ -59,6 +64,7 @@ public class UserTranslateExchangeIdsBody {
      *
      * @return the raw representation of this class
      */
+    @Nullable
     public JsonObject getRawObject() {
         return rawObject;
     }
@@ -68,6 +74,7 @@ public class UserTranslateExchangeIdsBody {
      *
      * @return the serializer
      */
+    @Nullable
     public ISerializer getSerializer() {
         return serializer;
     }
@@ -78,7 +85,7 @@ public class UserTranslateExchangeIdsBody {
      * @param serializer the serializer
      * @param json the JSON object to set this object to
      */
-    public void setRawObject(final ISerializer serializer, final JsonObject json) {
+    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
         this.serializer = serializer;
         rawObject = json;
 

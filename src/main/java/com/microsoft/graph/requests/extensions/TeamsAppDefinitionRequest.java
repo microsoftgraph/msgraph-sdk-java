@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TeamsAppDefinition;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class TeamsAppDefinitionRequest extends BaseRequest<TeamsAppDefinition> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamsAppDefinitionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsAppDefinitionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TeamsAppDefinition.class);
     }
 
@@ -37,7 +39,7 @@ public class TeamsAppDefinitionRequest extends BaseRequest<TeamsAppDefinition> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super TeamsAppDefinition> callback) {
+    public void get(@Nonnull final ICallback<? super TeamsAppDefinition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class TeamsAppDefinitionRequest extends BaseRequest<TeamsAppDefinition> {
      * @return the TeamsAppDefinition from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public TeamsAppDefinition get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class TeamsAppDefinitionRequest extends BaseRequest<TeamsAppDefinition> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super TeamsAppDefinition> callback) {
+    public void delete(@Nonnull final ICallback<? super TeamsAppDefinition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class TeamsAppDefinitionRequest extends BaseRequest<TeamsAppDefinition> {
      * @param sourceTeamsAppDefinition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TeamsAppDefinition sourceTeamsAppDefinition, final ICallback<? super TeamsAppDefinition> callback) {
+    public void patch(@Nonnull final TeamsAppDefinition sourceTeamsAppDefinition, @Nonnull final ICallback<? super TeamsAppDefinition> callback) {
         send(HttpMethod.PATCH, callback, sourceTeamsAppDefinition);
     }
 
@@ -86,7 +89,8 @@ public class TeamsAppDefinitionRequest extends BaseRequest<TeamsAppDefinition> {
      * @return the updated TeamsAppDefinition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TeamsAppDefinition patch(final TeamsAppDefinition sourceTeamsAppDefinition) throws ClientException {
+    @Nullable
+    public TeamsAppDefinition patch(@Nonnull final TeamsAppDefinition sourceTeamsAppDefinition) throws ClientException {
         return send(HttpMethod.PATCH, sourceTeamsAppDefinition);
     }
 
@@ -96,7 +100,7 @@ public class TeamsAppDefinitionRequest extends BaseRequest<TeamsAppDefinition> {
      * @param newTeamsAppDefinition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TeamsAppDefinition newTeamsAppDefinition, final ICallback<? super TeamsAppDefinition> callback) {
+    public void post(@Nonnull final TeamsAppDefinition newTeamsAppDefinition, @Nonnull final ICallback<? super TeamsAppDefinition> callback) {
         send(HttpMethod.POST, callback, newTeamsAppDefinition);
     }
 
@@ -107,7 +111,8 @@ public class TeamsAppDefinitionRequest extends BaseRequest<TeamsAppDefinition> {
      * @return the created TeamsAppDefinition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TeamsAppDefinition post(final TeamsAppDefinition newTeamsAppDefinition) throws ClientException {
+    @Nullable
+    public TeamsAppDefinition post(@Nonnull final TeamsAppDefinition newTeamsAppDefinition) throws ClientException {
         return send(HttpMethod.POST, newTeamsAppDefinition);
     }
 
@@ -117,7 +122,7 @@ public class TeamsAppDefinitionRequest extends BaseRequest<TeamsAppDefinition> {
      * @param newTeamsAppDefinition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TeamsAppDefinition newTeamsAppDefinition, final ICallback<? super TeamsAppDefinition> callback) {
+    public void put(@Nonnull final TeamsAppDefinition newTeamsAppDefinition, @Nonnull final ICallback<? super TeamsAppDefinition> callback) {
         send(HttpMethod.PUT, callback, newTeamsAppDefinition);
     }
 
@@ -128,7 +133,8 @@ public class TeamsAppDefinitionRequest extends BaseRequest<TeamsAppDefinition> {
      * @return the created TeamsAppDefinition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TeamsAppDefinition put(final TeamsAppDefinition newTeamsAppDefinition) throws ClientException {
+    @Nullable
+    public TeamsAppDefinition put(@Nonnull final TeamsAppDefinition newTeamsAppDefinition) throws ClientException {
         return send(HttpMethod.PUT, newTeamsAppDefinition);
     }
 
@@ -138,7 +144,8 @@ public class TeamsAppDefinitionRequest extends BaseRequest<TeamsAppDefinition> {
      * @param value the select clause
      * @return the updated request
      */
-     public TeamsAppDefinitionRequest select(final String value) {
+     @Nonnull
+     public TeamsAppDefinitionRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class TeamsAppDefinitionRequest extends BaseRequest<TeamsAppDefinition> {
      * @param value the expand clause
      * @return the updated request
      */
-     public TeamsAppDefinitionRequest expand(final String value) {
+     @Nonnull
+     public TeamsAppDefinitionRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

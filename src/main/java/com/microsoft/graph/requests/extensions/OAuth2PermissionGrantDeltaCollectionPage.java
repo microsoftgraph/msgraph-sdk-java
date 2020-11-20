@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.DeltaCollectionPage;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantDeltaCollectionRequestBuilder;
@@ -29,7 +31,7 @@ public class OAuth2PermissionGrantDeltaCollectionPage extends DeltaCollectionPag
      * @param response The serialized OAuth2PermissionGrantDeltaCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public OAuth2PermissionGrantDeltaCollectionPage(final OAuth2PermissionGrantDeltaCollectionResponse response, final OAuth2PermissionGrantDeltaCollectionRequestBuilder builder) {
+    public OAuth2PermissionGrantDeltaCollectionPage(@Nonnull final OAuth2PermissionGrantDeltaCollectionResponse response, @Nonnull final OAuth2PermissionGrantDeltaCollectionRequestBuilder builder) {
        super(response, builder);
     }
 
@@ -39,7 +41,7 @@ public class OAuth2PermissionGrantDeltaCollectionPage extends DeltaCollectionPag
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public OAuth2PermissionGrantDeltaCollectionPage(final java.util.List<OAuth2PermissionGrant> pageContents, final OAuth2PermissionGrantDeltaCollectionRequestBuilder nextRequestBuilder) {
+    public OAuth2PermissionGrantDeltaCollectionPage(@Nonnull final java.util.List<OAuth2PermissionGrant> pageContents, @Nullable final OAuth2PermissionGrantDeltaCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

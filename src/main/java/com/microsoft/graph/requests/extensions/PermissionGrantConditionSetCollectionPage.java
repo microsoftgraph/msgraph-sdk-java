@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.PermissionGrantConditionSet;
 import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class PermissionGrantConditionSetCollectionPage extends BaseCollectionPag
      * @param response the serialized PermissionGrantConditionSetCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public PermissionGrantConditionSetCollectionPage(final PermissionGrantConditionSetCollectionResponse response, final PermissionGrantConditionSetCollectionRequestBuilder builder) {
+    public PermissionGrantConditionSetCollectionPage(@Nonnull final PermissionGrantConditionSetCollectionResponse response, @Nonnull final PermissionGrantConditionSetCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class PermissionGrantConditionSetCollectionPage extends BaseCollectionPag
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public PermissionGrantConditionSetCollectionPage(final java.util.List<PermissionGrantConditionSet> pageContents, final PermissionGrantConditionSetCollectionRequestBuilder nextRequestBuilder) {
+    public PermissionGrantConditionSetCollectionPage(@Nonnull final java.util.List<PermissionGrantConditionSet> pageContents, @Nullable final PermissionGrantConditionSetCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

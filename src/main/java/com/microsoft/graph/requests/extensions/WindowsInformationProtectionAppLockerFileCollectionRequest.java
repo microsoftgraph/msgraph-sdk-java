@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.WindowsInformationProtection;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionAppLockerFile;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class WindowsInformationProtectionAppLockerFileCollectionRequest extends 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsInformationProtectionAppLockerFileCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsInformationProtectionAppLockerFileCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsInformationProtectionAppLockerFileCollectionResponse.class, WindowsInformationProtectionAppLockerFileCollectionPage.class, WindowsInformationProtectionAppLockerFileCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class WindowsInformationProtectionAppLockerFileCollectionRequest extends 
      * @param newWindowsInformationProtectionAppLockerFile the WindowsInformationProtectionAppLockerFile to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile, final ICallback<? super WindowsInformationProtectionAppLockerFile> callback) {
+    public void post(@Nonnull final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile, @Nonnull final ICallback<? super WindowsInformationProtectionAppLockerFile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsInformationProtectionAppLockerFileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class WindowsInformationProtectionAppLockerFileCollectionRequest extends 
      * @param newWindowsInformationProtectionAppLockerFile the WindowsInformationProtectionAppLockerFile to create
      * @return the newly created object
      */
-    public WindowsInformationProtectionAppLockerFile post(final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile) throws ClientException {
+    @Nonnull
+    public WindowsInformationProtectionAppLockerFile post(@Nonnull final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WindowsInformationProtectionAppLockerFileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class WindowsInformationProtectionAppLockerFileCollectionRequest extends 
      * @param value the expand clause
      * @return the updated request
      */
-    public WindowsInformationProtectionAppLockerFileCollectionRequest expand(final String value) {
+    @Nonnull
+    public WindowsInformationProtectionAppLockerFileCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class WindowsInformationProtectionAppLockerFileCollectionRequest extends 
      * @param value the filter clause
      * @return the updated request
      */
-    public WindowsInformationProtectionAppLockerFileCollectionRequest filter(final String value) {
+    @Nonnull
+    public WindowsInformationProtectionAppLockerFileCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class WindowsInformationProtectionAppLockerFileCollectionRequest extends 
      * @param value the order by clause
      * @return the updated request
      */
-    public WindowsInformationProtectionAppLockerFileCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public WindowsInformationProtectionAppLockerFileCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class WindowsInformationProtectionAppLockerFileCollectionRequest extends 
      * @param value the select clause
      * @return the updated request
      */
-    public WindowsInformationProtectionAppLockerFileCollectionRequest select(final String value) {
+    @Nonnull
+    public WindowsInformationProtectionAppLockerFileCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class WindowsInformationProtectionAppLockerFileCollectionRequest extends 
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public WindowsInformationProtectionAppLockerFileCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class WindowsInformationProtectionAppLockerFileCollectionRequest extends 
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public WindowsInformationProtectionAppLockerFileCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class WindowsInformationProtectionAppLockerFileCollectionRequest extends 
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public WindowsInformationProtectionAppLockerFileCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public WindowsInformationProtectionAppLockerFileCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

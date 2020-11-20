@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.TeamsAppDefinition;
 import com.microsoft.graph.requests.extensions.TeamsAppDefinitionCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.TeamsAppDefinitionCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class TeamsAppDefinitionCollectionPage extends BaseCollectionPage<TeamsAp
      * @param response the serialized TeamsAppDefinitionCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TeamsAppDefinitionCollectionPage(final TeamsAppDefinitionCollectionResponse response, final TeamsAppDefinitionCollectionRequestBuilder builder) {
+    public TeamsAppDefinitionCollectionPage(@Nonnull final TeamsAppDefinitionCollectionResponse response, @Nonnull final TeamsAppDefinitionCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class TeamsAppDefinitionCollectionPage extends BaseCollectionPage<TeamsAp
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public TeamsAppDefinitionCollectionPage(final java.util.List<TeamsAppDefinition> pageContents, final TeamsAppDefinitionCollectionRequestBuilder nextRequestBuilder) {
+    public TeamsAppDefinitionCollectionPage(@Nonnull final java.util.List<TeamsAppDefinition> pageContents, @Nullable final TeamsAppDefinitionCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

@@ -78,6 +78,8 @@ import com.microsoft.graph.requests.extensions.UserTeamworkRequestBuilder;
 import com.microsoft.graph.requests.extensions.TodoRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -95,7 +97,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -105,7 +107,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @param requestOptions the options for this request
      * @return the UserRequest instance
      */
-    public UserRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public UserRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -115,7 +118,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @param requestOptions the options for this request
      * @return the UserRequest instance
      */
-    public UserRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public UserRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.UserRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -125,6 +129,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public AppRoleAssignmentCollectionRequestBuilder appRoleAssignments() {
         return new AppRoleAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appRoleAssignments"), getClient(), null);
     }
@@ -135,7 +140,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public AppRoleAssignmentRequestBuilder appRoleAssignments(final String id) {
+    @Nonnull
+    public AppRoleAssignmentRequestBuilder appRoleAssignments(@Nonnull final String id) {
         return new AppRoleAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("appRoleAssignments") + "/" + id, getClient(), null);
     }
     /**
@@ -143,6 +149,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public DirectoryObjectCollectionWithReferencesRequestBuilder createdObjects() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("createdObjects"), getClient(), null);
     }
@@ -153,7 +160,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public DirectoryObjectWithReferenceRequestBuilder createdObjects(final String id) {
+    @Nonnull
+    public DirectoryObjectWithReferenceRequestBuilder createdObjects(@Nonnull final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdObjects") + "/" + id, getClient(), null);
     }
     /**
@@ -161,6 +169,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public ServicePrincipalCollectionWithReferencesRequestBuilder createdObjectsAsServicePrincipal() {
         return new ServicePrincipalCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("createdObjects") + "/microsoft.graph.servicePrincipal", getClient(), null);
     }
@@ -171,7 +180,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public ServicePrincipalWithReferenceRequestBuilder createdObjectsAsServicePrincipal(final String id) {
+    @Nonnull
+    public ServicePrincipalWithReferenceRequestBuilder createdObjectsAsServicePrincipal(@Nonnull final String id) {
         return new ServicePrincipalWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdObjects") + "/" + id + "/microsoft.graph.servicePrincipal", getClient(), null);
     }
     /**
@@ -179,6 +189,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public DirectoryObjectCollectionWithReferencesRequestBuilder directReports() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("directReports"), getClient(), null);
     }
@@ -189,7 +200,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public DirectoryObjectWithReferenceRequestBuilder directReports(final String id) {
+    @Nonnull
+    public DirectoryObjectWithReferenceRequestBuilder directReports(@Nonnull final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("directReports") + "/" + id, getClient(), null);
     }
     /**
@@ -197,6 +209,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public UserCollectionWithReferencesRequestBuilder directReportsAsUser() {
         return new UserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("directReports") + "/microsoft.graph.user", getClient(), null);
     }
@@ -207,7 +220,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public UserWithReferenceRequestBuilder directReportsAsUser(final String id) {
+    @Nonnull
+    public UserWithReferenceRequestBuilder directReportsAsUser(@Nonnull final String id) {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("directReports") + "/" + id + "/microsoft.graph.user", getClient(), null);
     }
     /**
@@ -215,6 +229,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public OrgContactCollectionWithReferencesRequestBuilder directReportsAsOrgContact() {
         return new OrgContactCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("directReports") + "/microsoft.graph.orgContact", getClient(), null);
     }
@@ -225,7 +240,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public OrgContactWithReferenceRequestBuilder directReportsAsOrgContact(final String id) {
+    @Nonnull
+    public OrgContactWithReferenceRequestBuilder directReportsAsOrgContact(@Nonnull final String id) {
         return new OrgContactWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("directReports") + "/" + id + "/microsoft.graph.orgContact", getClient(), null);
     }
     /**
@@ -233,6 +249,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public LicenseDetailsCollectionRequestBuilder licenseDetails() {
         return new LicenseDetailsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("licenseDetails"), getClient(), null);
     }
@@ -243,7 +260,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public LicenseDetailsRequestBuilder licenseDetails(final String id) {
+    @Nonnull
+    public LicenseDetailsRequestBuilder licenseDetails(@Nonnull final String id) {
         return new LicenseDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("licenseDetails") + "/" + id, getClient(), null);
     }
 
@@ -252,6 +270,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the DirectoryObjectWithReferenceRequestBuilder instance
      */
+    @Nonnull
     public DirectoryObjectWithReferenceRequestBuilder manager() {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("manager"), getClient(), null);
     }
@@ -260,6 +279,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public DirectoryObjectCollectionWithReferencesRequestBuilder memberOf() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf"), getClient(), null);
     }
@@ -270,7 +290,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public DirectoryObjectWithReferenceRequestBuilder memberOf(final String id) {
+    @Nonnull
+    public DirectoryObjectWithReferenceRequestBuilder memberOf(@Nonnull final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id, getClient(), null);
     }
     /**
@@ -278,6 +299,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public UserCollectionWithReferencesRequestBuilder memberOfAsUser() {
         return new UserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/microsoft.graph.user", getClient(), null);
     }
@@ -288,7 +310,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public UserWithReferenceRequestBuilder memberOfAsUser(final String id) {
+    @Nonnull
+    public UserWithReferenceRequestBuilder memberOfAsUser(@Nonnull final String id) {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.user", getClient(), null);
     }
     /**
@@ -296,6 +319,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public GroupCollectionWithReferencesRequestBuilder memberOfAsGroup() {
         return new GroupCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/microsoft.graph.group", getClient(), null);
     }
@@ -306,7 +330,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public GroupWithReferenceRequestBuilder memberOfAsGroup(final String id) {
+    @Nonnull
+    public GroupWithReferenceRequestBuilder memberOfAsGroup(@Nonnull final String id) {
         return new GroupWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.group", getClient(), null);
     }
     /**
@@ -314,6 +339,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public ApplicationCollectionWithReferencesRequestBuilder memberOfAsApplication() {
         return new ApplicationCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/microsoft.graph.application", getClient(), null);
     }
@@ -324,7 +350,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public ApplicationWithReferenceRequestBuilder memberOfAsApplication(final String id) {
+    @Nonnull
+    public ApplicationWithReferenceRequestBuilder memberOfAsApplication(@Nonnull final String id) {
         return new ApplicationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.application", getClient(), null);
     }
     /**
@@ -332,6 +359,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public ServicePrincipalCollectionWithReferencesRequestBuilder memberOfAsServicePrincipal() {
         return new ServicePrincipalCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/microsoft.graph.servicePrincipal", getClient(), null);
     }
@@ -342,7 +370,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public ServicePrincipalWithReferenceRequestBuilder memberOfAsServicePrincipal(final String id) {
+    @Nonnull
+    public ServicePrincipalWithReferenceRequestBuilder memberOfAsServicePrincipal(@Nonnull final String id) {
         return new ServicePrincipalWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.servicePrincipal", getClient(), null);
     }
     /**
@@ -350,6 +379,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public DeviceCollectionWithReferencesRequestBuilder memberOfAsDevice() {
         return new DeviceCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/microsoft.graph.device", getClient(), null);
     }
@@ -360,7 +390,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public DeviceWithReferenceRequestBuilder memberOfAsDevice(final String id) {
+    @Nonnull
+    public DeviceWithReferenceRequestBuilder memberOfAsDevice(@Nonnull final String id) {
         return new DeviceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.device", getClient(), null);
     }
     /**
@@ -368,6 +399,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public OrgContactCollectionWithReferencesRequestBuilder memberOfAsOrgContact() {
         return new OrgContactCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/microsoft.graph.orgContact", getClient(), null);
     }
@@ -378,7 +410,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public OrgContactWithReferenceRequestBuilder memberOfAsOrgContact(final String id) {
+    @Nonnull
+    public OrgContactWithReferenceRequestBuilder memberOfAsOrgContact(@Nonnull final String id) {
         return new OrgContactWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.orgContact", getClient(), null);
     }
     /**
@@ -386,6 +419,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public OAuth2PermissionGrantCollectionWithReferencesRequestBuilder oauth2PermissionGrants() {
         return new OAuth2PermissionGrantCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("oauth2PermissionGrants"), getClient(), null);
     }
@@ -396,7 +430,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public OAuth2PermissionGrantWithReferenceRequestBuilder oauth2PermissionGrants(final String id) {
+    @Nonnull
+    public OAuth2PermissionGrantWithReferenceRequestBuilder oauth2PermissionGrants(@Nonnull final String id) {
         return new OAuth2PermissionGrantWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("oauth2PermissionGrants") + "/" + id, getClient(), null);
     }
     /**
@@ -404,6 +439,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public DirectoryObjectCollectionWithReferencesRequestBuilder ownedDevices() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("ownedDevices"), getClient(), null);
     }
@@ -414,7 +450,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public DirectoryObjectWithReferenceRequestBuilder ownedDevices(final String id) {
+    @Nonnull
+    public DirectoryObjectWithReferenceRequestBuilder ownedDevices(@Nonnull final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("ownedDevices") + "/" + id, getClient(), null);
     }
     /**
@@ -422,6 +459,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public DeviceCollectionWithReferencesRequestBuilder ownedDevicesAsDevice() {
         return new DeviceCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("ownedDevices") + "/microsoft.graph.device", getClient(), null);
     }
@@ -432,7 +470,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public DeviceWithReferenceRequestBuilder ownedDevicesAsDevice(final String id) {
+    @Nonnull
+    public DeviceWithReferenceRequestBuilder ownedDevicesAsDevice(@Nonnull final String id) {
         return new DeviceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("ownedDevices") + "/" + id + "/microsoft.graph.device", getClient(), null);
     }
     /**
@@ -440,6 +479,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public AppRoleAssignmentCollectionWithReferencesRequestBuilder ownedDevicesAsAppRoleAssignment() {
         return new AppRoleAssignmentCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("ownedDevices") + "/microsoft.graph.appRoleAssignment", getClient(), null);
     }
@@ -450,7 +490,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public AppRoleAssignmentWithReferenceRequestBuilder ownedDevicesAsAppRoleAssignment(final String id) {
+    @Nonnull
+    public AppRoleAssignmentWithReferenceRequestBuilder ownedDevicesAsAppRoleAssignment(@Nonnull final String id) {
         return new AppRoleAssignmentWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("ownedDevices") + "/" + id + "/microsoft.graph.appRoleAssignment", getClient(), null);
     }
     /**
@@ -458,6 +499,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public EndpointCollectionWithReferencesRequestBuilder ownedDevicesAsEndpoint() {
         return new EndpointCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("ownedDevices") + "/microsoft.graph.endpoint", getClient(), null);
     }
@@ -468,7 +510,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public EndpointWithReferenceRequestBuilder ownedDevicesAsEndpoint(final String id) {
+    @Nonnull
+    public EndpointWithReferenceRequestBuilder ownedDevicesAsEndpoint(@Nonnull final String id) {
         return new EndpointWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("ownedDevices") + "/" + id + "/microsoft.graph.endpoint", getClient(), null);
     }
     /**
@@ -476,6 +519,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public DirectoryObjectCollectionWithReferencesRequestBuilder ownedObjects() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("ownedObjects"), getClient(), null);
     }
@@ -486,7 +530,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public DirectoryObjectWithReferenceRequestBuilder ownedObjects(final String id) {
+    @Nonnull
+    public DirectoryObjectWithReferenceRequestBuilder ownedObjects(@Nonnull final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("ownedObjects") + "/" + id, getClient(), null);
     }
     /**
@@ -494,6 +539,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public ApplicationCollectionWithReferencesRequestBuilder ownedObjectsAsApplication() {
         return new ApplicationCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("ownedObjects") + "/microsoft.graph.application", getClient(), null);
     }
@@ -504,7 +550,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public ApplicationWithReferenceRequestBuilder ownedObjectsAsApplication(final String id) {
+    @Nonnull
+    public ApplicationWithReferenceRequestBuilder ownedObjectsAsApplication(@Nonnull final String id) {
         return new ApplicationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("ownedObjects") + "/" + id + "/microsoft.graph.application", getClient(), null);
     }
     /**
@@ -512,6 +559,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public GroupCollectionWithReferencesRequestBuilder ownedObjectsAsGroup() {
         return new GroupCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("ownedObjects") + "/microsoft.graph.group", getClient(), null);
     }
@@ -522,7 +570,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public GroupWithReferenceRequestBuilder ownedObjectsAsGroup(final String id) {
+    @Nonnull
+    public GroupWithReferenceRequestBuilder ownedObjectsAsGroup(@Nonnull final String id) {
         return new GroupWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("ownedObjects") + "/" + id + "/microsoft.graph.group", getClient(), null);
     }
     /**
@@ -530,6 +579,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public ServicePrincipalCollectionWithReferencesRequestBuilder ownedObjectsAsServicePrincipal() {
         return new ServicePrincipalCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("ownedObjects") + "/microsoft.graph.servicePrincipal", getClient(), null);
     }
@@ -540,7 +590,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public ServicePrincipalWithReferenceRequestBuilder ownedObjectsAsServicePrincipal(final String id) {
+    @Nonnull
+    public ServicePrincipalWithReferenceRequestBuilder ownedObjectsAsServicePrincipal(@Nonnull final String id) {
         return new ServicePrincipalWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("ownedObjects") + "/" + id + "/microsoft.graph.servicePrincipal", getClient(), null);
     }
     /**
@@ -548,6 +599,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public DirectoryObjectCollectionWithReferencesRequestBuilder registeredDevices() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("registeredDevices"), getClient(), null);
     }
@@ -558,7 +610,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public DirectoryObjectWithReferenceRequestBuilder registeredDevices(final String id) {
+    @Nonnull
+    public DirectoryObjectWithReferenceRequestBuilder registeredDevices(@Nonnull final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("registeredDevices") + "/" + id, getClient(), null);
     }
     /**
@@ -566,6 +619,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public DeviceCollectionWithReferencesRequestBuilder registeredDevicesAsDevice() {
         return new DeviceCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("registeredDevices") + "/microsoft.graph.device", getClient(), null);
     }
@@ -576,7 +630,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public DeviceWithReferenceRequestBuilder registeredDevicesAsDevice(final String id) {
+    @Nonnull
+    public DeviceWithReferenceRequestBuilder registeredDevicesAsDevice(@Nonnull final String id) {
         return new DeviceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("registeredDevices") + "/" + id + "/microsoft.graph.device", getClient(), null);
     }
     /**
@@ -584,6 +639,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public AppRoleAssignmentCollectionWithReferencesRequestBuilder registeredDevicesAsAppRoleAssignment() {
         return new AppRoleAssignmentCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("registeredDevices") + "/microsoft.graph.appRoleAssignment", getClient(), null);
     }
@@ -594,7 +650,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public AppRoleAssignmentWithReferenceRequestBuilder registeredDevicesAsAppRoleAssignment(final String id) {
+    @Nonnull
+    public AppRoleAssignmentWithReferenceRequestBuilder registeredDevicesAsAppRoleAssignment(@Nonnull final String id) {
         return new AppRoleAssignmentWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("registeredDevices") + "/" + id + "/microsoft.graph.appRoleAssignment", getClient(), null);
     }
     /**
@@ -602,6 +659,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public EndpointCollectionWithReferencesRequestBuilder registeredDevicesAsEndpoint() {
         return new EndpointCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("registeredDevices") + "/microsoft.graph.endpoint", getClient(), null);
     }
@@ -612,7 +670,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public EndpointWithReferenceRequestBuilder registeredDevicesAsEndpoint(final String id) {
+    @Nonnull
+    public EndpointWithReferenceRequestBuilder registeredDevicesAsEndpoint(@Nonnull final String id) {
         return new EndpointWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("registeredDevices") + "/" + id + "/microsoft.graph.endpoint", getClient(), null);
     }
     /**
@@ -620,6 +679,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public ScopedRoleMembershipCollectionRequestBuilder scopedRoleMemberOf() {
         return new ScopedRoleMembershipCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("scopedRoleMemberOf"), getClient(), null);
     }
@@ -630,7 +690,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public ScopedRoleMembershipRequestBuilder scopedRoleMemberOf(final String id) {
+    @Nonnull
+    public ScopedRoleMembershipRequestBuilder scopedRoleMemberOf(@Nonnull final String id) {
         return new ScopedRoleMembershipRequestBuilder(getRequestUrlWithAdditionalSegment("scopedRoleMemberOf") + "/" + id, getClient(), null);
     }
     /**
@@ -638,6 +699,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public DirectoryObjectCollectionWithReferencesRequestBuilder transitiveMemberOf() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf"), getClient(), null);
     }
@@ -648,7 +710,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public DirectoryObjectWithReferenceRequestBuilder transitiveMemberOf(final String id) {
+    @Nonnull
+    public DirectoryObjectWithReferenceRequestBuilder transitiveMemberOf(@Nonnull final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id, getClient(), null);
     }
     /**
@@ -656,6 +719,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public UserCollectionWithReferencesRequestBuilder transitiveMemberOfAsUser() {
         return new UserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/microsoft.graph.user", getClient(), null);
     }
@@ -666,7 +730,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public UserWithReferenceRequestBuilder transitiveMemberOfAsUser(final String id) {
+    @Nonnull
+    public UserWithReferenceRequestBuilder transitiveMemberOfAsUser(@Nonnull final String id) {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.user", getClient(), null);
     }
     /**
@@ -674,6 +739,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public GroupCollectionWithReferencesRequestBuilder transitiveMemberOfAsGroup() {
         return new GroupCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/microsoft.graph.group", getClient(), null);
     }
@@ -684,7 +750,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public GroupWithReferenceRequestBuilder transitiveMemberOfAsGroup(final String id) {
+    @Nonnull
+    public GroupWithReferenceRequestBuilder transitiveMemberOfAsGroup(@Nonnull final String id) {
         return new GroupWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.group", getClient(), null);
     }
     /**
@@ -692,6 +759,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public ApplicationCollectionWithReferencesRequestBuilder transitiveMemberOfAsApplication() {
         return new ApplicationCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/microsoft.graph.application", getClient(), null);
     }
@@ -702,7 +770,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public ApplicationWithReferenceRequestBuilder transitiveMemberOfAsApplication(final String id) {
+    @Nonnull
+    public ApplicationWithReferenceRequestBuilder transitiveMemberOfAsApplication(@Nonnull final String id) {
         return new ApplicationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.application", getClient(), null);
     }
     /**
@@ -710,6 +779,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public ServicePrincipalCollectionWithReferencesRequestBuilder transitiveMemberOfAsServicePrincipal() {
         return new ServicePrincipalCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/microsoft.graph.servicePrincipal", getClient(), null);
     }
@@ -720,7 +790,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public ServicePrincipalWithReferenceRequestBuilder transitiveMemberOfAsServicePrincipal(final String id) {
+    @Nonnull
+    public ServicePrincipalWithReferenceRequestBuilder transitiveMemberOfAsServicePrincipal(@Nonnull final String id) {
         return new ServicePrincipalWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.servicePrincipal", getClient(), null);
     }
     /**
@@ -728,6 +799,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public DeviceCollectionWithReferencesRequestBuilder transitiveMemberOfAsDevice() {
         return new DeviceCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/microsoft.graph.device", getClient(), null);
     }
@@ -738,7 +810,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public DeviceWithReferenceRequestBuilder transitiveMemberOfAsDevice(final String id) {
+    @Nonnull
+    public DeviceWithReferenceRequestBuilder transitiveMemberOfAsDevice(@Nonnull final String id) {
         return new DeviceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.device", getClient(), null);
     }
     /**
@@ -746,6 +819,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public OrgContactCollectionWithReferencesRequestBuilder transitiveMemberOfAsOrgContact() {
         return new OrgContactCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/microsoft.graph.orgContact", getClient(), null);
     }
@@ -756,7 +830,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public OrgContactWithReferenceRequestBuilder transitiveMemberOfAsOrgContact(final String id) {
+    @Nonnull
+    public OrgContactWithReferenceRequestBuilder transitiveMemberOfAsOrgContact(@Nonnull final String id) {
         return new OrgContactWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.orgContact", getClient(), null);
     }
 
@@ -765,6 +840,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the CalendarRequestBuilder instance
      */
+    @Nonnull
     public CalendarRequestBuilder calendar() {
         return new CalendarRequestBuilder(getRequestUrlWithAdditionalSegment("calendar"), getClient(), null);
     }
@@ -773,6 +849,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public CalendarGroupCollectionRequestBuilder calendarGroups() {
         return new CalendarGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calendarGroups"), getClient(), null);
     }
@@ -783,7 +860,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public CalendarGroupRequestBuilder calendarGroups(final String id) {
+    @Nonnull
+    public CalendarGroupRequestBuilder calendarGroups(@Nonnull final String id) {
         return new CalendarGroupRequestBuilder(getRequestUrlWithAdditionalSegment("calendarGroups") + "/" + id, getClient(), null);
     }
     /**
@@ -791,6 +869,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public CalendarCollectionRequestBuilder calendars() {
         return new CalendarCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calendars"), getClient(), null);
     }
@@ -801,7 +880,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public CalendarRequestBuilder calendars(final String id) {
+    @Nonnull
+    public CalendarRequestBuilder calendars(@Nonnull final String id) {
         return new CalendarRequestBuilder(getRequestUrlWithAdditionalSegment("calendars") + "/" + id, getClient(), null);
     }
     /**
@@ -809,6 +889,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public EventCollectionRequestBuilder calendarView() {
         return new EventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calendarView"), getClient(), null);
     }
@@ -819,7 +900,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public EventRequestBuilder calendarView(final String id) {
+    @Nonnull
+    public EventRequestBuilder calendarView(@Nonnull final String id) {
         return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("calendarView") + "/" + id, getClient(), null);
     }
     /**
@@ -827,6 +909,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public ContactFolderCollectionRequestBuilder contactFolders() {
         return new ContactFolderCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contactFolders"), getClient(), null);
     }
@@ -837,7 +920,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public ContactFolderRequestBuilder contactFolders(final String id) {
+    @Nonnull
+    public ContactFolderRequestBuilder contactFolders(@Nonnull final String id) {
         return new ContactFolderRequestBuilder(getRequestUrlWithAdditionalSegment("contactFolders") + "/" + id, getClient(), null);
     }
     /**
@@ -845,6 +929,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public ContactCollectionRequestBuilder contacts() {
         return new ContactCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contacts"), getClient(), null);
     }
@@ -855,7 +940,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public ContactRequestBuilder contacts(final String id) {
+    @Nonnull
+    public ContactRequestBuilder contacts(@Nonnull final String id) {
         return new ContactRequestBuilder(getRequestUrlWithAdditionalSegment("contacts") + "/" + id, getClient(), null);
     }
     /**
@@ -863,6 +949,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public EventCollectionRequestBuilder events() {
         return new EventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("events"), getClient(), null);
     }
@@ -873,7 +960,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public EventRequestBuilder events(final String id) {
+    @Nonnull
+    public EventRequestBuilder events(@Nonnull final String id) {
         return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("events") + "/" + id, getClient(), null);
     }
 
@@ -882,6 +970,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the InferenceClassificationRequestBuilder instance
      */
+    @Nonnull
     public InferenceClassificationRequestBuilder inferenceClassification() {
         return new InferenceClassificationRequestBuilder(getRequestUrlWithAdditionalSegment("inferenceClassification"), getClient(), null);
     }
@@ -890,6 +979,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public MailFolderCollectionRequestBuilder mailFolders() {
         return new MailFolderCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mailFolders"), getClient(), null);
     }
@@ -900,7 +990,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public MailFolderRequestBuilder mailFolders(final String id) {
+    @Nonnull
+    public MailFolderRequestBuilder mailFolders(@Nonnull final String id) {
         return new MailFolderRequestBuilder(getRequestUrlWithAdditionalSegment("mailFolders") + "/" + id, getClient(), null);
     }
     /**
@@ -908,6 +999,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public MessageCollectionRequestBuilder messages() {
         return new MessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("messages"), getClient(), null);
     }
@@ -918,7 +1010,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public MessageRequestBuilder messages(final String id) {
+    @Nonnull
+    public MessageRequestBuilder messages(@Nonnull final String id) {
         return new MessageRequestBuilder(getRequestUrlWithAdditionalSegment("messages") + "/" + id, getClient(), null);
     }
 
@@ -927,6 +1020,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the OutlookUserRequestBuilder instance
      */
+    @Nonnull
     public OutlookUserRequestBuilder outlook() {
         return new OutlookUserRequestBuilder(getRequestUrlWithAdditionalSegment("outlook"), getClient(), null);
     }
@@ -935,6 +1029,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public PersonCollectionRequestBuilder people() {
         return new PersonCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("people"), getClient(), null);
     }
@@ -945,7 +1040,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public PersonRequestBuilder people(final String id) {
+    @Nonnull
+    public PersonRequestBuilder people(@Nonnull final String id) {
         return new PersonRequestBuilder(getRequestUrlWithAdditionalSegment("people") + "/" + id, getClient(), null);
     }
 
@@ -954,6 +1050,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the ProfilePhotoRequestBuilder instance
      */
+    @Nonnull
     public ProfilePhotoRequestBuilder photo() {
         return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photo"), getClient(), null);
     }
@@ -962,6 +1059,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public ProfilePhotoCollectionRequestBuilder photos() {
         return new ProfilePhotoCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("photos"), getClient(), null);
     }
@@ -972,7 +1070,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public ProfilePhotoRequestBuilder photos(final String id) {
+    @Nonnull
+    public ProfilePhotoRequestBuilder photos(@Nonnull final String id) {
         return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photos") + "/" + id, getClient(), null);
     }
 
@@ -981,6 +1080,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the DriveRequestBuilder instance
      */
+    @Nonnull
     public DriveRequestBuilder drive() {
         return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drive"), getClient(), null);
     }
@@ -989,6 +1089,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public DriveCollectionRequestBuilder drives() {
         return new DriveCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("drives"), getClient(), null);
     }
@@ -999,7 +1100,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public DriveRequestBuilder drives(final String id) {
+    @Nonnull
+    public DriveRequestBuilder drives(@Nonnull final String id) {
         return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drives") + "/" + id, getClient(), null);
     }
     /**
@@ -1007,6 +1109,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public SiteCollectionWithReferencesRequestBuilder followedSites() {
         return new SiteCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("followedSites"), getClient(), null);
     }
@@ -1017,7 +1120,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public SiteWithReferenceRequestBuilder followedSites(final String id) {
+    @Nonnull
+    public SiteWithReferenceRequestBuilder followedSites(@Nonnull final String id) {
         return new SiteWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("followedSites") + "/" + id, getClient(), null);
     }
     /**
@@ -1025,6 +1129,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public ExtensionCollectionRequestBuilder extensions() {
         return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
     }
@@ -1035,7 +1140,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public ExtensionRequestBuilder extensions(final String id) {
+    @Nonnull
+    public ExtensionRequestBuilder extensions(@Nonnull final String id) {
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
     /**
@@ -1043,6 +1149,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public ManagedDeviceCollectionRequestBuilder managedDevices() {
         return new ManagedDeviceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedDevices"), getClient(), null);
     }
@@ -1053,7 +1160,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public ManagedDeviceRequestBuilder managedDevices(final String id) {
+    @Nonnull
+    public ManagedDeviceRequestBuilder managedDevices(@Nonnull final String id) {
         return new ManagedDeviceRequestBuilder(getRequestUrlWithAdditionalSegment("managedDevices") + "/" + id, getClient(), null);
     }
     /**
@@ -1061,6 +1169,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public ManagedAppRegistrationCollectionWithReferencesRequestBuilder managedAppRegistrations() {
         return new ManagedAppRegistrationCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("managedAppRegistrations"), getClient(), null);
     }
@@ -1071,7 +1180,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public ManagedAppRegistrationWithReferenceRequestBuilder managedAppRegistrations(final String id) {
+    @Nonnull
+    public ManagedAppRegistrationWithReferenceRequestBuilder managedAppRegistrations(@Nonnull final String id) {
         return new ManagedAppRegistrationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("managedAppRegistrations") + "/" + id, getClient(), null);
     }
     /**
@@ -1079,6 +1189,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public DeviceManagementTroubleshootingEventCollectionRequestBuilder deviceManagementTroubleshootingEvents() {
         return new DeviceManagementTroubleshootingEventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceManagementTroubleshootingEvents"), getClient(), null);
     }
@@ -1089,7 +1200,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public DeviceManagementTroubleshootingEventRequestBuilder deviceManagementTroubleshootingEvents(final String id) {
+    @Nonnull
+    public DeviceManagementTroubleshootingEventRequestBuilder deviceManagementTroubleshootingEvents(@Nonnull final String id) {
         return new DeviceManagementTroubleshootingEventRequestBuilder(getRequestUrlWithAdditionalSegment("deviceManagementTroubleshootingEvents") + "/" + id, getClient(), null);
     }
 
@@ -1098,6 +1210,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the PlannerUserRequestBuilder instance
      */
+    @Nonnull
     public PlannerUserRequestBuilder planner() {
         return new PlannerUserRequestBuilder(getRequestUrlWithAdditionalSegment("planner"), getClient(), null);
     }
@@ -1107,6 +1220,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the OfficeGraphInsightsRequestBuilder instance
      */
+    @Nonnull
     public OfficeGraphInsightsRequestBuilder insights() {
         return new OfficeGraphInsightsRequestBuilder(getRequestUrlWithAdditionalSegment("insights"), getClient(), null);
     }
@@ -1116,6 +1230,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the UserSettingsRequestBuilder instance
      */
+    @Nonnull
     public UserSettingsRequestBuilder settings() {
         return new UserSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
     }
@@ -1125,6 +1240,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the OnenoteRequestBuilder instance
      */
+    @Nonnull
     public OnenoteRequestBuilder onenote() {
         return new OnenoteRequestBuilder(getRequestUrlWithAdditionalSegment("onenote"), getClient(), null);
     }
@@ -1133,6 +1249,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public UserActivityCollectionRequestBuilder activities() {
         return new UserActivityCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("activities"), getClient(), null);
     }
@@ -1143,7 +1260,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public UserActivityRequestBuilder activities(final String id) {
+    @Nonnull
+    public UserActivityRequestBuilder activities(@Nonnull final String id) {
         return new UserActivityRequestBuilder(getRequestUrlWithAdditionalSegment("activities") + "/" + id, getClient(), null);
     }
     /**
@@ -1151,6 +1269,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public OnlineMeetingCollectionRequestBuilder onlineMeetings() {
         return new OnlineMeetingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("onlineMeetings"), getClient(), null);
     }
@@ -1161,7 +1280,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public OnlineMeetingRequestBuilder onlineMeetings(final String id) {
+    @Nonnull
+    public OnlineMeetingRequestBuilder onlineMeetings(@Nonnull final String id) {
         return new OnlineMeetingRequestBuilder(getRequestUrlWithAdditionalSegment("onlineMeetings") + "/" + id, getClient(), null);
     }
     /**
@@ -1169,6 +1289,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public TeamCollectionRequestBuilder joinedTeams() {
         return new TeamCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("joinedTeams"), getClient(), null);
     }
@@ -1179,7 +1300,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      * @param id the item identifier
      */
-    public TeamRequestBuilder joinedTeams(final String id) {
+    @Nonnull
+    public TeamRequestBuilder joinedTeams(@Nonnull final String id) {
         return new TeamRequestBuilder(getRequestUrlWithAdditionalSegment("joinedTeams") + "/" + id, getClient(), null);
     }
 
@@ -1188,6 +1310,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the UserTeamworkRequestBuilder instance
      */
+    @Nonnull
     public UserTeamworkRequestBuilder teamwork() {
         return new UserTeamworkRequestBuilder(getRequestUrlWithAdditionalSegment("teamwork"), getClient(), null);
     }
@@ -1197,6 +1320,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      *
      * @return the TodoRequestBuilder instance
      */
+    @Nonnull
     public TodoRequestBuilder todo() {
         return new TodoRequestBuilder(getRequestUrlWithAdditionalSegment("todo"), getClient(), null);
     }
@@ -1207,7 +1331,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @param addLicenses the addLicenses
      * @param removeLicenses the removeLicenses
      */
-    public UserAssignLicenseRequestBuilder assignLicense(final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses) {
+    @Nonnull
+    public UserAssignLicenseRequestBuilder assignLicense(@Nullable final java.util.List<AssignedLicense> addLicenses, @Nullable final java.util.List<java.util.UUID> removeLicenses) {
         return new UserAssignLicenseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assignLicense"), getClient(), null, addLicenses, removeLicenses);
     }
 
@@ -1217,7 +1342,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @param currentPassword the currentPassword
      * @param newPassword the newPassword
      */
-    public UserChangePasswordRequestBuilder changePassword(final String currentPassword, final String newPassword) {
+    @Nonnull
+    public UserChangePasswordRequestBuilder changePassword(@Nullable final String currentPassword, @Nullable final String newPassword) {
         return new UserChangePasswordRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.changePassword"), getClient(), null, currentPassword, newPassword);
     }
 
@@ -1225,6 +1351,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public UserReprocessLicenseAssignmentRequestBuilder reprocessLicenseAssignment() {
         return new UserReprocessLicenseAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reprocessLicenseAssignment"), getClient(), null);
     }
@@ -1233,6 +1360,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public UserRevokeSignInSessionsRequestBuilder revokeSignInSessions() {
         return new UserRevokeSignInSessionsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.revokeSignInSessions"), getClient(), null);
     }
@@ -1249,7 +1377,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @param returnSuggestionReasons the returnSuggestionReasons
      * @param minimumAttendeePercentage the minimumAttendeePercentage
      */
-    public UserFindMeetingTimesRequestBuilder findMeetingTimes(final java.util.List<AttendeeBase> attendees, final LocationConstraint locationConstraint, final TimeConstraint timeConstraint, final javax.xml.datatype.Duration meetingDuration, final Integer maxCandidates, final Boolean isOrganizerOptional, final Boolean returnSuggestionReasons, final Double minimumAttendeePercentage) {
+    @Nonnull
+    public UserFindMeetingTimesRequestBuilder findMeetingTimes(@Nullable final java.util.List<AttendeeBase> attendees, @Nullable final LocationConstraint locationConstraint, @Nullable final TimeConstraint timeConstraint, @Nullable final javax.xml.datatype.Duration meetingDuration, @Nullable final Integer maxCandidates, @Nullable final Boolean isOrganizerOptional, @Nullable final Boolean returnSuggestionReasons, @Nullable final Double minimumAttendeePercentage) {
         return new UserFindMeetingTimesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.findMeetingTimes"), getClient(), null, attendees, locationConstraint, timeConstraint, meetingDuration, maxCandidates, isOrganizerOptional, returnSuggestionReasons, minimumAttendeePercentage);
     }
 
@@ -1259,7 +1388,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @param emailAddresses the emailAddresses
      * @param mailTipsOptions the mailTipsOptions
      */
-    public UserGetMailTipsCollectionRequestBuilder getMailTips(final java.util.List<String> emailAddresses, final EnumSet<MailTipsType> mailTipsOptions) {
+    @Nonnull
+    public UserGetMailTipsCollectionRequestBuilder getMailTips(@Nullable final java.util.List<String> emailAddresses, @Nullable final EnumSet<MailTipsType> mailTipsOptions) {
         return new UserGetMailTipsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getMailTips"), getClient(), null, emailAddresses, mailTipsOptions);
     }
 
@@ -1269,7 +1399,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @param message the message
      * @param saveToSentItems the saveToSentItems
      */
-    public UserSendMailRequestBuilder sendMail(final Message message, final Boolean saveToSentItems) {
+    @Nonnull
+    public UserSendMailRequestBuilder sendMail(@Nullable final Message message, @Nullable final Boolean saveToSentItems) {
         return new UserSendMailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendMail"), getClient(), null, message, saveToSentItems);
     }
 
@@ -1280,7 +1411,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @param targetIdType the targetIdType
      * @param sourceIdType the sourceIdType
      */
-    public UserTranslateExchangeIdsCollectionRequestBuilder translateExchangeIds(final java.util.List<String> inputIds, final ExchangeIdFormat targetIdType, final ExchangeIdFormat sourceIdType) {
+    @Nonnull
+    public UserTranslateExchangeIdsCollectionRequestBuilder translateExchangeIds(@Nullable final java.util.List<String> inputIds, @Nullable final ExchangeIdFormat targetIdType, @Nullable final ExchangeIdFormat sourceIdType) {
         return new UserTranslateExchangeIdsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.translateExchangeIds"), getClient(), null, inputIds, targetIdType, sourceIdType);
     }
 
@@ -1288,6 +1420,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public UserRemoveAllDevicesFromManagementRequestBuilder removeAllDevicesFromManagement() {
         return new UserRemoveAllDevicesFromManagementRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.removeAllDevicesFromManagement"), getClient(), null);
     }
@@ -1297,7 +1430,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder 
      * @param deviceTag the deviceTag
      */
-    public UserWipeManagedAppRegistrationsByDeviceTagRequestBuilder wipeManagedAppRegistrationsByDeviceTag(final String deviceTag) {
+    @Nonnull
+    public UserWipeManagedAppRegistrationsByDeviceTagRequestBuilder wipeManagedAppRegistrationsByDeviceTag(@Nullable final String deviceTag) {
         return new UserWipeManagedAppRegistrationsByDeviceTagRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.wipeManagedAppRegistrationsByDeviceTag"), getClient(), null, deviceTag);
     }
 
@@ -1306,7 +1440,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder 
      * @param storageLocation the storageLocation
      */
-    public UserExportPersonalDataRequestBuilder exportPersonalData(final String storageLocation) {
+    @Nonnull
+    public UserExportPersonalDataRequestBuilder exportPersonalData(@Nullable final String storageLocation) {
         return new UserExportPersonalDataRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.exportPersonalData"), getClient(), null, storageLocation);
     }
 
@@ -1316,7 +1451,8 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @param startDateTime the startDateTime
      * @param endDateTime the endDateTime
      */
-    public UserReminderViewCollectionRequestBuilder reminderView(final String startDateTime, final String endDateTime) {
+    @Nonnull
+    public UserReminderViewCollectionRequestBuilder reminderView(@Nullable final String startDateTime, @Nullable final String endDateTime) {
         return new UserReminderViewCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reminderView"), getClient(), null, startDateTime, endDateTime);
     }
 
@@ -1324,6 +1460,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * Gets a builder to execute the method
      * @return the request builder collection
      */
+    @Nonnull
     public UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder getManagedAppDiagnosticStatuses() {
         return new UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getManagedAppDiagnosticStatuses"), getClient(), null);
     }
@@ -1332,6 +1469,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * Gets a builder to execute the method
      * @return the request builder collection
      */
+    @Nonnull
     public UserGetManagedAppPoliciesCollectionRequestBuilder getManagedAppPolicies() {
         return new UserGetManagedAppPoliciesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getManagedAppPolicies"), getClient(), null);
     }

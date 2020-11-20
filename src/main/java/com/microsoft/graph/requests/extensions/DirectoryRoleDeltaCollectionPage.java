@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DirectoryRole;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.DeltaCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryRoleDeltaCollectionRequestBuilder;
@@ -29,7 +31,7 @@ public class DirectoryRoleDeltaCollectionPage extends DeltaCollectionPage<Direct
      * @param response The serialized DirectoryRoleDeltaCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public DirectoryRoleDeltaCollectionPage(final DirectoryRoleDeltaCollectionResponse response, final DirectoryRoleDeltaCollectionRequestBuilder builder) {
+    public DirectoryRoleDeltaCollectionPage(@Nonnull final DirectoryRoleDeltaCollectionResponse response, @Nonnull final DirectoryRoleDeltaCollectionRequestBuilder builder) {
        super(response, builder);
     }
 
@@ -39,7 +41,7 @@ public class DirectoryRoleDeltaCollectionPage extends DeltaCollectionPage<Direct
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public DirectoryRoleDeltaCollectionPage(final java.util.List<DirectoryRole> pageContents, final DirectoryRoleDeltaCollectionRequestBuilder nextRequestBuilder) {
+    public DirectoryRoleDeltaCollectionPage(@Nonnull final java.util.List<DirectoryRole> pageContents, @Nullable final DirectoryRoleDeltaCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

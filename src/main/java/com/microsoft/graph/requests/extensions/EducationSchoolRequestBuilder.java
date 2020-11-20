@@ -14,6 +14,8 @@ import com.microsoft.graph.requests.extensions.EducationUserCollectionRequestBui
 import com.microsoft.graph.requests.extensions.EducationUserRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -31,7 +33,7 @@ public class EducationSchoolRequestBuilder extends BaseRequestBuilder<EducationS
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationSchoolRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationSchoolRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -41,7 +43,8 @@ public class EducationSchoolRequestBuilder extends BaseRequestBuilder<EducationS
      * @param requestOptions the options for this request
      * @return the EducationSchoolRequest instance
      */
-    public EducationSchoolRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public EducationSchoolRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,7 +54,8 @@ public class EducationSchoolRequestBuilder extends BaseRequestBuilder<EducationS
      * @param requestOptions the options for this request
      * @return the EducationSchoolRequest instance
      */
-    public EducationSchoolRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public EducationSchoolRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.EducationSchoolRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -61,6 +65,7 @@ public class EducationSchoolRequestBuilder extends BaseRequestBuilder<EducationS
      *
      * @return the collection request builder
      */
+    @Nonnull
     public EducationClassCollectionWithReferencesRequestBuilder classes() {
         return new EducationClassCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("classes"), getClient(), null);
     }
@@ -71,7 +76,8 @@ public class EducationSchoolRequestBuilder extends BaseRequestBuilder<EducationS
      * @return the request builder
      * @param id the item identifier
      */
-    public EducationClassWithReferenceRequestBuilder classes(final String id) {
+    @Nonnull
+    public EducationClassWithReferenceRequestBuilder classes(@Nonnull final String id) {
         return new EducationClassWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("classes") + "/" + id, getClient(), null);
     }
     /**
@@ -79,6 +85,7 @@ public class EducationSchoolRequestBuilder extends BaseRequestBuilder<EducationS
      *
      * @return the collection request builder
      */
+    @Nonnull
     public EducationUserCollectionWithReferencesRequestBuilder users() {
         return new EducationUserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("users"), getClient(), null);
     }
@@ -89,7 +96,8 @@ public class EducationSchoolRequestBuilder extends BaseRequestBuilder<EducationS
      * @return the request builder
      * @param id the item identifier
      */
-    public EducationUserWithReferenceRequestBuilder users(final String id) {
+    @Nonnull
+    public EducationUserWithReferenceRequestBuilder users(@Nonnull final String id) {
         return new EducationUserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("users") + "/" + id, getClient(), null);
     }
 }

@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.EnrollmentConfigurationAssignment;
 import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignmentCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignmentCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class EnrollmentConfigurationAssignmentCollectionPage extends BaseCollect
      * @param response the serialized EnrollmentConfigurationAssignmentCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public EnrollmentConfigurationAssignmentCollectionPage(final EnrollmentConfigurationAssignmentCollectionResponse response, final EnrollmentConfigurationAssignmentCollectionRequestBuilder builder) {
+    public EnrollmentConfigurationAssignmentCollectionPage(@Nonnull final EnrollmentConfigurationAssignmentCollectionResponse response, @Nonnull final EnrollmentConfigurationAssignmentCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class EnrollmentConfigurationAssignmentCollectionPage extends BaseCollect
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public EnrollmentConfigurationAssignmentCollectionPage(final java.util.List<EnrollmentConfigurationAssignment> pageContents, final EnrollmentConfigurationAssignmentCollectionRequestBuilder nextRequestBuilder) {
+    public EnrollmentConfigurationAssignmentCollectionPage(@Nonnull final java.util.List<EnrollmentConfigurationAssignment> pageContents, @Nullable final EnrollmentConfigurationAssignmentCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

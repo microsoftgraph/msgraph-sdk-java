@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class TokenLifetimePolicyRequest extends BaseRequest<TokenLifetimePolicy>
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TokenLifetimePolicyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TokenLifetimePolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TokenLifetimePolicy.class);
     }
 
@@ -37,7 +39,7 @@ public class TokenLifetimePolicyRequest extends BaseRequest<TokenLifetimePolicy>
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super TokenLifetimePolicy> callback) {
+    public void get(@Nonnull final ICallback<? super TokenLifetimePolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class TokenLifetimePolicyRequest extends BaseRequest<TokenLifetimePolicy>
      * @return the TokenLifetimePolicy from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public TokenLifetimePolicy get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class TokenLifetimePolicyRequest extends BaseRequest<TokenLifetimePolicy>
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super TokenLifetimePolicy> callback) {
+    public void delete(@Nonnull final ICallback<? super TokenLifetimePolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class TokenLifetimePolicyRequest extends BaseRequest<TokenLifetimePolicy>
      * @param sourceTokenLifetimePolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TokenLifetimePolicy sourceTokenLifetimePolicy, final ICallback<? super TokenLifetimePolicy> callback) {
+    public void patch(@Nonnull final TokenLifetimePolicy sourceTokenLifetimePolicy, @Nonnull final ICallback<? super TokenLifetimePolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceTokenLifetimePolicy);
     }
 
@@ -86,7 +89,8 @@ public class TokenLifetimePolicyRequest extends BaseRequest<TokenLifetimePolicy>
      * @return the updated TokenLifetimePolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TokenLifetimePolicy patch(final TokenLifetimePolicy sourceTokenLifetimePolicy) throws ClientException {
+    @Nullable
+    public TokenLifetimePolicy patch(@Nonnull final TokenLifetimePolicy sourceTokenLifetimePolicy) throws ClientException {
         return send(HttpMethod.PATCH, sourceTokenLifetimePolicy);
     }
 
@@ -96,7 +100,7 @@ public class TokenLifetimePolicyRequest extends BaseRequest<TokenLifetimePolicy>
      * @param newTokenLifetimePolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TokenLifetimePolicy newTokenLifetimePolicy, final ICallback<? super TokenLifetimePolicy> callback) {
+    public void post(@Nonnull final TokenLifetimePolicy newTokenLifetimePolicy, @Nonnull final ICallback<? super TokenLifetimePolicy> callback) {
         send(HttpMethod.POST, callback, newTokenLifetimePolicy);
     }
 
@@ -107,7 +111,8 @@ public class TokenLifetimePolicyRequest extends BaseRequest<TokenLifetimePolicy>
      * @return the created TokenLifetimePolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TokenLifetimePolicy post(final TokenLifetimePolicy newTokenLifetimePolicy) throws ClientException {
+    @Nullable
+    public TokenLifetimePolicy post(@Nonnull final TokenLifetimePolicy newTokenLifetimePolicy) throws ClientException {
         return send(HttpMethod.POST, newTokenLifetimePolicy);
     }
 
@@ -117,7 +122,7 @@ public class TokenLifetimePolicyRequest extends BaseRequest<TokenLifetimePolicy>
      * @param newTokenLifetimePolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TokenLifetimePolicy newTokenLifetimePolicy, final ICallback<? super TokenLifetimePolicy> callback) {
+    public void put(@Nonnull final TokenLifetimePolicy newTokenLifetimePolicy, @Nonnull final ICallback<? super TokenLifetimePolicy> callback) {
         send(HttpMethod.PUT, callback, newTokenLifetimePolicy);
     }
 
@@ -128,7 +133,8 @@ public class TokenLifetimePolicyRequest extends BaseRequest<TokenLifetimePolicy>
      * @return the created TokenLifetimePolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TokenLifetimePolicy put(final TokenLifetimePolicy newTokenLifetimePolicy) throws ClientException {
+    @Nullable
+    public TokenLifetimePolicy put(@Nonnull final TokenLifetimePolicy newTokenLifetimePolicy) throws ClientException {
         return send(HttpMethod.PUT, newTokenLifetimePolicy);
     }
 
@@ -138,7 +144,8 @@ public class TokenLifetimePolicyRequest extends BaseRequest<TokenLifetimePolicy>
      * @param value the select clause
      * @return the updated request
      */
-     public TokenLifetimePolicyRequest select(final String value) {
+     @Nonnull
+     public TokenLifetimePolicyRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class TokenLifetimePolicyRequest extends BaseRequest<TokenLifetimePolicy>
      * @param value the expand clause
      * @return the updated request
      */
-     public TokenLifetimePolicyRequest expand(final String value) {
+     @Nonnull
+     public TokenLifetimePolicyRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

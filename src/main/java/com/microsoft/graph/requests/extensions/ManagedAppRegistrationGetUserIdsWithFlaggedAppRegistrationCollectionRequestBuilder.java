@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest;
@@ -32,7 +34,7 @@ public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectio
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder.class, ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest.class);
     }
     
@@ -42,8 +44,9 @@ public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectio
      * @param requestOptions the options for this request
      * @return the ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest instance
      */
-     @Override
-    public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Override
+    @Nonnull
+    public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest request = super.buildRequest(requestOptions);
 
       for (com.microsoft.graph.options.FunctionOption option : functionOptions) {

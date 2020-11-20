@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CountryNamedLocation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class CountryNamedLocationRequest extends BaseRequest<CountryNamedLocatio
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CountryNamedLocationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CountryNamedLocationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CountryNamedLocation.class);
     }
 
@@ -37,7 +39,7 @@ public class CountryNamedLocationRequest extends BaseRequest<CountryNamedLocatio
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super CountryNamedLocation> callback) {
+    public void get(@Nonnull final ICallback<? super CountryNamedLocation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class CountryNamedLocationRequest extends BaseRequest<CountryNamedLocatio
      * @return the CountryNamedLocation from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public CountryNamedLocation get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class CountryNamedLocationRequest extends BaseRequest<CountryNamedLocatio
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super CountryNamedLocation> callback) {
+    public void delete(@Nonnull final ICallback<? super CountryNamedLocation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class CountryNamedLocationRequest extends BaseRequest<CountryNamedLocatio
      * @param sourceCountryNamedLocation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CountryNamedLocation sourceCountryNamedLocation, final ICallback<? super CountryNamedLocation> callback) {
+    public void patch(@Nonnull final CountryNamedLocation sourceCountryNamedLocation, @Nonnull final ICallback<? super CountryNamedLocation> callback) {
         send(HttpMethod.PATCH, callback, sourceCountryNamedLocation);
     }
 
@@ -86,7 +89,8 @@ public class CountryNamedLocationRequest extends BaseRequest<CountryNamedLocatio
      * @return the updated CountryNamedLocation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CountryNamedLocation patch(final CountryNamedLocation sourceCountryNamedLocation) throws ClientException {
+    @Nullable
+    public CountryNamedLocation patch(@Nonnull final CountryNamedLocation sourceCountryNamedLocation) throws ClientException {
         return send(HttpMethod.PATCH, sourceCountryNamedLocation);
     }
 
@@ -96,7 +100,7 @@ public class CountryNamedLocationRequest extends BaseRequest<CountryNamedLocatio
      * @param newCountryNamedLocation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CountryNamedLocation newCountryNamedLocation, final ICallback<? super CountryNamedLocation> callback) {
+    public void post(@Nonnull final CountryNamedLocation newCountryNamedLocation, @Nonnull final ICallback<? super CountryNamedLocation> callback) {
         send(HttpMethod.POST, callback, newCountryNamedLocation);
     }
 
@@ -107,7 +111,8 @@ public class CountryNamedLocationRequest extends BaseRequest<CountryNamedLocatio
      * @return the created CountryNamedLocation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CountryNamedLocation post(final CountryNamedLocation newCountryNamedLocation) throws ClientException {
+    @Nullable
+    public CountryNamedLocation post(@Nonnull final CountryNamedLocation newCountryNamedLocation) throws ClientException {
         return send(HttpMethod.POST, newCountryNamedLocation);
     }
 
@@ -117,7 +122,7 @@ public class CountryNamedLocationRequest extends BaseRequest<CountryNamedLocatio
      * @param newCountryNamedLocation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CountryNamedLocation newCountryNamedLocation, final ICallback<? super CountryNamedLocation> callback) {
+    public void put(@Nonnull final CountryNamedLocation newCountryNamedLocation, @Nonnull final ICallback<? super CountryNamedLocation> callback) {
         send(HttpMethod.PUT, callback, newCountryNamedLocation);
     }
 
@@ -128,7 +133,8 @@ public class CountryNamedLocationRequest extends BaseRequest<CountryNamedLocatio
      * @return the created CountryNamedLocation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CountryNamedLocation put(final CountryNamedLocation newCountryNamedLocation) throws ClientException {
+    @Nullable
+    public CountryNamedLocation put(@Nonnull final CountryNamedLocation newCountryNamedLocation) throws ClientException {
         return send(HttpMethod.PUT, newCountryNamedLocation);
     }
 
@@ -138,7 +144,8 @@ public class CountryNamedLocationRequest extends BaseRequest<CountryNamedLocatio
      * @param value the select clause
      * @return the updated request
      */
-     public CountryNamedLocationRequest select(final String value) {
+     @Nonnull
+     public CountryNamedLocationRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class CountryNamedLocationRequest extends BaseRequest<CountryNamedLocatio
      * @param value the expand clause
      * @return the updated request
      */
-     public CountryNamedLocationRequest expand(final String value) {
+     @Nonnull
+     public CountryNamedLocationRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

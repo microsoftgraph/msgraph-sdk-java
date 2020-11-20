@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.TodoTask;
 import com.microsoft.graph.models.extensions.Extension;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class ExtensionCollectionRequest extends BaseCollectionRequest<Extension,
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ExtensionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ExtensionCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ExtensionCollectionResponse.class, ExtensionCollectionPage.class, ExtensionCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class ExtensionCollectionRequest extends BaseCollectionRequest<Extension,
      * @param newExtension the Extension to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final Extension newExtension, final ICallback<? super Extension> callback) {
+    public void post(@Nonnull final Extension newExtension, @Nonnull final ICallback<? super Extension> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ExtensionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class ExtensionCollectionRequest extends BaseCollectionRequest<Extension,
      * @param newExtension the Extension to create
      * @return the newly created object
      */
-    public Extension post(final Extension newExtension) throws ClientException {
+    @Nonnull
+    public Extension post(@Nonnull final Extension newExtension) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ExtensionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class ExtensionCollectionRequest extends BaseCollectionRequest<Extension,
      * @param value the expand clause
      * @return the updated request
      */
-    public ExtensionCollectionRequest expand(final String value) {
+    @Nonnull
+    public ExtensionCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class ExtensionCollectionRequest extends BaseCollectionRequest<Extension,
      * @param value the filter clause
      * @return the updated request
      */
-    public ExtensionCollectionRequest filter(final String value) {
+    @Nonnull
+    public ExtensionCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class ExtensionCollectionRequest extends BaseCollectionRequest<Extension,
      * @param value the order by clause
      * @return the updated request
      */
-    public ExtensionCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ExtensionCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class ExtensionCollectionRequest extends BaseCollectionRequest<Extension,
      * @param value the select clause
      * @return the updated request
      */
-    public ExtensionCollectionRequest select(final String value) {
+    @Nonnull
+    public ExtensionCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class ExtensionCollectionRequest extends BaseCollectionRequest<Extension,
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ExtensionCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class ExtensionCollectionRequest extends BaseCollectionRequest<Extension,
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ExtensionCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class ExtensionCollectionRequest extends BaseCollectionRequest<Extension,
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ExtensionCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ExtensionCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

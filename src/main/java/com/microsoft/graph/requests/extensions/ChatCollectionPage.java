@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Chat;
 import com.microsoft.graph.requests.extensions.ChatCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.ChatCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class ChatCollectionPage extends BaseCollectionPage<Chat, ChatCollectionR
      * @param response the serialized ChatCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ChatCollectionPage(final ChatCollectionResponse response, final ChatCollectionRequestBuilder builder) {
+    public ChatCollectionPage(@Nonnull final ChatCollectionResponse response, @Nonnull final ChatCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class ChatCollectionPage extends BaseCollectionPage<Chat, ChatCollectionR
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public ChatCollectionPage(final java.util.List<Chat> pageContents, final ChatCollectionRequestBuilder nextRequestBuilder) {
+    public ChatCollectionPage(@Nonnull final java.util.List<Chat> pageContents, @Nullable final ChatCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

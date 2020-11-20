@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ClaimsMappingPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseReferenceRequest;
@@ -30,7 +32,7 @@ public class ClaimsMappingPolicyReferenceRequest extends BaseReferenceRequest<Cl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ClaimsMappingPolicyReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ClaimsMappingPolicyReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ClaimsMappingPolicy.class);
     }
 
@@ -40,7 +42,8 @@ public class ClaimsMappingPolicyReferenceRequest extends BaseReferenceRequest<Cl
      * @param value the select clause
      * @return the updated request
      */
-    public ClaimsMappingPolicyReferenceRequest select(final String value) {
+    @Nonnull
+    public ClaimsMappingPolicyReferenceRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -51,7 +54,8 @@ public class ClaimsMappingPolicyReferenceRequest extends BaseReferenceRequest<Cl
      * @param value the expand clause
      * @return the updated request
      */
-    public ClaimsMappingPolicyReferenceRequest expand(final String value) {
+    @Nonnull
+    public ClaimsMappingPolicyReferenceRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -61,7 +65,7 @@ public class ClaimsMappingPolicyReferenceRequest extends BaseReferenceRequest<Cl
      * @param srcClaimsMappingPolicy the ClaimsMappingPolicy reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(ClaimsMappingPolicy srcClaimsMappingPolicy, final ICallback<? super ClaimsMappingPolicy> callback) {
+    public void put(@Nonnull final ClaimsMappingPolicy srcClaimsMappingPolicy, @Nonnull final ICallback<? super ClaimsMappingPolicy> callback) {
         send(HttpMethod.PUT, callback, srcClaimsMappingPolicy);
     }
 
@@ -72,7 +76,8 @@ public class ClaimsMappingPolicyReferenceRequest extends BaseReferenceRequest<Cl
      * @return the ClaimsMappingPolicy
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    public ClaimsMappingPolicy put(ClaimsMappingPolicy srcClaimsMappingPolicy) throws ClientException {
+    @Nullable
+    public ClaimsMappingPolicy put(@Nonnull final ClaimsMappingPolicy srcClaimsMappingPolicy) throws ClientException {
         return send(HttpMethod.PUT, srcClaimsMappingPolicy);
     }
 }

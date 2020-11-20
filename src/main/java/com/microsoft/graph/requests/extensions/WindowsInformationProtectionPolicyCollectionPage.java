@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionPolicy;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionPolicyCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionPolicyCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class WindowsInformationProtectionPolicyCollectionPage extends BaseCollec
      * @param response the serialized WindowsInformationProtectionPolicyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public WindowsInformationProtectionPolicyCollectionPage(final WindowsInformationProtectionPolicyCollectionResponse response, final WindowsInformationProtectionPolicyCollectionRequestBuilder builder) {
+    public WindowsInformationProtectionPolicyCollectionPage(@Nonnull final WindowsInformationProtectionPolicyCollectionResponse response, @Nonnull final WindowsInformationProtectionPolicyCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class WindowsInformationProtectionPolicyCollectionPage extends BaseCollec
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public WindowsInformationProtectionPolicyCollectionPage(final java.util.List<WindowsInformationProtectionPolicy> pageContents, final WindowsInformationProtectionPolicyCollectionRequestBuilder nextRequestBuilder) {
+    public WindowsInformationProtectionPolicyCollectionPage(@Nonnull final java.util.List<WindowsInformationProtectionPolicy> pageContents, @Nullable final WindowsInformationProtectionPolicyCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

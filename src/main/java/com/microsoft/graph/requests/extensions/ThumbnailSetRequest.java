@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ThumbnailSet;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class ThumbnailSetRequest extends BaseRequest<ThumbnailSet> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ThumbnailSetRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ThumbnailSetRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ThumbnailSet.class);
     }
 
@@ -37,7 +39,7 @@ public class ThumbnailSetRequest extends BaseRequest<ThumbnailSet> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ThumbnailSet> callback) {
+    public void get(@Nonnull final ICallback<? super ThumbnailSet> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class ThumbnailSetRequest extends BaseRequest<ThumbnailSet> {
      * @return the ThumbnailSet from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ThumbnailSet get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class ThumbnailSetRequest extends BaseRequest<ThumbnailSet> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ThumbnailSet> callback) {
+    public void delete(@Nonnull final ICallback<? super ThumbnailSet> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class ThumbnailSetRequest extends BaseRequest<ThumbnailSet> {
      * @param sourceThumbnailSet the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ThumbnailSet sourceThumbnailSet, final ICallback<? super ThumbnailSet> callback) {
+    public void patch(@Nonnull final ThumbnailSet sourceThumbnailSet, @Nonnull final ICallback<? super ThumbnailSet> callback) {
         send(HttpMethod.PATCH, callback, sourceThumbnailSet);
     }
 
@@ -86,7 +89,8 @@ public class ThumbnailSetRequest extends BaseRequest<ThumbnailSet> {
      * @return the updated ThumbnailSet
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ThumbnailSet patch(final ThumbnailSet sourceThumbnailSet) throws ClientException {
+    @Nullable
+    public ThumbnailSet patch(@Nonnull final ThumbnailSet sourceThumbnailSet) throws ClientException {
         return send(HttpMethod.PATCH, sourceThumbnailSet);
     }
 
@@ -96,7 +100,7 @@ public class ThumbnailSetRequest extends BaseRequest<ThumbnailSet> {
      * @param newThumbnailSet the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ThumbnailSet newThumbnailSet, final ICallback<? super ThumbnailSet> callback) {
+    public void post(@Nonnull final ThumbnailSet newThumbnailSet, @Nonnull final ICallback<? super ThumbnailSet> callback) {
         send(HttpMethod.POST, callback, newThumbnailSet);
     }
 
@@ -107,7 +111,8 @@ public class ThumbnailSetRequest extends BaseRequest<ThumbnailSet> {
      * @return the created ThumbnailSet
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ThumbnailSet post(final ThumbnailSet newThumbnailSet) throws ClientException {
+    @Nullable
+    public ThumbnailSet post(@Nonnull final ThumbnailSet newThumbnailSet) throws ClientException {
         return send(HttpMethod.POST, newThumbnailSet);
     }
 
@@ -117,7 +122,7 @@ public class ThumbnailSetRequest extends BaseRequest<ThumbnailSet> {
      * @param newThumbnailSet the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ThumbnailSet newThumbnailSet, final ICallback<? super ThumbnailSet> callback) {
+    public void put(@Nonnull final ThumbnailSet newThumbnailSet, @Nonnull final ICallback<? super ThumbnailSet> callback) {
         send(HttpMethod.PUT, callback, newThumbnailSet);
     }
 
@@ -128,7 +133,8 @@ public class ThumbnailSetRequest extends BaseRequest<ThumbnailSet> {
      * @return the created ThumbnailSet
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ThumbnailSet put(final ThumbnailSet newThumbnailSet) throws ClientException {
+    @Nullable
+    public ThumbnailSet put(@Nonnull final ThumbnailSet newThumbnailSet) throws ClientException {
         return send(HttpMethod.PUT, newThumbnailSet);
     }
 
@@ -138,7 +144,8 @@ public class ThumbnailSetRequest extends BaseRequest<ThumbnailSet> {
      * @param value the select clause
      * @return the updated request
      */
-     public ThumbnailSetRequest select(final String value) {
+     @Nonnull
+     public ThumbnailSetRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class ThumbnailSetRequest extends BaseRequest<ThumbnailSet> {
      * @param value the expand clause
      * @return the updated request
      */
-     public ThumbnailSetRequest expand(final String value) {
+     @Nonnull
+     public ThumbnailSetRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedAppDiagnosticStatus;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder;
@@ -29,7 +31,7 @@ public class UserGetManagedAppDiagnosticStatusesCollectionPage extends BaseColle
      * @param response The serialized UserGetManagedAppDiagnosticStatusesCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public UserGetManagedAppDiagnosticStatusesCollectionPage(final UserGetManagedAppDiagnosticStatusesCollectionResponse response, final UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder builder) {
+    public UserGetManagedAppDiagnosticStatusesCollectionPage(@Nonnull final UserGetManagedAppDiagnosticStatusesCollectionResponse response, @Nonnull final UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder builder) {
        super(response, builder);
     }
 
@@ -39,7 +41,7 @@ public class UserGetManagedAppDiagnosticStatusesCollectionPage extends BaseColle
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public UserGetManagedAppDiagnosticStatusesCollectionPage(final java.util.List<ManagedAppDiagnosticStatus> pageContents, final UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder nextRequestBuilder) {
+    public UserGetManagedAppDiagnosticStatusesCollectionPage(@Nonnull final java.util.List<ManagedAppDiagnosticStatus> pageContents, @Nullable final UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

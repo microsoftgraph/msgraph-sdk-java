@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Organization;
 import com.microsoft.graph.models.extensions.CertificateBasedAuthConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionWithReferencesPage;
@@ -34,7 +36,7 @@ public class CertificateBasedAuthConfigurationCollectionWithReferencesPage exten
      * @param response the serialized CertificateBasedAuthConfigurationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public CertificateBasedAuthConfigurationCollectionWithReferencesPage(final CertificateBasedAuthConfigurationCollectionResponse response, final CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder builder) {
+    public CertificateBasedAuthConfigurationCollectionWithReferencesPage(@Nonnull final CertificateBasedAuthConfigurationCollectionResponse response, @Nullable final CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 
@@ -44,7 +46,7 @@ public class CertificateBasedAuthConfigurationCollectionWithReferencesPage exten
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public CertificateBasedAuthConfigurationCollectionWithReferencesPage(final java.util.List<CertificateBasedAuthConfiguration> pageContents, final CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+    public CertificateBasedAuthConfigurationCollectionWithReferencesPage(@Nonnull final java.util.List<CertificateBasedAuthConfiguration> pageContents, @Nullable final CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.models.extensions.AssignedLicense;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.GroupWithReferenceRequest;
 import com.microsoft.graph.requests.extensions.GroupReferenceRequestBuilder;
@@ -39,7 +41,7 @@ public class GroupCollectionReferenceRequest extends BaseCollectionWithReference
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupCollectionReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupCollectionResponse.class, GroupCollectionWithReferencesPage.class, GroupCollectionWithReferencesRequestBuilder.class);
     }
 
@@ -48,7 +50,7 @@ public class GroupCollectionReferenceRequest extends BaseCollectionWithReference
      * @param newGroup the Group to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final Group newGroup, final ICallback<? super Group> callback) {
+    public void post(@Nonnull final Group newGroup, @Nonnull final ICallback<? super Group> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/groups/" + newGroup.id);
         new GroupWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -61,7 +63,8 @@ public class GroupCollectionReferenceRequest extends BaseCollectionWithReference
      * @param newGroup the Group to create
      * @return the newly created object
      */
-    public Group post(final Group newGroup) throws ClientException {
+    @Nonnull
+    public Group post(@Nonnull final Group newGroup) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/groups/" + newGroup.id);
         return new GroupWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
@@ -74,7 +77,8 @@ public class GroupCollectionReferenceRequest extends BaseCollectionWithReference
      * @param value the expand clause
      * @return the updated request
      */
-    public GroupCollectionReferenceRequest expand(final String value) {
+    @Nonnull
+    public GroupCollectionReferenceRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -85,7 +89,8 @@ public class GroupCollectionReferenceRequest extends BaseCollectionWithReference
      * @param value the filter clause
      * @return the updated request
      */
-    public GroupCollectionReferenceRequest filter(final String value) {
+    @Nonnull
+    public GroupCollectionReferenceRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -96,7 +101,8 @@ public class GroupCollectionReferenceRequest extends BaseCollectionWithReference
      * @param value the sort clause
      * @return the updated request
      */
-    public GroupCollectionReferenceRequest orderBy(final String value) {
+    @Nonnull
+    public GroupCollectionReferenceRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -107,7 +113,8 @@ public class GroupCollectionReferenceRequest extends BaseCollectionWithReference
      * @param value the select clause
      * @return the updated request
      */
-    public GroupCollectionReferenceRequest select(final String value) {
+    @Nonnull
+    public GroupCollectionReferenceRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -118,6 +125,7 @@ public class GroupCollectionReferenceRequest extends BaseCollectionWithReference
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public GroupCollectionReferenceRequest top(final int value) {
         addTopOption(value);
         return this;

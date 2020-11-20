@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.OrgContact;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.BaseCollectionReferenceRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
@@ -29,7 +31,7 @@ public class OrgContactCollectionReferenceRequestBuilder extends BaseCollectionR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OrgContactCollectionReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OrgContactCollectionReferenceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OrgContactReferenceRequestBuilder.class, OrgContactCollectionReferenceRequest.class);
     }
 }

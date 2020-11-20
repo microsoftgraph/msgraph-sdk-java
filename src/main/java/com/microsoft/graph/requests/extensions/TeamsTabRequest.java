@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.TeamsTab;
 import com.microsoft.graph.requests.extensions.TeamsAppRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,7 +31,7 @@ public class TeamsTabRequest extends BaseRequest<TeamsTab> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamsTabRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsTabRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TeamsTab.class);
     }
 
@@ -38,7 +40,7 @@ public class TeamsTabRequest extends BaseRequest<TeamsTab> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super TeamsTab> callback) {
+    public void get(@Nonnull final ICallback<? super TeamsTab> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class TeamsTabRequest extends BaseRequest<TeamsTab> {
      * @return the TeamsTab from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public TeamsTab get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class TeamsTabRequest extends BaseRequest<TeamsTab> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super TeamsTab> callback) {
+    public void delete(@Nonnull final ICallback<? super TeamsTab> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class TeamsTabRequest extends BaseRequest<TeamsTab> {
      * @param sourceTeamsTab the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TeamsTab sourceTeamsTab, final ICallback<? super TeamsTab> callback) {
+    public void patch(@Nonnull final TeamsTab sourceTeamsTab, @Nonnull final ICallback<? super TeamsTab> callback) {
         send(HttpMethod.PATCH, callback, sourceTeamsTab);
     }
 
@@ -87,7 +90,8 @@ public class TeamsTabRequest extends BaseRequest<TeamsTab> {
      * @return the updated TeamsTab
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TeamsTab patch(final TeamsTab sourceTeamsTab) throws ClientException {
+    @Nullable
+    public TeamsTab patch(@Nonnull final TeamsTab sourceTeamsTab) throws ClientException {
         return send(HttpMethod.PATCH, sourceTeamsTab);
     }
 
@@ -97,7 +101,7 @@ public class TeamsTabRequest extends BaseRequest<TeamsTab> {
      * @param newTeamsTab the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TeamsTab newTeamsTab, final ICallback<? super TeamsTab> callback) {
+    public void post(@Nonnull final TeamsTab newTeamsTab, @Nonnull final ICallback<? super TeamsTab> callback) {
         send(HttpMethod.POST, callback, newTeamsTab);
     }
 
@@ -108,7 +112,8 @@ public class TeamsTabRequest extends BaseRequest<TeamsTab> {
      * @return the created TeamsTab
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TeamsTab post(final TeamsTab newTeamsTab) throws ClientException {
+    @Nullable
+    public TeamsTab post(@Nonnull final TeamsTab newTeamsTab) throws ClientException {
         return send(HttpMethod.POST, newTeamsTab);
     }
 
@@ -118,7 +123,7 @@ public class TeamsTabRequest extends BaseRequest<TeamsTab> {
      * @param newTeamsTab the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TeamsTab newTeamsTab, final ICallback<? super TeamsTab> callback) {
+    public void put(@Nonnull final TeamsTab newTeamsTab, @Nonnull final ICallback<? super TeamsTab> callback) {
         send(HttpMethod.PUT, callback, newTeamsTab);
     }
 
@@ -129,7 +134,8 @@ public class TeamsTabRequest extends BaseRequest<TeamsTab> {
      * @return the created TeamsTab
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TeamsTab put(final TeamsTab newTeamsTab) throws ClientException {
+    @Nullable
+    public TeamsTab put(@Nonnull final TeamsTab newTeamsTab) throws ClientException {
         return send(HttpMethod.PUT, newTeamsTab);
     }
 
@@ -139,7 +145,8 @@ public class TeamsTabRequest extends BaseRequest<TeamsTab> {
      * @param value the select clause
      * @return the updated request
      */
-     public TeamsTabRequest select(final String value) {
+     @Nonnull
+     public TeamsTabRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -150,7 +157,8 @@ public class TeamsTabRequest extends BaseRequest<TeamsTab> {
      * @param value the expand clause
      * @return the updated request
      */
-     public TeamsTabRequest expand(final String value) {
+     @Nonnull
+     public TeamsTabRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

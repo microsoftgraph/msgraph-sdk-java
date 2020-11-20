@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.LocalizedNotificationMessageColle
 import com.microsoft.graph.requests.extensions.LocalizedNotificationMessageRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -29,7 +31,7 @@ public class NotificationMessageTemplateRequestBuilder extends BaseRequestBuilde
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public NotificationMessageTemplateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public NotificationMessageTemplateRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +41,8 @@ public class NotificationMessageTemplateRequestBuilder extends BaseRequestBuilde
      * @param requestOptions the options for this request
      * @return the NotificationMessageTemplateRequest instance
      */
-    public NotificationMessageTemplateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public NotificationMessageTemplateRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,7 +52,8 @@ public class NotificationMessageTemplateRequestBuilder extends BaseRequestBuilde
      * @param requestOptions the options for this request
      * @return the NotificationMessageTemplateRequest instance
      */
-    public NotificationMessageTemplateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public NotificationMessageTemplateRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.NotificationMessageTemplateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,6 +63,7 @@ public class NotificationMessageTemplateRequestBuilder extends BaseRequestBuilde
      *
      * @return the collection request builder
      */
+    @Nonnull
     public LocalizedNotificationMessageCollectionRequestBuilder localizedNotificationMessages() {
         return new LocalizedNotificationMessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("localizedNotificationMessages"), getClient(), null);
     }
@@ -69,7 +74,8 @@ public class NotificationMessageTemplateRequestBuilder extends BaseRequestBuilde
      * @return the request builder
      * @param id the item identifier
      */
-    public LocalizedNotificationMessageRequestBuilder localizedNotificationMessages(final String id) {
+    @Nonnull
+    public LocalizedNotificationMessageRequestBuilder localizedNotificationMessages(@Nonnull final String id) {
         return new LocalizedNotificationMessageRequestBuilder(getRequestUrlWithAdditionalSegment("localizedNotificationMessages") + "/" + id, getClient(), null);
     }
 
@@ -77,6 +83,7 @@ public class NotificationMessageTemplateRequestBuilder extends BaseRequestBuilde
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public NotificationMessageTemplateSendTestMessageRequestBuilder sendTestMessage() {
         return new NotificationMessageTemplateSendTestMessageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendTestMessage"), getClient(), null);
     }

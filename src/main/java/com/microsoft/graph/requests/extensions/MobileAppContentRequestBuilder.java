@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.MobileAppContentFileCollectionReq
 import com.microsoft.graph.requests.extensions.MobileAppContentFileRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -29,7 +31,7 @@ public class MobileAppContentRequestBuilder extends BaseRequestBuilder<MobileApp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MobileAppContentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppContentRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +41,8 @@ public class MobileAppContentRequestBuilder extends BaseRequestBuilder<MobileApp
      * @param requestOptions the options for this request
      * @return the MobileAppContentRequest instance
      */
-    public MobileAppContentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public MobileAppContentRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,7 +52,8 @@ public class MobileAppContentRequestBuilder extends BaseRequestBuilder<MobileApp
      * @param requestOptions the options for this request
      * @return the MobileAppContentRequest instance
      */
-    public MobileAppContentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public MobileAppContentRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.MobileAppContentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,6 +63,7 @@ public class MobileAppContentRequestBuilder extends BaseRequestBuilder<MobileApp
      *
      * @return the collection request builder
      */
+    @Nonnull
     public MobileAppContentFileCollectionRequestBuilder files() {
         return new MobileAppContentFileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("files"), getClient(), null);
     }
@@ -69,7 +74,8 @@ public class MobileAppContentRequestBuilder extends BaseRequestBuilder<MobileApp
      * @return the request builder
      * @param id the item identifier
      */
-    public MobileAppContentFileRequestBuilder files(final String id) {
+    @Nonnull
+    public MobileAppContentFileRequestBuilder files(@Nonnull final String id) {
         return new MobileAppContentFileRequestBuilder(getRequestUrlWithAdditionalSegment("files") + "/" + id, getClient(), null);
     }
 }

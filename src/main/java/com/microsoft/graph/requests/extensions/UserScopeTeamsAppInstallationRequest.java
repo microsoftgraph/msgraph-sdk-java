@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.UserScopeTeamsAppInstallation;
 import com.microsoft.graph.requests.extensions.ChatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,7 +31,7 @@ public class UserScopeTeamsAppInstallationRequest extends BaseRequest<UserScopeT
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserScopeTeamsAppInstallationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserScopeTeamsAppInstallationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserScopeTeamsAppInstallation.class);
     }
 
@@ -38,7 +40,7 @@ public class UserScopeTeamsAppInstallationRequest extends BaseRequest<UserScopeT
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super UserScopeTeamsAppInstallation> callback) {
+    public void get(@Nonnull final ICallback<? super UserScopeTeamsAppInstallation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class UserScopeTeamsAppInstallationRequest extends BaseRequest<UserScopeT
      * @return the UserScopeTeamsAppInstallation from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public UserScopeTeamsAppInstallation get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class UserScopeTeamsAppInstallationRequest extends BaseRequest<UserScopeT
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super UserScopeTeamsAppInstallation> callback) {
+    public void delete(@Nonnull final ICallback<? super UserScopeTeamsAppInstallation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class UserScopeTeamsAppInstallationRequest extends BaseRequest<UserScopeT
      * @param sourceUserScopeTeamsAppInstallation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserScopeTeamsAppInstallation sourceUserScopeTeamsAppInstallation, final ICallback<? super UserScopeTeamsAppInstallation> callback) {
+    public void patch(@Nonnull final UserScopeTeamsAppInstallation sourceUserScopeTeamsAppInstallation, @Nonnull final ICallback<? super UserScopeTeamsAppInstallation> callback) {
         send(HttpMethod.PATCH, callback, sourceUserScopeTeamsAppInstallation);
     }
 
@@ -87,7 +90,8 @@ public class UserScopeTeamsAppInstallationRequest extends BaseRequest<UserScopeT
      * @return the updated UserScopeTeamsAppInstallation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserScopeTeamsAppInstallation patch(final UserScopeTeamsAppInstallation sourceUserScopeTeamsAppInstallation) throws ClientException {
+    @Nullable
+    public UserScopeTeamsAppInstallation patch(@Nonnull final UserScopeTeamsAppInstallation sourceUserScopeTeamsAppInstallation) throws ClientException {
         return send(HttpMethod.PATCH, sourceUserScopeTeamsAppInstallation);
     }
 
@@ -97,7 +101,7 @@ public class UserScopeTeamsAppInstallationRequest extends BaseRequest<UserScopeT
      * @param newUserScopeTeamsAppInstallation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation, final ICallback<? super UserScopeTeamsAppInstallation> callback) {
+    public void post(@Nonnull final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation, @Nonnull final ICallback<? super UserScopeTeamsAppInstallation> callback) {
         send(HttpMethod.POST, callback, newUserScopeTeamsAppInstallation);
     }
 
@@ -108,7 +112,8 @@ public class UserScopeTeamsAppInstallationRequest extends BaseRequest<UserScopeT
      * @return the created UserScopeTeamsAppInstallation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserScopeTeamsAppInstallation post(final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation) throws ClientException {
+    @Nullable
+    public UserScopeTeamsAppInstallation post(@Nonnull final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation) throws ClientException {
         return send(HttpMethod.POST, newUserScopeTeamsAppInstallation);
     }
 
@@ -118,7 +123,7 @@ public class UserScopeTeamsAppInstallationRequest extends BaseRequest<UserScopeT
      * @param newUserScopeTeamsAppInstallation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation, final ICallback<? super UserScopeTeamsAppInstallation> callback) {
+    public void put(@Nonnull final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation, @Nonnull final ICallback<? super UserScopeTeamsAppInstallation> callback) {
         send(HttpMethod.PUT, callback, newUserScopeTeamsAppInstallation);
     }
 
@@ -129,7 +134,8 @@ public class UserScopeTeamsAppInstallationRequest extends BaseRequest<UserScopeT
      * @return the created UserScopeTeamsAppInstallation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserScopeTeamsAppInstallation put(final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation) throws ClientException {
+    @Nullable
+    public UserScopeTeamsAppInstallation put(@Nonnull final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation) throws ClientException {
         return send(HttpMethod.PUT, newUserScopeTeamsAppInstallation);
     }
 
@@ -139,7 +145,8 @@ public class UserScopeTeamsAppInstallationRequest extends BaseRequest<UserScopeT
      * @param value the select clause
      * @return the updated request
      */
-     public UserScopeTeamsAppInstallationRequest select(final String value) {
+     @Nonnull
+     public UserScopeTeamsAppInstallationRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -150,7 +157,8 @@ public class UserScopeTeamsAppInstallationRequest extends BaseRequest<UserScopeT
      * @param value the expand clause
      * @return the updated request
      */
-     public UserScopeTeamsAppInstallationRequest expand(final String value) {
+     @Nonnull
+     public UserScopeTeamsAppInstallationRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

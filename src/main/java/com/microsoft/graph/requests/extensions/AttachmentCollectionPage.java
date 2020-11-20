@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Attachment;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class AttachmentCollectionPage extends BaseCollectionPage<Attachment, Att
      * @param response the serialized AttachmentCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public AttachmentCollectionPage(final AttachmentCollectionResponse response, final AttachmentCollectionRequestBuilder builder) {
+    public AttachmentCollectionPage(@Nonnull final AttachmentCollectionResponse response, @Nonnull final AttachmentCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class AttachmentCollectionPage extends BaseCollectionPage<Attachment, Att
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public AttachmentCollectionPage(final java.util.List<Attachment> pageContents, final AttachmentCollectionRequestBuilder nextRequestBuilder) {
+    public AttachmentCollectionPage(@Nonnull final java.util.List<Attachment> pageContents, @Nullable final AttachmentCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

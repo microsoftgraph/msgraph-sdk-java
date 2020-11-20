@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DeviceAndAppManagementRoleAssignment;
 import com.microsoft.graph.requests.extensions.DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DeviceAndAppManagementRoleAssignmentCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class DeviceAndAppManagementRoleAssignmentCollectionPage extends BaseColl
      * @param response the serialized DeviceAndAppManagementRoleAssignmentCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DeviceAndAppManagementRoleAssignmentCollectionPage(final DeviceAndAppManagementRoleAssignmentCollectionResponse response, final DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder builder) {
+    public DeviceAndAppManagementRoleAssignmentCollectionPage(@Nonnull final DeviceAndAppManagementRoleAssignmentCollectionResponse response, @Nonnull final DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class DeviceAndAppManagementRoleAssignmentCollectionPage extends BaseColl
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public DeviceAndAppManagementRoleAssignmentCollectionPage(final java.util.List<DeviceAndAppManagementRoleAssignment> pageContents, final DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder nextRequestBuilder) {
+    public DeviceAndAppManagementRoleAssignmentCollectionPage(@Nonnull final java.util.List<DeviceAndAppManagementRoleAssignment> pageContents, @Nullable final DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

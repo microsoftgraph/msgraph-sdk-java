@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DetectedApp;
 import com.microsoft.graph.requests.extensions.DetectedAppCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DetectedAppCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class DetectedAppCollectionPage extends BaseCollectionPage<DetectedApp, D
      * @param response the serialized DetectedAppCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DetectedAppCollectionPage(final DetectedAppCollectionResponse response, final DetectedAppCollectionRequestBuilder builder) {
+    public DetectedAppCollectionPage(@Nonnull final DetectedAppCollectionResponse response, @Nonnull final DetectedAppCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class DetectedAppCollectionPage extends BaseCollectionPage<DetectedApp, D
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public DetectedAppCollectionPage(final java.util.List<DetectedApp> pageContents, final DetectedAppCollectionRequestBuilder nextRequestBuilder) {
+    public DetectedAppCollectionPage(@Nonnull final java.util.List<DetectedApp> pageContents, @Nullable final DetectedAppCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

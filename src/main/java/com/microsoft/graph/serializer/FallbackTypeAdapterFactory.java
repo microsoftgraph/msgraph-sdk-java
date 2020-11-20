@@ -36,6 +36,9 @@ import com.google.gson.stream.JsonToken;
 import com.google.gson.stream.JsonWriter;
 import com.microsoft.graph.logger.ILogger;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 /**
  * Handles serialization/deserialization for special types (especially of 
  * fields which are not caught by registering a type adapter).
@@ -74,13 +77,14 @@ public final class FallbackTypeAdapterFactory implements TypeAdapterFactory {
      * 
      * @param logger logger to use for the factory
      */
-    public FallbackTypeAdapterFactory(ILogger logger) {
+    public FallbackTypeAdapterFactory(@Nonnull final ILogger logger) {
         this.logger = logger;
     }
 
     @SuppressWarnings("unchecked")
     @Override
-    public <T> TypeAdapter<T> create(final Gson gson, final TypeToken<T> type) {
+    @Nullable
+    public <T> TypeAdapter<T> create(@Nonnull final Gson gson, @Nonnull final TypeToken<T> type) {
         final Class<T> rawType = (Class<T>) type.getRawType();
         if (rawType.isEnum()) {
             return new EnumTypeAdapter<T>(rawType, logger);

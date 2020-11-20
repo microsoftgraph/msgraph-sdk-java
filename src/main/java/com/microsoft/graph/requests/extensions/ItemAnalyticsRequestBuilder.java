@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.ItemActivityStatCollectionRequest
 import com.microsoft.graph.requests.extensions.ItemActivityStatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -29,7 +31,7 @@ public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder<ItemAnalytic
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ItemAnalyticsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ItemAnalyticsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +41,8 @@ public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder<ItemAnalytic
      * @param requestOptions the options for this request
      * @return the ItemAnalyticsRequest instance
      */
-    public ItemAnalyticsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ItemAnalyticsRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,7 +52,8 @@ public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder<ItemAnalytic
      * @param requestOptions the options for this request
      * @return the ItemAnalyticsRequest instance
      */
-    public ItemAnalyticsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ItemAnalyticsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ItemAnalyticsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -60,6 +64,7 @@ public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder<ItemAnalytic
      *
      * @return the ItemActivityStatWithReferenceRequestBuilder instance
      */
+    @Nonnull
     public ItemActivityStatWithReferenceRequestBuilder allTime() {
         return new ItemActivityStatWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("allTime"), getClient(), null);
     }
@@ -68,6 +73,7 @@ public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder<ItemAnalytic
      *
      * @return the collection request builder
      */
+    @Nonnull
     public ItemActivityStatCollectionRequestBuilder itemActivityStats() {
         return new ItemActivityStatCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("itemActivityStats"), getClient(), null);
     }
@@ -78,7 +84,8 @@ public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder<ItemAnalytic
      * @return the request builder
      * @param id the item identifier
      */
-    public ItemActivityStatRequestBuilder itemActivityStats(final String id) {
+    @Nonnull
+    public ItemActivityStatRequestBuilder itemActivityStats(@Nonnull final String id) {
         return new ItemActivityStatRequestBuilder(getRequestUrlWithAdditionalSegment("itemActivityStats") + "/" + id, getClient(), null);
     }
 
@@ -87,6 +94,7 @@ public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder<ItemAnalytic
      *
      * @return the ItemActivityStatWithReferenceRequestBuilder instance
      */
+    @Nonnull
     public ItemActivityStatWithReferenceRequestBuilder lastSevenDays() {
         return new ItemActivityStatWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastSevenDays"), getClient(), null);
     }

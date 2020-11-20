@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RecentNotebook;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.NotebookGetRecentNotebooksCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.NotebookGetRecentNotebooksCollectionResponse;
@@ -34,7 +36,7 @@ public class NotebookGetRecentNotebooksCollectionRequest extends BaseCollectionR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public NotebookGetRecentNotebooksCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public NotebookGetRecentNotebooksCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, NotebookGetRecentNotebooksCollectionResponse.class, NotebookGetRecentNotebooksCollectionPage.class, NotebookGetRecentNotebooksCollectionRequestBuilder.class);
     }
 
@@ -45,7 +47,8 @@ public class NotebookGetRecentNotebooksCollectionRequest extends BaseCollectionR
      * @param value the select clause
      * @return the updated request
      */
-    public NotebookGetRecentNotebooksCollectionRequest select(final String value) {
+    @Nonnull
+    public NotebookGetRecentNotebooksCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -56,6 +59,7 @@ public class NotebookGetRecentNotebooksCollectionRequest extends BaseCollectionR
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public NotebookGetRecentNotebooksCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -67,7 +71,8 @@ public class NotebookGetRecentNotebooksCollectionRequest extends BaseCollectionR
      * @param value the expand clause
      * @return the updated request
      */
-    public NotebookGetRecentNotebooksCollectionRequest expand(final String value) {
+    @Nonnull
+    public NotebookGetRecentNotebooksCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -78,7 +83,8 @@ public class NotebookGetRecentNotebooksCollectionRequest extends BaseCollectionR
      * @param value the filter clause
      * @return the updated request
      */
-    public NotebookGetRecentNotebooksCollectionRequest filter(final String value) {
+    @Nonnull
+    public NotebookGetRecentNotebooksCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -89,7 +95,8 @@ public class NotebookGetRecentNotebooksCollectionRequest extends BaseCollectionR
      * @param value the order by clause
      * @return the updated request
      */
-    public NotebookGetRecentNotebooksCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public NotebookGetRecentNotebooksCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }

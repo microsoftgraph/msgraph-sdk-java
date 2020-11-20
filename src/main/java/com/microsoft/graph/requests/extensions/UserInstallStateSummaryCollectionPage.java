@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.UserInstallStateSummary;
 import com.microsoft.graph.requests.extensions.UserInstallStateSummaryCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.UserInstallStateSummaryCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class UserInstallStateSummaryCollectionPage extends BaseCollectionPage<Us
      * @param response the serialized UserInstallStateSummaryCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public UserInstallStateSummaryCollectionPage(final UserInstallStateSummaryCollectionResponse response, final UserInstallStateSummaryCollectionRequestBuilder builder) {
+    public UserInstallStateSummaryCollectionPage(@Nonnull final UserInstallStateSummaryCollectionResponse response, @Nonnull final UserInstallStateSummaryCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class UserInstallStateSummaryCollectionPage extends BaseCollectionPage<Us
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public UserInstallStateSummaryCollectionPage(final java.util.List<UserInstallStateSummary> pageContents, final UserInstallStateSummaryCollectionRequestBuilder nextRequestBuilder) {
+    public UserInstallStateSummaryCollectionPage(@Nonnull final java.util.List<UserInstallStateSummary> pageContents, @Nullable final UserInstallStateSummaryCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

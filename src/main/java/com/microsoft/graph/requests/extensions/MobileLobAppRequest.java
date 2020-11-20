@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.MobileAppContentCollectionRequest
 import com.microsoft.graph.requests.extensions.MobileAppContentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -31,10 +33,10 @@ public class MobileLobAppRequest extends BaseRequest<MobileLobApp> {
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public MobileLobAppRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends MobileLobApp> responseClass) {
+    public MobileLobAppRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends MobileLobApp> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -45,7 +47,7 @@ public class MobileLobAppRequest extends BaseRequest<MobileLobApp> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MobileLobAppRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileLobAppRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MobileLobApp.class);
     }
 
@@ -54,7 +56,7 @@ public class MobileLobAppRequest extends BaseRequest<MobileLobApp> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MobileLobApp> callback) {
+    public void get(@Nonnull final ICallback<? super MobileLobApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -64,6 +66,7 @@ public class MobileLobAppRequest extends BaseRequest<MobileLobApp> {
      * @return the MobileLobApp from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MobileLobApp get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -73,7 +76,7 @@ public class MobileLobAppRequest extends BaseRequest<MobileLobApp> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MobileLobApp> callback) {
+    public void delete(@Nonnull final ICallback<? super MobileLobApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -92,7 +95,7 @@ public class MobileLobAppRequest extends BaseRequest<MobileLobApp> {
      * @param sourceMobileLobApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MobileLobApp sourceMobileLobApp, final ICallback<? super MobileLobApp> callback) {
+    public void patch(@Nonnull final MobileLobApp sourceMobileLobApp, @Nonnull final ICallback<? super MobileLobApp> callback) {
         send(HttpMethod.PATCH, callback, sourceMobileLobApp);
     }
 
@@ -103,7 +106,8 @@ public class MobileLobAppRequest extends BaseRequest<MobileLobApp> {
      * @return the updated MobileLobApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MobileLobApp patch(final MobileLobApp sourceMobileLobApp) throws ClientException {
+    @Nullable
+    public MobileLobApp patch(@Nonnull final MobileLobApp sourceMobileLobApp) throws ClientException {
         return send(HttpMethod.PATCH, sourceMobileLobApp);
     }
 
@@ -113,7 +117,7 @@ public class MobileLobAppRequest extends BaseRequest<MobileLobApp> {
      * @param newMobileLobApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MobileLobApp newMobileLobApp, final ICallback<? super MobileLobApp> callback) {
+    public void post(@Nonnull final MobileLobApp newMobileLobApp, @Nonnull final ICallback<? super MobileLobApp> callback) {
         send(HttpMethod.POST, callback, newMobileLobApp);
     }
 
@@ -124,7 +128,8 @@ public class MobileLobAppRequest extends BaseRequest<MobileLobApp> {
      * @return the created MobileLobApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MobileLobApp post(final MobileLobApp newMobileLobApp) throws ClientException {
+    @Nullable
+    public MobileLobApp post(@Nonnull final MobileLobApp newMobileLobApp) throws ClientException {
         return send(HttpMethod.POST, newMobileLobApp);
     }
 
@@ -134,7 +139,7 @@ public class MobileLobAppRequest extends BaseRequest<MobileLobApp> {
      * @param newMobileLobApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MobileLobApp newMobileLobApp, final ICallback<? super MobileLobApp> callback) {
+    public void put(@Nonnull final MobileLobApp newMobileLobApp, @Nonnull final ICallback<? super MobileLobApp> callback) {
         send(HttpMethod.PUT, callback, newMobileLobApp);
     }
 
@@ -145,7 +150,8 @@ public class MobileLobAppRequest extends BaseRequest<MobileLobApp> {
      * @return the created MobileLobApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MobileLobApp put(final MobileLobApp newMobileLobApp) throws ClientException {
+    @Nullable
+    public MobileLobApp put(@Nonnull final MobileLobApp newMobileLobApp) throws ClientException {
         return send(HttpMethod.PUT, newMobileLobApp);
     }
 
@@ -155,7 +161,8 @@ public class MobileLobAppRequest extends BaseRequest<MobileLobApp> {
      * @param value the select clause
      * @return the updated request
      */
-     public MobileLobAppRequest select(final String value) {
+     @Nonnull
+     public MobileLobAppRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -166,7 +173,8 @@ public class MobileLobAppRequest extends BaseRequest<MobileLobApp> {
      * @param value the expand clause
      * @return the updated request
      */
-     public MobileLobAppRequest expand(final String value) {
+     @Nonnull
+     public MobileLobAppRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

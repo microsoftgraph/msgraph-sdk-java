@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.extensions.ManagedAppRegistration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionWithReferencesPage;
@@ -34,7 +36,7 @@ public class ManagedAppRegistrationCollectionWithReferencesPage extends BaseColl
      * @param response the serialized ManagedAppRegistrationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ManagedAppRegistrationCollectionWithReferencesPage(final ManagedAppRegistrationCollectionResponse response, final ManagedAppRegistrationCollectionWithReferencesRequestBuilder builder) {
+    public ManagedAppRegistrationCollectionWithReferencesPage(@Nonnull final ManagedAppRegistrationCollectionResponse response, @Nullable final ManagedAppRegistrationCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 
@@ -44,7 +46,7 @@ public class ManagedAppRegistrationCollectionWithReferencesPage extends BaseColl
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public ManagedAppRegistrationCollectionWithReferencesPage(final java.util.List<ManagedAppRegistration> pageContents, final ManagedAppRegistrationCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+    public ManagedAppRegistrationCollectionWithReferencesPage(@Nonnull final java.util.List<ManagedAppRegistration> pageContents, @Nullable final ManagedAppRegistrationCollectionWithReferencesRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

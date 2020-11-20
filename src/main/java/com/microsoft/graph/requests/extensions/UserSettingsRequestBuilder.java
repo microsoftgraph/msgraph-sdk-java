@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.UserSettings;
 import com.microsoft.graph.requests.extensions.ShiftPreferencesRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -28,7 +30,7 @@ public class UserSettingsRequestBuilder extends BaseRequestBuilder<UserSettings>
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserSettingsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserSettingsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,7 +40,8 @@ public class UserSettingsRequestBuilder extends BaseRequestBuilder<UserSettings>
      * @param requestOptions the options for this request
      * @return the UserSettingsRequest instance
      */
-    public UserSettingsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public UserSettingsRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,7 +51,8 @@ public class UserSettingsRequestBuilder extends BaseRequestBuilder<UserSettings>
      * @param requestOptions the options for this request
      * @return the UserSettingsRequest instance
      */
-    public UserSettingsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public UserSettingsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.UserSettingsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,6 +63,7 @@ public class UserSettingsRequestBuilder extends BaseRequestBuilder<UserSettings>
      *
      * @return the ShiftPreferencesRequestBuilder instance
      */
+    @Nonnull
     public ShiftPreferencesRequestBuilder shiftPreferences() {
         return new ShiftPreferencesRequestBuilder(getRequestUrlWithAdditionalSegment("shiftPreferences"), getClient(), null);
     }

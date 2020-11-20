@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.RemoteAssistancePartner;
 import com.microsoft.graph.requests.extensions.RemoteAssistancePartnerCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.RemoteAssistancePartnerCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class RemoteAssistancePartnerCollectionPage extends BaseCollectionPage<Re
      * @param response the serialized RemoteAssistancePartnerCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public RemoteAssistancePartnerCollectionPage(final RemoteAssistancePartnerCollectionResponse response, final RemoteAssistancePartnerCollectionRequestBuilder builder) {
+    public RemoteAssistancePartnerCollectionPage(@Nonnull final RemoteAssistancePartnerCollectionResponse response, @Nonnull final RemoteAssistancePartnerCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class RemoteAssistancePartnerCollectionPage extends BaseCollectionPage<Re
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public RemoteAssistancePartnerCollectionPage(final java.util.List<RemoteAssistancePartner> pageContents, final RemoteAssistancePartnerCollectionRequestBuilder nextRequestBuilder) {
+    public RemoteAssistancePartnerCollectionPage(@Nonnull final java.util.List<RemoteAssistancePartner> pageContents, @Nullable final RemoteAssistancePartnerCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.SiteGetActivitiesByIntervalCollectionRequestBuilder;
@@ -29,7 +31,7 @@ public class SiteGetActivitiesByIntervalCollectionPage extends BaseCollectionPag
      * @param response The serialized SiteGetActivitiesByIntervalCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public SiteGetActivitiesByIntervalCollectionPage(final SiteGetActivitiesByIntervalCollectionResponse response, final SiteGetActivitiesByIntervalCollectionRequestBuilder builder) {
+    public SiteGetActivitiesByIntervalCollectionPage(@Nonnull final SiteGetActivitiesByIntervalCollectionResponse response, @Nonnull final SiteGetActivitiesByIntervalCollectionRequestBuilder builder) {
        super(response, builder);
     }
 
@@ -39,7 +41,7 @@ public class SiteGetActivitiesByIntervalCollectionPage extends BaseCollectionPag
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public SiteGetActivitiesByIntervalCollectionPage(final java.util.List<ItemActivityStat> pageContents, final SiteGetActivitiesByIntervalCollectionRequestBuilder nextRequestBuilder) {
+    public SiteGetActivitiesByIntervalCollectionPage(@Nonnull final java.util.List<ItemActivityStat> pageContents, @Nullable final SiteGetActivitiesByIntervalCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

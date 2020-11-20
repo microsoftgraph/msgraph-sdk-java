@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.NotificationMessageTemplate;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class NotificationMessageTemplateCollectionRequest extends BaseCollection
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public NotificationMessageTemplateCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public NotificationMessageTemplateCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, NotificationMessageTemplateCollectionResponse.class, NotificationMessageTemplateCollectionPage.class, NotificationMessageTemplateCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class NotificationMessageTemplateCollectionRequest extends BaseCollection
      * @param newNotificationMessageTemplate the NotificationMessageTemplate to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final NotificationMessageTemplate newNotificationMessageTemplate, final ICallback<? super NotificationMessageTemplate> callback) {
+    public void post(@Nonnull final NotificationMessageTemplate newNotificationMessageTemplate, @Nonnull final ICallback<? super NotificationMessageTemplate> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new NotificationMessageTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class NotificationMessageTemplateCollectionRequest extends BaseCollection
      * @param newNotificationMessageTemplate the NotificationMessageTemplate to create
      * @return the newly created object
      */
-    public NotificationMessageTemplate post(final NotificationMessageTemplate newNotificationMessageTemplate) throws ClientException {
+    @Nonnull
+    public NotificationMessageTemplate post(@Nonnull final NotificationMessageTemplate newNotificationMessageTemplate) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new NotificationMessageTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class NotificationMessageTemplateCollectionRequest extends BaseCollection
      * @param value the expand clause
      * @return the updated request
      */
-    public NotificationMessageTemplateCollectionRequest expand(final String value) {
+    @Nonnull
+    public NotificationMessageTemplateCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class NotificationMessageTemplateCollectionRequest extends BaseCollection
      * @param value the filter clause
      * @return the updated request
      */
-    public NotificationMessageTemplateCollectionRequest filter(final String value) {
+    @Nonnull
+    public NotificationMessageTemplateCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class NotificationMessageTemplateCollectionRequest extends BaseCollection
      * @param value the order by clause
      * @return the updated request
      */
-    public NotificationMessageTemplateCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public NotificationMessageTemplateCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class NotificationMessageTemplateCollectionRequest extends BaseCollection
      * @param value the select clause
      * @return the updated request
      */
-    public NotificationMessageTemplateCollectionRequest select(final String value) {
+    @Nonnull
+    public NotificationMessageTemplateCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class NotificationMessageTemplateCollectionRequest extends BaseCollection
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public NotificationMessageTemplateCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class NotificationMessageTemplateCollectionRequest extends BaseCollection
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public NotificationMessageTemplateCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class NotificationMessageTemplateCollectionRequest extends BaseCollection
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public NotificationMessageTemplateCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public NotificationMessageTemplateCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.PolicyRoot;
 import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class TokenIssuancePolicyCollectionRequest extends BaseCollectionRequest<
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TokenIssuancePolicyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TokenIssuancePolicyCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TokenIssuancePolicyCollectionResponse.class, TokenIssuancePolicyCollectionPage.class, TokenIssuancePolicyCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class TokenIssuancePolicyCollectionRequest extends BaseCollectionRequest<
      * @param newTokenIssuancePolicy the TokenIssuancePolicy to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final TokenIssuancePolicy newTokenIssuancePolicy, final ICallback<? super TokenIssuancePolicy> callback) {
+    public void post(@Nonnull final TokenIssuancePolicy newTokenIssuancePolicy, @Nonnull final ICallback<? super TokenIssuancePolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TokenIssuancePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class TokenIssuancePolicyCollectionRequest extends BaseCollectionRequest<
      * @param newTokenIssuancePolicy the TokenIssuancePolicy to create
      * @return the newly created object
      */
-    public TokenIssuancePolicy post(final TokenIssuancePolicy newTokenIssuancePolicy) throws ClientException {
+    @Nonnull
+    public TokenIssuancePolicy post(@Nonnull final TokenIssuancePolicy newTokenIssuancePolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TokenIssuancePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class TokenIssuancePolicyCollectionRequest extends BaseCollectionRequest<
      * @param value the expand clause
      * @return the updated request
      */
-    public TokenIssuancePolicyCollectionRequest expand(final String value) {
+    @Nonnull
+    public TokenIssuancePolicyCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class TokenIssuancePolicyCollectionRequest extends BaseCollectionRequest<
      * @param value the filter clause
      * @return the updated request
      */
-    public TokenIssuancePolicyCollectionRequest filter(final String value) {
+    @Nonnull
+    public TokenIssuancePolicyCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class TokenIssuancePolicyCollectionRequest extends BaseCollectionRequest<
      * @param value the order by clause
      * @return the updated request
      */
-    public TokenIssuancePolicyCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public TokenIssuancePolicyCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class TokenIssuancePolicyCollectionRequest extends BaseCollectionRequest<
      * @param value the select clause
      * @return the updated request
      */
-    public TokenIssuancePolicyCollectionRequest select(final String value) {
+    @Nonnull
+    public TokenIssuancePolicyCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class TokenIssuancePolicyCollectionRequest extends BaseCollectionRequest<
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public TokenIssuancePolicyCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class TokenIssuancePolicyCollectionRequest extends BaseCollectionRequest<
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public TokenIssuancePolicyCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class TokenIssuancePolicyCollectionRequest extends BaseCollectionRequest<
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public TokenIssuancePolicyCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public TokenIssuancePolicyCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

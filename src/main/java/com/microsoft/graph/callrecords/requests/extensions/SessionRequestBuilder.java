@@ -12,6 +12,8 @@ import com.microsoft.graph.callrecords.requests.extensions.SegmentCollectionRequ
 import com.microsoft.graph.callrecords.requests.extensions.SegmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -29,7 +31,7 @@ public class SessionRequestBuilder extends BaseRequestBuilder<Session> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SessionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SessionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +41,8 @@ public class SessionRequestBuilder extends BaseRequestBuilder<Session> {
      * @param requestOptions the options for this request
      * @return the SessionRequest instance
      */
-    public SessionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public SessionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,7 +52,8 @@ public class SessionRequestBuilder extends BaseRequestBuilder<Session> {
      * @param requestOptions the options for this request
      * @return the SessionRequest instance
      */
-    public SessionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public SessionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.callrecords.requests.extensions.SessionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,6 +63,7 @@ public class SessionRequestBuilder extends BaseRequestBuilder<Session> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public SegmentCollectionRequestBuilder segments() {
         return new SegmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("segments"), getClient(), null);
     }
@@ -69,7 +74,8 @@ public class SessionRequestBuilder extends BaseRequestBuilder<Session> {
      * @return the request builder
      * @param id the item identifier
      */
-    public SegmentRequestBuilder segments(final String id) {
+    @Nonnull
+    public SegmentRequestBuilder segments(@Nonnull final String id) {
         return new SegmentRequestBuilder(getRequestUrlWithAdditionalSegment("segments") + "/" + id, getClient(), null);
     }
 }

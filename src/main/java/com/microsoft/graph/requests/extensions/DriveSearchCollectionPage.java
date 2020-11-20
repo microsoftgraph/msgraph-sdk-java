@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DriveItem;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.DriveSearchCollectionRequestBuilder;
@@ -29,7 +31,7 @@ public class DriveSearchCollectionPage extends BaseCollectionPage<DriveItem, Dri
      * @param response The serialized DriveSearchCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public DriveSearchCollectionPage(final DriveSearchCollectionResponse response, final DriveSearchCollectionRequestBuilder builder) {
+    public DriveSearchCollectionPage(@Nonnull final DriveSearchCollectionResponse response, @Nonnull final DriveSearchCollectionRequestBuilder builder) {
        super(response, builder);
     }
 
@@ -39,7 +41,7 @@ public class DriveSearchCollectionPage extends BaseCollectionPage<DriveItem, Dri
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public DriveSearchCollectionPage(final java.util.List<DriveItem> pageContents, final DriveSearchCollectionRequestBuilder nextRequestBuilder) {
+    public DriveSearchCollectionPage(@Nonnull final java.util.List<DriveItem> pageContents, @Nullable final DriveSearchCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

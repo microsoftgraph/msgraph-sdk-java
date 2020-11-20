@@ -31,6 +31,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 /**
  * A page of results from a collection
  *
@@ -66,7 +69,7 @@ public class BaseCollectionPage<T, T2 extends BaseRequestBuilder<T>> implements 
      * @param response the serialized WorkforceIntegrationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public BaseCollectionPage(final ICollectionResponse<T> response, final T2 builder) {
+    public BaseCollectionPage(@Nonnull final ICollectionResponse<T> response, @Nullable final T2 builder) {
         this(response.values(), builder, response.additionalDataManager());
     }
 
@@ -76,7 +79,7 @@ public class BaseCollectionPage<T, T2 extends BaseRequestBuilder<T>> implements 
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public BaseCollectionPage(final List<T> pageContents, final T2 nextRequestBuilder) {
+    public BaseCollectionPage(@Nonnull final List<T> pageContents, @Nullable final T2 nextRequestBuilder) {
         // CollectionPages are never directly modifiable, either 'update'/'delete' the specific child or 'add' the new
         // object to the 'children' of the collection.
         this.pageContents = Collections.unmodifiableList(pageContents == null ? new ArrayList<T>() : pageContents);
@@ -90,7 +93,7 @@ public class BaseCollectionPage<T, T2 extends BaseRequestBuilder<T>> implements 
      * @param nextRequestBuilder the request builder for the next page
      * @param responseAdditionalData the additional data returned by the response
      */
-    public BaseCollectionPage(final List<T> pageContents, final T2 nextRequestBuilder, final AdditionalDataManager responseAdditionalData) {
+    public BaseCollectionPage(@Nonnull final List<T> pageContents, @Nonnull final T2 nextRequestBuilder, @Nonnull final AdditionalDataManager responseAdditionalData) {
         this(pageContents, nextRequestBuilder);
         this.additionalDataManager().putAll(responseAdditionalData);
     }
@@ -100,6 +103,7 @@ public class BaseCollectionPage<T, T2 extends BaseRequestBuilder<T>> implements 
      *
      * @return the next page request builder
      */
+    @Nullable
     public T2 getNextPage() {
         return requestBuilder;
     }
@@ -109,6 +113,7 @@ public class BaseCollectionPage<T, T2 extends BaseRequestBuilder<T>> implements 
      *
      * @return the current page
      */
+    @Nonnull
     public List<T> getCurrentPage() {
         return pageContents;
     }
@@ -118,6 +123,7 @@ public class BaseCollectionPage<T, T2 extends BaseRequestBuilder<T>> implements 
      *
      * @return the raw representation of this class
      */
+    @Nullable
     public JsonObject getRawObject() {
         return rawObject;
     }
@@ -128,6 +134,7 @@ public class BaseCollectionPage<T, T2 extends BaseRequestBuilder<T>> implements 
      * @return the serializer
      */
     @Override
+    @Nullable
     public ISerializer getSerializer() {
         return serializer;
     }
@@ -138,12 +145,13 @@ public class BaseCollectionPage<T, T2 extends BaseRequestBuilder<T>> implements 
      * @param serializer the serializer
      * @param json       the JSON object to set this object to
      */
-    public void setRawObject(final ISerializer serializer, final JsonObject json) {
+    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
         this.serializer = serializer;
         rawObject = json;
     }
 
     @Override
+    @Nullable
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }

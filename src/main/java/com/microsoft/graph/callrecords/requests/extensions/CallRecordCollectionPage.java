@@ -5,6 +5,8 @@
 package com.microsoft.graph.callrecords.requests.extensions;
 import com.microsoft.graph.callrecords.models.extensions.CallRecord;
 import com.microsoft.graph.callrecords.requests.extensions.CallRecordCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.callrecords.requests.extensions.CallRecordCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class CallRecordCollectionPage extends BaseCollectionPage<CallRecord, Cal
      * @param response the serialized CallRecordCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public CallRecordCollectionPage(final CallRecordCollectionResponse response, final CallRecordCollectionRequestBuilder builder) {
+    public CallRecordCollectionPage(@Nonnull final CallRecordCollectionResponse response, @Nonnull final CallRecordCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class CallRecordCollectionPage extends BaseCollectionPage<CallRecord, Cal
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public CallRecordCollectionPage(final java.util.List<CallRecord> pageContents, final CallRecordCollectionRequestBuilder nextRequestBuilder) {
+    public CallRecordCollectionPage(@Nonnull final java.util.List<CallRecord> pageContents, @Nullable final CallRecordCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.Chat;
 import com.microsoft.graph.models.extensions.ChatMessage;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.BaseReferenceRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
@@ -30,7 +32,7 @@ public class ChatReferenceRequestBuilder extends BaseReferenceRequestBuilder<Cha
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ChatReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ChatReferenceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ChatReferenceRequest.class);
     }
 }

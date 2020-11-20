@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.LinkedResource;
 import com.microsoft.graph.requests.extensions.LinkedResourceCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.LinkedResourceCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class LinkedResourceCollectionPage extends BaseCollectionPage<LinkedResou
      * @param response the serialized LinkedResourceCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public LinkedResourceCollectionPage(final LinkedResourceCollectionResponse response, final LinkedResourceCollectionRequestBuilder builder) {
+    public LinkedResourceCollectionPage(@Nonnull final LinkedResourceCollectionResponse response, @Nonnull final LinkedResourceCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class LinkedResourceCollectionPage extends BaseCollectionPage<LinkedResou
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public LinkedResourceCollectionPage(final java.util.List<LinkedResource> pageContents, final LinkedResourceCollectionRequestBuilder nextRequestBuilder) {
+    public LinkedResourceCollectionPage(@Nonnull final java.util.List<LinkedResource> pageContents, @Nullable final LinkedResourceCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ActivityHistoryItem;
 import com.microsoft.graph.requests.extensions.UserActivityRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -28,7 +30,7 @@ public class ActivityHistoryItemRequestBuilder extends BaseRequestBuilder<Activi
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ActivityHistoryItemRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ActivityHistoryItemRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,7 +40,8 @@ public class ActivityHistoryItemRequestBuilder extends BaseRequestBuilder<Activi
      * @param requestOptions the options for this request
      * @return the ActivityHistoryItemRequest instance
      */
-    public ActivityHistoryItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ActivityHistoryItemRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,7 +51,8 @@ public class ActivityHistoryItemRequestBuilder extends BaseRequestBuilder<Activi
      * @param requestOptions the options for this request
      * @return the ActivityHistoryItemRequest instance
      */
-    public ActivityHistoryItemRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ActivityHistoryItemRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ActivityHistoryItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,6 +63,7 @@ public class ActivityHistoryItemRequestBuilder extends BaseRequestBuilder<Activi
      *
      * @return the UserActivityWithReferenceRequestBuilder instance
      */
+    @Nonnull
     public UserActivityWithReferenceRequestBuilder activity() {
         return new UserActivityWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("activity"), getClient(), null);
     }

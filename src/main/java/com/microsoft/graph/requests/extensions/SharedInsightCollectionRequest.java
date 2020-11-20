@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.OfficeGraphInsights;
 import com.microsoft.graph.models.extensions.SharedInsight;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class SharedInsightCollectionRequest extends BaseCollectionRequest<Shared
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SharedInsightCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SharedInsightCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SharedInsightCollectionResponse.class, SharedInsightCollectionPage.class, SharedInsightCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class SharedInsightCollectionRequest extends BaseCollectionRequest<Shared
      * @param newSharedInsight the SharedInsight to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final SharedInsight newSharedInsight, final ICallback<? super SharedInsight> callback) {
+    public void post(@Nonnull final SharedInsight newSharedInsight, @Nonnull final ICallback<? super SharedInsight> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SharedInsightRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class SharedInsightCollectionRequest extends BaseCollectionRequest<Shared
      * @param newSharedInsight the SharedInsight to create
      * @return the newly created object
      */
-    public SharedInsight post(final SharedInsight newSharedInsight) throws ClientException {
+    @Nonnull
+    public SharedInsight post(@Nonnull final SharedInsight newSharedInsight) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SharedInsightRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class SharedInsightCollectionRequest extends BaseCollectionRequest<Shared
      * @param value the expand clause
      * @return the updated request
      */
-    public SharedInsightCollectionRequest expand(final String value) {
+    @Nonnull
+    public SharedInsightCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class SharedInsightCollectionRequest extends BaseCollectionRequest<Shared
      * @param value the filter clause
      * @return the updated request
      */
-    public SharedInsightCollectionRequest filter(final String value) {
+    @Nonnull
+    public SharedInsightCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class SharedInsightCollectionRequest extends BaseCollectionRequest<Shared
      * @param value the order by clause
      * @return the updated request
      */
-    public SharedInsightCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public SharedInsightCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class SharedInsightCollectionRequest extends BaseCollectionRequest<Shared
      * @param value the select clause
      * @return the updated request
      */
-    public SharedInsightCollectionRequest select(final String value) {
+    @Nonnull
+    public SharedInsightCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class SharedInsightCollectionRequest extends BaseCollectionRequest<Shared
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public SharedInsightCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class SharedInsightCollectionRequest extends BaseCollectionRequest<Shared
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public SharedInsightCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class SharedInsightCollectionRequest extends BaseCollectionRequest<Shared
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public SharedInsightCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public SharedInsightCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

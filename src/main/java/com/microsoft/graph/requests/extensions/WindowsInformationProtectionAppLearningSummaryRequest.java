@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionAppLearningSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class WindowsInformationProtectionAppLearningSummaryRequest extends BaseR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsInformationProtectionAppLearningSummaryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsInformationProtectionAppLearningSummaryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsInformationProtectionAppLearningSummary.class);
     }
 
@@ -37,7 +39,7 @@ public class WindowsInformationProtectionAppLearningSummaryRequest extends BaseR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WindowsInformationProtectionAppLearningSummary> callback) {
+    public void get(@Nonnull final ICallback<? super WindowsInformationProtectionAppLearningSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class WindowsInformationProtectionAppLearningSummaryRequest extends BaseR
      * @return the WindowsInformationProtectionAppLearningSummary from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WindowsInformationProtectionAppLearningSummary get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class WindowsInformationProtectionAppLearningSummaryRequest extends BaseR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WindowsInformationProtectionAppLearningSummary> callback) {
+    public void delete(@Nonnull final ICallback<? super WindowsInformationProtectionAppLearningSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class WindowsInformationProtectionAppLearningSummaryRequest extends BaseR
      * @param sourceWindowsInformationProtectionAppLearningSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsInformationProtectionAppLearningSummary sourceWindowsInformationProtectionAppLearningSummary, final ICallback<? super WindowsInformationProtectionAppLearningSummary> callback) {
+    public void patch(@Nonnull final WindowsInformationProtectionAppLearningSummary sourceWindowsInformationProtectionAppLearningSummary, @Nonnull final ICallback<? super WindowsInformationProtectionAppLearningSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsInformationProtectionAppLearningSummary);
     }
 
@@ -86,7 +89,8 @@ public class WindowsInformationProtectionAppLearningSummaryRequest extends BaseR
      * @return the updated WindowsInformationProtectionAppLearningSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsInformationProtectionAppLearningSummary patch(final WindowsInformationProtectionAppLearningSummary sourceWindowsInformationProtectionAppLearningSummary) throws ClientException {
+    @Nullable
+    public WindowsInformationProtectionAppLearningSummary patch(@Nonnull final WindowsInformationProtectionAppLearningSummary sourceWindowsInformationProtectionAppLearningSummary) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindowsInformationProtectionAppLearningSummary);
     }
 
@@ -96,7 +100,7 @@ public class WindowsInformationProtectionAppLearningSummaryRequest extends BaseR
      * @param newWindowsInformationProtectionAppLearningSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary, final ICallback<? super WindowsInformationProtectionAppLearningSummary> callback) {
+    public void post(@Nonnull final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary, @Nonnull final ICallback<? super WindowsInformationProtectionAppLearningSummary> callback) {
         send(HttpMethod.POST, callback, newWindowsInformationProtectionAppLearningSummary);
     }
 
@@ -107,7 +111,8 @@ public class WindowsInformationProtectionAppLearningSummaryRequest extends BaseR
      * @return the created WindowsInformationProtectionAppLearningSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsInformationProtectionAppLearningSummary post(final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary) throws ClientException {
+    @Nullable
+    public WindowsInformationProtectionAppLearningSummary post(@Nonnull final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary) throws ClientException {
         return send(HttpMethod.POST, newWindowsInformationProtectionAppLearningSummary);
     }
 
@@ -117,7 +122,7 @@ public class WindowsInformationProtectionAppLearningSummaryRequest extends BaseR
      * @param newWindowsInformationProtectionAppLearningSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary, final ICallback<? super WindowsInformationProtectionAppLearningSummary> callback) {
+    public void put(@Nonnull final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary, @Nonnull final ICallback<? super WindowsInformationProtectionAppLearningSummary> callback) {
         send(HttpMethod.PUT, callback, newWindowsInformationProtectionAppLearningSummary);
     }
 
@@ -128,7 +133,8 @@ public class WindowsInformationProtectionAppLearningSummaryRequest extends BaseR
      * @return the created WindowsInformationProtectionAppLearningSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsInformationProtectionAppLearningSummary put(final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary) throws ClientException {
+    @Nullable
+    public WindowsInformationProtectionAppLearningSummary put(@Nonnull final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary) throws ClientException {
         return send(HttpMethod.PUT, newWindowsInformationProtectionAppLearningSummary);
     }
 
@@ -138,7 +144,8 @@ public class WindowsInformationProtectionAppLearningSummaryRequest extends BaseR
      * @param value the select clause
      * @return the updated request
      */
-     public WindowsInformationProtectionAppLearningSummaryRequest select(final String value) {
+     @Nonnull
+     public WindowsInformationProtectionAppLearningSummaryRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class WindowsInformationProtectionAppLearningSummaryRequest extends BaseR
      * @param value the expand clause
      * @return the updated request
      */
-     public WindowsInformationProtectionAppLearningSummaryRequest expand(final String value) {
+     @Nonnull
+     public WindowsInformationProtectionAppLearningSummaryRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

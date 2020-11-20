@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetMemberGroupsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetMemberGroupsCollectionRequest;
@@ -33,7 +35,7 @@ public class DirectoryObjectGetMemberGroupsCollectionRequestBuilder extends Base
      * @param requestOptions the options for this request
      * @param securityEnabledOnly the securityEnabledOnly
      */
-    public DirectoryObjectGetMemberGroupsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final Boolean securityEnabledOnly) {
+    public DirectoryObjectGetMemberGroupsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final Boolean securityEnabledOnly) {
         super(requestUrl, client, requestOptions, DirectoryObjectGetMemberGroupsCollectionRequestBuilder.class, DirectoryObjectGetMemberGroupsCollectionRequest.class);
   	 if(securityEnabledOnly!=null){
 			bodyParams.put("securityEnabledOnly", securityEnabledOnly);
@@ -46,8 +48,9 @@ public class DirectoryObjectGetMemberGroupsCollectionRequestBuilder extends Base
      * @param requestOptions the options for this request
      * @return the DirectoryObjectGetMemberGroupsCollectionRequest instance
      */
-     @Override
-    public DirectoryObjectGetMemberGroupsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Override
+    @Nonnull
+    public DirectoryObjectGetMemberGroupsCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final DirectoryObjectGetMemberGroupsCollectionRequest request = super.buildRequest(requestOptions);
 
         if (hasParameter("securityEnabledOnly")) {

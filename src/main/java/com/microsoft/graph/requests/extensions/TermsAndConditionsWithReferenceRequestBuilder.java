@@ -14,6 +14,8 @@ import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentColle
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.BaseWithReferenceRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
@@ -32,7 +34,7 @@ public class TermsAndConditionsWithReferenceRequestBuilder extends BaseWithRefer
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TermsAndConditionsWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TermsAndConditionsWithReferenceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TermsAndConditionsWithReferenceRequest.class, TermsAndConditionsReferenceRequestBuilder.class);
     }
 }

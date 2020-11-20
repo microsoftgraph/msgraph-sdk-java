@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.DeviceCategory;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DeviceCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCategoryRequestBuilder;
@@ -32,7 +34,7 @@ public class DeviceCategoryCollectionRequestBuilder extends BaseCollectionReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceCategoryCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceCategoryCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceCategoryRequestBuilder.class, DeviceCategoryCollectionRequest.class);
     }
 

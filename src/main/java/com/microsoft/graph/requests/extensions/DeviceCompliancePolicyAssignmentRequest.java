@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class DeviceCompliancePolicyAssignmentRequest extends BaseRequest<DeviceC
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceCompliancePolicyAssignmentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceCompliancePolicyAssignmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceCompliancePolicyAssignment.class);
     }
 
@@ -37,7 +39,7 @@ public class DeviceCompliancePolicyAssignmentRequest extends BaseRequest<DeviceC
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceCompliancePolicyAssignment> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceCompliancePolicyAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class DeviceCompliancePolicyAssignmentRequest extends BaseRequest<DeviceC
      * @return the DeviceCompliancePolicyAssignment from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceCompliancePolicyAssignment get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class DeviceCompliancePolicyAssignmentRequest extends BaseRequest<DeviceC
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceCompliancePolicyAssignment> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceCompliancePolicyAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class DeviceCompliancePolicyAssignmentRequest extends BaseRequest<DeviceC
      * @param sourceDeviceCompliancePolicyAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceCompliancePolicyAssignment sourceDeviceCompliancePolicyAssignment, final ICallback<? super DeviceCompliancePolicyAssignment> callback) {
+    public void patch(@Nonnull final DeviceCompliancePolicyAssignment sourceDeviceCompliancePolicyAssignment, @Nonnull final ICallback<? super DeviceCompliancePolicyAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceCompliancePolicyAssignment);
     }
 
@@ -86,7 +89,8 @@ public class DeviceCompliancePolicyAssignmentRequest extends BaseRequest<DeviceC
      * @return the updated DeviceCompliancePolicyAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceCompliancePolicyAssignment patch(final DeviceCompliancePolicyAssignment sourceDeviceCompliancePolicyAssignment) throws ClientException {
+    @Nullable
+    public DeviceCompliancePolicyAssignment patch(@Nonnull final DeviceCompliancePolicyAssignment sourceDeviceCompliancePolicyAssignment) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceCompliancePolicyAssignment);
     }
 
@@ -96,7 +100,7 @@ public class DeviceCompliancePolicyAssignmentRequest extends BaseRequest<DeviceC
      * @param newDeviceCompliancePolicyAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceCompliancePolicyAssignment newDeviceCompliancePolicyAssignment, final ICallback<? super DeviceCompliancePolicyAssignment> callback) {
+    public void post(@Nonnull final DeviceCompliancePolicyAssignment newDeviceCompliancePolicyAssignment, @Nonnull final ICallback<? super DeviceCompliancePolicyAssignment> callback) {
         send(HttpMethod.POST, callback, newDeviceCompliancePolicyAssignment);
     }
 
@@ -107,7 +111,8 @@ public class DeviceCompliancePolicyAssignmentRequest extends BaseRequest<DeviceC
      * @return the created DeviceCompliancePolicyAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceCompliancePolicyAssignment post(final DeviceCompliancePolicyAssignment newDeviceCompliancePolicyAssignment) throws ClientException {
+    @Nullable
+    public DeviceCompliancePolicyAssignment post(@Nonnull final DeviceCompliancePolicyAssignment newDeviceCompliancePolicyAssignment) throws ClientException {
         return send(HttpMethod.POST, newDeviceCompliancePolicyAssignment);
     }
 
@@ -117,7 +122,7 @@ public class DeviceCompliancePolicyAssignmentRequest extends BaseRequest<DeviceC
      * @param newDeviceCompliancePolicyAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceCompliancePolicyAssignment newDeviceCompliancePolicyAssignment, final ICallback<? super DeviceCompliancePolicyAssignment> callback) {
+    public void put(@Nonnull final DeviceCompliancePolicyAssignment newDeviceCompliancePolicyAssignment, @Nonnull final ICallback<? super DeviceCompliancePolicyAssignment> callback) {
         send(HttpMethod.PUT, callback, newDeviceCompliancePolicyAssignment);
     }
 
@@ -128,7 +133,8 @@ public class DeviceCompliancePolicyAssignmentRequest extends BaseRequest<DeviceC
      * @return the created DeviceCompliancePolicyAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceCompliancePolicyAssignment put(final DeviceCompliancePolicyAssignment newDeviceCompliancePolicyAssignment) throws ClientException {
+    @Nullable
+    public DeviceCompliancePolicyAssignment put(@Nonnull final DeviceCompliancePolicyAssignment newDeviceCompliancePolicyAssignment) throws ClientException {
         return send(HttpMethod.PUT, newDeviceCompliancePolicyAssignment);
     }
 
@@ -138,7 +144,8 @@ public class DeviceCompliancePolicyAssignmentRequest extends BaseRequest<DeviceC
      * @param value the select clause
      * @return the updated request
      */
-     public DeviceCompliancePolicyAssignmentRequest select(final String value) {
+     @Nonnull
+     public DeviceCompliancePolicyAssignmentRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class DeviceCompliancePolicyAssignmentRequest extends BaseRequest<DeviceC
      * @param value the expand clause
      * @return the updated request
      */
-     public DeviceCompliancePolicyAssignmentRequest expand(final String value) {
+     @Nonnull
+     public DeviceCompliancePolicyAssignmentRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

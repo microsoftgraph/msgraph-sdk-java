@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.TeamsAppDefinitionCollectionReque
 import com.microsoft.graph.requests.extensions.TeamsAppDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseReferenceRequest;
@@ -32,7 +34,7 @@ public class TeamsAppReferenceRequest extends BaseReferenceRequest<TeamsApp> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamsAppReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsAppReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TeamsApp.class);
     }
 
@@ -42,7 +44,8 @@ public class TeamsAppReferenceRequest extends BaseReferenceRequest<TeamsApp> {
      * @param value the select clause
      * @return the updated request
      */
-    public TeamsAppReferenceRequest select(final String value) {
+    @Nonnull
+    public TeamsAppReferenceRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -53,7 +56,8 @@ public class TeamsAppReferenceRequest extends BaseReferenceRequest<TeamsApp> {
      * @param value the expand clause
      * @return the updated request
      */
-    public TeamsAppReferenceRequest expand(final String value) {
+    @Nonnull
+    public TeamsAppReferenceRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -63,7 +67,7 @@ public class TeamsAppReferenceRequest extends BaseReferenceRequest<TeamsApp> {
      * @param srcTeamsApp the TeamsApp reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(TeamsApp srcTeamsApp, final ICallback<? super TeamsApp> callback) {
+    public void put(@Nonnull final TeamsApp srcTeamsApp, @Nonnull final ICallback<? super TeamsApp> callback) {
         send(HttpMethod.PUT, callback, srcTeamsApp);
     }
 
@@ -74,7 +78,8 @@ public class TeamsAppReferenceRequest extends BaseReferenceRequest<TeamsApp> {
      * @return the TeamsApp
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    public TeamsApp put(TeamsApp srcTeamsApp) throws ClientException {
+    @Nullable
+    public TeamsApp put(@Nonnull final TeamsApp srcTeamsApp) throws ClientException {
         return send(HttpMethod.PUT, srcTeamsApp);
     }
 }

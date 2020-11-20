@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantDeltaCollectionRequest;
@@ -32,7 +34,7 @@ public class OAuth2PermissionGrantDeltaCollectionRequestBuilder extends BaseFunc
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OAuth2PermissionGrantDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OAuth2PermissionGrantDeltaCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OAuth2PermissionGrantDeltaCollectionRequestBuilder.class, OAuth2PermissionGrantDeltaCollectionRequest.class);
     }
     
@@ -42,8 +44,9 @@ public class OAuth2PermissionGrantDeltaCollectionRequestBuilder extends BaseFunc
      * @param requestOptions the options for this request
      * @return the OAuth2PermissionGrantDeltaCollectionRequest instance
      */
-     @Override
-    public OAuth2PermissionGrantDeltaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Override
+    @Nonnull
+    public OAuth2PermissionGrantDeltaCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final OAuth2PermissionGrantDeltaCollectionRequest request = super.buildRequest(requestOptions);
 
       for (com.microsoft.graph.options.FunctionOption option : functionOptions) {

@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.DeviceManagementTroubleshootingEvent;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class DeviceManagementTroubleshootingEventCollectionRequest extends BaseC
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementTroubleshootingEventCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementTroubleshootingEventCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagementTroubleshootingEventCollectionResponse.class, DeviceManagementTroubleshootingEventCollectionPage.class, DeviceManagementTroubleshootingEventCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class DeviceManagementTroubleshootingEventCollectionRequest extends BaseC
      * @param newDeviceManagementTroubleshootingEvent the DeviceManagementTroubleshootingEvent to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent, final ICallback<? super DeviceManagementTroubleshootingEvent> callback) {
+    public void post(@Nonnull final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent, @Nonnull final ICallback<? super DeviceManagementTroubleshootingEvent> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementTroubleshootingEventRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class DeviceManagementTroubleshootingEventCollectionRequest extends BaseC
      * @param newDeviceManagementTroubleshootingEvent the DeviceManagementTroubleshootingEvent to create
      * @return the newly created object
      */
-    public DeviceManagementTroubleshootingEvent post(final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent) throws ClientException {
+    @Nonnull
+    public DeviceManagementTroubleshootingEvent post(@Nonnull final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceManagementTroubleshootingEventRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class DeviceManagementTroubleshootingEventCollectionRequest extends BaseC
      * @param value the expand clause
      * @return the updated request
      */
-    public DeviceManagementTroubleshootingEventCollectionRequest expand(final String value) {
+    @Nonnull
+    public DeviceManagementTroubleshootingEventCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class DeviceManagementTroubleshootingEventCollectionRequest extends BaseC
      * @param value the filter clause
      * @return the updated request
      */
-    public DeviceManagementTroubleshootingEventCollectionRequest filter(final String value) {
+    @Nonnull
+    public DeviceManagementTroubleshootingEventCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class DeviceManagementTroubleshootingEventCollectionRequest extends BaseC
      * @param value the order by clause
      * @return the updated request
      */
-    public DeviceManagementTroubleshootingEventCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DeviceManagementTroubleshootingEventCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class DeviceManagementTroubleshootingEventCollectionRequest extends BaseC
      * @param value the select clause
      * @return the updated request
      */
-    public DeviceManagementTroubleshootingEventCollectionRequest select(final String value) {
+    @Nonnull
+    public DeviceManagementTroubleshootingEventCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class DeviceManagementTroubleshootingEventCollectionRequest extends BaseC
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DeviceManagementTroubleshootingEventCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class DeviceManagementTroubleshootingEventCollectionRequest extends BaseC
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public DeviceManagementTroubleshootingEventCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class DeviceManagementTroubleshootingEventCollectionRequest extends BaseC
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public DeviceManagementTroubleshootingEventCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public DeviceManagementTroubleshootingEventCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

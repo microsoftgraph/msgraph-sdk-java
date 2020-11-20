@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.LocaleInfo;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.OutlookUserSupportedLanguagesCollectionRequestBuilder;
@@ -29,7 +31,7 @@ public class OutlookUserSupportedLanguagesCollectionPage extends BaseCollectionP
      * @param response The serialized OutlookUserSupportedLanguagesCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public OutlookUserSupportedLanguagesCollectionPage(final OutlookUserSupportedLanguagesCollectionResponse response, final OutlookUserSupportedLanguagesCollectionRequestBuilder builder) {
+    public OutlookUserSupportedLanguagesCollectionPage(@Nonnull final OutlookUserSupportedLanguagesCollectionResponse response, @Nonnull final OutlookUserSupportedLanguagesCollectionRequestBuilder builder) {
        super(response, builder);
     }
 
@@ -39,7 +41,7 @@ public class OutlookUserSupportedLanguagesCollectionPage extends BaseCollectionP
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public OutlookUserSupportedLanguagesCollectionPage(final java.util.List<LocaleInfo> pageContents, final OutlookUserSupportedLanguagesCollectionRequestBuilder nextRequestBuilder) {
+    public OutlookUserSupportedLanguagesCollectionPage(@Nonnull final java.util.List<LocaleInfo> pageContents, @Nullable final OutlookUserSupportedLanguagesCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

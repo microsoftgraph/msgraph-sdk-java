@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IdentityProvider;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -33,7 +35,7 @@ public class IdentityProviderCollectionRequest extends BaseCollectionRequest<Ide
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IdentityProviderCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IdentityProviderCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IdentityProviderCollectionResponse.class, IdentityProviderCollectionPage.class, IdentityProviderCollectionRequestBuilder.class);
     }
 
@@ -42,7 +44,7 @@ public class IdentityProviderCollectionRequest extends BaseCollectionRequest<Ide
      * @param newIdentityProvider the IdentityProvider to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final IdentityProvider newIdentityProvider, final ICallback<? super IdentityProvider> callback) {
+    public void post(@Nonnull final IdentityProvider newIdentityProvider, @Nonnull final ICallback<? super IdentityProvider> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new IdentityProviderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -54,7 +56,8 @@ public class IdentityProviderCollectionRequest extends BaseCollectionRequest<Ide
      * @param newIdentityProvider the IdentityProvider to create
      * @return the newly created object
      */
-    public IdentityProvider post(final IdentityProvider newIdentityProvider) throws ClientException {
+    @Nonnull
+    public IdentityProvider post(@Nonnull final IdentityProvider newIdentityProvider) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new IdentityProviderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -67,7 +70,8 @@ public class IdentityProviderCollectionRequest extends BaseCollectionRequest<Ide
      * @param value the expand clause
      * @return the updated request
      */
-    public IdentityProviderCollectionRequest expand(final String value) {
+    @Nonnull
+    public IdentityProviderCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -78,7 +82,8 @@ public class IdentityProviderCollectionRequest extends BaseCollectionRequest<Ide
      * @param value the filter clause
      * @return the updated request
      */
-    public IdentityProviderCollectionRequest filter(final String value) {
+    @Nonnull
+    public IdentityProviderCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -89,7 +94,8 @@ public class IdentityProviderCollectionRequest extends BaseCollectionRequest<Ide
      * @param value the order by clause
      * @return the updated request
      */
-    public IdentityProviderCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public IdentityProviderCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -100,7 +106,8 @@ public class IdentityProviderCollectionRequest extends BaseCollectionRequest<Ide
      * @param value the select clause
      * @return the updated request
      */
-    public IdentityProviderCollectionRequest select(final String value) {
+    @Nonnull
+    public IdentityProviderCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -111,6 +118,7 @@ public class IdentityProviderCollectionRequest extends BaseCollectionRequest<Ide
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public IdentityProviderCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -122,6 +130,7 @@ public class IdentityProviderCollectionRequest extends BaseCollectionRequest<Ide
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public IdentityProviderCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -133,7 +142,8 @@ public class IdentityProviderCollectionRequest extends BaseCollectionRequest<Ide
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public IdentityProviderCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public IdentityProviderCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

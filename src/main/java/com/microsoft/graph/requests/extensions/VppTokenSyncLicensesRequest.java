@@ -6,6 +6,8 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.VppToken;
 import com.microsoft.graph.requests.extensions.VppTokenSyncLicensesRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.core.ClientException;
@@ -27,7 +29,7 @@ public class VppTokenSyncLicensesRequest extends BaseRequest<VppToken> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public VppTokenSyncLicensesRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public VppTokenSyncLicensesRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, VppToken.class);
     }
 
@@ -36,7 +38,7 @@ public class VppTokenSyncLicensesRequest extends BaseRequest<VppToken> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<? super VppToken> callback) {
+    public void post(@Nonnull final ICallback<? super VppToken> callback) {
         send(HttpMethod.POST, callback, null);
     }
 
@@ -46,6 +48,7 @@ public class VppTokenSyncLicensesRequest extends BaseRequest<VppToken> {
      * @return the VppToken
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
+    @Nullable
     public VppToken post() throws ClientException {
        return send(HttpMethod.POST, null);
     }
@@ -56,7 +59,8 @@ public class VppTokenSyncLicensesRequest extends BaseRequest<VppToken> {
      * @param value the select clause
      * @return the updated request
      */
-    public VppTokenSyncLicensesRequest select(final String value) {
+    @Nonnull
+    public VppTokenSyncLicensesRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -67,7 +71,8 @@ public class VppTokenSyncLicensesRequest extends BaseRequest<VppToken> {
      * @param value the expand clause
      * @return the updated request
      */
-    public VppTokenSyncLicensesRequest expand(final String value) {
+    @Nonnull
+    public VppTokenSyncLicensesRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }

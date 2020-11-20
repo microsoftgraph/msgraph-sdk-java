@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Extension;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class ExtensionCollectionPage extends BaseCollectionPage<Extension, Exten
      * @param response the serialized ExtensionCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ExtensionCollectionPage(final ExtensionCollectionResponse response, final ExtensionCollectionRequestBuilder builder) {
+    public ExtensionCollectionPage(@Nonnull final ExtensionCollectionResponse response, @Nonnull final ExtensionCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class ExtensionCollectionPage extends BaseCollectionPage<Extension, Exten
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public ExtensionCollectionPage(final java.util.List<Extension> pageContents, final ExtensionCollectionRequestBuilder nextRequestBuilder) {
+    public ExtensionCollectionPage(@Nonnull final java.util.List<Extension> pageContents, @Nullable final ExtensionCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

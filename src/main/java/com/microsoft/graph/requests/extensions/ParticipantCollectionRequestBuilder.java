@@ -14,6 +14,8 @@ import com.microsoft.graph.models.extensions.InviteParticipantsOperation;
 import com.microsoft.graph.models.extensions.MuteParticipantOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.ParticipantCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ParticipantRequestBuilder;
@@ -36,7 +38,7 @@ public class ParticipantCollectionRequestBuilder extends BaseCollectionRequestBu
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ParticipantCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ParticipantCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ParticipantRequestBuilder.class, ParticipantCollectionRequest.class);
     }
 
@@ -48,7 +50,8 @@ public class ParticipantCollectionRequestBuilder extends BaseCollectionRequestBu
      * @param participants the participants
      * @param clientContext the clientContext
      */
-    public ParticipantInviteRequestBuilder invite(final java.util.List<InvitationParticipantInfo> participants, final String clientContext) {
+    @Nonnull
+    public ParticipantInviteRequestBuilder invite(@Nullable final java.util.List<InvitationParticipantInfo> participants, @Nullable final String clientContext) {
         return new ParticipantInviteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.invite"), getClient(), null, participants, clientContext);
     }
 }

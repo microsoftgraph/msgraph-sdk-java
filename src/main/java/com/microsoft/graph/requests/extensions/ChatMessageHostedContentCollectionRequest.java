@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ChatMessage;
 import com.microsoft.graph.models.extensions.ChatMessageHostedContent;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class ChatMessageHostedContentCollectionRequest extends BaseCollectionReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ChatMessageHostedContentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ChatMessageHostedContentCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ChatMessageHostedContentCollectionResponse.class, ChatMessageHostedContentCollectionPage.class, ChatMessageHostedContentCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class ChatMessageHostedContentCollectionRequest extends BaseCollectionReq
      * @param newChatMessageHostedContent the ChatMessageHostedContent to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final ChatMessageHostedContent newChatMessageHostedContent, final ICallback<? super ChatMessageHostedContent> callback) {
+    public void post(@Nonnull final ChatMessageHostedContent newChatMessageHostedContent, @Nonnull final ICallback<? super ChatMessageHostedContent> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ChatMessageHostedContentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class ChatMessageHostedContentCollectionRequest extends BaseCollectionReq
      * @param newChatMessageHostedContent the ChatMessageHostedContent to create
      * @return the newly created object
      */
-    public ChatMessageHostedContent post(final ChatMessageHostedContent newChatMessageHostedContent) throws ClientException {
+    @Nonnull
+    public ChatMessageHostedContent post(@Nonnull final ChatMessageHostedContent newChatMessageHostedContent) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ChatMessageHostedContentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class ChatMessageHostedContentCollectionRequest extends BaseCollectionReq
      * @param value the expand clause
      * @return the updated request
      */
-    public ChatMessageHostedContentCollectionRequest expand(final String value) {
+    @Nonnull
+    public ChatMessageHostedContentCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class ChatMessageHostedContentCollectionRequest extends BaseCollectionReq
      * @param value the filter clause
      * @return the updated request
      */
-    public ChatMessageHostedContentCollectionRequest filter(final String value) {
+    @Nonnull
+    public ChatMessageHostedContentCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class ChatMessageHostedContentCollectionRequest extends BaseCollectionReq
      * @param value the order by clause
      * @return the updated request
      */
-    public ChatMessageHostedContentCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ChatMessageHostedContentCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class ChatMessageHostedContentCollectionRequest extends BaseCollectionReq
      * @param value the select clause
      * @return the updated request
      */
-    public ChatMessageHostedContentCollectionRequest select(final String value) {
+    @Nonnull
+    public ChatMessageHostedContentCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class ChatMessageHostedContentCollectionRequest extends BaseCollectionReq
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ChatMessageHostedContentCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class ChatMessageHostedContentCollectionRequest extends BaseCollectionReq
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ChatMessageHostedContentCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class ChatMessageHostedContentCollectionRequest extends BaseCollectionReq
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ChatMessageHostedContentCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ChatMessageHostedContentCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

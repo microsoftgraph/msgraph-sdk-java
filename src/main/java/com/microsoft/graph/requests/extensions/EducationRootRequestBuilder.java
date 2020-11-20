@@ -16,6 +16,8 @@ import com.microsoft.graph.requests.extensions.EducationUserCollectionRequestBui
 import com.microsoft.graph.requests.extensions.EducationUserRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -33,7 +35,7 @@ public class EducationRootRequestBuilder extends BaseRequestBuilder<EducationRoo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationRootRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationRootRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -43,7 +45,8 @@ public class EducationRootRequestBuilder extends BaseRequestBuilder<EducationRoo
      * @param requestOptions the options for this request
      * @return the EducationRootRequest instance
      */
-    public EducationRootRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public EducationRootRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -53,7 +56,8 @@ public class EducationRootRequestBuilder extends BaseRequestBuilder<EducationRoo
      * @param requestOptions the options for this request
      * @return the EducationRootRequest instance
      */
-    public EducationRootRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public EducationRootRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.EducationRootRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -63,6 +67,7 @@ public class EducationRootRequestBuilder extends BaseRequestBuilder<EducationRoo
      *
      * @return the collection request builder
      */
+    @Nonnull
     public EducationClassCollectionRequestBuilder classes() {
         return new EducationClassCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("classes"), getClient(), null);
     }
@@ -73,7 +78,8 @@ public class EducationRootRequestBuilder extends BaseRequestBuilder<EducationRoo
      * @return the request builder
      * @param id the item identifier
      */
-    public EducationClassRequestBuilder classes(final String id) {
+    @Nonnull
+    public EducationClassRequestBuilder classes(@Nonnull final String id) {
         return new EducationClassRequestBuilder(getRequestUrlWithAdditionalSegment("classes") + "/" + id, getClient(), null);
     }
 
@@ -82,6 +88,7 @@ public class EducationRootRequestBuilder extends BaseRequestBuilder<EducationRoo
      *
      * @return the EducationUserRequestBuilder instance
      */
+    @Nonnull
     public EducationUserRequestBuilder me() {
         return new EducationUserRequestBuilder(getRequestUrlWithAdditionalSegment("me"), getClient(), null);
     }
@@ -90,6 +97,7 @@ public class EducationRootRequestBuilder extends BaseRequestBuilder<EducationRoo
      *
      * @return the collection request builder
      */
+    @Nonnull
     public EducationSchoolCollectionRequestBuilder schools() {
         return new EducationSchoolCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("schools"), getClient(), null);
     }
@@ -100,7 +108,8 @@ public class EducationRootRequestBuilder extends BaseRequestBuilder<EducationRoo
      * @return the request builder
      * @param id the item identifier
      */
-    public EducationSchoolRequestBuilder schools(final String id) {
+    @Nonnull
+    public EducationSchoolRequestBuilder schools(@Nonnull final String id) {
         return new EducationSchoolRequestBuilder(getRequestUrlWithAdditionalSegment("schools") + "/" + id, getClient(), null);
     }
     /**
@@ -108,6 +117,7 @@ public class EducationRootRequestBuilder extends BaseRequestBuilder<EducationRoo
      *
      * @return the collection request builder
      */
+    @Nonnull
     public EducationUserCollectionRequestBuilder users() {
         return new EducationUserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("users"), getClient(), null);
     }
@@ -118,7 +128,8 @@ public class EducationRootRequestBuilder extends BaseRequestBuilder<EducationRoo
      * @return the request builder
      * @param id the item identifier
      */
-    public EducationUserRequestBuilder users(final String id) {
+    @Nonnull
+    public EducationUserRequestBuilder users(@Nonnull final String id) {
         return new EducationUserRequestBuilder(getRequestUrlWithAdditionalSegment("users") + "/" + id, getClient(), null);
     }
 }

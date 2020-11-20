@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicySettingStateSummary;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicySettingStateSummaryCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class DeviceCompliancePolicySettingStateSummaryCollectionPage extends Bas
      * @param response the serialized DeviceCompliancePolicySettingStateSummaryCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DeviceCompliancePolicySettingStateSummaryCollectionPage(final DeviceCompliancePolicySettingStateSummaryCollectionResponse response, final DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder builder) {
+    public DeviceCompliancePolicySettingStateSummaryCollectionPage(@Nonnull final DeviceCompliancePolicySettingStateSummaryCollectionResponse response, @Nonnull final DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class DeviceCompliancePolicySettingStateSummaryCollectionPage extends Bas
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public DeviceCompliancePolicySettingStateSummaryCollectionPage(final java.util.List<DeviceCompliancePolicySettingStateSummary> pageContents, final DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder nextRequestBuilder) {
+    public DeviceCompliancePolicySettingStateSummaryCollectionPage(@Nonnull final java.util.List<DeviceCompliancePolicySettingStateSummary> pageContents, @Nullable final DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

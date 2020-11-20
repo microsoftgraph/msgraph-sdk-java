@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Reminder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.UserReminderViewCollectionRequestBuilder;
@@ -29,7 +31,7 @@ public class UserReminderViewCollectionPage extends BaseCollectionPage<Reminder,
      * @param response The serialized UserReminderViewCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public UserReminderViewCollectionPage(final UserReminderViewCollectionResponse response, final UserReminderViewCollectionRequestBuilder builder) {
+    public UserReminderViewCollectionPage(@Nonnull final UserReminderViewCollectionResponse response, @Nonnull final UserReminderViewCollectionRequestBuilder builder) {
        super(response, builder);
     }
 
@@ -39,7 +41,7 @@ public class UserReminderViewCollectionPage extends BaseCollectionPage<Reminder,
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public UserReminderViewCollectionPage(final java.util.List<Reminder> pageContents, final UserReminderViewCollectionRequestBuilder nextRequestBuilder) {
+    public UserReminderViewCollectionPage(@Nonnull final java.util.List<Reminder> pageContents, @Nullable final UserReminderViewCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

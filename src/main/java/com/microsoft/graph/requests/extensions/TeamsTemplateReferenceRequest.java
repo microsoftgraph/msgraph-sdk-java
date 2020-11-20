@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TeamsTemplate;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseReferenceRequest;
@@ -30,7 +32,7 @@ public class TeamsTemplateReferenceRequest extends BaseReferenceRequest<TeamsTem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamsTemplateReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsTemplateReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TeamsTemplate.class);
     }
 
@@ -40,7 +42,8 @@ public class TeamsTemplateReferenceRequest extends BaseReferenceRequest<TeamsTem
      * @param value the select clause
      * @return the updated request
      */
-    public TeamsTemplateReferenceRequest select(final String value) {
+    @Nonnull
+    public TeamsTemplateReferenceRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -51,7 +54,8 @@ public class TeamsTemplateReferenceRequest extends BaseReferenceRequest<TeamsTem
      * @param value the expand clause
      * @return the updated request
      */
-    public TeamsTemplateReferenceRequest expand(final String value) {
+    @Nonnull
+    public TeamsTemplateReferenceRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -61,7 +65,7 @@ public class TeamsTemplateReferenceRequest extends BaseReferenceRequest<TeamsTem
      * @param srcTeamsTemplate the TeamsTemplate reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(TeamsTemplate srcTeamsTemplate, final ICallback<? super TeamsTemplate> callback) {
+    public void put(@Nonnull final TeamsTemplate srcTeamsTemplate, @Nonnull final ICallback<? super TeamsTemplate> callback) {
         send(HttpMethod.PUT, callback, srcTeamsTemplate);
     }
 
@@ -72,7 +76,8 @@ public class TeamsTemplateReferenceRequest extends BaseReferenceRequest<TeamsTem
      * @return the TeamsTemplate
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    public TeamsTemplate put(TeamsTemplate srcTeamsTemplate) throws ClientException {
+    @Nullable
+    public TeamsTemplate put(@Nonnull final TeamsTemplate srcTeamsTemplate) throws ClientException {
         return send(HttpMethod.PUT, srcTeamsTemplate);
     }
 }

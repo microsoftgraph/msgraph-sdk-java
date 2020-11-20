@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.AppRoleAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionWithReferencesPage;
@@ -34,7 +36,7 @@ public class AppRoleAssignmentCollectionWithReferencesPage extends BaseCollectio
      * @param response the serialized AppRoleAssignmentCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public AppRoleAssignmentCollectionWithReferencesPage(final AppRoleAssignmentCollectionResponse response, final AppRoleAssignmentCollectionWithReferencesRequestBuilder builder) {
+    public AppRoleAssignmentCollectionWithReferencesPage(@Nonnull final AppRoleAssignmentCollectionResponse response, @Nullable final AppRoleAssignmentCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 
@@ -44,7 +46,7 @@ public class AppRoleAssignmentCollectionWithReferencesPage extends BaseCollectio
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public AppRoleAssignmentCollectionWithReferencesPage(final java.util.List<AppRoleAssignment> pageContents, final AppRoleAssignmentCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+    public AppRoleAssignmentCollectionWithReferencesPage(@Nonnull final java.util.List<AppRoleAssignment> pageContents, @Nullable final AppRoleAssignmentCollectionWithReferencesRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

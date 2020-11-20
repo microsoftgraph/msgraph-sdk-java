@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Schedule;
 import com.microsoft.graph.models.extensions.OpenShift;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class OpenShiftCollectionRequest extends BaseCollectionRequest<OpenShift,
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OpenShiftCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OpenShiftCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OpenShiftCollectionResponse.class, OpenShiftCollectionPage.class, OpenShiftCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class OpenShiftCollectionRequest extends BaseCollectionRequest<OpenShift,
      * @param newOpenShift the OpenShift to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final OpenShift newOpenShift, final ICallback<? super OpenShift> callback) {
+    public void post(@Nonnull final OpenShift newOpenShift, @Nonnull final ICallback<? super OpenShift> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OpenShiftRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class OpenShiftCollectionRequest extends BaseCollectionRequest<OpenShift,
      * @param newOpenShift the OpenShift to create
      * @return the newly created object
      */
-    public OpenShift post(final OpenShift newOpenShift) throws ClientException {
+    @Nonnull
+    public OpenShift post(@Nonnull final OpenShift newOpenShift) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OpenShiftRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class OpenShiftCollectionRequest extends BaseCollectionRequest<OpenShift,
      * @param value the expand clause
      * @return the updated request
      */
-    public OpenShiftCollectionRequest expand(final String value) {
+    @Nonnull
+    public OpenShiftCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class OpenShiftCollectionRequest extends BaseCollectionRequest<OpenShift,
      * @param value the filter clause
      * @return the updated request
      */
-    public OpenShiftCollectionRequest filter(final String value) {
+    @Nonnull
+    public OpenShiftCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class OpenShiftCollectionRequest extends BaseCollectionRequest<OpenShift,
      * @param value the order by clause
      * @return the updated request
      */
-    public OpenShiftCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public OpenShiftCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class OpenShiftCollectionRequest extends BaseCollectionRequest<OpenShift,
      * @param value the select clause
      * @return the updated request
      */
-    public OpenShiftCollectionRequest select(final String value) {
+    @Nonnull
+    public OpenShiftCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class OpenShiftCollectionRequest extends BaseCollectionRequest<OpenShift,
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public OpenShiftCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class OpenShiftCollectionRequest extends BaseCollectionRequest<OpenShift,
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public OpenShiftCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class OpenShiftCollectionRequest extends BaseCollectionRequest<OpenShift,
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public OpenShiftCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public OpenShiftCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

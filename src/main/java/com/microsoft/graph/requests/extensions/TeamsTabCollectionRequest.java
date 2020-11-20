@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Channel;
 import com.microsoft.graph.models.extensions.TeamsTab;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class TeamsTabCollectionRequest extends BaseCollectionRequest<TeamsTab, T
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamsTabCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsTabCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TeamsTabCollectionResponse.class, TeamsTabCollectionPage.class, TeamsTabCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class TeamsTabCollectionRequest extends BaseCollectionRequest<TeamsTab, T
      * @param newTeamsTab the TeamsTab to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final TeamsTab newTeamsTab, final ICallback<? super TeamsTab> callback) {
+    public void post(@Nonnull final TeamsTab newTeamsTab, @Nonnull final ICallback<? super TeamsTab> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TeamsTabRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class TeamsTabCollectionRequest extends BaseCollectionRequest<TeamsTab, T
      * @param newTeamsTab the TeamsTab to create
      * @return the newly created object
      */
-    public TeamsTab post(final TeamsTab newTeamsTab) throws ClientException {
+    @Nonnull
+    public TeamsTab post(@Nonnull final TeamsTab newTeamsTab) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TeamsTabRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class TeamsTabCollectionRequest extends BaseCollectionRequest<TeamsTab, T
      * @param value the expand clause
      * @return the updated request
      */
-    public TeamsTabCollectionRequest expand(final String value) {
+    @Nonnull
+    public TeamsTabCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class TeamsTabCollectionRequest extends BaseCollectionRequest<TeamsTab, T
      * @param value the filter clause
      * @return the updated request
      */
-    public TeamsTabCollectionRequest filter(final String value) {
+    @Nonnull
+    public TeamsTabCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class TeamsTabCollectionRequest extends BaseCollectionRequest<TeamsTab, T
      * @param value the order by clause
      * @return the updated request
      */
-    public TeamsTabCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public TeamsTabCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class TeamsTabCollectionRequest extends BaseCollectionRequest<TeamsTab, T
      * @param value the select clause
      * @return the updated request
      */
-    public TeamsTabCollectionRequest select(final String value) {
+    @Nonnull
+    public TeamsTabCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class TeamsTabCollectionRequest extends BaseCollectionRequest<TeamsTab, T
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public TeamsTabCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class TeamsTabCollectionRequest extends BaseCollectionRequest<TeamsTab, T
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public TeamsTabCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class TeamsTabCollectionRequest extends BaseCollectionRequest<TeamsTab, T
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public TeamsTabCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public TeamsTabCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

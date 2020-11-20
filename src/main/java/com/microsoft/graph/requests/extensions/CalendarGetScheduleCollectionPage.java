@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DateTimeTimeZone;
 import com.microsoft.graph.models.extensions.ScheduleInformation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.CalendarGetScheduleCollectionRequestBuilder;
@@ -30,7 +32,7 @@ public class CalendarGetScheduleCollectionPage extends BaseCollectionPage<Schedu
      * @param response The serialized CalendarGetScheduleCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public CalendarGetScheduleCollectionPage(final CalendarGetScheduleCollectionResponse response, final CalendarGetScheduleCollectionRequestBuilder builder) {
+    public CalendarGetScheduleCollectionPage(@Nonnull final CalendarGetScheduleCollectionResponse response, @Nonnull final CalendarGetScheduleCollectionRequestBuilder builder) {
        super(response, builder);
     }
 
@@ -40,7 +42,7 @@ public class CalendarGetScheduleCollectionPage extends BaseCollectionPage<Schedu
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public CalendarGetScheduleCollectionPage(final java.util.List<ScheduleInformation> pageContents, final CalendarGetScheduleCollectionRequestBuilder nextRequestBuilder) {
+    public CalendarGetScheduleCollectionPage(@Nonnull final java.util.List<ScheduleInformation> pageContents, @Nullable final CalendarGetScheduleCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

@@ -6,6 +6,8 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookChart;
 import com.microsoft.graph.requests.extensions.WorkbookChartItemRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.core.ClientException;
@@ -27,7 +29,7 @@ public class WorkbookChartItemRequest extends BaseRequest<WorkbookChart> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartItemRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartItemRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChart.class);
     }
 
@@ -36,7 +38,7 @@ public class WorkbookChartItemRequest extends BaseRequest<WorkbookChart> {
      * @param srcWorkbookChart the WorkbookChart with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    public void patch(WorkbookChart srcWorkbookChart, final ICallback<? super WorkbookChart> callback) {
+    public void patch(@Nonnull WorkbookChart srcWorkbookChart, @Nonnull final ICallback<? super WorkbookChart> callback) {
         send(HttpMethod.PATCH, callback, srcWorkbookChart);
     }
 
@@ -47,7 +49,8 @@ public class WorkbookChartItemRequest extends BaseRequest<WorkbookChart> {
      * @return the WorkbookChart
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-     public WorkbookChart patch(WorkbookChart srcWorkbookChart) throws ClientException {
+     @Nullable
+     public WorkbookChart patch(@Nonnull final WorkbookChart srcWorkbookChart) throws ClientException {
         return this.send(HttpMethod.PATCH, srcWorkbookChart);
     }
 
@@ -57,7 +60,7 @@ public class WorkbookChartItemRequest extends BaseRequest<WorkbookChart> {
      * @param srcWorkbookChart the WorkbookChart to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(WorkbookChart srcWorkbookChart, final ICallback<? super WorkbookChart> callback) {
+    public void put(@Nonnull final WorkbookChart srcWorkbookChart, @Nonnull final ICallback<? super WorkbookChart> callback) {
         send(HttpMethod.PUT, callback, srcWorkbookChart);
     }
 
@@ -68,7 +71,8 @@ public class WorkbookChartItemRequest extends BaseRequest<WorkbookChart> {
      * @return the WorkbookChart
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-     public WorkbookChart put(WorkbookChart srcWorkbookChart) throws ClientException {
+     @Nullable
+     public WorkbookChart put(@Nonnull final WorkbookChart srcWorkbookChart) throws ClientException {
         return this.send(HttpMethod.PUT, srcWorkbookChart);
     }
     /**
@@ -76,7 +80,7 @@ public class WorkbookChartItemRequest extends BaseRequest<WorkbookChart> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookChart> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookChart> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -86,6 +90,7 @@ public class WorkbookChartItemRequest extends BaseRequest<WorkbookChart> {
      * @return the WorkbookChart
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
+    @Nullable
     public WorkbookChart get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -96,7 +101,8 @@ public class WorkbookChartItemRequest extends BaseRequest<WorkbookChart> {
      * @param value the select clause
      * @return the updated request
      */
-    public WorkbookChartItemRequest select(final String value) {
+    @Nonnull
+    public WorkbookChartItemRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -107,7 +113,8 @@ public class WorkbookChartItemRequest extends BaseRequest<WorkbookChart> {
      * @param value the expand clause
      * @return the updated request
      */
-    public WorkbookChartItemRequest expand(final String value) {
+    @Nonnull
+    public WorkbookChartItemRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -118,7 +125,8 @@ public class WorkbookChartItemRequest extends BaseRequest<WorkbookChart> {
      * @param value the filter clause
      * @return the updated request
      */
-    public WorkbookChartItemRequest filter(final String value) {
+    @Nonnull
+    public WorkbookChartItemRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -129,7 +137,8 @@ public class WorkbookChartItemRequest extends BaseRequest<WorkbookChart> {
      * @param value the order by clause
      * @return the updated request
      */
-    public WorkbookChartItemRequest orderBy(final String value) {
+    @Nonnull
+    public WorkbookChartItemRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }

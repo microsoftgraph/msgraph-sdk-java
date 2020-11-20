@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberGroupsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberGroupsCollectionResponse;
@@ -38,7 +40,7 @@ public class DirectoryObjectCheckMemberGroupsCollectionRequest extends BaseColle
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DirectoryObjectCheckMemberGroupsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryObjectCheckMemberGroupsCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DirectoryObjectCheckMemberGroupsCollectionResponse.class, DirectoryObjectCheckMemberGroupsCollectionPage.class, DirectoryObjectCheckMemberGroupsCollectionRequestBuilder.class);
         body = new DirectoryObjectCheckMemberGroupsBody();
     }
@@ -48,7 +50,7 @@ public class DirectoryObjectCheckMemberGroupsCollectionRequest extends BaseColle
      * Invokes the method and calls the callback with the resulting collection of objects
      * @param callback a callback to be invoked with the resulting collection of objects
      */
-    public void post(final ICallback<? super DirectoryObjectCheckMemberGroupsCollectionPage> callback) {
+    public void post(@Nonnull final ICallback<? super DirectoryObjectCheckMemberGroupsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -66,6 +68,7 @@ public class DirectoryObjectCheckMemberGroupsCollectionRequest extends BaseColle
      * Invokes the method and returns the resulting collection of objects
      * @return a collection of objects returned by the method
      */
+    @Nullable
     public DirectoryObjectCheckMemberGroupsCollectionPage post() throws ClientException {
         final DirectoryObjectCheckMemberGroupsCollectionResponse response = post(body);
         return buildFromResponse(response);
@@ -78,7 +81,8 @@ public class DirectoryObjectCheckMemberGroupsCollectionRequest extends BaseColle
      * @param value the select clause
      * @return the updated request
      */
-    public DirectoryObjectCheckMemberGroupsCollectionRequest select(final String value) {
+    @Nonnull
+    public DirectoryObjectCheckMemberGroupsCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -89,6 +93,7 @@ public class DirectoryObjectCheckMemberGroupsCollectionRequest extends BaseColle
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DirectoryObjectCheckMemberGroupsCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -100,7 +105,8 @@ public class DirectoryObjectCheckMemberGroupsCollectionRequest extends BaseColle
      * @param value the expand clause
      * @return the updated request
      */
-    public DirectoryObjectCheckMemberGroupsCollectionRequest expand(final String value) {
+    @Nonnull
+    public DirectoryObjectCheckMemberGroupsCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -111,7 +117,8 @@ public class DirectoryObjectCheckMemberGroupsCollectionRequest extends BaseColle
      * @param value the filter clause
      * @return the updated request
      */
-    public DirectoryObjectCheckMemberGroupsCollectionRequest filter(final String value) {
+    @Nonnull
+    public DirectoryObjectCheckMemberGroupsCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -122,7 +129,8 @@ public class DirectoryObjectCheckMemberGroupsCollectionRequest extends BaseColle
      * @param value the order by clause
      * @return the updated request
      */
-    public DirectoryObjectCheckMemberGroupsCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DirectoryObjectCheckMemberGroupsCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }

@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.models.extensions.UpdateWindowsDeviceAccountActionParameter;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.requests.extensions.ManagedDeviceWithReferenceRequest;
@@ -40,7 +42,7 @@ public class ManagedDeviceCollectionWithReferencesRequest extends BaseCollection
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceCollectionWithReferencesRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedDeviceCollectionResponse.class, ManagedDeviceCollectionWithReferencesPage.class, ManagedDeviceCollectionWithReferencesRequestBuilder.class);
     }
 
@@ -50,7 +52,8 @@ public class ManagedDeviceCollectionWithReferencesRequest extends BaseCollection
      * @param value the expand clause
      * @return the updated request
      */
-    public ManagedDeviceCollectionWithReferencesRequest expand(final String value) {
+    @Nonnull
+    public ManagedDeviceCollectionWithReferencesRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -61,7 +64,8 @@ public class ManagedDeviceCollectionWithReferencesRequest extends BaseCollection
      * @param value the filter clause
      * @return the updated request
      */
-    public ManagedDeviceCollectionWithReferencesRequest filter(final String value) {
+    @Nonnull
+    public ManagedDeviceCollectionWithReferencesRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -72,7 +76,8 @@ public class ManagedDeviceCollectionWithReferencesRequest extends BaseCollection
      * @param value the order by clause
      * @return the updated request
      */
-    public ManagedDeviceCollectionWithReferencesRequest orderBy(final String value) {
+    @Nonnull
+    public ManagedDeviceCollectionWithReferencesRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -83,7 +88,8 @@ public class ManagedDeviceCollectionWithReferencesRequest extends BaseCollection
      * @param value the select clause
      * @return the updated request
      */
-    public ManagedDeviceCollectionWithReferencesRequest select(final String value) {
+    @Nonnull
+    public ManagedDeviceCollectionWithReferencesRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -94,6 +100,7 @@ public class ManagedDeviceCollectionWithReferencesRequest extends BaseCollection
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ManagedDeviceCollectionWithReferencesRequest top(final int value) {
         addTopOption(value);
         return this;

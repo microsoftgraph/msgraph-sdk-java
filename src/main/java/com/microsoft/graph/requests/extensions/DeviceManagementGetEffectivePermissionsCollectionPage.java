@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RolePermission;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceManagementGetEffectivePermissionsCollectionRequestBuilder;
@@ -29,7 +31,7 @@ public class DeviceManagementGetEffectivePermissionsCollectionPage extends BaseC
      * @param response The serialized DeviceManagementGetEffectivePermissionsCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public DeviceManagementGetEffectivePermissionsCollectionPage(final DeviceManagementGetEffectivePermissionsCollectionResponse response, final DeviceManagementGetEffectivePermissionsCollectionRequestBuilder builder) {
+    public DeviceManagementGetEffectivePermissionsCollectionPage(@Nonnull final DeviceManagementGetEffectivePermissionsCollectionResponse response, @Nonnull final DeviceManagementGetEffectivePermissionsCollectionRequestBuilder builder) {
        super(response, builder);
     }
 
@@ -39,7 +41,7 @@ public class DeviceManagementGetEffectivePermissionsCollectionPage extends BaseC
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public DeviceManagementGetEffectivePermissionsCollectionPage(final java.util.List<RolePermission> pageContents, final DeviceManagementGetEffectivePermissionsCollectionRequestBuilder nextRequestBuilder) {
+    public DeviceManagementGetEffectivePermissionsCollectionPage(@Nonnull final java.util.List<RolePermission> pageContents, @Nullable final DeviceManagementGetEffectivePermissionsCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

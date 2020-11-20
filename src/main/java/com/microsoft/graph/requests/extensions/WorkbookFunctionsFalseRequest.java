@@ -7,6 +7,8 @@ import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsFalseRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.core.ClientException;
@@ -28,7 +30,7 @@ public class WorkbookFunctionsFalseRequest extends BaseRequest<WorkbookFunctionR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookFunctionsFalseRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsFalseRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
     }
 
@@ -37,7 +39,7 @@ public class WorkbookFunctionsFalseRequest extends BaseRequest<WorkbookFunctionR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
+    public void post(@Nonnull final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class WorkbookFunctionsFalseRequest extends BaseRequest<WorkbookFunctionR
      * @return the WorkbookFunctionResult
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
+    @Nullable
     public WorkbookFunctionResult post() throws ClientException {
        return send(HttpMethod.POST, null);
     }
@@ -57,7 +60,8 @@ public class WorkbookFunctionsFalseRequest extends BaseRequest<WorkbookFunctionR
      * @param value the select clause
      * @return the updated request
      */
-    public WorkbookFunctionsFalseRequest select(final String value) {
+    @Nonnull
+    public WorkbookFunctionsFalseRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -68,7 +72,8 @@ public class WorkbookFunctionsFalseRequest extends BaseRequest<WorkbookFunctionR
      * @param value the expand clause
      * @return the updated request
      */
-    public WorkbookFunctionsFalseRequest expand(final String value) {
+    @Nonnull
+    public WorkbookFunctionsFalseRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }

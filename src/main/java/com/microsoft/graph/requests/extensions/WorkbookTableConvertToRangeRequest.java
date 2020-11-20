@@ -7,6 +7,8 @@ import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.models.extensions.WorkbookTable;
 import com.microsoft.graph.requests.extensions.WorkbookTableConvertToRangeRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.core.ClientException;
@@ -28,7 +30,7 @@ public class WorkbookTableConvertToRangeRequest extends BaseRequest<WorkbookRang
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookTableConvertToRangeRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableConvertToRangeRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookRange.class);
     }
 
@@ -37,7 +39,7 @@ public class WorkbookTableConvertToRangeRequest extends BaseRequest<WorkbookRang
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<? super WorkbookRange> callback) {
+    public void post(@Nonnull final ICallback<? super WorkbookRange> callback) {
         send(HttpMethod.POST, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class WorkbookTableConvertToRangeRequest extends BaseRequest<WorkbookRang
      * @return the WorkbookRange
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
+    @Nullable
     public WorkbookRange post() throws ClientException {
        return send(HttpMethod.POST, null);
     }
@@ -57,7 +60,8 @@ public class WorkbookTableConvertToRangeRequest extends BaseRequest<WorkbookRang
      * @param value the select clause
      * @return the updated request
      */
-    public WorkbookTableConvertToRangeRequest select(final String value) {
+    @Nonnull
+    public WorkbookTableConvertToRangeRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -68,7 +72,8 @@ public class WorkbookTableConvertToRangeRequest extends BaseRequest<WorkbookRang
      * @param value the expand clause
      * @return the updated request
      */
-    public WorkbookTableConvertToRangeRequest expand(final String value) {
+    @Nonnull
+    public WorkbookTableConvertToRangeRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }

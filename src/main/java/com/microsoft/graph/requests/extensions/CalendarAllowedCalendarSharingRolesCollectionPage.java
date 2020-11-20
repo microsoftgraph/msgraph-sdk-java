@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.generated.CalendarRoleType;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.CalendarAllowedCalendarSharingRolesCollectionRequestBuilder;
@@ -29,7 +31,7 @@ public class CalendarAllowedCalendarSharingRolesCollectionPage extends BaseColle
      * @param response The serialized CalendarAllowedCalendarSharingRolesCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public CalendarAllowedCalendarSharingRolesCollectionPage(final CalendarAllowedCalendarSharingRolesCollectionResponse response, final CalendarAllowedCalendarSharingRolesCollectionRequestBuilder builder) {
+    public CalendarAllowedCalendarSharingRolesCollectionPage(@Nonnull final CalendarAllowedCalendarSharingRolesCollectionResponse response, @Nonnull final CalendarAllowedCalendarSharingRolesCollectionRequestBuilder builder) {
        super(response, builder);
     }
 
@@ -39,7 +41,7 @@ public class CalendarAllowedCalendarSharingRolesCollectionPage extends BaseColle
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public CalendarAllowedCalendarSharingRolesCollectionPage(final java.util.List<CalendarRoleType> pageContents, final CalendarAllowedCalendarSharingRolesCollectionRequestBuilder nextRequestBuilder) {
+    public CalendarAllowedCalendarSharingRolesCollectionPage(@Nonnull final java.util.List<CalendarRoleType> pageContents, @Nullable final CalendarAllowedCalendarSharingRolesCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ResourceOperation;
 import com.microsoft.graph.requests.extensions.ResourceOperationCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.ResourceOperationCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class ResourceOperationCollectionPage extends BaseCollectionPage<Resource
      * @param response the serialized ResourceOperationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ResourceOperationCollectionPage(final ResourceOperationCollectionResponse response, final ResourceOperationCollectionRequestBuilder builder) {
+    public ResourceOperationCollectionPage(@Nonnull final ResourceOperationCollectionResponse response, @Nonnull final ResourceOperationCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class ResourceOperationCollectionPage extends BaseCollectionPage<Resource
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public ResourceOperationCollectionPage(final java.util.List<ResourceOperation> pageContents, final ResourceOperationCollectionRequestBuilder nextRequestBuilder) {
+    public ResourceOperationCollectionPage(@Nonnull final java.util.List<ResourceOperation> pageContents, @Nullable final ResourceOperationCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

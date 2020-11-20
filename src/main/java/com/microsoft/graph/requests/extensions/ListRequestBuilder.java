@@ -19,6 +19,8 @@ import com.microsoft.graph.requests.extensions.SubscriptionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -36,7 +38,7 @@ public class ListRequestBuilder extends BaseRequestBuilder<List> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ListRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ListRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +48,8 @@ public class ListRequestBuilder extends BaseRequestBuilder<List> {
      * @param requestOptions the options for this request
      * @return the ListRequest instance
      */
-    public ListRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ListRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -56,7 +59,8 @@ public class ListRequestBuilder extends BaseRequestBuilder<List> {
      * @param requestOptions the options for this request
      * @return the ListRequest instance
      */
-    public ListRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ListRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ListRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -67,6 +71,7 @@ public class ListRequestBuilder extends BaseRequestBuilder<List> {
      *
      * @return the UserWithReferenceRequestBuilder instance
      */
+    @Nonnull
     public UserWithReferenceRequestBuilder createdByUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
     }
@@ -76,6 +81,7 @@ public class ListRequestBuilder extends BaseRequestBuilder<List> {
      *
      * @return the UserWithReferenceRequestBuilder instance
      */
+    @Nonnull
     public UserWithReferenceRequestBuilder lastModifiedByUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
     }
@@ -84,6 +90,7 @@ public class ListRequestBuilder extends BaseRequestBuilder<List> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public ColumnDefinitionCollectionRequestBuilder columns() {
         return new ColumnDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("columns"), getClient(), null);
     }
@@ -94,7 +101,8 @@ public class ListRequestBuilder extends BaseRequestBuilder<List> {
      * @return the request builder
      * @param id the item identifier
      */
-    public ColumnDefinitionRequestBuilder columns(final String id) {
+    @Nonnull
+    public ColumnDefinitionRequestBuilder columns(@Nonnull final String id) {
         return new ColumnDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("columns") + "/" + id, getClient(), null);
     }
     /**
@@ -102,6 +110,7 @@ public class ListRequestBuilder extends BaseRequestBuilder<List> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public ContentTypeCollectionRequestBuilder contentTypes() {
         return new ContentTypeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contentTypes"), getClient(), null);
     }
@@ -112,7 +121,8 @@ public class ListRequestBuilder extends BaseRequestBuilder<List> {
      * @return the request builder
      * @param id the item identifier
      */
-    public ContentTypeRequestBuilder contentTypes(final String id) {
+    @Nonnull
+    public ContentTypeRequestBuilder contentTypes(@Nonnull final String id) {
         return new ContentTypeRequestBuilder(getRequestUrlWithAdditionalSegment("contentTypes") + "/" + id, getClient(), null);
     }
 
@@ -121,6 +131,7 @@ public class ListRequestBuilder extends BaseRequestBuilder<List> {
      *
      * @return the DriveRequestBuilder instance
      */
+    @Nonnull
     public DriveRequestBuilder drive() {
         return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drive"), getClient(), null);
     }
@@ -129,6 +140,7 @@ public class ListRequestBuilder extends BaseRequestBuilder<List> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public ListItemCollectionRequestBuilder items() {
         return new ListItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
     }
@@ -139,7 +151,8 @@ public class ListRequestBuilder extends BaseRequestBuilder<List> {
      * @return the request builder
      * @param id the item identifier
      */
-    public ListItemRequestBuilder items(final String id) {
+    @Nonnull
+    public ListItemRequestBuilder items(@Nonnull final String id) {
         return new ListItemRequestBuilder(getRequestUrlWithAdditionalSegment("items") + "/" + id, getClient(), null);
     }
     /**
@@ -147,6 +160,7 @@ public class ListRequestBuilder extends BaseRequestBuilder<List> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public SubscriptionCollectionRequestBuilder subscriptions() {
         return new SubscriptionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("subscriptions"), getClient(), null);
     }
@@ -157,7 +171,8 @@ public class ListRequestBuilder extends BaseRequestBuilder<List> {
      * @return the request builder
      * @param id the item identifier
      */
-    public SubscriptionRequestBuilder subscriptions(final String id) {
+    @Nonnull
+    public SubscriptionRequestBuilder subscriptions(@Nonnull final String id) {
         return new SubscriptionRequestBuilder(getRequestUrlWithAdditionalSegment("subscriptions") + "/" + id, getClient(), null);
     }
 }

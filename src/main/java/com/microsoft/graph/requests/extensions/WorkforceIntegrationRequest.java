@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkforceIntegration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class WorkforceIntegrationRequest extends BaseRequest<WorkforceIntegratio
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkforceIntegrationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkforceIntegrationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkforceIntegration.class);
     }
 
@@ -37,7 +39,7 @@ public class WorkforceIntegrationRequest extends BaseRequest<WorkforceIntegratio
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkforceIntegration> callback) {
+    public void get(@Nonnull final ICallback<? super WorkforceIntegration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class WorkforceIntegrationRequest extends BaseRequest<WorkforceIntegratio
      * @return the WorkforceIntegration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WorkforceIntegration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class WorkforceIntegrationRequest extends BaseRequest<WorkforceIntegratio
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkforceIntegration> callback) {
+    public void delete(@Nonnull final ICallback<? super WorkforceIntegration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class WorkforceIntegrationRequest extends BaseRequest<WorkforceIntegratio
      * @param sourceWorkforceIntegration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkforceIntegration sourceWorkforceIntegration, final ICallback<? super WorkforceIntegration> callback) {
+    public void patch(@Nonnull final WorkforceIntegration sourceWorkforceIntegration, @Nonnull final ICallback<? super WorkforceIntegration> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkforceIntegration);
     }
 
@@ -86,7 +89,8 @@ public class WorkforceIntegrationRequest extends BaseRequest<WorkforceIntegratio
      * @return the updated WorkforceIntegration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkforceIntegration patch(final WorkforceIntegration sourceWorkforceIntegration) throws ClientException {
+    @Nullable
+    public WorkforceIntegration patch(@Nonnull final WorkforceIntegration sourceWorkforceIntegration) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkforceIntegration);
     }
 
@@ -96,7 +100,7 @@ public class WorkforceIntegrationRequest extends BaseRequest<WorkforceIntegratio
      * @param newWorkforceIntegration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkforceIntegration newWorkforceIntegration, final ICallback<? super WorkforceIntegration> callback) {
+    public void post(@Nonnull final WorkforceIntegration newWorkforceIntegration, @Nonnull final ICallback<? super WorkforceIntegration> callback) {
         send(HttpMethod.POST, callback, newWorkforceIntegration);
     }
 
@@ -107,7 +111,8 @@ public class WorkforceIntegrationRequest extends BaseRequest<WorkforceIntegratio
      * @return the created WorkforceIntegration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkforceIntegration post(final WorkforceIntegration newWorkforceIntegration) throws ClientException {
+    @Nullable
+    public WorkforceIntegration post(@Nonnull final WorkforceIntegration newWorkforceIntegration) throws ClientException {
         return send(HttpMethod.POST, newWorkforceIntegration);
     }
 
@@ -117,7 +122,7 @@ public class WorkforceIntegrationRequest extends BaseRequest<WorkforceIntegratio
      * @param newWorkforceIntegration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkforceIntegration newWorkforceIntegration, final ICallback<? super WorkforceIntegration> callback) {
+    public void put(@Nonnull final WorkforceIntegration newWorkforceIntegration, @Nonnull final ICallback<? super WorkforceIntegration> callback) {
         send(HttpMethod.PUT, callback, newWorkforceIntegration);
     }
 
@@ -128,7 +133,8 @@ public class WorkforceIntegrationRequest extends BaseRequest<WorkforceIntegratio
      * @return the created WorkforceIntegration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkforceIntegration put(final WorkforceIntegration newWorkforceIntegration) throws ClientException {
+    @Nullable
+    public WorkforceIntegration put(@Nonnull final WorkforceIntegration newWorkforceIntegration) throws ClientException {
         return send(HttpMethod.PUT, newWorkforceIntegration);
     }
 
@@ -138,7 +144,8 @@ public class WorkforceIntegrationRequest extends BaseRequest<WorkforceIntegratio
      * @param value the select clause
      * @return the updated request
      */
-     public WorkforceIntegrationRequest select(final String value) {
+     @Nonnull
+     public WorkforceIntegrationRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class WorkforceIntegrationRequest extends BaseRequest<WorkforceIntegratio
      * @param value the expand clause
      * @return the updated request
      */
-     public WorkforceIntegrationRequest expand(final String value) {
+     @Nonnull
+     public WorkforceIntegrationRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

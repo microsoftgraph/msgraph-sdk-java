@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.IosUpdateDeviceStatus;
 import com.microsoft.graph.requests.extensions.IosUpdateDeviceStatusCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.IosUpdateDeviceStatusCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class IosUpdateDeviceStatusCollectionPage extends BaseCollectionPage<IosU
      * @param response the serialized IosUpdateDeviceStatusCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public IosUpdateDeviceStatusCollectionPage(final IosUpdateDeviceStatusCollectionResponse response, final IosUpdateDeviceStatusCollectionRequestBuilder builder) {
+    public IosUpdateDeviceStatusCollectionPage(@Nonnull final IosUpdateDeviceStatusCollectionResponse response, @Nonnull final IosUpdateDeviceStatusCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class IosUpdateDeviceStatusCollectionPage extends BaseCollectionPage<IosU
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public IosUpdateDeviceStatusCollectionPage(final java.util.List<IosUpdateDeviceStatus> pageContents, final IosUpdateDeviceStatusCollectionRequestBuilder nextRequestBuilder) {
+    public IosUpdateDeviceStatusCollectionPage(@Nonnull final java.util.List<IosUpdateDeviceStatus> pageContents, @Nullable final IosUpdateDeviceStatusCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

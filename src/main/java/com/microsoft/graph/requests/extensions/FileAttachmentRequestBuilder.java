@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.FileAttachment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -27,7 +29,7 @@ public class FileAttachmentRequestBuilder extends BaseRequestBuilder<FileAttachm
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public FileAttachmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public FileAttachmentRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -37,7 +39,8 @@ public class FileAttachmentRequestBuilder extends BaseRequestBuilder<FileAttachm
      * @param requestOptions the options for this request
      * @return the FileAttachmentRequest instance
      */
-    public FileAttachmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public FileAttachmentRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,7 +50,8 @@ public class FileAttachmentRequestBuilder extends BaseRequestBuilder<FileAttachm
      * @param requestOptions the options for this request
      * @return the FileAttachmentRequest instance
      */
-    public FileAttachmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public FileAttachmentRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.FileAttachmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -57,6 +61,7 @@ public class FileAttachmentRequestBuilder extends BaseRequestBuilder<FileAttachm
      * Gets a request builder to get the binary value of the object
      * @return the stream request builder
      */
+    @Nonnull
     public FileAttachmentStreamRequestBuilder content() {
         return new FileAttachmentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("$value"), getClient(), null);
     }

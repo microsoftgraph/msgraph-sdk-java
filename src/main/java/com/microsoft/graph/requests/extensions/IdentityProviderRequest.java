@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IdentityProvider;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class IdentityProviderRequest extends BaseRequest<IdentityProvider> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IdentityProviderRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IdentityProviderRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IdentityProvider.class);
     }
 
@@ -37,7 +39,7 @@ public class IdentityProviderRequest extends BaseRequest<IdentityProvider> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IdentityProvider> callback) {
+    public void get(@Nonnull final ICallback<? super IdentityProvider> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class IdentityProviderRequest extends BaseRequest<IdentityProvider> {
      * @return the IdentityProvider from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public IdentityProvider get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class IdentityProviderRequest extends BaseRequest<IdentityProvider> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IdentityProvider> callback) {
+    public void delete(@Nonnull final ICallback<? super IdentityProvider> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class IdentityProviderRequest extends BaseRequest<IdentityProvider> {
      * @param sourceIdentityProvider the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IdentityProvider sourceIdentityProvider, final ICallback<? super IdentityProvider> callback) {
+    public void patch(@Nonnull final IdentityProvider sourceIdentityProvider, @Nonnull final ICallback<? super IdentityProvider> callback) {
         send(HttpMethod.PATCH, callback, sourceIdentityProvider);
     }
 
@@ -86,7 +89,8 @@ public class IdentityProviderRequest extends BaseRequest<IdentityProvider> {
      * @return the updated IdentityProvider
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IdentityProvider patch(final IdentityProvider sourceIdentityProvider) throws ClientException {
+    @Nullable
+    public IdentityProvider patch(@Nonnull final IdentityProvider sourceIdentityProvider) throws ClientException {
         return send(HttpMethod.PATCH, sourceIdentityProvider);
     }
 
@@ -96,7 +100,7 @@ public class IdentityProviderRequest extends BaseRequest<IdentityProvider> {
      * @param newIdentityProvider the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IdentityProvider newIdentityProvider, final ICallback<? super IdentityProvider> callback) {
+    public void post(@Nonnull final IdentityProvider newIdentityProvider, @Nonnull final ICallback<? super IdentityProvider> callback) {
         send(HttpMethod.POST, callback, newIdentityProvider);
     }
 
@@ -107,7 +111,8 @@ public class IdentityProviderRequest extends BaseRequest<IdentityProvider> {
      * @return the created IdentityProvider
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IdentityProvider post(final IdentityProvider newIdentityProvider) throws ClientException {
+    @Nullable
+    public IdentityProvider post(@Nonnull final IdentityProvider newIdentityProvider) throws ClientException {
         return send(HttpMethod.POST, newIdentityProvider);
     }
 
@@ -117,7 +122,7 @@ public class IdentityProviderRequest extends BaseRequest<IdentityProvider> {
      * @param newIdentityProvider the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IdentityProvider newIdentityProvider, final ICallback<? super IdentityProvider> callback) {
+    public void put(@Nonnull final IdentityProvider newIdentityProvider, @Nonnull final ICallback<? super IdentityProvider> callback) {
         send(HttpMethod.PUT, callback, newIdentityProvider);
     }
 
@@ -128,7 +133,8 @@ public class IdentityProviderRequest extends BaseRequest<IdentityProvider> {
      * @return the created IdentityProvider
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IdentityProvider put(final IdentityProvider newIdentityProvider) throws ClientException {
+    @Nullable
+    public IdentityProvider put(@Nonnull final IdentityProvider newIdentityProvider) throws ClientException {
         return send(HttpMethod.PUT, newIdentityProvider);
     }
 
@@ -138,7 +144,8 @@ public class IdentityProviderRequest extends BaseRequest<IdentityProvider> {
      * @param value the select clause
      * @return the updated request
      */
-     public IdentityProviderRequest select(final String value) {
+     @Nonnull
+     public IdentityProviderRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class IdentityProviderRequest extends BaseRequest<IdentityProvider> {
      * @param value the expand clause
      * @return the updated request
      */
-     public IdentityProviderRequest expand(final String value) {
+     @Nonnull
+     public IdentityProviderRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

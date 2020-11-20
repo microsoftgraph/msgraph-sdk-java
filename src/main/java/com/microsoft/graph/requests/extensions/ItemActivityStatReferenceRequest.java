@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.ItemActivityCollectionRequestBuil
 import com.microsoft.graph.requests.extensions.ItemActivityRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseReferenceRequest;
@@ -32,7 +34,7 @@ public class ItemActivityStatReferenceRequest extends BaseReferenceRequest<ItemA
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ItemActivityStatReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ItemActivityStatReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ItemActivityStat.class);
     }
 
@@ -42,7 +44,8 @@ public class ItemActivityStatReferenceRequest extends BaseReferenceRequest<ItemA
      * @param value the select clause
      * @return the updated request
      */
-    public ItemActivityStatReferenceRequest select(final String value) {
+    @Nonnull
+    public ItemActivityStatReferenceRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -53,7 +56,8 @@ public class ItemActivityStatReferenceRequest extends BaseReferenceRequest<ItemA
      * @param value the expand clause
      * @return the updated request
      */
-    public ItemActivityStatReferenceRequest expand(final String value) {
+    @Nonnull
+    public ItemActivityStatReferenceRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -63,7 +67,7 @@ public class ItemActivityStatReferenceRequest extends BaseReferenceRequest<ItemA
      * @param srcItemActivityStat the ItemActivityStat reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(ItemActivityStat srcItemActivityStat, final ICallback<? super ItemActivityStat> callback) {
+    public void put(@Nonnull final ItemActivityStat srcItemActivityStat, @Nonnull final ICallback<? super ItemActivityStat> callback) {
         send(HttpMethod.PUT, callback, srcItemActivityStat);
     }
 
@@ -74,7 +78,8 @@ public class ItemActivityStatReferenceRequest extends BaseReferenceRequest<ItemA
      * @return the ItemActivityStat
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    public ItemActivityStat put(ItemActivityStat srcItemActivityStat) throws ClientException {
+    @Nullable
+    public ItemActivityStat put(@Nonnull final ItemActivityStat srcItemActivityStat) throws ClientException {
         return send(HttpMethod.PUT, srcItemActivityStat);
     }
 }

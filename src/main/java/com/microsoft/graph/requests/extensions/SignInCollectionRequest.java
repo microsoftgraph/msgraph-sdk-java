@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.AuditLogRoot;
 import com.microsoft.graph.models.extensions.SignIn;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class SignInCollectionRequest extends BaseCollectionRequest<SignIn, SignI
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SignInCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SignInCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SignInCollectionResponse.class, SignInCollectionPage.class, SignInCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class SignInCollectionRequest extends BaseCollectionRequest<SignIn, SignI
      * @param newSignIn the SignIn to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final SignIn newSignIn, final ICallback<? super SignIn> callback) {
+    public void post(@Nonnull final SignIn newSignIn, @Nonnull final ICallback<? super SignIn> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SignInRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class SignInCollectionRequest extends BaseCollectionRequest<SignIn, SignI
      * @param newSignIn the SignIn to create
      * @return the newly created object
      */
-    public SignIn post(final SignIn newSignIn) throws ClientException {
+    @Nonnull
+    public SignIn post(@Nonnull final SignIn newSignIn) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SignInRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class SignInCollectionRequest extends BaseCollectionRequest<SignIn, SignI
      * @param value the expand clause
      * @return the updated request
      */
-    public SignInCollectionRequest expand(final String value) {
+    @Nonnull
+    public SignInCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class SignInCollectionRequest extends BaseCollectionRequest<SignIn, SignI
      * @param value the filter clause
      * @return the updated request
      */
-    public SignInCollectionRequest filter(final String value) {
+    @Nonnull
+    public SignInCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class SignInCollectionRequest extends BaseCollectionRequest<SignIn, SignI
      * @param value the order by clause
      * @return the updated request
      */
-    public SignInCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public SignInCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class SignInCollectionRequest extends BaseCollectionRequest<SignIn, SignI
      * @param value the select clause
      * @return the updated request
      */
-    public SignInCollectionRequest select(final String value) {
+    @Nonnull
+    public SignInCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class SignInCollectionRequest extends BaseCollectionRequest<SignIn, SignI
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public SignInCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class SignInCollectionRequest extends BaseCollectionRequest<SignIn, SignI
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public SignInCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class SignInCollectionRequest extends BaseCollectionRequest<SignIn, SignI
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public SignInCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public SignInCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

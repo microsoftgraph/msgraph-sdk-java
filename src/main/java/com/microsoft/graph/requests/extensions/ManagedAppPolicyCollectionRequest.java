@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.ManagedAppPolicy;
 import com.microsoft.graph.models.extensions.ManagedMobileApp;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,7 +37,7 @@ public class ManagedAppPolicyCollectionRequest extends BaseCollectionRequest<Man
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedAppPolicyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppPolicyCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedAppPolicyCollectionResponse.class, ManagedAppPolicyCollectionPage.class, ManagedAppPolicyCollectionRequestBuilder.class);
     }
 
@@ -44,7 +46,7 @@ public class ManagedAppPolicyCollectionRequest extends BaseCollectionRequest<Man
      * @param newManagedAppPolicy the ManagedAppPolicy to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final ManagedAppPolicy newManagedAppPolicy, final ICallback<? super ManagedAppPolicy> callback) {
+    public void post(@Nonnull final ManagedAppPolicy newManagedAppPolicy, @Nonnull final ICallback<? super ManagedAppPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedAppPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -56,7 +58,8 @@ public class ManagedAppPolicyCollectionRequest extends BaseCollectionRequest<Man
      * @param newManagedAppPolicy the ManagedAppPolicy to create
      * @return the newly created object
      */
-    public ManagedAppPolicy post(final ManagedAppPolicy newManagedAppPolicy) throws ClientException {
+    @Nonnull
+    public ManagedAppPolicy post(@Nonnull final ManagedAppPolicy newManagedAppPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedAppPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -69,7 +72,8 @@ public class ManagedAppPolicyCollectionRequest extends BaseCollectionRequest<Man
      * @param value the expand clause
      * @return the updated request
      */
-    public ManagedAppPolicyCollectionRequest expand(final String value) {
+    @Nonnull
+    public ManagedAppPolicyCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -80,7 +84,8 @@ public class ManagedAppPolicyCollectionRequest extends BaseCollectionRequest<Man
      * @param value the filter clause
      * @return the updated request
      */
-    public ManagedAppPolicyCollectionRequest filter(final String value) {
+    @Nonnull
+    public ManagedAppPolicyCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -91,7 +96,8 @@ public class ManagedAppPolicyCollectionRequest extends BaseCollectionRequest<Man
      * @param value the order by clause
      * @return the updated request
      */
-    public ManagedAppPolicyCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ManagedAppPolicyCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -102,7 +108,8 @@ public class ManagedAppPolicyCollectionRequest extends BaseCollectionRequest<Man
      * @param value the select clause
      * @return the updated request
      */
-    public ManagedAppPolicyCollectionRequest select(final String value) {
+    @Nonnull
+    public ManagedAppPolicyCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -113,6 +120,7 @@ public class ManagedAppPolicyCollectionRequest extends BaseCollectionRequest<Man
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ManagedAppPolicyCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -124,6 +132,7 @@ public class ManagedAppPolicyCollectionRequest extends BaseCollectionRequest<Man
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ManagedAppPolicyCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -135,7 +144,8 @@ public class ManagedAppPolicyCollectionRequest extends BaseCollectionRequest<Man
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ManagedAppPolicyCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ManagedAppPolicyCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

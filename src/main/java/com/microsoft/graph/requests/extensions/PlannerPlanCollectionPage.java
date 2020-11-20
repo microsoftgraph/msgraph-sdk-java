@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.PlannerPlan;
 import com.microsoft.graph.requests.extensions.PlannerPlanCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.PlannerPlanCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class PlannerPlanCollectionPage extends BaseCollectionPage<PlannerPlan, P
      * @param response the serialized PlannerPlanCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public PlannerPlanCollectionPage(final PlannerPlanCollectionResponse response, final PlannerPlanCollectionRequestBuilder builder) {
+    public PlannerPlanCollectionPage(@Nonnull final PlannerPlanCollectionResponse response, @Nonnull final PlannerPlanCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class PlannerPlanCollectionPage extends BaseCollectionPage<PlannerPlan, P
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public PlannerPlanCollectionPage(final java.util.List<PlannerPlan> pageContents, final PlannerPlanCollectionRequestBuilder nextRequestBuilder) {
+    public PlannerPlanCollectionPage(@Nonnull final java.util.List<PlannerPlan> pageContents, @Nullable final PlannerPlanCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.WorkbookChartPointFormat;
 import com.microsoft.graph.requests.extensions.WorkbookChartFillRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,7 +31,7 @@ public class WorkbookChartPointFormatRequest extends BaseRequest<WorkbookChartPo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartPointFormatRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartPointFormatRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChartPointFormat.class);
     }
 
@@ -38,7 +40,7 @@ public class WorkbookChartPointFormatRequest extends BaseRequest<WorkbookChartPo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookChartPointFormat> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookChartPointFormat> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class WorkbookChartPointFormatRequest extends BaseRequest<WorkbookChartPo
      * @return the WorkbookChartPointFormat from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WorkbookChartPointFormat get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class WorkbookChartPointFormatRequest extends BaseRequest<WorkbookChartPo
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookChartPointFormat> callback) {
+    public void delete(@Nonnull final ICallback<? super WorkbookChartPointFormat> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class WorkbookChartPointFormatRequest extends BaseRequest<WorkbookChartPo
      * @param sourceWorkbookChartPointFormat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookChartPointFormat sourceWorkbookChartPointFormat, final ICallback<? super WorkbookChartPointFormat> callback) {
+    public void patch(@Nonnull final WorkbookChartPointFormat sourceWorkbookChartPointFormat, @Nonnull final ICallback<? super WorkbookChartPointFormat> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartPointFormat);
     }
 
@@ -87,7 +90,8 @@ public class WorkbookChartPointFormatRequest extends BaseRequest<WorkbookChartPo
      * @return the updated WorkbookChartPointFormat
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartPointFormat patch(final WorkbookChartPointFormat sourceWorkbookChartPointFormat) throws ClientException {
+    @Nullable
+    public WorkbookChartPointFormat patch(@Nonnull final WorkbookChartPointFormat sourceWorkbookChartPointFormat) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookChartPointFormat);
     }
 
@@ -97,7 +101,7 @@ public class WorkbookChartPointFormatRequest extends BaseRequest<WorkbookChartPo
      * @param newWorkbookChartPointFormat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookChartPointFormat newWorkbookChartPointFormat, final ICallback<? super WorkbookChartPointFormat> callback) {
+    public void post(@Nonnull final WorkbookChartPointFormat newWorkbookChartPointFormat, @Nonnull final ICallback<? super WorkbookChartPointFormat> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartPointFormat);
     }
 
@@ -108,7 +112,8 @@ public class WorkbookChartPointFormatRequest extends BaseRequest<WorkbookChartPo
      * @return the created WorkbookChartPointFormat
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartPointFormat post(final WorkbookChartPointFormat newWorkbookChartPointFormat) throws ClientException {
+    @Nullable
+    public WorkbookChartPointFormat post(@Nonnull final WorkbookChartPointFormat newWorkbookChartPointFormat) throws ClientException {
         return send(HttpMethod.POST, newWorkbookChartPointFormat);
     }
 
@@ -118,7 +123,7 @@ public class WorkbookChartPointFormatRequest extends BaseRequest<WorkbookChartPo
      * @param newWorkbookChartPointFormat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookChartPointFormat newWorkbookChartPointFormat, final ICallback<? super WorkbookChartPointFormat> callback) {
+    public void put(@Nonnull final WorkbookChartPointFormat newWorkbookChartPointFormat, @Nonnull final ICallback<? super WorkbookChartPointFormat> callback) {
         send(HttpMethod.PUT, callback, newWorkbookChartPointFormat);
     }
 
@@ -129,7 +134,8 @@ public class WorkbookChartPointFormatRequest extends BaseRequest<WorkbookChartPo
      * @return the created WorkbookChartPointFormat
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartPointFormat put(final WorkbookChartPointFormat newWorkbookChartPointFormat) throws ClientException {
+    @Nullable
+    public WorkbookChartPointFormat put(@Nonnull final WorkbookChartPointFormat newWorkbookChartPointFormat) throws ClientException {
         return send(HttpMethod.PUT, newWorkbookChartPointFormat);
     }
 
@@ -139,7 +145,8 @@ public class WorkbookChartPointFormatRequest extends BaseRequest<WorkbookChartPo
      * @param value the select clause
      * @return the updated request
      */
-     public WorkbookChartPointFormatRequest select(final String value) {
+     @Nonnull
+     public WorkbookChartPointFormatRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -150,7 +157,8 @@ public class WorkbookChartPointFormatRequest extends BaseRequest<WorkbookChartPo
      * @param value the expand clause
      * @return the updated request
      */
-     public WorkbookChartPointFormatRequest expand(final String value) {
+     @Nonnull
+     public WorkbookChartPointFormatRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

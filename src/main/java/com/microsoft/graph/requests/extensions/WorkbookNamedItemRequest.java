@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -30,7 +32,7 @@ public class WorkbookNamedItemRequest extends BaseRequest<WorkbookNamedItem> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookNamedItemRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookNamedItemRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookNamedItem.class);
     }
 
@@ -39,7 +41,7 @@ public class WorkbookNamedItemRequest extends BaseRequest<WorkbookNamedItem> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookNamedItem> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookNamedItem> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -49,6 +51,7 @@ public class WorkbookNamedItemRequest extends BaseRequest<WorkbookNamedItem> {
      * @return the WorkbookNamedItem from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WorkbookNamedItem get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -58,7 +61,7 @@ public class WorkbookNamedItemRequest extends BaseRequest<WorkbookNamedItem> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookNamedItem> callback) {
+    public void delete(@Nonnull final ICallback<? super WorkbookNamedItem> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +80,7 @@ public class WorkbookNamedItemRequest extends BaseRequest<WorkbookNamedItem> {
      * @param sourceWorkbookNamedItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookNamedItem sourceWorkbookNamedItem, final ICallback<? super WorkbookNamedItem> callback) {
+    public void patch(@Nonnull final WorkbookNamedItem sourceWorkbookNamedItem, @Nonnull final ICallback<? super WorkbookNamedItem> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookNamedItem);
     }
 
@@ -88,7 +91,8 @@ public class WorkbookNamedItemRequest extends BaseRequest<WorkbookNamedItem> {
      * @return the updated WorkbookNamedItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookNamedItem patch(final WorkbookNamedItem sourceWorkbookNamedItem) throws ClientException {
+    @Nullable
+    public WorkbookNamedItem patch(@Nonnull final WorkbookNamedItem sourceWorkbookNamedItem) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookNamedItem);
     }
 
@@ -98,7 +102,7 @@ public class WorkbookNamedItemRequest extends BaseRequest<WorkbookNamedItem> {
      * @param newWorkbookNamedItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookNamedItem newWorkbookNamedItem, final ICallback<? super WorkbookNamedItem> callback) {
+    public void post(@Nonnull final WorkbookNamedItem newWorkbookNamedItem, @Nonnull final ICallback<? super WorkbookNamedItem> callback) {
         send(HttpMethod.POST, callback, newWorkbookNamedItem);
     }
 
@@ -109,7 +113,8 @@ public class WorkbookNamedItemRequest extends BaseRequest<WorkbookNamedItem> {
      * @return the created WorkbookNamedItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookNamedItem post(final WorkbookNamedItem newWorkbookNamedItem) throws ClientException {
+    @Nullable
+    public WorkbookNamedItem post(@Nonnull final WorkbookNamedItem newWorkbookNamedItem) throws ClientException {
         return send(HttpMethod.POST, newWorkbookNamedItem);
     }
 
@@ -119,7 +124,7 @@ public class WorkbookNamedItemRequest extends BaseRequest<WorkbookNamedItem> {
      * @param newWorkbookNamedItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookNamedItem newWorkbookNamedItem, final ICallback<? super WorkbookNamedItem> callback) {
+    public void put(@Nonnull final WorkbookNamedItem newWorkbookNamedItem, @Nonnull final ICallback<? super WorkbookNamedItem> callback) {
         send(HttpMethod.PUT, callback, newWorkbookNamedItem);
     }
 
@@ -130,7 +135,8 @@ public class WorkbookNamedItemRequest extends BaseRequest<WorkbookNamedItem> {
      * @return the created WorkbookNamedItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookNamedItem put(final WorkbookNamedItem newWorkbookNamedItem) throws ClientException {
+    @Nullable
+    public WorkbookNamedItem put(@Nonnull final WorkbookNamedItem newWorkbookNamedItem) throws ClientException {
         return send(HttpMethod.PUT, newWorkbookNamedItem);
     }
 
@@ -140,7 +146,8 @@ public class WorkbookNamedItemRequest extends BaseRequest<WorkbookNamedItem> {
      * @param value the select clause
      * @return the updated request
      */
-     public WorkbookNamedItemRequest select(final String value) {
+     @Nonnull
+     public WorkbookNamedItemRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -151,7 +158,8 @@ public class WorkbookNamedItemRequest extends BaseRequest<WorkbookNamedItem> {
      * @param value the expand clause
      * @return the updated request
      */
-     public WorkbookNamedItemRequest expand(final String value) {
+     @Nonnull
+     public WorkbookNamedItemRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

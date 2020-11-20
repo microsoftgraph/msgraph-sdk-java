@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.WorkforceIntegrationCollectionReq
 import com.microsoft.graph.requests.extensions.WorkforceIntegrationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -30,7 +32,7 @@ public class TeamworkRequest extends BaseRequest<Teamwork> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamworkRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamworkRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Teamwork.class);
     }
 
@@ -39,7 +41,7 @@ public class TeamworkRequest extends BaseRequest<Teamwork> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Teamwork> callback) {
+    public void get(@Nonnull final ICallback<? super Teamwork> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -49,6 +51,7 @@ public class TeamworkRequest extends BaseRequest<Teamwork> {
      * @return the Teamwork from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Teamwork get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -58,7 +61,7 @@ public class TeamworkRequest extends BaseRequest<Teamwork> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Teamwork> callback) {
+    public void delete(@Nonnull final ICallback<? super Teamwork> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +80,7 @@ public class TeamworkRequest extends BaseRequest<Teamwork> {
      * @param sourceTeamwork the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Teamwork sourceTeamwork, final ICallback<? super Teamwork> callback) {
+    public void patch(@Nonnull final Teamwork sourceTeamwork, @Nonnull final ICallback<? super Teamwork> callback) {
         send(HttpMethod.PATCH, callback, sourceTeamwork);
     }
 
@@ -88,7 +91,8 @@ public class TeamworkRequest extends BaseRequest<Teamwork> {
      * @return the updated Teamwork
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Teamwork patch(final Teamwork sourceTeamwork) throws ClientException {
+    @Nullable
+    public Teamwork patch(@Nonnull final Teamwork sourceTeamwork) throws ClientException {
         return send(HttpMethod.PATCH, sourceTeamwork);
     }
 
@@ -98,7 +102,7 @@ public class TeamworkRequest extends BaseRequest<Teamwork> {
      * @param newTeamwork the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Teamwork newTeamwork, final ICallback<? super Teamwork> callback) {
+    public void post(@Nonnull final Teamwork newTeamwork, @Nonnull final ICallback<? super Teamwork> callback) {
         send(HttpMethod.POST, callback, newTeamwork);
     }
 
@@ -109,7 +113,8 @@ public class TeamworkRequest extends BaseRequest<Teamwork> {
      * @return the created Teamwork
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Teamwork post(final Teamwork newTeamwork) throws ClientException {
+    @Nullable
+    public Teamwork post(@Nonnull final Teamwork newTeamwork) throws ClientException {
         return send(HttpMethod.POST, newTeamwork);
     }
 
@@ -119,7 +124,7 @@ public class TeamworkRequest extends BaseRequest<Teamwork> {
      * @param newTeamwork the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Teamwork newTeamwork, final ICallback<? super Teamwork> callback) {
+    public void put(@Nonnull final Teamwork newTeamwork, @Nonnull final ICallback<? super Teamwork> callback) {
         send(HttpMethod.PUT, callback, newTeamwork);
     }
 
@@ -130,7 +135,8 @@ public class TeamworkRequest extends BaseRequest<Teamwork> {
      * @return the created Teamwork
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Teamwork put(final Teamwork newTeamwork) throws ClientException {
+    @Nullable
+    public Teamwork put(@Nonnull final Teamwork newTeamwork) throws ClientException {
         return send(HttpMethod.PUT, newTeamwork);
     }
 
@@ -140,7 +146,8 @@ public class TeamworkRequest extends BaseRequest<Teamwork> {
      * @param value the select clause
      * @return the updated request
      */
-     public TeamworkRequest select(final String value) {
+     @Nonnull
+     public TeamworkRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -151,7 +158,8 @@ public class TeamworkRequest extends BaseRequest<Teamwork> {
      * @param value the expand clause
      * @return the updated request
      */
-     public TeamworkRequest expand(final String value) {
+     @Nonnull
+     public TeamworkRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosCertificateProfile;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class IosCertificateProfileRequest extends BaseRequest<IosCertificateProf
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosCertificateProfileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IosCertificateProfileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IosCertificateProfile.class);
     }
 
@@ -37,7 +39,7 @@ public class IosCertificateProfileRequest extends BaseRequest<IosCertificateProf
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IosCertificateProfile> callback) {
+    public void get(@Nonnull final ICallback<? super IosCertificateProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class IosCertificateProfileRequest extends BaseRequest<IosCertificateProf
      * @return the IosCertificateProfile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public IosCertificateProfile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class IosCertificateProfileRequest extends BaseRequest<IosCertificateProf
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IosCertificateProfile> callback) {
+    public void delete(@Nonnull final ICallback<? super IosCertificateProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class IosCertificateProfileRequest extends BaseRequest<IosCertificateProf
      * @param sourceIosCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosCertificateProfile sourceIosCertificateProfile, final ICallback<? super IosCertificateProfile> callback) {
+    public void patch(@Nonnull final IosCertificateProfile sourceIosCertificateProfile, @Nonnull final ICallback<? super IosCertificateProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceIosCertificateProfile);
     }
 
@@ -86,7 +89,8 @@ public class IosCertificateProfileRequest extends BaseRequest<IosCertificateProf
      * @return the updated IosCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosCertificateProfile patch(final IosCertificateProfile sourceIosCertificateProfile) throws ClientException {
+    @Nullable
+    public IosCertificateProfile patch(@Nonnull final IosCertificateProfile sourceIosCertificateProfile) throws ClientException {
         return send(HttpMethod.PATCH, sourceIosCertificateProfile);
     }
 
@@ -96,7 +100,7 @@ public class IosCertificateProfileRequest extends BaseRequest<IosCertificateProf
      * @param newIosCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosCertificateProfile newIosCertificateProfile, final ICallback<? super IosCertificateProfile> callback) {
+    public void post(@Nonnull final IosCertificateProfile newIosCertificateProfile, @Nonnull final ICallback<? super IosCertificateProfile> callback) {
         send(HttpMethod.POST, callback, newIosCertificateProfile);
     }
 
@@ -107,7 +111,8 @@ public class IosCertificateProfileRequest extends BaseRequest<IosCertificateProf
      * @return the created IosCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosCertificateProfile post(final IosCertificateProfile newIosCertificateProfile) throws ClientException {
+    @Nullable
+    public IosCertificateProfile post(@Nonnull final IosCertificateProfile newIosCertificateProfile) throws ClientException {
         return send(HttpMethod.POST, newIosCertificateProfile);
     }
 
@@ -117,7 +122,7 @@ public class IosCertificateProfileRequest extends BaseRequest<IosCertificateProf
      * @param newIosCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosCertificateProfile newIosCertificateProfile, final ICallback<? super IosCertificateProfile> callback) {
+    public void put(@Nonnull final IosCertificateProfile newIosCertificateProfile, @Nonnull final ICallback<? super IosCertificateProfile> callback) {
         send(HttpMethod.PUT, callback, newIosCertificateProfile);
     }
 
@@ -128,7 +133,8 @@ public class IosCertificateProfileRequest extends BaseRequest<IosCertificateProf
      * @return the created IosCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosCertificateProfile put(final IosCertificateProfile newIosCertificateProfile) throws ClientException {
+    @Nullable
+    public IosCertificateProfile put(@Nonnull final IosCertificateProfile newIosCertificateProfile) throws ClientException {
         return send(HttpMethod.PUT, newIosCertificateProfile);
     }
 
@@ -138,7 +144,8 @@ public class IosCertificateProfileRequest extends BaseRequest<IosCertificateProf
      * @param value the select clause
      * @return the updated request
      */
-     public IosCertificateProfileRequest select(final String value) {
+     @Nonnull
+     public IosCertificateProfileRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class IosCertificateProfileRequest extends BaseRequest<IosCertificateProf
      * @param value the expand clause
      * @return the updated request
      */
-     public IosCertificateProfileRequest expand(final String value) {
+     @Nonnull
+     public IosCertificateProfileRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.OnenoteResource;
 import com.microsoft.graph.requests.extensions.OnenoteResourceCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.OnenoteResourceCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class OnenoteResourceCollectionPage extends BaseCollectionPage<OnenoteRes
      * @param response the serialized OnenoteResourceCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public OnenoteResourceCollectionPage(final OnenoteResourceCollectionResponse response, final OnenoteResourceCollectionRequestBuilder builder) {
+    public OnenoteResourceCollectionPage(@Nonnull final OnenoteResourceCollectionResponse response, @Nonnull final OnenoteResourceCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class OnenoteResourceCollectionPage extends BaseCollectionPage<OnenoteRes
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public OnenoteResourceCollectionPage(final java.util.List<OnenoteResource> pageContents, final OnenoteResourceCollectionRequestBuilder nextRequestBuilder) {
+    public OnenoteResourceCollectionPage(@Nonnull final java.util.List<OnenoteResource> pageContents, @Nullable final OnenoteResourceCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

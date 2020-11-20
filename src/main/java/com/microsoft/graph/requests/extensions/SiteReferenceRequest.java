@@ -25,6 +25,8 @@ import com.microsoft.graph.requests.extensions.ItemAnalyticsRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseReferenceRequest;
@@ -45,7 +47,7 @@ public class SiteReferenceRequest extends BaseReferenceRequest<Site> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SiteReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SiteReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Site.class);
     }
 
@@ -55,7 +57,8 @@ public class SiteReferenceRequest extends BaseReferenceRequest<Site> {
      * @param value the select clause
      * @return the updated request
      */
-    public SiteReferenceRequest select(final String value) {
+    @Nonnull
+    public SiteReferenceRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -66,7 +69,8 @@ public class SiteReferenceRequest extends BaseReferenceRequest<Site> {
      * @param value the expand clause
      * @return the updated request
      */
-    public SiteReferenceRequest expand(final String value) {
+    @Nonnull
+    public SiteReferenceRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -76,7 +80,7 @@ public class SiteReferenceRequest extends BaseReferenceRequest<Site> {
      * @param srcSite the Site reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(Site srcSite, final ICallback<? super Site> callback) {
+    public void put(@Nonnull final Site srcSite, @Nonnull final ICallback<? super Site> callback) {
         send(HttpMethod.PUT, callback, srcSite);
     }
 
@@ -87,7 +91,8 @@ public class SiteReferenceRequest extends BaseReferenceRequest<Site> {
      * @return the Site
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    public Site put(Site srcSite) throws ClientException {
+    @Nullable
+    public Site put(@Nonnull final Site srcSite) throws ClientException {
         return send(HttpMethod.PUT, srcSite);
     }
 }

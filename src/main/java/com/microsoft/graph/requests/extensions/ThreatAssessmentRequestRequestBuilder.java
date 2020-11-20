@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.ThreatAssessmentResultCollectionR
 import com.microsoft.graph.requests.extensions.ThreatAssessmentResultRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -29,7 +31,7 @@ public class ThreatAssessmentRequestRequestBuilder extends BaseRequestBuilder<Th
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ThreatAssessmentRequestRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ThreatAssessmentRequestRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +41,8 @@ public class ThreatAssessmentRequestRequestBuilder extends BaseRequestBuilder<Th
      * @param requestOptions the options for this request
      * @return the ThreatAssessmentRequestRequest instance
      */
-    public ThreatAssessmentRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ThreatAssessmentRequestRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,7 +52,8 @@ public class ThreatAssessmentRequestRequestBuilder extends BaseRequestBuilder<Th
      * @param requestOptions the options for this request
      * @return the ThreatAssessmentRequestRequest instance
      */
-    public ThreatAssessmentRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ThreatAssessmentRequestRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ThreatAssessmentRequestRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,6 +63,7 @@ public class ThreatAssessmentRequestRequestBuilder extends BaseRequestBuilder<Th
      *
      * @return the collection request builder
      */
+    @Nonnull
     public ThreatAssessmentResultCollectionRequestBuilder results() {
         return new ThreatAssessmentResultCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("results"), getClient(), null);
     }
@@ -69,7 +74,8 @@ public class ThreatAssessmentRequestRequestBuilder extends BaseRequestBuilder<Th
      * @return the request builder
      * @param id the item identifier
      */
-    public ThreatAssessmentResultRequestBuilder results(final String id) {
+    @Nonnull
+    public ThreatAssessmentResultRequestBuilder results(@Nonnull final String id) {
         return new ThreatAssessmentResultRequestBuilder(getRequestUrlWithAdditionalSegment("results") + "/" + id, getClient(), null);
     }
 }

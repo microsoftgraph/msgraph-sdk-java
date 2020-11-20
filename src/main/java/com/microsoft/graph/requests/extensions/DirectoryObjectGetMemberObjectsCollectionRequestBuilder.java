@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetMemberObjectsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetMemberObjectsCollectionRequest;
@@ -33,7 +35,7 @@ public class DirectoryObjectGetMemberObjectsCollectionRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @param securityEnabledOnly the securityEnabledOnly
      */
-    public DirectoryObjectGetMemberObjectsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final Boolean securityEnabledOnly) {
+    public DirectoryObjectGetMemberObjectsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final Boolean securityEnabledOnly) {
         super(requestUrl, client, requestOptions, DirectoryObjectGetMemberObjectsCollectionRequestBuilder.class, DirectoryObjectGetMemberObjectsCollectionRequest.class);
   	 if(securityEnabledOnly!=null){
 			bodyParams.put("securityEnabledOnly", securityEnabledOnly);
@@ -46,8 +48,9 @@ public class DirectoryObjectGetMemberObjectsCollectionRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @return the DirectoryObjectGetMemberObjectsCollectionRequest instance
      */
-     @Override
-    public DirectoryObjectGetMemberObjectsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Override
+    @Nonnull
+    public DirectoryObjectGetMemberObjectsCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final DirectoryObjectGetMemberObjectsCollectionRequest request = super.buildRequest(requestOptions);
 
         if (hasParameter("securityEnabledOnly")) {

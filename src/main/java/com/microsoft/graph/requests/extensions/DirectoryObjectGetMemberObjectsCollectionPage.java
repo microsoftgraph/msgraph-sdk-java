@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetMemberObjectsCollectionRequestBuilder;
@@ -29,7 +31,7 @@ public class DirectoryObjectGetMemberObjectsCollectionPage extends BaseCollectio
      * @param response The serialized DirectoryObjectGetMemberObjectsCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public DirectoryObjectGetMemberObjectsCollectionPage(final DirectoryObjectGetMemberObjectsCollectionResponse response, final DirectoryObjectGetMemberObjectsCollectionRequestBuilder builder) {
+    public DirectoryObjectGetMemberObjectsCollectionPage(@Nonnull final DirectoryObjectGetMemberObjectsCollectionResponse response, @Nonnull final DirectoryObjectGetMemberObjectsCollectionRequestBuilder builder) {
        super(response, builder);
     }
 
@@ -39,7 +41,7 @@ public class DirectoryObjectGetMemberObjectsCollectionPage extends BaseCollectio
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public DirectoryObjectGetMemberObjectsCollectionPage(final java.util.List<String> pageContents, final DirectoryObjectGetMemberObjectsCollectionRequestBuilder nextRequestBuilder) {
+    public DirectoryObjectGetMemberObjectsCollectionPage(@Nonnull final java.util.List<String> pageContents, @Nullable final DirectoryObjectGetMemberObjectsCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

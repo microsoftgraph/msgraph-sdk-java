@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.WorkbookChartSeries;
 import com.microsoft.graph.models.extensions.WorkbookChartPoint;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.WorkbookChartPointCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartPointRequestBuilder;
@@ -34,7 +36,7 @@ public class WorkbookChartPointCollectionRequestBuilder extends BaseCollectionRe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartPointCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartPointCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChartPointRequestBuilder.class, WorkbookChartPointCollectionRequest.class);
     }
 
@@ -44,6 +46,7 @@ public class WorkbookChartPointCollectionRequestBuilder extends BaseCollectionRe
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public WorkbookChartPointCountRequestBuilder count() {
         return new WorkbookChartPointCountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.count"), getClient(), null);
     }
@@ -53,7 +56,8 @@ public class WorkbookChartPointCollectionRequestBuilder extends BaseCollectionRe
      * @return the request builder 
      * @param index the index
      */
-    public WorkbookChartPointItemAtRequestBuilder itemAt(final Integer index) {
+    @Nonnull
+    public WorkbookChartPointItemAtRequestBuilder itemAt(@Nullable final Integer index) {
         return new WorkbookChartPointItemAtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.itemAt"), getClient(), null, index);
     }
 }

@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Subscription;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -33,7 +35,7 @@ public class SubscriptionCollectionRequest extends BaseCollectionRequest<Subscri
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SubscriptionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SubscriptionCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SubscriptionCollectionResponse.class, SubscriptionCollectionPage.class, SubscriptionCollectionRequestBuilder.class);
     }
 
@@ -42,7 +44,7 @@ public class SubscriptionCollectionRequest extends BaseCollectionRequest<Subscri
      * @param newSubscription the Subscription to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final Subscription newSubscription, final ICallback<? super Subscription> callback) {
+    public void post(@Nonnull final Subscription newSubscription, @Nonnull final ICallback<? super Subscription> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SubscriptionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -54,7 +56,8 @@ public class SubscriptionCollectionRequest extends BaseCollectionRequest<Subscri
      * @param newSubscription the Subscription to create
      * @return the newly created object
      */
-    public Subscription post(final Subscription newSubscription) throws ClientException {
+    @Nonnull
+    public Subscription post(@Nonnull final Subscription newSubscription) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SubscriptionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -67,7 +70,8 @@ public class SubscriptionCollectionRequest extends BaseCollectionRequest<Subscri
      * @param value the expand clause
      * @return the updated request
      */
-    public SubscriptionCollectionRequest expand(final String value) {
+    @Nonnull
+    public SubscriptionCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -78,7 +82,8 @@ public class SubscriptionCollectionRequest extends BaseCollectionRequest<Subscri
      * @param value the filter clause
      * @return the updated request
      */
-    public SubscriptionCollectionRequest filter(final String value) {
+    @Nonnull
+    public SubscriptionCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -89,7 +94,8 @@ public class SubscriptionCollectionRequest extends BaseCollectionRequest<Subscri
      * @param value the order by clause
      * @return the updated request
      */
-    public SubscriptionCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public SubscriptionCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -100,7 +106,8 @@ public class SubscriptionCollectionRequest extends BaseCollectionRequest<Subscri
      * @param value the select clause
      * @return the updated request
      */
-    public SubscriptionCollectionRequest select(final String value) {
+    @Nonnull
+    public SubscriptionCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -111,6 +118,7 @@ public class SubscriptionCollectionRequest extends BaseCollectionRequest<Subscri
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public SubscriptionCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -122,6 +130,7 @@ public class SubscriptionCollectionRequest extends BaseCollectionRequest<Subscri
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public SubscriptionCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -133,7 +142,8 @@ public class SubscriptionCollectionRequest extends BaseCollectionRequest<Subscri
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public SubscriptionCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public SubscriptionCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

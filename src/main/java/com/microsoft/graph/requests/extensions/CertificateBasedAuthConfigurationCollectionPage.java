@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.CertificateBasedAuthConfiguration;
 import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class CertificateBasedAuthConfigurationCollectionPage extends BaseCollect
      * @param response the serialized CertificateBasedAuthConfigurationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public CertificateBasedAuthConfigurationCollectionPage(final CertificateBasedAuthConfigurationCollectionResponse response, final CertificateBasedAuthConfigurationCollectionRequestBuilder builder) {
+    public CertificateBasedAuthConfigurationCollectionPage(@Nonnull final CertificateBasedAuthConfigurationCollectionResponse response, @Nonnull final CertificateBasedAuthConfigurationCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class CertificateBasedAuthConfigurationCollectionPage extends BaseCollect
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public CertificateBasedAuthConfigurationCollectionPage(final java.util.List<CertificateBasedAuthConfiguration> pageContents, final CertificateBasedAuthConfigurationCollectionRequestBuilder nextRequestBuilder) {
+    public CertificateBasedAuthConfigurationCollectionPage(@Nonnull final java.util.List<CertificateBasedAuthConfiguration> pageContents, @Nullable final CertificateBasedAuthConfigurationCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

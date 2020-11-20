@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.PasswordCredential;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,7 +37,7 @@ public class ServicePrincipalCollectionRequest extends BaseCollectionRequest<Ser
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ServicePrincipalCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ServicePrincipalCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ServicePrincipalCollectionResponse.class, ServicePrincipalCollectionPage.class, ServicePrincipalCollectionRequestBuilder.class);
     }
 
@@ -44,7 +46,7 @@ public class ServicePrincipalCollectionRequest extends BaseCollectionRequest<Ser
      * @param newServicePrincipal the ServicePrincipal to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final ServicePrincipal newServicePrincipal, final ICallback<? super ServicePrincipal> callback) {
+    public void post(@Nonnull final ServicePrincipal newServicePrincipal, @Nonnull final ICallback<? super ServicePrincipal> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ServicePrincipalRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -56,7 +58,8 @@ public class ServicePrincipalCollectionRequest extends BaseCollectionRequest<Ser
      * @param newServicePrincipal the ServicePrincipal to create
      * @return the newly created object
      */
-    public ServicePrincipal post(final ServicePrincipal newServicePrincipal) throws ClientException {
+    @Nonnull
+    public ServicePrincipal post(@Nonnull final ServicePrincipal newServicePrincipal) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ServicePrincipalRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -69,7 +72,8 @@ public class ServicePrincipalCollectionRequest extends BaseCollectionRequest<Ser
      * @param value the expand clause
      * @return the updated request
      */
-    public ServicePrincipalCollectionRequest expand(final String value) {
+    @Nonnull
+    public ServicePrincipalCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -80,7 +84,8 @@ public class ServicePrincipalCollectionRequest extends BaseCollectionRequest<Ser
      * @param value the filter clause
      * @return the updated request
      */
-    public ServicePrincipalCollectionRequest filter(final String value) {
+    @Nonnull
+    public ServicePrincipalCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -91,7 +96,8 @@ public class ServicePrincipalCollectionRequest extends BaseCollectionRequest<Ser
      * @param value the order by clause
      * @return the updated request
      */
-    public ServicePrincipalCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ServicePrincipalCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -102,7 +108,8 @@ public class ServicePrincipalCollectionRequest extends BaseCollectionRequest<Ser
      * @param value the select clause
      * @return the updated request
      */
-    public ServicePrincipalCollectionRequest select(final String value) {
+    @Nonnull
+    public ServicePrincipalCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -113,6 +120,7 @@ public class ServicePrincipalCollectionRequest extends BaseCollectionRequest<Ser
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ServicePrincipalCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -124,6 +132,7 @@ public class ServicePrincipalCollectionRequest extends BaseCollectionRequest<Ser
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ServicePrincipalCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -135,7 +144,8 @@ public class ServicePrincipalCollectionRequest extends BaseCollectionRequest<Ser
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ServicePrincipalCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ServicePrincipalCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

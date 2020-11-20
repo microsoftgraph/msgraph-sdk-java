@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DriveRecipient;
 import com.microsoft.graph.models.extensions.Permission;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.PermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PermissionGrantCollectionResponse;
@@ -40,7 +42,7 @@ public class PermissionGrantCollectionRequest extends BaseCollectionRequest<Perm
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PermissionGrantCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PermissionGrantCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PermissionGrantCollectionResponse.class, PermissionGrantCollectionPage.class, PermissionGrantCollectionRequestBuilder.class);
         body = new PermissionGrantBody();
     }
@@ -50,7 +52,7 @@ public class PermissionGrantCollectionRequest extends BaseCollectionRequest<Perm
      * Invokes the method and calls the callback with the resulting collection of objects
      * @param callback a callback to be invoked with the resulting collection of objects
      */
-    public void post(final ICallback<? super PermissionGrantCollectionPage> callback) {
+    public void post(@Nonnull final ICallback<? super PermissionGrantCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -68,6 +70,7 @@ public class PermissionGrantCollectionRequest extends BaseCollectionRequest<Perm
      * Invokes the method and returns the resulting collection of objects
      * @return a collection of objects returned by the method
      */
+    @Nullable
     public PermissionGrantCollectionPage post() throws ClientException {
         final PermissionGrantCollectionResponse response = post(body);
         return buildFromResponse(response);
@@ -80,7 +83,8 @@ public class PermissionGrantCollectionRequest extends BaseCollectionRequest<Perm
      * @param value the select clause
      * @return the updated request
      */
-    public PermissionGrantCollectionRequest select(final String value) {
+    @Nonnull
+    public PermissionGrantCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -91,6 +95,7 @@ public class PermissionGrantCollectionRequest extends BaseCollectionRequest<Perm
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public PermissionGrantCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -102,7 +107,8 @@ public class PermissionGrantCollectionRequest extends BaseCollectionRequest<Perm
      * @param value the expand clause
      * @return the updated request
      */
-    public PermissionGrantCollectionRequest expand(final String value) {
+    @Nonnull
+    public PermissionGrantCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -113,7 +119,8 @@ public class PermissionGrantCollectionRequest extends BaseCollectionRequest<Perm
      * @param value the filter clause
      * @return the updated request
      */
-    public PermissionGrantCollectionRequest filter(final String value) {
+    @Nonnull
+    public PermissionGrantCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -124,7 +131,8 @@ public class PermissionGrantCollectionRequest extends BaseCollectionRequest<Perm
      * @param value the order by clause
      * @return the updated request
      */
-    public PermissionGrantCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public PermissionGrantCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }

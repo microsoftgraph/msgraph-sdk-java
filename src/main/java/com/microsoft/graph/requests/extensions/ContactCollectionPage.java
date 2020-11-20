@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Contact;
 import com.microsoft.graph.requests.extensions.ContactCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.ContactCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class ContactCollectionPage extends BaseCollectionPage<Contact, ContactCo
      * @param response the serialized ContactCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ContactCollectionPage(final ContactCollectionResponse response, final ContactCollectionRequestBuilder builder) {
+    public ContactCollectionPage(@Nonnull final ContactCollectionResponse response, @Nonnull final ContactCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class ContactCollectionPage extends BaseCollectionPage<Contact, ContactCo
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public ContactCollectionPage(final java.util.List<Contact> pageContents, final ContactCollectionRequestBuilder nextRequestBuilder) {
+    public ContactCollectionPage(@Nonnull final java.util.List<Contact> pageContents, @Nullable final ContactCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

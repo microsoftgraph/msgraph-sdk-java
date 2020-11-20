@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantWithReferenceRequest;
@@ -39,7 +41,7 @@ public class OAuth2PermissionGrantCollectionWithReferencesRequest extends BaseCo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OAuth2PermissionGrantCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OAuth2PermissionGrantCollectionWithReferencesRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OAuth2PermissionGrantCollectionResponse.class, OAuth2PermissionGrantCollectionWithReferencesPage.class, OAuth2PermissionGrantCollectionWithReferencesRequestBuilder.class);
     }
 
@@ -49,7 +51,8 @@ public class OAuth2PermissionGrantCollectionWithReferencesRequest extends BaseCo
      * @param value the expand clause
      * @return the updated request
      */
-    public OAuth2PermissionGrantCollectionWithReferencesRequest expand(final String value) {
+    @Nonnull
+    public OAuth2PermissionGrantCollectionWithReferencesRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -60,7 +63,8 @@ public class OAuth2PermissionGrantCollectionWithReferencesRequest extends BaseCo
      * @param value the filter clause
      * @return the updated request
      */
-    public OAuth2PermissionGrantCollectionWithReferencesRequest filter(final String value) {
+    @Nonnull
+    public OAuth2PermissionGrantCollectionWithReferencesRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -71,7 +75,8 @@ public class OAuth2PermissionGrantCollectionWithReferencesRequest extends BaseCo
      * @param value the order by clause
      * @return the updated request
      */
-    public OAuth2PermissionGrantCollectionWithReferencesRequest orderBy(final String value) {
+    @Nonnull
+    public OAuth2PermissionGrantCollectionWithReferencesRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -82,7 +87,8 @@ public class OAuth2PermissionGrantCollectionWithReferencesRequest extends BaseCo
      * @param value the select clause
      * @return the updated request
      */
-    public OAuth2PermissionGrantCollectionWithReferencesRequest select(final String value) {
+    @Nonnull
+    public OAuth2PermissionGrantCollectionWithReferencesRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -93,6 +99,7 @@ public class OAuth2PermissionGrantCollectionWithReferencesRequest extends BaseCo
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public OAuth2PermissionGrantCollectionWithReferencesRequest top(final int value) {
         addTopOption(value);
         return this;

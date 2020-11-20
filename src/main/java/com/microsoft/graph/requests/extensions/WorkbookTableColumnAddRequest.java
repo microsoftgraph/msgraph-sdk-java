@@ -7,6 +7,8 @@ import com.microsoft.graph.models.extensions.WorkbookTableColumnAddBody;
 import com.microsoft.graph.models.extensions.WorkbookTableColumn;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnAddRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -30,7 +32,7 @@ public class WorkbookTableColumnAddRequest extends BaseRequest<WorkbookTableColu
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookTableColumnAddRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableColumnAddRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookTableColumn.class);
         body = new WorkbookTableColumnAddBody();
     }
@@ -39,7 +41,7 @@ public class WorkbookTableColumnAddRequest extends BaseRequest<WorkbookTableColu
      * Invokes the method and invokes the callback with the result
      * @param callback callback to be invoked after executing the request
      */
-    public void post(final ICallback<? super WorkbookTableColumn> callback) {
+    public void post(@Nonnull final ICallback<? super WorkbookTableColumn> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -47,6 +49,7 @@ public class WorkbookTableColumnAddRequest extends BaseRequest<WorkbookTableColu
      * Invokes the method and returns the result
      * @return result of the method invocation
      */
+    @Nullable
     public WorkbookTableColumn post() throws ClientException {
         return send(HttpMethod.POST, body);
     }
@@ -57,7 +60,8 @@ public class WorkbookTableColumnAddRequest extends BaseRequest<WorkbookTableColu
      * @param value the select clause
      * @return the updated request
      */
-    public WorkbookTableColumnAddRequest select(final String value) {
+    @Nonnull
+    public WorkbookTableColumnAddRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -68,6 +72,7 @@ public class WorkbookTableColumnAddRequest extends BaseRequest<WorkbookTableColu
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public WorkbookTableColumnAddRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -79,7 +84,8 @@ public class WorkbookTableColumnAddRequest extends BaseRequest<WorkbookTableColu
      * @param value the expand clause
      * @return the updated request
      */
-    public WorkbookTableColumnAddRequest expand(final String value) {
+    @Nonnull
+    public WorkbookTableColumnAddRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }

@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosCompliancePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class IosCompliancePolicyRequest extends BaseRequest<IosCompliancePolicy>
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosCompliancePolicyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IosCompliancePolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IosCompliancePolicy.class);
     }
 
@@ -37,7 +39,7 @@ public class IosCompliancePolicyRequest extends BaseRequest<IosCompliancePolicy>
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IosCompliancePolicy> callback) {
+    public void get(@Nonnull final ICallback<? super IosCompliancePolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class IosCompliancePolicyRequest extends BaseRequest<IosCompliancePolicy>
      * @return the IosCompliancePolicy from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public IosCompliancePolicy get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class IosCompliancePolicyRequest extends BaseRequest<IosCompliancePolicy>
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IosCompliancePolicy> callback) {
+    public void delete(@Nonnull final ICallback<? super IosCompliancePolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class IosCompliancePolicyRequest extends BaseRequest<IosCompliancePolicy>
      * @param sourceIosCompliancePolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosCompliancePolicy sourceIosCompliancePolicy, final ICallback<? super IosCompliancePolicy> callback) {
+    public void patch(@Nonnull final IosCompliancePolicy sourceIosCompliancePolicy, @Nonnull final ICallback<? super IosCompliancePolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceIosCompliancePolicy);
     }
 
@@ -86,7 +89,8 @@ public class IosCompliancePolicyRequest extends BaseRequest<IosCompliancePolicy>
      * @return the updated IosCompliancePolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosCompliancePolicy patch(final IosCompliancePolicy sourceIosCompliancePolicy) throws ClientException {
+    @Nullable
+    public IosCompliancePolicy patch(@Nonnull final IosCompliancePolicy sourceIosCompliancePolicy) throws ClientException {
         return send(HttpMethod.PATCH, sourceIosCompliancePolicy);
     }
 
@@ -96,7 +100,7 @@ public class IosCompliancePolicyRequest extends BaseRequest<IosCompliancePolicy>
      * @param newIosCompliancePolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosCompliancePolicy newIosCompliancePolicy, final ICallback<? super IosCompliancePolicy> callback) {
+    public void post(@Nonnull final IosCompliancePolicy newIosCompliancePolicy, @Nonnull final ICallback<? super IosCompliancePolicy> callback) {
         send(HttpMethod.POST, callback, newIosCompliancePolicy);
     }
 
@@ -107,7 +111,8 @@ public class IosCompliancePolicyRequest extends BaseRequest<IosCompliancePolicy>
      * @return the created IosCompliancePolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosCompliancePolicy post(final IosCompliancePolicy newIosCompliancePolicy) throws ClientException {
+    @Nullable
+    public IosCompliancePolicy post(@Nonnull final IosCompliancePolicy newIosCompliancePolicy) throws ClientException {
         return send(HttpMethod.POST, newIosCompliancePolicy);
     }
 
@@ -117,7 +122,7 @@ public class IosCompliancePolicyRequest extends BaseRequest<IosCompliancePolicy>
      * @param newIosCompliancePolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosCompliancePolicy newIosCompliancePolicy, final ICallback<? super IosCompliancePolicy> callback) {
+    public void put(@Nonnull final IosCompliancePolicy newIosCompliancePolicy, @Nonnull final ICallback<? super IosCompliancePolicy> callback) {
         send(HttpMethod.PUT, callback, newIosCompliancePolicy);
     }
 
@@ -128,7 +133,8 @@ public class IosCompliancePolicyRequest extends BaseRequest<IosCompliancePolicy>
      * @return the created IosCompliancePolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosCompliancePolicy put(final IosCompliancePolicy newIosCompliancePolicy) throws ClientException {
+    @Nullable
+    public IosCompliancePolicy put(@Nonnull final IosCompliancePolicy newIosCompliancePolicy) throws ClientException {
         return send(HttpMethod.PUT, newIosCompliancePolicy);
     }
 
@@ -138,7 +144,8 @@ public class IosCompliancePolicyRequest extends BaseRequest<IosCompliancePolicy>
      * @param value the select clause
      * @return the updated request
      */
-     public IosCompliancePolicyRequest select(final String value) {
+     @Nonnull
+     public IosCompliancePolicyRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class IosCompliancePolicyRequest extends BaseRequest<IosCompliancePolicy>
      * @param value the expand clause
      * @return the updated request
      */
-     public IosCompliancePolicyRequest expand(final String value) {
+     @Nonnull
+     public IosCompliancePolicyRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

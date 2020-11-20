@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.TodoTaskList;
 import com.microsoft.graph.requests.extensions.TodoTaskListCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.TodoTaskListCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class TodoTaskListCollectionPage extends BaseCollectionPage<TodoTaskList,
      * @param response the serialized TodoTaskListCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TodoTaskListCollectionPage(final TodoTaskListCollectionResponse response, final TodoTaskListCollectionRequestBuilder builder) {
+    public TodoTaskListCollectionPage(@Nonnull final TodoTaskListCollectionResponse response, @Nonnull final TodoTaskListCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class TodoTaskListCollectionPage extends BaseCollectionPage<TodoTaskList,
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public TodoTaskListCollectionPage(final java.util.List<TodoTaskList> pageContents, final TodoTaskListCollectionRequestBuilder nextRequestBuilder) {
+    public TodoTaskListCollectionPage(@Nonnull final java.util.List<TodoTaskList> pageContents, @Nullable final TodoTaskListCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

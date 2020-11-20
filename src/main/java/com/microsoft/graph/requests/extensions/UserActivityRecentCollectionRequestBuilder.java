@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserActivity;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.UserActivityRecentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserActivityRecentCollectionRequest;
@@ -32,7 +34,7 @@ public class UserActivityRecentCollectionRequestBuilder extends BaseFunctionColl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserActivityRecentCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserActivityRecentCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserActivityRecentCollectionRequestBuilder.class, UserActivityRecentCollectionRequest.class);
     }
     
@@ -42,8 +44,9 @@ public class UserActivityRecentCollectionRequestBuilder extends BaseFunctionColl
      * @param requestOptions the options for this request
      * @return the UserActivityRecentCollectionRequest instance
      */
-     @Override
-    public UserActivityRecentCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Override
+    @Nonnull
+    public UserActivityRecentCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final UserActivityRecentCollectionRequest request = super.buildRequest(requestOptions);
 
       for (com.microsoft.graph.options.FunctionOption option : functionOptions) {

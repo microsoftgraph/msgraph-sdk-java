@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetCollec
 import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -29,7 +31,7 @@ public class PermissionGrantPolicyRequestBuilder extends BaseRequestBuilder<Perm
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PermissionGrantPolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PermissionGrantPolicyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +41,8 @@ public class PermissionGrantPolicyRequestBuilder extends BaseRequestBuilder<Perm
      * @param requestOptions the options for this request
      * @return the PermissionGrantPolicyRequest instance
      */
-    public PermissionGrantPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public PermissionGrantPolicyRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,7 +52,8 @@ public class PermissionGrantPolicyRequestBuilder extends BaseRequestBuilder<Perm
      * @param requestOptions the options for this request
      * @return the PermissionGrantPolicyRequest instance
      */
-    public PermissionGrantPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public PermissionGrantPolicyRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PermissionGrantPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,6 +63,7 @@ public class PermissionGrantPolicyRequestBuilder extends BaseRequestBuilder<Perm
      *
      * @return the collection request builder
      */
+    @Nonnull
     public PermissionGrantConditionSetCollectionRequestBuilder excludes() {
         return new PermissionGrantConditionSetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("excludes"), getClient(), null);
     }
@@ -69,7 +74,8 @@ public class PermissionGrantPolicyRequestBuilder extends BaseRequestBuilder<Perm
      * @return the request builder
      * @param id the item identifier
      */
-    public PermissionGrantConditionSetRequestBuilder excludes(final String id) {
+    @Nonnull
+    public PermissionGrantConditionSetRequestBuilder excludes(@Nonnull final String id) {
         return new PermissionGrantConditionSetRequestBuilder(getRequestUrlWithAdditionalSegment("excludes") + "/" + id, getClient(), null);
     }
     /**
@@ -77,6 +83,7 @@ public class PermissionGrantPolicyRequestBuilder extends BaseRequestBuilder<Perm
      *
      * @return the collection request builder
      */
+    @Nonnull
     public PermissionGrantConditionSetCollectionRequestBuilder includes() {
         return new PermissionGrantConditionSetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("includes"), getClient(), null);
     }
@@ -87,7 +94,8 @@ public class PermissionGrantPolicyRequestBuilder extends BaseRequestBuilder<Perm
      * @return the request builder
      * @param id the item identifier
      */
-    public PermissionGrantConditionSetRequestBuilder includes(final String id) {
+    @Nonnull
+    public PermissionGrantConditionSetRequestBuilder includes(@Nonnull final String id) {
         return new PermissionGrantConditionSetRequestBuilder(getRequestUrlWithAdditionalSegment("includes") + "/" + id, getClient(), null);
     }
 }

@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.ListItemGetActivitiesByIntervalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListItemGetActivitiesByIntervalCollectionResponse;
@@ -34,7 +36,7 @@ public class ListItemGetActivitiesByIntervalCollectionRequest extends BaseCollec
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ListItemGetActivitiesByIntervalCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ListItemGetActivitiesByIntervalCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ListItemGetActivitiesByIntervalCollectionResponse.class, ListItemGetActivitiesByIntervalCollectionPage.class, ListItemGetActivitiesByIntervalCollectionRequestBuilder.class);
     }
 
@@ -45,7 +47,8 @@ public class ListItemGetActivitiesByIntervalCollectionRequest extends BaseCollec
      * @param value the select clause
      * @return the updated request
      */
-    public ListItemGetActivitiesByIntervalCollectionRequest select(final String value) {
+    @Nonnull
+    public ListItemGetActivitiesByIntervalCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -56,6 +59,7 @@ public class ListItemGetActivitiesByIntervalCollectionRequest extends BaseCollec
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ListItemGetActivitiesByIntervalCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -67,7 +71,8 @@ public class ListItemGetActivitiesByIntervalCollectionRequest extends BaseCollec
      * @param value the expand clause
      * @return the updated request
      */
-    public ListItemGetActivitiesByIntervalCollectionRequest expand(final String value) {
+    @Nonnull
+    public ListItemGetActivitiesByIntervalCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -78,7 +83,8 @@ public class ListItemGetActivitiesByIntervalCollectionRequest extends BaseCollec
      * @param value the filter clause
      * @return the updated request
      */
-    public ListItemGetActivitiesByIntervalCollectionRequest filter(final String value) {
+    @Nonnull
+    public ListItemGetActivitiesByIntervalCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -89,7 +95,8 @@ public class ListItemGetActivitiesByIntervalCollectionRequest extends BaseCollec
      * @param value the order by clause
      * @return the updated request
      */
-    public ListItemGetActivitiesByIntervalCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ListItemGetActivitiesByIntervalCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }

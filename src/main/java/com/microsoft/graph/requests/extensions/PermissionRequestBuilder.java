@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Permission;
 import com.microsoft.graph.models.extensions.DriveRecipient;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -28,7 +30,7 @@ public class PermissionRequestBuilder extends BaseRequestBuilder<Permission> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PermissionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PermissionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,7 +40,8 @@ public class PermissionRequestBuilder extends BaseRequestBuilder<Permission> {
      * @param requestOptions the options for this request
      * @return the PermissionRequest instance
      */
-    public PermissionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public PermissionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,7 +51,8 @@ public class PermissionRequestBuilder extends BaseRequestBuilder<Permission> {
      * @param requestOptions the options for this request
      * @return the PermissionRequest instance
      */
-    public PermissionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public PermissionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PermissionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -60,7 +64,8 @@ public class PermissionRequestBuilder extends BaseRequestBuilder<Permission> {
      * @param roles the roles
      * @param recipients the recipients
      */
-    public PermissionGrantCollectionRequestBuilder grant(final java.util.List<String> roles, final java.util.List<DriveRecipient> recipients) {
+    @Nonnull
+    public PermissionGrantCollectionRequestBuilder grant(@Nullable final java.util.List<String> roles, @Nullable final java.util.List<DriveRecipient> recipients) {
         return new PermissionGrantCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.grant"), getClient(), null, roles, recipients);
     }
 }

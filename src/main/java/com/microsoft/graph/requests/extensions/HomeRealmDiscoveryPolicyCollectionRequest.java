@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.PolicyRoot;
 import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class HomeRealmDiscoveryPolicyCollectionRequest extends BaseCollectionReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public HomeRealmDiscoveryPolicyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public HomeRealmDiscoveryPolicyCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicyCollectionResponse.class, HomeRealmDiscoveryPolicyCollectionPage.class, HomeRealmDiscoveryPolicyCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class HomeRealmDiscoveryPolicyCollectionRequest extends BaseCollectionReq
      * @param newHomeRealmDiscoveryPolicy the HomeRealmDiscoveryPolicy to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
+    public void post(@Nonnull final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, @Nonnull final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new HomeRealmDiscoveryPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class HomeRealmDiscoveryPolicyCollectionRequest extends BaseCollectionReq
      * @param newHomeRealmDiscoveryPolicy the HomeRealmDiscoveryPolicy to create
      * @return the newly created object
      */
-    public HomeRealmDiscoveryPolicy post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy) throws ClientException {
+    @Nonnull
+    public HomeRealmDiscoveryPolicy post(@Nonnull final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new HomeRealmDiscoveryPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class HomeRealmDiscoveryPolicyCollectionRequest extends BaseCollectionReq
      * @param value the expand clause
      * @return the updated request
      */
-    public HomeRealmDiscoveryPolicyCollectionRequest expand(final String value) {
+    @Nonnull
+    public HomeRealmDiscoveryPolicyCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class HomeRealmDiscoveryPolicyCollectionRequest extends BaseCollectionReq
      * @param value the filter clause
      * @return the updated request
      */
-    public HomeRealmDiscoveryPolicyCollectionRequest filter(final String value) {
+    @Nonnull
+    public HomeRealmDiscoveryPolicyCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class HomeRealmDiscoveryPolicyCollectionRequest extends BaseCollectionReq
      * @param value the order by clause
      * @return the updated request
      */
-    public HomeRealmDiscoveryPolicyCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public HomeRealmDiscoveryPolicyCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class HomeRealmDiscoveryPolicyCollectionRequest extends BaseCollectionReq
      * @param value the select clause
      * @return the updated request
      */
-    public HomeRealmDiscoveryPolicyCollectionRequest select(final String value) {
+    @Nonnull
+    public HomeRealmDiscoveryPolicyCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class HomeRealmDiscoveryPolicyCollectionRequest extends BaseCollectionReq
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public HomeRealmDiscoveryPolicyCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class HomeRealmDiscoveryPolicyCollectionRequest extends BaseCollectionReq
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public HomeRealmDiscoveryPolicyCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class HomeRealmDiscoveryPolicyCollectionRequest extends BaseCollectionReq
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public HomeRealmDiscoveryPolicyCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public HomeRealmDiscoveryPolicyCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

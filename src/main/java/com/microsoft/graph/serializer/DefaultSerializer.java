@@ -38,6 +38,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 /**
  * The default serializer implementation for the SDK
  */
@@ -58,7 +61,7 @@ public class DefaultSerializer implements ISerializer {
 	 *
 	 * @param logger the logger
 	 */
-	public DefaultSerializer(final ILogger logger) {
+	public DefaultSerializer(@Nonnull final ILogger logger) {
 		this.logger = logger;
 		this.gson = GsonFactory.getGsonInstance(logger);
 	}
@@ -72,13 +75,15 @@ public class DefaultSerializer implements ISerializer {
 	 * @return			the deserialized item from the input string
 	 */
 	@Override
-	public <T> T deserializeObject(final String inputString, final Class<T> clazz) {
+	@Nullable
+	public <T> T deserializeObject(@Nonnull final String inputString, @Nonnull final Class<T> clazz) {
 		return deserializeObject(inputString, clazz, null);
 	}
 	private static final String graphResponseHeadersKey = "graphResponseHeaders";
 	@SuppressWarnings("unchecked")
 	@Override
-	public <T> T deserializeObject(final String inputString, final Class<T> clazz, Map<String, java.util.List<String>> responseHeaders) {
+	@Nullable
+	public <T> T deserializeObject(@Nonnull final String inputString, @Nonnull final Class<T> clazz, @Nonnull final Map<String, java.util.List<String>> responseHeaders) {
 		final T jsonObject = gson.fromJson(inputString, clazz);
 
 		// Populate the JSON-backed fields for any annotations that are not in the object model
@@ -199,7 +204,8 @@ public class DefaultSerializer implements ISerializer {
 	 * @return 					 the string representation of that item
 	 */
 	@Override
-	public <T> String serializeObject(final T serializableObject) {
+	@Nullable
+	public <T> String serializeObject(@Nonnull final T serializableObject) {
 		logger.logDebug("Serializing type " + serializableObject.getClass().getSimpleName());
 		JsonElement outJsonTree = gson.toJsonTree(serializableObject);
 
@@ -335,7 +341,8 @@ public class DefaultSerializer implements ISerializer {
 	 * @param parentClass the parent class the derived class should inherit from
 	 * @return			the derived class if found, or null if not applicable
 	 */
-	public Class<?> getDerivedClass(JsonObject jsonObject, Class<?> parentClass) {
+	@Nullable
+	public Class<?> getDerivedClass(@Nonnull final JsonObject jsonObject, @Nonnull final Class<?> parentClass) {
 		//Identify the odata.type information if provided
 		if (jsonObject.get(ODATA_TYPE_KEY) != null) {
 			/** #microsoft.graph.user or #microsoft.graph.callrecords.callrecord */
@@ -370,6 +377,7 @@ public class DefaultSerializer implements ISerializer {
 	 * @return a logger
 	 */
 	@VisibleForTesting
+	@Nullable
 	public ILogger getLogger() {
 		return logger;
 	}

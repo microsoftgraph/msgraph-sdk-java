@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ManagedAppPolicy;
 import com.microsoft.graph.requests.extensions.ManagedAppPolicyCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.ManagedAppPolicyCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class ManagedAppPolicyCollectionPage extends BaseCollectionPage<ManagedAp
      * @param response the serialized ManagedAppPolicyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ManagedAppPolicyCollectionPage(final ManagedAppPolicyCollectionResponse response, final ManagedAppPolicyCollectionRequestBuilder builder) {
+    public ManagedAppPolicyCollectionPage(@Nonnull final ManagedAppPolicyCollectionResponse response, @Nonnull final ManagedAppPolicyCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class ManagedAppPolicyCollectionPage extends BaseCollectionPage<ManagedAp
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public ManagedAppPolicyCollectionPage(final java.util.List<ManagedAppPolicy> pageContents, final ManagedAppPolicyCollectionRequestBuilder nextRequestBuilder) {
+    public ManagedAppPolicyCollectionPage(@Nonnull final java.util.List<ManagedAppPolicy> pageContents, @Nullable final ManagedAppPolicyCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

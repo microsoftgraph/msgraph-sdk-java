@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.MessageRule;
 import com.microsoft.graph.requests.extensions.MessageRuleCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.MessageRuleCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class MessageRuleCollectionPage extends BaseCollectionPage<MessageRule, M
      * @param response the serialized MessageRuleCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public MessageRuleCollectionPage(final MessageRuleCollectionResponse response, final MessageRuleCollectionRequestBuilder builder) {
+    public MessageRuleCollectionPage(@Nonnull final MessageRuleCollectionResponse response, @Nonnull final MessageRuleCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class MessageRuleCollectionPage extends BaseCollectionPage<MessageRule, M
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public MessageRuleCollectionPage(final java.util.List<MessageRule> pageContents, final MessageRuleCollectionRequestBuilder nextRequestBuilder) {
+    public MessageRuleCollectionPage(@Nonnull final java.util.List<MessageRule> pageContents, @Nullable final MessageRuleCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

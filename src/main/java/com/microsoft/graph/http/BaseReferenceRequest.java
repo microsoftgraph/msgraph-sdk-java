@@ -29,6 +29,9 @@ import com.microsoft.graph.options.Option;
 
 import java.util.List;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 /**
  * An HTTP request.
  * 
@@ -44,7 +47,7 @@ public abstract class BaseReferenceRequest<T> extends BaseRequest<T> {
      * @param requestOptions the options for this request
      * @param entityType     the class for the entity
      */
-    public BaseReferenceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final Class<T> entityType) {
+    public BaseReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final Class<T> entityType) {
         super(requestUrl, client, requestOptions, entityType);
     }
 
@@ -52,7 +55,7 @@ public abstract class BaseReferenceRequest<T> extends BaseRequest<T> {
      * Deletes the entity and invokes the callback
      * @param callback callback to be invoked once the entity is deleted
      */
-    public void delete(final ICallback<? super T> callback) {
+    public void delete(@Nonnull final ICallback<? super T> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -60,6 +63,7 @@ public abstract class BaseReferenceRequest<T> extends BaseRequest<T> {
      * Deletes the entity
      * @return the deleted entity 
      */
+    @Nullable
     public T delete() throws ClientException {
        return send(HttpMethod.DELETE, null);
     }

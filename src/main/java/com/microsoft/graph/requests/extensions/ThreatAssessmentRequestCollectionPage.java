@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ThreatAssessmentRequest;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class ThreatAssessmentRequestCollectionPage extends BaseCollectionPage<Th
      * @param response the serialized ThreatAssessmentRequestCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ThreatAssessmentRequestCollectionPage(final ThreatAssessmentRequestCollectionResponse response, final ThreatAssessmentRequestCollectionRequestBuilder builder) {
+    public ThreatAssessmentRequestCollectionPage(@Nonnull final ThreatAssessmentRequestCollectionResponse response, @Nonnull final ThreatAssessmentRequestCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class ThreatAssessmentRequestCollectionPage extends BaseCollectionPage<Th
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public ThreatAssessmentRequestCollectionPage(final java.util.List<ThreatAssessmentRequest> pageContents, final ThreatAssessmentRequestCollectionRequestBuilder nextRequestBuilder) {
+    public ThreatAssessmentRequestCollectionPage(@Nonnull final java.util.List<ThreatAssessmentRequest> pageContents, @Nullable final ThreatAssessmentRequestCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

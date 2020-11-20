@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantRequestBuilder;
@@ -32,7 +34,7 @@ public class OAuth2PermissionGrantCollectionRequestBuilder extends BaseCollectio
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OAuth2PermissionGrantCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OAuth2PermissionGrantCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OAuth2PermissionGrantRequestBuilder.class, OAuth2PermissionGrantCollectionRequest.class);
     }
 
@@ -42,6 +44,7 @@ public class OAuth2PermissionGrantCollectionRequestBuilder extends BaseCollectio
      * Gets a builder to execute the method
      * @return the request builder collection
      */
+    @Nonnull
     public OAuth2PermissionGrantDeltaCollectionRequestBuilder delta() {
         return new OAuth2PermissionGrantDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
@@ -52,7 +55,8 @@ public class OAuth2PermissionGrantCollectionRequestBuilder extends BaseCollectio
      * @return a request builder to get the changes
      * @param deltaLink the link returned by the last delta request
      */
-	public OAuth2PermissionGrantDeltaCollectionRequestBuilder delta(final String deltaLink) {
+    @Nonnull
+	public OAuth2PermissionGrantDeltaCollectionRequestBuilder delta(@Nonnull final String deltaLink) {
         return new OAuth2PermissionGrantDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }
 }

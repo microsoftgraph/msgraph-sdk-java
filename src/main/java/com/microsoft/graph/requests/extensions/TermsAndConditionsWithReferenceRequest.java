@@ -14,6 +14,8 @@ import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentColle
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseWithReferenceRequest;
@@ -35,7 +37,7 @@ public class TermsAndConditionsWithReferenceRequest extends BaseWithReferenceReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TermsAndConditionsWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TermsAndConditionsWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TermsAndConditions.class);
     }
 
@@ -45,7 +47,8 @@ public class TermsAndConditionsWithReferenceRequest extends BaseWithReferenceReq
      * @param value the select clause
      * @return the updated request
      */
-    public TermsAndConditionsWithReferenceRequest select(final String value) {
+    @Nonnull
+    public TermsAndConditionsWithReferenceRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -56,7 +59,8 @@ public class TermsAndConditionsWithReferenceRequest extends BaseWithReferenceReq
      * @param value the expand clause
      * @return the updated request
      */
-    public TermsAndConditionsWithReferenceRequest expand(final String value) {
+    @Nonnull
+    public TermsAndConditionsWithReferenceRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }

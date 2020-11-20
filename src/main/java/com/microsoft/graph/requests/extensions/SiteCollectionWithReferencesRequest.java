@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.requests.extensions.SiteWithReferenceRequest;
@@ -40,7 +42,7 @@ public class SiteCollectionWithReferencesRequest extends BaseCollectionWithRefer
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SiteCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SiteCollectionWithReferencesRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SiteCollectionResponse.class, SiteCollectionWithReferencesPage.class, SiteCollectionWithReferencesRequestBuilder.class);
     }
 
@@ -50,7 +52,8 @@ public class SiteCollectionWithReferencesRequest extends BaseCollectionWithRefer
      * @param value the expand clause
      * @return the updated request
      */
-    public SiteCollectionWithReferencesRequest expand(final String value) {
+    @Nonnull
+    public SiteCollectionWithReferencesRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -61,7 +64,8 @@ public class SiteCollectionWithReferencesRequest extends BaseCollectionWithRefer
      * @param value the filter clause
      * @return the updated request
      */
-    public SiteCollectionWithReferencesRequest filter(final String value) {
+    @Nonnull
+    public SiteCollectionWithReferencesRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -72,7 +76,8 @@ public class SiteCollectionWithReferencesRequest extends BaseCollectionWithRefer
      * @param value the order by clause
      * @return the updated request
      */
-    public SiteCollectionWithReferencesRequest orderBy(final String value) {
+    @Nonnull
+    public SiteCollectionWithReferencesRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -83,7 +88,8 @@ public class SiteCollectionWithReferencesRequest extends BaseCollectionWithRefer
      * @param value the select clause
      * @return the updated request
      */
-    public SiteCollectionWithReferencesRequest select(final String value) {
+    @Nonnull
+    public SiteCollectionWithReferencesRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -94,6 +100,7 @@ public class SiteCollectionWithReferencesRequest extends BaseCollectionWithRefer
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public SiteCollectionWithReferencesRequest top(final int value) {
         addTopOption(value);
         return this;

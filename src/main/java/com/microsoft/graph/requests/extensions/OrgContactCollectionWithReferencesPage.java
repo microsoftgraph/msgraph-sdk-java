@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.OrgContact;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.OrgContactCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.OrgContactCollectionWithReferencesPage;
@@ -34,7 +36,7 @@ public class OrgContactCollectionWithReferencesPage extends BaseCollectionPage<O
      * @param response the serialized OrgContactCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public OrgContactCollectionWithReferencesPage(final OrgContactCollectionResponse response, final OrgContactCollectionWithReferencesRequestBuilder builder) {
+    public OrgContactCollectionWithReferencesPage(@Nonnull final OrgContactCollectionResponse response, @Nullable final OrgContactCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 
@@ -44,7 +46,7 @@ public class OrgContactCollectionWithReferencesPage extends BaseCollectionPage<O
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public OrgContactCollectionWithReferencesPage(final java.util.List<OrgContact> pageContents, final OrgContactCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+    public OrgContactCollectionWithReferencesPage(@Nonnull final java.util.List<OrgContact> pageContents, @Nullable final OrgContactCollectionWithReferencesRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

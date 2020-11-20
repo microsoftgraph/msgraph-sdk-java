@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Room;
 import com.microsoft.graph.requests.extensions.RoomCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.RoomCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class RoomCollectionPage extends BaseCollectionPage<Room, RoomCollectionR
      * @param response the serialized RoomCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public RoomCollectionPage(final RoomCollectionResponse response, final RoomCollectionRequestBuilder builder) {
+    public RoomCollectionPage(@Nonnull final RoomCollectionResponse response, @Nonnull final RoomCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class RoomCollectionPage extends BaseCollectionPage<Room, RoomCollectionR
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public RoomCollectionPage(final java.util.List<Room> pageContents, final RoomCollectionRequestBuilder nextRequestBuilder) {
+    public RoomCollectionPage(@Nonnull final java.util.List<Room> pageContents, @Nullable final RoomCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.generated.CalendarRoleType;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.CalendarAllowedCalendarSharingRolesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CalendarAllowedCalendarSharingRolesCollectionRequest;
@@ -33,7 +35,7 @@ public class CalendarAllowedCalendarSharingRolesCollectionRequestBuilder extends
      * @param requestOptions the options for this request
      * @param user the user
      */
-    public CalendarAllowedCalendarSharingRolesCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String user) {
+    public CalendarAllowedCalendarSharingRolesCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final String user) {
         super(requestUrl, client, requestOptions, CalendarAllowedCalendarSharingRolesCollectionRequestBuilder.class, CalendarAllowedCalendarSharingRolesCollectionRequest.class);
      	 if(user!=null){
 			functionOptions.add(new com.microsoft.graph.options.FunctionOption("user", user));
@@ -46,8 +48,9 @@ public class CalendarAllowedCalendarSharingRolesCollectionRequestBuilder extends
      * @param requestOptions the options for this request
      * @return the CalendarAllowedCalendarSharingRolesCollectionRequest instance
      */
-     @Override
-    public CalendarAllowedCalendarSharingRolesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Override
+    @Nonnull
+    public CalendarAllowedCalendarSharingRolesCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final CalendarAllowedCalendarSharingRolesCollectionRequest request = super.buildRequest(requestOptions);
 
       for (com.microsoft.graph.options.FunctionOption option : functionOptions) {

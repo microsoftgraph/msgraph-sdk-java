@@ -7,6 +7,8 @@ import com.microsoft.graph.models.extensions.ApplicationAddPasswordBody;
 import com.microsoft.graph.models.extensions.PasswordCredential;
 import com.microsoft.graph.requests.extensions.ApplicationAddPasswordRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -30,7 +32,7 @@ public class ApplicationAddPasswordRequest extends BaseRequest<PasswordCredentia
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ApplicationAddPasswordRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ApplicationAddPasswordRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PasswordCredential.class);
         body = new ApplicationAddPasswordBody();
     }
@@ -39,7 +41,7 @@ public class ApplicationAddPasswordRequest extends BaseRequest<PasswordCredentia
      * Invokes the method and invokes the callback with the result
      * @param callback callback to be invoked after executing the request
      */
-    public void post(final ICallback<? super PasswordCredential> callback) {
+    public void post(@Nonnull final ICallback<? super PasswordCredential> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -47,6 +49,7 @@ public class ApplicationAddPasswordRequest extends BaseRequest<PasswordCredentia
      * Invokes the method and returns the result
      * @return result of the method invocation
      */
+    @Nullable
     public PasswordCredential post() throws ClientException {
         return send(HttpMethod.POST, body);
     }
@@ -57,7 +60,8 @@ public class ApplicationAddPasswordRequest extends BaseRequest<PasswordCredentia
      * @param value the select clause
      * @return the updated request
      */
-    public ApplicationAddPasswordRequest select(final String value) {
+    @Nonnull
+    public ApplicationAddPasswordRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -68,6 +72,7 @@ public class ApplicationAddPasswordRequest extends BaseRequest<PasswordCredentia
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ApplicationAddPasswordRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -79,7 +84,8 @@ public class ApplicationAddPasswordRequest extends BaseRequest<PasswordCredentia
      * @param value the expand clause
      * @return the updated request
      */
-    public ApplicationAddPasswordRequest expand(final String value) {
+    @Nonnull
+    public ApplicationAddPasswordRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }

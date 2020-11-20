@@ -23,6 +23,8 @@ import com.microsoft.graph.requests.extensions.WorkbookApplicationRequestBuilder
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -40,7 +42,7 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder<Workbook> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -50,7 +52,8 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder<Workbook> {
      * @param requestOptions the options for this request
      * @return the WorkbookRequest instance
      */
-    public WorkbookRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WorkbookRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -60,7 +63,8 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder<Workbook> {
      * @param requestOptions the options for this request
      * @return the WorkbookRequest instance
      */
-    public WorkbookRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WorkbookRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -71,6 +75,7 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder<Workbook> {
      *
      * @return the WorkbookApplicationRequestBuilder instance
      */
+    @Nonnull
     public WorkbookApplicationRequestBuilder application() {
         return new WorkbookApplicationRequestBuilder(getRequestUrlWithAdditionalSegment("application"), getClient(), null);
     }
@@ -79,6 +84,7 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder<Workbook> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public WorkbookCommentCollectionRequestBuilder comments() {
         return new WorkbookCommentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("comments"), getClient(), null);
     }
@@ -89,7 +95,8 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder<Workbook> {
      * @return the request builder
      * @param id the item identifier
      */
-    public WorkbookCommentRequestBuilder comments(final String id) {
+    @Nonnull
+    public WorkbookCommentRequestBuilder comments(@Nonnull final String id) {
         return new WorkbookCommentRequestBuilder(getRequestUrlWithAdditionalSegment("comments") + "/" + id, getClient(), null);
     }
 
@@ -98,6 +105,7 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder<Workbook> {
      *
      * @return the WorkbookFunctionsRequestBuilder instance
      */
+    @Nonnull
     public WorkbookFunctionsRequestBuilder functions() {
         return new WorkbookFunctionsRequestBuilder(getRequestUrlWithAdditionalSegment("functions"), getClient(), null);
     }
@@ -106,6 +114,7 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder<Workbook> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public WorkbookNamedItemCollectionRequestBuilder names() {
         return new WorkbookNamedItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("names"), getClient(), null);
     }
@@ -116,7 +125,8 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder<Workbook> {
      * @return the request builder
      * @param id the item identifier
      */
-    public WorkbookNamedItemRequestBuilder names(final String id) {
+    @Nonnull
+    public WorkbookNamedItemRequestBuilder names(@Nonnull final String id) {
         return new WorkbookNamedItemRequestBuilder(getRequestUrlWithAdditionalSegment("names") + "/" + id, getClient(), null);
     }
     /**
@@ -124,6 +134,7 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder<Workbook> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public WorkbookOperationCollectionRequestBuilder operations() {
         return new WorkbookOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
     }
@@ -134,7 +145,8 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder<Workbook> {
      * @return the request builder
      * @param id the item identifier
      */
-    public WorkbookOperationRequestBuilder operations(final String id) {
+    @Nonnull
+    public WorkbookOperationRequestBuilder operations(@Nonnull final String id) {
         return new WorkbookOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
     /**
@@ -142,6 +154,7 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder<Workbook> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public WorkbookTableCollectionRequestBuilder tables() {
         return new WorkbookTableCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tables"), getClient(), null);
     }
@@ -152,7 +165,8 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder<Workbook> {
      * @return the request builder
      * @param id the item identifier
      */
-    public WorkbookTableRequestBuilder tables(final String id) {
+    @Nonnull
+    public WorkbookTableRequestBuilder tables(@Nonnull final String id) {
         return new WorkbookTableRequestBuilder(getRequestUrlWithAdditionalSegment("tables") + "/" + id, getClient(), null);
     }
     /**
@@ -160,6 +174,7 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder<Workbook> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public WorkbookWorksheetCollectionRequestBuilder worksheets() {
         return new WorkbookWorksheetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("worksheets"), getClient(), null);
     }
@@ -170,7 +185,8 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder<Workbook> {
      * @return the request builder
      * @param id the item identifier
      */
-    public WorkbookWorksheetRequestBuilder worksheets(final String id) {
+    @Nonnull
+    public WorkbookWorksheetRequestBuilder worksheets(@Nonnull final String id) {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheets") + "/" + id, getClient(), null);
     }
 
@@ -178,6 +194,7 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder<Workbook> {
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public WorkbookCloseSessionRequestBuilder closeSession() {
         return new WorkbookCloseSessionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.closeSession"), getClient(), null);
     }
@@ -187,7 +204,8 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder<Workbook> {
      * @return the request builder 
      * @param persistChanges the persistChanges
      */
-    public WorkbookCreateSessionRequestBuilder createSession(final Boolean persistChanges) {
+    @Nonnull
+    public WorkbookCreateSessionRequestBuilder createSession(@Nullable final Boolean persistChanges) {
         return new WorkbookCreateSessionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createSession"), getClient(), null, persistChanges);
     }
 
@@ -195,6 +213,7 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder<Workbook> {
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public WorkbookRefreshSessionRequestBuilder refreshSession() {
         return new WorkbookRefreshSessionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.refreshSession"), getClient(), null);
     }
@@ -204,7 +223,8 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder<Workbook> {
      * @return the request builder 
      * @param key the key
      */
-    public WorkbookSessionInfoResourceRequestBuilder sessionInfoResource(final String key) {
+    @Nonnull
+    public WorkbookSessionInfoResourceRequestBuilder sessionInfoResource(@Nullable final String key) {
         return new WorkbookSessionInfoResourceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sessionInfoResource"), getClient(), null, key);
     }
 }

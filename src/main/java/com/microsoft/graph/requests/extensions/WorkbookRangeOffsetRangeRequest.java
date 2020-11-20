@@ -6,6 +6,8 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.requests.extensions.WorkbookRangeOffsetRangeRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.core.ClientException;
@@ -27,7 +29,7 @@ public class WorkbookRangeOffsetRangeRequest extends BaseRequest<WorkbookRange> 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookRangeOffsetRangeRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeOffsetRangeRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookRange.class);
     }
 
@@ -36,7 +38,7 @@ public class WorkbookRangeOffsetRangeRequest extends BaseRequest<WorkbookRange> 
      * @param srcWorkbookRange the WorkbookRange with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    public void patch(WorkbookRange srcWorkbookRange, final ICallback<? super WorkbookRange> callback) {
+    public void patch(@Nonnull WorkbookRange srcWorkbookRange, @Nonnull final ICallback<? super WorkbookRange> callback) {
         send(HttpMethod.PATCH, callback, srcWorkbookRange);
     }
 
@@ -47,7 +49,8 @@ public class WorkbookRangeOffsetRangeRequest extends BaseRequest<WorkbookRange> 
      * @return the WorkbookRange
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-     public WorkbookRange patch(WorkbookRange srcWorkbookRange) throws ClientException {
+     @Nullable
+     public WorkbookRange patch(@Nonnull final WorkbookRange srcWorkbookRange) throws ClientException {
         return this.send(HttpMethod.PATCH, srcWorkbookRange);
     }
 
@@ -57,7 +60,7 @@ public class WorkbookRangeOffsetRangeRequest extends BaseRequest<WorkbookRange> 
      * @param srcWorkbookRange the WorkbookRange to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(WorkbookRange srcWorkbookRange, final ICallback<? super WorkbookRange> callback) {
+    public void put(@Nonnull final WorkbookRange srcWorkbookRange, @Nonnull final ICallback<? super WorkbookRange> callback) {
         send(HttpMethod.PUT, callback, srcWorkbookRange);
     }
 
@@ -68,7 +71,8 @@ public class WorkbookRangeOffsetRangeRequest extends BaseRequest<WorkbookRange> 
      * @return the WorkbookRange
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-     public WorkbookRange put(WorkbookRange srcWorkbookRange) throws ClientException {
+     @Nullable
+     public WorkbookRange put(@Nonnull final WorkbookRange srcWorkbookRange) throws ClientException {
         return this.send(HttpMethod.PUT, srcWorkbookRange);
     }
     /**
@@ -76,7 +80,7 @@ public class WorkbookRangeOffsetRangeRequest extends BaseRequest<WorkbookRange> 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookRange> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookRange> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -86,6 +90,7 @@ public class WorkbookRangeOffsetRangeRequest extends BaseRequest<WorkbookRange> 
      * @return the WorkbookRange
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
+    @Nullable
     public WorkbookRange get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -96,7 +101,8 @@ public class WorkbookRangeOffsetRangeRequest extends BaseRequest<WorkbookRange> 
      * @param value the select clause
      * @return the updated request
      */
-    public WorkbookRangeOffsetRangeRequest select(final String value) {
+    @Nonnull
+    public WorkbookRangeOffsetRangeRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -107,7 +113,8 @@ public class WorkbookRangeOffsetRangeRequest extends BaseRequest<WorkbookRange> 
      * @param value the expand clause
      * @return the updated request
      */
-    public WorkbookRangeOffsetRangeRequest expand(final String value) {
+    @Nonnull
+    public WorkbookRangeOffsetRangeRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -118,7 +125,8 @@ public class WorkbookRangeOffsetRangeRequest extends BaseRequest<WorkbookRange> 
      * @param value the filter clause
      * @return the updated request
      */
-    public WorkbookRangeOffsetRangeRequest filter(final String value) {
+    @Nonnull
+    public WorkbookRangeOffsetRangeRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -129,7 +137,8 @@ public class WorkbookRangeOffsetRangeRequest extends BaseRequest<WorkbookRange> 
      * @param value the order by clause
      * @return the updated request
      */
-    public WorkbookRangeOffsetRangeRequest orderBy(final String value) {
+    @Nonnull
+    public WorkbookRangeOffsetRangeRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }

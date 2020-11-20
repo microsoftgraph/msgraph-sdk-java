@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.AppRoleAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.models.extensions.AppRoleAssignment;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentWithReferenceRequest;
@@ -39,7 +41,7 @@ public class AppRoleAssignmentCollectionWithReferencesRequest extends BaseCollec
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AppRoleAssignmentCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AppRoleAssignmentCollectionWithReferencesRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AppRoleAssignmentCollectionResponse.class, AppRoleAssignmentCollectionWithReferencesPage.class, AppRoleAssignmentCollectionWithReferencesRequestBuilder.class);
     }
 
@@ -49,7 +51,8 @@ public class AppRoleAssignmentCollectionWithReferencesRequest extends BaseCollec
      * @param value the expand clause
      * @return the updated request
      */
-    public AppRoleAssignmentCollectionWithReferencesRequest expand(final String value) {
+    @Nonnull
+    public AppRoleAssignmentCollectionWithReferencesRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -60,7 +63,8 @@ public class AppRoleAssignmentCollectionWithReferencesRequest extends BaseCollec
      * @param value the filter clause
      * @return the updated request
      */
-    public AppRoleAssignmentCollectionWithReferencesRequest filter(final String value) {
+    @Nonnull
+    public AppRoleAssignmentCollectionWithReferencesRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -71,7 +75,8 @@ public class AppRoleAssignmentCollectionWithReferencesRequest extends BaseCollec
      * @param value the order by clause
      * @return the updated request
      */
-    public AppRoleAssignmentCollectionWithReferencesRequest orderBy(final String value) {
+    @Nonnull
+    public AppRoleAssignmentCollectionWithReferencesRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -82,7 +87,8 @@ public class AppRoleAssignmentCollectionWithReferencesRequest extends BaseCollec
      * @param value the select clause
      * @return the updated request
      */
-    public AppRoleAssignmentCollectionWithReferencesRequest select(final String value) {
+    @Nonnull
+    public AppRoleAssignmentCollectionWithReferencesRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -93,6 +99,7 @@ public class AppRoleAssignmentCollectionWithReferencesRequest extends BaseCollec
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public AppRoleAssignmentCollectionWithReferencesRequest top(final int value) {
         addTopOption(value);
         return this;

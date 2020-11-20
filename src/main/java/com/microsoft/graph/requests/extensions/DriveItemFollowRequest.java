@@ -6,6 +6,8 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.requests.extensions.DriveItemFollowRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.core.ClientException;
@@ -27,7 +29,7 @@ public class DriveItemFollowRequest extends BaseRequest<DriveItem> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DriveItemFollowRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveItemFollowRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DriveItem.class);
     }
 
@@ -36,7 +38,7 @@ public class DriveItemFollowRequest extends BaseRequest<DriveItem> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<? super DriveItem> callback) {
+    public void post(@Nonnull final ICallback<? super DriveItem> callback) {
         send(HttpMethod.POST, callback, null);
     }
 
@@ -46,6 +48,7 @@ public class DriveItemFollowRequest extends BaseRequest<DriveItem> {
      * @return the DriveItem
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
+    @Nullable
     public DriveItem post() throws ClientException {
        return send(HttpMethod.POST, null);
     }
@@ -56,7 +59,8 @@ public class DriveItemFollowRequest extends BaseRequest<DriveItem> {
      * @param value the select clause
      * @return the updated request
      */
-    public DriveItemFollowRequest select(final String value) {
+    @Nonnull
+    public DriveItemFollowRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -67,7 +71,8 @@ public class DriveItemFollowRequest extends BaseRequest<DriveItem> {
      * @param value the expand clause
      * @return the updated request
      */
-    public DriveItemFollowRequest expand(final String value) {
+    @Nonnull
+    public DriveItemFollowRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }

@@ -14,6 +14,8 @@ import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentColle
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseReferenceRequest;
@@ -34,7 +36,7 @@ public class TermsAndConditionsReferenceRequest extends BaseReferenceRequest<Ter
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TermsAndConditionsReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TermsAndConditionsReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TermsAndConditions.class);
     }
 
@@ -44,7 +46,8 @@ public class TermsAndConditionsReferenceRequest extends BaseReferenceRequest<Ter
      * @param value the select clause
      * @return the updated request
      */
-    public TermsAndConditionsReferenceRequest select(final String value) {
+    @Nonnull
+    public TermsAndConditionsReferenceRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -55,7 +58,8 @@ public class TermsAndConditionsReferenceRequest extends BaseReferenceRequest<Ter
      * @param value the expand clause
      * @return the updated request
      */
-    public TermsAndConditionsReferenceRequest expand(final String value) {
+    @Nonnull
+    public TermsAndConditionsReferenceRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -65,7 +69,7 @@ public class TermsAndConditionsReferenceRequest extends BaseReferenceRequest<Ter
      * @param srcTermsAndConditions the TermsAndConditions reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(TermsAndConditions srcTermsAndConditions, final ICallback<? super TermsAndConditions> callback) {
+    public void put(@Nonnull final TermsAndConditions srcTermsAndConditions, @Nonnull final ICallback<? super TermsAndConditions> callback) {
         send(HttpMethod.PUT, callback, srcTermsAndConditions);
     }
 
@@ -76,7 +80,8 @@ public class TermsAndConditionsReferenceRequest extends BaseReferenceRequest<Ter
      * @return the TermsAndConditions
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    public TermsAndConditions put(TermsAndConditions srcTermsAndConditions) throws ClientException {
+    @Nullable
+    public TermsAndConditions put(@Nonnull final TermsAndConditions srcTermsAndConditions) throws ClientException {
         return send(HttpMethod.PUT, srcTermsAndConditions);
     }
 }

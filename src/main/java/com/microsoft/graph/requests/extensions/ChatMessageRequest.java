@@ -14,6 +14,8 @@ import com.microsoft.graph.requests.extensions.ChatMessageCollectionRequestBuild
 import com.microsoft.graph.requests.extensions.ChatMessageRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -32,7 +34,7 @@ public class ChatMessageRequest extends BaseRequest<ChatMessage> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ChatMessageRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ChatMessageRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ChatMessage.class);
     }
 
@@ -41,7 +43,7 @@ public class ChatMessageRequest extends BaseRequest<ChatMessage> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ChatMessage> callback) {
+    public void get(@Nonnull final ICallback<? super ChatMessage> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -51,6 +53,7 @@ public class ChatMessageRequest extends BaseRequest<ChatMessage> {
      * @return the ChatMessage from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ChatMessage get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -60,7 +63,7 @@ public class ChatMessageRequest extends BaseRequest<ChatMessage> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ChatMessage> callback) {
+    public void delete(@Nonnull final ICallback<? super ChatMessage> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +82,7 @@ public class ChatMessageRequest extends BaseRequest<ChatMessage> {
      * @param sourceChatMessage the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ChatMessage sourceChatMessage, final ICallback<? super ChatMessage> callback) {
+    public void patch(@Nonnull final ChatMessage sourceChatMessage, @Nonnull final ICallback<? super ChatMessage> callback) {
         send(HttpMethod.PATCH, callback, sourceChatMessage);
     }
 
@@ -90,7 +93,8 @@ public class ChatMessageRequest extends BaseRequest<ChatMessage> {
      * @return the updated ChatMessage
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ChatMessage patch(final ChatMessage sourceChatMessage) throws ClientException {
+    @Nullable
+    public ChatMessage patch(@Nonnull final ChatMessage sourceChatMessage) throws ClientException {
         return send(HttpMethod.PATCH, sourceChatMessage);
     }
 
@@ -100,7 +104,7 @@ public class ChatMessageRequest extends BaseRequest<ChatMessage> {
      * @param newChatMessage the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ChatMessage newChatMessage, final ICallback<? super ChatMessage> callback) {
+    public void post(@Nonnull final ChatMessage newChatMessage, @Nonnull final ICallback<? super ChatMessage> callback) {
         send(HttpMethod.POST, callback, newChatMessage);
     }
 
@@ -111,7 +115,8 @@ public class ChatMessageRequest extends BaseRequest<ChatMessage> {
      * @return the created ChatMessage
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ChatMessage post(final ChatMessage newChatMessage) throws ClientException {
+    @Nullable
+    public ChatMessage post(@Nonnull final ChatMessage newChatMessage) throws ClientException {
         return send(HttpMethod.POST, newChatMessage);
     }
 
@@ -121,7 +126,7 @@ public class ChatMessageRequest extends BaseRequest<ChatMessage> {
      * @param newChatMessage the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ChatMessage newChatMessage, final ICallback<? super ChatMessage> callback) {
+    public void put(@Nonnull final ChatMessage newChatMessage, @Nonnull final ICallback<? super ChatMessage> callback) {
         send(HttpMethod.PUT, callback, newChatMessage);
     }
 
@@ -132,7 +137,8 @@ public class ChatMessageRequest extends BaseRequest<ChatMessage> {
      * @return the created ChatMessage
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ChatMessage put(final ChatMessage newChatMessage) throws ClientException {
+    @Nullable
+    public ChatMessage put(@Nonnull final ChatMessage newChatMessage) throws ClientException {
         return send(HttpMethod.PUT, newChatMessage);
     }
 
@@ -142,7 +148,8 @@ public class ChatMessageRequest extends BaseRequest<ChatMessage> {
      * @param value the select clause
      * @return the updated request
      */
-     public ChatMessageRequest select(final String value) {
+     @Nonnull
+     public ChatMessageRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -153,7 +160,8 @@ public class ChatMessageRequest extends BaseRequest<ChatMessage> {
      * @param value the expand clause
      * @return the updated request
      */
-     public ChatMessageRequest expand(final String value) {
+     @Nonnull
+     public ChatMessageRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

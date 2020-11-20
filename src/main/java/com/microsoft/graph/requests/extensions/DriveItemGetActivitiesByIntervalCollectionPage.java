@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.DriveItemGetActivitiesByIntervalCollectionRequestBuilder;
@@ -29,7 +31,7 @@ public class DriveItemGetActivitiesByIntervalCollectionPage extends BaseCollecti
      * @param response The serialized DriveItemGetActivitiesByIntervalCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public DriveItemGetActivitiesByIntervalCollectionPage(final DriveItemGetActivitiesByIntervalCollectionResponse response, final DriveItemGetActivitiesByIntervalCollectionRequestBuilder builder) {
+    public DriveItemGetActivitiesByIntervalCollectionPage(@Nonnull final DriveItemGetActivitiesByIntervalCollectionResponse response, @Nonnull final DriveItemGetActivitiesByIntervalCollectionRequestBuilder builder) {
        super(response, builder);
     }
 
@@ -39,7 +41,7 @@ public class DriveItemGetActivitiesByIntervalCollectionPage extends BaseCollecti
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public DriveItemGetActivitiesByIntervalCollectionPage(final java.util.List<ItemActivityStat> pageContents, final DriveItemGetActivitiesByIntervalCollectionRequestBuilder nextRequestBuilder) {
+    public DriveItemGetActivitiesByIntervalCollectionPage(@Nonnull final java.util.List<ItemActivityStat> pageContents, @Nullable final DriveItemGetActivitiesByIntervalCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

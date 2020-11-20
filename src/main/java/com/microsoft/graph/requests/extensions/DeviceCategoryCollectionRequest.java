@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.DeviceCategory;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class DeviceCategoryCollectionRequest extends BaseCollectionRequest<Devic
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceCategoryCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceCategoryCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceCategoryCollectionResponse.class, DeviceCategoryCollectionPage.class, DeviceCategoryCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class DeviceCategoryCollectionRequest extends BaseCollectionRequest<Devic
      * @param newDeviceCategory the DeviceCategory to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final DeviceCategory newDeviceCategory, final ICallback<? super DeviceCategory> callback) {
+    public void post(@Nonnull final DeviceCategory newDeviceCategory, @Nonnull final ICallback<? super DeviceCategory> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class DeviceCategoryCollectionRequest extends BaseCollectionRequest<Devic
      * @param newDeviceCategory the DeviceCategory to create
      * @return the newly created object
      */
-    public DeviceCategory post(final DeviceCategory newDeviceCategory) throws ClientException {
+    @Nonnull
+    public DeviceCategory post(@Nonnull final DeviceCategory newDeviceCategory) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class DeviceCategoryCollectionRequest extends BaseCollectionRequest<Devic
      * @param value the expand clause
      * @return the updated request
      */
-    public DeviceCategoryCollectionRequest expand(final String value) {
+    @Nonnull
+    public DeviceCategoryCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class DeviceCategoryCollectionRequest extends BaseCollectionRequest<Devic
      * @param value the filter clause
      * @return the updated request
      */
-    public DeviceCategoryCollectionRequest filter(final String value) {
+    @Nonnull
+    public DeviceCategoryCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class DeviceCategoryCollectionRequest extends BaseCollectionRequest<Devic
      * @param value the order by clause
      * @return the updated request
      */
-    public DeviceCategoryCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DeviceCategoryCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class DeviceCategoryCollectionRequest extends BaseCollectionRequest<Devic
      * @param value the select clause
      * @return the updated request
      */
-    public DeviceCategoryCollectionRequest select(final String value) {
+    @Nonnull
+    public DeviceCategoryCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class DeviceCategoryCollectionRequest extends BaseCollectionRequest<Devic
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DeviceCategoryCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class DeviceCategoryCollectionRequest extends BaseCollectionRequest<Devic
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public DeviceCategoryCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class DeviceCategoryCollectionRequest extends BaseCollectionRequest<Devic
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public DeviceCategoryCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public DeviceCategoryCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

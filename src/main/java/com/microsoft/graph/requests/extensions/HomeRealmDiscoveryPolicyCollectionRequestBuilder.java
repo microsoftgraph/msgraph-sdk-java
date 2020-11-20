@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.PolicyRoot;
 import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyRequestBuilder;
@@ -32,7 +34,7 @@ public class HomeRealmDiscoveryPolicyCollectionRequestBuilder extends BaseCollec
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public HomeRealmDiscoveryPolicyCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public HomeRealmDiscoveryPolicyCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicyRequestBuilder.class, HomeRealmDiscoveryPolicyCollectionRequest.class);
     }
 

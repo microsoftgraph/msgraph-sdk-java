@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartFill;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class WorkbookChartFillRequest extends BaseRequest<WorkbookChartFill> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartFillRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartFillRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChartFill.class);
     }
 
@@ -37,7 +39,7 @@ public class WorkbookChartFillRequest extends BaseRequest<WorkbookChartFill> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookChartFill> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookChartFill> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class WorkbookChartFillRequest extends BaseRequest<WorkbookChartFill> {
      * @return the WorkbookChartFill from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WorkbookChartFill get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class WorkbookChartFillRequest extends BaseRequest<WorkbookChartFill> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookChartFill> callback) {
+    public void delete(@Nonnull final ICallback<? super WorkbookChartFill> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class WorkbookChartFillRequest extends BaseRequest<WorkbookChartFill> {
      * @param sourceWorkbookChartFill the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookChartFill sourceWorkbookChartFill, final ICallback<? super WorkbookChartFill> callback) {
+    public void patch(@Nonnull final WorkbookChartFill sourceWorkbookChartFill, @Nonnull final ICallback<? super WorkbookChartFill> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartFill);
     }
 
@@ -86,7 +89,8 @@ public class WorkbookChartFillRequest extends BaseRequest<WorkbookChartFill> {
      * @return the updated WorkbookChartFill
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartFill patch(final WorkbookChartFill sourceWorkbookChartFill) throws ClientException {
+    @Nullable
+    public WorkbookChartFill patch(@Nonnull final WorkbookChartFill sourceWorkbookChartFill) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookChartFill);
     }
 
@@ -96,7 +100,7 @@ public class WorkbookChartFillRequest extends BaseRequest<WorkbookChartFill> {
      * @param newWorkbookChartFill the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookChartFill newWorkbookChartFill, final ICallback<? super WorkbookChartFill> callback) {
+    public void post(@Nonnull final WorkbookChartFill newWorkbookChartFill, @Nonnull final ICallback<? super WorkbookChartFill> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartFill);
     }
 
@@ -107,7 +111,8 @@ public class WorkbookChartFillRequest extends BaseRequest<WorkbookChartFill> {
      * @return the created WorkbookChartFill
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartFill post(final WorkbookChartFill newWorkbookChartFill) throws ClientException {
+    @Nullable
+    public WorkbookChartFill post(@Nonnull final WorkbookChartFill newWorkbookChartFill) throws ClientException {
         return send(HttpMethod.POST, newWorkbookChartFill);
     }
 
@@ -117,7 +122,7 @@ public class WorkbookChartFillRequest extends BaseRequest<WorkbookChartFill> {
      * @param newWorkbookChartFill the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookChartFill newWorkbookChartFill, final ICallback<? super WorkbookChartFill> callback) {
+    public void put(@Nonnull final WorkbookChartFill newWorkbookChartFill, @Nonnull final ICallback<? super WorkbookChartFill> callback) {
         send(HttpMethod.PUT, callback, newWorkbookChartFill);
     }
 
@@ -128,7 +133,8 @@ public class WorkbookChartFillRequest extends BaseRequest<WorkbookChartFill> {
      * @return the created WorkbookChartFill
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartFill put(final WorkbookChartFill newWorkbookChartFill) throws ClientException {
+    @Nullable
+    public WorkbookChartFill put(@Nonnull final WorkbookChartFill newWorkbookChartFill) throws ClientException {
         return send(HttpMethod.PUT, newWorkbookChartFill);
     }
 
@@ -138,7 +144,8 @@ public class WorkbookChartFillRequest extends BaseRequest<WorkbookChartFill> {
      * @param value the select clause
      * @return the updated request
      */
-     public WorkbookChartFillRequest select(final String value) {
+     @Nonnull
+     public WorkbookChartFillRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class WorkbookChartFillRequest extends BaseRequest<WorkbookChartFill> {
      * @param value the expand clause
      * @return the updated request
      */
-     public WorkbookChartFillRequest expand(final String value) {
+     @Nonnull
+     public WorkbookChartFillRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ShiftPreferences;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class ShiftPreferencesRequest extends BaseRequest<ShiftPreferences> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ShiftPreferencesRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ShiftPreferencesRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ShiftPreferences.class);
     }
 
@@ -37,7 +39,7 @@ public class ShiftPreferencesRequest extends BaseRequest<ShiftPreferences> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ShiftPreferences> callback) {
+    public void get(@Nonnull final ICallback<? super ShiftPreferences> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class ShiftPreferencesRequest extends BaseRequest<ShiftPreferences> {
      * @return the ShiftPreferences from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ShiftPreferences get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class ShiftPreferencesRequest extends BaseRequest<ShiftPreferences> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ShiftPreferences> callback) {
+    public void delete(@Nonnull final ICallback<? super ShiftPreferences> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class ShiftPreferencesRequest extends BaseRequest<ShiftPreferences> {
      * @param sourceShiftPreferences the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ShiftPreferences sourceShiftPreferences, final ICallback<? super ShiftPreferences> callback) {
+    public void patch(@Nonnull final ShiftPreferences sourceShiftPreferences, @Nonnull final ICallback<? super ShiftPreferences> callback) {
         send(HttpMethod.PATCH, callback, sourceShiftPreferences);
     }
 
@@ -86,7 +89,8 @@ public class ShiftPreferencesRequest extends BaseRequest<ShiftPreferences> {
      * @return the updated ShiftPreferences
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ShiftPreferences patch(final ShiftPreferences sourceShiftPreferences) throws ClientException {
+    @Nullable
+    public ShiftPreferences patch(@Nonnull final ShiftPreferences sourceShiftPreferences) throws ClientException {
         return send(HttpMethod.PATCH, sourceShiftPreferences);
     }
 
@@ -96,7 +100,7 @@ public class ShiftPreferencesRequest extends BaseRequest<ShiftPreferences> {
      * @param newShiftPreferences the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ShiftPreferences newShiftPreferences, final ICallback<? super ShiftPreferences> callback) {
+    public void post(@Nonnull final ShiftPreferences newShiftPreferences, @Nonnull final ICallback<? super ShiftPreferences> callback) {
         send(HttpMethod.POST, callback, newShiftPreferences);
     }
 
@@ -107,7 +111,8 @@ public class ShiftPreferencesRequest extends BaseRequest<ShiftPreferences> {
      * @return the created ShiftPreferences
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ShiftPreferences post(final ShiftPreferences newShiftPreferences) throws ClientException {
+    @Nullable
+    public ShiftPreferences post(@Nonnull final ShiftPreferences newShiftPreferences) throws ClientException {
         return send(HttpMethod.POST, newShiftPreferences);
     }
 
@@ -117,7 +122,7 @@ public class ShiftPreferencesRequest extends BaseRequest<ShiftPreferences> {
      * @param newShiftPreferences the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ShiftPreferences newShiftPreferences, final ICallback<? super ShiftPreferences> callback) {
+    public void put(@Nonnull final ShiftPreferences newShiftPreferences, @Nonnull final ICallback<? super ShiftPreferences> callback) {
         send(HttpMethod.PUT, callback, newShiftPreferences);
     }
 
@@ -128,7 +133,8 @@ public class ShiftPreferencesRequest extends BaseRequest<ShiftPreferences> {
      * @return the created ShiftPreferences
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ShiftPreferences put(final ShiftPreferences newShiftPreferences) throws ClientException {
+    @Nullable
+    public ShiftPreferences put(@Nonnull final ShiftPreferences newShiftPreferences) throws ClientException {
         return send(HttpMethod.PUT, newShiftPreferences);
     }
 
@@ -138,7 +144,8 @@ public class ShiftPreferencesRequest extends BaseRequest<ShiftPreferences> {
      * @param value the select clause
      * @return the updated request
      */
-     public ShiftPreferencesRequest select(final String value) {
+     @Nonnull
+     public ShiftPreferencesRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class ShiftPreferencesRequest extends BaseRequest<ShiftPreferences> {
      * @param value the expand clause
      * @return the updated request
      */
-     public ShiftPreferencesRequest expand(final String value) {
+     @Nonnull
+     public ShiftPreferencesRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

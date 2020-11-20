@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.UserActivity;
 import com.microsoft.graph.requests.extensions.UserActivityCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.UserActivityCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class UserActivityCollectionPage extends BaseCollectionPage<UserActivity,
      * @param response the serialized UserActivityCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public UserActivityCollectionPage(final UserActivityCollectionResponse response, final UserActivityCollectionRequestBuilder builder) {
+    public UserActivityCollectionPage(@Nonnull final UserActivityCollectionResponse response, @Nonnull final UserActivityCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class UserActivityCollectionPage extends BaseCollectionPage<UserActivity,
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public UserActivityCollectionPage(final java.util.List<UserActivity> pageContents, final UserActivityCollectionRequestBuilder nextRequestBuilder) {
+    public UserActivityCollectionPage(@Nonnull final java.util.List<UserActivity> pageContents, @Nullable final UserActivityCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

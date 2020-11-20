@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Operation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,10 +31,10 @@ public class OperationRequest extends BaseRequest<Operation> {
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public OperationRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends Operation> responseClass) {
+    public OperationRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends Operation> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -43,7 +45,7 @@ public class OperationRequest extends BaseRequest<Operation> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OperationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OperationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Operation.class);
     }
 
@@ -52,7 +54,7 @@ public class OperationRequest extends BaseRequest<Operation> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Operation> callback) {
+    public void get(@Nonnull final ICallback<? super Operation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -62,6 +64,7 @@ public class OperationRequest extends BaseRequest<Operation> {
      * @return the Operation from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Operation get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -71,7 +74,7 @@ public class OperationRequest extends BaseRequest<Operation> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Operation> callback) {
+    public void delete(@Nonnull final ICallback<? super Operation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +93,7 @@ public class OperationRequest extends BaseRequest<Operation> {
      * @param sourceOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Operation sourceOperation, final ICallback<? super Operation> callback) {
+    public void patch(@Nonnull final Operation sourceOperation, @Nonnull final ICallback<? super Operation> callback) {
         send(HttpMethod.PATCH, callback, sourceOperation);
     }
 
@@ -101,7 +104,8 @@ public class OperationRequest extends BaseRequest<Operation> {
      * @return the updated Operation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Operation patch(final Operation sourceOperation) throws ClientException {
+    @Nullable
+    public Operation patch(@Nonnull final Operation sourceOperation) throws ClientException {
         return send(HttpMethod.PATCH, sourceOperation);
     }
 
@@ -111,7 +115,7 @@ public class OperationRequest extends BaseRequest<Operation> {
      * @param newOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Operation newOperation, final ICallback<? super Operation> callback) {
+    public void post(@Nonnull final Operation newOperation, @Nonnull final ICallback<? super Operation> callback) {
         send(HttpMethod.POST, callback, newOperation);
     }
 
@@ -122,7 +126,8 @@ public class OperationRequest extends BaseRequest<Operation> {
      * @return the created Operation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Operation post(final Operation newOperation) throws ClientException {
+    @Nullable
+    public Operation post(@Nonnull final Operation newOperation) throws ClientException {
         return send(HttpMethod.POST, newOperation);
     }
 
@@ -132,7 +137,7 @@ public class OperationRequest extends BaseRequest<Operation> {
      * @param newOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Operation newOperation, final ICallback<? super Operation> callback) {
+    public void put(@Nonnull final Operation newOperation, @Nonnull final ICallback<? super Operation> callback) {
         send(HttpMethod.PUT, callback, newOperation);
     }
 
@@ -143,7 +148,8 @@ public class OperationRequest extends BaseRequest<Operation> {
      * @return the created Operation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Operation put(final Operation newOperation) throws ClientException {
+    @Nullable
+    public Operation put(@Nonnull final Operation newOperation) throws ClientException {
         return send(HttpMethod.PUT, newOperation);
     }
 
@@ -153,7 +159,8 @@ public class OperationRequest extends BaseRequest<Operation> {
      * @param value the select clause
      * @return the updated request
      */
-     public OperationRequest select(final String value) {
+     @Nonnull
+     public OperationRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -164,7 +171,8 @@ public class OperationRequest extends BaseRequest<Operation> {
      * @param value the expand clause
      * @return the updated request
      */
-     public OperationRequest expand(final String value) {
+     @Nonnull
+     public OperationRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

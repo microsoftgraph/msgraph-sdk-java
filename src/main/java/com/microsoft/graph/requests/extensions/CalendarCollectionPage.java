@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Calendar;
 import com.microsoft.graph.requests.extensions.CalendarCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.CalendarCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class CalendarCollectionPage extends BaseCollectionPage<Calendar, Calenda
      * @param response the serialized CalendarCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public CalendarCollectionPage(final CalendarCollectionResponse response, final CalendarCollectionRequestBuilder builder) {
+    public CalendarCollectionPage(@Nonnull final CalendarCollectionResponse response, @Nonnull final CalendarCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class CalendarCollectionPage extends BaseCollectionPage<Calendar, Calenda
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public CalendarCollectionPage(final java.util.List<Calendar> pageContents, final CalendarCollectionRequestBuilder nextRequestBuilder) {
+    public CalendarCollectionPage(@Nonnull final java.util.List<Calendar> pageContents, @Nullable final CalendarCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

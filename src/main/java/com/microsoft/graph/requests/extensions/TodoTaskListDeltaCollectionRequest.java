@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TodoTaskList;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.TodoTaskListDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TodoTaskListDeltaCollectionResponse;
@@ -34,7 +36,7 @@ public class TodoTaskListDeltaCollectionRequest extends BaseCollectionRequest<To
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TodoTaskListDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TodoTaskListDeltaCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TodoTaskListDeltaCollectionResponse.class, TodoTaskListDeltaCollectionPage.class, TodoTaskListDeltaCollectionRequestBuilder.class);
     }
 
@@ -45,7 +47,8 @@ public class TodoTaskListDeltaCollectionRequest extends BaseCollectionRequest<To
      * @param value the select clause
      * @return the updated request
      */
-    public TodoTaskListDeltaCollectionRequest select(final String value) {
+    @Nonnull
+    public TodoTaskListDeltaCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -56,6 +59,7 @@ public class TodoTaskListDeltaCollectionRequest extends BaseCollectionRequest<To
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public TodoTaskListDeltaCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -67,7 +71,8 @@ public class TodoTaskListDeltaCollectionRequest extends BaseCollectionRequest<To
      * @param value the expand clause
      * @return the updated request
      */
-    public TodoTaskListDeltaCollectionRequest expand(final String value) {
+    @Nonnull
+    public TodoTaskListDeltaCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -78,7 +83,8 @@ public class TodoTaskListDeltaCollectionRequest extends BaseCollectionRequest<To
      * @param value the filter clause
      * @return the updated request
      */
-    public TodoTaskListDeltaCollectionRequest filter(final String value) {
+    @Nonnull
+    public TodoTaskListDeltaCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -89,7 +95,8 @@ public class TodoTaskListDeltaCollectionRequest extends BaseCollectionRequest<To
      * @param value the order by clause
      * @return the updated request
      */
-    public TodoTaskListDeltaCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public TodoTaskListDeltaCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }

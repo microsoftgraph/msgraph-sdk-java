@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.SharedDriveItem;
 import com.microsoft.graph.requests.extensions.SharedDriveItemCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.SharedDriveItemCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class SharedDriveItemCollectionPage extends BaseCollectionPage<SharedDriv
      * @param response the serialized SharedDriveItemCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public SharedDriveItemCollectionPage(final SharedDriveItemCollectionResponse response, final SharedDriveItemCollectionRequestBuilder builder) {
+    public SharedDriveItemCollectionPage(@Nonnull final SharedDriveItemCollectionResponse response, @Nonnull final SharedDriveItemCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class SharedDriveItemCollectionPage extends BaseCollectionPage<SharedDriv
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public SharedDriveItemCollectionPage(final java.util.List<SharedDriveItem> pageContents, final SharedDriveItemCollectionRequestBuilder nextRequestBuilder) {
+    public SharedDriveItemCollectionPage(@Nonnull final java.util.List<SharedDriveItem> pageContents, @Nullable final SharedDriveItemCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

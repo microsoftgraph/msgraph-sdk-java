@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionNetworkLearningSummary;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionNetworkLearningSummaryCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class WindowsInformationProtectionNetworkLearningSummaryCollectionPage ex
      * @param response the serialized WindowsInformationProtectionNetworkLearningSummaryCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public WindowsInformationProtectionNetworkLearningSummaryCollectionPage(final WindowsInformationProtectionNetworkLearningSummaryCollectionResponse response, final WindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder builder) {
+    public WindowsInformationProtectionNetworkLearningSummaryCollectionPage(@Nonnull final WindowsInformationProtectionNetworkLearningSummaryCollectionResponse response, @Nonnull final WindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class WindowsInformationProtectionNetworkLearningSummaryCollectionPage ex
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public WindowsInformationProtectionNetworkLearningSummaryCollectionPage(final java.util.List<WindowsInformationProtectionNetworkLearningSummary> pageContents, final WindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder nextRequestBuilder) {
+    public WindowsInformationProtectionNetworkLearningSummaryCollectionPage(@Nonnull final java.util.List<WindowsInformationProtectionNetworkLearningSummary> pageContents, @Nullable final WindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

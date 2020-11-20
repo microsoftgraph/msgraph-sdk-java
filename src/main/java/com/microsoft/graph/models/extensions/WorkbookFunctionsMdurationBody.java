@@ -7,6 +7,8 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
 import java.util.EnumSet;
@@ -24,6 +26,7 @@ public class WorkbookFunctionsMdurationBody {
      */
     @SerializedName(value = "settlement", alternate = {"Settlement"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement settlement;
 
     /**
@@ -32,6 +35,7 @@ public class WorkbookFunctionsMdurationBody {
      */
     @SerializedName(value = "maturity", alternate = {"Maturity"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement maturity;
 
     /**
@@ -40,6 +44,7 @@ public class WorkbookFunctionsMdurationBody {
      */
     @SerializedName(value = "coupon", alternate = {"Coupon"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement coupon;
 
     /**
@@ -48,6 +53,7 @@ public class WorkbookFunctionsMdurationBody {
      */
     @SerializedName(value = "yld", alternate = {"Yld"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement yld;
 
     /**
@@ -56,6 +62,7 @@ public class WorkbookFunctionsMdurationBody {
      */
     @SerializedName(value = "frequency", alternate = {"Frequency"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement frequency;
 
     /**
@@ -64,6 +71,7 @@ public class WorkbookFunctionsMdurationBody {
      */
     @SerializedName(value = "basis", alternate = {"Basis"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement basis;
 
 
@@ -82,6 +90,7 @@ public class WorkbookFunctionsMdurationBody {
      *
      * @return the raw representation of this class
      */
+    @Nullable
     public JsonObject getRawObject() {
         return rawObject;
     }
@@ -91,6 +100,7 @@ public class WorkbookFunctionsMdurationBody {
      *
      * @return the serializer
      */
+    @Nullable
     public ISerializer getSerializer() {
         return serializer;
     }
@@ -101,7 +111,7 @@ public class WorkbookFunctionsMdurationBody {
      * @param serializer the serializer
      * @param json the JSON object to set this object to
      */
-    public void setRawObject(final ISerializer serializer, final JsonObject json) {
+    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
         this.serializer = serializer;
         rawObject = json;
 

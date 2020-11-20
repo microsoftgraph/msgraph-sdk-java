@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.requests.extensions.DriveItemCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DriveItemCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class DriveItemCollectionPage extends BaseCollectionPage<DriveItem, Drive
      * @param response the serialized DriveItemCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DriveItemCollectionPage(final DriveItemCollectionResponse response, final DriveItemCollectionRequestBuilder builder) {
+    public DriveItemCollectionPage(@Nonnull final DriveItemCollectionResponse response, @Nonnull final DriveItemCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class DriveItemCollectionPage extends BaseCollectionPage<DriveItem, Drive
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public DriveItemCollectionPage(final java.util.List<DriveItem> pageContents, final DriveItemCollectionRequestBuilder nextRequestBuilder) {
+    public DriveItemCollectionPage(@Nonnull final java.util.List<DriveItem> pageContents, @Nullable final DriveItemCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

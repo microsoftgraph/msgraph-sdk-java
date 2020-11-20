@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.PlannerPlanCollectionRequestBuild
 import com.microsoft.graph.requests.extensions.PlannerPlanRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -30,7 +32,7 @@ public class PlannerGroupRequest extends BaseRequest<PlannerGroup> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PlannerGroupRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PlannerGroupRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PlannerGroup.class);
     }
 
@@ -39,7 +41,7 @@ public class PlannerGroupRequest extends BaseRequest<PlannerGroup> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PlannerGroup> callback) {
+    public void get(@Nonnull final ICallback<? super PlannerGroup> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -49,6 +51,7 @@ public class PlannerGroupRequest extends BaseRequest<PlannerGroup> {
      * @return the PlannerGroup from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PlannerGroup get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -58,7 +61,7 @@ public class PlannerGroupRequest extends BaseRequest<PlannerGroup> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PlannerGroup> callback) {
+    public void delete(@Nonnull final ICallback<? super PlannerGroup> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +80,7 @@ public class PlannerGroupRequest extends BaseRequest<PlannerGroup> {
      * @param sourcePlannerGroup the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PlannerGroup sourcePlannerGroup, final ICallback<? super PlannerGroup> callback) {
+    public void patch(@Nonnull final PlannerGroup sourcePlannerGroup, @Nonnull final ICallback<? super PlannerGroup> callback) {
         send(HttpMethod.PATCH, callback, sourcePlannerGroup);
     }
 
@@ -88,7 +91,8 @@ public class PlannerGroupRequest extends BaseRequest<PlannerGroup> {
      * @return the updated PlannerGroup
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PlannerGroup patch(final PlannerGroup sourcePlannerGroup) throws ClientException {
+    @Nullable
+    public PlannerGroup patch(@Nonnull final PlannerGroup sourcePlannerGroup) throws ClientException {
         return send(HttpMethod.PATCH, sourcePlannerGroup);
     }
 
@@ -98,7 +102,7 @@ public class PlannerGroupRequest extends BaseRequest<PlannerGroup> {
      * @param newPlannerGroup the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PlannerGroup newPlannerGroup, final ICallback<? super PlannerGroup> callback) {
+    public void post(@Nonnull final PlannerGroup newPlannerGroup, @Nonnull final ICallback<? super PlannerGroup> callback) {
         send(HttpMethod.POST, callback, newPlannerGroup);
     }
 
@@ -109,7 +113,8 @@ public class PlannerGroupRequest extends BaseRequest<PlannerGroup> {
      * @return the created PlannerGroup
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PlannerGroup post(final PlannerGroup newPlannerGroup) throws ClientException {
+    @Nullable
+    public PlannerGroup post(@Nonnull final PlannerGroup newPlannerGroup) throws ClientException {
         return send(HttpMethod.POST, newPlannerGroup);
     }
 
@@ -119,7 +124,7 @@ public class PlannerGroupRequest extends BaseRequest<PlannerGroup> {
      * @param newPlannerGroup the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PlannerGroup newPlannerGroup, final ICallback<? super PlannerGroup> callback) {
+    public void put(@Nonnull final PlannerGroup newPlannerGroup, @Nonnull final ICallback<? super PlannerGroup> callback) {
         send(HttpMethod.PUT, callback, newPlannerGroup);
     }
 
@@ -130,7 +135,8 @@ public class PlannerGroupRequest extends BaseRequest<PlannerGroup> {
      * @return the created PlannerGroup
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PlannerGroup put(final PlannerGroup newPlannerGroup) throws ClientException {
+    @Nullable
+    public PlannerGroup put(@Nonnull final PlannerGroup newPlannerGroup) throws ClientException {
         return send(HttpMethod.PUT, newPlannerGroup);
     }
 
@@ -140,7 +146,8 @@ public class PlannerGroupRequest extends BaseRequest<PlannerGroup> {
      * @param value the select clause
      * @return the updated request
      */
-     public PlannerGroupRequest select(final String value) {
+     @Nonnull
+     public PlannerGroupRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -151,7 +158,8 @@ public class PlannerGroupRequest extends BaseRequest<PlannerGroup> {
      * @param value the expand clause
      * @return the updated request
      */
-     public PlannerGroupRequest expand(final String value) {
+     @Nonnull
+     public PlannerGroupRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

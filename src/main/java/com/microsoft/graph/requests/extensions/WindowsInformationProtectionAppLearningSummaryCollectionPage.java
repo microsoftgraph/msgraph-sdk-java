@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionAppLearningSummary;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLearningSummaryCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLearningSummaryCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class WindowsInformationProtectionAppLearningSummaryCollectionPage extend
      * @param response the serialized WindowsInformationProtectionAppLearningSummaryCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public WindowsInformationProtectionAppLearningSummaryCollectionPage(final WindowsInformationProtectionAppLearningSummaryCollectionResponse response, final WindowsInformationProtectionAppLearningSummaryCollectionRequestBuilder builder) {
+    public WindowsInformationProtectionAppLearningSummaryCollectionPage(@Nonnull final WindowsInformationProtectionAppLearningSummaryCollectionResponse response, @Nonnull final WindowsInformationProtectionAppLearningSummaryCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class WindowsInformationProtectionAppLearningSummaryCollectionPage extend
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public WindowsInformationProtectionAppLearningSummaryCollectionPage(final java.util.List<WindowsInformationProtectionAppLearningSummary> pageContents, final WindowsInformationProtectionAppLearningSummaryCollectionRequestBuilder nextRequestBuilder) {
+    public WindowsInformationProtectionAppLearningSummaryCollectionPage(@Nonnull final java.util.List<WindowsInformationProtectionAppLearningSummary> pageContents, @Nullable final WindowsInformationProtectionAppLearningSummaryCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

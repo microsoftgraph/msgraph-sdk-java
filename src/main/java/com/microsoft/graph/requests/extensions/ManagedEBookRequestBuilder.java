@@ -18,6 +18,8 @@ import com.microsoft.graph.requests.extensions.UserInstallStateSummaryRequestBui
 import com.microsoft.graph.requests.extensions.EBookInstallSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -35,7 +37,7 @@ public class ManagedEBookRequestBuilder extends BaseRequestBuilder<ManagedEBook>
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedEBookRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedEBookRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,7 +47,8 @@ public class ManagedEBookRequestBuilder extends BaseRequestBuilder<ManagedEBook>
      * @param requestOptions the options for this request
      * @return the ManagedEBookRequest instance
      */
-    public ManagedEBookRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ManagedEBookRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -55,7 +58,8 @@ public class ManagedEBookRequestBuilder extends BaseRequestBuilder<ManagedEBook>
      * @param requestOptions the options for this request
      * @return the ManagedEBookRequest instance
      */
-    public ManagedEBookRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ManagedEBookRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ManagedEBookRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -65,6 +69,7 @@ public class ManagedEBookRequestBuilder extends BaseRequestBuilder<ManagedEBook>
      *
      * @return the collection request builder
      */
+    @Nonnull
     public ManagedEBookAssignmentCollectionRequestBuilder assignments() {
         return new ManagedEBookAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
@@ -75,7 +80,8 @@ public class ManagedEBookRequestBuilder extends BaseRequestBuilder<ManagedEBook>
      * @return the request builder
      * @param id the item identifier
      */
-    public ManagedEBookAssignmentRequestBuilder assignments(final String id) {
+    @Nonnull
+    public ManagedEBookAssignmentRequestBuilder assignments(@Nonnull final String id) {
         return new ManagedEBookAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
     /**
@@ -83,6 +89,7 @@ public class ManagedEBookRequestBuilder extends BaseRequestBuilder<ManagedEBook>
      *
      * @return the collection request builder
      */
+    @Nonnull
     public DeviceInstallStateCollectionRequestBuilder deviceStates() {
         return new DeviceInstallStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates"), getClient(), null);
     }
@@ -93,7 +100,8 @@ public class ManagedEBookRequestBuilder extends BaseRequestBuilder<ManagedEBook>
      * @return the request builder
      * @param id the item identifier
      */
-    public DeviceInstallStateRequestBuilder deviceStates(final String id) {
+    @Nonnull
+    public DeviceInstallStateRequestBuilder deviceStates(@Nonnull final String id) {
         return new DeviceInstallStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates") + "/" + id, getClient(), null);
     }
 
@@ -102,6 +110,7 @@ public class ManagedEBookRequestBuilder extends BaseRequestBuilder<ManagedEBook>
      *
      * @return the EBookInstallSummaryRequestBuilder instance
      */
+    @Nonnull
     public EBookInstallSummaryRequestBuilder installSummary() {
         return new EBookInstallSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("installSummary"), getClient(), null);
     }
@@ -110,6 +119,7 @@ public class ManagedEBookRequestBuilder extends BaseRequestBuilder<ManagedEBook>
      *
      * @return the collection request builder
      */
+    @Nonnull
     public UserInstallStateSummaryCollectionRequestBuilder userStateSummary() {
         return new UserInstallStateSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStateSummary"), getClient(), null);
     }
@@ -120,7 +130,8 @@ public class ManagedEBookRequestBuilder extends BaseRequestBuilder<ManagedEBook>
      * @return the request builder
      * @param id the item identifier
      */
-    public UserInstallStateSummaryRequestBuilder userStateSummary(final String id) {
+    @Nonnull
+    public UserInstallStateSummaryRequestBuilder userStateSummary(@Nonnull final String id) {
         return new UserInstallStateSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("userStateSummary") + "/" + id, getClient(), null);
     }
 
@@ -129,7 +140,8 @@ public class ManagedEBookRequestBuilder extends BaseRequestBuilder<ManagedEBook>
      * @return the request builder 
      * @param managedEBookAssignments the managedEBookAssignments
      */
-    public ManagedEBookAssignRequestBuilder assign(final java.util.List<ManagedEBookAssignment> managedEBookAssignments) {
+    @Nonnull
+    public ManagedEBookAssignRequestBuilder assign(@Nullable final java.util.List<ManagedEBookAssignment> managedEBookAssignments) {
         return new ManagedEBookAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, managedEBookAssignments);
     }
 }

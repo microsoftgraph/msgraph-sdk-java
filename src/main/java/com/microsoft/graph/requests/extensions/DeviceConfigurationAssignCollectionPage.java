@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceConfigurationAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignCollectionRequestBuilder;
@@ -29,7 +31,7 @@ public class DeviceConfigurationAssignCollectionPage extends BaseCollectionPage<
      * @param response The serialized DeviceConfigurationAssignCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public DeviceConfigurationAssignCollectionPage(final DeviceConfigurationAssignCollectionResponse response, final DeviceConfigurationAssignCollectionRequestBuilder builder) {
+    public DeviceConfigurationAssignCollectionPage(@Nonnull final DeviceConfigurationAssignCollectionResponse response, @Nonnull final DeviceConfigurationAssignCollectionRequestBuilder builder) {
        super(response, builder);
     }
 
@@ -39,7 +41,7 @@ public class DeviceConfigurationAssignCollectionPage extends BaseCollectionPage<
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public DeviceConfigurationAssignCollectionPage(final java.util.List<DeviceConfigurationAssignment> pageContents, final DeviceConfigurationAssignCollectionRequestBuilder nextRequestBuilder) {
+    public DeviceConfigurationAssignCollectionPage(@Nonnull final java.util.List<DeviceConfigurationAssignment> pageContents, @Nullable final DeviceConfigurationAssignCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

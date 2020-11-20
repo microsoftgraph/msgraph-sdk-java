@@ -12,6 +12,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 /**
  * The base method request builder class used for POST actions
  */
@@ -23,6 +26,7 @@ public class BaseActionCollectionRequestBuilder<T, T2 extends BaseRequestBuilder
     /**
      * The body parameters to add to this request
      */
+    @Nonnull
     protected Map<String, Object> bodyParams = new HashMap<>();
 
     /**
@@ -35,11 +39,11 @@ public class BaseActionCollectionRequestBuilder<T, T2 extends BaseRequestBuilder
      * @param collectionRequestClass the class for the collection request
      */
     public BaseActionCollectionRequestBuilder(
-            final String requestUrl,
-            final IBaseClient client,
-            final List<? extends Option> options,
-            final Class<T2> requestBuilderClass,
-            final Class<T5> collectionRequestClass
+            @Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final List<? extends Option> options,
+            @Nonnull final Class<T2> requestBuilderClass,
+            @Nonnull final Class<T5> collectionRequestClass
     ) {
         super(requestUrl, client, options, requestBuilderClass, collectionRequestClass);
     }
@@ -50,7 +54,7 @@ public class BaseActionCollectionRequestBuilder<T, T2 extends BaseRequestBuilder
      * @param name the key used to access the stored body parameter
      * @return true, if {@link BaseActionCollectionRequestBuilder#bodyParams} contains the key, otherwise false
      */
-    protected boolean hasParameter(final String name) {
+    protected boolean hasParameter(@Nonnull final String name) {
         return bodyParams.containsKey(name);
     }
 
@@ -62,7 +66,8 @@ public class BaseActionCollectionRequestBuilder<T, T2 extends BaseRequestBuilder
      * @return the stored instance of T, otherwise null
      */
     @SuppressWarnings("unchecked")
-    protected <T1> T1 getParameter(final String name) {
+    @Nullable
+    protected <T1> T1 getParameter(@Nonnull final String name) {
         return (T1) bodyParams.get(name);
     }
 }

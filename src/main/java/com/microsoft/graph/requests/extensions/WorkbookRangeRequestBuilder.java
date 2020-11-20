@@ -14,6 +14,8 @@ import com.microsoft.graph.requests.extensions.WorkbookRangeSortRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -31,7 +33,7 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -41,7 +43,8 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      * @param requestOptions the options for this request
      * @return the WorkbookRangeRequest instance
      */
-    public WorkbookRangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WorkbookRangeRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,7 +54,8 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      * @param requestOptions the options for this request
      * @return the WorkbookRangeRequest instance
      */
-    public WorkbookRangeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WorkbookRangeRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookRangeRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -62,6 +66,7 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      *
      * @return the WorkbookRangeFormatRequestBuilder instance
      */
+    @Nonnull
     public WorkbookRangeFormatRequestBuilder format() {
         return new WorkbookRangeFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
@@ -71,6 +76,7 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      *
      * @return the WorkbookRangeSortRequestBuilder instance
      */
+    @Nonnull
     public WorkbookRangeSortRequestBuilder sort() {
         return new WorkbookRangeSortRequestBuilder(getRequestUrlWithAdditionalSegment("sort"), getClient(), null);
     }
@@ -80,6 +86,7 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      *
      * @return the WorkbookWorksheetRequestBuilder instance
      */
+    @Nonnull
     public WorkbookWorksheetRequestBuilder worksheet() {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
     }
@@ -89,7 +96,8 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      * @return the request builder 
      * @param applyTo the applyTo
      */
-    public WorkbookRangeClearRequestBuilder clear(final String applyTo) {
+    @Nonnull
+    public WorkbookRangeClearRequestBuilder clear(@Nullable final String applyTo) {
         return new WorkbookRangeClearRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.clear"), getClient(), null, applyTo);
     }
 
@@ -98,7 +106,8 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      * @return the request builder 
      * @param shift the shift
      */
-    public WorkbookRangeDeleteRequestBuilder delete(final String shift) {
+    @Nonnull
+    public WorkbookRangeDeleteRequestBuilder delete(@Nullable final String shift) {
         return new WorkbookRangeDeleteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delete"), getClient(), null, shift);
     }
 
@@ -107,7 +116,8 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      * @return the request builder 
      * @param shift the shift
      */
-    public WorkbookRangeInsertRequestBuilder insert(final String shift) {
+    @Nonnull
+    public WorkbookRangeInsertRequestBuilder insert(@Nullable final String shift) {
         return new WorkbookRangeInsertRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.insert"), getClient(), null, shift);
     }
 
@@ -116,7 +126,8 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      * @return the request builder 
      * @param across the across
      */
-    public WorkbookRangeMergeRequestBuilder merge(final Boolean across) {
+    @Nonnull
+    public WorkbookRangeMergeRequestBuilder merge(@Nullable final Boolean across) {
         return new WorkbookRangeMergeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.merge"), getClient(), null, across);
     }
 
@@ -124,6 +135,7 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public WorkbookRangeUnmergeRequestBuilder unmerge() {
         return new WorkbookRangeUnmergeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unmerge"), getClient(), null);
     }
@@ -133,7 +145,8 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      * @return the request builder 
      * @param anotherRange the anotherRange
      */
-    public WorkbookRangeBoundingRectRequestBuilder boundingRect(final String anotherRange) {
+    @Nonnull
+    public WorkbookRangeBoundingRectRequestBuilder boundingRect(@Nullable final String anotherRange) {
         return new WorkbookRangeBoundingRectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.boundingRect"), getClient(), null, anotherRange);
     }
 
@@ -143,7 +156,8 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      * @param row the row
      * @param column the column
      */
-    public WorkbookRangeCellRequestBuilder cell(final Integer row, final Integer column) {
+    @Nonnull
+    public WorkbookRangeCellRequestBuilder cell(@Nullable final Integer row, @Nullable final Integer column) {
         return new WorkbookRangeCellRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cell"), getClient(), null, row, column);
     }
 
@@ -152,7 +166,8 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      * @return the request builder 
      * @param column the column
      */
-    public WorkbookRangeColumnRequestBuilder column(final Integer column) {
+    @Nonnull
+    public WorkbookRangeColumnRequestBuilder column(@Nullable final Integer column) {
         return new WorkbookRangeColumnRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.column"), getClient(), null, column);
     }
 
@@ -160,6 +175,7 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public WorkbookRangeColumnsAfterRequestBuilder columnsAfter() {
         return new WorkbookRangeColumnsAfterRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.columnsAfter"), getClient(), null);
     }
@@ -169,7 +185,8 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      * @return the request builder 
      * @param count the count
      */
-    public WorkbookRangeColumnsAfterRequestBuilder columnsAfter(final Integer count) {
+    @Nonnull
+    public WorkbookRangeColumnsAfterRequestBuilder columnsAfter(@Nullable final Integer count) {
         return new WorkbookRangeColumnsAfterRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.columnsAfter"), getClient(), null, count);
     }
 
@@ -177,6 +194,7 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public WorkbookRangeColumnsBeforeRequestBuilder columnsBefore() {
         return new WorkbookRangeColumnsBeforeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.columnsBefore"), getClient(), null);
     }
@@ -186,7 +204,8 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      * @return the request builder 
      * @param count the count
      */
-    public WorkbookRangeColumnsBeforeRequestBuilder columnsBefore(final Integer count) {
+    @Nonnull
+    public WorkbookRangeColumnsBeforeRequestBuilder columnsBefore(@Nullable final Integer count) {
         return new WorkbookRangeColumnsBeforeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.columnsBefore"), getClient(), null, count);
     }
 
@@ -194,6 +213,7 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public WorkbookRangeEntireColumnRequestBuilder entireColumn() {
         return new WorkbookRangeEntireColumnRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.entireColumn"), getClient(), null);
     }
@@ -202,6 +222,7 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public WorkbookRangeEntireRowRequestBuilder entireRow() {
         return new WorkbookRangeEntireRowRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.entireRow"), getClient(), null);
     }
@@ -211,7 +232,8 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      * @return the request builder 
      * @param anotherRange the anotherRange
      */
-    public WorkbookRangeIntersectionRequestBuilder intersection(final String anotherRange) {
+    @Nonnull
+    public WorkbookRangeIntersectionRequestBuilder intersection(@Nullable final String anotherRange) {
         return new WorkbookRangeIntersectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.intersection"), getClient(), null, anotherRange);
     }
 
@@ -219,6 +241,7 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public WorkbookRangeLastCellRequestBuilder lastCell() {
         return new WorkbookRangeLastCellRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.lastCell"), getClient(), null);
     }
@@ -227,6 +250,7 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public WorkbookRangeLastColumnRequestBuilder lastColumn() {
         return new WorkbookRangeLastColumnRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.lastColumn"), getClient(), null);
     }
@@ -235,6 +259,7 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public WorkbookRangeLastRowRequestBuilder lastRow() {
         return new WorkbookRangeLastRowRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.lastRow"), getClient(), null);
     }
@@ -245,7 +270,8 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      * @param rowOffset the rowOffset
      * @param columnOffset the columnOffset
      */
-    public WorkbookRangeOffsetRangeRequestBuilder offsetRange(final Integer rowOffset, final Integer columnOffset) {
+    @Nonnull
+    public WorkbookRangeOffsetRangeRequestBuilder offsetRange(@Nullable final Integer rowOffset, @Nullable final Integer columnOffset) {
         return new WorkbookRangeOffsetRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.offsetRange"), getClient(), null, rowOffset, columnOffset);
     }
 
@@ -255,7 +281,8 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      * @param deltaRows the deltaRows
      * @param deltaColumns the deltaColumns
      */
-    public WorkbookRangeResizedRangeRequestBuilder resizedRange(final Integer deltaRows, final Integer deltaColumns) {
+    @Nonnull
+    public WorkbookRangeResizedRangeRequestBuilder resizedRange(@Nullable final Integer deltaRows, @Nullable final Integer deltaColumns) {
         return new WorkbookRangeResizedRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.resizedRange"), getClient(), null, deltaRows, deltaColumns);
     }
 
@@ -264,7 +291,8 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      * @return the request builder 
      * @param row the row
      */
-    public WorkbookRangeRowRequestBuilder row(final Integer row) {
+    @Nonnull
+    public WorkbookRangeRowRequestBuilder row(@Nullable final Integer row) {
         return new WorkbookRangeRowRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.row"), getClient(), null, row);
     }
 
@@ -272,6 +300,7 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public WorkbookRangeRowsAboveRequestBuilder rowsAbove() {
         return new WorkbookRangeRowsAboveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rowsAbove"), getClient(), null);
     }
@@ -281,7 +310,8 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      * @return the request builder 
      * @param count the count
      */
-    public WorkbookRangeRowsAboveRequestBuilder rowsAbove(final Integer count) {
+    @Nonnull
+    public WorkbookRangeRowsAboveRequestBuilder rowsAbove(@Nullable final Integer count) {
         return new WorkbookRangeRowsAboveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rowsAbove"), getClient(), null, count);
     }
 
@@ -289,6 +319,7 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public WorkbookRangeRowsBelowRequestBuilder rowsBelow() {
         return new WorkbookRangeRowsBelowRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rowsBelow"), getClient(), null);
     }
@@ -298,7 +329,8 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      * @return the request builder 
      * @param count the count
      */
-    public WorkbookRangeRowsBelowRequestBuilder rowsBelow(final Integer count) {
+    @Nonnull
+    public WorkbookRangeRowsBelowRequestBuilder rowsBelow(@Nullable final Integer count) {
         return new WorkbookRangeRowsBelowRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rowsBelow"), getClient(), null, count);
     }
 
@@ -306,6 +338,7 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public WorkbookRangeUsedRangeRequestBuilder usedRange() {
         return new WorkbookRangeUsedRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.usedRange"), getClient(), null);
     }
@@ -315,7 +348,8 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      * @return the request builder 
      * @param valuesOnly the valuesOnly
      */
-    public WorkbookRangeUsedRangeRequestBuilder usedRange(final Boolean valuesOnly) {
+    @Nonnull
+    public WorkbookRangeUsedRangeRequestBuilder usedRange(@Nullable final Boolean valuesOnly) {
         return new WorkbookRangeUsedRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.usedRange"), getClient(), null, valuesOnly);
     }
 
@@ -323,6 +357,7 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public WorkbookRangeVisibleViewRequestBuilder visibleView() {
         return new WorkbookRangeVisibleViewRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.visibleView"), getClient(), null);
     }

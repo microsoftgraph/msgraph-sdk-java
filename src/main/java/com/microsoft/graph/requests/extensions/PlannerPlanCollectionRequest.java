@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Planner;
 import com.microsoft.graph.models.extensions.PlannerPlan;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class PlannerPlanCollectionRequest extends BaseCollectionRequest<PlannerP
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PlannerPlanCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PlannerPlanCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PlannerPlanCollectionResponse.class, PlannerPlanCollectionPage.class, PlannerPlanCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class PlannerPlanCollectionRequest extends BaseCollectionRequest<PlannerP
      * @param newPlannerPlan the PlannerPlan to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final PlannerPlan newPlannerPlan, final ICallback<? super PlannerPlan> callback) {
+    public void post(@Nonnull final PlannerPlan newPlannerPlan, @Nonnull final ICallback<? super PlannerPlan> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PlannerPlanRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class PlannerPlanCollectionRequest extends BaseCollectionRequest<PlannerP
      * @param newPlannerPlan the PlannerPlan to create
      * @return the newly created object
      */
-    public PlannerPlan post(final PlannerPlan newPlannerPlan) throws ClientException {
+    @Nonnull
+    public PlannerPlan post(@Nonnull final PlannerPlan newPlannerPlan) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PlannerPlanRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class PlannerPlanCollectionRequest extends BaseCollectionRequest<PlannerP
      * @param value the expand clause
      * @return the updated request
      */
-    public PlannerPlanCollectionRequest expand(final String value) {
+    @Nonnull
+    public PlannerPlanCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class PlannerPlanCollectionRequest extends BaseCollectionRequest<PlannerP
      * @param value the filter clause
      * @return the updated request
      */
-    public PlannerPlanCollectionRequest filter(final String value) {
+    @Nonnull
+    public PlannerPlanCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class PlannerPlanCollectionRequest extends BaseCollectionRequest<PlannerP
      * @param value the order by clause
      * @return the updated request
      */
-    public PlannerPlanCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public PlannerPlanCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class PlannerPlanCollectionRequest extends BaseCollectionRequest<PlannerP
      * @param value the select clause
      * @return the updated request
      */
-    public PlannerPlanCollectionRequest select(final String value) {
+    @Nonnull
+    public PlannerPlanCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class PlannerPlanCollectionRequest extends BaseCollectionRequest<PlannerP
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public PlannerPlanCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class PlannerPlanCollectionRequest extends BaseCollectionRequest<PlannerP
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public PlannerPlanCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class PlannerPlanCollectionRequest extends BaseCollectionRequest<PlannerP
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public PlannerPlanCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public PlannerPlanCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

@@ -13,6 +13,8 @@ import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.PasswordCredential;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.models.extensions.Application;
 import com.microsoft.graph.requests.extensions.ApplicationWithReferenceRequest;
@@ -41,7 +43,7 @@ public class ApplicationCollectionWithReferencesRequest extends BaseCollectionWi
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ApplicationCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ApplicationCollectionWithReferencesRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ApplicationCollectionResponse.class, ApplicationCollectionWithReferencesPage.class, ApplicationCollectionWithReferencesRequestBuilder.class);
     }
 
@@ -51,7 +53,8 @@ public class ApplicationCollectionWithReferencesRequest extends BaseCollectionWi
      * @param value the expand clause
      * @return the updated request
      */
-    public ApplicationCollectionWithReferencesRequest expand(final String value) {
+    @Nonnull
+    public ApplicationCollectionWithReferencesRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -62,7 +65,8 @@ public class ApplicationCollectionWithReferencesRequest extends BaseCollectionWi
      * @param value the filter clause
      * @return the updated request
      */
-    public ApplicationCollectionWithReferencesRequest filter(final String value) {
+    @Nonnull
+    public ApplicationCollectionWithReferencesRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -73,7 +77,8 @@ public class ApplicationCollectionWithReferencesRequest extends BaseCollectionWi
      * @param value the order by clause
      * @return the updated request
      */
-    public ApplicationCollectionWithReferencesRequest orderBy(final String value) {
+    @Nonnull
+    public ApplicationCollectionWithReferencesRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -84,7 +89,8 @@ public class ApplicationCollectionWithReferencesRequest extends BaseCollectionWi
      * @param value the select clause
      * @return the updated request
      */
-    public ApplicationCollectionWithReferencesRequest select(final String value) {
+    @Nonnull
+    public ApplicationCollectionWithReferencesRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -95,6 +101,7 @@ public class ApplicationCollectionWithReferencesRequest extends BaseCollectionWi
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ApplicationCollectionWithReferencesRequest top(final int value) {
         addTopOption(value);
         return this;

@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.models.extensions.Recipient;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.MessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MessageRequestBuilder;
@@ -34,7 +36,7 @@ public class MessageCollectionRequestBuilder extends BaseCollectionRequestBuilde
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MessageCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MessageCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MessageRequestBuilder.class, MessageCollectionRequest.class);
     }
 
@@ -44,6 +46,7 @@ public class MessageCollectionRequestBuilder extends BaseCollectionRequestBuilde
      * Gets a builder to execute the method
      * @return the request builder collection
      */
+    @Nonnull
     public MessageDeltaCollectionRequestBuilder delta() {
         return new MessageDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
@@ -54,7 +57,8 @@ public class MessageCollectionRequestBuilder extends BaseCollectionRequestBuilde
      * @return a request builder to get the changes
      * @param deltaLink the link returned by the last delta request
      */
-	public MessageDeltaCollectionRequestBuilder delta(final String deltaLink) {
+    @Nonnull
+	public MessageDeltaCollectionRequestBuilder delta(@Nonnull final String deltaLink) {
         return new MessageDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }
 }

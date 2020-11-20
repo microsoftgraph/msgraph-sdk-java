@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.WorkbookNamedItem;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,7 +37,7 @@ public class WorkbookNamedItemCollectionRequest extends BaseCollectionRequest<Wo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookNamedItemCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookNamedItemCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookNamedItemCollectionResponse.class, WorkbookNamedItemCollectionPage.class, WorkbookNamedItemCollectionRequestBuilder.class);
     }
 
@@ -44,7 +46,7 @@ public class WorkbookNamedItemCollectionRequest extends BaseCollectionRequest<Wo
      * @param newWorkbookNamedItem the WorkbookNamedItem to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final WorkbookNamedItem newWorkbookNamedItem, final ICallback<? super WorkbookNamedItem> callback) {
+    public void post(@Nonnull final WorkbookNamedItem newWorkbookNamedItem, @Nonnull final ICallback<? super WorkbookNamedItem> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookNamedItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -56,7 +58,8 @@ public class WorkbookNamedItemCollectionRequest extends BaseCollectionRequest<Wo
      * @param newWorkbookNamedItem the WorkbookNamedItem to create
      * @return the newly created object
      */
-    public WorkbookNamedItem post(final WorkbookNamedItem newWorkbookNamedItem) throws ClientException {
+    @Nonnull
+    public WorkbookNamedItem post(@Nonnull final WorkbookNamedItem newWorkbookNamedItem) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookNamedItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -69,7 +72,8 @@ public class WorkbookNamedItemCollectionRequest extends BaseCollectionRequest<Wo
      * @param value the expand clause
      * @return the updated request
      */
-    public WorkbookNamedItemCollectionRequest expand(final String value) {
+    @Nonnull
+    public WorkbookNamedItemCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -80,7 +84,8 @@ public class WorkbookNamedItemCollectionRequest extends BaseCollectionRequest<Wo
      * @param value the filter clause
      * @return the updated request
      */
-    public WorkbookNamedItemCollectionRequest filter(final String value) {
+    @Nonnull
+    public WorkbookNamedItemCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -91,7 +96,8 @@ public class WorkbookNamedItemCollectionRequest extends BaseCollectionRequest<Wo
      * @param value the order by clause
      * @return the updated request
      */
-    public WorkbookNamedItemCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public WorkbookNamedItemCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -102,7 +108,8 @@ public class WorkbookNamedItemCollectionRequest extends BaseCollectionRequest<Wo
      * @param value the select clause
      * @return the updated request
      */
-    public WorkbookNamedItemCollectionRequest select(final String value) {
+    @Nonnull
+    public WorkbookNamedItemCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -113,6 +120,7 @@ public class WorkbookNamedItemCollectionRequest extends BaseCollectionRequest<Wo
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public WorkbookNamedItemCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -124,6 +132,7 @@ public class WorkbookNamedItemCollectionRequest extends BaseCollectionRequest<Wo
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public WorkbookNamedItemCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -135,7 +144,8 @@ public class WorkbookNamedItemCollectionRequest extends BaseCollectionRequest<Wo
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public WorkbookNamedItemCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public WorkbookNamedItemCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.TimeZoneInformation;
 import com.microsoft.graph.models.generated.TimeZoneStandard;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.OutlookUserSupportedTimeZonesCollectionRequestBuilder;
@@ -30,7 +32,7 @@ public class OutlookUserSupportedTimeZonesCollectionPage extends BaseCollectionP
      * @param response The serialized OutlookUserSupportedTimeZonesCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public OutlookUserSupportedTimeZonesCollectionPage(final OutlookUserSupportedTimeZonesCollectionResponse response, final OutlookUserSupportedTimeZonesCollectionRequestBuilder builder) {
+    public OutlookUserSupportedTimeZonesCollectionPage(@Nonnull final OutlookUserSupportedTimeZonesCollectionResponse response, @Nonnull final OutlookUserSupportedTimeZonesCollectionRequestBuilder builder) {
        super(response, builder);
     }
 
@@ -40,7 +42,7 @@ public class OutlookUserSupportedTimeZonesCollectionPage extends BaseCollectionP
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public OutlookUserSupportedTimeZonesCollectionPage(final java.util.List<TimeZoneInformation> pageContents, final OutlookUserSupportedTimeZonesCollectionRequestBuilder nextRequestBuilder) {
+    public OutlookUserSupportedTimeZonesCollectionPage(@Nonnull final java.util.List<TimeZoneInformation> pageContents, @Nullable final OutlookUserSupportedTimeZonesCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

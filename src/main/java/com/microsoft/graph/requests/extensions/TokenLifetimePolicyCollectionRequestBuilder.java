@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.PolicyRoot;
 import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyRequestBuilder;
@@ -32,7 +34,7 @@ public class TokenLifetimePolicyCollectionRequestBuilder extends BaseCollectionR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TokenLifetimePolicyCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TokenLifetimePolicyCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TokenLifetimePolicyRequestBuilder.class, TokenLifetimePolicyCollectionRequest.class);
     }
 

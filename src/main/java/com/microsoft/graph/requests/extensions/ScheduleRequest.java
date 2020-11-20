@@ -28,6 +28,8 @@ import com.microsoft.graph.requests.extensions.TimeOffCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TimeOffRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -46,7 +48,7 @@ public class ScheduleRequest extends BaseRequest<Schedule> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ScheduleRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ScheduleRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Schedule.class);
     }
 
@@ -55,7 +57,7 @@ public class ScheduleRequest extends BaseRequest<Schedule> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Schedule> callback) {
+    public void get(@Nonnull final ICallback<? super Schedule> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -65,6 +67,7 @@ public class ScheduleRequest extends BaseRequest<Schedule> {
      * @return the Schedule from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Schedule get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -74,7 +77,7 @@ public class ScheduleRequest extends BaseRequest<Schedule> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Schedule> callback) {
+    public void delete(@Nonnull final ICallback<? super Schedule> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -93,7 +96,7 @@ public class ScheduleRequest extends BaseRequest<Schedule> {
      * @param sourceSchedule the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Schedule sourceSchedule, final ICallback<? super Schedule> callback) {
+    public void patch(@Nonnull final Schedule sourceSchedule, @Nonnull final ICallback<? super Schedule> callback) {
         send(HttpMethod.PATCH, callback, sourceSchedule);
     }
 
@@ -104,7 +107,8 @@ public class ScheduleRequest extends BaseRequest<Schedule> {
      * @return the updated Schedule
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Schedule patch(final Schedule sourceSchedule) throws ClientException {
+    @Nullable
+    public Schedule patch(@Nonnull final Schedule sourceSchedule) throws ClientException {
         return send(HttpMethod.PATCH, sourceSchedule);
     }
 
@@ -114,7 +118,7 @@ public class ScheduleRequest extends BaseRequest<Schedule> {
      * @param newSchedule the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Schedule newSchedule, final ICallback<? super Schedule> callback) {
+    public void post(@Nonnull final Schedule newSchedule, @Nonnull final ICallback<? super Schedule> callback) {
         send(HttpMethod.POST, callback, newSchedule);
     }
 
@@ -125,7 +129,8 @@ public class ScheduleRequest extends BaseRequest<Schedule> {
      * @return the created Schedule
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Schedule post(final Schedule newSchedule) throws ClientException {
+    @Nullable
+    public Schedule post(@Nonnull final Schedule newSchedule) throws ClientException {
         return send(HttpMethod.POST, newSchedule);
     }
 
@@ -135,7 +140,7 @@ public class ScheduleRequest extends BaseRequest<Schedule> {
      * @param newSchedule the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Schedule newSchedule, final ICallback<? super Schedule> callback) {
+    public void put(@Nonnull final Schedule newSchedule, @Nonnull final ICallback<? super Schedule> callback) {
         send(HttpMethod.PUT, callback, newSchedule);
     }
 
@@ -146,7 +151,8 @@ public class ScheduleRequest extends BaseRequest<Schedule> {
      * @return the created Schedule
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Schedule put(final Schedule newSchedule) throws ClientException {
+    @Nullable
+    public Schedule put(@Nonnull final Schedule newSchedule) throws ClientException {
         return send(HttpMethod.PUT, newSchedule);
     }
 
@@ -156,7 +162,8 @@ public class ScheduleRequest extends BaseRequest<Schedule> {
      * @param value the select clause
      * @return the updated request
      */
-     public ScheduleRequest select(final String value) {
+     @Nonnull
+     public ScheduleRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -167,7 +174,8 @@ public class ScheduleRequest extends BaseRequest<Schedule> {
      * @param value the expand clause
      * @return the updated request
      */
-     public ScheduleRequest expand(final String value) {
+     @Nonnull
+     public ScheduleRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

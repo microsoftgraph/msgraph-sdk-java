@@ -26,6 +26,8 @@ import java.net.URL;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
@@ -80,12 +82,12 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      * @param collectionPageClass the class for the collection page
      * @param collectionRequestBuilderClass the class for the collection request builder
      */
-    public BaseCollectionRequest(final String requestUrl,
-                                 final IBaseClient client,
-                                 final List<? extends Option> options,
-                                 final Class<T2> responseCollectionClass,
-                                 final Class<T3> collectionPageClass,
-                                 final Class<? extends BaseCollectionRequestBuilder<T, ? extends BaseRequestBuilder<T>, T2, T3, ? extends BaseCollectionRequest<T, T2, T3>>> collectionRequestBuilderClass) {
+    public BaseCollectionRequest(@Nonnull final String requestUrl,
+                                 @Nonnull final IBaseClient client,
+                                 @Nullable final List<? extends Option> options,
+                                 @Nonnull final Class<T2> responseCollectionClass,
+                                 @Nonnull final Class<T3> collectionPageClass,
+                                 @Nonnull final Class<? extends BaseCollectionRequestBuilder<T, ? extends BaseRequestBuilder<T>, T2, T3, ? extends BaseCollectionRequest<T, T2, T3>>> collectionRequestBuilderClass) {
         this.responseCollectionClass = responseCollectionClass;
         this.collectionPageClass = collectionPageClass;
         this.collRequestBuilderClass = collectionRequestBuilderClass;
@@ -98,6 +100,7 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      * @return the response object
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
+    @Nullable
     protected T2 send() throws ClientException {
         baseRequest.setHttpMethod(HttpMethod.GET);
         return baseRequest.getClient().getHttpProvider().send(this, responseCollectionClass, null);
@@ -107,7 +110,7 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      * Gets the collection of items
      * @param callback the callback to call once the response is received
      */
-    public void get(final ICallback<? super T3> callback) {
+    public void get(@Nonnull final ICallback<? super T3> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -126,6 +129,7 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      * 
      * @return the collection page
      */
+    @Nullable
     public T3 get() throws ClientException {
         return buildFromResponse(send());
     }
@@ -136,7 +140,8 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      * @param response the collection response
      * @return the collection page
      */
-    public T3 buildFromResponse(final T2 response) {
+    @Nullable
+    public T3 buildFromResponse(@Nonnull final T2 response) {
         final List<com.microsoft.graph.options.Option> options = new java.util.ArrayList<com.microsoft.graph.options.Option>();
         try {
             final Object builder = this.collRequestBuilderClass
@@ -158,7 +163,8 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      * @return the response object
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    protected <BodyType> T2 post(final BodyType serializedObject) throws ClientException {
+    @Nullable
+    protected <BodyType> T2 post(@Nonnull final BodyType serializedObject) throws ClientException {
         baseRequest.setHttpMethod(HttpMethod.POST);
         return baseRequest.getClient().getHttpProvider().send(this, responseCollectionClass, serializedObject);
     }
@@ -169,6 +175,7 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      * @return the request URL
      */
     @Override
+    @Nonnull
     public URL getRequestUrl() {
         return baseRequest.getRequestUrl();
     }
@@ -179,6 +186,7 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      * @return the HTTP method
      */
     @Override
+    @Nullable
     public HttpMethod getHttpMethod() {
         return baseRequest.getHttpMethod();
     }
@@ -189,6 +197,7 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      * @return the headers
      */
     @Override
+    @Nullable
     public List<HeaderOption> getHeaders() {
         return baseRequest.getHeaders();
     }
@@ -200,7 +209,7 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      * @param value  the value of the header
      */
     @Override
-    public void addHeader(final String header, final String value) {
+    public void addHeader(@Nonnull final String header, @Nonnull final String value) {
         baseRequest.addHeader(header, value);
     }
 
@@ -229,6 +238,7 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      *
      * @return the full list of options for this request
      */
+    @Nullable
     public List<Option> getOptions() {
         return baseRequest.getOptions();
     }
@@ -238,7 +248,7 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      *
      * @param option the query option to add
      */
-    public void addQueryOption(final QueryOption option) {
+    public void addQueryOption(@Nonnull final QueryOption option) {
         baseRequest.getQueryOptions().add(option);
     }
 
@@ -247,7 +257,7 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      *
      * @param value the expand clause
      */
-    protected void addExpandOption(final String value) {
+    protected void addExpandOption(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
     }
 
@@ -256,7 +266,7 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      *
      * @param value the filter clause
      */
-    protected void addFilterOption(final String value) {
+    protected void addFilterOption(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
     }
 
@@ -265,7 +275,7 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      *
      * @param value the order by clause
      */
-    protected void addOrderByOption(final String value) {
+    protected void addOrderByOption(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
     }
 
@@ -274,7 +284,7 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      *
      * @param value the select clause
      */
-    protected void addSelectOption(final String value) {
+    protected void addSelectOption(@Nonnull final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
     }
 
@@ -301,7 +311,7 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      * Add Skip token for pagination
      * @param skipToken - Token for pagination
      */
-    protected void addSkipTokenOption(final String skipToken) {
+    protected void addSkipTokenOption(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
     }
 
@@ -310,7 +320,7 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      *
      * @param option the query option to add
      */
-    public void addFunctionOption(final FunctionOption option) {
+    public void addFunctionOption(@Nonnull final FunctionOption option) {
         baseRequest.getFunctionOptions().add(option);
     }
 
@@ -319,6 +329,7 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      *
      * @return the base request for this collection request
      */
+    @Nonnull
     public BaseRequest<T2> getBaseRequest() {
         return baseRequest;
     }
@@ -328,6 +339,7 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      *
      * @return the class for the collection page
      */
+    @Nonnull
     public Class<T3> getCollectionPageClass() {
         return collectionPageClass;
     }
@@ -355,7 +367,7 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      * 
      * @param shouldRedirect Callback called before doing a redirect
      */
-    public void setShouldRedirect(IShouldRedirect shouldRedirect) {
+    public void setShouldRedirect(@Nonnull IShouldRedirect shouldRedirect) {
     	baseRequest.setShouldRedirect(shouldRedirect);
     }
     
@@ -364,6 +376,7 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      * 
      * @return Callback which is called before redirect
      */
+    @Nullable
     public IShouldRedirect getShouldRedirect() {
     	return baseRequest.getShouldRedirect();
     }
@@ -373,7 +386,7 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      * 
      * @param shouldretry The callback called before retry
      */
-    public void setShouldRetry(IShouldRetry shouldretry) {
+    public void setShouldRetry(@Nonnull IShouldRetry shouldretry) {
     	baseRequest.setShouldRetry(shouldretry);
     }
     
@@ -382,6 +395,7 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      * 
      * @return Callback called before retry
      */
+    @Nullable
     public IShouldRetry getShouldRetry() {
     	return baseRequest.getShouldRetry();
     }
@@ -428,7 +442,8 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      * @param httpMethod the HTTP method
      * @return the current request
      */
-    public IHttpRequest withHttpMethod(final HttpMethod httpMethod) {
+    @Nullable
+    public IHttpRequest withHttpMethod(@Nonnull final HttpMethod httpMethod) {
         baseRequest.setHttpMethod(httpMethod);
         return this;
     }
@@ -437,6 +452,7 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      * @return the Request object to be executed
      */
     @Override
+    @Nullable
     public Request getHttpRequest() throws ClientException {
         return baseRequest.getHttpRequest();
     }
@@ -448,7 +464,8 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      * @return the Request object to be executed
      */
     @Override
-    public <requestBodyType> Request getHttpRequest(final requestBodyType serializedObject) throws ClientException {
+    @Nullable
+    public <requestBodyType> Request getHttpRequest(@Nonnull final requestBodyType serializedObject) throws ClientException {
         return baseRequest.getHttpRequest(serializedObject);
     }
 
@@ -461,7 +478,8 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      * @return the Request object to be executed
      */
     @Override
-    public <requestBodyType, responseType> Request getHttpRequest(final requestBodyType serializedObject, final IProgressCallback<responseType> progress) throws ClientException {
+    @Nullable
+    public <requestBodyType, responseType> Request getHttpRequest(@Nonnull final requestBodyType serializedObject, @Nonnull final IProgressCallback<responseType> progress) throws ClientException {
         return baseRequest.getHttpRequest(serializedObject, progress);
     }
 }

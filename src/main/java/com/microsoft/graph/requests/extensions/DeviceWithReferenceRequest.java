@@ -14,6 +14,8 @@ import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder
 import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseWithReferenceRequest;
@@ -35,7 +37,7 @@ public class DeviceWithReferenceRequest extends BaseWithReferenceRequest<Device>
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Device.class);
     }
 
@@ -45,7 +47,8 @@ public class DeviceWithReferenceRequest extends BaseWithReferenceRequest<Device>
      * @param value the select clause
      * @return the updated request
      */
-    public DeviceWithReferenceRequest select(final String value) {
+    @Nonnull
+    public DeviceWithReferenceRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -56,7 +59,8 @@ public class DeviceWithReferenceRequest extends BaseWithReferenceRequest<Device>
      * @param value the expand clause
      * @return the updated request
      */
-    public DeviceWithReferenceRequest expand(final String value) {
+    @Nonnull
+    public DeviceWithReferenceRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }

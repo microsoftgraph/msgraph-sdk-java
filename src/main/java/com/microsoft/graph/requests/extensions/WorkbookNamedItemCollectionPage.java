@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookNamedItem;
 import com.microsoft.graph.requests.extensions.WorkbookNamedItemCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.WorkbookNamedItemCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class WorkbookNamedItemCollectionPage extends BaseCollectionPage<Workbook
      * @param response the serialized WorkbookNamedItemCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public WorkbookNamedItemCollectionPage(final WorkbookNamedItemCollectionResponse response, final WorkbookNamedItemCollectionRequestBuilder builder) {
+    public WorkbookNamedItemCollectionPage(@Nonnull final WorkbookNamedItemCollectionResponse response, @Nonnull final WorkbookNamedItemCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class WorkbookNamedItemCollectionPage extends BaseCollectionPage<Workbook
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public WorkbookNamedItemCollectionPage(final java.util.List<WorkbookNamedItem> pageContents, final WorkbookNamedItemCollectionRequestBuilder nextRequestBuilder) {
+    public WorkbookNamedItemCollectionPage(@Nonnull final java.util.List<WorkbookNamedItem> pageContents, @Nullable final WorkbookNamedItemCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

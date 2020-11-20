@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ItemActivity;
 import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,7 +31,7 @@ public class ItemActivityRequest extends BaseRequest<ItemActivity> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ItemActivityRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ItemActivityRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ItemActivity.class);
     }
 
@@ -38,7 +40,7 @@ public class ItemActivityRequest extends BaseRequest<ItemActivity> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ItemActivity> callback) {
+    public void get(@Nonnull final ICallback<? super ItemActivity> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ItemActivityRequest extends BaseRequest<ItemActivity> {
      * @return the ItemActivity from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ItemActivity get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ItemActivityRequest extends BaseRequest<ItemActivity> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ItemActivity> callback) {
+    public void delete(@Nonnull final ICallback<? super ItemActivity> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ItemActivityRequest extends BaseRequest<ItemActivity> {
      * @param sourceItemActivity the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ItemActivity sourceItemActivity, final ICallback<? super ItemActivity> callback) {
+    public void patch(@Nonnull final ItemActivity sourceItemActivity, @Nonnull final ICallback<? super ItemActivity> callback) {
         send(HttpMethod.PATCH, callback, sourceItemActivity);
     }
 
@@ -87,7 +90,8 @@ public class ItemActivityRequest extends BaseRequest<ItemActivity> {
      * @return the updated ItemActivity
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ItemActivity patch(final ItemActivity sourceItemActivity) throws ClientException {
+    @Nullable
+    public ItemActivity patch(@Nonnull final ItemActivity sourceItemActivity) throws ClientException {
         return send(HttpMethod.PATCH, sourceItemActivity);
     }
 
@@ -97,7 +101,7 @@ public class ItemActivityRequest extends BaseRequest<ItemActivity> {
      * @param newItemActivity the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ItemActivity newItemActivity, final ICallback<? super ItemActivity> callback) {
+    public void post(@Nonnull final ItemActivity newItemActivity, @Nonnull final ICallback<? super ItemActivity> callback) {
         send(HttpMethod.POST, callback, newItemActivity);
     }
 
@@ -108,7 +112,8 @@ public class ItemActivityRequest extends BaseRequest<ItemActivity> {
      * @return the created ItemActivity
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ItemActivity post(final ItemActivity newItemActivity) throws ClientException {
+    @Nullable
+    public ItemActivity post(@Nonnull final ItemActivity newItemActivity) throws ClientException {
         return send(HttpMethod.POST, newItemActivity);
     }
 
@@ -118,7 +123,7 @@ public class ItemActivityRequest extends BaseRequest<ItemActivity> {
      * @param newItemActivity the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ItemActivity newItemActivity, final ICallback<? super ItemActivity> callback) {
+    public void put(@Nonnull final ItemActivity newItemActivity, @Nonnull final ICallback<? super ItemActivity> callback) {
         send(HttpMethod.PUT, callback, newItemActivity);
     }
 
@@ -129,7 +134,8 @@ public class ItemActivityRequest extends BaseRequest<ItemActivity> {
      * @return the created ItemActivity
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ItemActivity put(final ItemActivity newItemActivity) throws ClientException {
+    @Nullable
+    public ItemActivity put(@Nonnull final ItemActivity newItemActivity) throws ClientException {
         return send(HttpMethod.PUT, newItemActivity);
     }
 
@@ -139,7 +145,8 @@ public class ItemActivityRequest extends BaseRequest<ItemActivity> {
      * @param value the select clause
      * @return the updated request
      */
-     public ItemActivityRequest select(final String value) {
+     @Nonnull
+     public ItemActivityRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -150,7 +157,8 @@ public class ItemActivityRequest extends BaseRequest<ItemActivity> {
      * @param value the expand clause
      * @return the updated request
      */
-     public ItemActivityRequest expand(final String value) {
+     @Nonnull
+     public ItemActivityRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

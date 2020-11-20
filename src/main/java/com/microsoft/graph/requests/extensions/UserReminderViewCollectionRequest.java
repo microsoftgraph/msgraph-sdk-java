@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Reminder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.UserReminderViewCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserReminderViewCollectionResponse;
@@ -34,7 +36,7 @@ public class UserReminderViewCollectionRequest extends BaseCollectionRequest<Rem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserReminderViewCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserReminderViewCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserReminderViewCollectionResponse.class, UserReminderViewCollectionPage.class, UserReminderViewCollectionRequestBuilder.class);
     }
 
@@ -45,7 +47,8 @@ public class UserReminderViewCollectionRequest extends BaseCollectionRequest<Rem
      * @param value the select clause
      * @return the updated request
      */
-    public UserReminderViewCollectionRequest select(final String value) {
+    @Nonnull
+    public UserReminderViewCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -56,6 +59,7 @@ public class UserReminderViewCollectionRequest extends BaseCollectionRequest<Rem
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public UserReminderViewCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -67,7 +71,8 @@ public class UserReminderViewCollectionRequest extends BaseCollectionRequest<Rem
      * @param value the expand clause
      * @return the updated request
      */
-    public UserReminderViewCollectionRequest expand(final String value) {
+    @Nonnull
+    public UserReminderViewCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -78,7 +83,8 @@ public class UserReminderViewCollectionRequest extends BaseCollectionRequest<Rem
      * @param value the filter clause
      * @return the updated request
      */
-    public UserReminderViewCollectionRequest filter(final String value) {
+    @Nonnull
+    public UserReminderViewCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -89,7 +95,8 @@ public class UserReminderViewCollectionRequest extends BaseCollectionRequest<Rem
      * @param value the order by clause
      * @return the updated request
      */
-    public UserReminderViewCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public UserReminderViewCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }

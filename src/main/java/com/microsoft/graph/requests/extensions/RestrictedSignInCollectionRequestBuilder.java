@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.AuditLogRoot;
 import com.microsoft.graph.models.extensions.RestrictedSignIn;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.RestrictedSignInCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RestrictedSignInRequestBuilder;
@@ -32,7 +34,7 @@ public class RestrictedSignInCollectionRequestBuilder extends BaseCollectionRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RestrictedSignInCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RestrictedSignInCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, RestrictedSignInRequestBuilder.class, RestrictedSignInCollectionRequest.class);
     }
 

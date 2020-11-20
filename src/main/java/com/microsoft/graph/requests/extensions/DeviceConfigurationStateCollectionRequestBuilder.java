@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.models.extensions.DeviceConfigurationState;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DeviceConfigurationStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationStateRequestBuilder;
@@ -32,7 +34,7 @@ public class DeviceConfigurationStateCollectionRequestBuilder extends BaseCollec
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceConfigurationStateCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceConfigurationStateCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceConfigurationStateRequestBuilder.class, DeviceConfigurationStateCollectionRequest.class);
     }
 

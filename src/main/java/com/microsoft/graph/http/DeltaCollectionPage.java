@@ -29,6 +29,9 @@ import com.microsoft.graph.serializer.ISerializer;
 import java.util.Collections;
 import java.util.List;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
+
 /**
  * A page of results from a delta collection
  *
@@ -39,6 +42,7 @@ public class DeltaCollectionPage<T, T2 extends BaseRequestBuilder<T>> extends Ba
      * The opaque link to query delta after the 
      * initial request
      */
+    @Nullable
     public String deltaLink;
 
     /**
@@ -47,7 +51,7 @@ public class DeltaCollectionPage<T, T2 extends BaseRequestBuilder<T>> extends Ba
      * @param response The serialized delta reponse from the service
      * @param builder The request builder for the next collection page
      */
-    public DeltaCollectionPage(final ICollectionResponse<T> response, final T2 builder) {
+    public DeltaCollectionPage(@Nonnull final ICollectionResponse<T> response, @Nullable final T2 builder) {
        super(response.values(), builder, response.additionalDataManager());
         if (response.getRawObject().get("@odata.deltaLink") != null) {
             deltaLink = response.getRawObject().get("@odata.deltaLink").getAsString();
@@ -62,7 +66,7 @@ public class DeltaCollectionPage<T, T2 extends BaseRequestBuilder<T>> extends Ba
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public DeltaCollectionPage(final List<T> pageContents, final T2 nextRequestBuilder) {
+    public DeltaCollectionPage(@Nonnull final List<T> pageContents, @Nullable final T2 nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
     /**
@@ -70,6 +74,7 @@ public class DeltaCollectionPage<T, T2 extends BaseRequestBuilder<T>> extends Ba
      *
      * @return String The deltaLink URL
      */
+    @Nullable
     public String deltaLink() {
         return deltaLink;
     }

@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.TodoTaskList;
 import com.microsoft.graph.models.extensions.TodoTask;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class TodoTaskCollectionRequest extends BaseCollectionRequest<TodoTask, T
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TodoTaskCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TodoTaskCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TodoTaskCollectionResponse.class, TodoTaskCollectionPage.class, TodoTaskCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class TodoTaskCollectionRequest extends BaseCollectionRequest<TodoTask, T
      * @param newTodoTask the TodoTask to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final TodoTask newTodoTask, final ICallback<? super TodoTask> callback) {
+    public void post(@Nonnull final TodoTask newTodoTask, @Nonnull final ICallback<? super TodoTask> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TodoTaskRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class TodoTaskCollectionRequest extends BaseCollectionRequest<TodoTask, T
      * @param newTodoTask the TodoTask to create
      * @return the newly created object
      */
-    public TodoTask post(final TodoTask newTodoTask) throws ClientException {
+    @Nonnull
+    public TodoTask post(@Nonnull final TodoTask newTodoTask) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TodoTaskRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class TodoTaskCollectionRequest extends BaseCollectionRequest<TodoTask, T
      * @param value the expand clause
      * @return the updated request
      */
-    public TodoTaskCollectionRequest expand(final String value) {
+    @Nonnull
+    public TodoTaskCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class TodoTaskCollectionRequest extends BaseCollectionRequest<TodoTask, T
      * @param value the filter clause
      * @return the updated request
      */
-    public TodoTaskCollectionRequest filter(final String value) {
+    @Nonnull
+    public TodoTaskCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class TodoTaskCollectionRequest extends BaseCollectionRequest<TodoTask, T
      * @param value the order by clause
      * @return the updated request
      */
-    public TodoTaskCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public TodoTaskCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class TodoTaskCollectionRequest extends BaseCollectionRequest<TodoTask, T
      * @param value the select clause
      * @return the updated request
      */
-    public TodoTaskCollectionRequest select(final String value) {
+    @Nonnull
+    public TodoTaskCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class TodoTaskCollectionRequest extends BaseCollectionRequest<TodoTask, T
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public TodoTaskCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class TodoTaskCollectionRequest extends BaseCollectionRequest<TodoTask, T
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public TodoTaskCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class TodoTaskCollectionRequest extends BaseCollectionRequest<TodoTask, T
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public TodoTaskCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public TodoTaskCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

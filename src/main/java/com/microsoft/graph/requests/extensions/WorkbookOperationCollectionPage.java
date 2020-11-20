@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookOperation;
 import com.microsoft.graph.requests.extensions.WorkbookOperationCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.WorkbookOperationCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class WorkbookOperationCollectionPage extends BaseCollectionPage<Workbook
      * @param response the serialized WorkbookOperationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public WorkbookOperationCollectionPage(final WorkbookOperationCollectionResponse response, final WorkbookOperationCollectionRequestBuilder builder) {
+    public WorkbookOperationCollectionPage(@Nonnull final WorkbookOperationCollectionResponse response, @Nonnull final WorkbookOperationCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class WorkbookOperationCollectionPage extends BaseCollectionPage<Workbook
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public WorkbookOperationCollectionPage(final java.util.List<WorkbookOperation> pageContents, final WorkbookOperationCollectionRequestBuilder nextRequestBuilder) {
+    public WorkbookOperationCollectionPage(@Nonnull final java.util.List<WorkbookOperation> pageContents, @Nullable final WorkbookOperationCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

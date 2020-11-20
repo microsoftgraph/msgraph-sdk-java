@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Site;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.SiteAddCollectionRequestBuilder;
@@ -29,7 +31,7 @@ public class SiteAddCollectionPage extends BaseCollectionPage<Site, SiteAddColle
      * @param response The serialized SiteAddCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public SiteAddCollectionPage(final SiteAddCollectionResponse response, final SiteAddCollectionRequestBuilder builder) {
+    public SiteAddCollectionPage(@Nonnull final SiteAddCollectionResponse response, @Nonnull final SiteAddCollectionRequestBuilder builder) {
        super(response, builder);
     }
 
@@ -39,7 +41,7 @@ public class SiteAddCollectionPage extends BaseCollectionPage<Site, SiteAddColle
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public SiteAddCollectionPage(final java.util.List<Site> pageContents, final SiteAddCollectionRequestBuilder nextRequestBuilder) {
+    public SiteAddCollectionPage(@Nonnull final java.util.List<Site> pageContents, @Nullable final SiteAddCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

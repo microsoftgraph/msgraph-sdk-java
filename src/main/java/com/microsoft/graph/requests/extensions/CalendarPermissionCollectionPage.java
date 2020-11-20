@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.CalendarPermission;
 import com.microsoft.graph.requests.extensions.CalendarPermissionCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.CalendarPermissionCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class CalendarPermissionCollectionPage extends BaseCollectionPage<Calenda
      * @param response the serialized CalendarPermissionCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public CalendarPermissionCollectionPage(final CalendarPermissionCollectionResponse response, final CalendarPermissionCollectionRequestBuilder builder) {
+    public CalendarPermissionCollectionPage(@Nonnull final CalendarPermissionCollectionResponse response, @Nonnull final CalendarPermissionCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class CalendarPermissionCollectionPage extends BaseCollectionPage<Calenda
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public CalendarPermissionCollectionPage(final java.util.List<CalendarPermission> pageContents, final CalendarPermissionCollectionRequestBuilder nextRequestBuilder) {
+    public CalendarPermissionCollectionPage(@Nonnull final java.util.List<CalendarPermission> pageContents, @Nullable final CalendarPermissionCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

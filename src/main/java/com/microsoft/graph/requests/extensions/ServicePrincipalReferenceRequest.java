@@ -30,6 +30,8 @@ import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionRequ
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseReferenceRequest;
@@ -50,7 +52,7 @@ public class ServicePrincipalReferenceRequest extends BaseReferenceRequest<Servi
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ServicePrincipalReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ServicePrincipalReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ServicePrincipal.class);
     }
 
@@ -60,7 +62,8 @@ public class ServicePrincipalReferenceRequest extends BaseReferenceRequest<Servi
      * @param value the select clause
      * @return the updated request
      */
-    public ServicePrincipalReferenceRequest select(final String value) {
+    @Nonnull
+    public ServicePrincipalReferenceRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -71,7 +74,8 @@ public class ServicePrincipalReferenceRequest extends BaseReferenceRequest<Servi
      * @param value the expand clause
      * @return the updated request
      */
-    public ServicePrincipalReferenceRequest expand(final String value) {
+    @Nonnull
+    public ServicePrincipalReferenceRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -81,7 +85,7 @@ public class ServicePrincipalReferenceRequest extends BaseReferenceRequest<Servi
      * @param srcServicePrincipal the ServicePrincipal reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(ServicePrincipal srcServicePrincipal, final ICallback<? super ServicePrincipal> callback) {
+    public void put(@Nonnull final ServicePrincipal srcServicePrincipal, @Nonnull final ICallback<? super ServicePrincipal> callback) {
         send(HttpMethod.PUT, callback, srcServicePrincipal);
     }
 
@@ -92,7 +96,8 @@ public class ServicePrincipalReferenceRequest extends BaseReferenceRequest<Servi
      * @return the ServicePrincipal
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    public ServicePrincipal put(ServicePrincipal srcServicePrincipal) throws ClientException {
+    @Nullable
+    public ServicePrincipal put(@Nonnull final ServicePrincipal srcServicePrincipal) throws ClientException {
         return send(HttpMethod.PUT, srcServicePrincipal);
     }
 }

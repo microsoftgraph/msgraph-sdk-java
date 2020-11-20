@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.WorkbookTableRow;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.WorkbookTableRowCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookTableRowRequestBuilder;
@@ -36,7 +38,7 @@ public class WorkbookTableRowCollectionRequestBuilder extends BaseCollectionRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookTableRowCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableRowCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookTableRowRequestBuilder.class, WorkbookTableRowCollectionRequest.class);
     }
 
@@ -48,7 +50,8 @@ public class WorkbookTableRowCollectionRequestBuilder extends BaseCollectionRequ
      * @param index the index
      * @param values the values
      */
-    public WorkbookTableRowAddRequestBuilder add(final Integer index, final com.google.gson.JsonElement values) {
+    @Nonnull
+    public WorkbookTableRowAddRequestBuilder add(@Nullable final Integer index, @Nullable final com.google.gson.JsonElement values) {
         return new WorkbookTableRowAddRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.add"), getClient(), null, index, values);
     }
 
@@ -56,6 +59,7 @@ public class WorkbookTableRowCollectionRequestBuilder extends BaseCollectionRequ
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public WorkbookTableRowCountRequestBuilder count() {
         return new WorkbookTableRowCountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.count"), getClient(), null);
     }
@@ -65,7 +69,8 @@ public class WorkbookTableRowCollectionRequestBuilder extends BaseCollectionRequ
      * @return the request builder 
      * @param index the index
      */
-    public WorkbookTableRowItemAtRequestBuilder itemAt(final Integer index) {
+    @Nonnull
+    public WorkbookTableRowItemAtRequestBuilder itemAt(@Nullable final Integer index) {
         return new WorkbookTableRowItemAtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.itemAt"), getClient(), null, index);
     }
 }

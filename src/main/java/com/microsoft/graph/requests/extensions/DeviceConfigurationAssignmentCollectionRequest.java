@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceConfiguration;
 import com.microsoft.graph.models.extensions.DeviceConfigurationAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class DeviceConfigurationAssignmentCollectionRequest extends BaseCollecti
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceConfigurationAssignmentCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceConfigurationAssignmentCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceConfigurationAssignmentCollectionResponse.class, DeviceConfigurationAssignmentCollectionPage.class, DeviceConfigurationAssignmentCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class DeviceConfigurationAssignmentCollectionRequest extends BaseCollecti
      * @param newDeviceConfigurationAssignment the DeviceConfigurationAssignment to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final DeviceConfigurationAssignment newDeviceConfigurationAssignment, final ICallback<? super DeviceConfigurationAssignment> callback) {
+    public void post(@Nonnull final DeviceConfigurationAssignment newDeviceConfigurationAssignment, @Nonnull final ICallback<? super DeviceConfigurationAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class DeviceConfigurationAssignmentCollectionRequest extends BaseCollecti
      * @param newDeviceConfigurationAssignment the DeviceConfigurationAssignment to create
      * @return the newly created object
      */
-    public DeviceConfigurationAssignment post(final DeviceConfigurationAssignment newDeviceConfigurationAssignment) throws ClientException {
+    @Nonnull
+    public DeviceConfigurationAssignment post(@Nonnull final DeviceConfigurationAssignment newDeviceConfigurationAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class DeviceConfigurationAssignmentCollectionRequest extends BaseCollecti
      * @param value the expand clause
      * @return the updated request
      */
-    public DeviceConfigurationAssignmentCollectionRequest expand(final String value) {
+    @Nonnull
+    public DeviceConfigurationAssignmentCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class DeviceConfigurationAssignmentCollectionRequest extends BaseCollecti
      * @param value the filter clause
      * @return the updated request
      */
-    public DeviceConfigurationAssignmentCollectionRequest filter(final String value) {
+    @Nonnull
+    public DeviceConfigurationAssignmentCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class DeviceConfigurationAssignmentCollectionRequest extends BaseCollecti
      * @param value the order by clause
      * @return the updated request
      */
-    public DeviceConfigurationAssignmentCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DeviceConfigurationAssignmentCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class DeviceConfigurationAssignmentCollectionRequest extends BaseCollecti
      * @param value the select clause
      * @return the updated request
      */
-    public DeviceConfigurationAssignmentCollectionRequest select(final String value) {
+    @Nonnull
+    public DeviceConfigurationAssignmentCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class DeviceConfigurationAssignmentCollectionRequest extends BaseCollecti
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DeviceConfigurationAssignmentCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class DeviceConfigurationAssignmentCollectionRequest extends BaseCollecti
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public DeviceConfigurationAssignmentCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class DeviceConfigurationAssignmentCollectionRequest extends BaseCollecti
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public DeviceConfigurationAssignmentCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public DeviceConfigurationAssignmentCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

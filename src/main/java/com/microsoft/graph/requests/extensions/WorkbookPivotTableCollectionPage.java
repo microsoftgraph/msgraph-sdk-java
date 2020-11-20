@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookPivotTable;
 import com.microsoft.graph.requests.extensions.WorkbookPivotTableCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.WorkbookPivotTableCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class WorkbookPivotTableCollectionPage extends BaseCollectionPage<Workboo
      * @param response the serialized WorkbookPivotTableCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public WorkbookPivotTableCollectionPage(final WorkbookPivotTableCollectionResponse response, final WorkbookPivotTableCollectionRequestBuilder builder) {
+    public WorkbookPivotTableCollectionPage(@Nonnull final WorkbookPivotTableCollectionResponse response, @Nonnull final WorkbookPivotTableCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class WorkbookPivotTableCollectionPage extends BaseCollectionPage<Workboo
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public WorkbookPivotTableCollectionPage(final java.util.List<WorkbookPivotTable> pageContents, final WorkbookPivotTableCollectionRequestBuilder nextRequestBuilder) {
+    public WorkbookPivotTableCollectionPage(@Nonnull final java.util.List<WorkbookPivotTable> pageContents, @Nullable final WorkbookPivotTableCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

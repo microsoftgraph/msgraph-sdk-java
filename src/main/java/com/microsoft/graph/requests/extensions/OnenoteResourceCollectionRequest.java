@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Onenote;
 import com.microsoft.graph.models.extensions.OnenoteResource;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class OnenoteResourceCollectionRequest extends BaseCollectionRequest<Onen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnenoteResourceCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnenoteResourceCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OnenoteResourceCollectionResponse.class, OnenoteResourceCollectionPage.class, OnenoteResourceCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class OnenoteResourceCollectionRequest extends BaseCollectionRequest<Onen
      * @param newOnenoteResource the OnenoteResource to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final OnenoteResource newOnenoteResource, final ICallback<? super OnenoteResource> callback) {
+    public void post(@Nonnull final OnenoteResource newOnenoteResource, @Nonnull final ICallback<? super OnenoteResource> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OnenoteResourceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class OnenoteResourceCollectionRequest extends BaseCollectionRequest<Onen
      * @param newOnenoteResource the OnenoteResource to create
      * @return the newly created object
      */
-    public OnenoteResource post(final OnenoteResource newOnenoteResource) throws ClientException {
+    @Nonnull
+    public OnenoteResource post(@Nonnull final OnenoteResource newOnenoteResource) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OnenoteResourceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class OnenoteResourceCollectionRequest extends BaseCollectionRequest<Onen
      * @param value the expand clause
      * @return the updated request
      */
-    public OnenoteResourceCollectionRequest expand(final String value) {
+    @Nonnull
+    public OnenoteResourceCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class OnenoteResourceCollectionRequest extends BaseCollectionRequest<Onen
      * @param value the filter clause
      * @return the updated request
      */
-    public OnenoteResourceCollectionRequest filter(final String value) {
+    @Nonnull
+    public OnenoteResourceCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class OnenoteResourceCollectionRequest extends BaseCollectionRequest<Onen
      * @param value the order by clause
      * @return the updated request
      */
-    public OnenoteResourceCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public OnenoteResourceCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class OnenoteResourceCollectionRequest extends BaseCollectionRequest<Onen
      * @param value the select clause
      * @return the updated request
      */
-    public OnenoteResourceCollectionRequest select(final String value) {
+    @Nonnull
+    public OnenoteResourceCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class OnenoteResourceCollectionRequest extends BaseCollectionRequest<Onen
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public OnenoteResourceCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class OnenoteResourceCollectionRequest extends BaseCollectionRequest<Onen
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public OnenoteResourceCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class OnenoteResourceCollectionRequest extends BaseCollectionRequest<Onen
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public OnenoteResourceCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public OnenoteResourceCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

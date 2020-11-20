@@ -7,6 +7,8 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
 import java.util.EnumSet;
@@ -24,6 +26,7 @@ public class WorkbookFunctionsZ_TestBody {
      */
     @SerializedName(value = "array", alternate = {"Array"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement array;
 
     /**
@@ -32,6 +35,7 @@ public class WorkbookFunctionsZ_TestBody {
      */
     @SerializedName(value = "x", alternate = {"X"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement x;
 
     /**
@@ -40,6 +44,7 @@ public class WorkbookFunctionsZ_TestBody {
      */
     @SerializedName(value = "sigma", alternate = {"Sigma"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement sigma;
 
 
@@ -58,6 +63,7 @@ public class WorkbookFunctionsZ_TestBody {
      *
      * @return the raw representation of this class
      */
+    @Nullable
     public JsonObject getRawObject() {
         return rawObject;
     }
@@ -67,6 +73,7 @@ public class WorkbookFunctionsZ_TestBody {
      *
      * @return the serializer
      */
+    @Nullable
     public ISerializer getSerializer() {
         return serializer;
     }
@@ -77,7 +84,7 @@ public class WorkbookFunctionsZ_TestBody {
      * @param serializer the serializer
      * @param json the JSON object to set this object to
      */
-    public void setRawObject(final ISerializer serializer, final JsonObject json) {
+    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
         this.serializer = serializer;
         rawObject = json;
 

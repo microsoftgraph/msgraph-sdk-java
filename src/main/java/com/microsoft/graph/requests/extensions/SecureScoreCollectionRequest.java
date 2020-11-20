@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Security;
 import com.microsoft.graph.models.extensions.SecureScore;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class SecureScoreCollectionRequest extends BaseCollectionRequest<SecureSc
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SecureScoreCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SecureScoreCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SecureScoreCollectionResponse.class, SecureScoreCollectionPage.class, SecureScoreCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class SecureScoreCollectionRequest extends BaseCollectionRequest<SecureSc
      * @param newSecureScore the SecureScore to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final SecureScore newSecureScore, final ICallback<? super SecureScore> callback) {
+    public void post(@Nonnull final SecureScore newSecureScore, @Nonnull final ICallback<? super SecureScore> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SecureScoreRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class SecureScoreCollectionRequest extends BaseCollectionRequest<SecureSc
      * @param newSecureScore the SecureScore to create
      * @return the newly created object
      */
-    public SecureScore post(final SecureScore newSecureScore) throws ClientException {
+    @Nonnull
+    public SecureScore post(@Nonnull final SecureScore newSecureScore) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SecureScoreRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class SecureScoreCollectionRequest extends BaseCollectionRequest<SecureSc
      * @param value the expand clause
      * @return the updated request
      */
-    public SecureScoreCollectionRequest expand(final String value) {
+    @Nonnull
+    public SecureScoreCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class SecureScoreCollectionRequest extends BaseCollectionRequest<SecureSc
      * @param value the filter clause
      * @return the updated request
      */
-    public SecureScoreCollectionRequest filter(final String value) {
+    @Nonnull
+    public SecureScoreCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class SecureScoreCollectionRequest extends BaseCollectionRequest<SecureSc
      * @param value the order by clause
      * @return the updated request
      */
-    public SecureScoreCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public SecureScoreCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class SecureScoreCollectionRequest extends BaseCollectionRequest<SecureSc
      * @param value the select clause
      * @return the updated request
      */
-    public SecureScoreCollectionRequest select(final String value) {
+    @Nonnull
+    public SecureScoreCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class SecureScoreCollectionRequest extends BaseCollectionRequest<SecureSc
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public SecureScoreCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class SecureScoreCollectionRequest extends BaseCollectionRequest<SecureSc
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public SecureScoreCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class SecureScoreCollectionRequest extends BaseCollectionRequest<SecureSc
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public SecureScoreCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public SecureScoreCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

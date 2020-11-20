@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.TeamsApp;
 import com.microsoft.graph.requests.extensions.TeamsAppCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.TeamsAppCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class TeamsAppCollectionPage extends BaseCollectionPage<TeamsApp, TeamsAp
      * @param response the serialized TeamsAppCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TeamsAppCollectionPage(final TeamsAppCollectionResponse response, final TeamsAppCollectionRequestBuilder builder) {
+    public TeamsAppCollectionPage(@Nonnull final TeamsAppCollectionResponse response, @Nonnull final TeamsAppCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class TeamsAppCollectionPage extends BaseCollectionPage<TeamsApp, TeamsAp
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public TeamsAppCollectionPage(final java.util.List<TeamsApp> pageContents, final TeamsAppCollectionRequestBuilder nextRequestBuilder) {
+    public TeamsAppCollectionPage(@Nonnull final java.util.List<TeamsApp> pageContents, @Nullable final TeamsAppCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

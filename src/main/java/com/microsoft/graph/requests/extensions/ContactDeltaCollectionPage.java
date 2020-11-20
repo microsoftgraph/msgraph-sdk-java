@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Contact;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.DeltaCollectionPage;
 import com.microsoft.graph.requests.extensions.ContactDeltaCollectionRequestBuilder;
@@ -29,7 +31,7 @@ public class ContactDeltaCollectionPage extends DeltaCollectionPage<Contact, Con
      * @param response The serialized ContactDeltaCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public ContactDeltaCollectionPage(final ContactDeltaCollectionResponse response, final ContactDeltaCollectionRequestBuilder builder) {
+    public ContactDeltaCollectionPage(@Nonnull final ContactDeltaCollectionResponse response, @Nonnull final ContactDeltaCollectionRequestBuilder builder) {
        super(response, builder);
     }
 
@@ -39,7 +41,7 @@ public class ContactDeltaCollectionPage extends DeltaCollectionPage<Contact, Con
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public ContactDeltaCollectionPage(final java.util.List<Contact> pageContents, final ContactDeltaCollectionRequestBuilder nextRequestBuilder) {
+    public ContactDeltaCollectionPage(@Nonnull final java.util.List<Contact> pageContents, @Nullable final ContactDeltaCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

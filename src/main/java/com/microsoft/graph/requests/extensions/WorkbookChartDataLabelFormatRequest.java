@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.WorkbookChartFillRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartFontRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -30,7 +32,7 @@ public class WorkbookChartDataLabelFormatRequest extends BaseRequest<WorkbookCha
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartDataLabelFormatRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartDataLabelFormatRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChartDataLabelFormat.class);
     }
 
@@ -39,7 +41,7 @@ public class WorkbookChartDataLabelFormatRequest extends BaseRequest<WorkbookCha
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookChartDataLabelFormat> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookChartDataLabelFormat> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -49,6 +51,7 @@ public class WorkbookChartDataLabelFormatRequest extends BaseRequest<WorkbookCha
      * @return the WorkbookChartDataLabelFormat from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WorkbookChartDataLabelFormat get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -58,7 +61,7 @@ public class WorkbookChartDataLabelFormatRequest extends BaseRequest<WorkbookCha
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookChartDataLabelFormat> callback) {
+    public void delete(@Nonnull final ICallback<? super WorkbookChartDataLabelFormat> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +80,7 @@ public class WorkbookChartDataLabelFormatRequest extends BaseRequest<WorkbookCha
      * @param sourceWorkbookChartDataLabelFormat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookChartDataLabelFormat sourceWorkbookChartDataLabelFormat, final ICallback<? super WorkbookChartDataLabelFormat> callback) {
+    public void patch(@Nonnull final WorkbookChartDataLabelFormat sourceWorkbookChartDataLabelFormat, @Nonnull final ICallback<? super WorkbookChartDataLabelFormat> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartDataLabelFormat);
     }
 
@@ -88,7 +91,8 @@ public class WorkbookChartDataLabelFormatRequest extends BaseRequest<WorkbookCha
      * @return the updated WorkbookChartDataLabelFormat
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartDataLabelFormat patch(final WorkbookChartDataLabelFormat sourceWorkbookChartDataLabelFormat) throws ClientException {
+    @Nullable
+    public WorkbookChartDataLabelFormat patch(@Nonnull final WorkbookChartDataLabelFormat sourceWorkbookChartDataLabelFormat) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookChartDataLabelFormat);
     }
 
@@ -98,7 +102,7 @@ public class WorkbookChartDataLabelFormatRequest extends BaseRequest<WorkbookCha
      * @param newWorkbookChartDataLabelFormat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookChartDataLabelFormat newWorkbookChartDataLabelFormat, final ICallback<? super WorkbookChartDataLabelFormat> callback) {
+    public void post(@Nonnull final WorkbookChartDataLabelFormat newWorkbookChartDataLabelFormat, @Nonnull final ICallback<? super WorkbookChartDataLabelFormat> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartDataLabelFormat);
     }
 
@@ -109,7 +113,8 @@ public class WorkbookChartDataLabelFormatRequest extends BaseRequest<WorkbookCha
      * @return the created WorkbookChartDataLabelFormat
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartDataLabelFormat post(final WorkbookChartDataLabelFormat newWorkbookChartDataLabelFormat) throws ClientException {
+    @Nullable
+    public WorkbookChartDataLabelFormat post(@Nonnull final WorkbookChartDataLabelFormat newWorkbookChartDataLabelFormat) throws ClientException {
         return send(HttpMethod.POST, newWorkbookChartDataLabelFormat);
     }
 
@@ -119,7 +124,7 @@ public class WorkbookChartDataLabelFormatRequest extends BaseRequest<WorkbookCha
      * @param newWorkbookChartDataLabelFormat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookChartDataLabelFormat newWorkbookChartDataLabelFormat, final ICallback<? super WorkbookChartDataLabelFormat> callback) {
+    public void put(@Nonnull final WorkbookChartDataLabelFormat newWorkbookChartDataLabelFormat, @Nonnull final ICallback<? super WorkbookChartDataLabelFormat> callback) {
         send(HttpMethod.PUT, callback, newWorkbookChartDataLabelFormat);
     }
 
@@ -130,7 +135,8 @@ public class WorkbookChartDataLabelFormatRequest extends BaseRequest<WorkbookCha
      * @return the created WorkbookChartDataLabelFormat
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartDataLabelFormat put(final WorkbookChartDataLabelFormat newWorkbookChartDataLabelFormat) throws ClientException {
+    @Nullable
+    public WorkbookChartDataLabelFormat put(@Nonnull final WorkbookChartDataLabelFormat newWorkbookChartDataLabelFormat) throws ClientException {
         return send(HttpMethod.PUT, newWorkbookChartDataLabelFormat);
     }
 
@@ -140,7 +146,8 @@ public class WorkbookChartDataLabelFormatRequest extends BaseRequest<WorkbookCha
      * @param value the select clause
      * @return the updated request
      */
-     public WorkbookChartDataLabelFormatRequest select(final String value) {
+     @Nonnull
+     public WorkbookChartDataLabelFormatRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -151,7 +158,8 @@ public class WorkbookChartDataLabelFormatRequest extends BaseRequest<WorkbookCha
      * @param value the expand clause
      * @return the updated request
      */
-     public WorkbookChartDataLabelFormatRequest expand(final String value) {
+     @Nonnull
+     public WorkbookChartDataLabelFormatRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

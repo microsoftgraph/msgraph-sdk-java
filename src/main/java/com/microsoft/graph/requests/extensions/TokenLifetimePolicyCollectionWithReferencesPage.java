@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionWithReferencesPage;
@@ -34,7 +36,7 @@ public class TokenLifetimePolicyCollectionWithReferencesPage extends BaseCollect
      * @param response the serialized TokenLifetimePolicyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TokenLifetimePolicyCollectionWithReferencesPage(final TokenLifetimePolicyCollectionResponse response, final TokenLifetimePolicyCollectionWithReferencesRequestBuilder builder) {
+    public TokenLifetimePolicyCollectionWithReferencesPage(@Nonnull final TokenLifetimePolicyCollectionResponse response, @Nullable final TokenLifetimePolicyCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 
@@ -44,7 +46,7 @@ public class TokenLifetimePolicyCollectionWithReferencesPage extends BaseCollect
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public TokenLifetimePolicyCollectionWithReferencesPage(final java.util.List<TokenLifetimePolicy> pageContents, final TokenLifetimePolicyCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+    public TokenLifetimePolicyCollectionWithReferencesPage(@Nonnull final java.util.List<TokenLifetimePolicy> pageContents, @Nullable final TokenLifetimePolicyCollectionWithReferencesRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

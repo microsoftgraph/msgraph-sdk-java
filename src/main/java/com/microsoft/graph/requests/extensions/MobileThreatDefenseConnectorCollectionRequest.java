@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.MobileThreatDefenseConnector;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class MobileThreatDefenseConnectorCollectionRequest extends BaseCollectio
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MobileThreatDefenseConnectorCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileThreatDefenseConnectorCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MobileThreatDefenseConnectorCollectionResponse.class, MobileThreatDefenseConnectorCollectionPage.class, MobileThreatDefenseConnectorCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class MobileThreatDefenseConnectorCollectionRequest extends BaseCollectio
      * @param newMobileThreatDefenseConnector the MobileThreatDefenseConnector to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final MobileThreatDefenseConnector newMobileThreatDefenseConnector, final ICallback<? super MobileThreatDefenseConnector> callback) {
+    public void post(@Nonnull final MobileThreatDefenseConnector newMobileThreatDefenseConnector, @Nonnull final ICallback<? super MobileThreatDefenseConnector> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileThreatDefenseConnectorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class MobileThreatDefenseConnectorCollectionRequest extends BaseCollectio
      * @param newMobileThreatDefenseConnector the MobileThreatDefenseConnector to create
      * @return the newly created object
      */
-    public MobileThreatDefenseConnector post(final MobileThreatDefenseConnector newMobileThreatDefenseConnector) throws ClientException {
+    @Nonnull
+    public MobileThreatDefenseConnector post(@Nonnull final MobileThreatDefenseConnector newMobileThreatDefenseConnector) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MobileThreatDefenseConnectorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class MobileThreatDefenseConnectorCollectionRequest extends BaseCollectio
      * @param value the expand clause
      * @return the updated request
      */
-    public MobileThreatDefenseConnectorCollectionRequest expand(final String value) {
+    @Nonnull
+    public MobileThreatDefenseConnectorCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class MobileThreatDefenseConnectorCollectionRequest extends BaseCollectio
      * @param value the filter clause
      * @return the updated request
      */
-    public MobileThreatDefenseConnectorCollectionRequest filter(final String value) {
+    @Nonnull
+    public MobileThreatDefenseConnectorCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class MobileThreatDefenseConnectorCollectionRequest extends BaseCollectio
      * @param value the order by clause
      * @return the updated request
      */
-    public MobileThreatDefenseConnectorCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public MobileThreatDefenseConnectorCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class MobileThreatDefenseConnectorCollectionRequest extends BaseCollectio
      * @param value the select clause
      * @return the updated request
      */
-    public MobileThreatDefenseConnectorCollectionRequest select(final String value) {
+    @Nonnull
+    public MobileThreatDefenseConnectorCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class MobileThreatDefenseConnectorCollectionRequest extends BaseCollectio
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public MobileThreatDefenseConnectorCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class MobileThreatDefenseConnectorCollectionRequest extends BaseCollectio
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public MobileThreatDefenseConnectorCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class MobileThreatDefenseConnectorCollectionRequest extends BaseCollectio
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public MobileThreatDefenseConnectorCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public MobileThreatDefenseConnectorCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

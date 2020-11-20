@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.NotificationMessageTemplate;
 import com.microsoft.graph.requests.extensions.NotificationMessageTemplateCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.NotificationMessageTemplateCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class NotificationMessageTemplateCollectionPage extends BaseCollectionPag
      * @param response the serialized NotificationMessageTemplateCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public NotificationMessageTemplateCollectionPage(final NotificationMessageTemplateCollectionResponse response, final NotificationMessageTemplateCollectionRequestBuilder builder) {
+    public NotificationMessageTemplateCollectionPage(@Nonnull final NotificationMessageTemplateCollectionResponse response, @Nonnull final NotificationMessageTemplateCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class NotificationMessageTemplateCollectionPage extends BaseCollectionPag
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public NotificationMessageTemplateCollectionPage(final java.util.List<NotificationMessageTemplate> pageContents, final NotificationMessageTemplateCollectionRequestBuilder nextRequestBuilder) {
+    public NotificationMessageTemplateCollectionPage(@Nonnull final java.util.List<NotificationMessageTemplate> pageContents, @Nullable final NotificationMessageTemplateCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

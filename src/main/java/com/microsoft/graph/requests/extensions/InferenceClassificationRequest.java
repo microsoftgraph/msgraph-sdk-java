@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.InferenceClassificationOverrideCo
 import com.microsoft.graph.requests.extensions.InferenceClassificationOverrideRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -30,7 +32,7 @@ public class InferenceClassificationRequest extends BaseRequest<InferenceClassif
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public InferenceClassificationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public InferenceClassificationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, InferenceClassification.class);
     }
 
@@ -39,7 +41,7 @@ public class InferenceClassificationRequest extends BaseRequest<InferenceClassif
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super InferenceClassification> callback) {
+    public void get(@Nonnull final ICallback<? super InferenceClassification> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -49,6 +51,7 @@ public class InferenceClassificationRequest extends BaseRequest<InferenceClassif
      * @return the InferenceClassification from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public InferenceClassification get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -58,7 +61,7 @@ public class InferenceClassificationRequest extends BaseRequest<InferenceClassif
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super InferenceClassification> callback) {
+    public void delete(@Nonnull final ICallback<? super InferenceClassification> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +80,7 @@ public class InferenceClassificationRequest extends BaseRequest<InferenceClassif
      * @param sourceInferenceClassification the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final InferenceClassification sourceInferenceClassification, final ICallback<? super InferenceClassification> callback) {
+    public void patch(@Nonnull final InferenceClassification sourceInferenceClassification, @Nonnull final ICallback<? super InferenceClassification> callback) {
         send(HttpMethod.PATCH, callback, sourceInferenceClassification);
     }
 
@@ -88,7 +91,8 @@ public class InferenceClassificationRequest extends BaseRequest<InferenceClassif
      * @return the updated InferenceClassification
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public InferenceClassification patch(final InferenceClassification sourceInferenceClassification) throws ClientException {
+    @Nullable
+    public InferenceClassification patch(@Nonnull final InferenceClassification sourceInferenceClassification) throws ClientException {
         return send(HttpMethod.PATCH, sourceInferenceClassification);
     }
 
@@ -98,7 +102,7 @@ public class InferenceClassificationRequest extends BaseRequest<InferenceClassif
      * @param newInferenceClassification the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final InferenceClassification newInferenceClassification, final ICallback<? super InferenceClassification> callback) {
+    public void post(@Nonnull final InferenceClassification newInferenceClassification, @Nonnull final ICallback<? super InferenceClassification> callback) {
         send(HttpMethod.POST, callback, newInferenceClassification);
     }
 
@@ -109,7 +113,8 @@ public class InferenceClassificationRequest extends BaseRequest<InferenceClassif
      * @return the created InferenceClassification
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public InferenceClassification post(final InferenceClassification newInferenceClassification) throws ClientException {
+    @Nullable
+    public InferenceClassification post(@Nonnull final InferenceClassification newInferenceClassification) throws ClientException {
         return send(HttpMethod.POST, newInferenceClassification);
     }
 
@@ -119,7 +124,7 @@ public class InferenceClassificationRequest extends BaseRequest<InferenceClassif
      * @param newInferenceClassification the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final InferenceClassification newInferenceClassification, final ICallback<? super InferenceClassification> callback) {
+    public void put(@Nonnull final InferenceClassification newInferenceClassification, @Nonnull final ICallback<? super InferenceClassification> callback) {
         send(HttpMethod.PUT, callback, newInferenceClassification);
     }
 
@@ -130,7 +135,8 @@ public class InferenceClassificationRequest extends BaseRequest<InferenceClassif
      * @return the created InferenceClassification
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public InferenceClassification put(final InferenceClassification newInferenceClassification) throws ClientException {
+    @Nullable
+    public InferenceClassification put(@Nonnull final InferenceClassification newInferenceClassification) throws ClientException {
         return send(HttpMethod.PUT, newInferenceClassification);
     }
 
@@ -140,7 +146,8 @@ public class InferenceClassificationRequest extends BaseRequest<InferenceClassif
      * @param value the select clause
      * @return the updated request
      */
-     public InferenceClassificationRequest select(final String value) {
+     @Nonnull
+     public InferenceClassificationRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -151,7 +158,8 @@ public class InferenceClassificationRequest extends BaseRequest<InferenceClassif
      * @param value the expand clause
      * @return the updated request
      */
-     public InferenceClassificationRequest expand(final String value) {
+     @Nonnull
+     public InferenceClassificationRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

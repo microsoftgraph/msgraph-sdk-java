@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.AndroidManagedAppProtection;
 import com.microsoft.graph.requests.extensions.AndroidManagedAppProtectionCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.AndroidManagedAppProtectionCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class AndroidManagedAppProtectionCollectionPage extends BaseCollectionPag
      * @param response the serialized AndroidManagedAppProtectionCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public AndroidManagedAppProtectionCollectionPage(final AndroidManagedAppProtectionCollectionResponse response, final AndroidManagedAppProtectionCollectionRequestBuilder builder) {
+    public AndroidManagedAppProtectionCollectionPage(@Nonnull final AndroidManagedAppProtectionCollectionResponse response, @Nonnull final AndroidManagedAppProtectionCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class AndroidManagedAppProtectionCollectionPage extends BaseCollectionPag
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public AndroidManagedAppProtectionCollectionPage(final java.util.List<AndroidManagedAppProtection> pageContents, final AndroidManagedAppProtectionCollectionRequestBuilder nextRequestBuilder) {
+    public AndroidManagedAppProtectionCollectionPage(@Nonnull final java.util.List<AndroidManagedAppProtection> pageContents, @Nullable final AndroidManagedAppProtectionCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

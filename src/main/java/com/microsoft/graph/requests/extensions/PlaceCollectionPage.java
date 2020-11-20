@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Place;
 import com.microsoft.graph.requests.extensions.PlaceCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.PlaceCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class PlaceCollectionPage extends BaseCollectionPage<Place, PlaceCollecti
      * @param response the serialized PlaceCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public PlaceCollectionPage(final PlaceCollectionResponse response, final PlaceCollectionRequestBuilder builder) {
+    public PlaceCollectionPage(@Nonnull final PlaceCollectionResponse response, @Nonnull final PlaceCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class PlaceCollectionPage extends BaseCollectionPage<Place, PlaceCollecti
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public PlaceCollectionPage(final java.util.List<Place> pageContents, final PlaceCollectionRequestBuilder nextRequestBuilder) {
+    public PlaceCollectionPage(@Nonnull final java.util.List<Place> pageContents, @Nullable final PlaceCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

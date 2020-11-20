@@ -7,6 +7,8 @@ import com.microsoft.graph.models.extensions.WorkbookFunctionsStandardizeBody;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsStandardizeRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -30,7 +32,7 @@ public class WorkbookFunctionsStandardizeRequest extends BaseRequest<WorkbookFun
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookFunctionsStandardizeRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsStandardizeRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsStandardizeBody();
     }
@@ -39,7 +41,7 @@ public class WorkbookFunctionsStandardizeRequest extends BaseRequest<WorkbookFun
      * Invokes the method and invokes the callback with the result
      * @param callback callback to be invoked after executing the request
      */
-    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
+    public void post(@Nonnull final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -47,6 +49,7 @@ public class WorkbookFunctionsStandardizeRequest extends BaseRequest<WorkbookFun
      * Invokes the method and returns the result
      * @return result of the method invocation
      */
+    @Nullable
     public WorkbookFunctionResult post() throws ClientException {
         return send(HttpMethod.POST, body);
     }
@@ -57,7 +60,8 @@ public class WorkbookFunctionsStandardizeRequest extends BaseRequest<WorkbookFun
      * @param value the select clause
      * @return the updated request
      */
-    public WorkbookFunctionsStandardizeRequest select(final String value) {
+    @Nonnull
+    public WorkbookFunctionsStandardizeRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -68,6 +72,7 @@ public class WorkbookFunctionsStandardizeRequest extends BaseRequest<WorkbookFun
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public WorkbookFunctionsStandardizeRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -79,7 +84,8 @@ public class WorkbookFunctionsStandardizeRequest extends BaseRequest<WorkbookFun
      * @param value the expand clause
      * @return the updated request
      */
-    public WorkbookFunctionsStandardizeRequest expand(final String value) {
+    @Nonnull
+    public WorkbookFunctionsStandardizeRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }

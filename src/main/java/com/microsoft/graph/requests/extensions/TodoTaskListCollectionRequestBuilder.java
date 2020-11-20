@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Todo;
 import com.microsoft.graph.models.extensions.TodoTaskList;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.TodoTaskListCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TodoTaskListRequestBuilder;
@@ -33,7 +35,7 @@ public class TodoTaskListCollectionRequestBuilder extends BaseCollectionRequestB
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TodoTaskListCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TodoTaskListCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TodoTaskListRequestBuilder.class, TodoTaskListCollectionRequest.class);
     }
 
@@ -43,6 +45,7 @@ public class TodoTaskListCollectionRequestBuilder extends BaseCollectionRequestB
      * Gets a builder to execute the method
      * @return the request builder collection
      */
+    @Nonnull
     public TodoTaskListDeltaCollectionRequestBuilder delta() {
         return new TodoTaskListDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
@@ -53,7 +56,8 @@ public class TodoTaskListCollectionRequestBuilder extends BaseCollectionRequestB
      * @return a request builder to get the changes
      * @param deltaLink the link returned by the last delta request
      */
-	public TodoTaskListDeltaCollectionRequestBuilder delta(final String deltaLink) {
+    @Nonnull
+	public TodoTaskListDeltaCollectionRequestBuilder delta(@Nonnull final String deltaLink) {
         return new TodoTaskListDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }
 }

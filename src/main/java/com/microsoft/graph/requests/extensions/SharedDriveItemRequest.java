@@ -16,6 +16,8 @@ import com.microsoft.graph.requests.extensions.PermissionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -34,7 +36,7 @@ public class SharedDriveItemRequest extends BaseRequest<SharedDriveItem> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SharedDriveItemRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SharedDriveItemRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SharedDriveItem.class);
     }
 
@@ -43,7 +45,7 @@ public class SharedDriveItemRequest extends BaseRequest<SharedDriveItem> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SharedDriveItem> callback) {
+    public void get(@Nonnull final ICallback<? super SharedDriveItem> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -53,6 +55,7 @@ public class SharedDriveItemRequest extends BaseRequest<SharedDriveItem> {
      * @return the SharedDriveItem from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SharedDriveItem get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -62,7 +65,7 @@ public class SharedDriveItemRequest extends BaseRequest<SharedDriveItem> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SharedDriveItem> callback) {
+    public void delete(@Nonnull final ICallback<? super SharedDriveItem> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -81,7 +84,7 @@ public class SharedDriveItemRequest extends BaseRequest<SharedDriveItem> {
      * @param sourceSharedDriveItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SharedDriveItem sourceSharedDriveItem, final ICallback<? super SharedDriveItem> callback) {
+    public void patch(@Nonnull final SharedDriveItem sourceSharedDriveItem, @Nonnull final ICallback<? super SharedDriveItem> callback) {
         send(HttpMethod.PATCH, callback, sourceSharedDriveItem);
     }
 
@@ -92,7 +95,8 @@ public class SharedDriveItemRequest extends BaseRequest<SharedDriveItem> {
      * @return the updated SharedDriveItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SharedDriveItem patch(final SharedDriveItem sourceSharedDriveItem) throws ClientException {
+    @Nullable
+    public SharedDriveItem patch(@Nonnull final SharedDriveItem sourceSharedDriveItem) throws ClientException {
         return send(HttpMethod.PATCH, sourceSharedDriveItem);
     }
 
@@ -102,7 +106,7 @@ public class SharedDriveItemRequest extends BaseRequest<SharedDriveItem> {
      * @param newSharedDriveItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SharedDriveItem newSharedDriveItem, final ICallback<? super SharedDriveItem> callback) {
+    public void post(@Nonnull final SharedDriveItem newSharedDriveItem, @Nonnull final ICallback<? super SharedDriveItem> callback) {
         send(HttpMethod.POST, callback, newSharedDriveItem);
     }
 
@@ -113,7 +117,8 @@ public class SharedDriveItemRequest extends BaseRequest<SharedDriveItem> {
      * @return the created SharedDriveItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SharedDriveItem post(final SharedDriveItem newSharedDriveItem) throws ClientException {
+    @Nullable
+    public SharedDriveItem post(@Nonnull final SharedDriveItem newSharedDriveItem) throws ClientException {
         return send(HttpMethod.POST, newSharedDriveItem);
     }
 
@@ -123,7 +128,7 @@ public class SharedDriveItemRequest extends BaseRequest<SharedDriveItem> {
      * @param newSharedDriveItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SharedDriveItem newSharedDriveItem, final ICallback<? super SharedDriveItem> callback) {
+    public void put(@Nonnull final SharedDriveItem newSharedDriveItem, @Nonnull final ICallback<? super SharedDriveItem> callback) {
         send(HttpMethod.PUT, callback, newSharedDriveItem);
     }
 
@@ -134,7 +139,8 @@ public class SharedDriveItemRequest extends BaseRequest<SharedDriveItem> {
      * @return the created SharedDriveItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SharedDriveItem put(final SharedDriveItem newSharedDriveItem) throws ClientException {
+    @Nullable
+    public SharedDriveItem put(@Nonnull final SharedDriveItem newSharedDriveItem) throws ClientException {
         return send(HttpMethod.PUT, newSharedDriveItem);
     }
 
@@ -144,7 +150,8 @@ public class SharedDriveItemRequest extends BaseRequest<SharedDriveItem> {
      * @param value the select clause
      * @return the updated request
      */
-     public SharedDriveItemRequest select(final String value) {
+     @Nonnull
+     public SharedDriveItemRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -155,7 +162,8 @@ public class SharedDriveItemRequest extends BaseRequest<SharedDriveItem> {
      * @param value the expand clause
      * @return the updated request
      */
-     public SharedDriveItemRequest expand(final String value) {
+     @Nonnull
+     public SharedDriveItemRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

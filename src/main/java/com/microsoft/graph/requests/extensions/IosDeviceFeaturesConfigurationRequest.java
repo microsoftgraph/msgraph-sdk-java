@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosDeviceFeaturesConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class IosDeviceFeaturesConfigurationRequest extends BaseRequest<IosDevice
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosDeviceFeaturesConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IosDeviceFeaturesConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IosDeviceFeaturesConfiguration.class);
     }
 
@@ -37,7 +39,7 @@ public class IosDeviceFeaturesConfigurationRequest extends BaseRequest<IosDevice
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IosDeviceFeaturesConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super IosDeviceFeaturesConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class IosDeviceFeaturesConfigurationRequest extends BaseRequest<IosDevice
      * @return the IosDeviceFeaturesConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public IosDeviceFeaturesConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class IosDeviceFeaturesConfigurationRequest extends BaseRequest<IosDevice
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IosDeviceFeaturesConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super IosDeviceFeaturesConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class IosDeviceFeaturesConfigurationRequest extends BaseRequest<IosDevice
      * @param sourceIosDeviceFeaturesConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosDeviceFeaturesConfiguration sourceIosDeviceFeaturesConfiguration, final ICallback<? super IosDeviceFeaturesConfiguration> callback) {
+    public void patch(@Nonnull final IosDeviceFeaturesConfiguration sourceIosDeviceFeaturesConfiguration, @Nonnull final ICallback<? super IosDeviceFeaturesConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceIosDeviceFeaturesConfiguration);
     }
 
@@ -86,7 +89,8 @@ public class IosDeviceFeaturesConfigurationRequest extends BaseRequest<IosDevice
      * @return the updated IosDeviceFeaturesConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosDeviceFeaturesConfiguration patch(final IosDeviceFeaturesConfiguration sourceIosDeviceFeaturesConfiguration) throws ClientException {
+    @Nullable
+    public IosDeviceFeaturesConfiguration patch(@Nonnull final IosDeviceFeaturesConfiguration sourceIosDeviceFeaturesConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceIosDeviceFeaturesConfiguration);
     }
 
@@ -96,7 +100,7 @@ public class IosDeviceFeaturesConfigurationRequest extends BaseRequest<IosDevice
      * @param newIosDeviceFeaturesConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosDeviceFeaturesConfiguration newIosDeviceFeaturesConfiguration, final ICallback<? super IosDeviceFeaturesConfiguration> callback) {
+    public void post(@Nonnull final IosDeviceFeaturesConfiguration newIosDeviceFeaturesConfiguration, @Nonnull final ICallback<? super IosDeviceFeaturesConfiguration> callback) {
         send(HttpMethod.POST, callback, newIosDeviceFeaturesConfiguration);
     }
 
@@ -107,7 +111,8 @@ public class IosDeviceFeaturesConfigurationRequest extends BaseRequest<IosDevice
      * @return the created IosDeviceFeaturesConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosDeviceFeaturesConfiguration post(final IosDeviceFeaturesConfiguration newIosDeviceFeaturesConfiguration) throws ClientException {
+    @Nullable
+    public IosDeviceFeaturesConfiguration post(@Nonnull final IosDeviceFeaturesConfiguration newIosDeviceFeaturesConfiguration) throws ClientException {
         return send(HttpMethod.POST, newIosDeviceFeaturesConfiguration);
     }
 
@@ -117,7 +122,7 @@ public class IosDeviceFeaturesConfigurationRequest extends BaseRequest<IosDevice
      * @param newIosDeviceFeaturesConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosDeviceFeaturesConfiguration newIosDeviceFeaturesConfiguration, final ICallback<? super IosDeviceFeaturesConfiguration> callback) {
+    public void put(@Nonnull final IosDeviceFeaturesConfiguration newIosDeviceFeaturesConfiguration, @Nonnull final ICallback<? super IosDeviceFeaturesConfiguration> callback) {
         send(HttpMethod.PUT, callback, newIosDeviceFeaturesConfiguration);
     }
 
@@ -128,7 +133,8 @@ public class IosDeviceFeaturesConfigurationRequest extends BaseRequest<IosDevice
      * @return the created IosDeviceFeaturesConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosDeviceFeaturesConfiguration put(final IosDeviceFeaturesConfiguration newIosDeviceFeaturesConfiguration) throws ClientException {
+    @Nullable
+    public IosDeviceFeaturesConfiguration put(@Nonnull final IosDeviceFeaturesConfiguration newIosDeviceFeaturesConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newIosDeviceFeaturesConfiguration);
     }
 
@@ -138,7 +144,8 @@ public class IosDeviceFeaturesConfigurationRequest extends BaseRequest<IosDevice
      * @param value the select clause
      * @return the updated request
      */
-     public IosDeviceFeaturesConfigurationRequest select(final String value) {
+     @Nonnull
+     public IosDeviceFeaturesConfigurationRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class IosDeviceFeaturesConfigurationRequest extends BaseRequest<IosDevice
      * @param value the expand clause
      * @return the updated request
      */
-     public IosDeviceFeaturesConfigurationRequest expand(final String value) {
+     @Nonnull
+     public IosDeviceFeaturesConfigurationRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

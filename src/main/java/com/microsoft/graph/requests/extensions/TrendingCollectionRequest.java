@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.OfficeGraphInsights;
 import com.microsoft.graph.models.extensions.Trending;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class TrendingCollectionRequest extends BaseCollectionRequest<Trending, T
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TrendingCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TrendingCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TrendingCollectionResponse.class, TrendingCollectionPage.class, TrendingCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class TrendingCollectionRequest extends BaseCollectionRequest<Trending, T
      * @param newTrending the Trending to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final Trending newTrending, final ICallback<? super Trending> callback) {
+    public void post(@Nonnull final Trending newTrending, @Nonnull final ICallback<? super Trending> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TrendingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class TrendingCollectionRequest extends BaseCollectionRequest<Trending, T
      * @param newTrending the Trending to create
      * @return the newly created object
      */
-    public Trending post(final Trending newTrending) throws ClientException {
+    @Nonnull
+    public Trending post(@Nonnull final Trending newTrending) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TrendingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class TrendingCollectionRequest extends BaseCollectionRequest<Trending, T
      * @param value the expand clause
      * @return the updated request
      */
-    public TrendingCollectionRequest expand(final String value) {
+    @Nonnull
+    public TrendingCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class TrendingCollectionRequest extends BaseCollectionRequest<Trending, T
      * @param value the filter clause
      * @return the updated request
      */
-    public TrendingCollectionRequest filter(final String value) {
+    @Nonnull
+    public TrendingCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class TrendingCollectionRequest extends BaseCollectionRequest<Trending, T
      * @param value the order by clause
      * @return the updated request
      */
-    public TrendingCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public TrendingCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class TrendingCollectionRequest extends BaseCollectionRequest<Trending, T
      * @param value the select clause
      * @return the updated request
      */
-    public TrendingCollectionRequest select(final String value) {
+    @Nonnull
+    public TrendingCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class TrendingCollectionRequest extends BaseCollectionRequest<Trending, T
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public TrendingCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class TrendingCollectionRequest extends BaseCollectionRequest<Trending, T
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public TrendingCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class TrendingCollectionRequest extends BaseCollectionRequest<Trending, T
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public TrendingCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public TrendingCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

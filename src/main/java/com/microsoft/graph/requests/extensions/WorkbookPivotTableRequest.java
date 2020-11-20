@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.WorkbookPivotTable;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,7 +31,7 @@ public class WorkbookPivotTableRequest extends BaseRequest<WorkbookPivotTable> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookPivotTableRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookPivotTableRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookPivotTable.class);
     }
 
@@ -38,7 +40,7 @@ public class WorkbookPivotTableRequest extends BaseRequest<WorkbookPivotTable> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookPivotTable> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookPivotTable> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class WorkbookPivotTableRequest extends BaseRequest<WorkbookPivotTable> {
      * @return the WorkbookPivotTable from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WorkbookPivotTable get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class WorkbookPivotTableRequest extends BaseRequest<WorkbookPivotTable> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookPivotTable> callback) {
+    public void delete(@Nonnull final ICallback<? super WorkbookPivotTable> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class WorkbookPivotTableRequest extends BaseRequest<WorkbookPivotTable> {
      * @param sourceWorkbookPivotTable the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookPivotTable sourceWorkbookPivotTable, final ICallback<? super WorkbookPivotTable> callback) {
+    public void patch(@Nonnull final WorkbookPivotTable sourceWorkbookPivotTable, @Nonnull final ICallback<? super WorkbookPivotTable> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookPivotTable);
     }
 
@@ -87,7 +90,8 @@ public class WorkbookPivotTableRequest extends BaseRequest<WorkbookPivotTable> {
      * @return the updated WorkbookPivotTable
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookPivotTable patch(final WorkbookPivotTable sourceWorkbookPivotTable) throws ClientException {
+    @Nullable
+    public WorkbookPivotTable patch(@Nonnull final WorkbookPivotTable sourceWorkbookPivotTable) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookPivotTable);
     }
 
@@ -97,7 +101,7 @@ public class WorkbookPivotTableRequest extends BaseRequest<WorkbookPivotTable> {
      * @param newWorkbookPivotTable the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookPivotTable newWorkbookPivotTable, final ICallback<? super WorkbookPivotTable> callback) {
+    public void post(@Nonnull final WorkbookPivotTable newWorkbookPivotTable, @Nonnull final ICallback<? super WorkbookPivotTable> callback) {
         send(HttpMethod.POST, callback, newWorkbookPivotTable);
     }
 
@@ -108,7 +112,8 @@ public class WorkbookPivotTableRequest extends BaseRequest<WorkbookPivotTable> {
      * @return the created WorkbookPivotTable
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookPivotTable post(final WorkbookPivotTable newWorkbookPivotTable) throws ClientException {
+    @Nullable
+    public WorkbookPivotTable post(@Nonnull final WorkbookPivotTable newWorkbookPivotTable) throws ClientException {
         return send(HttpMethod.POST, newWorkbookPivotTable);
     }
 
@@ -118,7 +123,7 @@ public class WorkbookPivotTableRequest extends BaseRequest<WorkbookPivotTable> {
      * @param newWorkbookPivotTable the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookPivotTable newWorkbookPivotTable, final ICallback<? super WorkbookPivotTable> callback) {
+    public void put(@Nonnull final WorkbookPivotTable newWorkbookPivotTable, @Nonnull final ICallback<? super WorkbookPivotTable> callback) {
         send(HttpMethod.PUT, callback, newWorkbookPivotTable);
     }
 
@@ -129,7 +134,8 @@ public class WorkbookPivotTableRequest extends BaseRequest<WorkbookPivotTable> {
      * @return the created WorkbookPivotTable
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookPivotTable put(final WorkbookPivotTable newWorkbookPivotTable) throws ClientException {
+    @Nullable
+    public WorkbookPivotTable put(@Nonnull final WorkbookPivotTable newWorkbookPivotTable) throws ClientException {
         return send(HttpMethod.PUT, newWorkbookPivotTable);
     }
 
@@ -139,7 +145,8 @@ public class WorkbookPivotTableRequest extends BaseRequest<WorkbookPivotTable> {
      * @param value the select clause
      * @return the updated request
      */
-     public WorkbookPivotTableRequest select(final String value) {
+     @Nonnull
+     public WorkbookPivotTableRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -150,7 +157,8 @@ public class WorkbookPivotTableRequest extends BaseRequest<WorkbookPivotTable> {
      * @param value the expand clause
      * @return the updated request
      */
-     public WorkbookPivotTableRequest expand(final String value) {
+     @Nonnull
+     public WorkbookPivotTableRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

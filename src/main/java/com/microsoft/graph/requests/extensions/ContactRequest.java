@@ -17,6 +17,8 @@ import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedProperty
 import com.microsoft.graph.requests.extensions.ProfilePhotoRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -35,7 +37,7 @@ public class ContactRequest extends BaseRequest<Contact> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ContactRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ContactRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Contact.class);
     }
 
@@ -44,7 +46,7 @@ public class ContactRequest extends BaseRequest<Contact> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Contact> callback) {
+    public void get(@Nonnull final ICallback<? super Contact> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -54,6 +56,7 @@ public class ContactRequest extends BaseRequest<Contact> {
      * @return the Contact from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Contact get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -63,7 +66,7 @@ public class ContactRequest extends BaseRequest<Contact> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Contact> callback) {
+    public void delete(@Nonnull final ICallback<? super Contact> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -82,7 +85,7 @@ public class ContactRequest extends BaseRequest<Contact> {
      * @param sourceContact the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Contact sourceContact, final ICallback<? super Contact> callback) {
+    public void patch(@Nonnull final Contact sourceContact, @Nonnull final ICallback<? super Contact> callback) {
         send(HttpMethod.PATCH, callback, sourceContact);
     }
 
@@ -93,7 +96,8 @@ public class ContactRequest extends BaseRequest<Contact> {
      * @return the updated Contact
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Contact patch(final Contact sourceContact) throws ClientException {
+    @Nullable
+    public Contact patch(@Nonnull final Contact sourceContact) throws ClientException {
         return send(HttpMethod.PATCH, sourceContact);
     }
 
@@ -103,7 +107,7 @@ public class ContactRequest extends BaseRequest<Contact> {
      * @param newContact the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Contact newContact, final ICallback<? super Contact> callback) {
+    public void post(@Nonnull final Contact newContact, @Nonnull final ICallback<? super Contact> callback) {
         send(HttpMethod.POST, callback, newContact);
     }
 
@@ -114,7 +118,8 @@ public class ContactRequest extends BaseRequest<Contact> {
      * @return the created Contact
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Contact post(final Contact newContact) throws ClientException {
+    @Nullable
+    public Contact post(@Nonnull final Contact newContact) throws ClientException {
         return send(HttpMethod.POST, newContact);
     }
 
@@ -124,7 +129,7 @@ public class ContactRequest extends BaseRequest<Contact> {
      * @param newContact the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Contact newContact, final ICallback<? super Contact> callback) {
+    public void put(@Nonnull final Contact newContact, @Nonnull final ICallback<? super Contact> callback) {
         send(HttpMethod.PUT, callback, newContact);
     }
 
@@ -135,7 +140,8 @@ public class ContactRequest extends BaseRequest<Contact> {
      * @return the created Contact
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Contact put(final Contact newContact) throws ClientException {
+    @Nullable
+    public Contact put(@Nonnull final Contact newContact) throws ClientException {
         return send(HttpMethod.PUT, newContact);
     }
 
@@ -145,7 +151,8 @@ public class ContactRequest extends BaseRequest<Contact> {
      * @param value the select clause
      * @return the updated request
      */
-     public ContactRequest select(final String value) {
+     @Nonnull
+     public ContactRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -156,7 +163,8 @@ public class ContactRequest extends BaseRequest<Contact> {
      * @param value the expand clause
      * @return the updated request
      */
-     public ContactRequest expand(final String value) {
+     @Nonnull
+     public ContactRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

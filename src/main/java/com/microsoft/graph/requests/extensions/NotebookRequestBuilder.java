@@ -17,6 +17,8 @@ import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionRequestBu
 import com.microsoft.graph.requests.extensions.OnenoteSectionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -34,7 +36,7 @@ public class NotebookRequestBuilder extends BaseRequestBuilder<Notebook> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public NotebookRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public NotebookRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +46,8 @@ public class NotebookRequestBuilder extends BaseRequestBuilder<Notebook> {
      * @param requestOptions the options for this request
      * @return the NotebookRequest instance
      */
-    public NotebookRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public NotebookRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -54,7 +57,8 @@ public class NotebookRequestBuilder extends BaseRequestBuilder<Notebook> {
      * @param requestOptions the options for this request
      * @return the NotebookRequest instance
      */
-    public NotebookRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public NotebookRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.NotebookRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -64,6 +68,7 @@ public class NotebookRequestBuilder extends BaseRequestBuilder<Notebook> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public SectionGroupCollectionRequestBuilder sectionGroups() {
         return new SectionGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sectionGroups"), getClient(), null);
     }
@@ -74,7 +79,8 @@ public class NotebookRequestBuilder extends BaseRequestBuilder<Notebook> {
      * @return the request builder
      * @param id the item identifier
      */
-    public SectionGroupRequestBuilder sectionGroups(final String id) {
+    @Nonnull
+    public SectionGroupRequestBuilder sectionGroups(@Nonnull final String id) {
         return new SectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("sectionGroups") + "/" + id, getClient(), null);
     }
     /**
@@ -82,6 +88,7 @@ public class NotebookRequestBuilder extends BaseRequestBuilder<Notebook> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public OnenoteSectionCollectionRequestBuilder sections() {
         return new OnenoteSectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sections"), getClient(), null);
     }
@@ -92,7 +99,8 @@ public class NotebookRequestBuilder extends BaseRequestBuilder<Notebook> {
      * @return the request builder
      * @param id the item identifier
      */
-    public OnenoteSectionRequestBuilder sections(final String id) {
+    @Nonnull
+    public OnenoteSectionRequestBuilder sections(@Nonnull final String id) {
         return new OnenoteSectionRequestBuilder(getRequestUrlWithAdditionalSegment("sections") + "/" + id, getClient(), null);
     }
 
@@ -105,7 +113,8 @@ public class NotebookRequestBuilder extends BaseRequestBuilder<Notebook> {
      * @param siteCollectionId the siteCollectionId
      * @param siteId the siteId
      */
-    public NotebookCopyNotebookRequestBuilder copyNotebook(final String groupId, final String renameAs, final String notebookFolder, final String siteCollectionId, final String siteId) {
+    @Nonnull
+    public NotebookCopyNotebookRequestBuilder copyNotebook(@Nullable final String groupId, @Nullable final String renameAs, @Nullable final String notebookFolder, @Nullable final String siteCollectionId, @Nullable final String siteId) {
         return new NotebookCopyNotebookRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copyNotebook"), getClient(), null, groupId, renameAs, notebookFolder, siteCollectionId, siteId);
     }
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.RoleDefinition;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class RoleDefinitionCollectionRequest extends BaseCollectionRequest<RoleD
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RoleDefinitionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RoleDefinitionCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, RoleDefinitionCollectionResponse.class, RoleDefinitionCollectionPage.class, RoleDefinitionCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class RoleDefinitionCollectionRequest extends BaseCollectionRequest<RoleD
      * @param newRoleDefinition the RoleDefinition to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final RoleDefinition newRoleDefinition, final ICallback<? super RoleDefinition> callback) {
+    public void post(@Nonnull final RoleDefinition newRoleDefinition, @Nonnull final ICallback<? super RoleDefinition> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RoleDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class RoleDefinitionCollectionRequest extends BaseCollectionRequest<RoleD
      * @param newRoleDefinition the RoleDefinition to create
      * @return the newly created object
      */
-    public RoleDefinition post(final RoleDefinition newRoleDefinition) throws ClientException {
+    @Nonnull
+    public RoleDefinition post(@Nonnull final RoleDefinition newRoleDefinition) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new RoleDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class RoleDefinitionCollectionRequest extends BaseCollectionRequest<RoleD
      * @param value the expand clause
      * @return the updated request
      */
-    public RoleDefinitionCollectionRequest expand(final String value) {
+    @Nonnull
+    public RoleDefinitionCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class RoleDefinitionCollectionRequest extends BaseCollectionRequest<RoleD
      * @param value the filter clause
      * @return the updated request
      */
-    public RoleDefinitionCollectionRequest filter(final String value) {
+    @Nonnull
+    public RoleDefinitionCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class RoleDefinitionCollectionRequest extends BaseCollectionRequest<RoleD
      * @param value the order by clause
      * @return the updated request
      */
-    public RoleDefinitionCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public RoleDefinitionCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class RoleDefinitionCollectionRequest extends BaseCollectionRequest<RoleD
      * @param value the select clause
      * @return the updated request
      */
-    public RoleDefinitionCollectionRequest select(final String value) {
+    @Nonnull
+    public RoleDefinitionCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class RoleDefinitionCollectionRequest extends BaseCollectionRequest<RoleD
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public RoleDefinitionCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class RoleDefinitionCollectionRequest extends BaseCollectionRequest<RoleD
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public RoleDefinitionCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class RoleDefinitionCollectionRequest extends BaseCollectionRequest<RoleD
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public RoleDefinitionCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public RoleDefinitionCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

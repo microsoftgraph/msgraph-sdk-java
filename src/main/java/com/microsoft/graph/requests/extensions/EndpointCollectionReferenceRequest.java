@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.Endpoint;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.EndpointWithReferenceRequest;
 import com.microsoft.graph.requests.extensions.EndpointReferenceRequestBuilder;
@@ -38,7 +40,7 @@ public class EndpointCollectionReferenceRequest extends BaseCollectionWithRefere
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EndpointCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EndpointCollectionReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EndpointCollectionResponse.class, EndpointCollectionWithReferencesPage.class, EndpointCollectionWithReferencesRequestBuilder.class);
     }
 
@@ -48,7 +50,8 @@ public class EndpointCollectionReferenceRequest extends BaseCollectionWithRefere
      * @param value the expand clause
      * @return the updated request
      */
-    public EndpointCollectionReferenceRequest expand(final String value) {
+    @Nonnull
+    public EndpointCollectionReferenceRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -59,7 +62,8 @@ public class EndpointCollectionReferenceRequest extends BaseCollectionWithRefere
      * @param value the filter clause
      * @return the updated request
      */
-    public EndpointCollectionReferenceRequest filter(final String value) {
+    @Nonnull
+    public EndpointCollectionReferenceRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -70,7 +74,8 @@ public class EndpointCollectionReferenceRequest extends BaseCollectionWithRefere
      * @param value the sort clause
      * @return the updated request
      */
-    public EndpointCollectionReferenceRequest orderBy(final String value) {
+    @Nonnull
+    public EndpointCollectionReferenceRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -81,7 +86,8 @@ public class EndpointCollectionReferenceRequest extends BaseCollectionWithRefere
      * @param value the select clause
      * @return the updated request
      */
-    public EndpointCollectionReferenceRequest select(final String value) {
+    @Nonnull
+    public EndpointCollectionReferenceRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -92,6 +98,7 @@ public class EndpointCollectionReferenceRequest extends BaseCollectionWithRefere
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public EndpointCollectionReferenceRequest top(final int value) {
         addTopOption(value);
         return this;

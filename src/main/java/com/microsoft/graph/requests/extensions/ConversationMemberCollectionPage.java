@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ConversationMember;
 import com.microsoft.graph.requests.extensions.ConversationMemberCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.ConversationMemberCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class ConversationMemberCollectionPage extends BaseCollectionPage<Convers
      * @param response the serialized ConversationMemberCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ConversationMemberCollectionPage(final ConversationMemberCollectionResponse response, final ConversationMemberCollectionRequestBuilder builder) {
+    public ConversationMemberCollectionPage(@Nonnull final ConversationMemberCollectionResponse response, @Nonnull final ConversationMemberCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class ConversationMemberCollectionPage extends BaseCollectionPage<Convers
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public ConversationMemberCollectionPage(final java.util.List<ConversationMember> pageContents, final ConversationMemberCollectionRequestBuilder nextRequestBuilder) {
+    public ConversationMemberCollectionPage(@Nonnull final java.util.List<ConversationMember> pageContents, @Nullable final ConversationMemberCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

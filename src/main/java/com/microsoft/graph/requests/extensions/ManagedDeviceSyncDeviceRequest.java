@@ -6,6 +6,8 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.requests.extensions.ManagedDeviceSyncDeviceRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.core.ClientException;
@@ -27,7 +29,7 @@ public class ManagedDeviceSyncDeviceRequest extends BaseRequest<Void> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceSyncDeviceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceSyncDeviceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
     }
 
@@ -36,7 +38,7 @@ public class ManagedDeviceSyncDeviceRequest extends BaseRequest<Void> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<Void> callback) {
+    public void post(@Nonnull final ICallback<Void> callback) {
         final IExecutors executors = getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

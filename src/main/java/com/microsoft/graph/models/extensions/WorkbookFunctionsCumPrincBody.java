@@ -7,6 +7,8 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
 import java.util.EnumSet;
@@ -24,6 +26,7 @@ public class WorkbookFunctionsCumPrincBody {
      */
     @SerializedName(value = "rate", alternate = {"Rate"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement rate;
 
     /**
@@ -32,6 +35,7 @@ public class WorkbookFunctionsCumPrincBody {
      */
     @SerializedName(value = "nper", alternate = {"Nper"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement nper;
 
     /**
@@ -40,6 +44,7 @@ public class WorkbookFunctionsCumPrincBody {
      */
     @SerializedName(value = "pv", alternate = {"Pv"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement pv;
 
     /**
@@ -48,6 +53,7 @@ public class WorkbookFunctionsCumPrincBody {
      */
     @SerializedName(value = "startPeriod", alternate = {"StartPeriod"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement startPeriod;
 
     /**
@@ -56,6 +62,7 @@ public class WorkbookFunctionsCumPrincBody {
      */
     @SerializedName(value = "endPeriod", alternate = {"EndPeriod"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement endPeriod;
 
     /**
@@ -64,6 +71,7 @@ public class WorkbookFunctionsCumPrincBody {
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose
+	@Nullable
     public com.google.gson.JsonElement type;
 
 
@@ -82,6 +90,7 @@ public class WorkbookFunctionsCumPrincBody {
      *
      * @return the raw representation of this class
      */
+    @Nullable
     public JsonObject getRawObject() {
         return rawObject;
     }
@@ -91,6 +100,7 @@ public class WorkbookFunctionsCumPrincBody {
      *
      * @return the serializer
      */
+    @Nullable
     public ISerializer getSerializer() {
         return serializer;
     }
@@ -101,7 +111,7 @@ public class WorkbookFunctionsCumPrincBody {
      * @param serializer the serializer
      * @param json the JSON object to set this object to
      */
-    public void setRawObject(final ISerializer serializer, final JsonObject json) {
+    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
         this.serializer = serializer;
         rawObject = json;
 

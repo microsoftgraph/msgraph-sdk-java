@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.ThumbnailSet;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class ThumbnailSetCollectionRequest extends BaseCollectionRequest<Thumbna
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ThumbnailSetCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ThumbnailSetCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ThumbnailSetCollectionResponse.class, ThumbnailSetCollectionPage.class, ThumbnailSetCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class ThumbnailSetCollectionRequest extends BaseCollectionRequest<Thumbna
      * @param newThumbnailSet the ThumbnailSet to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final ThumbnailSet newThumbnailSet, final ICallback<? super ThumbnailSet> callback) {
+    public void post(@Nonnull final ThumbnailSet newThumbnailSet, @Nonnull final ICallback<? super ThumbnailSet> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ThumbnailSetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class ThumbnailSetCollectionRequest extends BaseCollectionRequest<Thumbna
      * @param newThumbnailSet the ThumbnailSet to create
      * @return the newly created object
      */
-    public ThumbnailSet post(final ThumbnailSet newThumbnailSet) throws ClientException {
+    @Nonnull
+    public ThumbnailSet post(@Nonnull final ThumbnailSet newThumbnailSet) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ThumbnailSetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class ThumbnailSetCollectionRequest extends BaseCollectionRequest<Thumbna
      * @param value the expand clause
      * @return the updated request
      */
-    public ThumbnailSetCollectionRequest expand(final String value) {
+    @Nonnull
+    public ThumbnailSetCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class ThumbnailSetCollectionRequest extends BaseCollectionRequest<Thumbna
      * @param value the filter clause
      * @return the updated request
      */
-    public ThumbnailSetCollectionRequest filter(final String value) {
+    @Nonnull
+    public ThumbnailSetCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class ThumbnailSetCollectionRequest extends BaseCollectionRequest<Thumbna
      * @param value the order by clause
      * @return the updated request
      */
-    public ThumbnailSetCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ThumbnailSetCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class ThumbnailSetCollectionRequest extends BaseCollectionRequest<Thumbna
      * @param value the select clause
      * @return the updated request
      */
-    public ThumbnailSetCollectionRequest select(final String value) {
+    @Nonnull
+    public ThumbnailSetCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class ThumbnailSetCollectionRequest extends BaseCollectionRequest<Thumbna
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ThumbnailSetCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class ThumbnailSetCollectionRequest extends BaseCollectionRequest<Thumbna
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ThumbnailSetCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class ThumbnailSetCollectionRequest extends BaseCollectionRequest<Thumbna
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ThumbnailSetCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ThumbnailSetCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

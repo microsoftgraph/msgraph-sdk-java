@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartFont;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class WorkbookChartFontRequest extends BaseRequest<WorkbookChartFont> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartFontRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartFontRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChartFont.class);
     }
 
@@ -37,7 +39,7 @@ public class WorkbookChartFontRequest extends BaseRequest<WorkbookChartFont> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookChartFont> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookChartFont> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class WorkbookChartFontRequest extends BaseRequest<WorkbookChartFont> {
      * @return the WorkbookChartFont from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WorkbookChartFont get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class WorkbookChartFontRequest extends BaseRequest<WorkbookChartFont> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookChartFont> callback) {
+    public void delete(@Nonnull final ICallback<? super WorkbookChartFont> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class WorkbookChartFontRequest extends BaseRequest<WorkbookChartFont> {
      * @param sourceWorkbookChartFont the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookChartFont sourceWorkbookChartFont, final ICallback<? super WorkbookChartFont> callback) {
+    public void patch(@Nonnull final WorkbookChartFont sourceWorkbookChartFont, @Nonnull final ICallback<? super WorkbookChartFont> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartFont);
     }
 
@@ -86,7 +89,8 @@ public class WorkbookChartFontRequest extends BaseRequest<WorkbookChartFont> {
      * @return the updated WorkbookChartFont
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartFont patch(final WorkbookChartFont sourceWorkbookChartFont) throws ClientException {
+    @Nullable
+    public WorkbookChartFont patch(@Nonnull final WorkbookChartFont sourceWorkbookChartFont) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookChartFont);
     }
 
@@ -96,7 +100,7 @@ public class WorkbookChartFontRequest extends BaseRequest<WorkbookChartFont> {
      * @param newWorkbookChartFont the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookChartFont newWorkbookChartFont, final ICallback<? super WorkbookChartFont> callback) {
+    public void post(@Nonnull final WorkbookChartFont newWorkbookChartFont, @Nonnull final ICallback<? super WorkbookChartFont> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartFont);
     }
 
@@ -107,7 +111,8 @@ public class WorkbookChartFontRequest extends BaseRequest<WorkbookChartFont> {
      * @return the created WorkbookChartFont
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartFont post(final WorkbookChartFont newWorkbookChartFont) throws ClientException {
+    @Nullable
+    public WorkbookChartFont post(@Nonnull final WorkbookChartFont newWorkbookChartFont) throws ClientException {
         return send(HttpMethod.POST, newWorkbookChartFont);
     }
 
@@ -117,7 +122,7 @@ public class WorkbookChartFontRequest extends BaseRequest<WorkbookChartFont> {
      * @param newWorkbookChartFont the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookChartFont newWorkbookChartFont, final ICallback<? super WorkbookChartFont> callback) {
+    public void put(@Nonnull final WorkbookChartFont newWorkbookChartFont, @Nonnull final ICallback<? super WorkbookChartFont> callback) {
         send(HttpMethod.PUT, callback, newWorkbookChartFont);
     }
 
@@ -128,7 +133,8 @@ public class WorkbookChartFontRequest extends BaseRequest<WorkbookChartFont> {
      * @return the created WorkbookChartFont
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartFont put(final WorkbookChartFont newWorkbookChartFont) throws ClientException {
+    @Nullable
+    public WorkbookChartFont put(@Nonnull final WorkbookChartFont newWorkbookChartFont) throws ClientException {
         return send(HttpMethod.PUT, newWorkbookChartFont);
     }
 
@@ -138,7 +144,8 @@ public class WorkbookChartFontRequest extends BaseRequest<WorkbookChartFont> {
      * @param value the select clause
      * @return the updated request
      */
-     public WorkbookChartFontRequest select(final String value) {
+     @Nonnull
+     public WorkbookChartFontRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class WorkbookChartFontRequest extends BaseRequest<WorkbookChartFont> {
      * @param value the expand clause
      * @return the updated request
      */
-     public WorkbookChartFontRequest expand(final String value) {
+     @Nonnull
+     public WorkbookChartFontRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

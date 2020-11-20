@@ -29,6 +29,8 @@ import com.microsoft.graph.requests.extensions.ParticipantCollectionRequestBuild
 import com.microsoft.graph.requests.extensions.ParticipantRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -46,7 +48,7 @@ public class CallRequestBuilder extends BaseRequestBuilder<Call> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CallRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CallRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -56,7 +58,8 @@ public class CallRequestBuilder extends BaseRequestBuilder<Call> {
      * @param requestOptions the options for this request
      * @return the CallRequest instance
      */
-    public CallRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public CallRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -66,7 +69,8 @@ public class CallRequestBuilder extends BaseRequestBuilder<Call> {
      * @param requestOptions the options for this request
      * @return the CallRequest instance
      */
-    public CallRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public CallRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.CallRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -76,6 +80,7 @@ public class CallRequestBuilder extends BaseRequestBuilder<Call> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public CommsOperationCollectionRequestBuilder operations() {
         return new CommsOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
     }
@@ -86,7 +91,8 @@ public class CallRequestBuilder extends BaseRequestBuilder<Call> {
      * @return the request builder
      * @param id the item identifier
      */
-    public CommsOperationRequestBuilder operations(final String id) {
+    @Nonnull
+    public CommsOperationRequestBuilder operations(@Nonnull final String id) {
         return new CommsOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
     /**
@@ -94,6 +100,7 @@ public class CallRequestBuilder extends BaseRequestBuilder<Call> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public ParticipantCollectionRequestBuilder participants() {
         return new ParticipantCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("participants"), getClient(), null);
     }
@@ -104,7 +111,8 @@ public class CallRequestBuilder extends BaseRequestBuilder<Call> {
      * @return the request builder
      * @param id the item identifier
      */
-    public ParticipantRequestBuilder participants(final String id) {
+    @Nonnull
+    public ParticipantRequestBuilder participants(@Nonnull final String id) {
         return new ParticipantRequestBuilder(getRequestUrlWithAdditionalSegment("participants") + "/" + id, getClient(), null);
     }
 
@@ -115,7 +123,8 @@ public class CallRequestBuilder extends BaseRequestBuilder<Call> {
      * @param mediaConfig the mediaConfig
      * @param acceptedModalities the acceptedModalities
      */
-    public CallAnswerRequestBuilder answer(final String callbackUri, final MediaConfig mediaConfig, final java.util.List<Modality> acceptedModalities) {
+    @Nonnull
+    public CallAnswerRequestBuilder answer(@Nullable final String callbackUri, @Nullable final MediaConfig mediaConfig, @Nullable final java.util.List<Modality> acceptedModalities) {
         return new CallAnswerRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.answer"), getClient(), null, callbackUri, mediaConfig, acceptedModalities);
     }
 
@@ -124,7 +133,8 @@ public class CallRequestBuilder extends BaseRequestBuilder<Call> {
      * @return the request builder 
      * @param clientContext the clientContext
      */
-    public CallCancelMediaProcessingRequestBuilder cancelMediaProcessing(final String clientContext) {
+    @Nonnull
+    public CallCancelMediaProcessingRequestBuilder cancelMediaProcessing(@Nullable final String clientContext) {
         return new CallCancelMediaProcessingRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cancelMediaProcessing"), getClient(), null, clientContext);
     }
 
@@ -133,7 +143,8 @@ public class CallRequestBuilder extends BaseRequestBuilder<Call> {
      * @return the request builder 
      * @param role the role
      */
-    public CallChangeScreenSharingRoleRequestBuilder changeScreenSharingRole(final ScreenSharingRole role) {
+    @Nonnull
+    public CallChangeScreenSharingRoleRequestBuilder changeScreenSharingRole(@Nullable final ScreenSharingRole role) {
         return new CallChangeScreenSharingRoleRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.changeScreenSharingRole"), getClient(), null, role);
     }
 
@@ -141,6 +152,7 @@ public class CallRequestBuilder extends BaseRequestBuilder<Call> {
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public CallKeepAliveRequestBuilder keepAlive() {
         return new CallKeepAliveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.keepAlive"), getClient(), null);
     }
@@ -150,7 +162,8 @@ public class CallRequestBuilder extends BaseRequestBuilder<Call> {
      * @return the request builder 
      * @param clientContext the clientContext
      */
-    public CallMuteRequestBuilder mute(final String clientContext) {
+    @Nonnull
+    public CallMuteRequestBuilder mute(@Nullable final String clientContext) {
         return new CallMuteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.mute"), getClient(), null, clientContext);
     }
 
@@ -160,7 +173,8 @@ public class CallRequestBuilder extends BaseRequestBuilder<Call> {
      * @param prompts the prompts
      * @param clientContext the clientContext
      */
-    public CallPlayPromptRequestBuilder playPrompt(final java.util.List<Prompt> prompts, final String clientContext) {
+    @Nonnull
+    public CallPlayPromptRequestBuilder playPrompt(@Nullable final java.util.List<Prompt> prompts, @Nullable final String clientContext) {
         return new CallPlayPromptRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.playPrompt"), getClient(), null, prompts, clientContext);
     }
 
@@ -176,7 +190,8 @@ public class CallRequestBuilder extends BaseRequestBuilder<Call> {
      * @param stopTones the stopTones
      * @param clientContext the clientContext
      */
-    public CallRecordResponseRequestBuilder recordResponse(final java.util.List<Prompt> prompts, final Boolean bargeInAllowed, final Integer initialSilenceTimeoutInSeconds, final Integer maxSilenceTimeoutInSeconds, final Integer maxRecordDurationInSeconds, final Boolean playBeep, final java.util.List<String> stopTones, final String clientContext) {
+    @Nonnull
+    public CallRecordResponseRequestBuilder recordResponse(@Nullable final java.util.List<Prompt> prompts, @Nullable final Boolean bargeInAllowed, @Nullable final Integer initialSilenceTimeoutInSeconds, @Nullable final Integer maxSilenceTimeoutInSeconds, @Nullable final Integer maxRecordDurationInSeconds, @Nullable final Boolean playBeep, @Nullable final java.util.List<String> stopTones, @Nullable final String clientContext) {
         return new CallRecordResponseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.recordResponse"), getClient(), null, prompts, bargeInAllowed, initialSilenceTimeoutInSeconds, maxSilenceTimeoutInSeconds, maxRecordDurationInSeconds, playBeep, stopTones, clientContext);
     }
 
@@ -187,7 +202,8 @@ public class CallRequestBuilder extends BaseRequestBuilder<Call> {
      * @param timeout the timeout
      * @param callbackUri the callbackUri
      */
-    public CallRedirectRequestBuilder redirect(final java.util.List<InvitationParticipantInfo> targets, final Integer timeout, final String callbackUri) {
+    @Nonnull
+    public CallRedirectRequestBuilder redirect(@Nullable final java.util.List<InvitationParticipantInfo> targets, @Nullable final Integer timeout, @Nullable final String callbackUri) {
         return new CallRedirectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.redirect"), getClient(), null, targets, timeout, callbackUri);
     }
 
@@ -197,7 +213,8 @@ public class CallRequestBuilder extends BaseRequestBuilder<Call> {
      * @param reason the reason
      * @param callbackUri the callbackUri
      */
-    public CallRejectRequestBuilder reject(final RejectReason reason, final String callbackUri) {
+    @Nonnull
+    public CallRejectRequestBuilder reject(@Nullable final RejectReason reason, @Nullable final String callbackUri) {
         return new CallRejectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reject"), getClient(), null, reason, callbackUri);
     }
 
@@ -206,7 +223,8 @@ public class CallRequestBuilder extends BaseRequestBuilder<Call> {
      * @return the request builder 
      * @param clientContext the clientContext
      */
-    public CallSubscribeToToneRequestBuilder subscribeToTone(final String clientContext) {
+    @Nonnull
+    public CallSubscribeToToneRequestBuilder subscribeToTone(@Nullable final String clientContext) {
         return new CallSubscribeToToneRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.subscribeToTone"), getClient(), null, clientContext);
     }
 
@@ -215,7 +233,8 @@ public class CallRequestBuilder extends BaseRequestBuilder<Call> {
      * @return the request builder 
      * @param transferTarget the transferTarget
      */
-    public CallTransferRequestBuilder transfer(final InvitationParticipantInfo transferTarget) {
+    @Nonnull
+    public CallTransferRequestBuilder transfer(@Nullable final InvitationParticipantInfo transferTarget) {
         return new CallTransferRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.transfer"), getClient(), null, transferTarget);
     }
 
@@ -224,7 +243,8 @@ public class CallRequestBuilder extends BaseRequestBuilder<Call> {
      * @return the request builder 
      * @param clientContext the clientContext
      */
-    public CallUnmuteRequestBuilder unmute(final String clientContext) {
+    @Nonnull
+    public CallUnmuteRequestBuilder unmute(@Nullable final String clientContext) {
         return new CallUnmuteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unmute"), getClient(), null, clientContext);
     }
 
@@ -234,7 +254,8 @@ public class CallRequestBuilder extends BaseRequestBuilder<Call> {
      * @param status the status
      * @param clientContext the clientContext
      */
-    public CallUpdateRecordingStatusRequestBuilder updateRecordingStatus(final RecordingStatus status, final String clientContext) {
+    @Nonnull
+    public CallUpdateRecordingStatusRequestBuilder updateRecordingStatus(@Nullable final RecordingStatus status, @Nullable final String clientContext) {
         return new CallUpdateRecordingStatusRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.updateRecordingStatus"), getClient(), null, status, clientContext);
     }
 }

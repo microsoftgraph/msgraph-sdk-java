@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.Schedule;
 import com.microsoft.graph.models.extensions.TimeOffReason;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class TimeOffReasonCollectionRequest extends BaseCollectionRequest<TimeOf
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TimeOffReasonCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TimeOffReasonCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TimeOffReasonCollectionResponse.class, TimeOffReasonCollectionPage.class, TimeOffReasonCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class TimeOffReasonCollectionRequest extends BaseCollectionRequest<TimeOf
      * @param newTimeOffReason the TimeOffReason to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final TimeOffReason newTimeOffReason, final ICallback<? super TimeOffReason> callback) {
+    public void post(@Nonnull final TimeOffReason newTimeOffReason, @Nonnull final ICallback<? super TimeOffReason> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TimeOffReasonRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class TimeOffReasonCollectionRequest extends BaseCollectionRequest<TimeOf
      * @param newTimeOffReason the TimeOffReason to create
      * @return the newly created object
      */
-    public TimeOffReason post(final TimeOffReason newTimeOffReason) throws ClientException {
+    @Nonnull
+    public TimeOffReason post(@Nonnull final TimeOffReason newTimeOffReason) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TimeOffReasonRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class TimeOffReasonCollectionRequest extends BaseCollectionRequest<TimeOf
      * @param value the expand clause
      * @return the updated request
      */
-    public TimeOffReasonCollectionRequest expand(final String value) {
+    @Nonnull
+    public TimeOffReasonCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class TimeOffReasonCollectionRequest extends BaseCollectionRequest<TimeOf
      * @param value the filter clause
      * @return the updated request
      */
-    public TimeOffReasonCollectionRequest filter(final String value) {
+    @Nonnull
+    public TimeOffReasonCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class TimeOffReasonCollectionRequest extends BaseCollectionRequest<TimeOf
      * @param value the order by clause
      * @return the updated request
      */
-    public TimeOffReasonCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public TimeOffReasonCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class TimeOffReasonCollectionRequest extends BaseCollectionRequest<TimeOf
      * @param value the select clause
      * @return the updated request
      */
-    public TimeOffReasonCollectionRequest select(final String value) {
+    @Nonnull
+    public TimeOffReasonCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class TimeOffReasonCollectionRequest extends BaseCollectionRequest<TimeOf
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public TimeOffReasonCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class TimeOffReasonCollectionRequest extends BaseCollectionRequest<TimeOf
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public TimeOffReasonCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class TimeOffReasonCollectionRequest extends BaseCollectionRequest<TimeOf
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public TimeOffReasonCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public TimeOffReasonCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

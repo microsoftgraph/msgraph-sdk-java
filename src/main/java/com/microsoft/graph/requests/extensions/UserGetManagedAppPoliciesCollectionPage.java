@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedAppPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.UserGetManagedAppPoliciesCollectionRequestBuilder;
@@ -29,7 +31,7 @@ public class UserGetManagedAppPoliciesCollectionPage extends BaseCollectionPage<
      * @param response The serialized UserGetManagedAppPoliciesCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public UserGetManagedAppPoliciesCollectionPage(final UserGetManagedAppPoliciesCollectionResponse response, final UserGetManagedAppPoliciesCollectionRequestBuilder builder) {
+    public UserGetManagedAppPoliciesCollectionPage(@Nonnull final UserGetManagedAppPoliciesCollectionResponse response, @Nonnull final UserGetManagedAppPoliciesCollectionRequestBuilder builder) {
        super(response, builder);
     }
 
@@ -39,7 +41,7 @@ public class UserGetManagedAppPoliciesCollectionPage extends BaseCollectionPage<
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public UserGetManagedAppPoliciesCollectionPage(final java.util.List<ManagedAppPolicy> pageContents, final UserGetManagedAppPoliciesCollectionRequestBuilder nextRequestBuilder) {
+    public UserGetManagedAppPoliciesCollectionPage(@Nonnull final java.util.List<ManagedAppPolicy> pageContents, @Nullable final UserGetManagedAppPoliciesCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

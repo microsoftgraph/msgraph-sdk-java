@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationDeviceSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -27,7 +29,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder exte
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -37,7 +39,8 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder exte
      * @param requestOptions the options for this request
      * @return the ManagedDeviceMobileAppConfigurationDeviceSummaryRequest instance
      */
-    public ManagedDeviceMobileAppConfigurationDeviceSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationDeviceSummaryRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,7 +50,8 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder exte
      * @param requestOptions the options for this request
      * @return the ManagedDeviceMobileAppConfigurationDeviceSummaryRequest instance
      */
-    public ManagedDeviceMobileAppConfigurationDeviceSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationDeviceSummaryRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

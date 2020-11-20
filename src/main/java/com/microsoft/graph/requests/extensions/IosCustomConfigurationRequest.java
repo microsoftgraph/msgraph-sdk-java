@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosCustomConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class IosCustomConfigurationRequest extends BaseRequest<IosCustomConfigur
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosCustomConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IosCustomConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IosCustomConfiguration.class);
     }
 
@@ -37,7 +39,7 @@ public class IosCustomConfigurationRequest extends BaseRequest<IosCustomConfigur
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IosCustomConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super IosCustomConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class IosCustomConfigurationRequest extends BaseRequest<IosCustomConfigur
      * @return the IosCustomConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public IosCustomConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class IosCustomConfigurationRequest extends BaseRequest<IosCustomConfigur
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IosCustomConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super IosCustomConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class IosCustomConfigurationRequest extends BaseRequest<IosCustomConfigur
      * @param sourceIosCustomConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosCustomConfiguration sourceIosCustomConfiguration, final ICallback<? super IosCustomConfiguration> callback) {
+    public void patch(@Nonnull final IosCustomConfiguration sourceIosCustomConfiguration, @Nonnull final ICallback<? super IosCustomConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceIosCustomConfiguration);
     }
 
@@ -86,7 +89,8 @@ public class IosCustomConfigurationRequest extends BaseRequest<IosCustomConfigur
      * @return the updated IosCustomConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosCustomConfiguration patch(final IosCustomConfiguration sourceIosCustomConfiguration) throws ClientException {
+    @Nullable
+    public IosCustomConfiguration patch(@Nonnull final IosCustomConfiguration sourceIosCustomConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceIosCustomConfiguration);
     }
 
@@ -96,7 +100,7 @@ public class IosCustomConfigurationRequest extends BaseRequest<IosCustomConfigur
      * @param newIosCustomConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosCustomConfiguration newIosCustomConfiguration, final ICallback<? super IosCustomConfiguration> callback) {
+    public void post(@Nonnull final IosCustomConfiguration newIosCustomConfiguration, @Nonnull final ICallback<? super IosCustomConfiguration> callback) {
         send(HttpMethod.POST, callback, newIosCustomConfiguration);
     }
 
@@ -107,7 +111,8 @@ public class IosCustomConfigurationRequest extends BaseRequest<IosCustomConfigur
      * @return the created IosCustomConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosCustomConfiguration post(final IosCustomConfiguration newIosCustomConfiguration) throws ClientException {
+    @Nullable
+    public IosCustomConfiguration post(@Nonnull final IosCustomConfiguration newIosCustomConfiguration) throws ClientException {
         return send(HttpMethod.POST, newIosCustomConfiguration);
     }
 
@@ -117,7 +122,7 @@ public class IosCustomConfigurationRequest extends BaseRequest<IosCustomConfigur
      * @param newIosCustomConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosCustomConfiguration newIosCustomConfiguration, final ICallback<? super IosCustomConfiguration> callback) {
+    public void put(@Nonnull final IosCustomConfiguration newIosCustomConfiguration, @Nonnull final ICallback<? super IosCustomConfiguration> callback) {
         send(HttpMethod.PUT, callback, newIosCustomConfiguration);
     }
 
@@ -128,7 +133,8 @@ public class IosCustomConfigurationRequest extends BaseRequest<IosCustomConfigur
      * @return the created IosCustomConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosCustomConfiguration put(final IosCustomConfiguration newIosCustomConfiguration) throws ClientException {
+    @Nullable
+    public IosCustomConfiguration put(@Nonnull final IosCustomConfiguration newIosCustomConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newIosCustomConfiguration);
     }
 
@@ -138,7 +144,8 @@ public class IosCustomConfigurationRequest extends BaseRequest<IosCustomConfigur
      * @param value the select clause
      * @return the updated request
      */
-     public IosCustomConfigurationRequest select(final String value) {
+     @Nonnull
+     public IosCustomConfigurationRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class IosCustomConfigurationRequest extends BaseRequest<IosCustomConfigur
      * @param value the expand clause
      * @return the updated request
      */
-     public IosCustomConfigurationRequest expand(final String value) {
+     @Nonnull
+     public IosCustomConfigurationRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

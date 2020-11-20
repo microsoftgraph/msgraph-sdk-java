@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.ExtensionProperty;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
@@ -35,7 +37,7 @@ public class DirectoryObjectCollectionRequestBuilder extends BaseCollectionReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DirectoryObjectCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryObjectCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DirectoryObjectRequestBuilder.class, DirectoryObjectCollectionRequest.class);
     }
 
@@ -49,7 +51,8 @@ public class DirectoryObjectCollectionRequestBuilder extends BaseCollectionReque
      * @param mailNickname the mailNickname
      * @param onBehalfOfUserId the onBehalfOfUserId
      */
-    public DirectoryObjectValidatePropertiesRequestBuilder validateProperties(final String entityType, final String displayName, final String mailNickname, final java.util.UUID onBehalfOfUserId) {
+    @Nonnull
+    public DirectoryObjectValidatePropertiesRequestBuilder validateProperties(@Nullable final String entityType, @Nullable final String displayName, @Nullable final String mailNickname, @Nullable final java.util.UUID onBehalfOfUserId) {
         return new DirectoryObjectValidatePropertiesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.validateProperties"), getClient(), null, entityType, displayName, mailNickname, onBehalfOfUserId);
     }
 
@@ -58,7 +61,8 @@ public class DirectoryObjectCollectionRequestBuilder extends BaseCollectionReque
      * @return the request builder collection
      * @param isSyncedFromOnPremises the isSyncedFromOnPremises
      */
-    public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder getAvailableExtensionProperties(final Boolean isSyncedFromOnPremises) {
+    @Nonnull
+    public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder getAvailableExtensionProperties(@Nullable final Boolean isSyncedFromOnPremises) {
         return new DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAvailableExtensionProperties"), getClient(), null, isSyncedFromOnPremises);
     }
 
@@ -68,7 +72,8 @@ public class DirectoryObjectCollectionRequestBuilder extends BaseCollectionReque
      * @param ids the ids
      * @param types the types
      */
-    public DirectoryObjectGetByIdsCollectionRequestBuilder getByIds(final java.util.List<String> ids, final java.util.List<String> types) {
+    @Nonnull
+    public DirectoryObjectGetByIdsCollectionRequestBuilder getByIds(@Nullable final java.util.List<String> ids, @Nullable final java.util.List<String> types) {
         return new DirectoryObjectGetByIdsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getByIds"), getClient(), null, ids, types);
     }
 }

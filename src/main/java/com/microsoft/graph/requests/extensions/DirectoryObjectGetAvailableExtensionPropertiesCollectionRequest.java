@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ExtensionProperty;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetAvailableExtensionPropertiesCollectionResponse;
@@ -39,7 +41,7 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest ext
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DirectoryObjectGetAvailableExtensionPropertiesCollectionResponse.class, DirectoryObjectGetAvailableExtensionPropertiesCollectionPage.class, DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder.class);
         body = new DirectoryObjectGetAvailableExtensionPropertiesBody();
     }
@@ -49,7 +51,7 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest ext
      * Invokes the method and calls the callback with the resulting collection of objects
      * @param callback a callback to be invoked with the resulting collection of objects
      */
-    public void post(final ICallback<? super DirectoryObjectGetAvailableExtensionPropertiesCollectionPage> callback) {
+    public void post(@Nonnull final ICallback<? super DirectoryObjectGetAvailableExtensionPropertiesCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -67,6 +69,7 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest ext
      * Invokes the method and returns the resulting collection of objects
      * @return a collection of objects returned by the method
      */
+    @Nullable
     public DirectoryObjectGetAvailableExtensionPropertiesCollectionPage post() throws ClientException {
         final DirectoryObjectGetAvailableExtensionPropertiesCollectionResponse response = post(body);
         return buildFromResponse(response);
@@ -79,7 +82,8 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest ext
      * @param value the select clause
      * @return the updated request
      */
-    public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest select(final String value) {
+    @Nonnull
+    public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -90,6 +94,7 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest ext
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -101,7 +106,8 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest ext
      * @param value the expand clause
      * @return the updated request
      */
-    public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest expand(final String value) {
+    @Nonnull
+    public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -112,7 +118,8 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest ext
      * @param value the filter clause
      * @return the updated request
      */
-    public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest filter(final String value) {
+    @Nonnull
+    public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -123,7 +130,8 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest ext
      * @param value the order by clause
      * @return the updated request
      */
-    public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }

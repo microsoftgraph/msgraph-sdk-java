@@ -7,6 +7,8 @@ import com.microsoft.graph.models.extensions.CallPlayPromptBody;
 import com.microsoft.graph.models.extensions.PlayPromptOperation;
 import com.microsoft.graph.requests.extensions.CallPlayPromptRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -30,7 +32,7 @@ public class CallPlayPromptRequest extends BaseRequest<PlayPromptOperation> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CallPlayPromptRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CallPlayPromptRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PlayPromptOperation.class);
         body = new CallPlayPromptBody();
     }
@@ -39,7 +41,7 @@ public class CallPlayPromptRequest extends BaseRequest<PlayPromptOperation> {
      * Invokes the method and invokes the callback with the result
      * @param callback callback to be invoked after executing the request
      */
-    public void post(final ICallback<? super PlayPromptOperation> callback) {
+    public void post(@Nonnull final ICallback<? super PlayPromptOperation> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -47,6 +49,7 @@ public class CallPlayPromptRequest extends BaseRequest<PlayPromptOperation> {
      * Invokes the method and returns the result
      * @return result of the method invocation
      */
+    @Nullable
     public PlayPromptOperation post() throws ClientException {
         return send(HttpMethod.POST, body);
     }
@@ -57,7 +60,8 @@ public class CallPlayPromptRequest extends BaseRequest<PlayPromptOperation> {
      * @param value the select clause
      * @return the updated request
      */
-    public CallPlayPromptRequest select(final String value) {
+    @Nonnull
+    public CallPlayPromptRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -68,6 +72,7 @@ public class CallPlayPromptRequest extends BaseRequest<PlayPromptOperation> {
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public CallPlayPromptRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -79,7 +84,8 @@ public class CallPlayPromptRequest extends BaseRequest<PlayPromptOperation> {
      * @param value the expand clause
      * @return the updated request
      */
-    public CallPlayPromptRequest expand(final String value) {
+    @Nonnull
+    public CallPlayPromptRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }

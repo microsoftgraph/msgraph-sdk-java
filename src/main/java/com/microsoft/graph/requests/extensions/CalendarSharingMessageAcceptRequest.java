@@ -7,6 +7,8 @@ import com.microsoft.graph.models.extensions.Calendar;
 import com.microsoft.graph.models.extensions.CalendarSharingMessage;
 import com.microsoft.graph.requests.extensions.CalendarSharingMessageAcceptRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.core.ClientException;
@@ -28,7 +30,7 @@ public class CalendarSharingMessageAcceptRequest extends BaseRequest<Calendar> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CalendarSharingMessageAcceptRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CalendarSharingMessageAcceptRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Calendar.class);
     }
 
@@ -37,7 +39,7 @@ public class CalendarSharingMessageAcceptRequest extends BaseRequest<Calendar> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<? super Calendar> callback) {
+    public void post(@Nonnull final ICallback<? super Calendar> callback) {
         send(HttpMethod.POST, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class CalendarSharingMessageAcceptRequest extends BaseRequest<Calendar> {
      * @return the Calendar
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
+    @Nullable
     public Calendar post() throws ClientException {
        return send(HttpMethod.POST, null);
     }
@@ -57,7 +60,8 @@ public class CalendarSharingMessageAcceptRequest extends BaseRequest<Calendar> {
      * @param value the select clause
      * @return the updated request
      */
-    public CalendarSharingMessageAcceptRequest select(final String value) {
+    @Nonnull
+    public CalendarSharingMessageAcceptRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -68,7 +72,8 @@ public class CalendarSharingMessageAcceptRequest extends BaseRequest<Calendar> {
      * @param value the expand clause
      * @return the updated request
      */
-    public CalendarSharingMessageAcceptRequest expand(final String value) {
+    @Nonnull
+    public CalendarSharingMessageAcceptRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }

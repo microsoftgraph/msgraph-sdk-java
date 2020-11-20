@@ -13,6 +13,8 @@ import com.microsoft.graph.models.extensions.ChatInfo;
 import com.microsoft.graph.models.extensions.MeetingParticipants;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -36,7 +38,7 @@ public class OnlineMeetingCollectionRequest extends BaseCollectionRequest<Online
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnlineMeetingCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnlineMeetingCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OnlineMeetingCollectionResponse.class, OnlineMeetingCollectionPage.class, OnlineMeetingCollectionRequestBuilder.class);
     }
 
@@ -45,7 +47,7 @@ public class OnlineMeetingCollectionRequest extends BaseCollectionRequest<Online
      * @param newOnlineMeeting the OnlineMeeting to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final OnlineMeeting newOnlineMeeting, final ICallback<? super OnlineMeeting> callback) {
+    public void post(@Nonnull final OnlineMeeting newOnlineMeeting, @Nonnull final ICallback<? super OnlineMeeting> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OnlineMeetingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -57,7 +59,8 @@ public class OnlineMeetingCollectionRequest extends BaseCollectionRequest<Online
      * @param newOnlineMeeting the OnlineMeeting to create
      * @return the newly created object
      */
-    public OnlineMeeting post(final OnlineMeeting newOnlineMeeting) throws ClientException {
+    @Nonnull
+    public OnlineMeeting post(@Nonnull final OnlineMeeting newOnlineMeeting) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OnlineMeetingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -70,7 +73,8 @@ public class OnlineMeetingCollectionRequest extends BaseCollectionRequest<Online
      * @param value the expand clause
      * @return the updated request
      */
-    public OnlineMeetingCollectionRequest expand(final String value) {
+    @Nonnull
+    public OnlineMeetingCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -81,7 +85,8 @@ public class OnlineMeetingCollectionRequest extends BaseCollectionRequest<Online
      * @param value the filter clause
      * @return the updated request
      */
-    public OnlineMeetingCollectionRequest filter(final String value) {
+    @Nonnull
+    public OnlineMeetingCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -92,7 +97,8 @@ public class OnlineMeetingCollectionRequest extends BaseCollectionRequest<Online
      * @param value the order by clause
      * @return the updated request
      */
-    public OnlineMeetingCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public OnlineMeetingCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -103,7 +109,8 @@ public class OnlineMeetingCollectionRequest extends BaseCollectionRequest<Online
      * @param value the select clause
      * @return the updated request
      */
-    public OnlineMeetingCollectionRequest select(final String value) {
+    @Nonnull
+    public OnlineMeetingCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -114,6 +121,7 @@ public class OnlineMeetingCollectionRequest extends BaseCollectionRequest<Online
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public OnlineMeetingCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -125,6 +133,7 @@ public class OnlineMeetingCollectionRequest extends BaseCollectionRequest<Online
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public OnlineMeetingCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -136,7 +145,8 @@ public class OnlineMeetingCollectionRequest extends BaseCollectionRequest<Online
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public OnlineMeetingCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public OnlineMeetingCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

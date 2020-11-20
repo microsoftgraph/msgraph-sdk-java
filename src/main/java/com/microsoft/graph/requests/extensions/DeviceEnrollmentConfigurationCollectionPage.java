@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DeviceEnrollmentConfiguration;
 import com.microsoft.graph.requests.extensions.DeviceEnrollmentConfigurationCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DeviceEnrollmentConfigurationCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class DeviceEnrollmentConfigurationCollectionPage extends BaseCollectionP
      * @param response the serialized DeviceEnrollmentConfigurationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DeviceEnrollmentConfigurationCollectionPage(final DeviceEnrollmentConfigurationCollectionResponse response, final DeviceEnrollmentConfigurationCollectionRequestBuilder builder) {
+    public DeviceEnrollmentConfigurationCollectionPage(@Nonnull final DeviceEnrollmentConfigurationCollectionResponse response, @Nonnull final DeviceEnrollmentConfigurationCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class DeviceEnrollmentConfigurationCollectionPage extends BaseCollectionP
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public DeviceEnrollmentConfigurationCollectionPage(final java.util.List<DeviceEnrollmentConfiguration> pageContents, final DeviceEnrollmentConfigurationCollectionRequestBuilder nextRequestBuilder) {
+    public DeviceEnrollmentConfigurationCollectionPage(@Nonnull final java.util.List<DeviceEnrollmentConfiguration> pageContents, @Nullable final DeviceEnrollmentConfigurationCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

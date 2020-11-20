@@ -15,6 +15,8 @@ import com.microsoft.graph.requests.extensions.EducationSchoolRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseWithReferenceRequest;
@@ -36,7 +38,7 @@ public class EducationClassWithReferenceRequest extends BaseWithReferenceRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationClassWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationClassWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EducationClass.class);
     }
 
@@ -46,7 +48,8 @@ public class EducationClassWithReferenceRequest extends BaseWithReferenceRequest
      * @param value the select clause
      * @return the updated request
      */
-    public EducationClassWithReferenceRequest select(final String value) {
+    @Nonnull
+    public EducationClassWithReferenceRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -57,7 +60,8 @@ public class EducationClassWithReferenceRequest extends BaseWithReferenceRequest
      * @param value the expand clause
      * @return the updated request
      */
-    public EducationClassWithReferenceRequest expand(final String value) {
+    @Nonnull
+    public EducationClassWithReferenceRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }

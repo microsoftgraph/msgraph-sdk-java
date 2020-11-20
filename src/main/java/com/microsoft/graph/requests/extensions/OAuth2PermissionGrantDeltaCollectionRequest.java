@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantDeltaCollectionResponse;
@@ -34,7 +36,7 @@ public class OAuth2PermissionGrantDeltaCollectionRequest extends BaseCollectionR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OAuth2PermissionGrantDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OAuth2PermissionGrantDeltaCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OAuth2PermissionGrantDeltaCollectionResponse.class, OAuth2PermissionGrantDeltaCollectionPage.class, OAuth2PermissionGrantDeltaCollectionRequestBuilder.class);
     }
 
@@ -45,7 +47,8 @@ public class OAuth2PermissionGrantDeltaCollectionRequest extends BaseCollectionR
      * @param value the select clause
      * @return the updated request
      */
-    public OAuth2PermissionGrantDeltaCollectionRequest select(final String value) {
+    @Nonnull
+    public OAuth2PermissionGrantDeltaCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -56,6 +59,7 @@ public class OAuth2PermissionGrantDeltaCollectionRequest extends BaseCollectionR
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public OAuth2PermissionGrantDeltaCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -67,7 +71,8 @@ public class OAuth2PermissionGrantDeltaCollectionRequest extends BaseCollectionR
      * @param value the expand clause
      * @return the updated request
      */
-    public OAuth2PermissionGrantDeltaCollectionRequest expand(final String value) {
+    @Nonnull
+    public OAuth2PermissionGrantDeltaCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -78,7 +83,8 @@ public class OAuth2PermissionGrantDeltaCollectionRequest extends BaseCollectionR
      * @param value the filter clause
      * @return the updated request
      */
-    public OAuth2PermissionGrantDeltaCollectionRequest filter(final String value) {
+    @Nonnull
+    public OAuth2PermissionGrantDeltaCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -89,7 +95,8 @@ public class OAuth2PermissionGrantDeltaCollectionRequest extends BaseCollectionR
      * @param value the order by clause
      * @return the updated request
      */
-    public OAuth2PermissionGrantDeltaCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public OAuth2PermissionGrantDeltaCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }

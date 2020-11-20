@@ -17,6 +17,8 @@ import com.microsoft.graph.requests.extensions.WorkbookTableSortRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -35,7 +37,7 @@ public class WorkbookTableRequest extends BaseRequest<WorkbookTable> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookTableRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookTable.class);
     }
 
@@ -44,7 +46,7 @@ public class WorkbookTableRequest extends BaseRequest<WorkbookTable> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookTable> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookTable> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -54,6 +56,7 @@ public class WorkbookTableRequest extends BaseRequest<WorkbookTable> {
      * @return the WorkbookTable from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WorkbookTable get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -63,7 +66,7 @@ public class WorkbookTableRequest extends BaseRequest<WorkbookTable> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookTable> callback) {
+    public void delete(@Nonnull final ICallback<? super WorkbookTable> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -82,7 +85,7 @@ public class WorkbookTableRequest extends BaseRequest<WorkbookTable> {
      * @param sourceWorkbookTable the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookTable sourceWorkbookTable, final ICallback<? super WorkbookTable> callback) {
+    public void patch(@Nonnull final WorkbookTable sourceWorkbookTable, @Nonnull final ICallback<? super WorkbookTable> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookTable);
     }
 
@@ -93,7 +96,8 @@ public class WorkbookTableRequest extends BaseRequest<WorkbookTable> {
      * @return the updated WorkbookTable
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookTable patch(final WorkbookTable sourceWorkbookTable) throws ClientException {
+    @Nullable
+    public WorkbookTable patch(@Nonnull final WorkbookTable sourceWorkbookTable) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookTable);
     }
 
@@ -103,7 +107,7 @@ public class WorkbookTableRequest extends BaseRequest<WorkbookTable> {
      * @param newWorkbookTable the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookTable newWorkbookTable, final ICallback<? super WorkbookTable> callback) {
+    public void post(@Nonnull final WorkbookTable newWorkbookTable, @Nonnull final ICallback<? super WorkbookTable> callback) {
         send(HttpMethod.POST, callback, newWorkbookTable);
     }
 
@@ -114,7 +118,8 @@ public class WorkbookTableRequest extends BaseRequest<WorkbookTable> {
      * @return the created WorkbookTable
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookTable post(final WorkbookTable newWorkbookTable) throws ClientException {
+    @Nullable
+    public WorkbookTable post(@Nonnull final WorkbookTable newWorkbookTable) throws ClientException {
         return send(HttpMethod.POST, newWorkbookTable);
     }
 
@@ -124,7 +129,7 @@ public class WorkbookTableRequest extends BaseRequest<WorkbookTable> {
      * @param newWorkbookTable the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookTable newWorkbookTable, final ICallback<? super WorkbookTable> callback) {
+    public void put(@Nonnull final WorkbookTable newWorkbookTable, @Nonnull final ICallback<? super WorkbookTable> callback) {
         send(HttpMethod.PUT, callback, newWorkbookTable);
     }
 
@@ -135,7 +140,8 @@ public class WorkbookTableRequest extends BaseRequest<WorkbookTable> {
      * @return the created WorkbookTable
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookTable put(final WorkbookTable newWorkbookTable) throws ClientException {
+    @Nullable
+    public WorkbookTable put(@Nonnull final WorkbookTable newWorkbookTable) throws ClientException {
         return send(HttpMethod.PUT, newWorkbookTable);
     }
 
@@ -145,7 +151,8 @@ public class WorkbookTableRequest extends BaseRequest<WorkbookTable> {
      * @param value the select clause
      * @return the updated request
      */
-     public WorkbookTableRequest select(final String value) {
+     @Nonnull
+     public WorkbookTableRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -156,7 +163,8 @@ public class WorkbookTableRequest extends BaseRequest<WorkbookTable> {
      * @param value the expand clause
      * @return the updated request
      */
-     public WorkbookTableRequest expand(final String value) {
+     @Nonnull
+     public WorkbookTableRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

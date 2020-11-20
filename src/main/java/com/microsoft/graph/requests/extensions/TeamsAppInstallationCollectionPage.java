@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.TeamsAppInstallation;
 import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class TeamsAppInstallationCollectionPage extends BaseCollectionPage<Teams
      * @param response the serialized TeamsAppInstallationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TeamsAppInstallationCollectionPage(final TeamsAppInstallationCollectionResponse response, final TeamsAppInstallationCollectionRequestBuilder builder) {
+    public TeamsAppInstallationCollectionPage(@Nonnull final TeamsAppInstallationCollectionResponse response, @Nonnull final TeamsAppInstallationCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class TeamsAppInstallationCollectionPage extends BaseCollectionPage<Teams
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public TeamsAppInstallationCollectionPage(final java.util.List<TeamsAppInstallation> pageContents, final TeamsAppInstallationCollectionRequestBuilder nextRequestBuilder) {
+    public TeamsAppInstallationCollectionPage(@Nonnull final java.util.List<TeamsAppInstallation> pageContents, @Nullable final TeamsAppInstallationCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

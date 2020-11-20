@@ -22,6 +22,8 @@ import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionRequ
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -40,7 +42,7 @@ public class ApplicationRequest extends BaseRequest<Application> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ApplicationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ApplicationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Application.class);
     }
 
@@ -49,7 +51,7 @@ public class ApplicationRequest extends BaseRequest<Application> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Application> callback) {
+    public void get(@Nonnull final ICallback<? super Application> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -59,6 +61,7 @@ public class ApplicationRequest extends BaseRequest<Application> {
      * @return the Application from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Application get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -68,7 +71,7 @@ public class ApplicationRequest extends BaseRequest<Application> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Application> callback) {
+    public void delete(@Nonnull final ICallback<? super Application> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -87,7 +90,7 @@ public class ApplicationRequest extends BaseRequest<Application> {
      * @param sourceApplication the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Application sourceApplication, final ICallback<? super Application> callback) {
+    public void patch(@Nonnull final Application sourceApplication, @Nonnull final ICallback<? super Application> callback) {
         send(HttpMethod.PATCH, callback, sourceApplication);
     }
 
@@ -98,7 +101,8 @@ public class ApplicationRequest extends BaseRequest<Application> {
      * @return the updated Application
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Application patch(final Application sourceApplication) throws ClientException {
+    @Nullable
+    public Application patch(@Nonnull final Application sourceApplication) throws ClientException {
         return send(HttpMethod.PATCH, sourceApplication);
     }
 
@@ -108,7 +112,7 @@ public class ApplicationRequest extends BaseRequest<Application> {
      * @param newApplication the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Application newApplication, final ICallback<? super Application> callback) {
+    public void post(@Nonnull final Application newApplication, @Nonnull final ICallback<? super Application> callback) {
         send(HttpMethod.POST, callback, newApplication);
     }
 
@@ -119,7 +123,8 @@ public class ApplicationRequest extends BaseRequest<Application> {
      * @return the created Application
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Application post(final Application newApplication) throws ClientException {
+    @Nullable
+    public Application post(@Nonnull final Application newApplication) throws ClientException {
         return send(HttpMethod.POST, newApplication);
     }
 
@@ -129,7 +134,7 @@ public class ApplicationRequest extends BaseRequest<Application> {
      * @param newApplication the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Application newApplication, final ICallback<? super Application> callback) {
+    public void put(@Nonnull final Application newApplication, @Nonnull final ICallback<? super Application> callback) {
         send(HttpMethod.PUT, callback, newApplication);
     }
 
@@ -140,7 +145,8 @@ public class ApplicationRequest extends BaseRequest<Application> {
      * @return the created Application
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Application put(final Application newApplication) throws ClientException {
+    @Nullable
+    public Application put(@Nonnull final Application newApplication) throws ClientException {
         return send(HttpMethod.PUT, newApplication);
     }
 
@@ -150,7 +156,8 @@ public class ApplicationRequest extends BaseRequest<Application> {
      * @param value the select clause
      * @return the updated request
      */
-     public ApplicationRequest select(final String value) {
+     @Nonnull
+     public ApplicationRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -161,7 +168,8 @@ public class ApplicationRequest extends BaseRequest<Application> {
      * @param value the expand clause
      * @return the updated request
      */
-     public ApplicationRequest expand(final String value) {
+     @Nonnull
+     public ApplicationRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

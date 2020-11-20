@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MailFolder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.DeltaCollectionPage;
 import com.microsoft.graph.requests.extensions.MailFolderDeltaCollectionRequestBuilder;
@@ -29,7 +31,7 @@ public class MailFolderDeltaCollectionPage extends DeltaCollectionPage<MailFolde
      * @param response The serialized MailFolderDeltaCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public MailFolderDeltaCollectionPage(final MailFolderDeltaCollectionResponse response, final MailFolderDeltaCollectionRequestBuilder builder) {
+    public MailFolderDeltaCollectionPage(@Nonnull final MailFolderDeltaCollectionResponse response, @Nonnull final MailFolderDeltaCollectionRequestBuilder builder) {
        super(response, builder);
     }
 
@@ -39,7 +41,7 @@ public class MailFolderDeltaCollectionPage extends DeltaCollectionPage<MailFolde
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public MailFolderDeltaCollectionPage(final java.util.List<MailFolder> pageContents, final MailFolderDeltaCollectionRequestBuilder nextRequestBuilder) {
+    public MailFolderDeltaCollectionPage(@Nonnull final java.util.List<MailFolder> pageContents, @Nullable final MailFolderDeltaCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.SettingStateDeviceSummary;
 import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class SettingStateDeviceSummaryCollectionPage extends BaseCollectionPage<
      * @param response the serialized SettingStateDeviceSummaryCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public SettingStateDeviceSummaryCollectionPage(final SettingStateDeviceSummaryCollectionResponse response, final SettingStateDeviceSummaryCollectionRequestBuilder builder) {
+    public SettingStateDeviceSummaryCollectionPage(@Nonnull final SettingStateDeviceSummaryCollectionResponse response, @Nonnull final SettingStateDeviceSummaryCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class SettingStateDeviceSummaryCollectionPage extends BaseCollectionPage<
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public SettingStateDeviceSummaryCollectionPage(final java.util.List<SettingStateDeviceSummary> pageContents, final SettingStateDeviceSummaryCollectionRequestBuilder nextRequestBuilder) {
+    public SettingStateDeviceSummaryCollectionPage(@Nonnull final java.util.List<SettingStateDeviceSummary> pageContents, @Nullable final SettingStateDeviceSummaryCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.SubscribedSku;
 import com.microsoft.graph.requests.extensions.SubscribedSkuCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.SubscribedSkuCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class SubscribedSkuCollectionPage extends BaseCollectionPage<SubscribedSk
      * @param response the serialized SubscribedSkuCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public SubscribedSkuCollectionPage(final SubscribedSkuCollectionResponse response, final SubscribedSkuCollectionRequestBuilder builder) {
+    public SubscribedSkuCollectionPage(@Nonnull final SubscribedSkuCollectionResponse response, @Nonnull final SubscribedSkuCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class SubscribedSkuCollectionPage extends BaseCollectionPage<SubscribedSk
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public SubscribedSkuCollectionPage(final java.util.List<SubscribedSku> pageContents, final SubscribedSkuCollectionRequestBuilder nextRequestBuilder) {
+    public SubscribedSkuCollectionPage(@Nonnull final java.util.List<SubscribedSku> pageContents, @Nullable final SubscribedSkuCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

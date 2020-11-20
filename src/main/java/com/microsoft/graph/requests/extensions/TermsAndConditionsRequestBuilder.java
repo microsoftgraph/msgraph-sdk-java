@@ -14,6 +14,8 @@ import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentColle
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -31,7 +33,7 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder<TermsAn
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TermsAndConditionsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TermsAndConditionsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -41,7 +43,8 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder<TermsAn
      * @param requestOptions the options for this request
      * @return the TermsAndConditionsRequest instance
      */
-    public TermsAndConditionsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public TermsAndConditionsRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,7 +54,8 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder<TermsAn
      * @param requestOptions the options for this request
      * @return the TermsAndConditionsRequest instance
      */
-    public TermsAndConditionsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public TermsAndConditionsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.TermsAndConditionsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -61,6 +65,7 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder<TermsAn
      *
      * @return the collection request builder
      */
+    @Nonnull
     public TermsAndConditionsAcceptanceStatusCollectionRequestBuilder acceptanceStatuses() {
         return new TermsAndConditionsAcceptanceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("acceptanceStatuses"), getClient(), null);
     }
@@ -71,7 +76,8 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder<TermsAn
      * @return the request builder
      * @param id the item identifier
      */
-    public TermsAndConditionsAcceptanceStatusRequestBuilder acceptanceStatuses(final String id) {
+    @Nonnull
+    public TermsAndConditionsAcceptanceStatusRequestBuilder acceptanceStatuses(@Nonnull final String id) {
         return new TermsAndConditionsAcceptanceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("acceptanceStatuses") + "/" + id, getClient(), null);
     }
     /**
@@ -79,6 +85,7 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder<TermsAn
      *
      * @return the collection request builder
      */
+    @Nonnull
     public TermsAndConditionsAssignmentCollectionRequestBuilder assignments() {
         return new TermsAndConditionsAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
@@ -89,7 +96,8 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder<TermsAn
      * @return the request builder
      * @param id the item identifier
      */
-    public TermsAndConditionsAssignmentRequestBuilder assignments(final String id) {
+    @Nonnull
+    public TermsAndConditionsAssignmentRequestBuilder assignments(@Nonnull final String id) {
         return new TermsAndConditionsAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 }

@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.WorkbookTableColumn;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnRequestBuilder;
@@ -36,7 +38,7 @@ public class WorkbookTableColumnCollectionRequestBuilder extends BaseCollectionR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookTableColumnCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableColumnCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookTableColumnRequestBuilder.class, WorkbookTableColumnCollectionRequest.class);
     }
 
@@ -49,7 +51,8 @@ public class WorkbookTableColumnCollectionRequestBuilder extends BaseCollectionR
      * @param values the values
      * @param name the name
      */
-    public WorkbookTableColumnAddRequestBuilder add(final Integer index, final com.google.gson.JsonElement values, final String name) {
+    @Nonnull
+    public WorkbookTableColumnAddRequestBuilder add(@Nullable final Integer index, @Nullable final com.google.gson.JsonElement values, @Nullable final String name) {
         return new WorkbookTableColumnAddRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.add"), getClient(), null, index, values, name);
     }
 
@@ -57,6 +60,7 @@ public class WorkbookTableColumnCollectionRequestBuilder extends BaseCollectionR
      * Gets a builder to execute the method
      * @return the request builder 
      */
+    @Nonnull
     public WorkbookTableColumnCountRequestBuilder count() {
         return new WorkbookTableColumnCountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.count"), getClient(), null);
     }
@@ -66,7 +70,8 @@ public class WorkbookTableColumnCollectionRequestBuilder extends BaseCollectionR
      * @return the request builder 
      * @param index the index
      */
-    public WorkbookTableColumnItemAtRequestBuilder itemAt(final Integer index) {
+    @Nonnull
+    public WorkbookTableColumnItemAtRequestBuilder itemAt(@Nullable final Integer index) {
         return new WorkbookTableColumnItemAtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.itemAt"), getClient(), null, index);
     }
 }

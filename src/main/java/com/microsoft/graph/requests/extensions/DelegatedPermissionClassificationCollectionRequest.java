@@ -11,6 +11,8 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.DelegatedPermissionClassification;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,7 +36,7 @@ public class DelegatedPermissionClassificationCollectionRequest extends BaseColl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DelegatedPermissionClassificationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DelegatedPermissionClassificationCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DelegatedPermissionClassificationCollectionResponse.class, DelegatedPermissionClassificationCollectionPage.class, DelegatedPermissionClassificationCollectionRequestBuilder.class);
     }
 
@@ -43,7 +45,7 @@ public class DelegatedPermissionClassificationCollectionRequest extends BaseColl
      * @param newDelegatedPermissionClassification the DelegatedPermissionClassification to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final DelegatedPermissionClassification newDelegatedPermissionClassification, final ICallback<? super DelegatedPermissionClassification> callback) {
+    public void post(@Nonnull final DelegatedPermissionClassification newDelegatedPermissionClassification, @Nonnull final ICallback<? super DelegatedPermissionClassification> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DelegatedPermissionClassificationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -55,7 +57,8 @@ public class DelegatedPermissionClassificationCollectionRequest extends BaseColl
      * @param newDelegatedPermissionClassification the DelegatedPermissionClassification to create
      * @return the newly created object
      */
-    public DelegatedPermissionClassification post(final DelegatedPermissionClassification newDelegatedPermissionClassification) throws ClientException {
+    @Nonnull
+    public DelegatedPermissionClassification post(@Nonnull final DelegatedPermissionClassification newDelegatedPermissionClassification) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DelegatedPermissionClassificationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -68,7 +71,8 @@ public class DelegatedPermissionClassificationCollectionRequest extends BaseColl
      * @param value the expand clause
      * @return the updated request
      */
-    public DelegatedPermissionClassificationCollectionRequest expand(final String value) {
+    @Nonnull
+    public DelegatedPermissionClassificationCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -79,7 +83,8 @@ public class DelegatedPermissionClassificationCollectionRequest extends BaseColl
      * @param value the filter clause
      * @return the updated request
      */
-    public DelegatedPermissionClassificationCollectionRequest filter(final String value) {
+    @Nonnull
+    public DelegatedPermissionClassificationCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -90,7 +95,8 @@ public class DelegatedPermissionClassificationCollectionRequest extends BaseColl
      * @param value the order by clause
      * @return the updated request
      */
-    public DelegatedPermissionClassificationCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public DelegatedPermissionClassificationCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -101,7 +107,8 @@ public class DelegatedPermissionClassificationCollectionRequest extends BaseColl
      * @param value the select clause
      * @return the updated request
      */
-    public DelegatedPermissionClassificationCollectionRequest select(final String value) {
+    @Nonnull
+    public DelegatedPermissionClassificationCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -112,6 +119,7 @@ public class DelegatedPermissionClassificationCollectionRequest extends BaseColl
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public DelegatedPermissionClassificationCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -123,6 +131,7 @@ public class DelegatedPermissionClassificationCollectionRequest extends BaseColl
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public DelegatedPermissionClassificationCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -134,7 +143,8 @@ public class DelegatedPermissionClassificationCollectionRequest extends BaseColl
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public DelegatedPermissionClassificationCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public DelegatedPermissionClassificationCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

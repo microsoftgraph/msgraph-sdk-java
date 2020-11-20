@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.TeamsAppDefinitionCollectionReque
 import com.microsoft.graph.requests.extensions.TeamsAppDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -29,7 +31,7 @@ public class TeamsAppRequestBuilder extends BaseRequestBuilder<TeamsApp> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamsAppRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsAppRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +41,8 @@ public class TeamsAppRequestBuilder extends BaseRequestBuilder<TeamsApp> {
      * @param requestOptions the options for this request
      * @return the TeamsAppRequest instance
      */
-    public TeamsAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public TeamsAppRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,7 +52,8 @@ public class TeamsAppRequestBuilder extends BaseRequestBuilder<TeamsApp> {
      * @param requestOptions the options for this request
      * @return the TeamsAppRequest instance
      */
-    public TeamsAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public TeamsAppRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.TeamsAppRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,6 +63,7 @@ public class TeamsAppRequestBuilder extends BaseRequestBuilder<TeamsApp> {
      *
      * @return the collection request builder
      */
+    @Nonnull
     public TeamsAppDefinitionCollectionRequestBuilder appDefinitions() {
         return new TeamsAppDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appDefinitions"), getClient(), null);
     }
@@ -69,7 +74,8 @@ public class TeamsAppRequestBuilder extends BaseRequestBuilder<TeamsApp> {
      * @return the request builder
      * @param id the item identifier
      */
-    public TeamsAppDefinitionRequestBuilder appDefinitions(final String id) {
+    @Nonnull
+    public TeamsAppDefinitionRequestBuilder appDefinitions(@Nonnull final String id) {
         return new TeamsAppDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("appDefinitions") + "/" + id, getClient(), null);
     }
 }

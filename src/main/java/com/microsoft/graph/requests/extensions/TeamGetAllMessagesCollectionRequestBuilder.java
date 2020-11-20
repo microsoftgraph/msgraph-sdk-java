@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ChatMessage;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.TeamGetAllMessagesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamGetAllMessagesCollectionRequest;
@@ -32,7 +34,7 @@ public class TeamGetAllMessagesCollectionRequestBuilder extends BaseFunctionColl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamGetAllMessagesCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamGetAllMessagesCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TeamGetAllMessagesCollectionRequestBuilder.class, TeamGetAllMessagesCollectionRequest.class);
     }
     
@@ -42,8 +44,9 @@ public class TeamGetAllMessagesCollectionRequestBuilder extends BaseFunctionColl
      * @param requestOptions the options for this request
      * @return the TeamGetAllMessagesCollectionRequest instance
      */
-     @Override
-    public TeamGetAllMessagesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Override
+    @Nonnull
+    public TeamGetAllMessagesCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final TeamGetAllMessagesCollectionRequest request = super.buildRequest(requestOptions);
 
       for (com.microsoft.graph.options.FunctionOption option : functionOptions) {

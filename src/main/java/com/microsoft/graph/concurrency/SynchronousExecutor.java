@@ -22,6 +22,8 @@
 
 package com.microsoft.graph.concurrency;
 
+import javax.annotation.Nonnull;
+
 import java.util.concurrent.Executor;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -40,7 +42,7 @@ public class SynchronousExecutor implements Executor {
      * 
      * @param runnable the task to run on the main thread
      */
-    @Override public void execute(final Runnable runnable) {
+    @Override public void execute(@Nonnull final Runnable runnable) {
     	activeCount.incrementAndGet();
     	runnable.run();
     	activeCount.decrementAndGet();

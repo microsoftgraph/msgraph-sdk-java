@@ -13,6 +13,8 @@ import com.microsoft.graph.models.extensions.Recipient;
 import com.microsoft.graph.models.extensions.DateTimeTimeZone;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -36,7 +38,7 @@ public class EventCollectionRequest extends BaseCollectionRequest<Event, EventCo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EventCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EventCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EventCollectionResponse.class, EventCollectionPage.class, EventCollectionRequestBuilder.class);
     }
 
@@ -45,7 +47,7 @@ public class EventCollectionRequest extends BaseCollectionRequest<Event, EventCo
      * @param newEvent the Event to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final Event newEvent, final ICallback<? super Event> callback) {
+    public void post(@Nonnull final Event newEvent, @Nonnull final ICallback<? super Event> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EventRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -57,7 +59,8 @@ public class EventCollectionRequest extends BaseCollectionRequest<Event, EventCo
      * @param newEvent the Event to create
      * @return the newly created object
      */
-    public Event post(final Event newEvent) throws ClientException {
+    @Nonnull
+    public Event post(@Nonnull final Event newEvent) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EventRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -70,7 +73,8 @@ public class EventCollectionRequest extends BaseCollectionRequest<Event, EventCo
      * @param value the expand clause
      * @return the updated request
      */
-    public EventCollectionRequest expand(final String value) {
+    @Nonnull
+    public EventCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -81,7 +85,8 @@ public class EventCollectionRequest extends BaseCollectionRequest<Event, EventCo
      * @param value the filter clause
      * @return the updated request
      */
-    public EventCollectionRequest filter(final String value) {
+    @Nonnull
+    public EventCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -92,7 +97,8 @@ public class EventCollectionRequest extends BaseCollectionRequest<Event, EventCo
      * @param value the order by clause
      * @return the updated request
      */
-    public EventCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public EventCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -103,7 +109,8 @@ public class EventCollectionRequest extends BaseCollectionRequest<Event, EventCo
      * @param value the select clause
      * @return the updated request
      */
-    public EventCollectionRequest select(final String value) {
+    @Nonnull
+    public EventCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -114,6 +121,7 @@ public class EventCollectionRequest extends BaseCollectionRequest<Event, EventCo
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public EventCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -125,6 +133,7 @@ public class EventCollectionRequest extends BaseCollectionRequest<Event, EventCo
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public EventCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -136,7 +145,8 @@ public class EventCollectionRequest extends BaseCollectionRequest<Event, EventCo
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public EventCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public EventCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RecentNotebook;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.NotebookGetRecentNotebooksCollectionRequestBuilder;
@@ -29,7 +31,7 @@ public class NotebookGetRecentNotebooksCollectionPage extends BaseCollectionPage
      * @param response The serialized NotebookGetRecentNotebooksCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public NotebookGetRecentNotebooksCollectionPage(final NotebookGetRecentNotebooksCollectionResponse response, final NotebookGetRecentNotebooksCollectionRequestBuilder builder) {
+    public NotebookGetRecentNotebooksCollectionPage(@Nonnull final NotebookGetRecentNotebooksCollectionResponse response, @Nonnull final NotebookGetRecentNotebooksCollectionRequestBuilder builder) {
        super(response, builder);
     }
 
@@ -39,7 +41,7 @@ public class NotebookGetRecentNotebooksCollectionPage extends BaseCollectionPage
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public NotebookGetRecentNotebooksCollectionPage(final java.util.List<RecentNotebook> pageContents, final NotebookGetRecentNotebooksCollectionRequestBuilder nextRequestBuilder) {
+    public NotebookGetRecentNotebooksCollectionPage(@Nonnull final java.util.List<RecentNotebook> pageContents, @Nullable final NotebookGetRecentNotebooksCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

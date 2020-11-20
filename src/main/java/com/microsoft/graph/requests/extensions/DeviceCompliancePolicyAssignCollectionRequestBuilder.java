@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignCollectionRequest;
@@ -33,7 +35,7 @@ public class DeviceCompliancePolicyAssignCollectionRequestBuilder extends BaseAc
      * @param requestOptions the options for this request
      * @param assignments the assignments
      */
-    public DeviceCompliancePolicyAssignCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<DeviceCompliancePolicyAssignment> assignments) {
+    public DeviceCompliancePolicyAssignCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final java.util.List<DeviceCompliancePolicyAssignment> assignments) {
         super(requestUrl, client, requestOptions, DeviceCompliancePolicyAssignCollectionRequestBuilder.class, DeviceCompliancePolicyAssignCollectionRequest.class);
   	 if(assignments!=null){
 			bodyParams.put("assignments", assignments);
@@ -46,8 +48,9 @@ public class DeviceCompliancePolicyAssignCollectionRequestBuilder extends BaseAc
      * @param requestOptions the options for this request
      * @return the DeviceCompliancePolicyAssignCollectionRequest instance
      */
-     @Override
-    public DeviceCompliancePolicyAssignCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Override
+    @Nonnull
+    public DeviceCompliancePolicyAssignCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final DeviceCompliancePolicyAssignCollectionRequest request = super.buildRequest(requestOptions);
 
         if (hasParameter("assignments")) {

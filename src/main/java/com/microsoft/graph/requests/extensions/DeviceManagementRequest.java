@@ -61,6 +61,8 @@ import com.microsoft.graph.requests.extensions.ApplePushNotificationCertificateR
 import com.microsoft.graph.requests.extensions.ManagedDeviceOverviewRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -79,7 +81,7 @@ public class DeviceManagementRequest extends BaseRequest<DeviceManagement> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagement.class);
     }
 
@@ -88,7 +90,7 @@ public class DeviceManagementRequest extends BaseRequest<DeviceManagement> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceManagement> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceManagement> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -98,6 +100,7 @@ public class DeviceManagementRequest extends BaseRequest<DeviceManagement> {
      * @return the DeviceManagement from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceManagement get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -107,7 +110,7 @@ public class DeviceManagementRequest extends BaseRequest<DeviceManagement> {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceManagement> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceManagement> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -126,7 +129,7 @@ public class DeviceManagementRequest extends BaseRequest<DeviceManagement> {
      * @param sourceDeviceManagement the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagement sourceDeviceManagement, final ICallback<? super DeviceManagement> callback) {
+    public void patch(@Nonnull final DeviceManagement sourceDeviceManagement, @Nonnull final ICallback<? super DeviceManagement> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagement);
     }
 
@@ -137,7 +140,8 @@ public class DeviceManagementRequest extends BaseRequest<DeviceManagement> {
      * @return the updated DeviceManagement
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagement patch(final DeviceManagement sourceDeviceManagement) throws ClientException {
+    @Nullable
+    public DeviceManagement patch(@Nonnull final DeviceManagement sourceDeviceManagement) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceManagement);
     }
 
@@ -147,7 +151,7 @@ public class DeviceManagementRequest extends BaseRequest<DeviceManagement> {
      * @param newDeviceManagement the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagement newDeviceManagement, final ICallback<? super DeviceManagement> callback) {
+    public void post(@Nonnull final DeviceManagement newDeviceManagement, @Nonnull final ICallback<? super DeviceManagement> callback) {
         send(HttpMethod.POST, callback, newDeviceManagement);
     }
 
@@ -158,7 +162,8 @@ public class DeviceManagementRequest extends BaseRequest<DeviceManagement> {
      * @return the created DeviceManagement
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagement post(final DeviceManagement newDeviceManagement) throws ClientException {
+    @Nullable
+    public DeviceManagement post(@Nonnull final DeviceManagement newDeviceManagement) throws ClientException {
         return send(HttpMethod.POST, newDeviceManagement);
     }
 
@@ -168,7 +173,7 @@ public class DeviceManagementRequest extends BaseRequest<DeviceManagement> {
      * @param newDeviceManagement the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagement newDeviceManagement, final ICallback<? super DeviceManagement> callback) {
+    public void put(@Nonnull final DeviceManagement newDeviceManagement, @Nonnull final ICallback<? super DeviceManagement> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagement);
     }
 
@@ -179,7 +184,8 @@ public class DeviceManagementRequest extends BaseRequest<DeviceManagement> {
      * @return the created DeviceManagement
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagement put(final DeviceManagement newDeviceManagement) throws ClientException {
+    @Nullable
+    public DeviceManagement put(@Nonnull final DeviceManagement newDeviceManagement) throws ClientException {
         return send(HttpMethod.PUT, newDeviceManagement);
     }
 
@@ -189,7 +195,8 @@ public class DeviceManagementRequest extends BaseRequest<DeviceManagement> {
      * @param value the select clause
      * @return the updated request
      */
-     public DeviceManagementRequest select(final String value) {
+     @Nonnull
+     public DeviceManagementRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -200,7 +207,8 @@ public class DeviceManagementRequest extends BaseRequest<DeviceManagement> {
      * @param value the expand clause
      * @return the updated request
      */
-     public DeviceManagementRequest expand(final String value) {
+     @Nonnull
+     public DeviceManagementRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DataPolicyOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +30,7 @@ public class DataPolicyOperationRequest extends BaseRequest<DataPolicyOperation>
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DataPolicyOperationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DataPolicyOperationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DataPolicyOperation.class);
     }
 
@@ -37,7 +39,7 @@ public class DataPolicyOperationRequest extends BaseRequest<DataPolicyOperation>
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DataPolicyOperation> callback) {
+    public void get(@Nonnull final ICallback<? super DataPolicyOperation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -47,6 +49,7 @@ public class DataPolicyOperationRequest extends BaseRequest<DataPolicyOperation>
      * @return the DataPolicyOperation from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DataPolicyOperation get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -56,7 +59,7 @@ public class DataPolicyOperationRequest extends BaseRequest<DataPolicyOperation>
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DataPolicyOperation> callback) {
+    public void delete(@Nonnull final ICallback<? super DataPolicyOperation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +78,7 @@ public class DataPolicyOperationRequest extends BaseRequest<DataPolicyOperation>
      * @param sourceDataPolicyOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DataPolicyOperation sourceDataPolicyOperation, final ICallback<? super DataPolicyOperation> callback) {
+    public void patch(@Nonnull final DataPolicyOperation sourceDataPolicyOperation, @Nonnull final ICallback<? super DataPolicyOperation> callback) {
         send(HttpMethod.PATCH, callback, sourceDataPolicyOperation);
     }
 
@@ -86,7 +89,8 @@ public class DataPolicyOperationRequest extends BaseRequest<DataPolicyOperation>
      * @return the updated DataPolicyOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DataPolicyOperation patch(final DataPolicyOperation sourceDataPolicyOperation) throws ClientException {
+    @Nullable
+    public DataPolicyOperation patch(@Nonnull final DataPolicyOperation sourceDataPolicyOperation) throws ClientException {
         return send(HttpMethod.PATCH, sourceDataPolicyOperation);
     }
 
@@ -96,7 +100,7 @@ public class DataPolicyOperationRequest extends BaseRequest<DataPolicyOperation>
      * @param newDataPolicyOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DataPolicyOperation newDataPolicyOperation, final ICallback<? super DataPolicyOperation> callback) {
+    public void post(@Nonnull final DataPolicyOperation newDataPolicyOperation, @Nonnull final ICallback<? super DataPolicyOperation> callback) {
         send(HttpMethod.POST, callback, newDataPolicyOperation);
     }
 
@@ -107,7 +111,8 @@ public class DataPolicyOperationRequest extends BaseRequest<DataPolicyOperation>
      * @return the created DataPolicyOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DataPolicyOperation post(final DataPolicyOperation newDataPolicyOperation) throws ClientException {
+    @Nullable
+    public DataPolicyOperation post(@Nonnull final DataPolicyOperation newDataPolicyOperation) throws ClientException {
         return send(HttpMethod.POST, newDataPolicyOperation);
     }
 
@@ -117,7 +122,7 @@ public class DataPolicyOperationRequest extends BaseRequest<DataPolicyOperation>
      * @param newDataPolicyOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DataPolicyOperation newDataPolicyOperation, final ICallback<? super DataPolicyOperation> callback) {
+    public void put(@Nonnull final DataPolicyOperation newDataPolicyOperation, @Nonnull final ICallback<? super DataPolicyOperation> callback) {
         send(HttpMethod.PUT, callback, newDataPolicyOperation);
     }
 
@@ -128,7 +133,8 @@ public class DataPolicyOperationRequest extends BaseRequest<DataPolicyOperation>
      * @return the created DataPolicyOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DataPolicyOperation put(final DataPolicyOperation newDataPolicyOperation) throws ClientException {
+    @Nullable
+    public DataPolicyOperation put(@Nonnull final DataPolicyOperation newDataPolicyOperation) throws ClientException {
         return send(HttpMethod.PUT, newDataPolicyOperation);
     }
 
@@ -138,7 +144,8 @@ public class DataPolicyOperationRequest extends BaseRequest<DataPolicyOperation>
      * @param value the select clause
      * @return the updated request
      */
-     public DataPolicyOperationRequest select(final String value) {
+     @Nonnull
+     public DataPolicyOperationRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -149,7 +156,8 @@ public class DataPolicyOperationRequest extends BaseRequest<DataPolicyOperation>
      * @param value the expand clause
      * @return the updated request
      */
-     public DataPolicyOperationRequest expand(final String value) {
+     @Nonnull
+     public DataPolicyOperationRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

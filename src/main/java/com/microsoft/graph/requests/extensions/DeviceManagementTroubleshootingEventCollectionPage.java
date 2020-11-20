@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DeviceManagementTroubleshootingEvent;
 import com.microsoft.graph.requests.extensions.DeviceManagementTroubleshootingEventCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DeviceManagementTroubleshootingEventCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class DeviceManagementTroubleshootingEventCollectionPage extends BaseColl
      * @param response the serialized DeviceManagementTroubleshootingEventCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DeviceManagementTroubleshootingEventCollectionPage(final DeviceManagementTroubleshootingEventCollectionResponse response, final DeviceManagementTroubleshootingEventCollectionRequestBuilder builder) {
+    public DeviceManagementTroubleshootingEventCollectionPage(@Nonnull final DeviceManagementTroubleshootingEventCollectionResponse response, @Nonnull final DeviceManagementTroubleshootingEventCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class DeviceManagementTroubleshootingEventCollectionPage extends BaseColl
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public DeviceManagementTroubleshootingEventCollectionPage(final java.util.List<DeviceManagementTroubleshootingEvent> pageContents, final DeviceManagementTroubleshootingEventCollectionRequestBuilder nextRequestBuilder) {
+    public DeviceManagementTroubleshootingEventCollectionPage(@Nonnull final java.util.List<DeviceManagementTroubleshootingEvent> pageContents, @Nullable final DeviceManagementTroubleshootingEventCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

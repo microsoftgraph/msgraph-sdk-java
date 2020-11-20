@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.PasswordCredential;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,7 +37,7 @@ public class ApplicationCollectionRequest extends BaseCollectionRequest<Applicat
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ApplicationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ApplicationCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ApplicationCollectionResponse.class, ApplicationCollectionPage.class, ApplicationCollectionRequestBuilder.class);
     }
 
@@ -44,7 +46,7 @@ public class ApplicationCollectionRequest extends BaseCollectionRequest<Applicat
      * @param newApplication the Application to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final Application newApplication, final ICallback<? super Application> callback) {
+    public void post(@Nonnull final Application newApplication, @Nonnull final ICallback<? super Application> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ApplicationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -56,7 +58,8 @@ public class ApplicationCollectionRequest extends BaseCollectionRequest<Applicat
      * @param newApplication the Application to create
      * @return the newly created object
      */
-    public Application post(final Application newApplication) throws ClientException {
+    @Nonnull
+    public Application post(@Nonnull final Application newApplication) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ApplicationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -69,7 +72,8 @@ public class ApplicationCollectionRequest extends BaseCollectionRequest<Applicat
      * @param value the expand clause
      * @return the updated request
      */
-    public ApplicationCollectionRequest expand(final String value) {
+    @Nonnull
+    public ApplicationCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -80,7 +84,8 @@ public class ApplicationCollectionRequest extends BaseCollectionRequest<Applicat
      * @param value the filter clause
      * @return the updated request
      */
-    public ApplicationCollectionRequest filter(final String value) {
+    @Nonnull
+    public ApplicationCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -91,7 +96,8 @@ public class ApplicationCollectionRequest extends BaseCollectionRequest<Applicat
      * @param value the order by clause
      * @return the updated request
      */
-    public ApplicationCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public ApplicationCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -102,7 +108,8 @@ public class ApplicationCollectionRequest extends BaseCollectionRequest<Applicat
      * @param value the select clause
      * @return the updated request
      */
-    public ApplicationCollectionRequest select(final String value) {
+    @Nonnull
+    public ApplicationCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -113,6 +120,7 @@ public class ApplicationCollectionRequest extends BaseCollectionRequest<Applicat
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public ApplicationCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -124,6 +132,7 @@ public class ApplicationCollectionRequest extends BaseCollectionRequest<Applicat
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public ApplicationCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -135,7 +144,8 @@ public class ApplicationCollectionRequest extends BaseCollectionRequest<Applicat
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public ApplicationCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public ApplicationCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

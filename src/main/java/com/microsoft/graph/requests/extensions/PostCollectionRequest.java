@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.Post;
 import com.microsoft.graph.models.extensions.Recipient;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,7 +37,7 @@ public class PostCollectionRequest extends BaseCollectionRequest<Post, PostColle
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PostCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PostCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PostCollectionResponse.class, PostCollectionPage.class, PostCollectionRequestBuilder.class);
     }
 
@@ -44,7 +46,7 @@ public class PostCollectionRequest extends BaseCollectionRequest<Post, PostColle
      * @param newPost the Post to create
      * @param callback the callback to invoke once the object has been created
      */
-    public void post(final Post newPost, final ICallback<? super Post> callback) {
+    public void post(@Nonnull final Post newPost, @Nonnull final ICallback<? super Post> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PostRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -56,7 +58,8 @@ public class PostCollectionRequest extends BaseCollectionRequest<Post, PostColle
      * @param newPost the Post to create
      * @return the newly created object
      */
-    public Post post(final Post newPost) throws ClientException {
+    @Nonnull
+    public Post post(@Nonnull final Post newPost) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PostRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -69,7 +72,8 @@ public class PostCollectionRequest extends BaseCollectionRequest<Post, PostColle
      * @param value the expand clause
      * @return the updated request
      */
-    public PostCollectionRequest expand(final String value) {
+    @Nonnull
+    public PostCollectionRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -80,7 +84,8 @@ public class PostCollectionRequest extends BaseCollectionRequest<Post, PostColle
      * @param value the filter clause
      * @return the updated request
      */
-    public PostCollectionRequest filter(final String value) {
+    @Nonnull
+    public PostCollectionRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -91,7 +96,8 @@ public class PostCollectionRequest extends BaseCollectionRequest<Post, PostColle
      * @param value the order by clause
      * @return the updated request
      */
-    public PostCollectionRequest orderBy(final String value) {
+    @Nonnull
+    public PostCollectionRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }
@@ -102,7 +108,8 @@ public class PostCollectionRequest extends BaseCollectionRequest<Post, PostColle
      * @param value the select clause
      * @return the updated request
      */
-    public PostCollectionRequest select(final String value) {
+    @Nonnull
+    public PostCollectionRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -113,6 +120,7 @@ public class PostCollectionRequest extends BaseCollectionRequest<Post, PostColle
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public PostCollectionRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -124,6 +132,7 @@ public class PostCollectionRequest extends BaseCollectionRequest<Post, PostColle
      * @param value of the number of items to skip
      * @return the updated request
      */
+    @Nonnull
     public PostCollectionRequest skip(final int value) {
         addSkipOption(value);
         return this;
@@ -135,7 +144,8 @@ public class PostCollectionRequest extends BaseCollectionRequest<Post, PostColle
      * @param skipToken - Token for pagination
      * @return the updated request
      */
-    public PostCollectionRequest skipToken(final String skipToken) {
+    @Nonnull
+    public PostCollectionRequest skipToken(@Nonnull final String skipToken) {
     	addSkipTokenOption(skipToken);
         return this;
     }

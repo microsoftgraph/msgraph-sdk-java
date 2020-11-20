@@ -7,6 +7,8 @@ import com.microsoft.graph.models.extensions.WorkbookFunctionsF_Inv_RTBody;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsF_Inv_RTRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -30,7 +32,7 @@ public class WorkbookFunctionsF_Inv_RTRequest extends BaseRequest<WorkbookFuncti
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookFunctionsF_Inv_RTRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsF_Inv_RTRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsF_Inv_RTBody();
     }
@@ -39,7 +41,7 @@ public class WorkbookFunctionsF_Inv_RTRequest extends BaseRequest<WorkbookFuncti
      * Invokes the method and invokes the callback with the result
      * @param callback callback to be invoked after executing the request
      */
-    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
+    public void post(@Nonnull final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -47,6 +49,7 @@ public class WorkbookFunctionsF_Inv_RTRequest extends BaseRequest<WorkbookFuncti
      * Invokes the method and returns the result
      * @return result of the method invocation
      */
+    @Nullable
     public WorkbookFunctionResult post() throws ClientException {
         return send(HttpMethod.POST, body);
     }
@@ -57,7 +60,8 @@ public class WorkbookFunctionsF_Inv_RTRequest extends BaseRequest<WorkbookFuncti
      * @param value the select clause
      * @return the updated request
      */
-    public WorkbookFunctionsF_Inv_RTRequest select(final String value) {
+    @Nonnull
+    public WorkbookFunctionsF_Inv_RTRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -68,6 +72,7 @@ public class WorkbookFunctionsF_Inv_RTRequest extends BaseRequest<WorkbookFuncti
      * @param value the max number of items to return
      * @return the updated request
      */
+    @Nonnull
     public WorkbookFunctionsF_Inv_RTRequest top(final int value) {
         addTopOption(value);
         return this;
@@ -79,7 +84,8 @@ public class WorkbookFunctionsF_Inv_RTRequest extends BaseRequest<WorkbookFuncti
      * @param value the expand clause
      * @return the updated request
      */
-    public WorkbookFunctionsF_Inv_RTRequest expand(final String value) {
+    @Nonnull
+    public WorkbookFunctionsF_Inv_RTRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }

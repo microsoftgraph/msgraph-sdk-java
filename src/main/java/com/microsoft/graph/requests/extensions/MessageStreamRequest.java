@@ -19,6 +19,8 @@ import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedProperty
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseStreamRequest;
 
@@ -38,7 +40,7 @@ public class MessageStreamRequest extends BaseStreamRequest<Message> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MessageStreamRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MessageStreamRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Message.class);
     }
 
@@ -47,7 +49,7 @@ public class MessageStreamRequest extends BaseStreamRequest<Message> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<InputStream> callback) {
+    public void get(@Nonnull final ICallback<InputStream> callback) {
         send(callback);
     }
 
@@ -57,6 +59,7 @@ public class MessageStreamRequest extends BaseStreamRequest<Message> {
      * @return the stream that the caller needs to close
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
+    @Nullable
     public InputStream get() throws ClientException {
        return send();
     }
@@ -67,7 +70,7 @@ public class MessageStreamRequest extends BaseStreamRequest<Message> {
      * @param fileContents the contents of the stream to upload
           * @param callback the callback to be called after success or failure
      */
-    public void put(final byte[] fileContents, final ICallback<? super Message> callback) {
+    public void put(@Nonnull final byte[] fileContents, @Nonnull final ICallback<? super Message> callback) {
         send(fileContents, callback);
     }
 
@@ -78,7 +81,8 @@ public class MessageStreamRequest extends BaseStreamRequest<Message> {
      * @return the result of the upload
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    public Message put(final byte[] fileContents) throws ClientException {
+    @Nullable
+    public Message put(@Nonnull final byte[] fileContents) throws ClientException {
         return send(fileContents);
     }
 }

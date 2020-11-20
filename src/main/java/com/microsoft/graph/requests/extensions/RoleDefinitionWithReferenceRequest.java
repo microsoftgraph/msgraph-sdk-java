@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.RoleAssignmentCollectionRequestBu
 import com.microsoft.graph.requests.extensions.RoleAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseWithReferenceRequest;
@@ -33,7 +35,7 @@ public class RoleDefinitionWithReferenceRequest extends BaseWithReferenceRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RoleDefinitionWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RoleDefinitionWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, RoleDefinition.class);
     }
 
@@ -43,7 +45,8 @@ public class RoleDefinitionWithReferenceRequest extends BaseWithReferenceRequest
      * @param value the select clause
      * @return the updated request
      */
-    public RoleDefinitionWithReferenceRequest select(final String value) {
+    @Nonnull
+    public RoleDefinitionWithReferenceRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -54,7 +57,8 @@ public class RoleDefinitionWithReferenceRequest extends BaseWithReferenceRequest
      * @param value the expand clause
      * @return the updated request
      */
-    public RoleDefinitionWithReferenceRequest expand(final String value) {
+    @Nonnull
+    public RoleDefinitionWithReferenceRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }

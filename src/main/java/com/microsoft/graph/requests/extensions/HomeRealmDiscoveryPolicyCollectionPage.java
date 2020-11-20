@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class HomeRealmDiscoveryPolicyCollectionPage extends BaseCollectionPage<H
      * @param response the serialized HomeRealmDiscoveryPolicyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public HomeRealmDiscoveryPolicyCollectionPage(final HomeRealmDiscoveryPolicyCollectionResponse response, final HomeRealmDiscoveryPolicyCollectionRequestBuilder builder) {
+    public HomeRealmDiscoveryPolicyCollectionPage(@Nonnull final HomeRealmDiscoveryPolicyCollectionResponse response, @Nonnull final HomeRealmDiscoveryPolicyCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class HomeRealmDiscoveryPolicyCollectionPage extends BaseCollectionPage<H
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public HomeRealmDiscoveryPolicyCollectionPage(final java.util.List<HomeRealmDiscoveryPolicy> pageContents, final HomeRealmDiscoveryPolicyCollectionRequestBuilder nextRequestBuilder) {
+    public HomeRealmDiscoveryPolicyCollectionPage(@Nonnull final java.util.List<HomeRealmDiscoveryPolicy> pageContents, @Nullable final HomeRealmDiscoveryPolicyCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

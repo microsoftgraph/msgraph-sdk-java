@@ -22,6 +22,8 @@ import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionRequ
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseReferenceRequest;
@@ -42,7 +44,7 @@ public class ApplicationReferenceRequest extends BaseReferenceRequest<Applicatio
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ApplicationReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ApplicationReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Application.class);
     }
 
@@ -52,7 +54,8 @@ public class ApplicationReferenceRequest extends BaseReferenceRequest<Applicatio
      * @param value the select clause
      * @return the updated request
      */
-    public ApplicationReferenceRequest select(final String value) {
+    @Nonnull
+    public ApplicationReferenceRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -63,7 +66,8 @@ public class ApplicationReferenceRequest extends BaseReferenceRequest<Applicatio
      * @param value the expand clause
      * @return the updated request
      */
-    public ApplicationReferenceRequest expand(final String value) {
+    @Nonnull
+    public ApplicationReferenceRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -73,7 +77,7 @@ public class ApplicationReferenceRequest extends BaseReferenceRequest<Applicatio
      * @param srcApplication the Application reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(Application srcApplication, final ICallback<? super Application> callback) {
+    public void put(@Nonnull final Application srcApplication, @Nonnull final ICallback<? super Application> callback) {
         send(HttpMethod.PUT, callback, srcApplication);
     }
 
@@ -84,7 +88,8 @@ public class ApplicationReferenceRequest extends BaseReferenceRequest<Applicatio
      * @return the Application
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    public Application put(Application srcApplication) throws ClientException {
+    @Nullable
+    public Application put(@Nonnull final Application srcApplication) throws ClientException {
         return send(HttpMethod.PUT, srcApplication);
     }
 }

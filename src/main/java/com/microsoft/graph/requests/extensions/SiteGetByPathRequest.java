@@ -6,6 +6,8 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.requests.extensions.SiteGetByPathRequest;
 
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.core.ClientException;
@@ -27,7 +29,7 @@ public class SiteGetByPathRequest extends BaseRequest<Site> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SiteGetByPathRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SiteGetByPathRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Site.class);
     }
 
@@ -36,7 +38,7 @@ public class SiteGetByPathRequest extends BaseRequest<Site> {
      * @param srcSite the Site with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    public void patch(Site srcSite, final ICallback<? super Site> callback) {
+    public void patch(@Nonnull Site srcSite, @Nonnull final ICallback<? super Site> callback) {
         send(HttpMethod.PATCH, callback, srcSite);
     }
 
@@ -47,7 +49,8 @@ public class SiteGetByPathRequest extends BaseRequest<Site> {
      * @return the Site
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-     public Site patch(Site srcSite) throws ClientException {
+     @Nullable
+     public Site patch(@Nonnull final Site srcSite) throws ClientException {
         return this.send(HttpMethod.PATCH, srcSite);
     }
 
@@ -57,7 +60,7 @@ public class SiteGetByPathRequest extends BaseRequest<Site> {
      * @param srcSite the Site to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(Site srcSite, final ICallback<? super Site> callback) {
+    public void put(@Nonnull final Site srcSite, @Nonnull final ICallback<? super Site> callback) {
         send(HttpMethod.PUT, callback, srcSite);
     }
 
@@ -68,7 +71,8 @@ public class SiteGetByPathRequest extends BaseRequest<Site> {
      * @return the Site
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-     public Site put(Site srcSite) throws ClientException {
+     @Nullable
+     public Site put(@Nonnull final Site srcSite) throws ClientException {
         return this.send(HttpMethod.PUT, srcSite);
     }
     /**
@@ -76,7 +80,7 @@ public class SiteGetByPathRequest extends BaseRequest<Site> {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Site> callback) {
+    public void get(@Nonnull final ICallback<? super Site> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -86,6 +90,7 @@ public class SiteGetByPathRequest extends BaseRequest<Site> {
      * @return the Site
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
+    @Nullable
     public Site get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -96,7 +101,8 @@ public class SiteGetByPathRequest extends BaseRequest<Site> {
      * @param value the select clause
      * @return the updated request
      */
-    public SiteGetByPathRequest select(final String value) {
+    @Nonnull
+    public SiteGetByPathRequest select(@Nonnull final String value) {
         addSelectOption(value);
         return this;
     }
@@ -107,7 +113,8 @@ public class SiteGetByPathRequest extends BaseRequest<Site> {
      * @param value the expand clause
      * @return the updated request
      */
-    public SiteGetByPathRequest expand(final String value) {
+    @Nonnull
+    public SiteGetByPathRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
     }
@@ -118,7 +125,8 @@ public class SiteGetByPathRequest extends BaseRequest<Site> {
      * @param value the filter clause
      * @return the updated request
      */
-    public SiteGetByPathRequest filter(final String value) {
+    @Nonnull
+    public SiteGetByPathRequest filter(@Nonnull final String value) {
         addFilterOption(value);
         return this;
     }
@@ -129,7 +137,8 @@ public class SiteGetByPathRequest extends BaseRequest<Site> {
      * @param value the order by clause
      * @return the updated request
      */
-    public SiteGetByPathRequest orderBy(final String value) {
+    @Nonnull
+    public SiteGetByPathRequest orderBy(@Nonnull final String value) {
         addOrderByOption(value);
         return this;
     }

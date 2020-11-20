@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AppleDeviceFeaturesConfigurationBase;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,10 +31,10 @@ public class AppleDeviceFeaturesConfigurationBaseRequest extends BaseRequest<App
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public AppleDeviceFeaturesConfigurationBaseRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends AppleDeviceFeaturesConfigurationBase> responseClass) {
+    public AppleDeviceFeaturesConfigurationBaseRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends AppleDeviceFeaturesConfigurationBase> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -43,7 +45,7 @@ public class AppleDeviceFeaturesConfigurationBaseRequest extends BaseRequest<App
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AppleDeviceFeaturesConfigurationBaseRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AppleDeviceFeaturesConfigurationBaseRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AppleDeviceFeaturesConfigurationBase.class);
     }
 
@@ -52,7 +54,7 @@ public class AppleDeviceFeaturesConfigurationBaseRequest extends BaseRequest<App
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AppleDeviceFeaturesConfigurationBase> callback) {
+    public void get(@Nonnull final ICallback<? super AppleDeviceFeaturesConfigurationBase> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -62,6 +64,7 @@ public class AppleDeviceFeaturesConfigurationBaseRequest extends BaseRequest<App
      * @return the AppleDeviceFeaturesConfigurationBase from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AppleDeviceFeaturesConfigurationBase get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -71,7 +74,7 @@ public class AppleDeviceFeaturesConfigurationBaseRequest extends BaseRequest<App
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AppleDeviceFeaturesConfigurationBase> callback) {
+    public void delete(@Nonnull final ICallback<? super AppleDeviceFeaturesConfigurationBase> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +93,7 @@ public class AppleDeviceFeaturesConfigurationBaseRequest extends BaseRequest<App
      * @param sourceAppleDeviceFeaturesConfigurationBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AppleDeviceFeaturesConfigurationBase sourceAppleDeviceFeaturesConfigurationBase, final ICallback<? super AppleDeviceFeaturesConfigurationBase> callback) {
+    public void patch(@Nonnull final AppleDeviceFeaturesConfigurationBase sourceAppleDeviceFeaturesConfigurationBase, @Nonnull final ICallback<? super AppleDeviceFeaturesConfigurationBase> callback) {
         send(HttpMethod.PATCH, callback, sourceAppleDeviceFeaturesConfigurationBase);
     }
 
@@ -101,7 +104,8 @@ public class AppleDeviceFeaturesConfigurationBaseRequest extends BaseRequest<App
      * @return the updated AppleDeviceFeaturesConfigurationBase
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AppleDeviceFeaturesConfigurationBase patch(final AppleDeviceFeaturesConfigurationBase sourceAppleDeviceFeaturesConfigurationBase) throws ClientException {
+    @Nullable
+    public AppleDeviceFeaturesConfigurationBase patch(@Nonnull final AppleDeviceFeaturesConfigurationBase sourceAppleDeviceFeaturesConfigurationBase) throws ClientException {
         return send(HttpMethod.PATCH, sourceAppleDeviceFeaturesConfigurationBase);
     }
 
@@ -111,7 +115,7 @@ public class AppleDeviceFeaturesConfigurationBaseRequest extends BaseRequest<App
      * @param newAppleDeviceFeaturesConfigurationBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AppleDeviceFeaturesConfigurationBase newAppleDeviceFeaturesConfigurationBase, final ICallback<? super AppleDeviceFeaturesConfigurationBase> callback) {
+    public void post(@Nonnull final AppleDeviceFeaturesConfigurationBase newAppleDeviceFeaturesConfigurationBase, @Nonnull final ICallback<? super AppleDeviceFeaturesConfigurationBase> callback) {
         send(HttpMethod.POST, callback, newAppleDeviceFeaturesConfigurationBase);
     }
 
@@ -122,7 +126,8 @@ public class AppleDeviceFeaturesConfigurationBaseRequest extends BaseRequest<App
      * @return the created AppleDeviceFeaturesConfigurationBase
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AppleDeviceFeaturesConfigurationBase post(final AppleDeviceFeaturesConfigurationBase newAppleDeviceFeaturesConfigurationBase) throws ClientException {
+    @Nullable
+    public AppleDeviceFeaturesConfigurationBase post(@Nonnull final AppleDeviceFeaturesConfigurationBase newAppleDeviceFeaturesConfigurationBase) throws ClientException {
         return send(HttpMethod.POST, newAppleDeviceFeaturesConfigurationBase);
     }
 
@@ -132,7 +137,7 @@ public class AppleDeviceFeaturesConfigurationBaseRequest extends BaseRequest<App
      * @param newAppleDeviceFeaturesConfigurationBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AppleDeviceFeaturesConfigurationBase newAppleDeviceFeaturesConfigurationBase, final ICallback<? super AppleDeviceFeaturesConfigurationBase> callback) {
+    public void put(@Nonnull final AppleDeviceFeaturesConfigurationBase newAppleDeviceFeaturesConfigurationBase, @Nonnull final ICallback<? super AppleDeviceFeaturesConfigurationBase> callback) {
         send(HttpMethod.PUT, callback, newAppleDeviceFeaturesConfigurationBase);
     }
 
@@ -143,7 +148,8 @@ public class AppleDeviceFeaturesConfigurationBaseRequest extends BaseRequest<App
      * @return the created AppleDeviceFeaturesConfigurationBase
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AppleDeviceFeaturesConfigurationBase put(final AppleDeviceFeaturesConfigurationBase newAppleDeviceFeaturesConfigurationBase) throws ClientException {
+    @Nullable
+    public AppleDeviceFeaturesConfigurationBase put(@Nonnull final AppleDeviceFeaturesConfigurationBase newAppleDeviceFeaturesConfigurationBase) throws ClientException {
         return send(HttpMethod.PUT, newAppleDeviceFeaturesConfigurationBase);
     }
 
@@ -153,7 +159,8 @@ public class AppleDeviceFeaturesConfigurationBaseRequest extends BaseRequest<App
      * @param value the select clause
      * @return the updated request
      */
-     public AppleDeviceFeaturesConfigurationBaseRequest select(final String value) {
+     @Nonnull
+     public AppleDeviceFeaturesConfigurationBaseRequest select(@Nonnull final String value) {
          addSelectOption(value);
          return this;
      }
@@ -164,7 +171,8 @@ public class AppleDeviceFeaturesConfigurationBaseRequest extends BaseRequest<App
      * @param value the expand clause
      * @return the updated request
      */
-     public AppleDeviceFeaturesConfigurationBaseRequest expand(final String value) {
+     @Nonnull
+     public AppleDeviceFeaturesConfigurationBaseRequest expand(@Nonnull final String value) {
          addExpandOption(value);
          return this;
      }

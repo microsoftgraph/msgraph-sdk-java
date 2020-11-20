@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ClaimsMappingPolicy;
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionRequestBuilder;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionResponse;
 import com.microsoft.graph.http.BaseCollectionPage;
 
@@ -21,7 +23,7 @@ public class ClaimsMappingPolicyCollectionPage extends BaseCollectionPage<Claims
      * @param response the serialized ClaimsMappingPolicyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ClaimsMappingPolicyCollectionPage(final ClaimsMappingPolicyCollectionResponse response, final ClaimsMappingPolicyCollectionRequestBuilder builder) {
+    public ClaimsMappingPolicyCollectionPage(@Nonnull final ClaimsMappingPolicyCollectionResponse response, @Nonnull final ClaimsMappingPolicyCollectionRequestBuilder builder) {
         super(response, builder);
     }
 
@@ -31,7 +33,7 @@ public class ClaimsMappingPolicyCollectionPage extends BaseCollectionPage<Claims
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public ClaimsMappingPolicyCollectionPage(final java.util.List<ClaimsMappingPolicy> pageContents, final ClaimsMappingPolicyCollectionRequestBuilder nextRequestBuilder) {
+    public ClaimsMappingPolicyCollectionPage(@Nonnull final java.util.List<ClaimsMappingPolicy> pageContents, @Nullable final ClaimsMappingPolicyCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }
