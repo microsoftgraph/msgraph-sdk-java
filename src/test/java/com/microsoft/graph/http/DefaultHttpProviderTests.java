@@ -28,13 +28,19 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
+import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.Maps;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import org.junit.Test;
 
 import com.google.gson.JsonObject;
@@ -58,6 +64,7 @@ public class DefaultHttpProviderTests {
 
     private MockAuthenticationProvider mAuthenticationProvider;
     private DefaultHttpProvider mProvider;
+    private Gson GSON = new GsonBuilder().create();
 
     @Test
     public void testNoContentType() throws Exception {
@@ -368,6 +375,26 @@ public class DefaultHttpProviderTests {
     public void testHasHeaderReturnsFalse() {
         HeaderOption h = new HeaderOption("name", "value");
         assertFalse(DefaultHttpProvider.hasHeader(Arrays.asList(h), "blah"));
+    }
+
+    @Test
+    public void testStreamToStringReturnsData() {
+        String data = GSON.toJson(Maps.newHashMap(
+                ImmutableMap.<String, String>builder()
+                        .put("key", "value")
+                        .build()));
+        final InputStream inputStream = new ByteArrayInputStream(data.getBytes(StandardCharsets.UTF_8));
+
+        String convertedData = DefaultHttpProvider.streamToString(inputStream);
+        assertEquals(data, convertedData);
+    }
+
+    @Test
+    public void testStreamToStringReturnsEmpty() {
+        final InputStream inputStream = new ByteArrayInputStream(new byte[0]);
+
+        String convertedData = DefaultHttpProvider.streamToString(inputStream);
+        assertEquals("", convertedData);
     }
     
 
