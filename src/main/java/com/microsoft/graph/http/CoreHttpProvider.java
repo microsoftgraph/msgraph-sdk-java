@@ -555,13 +555,12 @@ public class CoreHttpProvider implements IHttpProvider {
 	public static String streamToString(final InputStream input) {
 		final String httpStreamEncoding = "UTF-8";
 		final String endOfFile = "\\A";
-		final Scanner scanner = new Scanner(input, httpStreamEncoding);
 		String scannerString = "";
-		try {
+		try (final Scanner scanner = new Scanner(input, httpStreamEncoding)) {
 			scanner.useDelimiter(endOfFile);
-			scannerString = scanner.next();
-		} finally {
-			scanner.close();
+			if (scanner.hasNext()) {
+				scannerString = scanner.next();
+			}
 		}
 		return scannerString;
 	}
