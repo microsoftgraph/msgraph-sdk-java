@@ -9,10 +9,13 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.models.extensions.AssignedLicense;
+import com.microsoft.graph.models.extensions.ResourceSpecificPermissionGrant;
 import com.microsoft.graph.requests.extensions.IAppRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.IResourceSpecificPermissionGrantCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IResourceSpecificPermissionGrantRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupSettingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupSettingRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEventCollectionRequestBuilder;
@@ -184,6 +187,10 @@ public interface IGroupRequestBuilder extends IRequestBuilder {
 
     IOrgContactWithReferenceRequestBuilder ownersAsOrgContact(final String id);
 
+    IResourceSpecificPermissionGrantCollectionRequestBuilder permissionGrants();
+
+    IResourceSpecificPermissionGrantRequestBuilder permissionGrants(final String id);
+
     IGroupSettingCollectionRequestBuilder settings();
 
     IGroupSettingRequestBuilder settings(final String id);
@@ -330,6 +337,8 @@ public interface IGroupRequestBuilder extends IRequestBuilder {
      */
     ITeamRequestBuilder team();
     IGroupAssignLicenseRequestBuilder assignLicense(final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses);
+
+    IGroupCheckGrantedPermissionsForAppCollectionRequestBuilder checkGrantedPermissionsForApp();
     IGroupValidatePropertiesRequestBuilder validateProperties(final String displayName, final String mailNickname, final java.util.UUID onBehalfOfUserId);
     IGroupAddFavoriteRequestBuilder addFavorite();
     IGroupRemoveFavoriteRequestBuilder removeFavorite();

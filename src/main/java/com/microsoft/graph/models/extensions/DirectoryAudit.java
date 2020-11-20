@@ -92,7 +92,7 @@ public class DirectoryAudit extends Entity implements IJsonBackedObject {
 
     /**
      * The Result.
-     * Indicates the result of the activity.Possible values are: success, failure, timeout, unknownFutureValue.
+     * Indicates the result of the activity. Possible values are: success, failure, timeout, unknownFutureValue.
      */
     @SerializedName(value = "result", alternate = {"Result"})
     @Expose

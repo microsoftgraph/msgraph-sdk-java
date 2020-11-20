@@ -7,7 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.ServicePrincipal;
+import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.models.extensions.AppRoleAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -26,7 +26,7 @@ import com.microsoft.graph.core.IBaseClient;
 public class AppRoleAssignmentCollectionRequestBuilder extends BaseRequestBuilder implements IAppRoleAssignmentCollectionRequestBuilder {
 
     /**
-     * The request builder for this collection of ServicePrincipal
+     * The request builder for this collection of Group
      *
      * @param requestUrl     the request URL
      * @param client         the service client

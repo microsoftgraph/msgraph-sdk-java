@@ -263,6 +263,14 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
     public String servicePrincipalType;
 
     /**
+     * The Sign In Audience.
+     * 
+     */
+    @SerializedName(value = "signInAudience", alternate = {"SignInAudience"})
+    @Expose
+    public String signInAudience;
+
+    /**
      * The Tags.
      * Custom strings that can be used to categorize and identify the service principal. Not nullable.
      */

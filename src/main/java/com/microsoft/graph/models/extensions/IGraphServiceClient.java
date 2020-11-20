@@ -43,6 +43,8 @@ import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantCollectionR
 import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOrganizationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOrganizationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IResourceSpecificPermissionGrantCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IResourceSpecificPermissionGrantRequestBuilder;
 import com.microsoft.graph.requests.extensions.IScopedRoleMembershipCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IScopedRoleMembershipRequestBuilder;
 import com.microsoft.graph.requests.extensions.IServicePrincipalCollectionRequestBuilder;
@@ -82,6 +84,7 @@ import com.microsoft.graph.requests.extensions.ICloudCommunicationsRequestBuilde
 import com.microsoft.graph.requests.extensions.IDeviceAppManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReportRootRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISearchEntityRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecurityRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppCatalogsRequestBuilder;

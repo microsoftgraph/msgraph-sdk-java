@@ -13,6 +13,7 @@ import com.microsoft.graph.models.extensions.LicenseProcessingState;
 import com.microsoft.graph.models.extensions.OnPremisesProvisioningError;
 import com.microsoft.graph.models.extensions.AppRoleAssignment;
 import com.microsoft.graph.models.extensions.DirectoryObject;
+import com.microsoft.graph.models.extensions.ResourceSpecificPermissionGrant;
 import com.microsoft.graph.models.extensions.GroupSetting;
 import com.microsoft.graph.models.extensions.Calendar;
 import com.microsoft.graph.models.extensions.Event;
@@ -28,6 +29,7 @@ import com.microsoft.graph.models.extensions.Onenote;
 import com.microsoft.graph.models.extensions.Team;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
+import com.microsoft.graph.requests.extensions.ResourceSpecificPermissionGrantCollectionPage;
 import com.microsoft.graph.requests.extensions.GroupSettingCollectionPage;
 import com.microsoft.graph.requests.extensions.EventCollectionPage;
 import com.microsoft.graph.requests.extensions.ConversationCollectionPage;
@@ -388,6 +390,14 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     public DirectoryObjectCollectionPage owners;
 
     /**
+     * The Permission Grants.
+     * 
+     */
+    @SerializedName(value = "permissionGrants", alternate = {"PermissionGrants"})
+    @Expose
+    public ResourceSpecificPermissionGrantCollectionPage permissionGrants;
+
+    /**
      * The Settings.
      * Read-only. Nullable.
      */
@@ -601,6 +611,10 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
         if (json.has("owners")) {
             owners = serializer.deserializeObject(json.get("owners").toString(), DirectoryObjectCollectionPage.class);
+        }
+
+        if (json.has("permissionGrants")) {
+            permissionGrants = serializer.deserializeObject(json.get("permissionGrants").toString(), ResourceSpecificPermissionGrantCollectionPage.class);
         }
 
         if (json.has("settings")) {

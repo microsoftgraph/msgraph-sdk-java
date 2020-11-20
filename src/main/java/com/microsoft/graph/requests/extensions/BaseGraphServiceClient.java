@@ -79,6 +79,10 @@ import com.microsoft.graph.requests.extensions.IOrganizationCollectionRequestBui
 import com.microsoft.graph.requests.extensions.IOrganizationRequestBuilder;
 import com.microsoft.graph.requests.extensions.OrganizationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OrganizationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IResourceSpecificPermissionGrantCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IResourceSpecificPermissionGrantRequestBuilder;
+import com.microsoft.graph.requests.extensions.ResourceSpecificPermissionGrantCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ResourceSpecificPermissionGrantRequestBuilder;
 import com.microsoft.graph.requests.extensions.IScopedRoleMembershipCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IScopedRoleMembershipRequestBuilder;
 import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionRequestBuilder;
@@ -157,6 +161,8 @@ import com.microsoft.graph.requests.extensions.IDeviceManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReportRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.ReportRootRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISearchEntityRequestBuilder;
+import com.microsoft.graph.requests.extensions.SearchEntityRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecurityRequestBuilder;
@@ -542,6 +548,25 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      */
     public IOrganizationRequestBuilder organization(final String id) {
         return new OrganizationRequestBuilder(getServiceRoot() + "/organization/" + id, this, null);
+    }
+
+    /**
+     * Gets the collection of PermissionGrants objects
+     *
+     * @return the request builder for the collection of PermissionGrants objects
+     */
+    public IResourceSpecificPermissionGrantCollectionRequestBuilder permissionGrants() {
+        return new ResourceSpecificPermissionGrantCollectionRequestBuilder(getServiceRoot() + "/permissionGrants", this, null);
+    }
+
+    /**
+     * Gets a single PermissionGrants
+     *
+     * @param id the id of the PermissionGrants to retrieve
+     * @return the request builder for the PermissionGrants object
+     */
+    public IResourceSpecificPermissionGrantRequestBuilder permissionGrants(final String id) {
+        return new ResourceSpecificPermissionGrantRequestBuilder(getServiceRoot() + "/permissionGrants/" + id, this, null);
     }
 
     /**
@@ -931,6 +956,15 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     /**
      * Gets the GraphServiceRequestBuilder
      *
+     * @return the SearchEntity
+     */
+    public ISearchEntityRequestBuilder search() {
+        return new SearchEntityRequestBuilder(getServiceRoot() + "/search", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
      * @return the Planner
      */
     public IPlannerRequestBuilder planner() {
@@ -943,7 +977,7 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @return the Security
      */
     public ISecurityRequestBuilder Security() {
-        return new SecurityRequestBuilder(getServiceRoot() + "/Security", this, null);
+        return new SecurityRequestBuilder(getServiceRoot() + "/security", this, null);
     }
 
     /**

@@ -24,7 +24,7 @@ public class LinkedResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Application Name.
-     * 
+     * Field indicating the app name of the source that is sending the linkedResource.
      */
     @SerializedName(value = "applicationName", alternate = {"ApplicationName"})
     @Expose
@@ -32,7 +32,7 @@ public class LinkedResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Field indicating the title of the linkedResource.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -40,7 +40,7 @@ public class LinkedResource extends Entity implements IJsonBackedObject {
 
     /**
      * The External Id.
-     * 
+     * Id of the object that is associated with this task on the third-party/partner system.
      */
     @SerializedName(value = "externalId", alternate = {"ExternalId"})
     @Expose
@@ -48,7 +48,7 @@ public class LinkedResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Web Url.
-     * 
+     * Deep link to the linkedResource.
      */
     @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose
