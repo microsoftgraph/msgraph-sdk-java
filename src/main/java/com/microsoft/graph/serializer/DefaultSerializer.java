@@ -331,6 +331,7 @@ public class DefaultSerializer implements ISerializer {
 		}
 	}
 	
+	private final static String ODATA_TYPE_KEY = "@odata.type";
 	/**
 	 * Get the derived class for the given JSON object
 	 * This covers scenarios in which the service may return one of several derived types
@@ -340,7 +341,6 @@ public class DefaultSerializer implements ISerializer {
 	 * @param parentClass the parent class the derived class should inherit from
 	 * @return			the derived class if found, or null if not applicable
 	 */
-	private final static String ODATA_TYPE_KEY = "@odata.type";
 	@Nullable
 	public Class<?> getDerivedClass(@Nonnull final JsonObject jsonObject, @Nonnull final Class<?> parentClass) {
 		//Identify the odata.type information if provided
@@ -371,6 +371,11 @@ public class DefaultSerializer implements ISerializer {
 		return null;
 	}
 
+	/**
+	 * Gets the logger in use
+	 * 
+	 * @return a logger
+	 */
 	@VisibleForTesting
 	@Nullable
 	public ILogger getLogger() {

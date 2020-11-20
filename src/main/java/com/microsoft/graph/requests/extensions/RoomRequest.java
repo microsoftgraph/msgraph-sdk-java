@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Room Request.
  */
-public class RoomRequest extends BaseRequest {
+public class RoomRequest extends BaseRequest<Room> {
 	
     /**
      * The request for the Room
@@ -146,8 +146,8 @@ public class RoomRequest extends BaseRequest {
      */
      @Nonnull
      public RoomRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (RoomRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class RoomRequest extends BaseRequest {
      */
      @Nonnull
      public RoomRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (RoomRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
+import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.requests.extensions.ReportRootGetSharePointSiteUsageFileCountsRequest;
 
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Share Point Site Usage File Counts Request.
  */
-public class ReportRootGetSharePointSiteUsageFileCountsRequest extends BaseRequest {
+public class ReportRootGetSharePointSiteUsageFileCountsRequest extends BaseRequest<Report> {
 
     /**
      * The request for this ReportRootGetSharePointSiteUsageFileCounts
@@ -103,8 +104,8 @@ public class ReportRootGetSharePointSiteUsageFileCountsRequest extends BaseReque
      */
     @Nonnull
     public ReportRootGetSharePointSiteUsageFileCountsRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ReportRootGetSharePointSiteUsageFileCountsRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +116,8 @@ public class ReportRootGetSharePointSiteUsageFileCountsRequest extends BaseReque
      */
     @Nonnull
     public ReportRootGetSharePointSiteUsageFileCountsRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ReportRootGetSharePointSiteUsageFileCountsRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +128,8 @@ public class ReportRootGetSharePointSiteUsageFileCountsRequest extends BaseReque
      */
     @Nonnull
     public ReportRootGetSharePointSiteUsageFileCountsRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ReportRootGetSharePointSiteUsageFileCountsRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +140,8 @@ public class ReportRootGetSharePointSiteUsageFileCountsRequest extends BaseReque
      */
     @Nonnull
     public ReportRootGetSharePointSiteUsageFileCountsRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ReportRootGetSharePointSiteUsageFileCountsRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

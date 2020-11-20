@@ -68,8 +68,9 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

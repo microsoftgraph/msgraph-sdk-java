@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Audit Log Root Request Builder.
  */
-public class AuditLogRootRequestBuilder extends BaseRequestBuilder {
+public class AuditLogRootRequestBuilder extends BaseRequestBuilder<AuditLogRoot> {
 
     /**
      * The request builder for the AuditLogRoot
@@ -62,29 +62,62 @@ public class AuditLogRootRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the DirectoryAudit collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public DirectoryAuditCollectionRequestBuilder directoryAudits() {
         return new DirectoryAuditCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("directoryAudits"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DirectoryAudit item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public DirectoryAuditRequestBuilder directoryAudits(@Nonnull final String id) {
         return new DirectoryAuditRequestBuilder(getRequestUrlWithAdditionalSegment("directoryAudits") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the RestrictedSignIn collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public RestrictedSignInCollectionRequestBuilder restrictedSignIns() {
         return new RestrictedSignInCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("restrictedSignIns"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the RestrictedSignIn item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public RestrictedSignInRequestBuilder restrictedSignIns(@Nonnull final String id) {
         return new RestrictedSignInRequestBuilder(getRequestUrlWithAdditionalSegment("restrictedSignIns") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the SignIn collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public SignInCollectionRequestBuilder signIns() {
         return new SignInCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("signIns"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the SignIn item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public SignInRequestBuilder signIns(@Nonnull final String id) {
         return new SignInRequestBuilder(getRequestUrlWithAdditionalSegment("signIns") + "/" + id, getClient(), null);

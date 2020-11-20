@@ -65,7 +65,7 @@ public class WorkbookFunctionsOct2HexBody {
      * @return the serializer
      */
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

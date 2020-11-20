@@ -29,7 +29,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Contact Folder Request.
  */
-public class ContactFolderRequest extends BaseRequest {
+public class ContactFolderRequest extends BaseRequest<ContactFolder> {
 	
     /**
      * The request for the ContactFolder
@@ -154,8 +154,8 @@ public class ContactFolderRequest extends BaseRequest {
      */
      @Nonnull
      public ContactFolderRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ContactFolderRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -166,8 +166,8 @@ public class ContactFolderRequest extends BaseRequest {
      */
      @Nonnull
      public ContactFolderRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ContactFolderRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

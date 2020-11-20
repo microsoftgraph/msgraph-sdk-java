@@ -25,6 +25,8 @@ import org.junit.Test;
 import com.microsoft.graph.concurrency.ChunkedUploadProvider;
 import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.extensions.Attachment;
 import com.microsoft.graph.models.extensions.AttachmentItem;
 import com.microsoft.graph.models.extensions.Attendee;
 import com.microsoft.graph.models.extensions.AttendeeBase;
@@ -43,14 +45,14 @@ import com.microsoft.graph.models.extensions.UploadSession;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.generated.AttachmentType;
 import com.microsoft.graph.models.generated.BodyType;
-import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
-import com.microsoft.graph.requests.extensions.MessageCollectionPage;
-import com.microsoft.graph.requests.extensions.UserCollectionPage;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionPage;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionResponse;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionResponse;
+import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
+import com.microsoft.graph.requests.extensions.MessageCollectionPage;
 import com.microsoft.graph.requests.extensions.EventCollectionPage;
+import com.microsoft.graph.requests.extensions.UserCollectionPage;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionPage;
 
 @Ignore
 public class OutlookTests {

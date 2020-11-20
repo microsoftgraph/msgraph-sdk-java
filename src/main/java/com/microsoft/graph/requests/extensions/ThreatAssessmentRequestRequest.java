@@ -23,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Threat Assessment Request Request.
  */
-public class ThreatAssessmentRequestRequest extends BaseRequest {
+public class ThreatAssessmentRequestRequest extends BaseRequest<ThreatAssessmentRequest> {
 	
     /**
      * The request for the ThreatAssessmentRequest
@@ -163,8 +163,8 @@ public class ThreatAssessmentRequestRequest extends BaseRequest {
      */
      @Nonnull
      public ThreatAssessmentRequestRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ThreatAssessmentRequestRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -175,8 +175,8 @@ public class ThreatAssessmentRequestRequest extends BaseRequest {
      */
      @Nonnull
      public ThreatAssessmentRequestRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ThreatAssessmentRequestRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

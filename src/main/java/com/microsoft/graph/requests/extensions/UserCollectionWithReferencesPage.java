@@ -50,7 +50,17 @@ public class UserCollectionWithReferencesPage extends BaseCollectionPage<User, U
      * @param response the serialized UserCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public UserCollectionWithReferencesPage(@Nonnull final UserCollectionResponse response, @Nonnull  final UserCollectionWithReferencesRequestBuilder builder) {
+    public UserCollectionWithReferencesPage(@Nonnull final UserCollectionResponse response, @Nullable final UserCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
+    }
+
+    /**
+     * Creates the collection page for User
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public UserCollectionWithReferencesPage(@Nonnull final java.util.List<User> pageContents, @Nullable final UserCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
     }
 }

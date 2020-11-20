@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
+import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.requests.extensions.ReportRootGetEmailAppUsageVersionsUserCountsRequest;
 
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Email App Usage Versions User Counts Request.
  */
-public class ReportRootGetEmailAppUsageVersionsUserCountsRequest extends BaseRequest {
+public class ReportRootGetEmailAppUsageVersionsUserCountsRequest extends BaseRequest<Report> {
 
     /**
      * The request for this ReportRootGetEmailAppUsageVersionsUserCounts
@@ -103,8 +104,8 @@ public class ReportRootGetEmailAppUsageVersionsUserCountsRequest extends BaseReq
      */
     @Nonnull
     public ReportRootGetEmailAppUsageVersionsUserCountsRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ReportRootGetEmailAppUsageVersionsUserCountsRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +116,8 @@ public class ReportRootGetEmailAppUsageVersionsUserCountsRequest extends BaseReq
      */
     @Nonnull
     public ReportRootGetEmailAppUsageVersionsUserCountsRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ReportRootGetEmailAppUsageVersionsUserCountsRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +128,8 @@ public class ReportRootGetEmailAppUsageVersionsUserCountsRequest extends BaseReq
      */
     @Nonnull
     public ReportRootGetEmailAppUsageVersionsUserCountsRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ReportRootGetEmailAppUsageVersionsUserCountsRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +140,8 @@ public class ReportRootGetEmailAppUsageVersionsUserCountsRequest extends BaseReq
      */
     @Nonnull
     public ReportRootGetEmailAppUsageVersionsUserCountsRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ReportRootGetEmailAppUsageVersionsUserCountsRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

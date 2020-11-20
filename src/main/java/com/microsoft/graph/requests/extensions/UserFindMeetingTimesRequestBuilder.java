@@ -4,12 +4,12 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.UserFindMeetingTimesRequest;
+import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.extensions.AttendeeBase;
 import com.microsoft.graph.models.extensions.LocationConstraint;
 import com.microsoft.graph.models.extensions.TimeConstraint;
 import com.microsoft.graph.models.extensions.MeetingTimeSuggestionsResult;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
+import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the User Find Meeting Times Request Builder.
  */
-public class UserFindMeetingTimesRequestBuilder extends BaseActionRequestBuilder {
+public class UserFindMeetingTimesRequestBuilder extends BaseActionRequestBuilder<MeetingTimeSuggestionsResult> {
 
     /**
      * The request builder for this UserFindMeetingTimes

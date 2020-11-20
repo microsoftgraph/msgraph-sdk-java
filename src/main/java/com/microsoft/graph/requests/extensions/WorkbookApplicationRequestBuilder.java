@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Application Request Builder.
  */
-public class WorkbookApplicationRequestBuilder extends BaseRequestBuilder {
+public class WorkbookApplicationRequestBuilder extends BaseRequestBuilder<WorkbookApplication> {
 
     /**
      * The request builder for the WorkbookApplication
@@ -57,6 +57,11 @@ public class WorkbookApplicationRequestBuilder extends BaseRequestBuilder {
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param calculationType the calculationType
+     */
     @Nonnull
     public WorkbookApplicationCalculateRequestBuilder calculate(@Nullable final String calculationType) {
         return new WorkbookApplicationCalculateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.calculate"), getClient(), null, calculationType);

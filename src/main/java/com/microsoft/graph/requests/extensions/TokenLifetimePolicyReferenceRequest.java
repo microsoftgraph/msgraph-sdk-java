@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Token Lifetime Policy Reference Request.
  */
-public class TokenLifetimePolicyReferenceRequest extends BaseRequest {
+public class TokenLifetimePolicyReferenceRequest extends BaseReferenceRequest<TokenLifetimePolicy> {
 
     /**
      * The request for the TokenLifetimePolicy
@@ -36,15 +36,6 @@ public class TokenLifetimePolicyReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, TokenLifetimePolicy.class);
     }
 
-    public void delete(@Nonnull final ICallback<? super TokenLifetimePolicy> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    @Nullable
-    public TokenLifetimePolicy delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
-    }
-
     /**
      * Sets the select clause for the request
      *
@@ -53,8 +44,8 @@ public class TokenLifetimePolicyReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public TokenLifetimePolicyReferenceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (TokenLifetimePolicyReferenceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +56,8 @@ public class TokenLifetimePolicyReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public TokenLifetimePolicyReferenceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (TokenLifetimePolicyReferenceRequest)this;
+        addExpandOption(value);
+        return this;
     }
     /**
      * Puts the TokenLifetimePolicy

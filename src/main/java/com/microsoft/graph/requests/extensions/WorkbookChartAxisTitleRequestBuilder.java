@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Chart Axis Title Request Builder.
  */
-public class WorkbookChartAxisTitleRequestBuilder extends BaseRequestBuilder {
+public class WorkbookChartAxisTitleRequestBuilder extends BaseRequestBuilder<WorkbookChartAxisTitle> {
 
     /**
      * The request builder for the WorkbookChartAxisTitle

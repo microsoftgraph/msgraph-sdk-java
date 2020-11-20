@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Endpoint Request Builder.
  */
-public class EndpointRequestBuilder extends BaseRequestBuilder {
+public class EndpointRequestBuilder extends BaseRequestBuilder<Endpoint> {
 
     /**
      * The request builder for the Endpoint

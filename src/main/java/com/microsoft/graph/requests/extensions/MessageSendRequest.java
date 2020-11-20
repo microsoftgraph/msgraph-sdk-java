@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.requests.extensions.MessageSendRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Message Send Request.
  */
-public class MessageSendRequest extends BaseRequest {
+public class MessageSendRequest extends BaseRequest<Void> {
 
     /**
      * The request for this MessageSend

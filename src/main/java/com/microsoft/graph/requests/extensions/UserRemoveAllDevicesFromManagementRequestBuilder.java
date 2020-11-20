@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.UserRemoveAllDevicesFromManagementRequest;
+import com.microsoft.graph.models.extensions.User;
 
-import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
+import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the User Remove All Devices From Management Request Builder.
  */
-public class UserRemoveAllDevicesFromManagementRequestBuilder extends BaseActionRequestBuilder {
+public class UserRemoveAllDevicesFromManagementRequestBuilder extends BaseActionRequestBuilder<User> {
 
     /**
      * The request builder for this UserRemoveAllDevicesFromManagement

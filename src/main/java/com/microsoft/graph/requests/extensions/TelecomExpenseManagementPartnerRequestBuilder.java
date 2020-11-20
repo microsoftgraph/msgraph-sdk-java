@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Telecom Expense Management Partner Request Builder.
  */
-public class TelecomExpenseManagementPartnerRequestBuilder extends BaseRequestBuilder {
+public class TelecomExpenseManagementPartnerRequestBuilder extends BaseRequestBuilder<TelecomExpenseManagementPartner> {
 
     /**
      * The request builder for the TelecomExpenseManagementPartner

@@ -20,7 +20,8 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Service Principal Remove Password Request.
  */
-public class ServicePrincipalRemovePasswordRequest extends BaseRequest {
+public class ServicePrincipalRemovePasswordRequest extends BaseRequest<Void> {
+    /** The body for the method */
     protected final ServicePrincipalRemovePasswordBody body;
 
     /**
@@ -35,10 +36,18 @@ public class ServicePrincipalRemovePasswordRequest extends BaseRequest {
         body = new ServicePrincipalRemovePasswordBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(@Nonnull final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     @Nullable
     public Void post() throws ClientException {
         return send(HttpMethod.POST, body);
@@ -52,8 +61,8 @@ public class ServicePrincipalRemovePasswordRequest extends BaseRequest {
      */
     @Nonnull
     public ServicePrincipalRemovePasswordRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ServicePrincipalRemovePasswordRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -64,8 +73,8 @@ public class ServicePrincipalRemovePasswordRequest extends BaseRequest {
      */
     @Nonnull
     public ServicePrincipalRemovePasswordRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (ServicePrincipalRemovePasswordRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -76,8 +85,8 @@ public class ServicePrincipalRemovePasswordRequest extends BaseRequest {
      */
     @Nonnull
     public ServicePrincipalRemovePasswordRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ServicePrincipalRemovePasswordRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

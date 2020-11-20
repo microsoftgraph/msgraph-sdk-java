@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Configuration Device State Summary Request.
  */
-public class DeviceConfigurationDeviceStateSummaryRequest extends BaseRequest {
+public class DeviceConfigurationDeviceStateSummaryRequest extends BaseRequest<DeviceConfigurationDeviceStateSummary> {
 	
     /**
      * The request for the DeviceConfigurationDeviceStateSummary
@@ -146,8 +146,8 @@ public class DeviceConfigurationDeviceStateSummaryRequest extends BaseRequest {
      */
      @Nonnull
      public DeviceConfigurationDeviceStateSummaryRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceConfigurationDeviceStateSummaryRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class DeviceConfigurationDeviceStateSummaryRequest extends BaseRequest {
      */
      @Nonnull
      public DeviceConfigurationDeviceStateSummaryRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceConfigurationDeviceStateSummaryRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

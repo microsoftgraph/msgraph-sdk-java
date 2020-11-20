@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Teams Template Request.
  */
-public class TeamsTemplateRequest extends BaseRequest {
+public class TeamsTemplateRequest extends BaseRequest<TeamsTemplate> {
 	
     /**
      * The request for the TeamsTemplate
@@ -146,8 +146,8 @@ public class TeamsTemplateRequest extends BaseRequest {
      */
      @Nonnull
      public TeamsTemplateRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TeamsTemplateRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class TeamsTemplateRequest extends BaseRequest {
      */
      @Nonnull
      public TeamsTemplateRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TeamsTemplateRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

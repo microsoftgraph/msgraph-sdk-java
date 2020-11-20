@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Schema Extension Request Builder.
  */
-public class SchemaExtensionRequestBuilder extends BaseRequestBuilder {
+public class SchemaExtensionRequestBuilder extends BaseRequestBuilder<SchemaExtension> {
 
     /**
      * The request builder for the SchemaExtension

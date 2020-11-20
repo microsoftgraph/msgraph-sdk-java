@@ -66,11 +66,19 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
 				JsonObject.class);
 	}
 
+	/**
+	 * Gets the builder to start configuring the client
+	 * 
+	 * @return builder to start configuring the client
+	 */
 	@Nonnull
 	public static Builder<OkHttpClient> builder() {
 		return new Builder<OkHttpClient>();
 	}
 
+	/**
+	 * Builder to help configure the Graph service client
+	 */
 	public static final class Builder<httpClientType> {
 		private ISerializer serializer;
 		private IHttpProvider httpProvider;
@@ -246,6 +254,12 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
 		}
 	}
 	
+	/**
+	 * Checks whether the provided object is null or not and throws an exception if it is
+	 * 
+	 * @param o object to check
+	 * @param name name to use in the exception message
+	 */
 	protected static void checkNotNull(@Nullable final Object o, @Nonnull final String name) {
 		if (o==null) {
 			throw new NullPointerException(name + " cannot be null");

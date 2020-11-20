@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.WorkbookTableHeaderRowRangeRequest;
+import com.microsoft.graph.models.extensions.WorkbookTable;
 import com.microsoft.graph.models.extensions.WorkbookRange;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
+import com.microsoft.graph.http.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Workbook Table Header Row Range Request Builder.
  */
-public class WorkbookTableHeaderRowRangeRequestBuilder extends BaseFunctionRequestBuilder {
+public class WorkbookTableHeaderRowRangeRequestBuilder extends BaseFunctionRequestBuilder<WorkbookRange> {
 
     /**
      * The request builder for this WorkbookTableHeaderRowRange

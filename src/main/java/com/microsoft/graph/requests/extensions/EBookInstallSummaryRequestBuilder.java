@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the EBook Install Summary Request Builder.
  */
-public class EBookInstallSummaryRequestBuilder extends BaseRequestBuilder {
+public class EBookInstallSummaryRequestBuilder extends BaseRequestBuilder<EBookInstallSummary> {
 
     /**
      * The request builder for the EBookInstallSummary

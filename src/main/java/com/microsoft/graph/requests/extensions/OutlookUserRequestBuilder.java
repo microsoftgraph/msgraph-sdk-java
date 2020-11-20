@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Outlook User Request Builder.
  */
-public class OutlookUserRequestBuilder extends BaseRequestBuilder {
+public class OutlookUserRequestBuilder extends BaseRequestBuilder<OutlookUser> {
 
     /**
      * The request builder for the OutlookUser
@@ -61,26 +61,50 @@ public class OutlookUserRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the OutlookCategory collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public OutlookCategoryCollectionRequestBuilder masterCategories() {
         return new OutlookCategoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("masterCategories"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the OutlookCategory item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public OutlookCategoryRequestBuilder masterCategories(@Nonnull final String id) {
         return new OutlookCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("masterCategories") + "/" + id, getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
     @Nonnull
     public OutlookUserSupportedLanguagesCollectionRequestBuilder supportedLanguages() {
         return new OutlookUserSupportedLanguagesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.supportedLanguages"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
     @Nonnull
     public OutlookUserSupportedTimeZonesCollectionRequestBuilder supportedTimeZones() {
         return new OutlookUserSupportedTimeZonesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.supportedTimeZones"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param timeZoneStandard the timeZoneStandard
+     */
     @Nonnull
     public OutlookUserSupportedTimeZonesCollectionRequestBuilder supportedTimeZones(@Nullable final TimeZoneStandard timeZoneStandard) {
         return new OutlookUserSupportedTimeZonesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.supportedTimeZones"), getClient(), null, timeZoneStandard);

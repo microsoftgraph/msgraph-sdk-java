@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Compliance Action Item Request Builder.
  */
-public class DeviceComplianceActionItemRequestBuilder extends BaseRequestBuilder {
+public class DeviceComplianceActionItemRequestBuilder extends BaseRequestBuilder<DeviceComplianceActionItem> {
 
     /**
      * The request builder for the DeviceComplianceActionItem

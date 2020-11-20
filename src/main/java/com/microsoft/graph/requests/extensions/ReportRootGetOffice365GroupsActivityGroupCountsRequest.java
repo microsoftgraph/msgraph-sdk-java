@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
+import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.requests.extensions.ReportRootGetOffice365GroupsActivityGroupCountsRequest;
 
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Office365Groups Activity Group Counts Request.
  */
-public class ReportRootGetOffice365GroupsActivityGroupCountsRequest extends BaseRequest {
+public class ReportRootGetOffice365GroupsActivityGroupCountsRequest extends BaseRequest<Report> {
 
     /**
      * The request for this ReportRootGetOffice365GroupsActivityGroupCounts
@@ -103,8 +104,8 @@ public class ReportRootGetOffice365GroupsActivityGroupCountsRequest extends Base
      */
     @Nonnull
     public ReportRootGetOffice365GroupsActivityGroupCountsRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ReportRootGetOffice365GroupsActivityGroupCountsRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +116,8 @@ public class ReportRootGetOffice365GroupsActivityGroupCountsRequest extends Base
      */
     @Nonnull
     public ReportRootGetOffice365GroupsActivityGroupCountsRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ReportRootGetOffice365GroupsActivityGroupCountsRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +128,8 @@ public class ReportRootGetOffice365GroupsActivityGroupCountsRequest extends Base
      */
     @Nonnull
     public ReportRootGetOffice365GroupsActivityGroupCountsRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ReportRootGetOffice365GroupsActivityGroupCountsRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +140,8 @@ public class ReportRootGetOffice365GroupsActivityGroupCountsRequest extends Base
      */
     @Nonnull
     public ReportRootGetOffice365GroupsActivityGroupCountsRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ReportRootGetOffice365GroupsActivityGroupCountsRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

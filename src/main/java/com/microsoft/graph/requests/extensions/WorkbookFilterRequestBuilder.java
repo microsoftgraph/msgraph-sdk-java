@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Filter Request Builder.
  */
-public class WorkbookFilterRequestBuilder extends BaseRequestBuilder {
+public class WorkbookFilterRequestBuilder extends BaseRequestBuilder<WorkbookFilter> {
 
     /**
      * The request builder for the WorkbookFilter
@@ -59,61 +59,122 @@ public class WorkbookFilterRequestBuilder extends BaseRequestBuilder {
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param criteria the criteria
+     */
     @Nonnull
     public WorkbookFilterApplyRequestBuilder apply(@Nullable final WorkbookFilterCriteria criteria) {
         return new WorkbookFilterApplyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.apply"), getClient(), null, criteria);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param count the count
+     */
     @Nonnull
     public WorkbookFilterApplyBottomItemsFilterRequestBuilder applyBottomItemsFilter(@Nullable final Integer count) {
         return new WorkbookFilterApplyBottomItemsFilterRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.applyBottomItemsFilter"), getClient(), null, count);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param percent the percent
+     */
     @Nonnull
     public WorkbookFilterApplyBottomPercentFilterRequestBuilder applyBottomPercentFilter(@Nullable final Integer percent) {
         return new WorkbookFilterApplyBottomPercentFilterRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.applyBottomPercentFilter"), getClient(), null, percent);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param color the color
+     */
     @Nonnull
     public WorkbookFilterApplyCellColorFilterRequestBuilder applyCellColorFilter(@Nullable final String color) {
         return new WorkbookFilterApplyCellColorFilterRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.applyCellColorFilter"), getClient(), null, color);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param criteria1 the criteria1
+     * @param criteria2 the criteria2
+     * @param oper the oper
+     */
     @Nonnull
     public WorkbookFilterApplyCustomFilterRequestBuilder applyCustomFilter(@Nullable final String criteria1, @Nullable final String criteria2, @Nullable final String oper) {
         return new WorkbookFilterApplyCustomFilterRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.applyCustomFilter"), getClient(), null, criteria1, criteria2, oper);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param criteria the criteria
+     */
     @Nonnull
     public WorkbookFilterApplyDynamicFilterRequestBuilder applyDynamicFilter(@Nullable final String criteria) {
         return new WorkbookFilterApplyDynamicFilterRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.applyDynamicFilter"), getClient(), null, criteria);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param color the color
+     */
     @Nonnull
     public WorkbookFilterApplyFontColorFilterRequestBuilder applyFontColorFilter(@Nullable final String color) {
         return new WorkbookFilterApplyFontColorFilterRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.applyFontColorFilter"), getClient(), null, color);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param icon the icon
+     */
     @Nonnull
     public WorkbookFilterApplyIconFilterRequestBuilder applyIconFilter(@Nullable final WorkbookIcon icon) {
         return new WorkbookFilterApplyIconFilterRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.applyIconFilter"), getClient(), null, icon);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param count the count
+     */
     @Nonnull
     public WorkbookFilterApplyTopItemsFilterRequestBuilder applyTopItemsFilter(@Nullable final Integer count) {
         return new WorkbookFilterApplyTopItemsFilterRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.applyTopItemsFilter"), getClient(), null, count);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param percent the percent
+     */
     @Nonnull
     public WorkbookFilterApplyTopPercentFilterRequestBuilder applyTopPercentFilter(@Nullable final Integer percent) {
         return new WorkbookFilterApplyTopPercentFilterRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.applyTopPercentFilter"), getClient(), null, percent);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFilterApplyValuesFilterRequestBuilder applyValuesFilter(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFilterApplyValuesFilterRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.applyValuesFilter"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookFilterClearRequestBuilder clear() {
         return new WorkbookFilterClearRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.clear"), getClient(), null);

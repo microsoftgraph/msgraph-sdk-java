@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.requests.extensions.GroupSubscribeByMailRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Group Subscribe By Mail Request.
  */
-public class GroupSubscribeByMailRequest extends BaseRequest {
+public class GroupSubscribeByMailRequest extends BaseRequest<Void> {
 
     /**
      * The request for this GroupSubscribeByMail

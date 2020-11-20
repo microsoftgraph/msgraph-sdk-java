@@ -87,8 +87,9 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements IJsonBa
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

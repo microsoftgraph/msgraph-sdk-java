@@ -20,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range View Item At Request.
  */
-public class WorkbookRangeViewItemAtRequest extends BaseRequest {
+public class WorkbookRangeViewItemAtRequest extends BaseRequest<WorkbookRangeView> {
 
     /**
      * The request for this WorkbookRangeViewItemAt
@@ -103,8 +103,8 @@ public class WorkbookRangeViewItemAtRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeViewItemAtRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookRangeViewItemAtRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +115,8 @@ public class WorkbookRangeViewItemAtRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeViewItemAtRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookRangeViewItemAtRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +127,8 @@ public class WorkbookRangeViewItemAtRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeViewItemAtRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookRangeViewItemAtRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +139,8 @@ public class WorkbookRangeViewItemAtRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeViewItemAtRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookRangeViewItemAtRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

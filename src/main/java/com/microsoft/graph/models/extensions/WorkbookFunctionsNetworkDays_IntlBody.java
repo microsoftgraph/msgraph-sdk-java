@@ -83,7 +83,7 @@ public class WorkbookFunctionsNetworkDays_IntlBody {
      * @return the serializer
      */
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

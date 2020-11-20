@@ -20,7 +20,8 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Message Reply Request.
  */
-public class MessageReplyRequest extends BaseRequest {
+public class MessageReplyRequest extends BaseRequest<Void> {
+    /** The body for the method */
     protected final MessageReplyBody body;
 
     /**
@@ -35,10 +36,18 @@ public class MessageReplyRequest extends BaseRequest {
         body = new MessageReplyBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(@Nonnull final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     @Nullable
     public Void post() throws ClientException {
         return send(HttpMethod.POST, body);
@@ -52,8 +61,8 @@ public class MessageReplyRequest extends BaseRequest {
      */
     @Nonnull
     public MessageReplyRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (MessageReplyRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -64,8 +73,8 @@ public class MessageReplyRequest extends BaseRequest {
      */
     @Nonnull
     public MessageReplyRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (MessageReplyRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -76,8 +85,8 @@ public class MessageReplyRequest extends BaseRequest {
      */
     @Nonnull
     public MessageReplyRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (MessageReplyRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.WorkbookRangeFormat;
 import com.microsoft.graph.requests.extensions.WorkbookRangeFormatAutofitRowsRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Format Autofit Rows Request.
  */
-public class WorkbookRangeFormatAutofitRowsRequest extends BaseRequest {
+public class WorkbookRangeFormatAutofitRowsRequest extends BaseRequest<Void> {
 
     /**
      * The request for this WorkbookRangeFormatAutofitRows

@@ -14,8 +14,8 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DriveSearchCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveSearchCollectionPage;
 import com.microsoft.graph.requests.extensions.DriveSearchCollectionResponse;
+import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
@@ -26,7 +26,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Drive Search Collection Request.
  */
-public class DriveSearchCollectionRequest extends BaseCollectionRequest<DriveSearchCollectionResponse, DriveSearchCollectionPage> {
+public class DriveSearchCollectionRequest extends BaseCollectionRequest<DriveItem, DriveSearchCollectionResponse, DriveSearchCollectionPage> {
 
 
     /**
@@ -37,43 +37,9 @@ public class DriveSearchCollectionRequest extends BaseCollectionRequest<DriveSea
      * @param requestOptions the options for this request
      */
     public DriveSearchCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DriveSearchCollectionResponse.class, DriveSearchCollectionPage.class);
+        super(requestUrl, client, requestOptions, DriveSearchCollectionResponse.class, DriveSearchCollectionPage.class, DriveSearchCollectionRequestBuilder.class);
     }
 
-
-    public void get(@Nonnull final ICallback<? super DriveSearchCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    @Nullable
-    public DriveSearchCollectionPage get() throws ClientException {
-        final DriveSearchCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    @Nonnull
-    public DriveSearchCollectionPage buildFromResponse(@Nonnull final DriveSearchCollectionResponse response) {
-        final DriveSearchCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DriveSearchCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, (String) null);
-        } else {
-            builder = null;
-        }
-        final DriveSearchCollectionPage page = new DriveSearchCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
 
     /**
      * Sets the select clause for the request
@@ -83,8 +49,8 @@ public class DriveSearchCollectionRequest extends BaseCollectionRequest<DriveSea
      */
     @Nonnull
     public DriveSearchCollectionRequest select(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (DriveSearchCollectionRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -95,8 +61,8 @@ public class DriveSearchCollectionRequest extends BaseCollectionRequest<DriveSea
      */
     @Nonnull
     public DriveSearchCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (DriveSearchCollectionRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -107,8 +73,8 @@ public class DriveSearchCollectionRequest extends BaseCollectionRequest<DriveSea
      */
     @Nonnull
     public DriveSearchCollectionRequest expand(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DriveSearchCollectionRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -119,8 +85,8 @@ public class DriveSearchCollectionRequest extends BaseCollectionRequest<DriveSea
      */
     @Nonnull
     public DriveSearchCollectionRequest filter(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DriveSearchCollectionRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -131,8 +97,8 @@ public class DriveSearchCollectionRequest extends BaseCollectionRequest<DriveSea
      */
     @Nonnull
     public DriveSearchCollectionRequest orderBy(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (DriveSearchCollectionRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

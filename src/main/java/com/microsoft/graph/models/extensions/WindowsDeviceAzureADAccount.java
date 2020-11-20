@@ -59,8 +59,9 @@ public class WindowsDeviceAzureADAccount extends WindowsDeviceAccount implements
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

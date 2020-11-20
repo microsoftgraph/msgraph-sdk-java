@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Planner Group Request Builder.
  */
-public class PlannerGroupRequestBuilder extends BaseRequestBuilder {
+public class PlannerGroupRequestBuilder extends BaseRequestBuilder<PlannerGroup> {
 
     /**
      * The request builder for the PlannerGroup
@@ -58,11 +58,22 @@ public class PlannerGroupRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the PlannerPlan collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public PlannerPlanCollectionRequestBuilder plans() {
         return new PlannerPlanCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("plans"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the PlannerPlan item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public PlannerPlanRequestBuilder plans(@Nonnull final String id) {
         return new PlannerPlanRequestBuilder(getRequestUrlWithAdditionalSegment("plans") + "/" + id, getClient(), null);

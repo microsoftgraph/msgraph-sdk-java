@@ -20,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Columns Before Request.
  */
-public class WorkbookRangeColumnsBeforeRequest extends BaseRequest {
+public class WorkbookRangeColumnsBeforeRequest extends BaseRequest<WorkbookRange> {
 
     /**
      * The request for this WorkbookRangeColumnsBefore
@@ -103,8 +103,8 @@ public class WorkbookRangeColumnsBeforeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeColumnsBeforeRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookRangeColumnsBeforeRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +115,8 @@ public class WorkbookRangeColumnsBeforeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeColumnsBeforeRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookRangeColumnsBeforeRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +127,8 @@ public class WorkbookRangeColumnsBeforeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeColumnsBeforeRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookRangeColumnsBeforeRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +139,8 @@ public class WorkbookRangeColumnsBeforeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeColumnsBeforeRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookRangeColumnsBeforeRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

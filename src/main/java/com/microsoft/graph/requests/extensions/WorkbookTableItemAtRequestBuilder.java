@@ -5,8 +5,7 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.WorkbookTableItemAtRequest;
 import com.microsoft.graph.models.extensions.WorkbookTable;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
+import com.microsoft.graph.http.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -17,7 +16,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Workbook Table Item At Request Builder.
  */
-public class WorkbookTableItemAtRequestBuilder extends BaseFunctionRequestBuilder {
+public class WorkbookTableItemAtRequestBuilder extends BaseFunctionRequestBuilder<WorkbookTable> {
 
     /**
      * The request builder for this WorkbookTableItemAt
@@ -63,20 +62,42 @@ public class WorkbookTableItemAtRequestBuilder extends BaseFunctionRequestBuilde
 
         return request;
     }
+    /**
+     *  Gets a request builder for the WorkbookTableColumn collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public WorkbookTableColumnCollectionRequestBuilder columns() {
         return new WorkbookTableColumnCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("columns"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the WorkbookTableColumn item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public WorkbookTableColumnRequestBuilder columns(@Nonnull final String id) {
         return new WorkbookTableColumnRequestBuilder(getRequestUrlWithAdditionalSegment("columns") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the WorkbookTableRow collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public WorkbookTableRowCollectionRequestBuilder rows() {
         return new WorkbookTableRowCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rows"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the WorkbookTableRow item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public WorkbookTableRowRequestBuilder rows(@Nonnull final String id) {
         return new WorkbookTableRowRequestBuilder(getRequestUrlWithAdditionalSegment("rows") + "/" + id, getClient(), null);

@@ -24,7 +24,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Drive Request Builder.
  */
-public class DriveRequestBuilder extends BaseRequestBuilder {
+public class DriveRequestBuilder extends BaseRequestBuilder<Drive> {
 
     /**
      * The request builder for the Drive
@@ -80,20 +80,42 @@ public class DriveRequestBuilder extends BaseRequestBuilder {
     public UserWithReferenceRequestBuilder lastModifiedByUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the DriveItem collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public DriveItemCollectionRequestBuilder following() {
         return new DriveItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("following"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DriveItem item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public DriveItemRequestBuilder following(@Nonnull final String id) {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("following") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the DriveItem collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public DriveItemCollectionRequestBuilder items() {
         return new DriveItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DriveItem item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public DriveItemRequestBuilder items(@Nonnull final String id) {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("items") + "/" + id, getClient(), null);
@@ -118,26 +140,50 @@ public class DriveRequestBuilder extends BaseRequestBuilder {
     public DriveItemRequestBuilder root() {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("root"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the DriveItem collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public DriveItemCollectionRequestBuilder special() {
         return new DriveItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("special"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DriveItem item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public DriveItemRequestBuilder special(@Nonnull final String id) {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("special") + "/" + id, getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param q the q
+     */
     @Nonnull
     public DriveSearchCollectionRequestBuilder search(@Nullable final String q) {
         return new DriveSearchCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.search"), getClient(), null, q);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
     @Nonnull
     public DriveRecentCollectionRequestBuilder recent() {
         return new DriveRecentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.recent"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
     @Nonnull
     public DriveSharedWithMeCollectionRequestBuilder sharedWithMe() {
         return new DriveSharedWithMeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sharedWithMe"), getClient(), null);

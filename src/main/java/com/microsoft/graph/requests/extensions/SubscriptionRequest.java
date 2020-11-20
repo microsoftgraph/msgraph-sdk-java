@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Subscription Request.
  */
-public class SubscriptionRequest extends BaseRequest {
+public class SubscriptionRequest extends BaseRequest<Subscription> {
 	
     /**
      * The request for the Subscription
@@ -146,8 +146,8 @@ public class SubscriptionRequest extends BaseRequest {
      */
      @Nonnull
      public SubscriptionRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SubscriptionRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class SubscriptionRequest extends BaseRequest {
      */
      @Nonnull
      public SubscriptionRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SubscriptionRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

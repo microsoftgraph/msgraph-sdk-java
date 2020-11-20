@@ -59,8 +59,9 @@ public class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase implem
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

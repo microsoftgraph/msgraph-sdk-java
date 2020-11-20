@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Targeted Managed App Protection Request Builder.
  */
-public class TargetedManagedAppProtectionRequestBuilder extends BaseRequestBuilder {
+public class TargetedManagedAppProtectionRequestBuilder extends BaseRequestBuilder<TargetedManagedAppProtection> {
 
     /**
      * The request builder for the TargetedManagedAppProtection
@@ -59,16 +59,32 @@ public class TargetedManagedAppProtectionRequestBuilder extends BaseRequestBuild
     }
 
 
+    /**
+     *  Gets a request builder for the TargetedManagedAppPolicyAssignment collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public TargetedManagedAppPolicyAssignmentCollectionRequestBuilder assignments() {
         return new TargetedManagedAppPolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the TargetedManagedAppPolicyAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public TargetedManagedAppPolicyAssignmentRequestBuilder assignments(@Nonnull final String id) {
         return new TargetedManagedAppPolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param assignments the assignments
+     */
     @Nonnull
     public TargetedManagedAppProtectionAssignRequestBuilder assign(@Nullable final java.util.List<TargetedManagedAppPolicyAssignment> assignments) {
         return new TargetedManagedAppProtectionAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, assignments);

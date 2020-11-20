@@ -21,7 +21,8 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Dvar Request.
  */
-public class WorkbookFunctionsDvarRequest extends BaseRequest {
+public class WorkbookFunctionsDvarRequest extends BaseRequest<WorkbookFunctionResult> {
+    /** The body for the method */
     protected final WorkbookFunctionsDvarBody body;
 
     /**
@@ -36,10 +37,18 @@ public class WorkbookFunctionsDvarRequest extends BaseRequest {
         body = new WorkbookFunctionsDvarBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(@Nonnull final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     @Nullable
     public WorkbookFunctionResult post() throws ClientException {
         return send(HttpMethod.POST, body);
@@ -53,8 +62,8 @@ public class WorkbookFunctionsDvarRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsDvarRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsDvarRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +74,8 @@ public class WorkbookFunctionsDvarRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsDvarRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsDvarRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -77,8 +86,8 @@ public class WorkbookFunctionsDvarRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsDvarRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsDvarRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

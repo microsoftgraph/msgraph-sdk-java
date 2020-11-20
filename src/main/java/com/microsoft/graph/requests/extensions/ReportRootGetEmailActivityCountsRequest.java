@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
+import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.requests.extensions.ReportRootGetEmailActivityCountsRequest;
 
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Email Activity Counts Request.
  */
-public class ReportRootGetEmailActivityCountsRequest extends BaseRequest {
+public class ReportRootGetEmailActivityCountsRequest extends BaseRequest<Report> {
 
     /**
      * The request for this ReportRootGetEmailActivityCounts
@@ -103,8 +104,8 @@ public class ReportRootGetEmailActivityCountsRequest extends BaseRequest {
      */
     @Nonnull
     public ReportRootGetEmailActivityCountsRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ReportRootGetEmailActivityCountsRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +116,8 @@ public class ReportRootGetEmailActivityCountsRequest extends BaseRequest {
      */
     @Nonnull
     public ReportRootGetEmailActivityCountsRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ReportRootGetEmailActivityCountsRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +128,8 @@ public class ReportRootGetEmailActivityCountsRequest extends BaseRequest {
      */
     @Nonnull
     public ReportRootGetEmailActivityCountsRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ReportRootGetEmailActivityCountsRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +140,8 @@ public class ReportRootGetEmailActivityCountsRequest extends BaseRequest {
      */
     @Nonnull
     public ReportRootGetEmailActivityCountsRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ReportRootGetEmailActivityCountsRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

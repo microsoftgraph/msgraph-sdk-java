@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Session Request Builder.
  */
-public class SessionRequestBuilder extends BaseRequestBuilder {
+public class SessionRequestBuilder extends BaseRequestBuilder<Session> {
 
     /**
      * The request builder for the Session
@@ -58,11 +58,22 @@ public class SessionRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the Segment collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public SegmentCollectionRequestBuilder segments() {
         return new SegmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("segments"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Segment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public SegmentRequestBuilder segments(@Nonnull final String id) {
         return new SegmentRequestBuilder(getRequestUrlWithAdditionalSegment("segments") + "/" + id, getClient(), null);

@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Calendar Group Request Builder.
  */
-public class CalendarGroupRequestBuilder extends BaseRequestBuilder {
+public class CalendarGroupRequestBuilder extends BaseRequestBuilder<CalendarGroup> {
 
     /**
      * The request builder for the CalendarGroup
@@ -58,11 +58,22 @@ public class CalendarGroupRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the Calendar collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public CalendarCollectionRequestBuilder calendars() {
         return new CalendarCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calendars"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Calendar item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public CalendarRequestBuilder calendars(@Nonnull final String id) {
         return new CalendarRequestBuilder(getRequestUrlWithAdditionalSegment("calendars") + "/" + id, getClient(), null);

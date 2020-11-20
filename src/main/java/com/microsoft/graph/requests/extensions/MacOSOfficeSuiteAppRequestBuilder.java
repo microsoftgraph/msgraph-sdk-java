@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Mac OSOffice Suite App Request Builder.
  */
-public class MacOSOfficeSuiteAppRequestBuilder extends BaseRequestBuilder {
+public class MacOSOfficeSuiteAppRequestBuilder extends BaseRequestBuilder<MacOSOfficeSuiteApp> {
 
     /**
      * The request builder for the MacOSOfficeSuiteApp
@@ -56,20 +56,42 @@ public class MacOSOfficeSuiteAppRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the MobileAppAssignment collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public MobileAppAssignmentCollectionRequestBuilder assignments() {
         return new MobileAppAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the MobileAppAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public MobileAppAssignmentRequestBuilder assignments(@Nonnull final String id) {
         return new MobileAppAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the MobileAppCategory collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public MobileAppCategoryCollectionWithReferencesRequestBuilder categories() {
         return new MobileAppCategoryCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the MobileAppCategory item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public MobileAppCategoryWithReferenceRequestBuilder categories(@Nonnull final String id) {
         return new MobileAppCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);

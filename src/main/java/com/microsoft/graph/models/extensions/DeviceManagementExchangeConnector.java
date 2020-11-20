@@ -133,8 +133,9 @@ public class DeviceManagementExchangeConnector extends Entity implements IJsonBa
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

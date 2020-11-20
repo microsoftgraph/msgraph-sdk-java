@@ -23,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Mobile Lob App Request.
  */
-public class ManagedMobileLobAppRequest extends BaseRequest {
+public class ManagedMobileLobAppRequest extends BaseRequest<ManagedMobileLobApp> {
 	
     /**
      * The request for the ManagedMobileLobApp
@@ -163,8 +163,8 @@ public class ManagedMobileLobAppRequest extends BaseRequest {
      */
      @Nonnull
      public ManagedMobileLobAppRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ManagedMobileLobAppRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -175,8 +175,8 @@ public class ManagedMobileLobAppRequest extends BaseRequest {
      */
      @Nonnull
      public ManagedMobileLobAppRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ManagedMobileLobAppRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

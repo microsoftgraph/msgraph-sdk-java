@@ -50,8 +50,9 @@ public class DeviceAndAppManagementRoleDefinition extends RoleDefinition impleme
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

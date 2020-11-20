@@ -21,7 +21,8 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Lenb Request.
  */
-public class WorkbookFunctionsLenbRequest extends BaseRequest {
+public class WorkbookFunctionsLenbRequest extends BaseRequest<WorkbookFunctionResult> {
+    /** The body for the method */
     protected final WorkbookFunctionsLenbBody body;
 
     /**
@@ -36,10 +37,18 @@ public class WorkbookFunctionsLenbRequest extends BaseRequest {
         body = new WorkbookFunctionsLenbBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(@Nonnull final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     @Nullable
     public WorkbookFunctionResult post() throws ClientException {
         return send(HttpMethod.POST, body);
@@ -53,8 +62,8 @@ public class WorkbookFunctionsLenbRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsLenbRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsLenbRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +74,8 @@ public class WorkbookFunctionsLenbRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsLenbRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsLenbRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -77,8 +86,8 @@ public class WorkbookFunctionsLenbRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsLenbRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsLenbRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

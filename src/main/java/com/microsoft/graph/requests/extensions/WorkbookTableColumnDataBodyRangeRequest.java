@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRange;
+import com.microsoft.graph.models.extensions.WorkbookTableColumn;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnDataBodyRangeRequest;
 
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Column Data Body Range Request.
  */
-public class WorkbookTableColumnDataBodyRangeRequest extends BaseRequest {
+public class WorkbookTableColumnDataBodyRangeRequest extends BaseRequest<WorkbookRange> {
 
     /**
      * The request for this WorkbookTableColumnDataBodyRange
@@ -103,8 +104,8 @@ public class WorkbookTableColumnDataBodyRangeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookTableColumnDataBodyRangeRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookTableColumnDataBodyRangeRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +116,8 @@ public class WorkbookTableColumnDataBodyRangeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookTableColumnDataBodyRangeRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookTableColumnDataBodyRangeRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +128,8 @@ public class WorkbookTableColumnDataBodyRangeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookTableColumnDataBodyRangeRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookTableColumnDataBodyRangeRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +140,8 @@ public class WorkbookTableColumnDataBodyRangeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookTableColumnDataBodyRangeRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookTableColumnDataBodyRangeRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

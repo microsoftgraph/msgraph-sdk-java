@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Column Link Request.
  */
-public class ColumnLinkRequest extends BaseRequest {
+public class ColumnLinkRequest extends BaseRequest<ColumnLink> {
 	
     /**
      * The request for the ColumnLink
@@ -146,8 +146,8 @@ public class ColumnLinkRequest extends BaseRequest {
      */
      @Nonnull
      public ColumnLinkRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ColumnLinkRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class ColumnLinkRequest extends BaseRequest {
      */
      @Nonnull
      public ColumnLinkRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ColumnLinkRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

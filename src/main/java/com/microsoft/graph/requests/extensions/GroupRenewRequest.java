@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.requests.extensions.GroupRenewRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Group Renew Request.
  */
-public class GroupRenewRequest extends BaseRequest {
+public class GroupRenewRequest extends BaseRequest<Void> {
 
     /**
      * The request for this GroupRenew

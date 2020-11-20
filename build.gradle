@@ -18,6 +18,8 @@ plugins {
 
 java {
     modularity.inferModulePath = true
+    withSourcesJar()
+    withJavadocJar()
 }
 
 sourceSets {
@@ -59,18 +61,6 @@ tasks.jar {
     }
 }
 
-task sourceJar(type: Jar) {
-    outputs.cacheIf { true }
-    from sourceSets.main.allJava
-    archiveClassifier = 'sources'
-}
-
-task javadocJar(type: Jar, dependsOn: javadoc) {
-    outputs.cacheIf { true }
-    from javadoc.destinationDir
-    archiveClassifier = 'javadoc'
-}
-
 publishing {
 
     publications {
@@ -80,8 +70,6 @@ publishing {
             artifactId project.property('mavenArtifactId')
             version "${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}${mavenArtifactSuffix}"
             from components.java
-            artifact sourceJar
-        	artifact javadocJar
             pom.withXml {
                 def root = asNode()
                 root.appendNode('name', 'Microsoft Graph SDK for Java')
@@ -102,8 +90,6 @@ publishing {
         		def pomFile = file("${project.buildDir}/generated-pom.xml")
         		writeTo(pomFile)
         	}
-        	artifact sourceJar
-        	artifact javadocJar
 		}
 		
 		mavenCentralRelease(MavenPublication) {
@@ -116,8 +102,6 @@ publishing {
         		def pomFile = file("${project.buildDir}/generated-pom.xml")
         		writeTo(pomFile)
         	}
-        	artifact sourceJar
-        	artifact javadocJar
 		}
     }
 	repositories {
@@ -240,8 +224,6 @@ def getVersionName() {
 
 artifacts {
 	archives jar
-	archives sourceJar
-	archives javadocJar
 }
 
 def customizePom(pom) {

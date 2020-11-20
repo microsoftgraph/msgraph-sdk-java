@@ -14,8 +14,8 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.GroupDeltaCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.GroupDeltaCollectionPage;
 import com.microsoft.graph.requests.extensions.GroupDeltaCollectionResponse;
+import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
@@ -26,7 +26,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Group Delta Collection Request.
  */
-public class GroupDeltaCollectionRequest extends BaseCollectionRequest<GroupDeltaCollectionResponse, GroupDeltaCollectionPage> {
+public class GroupDeltaCollectionRequest extends BaseCollectionRequest<Group, GroupDeltaCollectionResponse, GroupDeltaCollectionPage> {
 
 
     /**
@@ -37,43 +37,9 @@ public class GroupDeltaCollectionRequest extends BaseCollectionRequest<GroupDelt
      * @param requestOptions the options for this request
      */
     public GroupDeltaCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, GroupDeltaCollectionResponse.class, GroupDeltaCollectionPage.class);
+        super(requestUrl, client, requestOptions, GroupDeltaCollectionResponse.class, GroupDeltaCollectionPage.class, GroupDeltaCollectionRequestBuilder.class);
     }
 
-
-    public void get(@Nonnull final ICallback<? super GroupDeltaCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    @Nullable
-    public GroupDeltaCollectionPage get() throws ClientException {
-        final GroupDeltaCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    @Nonnull
-    public GroupDeltaCollectionPage buildFromResponse(@Nonnull final GroupDeltaCollectionResponse response) {
-        final GroupDeltaCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new GroupDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final GroupDeltaCollectionPage page = new GroupDeltaCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
 
     /**
      * Sets the select clause for the request
@@ -83,8 +49,8 @@ public class GroupDeltaCollectionRequest extends BaseCollectionRequest<GroupDelt
      */
     @Nonnull
     public GroupDeltaCollectionRequest select(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (GroupDeltaCollectionRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -95,8 +61,8 @@ public class GroupDeltaCollectionRequest extends BaseCollectionRequest<GroupDelt
      */
     @Nonnull
     public GroupDeltaCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (GroupDeltaCollectionRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -107,8 +73,8 @@ public class GroupDeltaCollectionRequest extends BaseCollectionRequest<GroupDelt
      */
     @Nonnull
     public GroupDeltaCollectionRequest expand(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (GroupDeltaCollectionRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -119,8 +85,8 @@ public class GroupDeltaCollectionRequest extends BaseCollectionRequest<GroupDelt
      */
     @Nonnull
     public GroupDeltaCollectionRequest filter(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (GroupDeltaCollectionRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -131,8 +97,8 @@ public class GroupDeltaCollectionRequest extends BaseCollectionRequest<GroupDelt
      */
     @Nonnull
     public GroupDeltaCollectionRequest orderBy(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (GroupDeltaCollectionRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

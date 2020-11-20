@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Chart Series Format Request Builder.
  */
-public class WorkbookChartSeriesFormatRequestBuilder extends BaseRequestBuilder {
+public class WorkbookChartSeriesFormatRequestBuilder extends BaseRequestBuilder<WorkbookChartSeriesFormat> {
 
     /**
      * The request builder for the WorkbookChartSeriesFormat

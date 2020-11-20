@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Onenote Entity Base Model Request Builder.
  */
-public class OnenoteEntityBaseModelRequestBuilder extends BaseRequestBuilder {
+public class OnenoteEntityBaseModelRequestBuilder extends BaseRequestBuilder<OnenoteEntityBaseModel> {
 
     /**
      * The request builder for the OnenoteEntityBaseModel

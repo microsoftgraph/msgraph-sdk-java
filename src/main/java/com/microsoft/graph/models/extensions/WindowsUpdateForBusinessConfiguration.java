@@ -172,8 +172,9 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

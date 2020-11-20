@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Country Named Location Request Builder.
  */
-public class CountryNamedLocationRequestBuilder extends BaseRequestBuilder {
+public class CountryNamedLocationRequestBuilder extends BaseRequestBuilder<CountryNamedLocation> {
 
     /**
      * The request builder for the CountryNamedLocation

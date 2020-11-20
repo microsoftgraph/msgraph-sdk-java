@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Compliance Management Partner Request Builder.
  */
-public class ComplianceManagementPartnerRequestBuilder extends BaseRequestBuilder {
+public class ComplianceManagementPartnerRequestBuilder extends BaseRequestBuilder<ComplianceManagementPartner> {
 
     /**
      * The request builder for the ComplianceManagementPartner

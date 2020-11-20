@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
+import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsRandRequest;
 
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Functions Rand Request.
  */
-public class WorkbookFunctionsRandRequest extends BaseRequest {
+public class WorkbookFunctionsRandRequest extends BaseRequest<WorkbookFunctionResult> {
 
     /**
      * The request for this WorkbookFunctionsRand
@@ -61,8 +62,8 @@ public class WorkbookFunctionsRandRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsRandRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsRandRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -73,8 +74,8 @@ public class WorkbookFunctionsRandRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsRandRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsRandRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

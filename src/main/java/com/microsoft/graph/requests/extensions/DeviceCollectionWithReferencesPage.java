@@ -36,7 +36,17 @@ public class DeviceCollectionWithReferencesPage extends BaseCollectionPage<Devic
      * @param response the serialized DeviceCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DeviceCollectionWithReferencesPage(@Nonnull final DeviceCollectionResponse response, @Nonnull  final DeviceCollectionWithReferencesRequestBuilder builder) {
+    public DeviceCollectionWithReferencesPage(@Nonnull final DeviceCollectionResponse response, @Nullable final DeviceCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
+    }
+
+    /**
+     * Creates the collection page for Device
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DeviceCollectionWithReferencesPage(@Nonnull final java.util.List<Device> pageContents, @Nullable final DeviceCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
     }
 }

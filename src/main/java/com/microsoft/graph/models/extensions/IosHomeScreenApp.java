@@ -59,8 +59,9 @@ public class IosHomeScreenApp extends IosHomeScreenItem implements IJsonBackedOb
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

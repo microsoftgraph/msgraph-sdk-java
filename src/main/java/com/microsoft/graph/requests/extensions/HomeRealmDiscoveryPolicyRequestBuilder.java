@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Home Realm Discovery Policy Request Builder.
  */
-public class HomeRealmDiscoveryPolicyRequestBuilder extends BaseRequestBuilder {
+public class HomeRealmDiscoveryPolicyRequestBuilder extends BaseRequestBuilder<HomeRealmDiscoveryPolicy> {
 
     /**
      * The request builder for the HomeRealmDiscoveryPolicy
@@ -56,11 +56,22 @@ public class HomeRealmDiscoveryPolicyRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the DirectoryObject collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public DirectoryObjectCollectionWithReferencesRequestBuilder appliesTo() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("appliesTo"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DirectoryObject item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public DirectoryObjectWithReferenceRequestBuilder appliesTo(@Nonnull final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("appliesTo") + "/" + id, getClient(), null);

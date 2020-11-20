@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Compliance Scheduled Action For Rule Request Builder.
  */
-public class DeviceComplianceScheduledActionForRuleRequestBuilder extends BaseRequestBuilder {
+public class DeviceComplianceScheduledActionForRuleRequestBuilder extends BaseRequestBuilder<DeviceComplianceScheduledActionForRule> {
 
     /**
      * The request builder for the DeviceComplianceScheduledActionForRule
@@ -58,11 +58,22 @@ public class DeviceComplianceScheduledActionForRuleRequestBuilder extends BaseRe
     }
 
 
+    /**
+     *  Gets a request builder for the DeviceComplianceActionItem collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public DeviceComplianceActionItemCollectionRequestBuilder scheduledActionConfigurations() {
         return new DeviceComplianceActionItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionConfigurations"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DeviceComplianceActionItem item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public DeviceComplianceActionItemRequestBuilder scheduledActionConfigurations(@Nonnull final String id) {
         return new DeviceComplianceActionItemRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionConfigurations") + "/" + id, getClient(), null);

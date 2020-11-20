@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Enrollment Configuration Assignment Request Builder.
  */
-public class EnrollmentConfigurationAssignmentRequestBuilder extends BaseRequestBuilder {
+public class EnrollmentConfigurationAssignmentRequestBuilder extends BaseRequestBuilder<EnrollmentConfigurationAssignment> {
 
     /**
      * The request builder for the EnrollmentConfigurationAssignment

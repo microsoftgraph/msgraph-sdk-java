@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Pivot Table Request Builder.
  */
-public class WorkbookPivotTableRequestBuilder extends BaseRequestBuilder {
+public class WorkbookPivotTableRequestBuilder extends BaseRequestBuilder<WorkbookPivotTable> {
 
     /**
      * The request builder for the WorkbookPivotTable
@@ -68,6 +68,10 @@ public class WorkbookPivotTableRequestBuilder extends BaseRequestBuilder {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookPivotTableRefreshRequestBuilder refresh() {
         return new WorkbookPivotTableRefreshRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.refresh"), getClient(), null);

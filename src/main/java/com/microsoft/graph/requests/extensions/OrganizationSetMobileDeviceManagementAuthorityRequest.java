@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.Organization;
 import com.microsoft.graph.requests.extensions.OrganizationSetMobileDeviceManagementAuthorityRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Organization Set Mobile Device Management Authority Request.
  */
-public class OrganizationSetMobileDeviceManagementAuthorityRequest extends BaseRequest {
+public class OrganizationSetMobileDeviceManagementAuthorityRequest extends BaseRequest<Integer> {
 
     /**
      * The request for this OrganizationSetMobileDeviceManagementAuthority
@@ -60,8 +61,8 @@ public class OrganizationSetMobileDeviceManagementAuthorityRequest extends BaseR
      */
     @Nonnull
     public OrganizationSetMobileDeviceManagementAuthorityRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (OrganizationSetMobileDeviceManagementAuthorityRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -72,8 +73,8 @@ public class OrganizationSetMobileDeviceManagementAuthorityRequest extends BaseR
      */
     @Nonnull
     public OrganizationSetMobileDeviceManagementAuthorityRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (OrganizationSetMobileDeviceManagementAuthorityRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsHex2BinRequest;
+import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
+import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Workbook Functions Hex2Bin Request Builder.
  */
-public class WorkbookFunctionsHex2BinRequestBuilder extends BaseActionRequestBuilder {
+public class WorkbookFunctionsHex2BinRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
     /**
      * The request builder for this WorkbookFunctionsHex2Bin

@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the On Premises Conditional Access Settings Request Builder.
  */
-public class OnPremisesConditionalAccessSettingsRequestBuilder extends BaseRequestBuilder {
+public class OnPremisesConditionalAccessSettingsRequestBuilder extends BaseRequestBuilder<OnPremisesConditionalAccessSettings> {
 
     /**
      * The request builder for the OnPremisesConditionalAccessSettings

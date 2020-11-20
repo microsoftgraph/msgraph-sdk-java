@@ -21,7 +21,8 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Chi Sq_Inv_RTRequest.
  */
-public class WorkbookFunctionsChiSq_Inv_RTRequest extends BaseRequest {
+public class WorkbookFunctionsChiSq_Inv_RTRequest extends BaseRequest<WorkbookFunctionResult> {
+    /** The body for the method */
     protected final WorkbookFunctionsChiSq_Inv_RTBody body;
 
     /**
@@ -36,10 +37,18 @@ public class WorkbookFunctionsChiSq_Inv_RTRequest extends BaseRequest {
         body = new WorkbookFunctionsChiSq_Inv_RTBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(@Nonnull final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     @Nullable
     public WorkbookFunctionResult post() throws ClientException {
         return send(HttpMethod.POST, body);
@@ -53,8 +62,8 @@ public class WorkbookFunctionsChiSq_Inv_RTRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsChiSq_Inv_RTRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsChiSq_Inv_RTRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +74,8 @@ public class WorkbookFunctionsChiSq_Inv_RTRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsChiSq_Inv_RTRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsChiSq_Inv_RTRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -77,8 +86,8 @@ public class WorkbookFunctionsChiSq_Inv_RTRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsChiSq_Inv_RTRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsChiSq_Inv_RTRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

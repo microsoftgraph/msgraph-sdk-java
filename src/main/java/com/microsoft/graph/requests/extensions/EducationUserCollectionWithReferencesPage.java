@@ -36,7 +36,17 @@ public class EducationUserCollectionWithReferencesPage extends BaseCollectionPag
      * @param response the serialized EducationUserCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public EducationUserCollectionWithReferencesPage(@Nonnull final EducationUserCollectionResponse response, @Nonnull  final EducationUserCollectionWithReferencesRequestBuilder builder) {
+    public EducationUserCollectionWithReferencesPage(@Nonnull final EducationUserCollectionResponse response, @Nullable final EducationUserCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
+    }
+
+    /**
+     * Creates the collection page for EducationUser
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public EducationUserCollectionWithReferencesPage(@Nonnull final java.util.List<EducationUser> pageContents, @Nullable final EducationUserCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
     }
 }

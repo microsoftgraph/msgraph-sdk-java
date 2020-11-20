@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
+import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.requests.extensions.ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest;
 
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Mailbox Usage Quota Status Mailbox Counts Request.
  */
-public class ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest extends BaseRequest {
+public class ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest extends BaseRequest<Report> {
 
     /**
      * The request for this ReportRootGetMailboxUsageQuotaStatusMailboxCounts
@@ -103,8 +104,8 @@ public class ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest extends Ba
      */
     @Nonnull
     public ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +116,8 @@ public class ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest extends Ba
      */
     @Nonnull
     public ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +128,8 @@ public class ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest extends Ba
      */
     @Nonnull
     public ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +140,8 @@ public class ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest extends Ba
      */
     @Nonnull
     public ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

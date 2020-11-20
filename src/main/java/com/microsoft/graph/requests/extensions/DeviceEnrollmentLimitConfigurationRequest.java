@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Enrollment Limit Configuration Request.
  */
-public class DeviceEnrollmentLimitConfigurationRequest extends BaseRequest {
+public class DeviceEnrollmentLimitConfigurationRequest extends BaseRequest<DeviceEnrollmentLimitConfiguration> {
 	
     /**
      * The request for the DeviceEnrollmentLimitConfiguration
@@ -146,8 +146,8 @@ public class DeviceEnrollmentLimitConfigurationRequest extends BaseRequest {
      */
      @Nonnull
      public DeviceEnrollmentLimitConfigurationRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceEnrollmentLimitConfigurationRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class DeviceEnrollmentLimitConfigurationRequest extends BaseRequest {
      */
      @Nonnull
      public DeviceEnrollmentLimitConfigurationRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceEnrollmentLimitConfigurationRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

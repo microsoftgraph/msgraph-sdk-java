@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Secure Score Request.
  */
-public class SecureScoreRequest extends BaseRequest {
+public class SecureScoreRequest extends BaseRequest<SecureScore> {
 	
     /**
      * The request for the SecureScore
@@ -146,8 +146,8 @@ public class SecureScoreRequest extends BaseRequest {
      */
      @Nonnull
      public SecureScoreRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SecureScoreRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class SecureScoreRequest extends BaseRequest {
      */
      @Nonnull
      public SecureScoreRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SecureScoreRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

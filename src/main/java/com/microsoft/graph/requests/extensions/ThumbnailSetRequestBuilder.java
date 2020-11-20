@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Thumbnail Set Request Builder.
  */
-public class ThumbnailSetRequestBuilder extends BaseRequestBuilder {
+public class ThumbnailSetRequestBuilder extends BaseRequestBuilder<ThumbnailSet> {
 
     /**
      * The request builder for the ThumbnailSet
@@ -55,6 +55,11 @@ public class ThumbnailSetRequestBuilder extends BaseRequestBuilder {
         return new com.microsoft.graph.requests.extensions.ThumbnailSetRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
+    /**
+     * Gets a request builder to get the thumbnail of a certain size
+     * @param size the size to get
+     * @return a request builder to get the thumbnail of a certain size
+     */
     @Nonnull
     public ThumbnailRequestBuilder getThumbnailSize(@Nonnull final String size) {
         return new ThumbnailRequestBuilder(getRequestUrlWithAdditionalSegment(size), getClient(), /* options */ null);

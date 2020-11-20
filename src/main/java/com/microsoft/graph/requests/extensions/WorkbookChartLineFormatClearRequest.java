@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.WorkbookChartLineFormat;
 import com.microsoft.graph.requests.extensions.WorkbookChartLineFormatClearRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Line Format Clear Request.
  */
-public class WorkbookChartLineFormatClearRequest extends BaseRequest {
+public class WorkbookChartLineFormatClearRequest extends BaseRequest<Void> {
 
     /**
      * The request for this WorkbookChartLineFormatClear

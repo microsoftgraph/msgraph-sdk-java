@@ -14,8 +14,8 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.ListItemGetActivitiesByIntervalCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ListItemGetActivitiesByIntervalCollectionPage;
 import com.microsoft.graph.requests.extensions.ListItemGetActivitiesByIntervalCollectionResponse;
+import com.microsoft.graph.models.extensions.ItemActivityStat;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
@@ -26,7 +26,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the List Item Get Activities By Interval Collection Request.
  */
-public class ListItemGetActivitiesByIntervalCollectionRequest extends BaseCollectionRequest<ListItemGetActivitiesByIntervalCollectionResponse, ListItemGetActivitiesByIntervalCollectionPage> {
+public class ListItemGetActivitiesByIntervalCollectionRequest extends BaseCollectionRequest<ItemActivityStat, ListItemGetActivitiesByIntervalCollectionResponse, ListItemGetActivitiesByIntervalCollectionPage> {
 
 
     /**
@@ -37,43 +37,9 @@ public class ListItemGetActivitiesByIntervalCollectionRequest extends BaseCollec
      * @param requestOptions the options for this request
      */
     public ListItemGetActivitiesByIntervalCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ListItemGetActivitiesByIntervalCollectionResponse.class, ListItemGetActivitiesByIntervalCollectionPage.class);
+        super(requestUrl, client, requestOptions, ListItemGetActivitiesByIntervalCollectionResponse.class, ListItemGetActivitiesByIntervalCollectionPage.class, ListItemGetActivitiesByIntervalCollectionRequestBuilder.class);
     }
 
-
-    public void get(@Nonnull final ICallback<? super ListItemGetActivitiesByIntervalCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    @Nullable
-    public ListItemGetActivitiesByIntervalCollectionPage get() throws ClientException {
-        final ListItemGetActivitiesByIntervalCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    @Nonnull
-    public ListItemGetActivitiesByIntervalCollectionPage buildFromResponse(@Nonnull final ListItemGetActivitiesByIntervalCollectionResponse response) {
-        final ListItemGetActivitiesByIntervalCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new ListItemGetActivitiesByIntervalCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final ListItemGetActivitiesByIntervalCollectionPage page = new ListItemGetActivitiesByIntervalCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
 
     /**
      * Sets the select clause for the request
@@ -83,8 +49,8 @@ public class ListItemGetActivitiesByIntervalCollectionRequest extends BaseCollec
      */
     @Nonnull
     public ListItemGetActivitiesByIntervalCollectionRequest select(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ListItemGetActivitiesByIntervalCollectionRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -95,8 +61,8 @@ public class ListItemGetActivitiesByIntervalCollectionRequest extends BaseCollec
      */
     @Nonnull
     public ListItemGetActivitiesByIntervalCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (ListItemGetActivitiesByIntervalCollectionRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -107,8 +73,8 @@ public class ListItemGetActivitiesByIntervalCollectionRequest extends BaseCollec
      */
     @Nonnull
     public ListItemGetActivitiesByIntervalCollectionRequest expand(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ListItemGetActivitiesByIntervalCollectionRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -119,8 +85,8 @@ public class ListItemGetActivitiesByIntervalCollectionRequest extends BaseCollec
      */
     @Nonnull
     public ListItemGetActivitiesByIntervalCollectionRequest filter(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ListItemGetActivitiesByIntervalCollectionRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -131,8 +97,8 @@ public class ListItemGetActivitiesByIntervalCollectionRequest extends BaseCollec
      */
     @Nonnull
     public ListItemGetActivitiesByIntervalCollectionRequest orderBy(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ListItemGetActivitiesByIntervalCollectionRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

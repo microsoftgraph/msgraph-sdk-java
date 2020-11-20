@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
+import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.requests.extensions.ReportRootGetSkypeForBusinessActivityUserDetailRequest;
 
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Skype For Business Activity User Detail Request.
  */
-public class ReportRootGetSkypeForBusinessActivityUserDetailRequest extends BaseRequest {
+public class ReportRootGetSkypeForBusinessActivityUserDetailRequest extends BaseRequest<Report> {
 
     /**
      * The request for this ReportRootGetSkypeForBusinessActivityUserDetail
@@ -103,8 +104,8 @@ public class ReportRootGetSkypeForBusinessActivityUserDetailRequest extends Base
      */
     @Nonnull
     public ReportRootGetSkypeForBusinessActivityUserDetailRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ReportRootGetSkypeForBusinessActivityUserDetailRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +116,8 @@ public class ReportRootGetSkypeForBusinessActivityUserDetailRequest extends Base
      */
     @Nonnull
     public ReportRootGetSkypeForBusinessActivityUserDetailRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ReportRootGetSkypeForBusinessActivityUserDetailRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +128,8 @@ public class ReportRootGetSkypeForBusinessActivityUserDetailRequest extends Base
      */
     @Nonnull
     public ReportRootGetSkypeForBusinessActivityUserDetailRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ReportRootGetSkypeForBusinessActivityUserDetailRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +140,8 @@ public class ReportRootGetSkypeForBusinessActivityUserDetailRequest extends Base
      */
     @Nonnull
     public ReportRootGetSkypeForBusinessActivityUserDetailRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ReportRootGetSkypeForBusinessActivityUserDetailRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

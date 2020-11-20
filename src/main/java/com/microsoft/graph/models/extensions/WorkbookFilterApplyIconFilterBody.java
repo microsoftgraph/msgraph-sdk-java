@@ -56,7 +56,7 @@ public class WorkbookFilterApplyIconFilterBody {
      * @return the serializer
      */
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

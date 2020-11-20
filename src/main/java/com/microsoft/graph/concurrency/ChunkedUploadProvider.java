@@ -63,11 +63,6 @@ public class ChunkedUploadProvider<UploadType> {
     private static final int MAXIMUM_CHUNK_SIZE = 60 * 1024 * 1024;
 
     /**
-     * The default retry times for a simple chunk upload if failure happened
-     */
-    private static final int MAXIMUM_RETRY_TIMES = 3;
-
-    /**
      * The client
      */
     private final IGraphServiceClient client;
@@ -141,7 +136,7 @@ public class ChunkedUploadProvider<UploadType> {
      * @param options  the upload options
      * @param callback the progress callback invoked during uploading
      * @param configs  the optional configurations for the upload options. [0] should be the customized chunk
-     *                 size and [1] should be the maxRetry for upload retry.
+     *                 size
      * @throws IOException the IO exception that occurred during upload
      */
     @SuppressWarnings("LambdaLast")
@@ -153,12 +148,6 @@ public class ChunkedUploadProvider<UploadType> {
 
         if (configs.length > 0) {
             chunkSize = configs[0];
-        }
-
-        int maxRetry = MAXIMUM_RETRY_TIMES;
-
-        if (configs.length > 1) {
-            maxRetry = configs[1];
         }
 
         if (chunkSize % REQUIRED_CHUNK_SIZE_INCREMENT != 0) {
@@ -184,10 +173,10 @@ public class ChunkedUploadProvider<UploadType> {
                 buffRead += read;
             }
 
-            ChunkedUploadRequest request =
-                    new ChunkedUploadRequest(this.uploadUrl, this.client, options, buffer, buffRead,
-                            maxRetry, this.readSoFar, this.streamSize);
-            ChunkedUploadResult<UploadType> result = request.upload(this.responseHandler);
+            final ChunkedUploadRequest<UploadType> request =
+                    new ChunkedUploadRequest<UploadType>(this.uploadUrl, this.client, options, buffer, buffRead,
+                            this.readSoFar, this.streamSize);
+            final ChunkedUploadResult<UploadType> result = request.upload(this.responseHandler);
 
             if (result.uploadCompleted()) {
                 callback.progress(this.streamSize, this.streamSize);
@@ -209,7 +198,7 @@ public class ChunkedUploadProvider<UploadType> {
      *
      * @param callback the progress callback invoked during uploading
      * @param configs  the optional configurations for the upload options. [0] should be the customized chunk
-     *                 size and [1] should be the maxRetry for upload retry.
+     *                 size
      * @throws IOException the IO exception that occurred during upload
      */
     @SuppressWarnings("LambdaLast")

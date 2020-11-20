@@ -23,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Teams App Request.
  */
-public class TeamsAppRequest extends BaseRequest {
+public class TeamsAppRequest extends BaseRequest<TeamsApp> {
 	
     /**
      * The request for the TeamsApp
@@ -148,8 +148,8 @@ public class TeamsAppRequest extends BaseRequest {
      */
      @Nonnull
      public TeamsAppRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TeamsAppRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -160,8 +160,8 @@ public class TeamsAppRequest extends BaseRequest {
      */
      @Nonnull
      public TeamsAppRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TeamsAppRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

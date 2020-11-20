@@ -22,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Invitation Request.
  */
-public class InvitationRequest extends BaseRequest {
+public class InvitationRequest extends BaseRequest<Invitation> {
 	
     /**
      * The request for the Invitation
@@ -147,8 +147,8 @@ public class InvitationRequest extends BaseRequest {
      */
      @Nonnull
      public InvitationRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (InvitationRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -159,8 +159,8 @@ public class InvitationRequest extends BaseRequest {
      */
      @Nonnull
      public InvitationRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (InvitationRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

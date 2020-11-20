@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookSessionInfo;
+import com.microsoft.graph.models.extensions.Workbook;
 import com.microsoft.graph.requests.extensions.WorkbookSessionInfoResourceRequest;
 
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Session Info Resource Request.
  */
-public class WorkbookSessionInfoResourceRequest extends BaseRequest {
+public class WorkbookSessionInfoResourceRequest extends BaseRequest<WorkbookSessionInfo> {
 
     /**
      * The request for this WorkbookSessionInfoResource
@@ -61,8 +62,8 @@ public class WorkbookSessionInfoResourceRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookSessionInfoResourceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookSessionInfoResourceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -73,8 +74,8 @@ public class WorkbookSessionInfoResourceRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookSessionInfoResourceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookSessionInfoResourceRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -85,8 +86,8 @@ public class WorkbookSessionInfoResourceRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookSessionInfoResourceRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookSessionInfoResourceRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -97,8 +98,8 @@ public class WorkbookSessionInfoResourceRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookSessionInfoResourceRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookSessionInfoResourceRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

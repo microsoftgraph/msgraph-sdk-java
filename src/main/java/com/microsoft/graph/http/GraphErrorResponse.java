@@ -33,10 +33,14 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.ISerializer;
 
+/**
+ * Represents the error response body returned by the service
+ */
 public class GraphErrorResponse implements IJsonBackedObject {
 
     private AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
+    /** The error returned by the response */
     @SerializedName("error")
     @Expose()
     @Nullable
@@ -61,6 +65,22 @@ public class GraphErrorResponse implements IJsonBackedObject {
     @Nullable
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
+    }
+
+    @Override
+    @Nullable
+    public ISerializer getSerializer() {
+        return null;
+    }
+
+    /**
+     * Gets the raw JSON object for this object as parsed from
+     * @return the JSON that this object was derived from
+     */
+    @Override
+    @Nullable
+    public JsonObject getRawObject() {
+        return rawObject;
     }
 }
 

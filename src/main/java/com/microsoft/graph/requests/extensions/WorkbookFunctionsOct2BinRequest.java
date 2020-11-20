@@ -21,7 +21,8 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Oct2Bin Request.
  */
-public class WorkbookFunctionsOct2BinRequest extends BaseRequest {
+public class WorkbookFunctionsOct2BinRequest extends BaseRequest<WorkbookFunctionResult> {
+    /** The body for the method */
     protected final WorkbookFunctionsOct2BinBody body;
 
     /**
@@ -36,10 +37,18 @@ public class WorkbookFunctionsOct2BinRequest extends BaseRequest {
         body = new WorkbookFunctionsOct2BinBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(@Nonnull final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     @Nullable
     public WorkbookFunctionResult post() throws ClientException {
         return send(HttpMethod.POST, body);
@@ -53,8 +62,8 @@ public class WorkbookFunctionsOct2BinRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsOct2BinRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsOct2BinRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +74,8 @@ public class WorkbookFunctionsOct2BinRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsOct2BinRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsOct2BinRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -77,8 +86,8 @@ public class WorkbookFunctionsOct2BinRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsOct2BinRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsOct2BinRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

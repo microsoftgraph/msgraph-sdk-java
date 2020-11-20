@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Home Realm Discovery Policy Reference Request.
  */
-public class HomeRealmDiscoveryPolicyReferenceRequest extends BaseRequest {
+public class HomeRealmDiscoveryPolicyReferenceRequest extends BaseReferenceRequest<HomeRealmDiscoveryPolicy> {
 
     /**
      * The request for the HomeRealmDiscoveryPolicy
@@ -36,15 +36,6 @@ public class HomeRealmDiscoveryPolicyReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicy.class);
     }
 
-    public void delete(@Nonnull final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    @Nullable
-    public HomeRealmDiscoveryPolicy delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
-    }
-
     /**
      * Sets the select clause for the request
      *
@@ -53,8 +44,8 @@ public class HomeRealmDiscoveryPolicyReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public HomeRealmDiscoveryPolicyReferenceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (HomeRealmDiscoveryPolicyReferenceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +56,8 @@ public class HomeRealmDiscoveryPolicyReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public HomeRealmDiscoveryPolicyReferenceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (HomeRealmDiscoveryPolicyReferenceRequest)this;
+        addExpandOption(value);
+        return this;
     }
     /**
      * Puts the HomeRealmDiscoveryPolicy

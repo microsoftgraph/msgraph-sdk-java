@@ -50,8 +50,9 @@ public class AndroidManagedAppRegistration extends ManagedAppRegistration implem
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

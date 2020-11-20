@@ -37,7 +37,17 @@ public class DirectoryObjectCollectionWithReferencesPage extends BaseCollectionP
      * @param response the serialized DirectoryObjectCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DirectoryObjectCollectionWithReferencesPage(@Nonnull final DirectoryObjectCollectionResponse response, @Nonnull  final DirectoryObjectCollectionWithReferencesRequestBuilder builder) {
+    public DirectoryObjectCollectionWithReferencesPage(@Nonnull final DirectoryObjectCollectionResponse response, @Nullable final DirectoryObjectCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
+    }
+
+    /**
+     * Creates the collection page for DirectoryObject
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DirectoryObjectCollectionWithReferencesPage(@Nonnull final java.util.List<DirectoryObject> pageContents, @Nullable final DirectoryObjectCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
     }
 }

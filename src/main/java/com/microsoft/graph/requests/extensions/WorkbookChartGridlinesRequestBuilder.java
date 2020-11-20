@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Chart Gridlines Request Builder.
  */
-public class WorkbookChartGridlinesRequestBuilder extends BaseRequestBuilder {
+public class WorkbookChartGridlinesRequestBuilder extends BaseRequestBuilder<WorkbookChartGridlines> {
 
     /**
      * The request builder for the WorkbookChartGridlines

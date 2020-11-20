@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.generated.ComplianceState;
 import com.microsoft.graph.models.extensions.ConfigurationManagerClientEnabledFeatures;
 import com.microsoft.graph.models.extensions.DeviceActionResult;
@@ -507,8 +508,9 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

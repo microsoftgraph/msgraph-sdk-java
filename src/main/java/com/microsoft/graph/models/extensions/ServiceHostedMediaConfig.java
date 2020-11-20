@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.MediaInfo;
 import com.microsoft.graph.models.extensions.MediaConfig;
 
@@ -60,8 +61,9 @@ public class ServiceHostedMediaConfig extends MediaConfig implements IJsonBacked
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

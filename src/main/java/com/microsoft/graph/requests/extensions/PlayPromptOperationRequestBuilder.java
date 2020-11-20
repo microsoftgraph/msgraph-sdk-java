@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Play Prompt Operation Request Builder.
  */
-public class PlayPromptOperationRequestBuilder extends BaseRequestBuilder {
+public class PlayPromptOperationRequestBuilder extends BaseRequestBuilder<PlayPromptOperation> {
 
     /**
      * The request builder for the PlayPromptOperation

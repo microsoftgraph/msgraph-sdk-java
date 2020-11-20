@@ -5,8 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.MessageReplyRequest;
 import com.microsoft.graph.models.extensions.Message;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
+import com.microsoft.graph.models.extensions.Message;
+import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Message Reply Request Builder.
  */
-public class MessageReplyRequestBuilder extends BaseActionRequestBuilder {
+public class MessageReplyRequestBuilder extends BaseActionRequestBuilder<Message> {
 
     /**
      * The request builder for this MessageReply

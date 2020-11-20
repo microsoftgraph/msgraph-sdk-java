@@ -68,8 +68,9 @@ public class WebApp extends MobileApp implements IJsonBackedObject {
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

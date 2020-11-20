@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Time Off Reason Request Builder.
  */
-public class TimeOffReasonRequestBuilder extends BaseRequestBuilder {
+public class TimeOffReasonRequestBuilder extends BaseRequestBuilder<TimeOffReason> {
 
     /**
      * The request builder for the TimeOffReason

@@ -41,7 +41,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -51,7 +51,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Group With Reference Request.
  */
-public class GroupWithReferenceRequest extends BaseRequest {
+public class GroupWithReferenceRequest extends BaseWithReferenceRequest<Group> {
 
     /**
      * The request for the Group
@@ -64,46 +64,6 @@ public class GroupWithReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, Group.class);
     }
 
-    public void post(@Nonnull final Group newGroup, @Nullable final IJsonBackedObject payload, @Nonnull final ICallback<? super Group> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    @Nullable
-    public Group post(@Nonnull final Group newGroup, @Nullable final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newGroup;
-        }
-        return null;
-    }
-
-    public void get(@Nonnull final ICallback<? super Group> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    @Nullable
-    public Group get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(@Nonnull final ICallback<? super Group> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(@Nonnull final Group sourceGroup, @Nonnull final ICallback<? super Group> callback) {
-		send(HttpMethod.PATCH, callback, sourceGroup);
-	}
-
-    @Nullable
-	public Group patch(@Nonnull final Group sourceGroup) throws ClientException {
-		return send(HttpMethod.PATCH, sourceGroup);
-	}
-
-
     /**
      * Sets the select clause for the request
      *
@@ -112,8 +72,8 @@ public class GroupWithReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public GroupWithReferenceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (GroupWithReferenceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -124,7 +84,7 @@ public class GroupWithReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public GroupWithReferenceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (GroupWithReferenceRequest)this;
+        addExpandOption(value);
+        return this;
     }
 }

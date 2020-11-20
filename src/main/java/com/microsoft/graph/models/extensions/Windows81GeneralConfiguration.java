@@ -351,8 +351,9 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

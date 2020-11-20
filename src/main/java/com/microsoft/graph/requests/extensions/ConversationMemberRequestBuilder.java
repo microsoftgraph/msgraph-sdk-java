@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Conversation Member Request Builder.
  */
-public class ConversationMemberRequestBuilder extends BaseRequestBuilder {
+public class ConversationMemberRequestBuilder extends BaseRequestBuilder<ConversationMember> {
 
     /**
      * The request builder for the ConversationMember

@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Notification Message Template Request Builder.
  */
-public class NotificationMessageTemplateRequestBuilder extends BaseRequestBuilder {
+public class NotificationMessageTemplateRequestBuilder extends BaseRequestBuilder<NotificationMessageTemplate> {
 
     /**
      * The request builder for the NotificationMessageTemplate
@@ -58,16 +58,31 @@ public class NotificationMessageTemplateRequestBuilder extends BaseRequestBuilde
     }
 
 
+    /**
+     *  Gets a request builder for the LocalizedNotificationMessage collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public LocalizedNotificationMessageCollectionRequestBuilder localizedNotificationMessages() {
         return new LocalizedNotificationMessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("localizedNotificationMessages"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the LocalizedNotificationMessage item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public LocalizedNotificationMessageRequestBuilder localizedNotificationMessages(@Nonnull final String id) {
         return new LocalizedNotificationMessageRequestBuilder(getRequestUrlWithAdditionalSegment("localizedNotificationMessages") + "/" + id, getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public NotificationMessageTemplateSendTestMessageRequestBuilder sendTestMessage() {
         return new NotificationMessageTemplateSendTestMessageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendTestMessage"), getClient(), null);

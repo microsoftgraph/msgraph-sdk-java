@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Subscribed Sku Request Builder.
  */
-public class SubscribedSkuRequestBuilder extends BaseRequestBuilder {
+public class SubscribedSkuRequestBuilder extends BaseRequestBuilder<SubscribedSku> {
 
     /**
      * The request builder for the SubscribedSku

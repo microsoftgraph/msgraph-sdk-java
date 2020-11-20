@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range View Request.
  */
-public class WorkbookRangeViewRequest extends BaseRequest {
+public class WorkbookRangeViewRequest extends BaseRequest<WorkbookRangeView> {
 	
     /**
      * The request for the WorkbookRangeView
@@ -149,8 +149,8 @@ public class WorkbookRangeViewRequest extends BaseRequest {
      */
      @Nonnull
      public WorkbookRangeViewRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookRangeViewRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -161,8 +161,8 @@ public class WorkbookRangeViewRequest extends BaseRequest {
      */
      @Nonnull
      public WorkbookRangeViewRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookRangeViewRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

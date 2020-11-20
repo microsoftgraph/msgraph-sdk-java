@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Multi Value Legacy Extended Property Request Builder.
  */
-public class MultiValueLegacyExtendedPropertyRequestBuilder extends BaseRequestBuilder {
+public class MultiValueLegacyExtendedPropertyRequestBuilder extends BaseRequestBuilder<MultiValueLegacyExtendedProperty> {
 
     /**
      * The request builder for the MultiValueLegacyExtendedProperty

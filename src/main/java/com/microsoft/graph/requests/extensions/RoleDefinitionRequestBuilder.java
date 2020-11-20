@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Role Definition Request Builder.
  */
-public class RoleDefinitionRequestBuilder extends BaseRequestBuilder {
+public class RoleDefinitionRequestBuilder extends BaseRequestBuilder<RoleDefinition> {
 
     /**
      * The request builder for the RoleDefinition
@@ -58,11 +58,22 @@ public class RoleDefinitionRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the RoleAssignment collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public RoleAssignmentCollectionRequestBuilder roleAssignments() {
         return new RoleAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the RoleAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public RoleAssignmentRequestBuilder roleAssignments(@Nonnull final String id) {
         return new RoleAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments") + "/" + id, getClient(), null);

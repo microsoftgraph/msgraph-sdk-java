@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Function Result Request Builder.
  */
-public class WorkbookFunctionResultRequestBuilder extends BaseRequestBuilder {
+public class WorkbookFunctionResultRequestBuilder extends BaseRequestBuilder<WorkbookFunctionResult> {
 
     /**
      * The request builder for the WorkbookFunctionResult

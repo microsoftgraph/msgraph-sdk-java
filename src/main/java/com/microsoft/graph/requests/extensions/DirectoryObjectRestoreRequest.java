@@ -20,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Directory Object Restore Request.
  */
-public class DirectoryObjectRestoreRequest extends BaseRequest {
+public class DirectoryObjectRestoreRequest extends BaseRequest<DirectoryObject> {
 
     /**
      * The request for this DirectoryObjectRestore
@@ -61,8 +61,8 @@ public class DirectoryObjectRestoreRequest extends BaseRequest {
      */
     @Nonnull
     public DirectoryObjectRestoreRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (DirectoryObjectRestoreRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -73,8 +73,8 @@ public class DirectoryObjectRestoreRequest extends BaseRequest {
      */
     @Nonnull
     public DirectoryObjectRestoreRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DirectoryObjectRestoreRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Invitation Request Builder.
  */
-public class InvitationRequestBuilder extends BaseRequestBuilder {
+public class InvitationRequestBuilder extends BaseRequestBuilder<Invitation> {
 
     /**
      * The request builder for the Invitation

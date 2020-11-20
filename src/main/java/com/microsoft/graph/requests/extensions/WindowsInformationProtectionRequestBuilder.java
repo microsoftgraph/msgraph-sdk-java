@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows Information Protection Request Builder.
  */
-public class WindowsInformationProtectionRequestBuilder extends BaseRequestBuilder {
+public class WindowsInformationProtectionRequestBuilder extends BaseRequestBuilder<WindowsInformationProtection> {
 
     /**
      * The request builder for the WindowsInformationProtection
@@ -61,34 +61,72 @@ public class WindowsInformationProtectionRequestBuilder extends BaseRequestBuild
     }
 
 
+    /**
+     *  Gets a request builder for the TargetedManagedAppPolicyAssignment collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public TargetedManagedAppPolicyAssignmentCollectionRequestBuilder assignments() {
         return new TargetedManagedAppPolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the TargetedManagedAppPolicyAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public TargetedManagedAppPolicyAssignmentRequestBuilder assignments(@Nonnull final String id) {
         return new TargetedManagedAppPolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the WindowsInformationProtectionAppLockerFile collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public WindowsInformationProtectionAppLockerFileCollectionRequestBuilder exemptAppLockerFiles() {
         return new WindowsInformationProtectionAppLockerFileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("exemptAppLockerFiles"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the WindowsInformationProtectionAppLockerFile item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public WindowsInformationProtectionAppLockerFileRequestBuilder exemptAppLockerFiles(@Nonnull final String id) {
         return new WindowsInformationProtectionAppLockerFileRequestBuilder(getRequestUrlWithAdditionalSegment("exemptAppLockerFiles") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the WindowsInformationProtectionAppLockerFile collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public WindowsInformationProtectionAppLockerFileCollectionRequestBuilder protectedAppLockerFiles() {
         return new WindowsInformationProtectionAppLockerFileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("protectedAppLockerFiles"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the WindowsInformationProtectionAppLockerFile item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public WindowsInformationProtectionAppLockerFileRequestBuilder protectedAppLockerFiles(@Nonnull final String id) {
         return new WindowsInformationProtectionAppLockerFileRequestBuilder(getRequestUrlWithAdditionalSegment("protectedAppLockerFiles") + "/" + id, getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param assignments the assignments
+     */
     @Nonnull
     public WindowsInformationProtectionAssignRequestBuilder assign(@Nullable final java.util.List<TargetedManagedAppPolicyAssignment> assignments) {
         return new WindowsInformationProtectionAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, assignments);

@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Subscribe To Tone Operation Request.
  */
-public class SubscribeToToneOperationRequest extends BaseRequest {
+public class SubscribeToToneOperationRequest extends BaseRequest<SubscribeToToneOperation> {
 	
     /**
      * The request for the SubscribeToToneOperation
@@ -146,8 +146,8 @@ public class SubscribeToToneOperationRequest extends BaseRequest {
      */
      @Nonnull
      public SubscribeToToneOperationRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SubscribeToToneOperationRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class SubscribeToToneOperationRequest extends BaseRequest {
      */
      @Nonnull
      public SubscribeToToneOperationRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SubscribeToToneOperationRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

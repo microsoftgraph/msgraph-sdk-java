@@ -20,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Rows Above Request.
  */
-public class WorkbookRangeRowsAboveRequest extends BaseRequest {
+public class WorkbookRangeRowsAboveRequest extends BaseRequest<WorkbookRange> {
 
     /**
      * The request for this WorkbookRangeRowsAbove
@@ -103,8 +103,8 @@ public class WorkbookRangeRowsAboveRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeRowsAboveRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookRangeRowsAboveRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +115,8 @@ public class WorkbookRangeRowsAboveRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeRowsAboveRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookRangeRowsAboveRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +127,8 @@ public class WorkbookRangeRowsAboveRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeRowsAboveRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookRangeRowsAboveRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +139,8 @@ public class WorkbookRangeRowsAboveRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeRowsAboveRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookRangeRowsAboveRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

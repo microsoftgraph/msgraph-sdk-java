@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Directory Object Request Builder.
  */
-public class DirectoryObjectRequestBuilder extends BaseRequestBuilder {
+public class DirectoryObjectRequestBuilder extends BaseRequestBuilder<DirectoryObject> {
 
     /**
      * The request builder for the DirectoryObject
@@ -58,26 +58,50 @@ public class DirectoryObjectRequestBuilder extends BaseRequestBuilder {
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param groupIds the groupIds
+     */
     @Nonnull
     public DirectoryObjectCheckMemberGroupsCollectionRequestBuilder checkMemberGroups(@Nullable final java.util.List<String> groupIds) {
         return new DirectoryObjectCheckMemberGroupsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.checkMemberGroups"), getClient(), null, groupIds);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param ids the ids
+     */
     @Nonnull
     public DirectoryObjectCheckMemberObjectsCollectionRequestBuilder checkMemberObjects(@Nullable final java.util.List<String> ids) {
         return new DirectoryObjectCheckMemberObjectsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.checkMemberObjects"), getClient(), null, ids);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param securityEnabledOnly the securityEnabledOnly
+     */
     @Nonnull
     public DirectoryObjectGetMemberGroupsCollectionRequestBuilder getMemberGroups(@Nullable final Boolean securityEnabledOnly) {
         return new DirectoryObjectGetMemberGroupsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getMemberGroups"), getClient(), null, securityEnabledOnly);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param securityEnabledOnly the securityEnabledOnly
+     */
     @Nonnull
     public DirectoryObjectGetMemberObjectsCollectionRequestBuilder getMemberObjects(@Nullable final Boolean securityEnabledOnly) {
         return new DirectoryObjectGetMemberObjectsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getMemberObjects"), getClient(), null, securityEnabledOnly);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public DirectoryObjectRestoreRequestBuilder restore() {
         return new DirectoryObjectRestoreRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.restore"), getClient(), null);

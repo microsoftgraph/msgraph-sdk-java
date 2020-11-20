@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Category Request Builder.
  */
-public class DeviceCategoryRequestBuilder extends BaseRequestBuilder {
+public class DeviceCategoryRequestBuilder extends BaseRequestBuilder<DeviceCategory> {
 
     /**
      * The request builder for the DeviceCategory

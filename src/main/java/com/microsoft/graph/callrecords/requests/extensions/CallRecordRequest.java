@@ -23,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Call Record Request.
  */
-public class CallRecordRequest extends BaseRequest {
+public class CallRecordRequest extends BaseRequest<CallRecord> {
 	
     /**
      * The request for the CallRecord
@@ -148,8 +148,8 @@ public class CallRecordRequest extends BaseRequest {
      */
      @Nonnull
      public CallRecordRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (CallRecordRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -160,8 +160,8 @@ public class CallRecordRequest extends BaseRequest {
      */
      @Nonnull
      public CallRecordRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CallRecordRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

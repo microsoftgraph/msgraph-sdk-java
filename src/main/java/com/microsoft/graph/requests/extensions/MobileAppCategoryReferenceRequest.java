@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Mobile App Category Reference Request.
  */
-public class MobileAppCategoryReferenceRequest extends BaseRequest {
+public class MobileAppCategoryReferenceRequest extends BaseReferenceRequest<MobileAppCategory> {
 
     /**
      * The request for the MobileAppCategory
@@ -36,15 +36,6 @@ public class MobileAppCategoryReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, MobileAppCategory.class);
     }
 
-    public void delete(@Nonnull final ICallback<? super MobileAppCategory> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    @Nullable
-    public MobileAppCategory delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
-    }
-
     /**
      * Sets the select clause for the request
      *
@@ -53,8 +44,8 @@ public class MobileAppCategoryReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public MobileAppCategoryReferenceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (MobileAppCategoryReferenceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +56,8 @@ public class MobileAppCategoryReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public MobileAppCategoryReferenceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (MobileAppCategoryReferenceRequest)this;
+        addExpandOption(value);
+        return this;
     }
     /**
      * Puts the MobileAppCategory

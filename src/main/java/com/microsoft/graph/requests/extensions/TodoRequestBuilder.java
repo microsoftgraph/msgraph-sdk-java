@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Todo Request Builder.
  */
-public class TodoRequestBuilder extends BaseRequestBuilder {
+public class TodoRequestBuilder extends BaseRequestBuilder<Todo> {
 
     /**
      * The request builder for the Todo
@@ -58,11 +58,22 @@ public class TodoRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the TodoTaskList collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public TodoTaskListCollectionRequestBuilder lists() {
         return new TodoTaskListCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("lists"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the TodoTaskList item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public TodoTaskListRequestBuilder lists(@Nonnull final String id) {
         return new TodoTaskListRequestBuilder(getRequestUrlWithAdditionalSegment("lists") + "/" + id, getClient(), null);

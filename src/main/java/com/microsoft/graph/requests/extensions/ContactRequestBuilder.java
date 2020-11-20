@@ -27,7 +27,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Contact Request Builder.
  */
-public class ContactRequestBuilder extends BaseRequestBuilder {
+public class ContactRequestBuilder extends BaseRequestBuilder<Contact> {
 
     /**
      * The request builder for the Contact
@@ -63,20 +63,42 @@ public class ContactRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the Extension collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ExtensionCollectionRequestBuilder extensions() {
         return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Extension item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ExtensionRequestBuilder extensions(@Nonnull final String id) {
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the MultiValueLegacyExtendedProperty collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public MultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties() {
         return new MultiValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the MultiValueLegacyExtendedProperty item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public MultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(@Nonnull final String id) {
         return new MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties") + "/" + id, getClient(), null);
@@ -91,11 +113,22 @@ public class ContactRequestBuilder extends BaseRequestBuilder {
     public ProfilePhotoRequestBuilder photo() {
         return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photo"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the SingleValueLegacyExtendedProperty collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public SingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
         return new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the SingleValueLegacyExtendedProperty item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public SingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(@Nonnull final String id) {
         return new SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);

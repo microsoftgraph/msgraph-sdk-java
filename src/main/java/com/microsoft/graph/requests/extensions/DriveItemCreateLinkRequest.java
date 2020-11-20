@@ -21,7 +21,8 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Drive Item Create Link Request.
  */
-public class DriveItemCreateLinkRequest extends BaseRequest {
+public class DriveItemCreateLinkRequest extends BaseRequest<Permission> {
+    /** The body for the method */
     protected final DriveItemCreateLinkBody body;
 
     /**
@@ -36,10 +37,18 @@ public class DriveItemCreateLinkRequest extends BaseRequest {
         body = new DriveItemCreateLinkBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(@Nonnull final ICallback<? super Permission> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     @Nullable
     public Permission post() throws ClientException {
         return send(HttpMethod.POST, body);
@@ -53,8 +62,8 @@ public class DriveItemCreateLinkRequest extends BaseRequest {
      */
     @Nonnull
     public DriveItemCreateLinkRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (DriveItemCreateLinkRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +74,8 @@ public class DriveItemCreateLinkRequest extends BaseRequest {
      */
     @Nonnull
     public DriveItemCreateLinkRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (DriveItemCreateLinkRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -77,8 +86,8 @@ public class DriveItemCreateLinkRequest extends BaseRequest {
      */
     @Nonnull
     public DriveItemCreateLinkRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DriveItemCreateLinkRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

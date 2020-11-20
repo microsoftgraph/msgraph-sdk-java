@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Chart Axis Format Request Builder.
  */
-public class WorkbookChartAxisFormatRequestBuilder extends BaseRequestBuilder {
+public class WorkbookChartAxisFormatRequestBuilder extends BaseRequestBuilder<WorkbookChartAxisFormat> {
 
     /**
      * The request builder for the WorkbookChartAxisFormat

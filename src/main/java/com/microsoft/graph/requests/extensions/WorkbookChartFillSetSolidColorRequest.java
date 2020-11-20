@@ -20,7 +20,8 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Chart Fill Set Solid Color Request.
  */
-public class WorkbookChartFillSetSolidColorRequest extends BaseRequest {
+public class WorkbookChartFillSetSolidColorRequest extends BaseRequest<Void> {
+    /** The body for the method */
     protected final WorkbookChartFillSetSolidColorBody body;
 
     /**
@@ -35,10 +36,18 @@ public class WorkbookChartFillSetSolidColorRequest extends BaseRequest {
         body = new WorkbookChartFillSetSolidColorBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(@Nonnull final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     @Nullable
     public Void post() throws ClientException {
         return send(HttpMethod.POST, body);
@@ -52,8 +61,8 @@ public class WorkbookChartFillSetSolidColorRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookChartFillSetSolidColorRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookChartFillSetSolidColorRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -64,8 +73,8 @@ public class WorkbookChartFillSetSolidColorRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookChartFillSetSolidColorRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookChartFillSetSolidColorRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -76,8 +85,8 @@ public class WorkbookChartFillSetSolidColorRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookChartFillSetSolidColorRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookChartFillSetSolidColorRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

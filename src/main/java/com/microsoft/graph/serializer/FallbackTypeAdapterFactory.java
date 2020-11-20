@@ -72,6 +72,11 @@ public final class FallbackTypeAdapterFactory implements TypeAdapterFactory {
         
     };
     
+    /**
+     * Instanciates a new type adapter factory
+     * 
+     * @param logger logger to use for the factory
+     */
     public FallbackTypeAdapterFactory(@Nonnull final ILogger logger) {
         this.logger = logger;
     }

@@ -20,7 +20,8 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Filter Apply Custom Filter Request.
  */
-public class WorkbookFilterApplyCustomFilterRequest extends BaseRequest {
+public class WorkbookFilterApplyCustomFilterRequest extends BaseRequest<Void> {
+    /** The body for the method */
     protected final WorkbookFilterApplyCustomFilterBody body;
 
     /**
@@ -35,10 +36,18 @@ public class WorkbookFilterApplyCustomFilterRequest extends BaseRequest {
         body = new WorkbookFilterApplyCustomFilterBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(@Nonnull final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     @Nullable
     public Void post() throws ClientException {
         return send(HttpMethod.POST, body);
@@ -52,8 +61,8 @@ public class WorkbookFilterApplyCustomFilterRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFilterApplyCustomFilterRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFilterApplyCustomFilterRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -64,8 +73,8 @@ public class WorkbookFilterApplyCustomFilterRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFilterApplyCustomFilterRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFilterApplyCustomFilterRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -76,8 +85,8 @@ public class WorkbookFilterApplyCustomFilterRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFilterApplyCustomFilterRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFilterApplyCustomFilterRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

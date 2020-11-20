@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Subscribe To Tone Operation Request Builder.
  */
-public class SubscribeToToneOperationRequestBuilder extends BaseRequestBuilder {
+public class SubscribeToToneOperationRequestBuilder extends BaseRequestBuilder<SubscribeToToneOperation> {
 
     /**
      * The request builder for the SubscribeToToneOperation

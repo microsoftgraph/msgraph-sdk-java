@@ -51,8 +51,9 @@ public class CancelMediaProcessingOperation extends CommsOperation implements IJ
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

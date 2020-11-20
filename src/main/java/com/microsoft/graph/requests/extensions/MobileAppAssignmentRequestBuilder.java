@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Mobile App Assignment Request Builder.
  */
-public class MobileAppAssignmentRequestBuilder extends BaseRequestBuilder {
+public class MobileAppAssignmentRequestBuilder extends BaseRequestBuilder<MobileAppAssignment> {
 
     /**
      * The request builder for the MobileAppAssignment

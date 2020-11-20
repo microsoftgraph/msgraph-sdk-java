@@ -33,10 +33,12 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.ISerializer;
 
+/** Represents the body to use with an OData method */
 public class ReferenceRequestBody implements IJsonBackedObject {
 
     private AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
+    /** the odata id */
     @SerializedName("@odata.id")
     @Expose
     @Nonnull
@@ -52,6 +54,10 @@ public class ReferenceRequestBody implements IJsonBackedObject {
      */
     private ISerializer serializer;
 
+    /**
+     * Instanciates a new reference request body from the serialized payload
+     * @param payload payload to instanciate the body from
+     */
     public ReferenceRequestBody(@Nonnull final String payload) {
         odataId = payload;
     }
@@ -72,7 +78,8 @@ public class ReferenceRequestBody implements IJsonBackedObject {
      * @return the serializer
      */
     @Nullable
-    protected ISerializer getSerializer() {
+    @Override
+    public ISerializer getSerializer() {
         return serializer;
     }
 

@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Item Analytics Request Builder.
  */
-public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder {
+public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder<ItemAnalytics> {
 
     /**
      * The request builder for the ItemAnalytics
@@ -68,11 +68,22 @@ public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder {
     public ItemActivityStatWithReferenceRequestBuilder allTime() {
         return new ItemActivityStatWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("allTime"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the ItemActivityStat collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ItemActivityStatCollectionRequestBuilder itemActivityStats() {
         return new ItemActivityStatCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("itemActivityStats"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ItemActivityStat item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ItemActivityStatRequestBuilder itemActivityStats(@Nonnull final String id) {
         return new ItemActivityStatRequestBuilder(getRequestUrlWithAdditionalSegment("itemActivityStats") + "/" + id, getClient(), null);

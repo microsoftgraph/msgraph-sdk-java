@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
+import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.requests.extensions.ReportRootDeviceConfigurationUserActivityRequest;
 
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Device Configuration User Activity Request.
  */
-public class ReportRootDeviceConfigurationUserActivityRequest extends BaseRequest {
+public class ReportRootDeviceConfigurationUserActivityRequest extends BaseRequest<Report> {
 
     /**
      * The request for this ReportRootDeviceConfigurationUserActivity
@@ -103,8 +104,8 @@ public class ReportRootDeviceConfigurationUserActivityRequest extends BaseReques
      */
     @Nonnull
     public ReportRootDeviceConfigurationUserActivityRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ReportRootDeviceConfigurationUserActivityRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +116,8 @@ public class ReportRootDeviceConfigurationUserActivityRequest extends BaseReques
      */
     @Nonnull
     public ReportRootDeviceConfigurationUserActivityRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ReportRootDeviceConfigurationUserActivityRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +128,8 @@ public class ReportRootDeviceConfigurationUserActivityRequest extends BaseReques
      */
     @Nonnull
     public ReportRootDeviceConfigurationUserActivityRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ReportRootDeviceConfigurationUserActivityRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +140,8 @@ public class ReportRootDeviceConfigurationUserActivityRequest extends BaseReques
      */
     @Nonnull
     public ReportRootDeviceConfigurationUserActivityRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ReportRootDeviceConfigurationUserActivityRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

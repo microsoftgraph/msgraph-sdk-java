@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.DeviceManagementSettings;
 import com.microsoft.graph.models.extensions.IntuneBrand;
 import com.microsoft.graph.models.generated.DeviceManagementSubscriptionState;
@@ -391,8 +392,9 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

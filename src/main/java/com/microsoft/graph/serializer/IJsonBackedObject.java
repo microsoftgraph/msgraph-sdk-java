@@ -49,4 +49,19 @@ public interface IJsonBackedObject {
     @Nullable
     AdditionalDataManager additionalDataManager();
 
+
+    /**
+     * Gets the raw JSON object for this object as parsed from
+     * @return the JSON that this object was derived from
+     */
+    @Nullable
+    JsonObject getRawObject();
+
+    /**
+     * Gets serializer
+     *
+     * @return the serializer
+     */
+    @Nullable
+    ISerializer getSerializer();
 }

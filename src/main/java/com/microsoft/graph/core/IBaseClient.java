@@ -86,7 +86,7 @@ public interface IBaseClient {
      */
     void validate();
     
-    /*
+    /**
      * Shuts down the executors.
      */
     void shutdown();

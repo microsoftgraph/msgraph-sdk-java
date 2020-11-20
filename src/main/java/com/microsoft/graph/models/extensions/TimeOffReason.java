@@ -78,8 +78,9 @@ public class TimeOffReason extends ChangeTrackedEntity implements IJsonBackedObj
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

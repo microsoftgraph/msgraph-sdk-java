@@ -241,8 +241,9 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements I
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

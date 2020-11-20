@@ -11,6 +11,7 @@ import javax.annotation.Nonnull;
 import okhttp3.Headers;
 import okhttp3.Response;
 
+/** Internal utility class to help parsing the response headers */
 public class HttpResponseHeadersHelper {
     /**
 	 * Gets the response headers from OkHttp Response
@@ -43,10 +44,9 @@ public class HttpResponseHeadersHelper {
 	 */
 	@Nonnull
 	public Map<String, List<String>> getResponseHeadersAsMapOfStringList(@Nonnull final Response response) {
-		Map<String, List<String>> headerFields = response.headers().toMultimap();
+		final Map<String, List<String>> headerFields = response.headers().toMultimap();
 		// Add the response code
-		List<String> list = new ArrayList<>();
-		list.add(Integer.toString(response.code()));
+		final List<String> list = new ArrayList<>();
 		headerFields.put("responseCode", list);
 		return headerFields;
 	}

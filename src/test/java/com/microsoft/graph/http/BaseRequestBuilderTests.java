@@ -12,11 +12,11 @@ import org.junit.Test;
 public class BaseRequestBuilderTests {
 
     private String expectedRequestUrl = "https://a.b.c/";
-    private BaseRequestBuilder baseRequestBuilder;
+    private BaseRequestBuilder<String> baseRequestBuilder;
 
     @Before
     public void setUp() throws Exception {
-        baseRequestBuilder = new BaseRequestBuilder(expectedRequestUrl,null,null){};
+        baseRequestBuilder = new BaseRequestBuilder<String>(expectedRequestUrl,null,null){};
     }
 
     @Test

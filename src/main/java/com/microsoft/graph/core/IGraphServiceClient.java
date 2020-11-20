@@ -16,9 +16,23 @@ import com.microsoft.graph.core.CustomRequestBuilder;
  */
 public interface IGraphServiceClient extends IBaseGraphServiceClient {
     
+    /**
+     * Gets a builder to execute a custom request
+     * 
+     * @return the custom request builder
+     * @param url the url to send the request to
+     * @param responseType the class to deserialize the response to
+     * @param <T> the type to deserialize the response to
+     */
     @Nonnull
     <T> CustomRequestBuilder<T> customRequest(@Nonnull final String url, @Nonnull final Class<T> responseType);
-	
+    
+    /**
+     * Gets a builder to execute a custom request with a generic JSONObject response
+     * 
+     * @return the custom request builder
+     * @param url the url to send the request to
+     */
     @Nonnull
     CustomRequestBuilder<JsonObject> customRequest(@Nonnull final String url);
 }

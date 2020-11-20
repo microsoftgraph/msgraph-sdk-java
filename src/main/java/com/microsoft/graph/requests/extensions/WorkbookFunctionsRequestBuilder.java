@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Functions Request Builder.
  */
-public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder {
+public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<WorkbookFunctions> {
 
     /**
      * The request builder for the WorkbookFunctions
@@ -58,1831 +58,4110 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder {
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number1 the number1
+     * @param number2 the number2
+     */
     @Nonnull
     public WorkbookFunctionsDeltaRequestBuilder delta(@Nullable final com.google.gson.JsonElement number1, @Nullable final com.google.gson.JsonElement number2) {
         return new WorkbookFunctionsDeltaRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, number1, number2);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsAbsRequestBuilder abs(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsAbsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.abs"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param issue the issue
+     * @param firstInterest the firstInterest
+     * @param settlement the settlement
+     * @param rate the rate
+     * @param par the par
+     * @param frequency the frequency
+     * @param basis the basis
+     * @param calcMethod the calcMethod
+     */
     @Nonnull
     public WorkbookFunctionsAccrIntRequestBuilder accrInt(@Nullable final com.google.gson.JsonElement issue, @Nullable final com.google.gson.JsonElement firstInterest, @Nullable final com.google.gson.JsonElement settlement, @Nullable final com.google.gson.JsonElement rate, @Nullable final com.google.gson.JsonElement par, @Nullable final com.google.gson.JsonElement frequency, @Nullable final com.google.gson.JsonElement basis, @Nullable final com.google.gson.JsonElement calcMethod) {
         return new WorkbookFunctionsAccrIntRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.accrInt"), getClient(), null, issue, firstInterest, settlement, rate, par, frequency, basis, calcMethod);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param issue the issue
+     * @param settlement the settlement
+     * @param rate the rate
+     * @param par the par
+     * @param basis the basis
+     */
     @Nonnull
     public WorkbookFunctionsAccrIntMRequestBuilder accrIntM(@Nullable final com.google.gson.JsonElement issue, @Nullable final com.google.gson.JsonElement settlement, @Nullable final com.google.gson.JsonElement rate, @Nullable final com.google.gson.JsonElement par, @Nullable final com.google.gson.JsonElement basis) {
         return new WorkbookFunctionsAccrIntMRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.accrIntM"), getClient(), null, issue, settlement, rate, par, basis);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsAcosRequestBuilder acos(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsAcosRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.acos"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsAcoshRequestBuilder acosh(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsAcoshRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.acosh"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsAcotRequestBuilder acot(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsAcotRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.acot"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsAcothRequestBuilder acoth(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsAcothRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.acoth"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param cost the cost
+     * @param datePurchased the datePurchased
+     * @param firstPeriod the firstPeriod
+     * @param salvage the salvage
+     * @param period the period
+     * @param rate the rate
+     * @param basis the basis
+     */
     @Nonnull
     public WorkbookFunctionsAmorDegrcRequestBuilder amorDegrc(@Nullable final com.google.gson.JsonElement cost, @Nullable final com.google.gson.JsonElement datePurchased, @Nullable final com.google.gson.JsonElement firstPeriod, @Nullable final com.google.gson.JsonElement salvage, @Nullable final com.google.gson.JsonElement period, @Nullable final com.google.gson.JsonElement rate, @Nullable final com.google.gson.JsonElement basis) {
         return new WorkbookFunctionsAmorDegrcRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.amorDegrc"), getClient(), null, cost, datePurchased, firstPeriod, salvage, period, rate, basis);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param cost the cost
+     * @param datePurchased the datePurchased
+     * @param firstPeriod the firstPeriod
+     * @param salvage the salvage
+     * @param period the period
+     * @param rate the rate
+     * @param basis the basis
+     */
     @Nonnull
     public WorkbookFunctionsAmorLincRequestBuilder amorLinc(@Nullable final com.google.gson.JsonElement cost, @Nullable final com.google.gson.JsonElement datePurchased, @Nullable final com.google.gson.JsonElement firstPeriod, @Nullable final com.google.gson.JsonElement salvage, @Nullable final com.google.gson.JsonElement period, @Nullable final com.google.gson.JsonElement rate, @Nullable final com.google.gson.JsonElement basis) {
         return new WorkbookFunctionsAmorLincRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.amorLinc"), getClient(), null, cost, datePurchased, firstPeriod, salvage, period, rate, basis);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsAndRequestBuilder and(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsAndRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.and"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param text the text
+     */
     @Nonnull
     public WorkbookFunctionsArabicRequestBuilder arabic(@Nullable final com.google.gson.JsonElement text) {
         return new WorkbookFunctionsArabicRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.arabic"), getClient(), null, text);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param reference the reference
+     */
     @Nonnull
     public WorkbookFunctionsAreasRequestBuilder areas(@Nullable final com.google.gson.JsonElement reference) {
         return new WorkbookFunctionsAreasRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.areas"), getClient(), null, reference);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param text the text
+     */
     @Nonnull
     public WorkbookFunctionsAscRequestBuilder asc(@Nullable final com.google.gson.JsonElement text) {
         return new WorkbookFunctionsAscRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.asc"), getClient(), null, text);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsAsinRequestBuilder asin(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsAsinRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.asin"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsAsinhRequestBuilder asinh(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsAsinhRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.asinh"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsAtanRequestBuilder atan(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsAtanRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.atan"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param xNum the xNum
+     * @param yNum the yNum
+     */
     @Nonnull
     public WorkbookFunctionsAtan2RequestBuilder atan2(@Nullable final com.google.gson.JsonElement xNum, @Nullable final com.google.gson.JsonElement yNum) {
         return new WorkbookFunctionsAtan2RequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.atan2"), getClient(), null, xNum, yNum);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsAtanhRequestBuilder atanh(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsAtanhRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.atanh"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsAveDevRequestBuilder aveDev(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsAveDevRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.aveDev"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsAverageRequestBuilder average(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsAverageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.average"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsAverageARequestBuilder averageA(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsAverageARequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.averageA"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param range the range
+     * @param criteria the criteria
+     * @param averageRange the averageRange
+     */
     @Nonnull
     public WorkbookFunctionsAverageIfRequestBuilder averageIf(@Nullable final com.google.gson.JsonElement range, @Nullable final com.google.gson.JsonElement criteria, @Nullable final com.google.gson.JsonElement averageRange) {
         return new WorkbookFunctionsAverageIfRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.averageIf"), getClient(), null, range, criteria, averageRange);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param averageRange the averageRange
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsAverageIfsRequestBuilder averageIfs(@Nullable final com.google.gson.JsonElement averageRange, @Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsAverageIfsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.averageIfs"), getClient(), null, averageRange, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsBahtTextRequestBuilder bahtText(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsBahtTextRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.bahtText"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param radix the radix
+     * @param minLength the minLength
+     */
     @Nonnull
     public WorkbookFunctionsBaseRequestBuilder base(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement radix, @Nullable final com.google.gson.JsonElement minLength) {
         return new WorkbookFunctionsBaseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.base"), getClient(), null, number, radix, minLength);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param x the x
+     * @param n the n
+     */
     @Nonnull
     public WorkbookFunctionsBesselIRequestBuilder besselI(@Nullable final com.google.gson.JsonElement x, @Nullable final com.google.gson.JsonElement n) {
         return new WorkbookFunctionsBesselIRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.besselI"), getClient(), null, x, n);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param x the x
+     * @param n the n
+     */
     @Nonnull
     public WorkbookFunctionsBesselJRequestBuilder besselJ(@Nullable final com.google.gson.JsonElement x, @Nullable final com.google.gson.JsonElement n) {
         return new WorkbookFunctionsBesselJRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.besselJ"), getClient(), null, x, n);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param x the x
+     * @param n the n
+     */
     @Nonnull
     public WorkbookFunctionsBesselKRequestBuilder besselK(@Nullable final com.google.gson.JsonElement x, @Nullable final com.google.gson.JsonElement n) {
         return new WorkbookFunctionsBesselKRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.besselK"), getClient(), null, x, n);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param x the x
+     * @param n the n
+     */
     @Nonnull
     public WorkbookFunctionsBesselYRequestBuilder besselY(@Nullable final com.google.gson.JsonElement x, @Nullable final com.google.gson.JsonElement n) {
         return new WorkbookFunctionsBesselYRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.besselY"), getClient(), null, x, n);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param x the x
+     * @param alpha the alpha
+     * @param beta the beta
+     * @param cumulative the cumulative
+     * @param a the a
+     * @param b the b
+     */
     @Nonnull
     public WorkbookFunctionsBeta_DistRequestBuilder beta_Dist(@Nullable final com.google.gson.JsonElement x, @Nullable final com.google.gson.JsonElement alpha, @Nullable final com.google.gson.JsonElement beta, @Nullable final com.google.gson.JsonElement cumulative, @Nullable final com.google.gson.JsonElement a, @Nullable final com.google.gson.JsonElement b) {
         return new WorkbookFunctionsBeta_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.beta_Dist"), getClient(), null, x, alpha, beta, cumulative, a, b);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param probability the probability
+     * @param alpha the alpha
+     * @param beta the beta
+     * @param a the a
+     * @param b the b
+     */
     @Nonnull
     public WorkbookFunctionsBeta_InvRequestBuilder beta_Inv(@Nullable final com.google.gson.JsonElement probability, @Nullable final com.google.gson.JsonElement alpha, @Nullable final com.google.gson.JsonElement beta, @Nullable final com.google.gson.JsonElement a, @Nullable final com.google.gson.JsonElement b) {
         return new WorkbookFunctionsBeta_InvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.beta_Inv"), getClient(), null, probability, alpha, beta, a, b);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsBin2DecRequestBuilder bin2Dec(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsBin2DecRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.bin2Dec"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param places the places
+     */
     @Nonnull
     public WorkbookFunctionsBin2HexRequestBuilder bin2Hex(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement places) {
         return new WorkbookFunctionsBin2HexRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.bin2Hex"), getClient(), null, number, places);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param places the places
+     */
     @Nonnull
     public WorkbookFunctionsBin2OctRequestBuilder bin2Oct(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement places) {
         return new WorkbookFunctionsBin2OctRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.bin2Oct"), getClient(), null, number, places);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param numberS the numberS
+     * @param trials the trials
+     * @param probabilityS the probabilityS
+     * @param cumulative the cumulative
+     */
     @Nonnull
     public WorkbookFunctionsBinom_DistRequestBuilder binom_Dist(@Nullable final com.google.gson.JsonElement numberS, @Nullable final com.google.gson.JsonElement trials, @Nullable final com.google.gson.JsonElement probabilityS, @Nullable final com.google.gson.JsonElement cumulative) {
         return new WorkbookFunctionsBinom_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.binom_Dist"), getClient(), null, numberS, trials, probabilityS, cumulative);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param trials the trials
+     * @param probabilityS the probabilityS
+     * @param numberS the numberS
+     * @param numberS2 the numberS2
+     */
     @Nonnull
     public WorkbookFunctionsBinom_Dist_RangeRequestBuilder binom_Dist_Range(@Nullable final com.google.gson.JsonElement trials, @Nullable final com.google.gson.JsonElement probabilityS, @Nullable final com.google.gson.JsonElement numberS, @Nullable final com.google.gson.JsonElement numberS2) {
         return new WorkbookFunctionsBinom_Dist_RangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.binom_Dist_Range"), getClient(), null, trials, probabilityS, numberS, numberS2);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param trials the trials
+     * @param probabilityS the probabilityS
+     * @param alpha the alpha
+     */
     @Nonnull
     public WorkbookFunctionsBinom_InvRequestBuilder binom_Inv(@Nullable final com.google.gson.JsonElement trials, @Nullable final com.google.gson.JsonElement probabilityS, @Nullable final com.google.gson.JsonElement alpha) {
         return new WorkbookFunctionsBinom_InvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.binom_Inv"), getClient(), null, trials, probabilityS, alpha);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number1 the number1
+     * @param number2 the number2
+     */
     @Nonnull
     public WorkbookFunctionsBitandRequestBuilder bitand(@Nullable final com.google.gson.JsonElement number1, @Nullable final com.google.gson.JsonElement number2) {
         return new WorkbookFunctionsBitandRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.bitand"), getClient(), null, number1, number2);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param shiftAmount the shiftAmount
+     */
     @Nonnull
     public WorkbookFunctionsBitlshiftRequestBuilder bitlshift(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement shiftAmount) {
         return new WorkbookFunctionsBitlshiftRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.bitlshift"), getClient(), null, number, shiftAmount);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number1 the number1
+     * @param number2 the number2
+     */
     @Nonnull
     public WorkbookFunctionsBitorRequestBuilder bitor(@Nullable final com.google.gson.JsonElement number1, @Nullable final com.google.gson.JsonElement number2) {
         return new WorkbookFunctionsBitorRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.bitor"), getClient(), null, number1, number2);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param shiftAmount the shiftAmount
+     */
     @Nonnull
     public WorkbookFunctionsBitrshiftRequestBuilder bitrshift(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement shiftAmount) {
         return new WorkbookFunctionsBitrshiftRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.bitrshift"), getClient(), null, number, shiftAmount);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number1 the number1
+     * @param number2 the number2
+     */
     @Nonnull
     public WorkbookFunctionsBitxorRequestBuilder bitxor(@Nullable final com.google.gson.JsonElement number1, @Nullable final com.google.gson.JsonElement number2) {
         return new WorkbookFunctionsBitxorRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.bitxor"), getClient(), null, number1, number2);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param significance the significance
+     * @param mode the mode
+     */
     @Nonnull
     public WorkbookFunctionsCeiling_MathRequestBuilder ceiling_Math(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement significance, @Nullable final com.google.gson.JsonElement mode) {
         return new WorkbookFunctionsCeiling_MathRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ceiling_Math"), getClient(), null, number, significance, mode);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param significance the significance
+     */
     @Nonnull
     public WorkbookFunctionsCeiling_PreciseRequestBuilder ceiling_Precise(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement significance) {
         return new WorkbookFunctionsCeiling_PreciseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ceiling_Precise"), getClient(), null, number, significance);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsCharRequestBuilder msgraphChar(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsCharRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.char"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param x the x
+     * @param degFreedom the degFreedom
+     * @param cumulative the cumulative
+     */
     @Nonnull
     public WorkbookFunctionsChiSq_DistRequestBuilder chiSq_Dist(@Nullable final com.google.gson.JsonElement x, @Nullable final com.google.gson.JsonElement degFreedom, @Nullable final com.google.gson.JsonElement cumulative) {
         return new WorkbookFunctionsChiSq_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.chiSq_Dist"), getClient(), null, x, degFreedom, cumulative);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param x the x
+     * @param degFreedom the degFreedom
+     */
     @Nonnull
     public WorkbookFunctionsChiSq_Dist_RTRequestBuilder chiSq_Dist_RT(@Nullable final com.google.gson.JsonElement x, @Nullable final com.google.gson.JsonElement degFreedom) {
         return new WorkbookFunctionsChiSq_Dist_RTRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.chiSq_Dist_RT"), getClient(), null, x, degFreedom);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param probability the probability
+     * @param degFreedom the degFreedom
+     */
     @Nonnull
     public WorkbookFunctionsChiSq_InvRequestBuilder chiSq_Inv(@Nullable final com.google.gson.JsonElement probability, @Nullable final com.google.gson.JsonElement degFreedom) {
         return new WorkbookFunctionsChiSq_InvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.chiSq_Inv"), getClient(), null, probability, degFreedom);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param probability the probability
+     * @param degFreedom the degFreedom
+     */
     @Nonnull
     public WorkbookFunctionsChiSq_Inv_RTRequestBuilder chiSq_Inv_RT(@Nullable final com.google.gson.JsonElement probability, @Nullable final com.google.gson.JsonElement degFreedom) {
         return new WorkbookFunctionsChiSq_Inv_RTRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.chiSq_Inv_RT"), getClient(), null, probability, degFreedom);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param indexNum the indexNum
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsChooseRequestBuilder choose(@Nullable final com.google.gson.JsonElement indexNum, @Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsChooseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.choose"), getClient(), null, indexNum, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param text the text
+     */
     @Nonnull
     public WorkbookFunctionsCleanRequestBuilder clean(@Nullable final com.google.gson.JsonElement text) {
         return new WorkbookFunctionsCleanRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.clean"), getClient(), null, text);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param text the text
+     */
     @Nonnull
     public WorkbookFunctionsCodeRequestBuilder code(@Nullable final com.google.gson.JsonElement text) {
         return new WorkbookFunctionsCodeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.code"), getClient(), null, text);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param array the array
+     */
     @Nonnull
     public WorkbookFunctionsColumnsRequestBuilder columns(@Nullable final com.google.gson.JsonElement array) {
         return new WorkbookFunctionsColumnsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.columns"), getClient(), null, array);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param numberChosen the numberChosen
+     */
     @Nonnull
     public WorkbookFunctionsCombinRequestBuilder combin(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement numberChosen) {
         return new WorkbookFunctionsCombinRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.combin"), getClient(), null, number, numberChosen);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param numberChosen the numberChosen
+     */
     @Nonnull
     public WorkbookFunctionsCombinaRequestBuilder combina(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement numberChosen) {
         return new WorkbookFunctionsCombinaRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.combina"), getClient(), null, number, numberChosen);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param realNum the realNum
+     * @param iNum the iNum
+     * @param suffix the suffix
+     */
     @Nonnull
     public WorkbookFunctionsComplexRequestBuilder complex(@Nullable final com.google.gson.JsonElement realNum, @Nullable final com.google.gson.JsonElement iNum, @Nullable final com.google.gson.JsonElement suffix) {
         return new WorkbookFunctionsComplexRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.complex"), getClient(), null, realNum, iNum, suffix);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsConcatenateRequestBuilder concatenate(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsConcatenateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.concatenate"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param alpha the alpha
+     * @param standardDev the standardDev
+     * @param size the size
+     */
     @Nonnull
     public WorkbookFunctionsConfidence_NormRequestBuilder confidence_Norm(@Nullable final com.google.gson.JsonElement alpha, @Nullable final com.google.gson.JsonElement standardDev, @Nullable final com.google.gson.JsonElement size) {
         return new WorkbookFunctionsConfidence_NormRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.confidence_Norm"), getClient(), null, alpha, standardDev, size);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param alpha the alpha
+     * @param standardDev the standardDev
+     * @param size the size
+     */
     @Nonnull
     public WorkbookFunctionsConfidence_TRequestBuilder confidence_T(@Nullable final com.google.gson.JsonElement alpha, @Nullable final com.google.gson.JsonElement standardDev, @Nullable final com.google.gson.JsonElement size) {
         return new WorkbookFunctionsConfidence_TRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.confidence_T"), getClient(), null, alpha, standardDev, size);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param fromUnit the fromUnit
+     * @param toUnit the toUnit
+     */
     @Nonnull
     public WorkbookFunctionsConvertRequestBuilder convert(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement fromUnit, @Nullable final com.google.gson.JsonElement toUnit) {
         return new WorkbookFunctionsConvertRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.convert"), getClient(), null, number, fromUnit, toUnit);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsCosRequestBuilder cos(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsCosRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cos"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsCoshRequestBuilder cosh(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsCoshRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cosh"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsCotRequestBuilder cot(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsCotRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cot"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsCothRequestBuilder coth(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsCothRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.coth"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsCountRequestBuilder count(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsCountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.count"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsCountARequestBuilder countA(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsCountARequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.countA"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param range the range
+     */
     @Nonnull
     public WorkbookFunctionsCountBlankRequestBuilder countBlank(@Nullable final com.google.gson.JsonElement range) {
         return new WorkbookFunctionsCountBlankRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.countBlank"), getClient(), null, range);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param range the range
+     * @param criteria the criteria
+     */
     @Nonnull
     public WorkbookFunctionsCountIfRequestBuilder countIf(@Nullable final com.google.gson.JsonElement range, @Nullable final com.google.gson.JsonElement criteria) {
         return new WorkbookFunctionsCountIfRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.countIf"), getClient(), null, range, criteria);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsCountIfsRequestBuilder countIfs(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsCountIfsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.countIfs"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param frequency the frequency
+     * @param basis the basis
+     */
     @Nonnull
     public WorkbookFunctionsCoupDayBsRequestBuilder coupDayBs(@Nullable final com.google.gson.JsonElement settlement, @Nullable final com.google.gson.JsonElement maturity, @Nullable final com.google.gson.JsonElement frequency, @Nullable final com.google.gson.JsonElement basis) {
         return new WorkbookFunctionsCoupDayBsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.coupDayBs"), getClient(), null, settlement, maturity, frequency, basis);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param frequency the frequency
+     * @param basis the basis
+     */
     @Nonnull
     public WorkbookFunctionsCoupDaysRequestBuilder coupDays(@Nullable final com.google.gson.JsonElement settlement, @Nullable final com.google.gson.JsonElement maturity, @Nullable final com.google.gson.JsonElement frequency, @Nullable final com.google.gson.JsonElement basis) {
         return new WorkbookFunctionsCoupDaysRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.coupDays"), getClient(), null, settlement, maturity, frequency, basis);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param frequency the frequency
+     * @param basis the basis
+     */
     @Nonnull
     public WorkbookFunctionsCoupDaysNcRequestBuilder coupDaysNc(@Nullable final com.google.gson.JsonElement settlement, @Nullable final com.google.gson.JsonElement maturity, @Nullable final com.google.gson.JsonElement frequency, @Nullable final com.google.gson.JsonElement basis) {
         return new WorkbookFunctionsCoupDaysNcRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.coupDaysNc"), getClient(), null, settlement, maturity, frequency, basis);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param frequency the frequency
+     * @param basis the basis
+     */
     @Nonnull
     public WorkbookFunctionsCoupNcdRequestBuilder coupNcd(@Nullable final com.google.gson.JsonElement settlement, @Nullable final com.google.gson.JsonElement maturity, @Nullable final com.google.gson.JsonElement frequency, @Nullable final com.google.gson.JsonElement basis) {
         return new WorkbookFunctionsCoupNcdRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.coupNcd"), getClient(), null, settlement, maturity, frequency, basis);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param frequency the frequency
+     * @param basis the basis
+     */
     @Nonnull
     public WorkbookFunctionsCoupNumRequestBuilder coupNum(@Nullable final com.google.gson.JsonElement settlement, @Nullable final com.google.gson.JsonElement maturity, @Nullable final com.google.gson.JsonElement frequency, @Nullable final com.google.gson.JsonElement basis) {
         return new WorkbookFunctionsCoupNumRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.coupNum"), getClient(), null, settlement, maturity, frequency, basis);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param frequency the frequency
+     * @param basis the basis
+     */
     @Nonnull
     public WorkbookFunctionsCoupPcdRequestBuilder coupPcd(@Nullable final com.google.gson.JsonElement settlement, @Nullable final com.google.gson.JsonElement maturity, @Nullable final com.google.gson.JsonElement frequency, @Nullable final com.google.gson.JsonElement basis) {
         return new WorkbookFunctionsCoupPcdRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.coupPcd"), getClient(), null, settlement, maturity, frequency, basis);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsCscRequestBuilder csc(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsCscRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.csc"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsCschRequestBuilder csch(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsCschRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.csch"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param rate the rate
+     * @param nper the nper
+     * @param pv the pv
+     * @param startPeriod the startPeriod
+     * @param endPeriod the endPeriod
+     * @param type the type
+     */
     @Nonnull
     public WorkbookFunctionsCumIPmtRequestBuilder cumIPmt(@Nullable final com.google.gson.JsonElement rate, @Nullable final com.google.gson.JsonElement nper, @Nullable final com.google.gson.JsonElement pv, @Nullable final com.google.gson.JsonElement startPeriod, @Nullable final com.google.gson.JsonElement endPeriod, @Nullable final com.google.gson.JsonElement type) {
         return new WorkbookFunctionsCumIPmtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cumIPmt"), getClient(), null, rate, nper, pv, startPeriod, endPeriod, type);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param rate the rate
+     * @param nper the nper
+     * @param pv the pv
+     * @param startPeriod the startPeriod
+     * @param endPeriod the endPeriod
+     * @param type the type
+     */
     @Nonnull
     public WorkbookFunctionsCumPrincRequestBuilder cumPrinc(@Nullable final com.google.gson.JsonElement rate, @Nullable final com.google.gson.JsonElement nper, @Nullable final com.google.gson.JsonElement pv, @Nullable final com.google.gson.JsonElement startPeriod, @Nullable final com.google.gson.JsonElement endPeriod, @Nullable final com.google.gson.JsonElement type) {
         return new WorkbookFunctionsCumPrincRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cumPrinc"), getClient(), null, rate, nper, pv, startPeriod, endPeriod, type);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param year the year
+     * @param month the month
+     * @param day the day
+     */
     @Nonnull
     public WorkbookFunctionsDateRequestBuilder date(@Nullable final com.google.gson.JsonElement year, @Nullable final com.google.gson.JsonElement month, @Nullable final com.google.gson.JsonElement day) {
         return new WorkbookFunctionsDateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.date"), getClient(), null, year, month, day);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param dateText the dateText
+     */
     @Nonnull
     public WorkbookFunctionsDatevalueRequestBuilder datevalue(@Nullable final com.google.gson.JsonElement dateText) {
         return new WorkbookFunctionsDatevalueRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.datevalue"), getClient(), null, dateText);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param database the database
+     * @param field the field
+     * @param criteria the criteria
+     */
     @Nonnull
     public WorkbookFunctionsDaverageRequestBuilder daverage(@Nullable final com.google.gson.JsonElement database, @Nullable final com.google.gson.JsonElement field, @Nullable final com.google.gson.JsonElement criteria) {
         return new WorkbookFunctionsDaverageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.daverage"), getClient(), null, database, field, criteria);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param serialNumber the serialNumber
+     */
     @Nonnull
     public WorkbookFunctionsDayRequestBuilder day(@Nullable final com.google.gson.JsonElement serialNumber) {
         return new WorkbookFunctionsDayRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.day"), getClient(), null, serialNumber);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param endDate the endDate
+     * @param startDate the startDate
+     */
     @Nonnull
     public WorkbookFunctionsDaysRequestBuilder days(@Nullable final com.google.gson.JsonElement endDate, @Nullable final com.google.gson.JsonElement startDate) {
         return new WorkbookFunctionsDaysRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.days"), getClient(), null, endDate, startDate);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param startDate the startDate
+     * @param endDate the endDate
+     * @param method the method
+     */
     @Nonnull
     public WorkbookFunctionsDays360RequestBuilder days360(@Nullable final com.google.gson.JsonElement startDate, @Nullable final com.google.gson.JsonElement endDate, @Nullable final com.google.gson.JsonElement method) {
         return new WorkbookFunctionsDays360RequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.days360"), getClient(), null, startDate, endDate, method);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param cost the cost
+     * @param salvage the salvage
+     * @param life the life
+     * @param period the period
+     * @param month the month
+     */
     @Nonnull
     public WorkbookFunctionsDbRequestBuilder db(@Nullable final com.google.gson.JsonElement cost, @Nullable final com.google.gson.JsonElement salvage, @Nullable final com.google.gson.JsonElement life, @Nullable final com.google.gson.JsonElement period, @Nullable final com.google.gson.JsonElement month) {
         return new WorkbookFunctionsDbRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.db"), getClient(), null, cost, salvage, life, period, month);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param text the text
+     */
     @Nonnull
     public WorkbookFunctionsDbcsRequestBuilder dbcs(@Nullable final com.google.gson.JsonElement text) {
         return new WorkbookFunctionsDbcsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dbcs"), getClient(), null, text);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param database the database
+     * @param field the field
+     * @param criteria the criteria
+     */
     @Nonnull
     public WorkbookFunctionsDcountRequestBuilder dcount(@Nullable final com.google.gson.JsonElement database, @Nullable final com.google.gson.JsonElement field, @Nullable final com.google.gson.JsonElement criteria) {
         return new WorkbookFunctionsDcountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dcount"), getClient(), null, database, field, criteria);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param database the database
+     * @param field the field
+     * @param criteria the criteria
+     */
     @Nonnull
     public WorkbookFunctionsDcountARequestBuilder dcountA(@Nullable final com.google.gson.JsonElement database, @Nullable final com.google.gson.JsonElement field, @Nullable final com.google.gson.JsonElement criteria) {
         return new WorkbookFunctionsDcountARequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dcountA"), getClient(), null, database, field, criteria);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param cost the cost
+     * @param salvage the salvage
+     * @param life the life
+     * @param period the period
+     * @param factor the factor
+     */
     @Nonnull
     public WorkbookFunctionsDdbRequestBuilder ddb(@Nullable final com.google.gson.JsonElement cost, @Nullable final com.google.gson.JsonElement salvage, @Nullable final com.google.gson.JsonElement life, @Nullable final com.google.gson.JsonElement period, @Nullable final com.google.gson.JsonElement factor) {
         return new WorkbookFunctionsDdbRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ddb"), getClient(), null, cost, salvage, life, period, factor);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param places the places
+     */
     @Nonnull
     public WorkbookFunctionsDec2BinRequestBuilder dec2Bin(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement places) {
         return new WorkbookFunctionsDec2BinRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dec2Bin"), getClient(), null, number, places);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param places the places
+     */
     @Nonnull
     public WorkbookFunctionsDec2HexRequestBuilder dec2Hex(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement places) {
         return new WorkbookFunctionsDec2HexRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dec2Hex"), getClient(), null, number, places);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param places the places
+     */
     @Nonnull
     public WorkbookFunctionsDec2OctRequestBuilder dec2Oct(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement places) {
         return new WorkbookFunctionsDec2OctRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dec2Oct"), getClient(), null, number, places);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param radix the radix
+     */
     @Nonnull
     public WorkbookFunctionsDecimalRequestBuilder decimal(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement radix) {
         return new WorkbookFunctionsDecimalRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.decimal"), getClient(), null, number, radix);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param angle the angle
+     */
     @Nonnull
     public WorkbookFunctionsDegreesRequestBuilder degrees(@Nullable final com.google.gson.JsonElement angle) {
         return new WorkbookFunctionsDegreesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.degrees"), getClient(), null, angle);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsDevSqRequestBuilder devSq(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsDevSqRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.devSq"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param database the database
+     * @param field the field
+     * @param criteria the criteria
+     */
     @Nonnull
     public WorkbookFunctionsDgetRequestBuilder dget(@Nullable final com.google.gson.JsonElement database, @Nullable final com.google.gson.JsonElement field, @Nullable final com.google.gson.JsonElement criteria) {
         return new WorkbookFunctionsDgetRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dget"), getClient(), null, database, field, criteria);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param pr the pr
+     * @param redemption the redemption
+     * @param basis the basis
+     */
     @Nonnull
     public WorkbookFunctionsDiscRequestBuilder disc(@Nullable final com.google.gson.JsonElement settlement, @Nullable final com.google.gson.JsonElement maturity, @Nullable final com.google.gson.JsonElement pr, @Nullable final com.google.gson.JsonElement redemption, @Nullable final com.google.gson.JsonElement basis) {
         return new WorkbookFunctionsDiscRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.disc"), getClient(), null, settlement, maturity, pr, redemption, basis);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param database the database
+     * @param field the field
+     * @param criteria the criteria
+     */
     @Nonnull
     public WorkbookFunctionsDmaxRequestBuilder dmax(@Nullable final com.google.gson.JsonElement database, @Nullable final com.google.gson.JsonElement field, @Nullable final com.google.gson.JsonElement criteria) {
         return new WorkbookFunctionsDmaxRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dmax"), getClient(), null, database, field, criteria);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param database the database
+     * @param field the field
+     * @param criteria the criteria
+     */
     @Nonnull
     public WorkbookFunctionsDminRequestBuilder dmin(@Nullable final com.google.gson.JsonElement database, @Nullable final com.google.gson.JsonElement field, @Nullable final com.google.gson.JsonElement criteria) {
         return new WorkbookFunctionsDminRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dmin"), getClient(), null, database, field, criteria);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param decimals the decimals
+     */
     @Nonnull
     public WorkbookFunctionsDollarRequestBuilder dollar(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement decimals) {
         return new WorkbookFunctionsDollarRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dollar"), getClient(), null, number, decimals);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param fractionalDollar the fractionalDollar
+     * @param fraction the fraction
+     */
     @Nonnull
     public WorkbookFunctionsDollarDeRequestBuilder dollarDe(@Nullable final com.google.gson.JsonElement fractionalDollar, @Nullable final com.google.gson.JsonElement fraction) {
         return new WorkbookFunctionsDollarDeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dollarDe"), getClient(), null, fractionalDollar, fraction);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param decimalDollar the decimalDollar
+     * @param fraction the fraction
+     */
     @Nonnull
     public WorkbookFunctionsDollarFrRequestBuilder dollarFr(@Nullable final com.google.gson.JsonElement decimalDollar, @Nullable final com.google.gson.JsonElement fraction) {
         return new WorkbookFunctionsDollarFrRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dollarFr"), getClient(), null, decimalDollar, fraction);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param database the database
+     * @param field the field
+     * @param criteria the criteria
+     */
     @Nonnull
     public WorkbookFunctionsDproductRequestBuilder dproduct(@Nullable final com.google.gson.JsonElement database, @Nullable final com.google.gson.JsonElement field, @Nullable final com.google.gson.JsonElement criteria) {
         return new WorkbookFunctionsDproductRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dproduct"), getClient(), null, database, field, criteria);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param database the database
+     * @param field the field
+     * @param criteria the criteria
+     */
     @Nonnull
     public WorkbookFunctionsDstDevRequestBuilder dstDev(@Nullable final com.google.gson.JsonElement database, @Nullable final com.google.gson.JsonElement field, @Nullable final com.google.gson.JsonElement criteria) {
         return new WorkbookFunctionsDstDevRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dstDev"), getClient(), null, database, field, criteria);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param database the database
+     * @param field the field
+     * @param criteria the criteria
+     */
     @Nonnull
     public WorkbookFunctionsDstDevPRequestBuilder dstDevP(@Nullable final com.google.gson.JsonElement database, @Nullable final com.google.gson.JsonElement field, @Nullable final com.google.gson.JsonElement criteria) {
         return new WorkbookFunctionsDstDevPRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dstDevP"), getClient(), null, database, field, criteria);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param database the database
+     * @param field the field
+     * @param criteria the criteria
+     */
     @Nonnull
     public WorkbookFunctionsDsumRequestBuilder dsum(@Nullable final com.google.gson.JsonElement database, @Nullable final com.google.gson.JsonElement field, @Nullable final com.google.gson.JsonElement criteria) {
         return new WorkbookFunctionsDsumRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dsum"), getClient(), null, database, field, criteria);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param coupon the coupon
+     * @param yld the yld
+     * @param frequency the frequency
+     * @param basis the basis
+     */
     @Nonnull
     public WorkbookFunctionsDurationRequestBuilder duration(@Nullable final com.google.gson.JsonElement settlement, @Nullable final com.google.gson.JsonElement maturity, @Nullable final com.google.gson.JsonElement coupon, @Nullable final com.google.gson.JsonElement yld, @Nullable final com.google.gson.JsonElement frequency, @Nullable final com.google.gson.JsonElement basis) {
         return new WorkbookFunctionsDurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.duration"), getClient(), null, settlement, maturity, coupon, yld, frequency, basis);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param database the database
+     * @param field the field
+     * @param criteria the criteria
+     */
     @Nonnull
     public WorkbookFunctionsDvarRequestBuilder dvar(@Nullable final com.google.gson.JsonElement database, @Nullable final com.google.gson.JsonElement field, @Nullable final com.google.gson.JsonElement criteria) {
         return new WorkbookFunctionsDvarRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dvar"), getClient(), null, database, field, criteria);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param database the database
+     * @param field the field
+     * @param criteria the criteria
+     */
     @Nonnull
     public WorkbookFunctionsDvarPRequestBuilder dvarP(@Nullable final com.google.gson.JsonElement database, @Nullable final com.google.gson.JsonElement field, @Nullable final com.google.gson.JsonElement criteria) {
         return new WorkbookFunctionsDvarPRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dvarP"), getClient(), null, database, field, criteria);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param significance the significance
+     */
     @Nonnull
     public WorkbookFunctionsEcma_CeilingRequestBuilder ecma_Ceiling(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement significance) {
         return new WorkbookFunctionsEcma_CeilingRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ecma_Ceiling"), getClient(), null, number, significance);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param startDate the startDate
+     * @param months the months
+     */
     @Nonnull
     public WorkbookFunctionsEdateRequestBuilder edate(@Nullable final com.google.gson.JsonElement startDate, @Nullable final com.google.gson.JsonElement months) {
         return new WorkbookFunctionsEdateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.edate"), getClient(), null, startDate, months);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param nominalRate the nominalRate
+     * @param npery the npery
+     */
     @Nonnull
     public WorkbookFunctionsEffectRequestBuilder effect(@Nullable final com.google.gson.JsonElement nominalRate, @Nullable final com.google.gson.JsonElement npery) {
         return new WorkbookFunctionsEffectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.effect"), getClient(), null, nominalRate, npery);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param startDate the startDate
+     * @param months the months
+     */
     @Nonnull
     public WorkbookFunctionsEoMonthRequestBuilder eoMonth(@Nullable final com.google.gson.JsonElement startDate, @Nullable final com.google.gson.JsonElement months) {
         return new WorkbookFunctionsEoMonthRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.eoMonth"), getClient(), null, startDate, months);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param lowerLimit the lowerLimit
+     * @param upperLimit the upperLimit
+     */
     @Nonnull
     public WorkbookFunctionsErfRequestBuilder erf(@Nullable final com.google.gson.JsonElement lowerLimit, @Nullable final com.google.gson.JsonElement upperLimit) {
         return new WorkbookFunctionsErfRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.erf"), getClient(), null, lowerLimit, upperLimit);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param x the x
+     */
     @Nonnull
     public WorkbookFunctionsErf_PreciseRequestBuilder erf_Precise(@Nullable final com.google.gson.JsonElement x) {
         return new WorkbookFunctionsErf_PreciseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.erf_Precise"), getClient(), null, x);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param x the x
+     */
     @Nonnull
     public WorkbookFunctionsErfCRequestBuilder erfC(@Nullable final com.google.gson.JsonElement x) {
         return new WorkbookFunctionsErfCRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.erfC"), getClient(), null, x);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param x the x
+     */
     @Nonnull
     public WorkbookFunctionsErfC_PreciseRequestBuilder erfC_Precise(@Nullable final com.google.gson.JsonElement x) {
         return new WorkbookFunctionsErfC_PreciseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.erfC_Precise"), getClient(), null, x);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param errorVal the errorVal
+     */
     @Nonnull
     public WorkbookFunctionsError_TypeRequestBuilder error_Type(@Nullable final com.google.gson.JsonElement errorVal) {
         return new WorkbookFunctionsError_TypeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.error_Type"), getClient(), null, errorVal);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsEvenRequestBuilder even(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsEvenRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.even"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param text1 the text1
+     * @param text2 the text2
+     */
     @Nonnull
     public WorkbookFunctionsExactRequestBuilder exact(@Nullable final com.google.gson.JsonElement text1, @Nullable final com.google.gson.JsonElement text2) {
         return new WorkbookFunctionsExactRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.exact"), getClient(), null, text1, text2);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsExpRequestBuilder exp(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsExpRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.exp"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param x the x
+     * @param lambda the lambda
+     * @param cumulative the cumulative
+     */
     @Nonnull
     public WorkbookFunctionsExpon_DistRequestBuilder expon_Dist(@Nullable final com.google.gson.JsonElement x, @Nullable final com.google.gson.JsonElement lambda, @Nullable final com.google.gson.JsonElement cumulative) {
         return new WorkbookFunctionsExpon_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.expon_Dist"), getClient(), null, x, lambda, cumulative);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param x the x
+     * @param degFreedom1 the degFreedom1
+     * @param degFreedom2 the degFreedom2
+     * @param cumulative the cumulative
+     */
     @Nonnull
     public WorkbookFunctionsF_DistRequestBuilder f_Dist(@Nullable final com.google.gson.JsonElement x, @Nullable final com.google.gson.JsonElement degFreedom1, @Nullable final com.google.gson.JsonElement degFreedom2, @Nullable final com.google.gson.JsonElement cumulative) {
         return new WorkbookFunctionsF_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.f_Dist"), getClient(), null, x, degFreedom1, degFreedom2, cumulative);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param x the x
+     * @param degFreedom1 the degFreedom1
+     * @param degFreedom2 the degFreedom2
+     */
     @Nonnull
     public WorkbookFunctionsF_Dist_RTRequestBuilder f_Dist_RT(@Nullable final com.google.gson.JsonElement x, @Nullable final com.google.gson.JsonElement degFreedom1, @Nullable final com.google.gson.JsonElement degFreedom2) {
         return new WorkbookFunctionsF_Dist_RTRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.f_Dist_RT"), getClient(), null, x, degFreedom1, degFreedom2);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param probability the probability
+     * @param degFreedom1 the degFreedom1
+     * @param degFreedom2 the degFreedom2
+     */
     @Nonnull
     public WorkbookFunctionsF_InvRequestBuilder f_Inv(@Nullable final com.google.gson.JsonElement probability, @Nullable final com.google.gson.JsonElement degFreedom1, @Nullable final com.google.gson.JsonElement degFreedom2) {
         return new WorkbookFunctionsF_InvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.f_Inv"), getClient(), null, probability, degFreedom1, degFreedom2);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param probability the probability
+     * @param degFreedom1 the degFreedom1
+     * @param degFreedom2 the degFreedom2
+     */
     @Nonnull
     public WorkbookFunctionsF_Inv_RTRequestBuilder f_Inv_RT(@Nullable final com.google.gson.JsonElement probability, @Nullable final com.google.gson.JsonElement degFreedom1, @Nullable final com.google.gson.JsonElement degFreedom2) {
         return new WorkbookFunctionsF_Inv_RTRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.f_Inv_RT"), getClient(), null, probability, degFreedom1, degFreedom2);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsFactRequestBuilder fact(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsFactRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.fact"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsFactDoubleRequestBuilder factDouble(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsFactDoubleRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.factDouble"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookFunctionsFalseRequestBuilder msgraphFalse() {
         return new WorkbookFunctionsFalseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.false"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param findText the findText
+     * @param withinText the withinText
+     * @param startNum the startNum
+     */
     @Nonnull
     public WorkbookFunctionsFindRequestBuilder find(@Nullable final com.google.gson.JsonElement findText, @Nullable final com.google.gson.JsonElement withinText, @Nullable final com.google.gson.JsonElement startNum) {
         return new WorkbookFunctionsFindRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.find"), getClient(), null, findText, withinText, startNum);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param findText the findText
+     * @param withinText the withinText
+     * @param startNum the startNum
+     */
     @Nonnull
     public WorkbookFunctionsFindBRequestBuilder findB(@Nullable final com.google.gson.JsonElement findText, @Nullable final com.google.gson.JsonElement withinText, @Nullable final com.google.gson.JsonElement startNum) {
         return new WorkbookFunctionsFindBRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.findB"), getClient(), null, findText, withinText, startNum);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param x the x
+     */
     @Nonnull
     public WorkbookFunctionsFisherRequestBuilder fisher(@Nullable final com.google.gson.JsonElement x) {
         return new WorkbookFunctionsFisherRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.fisher"), getClient(), null, x);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param y the y
+     */
     @Nonnull
     public WorkbookFunctionsFisherInvRequestBuilder fisherInv(@Nullable final com.google.gson.JsonElement y) {
         return new WorkbookFunctionsFisherInvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.fisherInv"), getClient(), null, y);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param decimals the decimals
+     * @param noCommas the noCommas
+     */
     @Nonnull
     public WorkbookFunctionsFixedRequestBuilder fixed(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement decimals, @Nullable final com.google.gson.JsonElement noCommas) {
         return new WorkbookFunctionsFixedRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.fixed"), getClient(), null, number, decimals, noCommas);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param significance the significance
+     * @param mode the mode
+     */
     @Nonnull
     public WorkbookFunctionsFloor_MathRequestBuilder floor_Math(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement significance, @Nullable final com.google.gson.JsonElement mode) {
         return new WorkbookFunctionsFloor_MathRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.floor_Math"), getClient(), null, number, significance, mode);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param significance the significance
+     */
     @Nonnull
     public WorkbookFunctionsFloor_PreciseRequestBuilder floor_Precise(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement significance) {
         return new WorkbookFunctionsFloor_PreciseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.floor_Precise"), getClient(), null, number, significance);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param rate the rate
+     * @param nper the nper
+     * @param pmt the pmt
+     * @param pv the pv
+     * @param type the type
+     */
     @Nonnull
     public WorkbookFunctionsFvRequestBuilder fv(@Nullable final com.google.gson.JsonElement rate, @Nullable final com.google.gson.JsonElement nper, @Nullable final com.google.gson.JsonElement pmt, @Nullable final com.google.gson.JsonElement pv, @Nullable final com.google.gson.JsonElement type) {
         return new WorkbookFunctionsFvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.fv"), getClient(), null, rate, nper, pmt, pv, type);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param principal the principal
+     * @param schedule the schedule
+     */
     @Nonnull
     public WorkbookFunctionsFvscheduleRequestBuilder fvschedule(@Nullable final com.google.gson.JsonElement principal, @Nullable final com.google.gson.JsonElement schedule) {
         return new WorkbookFunctionsFvscheduleRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.fvschedule"), getClient(), null, principal, schedule);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param x the x
+     */
     @Nonnull
     public WorkbookFunctionsGammaRequestBuilder gamma(@Nullable final com.google.gson.JsonElement x) {
         return new WorkbookFunctionsGammaRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.gamma"), getClient(), null, x);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param x the x
+     * @param alpha the alpha
+     * @param beta the beta
+     * @param cumulative the cumulative
+     */
     @Nonnull
     public WorkbookFunctionsGamma_DistRequestBuilder gamma_Dist(@Nullable final com.google.gson.JsonElement x, @Nullable final com.google.gson.JsonElement alpha, @Nullable final com.google.gson.JsonElement beta, @Nullable final com.google.gson.JsonElement cumulative) {
         return new WorkbookFunctionsGamma_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.gamma_Dist"), getClient(), null, x, alpha, beta, cumulative);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param probability the probability
+     * @param alpha the alpha
+     * @param beta the beta
+     */
     @Nonnull
     public WorkbookFunctionsGamma_InvRequestBuilder gamma_Inv(@Nullable final com.google.gson.JsonElement probability, @Nullable final com.google.gson.JsonElement alpha, @Nullable final com.google.gson.JsonElement beta) {
         return new WorkbookFunctionsGamma_InvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.gamma_Inv"), getClient(), null, probability, alpha, beta);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param x the x
+     */
     @Nonnull
     public WorkbookFunctionsGammaLnRequestBuilder gammaLn(@Nullable final com.google.gson.JsonElement x) {
         return new WorkbookFunctionsGammaLnRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.gammaLn"), getClient(), null, x);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param x the x
+     */
     @Nonnull
     public WorkbookFunctionsGammaLn_PreciseRequestBuilder gammaLn_Precise(@Nullable final com.google.gson.JsonElement x) {
         return new WorkbookFunctionsGammaLn_PreciseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.gammaLn_Precise"), getClient(), null, x);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param x the x
+     */
     @Nonnull
     public WorkbookFunctionsGaussRequestBuilder gauss(@Nullable final com.google.gson.JsonElement x) {
         return new WorkbookFunctionsGaussRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.gauss"), getClient(), null, x);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsGcdRequestBuilder gcd(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsGcdRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.gcd"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsGeoMeanRequestBuilder geoMean(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsGeoMeanRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.geoMean"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param step the step
+     */
     @Nonnull
     public WorkbookFunctionsGeStepRequestBuilder geStep(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement step) {
         return new WorkbookFunctionsGeStepRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.geStep"), getClient(), null, number, step);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsHarMeanRequestBuilder harMean(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsHarMeanRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.harMean"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param places the places
+     */
     @Nonnull
     public WorkbookFunctionsHex2BinRequestBuilder hex2Bin(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement places) {
         return new WorkbookFunctionsHex2BinRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.hex2Bin"), getClient(), null, number, places);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsHex2DecRequestBuilder hex2Dec(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsHex2DecRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.hex2Dec"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param places the places
+     */
     @Nonnull
     public WorkbookFunctionsHex2OctRequestBuilder hex2Oct(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement places) {
         return new WorkbookFunctionsHex2OctRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.hex2Oct"), getClient(), null, number, places);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param lookupValue the lookupValue
+     * @param tableArray the tableArray
+     * @param rowIndexNum the rowIndexNum
+     * @param rangeLookup the rangeLookup
+     */
     @Nonnull
     public WorkbookFunctionsHlookupRequestBuilder hlookup(@Nullable final com.google.gson.JsonElement lookupValue, @Nullable final com.google.gson.JsonElement tableArray, @Nullable final com.google.gson.JsonElement rowIndexNum, @Nullable final com.google.gson.JsonElement rangeLookup) {
         return new WorkbookFunctionsHlookupRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.hlookup"), getClient(), null, lookupValue, tableArray, rowIndexNum, rangeLookup);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param serialNumber the serialNumber
+     */
     @Nonnull
     public WorkbookFunctionsHourRequestBuilder hour(@Nullable final com.google.gson.JsonElement serialNumber) {
         return new WorkbookFunctionsHourRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.hour"), getClient(), null, serialNumber);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param linkLocation the linkLocation
+     * @param friendlyName the friendlyName
+     */
     @Nonnull
     public WorkbookFunctionsHyperlinkRequestBuilder hyperlink(@Nullable final com.google.gson.JsonElement linkLocation, @Nullable final com.google.gson.JsonElement friendlyName) {
         return new WorkbookFunctionsHyperlinkRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.hyperlink"), getClient(), null, linkLocation, friendlyName);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param sampleS the sampleS
+     * @param numberSample the numberSample
+     * @param populationS the populationS
+     * @param numberPop the numberPop
+     * @param cumulative the cumulative
+     */
     @Nonnull
     public WorkbookFunctionsHypGeom_DistRequestBuilder hypGeom_Dist(@Nullable final com.google.gson.JsonElement sampleS, @Nullable final com.google.gson.JsonElement numberSample, @Nullable final com.google.gson.JsonElement populationS, @Nullable final com.google.gson.JsonElement numberPop, @Nullable final com.google.gson.JsonElement cumulative) {
         return new WorkbookFunctionsHypGeom_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.hypGeom_Dist"), getClient(), null, sampleS, numberSample, populationS, numberPop, cumulative);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param logicalTest the logicalTest
+     * @param valueIfTrue the valueIfTrue
+     * @param valueIfFalse the valueIfFalse
+     */
     @Nonnull
     public WorkbookFunctionsIfRequestBuilder msgraphIf(@Nullable final com.google.gson.JsonElement logicalTest, @Nullable final com.google.gson.JsonElement valueIfTrue, @Nullable final com.google.gson.JsonElement valueIfFalse) {
         return new WorkbookFunctionsIfRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.if"), getClient(), null, logicalTest, valueIfTrue, valueIfFalse);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param inumber the inumber
+     */
     @Nonnull
     public WorkbookFunctionsImAbsRequestBuilder imAbs(@Nullable final com.google.gson.JsonElement inumber) {
         return new WorkbookFunctionsImAbsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imAbs"), getClient(), null, inumber);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param inumber the inumber
+     */
     @Nonnull
     public WorkbookFunctionsImaginaryRequestBuilder imaginary(@Nullable final com.google.gson.JsonElement inumber) {
         return new WorkbookFunctionsImaginaryRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imaginary"), getClient(), null, inumber);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param inumber the inumber
+     */
     @Nonnull
     public WorkbookFunctionsImArgumentRequestBuilder imArgument(@Nullable final com.google.gson.JsonElement inumber) {
         return new WorkbookFunctionsImArgumentRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imArgument"), getClient(), null, inumber);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param inumber the inumber
+     */
     @Nonnull
     public WorkbookFunctionsImConjugateRequestBuilder imConjugate(@Nullable final com.google.gson.JsonElement inumber) {
         return new WorkbookFunctionsImConjugateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imConjugate"), getClient(), null, inumber);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param inumber the inumber
+     */
     @Nonnull
     public WorkbookFunctionsImCosRequestBuilder imCos(@Nullable final com.google.gson.JsonElement inumber) {
         return new WorkbookFunctionsImCosRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imCos"), getClient(), null, inumber);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param inumber the inumber
+     */
     @Nonnull
     public WorkbookFunctionsImCoshRequestBuilder imCosh(@Nullable final com.google.gson.JsonElement inumber) {
         return new WorkbookFunctionsImCoshRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imCosh"), getClient(), null, inumber);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param inumber the inumber
+     */
     @Nonnull
     public WorkbookFunctionsImCotRequestBuilder imCot(@Nullable final com.google.gson.JsonElement inumber) {
         return new WorkbookFunctionsImCotRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imCot"), getClient(), null, inumber);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param inumber the inumber
+     */
     @Nonnull
     public WorkbookFunctionsImCscRequestBuilder imCsc(@Nullable final com.google.gson.JsonElement inumber) {
         return new WorkbookFunctionsImCscRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imCsc"), getClient(), null, inumber);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param inumber the inumber
+     */
     @Nonnull
     public WorkbookFunctionsImCschRequestBuilder imCsch(@Nullable final com.google.gson.JsonElement inumber) {
         return new WorkbookFunctionsImCschRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imCsch"), getClient(), null, inumber);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param inumber1 the inumber1
+     * @param inumber2 the inumber2
+     */
     @Nonnull
     public WorkbookFunctionsImDivRequestBuilder imDiv(@Nullable final com.google.gson.JsonElement inumber1, @Nullable final com.google.gson.JsonElement inumber2) {
         return new WorkbookFunctionsImDivRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imDiv"), getClient(), null, inumber1, inumber2);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param inumber the inumber
+     */
     @Nonnull
     public WorkbookFunctionsImExpRequestBuilder imExp(@Nullable final com.google.gson.JsonElement inumber) {
         return new WorkbookFunctionsImExpRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imExp"), getClient(), null, inumber);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param inumber the inumber
+     */
     @Nonnull
     public WorkbookFunctionsImLnRequestBuilder imLn(@Nullable final com.google.gson.JsonElement inumber) {
         return new WorkbookFunctionsImLnRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imLn"), getClient(), null, inumber);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param inumber the inumber
+     */
     @Nonnull
     public WorkbookFunctionsImLog10RequestBuilder imLog10(@Nullable final com.google.gson.JsonElement inumber) {
         return new WorkbookFunctionsImLog10RequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imLog10"), getClient(), null, inumber);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param inumber the inumber
+     */
     @Nonnull
     public WorkbookFunctionsImLog2RequestBuilder imLog2(@Nullable final com.google.gson.JsonElement inumber) {
         return new WorkbookFunctionsImLog2RequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imLog2"), getClient(), null, inumber);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param inumber the inumber
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsImPowerRequestBuilder imPower(@Nullable final com.google.gson.JsonElement inumber, @Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsImPowerRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imPower"), getClient(), null, inumber, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsImProductRequestBuilder imProduct(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsImProductRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imProduct"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param inumber the inumber
+     */
     @Nonnull
     public WorkbookFunctionsImRealRequestBuilder imReal(@Nullable final com.google.gson.JsonElement inumber) {
         return new WorkbookFunctionsImRealRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imReal"), getClient(), null, inumber);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param inumber the inumber
+     */
     @Nonnull
     public WorkbookFunctionsImSecRequestBuilder imSec(@Nullable final com.google.gson.JsonElement inumber) {
         return new WorkbookFunctionsImSecRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imSec"), getClient(), null, inumber);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param inumber the inumber
+     */
     @Nonnull
     public WorkbookFunctionsImSechRequestBuilder imSech(@Nullable final com.google.gson.JsonElement inumber) {
         return new WorkbookFunctionsImSechRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imSech"), getClient(), null, inumber);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param inumber the inumber
+     */
     @Nonnull
     public WorkbookFunctionsImSinRequestBuilder imSin(@Nullable final com.google.gson.JsonElement inumber) {
         return new WorkbookFunctionsImSinRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imSin"), getClient(), null, inumber);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param inumber the inumber
+     */
     @Nonnull
     public WorkbookFunctionsImSinhRequestBuilder imSinh(@Nullable final com.google.gson.JsonElement inumber) {
         return new WorkbookFunctionsImSinhRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imSinh"), getClient(), null, inumber);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param inumber the inumber
+     */
     @Nonnull
     public WorkbookFunctionsImSqrtRequestBuilder imSqrt(@Nullable final com.google.gson.JsonElement inumber) {
         return new WorkbookFunctionsImSqrtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imSqrt"), getClient(), null, inumber);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param inumber1 the inumber1
+     * @param inumber2 the inumber2
+     */
     @Nonnull
     public WorkbookFunctionsImSubRequestBuilder imSub(@Nullable final com.google.gson.JsonElement inumber1, @Nullable final com.google.gson.JsonElement inumber2) {
         return new WorkbookFunctionsImSubRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imSub"), getClient(), null, inumber1, inumber2);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsImSumRequestBuilder imSum(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsImSumRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imSum"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param inumber the inumber
+     */
     @Nonnull
     public WorkbookFunctionsImTanRequestBuilder imTan(@Nullable final com.google.gson.JsonElement inumber) {
         return new WorkbookFunctionsImTanRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imTan"), getClient(), null, inumber);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsIntRequestBuilder msgraphInt(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsIntRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.int"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param investment the investment
+     * @param redemption the redemption
+     * @param basis the basis
+     */
     @Nonnull
     public WorkbookFunctionsIntRateRequestBuilder intRate(@Nullable final com.google.gson.JsonElement settlement, @Nullable final com.google.gson.JsonElement maturity, @Nullable final com.google.gson.JsonElement investment, @Nullable final com.google.gson.JsonElement redemption, @Nullable final com.google.gson.JsonElement basis) {
         return new WorkbookFunctionsIntRateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.intRate"), getClient(), null, settlement, maturity, investment, redemption, basis);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param rate the rate
+     * @param per the per
+     * @param nper the nper
+     * @param pv the pv
+     * @param fv the fv
+     * @param type the type
+     */
     @Nonnull
     public WorkbookFunctionsIpmtRequestBuilder ipmt(@Nullable final com.google.gson.JsonElement rate, @Nullable final com.google.gson.JsonElement per, @Nullable final com.google.gson.JsonElement nper, @Nullable final com.google.gson.JsonElement pv, @Nullable final com.google.gson.JsonElement fv, @Nullable final com.google.gson.JsonElement type) {
         return new WorkbookFunctionsIpmtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ipmt"), getClient(), null, rate, per, nper, pv, fv, type);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     * @param guess the guess
+     */
     @Nonnull
     public WorkbookFunctionsIrrRequestBuilder irr(@Nullable final com.google.gson.JsonElement values, @Nullable final com.google.gson.JsonElement guess) {
         return new WorkbookFunctionsIrrRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.irr"), getClient(), null, values, guess);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param value the value
+     */
     @Nonnull
     public WorkbookFunctionsIsErrRequestBuilder isErr(@Nullable final com.google.gson.JsonElement value) {
         return new WorkbookFunctionsIsErrRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isErr"), getClient(), null, value);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param value the value
+     */
     @Nonnull
     public WorkbookFunctionsIsErrorRequestBuilder isError(@Nullable final com.google.gson.JsonElement value) {
         return new WorkbookFunctionsIsErrorRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isError"), getClient(), null, value);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsIsEvenRequestBuilder isEven(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsIsEvenRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isEven"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param reference the reference
+     */
     @Nonnull
     public WorkbookFunctionsIsFormulaRequestBuilder isFormula(@Nullable final com.google.gson.JsonElement reference) {
         return new WorkbookFunctionsIsFormulaRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isFormula"), getClient(), null, reference);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param value the value
+     */
     @Nonnull
     public WorkbookFunctionsIsLogicalRequestBuilder isLogical(@Nullable final com.google.gson.JsonElement value) {
         return new WorkbookFunctionsIsLogicalRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isLogical"), getClient(), null, value);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param value the value
+     */
     @Nonnull
     public WorkbookFunctionsIsNARequestBuilder isNA(@Nullable final com.google.gson.JsonElement value) {
         return new WorkbookFunctionsIsNARequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isNA"), getClient(), null, value);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param value the value
+     */
     @Nonnull
     public WorkbookFunctionsIsNonTextRequestBuilder isNonText(@Nullable final com.google.gson.JsonElement value) {
         return new WorkbookFunctionsIsNonTextRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isNonText"), getClient(), null, value);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param value the value
+     */
     @Nonnull
     public WorkbookFunctionsIsNumberRequestBuilder isNumber(@Nullable final com.google.gson.JsonElement value) {
         return new WorkbookFunctionsIsNumberRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isNumber"), getClient(), null, value);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param significance the significance
+     */
     @Nonnull
     public WorkbookFunctionsIso_CeilingRequestBuilder iso_Ceiling(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement significance) {
         return new WorkbookFunctionsIso_CeilingRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.iso_Ceiling"), getClient(), null, number, significance);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsIsOddRequestBuilder isOdd(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsIsOddRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isOdd"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param date the date
+     */
     @Nonnull
     public WorkbookFunctionsIsoWeekNumRequestBuilder isoWeekNum(@Nullable final com.google.gson.JsonElement date) {
         return new WorkbookFunctionsIsoWeekNumRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isoWeekNum"), getClient(), null, date);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param rate the rate
+     * @param per the per
+     * @param nper the nper
+     * @param pv the pv
+     */
     @Nonnull
     public WorkbookFunctionsIspmtRequestBuilder ispmt(@Nullable final com.google.gson.JsonElement rate, @Nullable final com.google.gson.JsonElement per, @Nullable final com.google.gson.JsonElement nper, @Nullable final com.google.gson.JsonElement pv) {
         return new WorkbookFunctionsIspmtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ispmt"), getClient(), null, rate, per, nper, pv);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param value the value
+     */
     @Nonnull
     public WorkbookFunctionsIsrefRequestBuilder isref(@Nullable final com.google.gson.JsonElement value) {
         return new WorkbookFunctionsIsrefRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isref"), getClient(), null, value);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param value the value
+     */
     @Nonnull
     public WorkbookFunctionsIsTextRequestBuilder isText(@Nullable final com.google.gson.JsonElement value) {
         return new WorkbookFunctionsIsTextRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isText"), getClient(), null, value);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsKurtRequestBuilder kurt(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsKurtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.kurt"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param array the array
+     * @param k the k
+     */
     @Nonnull
     public WorkbookFunctionsLargeRequestBuilder large(@Nullable final com.google.gson.JsonElement array, @Nullable final com.google.gson.JsonElement k) {
         return new WorkbookFunctionsLargeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.large"), getClient(), null, array, k);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsLcmRequestBuilder lcm(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsLcmRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.lcm"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param text the text
+     * @param numChars the numChars
+     */
     @Nonnull
     public WorkbookFunctionsLeftRequestBuilder left(@Nullable final com.google.gson.JsonElement text, @Nullable final com.google.gson.JsonElement numChars) {
         return new WorkbookFunctionsLeftRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.left"), getClient(), null, text, numChars);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param text the text
+     * @param numBytes the numBytes
+     */
     @Nonnull
     public WorkbookFunctionsLeftbRequestBuilder leftb(@Nullable final com.google.gson.JsonElement text, @Nullable final com.google.gson.JsonElement numBytes) {
         return new WorkbookFunctionsLeftbRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.leftb"), getClient(), null, text, numBytes);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param text the text
+     */
     @Nonnull
     public WorkbookFunctionsLenRequestBuilder len(@Nullable final com.google.gson.JsonElement text) {
         return new WorkbookFunctionsLenRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.len"), getClient(), null, text);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param text the text
+     */
     @Nonnull
     public WorkbookFunctionsLenbRequestBuilder lenb(@Nullable final com.google.gson.JsonElement text) {
         return new WorkbookFunctionsLenbRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.lenb"), getClient(), null, text);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsLnRequestBuilder ln(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsLnRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ln"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param base the base
+     */
     @Nonnull
     public WorkbookFunctionsLogRequestBuilder log(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement base) {
         return new WorkbookFunctionsLogRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.log"), getClient(), null, number, base);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsLog10RequestBuilder log10(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsLog10RequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.log10"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param x the x
+     * @param mean the mean
+     * @param standardDev the standardDev
+     * @param cumulative the cumulative
+     */
     @Nonnull
     public WorkbookFunctionsLogNorm_DistRequestBuilder logNorm_Dist(@Nullable final com.google.gson.JsonElement x, @Nullable final com.google.gson.JsonElement mean, @Nullable final com.google.gson.JsonElement standardDev, @Nullable final com.google.gson.JsonElement cumulative) {
         return new WorkbookFunctionsLogNorm_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.logNorm_Dist"), getClient(), null, x, mean, standardDev, cumulative);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param probability the probability
+     * @param mean the mean
+     * @param standardDev the standardDev
+     */
     @Nonnull
     public WorkbookFunctionsLogNorm_InvRequestBuilder logNorm_Inv(@Nullable final com.google.gson.JsonElement probability, @Nullable final com.google.gson.JsonElement mean, @Nullable final com.google.gson.JsonElement standardDev) {
         return new WorkbookFunctionsLogNorm_InvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.logNorm_Inv"), getClient(), null, probability, mean, standardDev);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param lookupValue the lookupValue
+     * @param lookupVector the lookupVector
+     * @param resultVector the resultVector
+     */
     @Nonnull
     public WorkbookFunctionsLookupRequestBuilder lookup(@Nullable final com.google.gson.JsonElement lookupValue, @Nullable final com.google.gson.JsonElement lookupVector, @Nullable final com.google.gson.JsonElement resultVector) {
         return new WorkbookFunctionsLookupRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.lookup"), getClient(), null, lookupValue, lookupVector, resultVector);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param text the text
+     */
     @Nonnull
     public WorkbookFunctionsLowerRequestBuilder lower(@Nullable final com.google.gson.JsonElement text) {
         return new WorkbookFunctionsLowerRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.lower"), getClient(), null, text);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param lookupValue the lookupValue
+     * @param lookupArray the lookupArray
+     * @param matchType the matchType
+     */
     @Nonnull
     public WorkbookFunctionsMatchRequestBuilder match(@Nullable final com.google.gson.JsonElement lookupValue, @Nullable final com.google.gson.JsonElement lookupArray, @Nullable final com.google.gson.JsonElement matchType) {
         return new WorkbookFunctionsMatchRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.match"), getClient(), null, lookupValue, lookupArray, matchType);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsMaxRequestBuilder max(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsMaxRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.max"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsMaxARequestBuilder maxA(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsMaxARequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.maxA"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param coupon the coupon
+     * @param yld the yld
+     * @param frequency the frequency
+     * @param basis the basis
+     */
     @Nonnull
     public WorkbookFunctionsMdurationRequestBuilder mduration(@Nullable final com.google.gson.JsonElement settlement, @Nullable final com.google.gson.JsonElement maturity, @Nullable final com.google.gson.JsonElement coupon, @Nullable final com.google.gson.JsonElement yld, @Nullable final com.google.gson.JsonElement frequency, @Nullable final com.google.gson.JsonElement basis) {
         return new WorkbookFunctionsMdurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.mduration"), getClient(), null, settlement, maturity, coupon, yld, frequency, basis);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsMedianRequestBuilder median(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsMedianRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.median"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param text the text
+     * @param startNum the startNum
+     * @param numChars the numChars
+     */
     @Nonnull
     public WorkbookFunctionsMidRequestBuilder mid(@Nullable final com.google.gson.JsonElement text, @Nullable final com.google.gson.JsonElement startNum, @Nullable final com.google.gson.JsonElement numChars) {
         return new WorkbookFunctionsMidRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.mid"), getClient(), null, text, startNum, numChars);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param text the text
+     * @param startNum the startNum
+     * @param numBytes the numBytes
+     */
     @Nonnull
     public WorkbookFunctionsMidbRequestBuilder midb(@Nullable final com.google.gson.JsonElement text, @Nullable final com.google.gson.JsonElement startNum, @Nullable final com.google.gson.JsonElement numBytes) {
         return new WorkbookFunctionsMidbRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.midb"), getClient(), null, text, startNum, numBytes);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsMinRequestBuilder min(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsMinRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.min"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsMinARequestBuilder minA(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsMinARequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.minA"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param serialNumber the serialNumber
+     */
     @Nonnull
     public WorkbookFunctionsMinuteRequestBuilder minute(@Nullable final com.google.gson.JsonElement serialNumber) {
         return new WorkbookFunctionsMinuteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.minute"), getClient(), null, serialNumber);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     * @param financeRate the financeRate
+     * @param reinvestRate the reinvestRate
+     */
     @Nonnull
     public WorkbookFunctionsMirrRequestBuilder mirr(@Nullable final com.google.gson.JsonElement values, @Nullable final com.google.gson.JsonElement financeRate, @Nullable final com.google.gson.JsonElement reinvestRate) {
         return new WorkbookFunctionsMirrRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.mirr"), getClient(), null, values, financeRate, reinvestRate);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param divisor the divisor
+     */
     @Nonnull
     public WorkbookFunctionsModRequestBuilder mod(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement divisor) {
         return new WorkbookFunctionsModRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.mod"), getClient(), null, number, divisor);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param serialNumber the serialNumber
+     */
     @Nonnull
     public WorkbookFunctionsMonthRequestBuilder month(@Nullable final com.google.gson.JsonElement serialNumber) {
         return new WorkbookFunctionsMonthRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.month"), getClient(), null, serialNumber);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param multiple the multiple
+     */
     @Nonnull
     public WorkbookFunctionsMroundRequestBuilder mround(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement multiple) {
         return new WorkbookFunctionsMroundRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.mround"), getClient(), null, number, multiple);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsMultiNomialRequestBuilder multiNomial(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsMultiNomialRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.multiNomial"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param value the value
+     */
     @Nonnull
     public WorkbookFunctionsNRequestBuilder n(@Nullable final com.google.gson.JsonElement value) {
         return new WorkbookFunctionsNRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.n"), getClient(), null, value);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookFunctionsNaRequestBuilder na() {
         return new WorkbookFunctionsNaRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.na"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param numberF the numberF
+     * @param numberS the numberS
+     * @param probabilityS the probabilityS
+     * @param cumulative the cumulative
+     */
     @Nonnull
     public WorkbookFunctionsNegBinom_DistRequestBuilder negBinom_Dist(@Nullable final com.google.gson.JsonElement numberF, @Nullable final com.google.gson.JsonElement numberS, @Nullable final com.google.gson.JsonElement probabilityS, @Nullable final com.google.gson.JsonElement cumulative) {
         return new WorkbookFunctionsNegBinom_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.negBinom_Dist"), getClient(), null, numberF, numberS, probabilityS, cumulative);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param startDate the startDate
+     * @param endDate the endDate
+     * @param holidays the holidays
+     */
     @Nonnull
     public WorkbookFunctionsNetworkDaysRequestBuilder networkDays(@Nullable final com.google.gson.JsonElement startDate, @Nullable final com.google.gson.JsonElement endDate, @Nullable final com.google.gson.JsonElement holidays) {
         return new WorkbookFunctionsNetworkDaysRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.networkDays"), getClient(), null, startDate, endDate, holidays);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param startDate the startDate
+     * @param endDate the endDate
+     * @param weekend the weekend
+     * @param holidays the holidays
+     */
     @Nonnull
     public WorkbookFunctionsNetworkDays_IntlRequestBuilder networkDays_Intl(@Nullable final com.google.gson.JsonElement startDate, @Nullable final com.google.gson.JsonElement endDate, @Nullable final com.google.gson.JsonElement weekend, @Nullable final com.google.gson.JsonElement holidays) {
         return new WorkbookFunctionsNetworkDays_IntlRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.networkDays_Intl"), getClient(), null, startDate, endDate, weekend, holidays);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param effectRate the effectRate
+     * @param npery the npery
+     */
     @Nonnull
     public WorkbookFunctionsNominalRequestBuilder nominal(@Nullable final com.google.gson.JsonElement effectRate, @Nullable final com.google.gson.JsonElement npery) {
         return new WorkbookFunctionsNominalRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.nominal"), getClient(), null, effectRate, npery);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param x the x
+     * @param mean the mean
+     * @param standardDev the standardDev
+     * @param cumulative the cumulative
+     */
     @Nonnull
     public WorkbookFunctionsNorm_DistRequestBuilder norm_Dist(@Nullable final com.google.gson.JsonElement x, @Nullable final com.google.gson.JsonElement mean, @Nullable final com.google.gson.JsonElement standardDev, @Nullable final com.google.gson.JsonElement cumulative) {
         return new WorkbookFunctionsNorm_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.norm_Dist"), getClient(), null, x, mean, standardDev, cumulative);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param probability the probability
+     * @param mean the mean
+     * @param standardDev the standardDev
+     */
     @Nonnull
     public WorkbookFunctionsNorm_InvRequestBuilder norm_Inv(@Nullable final com.google.gson.JsonElement probability, @Nullable final com.google.gson.JsonElement mean, @Nullable final com.google.gson.JsonElement standardDev) {
         return new WorkbookFunctionsNorm_InvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.norm_Inv"), getClient(), null, probability, mean, standardDev);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param z the z
+     * @param cumulative the cumulative
+     */
     @Nonnull
     public WorkbookFunctionsNorm_S_DistRequestBuilder norm_S_Dist(@Nullable final com.google.gson.JsonElement z, @Nullable final com.google.gson.JsonElement cumulative) {
         return new WorkbookFunctionsNorm_S_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.norm_S_Dist"), getClient(), null, z, cumulative);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param probability the probability
+     */
     @Nonnull
     public WorkbookFunctionsNorm_S_InvRequestBuilder norm_S_Inv(@Nullable final com.google.gson.JsonElement probability) {
         return new WorkbookFunctionsNorm_S_InvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.norm_S_Inv"), getClient(), null, probability);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param logical the logical
+     */
     @Nonnull
     public WorkbookFunctionsNotRequestBuilder not(@Nullable final com.google.gson.JsonElement logical) {
         return new WorkbookFunctionsNotRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.not"), getClient(), null, logical);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookFunctionsNowRequestBuilder now() {
         return new WorkbookFunctionsNowRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.now"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param rate the rate
+     * @param pmt the pmt
+     * @param pv the pv
+     * @param fv the fv
+     * @param type the type
+     */
     @Nonnull
     public WorkbookFunctionsNperRequestBuilder nper(@Nullable final com.google.gson.JsonElement rate, @Nullable final com.google.gson.JsonElement pmt, @Nullable final com.google.gson.JsonElement pv, @Nullable final com.google.gson.JsonElement fv, @Nullable final com.google.gson.JsonElement type) {
         return new WorkbookFunctionsNperRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.nper"), getClient(), null, rate, pmt, pv, fv, type);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param rate the rate
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsNpvRequestBuilder npv(@Nullable final com.google.gson.JsonElement rate, @Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsNpvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.npv"), getClient(), null, rate, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param text the text
+     * @param decimalSeparator the decimalSeparator
+     * @param groupSeparator the groupSeparator
+     */
     @Nonnull
     public WorkbookFunctionsNumberValueRequestBuilder numberValue(@Nullable final com.google.gson.JsonElement text, @Nullable final com.google.gson.JsonElement decimalSeparator, @Nullable final com.google.gson.JsonElement groupSeparator) {
         return new WorkbookFunctionsNumberValueRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.numberValue"), getClient(), null, text, decimalSeparator, groupSeparator);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param places the places
+     */
     @Nonnull
     public WorkbookFunctionsOct2BinRequestBuilder oct2Bin(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement places) {
         return new WorkbookFunctionsOct2BinRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.oct2Bin"), getClient(), null, number, places);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsOct2DecRequestBuilder oct2Dec(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsOct2DecRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.oct2Dec"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param places the places
+     */
     @Nonnull
     public WorkbookFunctionsOct2HexRequestBuilder oct2Hex(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement places) {
         return new WorkbookFunctionsOct2HexRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.oct2Hex"), getClient(), null, number, places);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsOddRequestBuilder odd(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsOddRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.odd"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param issue the issue
+     * @param firstCoupon the firstCoupon
+     * @param rate the rate
+     * @param yld the yld
+     * @param redemption the redemption
+     * @param frequency the frequency
+     * @param basis the basis
+     */
     @Nonnull
     public WorkbookFunctionsOddFPriceRequestBuilder oddFPrice(@Nullable final com.google.gson.JsonElement settlement, @Nullable final com.google.gson.JsonElement maturity, @Nullable final com.google.gson.JsonElement issue, @Nullable final com.google.gson.JsonElement firstCoupon, @Nullable final com.google.gson.JsonElement rate, @Nullable final com.google.gson.JsonElement yld, @Nullable final com.google.gson.JsonElement redemption, @Nullable final com.google.gson.JsonElement frequency, @Nullable final com.google.gson.JsonElement basis) {
         return new WorkbookFunctionsOddFPriceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.oddFPrice"), getClient(), null, settlement, maturity, issue, firstCoupon, rate, yld, redemption, frequency, basis);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param issue the issue
+     * @param firstCoupon the firstCoupon
+     * @param rate the rate
+     * @param pr the pr
+     * @param redemption the redemption
+     * @param frequency the frequency
+     * @param basis the basis
+     */
     @Nonnull
     public WorkbookFunctionsOddFYieldRequestBuilder oddFYield(@Nullable final com.google.gson.JsonElement settlement, @Nullable final com.google.gson.JsonElement maturity, @Nullable final com.google.gson.JsonElement issue, @Nullable final com.google.gson.JsonElement firstCoupon, @Nullable final com.google.gson.JsonElement rate, @Nullable final com.google.gson.JsonElement pr, @Nullable final com.google.gson.JsonElement redemption, @Nullable final com.google.gson.JsonElement frequency, @Nullable final com.google.gson.JsonElement basis) {
         return new WorkbookFunctionsOddFYieldRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.oddFYield"), getClient(), null, settlement, maturity, issue, firstCoupon, rate, pr, redemption, frequency, basis);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param lastInterest the lastInterest
+     * @param rate the rate
+     * @param yld the yld
+     * @param redemption the redemption
+     * @param frequency the frequency
+     * @param basis the basis
+     */
     @Nonnull
     public WorkbookFunctionsOddLPriceRequestBuilder oddLPrice(@Nullable final com.google.gson.JsonElement settlement, @Nullable final com.google.gson.JsonElement maturity, @Nullable final com.google.gson.JsonElement lastInterest, @Nullable final com.google.gson.JsonElement rate, @Nullable final com.google.gson.JsonElement yld, @Nullable final com.google.gson.JsonElement redemption, @Nullable final com.google.gson.JsonElement frequency, @Nullable final com.google.gson.JsonElement basis) {
         return new WorkbookFunctionsOddLPriceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.oddLPrice"), getClient(), null, settlement, maturity, lastInterest, rate, yld, redemption, frequency, basis);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param lastInterest the lastInterest
+     * @param rate the rate
+     * @param pr the pr
+     * @param redemption the redemption
+     * @param frequency the frequency
+     * @param basis the basis
+     */
     @Nonnull
     public WorkbookFunctionsOddLYieldRequestBuilder oddLYield(@Nullable final com.google.gson.JsonElement settlement, @Nullable final com.google.gson.JsonElement maturity, @Nullable final com.google.gson.JsonElement lastInterest, @Nullable final com.google.gson.JsonElement rate, @Nullable final com.google.gson.JsonElement pr, @Nullable final com.google.gson.JsonElement redemption, @Nullable final com.google.gson.JsonElement frequency, @Nullable final com.google.gson.JsonElement basis) {
         return new WorkbookFunctionsOddLYieldRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.oddLYield"), getClient(), null, settlement, maturity, lastInterest, rate, pr, redemption, frequency, basis);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsOrRequestBuilder or(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsOrRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.or"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param rate the rate
+     * @param pv the pv
+     * @param fv the fv
+     */
     @Nonnull
     public WorkbookFunctionsPdurationRequestBuilder pduration(@Nullable final com.google.gson.JsonElement rate, @Nullable final com.google.gson.JsonElement pv, @Nullable final com.google.gson.JsonElement fv) {
         return new WorkbookFunctionsPdurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.pduration"), getClient(), null, rate, pv, fv);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param array the array
+     * @param k the k
+     */
     @Nonnull
     public WorkbookFunctionsPercentile_ExcRequestBuilder percentile_Exc(@Nullable final com.google.gson.JsonElement array, @Nullable final com.google.gson.JsonElement k) {
         return new WorkbookFunctionsPercentile_ExcRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.percentile_Exc"), getClient(), null, array, k);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param array the array
+     * @param k the k
+     */
     @Nonnull
     public WorkbookFunctionsPercentile_IncRequestBuilder percentile_Inc(@Nullable final com.google.gson.JsonElement array, @Nullable final com.google.gson.JsonElement k) {
         return new WorkbookFunctionsPercentile_IncRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.percentile_Inc"), getClient(), null, array, k);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param array the array
+     * @param x the x
+     * @param significance the significance
+     */
     @Nonnull
     public WorkbookFunctionsPercentRank_ExcRequestBuilder percentRank_Exc(@Nullable final com.google.gson.JsonElement array, @Nullable final com.google.gson.JsonElement x, @Nullable final com.google.gson.JsonElement significance) {
         return new WorkbookFunctionsPercentRank_ExcRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.percentRank_Exc"), getClient(), null, array, x, significance);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param array the array
+     * @param x the x
+     * @param significance the significance
+     */
     @Nonnull
     public WorkbookFunctionsPercentRank_IncRequestBuilder percentRank_Inc(@Nullable final com.google.gson.JsonElement array, @Nullable final com.google.gson.JsonElement x, @Nullable final com.google.gson.JsonElement significance) {
         return new WorkbookFunctionsPercentRank_IncRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.percentRank_Inc"), getClient(), null, array, x, significance);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param numberChosen the numberChosen
+     */
     @Nonnull
     public WorkbookFunctionsPermutRequestBuilder permut(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement numberChosen) {
         return new WorkbookFunctionsPermutRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.permut"), getClient(), null, number, numberChosen);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param numberChosen the numberChosen
+     */
     @Nonnull
     public WorkbookFunctionsPermutationaRequestBuilder permutationa(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement numberChosen) {
         return new WorkbookFunctionsPermutationaRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.permutationa"), getClient(), null, number, numberChosen);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param x the x
+     */
     @Nonnull
     public WorkbookFunctionsPhiRequestBuilder phi(@Nullable final com.google.gson.JsonElement x) {
         return new WorkbookFunctionsPhiRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.phi"), getClient(), null, x);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookFunctionsPiRequestBuilder pi() {
         return new WorkbookFunctionsPiRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.pi"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param rate the rate
+     * @param nper the nper
+     * @param pv the pv
+     * @param fv the fv
+     * @param type the type
+     */
     @Nonnull
     public WorkbookFunctionsPmtRequestBuilder pmt(@Nullable final com.google.gson.JsonElement rate, @Nullable final com.google.gson.JsonElement nper, @Nullable final com.google.gson.JsonElement pv, @Nullable final com.google.gson.JsonElement fv, @Nullable final com.google.gson.JsonElement type) {
         return new WorkbookFunctionsPmtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.pmt"), getClient(), null, rate, nper, pv, fv, type);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param x the x
+     * @param mean the mean
+     * @param cumulative the cumulative
+     */
     @Nonnull
     public WorkbookFunctionsPoisson_DistRequestBuilder poisson_Dist(@Nullable final com.google.gson.JsonElement x, @Nullable final com.google.gson.JsonElement mean, @Nullable final com.google.gson.JsonElement cumulative) {
         return new WorkbookFunctionsPoisson_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.poisson_Dist"), getClient(), null, x, mean, cumulative);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param power the power
+     */
     @Nonnull
     public WorkbookFunctionsPowerRequestBuilder power(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement power) {
         return new WorkbookFunctionsPowerRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.power"), getClient(), null, number, power);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param rate the rate
+     * @param per the per
+     * @param nper the nper
+     * @param pv the pv
+     * @param fv the fv
+     * @param type the type
+     */
     @Nonnull
     public WorkbookFunctionsPpmtRequestBuilder ppmt(@Nullable final com.google.gson.JsonElement rate, @Nullable final com.google.gson.JsonElement per, @Nullable final com.google.gson.JsonElement nper, @Nullable final com.google.gson.JsonElement pv, @Nullable final com.google.gson.JsonElement fv, @Nullable final com.google.gson.JsonElement type) {
         return new WorkbookFunctionsPpmtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ppmt"), getClient(), null, rate, per, nper, pv, fv, type);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param rate the rate
+     * @param yld the yld
+     * @param redemption the redemption
+     * @param frequency the frequency
+     * @param basis the basis
+     */
     @Nonnull
     public WorkbookFunctionsPriceRequestBuilder price(@Nullable final com.google.gson.JsonElement settlement, @Nullable final com.google.gson.JsonElement maturity, @Nullable final com.google.gson.JsonElement rate, @Nullable final com.google.gson.JsonElement yld, @Nullable final com.google.gson.JsonElement redemption, @Nullable final com.google.gson.JsonElement frequency, @Nullable final com.google.gson.JsonElement basis) {
         return new WorkbookFunctionsPriceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.price"), getClient(), null, settlement, maturity, rate, yld, redemption, frequency, basis);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param discount the discount
+     * @param redemption the redemption
+     * @param basis the basis
+     */
     @Nonnull
     public WorkbookFunctionsPriceDiscRequestBuilder priceDisc(@Nullable final com.google.gson.JsonElement settlement, @Nullable final com.google.gson.JsonElement maturity, @Nullable final com.google.gson.JsonElement discount, @Nullable final com.google.gson.JsonElement redemption, @Nullable final com.google.gson.JsonElement basis) {
         return new WorkbookFunctionsPriceDiscRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.priceDisc"), getClient(), null, settlement, maturity, discount, redemption, basis);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param issue the issue
+     * @param rate the rate
+     * @param yld the yld
+     * @param basis the basis
+     */
     @Nonnull
     public WorkbookFunctionsPriceMatRequestBuilder priceMat(@Nullable final com.google.gson.JsonElement settlement, @Nullable final com.google.gson.JsonElement maturity, @Nullable final com.google.gson.JsonElement issue, @Nullable final com.google.gson.JsonElement rate, @Nullable final com.google.gson.JsonElement yld, @Nullable final com.google.gson.JsonElement basis) {
         return new WorkbookFunctionsPriceMatRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.priceMat"), getClient(), null, settlement, maturity, issue, rate, yld, basis);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsProductRequestBuilder product(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsProductRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.product"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param text the text
+     */
     @Nonnull
     public WorkbookFunctionsProperRequestBuilder proper(@Nullable final com.google.gson.JsonElement text) {
         return new WorkbookFunctionsProperRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.proper"), getClient(), null, text);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param rate the rate
+     * @param nper the nper
+     * @param pmt the pmt
+     * @param fv the fv
+     * @param type the type
+     */
     @Nonnull
     public WorkbookFunctionsPvRequestBuilder pv(@Nullable final com.google.gson.JsonElement rate, @Nullable final com.google.gson.JsonElement nper, @Nullable final com.google.gson.JsonElement pmt, @Nullable final com.google.gson.JsonElement fv, @Nullable final com.google.gson.JsonElement type) {
         return new WorkbookFunctionsPvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.pv"), getClient(), null, rate, nper, pmt, fv, type);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param array the array
+     * @param quart the quart
+     */
     @Nonnull
     public WorkbookFunctionsQuartile_ExcRequestBuilder quartile_Exc(@Nullable final com.google.gson.JsonElement array, @Nullable final com.google.gson.JsonElement quart) {
         return new WorkbookFunctionsQuartile_ExcRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.quartile_Exc"), getClient(), null, array, quart);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param array the array
+     * @param quart the quart
+     */
     @Nonnull
     public WorkbookFunctionsQuartile_IncRequestBuilder quartile_Inc(@Nullable final com.google.gson.JsonElement array, @Nullable final com.google.gson.JsonElement quart) {
         return new WorkbookFunctionsQuartile_IncRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.quartile_Inc"), getClient(), null, array, quart);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param numerator the numerator
+     * @param denominator the denominator
+     */
     @Nonnull
     public WorkbookFunctionsQuotientRequestBuilder quotient(@Nullable final com.google.gson.JsonElement numerator, @Nullable final com.google.gson.JsonElement denominator) {
         return new WorkbookFunctionsQuotientRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.quotient"), getClient(), null, numerator, denominator);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param angle the angle
+     */
     @Nonnull
     public WorkbookFunctionsRadiansRequestBuilder radians(@Nullable final com.google.gson.JsonElement angle) {
         return new WorkbookFunctionsRadiansRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.radians"), getClient(), null, angle);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookFunctionsRandRequestBuilder rand() {
         return new WorkbookFunctionsRandRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rand"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param bottom the bottom
+     * @param top the top
+     */
     @Nonnull
     public WorkbookFunctionsRandBetweenRequestBuilder randBetween(@Nullable final com.google.gson.JsonElement bottom, @Nullable final com.google.gson.JsonElement top) {
         return new WorkbookFunctionsRandBetweenRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.randBetween"), getClient(), null, bottom, top);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param ref the ref
+     * @param order the order
+     */
     @Nonnull
     public WorkbookFunctionsRank_AvgRequestBuilder rank_Avg(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement ref, @Nullable final com.google.gson.JsonElement order) {
         return new WorkbookFunctionsRank_AvgRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rank_Avg"), getClient(), null, number, ref, order);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param ref the ref
+     * @param order the order
+     */
     @Nonnull
     public WorkbookFunctionsRank_EqRequestBuilder rank_Eq(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement ref, @Nullable final com.google.gson.JsonElement order) {
         return new WorkbookFunctionsRank_EqRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rank_Eq"), getClient(), null, number, ref, order);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param nper the nper
+     * @param pmt the pmt
+     * @param pv the pv
+     * @param fv the fv
+     * @param type the type
+     * @param guess the guess
+     */
     @Nonnull
     public WorkbookFunctionsRateRequestBuilder rate(@Nullable final com.google.gson.JsonElement nper, @Nullable final com.google.gson.JsonElement pmt, @Nullable final com.google.gson.JsonElement pv, @Nullable final com.google.gson.JsonElement fv, @Nullable final com.google.gson.JsonElement type, @Nullable final com.google.gson.JsonElement guess) {
         return new WorkbookFunctionsRateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rate"), getClient(), null, nper, pmt, pv, fv, type, guess);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param investment the investment
+     * @param discount the discount
+     * @param basis the basis
+     */
     @Nonnull
     public WorkbookFunctionsReceivedRequestBuilder received(@Nullable final com.google.gson.JsonElement settlement, @Nullable final com.google.gson.JsonElement maturity, @Nullable final com.google.gson.JsonElement investment, @Nullable final com.google.gson.JsonElement discount, @Nullable final com.google.gson.JsonElement basis) {
         return new WorkbookFunctionsReceivedRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.received"), getClient(), null, settlement, maturity, investment, discount, basis);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param oldText the oldText
+     * @param startNum the startNum
+     * @param numChars the numChars
+     * @param newText the newText
+     */
     @Nonnull
     public WorkbookFunctionsReplaceRequestBuilder replace(@Nullable final com.google.gson.JsonElement oldText, @Nullable final com.google.gson.JsonElement startNum, @Nullable final com.google.gson.JsonElement numChars, @Nullable final com.google.gson.JsonElement newText) {
         return new WorkbookFunctionsReplaceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.replace"), getClient(), null, oldText, startNum, numChars, newText);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param oldText the oldText
+     * @param startNum the startNum
+     * @param numBytes the numBytes
+     * @param newText the newText
+     */
     @Nonnull
     public WorkbookFunctionsReplaceBRequestBuilder replaceB(@Nullable final com.google.gson.JsonElement oldText, @Nullable final com.google.gson.JsonElement startNum, @Nullable final com.google.gson.JsonElement numBytes, @Nullable final com.google.gson.JsonElement newText) {
         return new WorkbookFunctionsReplaceBRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.replaceB"), getClient(), null, oldText, startNum, numBytes, newText);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param text the text
+     * @param numberTimes the numberTimes
+     */
     @Nonnull
     public WorkbookFunctionsReptRequestBuilder rept(@Nullable final com.google.gson.JsonElement text, @Nullable final com.google.gson.JsonElement numberTimes) {
         return new WorkbookFunctionsReptRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rept"), getClient(), null, text, numberTimes);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param text the text
+     * @param numChars the numChars
+     */
     @Nonnull
     public WorkbookFunctionsRightRequestBuilder right(@Nullable final com.google.gson.JsonElement text, @Nullable final com.google.gson.JsonElement numChars) {
         return new WorkbookFunctionsRightRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.right"), getClient(), null, text, numChars);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param text the text
+     * @param numBytes the numBytes
+     */
     @Nonnull
     public WorkbookFunctionsRightbRequestBuilder rightb(@Nullable final com.google.gson.JsonElement text, @Nullable final com.google.gson.JsonElement numBytes) {
         return new WorkbookFunctionsRightbRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rightb"), getClient(), null, text, numBytes);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param form the form
+     */
     @Nonnull
     public WorkbookFunctionsRomanRequestBuilder roman(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement form) {
         return new WorkbookFunctionsRomanRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.roman"), getClient(), null, number, form);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param numDigits the numDigits
+     */
     @Nonnull
     public WorkbookFunctionsRoundRequestBuilder round(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement numDigits) {
         return new WorkbookFunctionsRoundRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.round"), getClient(), null, number, numDigits);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param numDigits the numDigits
+     */
     @Nonnull
     public WorkbookFunctionsRoundDownRequestBuilder roundDown(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement numDigits) {
         return new WorkbookFunctionsRoundDownRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.roundDown"), getClient(), null, number, numDigits);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param numDigits the numDigits
+     */
     @Nonnull
     public WorkbookFunctionsRoundUpRequestBuilder roundUp(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement numDigits) {
         return new WorkbookFunctionsRoundUpRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.roundUp"), getClient(), null, number, numDigits);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param array the array
+     */
     @Nonnull
     public WorkbookFunctionsRowsRequestBuilder rows(@Nullable final com.google.gson.JsonElement array) {
         return new WorkbookFunctionsRowsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rows"), getClient(), null, array);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param nper the nper
+     * @param pv the pv
+     * @param fv the fv
+     */
     @Nonnull
     public WorkbookFunctionsRriRequestBuilder rri(@Nullable final com.google.gson.JsonElement nper, @Nullable final com.google.gson.JsonElement pv, @Nullable final com.google.gson.JsonElement fv) {
         return new WorkbookFunctionsRriRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rri"), getClient(), null, nper, pv, fv);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsSecRequestBuilder sec(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsSecRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sec"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsSechRequestBuilder sech(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsSechRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sech"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param serialNumber the serialNumber
+     */
     @Nonnull
     public WorkbookFunctionsSecondRequestBuilder second(@Nullable final com.google.gson.JsonElement serialNumber) {
         return new WorkbookFunctionsSecondRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.second"), getClient(), null, serialNumber);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param x the x
+     * @param n the n
+     * @param m the m
+     * @param coefficients the coefficients
+     */
     @Nonnull
     public WorkbookFunctionsSeriesSumRequestBuilder seriesSum(@Nullable final com.google.gson.JsonElement x, @Nullable final com.google.gson.JsonElement n, @Nullable final com.google.gson.JsonElement m, @Nullable final com.google.gson.JsonElement coefficients) {
         return new WorkbookFunctionsSeriesSumRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.seriesSum"), getClient(), null, x, n, m, coefficients);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param value the value
+     */
     @Nonnull
     public WorkbookFunctionsSheetRequestBuilder sheet(@Nullable final com.google.gson.JsonElement value) {
         return new WorkbookFunctionsSheetRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sheet"), getClient(), null, value);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param reference the reference
+     */
     @Nonnull
     public WorkbookFunctionsSheetsRequestBuilder sheets(@Nullable final com.google.gson.JsonElement reference) {
         return new WorkbookFunctionsSheetsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sheets"), getClient(), null, reference);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsSignRequestBuilder sign(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsSignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sign"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsSinRequestBuilder sin(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsSinRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sin"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsSinhRequestBuilder sinh(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsSinhRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sinh"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsSkewRequestBuilder skew(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsSkewRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.skew"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsSkew_pRequestBuilder skew_p(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsSkew_pRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.skew_p"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param cost the cost
+     * @param salvage the salvage
+     * @param life the life
+     */
     @Nonnull
     public WorkbookFunctionsSlnRequestBuilder sln(@Nullable final com.google.gson.JsonElement cost, @Nullable final com.google.gson.JsonElement salvage, @Nullable final com.google.gson.JsonElement life) {
         return new WorkbookFunctionsSlnRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sln"), getClient(), null, cost, salvage, life);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param array the array
+     * @param k the k
+     */
     @Nonnull
     public WorkbookFunctionsSmallRequestBuilder small(@Nullable final com.google.gson.JsonElement array, @Nullable final com.google.gson.JsonElement k) {
         return new WorkbookFunctionsSmallRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.small"), getClient(), null, array, k);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsSqrtRequestBuilder sqrt(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsSqrtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sqrt"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsSqrtPiRequestBuilder sqrtPi(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsSqrtPiRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sqrtPi"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param x the x
+     * @param mean the mean
+     * @param standardDev the standardDev
+     */
     @Nonnull
     public WorkbookFunctionsStandardizeRequestBuilder standardize(@Nullable final com.google.gson.JsonElement x, @Nullable final com.google.gson.JsonElement mean, @Nullable final com.google.gson.JsonElement standardDev) {
         return new WorkbookFunctionsStandardizeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.standardize"), getClient(), null, x, mean, standardDev);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsStDev_PRequestBuilder stDev_P(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsStDev_PRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stDev_P"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsStDev_SRequestBuilder stDev_S(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsStDev_SRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stDev_S"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsStDevARequestBuilder stDevA(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsStDevARequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stDevA"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsStDevPARequestBuilder stDevPA(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsStDevPARequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stDevPA"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param text the text
+     * @param oldText the oldText
+     * @param newText the newText
+     * @param instanceNum the instanceNum
+     */
     @Nonnull
     public WorkbookFunctionsSubstituteRequestBuilder substitute(@Nullable final com.google.gson.JsonElement text, @Nullable final com.google.gson.JsonElement oldText, @Nullable final com.google.gson.JsonElement newText, @Nullable final com.google.gson.JsonElement instanceNum) {
         return new WorkbookFunctionsSubstituteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.substitute"), getClient(), null, text, oldText, newText, instanceNum);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param functionNum the functionNum
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsSubtotalRequestBuilder subtotal(@Nullable final com.google.gson.JsonElement functionNum, @Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsSubtotalRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.subtotal"), getClient(), null, functionNum, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsSumRequestBuilder sum(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsSumRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sum"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param range the range
+     * @param criteria the criteria
+     * @param sumRange the sumRange
+     */
     @Nonnull
     public WorkbookFunctionsSumIfRequestBuilder sumIf(@Nullable final com.google.gson.JsonElement range, @Nullable final com.google.gson.JsonElement criteria, @Nullable final com.google.gson.JsonElement sumRange) {
         return new WorkbookFunctionsSumIfRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sumIf"), getClient(), null, range, criteria, sumRange);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param sumRange the sumRange
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsSumIfsRequestBuilder sumIfs(@Nullable final com.google.gson.JsonElement sumRange, @Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsSumIfsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sumIfs"), getClient(), null, sumRange, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsSumSqRequestBuilder sumSq(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsSumSqRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sumSq"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param cost the cost
+     * @param salvage the salvage
+     * @param life the life
+     * @param per the per
+     */
     @Nonnull
     public WorkbookFunctionsSydRequestBuilder syd(@Nullable final com.google.gson.JsonElement cost, @Nullable final com.google.gson.JsonElement salvage, @Nullable final com.google.gson.JsonElement life, @Nullable final com.google.gson.JsonElement per) {
         return new WorkbookFunctionsSydRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.syd"), getClient(), null, cost, salvage, life, per);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param value the value
+     */
     @Nonnull
     public WorkbookFunctionsTRequestBuilder t(@Nullable final com.google.gson.JsonElement value) {
         return new WorkbookFunctionsTRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.t"), getClient(), null, value);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param x the x
+     * @param degFreedom the degFreedom
+     * @param cumulative the cumulative
+     */
     @Nonnull
     public WorkbookFunctionsT_DistRequestBuilder t_Dist(@Nullable final com.google.gson.JsonElement x, @Nullable final com.google.gson.JsonElement degFreedom, @Nullable final com.google.gson.JsonElement cumulative) {
         return new WorkbookFunctionsT_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.t_Dist"), getClient(), null, x, degFreedom, cumulative);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param x the x
+     * @param degFreedom the degFreedom
+     */
     @Nonnull
     public WorkbookFunctionsT_Dist_2TRequestBuilder t_Dist_2T(@Nullable final com.google.gson.JsonElement x, @Nullable final com.google.gson.JsonElement degFreedom) {
         return new WorkbookFunctionsT_Dist_2TRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.t_Dist_2T"), getClient(), null, x, degFreedom);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param x the x
+     * @param degFreedom the degFreedom
+     */
     @Nonnull
     public WorkbookFunctionsT_Dist_RTRequestBuilder t_Dist_RT(@Nullable final com.google.gson.JsonElement x, @Nullable final com.google.gson.JsonElement degFreedom) {
         return new WorkbookFunctionsT_Dist_RTRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.t_Dist_RT"), getClient(), null, x, degFreedom);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param probability the probability
+     * @param degFreedom the degFreedom
+     */
     @Nonnull
     public WorkbookFunctionsT_InvRequestBuilder t_Inv(@Nullable final com.google.gson.JsonElement probability, @Nullable final com.google.gson.JsonElement degFreedom) {
         return new WorkbookFunctionsT_InvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.t_Inv"), getClient(), null, probability, degFreedom);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param probability the probability
+     * @param degFreedom the degFreedom
+     */
     @Nonnull
     public WorkbookFunctionsT_Inv_2TRequestBuilder t_Inv_2T(@Nullable final com.google.gson.JsonElement probability, @Nullable final com.google.gson.JsonElement degFreedom) {
         return new WorkbookFunctionsT_Inv_2TRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.t_Inv_2T"), getClient(), null, probability, degFreedom);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsTanRequestBuilder tan(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsTanRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.tan"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsTanhRequestBuilder tanh(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsTanhRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.tanh"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param discount the discount
+     */
     @Nonnull
     public WorkbookFunctionsTbillEqRequestBuilder tbillEq(@Nullable final com.google.gson.JsonElement settlement, @Nullable final com.google.gson.JsonElement maturity, @Nullable final com.google.gson.JsonElement discount) {
         return new WorkbookFunctionsTbillEqRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.tbillEq"), getClient(), null, settlement, maturity, discount);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param discount the discount
+     */
     @Nonnull
     public WorkbookFunctionsTbillPriceRequestBuilder tbillPrice(@Nullable final com.google.gson.JsonElement settlement, @Nullable final com.google.gson.JsonElement maturity, @Nullable final com.google.gson.JsonElement discount) {
         return new WorkbookFunctionsTbillPriceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.tbillPrice"), getClient(), null, settlement, maturity, discount);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param pr the pr
+     */
     @Nonnull
     public WorkbookFunctionsTbillYieldRequestBuilder tbillYield(@Nullable final com.google.gson.JsonElement settlement, @Nullable final com.google.gson.JsonElement maturity, @Nullable final com.google.gson.JsonElement pr) {
         return new WorkbookFunctionsTbillYieldRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.tbillYield"), getClient(), null, settlement, maturity, pr);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param value the value
+     * @param formatText the formatText
+     */
     @Nonnull
     public WorkbookFunctionsTextRequestBuilder text(@Nullable final com.google.gson.JsonElement value, @Nullable final com.google.gson.JsonElement formatText) {
         return new WorkbookFunctionsTextRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.text"), getClient(), null, value, formatText);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param hour the hour
+     * @param minute the minute
+     * @param second the second
+     */
     @Nonnull
     public WorkbookFunctionsTimeRequestBuilder time(@Nullable final com.google.gson.JsonElement hour, @Nullable final com.google.gson.JsonElement minute, @Nullable final com.google.gson.JsonElement second) {
         return new WorkbookFunctionsTimeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.time"), getClient(), null, hour, minute, second);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param timeText the timeText
+     */
     @Nonnull
     public WorkbookFunctionsTimevalueRequestBuilder timevalue(@Nullable final com.google.gson.JsonElement timeText) {
         return new WorkbookFunctionsTimevalueRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.timevalue"), getClient(), null, timeText);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookFunctionsTodayRequestBuilder today() {
         return new WorkbookFunctionsTodayRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.today"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param text the text
+     */
     @Nonnull
     public WorkbookFunctionsTrimRequestBuilder trim(@Nullable final com.google.gson.JsonElement text) {
         return new WorkbookFunctionsTrimRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.trim"), getClient(), null, text);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param array the array
+     * @param percent the percent
+     */
     @Nonnull
     public WorkbookFunctionsTrimMeanRequestBuilder trimMean(@Nullable final com.google.gson.JsonElement array, @Nullable final com.google.gson.JsonElement percent) {
         return new WorkbookFunctionsTrimMeanRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.trimMean"), getClient(), null, array, percent);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookFunctionsTrueRequestBuilder msgraphTrue() {
         return new WorkbookFunctionsTrueRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.true"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param numDigits the numDigits
+     */
     @Nonnull
     public WorkbookFunctionsTruncRequestBuilder trunc(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement numDigits) {
         return new WorkbookFunctionsTruncRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.trunc"), getClient(), null, number, numDigits);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param value the value
+     */
     @Nonnull
     public WorkbookFunctionsTypeRequestBuilder type(@Nullable final com.google.gson.JsonElement value) {
         return new WorkbookFunctionsTypeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.type"), getClient(), null, value);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     */
     @Nonnull
     public WorkbookFunctionsUnicharRequestBuilder unichar(@Nullable final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsUnicharRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unichar"), getClient(), null, number);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param text the text
+     */
     @Nonnull
     public WorkbookFunctionsUnicodeRequestBuilder unicode(@Nullable final com.google.gson.JsonElement text) {
         return new WorkbookFunctionsUnicodeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unicode"), getClient(), null, text);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param text the text
+     */
     @Nonnull
     public WorkbookFunctionsUpperRequestBuilder upper(@Nullable final com.google.gson.JsonElement text) {
         return new WorkbookFunctionsUpperRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.upper"), getClient(), null, text);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param number the number
+     * @param decimals the decimals
+     */
     @Nonnull
     public WorkbookFunctionsUsdollarRequestBuilder usdollar(@Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement decimals) {
         return new WorkbookFunctionsUsdollarRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.usdollar"), getClient(), null, number, decimals);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param text the text
+     */
     @Nonnull
     public WorkbookFunctionsValueRequestBuilder value(@Nullable final com.google.gson.JsonElement text) {
         return new WorkbookFunctionsValueRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.value"), getClient(), null, text);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsVar_PRequestBuilder var_P(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsVar_PRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.var_P"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsVar_SRequestBuilder var_S(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsVar_SRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.var_S"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsVarARequestBuilder varA(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsVarARequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.varA"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsVarPARequestBuilder varPA(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsVarPARequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.varPA"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param cost the cost
+     * @param salvage the salvage
+     * @param life the life
+     * @param startPeriod the startPeriod
+     * @param endPeriod the endPeriod
+     * @param factor the factor
+     * @param noSwitch the noSwitch
+     */
     @Nonnull
     public WorkbookFunctionsVdbRequestBuilder vdb(@Nullable final com.google.gson.JsonElement cost, @Nullable final com.google.gson.JsonElement salvage, @Nullable final com.google.gson.JsonElement life, @Nullable final com.google.gson.JsonElement startPeriod, @Nullable final com.google.gson.JsonElement endPeriod, @Nullable final com.google.gson.JsonElement factor, @Nullable final com.google.gson.JsonElement noSwitch) {
         return new WorkbookFunctionsVdbRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.vdb"), getClient(), null, cost, salvage, life, startPeriod, endPeriod, factor, noSwitch);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param lookupValue the lookupValue
+     * @param tableArray the tableArray
+     * @param colIndexNum the colIndexNum
+     * @param rangeLookup the rangeLookup
+     */
     @Nonnull
     public WorkbookFunctionsVlookupRequestBuilder vlookup(@Nullable final com.google.gson.JsonElement lookupValue, @Nullable final com.google.gson.JsonElement tableArray, @Nullable final com.google.gson.JsonElement colIndexNum, @Nullable final com.google.gson.JsonElement rangeLookup) {
         return new WorkbookFunctionsVlookupRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.vlookup"), getClient(), null, lookupValue, tableArray, colIndexNum, rangeLookup);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param serialNumber the serialNumber
+     * @param returnType the returnType
+     */
     @Nonnull
     public WorkbookFunctionsWeekdayRequestBuilder weekday(@Nullable final com.google.gson.JsonElement serialNumber, @Nullable final com.google.gson.JsonElement returnType) {
         return new WorkbookFunctionsWeekdayRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.weekday"), getClient(), null, serialNumber, returnType);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param serialNumber the serialNumber
+     * @param returnType the returnType
+     */
     @Nonnull
     public WorkbookFunctionsWeekNumRequestBuilder weekNum(@Nullable final com.google.gson.JsonElement serialNumber, @Nullable final com.google.gson.JsonElement returnType) {
         return new WorkbookFunctionsWeekNumRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.weekNum"), getClient(), null, serialNumber, returnType);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param x the x
+     * @param alpha the alpha
+     * @param beta the beta
+     * @param cumulative the cumulative
+     */
     @Nonnull
     public WorkbookFunctionsWeibull_DistRequestBuilder weibull_Dist(@Nullable final com.google.gson.JsonElement x, @Nullable final com.google.gson.JsonElement alpha, @Nullable final com.google.gson.JsonElement beta, @Nullable final com.google.gson.JsonElement cumulative) {
         return new WorkbookFunctionsWeibull_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.weibull_Dist"), getClient(), null, x, alpha, beta, cumulative);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param startDate the startDate
+     * @param days the days
+     * @param holidays the holidays
+     */
     @Nonnull
     public WorkbookFunctionsWorkDayRequestBuilder workDay(@Nullable final com.google.gson.JsonElement startDate, @Nullable final com.google.gson.JsonElement days, @Nullable final com.google.gson.JsonElement holidays) {
         return new WorkbookFunctionsWorkDayRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.workDay"), getClient(), null, startDate, days, holidays);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param startDate the startDate
+     * @param days the days
+     * @param weekend the weekend
+     * @param holidays the holidays
+     */
     @Nonnull
     public WorkbookFunctionsWorkDay_IntlRequestBuilder workDay_Intl(@Nullable final com.google.gson.JsonElement startDate, @Nullable final com.google.gson.JsonElement days, @Nullable final com.google.gson.JsonElement weekend, @Nullable final com.google.gson.JsonElement holidays) {
         return new WorkbookFunctionsWorkDay_IntlRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.workDay_Intl"), getClient(), null, startDate, days, weekend, holidays);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     * @param dates the dates
+     * @param guess the guess
+     */
     @Nonnull
     public WorkbookFunctionsXirrRequestBuilder xirr(@Nullable final com.google.gson.JsonElement values, @Nullable final com.google.gson.JsonElement dates, @Nullable final com.google.gson.JsonElement guess) {
         return new WorkbookFunctionsXirrRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.xirr"), getClient(), null, values, dates, guess);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param rate the rate
+     * @param values the values
+     * @param dates the dates
+     */
     @Nonnull
     public WorkbookFunctionsXnpvRequestBuilder xnpv(@Nullable final com.google.gson.JsonElement rate, @Nullable final com.google.gson.JsonElement values, @Nullable final com.google.gson.JsonElement dates) {
         return new WorkbookFunctionsXnpvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.xnpv"), getClient(), null, rate, values, dates);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param values the values
+     */
     @Nonnull
     public WorkbookFunctionsXorRequestBuilder xor(@Nullable final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsXorRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.xor"), getClient(), null, values);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param serialNumber the serialNumber
+     */
     @Nonnull
     public WorkbookFunctionsYearRequestBuilder year(@Nullable final com.google.gson.JsonElement serialNumber) {
         return new WorkbookFunctionsYearRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.year"), getClient(), null, serialNumber);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param startDate the startDate
+     * @param endDate the endDate
+     * @param basis the basis
+     */
     @Nonnull
     public WorkbookFunctionsYearFracRequestBuilder yearFrac(@Nullable final com.google.gson.JsonElement startDate, @Nullable final com.google.gson.JsonElement endDate, @Nullable final com.google.gson.JsonElement basis) {
         return new WorkbookFunctionsYearFracRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.yearFrac"), getClient(), null, startDate, endDate, basis);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param rate the rate
+     * @param pr the pr
+     * @param redemption the redemption
+     * @param frequency the frequency
+     * @param basis the basis
+     */
     @Nonnull
     public WorkbookFunctionsYieldRequestBuilder yield(@Nullable final com.google.gson.JsonElement settlement, @Nullable final com.google.gson.JsonElement maturity, @Nullable final com.google.gson.JsonElement rate, @Nullable final com.google.gson.JsonElement pr, @Nullable final com.google.gson.JsonElement redemption, @Nullable final com.google.gson.JsonElement frequency, @Nullable final com.google.gson.JsonElement basis) {
         return new WorkbookFunctionsYieldRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.yield"), getClient(), null, settlement, maturity, rate, pr, redemption, frequency, basis);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param pr the pr
+     * @param redemption the redemption
+     * @param basis the basis
+     */
     @Nonnull
     public WorkbookFunctionsYieldDiscRequestBuilder yieldDisc(@Nullable final com.google.gson.JsonElement settlement, @Nullable final com.google.gson.JsonElement maturity, @Nullable final com.google.gson.JsonElement pr, @Nullable final com.google.gson.JsonElement redemption, @Nullable final com.google.gson.JsonElement basis) {
         return new WorkbookFunctionsYieldDiscRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.yieldDisc"), getClient(), null, settlement, maturity, pr, redemption, basis);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param issue the issue
+     * @param rate the rate
+     * @param pr the pr
+     * @param basis the basis
+     */
     @Nonnull
     public WorkbookFunctionsYieldMatRequestBuilder yieldMat(@Nullable final com.google.gson.JsonElement settlement, @Nullable final com.google.gson.JsonElement maturity, @Nullable final com.google.gson.JsonElement issue, @Nullable final com.google.gson.JsonElement rate, @Nullable final com.google.gson.JsonElement pr, @Nullable final com.google.gson.JsonElement basis) {
         return new WorkbookFunctionsYieldMatRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.yieldMat"), getClient(), null, settlement, maturity, issue, rate, pr, basis);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param array the array
+     * @param x the x
+     * @param sigma the sigma
+     */
     @Nonnull
     public WorkbookFunctionsZ_TestRequestBuilder z_Test(@Nullable final com.google.gson.JsonElement array, @Nullable final com.google.gson.JsonElement x, @Nullable final com.google.gson.JsonElement sigma) {
         return new WorkbookFunctionsZ_TestRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.z_Test"), getClient(), null, array, x, sigma);

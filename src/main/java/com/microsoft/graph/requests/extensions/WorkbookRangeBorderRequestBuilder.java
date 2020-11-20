@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Range Border Request Builder.
  */
-public class WorkbookRangeBorderRequestBuilder extends BaseRequestBuilder {
+public class WorkbookRangeBorderRequestBuilder extends BaseRequestBuilder<WorkbookRangeBorder> {
 
     /**
      * The request builder for the WorkbookRangeBorder

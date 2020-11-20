@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.requests.extensions.ManagedDeviceRecoverPasscodeRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Device Recover Passcode Request.
  */
-public class ManagedDeviceRecoverPasscodeRequest extends BaseRequest {
+public class ManagedDeviceRecoverPasscodeRequest extends BaseRequest<Void> {
 
     /**
      * The request for this ManagedDeviceRecoverPasscode

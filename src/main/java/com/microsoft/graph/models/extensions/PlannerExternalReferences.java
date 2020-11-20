@@ -23,6 +23,7 @@ import java.util.HashMap;
  */
 public class PlannerExternalReferences extends HashMap<String, Object> implements IJsonBackedObject {
 
+    /** the OData type of the object as returned by the service */
     @SerializedName("@odata.type")
     @Expose
     @Nullable
@@ -62,8 +63,9 @@ public class PlannerExternalReferences extends HashMap<String, Object> implement
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -25,7 +25,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Directory Object With Reference Request.
  */
-public class DirectoryObjectWithReferenceRequest extends BaseRequest {
+public class DirectoryObjectWithReferenceRequest extends BaseWithReferenceRequest<DirectoryObject> {
 
     /**
      * The request for the DirectoryObject
@@ -38,46 +38,6 @@ public class DirectoryObjectWithReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, DirectoryObject.class);
     }
 
-    public void post(@Nonnull final DirectoryObject newDirectoryObject, @Nullable final IJsonBackedObject payload, @Nonnull final ICallback<? super DirectoryObject> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    @Nullable
-    public DirectoryObject post(@Nonnull final DirectoryObject newDirectoryObject, @Nullable final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newDirectoryObject;
-        }
-        return null;
-    }
-
-    public void get(@Nonnull final ICallback<? super DirectoryObject> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    @Nullable
-    public DirectoryObject get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(@Nonnull final ICallback<? super DirectoryObject> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(@Nonnull final DirectoryObject sourceDirectoryObject, @Nonnull final ICallback<? super DirectoryObject> callback) {
-		send(HttpMethod.PATCH, callback, sourceDirectoryObject);
-	}
-
-    @Nullable
-	public DirectoryObject patch(@Nonnull final DirectoryObject sourceDirectoryObject) throws ClientException {
-		return send(HttpMethod.PATCH, sourceDirectoryObject);
-	}
-
-
     /**
      * Sets the select clause for the request
      *
@@ -86,8 +46,8 @@ public class DirectoryObjectWithReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public DirectoryObjectWithReferenceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (DirectoryObjectWithReferenceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -98,7 +58,7 @@ public class DirectoryObjectWithReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public DirectoryObjectWithReferenceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DirectoryObjectWithReferenceRequest)this;
+        addExpandOption(value);
+        return this;
     }
 }

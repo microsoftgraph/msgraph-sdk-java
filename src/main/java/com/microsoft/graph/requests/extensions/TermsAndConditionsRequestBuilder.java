@@ -24,7 +24,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Terms And Conditions Request Builder.
  */
-public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder {
+public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder<TermsAndConditions> {
 
     /**
      * The request builder for the TermsAndConditions
@@ -60,20 +60,42 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the TermsAndConditionsAcceptanceStatus collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public TermsAndConditionsAcceptanceStatusCollectionRequestBuilder acceptanceStatuses() {
         return new TermsAndConditionsAcceptanceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("acceptanceStatuses"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the TermsAndConditionsAcceptanceStatus item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public TermsAndConditionsAcceptanceStatusRequestBuilder acceptanceStatuses(@Nonnull final String id) {
         return new TermsAndConditionsAcceptanceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("acceptanceStatuses") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the TermsAndConditionsAssignment collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public TermsAndConditionsAssignmentCollectionRequestBuilder assignments() {
         return new TermsAndConditionsAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the TermsAndConditionsAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public TermsAndConditionsAssignmentRequestBuilder assignments(@Nonnull final String id) {
         return new TermsAndConditionsAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);

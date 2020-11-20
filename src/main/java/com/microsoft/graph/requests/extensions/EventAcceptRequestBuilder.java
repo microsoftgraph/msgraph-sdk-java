@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.EventAcceptRequest;
+import com.microsoft.graph.models.extensions.Event;
 
-import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
+import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Event Accept Request Builder.
  */
-public class EventAcceptRequestBuilder extends BaseActionRequestBuilder {
+public class EventAcceptRequestBuilder extends BaseActionRequestBuilder<Event> {
 
     /**
      * The request builder for this EventAccept

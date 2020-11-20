@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
+import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.requests.extensions.ReportRootGetYammerGroupsActivityGroupCountsRequest;
 
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Yammer Groups Activity Group Counts Request.
  */
-public class ReportRootGetYammerGroupsActivityGroupCountsRequest extends BaseRequest {
+public class ReportRootGetYammerGroupsActivityGroupCountsRequest extends BaseRequest<Report> {
 
     /**
      * The request for this ReportRootGetYammerGroupsActivityGroupCounts
@@ -103,8 +104,8 @@ public class ReportRootGetYammerGroupsActivityGroupCountsRequest extends BaseReq
      */
     @Nonnull
     public ReportRootGetYammerGroupsActivityGroupCountsRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ReportRootGetYammerGroupsActivityGroupCountsRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +116,8 @@ public class ReportRootGetYammerGroupsActivityGroupCountsRequest extends BaseReq
      */
     @Nonnull
     public ReportRootGetYammerGroupsActivityGroupCountsRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ReportRootGetYammerGroupsActivityGroupCountsRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +128,8 @@ public class ReportRootGetYammerGroupsActivityGroupCountsRequest extends BaseReq
      */
     @Nonnull
     public ReportRootGetYammerGroupsActivityGroupCountsRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ReportRootGetYammerGroupsActivityGroupCountsRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +140,8 @@ public class ReportRootGetYammerGroupsActivityGroupCountsRequest extends BaseReq
      */
     @Nonnull
     public ReportRootGetYammerGroupsActivityGroupCountsRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ReportRootGetYammerGroupsActivityGroupCountsRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

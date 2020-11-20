@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.SettingTemplateValue;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 
@@ -78,8 +79,9 @@ public class GroupSettingTemplate extends DirectoryObject implements IJsonBacked
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.generated.WellknownListName;
 import com.microsoft.graph.models.extensions.Extension;
 import com.microsoft.graph.models.extensions.TodoTask;
@@ -109,8 +110,9 @@ public class TodoTaskList extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

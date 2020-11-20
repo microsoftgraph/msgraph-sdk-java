@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Offer Shift Request Request Builder.
  */
-public class OfferShiftRequestRequestBuilder extends BaseRequestBuilder {
+public class OfferShiftRequestRequestBuilder extends BaseRequestBuilder<OfferShiftRequest> {
 
     /**
      * The request builder for the OfferShiftRequest

@@ -59,8 +59,9 @@ public class DeleteUserFromSharedAppleDeviceActionResult extends DeviceActionRes
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

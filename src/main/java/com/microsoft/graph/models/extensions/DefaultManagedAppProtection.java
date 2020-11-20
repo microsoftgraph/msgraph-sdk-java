@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.generated.ManagedAppDataEncryptionType;
 import com.microsoft.graph.models.extensions.KeyValuePair;
 import com.microsoft.graph.models.extensions.ManagedMobileApp;
@@ -163,8 +164,9 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

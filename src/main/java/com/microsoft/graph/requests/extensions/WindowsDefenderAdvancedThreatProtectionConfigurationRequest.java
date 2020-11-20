@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Defender Advanced Threat Protection Configuration Request.
  */
-public class WindowsDefenderAdvancedThreatProtectionConfigurationRequest extends BaseRequest {
+public class WindowsDefenderAdvancedThreatProtectionConfigurationRequest extends BaseRequest<WindowsDefenderAdvancedThreatProtectionConfiguration> {
 	
     /**
      * The request for the WindowsDefenderAdvancedThreatProtectionConfiguration
@@ -146,8 +146,8 @@ public class WindowsDefenderAdvancedThreatProtectionConfigurationRequest extends
      */
      @Nonnull
      public WindowsDefenderAdvancedThreatProtectionConfigurationRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsDefenderAdvancedThreatProtectionConfigurationRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class WindowsDefenderAdvancedThreatProtectionConfigurationRequest extends
      */
      @Nonnull
      public WindowsDefenderAdvancedThreatProtectionConfigurationRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsDefenderAdvancedThreatProtectionConfigurationRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

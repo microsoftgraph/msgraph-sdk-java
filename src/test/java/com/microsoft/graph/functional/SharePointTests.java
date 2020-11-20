@@ -9,12 +9,16 @@ import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.Site;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.QueryOption;
+import com.microsoft.graph.requests.extensions.SiteCollectionPage;
 import com.microsoft.graph.requests.extensions.DriveCollectionPage;
 import com.microsoft.graph.requests.extensions.DriveItemCollectionPage;
-import com.microsoft.graph.requests.extensions.SiteCollectionPage;
+import com.microsoft.graph.options.Option;
+import com.microsoft.graph.options.QueryOption;
+import com.microsoft.graph.models.extensions.Drive;
+import com.microsoft.graph.models.extensions.DriveItem;
+import com.microsoft.graph.models.extensions.Site;
 
 @Ignore
 public class SharePointTests {
@@ -34,7 +38,7 @@ public class SharePointTests {
 
     @Test
     public void testAccessRootSite() {
-//        ISiteCollectionPage sites = testBase.graphClient.getSites().buildRequest().get();
+//        BaseCollectionPage<ISite> sites = testBase.graphClient.getSites().buildRequest().get();
 //        assertNotNull(sites);
     }
 

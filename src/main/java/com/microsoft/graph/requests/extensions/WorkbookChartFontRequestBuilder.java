@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Chart Font Request Builder.
  */
-public class WorkbookChartFontRequestBuilder extends BaseRequestBuilder {
+public class WorkbookChartFontRequestBuilder extends BaseRequestBuilder<WorkbookChartFont> {
 
     /**
      * The request builder for the WorkbookChartFont

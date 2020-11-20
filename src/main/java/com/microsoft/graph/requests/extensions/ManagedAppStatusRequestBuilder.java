@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Managed App Status Request Builder.
  */
-public class ManagedAppStatusRequestBuilder extends BaseRequestBuilder {
+public class ManagedAppStatusRequestBuilder extends BaseRequestBuilder<ManagedAppStatus> {
 
     /**
      * The request builder for the ManagedAppStatus

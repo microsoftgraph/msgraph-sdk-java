@@ -21,7 +21,8 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Drive Item Preview Request.
  */
-public class DriveItemPreviewRequest extends BaseRequest {
+public class DriveItemPreviewRequest extends BaseRequest<ItemPreviewInfo> {
+    /** The body for the method */
     protected final DriveItemPreviewBody body;
 
     /**
@@ -36,10 +37,18 @@ public class DriveItemPreviewRequest extends BaseRequest {
         body = new DriveItemPreviewBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(@Nonnull final ICallback<? super ItemPreviewInfo> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     @Nullable
     public ItemPreviewInfo post() throws ClientException {
         return send(HttpMethod.POST, body);
@@ -53,8 +62,8 @@ public class DriveItemPreviewRequest extends BaseRequest {
      */
     @Nonnull
     public DriveItemPreviewRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (DriveItemPreviewRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +74,8 @@ public class DriveItemPreviewRequest extends BaseRequest {
      */
     @Nonnull
     public DriveItemPreviewRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (DriveItemPreviewRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -77,8 +86,8 @@ public class DriveItemPreviewRequest extends BaseRequest {
      */
     @Nonnull
     public DriveItemPreviewRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DriveItemPreviewRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

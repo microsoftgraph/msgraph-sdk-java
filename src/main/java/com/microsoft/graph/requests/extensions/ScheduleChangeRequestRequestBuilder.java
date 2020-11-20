@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Schedule Change Request Request Builder.
  */
-public class ScheduleChangeRequestRequestBuilder extends BaseRequestBuilder {
+public class ScheduleChangeRequestRequestBuilder extends BaseRequestBuilder<ScheduleChangeRequest> {
 
     /**
      * The request builder for the ScheduleChangeRequest
@@ -57,11 +57,21 @@ public class ScheduleChangeRequestRequestBuilder extends BaseRequestBuilder {
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param message the message
+     */
     @Nonnull
     public ScheduleChangeRequestDeclineRequestBuilder decline(@Nullable final String message) {
         return new ScheduleChangeRequestDeclineRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.decline"), getClient(), null, message);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param message the message
+     */
     @Nonnull
     public ScheduleChangeRequestApproveRequestBuilder approve(@Nullable final String message) {
         return new ScheduleChangeRequestApproveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.approve"), getClient(), null, message);

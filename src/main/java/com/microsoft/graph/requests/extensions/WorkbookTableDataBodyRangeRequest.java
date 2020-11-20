@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRange;
+import com.microsoft.graph.models.extensions.WorkbookTable;
 import com.microsoft.graph.requests.extensions.WorkbookTableDataBodyRangeRequest;
 
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Data Body Range Request.
  */
-public class WorkbookTableDataBodyRangeRequest extends BaseRequest {
+public class WorkbookTableDataBodyRangeRequest extends BaseRequest<WorkbookRange> {
 
     /**
      * The request for this WorkbookTableDataBodyRange
@@ -103,8 +104,8 @@ public class WorkbookTableDataBodyRangeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookTableDataBodyRangeRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookTableDataBodyRangeRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +116,8 @@ public class WorkbookTableDataBodyRangeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookTableDataBodyRangeRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookTableDataBodyRangeRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +128,8 @@ public class WorkbookTableDataBodyRangeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookTableDataBodyRangeRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookTableDataBodyRangeRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +140,8 @@ public class WorkbookTableDataBodyRangeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookTableDataBodyRangeRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookTableDataBodyRangeRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

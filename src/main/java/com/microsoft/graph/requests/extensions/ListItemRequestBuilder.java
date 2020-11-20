@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the List Item Request Builder.
  */
-public class ListItemRequestBuilder extends BaseRequestBuilder {
+public class ListItemRequestBuilder extends BaseRequestBuilder<ListItem> {
 
     /**
      * The request builder for the ListItem
@@ -112,21 +112,43 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
     public FieldValueSetRequestBuilder fields() {
         return new FieldValueSetRequestBuilder(getRequestUrlWithAdditionalSegment("fields"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the ListItemVersion collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ListItemVersionCollectionRequestBuilder versions() {
         return new ListItemVersionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("versions"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ListItemVersion item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ListItemVersionRequestBuilder versions(@Nonnull final String id) {
         return new ListItemVersionRequestBuilder(getRequestUrlWithAdditionalSegment("versions") + "/" + id, getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
     @Nonnull
     public ListItemGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval() {
         return new ListItemGetActivitiesByIntervalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getActivitiesByInterval"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param startDateTime the startDateTime
+     * @param endDateTime the endDateTime
+     * @param interval the interval
+     */
     @Nonnull
     public ListItemGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval(@Nullable final String startDateTime, @Nullable final String endDateTime, @Nullable final String interval) {
         return new ListItemGetActivitiesByIntervalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getActivitiesByInterval"), getClient(), null, startDateTime, endDateTime, interval);

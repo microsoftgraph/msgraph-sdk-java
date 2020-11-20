@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Ios Managed App Registration Request Builder.
  */
-public class IosManagedAppRegistrationRequestBuilder extends BaseRequestBuilder {
+public class IosManagedAppRegistrationRequestBuilder extends BaseRequestBuilder<IosManagedAppRegistration> {
 
     /**
      * The request builder for the IosManagedAppRegistration
@@ -56,29 +56,62 @@ public class IosManagedAppRegistrationRequestBuilder extends BaseRequestBuilder 
     }
 
 
+    /**
+     *  Gets a request builder for the ManagedAppPolicy collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ManagedAppPolicyCollectionRequestBuilder appliedPolicies() {
         return new ManagedAppPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appliedPolicies"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ManagedAppPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ManagedAppPolicyRequestBuilder appliedPolicies(@Nonnull final String id) {
         return new ManagedAppPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("appliedPolicies") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the ManagedAppPolicy collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ManagedAppPolicyCollectionRequestBuilder intendedPolicies() {
         return new ManagedAppPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("intendedPolicies"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ManagedAppPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ManagedAppPolicyRequestBuilder intendedPolicies(@Nonnull final String id) {
         return new ManagedAppPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("intendedPolicies") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the ManagedAppOperation collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ManagedAppOperationCollectionRequestBuilder operations() {
         return new ManagedAppOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ManagedAppOperation item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ManagedAppOperationRequestBuilder operations(@Nonnull final String id) {
         return new ManagedAppOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);

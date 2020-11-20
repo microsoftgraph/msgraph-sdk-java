@@ -21,7 +21,8 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Worksheet Add Request.
  */
-public class WorkbookWorksheetAddRequest extends BaseRequest {
+public class WorkbookWorksheetAddRequest extends BaseRequest<WorkbookWorksheet> {
+    /** The body for the method */
     protected final WorkbookWorksheetAddBody body;
 
     /**
@@ -36,10 +37,18 @@ public class WorkbookWorksheetAddRequest extends BaseRequest {
         body = new WorkbookWorksheetAddBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(@Nonnull final ICallback<? super WorkbookWorksheet> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     @Nullable
     public WorkbookWorksheet post() throws ClientException {
         return send(HttpMethod.POST, body);
@@ -53,8 +62,8 @@ public class WorkbookWorksheetAddRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookWorksheetAddRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookWorksheetAddRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +74,8 @@ public class WorkbookWorksheetAddRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookWorksheetAddRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookWorksheetAddRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -77,8 +86,8 @@ public class WorkbookWorksheetAddRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookWorksheetAddRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookWorksheetAddRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

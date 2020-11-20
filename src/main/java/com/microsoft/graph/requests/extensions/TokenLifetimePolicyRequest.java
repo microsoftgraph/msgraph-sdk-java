@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Token Lifetime Policy Request.
  */
-public class TokenLifetimePolicyRequest extends BaseRequest {
+public class TokenLifetimePolicyRequest extends BaseRequest<TokenLifetimePolicy> {
 	
     /**
      * The request for the TokenLifetimePolicy
@@ -146,8 +146,8 @@ public class TokenLifetimePolicyRequest extends BaseRequest {
      */
      @Nonnull
      public TokenLifetimePolicyRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TokenLifetimePolicyRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class TokenLifetimePolicyRequest extends BaseRequest {
      */
      @Nonnull
      public TokenLifetimePolicyRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TokenLifetimePolicyRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

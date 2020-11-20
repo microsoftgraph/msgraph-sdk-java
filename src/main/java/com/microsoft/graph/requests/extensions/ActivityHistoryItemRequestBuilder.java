@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Activity History Item Request Builder.
  */
-public class ActivityHistoryItemRequestBuilder extends BaseRequestBuilder {
+public class ActivityHistoryItemRequestBuilder extends BaseRequestBuilder<ActivityHistoryItem> {
 
     /**
      * The request builder for the ActivityHistoryItem

@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Participant Request.
  */
-public class ParticipantRequest extends BaseRequest {
+public class ParticipantRequest extends BaseRequest<Participant> {
 	
     /**
      * The request for the Participant
@@ -149,8 +149,8 @@ public class ParticipantRequest extends BaseRequest {
      */
      @Nonnull
      public ParticipantRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ParticipantRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -161,8 +161,8 @@ public class ParticipantRequest extends BaseRequest {
      */
      @Nonnull
      public ParticipantRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ParticipantRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

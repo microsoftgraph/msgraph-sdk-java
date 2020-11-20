@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the EBook Install Summary Request.
  */
-public class EBookInstallSummaryRequest extends BaseRequest {
+public class EBookInstallSummaryRequest extends BaseRequest<EBookInstallSummary> {
 	
     /**
      * The request for the EBookInstallSummary
@@ -146,8 +146,8 @@ public class EBookInstallSummaryRequest extends BaseRequest {
      */
      @Nonnull
      public EBookInstallSummaryRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EBookInstallSummaryRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class EBookInstallSummaryRequest extends BaseRequest {
      */
      @Nonnull
      public EBookInstallSummaryRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EBookInstallSummaryRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

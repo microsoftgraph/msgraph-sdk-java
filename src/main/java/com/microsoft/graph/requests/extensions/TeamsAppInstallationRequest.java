@@ -23,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Teams App Installation Request.
  */
-public class TeamsAppInstallationRequest extends BaseRequest {
+public class TeamsAppInstallationRequest extends BaseRequest<TeamsAppInstallation> {
 	
     /**
      * The request for the TeamsAppInstallation
@@ -163,8 +163,8 @@ public class TeamsAppInstallationRequest extends BaseRequest {
      */
      @Nonnull
      public TeamsAppInstallationRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TeamsAppInstallationRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -175,8 +175,8 @@ public class TeamsAppInstallationRequest extends BaseRequest {
      */
      @Nonnull
      public TeamsAppInstallationRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TeamsAppInstallationRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

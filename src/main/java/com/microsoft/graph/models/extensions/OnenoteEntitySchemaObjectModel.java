@@ -59,8 +59,9 @@ public class OnenoteEntitySchemaObjectModel extends OnenoteEntityBaseModel imple
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

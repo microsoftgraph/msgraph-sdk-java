@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.generated.ApplicationGuardBlockClipboardSharingType;
 import com.microsoft.graph.models.generated.ApplicationGuardBlockFileTransferType;
 import com.microsoft.graph.models.generated.AppLockerApplicationControlType;
@@ -382,8 +383,9 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

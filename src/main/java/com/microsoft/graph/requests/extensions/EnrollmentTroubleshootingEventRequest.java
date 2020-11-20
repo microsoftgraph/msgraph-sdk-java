@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Enrollment Troubleshooting Event Request.
  */
-public class EnrollmentTroubleshootingEventRequest extends BaseRequest {
+public class EnrollmentTroubleshootingEventRequest extends BaseRequest<EnrollmentTroubleshootingEvent> {
 	
     /**
      * The request for the EnrollmentTroubleshootingEvent
@@ -146,8 +146,8 @@ public class EnrollmentTroubleshootingEventRequest extends BaseRequest {
      */
      @Nonnull
      public EnrollmentTroubleshootingEventRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EnrollmentTroubleshootingEventRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class EnrollmentTroubleshootingEventRequest extends BaseRequest {
      */
      @Nonnull
      public EnrollmentTroubleshootingEventRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EnrollmentTroubleshootingEventRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

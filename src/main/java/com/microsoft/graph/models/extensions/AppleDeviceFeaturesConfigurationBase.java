@@ -50,8 +50,9 @@ public class AppleDeviceFeaturesConfigurationBase extends DeviceConfiguration im
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

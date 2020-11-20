@@ -21,7 +21,8 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Group Assign License Request.
  */
-public class GroupAssignLicenseRequest extends BaseRequest {
+public class GroupAssignLicenseRequest extends BaseRequest<Group> {
+    /** The body for the method */
     protected final GroupAssignLicenseBody body;
 
     /**
@@ -36,10 +37,18 @@ public class GroupAssignLicenseRequest extends BaseRequest {
         body = new GroupAssignLicenseBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(@Nonnull final ICallback<? super Group> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     @Nullable
     public Group post() throws ClientException {
         return send(HttpMethod.POST, body);
@@ -53,8 +62,8 @@ public class GroupAssignLicenseRequest extends BaseRequest {
      */
     @Nonnull
     public GroupAssignLicenseRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (GroupAssignLicenseRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +74,8 @@ public class GroupAssignLicenseRequest extends BaseRequest {
      */
     @Nonnull
     public GroupAssignLicenseRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (GroupAssignLicenseRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -77,8 +86,8 @@ public class GroupAssignLicenseRequest extends BaseRequest {
      */
     @Nonnull
     public GroupAssignLicenseRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (GroupAssignLicenseRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Compliance Policy Setting State Summary Request Builder.
  */
-public class DeviceCompliancePolicySettingStateSummaryRequestBuilder extends BaseRequestBuilder {
+public class DeviceCompliancePolicySettingStateSummaryRequestBuilder extends BaseRequestBuilder<DeviceCompliancePolicySettingStateSummary> {
 
     /**
      * The request builder for the DeviceCompliancePolicySettingStateSummary
@@ -58,11 +58,22 @@ public class DeviceCompliancePolicySettingStateSummaryRequestBuilder extends Bas
     }
 
 
+    /**
+     *  Gets a request builder for the DeviceComplianceSettingState collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public DeviceComplianceSettingStateCollectionRequestBuilder deviceComplianceSettingStates() {
         return new DeviceComplianceSettingStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceComplianceSettingStates"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DeviceComplianceSettingState item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public DeviceComplianceSettingStateRequestBuilder deviceComplianceSettingStates(@Nonnull final String id) {
         return new DeviceComplianceSettingStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceComplianceSettingStates") + "/" + id, getClient(), null);

@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -24,7 +24,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Entity With Reference Request.
  */
-public class EntityWithReferenceRequest extends BaseRequest {
+public class EntityWithReferenceRequest extends BaseWithReferenceRequest<Entity> {
 
     /**
      * The request for the Entity
@@ -37,46 +37,6 @@ public class EntityWithReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, Entity.class);
     }
 
-    public void post(@Nonnull final Entity newEntity, @Nullable final IJsonBackedObject payload, @Nonnull final ICallback<? super Entity> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    @Nullable
-    public Entity post(@Nonnull final Entity newEntity, @Nullable final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newEntity;
-        }
-        return null;
-    }
-
-    public void get(@Nonnull final ICallback<? super Entity> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    @Nullable
-    public Entity get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(@Nonnull final ICallback<? super Entity> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(@Nonnull final Entity sourceEntity, @Nonnull final ICallback<? super Entity> callback) {
-		send(HttpMethod.PATCH, callback, sourceEntity);
-	}
-
-    @Nullable
-	public Entity patch(@Nonnull final Entity sourceEntity) throws ClientException {
-		return send(HttpMethod.PATCH, sourceEntity);
-	}
-
-
     /**
      * Sets the select clause for the request
      *
@@ -85,8 +45,8 @@ public class EntityWithReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public EntityWithReferenceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (EntityWithReferenceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -97,7 +57,7 @@ public class EntityWithReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public EntityWithReferenceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (EntityWithReferenceRequest)this;
+        addExpandOption(value);
+        return this;
     }
 }

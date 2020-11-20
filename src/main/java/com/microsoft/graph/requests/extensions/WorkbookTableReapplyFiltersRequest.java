@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.WorkbookTable;
 import com.microsoft.graph.requests.extensions.WorkbookTableReapplyFiltersRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Reapply Filters Request.
  */
-public class WorkbookTableReapplyFiltersRequest extends BaseRequest {
+public class WorkbookTableReapplyFiltersRequest extends BaseRequest<Void> {
 
     /**
      * The request for this WorkbookTableReapplyFilters

@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Certificate Based Auth Configuration Request.
  */
-public class CertificateBasedAuthConfigurationRequest extends BaseRequest {
+public class CertificateBasedAuthConfigurationRequest extends BaseRequest<CertificateBasedAuthConfiguration> {
 	
     /**
      * The request for the CertificateBasedAuthConfiguration
@@ -146,8 +146,8 @@ public class CertificateBasedAuthConfigurationRequest extends BaseRequest {
      */
      @Nonnull
      public CertificateBasedAuthConfigurationRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (CertificateBasedAuthConfigurationRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class CertificateBasedAuthConfigurationRequest extends BaseRequest {
      */
      @Nonnull
      public CertificateBasedAuthConfigurationRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CertificateBasedAuthConfigurationRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -4,10 +4,10 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.CallPlayPromptRequest;
+import com.microsoft.graph.models.extensions.Call;
 import com.microsoft.graph.models.extensions.Prompt;
 import com.microsoft.graph.models.extensions.PlayPromptOperation;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
+import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Call Play Prompt Request Builder.
  */
-public class CallPlayPromptRequestBuilder extends BaseActionRequestBuilder {
+public class CallPlayPromptRequestBuilder extends BaseActionRequestBuilder<PlayPromptOperation> {
 
     /**
      * The request builder for this CallPlayPrompt

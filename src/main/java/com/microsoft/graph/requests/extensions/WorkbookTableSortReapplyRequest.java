@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.WorkbookTableSort;
 import com.microsoft.graph.requests.extensions.WorkbookTableSortReapplyRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Sort Reapply Request.
  */
-public class WorkbookTableSortReapplyRequest extends BaseRequest {
+public class WorkbookTableSortReapplyRequest extends BaseRequest<Void> {
 
     /**
      * The request for this WorkbookTableSortReapply

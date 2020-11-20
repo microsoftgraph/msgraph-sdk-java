@@ -56,7 +56,7 @@ public class WorkbookFunctionsBin2DecBody {
      * @return the serializer
      */
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

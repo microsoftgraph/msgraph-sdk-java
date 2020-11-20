@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Change Tracked Entity Request Builder.
  */
-public class ChangeTrackedEntityRequestBuilder extends BaseRequestBuilder {
+public class ChangeTrackedEntityRequestBuilder extends BaseRequestBuilder<ChangeTrackedEntity> {
 
     /**
      * The request builder for the ChangeTrackedEntity

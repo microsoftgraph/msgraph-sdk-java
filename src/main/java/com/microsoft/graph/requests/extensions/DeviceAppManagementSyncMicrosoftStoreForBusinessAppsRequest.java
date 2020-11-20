@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.DeviceAppManagement;
 import com.microsoft.graph.requests.extensions.DeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device App Management Sync Microsoft Store For Business Apps Request.
  */
-public class DeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest extends BaseRequest {
+public class DeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest extends BaseRequest<Void> {
 
     /**
      * The request for this DeviceAppManagementSyncMicrosoftStoreForBusinessApps

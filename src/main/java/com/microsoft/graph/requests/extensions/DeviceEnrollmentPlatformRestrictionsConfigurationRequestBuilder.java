@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Enrollment Platform Restrictions Configuration Request Builder.
  */
-public class DeviceEnrollmentPlatformRestrictionsConfigurationRequestBuilder extends BaseRequestBuilder {
+public class DeviceEnrollmentPlatformRestrictionsConfigurationRequestBuilder extends BaseRequestBuilder<DeviceEnrollmentPlatformRestrictionsConfiguration> {
 
     /**
      * The request builder for the DeviceEnrollmentPlatformRestrictionsConfiguration
@@ -56,11 +56,22 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequestBuilder ext
     }
 
 
+    /**
+     *  Gets a request builder for the EnrollmentConfigurationAssignment collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public EnrollmentConfigurationAssignmentCollectionRequestBuilder assignments() {
         return new EnrollmentConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the EnrollmentConfigurationAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public EnrollmentConfigurationAssignmentRequestBuilder assignments(@Nonnull final String id) {
         return new EnrollmentConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);

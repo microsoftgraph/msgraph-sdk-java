@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.EnrollmentConfigurationAssignment;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignmentCollectionPage;
@@ -115,8 +116,9 @@ public class DeviceEnrollmentConfiguration extends Entity implements IJsonBacked
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

@@ -59,8 +59,9 @@ public class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings imp
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.WorkbookFilter;
 import com.microsoft.graph.requests.extensions.WorkbookFilterClearRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Filter Clear Request.
  */
-public class WorkbookFilterClearRequest extends BaseRequest {
+public class WorkbookFilterClearRequest extends BaseRequest<Void> {
 
     /**
      * The request for this WorkbookFilterClear

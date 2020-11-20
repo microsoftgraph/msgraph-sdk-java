@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -24,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Chat Reference Request.
  */
-public class ChatReferenceRequest extends BaseRequest {
+public class ChatReferenceRequest extends BaseReferenceRequest<Chat> {
 
     /**
      * The request for the Chat
@@ -37,15 +37,6 @@ public class ChatReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, Chat.class);
     }
 
-    public void delete(@Nonnull final ICallback<? super Chat> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    @Nullable
-    public Chat delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
-    }
-
     /**
      * Sets the select clause for the request
      *
@@ -54,8 +45,8 @@ public class ChatReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public ChatReferenceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ChatReferenceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -66,8 +57,8 @@ public class ChatReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public ChatReferenceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ChatReferenceRequest)this;
+        addExpandOption(value);
+        return this;
     }
     /**
      * Puts the Chat

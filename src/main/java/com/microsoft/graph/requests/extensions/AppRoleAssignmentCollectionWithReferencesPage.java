@@ -36,7 +36,17 @@ public class AppRoleAssignmentCollectionWithReferencesPage extends BaseCollectio
      * @param response the serialized AppRoleAssignmentCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public AppRoleAssignmentCollectionWithReferencesPage(@Nonnull final AppRoleAssignmentCollectionResponse response, @Nonnull  final AppRoleAssignmentCollectionWithReferencesRequestBuilder builder) {
+    public AppRoleAssignmentCollectionWithReferencesPage(@Nonnull final AppRoleAssignmentCollectionResponse response, @Nullable final AppRoleAssignmentCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
+    }
+
+    /**
+     * Creates the collection page for AppRoleAssignment
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public AppRoleAssignmentCollectionWithReferencesPage(@Nonnull final java.util.List<AppRoleAssignment> pageContents, @Nullable final AppRoleAssignmentCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
     }
 }

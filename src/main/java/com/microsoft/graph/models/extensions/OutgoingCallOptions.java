@@ -50,8 +50,9 @@ public class OutgoingCallOptions extends CallOptions implements IJsonBackedObjec
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

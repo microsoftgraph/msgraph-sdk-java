@@ -68,8 +68,9 @@ public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallSchedul
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

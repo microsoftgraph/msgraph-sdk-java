@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Single Value Legacy Extended Property Request.
  */
-public class SingleValueLegacyExtendedPropertyRequest extends BaseRequest {
+public class SingleValueLegacyExtendedPropertyRequest extends BaseRequest<SingleValueLegacyExtendedProperty> {
 	
     /**
      * The request for the SingleValueLegacyExtendedProperty
@@ -146,8 +146,8 @@ public class SingleValueLegacyExtendedPropertyRequest extends BaseRequest {
      */
      @Nonnull
      public SingleValueLegacyExtendedPropertyRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SingleValueLegacyExtendedPropertyRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class SingleValueLegacyExtendedPropertyRequest extends BaseRequest {
      */
      @Nonnull
      public SingleValueLegacyExtendedPropertyRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SingleValueLegacyExtendedPropertyRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

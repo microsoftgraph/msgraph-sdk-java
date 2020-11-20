@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Participant Request Builder.
  */
-public class ParticipantRequestBuilder extends BaseRequestBuilder {
+public class ParticipantRequestBuilder extends BaseRequestBuilder<Participant> {
 
     /**
      * The request builder for the Participant
@@ -60,6 +60,11 @@ public class ParticipantRequestBuilder extends BaseRequestBuilder {
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param clientContext the clientContext
+     */
     @Nonnull
     public ParticipantMuteRequestBuilder mute(@Nullable final String clientContext) {
         return new ParticipantMuteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.mute"), getClient(), null, clientContext);

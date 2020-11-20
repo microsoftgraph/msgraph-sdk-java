@@ -23,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Permission Grant Policy Request.
  */
-public class PermissionGrantPolicyRequest extends BaseRequest {
+public class PermissionGrantPolicyRequest extends BaseRequest<PermissionGrantPolicy> {
 	
     /**
      * The request for the PermissionGrantPolicy
@@ -148,8 +148,8 @@ public class PermissionGrantPolicyRequest extends BaseRequest {
      */
      @Nonnull
      public PermissionGrantPolicyRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PermissionGrantPolicyRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -160,8 +160,8 @@ public class PermissionGrantPolicyRequest extends BaseRequest {
      */
      @Nonnull
      public PermissionGrantPolicyRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PermissionGrantPolicyRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

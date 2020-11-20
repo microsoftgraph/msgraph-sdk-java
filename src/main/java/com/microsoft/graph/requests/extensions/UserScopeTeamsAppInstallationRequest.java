@@ -22,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the User Scope Teams App Installation Request.
  */
-public class UserScopeTeamsAppInstallationRequest extends BaseRequest {
+public class UserScopeTeamsAppInstallationRequest extends BaseRequest<UserScopeTeamsAppInstallation> {
 	
     /**
      * The request for the UserScopeTeamsAppInstallation
@@ -147,8 +147,8 @@ public class UserScopeTeamsAppInstallationRequest extends BaseRequest {
      */
      @Nonnull
      public UserScopeTeamsAppInstallationRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (UserScopeTeamsAppInstallationRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -159,8 +159,8 @@ public class UserScopeTeamsAppInstallationRequest extends BaseRequest {
      */
      @Nonnull
      public UserScopeTeamsAppInstallationRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserScopeTeamsAppInstallationRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

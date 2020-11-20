@@ -5,8 +5,7 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.DomainVerifyRequest;
 import com.microsoft.graph.models.extensions.Domain;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
+import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -17,7 +16,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Domain Verify Request Builder.
  */
-public class DomainVerifyRequestBuilder extends BaseActionRequestBuilder {
+public class DomainVerifyRequestBuilder extends BaseActionRequestBuilder<Domain> {
 
     /**
      * The request builder for this DomainVerify

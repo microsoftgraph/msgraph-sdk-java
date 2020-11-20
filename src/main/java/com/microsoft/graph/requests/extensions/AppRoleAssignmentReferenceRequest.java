@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the App Role Assignment Reference Request.
  */
-public class AppRoleAssignmentReferenceRequest extends BaseRequest {
+public class AppRoleAssignmentReferenceRequest extends BaseReferenceRequest<AppRoleAssignment> {
 
     /**
      * The request for the AppRoleAssignment
@@ -36,15 +36,6 @@ public class AppRoleAssignmentReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, AppRoleAssignment.class);
     }
 
-    public void delete(@Nonnull final ICallback<? super AppRoleAssignment> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    @Nullable
-    public AppRoleAssignment delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
-    }
-
     /**
      * Sets the select clause for the request
      *
@@ -53,8 +44,8 @@ public class AppRoleAssignmentReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public AppRoleAssignmentReferenceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (AppRoleAssignmentReferenceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +56,8 @@ public class AppRoleAssignmentReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public AppRoleAssignmentReferenceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (AppRoleAssignmentReferenceRequest)this;
+        addExpandOption(value);
+        return this;
     }
     /**
      * Puts the AppRoleAssignment

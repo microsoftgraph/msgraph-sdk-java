@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Offer Shift Request Request.
  */
-public class OfferShiftRequestRequest extends BaseRequest {
+public class OfferShiftRequestRequest extends BaseRequest<OfferShiftRequest> {
 	
     /**
      * The request for the OfferShiftRequest
@@ -161,8 +161,8 @@ public class OfferShiftRequestRequest extends BaseRequest {
      */
      @Nonnull
      public OfferShiftRequestRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OfferShiftRequestRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -173,8 +173,8 @@ public class OfferShiftRequestRequest extends BaseRequest {
      */
      @Nonnull
      public OfferShiftRequestRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OfferShiftRequestRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

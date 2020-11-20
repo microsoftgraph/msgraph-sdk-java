@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.MobileAppContentFile;
 import com.microsoft.graph.requests.extensions.MobileAppContentFileRenewUploadRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mobile App Content File Renew Upload Request.
  */
-public class MobileAppContentFileRenewUploadRequest extends BaseRequest {
+public class MobileAppContentFileRenewUploadRequest extends BaseRequest<Void> {
 
     /**
      * The request for this MobileAppContentFileRenewUpload

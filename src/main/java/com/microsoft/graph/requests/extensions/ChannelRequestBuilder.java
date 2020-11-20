@@ -27,7 +27,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Channel Request Builder.
  */
-public class ChannelRequestBuilder extends BaseRequestBuilder {
+public class ChannelRequestBuilder extends BaseRequestBuilder<Channel> {
 
     /**
      * The request builder for the Channel
@@ -73,29 +73,62 @@ public class ChannelRequestBuilder extends BaseRequestBuilder {
     public DriveItemRequestBuilder filesFolder() {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("filesFolder"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the ConversationMember collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ConversationMemberCollectionRequestBuilder members() {
         return new ConversationMemberCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ConversationMember item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ConversationMemberRequestBuilder members(@Nonnull final String id) {
         return new ConversationMemberRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the ChatMessage collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ChatMessageCollectionRequestBuilder messages() {
         return new ChatMessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("messages"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ChatMessage item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ChatMessageRequestBuilder messages(@Nonnull final String id) {
         return new ChatMessageRequestBuilder(getRequestUrlWithAdditionalSegment("messages") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the TeamsTab collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public TeamsTabCollectionRequestBuilder tabs() {
         return new TeamsTabCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tabs"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the TeamsTab item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public TeamsTabRequestBuilder tabs(@Nonnull final String id) {
         return new TeamsTabRequestBuilder(getRequestUrlWithAdditionalSegment("tabs") + "/" + id, getClient(), null);

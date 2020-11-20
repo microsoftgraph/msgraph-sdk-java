@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Drive Item Version Request.
  */
-public class DriveItemVersionRequest extends BaseRequest {
+public class DriveItemVersionRequest extends BaseRequest<DriveItemVersion> {
 	
     /**
      * The request for the DriveItemVersion
@@ -146,8 +146,8 @@ public class DriveItemVersionRequest extends BaseRequest {
      */
      @Nonnull
      public DriveItemVersionRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DriveItemVersionRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class DriveItemVersionRequest extends BaseRequest {
      */
      @Nonnull
      public DriveItemVersionRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DriveItemVersionRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -37,7 +37,17 @@ public class GroupCollectionWithReferencesPage extends BaseCollectionPage<Group,
      * @param response the serialized GroupCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public GroupCollectionWithReferencesPage(@Nonnull final GroupCollectionResponse response, @Nonnull  final GroupCollectionWithReferencesRequestBuilder builder) {
+    public GroupCollectionWithReferencesPage(@Nonnull final GroupCollectionResponse response, @Nullable final GroupCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
+    }
+
+    /**
+     * Creates the collection page for Group
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public GroupCollectionWithReferencesPage(@Nonnull final java.util.List<Group> pageContents, @Nullable final GroupCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
     }
 }

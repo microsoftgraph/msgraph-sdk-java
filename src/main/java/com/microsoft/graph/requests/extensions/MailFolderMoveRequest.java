@@ -21,7 +21,8 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Mail Folder Move Request.
  */
-public class MailFolderMoveRequest extends BaseRequest {
+public class MailFolderMoveRequest extends BaseRequest<MailFolder> {
+    /** The body for the method */
     protected final MailFolderMoveBody body;
 
     /**
@@ -36,10 +37,18 @@ public class MailFolderMoveRequest extends BaseRequest {
         body = new MailFolderMoveBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(@Nonnull final ICallback<? super MailFolder> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     @Nullable
     public MailFolder post() throws ClientException {
         return send(HttpMethod.POST, body);
@@ -53,8 +62,8 @@ public class MailFolderMoveRequest extends BaseRequest {
      */
     @Nonnull
     public MailFolderMoveRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (MailFolderMoveRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +74,8 @@ public class MailFolderMoveRequest extends BaseRequest {
      */
     @Nonnull
     public MailFolderMoveRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (MailFolderMoveRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -77,8 +86,8 @@ public class MailFolderMoveRequest extends BaseRequest {
      */
     @Nonnull
     public MailFolderMoveRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (MailFolderMoveRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

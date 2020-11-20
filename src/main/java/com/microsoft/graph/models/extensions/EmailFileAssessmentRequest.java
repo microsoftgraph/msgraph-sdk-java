@@ -78,8 +78,9 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

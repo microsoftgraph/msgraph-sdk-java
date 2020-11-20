@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Range Sort Request Builder.
  */
-public class WorkbookRangeSortRequestBuilder extends BaseRequestBuilder {
+public class WorkbookRangeSortRequestBuilder extends BaseRequestBuilder<WorkbookRangeSort> {
 
     /**
      * The request builder for the WorkbookRangeSort
@@ -58,6 +58,15 @@ public class WorkbookRangeSortRequestBuilder extends BaseRequestBuilder {
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param fields the fields
+     * @param matchCase the matchCase
+     * @param hasHeaders the hasHeaders
+     * @param orientation the orientation
+     * @param method the method
+     */
     @Nonnull
     public WorkbookRangeSortApplyRequestBuilder apply(@Nullable final java.util.List<WorkbookSortField> fields, @Nullable final Boolean matchCase, @Nullable final Boolean hasHeaders, @Nullable final String orientation, @Nullable final String method) {
         return new WorkbookRangeSortApplyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.apply"), getClient(), null, fields, matchCase, hasHeaders, orientation, method);

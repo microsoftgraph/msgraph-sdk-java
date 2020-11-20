@@ -14,8 +14,8 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.UserGetManagedAppPoliciesCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.UserGetManagedAppPoliciesCollectionPage;
 import com.microsoft.graph.requests.extensions.UserGetManagedAppPoliciesCollectionResponse;
+import com.microsoft.graph.models.extensions.ManagedAppPolicy;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
@@ -26,7 +26,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the User Get Managed App Policies Collection Request.
  */
-public class UserGetManagedAppPoliciesCollectionRequest extends BaseCollectionRequest<UserGetManagedAppPoliciesCollectionResponse, UserGetManagedAppPoliciesCollectionPage> {
+public class UserGetManagedAppPoliciesCollectionRequest extends BaseCollectionRequest<ManagedAppPolicy, UserGetManagedAppPoliciesCollectionResponse, UserGetManagedAppPoliciesCollectionPage> {
 
 
     /**
@@ -37,43 +37,9 @@ public class UserGetManagedAppPoliciesCollectionRequest extends BaseCollectionRe
      * @param requestOptions the options for this request
      */
     public UserGetManagedAppPoliciesCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, UserGetManagedAppPoliciesCollectionResponse.class, UserGetManagedAppPoliciesCollectionPage.class);
+        super(requestUrl, client, requestOptions, UserGetManagedAppPoliciesCollectionResponse.class, UserGetManagedAppPoliciesCollectionPage.class, UserGetManagedAppPoliciesCollectionRequestBuilder.class);
     }
 
-
-    public void get(@Nonnull final ICallback<? super UserGetManagedAppPoliciesCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    @Nullable
-    public UserGetManagedAppPoliciesCollectionPage get() throws ClientException {
-        final UserGetManagedAppPoliciesCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    @Nonnull
-    public UserGetManagedAppPoliciesCollectionPage buildFromResponse(@Nonnull final UserGetManagedAppPoliciesCollectionResponse response) {
-        final UserGetManagedAppPoliciesCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new UserGetManagedAppPoliciesCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final UserGetManagedAppPoliciesCollectionPage page = new UserGetManagedAppPoliciesCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
 
     /**
      * Sets the select clause for the request
@@ -83,8 +49,8 @@ public class UserGetManagedAppPoliciesCollectionRequest extends BaseCollectionRe
      */
     @Nonnull
     public UserGetManagedAppPoliciesCollectionRequest select(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (UserGetManagedAppPoliciesCollectionRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -95,8 +61,8 @@ public class UserGetManagedAppPoliciesCollectionRequest extends BaseCollectionRe
      */
     @Nonnull
     public UserGetManagedAppPoliciesCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (UserGetManagedAppPoliciesCollectionRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -107,8 +73,8 @@ public class UserGetManagedAppPoliciesCollectionRequest extends BaseCollectionRe
      */
     @Nonnull
     public UserGetManagedAppPoliciesCollectionRequest expand(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (UserGetManagedAppPoliciesCollectionRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -119,8 +85,8 @@ public class UserGetManagedAppPoliciesCollectionRequest extends BaseCollectionRe
      */
     @Nonnull
     public UserGetManagedAppPoliciesCollectionRequest filter(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (UserGetManagedAppPoliciesCollectionRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -131,8 +97,8 @@ public class UserGetManagedAppPoliciesCollectionRequest extends BaseCollectionRe
      */
     @Nonnull
     public UserGetManagedAppPoliciesCollectionRequest orderBy(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (UserGetManagedAppPoliciesCollectionRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

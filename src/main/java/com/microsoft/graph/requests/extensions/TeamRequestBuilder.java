@@ -35,7 +35,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Team Request Builder.
  */
-public class TeamRequestBuilder extends BaseRequestBuilder {
+public class TeamRequestBuilder extends BaseRequestBuilder<Team> {
 
     /**
      * The request builder for the Team
@@ -81,11 +81,22 @@ public class TeamRequestBuilder extends BaseRequestBuilder {
     public ScheduleRequestBuilder schedule() {
         return new ScheduleRequestBuilder(getRequestUrlWithAdditionalSegment("schedule"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the Channel collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ChannelCollectionRequestBuilder channels() {
         return new ChannelCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("channels"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Channel item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ChannelRequestBuilder channels(@Nonnull final String id) {
         return new ChannelRequestBuilder(getRequestUrlWithAdditionalSegment("channels") + "/" + id, getClient(), null);
@@ -100,29 +111,62 @@ public class TeamRequestBuilder extends BaseRequestBuilder {
     public GroupWithReferenceRequestBuilder group() {
         return new GroupWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("group"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the TeamsAppInstallation collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public TeamsAppInstallationCollectionRequestBuilder installedApps() {
         return new TeamsAppInstallationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("installedApps"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the TeamsAppInstallation item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public TeamsAppInstallationRequestBuilder installedApps(@Nonnull final String id) {
         return new TeamsAppInstallationRequestBuilder(getRequestUrlWithAdditionalSegment("installedApps") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the ConversationMember collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ConversationMemberCollectionRequestBuilder members() {
         return new ConversationMemberCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ConversationMember item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ConversationMemberRequestBuilder members(@Nonnull final String id) {
         return new ConversationMemberRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the TeamsAsyncOperation collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public TeamsAsyncOperationCollectionRequestBuilder operations() {
         return new TeamsAsyncOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the TeamsAsyncOperation item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public TeamsAsyncOperationRequestBuilder operations(@Nonnull final String id) {
         return new TeamsAsyncOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
@@ -148,16 +192,35 @@ public class TeamRequestBuilder extends BaseRequestBuilder {
         return new TeamsTemplateWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("template"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param shouldSetSpoSiteReadOnlyForMembers the shouldSetSpoSiteReadOnlyForMembers
+     */
     @Nonnull
     public TeamArchiveRequestBuilder archive(@Nullable final Boolean shouldSetSpoSiteReadOnlyForMembers) {
         return new TeamArchiveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.archive"), getClient(), null, shouldSetSpoSiteReadOnlyForMembers);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param displayName the displayName
+     * @param description the description
+     * @param mailNickname the mailNickname
+     * @param classification the classification
+     * @param visibility the visibility
+     * @param partsToClone the partsToClone
+     */
     @Nonnull
     public TeamCloneRequestBuilder clone(@Nullable final String displayName, @Nullable final String description, @Nullable final String mailNickname, @Nullable final String classification, @Nullable final TeamVisibilityType visibility, @Nullable final EnumSet<ClonableTeamParts> partsToClone) {
         return new TeamCloneRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.clone"), getClient(), null, displayName, description, mailNickname, classification, visibility, partsToClone);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public TeamUnarchiveRequestBuilder unarchive() {
         return new TeamUnarchiveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unarchive"), getClient(), null);

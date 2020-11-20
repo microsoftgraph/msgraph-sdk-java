@@ -4,10 +4,10 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.AttachmentCreateUploadSessionRequest;
+import com.microsoft.graph.models.extensions.Attachment;
 import com.microsoft.graph.models.extensions.AttachmentItem;
 import com.microsoft.graph.models.extensions.UploadSession;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
+import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Attachment Create Upload Session Request Builder.
  */
-public class AttachmentCreateUploadSessionRequestBuilder extends BaseActionRequestBuilder {
+public class AttachmentCreateUploadSessionRequestBuilder extends BaseActionRequestBuilder<UploadSession> {
 
     /**
      * The request builder for this AttachmentCreateUploadSession

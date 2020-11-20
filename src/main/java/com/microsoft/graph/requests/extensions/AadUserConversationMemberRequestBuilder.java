@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Aad User Conversation Member Request Builder.
  */
-public class AadUserConversationMemberRequestBuilder extends BaseRequestBuilder {
+public class AadUserConversationMemberRequestBuilder extends BaseRequestBuilder<AadUserConversationMember> {
 
     /**
      * The request builder for the AadUserConversationMember

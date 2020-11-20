@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Teams App Installation Request Builder.
  */
-public class TeamsAppInstallationRequestBuilder extends BaseRequestBuilder {
+public class TeamsAppInstallationRequestBuilder extends BaseRequestBuilder<TeamsAppInstallation> {
 
     /**
      * The request builder for the TeamsAppInstallation
@@ -79,6 +79,10 @@ public class TeamsAppInstallationRequestBuilder extends BaseRequestBuilder {
         return new TeamsAppDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("teamsAppDefinition"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public TeamsAppInstallationUpgradeRequestBuilder upgrade() {
         return new TeamsAppInstallationUpgradeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.upgrade"), getClient(), null);

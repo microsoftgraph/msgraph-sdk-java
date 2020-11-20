@@ -125,8 +125,9 @@ public class WindowsUniversalAppX extends MobileLobApp implements IJsonBackedObj
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Ios Vpp EBook Assignment Request Builder.
  */
-public class IosVppEBookAssignmentRequestBuilder extends BaseRequestBuilder {
+public class IosVppEBookAssignmentRequestBuilder extends BaseRequestBuilder<IosVppEBookAssignment> {
 
     /**
      * The request builder for the IosVppEBookAssignment

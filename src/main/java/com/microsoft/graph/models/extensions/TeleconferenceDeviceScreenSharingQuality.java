@@ -51,8 +51,9 @@ public class TeleconferenceDeviceScreenSharingQuality extends TeleconferenceDevi
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

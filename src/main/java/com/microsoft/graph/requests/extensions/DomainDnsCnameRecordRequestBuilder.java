@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Domain Dns Cname Record Request Builder.
  */
-public class DomainDnsCnameRecordRequestBuilder extends BaseRequestBuilder {
+public class DomainDnsCnameRecordRequestBuilder extends BaseRequestBuilder<DomainDnsCnameRecord> {
 
     /**
      * The request builder for the DomainDnsCnameRecord

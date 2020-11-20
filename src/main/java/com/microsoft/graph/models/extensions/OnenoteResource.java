@@ -59,8 +59,9 @@ public class OnenoteResource extends OnenoteEntityBaseModel implements IJsonBack
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

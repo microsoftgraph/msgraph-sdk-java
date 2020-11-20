@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Policy Base Request Builder.
  */
-public class PolicyBaseRequestBuilder extends BaseRequestBuilder {
+public class PolicyBaseRequestBuilder extends BaseRequestBuilder<PolicyBase> {
 
     /**
      * The request builder for the PolicyBase

@@ -21,9 +21,9 @@ import com.microsoft.graph.serializer.MockSerializer;
  */
 public class BaseCollectionPageTests {
 
-    private IRequestBuilder mRequestBuilder;
+    private BaseRequestBuilder<String> mRequestBuilder;
     private static ArrayList<String> list;
-    private BaseCollectionPage<String, IRequestBuilder> baseCollectionPage;
+    private BaseCollectionPage<String, BaseRequestBuilder<String>> baseCollectionPage;
     private String requestUrl = "https://a.b.c/";
 
     @Before
@@ -33,8 +33,8 @@ public class BaseCollectionPageTests {
         list.add("Object2");
         list.add("Object3");
         IBaseClient mBaseClient = new MockBaseClient();
-        mRequestBuilder = new MockRequestBuilder(mBaseClient,requestUrl);
-        baseCollectionPage = new BaseCollectionPage<String, IRequestBuilder>(list,mRequestBuilder) {};
+        mRequestBuilder = new BaseRequestBuilder<String>(requestUrl, mBaseClient, null) {};
+        baseCollectionPage = new BaseCollectionPage<String, BaseRequestBuilder<String>>(list, mRequestBuilder) {};
     }
 
     @Test

@@ -14,8 +14,8 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.UserReminderViewCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.UserReminderViewCollectionPage;
 import com.microsoft.graph.requests.extensions.UserReminderViewCollectionResponse;
+import com.microsoft.graph.models.extensions.Reminder;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
@@ -26,7 +26,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the User Reminder View Collection Request.
  */
-public class UserReminderViewCollectionRequest extends BaseCollectionRequest<UserReminderViewCollectionResponse, UserReminderViewCollectionPage> {
+public class UserReminderViewCollectionRequest extends BaseCollectionRequest<Reminder, UserReminderViewCollectionResponse, UserReminderViewCollectionPage> {
 
 
     /**
@@ -37,43 +37,9 @@ public class UserReminderViewCollectionRequest extends BaseCollectionRequest<Use
      * @param requestOptions the options for this request
      */
     public UserReminderViewCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, UserReminderViewCollectionResponse.class, UserReminderViewCollectionPage.class);
+        super(requestUrl, client, requestOptions, UserReminderViewCollectionResponse.class, UserReminderViewCollectionPage.class, UserReminderViewCollectionRequestBuilder.class);
     }
 
-
-    public void get(@Nonnull final ICallback<? super UserReminderViewCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    @Nullable
-    public UserReminderViewCollectionPage get() throws ClientException {
-        final UserReminderViewCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    @Nonnull
-    public UserReminderViewCollectionPage buildFromResponse(@Nonnull final UserReminderViewCollectionResponse response) {
-        final UserReminderViewCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new UserReminderViewCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, (String) null, (String) null);
-        } else {
-            builder = null;
-        }
-        final UserReminderViewCollectionPage page = new UserReminderViewCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
 
     /**
      * Sets the select clause for the request
@@ -83,8 +49,8 @@ public class UserReminderViewCollectionRequest extends BaseCollectionRequest<Use
      */
     @Nonnull
     public UserReminderViewCollectionRequest select(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (UserReminderViewCollectionRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -95,8 +61,8 @@ public class UserReminderViewCollectionRequest extends BaseCollectionRequest<Use
      */
     @Nonnull
     public UserReminderViewCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (UserReminderViewCollectionRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -107,8 +73,8 @@ public class UserReminderViewCollectionRequest extends BaseCollectionRequest<Use
      */
     @Nonnull
     public UserReminderViewCollectionRequest expand(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (UserReminderViewCollectionRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -119,8 +85,8 @@ public class UserReminderViewCollectionRequest extends BaseCollectionRequest<Use
      */
     @Nonnull
     public UserReminderViewCollectionRequest filter(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (UserReminderViewCollectionRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -131,8 +97,8 @@ public class UserReminderViewCollectionRequest extends BaseCollectionRequest<Use
      */
     @Nonnull
     public UserReminderViewCollectionRequest orderBy(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (UserReminderViewCollectionRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

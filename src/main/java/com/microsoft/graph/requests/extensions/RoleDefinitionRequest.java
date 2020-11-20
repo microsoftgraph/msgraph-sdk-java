@@ -23,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Role Definition Request.
  */
-public class RoleDefinitionRequest extends BaseRequest {
+public class RoleDefinitionRequest extends BaseRequest<RoleDefinition> {
 	
     /**
      * The request for the RoleDefinition
@@ -163,8 +163,8 @@ public class RoleDefinitionRequest extends BaseRequest {
      */
      @Nonnull
      public RoleDefinitionRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (RoleDefinitionRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -175,8 +175,8 @@ public class RoleDefinitionRequest extends BaseRequest {
      */
      @Nonnull
      public RoleDefinitionRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (RoleDefinitionRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

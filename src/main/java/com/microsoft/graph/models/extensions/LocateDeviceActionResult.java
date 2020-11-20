@@ -60,8 +60,9 @@ public class LocateDeviceActionResult extends DeviceActionResult implements IJso
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

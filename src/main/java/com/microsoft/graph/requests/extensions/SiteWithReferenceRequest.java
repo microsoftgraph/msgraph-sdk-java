@@ -29,7 +29,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -39,7 +39,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Site With Reference Request.
  */
-public class SiteWithReferenceRequest extends BaseRequest {
+public class SiteWithReferenceRequest extends BaseWithReferenceRequest<Site> {
 
     /**
      * The request for the Site
@@ -52,46 +52,6 @@ public class SiteWithReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, Site.class);
     }
 
-    public void post(@Nonnull final Site newSite, @Nullable final IJsonBackedObject payload, @Nonnull final ICallback<? super Site> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    @Nullable
-    public Site post(@Nonnull final Site newSite, @Nullable final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newSite;
-        }
-        return null;
-    }
-
-    public void get(@Nonnull final ICallback<? super Site> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    @Nullable
-    public Site get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(@Nonnull final ICallback<? super Site> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(@Nonnull final Site sourceSite, @Nonnull final ICallback<? super Site> callback) {
-		send(HttpMethod.PATCH, callback, sourceSite);
-	}
-
-    @Nullable
-	public Site patch(@Nonnull final Site sourceSite) throws ClientException {
-		return send(HttpMethod.PATCH, sourceSite);
-	}
-
-
     /**
      * Sets the select clause for the request
      *
@@ -100,8 +60,8 @@ public class SiteWithReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public SiteWithReferenceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (SiteWithReferenceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -112,7 +72,7 @@ public class SiteWithReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public SiteWithReferenceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (SiteWithReferenceRequest)this;
+        addExpandOption(value);
+        return this;
     }
 }

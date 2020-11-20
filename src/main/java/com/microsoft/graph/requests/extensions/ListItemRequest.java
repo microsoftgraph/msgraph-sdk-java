@@ -27,7 +27,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the List Item Request.
  */
-public class ListItemRequest extends BaseRequest {
+public class ListItemRequest extends BaseRequest<ListItem> {
 	
     /**
      * The request for the ListItem
@@ -152,8 +152,8 @@ public class ListItemRequest extends BaseRequest {
      */
      @Nonnull
      public ListItemRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ListItemRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -164,8 +164,8 @@ public class ListItemRequest extends BaseRequest {
      */
      @Nonnull
      public ListItemRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ListItemRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

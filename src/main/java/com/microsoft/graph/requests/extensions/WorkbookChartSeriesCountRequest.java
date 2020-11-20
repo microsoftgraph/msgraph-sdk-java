@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.WorkbookChartSeries;
 import com.microsoft.graph.requests.extensions.WorkbookChartSeriesCountRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Series Count Request.
  */
-public class WorkbookChartSeriesCountRequest extends BaseRequest {
+public class WorkbookChartSeriesCountRequest extends BaseRequest<Integer> {
 
     /**
      * The request for this WorkbookChartSeriesCount
@@ -60,8 +61,8 @@ public class WorkbookChartSeriesCountRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookChartSeriesCountRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookChartSeriesCountRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -72,8 +73,8 @@ public class WorkbookChartSeriesCountRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookChartSeriesCountRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookChartSeriesCountRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -84,8 +85,8 @@ public class WorkbookChartSeriesCountRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookChartSeriesCountRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookChartSeriesCountRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -96,8 +97,8 @@ public class WorkbookChartSeriesCountRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookChartSeriesCountRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookChartSeriesCountRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

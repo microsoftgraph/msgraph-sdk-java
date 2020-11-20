@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.SharedInsight;
 import com.microsoft.graph.models.extensions.Trending;
 import com.microsoft.graph.models.extensions.UsedInsight;
@@ -83,8 +84,9 @@ public class OfficeGraphInsights extends Entity implements IJsonBackedObject {
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

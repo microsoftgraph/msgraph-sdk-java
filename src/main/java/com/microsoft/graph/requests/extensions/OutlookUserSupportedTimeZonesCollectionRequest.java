@@ -15,8 +15,8 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.OutlookUserSupportedTimeZonesCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OutlookUserSupportedTimeZonesCollectionPage;
 import com.microsoft.graph.requests.extensions.OutlookUserSupportedTimeZonesCollectionResponse;
+import com.microsoft.graph.models.extensions.TimeZoneInformation;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
@@ -27,7 +27,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Outlook User Supported Time Zones Collection Request.
  */
-public class OutlookUserSupportedTimeZonesCollectionRequest extends BaseCollectionRequest<OutlookUserSupportedTimeZonesCollectionResponse, OutlookUserSupportedTimeZonesCollectionPage> {
+public class OutlookUserSupportedTimeZonesCollectionRequest extends BaseCollectionRequest<TimeZoneInformation, OutlookUserSupportedTimeZonesCollectionResponse, OutlookUserSupportedTimeZonesCollectionPage> {
 
 
     /**
@@ -38,43 +38,9 @@ public class OutlookUserSupportedTimeZonesCollectionRequest extends BaseCollecti
      * @param requestOptions the options for this request
      */
     public OutlookUserSupportedTimeZonesCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OutlookUserSupportedTimeZonesCollectionResponse.class, OutlookUserSupportedTimeZonesCollectionPage.class);
+        super(requestUrl, client, requestOptions, OutlookUserSupportedTimeZonesCollectionResponse.class, OutlookUserSupportedTimeZonesCollectionPage.class, OutlookUserSupportedTimeZonesCollectionRequestBuilder.class);
     }
 
-
-    public void get(@Nonnull final ICallback<? super OutlookUserSupportedTimeZonesCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    @Nullable
-    public OutlookUserSupportedTimeZonesCollectionPage get() throws ClientException {
-        final OutlookUserSupportedTimeZonesCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    @Nonnull
-    public OutlookUserSupportedTimeZonesCollectionPage buildFromResponse(@Nonnull final OutlookUserSupportedTimeZonesCollectionResponse response) {
-        final OutlookUserSupportedTimeZonesCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new OutlookUserSupportedTimeZonesCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final OutlookUserSupportedTimeZonesCollectionPage page = new OutlookUserSupportedTimeZonesCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
 
     /**
      * Sets the select clause for the request
@@ -84,8 +50,8 @@ public class OutlookUserSupportedTimeZonesCollectionRequest extends BaseCollecti
      */
     @Nonnull
     public OutlookUserSupportedTimeZonesCollectionRequest select(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (OutlookUserSupportedTimeZonesCollectionRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -96,8 +62,8 @@ public class OutlookUserSupportedTimeZonesCollectionRequest extends BaseCollecti
      */
     @Nonnull
     public OutlookUserSupportedTimeZonesCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (OutlookUserSupportedTimeZonesCollectionRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -108,8 +74,8 @@ public class OutlookUserSupportedTimeZonesCollectionRequest extends BaseCollecti
      */
     @Nonnull
     public OutlookUserSupportedTimeZonesCollectionRequest expand(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (OutlookUserSupportedTimeZonesCollectionRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -120,8 +86,8 @@ public class OutlookUserSupportedTimeZonesCollectionRequest extends BaseCollecti
      */
     @Nonnull
     public OutlookUserSupportedTimeZonesCollectionRequest filter(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (OutlookUserSupportedTimeZonesCollectionRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -132,8 +98,8 @@ public class OutlookUserSupportedTimeZonesCollectionRequest extends BaseCollecti
      */
     @Nonnull
     public OutlookUserSupportedTimeZonesCollectionRequest orderBy(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (OutlookUserSupportedTimeZonesCollectionRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

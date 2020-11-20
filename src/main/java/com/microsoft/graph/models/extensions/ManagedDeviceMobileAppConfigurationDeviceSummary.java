@@ -113,8 +113,9 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity imp
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

@@ -22,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Calendar Sharing Message Request.
  */
-public class CalendarSharingMessageRequest extends BaseRequest {
+public class CalendarSharingMessageRequest extends BaseRequest<CalendarSharingMessage> {
 	
     /**
      * The request for the CalendarSharingMessage
@@ -147,8 +147,8 @@ public class CalendarSharingMessageRequest extends BaseRequest {
      */
      @Nonnull
      public CalendarSharingMessageRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (CalendarSharingMessageRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -159,8 +159,8 @@ public class CalendarSharingMessageRequest extends BaseRequest {
      */
      @Nonnull
      public CalendarSharingMessageRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CalendarSharingMessageRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

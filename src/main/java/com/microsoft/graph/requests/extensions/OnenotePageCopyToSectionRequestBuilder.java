@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.OnenotePageCopyToSectionRequest;
+import com.microsoft.graph.models.extensions.OnenotePage;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
+import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Onenote Page Copy To Section Request Builder.
  */
-public class OnenotePageCopyToSectionRequestBuilder extends BaseActionRequestBuilder {
+public class OnenotePageCopyToSectionRequestBuilder extends BaseActionRequestBuilder<OnenoteOperation> {
 
     /**
      * The request builder for this OnenotePageCopyToSection

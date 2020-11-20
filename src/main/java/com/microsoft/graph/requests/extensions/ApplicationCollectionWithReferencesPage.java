@@ -38,7 +38,17 @@ public class ApplicationCollectionWithReferencesPage extends BaseCollectionPage<
      * @param response the serialized ApplicationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ApplicationCollectionWithReferencesPage(@Nonnull final ApplicationCollectionResponse response, @Nonnull  final ApplicationCollectionWithReferencesRequestBuilder builder) {
+    public ApplicationCollectionWithReferencesPage(@Nonnull final ApplicationCollectionResponse response, @Nullable final ApplicationCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
+    }
+
+    /**
+     * Creates the collection page for Application
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ApplicationCollectionWithReferencesPage(@Nonnull final java.util.List<Application> pageContents, @Nullable final ApplicationCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
     }
 }

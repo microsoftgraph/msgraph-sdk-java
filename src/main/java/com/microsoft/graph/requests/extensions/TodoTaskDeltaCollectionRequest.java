@@ -14,8 +14,8 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.TodoTaskDeltaCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.TodoTaskDeltaCollectionPage;
 import com.microsoft.graph.requests.extensions.TodoTaskDeltaCollectionResponse;
+import com.microsoft.graph.models.extensions.TodoTask;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
@@ -26,7 +26,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Todo Task Delta Collection Request.
  */
-public class TodoTaskDeltaCollectionRequest extends BaseCollectionRequest<TodoTaskDeltaCollectionResponse, TodoTaskDeltaCollectionPage> {
+public class TodoTaskDeltaCollectionRequest extends BaseCollectionRequest<TodoTask, TodoTaskDeltaCollectionResponse, TodoTaskDeltaCollectionPage> {
 
 
     /**
@@ -37,43 +37,9 @@ public class TodoTaskDeltaCollectionRequest extends BaseCollectionRequest<TodoTa
      * @param requestOptions the options for this request
      */
     public TodoTaskDeltaCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TodoTaskDeltaCollectionResponse.class, TodoTaskDeltaCollectionPage.class);
+        super(requestUrl, client, requestOptions, TodoTaskDeltaCollectionResponse.class, TodoTaskDeltaCollectionPage.class, TodoTaskDeltaCollectionRequestBuilder.class);
     }
 
-
-    public void get(@Nonnull final ICallback<? super TodoTaskDeltaCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    @Nullable
-    public TodoTaskDeltaCollectionPage get() throws ClientException {
-        final TodoTaskDeltaCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    @Nonnull
-    public TodoTaskDeltaCollectionPage buildFromResponse(@Nonnull final TodoTaskDeltaCollectionResponse response) {
-        final TodoTaskDeltaCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new TodoTaskDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final TodoTaskDeltaCollectionPage page = new TodoTaskDeltaCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
 
     /**
      * Sets the select clause for the request
@@ -83,8 +49,8 @@ public class TodoTaskDeltaCollectionRequest extends BaseCollectionRequest<TodoTa
      */
     @Nonnull
     public TodoTaskDeltaCollectionRequest select(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (TodoTaskDeltaCollectionRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -95,8 +61,8 @@ public class TodoTaskDeltaCollectionRequest extends BaseCollectionRequest<TodoTa
      */
     @Nonnull
     public TodoTaskDeltaCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (TodoTaskDeltaCollectionRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -107,8 +73,8 @@ public class TodoTaskDeltaCollectionRequest extends BaseCollectionRequest<TodoTa
      */
     @Nonnull
     public TodoTaskDeltaCollectionRequest expand(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (TodoTaskDeltaCollectionRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -119,8 +85,8 @@ public class TodoTaskDeltaCollectionRequest extends BaseCollectionRequest<TodoTa
      */
     @Nonnull
     public TodoTaskDeltaCollectionRequest filter(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (TodoTaskDeltaCollectionRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -131,8 +97,8 @@ public class TodoTaskDeltaCollectionRequest extends BaseCollectionRequest<TodoTa
      */
     @Nonnull
     public TodoTaskDeltaCollectionRequest orderBy(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (TodoTaskDeltaCollectionRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

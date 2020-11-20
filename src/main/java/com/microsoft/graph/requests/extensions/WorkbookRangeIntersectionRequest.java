@@ -20,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Intersection Request.
  */
-public class WorkbookRangeIntersectionRequest extends BaseRequest {
+public class WorkbookRangeIntersectionRequest extends BaseRequest<WorkbookRange> {
 
     /**
      * The request for this WorkbookRangeIntersection
@@ -103,8 +103,8 @@ public class WorkbookRangeIntersectionRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeIntersectionRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookRangeIntersectionRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +115,8 @@ public class WorkbookRangeIntersectionRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeIntersectionRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookRangeIntersectionRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +127,8 @@ public class WorkbookRangeIntersectionRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeIntersectionRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookRangeIntersectionRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +139,8 @@ public class WorkbookRangeIntersectionRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeIntersectionRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookRangeIntersectionRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

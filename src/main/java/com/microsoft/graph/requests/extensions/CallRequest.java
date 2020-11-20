@@ -40,7 +40,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Call Request.
  */
-public class CallRequest extends BaseRequest {
+public class CallRequest extends BaseRequest<Call> {
 	
     /**
      * The request for the Call
@@ -165,8 +165,8 @@ public class CallRequest extends BaseRequest {
      */
      @Nonnull
      public CallRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (CallRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -177,8 +177,8 @@ public class CallRequest extends BaseRequest {
      */
      @Nonnull
      public CallRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CallRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

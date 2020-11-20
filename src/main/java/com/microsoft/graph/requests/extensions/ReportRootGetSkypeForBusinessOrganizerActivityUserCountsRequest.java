@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
+import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.requests.extensions.ReportRootGetSkypeForBusinessOrganizerActivityUserCountsRequest;
 
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Skype For Business Organizer Activity User Counts Request.
  */
-public class ReportRootGetSkypeForBusinessOrganizerActivityUserCountsRequest extends BaseRequest {
+public class ReportRootGetSkypeForBusinessOrganizerActivityUserCountsRequest extends BaseRequest<Report> {
 
     /**
      * The request for this ReportRootGetSkypeForBusinessOrganizerActivityUserCounts
@@ -103,8 +104,8 @@ public class ReportRootGetSkypeForBusinessOrganizerActivityUserCountsRequest ext
      */
     @Nonnull
     public ReportRootGetSkypeForBusinessOrganizerActivityUserCountsRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ReportRootGetSkypeForBusinessOrganizerActivityUserCountsRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +116,8 @@ public class ReportRootGetSkypeForBusinessOrganizerActivityUserCountsRequest ext
      */
     @Nonnull
     public ReportRootGetSkypeForBusinessOrganizerActivityUserCountsRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ReportRootGetSkypeForBusinessOrganizerActivityUserCountsRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +128,8 @@ public class ReportRootGetSkypeForBusinessOrganizerActivityUserCountsRequest ext
      */
     @Nonnull
     public ReportRootGetSkypeForBusinessOrganizerActivityUserCountsRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ReportRootGetSkypeForBusinessOrganizerActivityUserCountsRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +140,8 @@ public class ReportRootGetSkypeForBusinessOrganizerActivityUserCountsRequest ext
      */
     @Nonnull
     public ReportRootGetSkypeForBusinessOrganizerActivityUserCountsRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ReportRootGetSkypeForBusinessOrganizerActivityUserCountsRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

@@ -5,8 +5,7 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.VppTokenSyncLicensesRequest;
 import com.microsoft.graph.models.extensions.VppToken;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
+import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -17,7 +16,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Vpp Token Sync Licenses Request Builder.
  */
-public class VppTokenSyncLicensesRequestBuilder extends BaseActionRequestBuilder {
+public class VppTokenSyncLicensesRequestBuilder extends BaseActionRequestBuilder<VppToken> {
 
     /**
      * The request builder for this VppTokenSyncLicenses

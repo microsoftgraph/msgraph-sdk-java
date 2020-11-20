@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Role Assignment Request Builder.
  */
-public class RoleAssignmentRequestBuilder extends BaseRequestBuilder {
+public class RoleAssignmentRequestBuilder extends BaseRequestBuilder<RoleAssignment> {
 
     /**
      * The request builder for the RoleAssignment

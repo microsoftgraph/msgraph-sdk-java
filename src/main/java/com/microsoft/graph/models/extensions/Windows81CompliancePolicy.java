@@ -150,8 +150,9 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

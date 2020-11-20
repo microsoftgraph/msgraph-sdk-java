@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.WorkbookPivotTable;
 import com.microsoft.graph.requests.extensions.WorkbookPivotTableRefreshRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Pivot Table Refresh Request.
  */
-public class WorkbookPivotTableRefreshRequest extends BaseRequest {
+public class WorkbookPivotTableRefreshRequest extends BaseRequest<Void> {
 
     /**
      * The request for this WorkbookPivotTableRefresh

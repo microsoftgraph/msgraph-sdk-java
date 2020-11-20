@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Identity Provider Request Builder.
  */
-public class IdentityProviderRequestBuilder extends BaseRequestBuilder {
+public class IdentityProviderRequestBuilder extends BaseRequestBuilder<IdentityProvider> {
 
     /**
      * The request builder for the IdentityProvider

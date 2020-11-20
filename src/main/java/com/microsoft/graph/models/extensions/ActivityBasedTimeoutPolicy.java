@@ -50,8 +50,9 @@ public class ActivityBasedTimeoutPolicy extends StsPolicy implements IJsonBacked
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

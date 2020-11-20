@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Restricted Sign In Request Builder.
  */
-public class RestrictedSignInRequestBuilder extends BaseRequestBuilder {
+public class RestrictedSignInRequestBuilder extends BaseRequestBuilder<RestrictedSignIn> {
 
     /**
      * The request builder for the RestrictedSignIn

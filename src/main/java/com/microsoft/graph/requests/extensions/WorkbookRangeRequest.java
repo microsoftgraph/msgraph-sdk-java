@@ -25,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Request.
  */
-public class WorkbookRangeRequest extends BaseRequest {
+public class WorkbookRangeRequest extends BaseRequest<WorkbookRange> {
 	
     /**
      * The request for the WorkbookRange
@@ -150,8 +150,8 @@ public class WorkbookRangeRequest extends BaseRequest {
      */
      @Nonnull
      public WorkbookRangeRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookRangeRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -162,8 +162,8 @@ public class WorkbookRangeRequest extends BaseRequest {
      */
      @Nonnull
      public WorkbookRangeRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookRangeRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

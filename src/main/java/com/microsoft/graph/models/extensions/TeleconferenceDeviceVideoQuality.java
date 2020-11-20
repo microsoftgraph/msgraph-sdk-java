@@ -86,8 +86,9 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

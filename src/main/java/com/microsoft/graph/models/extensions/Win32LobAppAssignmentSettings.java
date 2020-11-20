@@ -80,8 +80,9 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

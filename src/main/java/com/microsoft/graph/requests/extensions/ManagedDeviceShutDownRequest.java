@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.requests.extensions.ManagedDeviceShutDownRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Device Shut Down Request.
  */
-public class ManagedDeviceShutDownRequest extends BaseRequest {
+public class ManagedDeviceShutDownRequest extends BaseRequest<Void> {
 
     /**
      * The request for this ManagedDeviceShutDown

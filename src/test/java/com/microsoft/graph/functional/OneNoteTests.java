@@ -23,27 +23,28 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 import com.microsoft.graph.core.Multipart;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.Notebook;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
 import com.microsoft.graph.models.extensions.OnenotePage;
 import com.microsoft.graph.models.extensions.OnenotePagePreview;
 import com.microsoft.graph.models.extensions.OnenotePatchContentCommand;
 import com.microsoft.graph.models.extensions.OnenoteSection;
+import com.microsoft.graph.models.extensions.RecentNotebook;
 import com.microsoft.graph.models.extensions.SectionGroup;
 import com.microsoft.graph.models.generated.OnenotePatchActionType;
 import com.microsoft.graph.models.generated.OnenotePatchInsertPosition;
 import com.microsoft.graph.options.HeaderOption;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.requests.extensions.NotebookCollectionPage;
-import com.microsoft.graph.requests.extensions.NotebookGetRecentNotebooksCollectionPage;
-import com.microsoft.graph.requests.extensions.OnenotePageCollectionPage;
 import com.microsoft.graph.requests.extensions.OnenotePageCollectionRequest;
 import com.microsoft.graph.requests.extensions.OnenotePageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnenotePageCollectionPage;
 import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionPage;
+import com.microsoft.graph.requests.extensions.NotebookGetRecentNotebooksCollectionPage;
 import com.microsoft.graph.requests.extensions.SectionGroupCollectionPage;
-import com.microsoft.graph.requests.extensions.OnenotePageCollectionRequest;
+import com.microsoft.graph.requests.extensions.NotebookCollectionPage;
 
 /**
  * Tests for OneNote API functionality

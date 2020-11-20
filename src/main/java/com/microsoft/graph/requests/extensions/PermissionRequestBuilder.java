@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Permission Request Builder.
  */
-public class PermissionRequestBuilder extends BaseRequestBuilder {
+public class PermissionRequestBuilder extends BaseRequestBuilder<Permission> {
 
     /**
      * The request builder for the Permission
@@ -58,6 +58,12 @@ public class PermissionRequestBuilder extends BaseRequestBuilder {
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param roles the roles
+     * @param recipients the recipients
+     */
     @Nonnull
     public PermissionGrantCollectionRequestBuilder grant(@Nullable final java.util.List<String> roles, @Nullable final java.util.List<DriveRecipient> recipients) {
         return new PermissionGrantCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.grant"), getClient(), null, roles, recipients);

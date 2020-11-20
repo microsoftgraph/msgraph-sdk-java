@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.Event;
 import com.microsoft.graph.requests.extensions.EventDismissReminderRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Event Dismiss Reminder Request.
  */
-public class EventDismissReminderRequest extends BaseRequest {
+public class EventDismissReminderRequest extends BaseRequest<Void> {
 
     /**
      * The request for this EventDismissReminder

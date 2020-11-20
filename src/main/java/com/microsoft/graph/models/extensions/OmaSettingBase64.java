@@ -68,8 +68,9 @@ public class OmaSettingBase64 extends OmaSetting implements IJsonBackedObject {
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

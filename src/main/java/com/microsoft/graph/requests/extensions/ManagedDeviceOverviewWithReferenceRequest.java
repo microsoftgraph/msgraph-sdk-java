@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -24,7 +24,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Managed Device Overview With Reference Request.
  */
-public class ManagedDeviceOverviewWithReferenceRequest extends BaseRequest {
+public class ManagedDeviceOverviewWithReferenceRequest extends BaseWithReferenceRequest<ManagedDeviceOverview> {
 
     /**
      * The request for the ManagedDeviceOverview
@@ -37,46 +37,6 @@ public class ManagedDeviceOverviewWithReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, ManagedDeviceOverview.class);
     }
 
-    public void post(@Nonnull final ManagedDeviceOverview newManagedDeviceOverview, @Nullable final IJsonBackedObject payload, @Nonnull final ICallback<? super ManagedDeviceOverview> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    @Nullable
-    public ManagedDeviceOverview post(@Nonnull final ManagedDeviceOverview newManagedDeviceOverview, @Nullable final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newManagedDeviceOverview;
-        }
-        return null;
-    }
-
-    public void get(@Nonnull final ICallback<? super ManagedDeviceOverview> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    @Nullable
-    public ManagedDeviceOverview get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(@Nonnull final ICallback<? super ManagedDeviceOverview> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(@Nonnull final ManagedDeviceOverview sourceManagedDeviceOverview, @Nonnull final ICallback<? super ManagedDeviceOverview> callback) {
-		send(HttpMethod.PATCH, callback, sourceManagedDeviceOverview);
-	}
-
-    @Nullable
-	public ManagedDeviceOverview patch(@Nonnull final ManagedDeviceOverview sourceManagedDeviceOverview) throws ClientException {
-		return send(HttpMethod.PATCH, sourceManagedDeviceOverview);
-	}
-
-
     /**
      * Sets the select clause for the request
      *
@@ -85,8 +45,8 @@ public class ManagedDeviceOverviewWithReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public ManagedDeviceOverviewWithReferenceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ManagedDeviceOverviewWithReferenceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -97,7 +57,7 @@ public class ManagedDeviceOverviewWithReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public ManagedDeviceOverviewWithReferenceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ManagedDeviceOverviewWithReferenceRequest)this;
+        addExpandOption(value);
+        return this;
     }
 }

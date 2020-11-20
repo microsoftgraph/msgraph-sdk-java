@@ -185,8 +185,9 @@ public class SoftwareUpdateStatusSummary extends Entity implements IJsonBackedOb
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

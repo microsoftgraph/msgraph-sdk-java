@@ -27,7 +27,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Notebook Request Builder.
  */
-public class NotebookRequestBuilder extends BaseRequestBuilder {
+public class NotebookRequestBuilder extends BaseRequestBuilder<Notebook> {
 
     /**
      * The request builder for the Notebook
@@ -63,25 +63,56 @@ public class NotebookRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the SectionGroup collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public SectionGroupCollectionRequestBuilder sectionGroups() {
         return new SectionGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sectionGroups"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the SectionGroup item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public SectionGroupRequestBuilder sectionGroups(@Nonnull final String id) {
         return new SectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("sectionGroups") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the OnenoteSection collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public OnenoteSectionCollectionRequestBuilder sections() {
         return new OnenoteSectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sections"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the OnenoteSection item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public OnenoteSectionRequestBuilder sections(@Nonnull final String id) {
         return new OnenoteSectionRequestBuilder(getRequestUrlWithAdditionalSegment("sections") + "/" + id, getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param groupId the groupId
+     * @param renameAs the renameAs
+     * @param notebookFolder the notebookFolder
+     * @param siteCollectionId the siteCollectionId
+     * @param siteId the siteId
+     */
     @Nonnull
     public NotebookCopyNotebookRequestBuilder copyNotebook(@Nullable final String groupId, @Nullable final String renameAs, @Nullable final String notebookFolder, @Nullable final String siteCollectionId, @Nullable final String siteId) {
         return new NotebookCopyNotebookRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copyNotebook"), getClient(), null, groupId, renameAs, notebookFolder, siteCollectionId, siteId);

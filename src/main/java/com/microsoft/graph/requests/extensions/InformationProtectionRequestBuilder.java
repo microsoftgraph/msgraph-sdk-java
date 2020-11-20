@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Information Protection Request Builder.
  */
-public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
+public class InformationProtectionRequestBuilder extends BaseRequestBuilder<InformationProtection> {
 
     /**
      * The request builder for the InformationProtection
@@ -58,11 +58,22 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the ThreatAssessmentRequest collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ThreatAssessmentRequestCollectionRequestBuilder threatAssessmentRequests() {
         return new ThreatAssessmentRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("threatAssessmentRequests"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ThreatAssessmentRequest item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ThreatAssessmentRequestRequestBuilder threatAssessmentRequests(@Nonnull final String id) {
         return new ThreatAssessmentRequestRequestBuilder(getRequestUrlWithAdditionalSegment("threatAssessmentRequests") + "/" + id, getClient(), null);

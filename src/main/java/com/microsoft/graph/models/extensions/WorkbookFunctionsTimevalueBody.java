@@ -56,7 +56,7 @@ public class WorkbookFunctionsTimevalueBody {
      * @return the serializer
      */
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

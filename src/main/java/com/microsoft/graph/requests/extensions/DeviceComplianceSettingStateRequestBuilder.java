@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Compliance Setting State Request Builder.
  */
-public class DeviceComplianceSettingStateRequestBuilder extends BaseRequestBuilder {
+public class DeviceComplianceSettingStateRequestBuilder extends BaseRequestBuilder<DeviceComplianceSettingState> {
 
     /**
      * The request builder for the DeviceComplianceSettingState

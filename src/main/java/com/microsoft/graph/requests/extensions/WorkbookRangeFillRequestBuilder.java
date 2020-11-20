@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Range Fill Request Builder.
  */
-public class WorkbookRangeFillRequestBuilder extends BaseRequestBuilder {
+public class WorkbookRangeFillRequestBuilder extends BaseRequestBuilder<WorkbookRangeFill> {
 
     /**
      * The request builder for the WorkbookRangeFill
@@ -57,6 +57,10 @@ public class WorkbookRangeFillRequestBuilder extends BaseRequestBuilder {
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookRangeFillClearRequestBuilder clear() {
         return new WorkbookRangeFillClearRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.clear"), getClient(), null);

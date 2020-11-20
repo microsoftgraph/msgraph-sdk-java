@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Group Setting Template Request.
  */
-public class GroupSettingTemplateRequest extends BaseRequest {
+public class GroupSettingTemplateRequest extends BaseRequest<GroupSettingTemplate> {
 	
     /**
      * The request for the GroupSettingTemplate
@@ -146,8 +146,8 @@ public class GroupSettingTemplateRequest extends BaseRequest {
      */
      @Nonnull
      public GroupSettingTemplateRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (GroupSettingTemplateRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class GroupSettingTemplateRequest extends BaseRequest {
      */
      @Nonnull
      public GroupSettingTemplateRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupSettingTemplateRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

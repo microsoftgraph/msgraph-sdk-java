@@ -21,7 +21,8 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Mirr Request.
  */
-public class WorkbookFunctionsMirrRequest extends BaseRequest {
+public class WorkbookFunctionsMirrRequest extends BaseRequest<WorkbookFunctionResult> {
+    /** The body for the method */
     protected final WorkbookFunctionsMirrBody body;
 
     /**
@@ -36,10 +37,18 @@ public class WorkbookFunctionsMirrRequest extends BaseRequest {
         body = new WorkbookFunctionsMirrBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(@Nonnull final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     @Nullable
     public WorkbookFunctionResult post() throws ClientException {
         return send(HttpMethod.POST, body);
@@ -53,8 +62,8 @@ public class WorkbookFunctionsMirrRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsMirrRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsMirrRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +74,8 @@ public class WorkbookFunctionsMirrRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsMirrRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsMirrRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -77,8 +86,8 @@ public class WorkbookFunctionsMirrRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsMirrRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsMirrRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

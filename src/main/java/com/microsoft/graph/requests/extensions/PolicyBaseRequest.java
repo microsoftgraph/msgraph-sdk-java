@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Policy Base Request.
  */
-public class PolicyBaseRequest extends BaseRequest {
+public class PolicyBaseRequest extends BaseRequest<PolicyBase> {
 	
     /**
      * The request for the PolicyBase
@@ -161,8 +161,8 @@ public class PolicyBaseRequest extends BaseRequest {
      */
      @Nonnull
      public PolicyBaseRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PolicyBaseRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -173,8 +173,8 @@ public class PolicyBaseRequest extends BaseRequest {
      */
      @Nonnull
      public PolicyBaseRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PolicyBaseRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -15,8 +15,8 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.PermissionGrantCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PermissionGrantCollectionPage;
 import com.microsoft.graph.requests.extensions.PermissionGrantCollectionResponse;
+import com.microsoft.graph.models.extensions.Permission;
 import com.microsoft.graph.models.extensions.PermissionGrantBody;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -28,9 +28,10 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Permission Grant Collection Request.
  */
-public class PermissionGrantCollectionRequest extends BaseCollectionRequest<PermissionGrantCollectionResponse, PermissionGrantCollectionPage> {
+public class PermissionGrantCollectionRequest extends BaseCollectionRequest<Permission, PermissionGrantCollectionResponse, PermissionGrantCollectionPage> {
 
 
+    /** The body for the method */
     protected final PermissionGrantBody body;
 
 
@@ -42,11 +43,15 @@ public class PermissionGrantCollectionRequest extends BaseCollectionRequest<Perm
      * @param requestOptions the options for this request
      */
     public PermissionGrantCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, PermissionGrantCollectionResponse.class, PermissionGrantCollectionPage.class);
+        super(requestUrl, client, requestOptions, PermissionGrantCollectionResponse.class, PermissionGrantCollectionPage.class, PermissionGrantCollectionRequestBuilder.class);
         body = new PermissionGrantBody();
     }
 
 
+    /**
+     * Invokes the method and calls the callback with the resulting collection of objects
+     * @param callback a callback to be invoked with the resulting collection of objects
+     */
     public void post(@Nonnull final ICallback<? super PermissionGrantCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
@@ -61,25 +66,16 @@ public class PermissionGrantCollectionRequest extends BaseCollectionRequest<Perm
         });
     }
 
+    /**
+     * Invokes the method and returns the resulting collection of objects
+     * @return a collection of objects returned by the method
+     */
     @Nullable
     public PermissionGrantCollectionPage post() throws ClientException {
         final PermissionGrantCollectionResponse response = post(body);
         return buildFromResponse(response);
     }
 
-
-    @Nonnull
-    public PermissionGrantCollectionPage buildFromResponse(@Nonnull final PermissionGrantCollectionResponse response) {
-        final PermissionGrantCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new PermissionGrantCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, (java.util.List<String>) null, (java.util.List<DriveRecipient>) null);
-        } else {
-            builder = null;
-        }
-        final PermissionGrantCollectionPage page = new PermissionGrantCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
 
     /**
      * Sets the select clause for the request
@@ -89,8 +85,8 @@ public class PermissionGrantCollectionRequest extends BaseCollectionRequest<Perm
      */
     @Nonnull
     public PermissionGrantCollectionRequest select(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (PermissionGrantCollectionRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -101,8 +97,8 @@ public class PermissionGrantCollectionRequest extends BaseCollectionRequest<Perm
      */
     @Nonnull
     public PermissionGrantCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (PermissionGrantCollectionRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -113,8 +109,8 @@ public class PermissionGrantCollectionRequest extends BaseCollectionRequest<Perm
      */
     @Nonnull
     public PermissionGrantCollectionRequest expand(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (PermissionGrantCollectionRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -125,8 +121,8 @@ public class PermissionGrantCollectionRequest extends BaseCollectionRequest<Perm
      */
     @Nonnull
     public PermissionGrantCollectionRequest filter(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (PermissionGrantCollectionRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -137,8 +133,8 @@ public class PermissionGrantCollectionRequest extends BaseCollectionRequest<Perm
      */
     @Nonnull
     public PermissionGrantCollectionRequest orderBy(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (PermissionGrantCollectionRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

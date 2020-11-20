@@ -101,7 +101,7 @@ public class WorkbookFunctionsCumPrincBody {
      * @return the serializer
      */
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

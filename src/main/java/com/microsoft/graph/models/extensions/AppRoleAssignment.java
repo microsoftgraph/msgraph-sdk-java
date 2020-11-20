@@ -113,8 +113,9 @@ public class AppRoleAssignment extends DirectoryObject implements IJsonBackedObj
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

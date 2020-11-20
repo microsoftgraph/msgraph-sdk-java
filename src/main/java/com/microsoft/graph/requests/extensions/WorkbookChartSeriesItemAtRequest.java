@@ -20,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Series Item At Request.
  */
-public class WorkbookChartSeriesItemAtRequest extends BaseRequest {
+public class WorkbookChartSeriesItemAtRequest extends BaseRequest<WorkbookChartSeries> {
 
     /**
      * The request for this WorkbookChartSeriesItemAt
@@ -103,8 +103,8 @@ public class WorkbookChartSeriesItemAtRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookChartSeriesItemAtRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookChartSeriesItemAtRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +115,8 @@ public class WorkbookChartSeriesItemAtRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookChartSeriesItemAtRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookChartSeriesItemAtRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +127,8 @@ public class WorkbookChartSeriesItemAtRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookChartSeriesItemAtRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookChartSeriesItemAtRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +139,8 @@ public class WorkbookChartSeriesItemAtRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookChartSeriesItemAtRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookChartSeriesItemAtRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

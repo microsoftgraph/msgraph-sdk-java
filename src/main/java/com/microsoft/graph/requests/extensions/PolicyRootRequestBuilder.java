@@ -35,7 +35,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Policy Root Request Builder.
  */
-public class PolicyRootRequestBuilder extends BaseRequestBuilder {
+public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
 
     /**
      * The request builder for the PolicyRoot
@@ -71,65 +71,142 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the ActivityBasedTimeoutPolicy collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ActivityBasedTimeoutPolicyCollectionRequestBuilder activityBasedTimeoutPolicies() {
         return new ActivityBasedTimeoutPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("activityBasedTimeoutPolicies"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ActivityBasedTimeoutPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ActivityBasedTimeoutPolicyRequestBuilder activityBasedTimeoutPolicies(@Nonnull final String id) {
         return new ActivityBasedTimeoutPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("activityBasedTimeoutPolicies") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the ClaimsMappingPolicy collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ClaimsMappingPolicyCollectionRequestBuilder claimsMappingPolicies() {
         return new ClaimsMappingPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("claimsMappingPolicies"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ClaimsMappingPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ClaimsMappingPolicyRequestBuilder claimsMappingPolicies(@Nonnull final String id) {
         return new ClaimsMappingPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("claimsMappingPolicies") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the HomeRealmDiscoveryPolicy collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public HomeRealmDiscoveryPolicyCollectionRequestBuilder homeRealmDiscoveryPolicies() {
         return new HomeRealmDiscoveryPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("homeRealmDiscoveryPolicies"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the HomeRealmDiscoveryPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public HomeRealmDiscoveryPolicyRequestBuilder homeRealmDiscoveryPolicies(@Nonnull final String id) {
         return new HomeRealmDiscoveryPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("homeRealmDiscoveryPolicies") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the PermissionGrantPolicy collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public PermissionGrantPolicyCollectionRequestBuilder permissionGrantPolicies() {
         return new PermissionGrantPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("permissionGrantPolicies"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the PermissionGrantPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public PermissionGrantPolicyRequestBuilder permissionGrantPolicies(@Nonnull final String id) {
         return new PermissionGrantPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("permissionGrantPolicies") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the TokenIssuancePolicy collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public TokenIssuancePolicyCollectionRequestBuilder tokenIssuancePolicies() {
         return new TokenIssuancePolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tokenIssuancePolicies"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the TokenIssuancePolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public TokenIssuancePolicyRequestBuilder tokenIssuancePolicies(@Nonnull final String id) {
         return new TokenIssuancePolicyRequestBuilder(getRequestUrlWithAdditionalSegment("tokenIssuancePolicies") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the TokenLifetimePolicy collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public TokenLifetimePolicyCollectionRequestBuilder tokenLifetimePolicies() {
         return new TokenLifetimePolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tokenLifetimePolicies"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the TokenLifetimePolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public TokenLifetimePolicyRequestBuilder tokenLifetimePolicies(@Nonnull final String id) {
         return new TokenLifetimePolicyRequestBuilder(getRequestUrlWithAdditionalSegment("tokenLifetimePolicies") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the ConditionalAccessPolicy collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ConditionalAccessPolicyCollectionRequestBuilder conditionalAccessPolicies() {
         return new ConditionalAccessPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccessPolicies"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ConditionalAccessPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ConditionalAccessPolicyRequestBuilder conditionalAccessPolicies(@Nonnull final String id) {
         return new ConditionalAccessPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccessPolicies") + "/" + id, getClient(), null);

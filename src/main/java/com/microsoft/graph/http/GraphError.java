@@ -30,18 +30,24 @@ import com.google.gson.annotations.Expose;
 import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
+/**
+ * Represents an error returned by the service
+ */
 public class GraphError {
 
+    /** The error message */
     @SerializedName("message")
     @Expose()
     @Nullable
     public String message;
 
+    /** The error code */
     @SerializedName("code")
     @Expose()
     @Nullable
     public String code;
 
+    /** The inner error */
     @SerializedName("innererror")
     @Nullable
     public GraphInnerError innererror;

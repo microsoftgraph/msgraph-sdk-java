@@ -23,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the User Teamwork Request.
  */
-public class UserTeamworkRequest extends BaseRequest {
+public class UserTeamworkRequest extends BaseRequest<UserTeamwork> {
 	
     /**
      * The request for the UserTeamwork
@@ -148,8 +148,8 @@ public class UserTeamworkRequest extends BaseRequest {
      */
      @Nonnull
      public UserTeamworkRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (UserTeamworkRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -160,8 +160,8 @@ public class UserTeamworkRequest extends BaseRequest {
      */
      @Nonnull
      public UserTeamworkRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserTeamworkRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

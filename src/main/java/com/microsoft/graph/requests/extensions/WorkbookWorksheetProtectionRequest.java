@@ -22,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Worksheet Protection Request.
  */
-public class WorkbookWorksheetProtectionRequest extends BaseRequest {
+public class WorkbookWorksheetProtectionRequest extends BaseRequest<WorkbookWorksheetProtection> {
 	
     /**
      * The request for the WorkbookWorksheetProtection
@@ -147,8 +147,8 @@ public class WorkbookWorksheetProtectionRequest extends BaseRequest {
      */
      @Nonnull
      public WorkbookWorksheetProtectionRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookWorksheetProtectionRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -159,8 +159,8 @@ public class WorkbookWorksheetProtectionRequest extends BaseRequest {
      */
      @Nonnull
      public WorkbookWorksheetProtectionRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookWorksheetProtectionRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

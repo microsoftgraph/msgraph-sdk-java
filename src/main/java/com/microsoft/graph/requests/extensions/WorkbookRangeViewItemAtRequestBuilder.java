@@ -5,8 +5,7 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.WorkbookRangeViewItemAtRequest;
 import com.microsoft.graph.models.extensions.WorkbookRangeView;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
+import com.microsoft.graph.http.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -17,7 +16,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Workbook Range View Item At Request Builder.
  */
-public class WorkbookRangeViewItemAtRequestBuilder extends BaseFunctionRequestBuilder {
+public class WorkbookRangeViewItemAtRequestBuilder extends BaseFunctionRequestBuilder<WorkbookRangeView> {
 
     /**
      * The request builder for this WorkbookRangeViewItemAt
@@ -63,11 +62,22 @@ public class WorkbookRangeViewItemAtRequestBuilder extends BaseFunctionRequestBu
 
         return request;
     }
+    /**
+     *  Gets a request builder for the WorkbookRangeView collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public WorkbookRangeViewCollectionRequestBuilder rows() {
         return new WorkbookRangeViewCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rows"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the WorkbookRangeView item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public WorkbookRangeViewRequestBuilder rows(@Nonnull final String id) {
         return new WorkbookRangeViewRequestBuilder(getRequestUrlWithAdditionalSegment("rows") + "/" + id, getClient(), null);

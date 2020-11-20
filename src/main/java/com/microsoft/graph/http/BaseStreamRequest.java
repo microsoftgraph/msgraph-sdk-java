@@ -52,7 +52,7 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
     /**
      * The base request for this collection request
      */
-    private final BaseRequest baseRequest;
+    private final BaseRequest<T> baseRequest;
 
     /**
      * Creates the stream request.
@@ -66,7 +66,7 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
                              @Nonnull final IBaseClient client,
                              @Nullable final List<? extends Option> options,
                              @Nonnull final Class<T> responseClass) {
-        baseRequest = new BaseRequest(requestUrl, client, options, responseClass) {
+        baseRequest = new BaseRequest<T>(requestUrl, client, options, responseClass) {
         };
     }
 
@@ -110,7 +110,6 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      * @param fileContents the file to upload
      * @return             the stream that the caller needs to close
      */
-    @SuppressWarnings("unchecked")
     @Nullable
     protected T send(@Nonnull final byte[] fileContents) {
         baseRequest.setHttpMethod(HttpMethod.PUT);

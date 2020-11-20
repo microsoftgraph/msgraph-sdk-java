@@ -21,7 +21,8 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Message Create Reply Request.
  */
-public class MessageCreateReplyRequest extends BaseRequest {
+public class MessageCreateReplyRequest extends BaseRequest<Message> {
+    /** The body for the method */
     protected final MessageCreateReplyBody body;
 
     /**
@@ -36,10 +37,18 @@ public class MessageCreateReplyRequest extends BaseRequest {
         body = new MessageCreateReplyBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(@Nonnull final ICallback<? super Message> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     @Nullable
     public Message post() throws ClientException {
         return send(HttpMethod.POST, body);
@@ -53,8 +62,8 @@ public class MessageCreateReplyRequest extends BaseRequest {
      */
     @Nonnull
     public MessageCreateReplyRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (MessageCreateReplyRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +74,8 @@ public class MessageCreateReplyRequest extends BaseRequest {
      */
     @Nonnull
     public MessageCreateReplyRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (MessageCreateReplyRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -77,8 +86,8 @@ public class MessageCreateReplyRequest extends BaseRequest {
      */
     @Nonnull
     public MessageCreateReplyRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (MessageCreateReplyRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

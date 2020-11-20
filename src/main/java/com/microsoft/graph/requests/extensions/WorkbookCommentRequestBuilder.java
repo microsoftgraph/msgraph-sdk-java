@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Comment Request Builder.
  */
-public class WorkbookCommentRequestBuilder extends BaseRequestBuilder {
+public class WorkbookCommentRequestBuilder extends BaseRequestBuilder<WorkbookComment> {
 
     /**
      * The request builder for the WorkbookComment
@@ -58,11 +58,22 @@ public class WorkbookCommentRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the WorkbookCommentReply collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public WorkbookCommentReplyCollectionRequestBuilder replies() {
         return new WorkbookCommentReplyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("replies"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the WorkbookCommentReply item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public WorkbookCommentReplyRequestBuilder replies(@Nonnull final String id) {
         return new WorkbookCommentReplyRequestBuilder(getRequestUrlWithAdditionalSegment("replies") + "/" + id, getClient(), null);

@@ -36,7 +36,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Team Request.
  */
-public class TeamRequest extends BaseRequest {
+public class TeamRequest extends BaseRequest<Team> {
 	
     /**
      * The request for the Team
@@ -161,8 +161,8 @@ public class TeamRequest extends BaseRequest {
      */
      @Nonnull
      public TeamRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TeamRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -173,8 +173,8 @@ public class TeamRequest extends BaseRequest {
      */
      @Nonnull
      public TeamRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TeamRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

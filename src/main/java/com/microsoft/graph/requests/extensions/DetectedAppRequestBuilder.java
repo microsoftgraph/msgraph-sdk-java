@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Detected App Request Builder.
  */
-public class DetectedAppRequestBuilder extends BaseRequestBuilder {
+public class DetectedAppRequestBuilder extends BaseRequestBuilder<DetectedApp> {
 
     /**
      * The request builder for the DetectedApp
@@ -58,11 +58,22 @@ public class DetectedAppRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the ManagedDevice collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ManagedDeviceCollectionWithReferencesRequestBuilder managedDevices() {
         return new ManagedDeviceCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("managedDevices"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ManagedDevice item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ManagedDeviceWithReferenceRequestBuilder managedDevices(@Nonnull final String id) {
         return new ManagedDeviceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("managedDevices") + "/" + id, getClient(), null);

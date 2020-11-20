@@ -20,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Used Range Request.
  */
-public class WorkbookRangeUsedRangeRequest extends BaseRequest {
+public class WorkbookRangeUsedRangeRequest extends BaseRequest<WorkbookRange> {
 
     /**
      * The request for this WorkbookRangeUsedRange
@@ -103,8 +103,8 @@ public class WorkbookRangeUsedRangeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeUsedRangeRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookRangeUsedRangeRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +115,8 @@ public class WorkbookRangeUsedRangeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeUsedRangeRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookRangeUsedRangeRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +127,8 @@ public class WorkbookRangeUsedRangeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeUsedRangeRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookRangeUsedRangeRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +139,8 @@ public class WorkbookRangeUsedRangeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeUsedRangeRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookRangeUsedRangeRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

@@ -74,7 +74,7 @@ public class WorkbookFunctionsNorm_InvBody {
      * @return the serializer
      */
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

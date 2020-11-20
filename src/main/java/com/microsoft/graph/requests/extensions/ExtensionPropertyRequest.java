@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Extension Property Request.
  */
-public class ExtensionPropertyRequest extends BaseRequest {
+public class ExtensionPropertyRequest extends BaseRequest<ExtensionProperty> {
 	
     /**
      * The request for the ExtensionProperty
@@ -146,8 +146,8 @@ public class ExtensionPropertyRequest extends BaseRequest {
      */
      @Nonnull
      public ExtensionPropertyRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ExtensionPropertyRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class ExtensionPropertyRequest extends BaseRequest {
      */
      @Nonnull
      public ExtensionPropertyRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ExtensionPropertyRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

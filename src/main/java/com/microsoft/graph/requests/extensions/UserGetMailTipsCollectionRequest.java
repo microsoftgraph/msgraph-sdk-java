@@ -16,8 +16,8 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.UserGetMailTipsCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.UserGetMailTipsCollectionPage;
 import com.microsoft.graph.requests.extensions.UserGetMailTipsCollectionResponse;
+import com.microsoft.graph.models.extensions.MailTips;
 import com.microsoft.graph.models.extensions.UserGetMailTipsBody;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -29,9 +29,10 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the User Get Mail Tips Collection Request.
  */
-public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<UserGetMailTipsCollectionResponse, UserGetMailTipsCollectionPage> {
+public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<MailTips, UserGetMailTipsCollectionResponse, UserGetMailTipsCollectionPage> {
 
 
+    /** The body for the method */
     protected final UserGetMailTipsBody body;
 
 
@@ -43,11 +44,15 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<User
      * @param requestOptions the options for this request
      */
     public UserGetMailTipsCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, UserGetMailTipsCollectionResponse.class, UserGetMailTipsCollectionPage.class);
+        super(requestUrl, client, requestOptions, UserGetMailTipsCollectionResponse.class, UserGetMailTipsCollectionPage.class, UserGetMailTipsCollectionRequestBuilder.class);
         body = new UserGetMailTipsBody();
     }
 
 
+    /**
+     * Invokes the method and calls the callback with the resulting collection of objects
+     * @param callback a callback to be invoked with the resulting collection of objects
+     */
     public void post(@Nonnull final ICallback<? super UserGetMailTipsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
@@ -62,25 +67,16 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<User
         });
     }
 
+    /**
+     * Invokes the method and returns the resulting collection of objects
+     * @return a collection of objects returned by the method
+     */
     @Nullable
     public UserGetMailTipsCollectionPage post() throws ClientException {
         final UserGetMailTipsCollectionResponse response = post(body);
         return buildFromResponse(response);
     }
 
-
-    @Nonnull
-    public UserGetMailTipsCollectionPage buildFromResponse(@Nonnull final UserGetMailTipsCollectionResponse response) {
-        final UserGetMailTipsCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new UserGetMailTipsCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, (java.util.List<String>) null, (EnumSet<MailTipsType>) null);
-        } else {
-            builder = null;
-        }
-        final UserGetMailTipsCollectionPage page = new UserGetMailTipsCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
 
     /**
      * Sets the select clause for the request
@@ -90,8 +86,8 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<User
      */
     @Nonnull
     public UserGetMailTipsCollectionRequest select(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (UserGetMailTipsCollectionRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -102,8 +98,8 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<User
      */
     @Nonnull
     public UserGetMailTipsCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (UserGetMailTipsCollectionRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -114,8 +110,8 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<User
      */
     @Nonnull
     public UserGetMailTipsCollectionRequest expand(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (UserGetMailTipsCollectionRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -126,8 +122,8 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<User
      */
     @Nonnull
     public UserGetMailTipsCollectionRequest filter(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (UserGetMailTipsCollectionRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -138,8 +134,8 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<User
      */
     @Nonnull
     public UserGetMailTipsCollectionRequest orderBy(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (UserGetMailTipsCollectionRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device And App Management Role Definition Request Builder.
  */
-public class DeviceAndAppManagementRoleDefinitionRequestBuilder extends BaseRequestBuilder {
+public class DeviceAndAppManagementRoleDefinitionRequestBuilder extends BaseRequestBuilder<DeviceAndAppManagementRoleDefinition> {
 
     /**
      * The request builder for the DeviceAndAppManagementRoleDefinition
@@ -56,11 +56,22 @@ public class DeviceAndAppManagementRoleDefinitionRequestBuilder extends BaseRequ
     }
 
 
+    /**
+     *  Gets a request builder for the RoleAssignment collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public RoleAssignmentCollectionRequestBuilder roleAssignments() {
         return new RoleAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the RoleAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public RoleAssignmentRequestBuilder roleAssignments(@Nonnull final String id) {
         return new RoleAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments") + "/" + id, getClient(), null);

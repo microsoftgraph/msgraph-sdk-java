@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.RemoteAssistancePartner;
 import com.microsoft.graph.requests.extensions.RemoteAssistancePartnerDisconnectRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Remote Assistance Partner Disconnect Request.
  */
-public class RemoteAssistancePartnerDisconnectRequest extends BaseRequest {
+public class RemoteAssistancePartnerDisconnectRequest extends BaseRequest<Void> {
 
     /**
      * The request for this RemoteAssistancePartnerDisconnect

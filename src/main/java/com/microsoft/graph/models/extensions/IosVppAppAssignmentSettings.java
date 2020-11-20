@@ -68,8 +68,9 @@ public class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings imp
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

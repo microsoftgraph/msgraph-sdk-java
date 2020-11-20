@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Used Insight Request Builder.
  */
-public class UsedInsightRequestBuilder extends BaseRequestBuilder {
+public class UsedInsightRequestBuilder extends BaseRequestBuilder<UsedInsight> {
 
     /**
      * The request builder for the UsedInsight

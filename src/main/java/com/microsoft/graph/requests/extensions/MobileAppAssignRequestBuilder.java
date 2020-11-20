@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.MobileAppAssignRequest;
+import com.microsoft.graph.models.extensions.MobileApp;
 import com.microsoft.graph.models.extensions.MobileAppAssignment;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
+import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Mobile App Assign Request Builder.
  */
-public class MobileAppAssignRequestBuilder extends BaseActionRequestBuilder {
+public class MobileAppAssignRequestBuilder extends BaseActionRequestBuilder<MobileApp> {
 
     /**
      * The request builder for this MobileAppAssign

@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Claims Mapping Policy Request Builder.
  */
-public class ClaimsMappingPolicyRequestBuilder extends BaseRequestBuilder {
+public class ClaimsMappingPolicyRequestBuilder extends BaseRequestBuilder<ClaimsMappingPolicy> {
 
     /**
      * The request builder for the ClaimsMappingPolicy
@@ -56,11 +56,22 @@ public class ClaimsMappingPolicyRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the DirectoryObject collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public DirectoryObjectCollectionWithReferencesRequestBuilder appliesTo() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("appliesTo"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DirectoryObject item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public DirectoryObjectWithReferenceRequestBuilder appliesTo(@Nonnull final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("appliesTo") + "/" + id, getClient(), null);

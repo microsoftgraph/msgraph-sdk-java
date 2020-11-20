@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Win32Lob App Request.
  */
-public class Win32LobAppRequest extends BaseRequest {
+public class Win32LobAppRequest extends BaseRequest<Win32LobApp> {
 	
     /**
      * The request for the Win32LobApp
@@ -146,8 +146,8 @@ public class Win32LobAppRequest extends BaseRequest {
      */
      @Nonnull
      public Win32LobAppRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (Win32LobAppRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class Win32LobAppRequest extends BaseRequest {
      */
      @Nonnull
      public Win32LobAppRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Win32LobAppRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

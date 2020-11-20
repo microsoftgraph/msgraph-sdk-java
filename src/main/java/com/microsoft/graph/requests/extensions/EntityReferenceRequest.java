@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Entity Reference Request.
  */
-public class EntityReferenceRequest extends BaseRequest {
+public class EntityReferenceRequest extends BaseReferenceRequest<Entity> {
 
     /**
      * The request for the Entity
@@ -36,15 +36,6 @@ public class EntityReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, Entity.class);
     }
 
-    public void delete(@Nonnull final ICallback<? super Entity> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    @Nullable
-    public Entity delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
-    }
-
     /**
      * Sets the select clause for the request
      *
@@ -53,8 +44,8 @@ public class EntityReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public EntityReferenceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (EntityReferenceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +56,8 @@ public class EntityReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public EntityReferenceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (EntityReferenceRequest)this;
+        addExpandOption(value);
+        return this;
     }
     /**
      * Puts the Entity

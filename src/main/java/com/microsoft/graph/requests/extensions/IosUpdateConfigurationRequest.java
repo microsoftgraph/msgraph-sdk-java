@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Ios Update Configuration Request.
  */
-public class IosUpdateConfigurationRequest extends BaseRequest {
+public class IosUpdateConfigurationRequest extends BaseRequest<IosUpdateConfiguration> {
 	
     /**
      * The request for the IosUpdateConfiguration
@@ -146,8 +146,8 @@ public class IosUpdateConfigurationRequest extends BaseRequest {
      */
      @Nonnull
      public IosUpdateConfigurationRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (IosUpdateConfigurationRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class IosUpdateConfigurationRequest extends BaseRequest {
      */
      @Nonnull
      public IosUpdateConfigurationRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IosUpdateConfigurationRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

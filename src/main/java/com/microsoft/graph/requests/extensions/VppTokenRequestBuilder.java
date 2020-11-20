@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Vpp Token Request Builder.
  */
-public class VppTokenRequestBuilder extends BaseRequestBuilder {
+public class VppTokenRequestBuilder extends BaseRequestBuilder<VppToken> {
 
     /**
      * The request builder for the VppToken
@@ -57,6 +57,10 @@ public class VppTokenRequestBuilder extends BaseRequestBuilder {
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public VppTokenSyncLicensesRequestBuilder syncLicenses() {
         return new VppTokenSyncLicensesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.syncLicenses"), getClient(), null);

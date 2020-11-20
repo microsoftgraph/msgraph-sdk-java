@@ -14,8 +14,8 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.UserActivityRecentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.UserActivityRecentCollectionPage;
 import com.microsoft.graph.requests.extensions.UserActivityRecentCollectionResponse;
+import com.microsoft.graph.models.extensions.UserActivity;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
@@ -26,7 +26,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the User Activity Recent Collection Request.
  */
-public class UserActivityRecentCollectionRequest extends BaseCollectionRequest<UserActivityRecentCollectionResponse, UserActivityRecentCollectionPage> {
+public class UserActivityRecentCollectionRequest extends BaseCollectionRequest<UserActivity, UserActivityRecentCollectionResponse, UserActivityRecentCollectionPage> {
 
 
     /**
@@ -37,43 +37,9 @@ public class UserActivityRecentCollectionRequest extends BaseCollectionRequest<U
      * @param requestOptions the options for this request
      */
     public UserActivityRecentCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, UserActivityRecentCollectionResponse.class, UserActivityRecentCollectionPage.class);
+        super(requestUrl, client, requestOptions, UserActivityRecentCollectionResponse.class, UserActivityRecentCollectionPage.class, UserActivityRecentCollectionRequestBuilder.class);
     }
 
-
-    public void get(@Nonnull final ICallback<? super UserActivityRecentCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    @Nullable
-    public UserActivityRecentCollectionPage get() throws ClientException {
-        final UserActivityRecentCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    @Nonnull
-    public UserActivityRecentCollectionPage buildFromResponse(@Nonnull final UserActivityRecentCollectionResponse response) {
-        final UserActivityRecentCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new UserActivityRecentCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final UserActivityRecentCollectionPage page = new UserActivityRecentCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
 
     /**
      * Sets the select clause for the request
@@ -83,8 +49,8 @@ public class UserActivityRecentCollectionRequest extends BaseCollectionRequest<U
      */
     @Nonnull
     public UserActivityRecentCollectionRequest select(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (UserActivityRecentCollectionRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -95,8 +61,8 @@ public class UserActivityRecentCollectionRequest extends BaseCollectionRequest<U
      */
     @Nonnull
     public UserActivityRecentCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (UserActivityRecentCollectionRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -107,8 +73,8 @@ public class UserActivityRecentCollectionRequest extends BaseCollectionRequest<U
      */
     @Nonnull
     public UserActivityRecentCollectionRequest expand(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (UserActivityRecentCollectionRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -119,8 +85,8 @@ public class UserActivityRecentCollectionRequest extends BaseCollectionRequest<U
      */
     @Nonnull
     public UserActivityRecentCollectionRequest filter(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (UserActivityRecentCollectionRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -131,8 +97,8 @@ public class UserActivityRecentCollectionRequest extends BaseCollectionRequest<U
      */
     @Nonnull
     public UserActivityRecentCollectionRequest orderBy(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (UserActivityRecentCollectionRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

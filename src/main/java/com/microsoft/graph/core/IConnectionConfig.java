@@ -28,6 +28,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.httpcore.middlewareoption.IShouldRedirect;
 import com.microsoft.graph.httpcore.middlewareoption.IShouldRetry;
 
+/** Represents the configuration to apply to http connection manager by the SDK */
 public interface IConnectionConfig {
 
 	/**

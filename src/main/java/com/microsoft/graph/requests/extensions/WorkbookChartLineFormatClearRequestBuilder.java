@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.WorkbookChartLineFormatClearRequest;
+import com.microsoft.graph.models.extensions.WorkbookChartLineFormat;
 
-import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
+import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Workbook Chart Line Format Clear Request Builder.
  */
-public class WorkbookChartLineFormatClearRequestBuilder extends BaseActionRequestBuilder {
+public class WorkbookChartLineFormatClearRequestBuilder extends BaseActionRequestBuilder<WorkbookChartLineFormat> {
 
     /**
      * The request builder for this WorkbookChartLineFormatClear

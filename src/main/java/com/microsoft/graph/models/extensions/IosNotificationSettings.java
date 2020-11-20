@@ -23,6 +23,7 @@ import javax.annotation.Nonnull;
  */
 public class IosNotificationSettings implements IJsonBackedObject {
 
+    /** the OData type of the object as returned by the service */
     @SerializedName("@odata.type")
     @Expose
     @Nullable
@@ -143,8 +144,9 @@ public class IosNotificationSettings implements IJsonBackedObject {
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

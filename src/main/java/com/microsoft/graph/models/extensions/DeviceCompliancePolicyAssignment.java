@@ -60,8 +60,9 @@ public class DeviceCompliancePolicyAssignment extends Entity implements IJsonBac
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

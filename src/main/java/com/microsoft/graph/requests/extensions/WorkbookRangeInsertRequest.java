@@ -21,7 +21,8 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Range Insert Request.
  */
-public class WorkbookRangeInsertRequest extends BaseRequest {
+public class WorkbookRangeInsertRequest extends BaseRequest<WorkbookRange> {
+    /** The body for the method */
     protected final WorkbookRangeInsertBody body;
 
     /**
@@ -36,10 +37,18 @@ public class WorkbookRangeInsertRequest extends BaseRequest {
         body = new WorkbookRangeInsertBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(@Nonnull final ICallback<? super WorkbookRange> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     @Nullable
     public WorkbookRange post() throws ClientException {
         return send(HttpMethod.POST, body);
@@ -53,8 +62,8 @@ public class WorkbookRangeInsertRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeInsertRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookRangeInsertRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +74,8 @@ public class WorkbookRangeInsertRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeInsertRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookRangeInsertRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -77,8 +86,8 @@ public class WorkbookRangeInsertRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeInsertRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookRangeInsertRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

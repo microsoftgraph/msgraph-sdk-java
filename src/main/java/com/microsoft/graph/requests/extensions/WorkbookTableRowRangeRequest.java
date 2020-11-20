@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRange;
+import com.microsoft.graph.models.extensions.WorkbookTableRow;
 import com.microsoft.graph.requests.extensions.WorkbookTableRowRangeRequest;
 
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Row Range Request.
  */
-public class WorkbookTableRowRangeRequest extends BaseRequest {
+public class WorkbookTableRowRangeRequest extends BaseRequest<WorkbookRange> {
 
     /**
      * The request for this WorkbookTableRowRange
@@ -103,8 +104,8 @@ public class WorkbookTableRowRangeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookTableRowRangeRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookTableRowRangeRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +116,8 @@ public class WorkbookTableRowRangeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookTableRowRangeRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookTableRowRangeRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +128,8 @@ public class WorkbookTableRowRangeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookTableRowRangeRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookTableRowRangeRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +140,8 @@ public class WorkbookTableRowRangeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookTableRowRangeRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookTableRowRangeRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

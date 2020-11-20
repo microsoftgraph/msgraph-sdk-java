@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Linked Resource Request.
  */
-public class LinkedResourceRequest extends BaseRequest {
+public class LinkedResourceRequest extends BaseRequest<LinkedResource> {
 	
     /**
      * The request for the LinkedResource
@@ -146,8 +146,8 @@ public class LinkedResourceRequest extends BaseRequest {
      */
      @Nonnull
      public LinkedResourceRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (LinkedResourceRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class LinkedResourceRequest extends BaseRequest {
      */
      @Nonnull
      public LinkedResourceRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (LinkedResourceRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

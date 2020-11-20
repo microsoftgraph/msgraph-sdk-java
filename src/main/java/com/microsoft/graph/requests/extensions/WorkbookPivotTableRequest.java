@@ -22,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Pivot Table Request.
  */
-public class WorkbookPivotTableRequest extends BaseRequest {
+public class WorkbookPivotTableRequest extends BaseRequest<WorkbookPivotTable> {
 	
     /**
      * The request for the WorkbookPivotTable
@@ -147,8 +147,8 @@ public class WorkbookPivotTableRequest extends BaseRequest {
      */
      @Nonnull
      public WorkbookPivotTableRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookPivotTableRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -159,8 +159,8 @@ public class WorkbookPivotTableRequest extends BaseRequest {
      */
      @Nonnull
      public WorkbookPivotTableRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookPivotTableRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

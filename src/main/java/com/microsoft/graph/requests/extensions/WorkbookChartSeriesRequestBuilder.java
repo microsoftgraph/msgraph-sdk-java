@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Chart Series Request Builder.
  */
-public class WorkbookChartSeriesRequestBuilder extends BaseRequestBuilder {
+public class WorkbookChartSeriesRequestBuilder extends BaseRequestBuilder<WorkbookChartSeries> {
 
     /**
      * The request builder for the WorkbookChartSeries
@@ -69,11 +69,22 @@ public class WorkbookChartSeriesRequestBuilder extends BaseRequestBuilder {
     public WorkbookChartSeriesFormatRequestBuilder format() {
         return new WorkbookChartSeriesFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the WorkbookChartPoint collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public WorkbookChartPointCollectionRequestBuilder points() {
         return new WorkbookChartPointCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("points"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the WorkbookChartPoint item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public WorkbookChartPointRequestBuilder points(@Nonnull final String id) {
         return new WorkbookChartPointRequestBuilder(getRequestUrlWithAdditionalSegment("points") + "/" + id, getClient(), null);

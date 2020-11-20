@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
+import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.requests.extensions.ReportRootGetYammerActivityCountsRequest;
 
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Yammer Activity Counts Request.
  */
-public class ReportRootGetYammerActivityCountsRequest extends BaseRequest {
+public class ReportRootGetYammerActivityCountsRequest extends BaseRequest<Report> {
 
     /**
      * The request for this ReportRootGetYammerActivityCounts
@@ -103,8 +104,8 @@ public class ReportRootGetYammerActivityCountsRequest extends BaseRequest {
      */
     @Nonnull
     public ReportRootGetYammerActivityCountsRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ReportRootGetYammerActivityCountsRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +116,8 @@ public class ReportRootGetYammerActivityCountsRequest extends BaseRequest {
      */
     @Nonnull
     public ReportRootGetYammerActivityCountsRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ReportRootGetYammerActivityCountsRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +128,8 @@ public class ReportRootGetYammerActivityCountsRequest extends BaseRequest {
      */
     @Nonnull
     public ReportRootGetYammerActivityCountsRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ReportRootGetYammerActivityCountsRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +140,8 @@ public class ReportRootGetYammerActivityCountsRequest extends BaseRequest {
      */
     @Nonnull
     public ReportRootGetYammerActivityCountsRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ReportRootGetYammerActivityCountsRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

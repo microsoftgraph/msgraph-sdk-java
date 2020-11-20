@@ -10,11 +10,13 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 import com.microsoft.graph.models.extensions.Calendar;
-import com.microsoft.graph.core.IGraphServiceClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.QueryOption;
+import com.microsoft.graph.models.extensions.Event;
 import com.microsoft.graph.requests.extensions.CalendarCollectionPage;
 import com.microsoft.graph.requests.extensions.EventCollectionPage;
+import com.microsoft.graph.core.IGraphServiceClient;
+import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.options.Option;
+import com.microsoft.graph.options.QueryOption;
 
 @Ignore
 public class CalendarTests {

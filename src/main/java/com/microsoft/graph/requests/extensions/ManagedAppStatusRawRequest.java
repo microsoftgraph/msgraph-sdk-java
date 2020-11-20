@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed App Status Raw Request.
  */
-public class ManagedAppStatusRawRequest extends BaseRequest {
+public class ManagedAppStatusRawRequest extends BaseRequest<ManagedAppStatusRaw> {
 	
     /**
      * The request for the ManagedAppStatusRaw
@@ -146,8 +146,8 @@ public class ManagedAppStatusRawRequest extends BaseRequest {
      */
      @Nonnull
      public ManagedAppStatusRawRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ManagedAppStatusRawRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class ManagedAppStatusRawRequest extends BaseRequest {
      */
      @Nonnull
      public ManagedAppStatusRawRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ManagedAppStatusRawRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

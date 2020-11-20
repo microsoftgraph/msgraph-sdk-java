@@ -24,7 +24,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Todo Task Request Builder.
  */
-public class TodoTaskRequestBuilder extends BaseRequestBuilder {
+public class TodoTaskRequestBuilder extends BaseRequestBuilder<TodoTask> {
 
     /**
      * The request builder for the TodoTask
@@ -60,20 +60,42 @@ public class TodoTaskRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the Extension collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ExtensionCollectionRequestBuilder extensions() {
         return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Extension item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ExtensionRequestBuilder extensions(@Nonnull final String id) {
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the LinkedResource collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public LinkedResourceCollectionRequestBuilder linkedResources() {
         return new LinkedResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("linkedResources"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the LinkedResource item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public LinkedResourceRequestBuilder linkedResources(@Nonnull final String id) {
         return new LinkedResourceRequestBuilder(getRequestUrlWithAdditionalSegment("linkedResources") + "/" + id, getClient(), null);

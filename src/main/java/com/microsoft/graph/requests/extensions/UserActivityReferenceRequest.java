@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -25,7 +25,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the User Activity Reference Request.
  */
-public class UserActivityReferenceRequest extends BaseRequest {
+public class UserActivityReferenceRequest extends BaseReferenceRequest<UserActivity> {
 
     /**
      * The request for the UserActivity
@@ -38,15 +38,6 @@ public class UserActivityReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, UserActivity.class);
     }
 
-    public void delete(@Nonnull final ICallback<? super UserActivity> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    @Nullable
-    public UserActivity delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
-    }
-
     /**
      * Sets the select clause for the request
      *
@@ -55,8 +46,8 @@ public class UserActivityReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public UserActivityReferenceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (UserActivityReferenceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -67,8 +58,8 @@ public class UserActivityReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public UserActivityReferenceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (UserActivityReferenceRequest)this;
+        addExpandOption(value);
+        return this;
     }
     /**
      * Puts the UserActivity

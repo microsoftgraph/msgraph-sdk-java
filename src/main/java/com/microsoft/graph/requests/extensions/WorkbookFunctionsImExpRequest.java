@@ -21,7 +21,8 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Im Exp Request.
  */
-public class WorkbookFunctionsImExpRequest extends BaseRequest {
+public class WorkbookFunctionsImExpRequest extends BaseRequest<WorkbookFunctionResult> {
+    /** The body for the method */
     protected final WorkbookFunctionsImExpBody body;
 
     /**
@@ -36,10 +37,18 @@ public class WorkbookFunctionsImExpRequest extends BaseRequest {
         body = new WorkbookFunctionsImExpBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(@Nonnull final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     @Nullable
     public WorkbookFunctionResult post() throws ClientException {
         return send(HttpMethod.POST, body);
@@ -53,8 +62,8 @@ public class WorkbookFunctionsImExpRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsImExpRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsImExpRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +74,8 @@ public class WorkbookFunctionsImExpRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsImExpRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsImExpRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -77,8 +86,8 @@ public class WorkbookFunctionsImExpRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsImExpRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsImExpRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

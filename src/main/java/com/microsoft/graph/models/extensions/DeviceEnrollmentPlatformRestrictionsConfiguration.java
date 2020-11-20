@@ -96,8 +96,9 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Software Update Status Summary Reference Request.
  */
-public class SoftwareUpdateStatusSummaryReferenceRequest extends BaseRequest {
+public class SoftwareUpdateStatusSummaryReferenceRequest extends BaseReferenceRequest<SoftwareUpdateStatusSummary> {
 
     /**
      * The request for the SoftwareUpdateStatusSummary
@@ -36,15 +36,6 @@ public class SoftwareUpdateStatusSummaryReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, SoftwareUpdateStatusSummary.class);
     }
 
-    public void delete(@Nonnull final ICallback<? super SoftwareUpdateStatusSummary> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    @Nullable
-    public SoftwareUpdateStatusSummary delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
-    }
-
     /**
      * Sets the select clause for the request
      *
@@ -53,8 +44,8 @@ public class SoftwareUpdateStatusSummaryReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public SoftwareUpdateStatusSummaryReferenceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (SoftwareUpdateStatusSummaryReferenceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +56,8 @@ public class SoftwareUpdateStatusSummaryReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public SoftwareUpdateStatusSummaryReferenceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (SoftwareUpdateStatusSummaryReferenceRequest)this;
+        addExpandOption(value);
+        return this;
     }
     /**
      * Puts the SoftwareUpdateStatusSummary

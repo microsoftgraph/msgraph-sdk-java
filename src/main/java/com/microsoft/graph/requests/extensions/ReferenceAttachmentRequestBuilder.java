@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Reference Attachment Request Builder.
  */
-public class ReferenceAttachmentRequestBuilder extends BaseRequestBuilder {
+public class ReferenceAttachmentRequestBuilder extends BaseRequestBuilder<ReferenceAttachment> {
 
     /**
      * The request builder for the ReferenceAttachment

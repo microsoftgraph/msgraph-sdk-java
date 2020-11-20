@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRange;
+import com.microsoft.graph.models.extensions.WorkbookNamedItem;
 import com.microsoft.graph.requests.extensions.WorkbookNamedItemRangeRequest;
 
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Named Item Range Request.
  */
-public class WorkbookNamedItemRangeRequest extends BaseRequest {
+public class WorkbookNamedItemRangeRequest extends BaseRequest<WorkbookRange> {
 
     /**
      * The request for this WorkbookNamedItemRange
@@ -103,8 +104,8 @@ public class WorkbookNamedItemRangeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookNamedItemRangeRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookNamedItemRangeRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +116,8 @@ public class WorkbookNamedItemRangeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookNamedItemRangeRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookNamedItemRangeRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +128,8 @@ public class WorkbookNamedItemRangeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookNamedItemRangeRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookNamedItemRangeRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +140,8 @@ public class WorkbookNamedItemRangeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookNamedItemRangeRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookNamedItemRangeRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

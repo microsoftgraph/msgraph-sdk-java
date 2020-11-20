@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Threat Assessment Result Request Builder.
  */
-public class ThreatAssessmentResultRequestBuilder extends BaseRequestBuilder {
+public class ThreatAssessmentResultRequestBuilder extends BaseRequestBuilder<ThreatAssessmentResult> {
 
     /**
      * The request builder for the ThreatAssessmentResult

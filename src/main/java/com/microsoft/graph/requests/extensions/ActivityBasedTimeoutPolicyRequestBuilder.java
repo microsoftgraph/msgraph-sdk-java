@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Activity Based Timeout Policy Request Builder.
  */
-public class ActivityBasedTimeoutPolicyRequestBuilder extends BaseRequestBuilder {
+public class ActivityBasedTimeoutPolicyRequestBuilder extends BaseRequestBuilder<ActivityBasedTimeoutPolicy> {
 
     /**
      * The request builder for the ActivityBasedTimeoutPolicy
@@ -56,11 +56,22 @@ public class ActivityBasedTimeoutPolicyRequestBuilder extends BaseRequestBuilder
     }
 
 
+    /**
+     *  Gets a request builder for the DirectoryObject collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public DirectoryObjectCollectionWithReferencesRequestBuilder appliesTo() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("appliesTo"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DirectoryObject item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public DirectoryObjectWithReferenceRequestBuilder appliesTo(@Nonnull final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("appliesTo") + "/" + id, getClient(), null);

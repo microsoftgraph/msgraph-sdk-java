@@ -24,7 +24,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Chat Message Request Builder.
  */
-public class ChatMessageRequestBuilder extends BaseRequestBuilder {
+public class ChatMessageRequestBuilder extends BaseRequestBuilder<ChatMessage> {
 
     /**
      * The request builder for the ChatMessage
@@ -60,20 +60,42 @@ public class ChatMessageRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the ChatMessageHostedContent collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ChatMessageHostedContentCollectionRequestBuilder hostedContents() {
         return new ChatMessageHostedContentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("hostedContents"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ChatMessageHostedContent item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ChatMessageHostedContentRequestBuilder hostedContents(@Nonnull final String id) {
         return new ChatMessageHostedContentRequestBuilder(getRequestUrlWithAdditionalSegment("hostedContents") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the ChatMessage collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ChatMessageCollectionRequestBuilder replies() {
         return new ChatMessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("replies"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ChatMessage item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ChatMessageRequestBuilder replies(@Nonnull final String id) {
         return new ChatMessageRequestBuilder(getRequestUrlWithAdditionalSegment("replies") + "/" + id, getClient(), null);

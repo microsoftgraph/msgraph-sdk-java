@@ -14,8 +14,8 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DriveSharedWithMeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveSharedWithMeCollectionPage;
 import com.microsoft.graph.requests.extensions.DriveSharedWithMeCollectionResponse;
+import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
@@ -26,7 +26,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Drive Shared With Me Collection Request.
  */
-public class DriveSharedWithMeCollectionRequest extends BaseCollectionRequest<DriveSharedWithMeCollectionResponse, DriveSharedWithMeCollectionPage> {
+public class DriveSharedWithMeCollectionRequest extends BaseCollectionRequest<DriveItem, DriveSharedWithMeCollectionResponse, DriveSharedWithMeCollectionPage> {
 
 
     /**
@@ -37,43 +37,9 @@ public class DriveSharedWithMeCollectionRequest extends BaseCollectionRequest<Dr
      * @param requestOptions the options for this request
      */
     public DriveSharedWithMeCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DriveSharedWithMeCollectionResponse.class, DriveSharedWithMeCollectionPage.class);
+        super(requestUrl, client, requestOptions, DriveSharedWithMeCollectionResponse.class, DriveSharedWithMeCollectionPage.class, DriveSharedWithMeCollectionRequestBuilder.class);
     }
 
-
-    public void get(@Nonnull final ICallback<? super DriveSharedWithMeCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    @Nullable
-    public DriveSharedWithMeCollectionPage get() throws ClientException {
-        final DriveSharedWithMeCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    @Nonnull
-    public DriveSharedWithMeCollectionPage buildFromResponse(@Nonnull final DriveSharedWithMeCollectionResponse response) {
-        final DriveSharedWithMeCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DriveSharedWithMeCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final DriveSharedWithMeCollectionPage page = new DriveSharedWithMeCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
 
     /**
      * Sets the select clause for the request
@@ -83,8 +49,8 @@ public class DriveSharedWithMeCollectionRequest extends BaseCollectionRequest<Dr
      */
     @Nonnull
     public DriveSharedWithMeCollectionRequest select(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (DriveSharedWithMeCollectionRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -95,8 +61,8 @@ public class DriveSharedWithMeCollectionRequest extends BaseCollectionRequest<Dr
      */
     @Nonnull
     public DriveSharedWithMeCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (DriveSharedWithMeCollectionRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -107,8 +73,8 @@ public class DriveSharedWithMeCollectionRequest extends BaseCollectionRequest<Dr
      */
     @Nonnull
     public DriveSharedWithMeCollectionRequest expand(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DriveSharedWithMeCollectionRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -119,8 +85,8 @@ public class DriveSharedWithMeCollectionRequest extends BaseCollectionRequest<Dr
      */
     @Nonnull
     public DriveSharedWithMeCollectionRequest filter(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DriveSharedWithMeCollectionRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -131,8 +97,8 @@ public class DriveSharedWithMeCollectionRequest extends BaseCollectionRequest<Dr
      */
     @Nonnull
     public DriveSharedWithMeCollectionRequest orderBy(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (DriveSharedWithMeCollectionRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

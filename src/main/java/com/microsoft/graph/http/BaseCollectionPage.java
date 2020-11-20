@@ -25,7 +25,9 @@ package com.microsoft.graph.http;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.serializer.IJsonBackedObject;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -35,17 +37,16 @@ import javax.annotation.Nonnull;
 /**
  * A page of results from a collection
  *
- * @param <T1> the type of the item contained within the collection
- * @param <T2> the type of the request builder for the next page in this collection
+ * @param <T> the type of the item contained within the collection
  */
-public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> implements IBaseCollectionPage<T1, T2> {
-
+public class BaseCollectionPage<T, T2 extends BaseRequestBuilder<T>> implements IJsonBackedObject {
+    
     private AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     /**
      * The contents of this page
      */
-    private final List<T1> pageContents;
+    private final List<T> pageContents;
 
     /**
      * The request builder for the next page
@@ -63,15 +64,25 @@ public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> impleme
     private ISerializer serializer;
 
     /**
+     * A collection page for WorkforceIntegration
+     *
+     * @param response the serialized WorkforceIntegrationCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
+     */
+    public BaseCollectionPage(@Nonnull final ICollectionResponse<T> response, @Nullable final T2 builder) {
+        this(response.values(), builder, response.additionalDataManager());
+    }
+
+    /**
      * Creates the collection page
      *
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public BaseCollectionPage(@Nonnull final List<T1> pageContents, @Nullable final T2 nextRequestBuilder) {
+    public BaseCollectionPage(@Nonnull final List<T> pageContents, @Nullable final T2 nextRequestBuilder) {
         // CollectionPages are never directly modifiable, either 'update'/'delete' the specific child or 'add' the new
         // object to the 'children' of the collection.
-        this.pageContents = Collections.unmodifiableList(pageContents);
+        this.pageContents = Collections.unmodifiableList(pageContents == null ? new ArrayList<T>() : pageContents);
         requestBuilder = nextRequestBuilder;
     }
 
@@ -82,7 +93,7 @@ public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> impleme
      * @param nextRequestBuilder the request builder for the next page
      * @param responseAdditionalData the additional data returned by the response
      */
-    public BaseCollectionPage(@Nonnull final List<T1> pageContents, @Nullable final T2 nextRequestBuilder, @Nonnull final AdditionalDataManager responseAdditionalData) {
+    public BaseCollectionPage(@Nonnull final List<T> pageContents, @Nonnull final T2 nextRequestBuilder, @Nonnull final AdditionalDataManager responseAdditionalData) {
         this(pageContents, nextRequestBuilder);
         this.additionalDataManager().putAll(responseAdditionalData);
     }
@@ -103,7 +114,7 @@ public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> impleme
      * @return the current page
      */
     @Nonnull
-    public List<T1> getCurrentPage() {
+    public List<T> getCurrentPage() {
         return pageContents;
     }
 
@@ -122,8 +133,9 @@ public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> impleme
      *
      * @return the serializer
      */
+    @Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

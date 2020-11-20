@@ -41,7 +41,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -50,7 +50,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Group Reference Request.
  */
-public class GroupReferenceRequest extends BaseRequest {
+public class GroupReferenceRequest extends BaseReferenceRequest<Group> {
 
     /**
      * The request for the Group
@@ -63,15 +63,6 @@ public class GroupReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, Group.class);
     }
 
-    public void delete(@Nonnull final ICallback<? super Group> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    @Nullable
-    public Group delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
-    }
-
     /**
      * Sets the select clause for the request
      *
@@ -80,8 +71,8 @@ public class GroupReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public GroupReferenceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (GroupReferenceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -92,8 +83,8 @@ public class GroupReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public GroupReferenceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (GroupReferenceRequest)this;
+        addExpandOption(value);
+        return this;
     }
     /**
      * Puts the Group

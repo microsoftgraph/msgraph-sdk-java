@@ -23,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Todo Request.
  */
-public class TodoRequest extends BaseRequest {
+public class TodoRequest extends BaseRequest<Todo> {
 	
     /**
      * The request for the Todo
@@ -148,8 +148,8 @@ public class TodoRequest extends BaseRequest {
      */
      @Nonnull
      public TodoRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TodoRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -160,8 +160,8 @@ public class TodoRequest extends BaseRequest {
      */
      @Nonnull
      public TodoRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TodoRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

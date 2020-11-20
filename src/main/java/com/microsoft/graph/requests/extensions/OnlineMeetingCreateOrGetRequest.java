@@ -21,7 +21,8 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Online Meeting Create Or Get Request.
  */
-public class OnlineMeetingCreateOrGetRequest extends BaseRequest {
+public class OnlineMeetingCreateOrGetRequest extends BaseRequest<OnlineMeeting> {
+    /** The body for the method */
     protected final OnlineMeetingCreateOrGetBody body;
 
     /**
@@ -36,10 +37,18 @@ public class OnlineMeetingCreateOrGetRequest extends BaseRequest {
         body = new OnlineMeetingCreateOrGetBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(@Nonnull final ICallback<? super OnlineMeeting> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     @Nullable
     public OnlineMeeting post() throws ClientException {
         return send(HttpMethod.POST, body);
@@ -53,8 +62,8 @@ public class OnlineMeetingCreateOrGetRequest extends BaseRequest {
      */
     @Nonnull
     public OnlineMeetingCreateOrGetRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (OnlineMeetingCreateOrGetRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +74,8 @@ public class OnlineMeetingCreateOrGetRequest extends BaseRequest {
      */
     @Nonnull
     public OnlineMeetingCreateOrGetRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (OnlineMeetingCreateOrGetRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -77,8 +86,8 @@ public class OnlineMeetingCreateOrGetRequest extends BaseRequest {
      */
     @Nonnull
     public OnlineMeetingCreateOrGetRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (OnlineMeetingCreateOrGetRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

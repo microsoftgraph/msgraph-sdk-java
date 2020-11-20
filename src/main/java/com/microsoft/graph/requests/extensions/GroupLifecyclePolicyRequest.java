@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Group Lifecycle Policy Request.
  */
-public class GroupLifecyclePolicyRequest extends BaseRequest {
+public class GroupLifecyclePolicyRequest extends BaseRequest<GroupLifecyclePolicy> {
 	
     /**
      * The request for the GroupLifecyclePolicy
@@ -146,8 +146,8 @@ public class GroupLifecyclePolicyRequest extends BaseRequest {
      */
      @Nonnull
      public GroupLifecyclePolicyRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (GroupLifecyclePolicyRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class GroupLifecyclePolicyRequest extends BaseRequest {
      */
      @Nonnull
      public GroupLifecyclePolicyRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupLifecyclePolicyRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.requests.extensions.ManagedDeviceRebootNowRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Device Reboot Now Request.
  */
-public class ManagedDeviceRebootNowRequest extends BaseRequest {
+public class ManagedDeviceRebootNowRequest extends BaseRequest<Void> {
 
     /**
      * The request for this ManagedDeviceRebootNow

@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the OAuth2Permission Grant Request.
  */
-public class OAuth2PermissionGrantRequest extends BaseRequest {
+public class OAuth2PermissionGrantRequest extends BaseRequest<OAuth2PermissionGrant> {
 	
     /**
      * The request for the OAuth2PermissionGrant
@@ -146,8 +146,8 @@ public class OAuth2PermissionGrantRequest extends BaseRequest {
      */
      @Nonnull
      public OAuth2PermissionGrantRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OAuth2PermissionGrantRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class OAuth2PermissionGrantRequest extends BaseRequest {
      */
      @Nonnull
      public OAuth2PermissionGrantRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OAuth2PermissionGrantRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

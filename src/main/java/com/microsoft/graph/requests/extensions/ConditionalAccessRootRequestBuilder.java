@@ -24,7 +24,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Conditional Access Root Request Builder.
  */
-public class ConditionalAccessRootRequestBuilder extends BaseRequestBuilder {
+public class ConditionalAccessRootRequestBuilder extends BaseRequestBuilder<ConditionalAccessRoot> {
 
     /**
      * The request builder for the ConditionalAccessRoot
@@ -60,20 +60,42 @@ public class ConditionalAccessRootRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the NamedLocation collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public NamedLocationCollectionRequestBuilder namedLocations() {
         return new NamedLocationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("namedLocations"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the NamedLocation item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public NamedLocationRequestBuilder namedLocations(@Nonnull final String id) {
         return new NamedLocationRequestBuilder(getRequestUrlWithAdditionalSegment("namedLocations") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the ConditionalAccessPolicy collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ConditionalAccessPolicyCollectionRequestBuilder policies() {
         return new ConditionalAccessPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("policies"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ConditionalAccessPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ConditionalAccessPolicyRequestBuilder policies(@Nonnull final String id) {
         return new ConditionalAccessPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("policies") + "/" + id, getClient(), null);

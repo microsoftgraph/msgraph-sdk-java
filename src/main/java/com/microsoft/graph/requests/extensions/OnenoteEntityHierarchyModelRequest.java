@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Onenote Entity Hierarchy Model Request.
  */
-public class OnenoteEntityHierarchyModelRequest extends BaseRequest {
+public class OnenoteEntityHierarchyModelRequest extends BaseRequest<OnenoteEntityHierarchyModel> {
 	
     /**
      * The request for the OnenoteEntityHierarchyModel
@@ -161,8 +161,8 @@ public class OnenoteEntityHierarchyModelRequest extends BaseRequest {
      */
      @Nonnull
      public OnenoteEntityHierarchyModelRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OnenoteEntityHierarchyModelRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -173,8 +173,8 @@ public class OnenoteEntityHierarchyModelRequest extends BaseRequest {
      */
      @Nonnull
      public OnenoteEntityHierarchyModelRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OnenoteEntityHierarchyModelRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

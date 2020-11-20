@@ -22,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Sort Request.
  */
-public class WorkbookRangeSortRequest extends BaseRequest {
+public class WorkbookRangeSortRequest extends BaseRequest<WorkbookRangeSort> {
 	
     /**
      * The request for the WorkbookRangeSort
@@ -147,8 +147,8 @@ public class WorkbookRangeSortRequest extends BaseRequest {
      */
      @Nonnull
      public WorkbookRangeSortRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookRangeSortRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -159,8 +159,8 @@ public class WorkbookRangeSortRequest extends BaseRequest {
      */
      @Nonnull
      public WorkbookRangeSortRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookRangeSortRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

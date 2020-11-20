@@ -23,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Notification Message Template Request.
  */
-public class NotificationMessageTemplateRequest extends BaseRequest {
+public class NotificationMessageTemplateRequest extends BaseRequest<NotificationMessageTemplate> {
 	
     /**
      * The request for the NotificationMessageTemplate
@@ -148,8 +148,8 @@ public class NotificationMessageTemplateRequest extends BaseRequest {
      */
      @Nonnull
      public NotificationMessageTemplateRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (NotificationMessageTemplateRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -160,8 +160,8 @@ public class NotificationMessageTemplateRequest extends BaseRequest {
      */
      @Nonnull
      public NotificationMessageTemplateRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (NotificationMessageTemplateRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

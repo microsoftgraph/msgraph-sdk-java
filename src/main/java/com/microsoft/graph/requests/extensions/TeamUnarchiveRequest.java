@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.Team;
 import com.microsoft.graph.requests.extensions.TeamUnarchiveRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Team Unarchive Request.
  */
-public class TeamUnarchiveRequest extends BaseRequest {
+public class TeamUnarchiveRequest extends BaseRequest<Void> {
 
     /**
      * The request for this TeamUnarchive

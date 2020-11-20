@@ -25,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Terms And Conditions Request.
  */
-public class TermsAndConditionsRequest extends BaseRequest {
+public class TermsAndConditionsRequest extends BaseRequest<TermsAndConditions> {
 	
     /**
      * The request for the TermsAndConditions
@@ -150,8 +150,8 @@ public class TermsAndConditionsRequest extends BaseRequest {
      */
      @Nonnull
      public TermsAndConditionsRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TermsAndConditionsRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -162,8 +162,8 @@ public class TermsAndConditionsRequest extends BaseRequest {
      */
      @Nonnull
      public TermsAndConditionsRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TermsAndConditionsRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

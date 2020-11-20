@@ -83,7 +83,7 @@ public class WorkbookFunctionsCoupNumBody {
      * @return the serializer
      */
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

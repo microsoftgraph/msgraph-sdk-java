@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Scheduling Group Request.
  */
-public class SchedulingGroupRequest extends BaseRequest {
+public class SchedulingGroupRequest extends BaseRequest<SchedulingGroup> {
 	
     /**
      * The request for the SchedulingGroup
@@ -146,8 +146,8 @@ public class SchedulingGroupRequest extends BaseRequest {
      */
      @Nonnull
      public SchedulingGroupRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SchedulingGroupRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class SchedulingGroupRequest extends BaseRequest {
      */
      @Nonnull
      public SchedulingGroupRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SchedulingGroupRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

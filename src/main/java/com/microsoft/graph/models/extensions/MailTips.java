@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.AutomaticRepliesMailTips;
 import com.microsoft.graph.models.extensions.EmailAddress;
 import com.microsoft.graph.models.extensions.MailTipsError;
@@ -27,6 +28,7 @@ import javax.annotation.Nonnull;
  */
 public class MailTips implements IJsonBackedObject {
 
+    /** the OData type of the object as returned by the service */
     @SerializedName("@odata.type")
     @Expose
     @Nullable
@@ -174,8 +176,9 @@ public class MailTips implements IJsonBackedObject {
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

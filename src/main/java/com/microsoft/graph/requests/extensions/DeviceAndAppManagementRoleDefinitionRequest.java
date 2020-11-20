@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device And App Management Role Definition Request.
  */
-public class DeviceAndAppManagementRoleDefinitionRequest extends BaseRequest {
+public class DeviceAndAppManagementRoleDefinitionRequest extends BaseRequest<DeviceAndAppManagementRoleDefinition> {
 	
     /**
      * The request for the DeviceAndAppManagementRoleDefinition
@@ -146,8 +146,8 @@ public class DeviceAndAppManagementRoleDefinitionRequest extends BaseRequest {
      */
      @Nonnull
      public DeviceAndAppManagementRoleDefinitionRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceAndAppManagementRoleDefinitionRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class DeviceAndAppManagementRoleDefinitionRequest extends BaseRequest {
      */
      @Nonnull
      public DeviceAndAppManagementRoleDefinitionRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceAndAppManagementRoleDefinitionRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

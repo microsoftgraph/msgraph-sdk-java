@@ -20,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Vpp Token Sync Licenses Request.
  */
-public class VppTokenSyncLicensesRequest extends BaseRequest {
+public class VppTokenSyncLicensesRequest extends BaseRequest<VppToken> {
 
     /**
      * The request for this VppTokenSyncLicenses
@@ -61,8 +61,8 @@ public class VppTokenSyncLicensesRequest extends BaseRequest {
      */
     @Nonnull
     public VppTokenSyncLicensesRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (VppTokenSyncLicensesRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -73,8 +73,8 @@ public class VppTokenSyncLicensesRequest extends BaseRequest {
      */
     @Nonnull
     public VppTokenSyncLicensesRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (VppTokenSyncLicensesRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

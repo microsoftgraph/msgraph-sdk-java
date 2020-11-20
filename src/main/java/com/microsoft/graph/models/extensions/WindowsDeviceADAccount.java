@@ -68,8 +68,9 @@ public class WindowsDeviceADAccount extends WindowsDeviceAccount implements IJso
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

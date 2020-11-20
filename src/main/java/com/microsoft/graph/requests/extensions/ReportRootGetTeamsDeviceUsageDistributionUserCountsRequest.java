@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
+import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.requests.extensions.ReportRootGetTeamsDeviceUsageDistributionUserCountsRequest;
 
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Teams Device Usage Distribution User Counts Request.
  */
-public class ReportRootGetTeamsDeviceUsageDistributionUserCountsRequest extends BaseRequest {
+public class ReportRootGetTeamsDeviceUsageDistributionUserCountsRequest extends BaseRequest<Report> {
 
     /**
      * The request for this ReportRootGetTeamsDeviceUsageDistributionUserCounts
@@ -103,8 +104,8 @@ public class ReportRootGetTeamsDeviceUsageDistributionUserCountsRequest extends 
      */
     @Nonnull
     public ReportRootGetTeamsDeviceUsageDistributionUserCountsRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ReportRootGetTeamsDeviceUsageDistributionUserCountsRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +116,8 @@ public class ReportRootGetTeamsDeviceUsageDistributionUserCountsRequest extends 
      */
     @Nonnull
     public ReportRootGetTeamsDeviceUsageDistributionUserCountsRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ReportRootGetTeamsDeviceUsageDistributionUserCountsRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +128,8 @@ public class ReportRootGetTeamsDeviceUsageDistributionUserCountsRequest extends 
      */
     @Nonnull
     public ReportRootGetTeamsDeviceUsageDistributionUserCountsRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ReportRootGetTeamsDeviceUsageDistributionUserCountsRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +140,8 @@ public class ReportRootGetTeamsDeviceUsageDistributionUserCountsRequest extends 
      */
     @Nonnull
     public ReportRootGetTeamsDeviceUsageDistributionUserCountsRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ReportRootGetTeamsDeviceUsageDistributionUserCountsRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows Information Protection App Locker File Request Builder.
  */
-public class WindowsInformationProtectionAppLockerFileRequestBuilder extends BaseRequestBuilder {
+public class WindowsInformationProtectionAppLockerFileRequestBuilder extends BaseRequestBuilder<WindowsInformationProtectionAppLockerFile> {
 
     /**
      * The request builder for the WindowsInformationProtectionAppLockerFile

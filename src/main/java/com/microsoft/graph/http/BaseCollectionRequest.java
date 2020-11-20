@@ -23,13 +23,19 @@
 package com.microsoft.graph.http;
 
 import java.net.URL;
+import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;
+import com.microsoft.graph.http.ICollectionResponse;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.httpcore.middlewareoption.IShouldRedirect;
 import com.microsoft.graph.httpcore.middlewareoption.IShouldRetry;
 import com.microsoft.graph.options.FunctionOption;
@@ -42,25 +48,28 @@ import okhttp3.Request;
 /**
  * A request against a collection
  *
- * @param <T1> the raw response class returned by the service
- * @param <T2> the class of the collection page
+ * @param <T> the type of the object in the collection 
+ * @param <T2> the response collection type
  */
-public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
+public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>,
+                                            T3 extends BaseCollectionPage<T, ? extends BaseRequestBuilder<T>>> implements IHttpRequest {
 
     /**
      * The base request for this collection request
      */
-    private final BaseRequest baseRequest;
+    private final BaseRequest<T2> baseRequest;
 
     /**
-     * The class for the response
+     * The class for the response collection
      */
-    private final Class<T1> responseClass;
-
+    private final Class<T2> responseCollectionClass;
+    
     /**
      * The class for the collection page
      */
-    private final Class<T2> collectionPageClass;
+    private final Class<T3> collectionPageClass;
+
+    private final Class<? extends BaseCollectionRequestBuilder<T, ? extends BaseRequestBuilder<T>, T2, T3, ? extends BaseCollectionRequest<T, T2, T3>>> collRequestBuilderClass;
 
 
     /**
@@ -69,18 +78,20 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      * @param requestUrl          the URL to make the request against
      * @param client              the client which can issue the request
      * @param options             the options for this request
-     * @param responseClass       the class for the response
+     * @param responseCollectionClass       the class for the response collection
      * @param collectionPageClass the class for the collection page
+     * @param collectionRequestBuilderClass the class for the collection request builder
      */
     public BaseCollectionRequest(@Nonnull final String requestUrl,
                                  @Nonnull final IBaseClient client,
                                  @Nullable final List<? extends Option> options,
-                                 @Nonnull final Class<T1> responseClass,
-                                 @Nonnull final Class<T2> collectionPageClass) {
-        this.responseClass = responseClass;
+                                 @Nonnull final Class<T2> responseCollectionClass,
+                                 @Nonnull final Class<T3> collectionPageClass,
+                                 @Nonnull final Class<? extends BaseCollectionRequestBuilder<T, ? extends BaseRequestBuilder<T>, T2, T3, ? extends BaseCollectionRequest<T, T2, T3>>> collectionRequestBuilderClass) {
+        this.responseCollectionClass = responseCollectionClass;
         this.collectionPageClass = collectionPageClass;
-        baseRequest = new BaseRequest(requestUrl, client, options, responseClass) {
-        };
+        this.collRequestBuilderClass = collectionRequestBuilderClass;
+        baseRequest = new BaseRequest<T2>(requestUrl, client, options, responseCollectionClass) {};
     }
 
     /**
@@ -90,9 +101,58 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     @Nullable
-    protected T1 send() throws ClientException {
+    protected T2 send() throws ClientException {
         baseRequest.setHttpMethod(HttpMethod.GET);
-        return baseRequest.getClient().getHttpProvider().send(this, responseClass, /* serialization object */ null);
+        return baseRequest.getClient().getHttpProvider().send(this, responseCollectionClass, null);
+    }
+    
+    /**
+     * Gets the collection of items
+     * @param callback the callback to call once the response is received
+     */
+    public void get(@Nonnull final ICallback<? super T3> callback) {
+        final IExecutors executors = getBaseRequest().getClient().getExecutors();
+        executors.performOnBackground(new Runnable() {
+           @Override
+           public void run() {
+                try {
+                    executors.performOnForeground(get(), callback);
+                } catch (final ClientException e) {
+                    executors.performOnForeground(e, callback);
+                }
+           }
+        });
+    }
+
+    /** 
+     * Gets the collection of items
+     * 
+     * @return the collection page
+     */
+    @Nullable
+    public T3 get() throws ClientException {
+        return buildFromResponse(send());
+    }
+
+    /** 
+     * Deserializes the collection from the response object 
+     * 
+     * @param response the collection response
+     * @return the collection page
+     */
+    @Nullable
+    public T3 buildFromResponse(@Nonnull final T2 response) {
+        final List<com.microsoft.graph.options.Option> options = new java.util.ArrayList<com.microsoft.graph.options.Option>();
+        try {
+            final Object builder = this.collRequestBuilderClass
+                    .getConstructor(String.class, IBaseClient.class, java.util.List.class)
+                    .newInstance(response.nextLink(), getBaseRequest().getClient(), options);
+            final T3 page = (T3)this.collectionPageClass.getConstructor(response.getClass(), builder.getClass()).newInstance(response, response.nextLink() == null ? null : builder);
+            page.setRawObject(response.getSerializer(), response.getRawObject());
+            return page;
+        } catch(IllegalArgumentException | InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException | SecurityException ex) {
+            return null;
+        }
     }
 
     /**
@@ -104,9 +164,9 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     @Nullable
-    protected <BodyType> T1 post(@Nonnull final BodyType serializedObject) throws ClientException {
+    protected <BodyType> T2 post(@Nonnull final BodyType serializedObject) throws ClientException {
         baseRequest.setHttpMethod(HttpMethod.POST);
-        return (T1) baseRequest.getClient().getHttpProvider().send(this, responseClass, serializedObject);
+        return baseRequest.getClient().getHttpProvider().send(this, responseCollectionClass, serializedObject);
     }
 
     /**
@@ -193,6 +253,69 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
     }
 
     /**
+     * Sets the expand clause for the request
+     *
+     * @param value the expand clause
+     */
+    protected void addExpandOption(@Nonnull final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     */
+    protected void addFilterOption(@Nonnull final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     */
+    protected void addOrderByOption(@Nonnull final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+    }
+
+    /**
+     * Sets the select clause for the request
+     *
+     * @param value the select clause
+     */
+    protected void addSelectOption(@Nonnull final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
+    }
+
+    /**
+     * Sets the top value for the request
+     *
+     * @param value the max number of items to return
+     */
+    protected void addTopOption(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", String.valueOf(value)));
+    }
+
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     */
+    protected void addSkipOption(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", String.valueOf(value)));
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     */
+    protected void addSkipTokenOption(@Nonnull final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+    }
+
+    /**
      * Adds a query option
      *
      * @param option the query option to add
@@ -207,7 +330,7 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      * @return the base request for this collection request
      */
     @Nonnull
-    protected BaseRequest getBaseRequest() {
+    public BaseRequest<T2> getBaseRequest() {
         return baseRequest;
     }
 
@@ -217,7 +340,7 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      * @return the class for the collection page
      */
     @Nonnull
-    public Class<T2> getCollectionPageClass() {
+    public Class<T3> getCollectionPageClass() {
         return collectionPageClass;
     }
     

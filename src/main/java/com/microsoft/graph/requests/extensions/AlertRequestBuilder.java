@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Alert Request Builder.
  */
-public class AlertRequestBuilder extends BaseRequestBuilder {
+public class AlertRequestBuilder extends BaseRequestBuilder<Alert> {
 
     /**
      * The request builder for the Alert

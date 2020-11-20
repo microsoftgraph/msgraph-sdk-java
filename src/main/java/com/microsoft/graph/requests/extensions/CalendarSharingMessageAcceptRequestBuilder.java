@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.CalendarSharingMessageAcceptRequest;
+import com.microsoft.graph.models.extensions.CalendarSharingMessage;
 import com.microsoft.graph.models.extensions.Calendar;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
+import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Calendar Sharing Message Accept Request Builder.
  */
-public class CalendarSharingMessageAcceptRequestBuilder extends BaseActionRequestBuilder {
+public class CalendarSharingMessageAcceptRequestBuilder extends BaseActionRequestBuilder<Calendar> {
 
     /**
      * The request builder for this CalendarSharingMessageAccept

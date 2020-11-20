@@ -24,7 +24,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Planner User Request Builder.
  */
-public class PlannerUserRequestBuilder extends BaseRequestBuilder {
+public class PlannerUserRequestBuilder extends BaseRequestBuilder<PlannerUser> {
 
     /**
      * The request builder for the PlannerUser
@@ -60,20 +60,42 @@ public class PlannerUserRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the PlannerPlan collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public PlannerPlanCollectionRequestBuilder plans() {
         return new PlannerPlanCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("plans"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the PlannerPlan item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public PlannerPlanRequestBuilder plans(@Nonnull final String id) {
         return new PlannerPlanRequestBuilder(getRequestUrlWithAdditionalSegment("plans") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the PlannerTask collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public PlannerTaskCollectionRequestBuilder tasks() {
         return new PlannerTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the PlannerTask item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public PlannerTaskRequestBuilder tasks(@Nonnull final String id) {
         return new PlannerTaskRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);

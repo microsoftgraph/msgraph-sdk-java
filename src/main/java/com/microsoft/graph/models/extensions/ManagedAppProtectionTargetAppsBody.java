@@ -56,7 +56,7 @@ public class ManagedAppProtectionTargetAppsBody {
      * @return the serializer
      */
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

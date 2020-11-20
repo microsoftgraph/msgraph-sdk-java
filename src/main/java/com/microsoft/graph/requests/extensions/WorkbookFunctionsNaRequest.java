@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
+import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsNaRequest;
 
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Functions Na Request.
  */
-public class WorkbookFunctionsNaRequest extends BaseRequest {
+public class WorkbookFunctionsNaRequest extends BaseRequest<WorkbookFunctionResult> {
 
     /**
      * The request for this WorkbookFunctionsNa
@@ -61,8 +62,8 @@ public class WorkbookFunctionsNaRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsNaRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsNaRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -73,8 +74,8 @@ public class WorkbookFunctionsNaRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsNaRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsNaRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

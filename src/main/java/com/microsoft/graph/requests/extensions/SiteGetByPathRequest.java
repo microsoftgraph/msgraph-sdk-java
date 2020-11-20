@@ -20,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Site Get By Path Request.
  */
-public class SiteGetByPathRequest extends BaseRequest {
+public class SiteGetByPathRequest extends BaseRequest<Site> {
 
     /**
      * The request for this SiteGetByPath
@@ -103,8 +103,8 @@ public class SiteGetByPathRequest extends BaseRequest {
      */
     @Nonnull
     public SiteGetByPathRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (SiteGetByPathRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +115,8 @@ public class SiteGetByPathRequest extends BaseRequest {
      */
     @Nonnull
     public SiteGetByPathRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (SiteGetByPathRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +127,8 @@ public class SiteGetByPathRequest extends BaseRequest {
      */
     @Nonnull
     public SiteGetByPathRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (SiteGetByPathRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +139,8 @@ public class SiteGetByPathRequest extends BaseRequest {
      */
     @Nonnull
     public SiteGetByPathRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (SiteGetByPathRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

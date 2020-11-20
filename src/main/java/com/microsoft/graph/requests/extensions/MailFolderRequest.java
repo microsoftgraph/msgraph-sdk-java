@@ -31,7 +31,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mail Folder Request.
  */
-public class MailFolderRequest extends BaseRequest {
+public class MailFolderRequest extends BaseRequest<MailFolder> {
 	
     /**
      * The request for the MailFolder
@@ -171,8 +171,8 @@ public class MailFolderRequest extends BaseRequest {
      */
      @Nonnull
      public MailFolderRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MailFolderRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -183,8 +183,8 @@ public class MailFolderRequest extends BaseRequest {
      */
      @Nonnull
      public MailFolderRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MailFolderRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -56,7 +56,7 @@ public class WorkbookFunctionsHarMeanBody {
      * @return the serializer
      */
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Enrollment Configuration Request.
  */
-public class DeviceEnrollmentConfigurationRequest extends BaseRequest {
+public class DeviceEnrollmentConfigurationRequest extends BaseRequest<DeviceEnrollmentConfiguration> {
 	
     /**
      * The request for the DeviceEnrollmentConfiguration
@@ -164,8 +164,8 @@ public class DeviceEnrollmentConfigurationRequest extends BaseRequest {
      */
      @Nonnull
      public DeviceEnrollmentConfigurationRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceEnrollmentConfigurationRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -176,8 +176,8 @@ public class DeviceEnrollmentConfigurationRequest extends BaseRequest {
      */
      @Nonnull
      public DeviceEnrollmentConfigurationRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceEnrollmentConfigurationRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

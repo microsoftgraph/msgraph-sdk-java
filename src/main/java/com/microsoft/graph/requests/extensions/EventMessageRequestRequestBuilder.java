@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Event Message Request Request Builder.
  */
-public class EventMessageRequestRequestBuilder extends BaseRequestBuilder {
+public class EventMessageRequestRequestBuilder extends BaseRequestBuilder<EventMessageRequest> {
 
     /**
      * The request builder for the EventMessageRequest
@@ -56,38 +56,82 @@ public class EventMessageRequestRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the Attachment collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public AttachmentCollectionRequestBuilder attachments() {
         return new AttachmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attachments"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Attachment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public AttachmentRequestBuilder attachments(@Nonnull final String id) {
         return new AttachmentRequestBuilder(getRequestUrlWithAdditionalSegment("attachments") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the Extension collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ExtensionCollectionRequestBuilder extensions() {
         return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Extension item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ExtensionRequestBuilder extensions(@Nonnull final String id) {
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the MultiValueLegacyExtendedProperty collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public MultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties() {
         return new MultiValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the MultiValueLegacyExtendedProperty item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public MultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(@Nonnull final String id) {
         return new MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the SingleValueLegacyExtendedProperty collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public SingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
         return new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the SingleValueLegacyExtendedProperty item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public SingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(@Nonnull final String id) {
         return new SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);

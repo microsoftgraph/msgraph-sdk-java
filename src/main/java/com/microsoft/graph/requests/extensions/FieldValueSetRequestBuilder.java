@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Field Value Set Request Builder.
  */
-public class FieldValueSetRequestBuilder extends BaseRequestBuilder {
+public class FieldValueSetRequestBuilder extends BaseRequestBuilder<FieldValueSet> {
 
     /**
      * The request builder for the FieldValueSet

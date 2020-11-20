@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Planner Request Builder.
  */
-public class PlannerRequestBuilder extends BaseRequestBuilder {
+public class PlannerRequestBuilder extends BaseRequestBuilder<Planner> {
 
     /**
      * The request builder for the Planner
@@ -62,29 +62,62 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the PlannerBucket collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public PlannerBucketCollectionRequestBuilder buckets() {
         return new PlannerBucketCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("buckets"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the PlannerBucket item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public PlannerBucketRequestBuilder buckets(@Nonnull final String id) {
         return new PlannerBucketRequestBuilder(getRequestUrlWithAdditionalSegment("buckets") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the PlannerPlan collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public PlannerPlanCollectionRequestBuilder plans() {
         return new PlannerPlanCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("plans"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the PlannerPlan item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public PlannerPlanRequestBuilder plans(@Nonnull final String id) {
         return new PlannerPlanRequestBuilder(getRequestUrlWithAdditionalSegment("plans") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the PlannerTask collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public PlannerTaskCollectionRequestBuilder tasks() {
         return new PlannerTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the PlannerTask item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public PlannerTaskRequestBuilder tasks(@Nonnull final String id) {
         return new PlannerTaskRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);

@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRangeView;
+import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.requests.extensions.WorkbookRangeVisibleViewRequest;
 
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Visible View Request.
  */
-public class WorkbookRangeVisibleViewRequest extends BaseRequest {
+public class WorkbookRangeVisibleViewRequest extends BaseRequest<WorkbookRangeView> {
 
     /**
      * The request for this WorkbookRangeVisibleView
@@ -103,8 +104,8 @@ public class WorkbookRangeVisibleViewRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeVisibleViewRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookRangeVisibleViewRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +116,8 @@ public class WorkbookRangeVisibleViewRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeVisibleViewRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookRangeVisibleViewRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +128,8 @@ public class WorkbookRangeVisibleViewRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeVisibleViewRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookRangeVisibleViewRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +140,8 @@ public class WorkbookRangeVisibleViewRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeVisibleViewRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookRangeVisibleViewRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

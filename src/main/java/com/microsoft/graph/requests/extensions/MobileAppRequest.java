@@ -26,7 +26,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mobile App Request.
  */
-public class MobileAppRequest extends BaseRequest {
+public class MobileAppRequest extends BaseRequest<MobileApp> {
 	
     /**
      * The request for the MobileApp
@@ -166,8 +166,8 @@ public class MobileAppRequest extends BaseRequest {
      */
      @Nonnull
      public MobileAppRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MobileAppRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -178,8 +178,8 @@ public class MobileAppRequest extends BaseRequest {
      */
      @Nonnull
      public MobileAppRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MobileAppRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

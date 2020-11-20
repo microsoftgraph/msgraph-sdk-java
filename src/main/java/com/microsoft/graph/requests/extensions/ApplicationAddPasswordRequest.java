@@ -21,7 +21,8 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Application Add Password Request.
  */
-public class ApplicationAddPasswordRequest extends BaseRequest {
+public class ApplicationAddPasswordRequest extends BaseRequest<PasswordCredential> {
+    /** The body for the method */
     protected final ApplicationAddPasswordBody body;
 
     /**
@@ -36,10 +37,18 @@ public class ApplicationAddPasswordRequest extends BaseRequest {
         body = new ApplicationAddPasswordBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(@Nonnull final ICallback<? super PasswordCredential> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     @Nullable
     public PasswordCredential post() throws ClientException {
         return send(HttpMethod.POST, body);
@@ -53,8 +62,8 @@ public class ApplicationAddPasswordRequest extends BaseRequest {
      */
     @Nonnull
     public ApplicationAddPasswordRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ApplicationAddPasswordRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +74,8 @@ public class ApplicationAddPasswordRequest extends BaseRequest {
      */
     @Nonnull
     public ApplicationAddPasswordRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (ApplicationAddPasswordRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -77,8 +86,8 @@ public class ApplicationAddPasswordRequest extends BaseRequest {
      */
     @Nonnull
     public ApplicationAddPasswordRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ApplicationAddPasswordRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

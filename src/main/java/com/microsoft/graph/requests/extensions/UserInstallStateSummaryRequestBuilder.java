@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the User Install State Summary Request Builder.
  */
-public class UserInstallStateSummaryRequestBuilder extends BaseRequestBuilder {
+public class UserInstallStateSummaryRequestBuilder extends BaseRequestBuilder<UserInstallStateSummary> {
 
     /**
      * The request builder for the UserInstallStateSummary
@@ -58,11 +58,22 @@ public class UserInstallStateSummaryRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the DeviceInstallState collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public DeviceInstallStateCollectionRequestBuilder deviceStates() {
         return new DeviceInstallStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DeviceInstallState item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public DeviceInstallStateRequestBuilder deviceStates(@Nonnull final String id) {
         return new DeviceInstallStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates") + "/" + id, getClient(), null);

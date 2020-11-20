@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -24,7 +24,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Certificate Based Auth Configuration With Reference Request.
  */
-public class CertificateBasedAuthConfigurationWithReferenceRequest extends BaseRequest {
+public class CertificateBasedAuthConfigurationWithReferenceRequest extends BaseWithReferenceRequest<CertificateBasedAuthConfiguration> {
 
     /**
      * The request for the CertificateBasedAuthConfiguration
@@ -37,46 +37,6 @@ public class CertificateBasedAuthConfigurationWithReferenceRequest extends BaseR
         super(requestUrl, client, requestOptions, CertificateBasedAuthConfiguration.class);
     }
 
-    public void post(@Nonnull final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, @Nullable final IJsonBackedObject payload, @Nonnull final ICallback<? super CertificateBasedAuthConfiguration> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    @Nullable
-    public CertificateBasedAuthConfiguration post(@Nonnull final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, @Nullable final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newCertificateBasedAuthConfiguration;
-        }
-        return null;
-    }
-
-    public void get(@Nonnull final ICallback<? super CertificateBasedAuthConfiguration> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    @Nullable
-    public CertificateBasedAuthConfiguration get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(@Nonnull final ICallback<? super CertificateBasedAuthConfiguration> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(@Nonnull final CertificateBasedAuthConfiguration sourceCertificateBasedAuthConfiguration, @Nonnull final ICallback<? super CertificateBasedAuthConfiguration> callback) {
-		send(HttpMethod.PATCH, callback, sourceCertificateBasedAuthConfiguration);
-	}
-
-    @Nullable
-	public CertificateBasedAuthConfiguration patch(@Nonnull final CertificateBasedAuthConfiguration sourceCertificateBasedAuthConfiguration) throws ClientException {
-		return send(HttpMethod.PATCH, sourceCertificateBasedAuthConfiguration);
-	}
-
-
     /**
      * Sets the select clause for the request
      *
@@ -85,8 +45,8 @@ public class CertificateBasedAuthConfigurationWithReferenceRequest extends BaseR
      */
     @Nonnull
     public CertificateBasedAuthConfigurationWithReferenceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (CertificateBasedAuthConfigurationWithReferenceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -97,7 +57,7 @@ public class CertificateBasedAuthConfigurationWithReferenceRequest extends BaseR
      */
     @Nonnull
     public CertificateBasedAuthConfigurationWithReferenceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (CertificateBasedAuthConfigurationWithReferenceRequest)this;
+        addExpandOption(value);
+        return this;
     }
 }

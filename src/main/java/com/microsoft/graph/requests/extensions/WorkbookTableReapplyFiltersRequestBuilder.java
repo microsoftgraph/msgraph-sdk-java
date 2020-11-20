@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.WorkbookTableReapplyFiltersRequest;
+import com.microsoft.graph.models.extensions.WorkbookTable;
 
-import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
+import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Workbook Table Reapply Filters Request Builder.
  */
-public class WorkbookTableReapplyFiltersRequestBuilder extends BaseActionRequestBuilder {
+public class WorkbookTableReapplyFiltersRequestBuilder extends BaseActionRequestBuilder<WorkbookTable> {
 
     /**
      * The request builder for this WorkbookTableReapplyFilters

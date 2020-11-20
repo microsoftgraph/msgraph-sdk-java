@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -28,7 +28,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Device With Reference Request.
  */
-public class DeviceWithReferenceRequest extends BaseRequest {
+public class DeviceWithReferenceRequest extends BaseWithReferenceRequest<Device> {
 
     /**
      * The request for the Device
@@ -41,46 +41,6 @@ public class DeviceWithReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, Device.class);
     }
 
-    public void post(@Nonnull final Device newDevice, @Nullable final IJsonBackedObject payload, @Nonnull final ICallback<? super Device> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    @Nullable
-    public Device post(@Nonnull final Device newDevice, @Nullable final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newDevice;
-        }
-        return null;
-    }
-
-    public void get(@Nonnull final ICallback<? super Device> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    @Nullable
-    public Device get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(@Nonnull final ICallback<? super Device> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(@Nonnull final Device sourceDevice, @Nonnull final ICallback<? super Device> callback) {
-		send(HttpMethod.PATCH, callback, sourceDevice);
-	}
-
-    @Nullable
-	public Device patch(@Nonnull final Device sourceDevice) throws ClientException {
-		return send(HttpMethod.PATCH, sourceDevice);
-	}
-
-
     /**
      * Sets the select clause for the request
      *
@@ -89,8 +49,8 @@ public class DeviceWithReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public DeviceWithReferenceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (DeviceWithReferenceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -101,7 +61,7 @@ public class DeviceWithReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public DeviceWithReferenceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DeviceWithReferenceRequest)this;
+        addExpandOption(value);
+        return this;
     }
 }

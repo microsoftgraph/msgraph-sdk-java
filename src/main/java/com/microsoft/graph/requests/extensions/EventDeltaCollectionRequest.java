@@ -14,8 +14,8 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.EventDeltaCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.EventDeltaCollectionPage;
 import com.microsoft.graph.requests.extensions.EventDeltaCollectionResponse;
+import com.microsoft.graph.models.extensions.Event;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
@@ -26,7 +26,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Event Delta Collection Request.
  */
-public class EventDeltaCollectionRequest extends BaseCollectionRequest<EventDeltaCollectionResponse, EventDeltaCollectionPage> {
+public class EventDeltaCollectionRequest extends BaseCollectionRequest<Event, EventDeltaCollectionResponse, EventDeltaCollectionPage> {
 
 
     /**
@@ -37,43 +37,9 @@ public class EventDeltaCollectionRequest extends BaseCollectionRequest<EventDelt
      * @param requestOptions the options for this request
      */
     public EventDeltaCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, EventDeltaCollectionResponse.class, EventDeltaCollectionPage.class);
+        super(requestUrl, client, requestOptions, EventDeltaCollectionResponse.class, EventDeltaCollectionPage.class, EventDeltaCollectionRequestBuilder.class);
     }
 
-
-    public void get(@Nonnull final ICallback<? super EventDeltaCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    @Nullable
-    public EventDeltaCollectionPage get() throws ClientException {
-        final EventDeltaCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    @Nonnull
-    public EventDeltaCollectionPage buildFromResponse(@Nonnull final EventDeltaCollectionResponse response) {
-        final EventDeltaCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new EventDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final EventDeltaCollectionPage page = new EventDeltaCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
 
     /**
      * Sets the select clause for the request
@@ -83,8 +49,8 @@ public class EventDeltaCollectionRequest extends BaseCollectionRequest<EventDelt
      */
     @Nonnull
     public EventDeltaCollectionRequest select(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (EventDeltaCollectionRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -95,8 +61,8 @@ public class EventDeltaCollectionRequest extends BaseCollectionRequest<EventDelt
      */
     @Nonnull
     public EventDeltaCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (EventDeltaCollectionRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -107,8 +73,8 @@ public class EventDeltaCollectionRequest extends BaseCollectionRequest<EventDelt
      */
     @Nonnull
     public EventDeltaCollectionRequest expand(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (EventDeltaCollectionRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -119,8 +85,8 @@ public class EventDeltaCollectionRequest extends BaseCollectionRequest<EventDelt
      */
     @Nonnull
     public EventDeltaCollectionRequest filter(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (EventDeltaCollectionRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -131,8 +97,8 @@ public class EventDeltaCollectionRequest extends BaseCollectionRequest<EventDelt
      */
     @Nonnull
     public EventDeltaCollectionRequest orderBy(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (EventDeltaCollectionRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

@@ -22,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Gridlines Request.
  */
-public class WorkbookChartGridlinesRequest extends BaseRequest {
+public class WorkbookChartGridlinesRequest extends BaseRequest<WorkbookChartGridlines> {
 	
     /**
      * The request for the WorkbookChartGridlines
@@ -147,8 +147,8 @@ public class WorkbookChartGridlinesRequest extends BaseRequest {
      */
      @Nonnull
      public WorkbookChartGridlinesRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookChartGridlinesRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -159,8 +159,8 @@ public class WorkbookChartGridlinesRequest extends BaseRequest {
      */
      @Nonnull
      public WorkbookChartGridlinesRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookChartGridlinesRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

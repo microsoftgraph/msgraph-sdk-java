@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Identity Security Defaults Enforcement Policy Request Builder.
  */
-public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends BaseRequestBuilder {
+public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends BaseRequestBuilder<IdentitySecurityDefaultsEnforcementPolicy> {
 
     /**
      * The request builder for the IdentitySecurityDefaultsEnforcementPolicy

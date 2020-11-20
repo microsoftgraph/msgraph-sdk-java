@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Scoped Role Membership Request.
  */
-public class ScopedRoleMembershipRequest extends BaseRequest {
+public class ScopedRoleMembershipRequest extends BaseRequest<ScopedRoleMembership> {
 	
     /**
      * The request for the ScopedRoleMembership
@@ -146,8 +146,8 @@ public class ScopedRoleMembershipRequest extends BaseRequest {
      */
      @Nonnull
      public ScopedRoleMembershipRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ScopedRoleMembershipRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class ScopedRoleMembershipRequest extends BaseRequest {
      */
      @Nonnull
      public ScopedRoleMembershipRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ScopedRoleMembershipRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

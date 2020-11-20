@@ -22,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Terms And Conditions Acceptance Status Request.
  */
-public class TermsAndConditionsAcceptanceStatusRequest extends BaseRequest {
+public class TermsAndConditionsAcceptanceStatusRequest extends BaseRequest<TermsAndConditionsAcceptanceStatus> {
 	
     /**
      * The request for the TermsAndConditionsAcceptanceStatus
@@ -147,8 +147,8 @@ public class TermsAndConditionsAcceptanceStatusRequest extends BaseRequest {
      */
      @Nonnull
      public TermsAndConditionsAcceptanceStatusRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TermsAndConditionsAcceptanceStatusRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -159,8 +159,8 @@ public class TermsAndConditionsAcceptanceStatusRequest extends BaseRequest {
      */
      @Nonnull
      public TermsAndConditionsAcceptanceStatusRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TermsAndConditionsAcceptanceStatusRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

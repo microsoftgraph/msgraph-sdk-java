@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Security Request Builder.
  */
-public class SecurityRequestBuilder extends BaseRequestBuilder {
+public class SecurityRequestBuilder extends BaseRequestBuilder<Security> {
 
     /**
      * The request builder for the Security
@@ -62,29 +62,62 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the Alert collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public AlertCollectionRequestBuilder alerts() {
         return new AlertCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("alerts"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Alert item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public AlertRequestBuilder alerts(@Nonnull final String id) {
         return new AlertRequestBuilder(getRequestUrlWithAdditionalSegment("alerts") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the SecureScoreControlProfile collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public SecureScoreControlProfileCollectionRequestBuilder secureScoreControlProfiles() {
         return new SecureScoreControlProfileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("secureScoreControlProfiles"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the SecureScoreControlProfile item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public SecureScoreControlProfileRequestBuilder secureScoreControlProfiles(@Nonnull final String id) {
         return new SecureScoreControlProfileRequestBuilder(getRequestUrlWithAdditionalSegment("secureScoreControlProfiles") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the SecureScore collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public SecureScoreCollectionRequestBuilder secureScores() {
         return new SecureScoreCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("secureScores"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the SecureScore item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public SecureScoreRequestBuilder secureScores(@Nonnull final String id) {
         return new SecureScoreRequestBuilder(getRequestUrlWithAdditionalSegment("secureScores") + "/" + id, getClient(), null);

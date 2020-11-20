@@ -59,8 +59,9 @@ public class EdgeSearchEngineCustom extends EdgeSearchEngineBase implements IJso
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

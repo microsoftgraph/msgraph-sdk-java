@@ -30,7 +30,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Post Request Builder.
  */
-public class PostRequestBuilder extends BaseRequestBuilder {
+public class PostRequestBuilder extends BaseRequestBuilder<Post> {
 
     /**
      * The request builder for the Post
@@ -66,20 +66,42 @@ public class PostRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the Attachment collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public AttachmentCollectionRequestBuilder attachments() {
         return new AttachmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attachments"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Attachment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public AttachmentRequestBuilder attachments(@Nonnull final String id) {
         return new AttachmentRequestBuilder(getRequestUrlWithAdditionalSegment("attachments") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the Extension collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ExtensionCollectionRequestBuilder extensions() {
         return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Extension item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ExtensionRequestBuilder extensions(@Nonnull final String id) {
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
@@ -94,30 +116,63 @@ public class PostRequestBuilder extends BaseRequestBuilder {
     public PostRequestBuilder inReplyTo() {
         return new PostRequestBuilder(getRequestUrlWithAdditionalSegment("inReplyTo"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the MultiValueLegacyExtendedProperty collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public MultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties() {
         return new MultiValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the MultiValueLegacyExtendedProperty item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public MultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(@Nonnull final String id) {
         return new MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the SingleValueLegacyExtendedProperty collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public SingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
         return new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the SingleValueLegacyExtendedProperty item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public SingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(@Nonnull final String id) {
         return new SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param comment the comment
+     * @param toRecipients the toRecipients
+     */
     @Nonnull
     public PostForwardRequestBuilder forward(@Nullable final String comment, @Nullable final java.util.List<Recipient> toRecipients) {
         return new PostForwardRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.forward"), getClient(), null, comment, toRecipients);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param post the post
+     */
     @Nonnull
     public PostReplyRequestBuilder reply(@Nullable final Post post) {
         return new PostReplyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reply"), getClient(), null, post);

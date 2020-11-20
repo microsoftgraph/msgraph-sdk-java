@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Endpoint Reference Request.
  */
-public class EndpointReferenceRequest extends BaseRequest {
+public class EndpointReferenceRequest extends BaseReferenceRequest<Endpoint> {
 
     /**
      * The request for the Endpoint
@@ -36,15 +36,6 @@ public class EndpointReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, Endpoint.class);
     }
 
-    public void delete(@Nonnull final ICallback<? super Endpoint> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    @Nullable
-    public Endpoint delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
-    }
-
     /**
      * Sets the select clause for the request
      *
@@ -53,8 +44,8 @@ public class EndpointReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public EndpointReferenceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (EndpointReferenceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +56,8 @@ public class EndpointReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public EndpointReferenceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (EndpointReferenceRequest)this;
+        addExpandOption(value);
+        return this;
     }
     /**
      * Puts the Endpoint

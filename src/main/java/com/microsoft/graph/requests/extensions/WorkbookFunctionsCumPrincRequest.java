@@ -21,7 +21,8 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Cum Princ Request.
  */
-public class WorkbookFunctionsCumPrincRequest extends BaseRequest {
+public class WorkbookFunctionsCumPrincRequest extends BaseRequest<WorkbookFunctionResult> {
+    /** The body for the method */
     protected final WorkbookFunctionsCumPrincBody body;
 
     /**
@@ -36,10 +37,18 @@ public class WorkbookFunctionsCumPrincRequest extends BaseRequest {
         body = new WorkbookFunctionsCumPrincBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(@Nonnull final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     @Nullable
     public WorkbookFunctionResult post() throws ClientException {
         return send(HttpMethod.POST, body);
@@ -53,8 +62,8 @@ public class WorkbookFunctionsCumPrincRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsCumPrincRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsCumPrincRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +74,8 @@ public class WorkbookFunctionsCumPrincRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsCumPrincRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsCumPrincRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -77,8 +86,8 @@ public class WorkbookFunctionsCumPrincRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsCumPrincRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsCumPrincRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

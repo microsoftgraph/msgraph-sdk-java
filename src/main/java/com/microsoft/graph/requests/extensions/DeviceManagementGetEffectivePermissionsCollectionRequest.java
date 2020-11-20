@@ -14,8 +14,8 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DeviceManagementGetEffectivePermissionsCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementGetEffectivePermissionsCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceManagementGetEffectivePermissionsCollectionResponse;
+import com.microsoft.graph.models.extensions.RolePermission;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
@@ -26,7 +26,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Device Management Get Effective Permissions Collection Request.
  */
-public class DeviceManagementGetEffectivePermissionsCollectionRequest extends BaseCollectionRequest<DeviceManagementGetEffectivePermissionsCollectionResponse, DeviceManagementGetEffectivePermissionsCollectionPage> {
+public class DeviceManagementGetEffectivePermissionsCollectionRequest extends BaseCollectionRequest<RolePermission, DeviceManagementGetEffectivePermissionsCollectionResponse, DeviceManagementGetEffectivePermissionsCollectionPage> {
 
 
     /**
@@ -37,43 +37,9 @@ public class DeviceManagementGetEffectivePermissionsCollectionRequest extends Ba
      * @param requestOptions the options for this request
      */
     public DeviceManagementGetEffectivePermissionsCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceManagementGetEffectivePermissionsCollectionResponse.class, DeviceManagementGetEffectivePermissionsCollectionPage.class);
+        super(requestUrl, client, requestOptions, DeviceManagementGetEffectivePermissionsCollectionResponse.class, DeviceManagementGetEffectivePermissionsCollectionPage.class, DeviceManagementGetEffectivePermissionsCollectionRequestBuilder.class);
     }
 
-
-    public void get(@Nonnull final ICallback<? super DeviceManagementGetEffectivePermissionsCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    @Nullable
-    public DeviceManagementGetEffectivePermissionsCollectionPage get() throws ClientException {
-        final DeviceManagementGetEffectivePermissionsCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    @Nonnull
-    public DeviceManagementGetEffectivePermissionsCollectionPage buildFromResponse(@Nonnull final DeviceManagementGetEffectivePermissionsCollectionResponse response) {
-        final DeviceManagementGetEffectivePermissionsCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DeviceManagementGetEffectivePermissionsCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, (String) null);
-        } else {
-            builder = null;
-        }
-        final DeviceManagementGetEffectivePermissionsCollectionPage page = new DeviceManagementGetEffectivePermissionsCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
 
     /**
      * Sets the select clause for the request
@@ -83,8 +49,8 @@ public class DeviceManagementGetEffectivePermissionsCollectionRequest extends Ba
      */
     @Nonnull
     public DeviceManagementGetEffectivePermissionsCollectionRequest select(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (DeviceManagementGetEffectivePermissionsCollectionRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -95,8 +61,8 @@ public class DeviceManagementGetEffectivePermissionsCollectionRequest extends Ba
      */
     @Nonnull
     public DeviceManagementGetEffectivePermissionsCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (DeviceManagementGetEffectivePermissionsCollectionRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -107,8 +73,8 @@ public class DeviceManagementGetEffectivePermissionsCollectionRequest extends Ba
      */
     @Nonnull
     public DeviceManagementGetEffectivePermissionsCollectionRequest expand(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DeviceManagementGetEffectivePermissionsCollectionRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -119,8 +85,8 @@ public class DeviceManagementGetEffectivePermissionsCollectionRequest extends Ba
      */
     @Nonnull
     public DeviceManagementGetEffectivePermissionsCollectionRequest filter(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DeviceManagementGetEffectivePermissionsCollectionRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -131,8 +97,8 @@ public class DeviceManagementGetEffectivePermissionsCollectionRequest extends Ba
      */
     @Nonnull
     public DeviceManagementGetEffectivePermissionsCollectionRequest orderBy(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (DeviceManagementGetEffectivePermissionsCollectionRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

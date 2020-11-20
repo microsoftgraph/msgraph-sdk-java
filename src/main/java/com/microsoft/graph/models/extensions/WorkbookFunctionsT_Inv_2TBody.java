@@ -65,7 +65,7 @@ public class WorkbookFunctionsT_Inv_2TBody {
      * @return the serializer
      */
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

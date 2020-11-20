@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Certificate Based Auth Configuration Request Builder.
  */
-public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequestBuilder {
+public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequestBuilder<CertificateBasedAuthConfiguration> {
 
     /**
      * The request builder for the CertificateBasedAuthConfiguration

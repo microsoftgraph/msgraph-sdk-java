@@ -20,7 +20,8 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Post Forward Request.
  */
-public class PostForwardRequest extends BaseRequest {
+public class PostForwardRequest extends BaseRequest<Void> {
+    /** The body for the method */
     protected final PostForwardBody body;
 
     /**
@@ -35,10 +36,18 @@ public class PostForwardRequest extends BaseRequest {
         body = new PostForwardBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(@Nonnull final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     @Nullable
     public Void post() throws ClientException {
         return send(HttpMethod.POST, body);
@@ -52,8 +61,8 @@ public class PostForwardRequest extends BaseRequest {
      */
     @Nonnull
     public PostForwardRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (PostForwardRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -64,8 +73,8 @@ public class PostForwardRequest extends BaseRequest {
      */
     @Nonnull
     public PostForwardRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (PostForwardRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -76,8 +85,8 @@ public class PostForwardRequest extends BaseRequest {
      */
     @Nonnull
     public PostForwardRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (PostForwardRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

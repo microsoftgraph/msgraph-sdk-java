@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android Managed App Protection Request.
  */
-public class AndroidManagedAppProtectionRequest extends BaseRequest {
+public class AndroidManagedAppProtectionRequest extends BaseRequest<AndroidManagedAppProtection> {
 	
     /**
      * The request for the AndroidManagedAppProtection
@@ -149,8 +149,8 @@ public class AndroidManagedAppProtectionRequest extends BaseRequest {
      */
      @Nonnull
      public AndroidManagedAppProtectionRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidManagedAppProtectionRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -161,8 +161,8 @@ public class AndroidManagedAppProtectionRequest extends BaseRequest {
      */
      @Nonnull
      public AndroidManagedAppProtectionRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidManagedAppProtectionRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

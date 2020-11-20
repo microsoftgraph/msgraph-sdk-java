@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -28,7 +28,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Education Class Reference Request.
  */
-public class EducationClassReferenceRequest extends BaseRequest {
+public class EducationClassReferenceRequest extends BaseReferenceRequest<EducationClass> {
 
     /**
      * The request for the EducationClass
@@ -41,15 +41,6 @@ public class EducationClassReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, EducationClass.class);
     }
 
-    public void delete(@Nonnull final ICallback<? super EducationClass> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    @Nullable
-    public EducationClass delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
-    }
-
     /**
      * Sets the select clause for the request
      *
@@ -58,8 +49,8 @@ public class EducationClassReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public EducationClassReferenceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (EducationClassReferenceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -70,8 +61,8 @@ public class EducationClassReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public EducationClassReferenceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (EducationClassReferenceRequest)this;
+        addExpandOption(value);
+        return this;
     }
     /**
      * Puts the EducationClass

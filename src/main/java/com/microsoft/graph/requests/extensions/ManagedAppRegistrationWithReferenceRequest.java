@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -28,7 +28,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Managed App Registration With Reference Request.
  */
-public class ManagedAppRegistrationWithReferenceRequest extends BaseRequest {
+public class ManagedAppRegistrationWithReferenceRequest extends BaseWithReferenceRequest<ManagedAppRegistration> {
 
     /**
      * The request for the ManagedAppRegistration
@@ -41,46 +41,6 @@ public class ManagedAppRegistrationWithReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, ManagedAppRegistration.class);
     }
 
-    public void post(@Nonnull final ManagedAppRegistration newManagedAppRegistration, @Nullable final IJsonBackedObject payload, @Nonnull final ICallback<? super ManagedAppRegistration> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    @Nullable
-    public ManagedAppRegistration post(@Nonnull final ManagedAppRegistration newManagedAppRegistration, @Nullable final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newManagedAppRegistration;
-        }
-        return null;
-    }
-
-    public void get(@Nonnull final ICallback<? super ManagedAppRegistration> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    @Nullable
-    public ManagedAppRegistration get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(@Nonnull final ICallback<? super ManagedAppRegistration> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(@Nonnull final ManagedAppRegistration sourceManagedAppRegistration, @Nonnull final ICallback<? super ManagedAppRegistration> callback) {
-		send(HttpMethod.PATCH, callback, sourceManagedAppRegistration);
-	}
-
-    @Nullable
-	public ManagedAppRegistration patch(@Nonnull final ManagedAppRegistration sourceManagedAppRegistration) throws ClientException {
-		return send(HttpMethod.PATCH, sourceManagedAppRegistration);
-	}
-
-
     /**
      * Sets the select clause for the request
      *
@@ -89,8 +49,8 @@ public class ManagedAppRegistrationWithReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public ManagedAppRegistrationWithReferenceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ManagedAppRegistrationWithReferenceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -101,7 +61,7 @@ public class ManagedAppRegistrationWithReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public ManagedAppRegistrationWithReferenceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ManagedAppRegistrationWithReferenceRequest)this;
+        addExpandOption(value);
+        return this;
     }
 }

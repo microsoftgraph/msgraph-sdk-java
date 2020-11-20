@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Table Sort Request Builder.
  */
-public class WorkbookTableSortRequestBuilder extends BaseRequestBuilder {
+public class WorkbookTableSortRequestBuilder extends BaseRequestBuilder<WorkbookTableSort> {
 
     /**
      * The request builder for the WorkbookTableSort
@@ -58,16 +58,31 @@ public class WorkbookTableSortRequestBuilder extends BaseRequestBuilder {
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param fields the fields
+     * @param matchCase the matchCase
+     * @param method the method
+     */
     @Nonnull
     public WorkbookTableSortApplyRequestBuilder apply(@Nullable final java.util.List<WorkbookSortField> fields, @Nullable final Boolean matchCase, @Nullable final String method) {
         return new WorkbookTableSortApplyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.apply"), getClient(), null, fields, matchCase, method);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookTableSortClearRequestBuilder clear() {
         return new WorkbookTableSortClearRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.clear"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookTableSortReapplyRequestBuilder reapply() {
         return new WorkbookTableSortReapplyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reapply"), getClient(), null);

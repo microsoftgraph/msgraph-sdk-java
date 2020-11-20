@@ -23,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Inference Classification Request.
  */
-public class InferenceClassificationRequest extends BaseRequest {
+public class InferenceClassificationRequest extends BaseRequest<InferenceClassification> {
 	
     /**
      * The request for the InferenceClassification
@@ -148,8 +148,8 @@ public class InferenceClassificationRequest extends BaseRequest {
      */
      @Nonnull
      public InferenceClassificationRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (InferenceClassificationRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -160,8 +160,8 @@ public class InferenceClassificationRequest extends BaseRequest {
      */
      @Nonnull
      public InferenceClassificationRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (InferenceClassificationRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

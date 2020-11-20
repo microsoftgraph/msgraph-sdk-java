@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Item Activity Request Builder.
  */
-public class ItemActivityRequestBuilder extends BaseRequestBuilder {
+public class ItemActivityRequestBuilder extends BaseRequestBuilder<ItemActivity> {
 
     /**
      * The request builder for the ItemActivity

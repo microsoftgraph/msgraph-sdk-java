@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Directory Audit Request Builder.
  */
-public class DirectoryAuditRequestBuilder extends BaseRequestBuilder {
+public class DirectoryAuditRequestBuilder extends BaseRequestBuilder<DirectoryAudit> {
 
     /**
      * The request builder for the DirectoryAudit

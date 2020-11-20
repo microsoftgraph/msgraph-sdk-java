@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.generated.ActivityDomain;
 import com.microsoft.graph.models.extensions.TimeSlot;
 
@@ -24,6 +25,7 @@ import javax.annotation.Nonnull;
  */
 public class TimeConstraint implements IJsonBackedObject {
 
+    /** the OData type of the object as returned by the service */
     @SerializedName("@odata.type")
     @Expose
     @Nullable
@@ -81,8 +83,9 @@ public class TimeConstraint implements IJsonBackedObject {
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

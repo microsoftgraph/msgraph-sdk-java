@@ -20,7 +20,8 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Group Lifecycle Policy Add Group Request.
  */
-public class GroupLifecyclePolicyAddGroupRequest extends BaseRequest {
+public class GroupLifecyclePolicyAddGroupRequest extends BaseRequest<Boolean> {
+    /** The body for the method */
     protected final GroupLifecyclePolicyAddGroupBody body;
 
     /**
@@ -35,10 +36,18 @@ public class GroupLifecyclePolicyAddGroupRequest extends BaseRequest {
         body = new GroupLifecyclePolicyAddGroupBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(@Nonnull final ICallback<? super Boolean> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     @Nullable
     public Boolean post() throws ClientException {
         return send(HttpMethod.POST, body);
@@ -52,8 +61,8 @@ public class GroupLifecyclePolicyAddGroupRequest extends BaseRequest {
      */
     @Nonnull
     public GroupLifecyclePolicyAddGroupRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (GroupLifecyclePolicyAddGroupRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -64,8 +73,8 @@ public class GroupLifecyclePolicyAddGroupRequest extends BaseRequest {
      */
     @Nonnull
     public GroupLifecyclePolicyAddGroupRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (GroupLifecyclePolicyAddGroupRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -76,8 +85,8 @@ public class GroupLifecyclePolicyAddGroupRequest extends BaseRequest {
      */
     @Nonnull
     public GroupLifecyclePolicyAddGroupRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (GroupLifecyclePolicyAddGroupRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

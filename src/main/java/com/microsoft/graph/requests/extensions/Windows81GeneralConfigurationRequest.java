@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows81General Configuration Request.
  */
-public class Windows81GeneralConfigurationRequest extends BaseRequest {
+public class Windows81GeneralConfigurationRequest extends BaseRequest<Windows81GeneralConfiguration> {
 	
     /**
      * The request for the Windows81GeneralConfiguration
@@ -146,8 +146,8 @@ public class Windows81GeneralConfigurationRequest extends BaseRequest {
      */
      @Nonnull
      public Windows81GeneralConfigurationRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (Windows81GeneralConfigurationRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class Windows81GeneralConfigurationRequest extends BaseRequest {
      */
      @Nonnull
      public Windows81GeneralConfigurationRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Windows81GeneralConfigurationRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.WorkbookRangeBorder;
 import com.microsoft.graph.requests.extensions.WorkbookRangeBorderCountRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Border Count Request.
  */
-public class WorkbookRangeBorderCountRequest extends BaseRequest {
+public class WorkbookRangeBorderCountRequest extends BaseRequest<Integer> {
 
     /**
      * The request for this WorkbookRangeBorderCount
@@ -60,8 +61,8 @@ public class WorkbookRangeBorderCountRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeBorderCountRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookRangeBorderCountRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -72,8 +73,8 @@ public class WorkbookRangeBorderCountRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeBorderCountRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookRangeBorderCountRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -84,8 +85,8 @@ public class WorkbookRangeBorderCountRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeBorderCountRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookRangeBorderCountRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -96,8 +97,8 @@ public class WorkbookRangeBorderCountRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeBorderCountRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookRangeBorderCountRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.NotificationMessageTemplate;
 import com.microsoft.graph.requests.extensions.NotificationMessageTemplateSendTestMessageRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Notification Message Template Send Test Message Request.
  */
-public class NotificationMessageTemplateSendTestMessageRequest extends BaseRequest {
+public class NotificationMessageTemplateSendTestMessageRequest extends BaseRequest<Void> {
 
     /**
      * The request for this NotificationMessageTemplateSendTestMessage

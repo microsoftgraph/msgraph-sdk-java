@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.WorkbookWorksheetProtection;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetProtectionUnprotectRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Worksheet Protection Unprotect Request.
  */
-public class WorkbookWorksheetProtectionUnprotectRequest extends BaseRequest {
+public class WorkbookWorksheetProtectionUnprotectRequest extends BaseRequest<Void> {
 
     /**
      * The request for this WorkbookWorksheetProtectionUnprotect

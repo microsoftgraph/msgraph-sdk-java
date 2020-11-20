@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Column Definition Request.
  */
-public class ColumnDefinitionRequest extends BaseRequest {
+public class ColumnDefinitionRequest extends BaseRequest<ColumnDefinition> {
 	
     /**
      * The request for the ColumnDefinition
@@ -146,8 +146,8 @@ public class ColumnDefinitionRequest extends BaseRequest {
      */
      @Nonnull
      public ColumnDefinitionRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ColumnDefinitionRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class ColumnDefinitionRequest extends BaseRequest {
      */
      @Nonnull
      public ColumnDefinitionRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ColumnDefinitionRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

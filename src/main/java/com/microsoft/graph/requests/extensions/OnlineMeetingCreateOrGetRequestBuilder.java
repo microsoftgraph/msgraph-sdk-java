@@ -7,8 +7,7 @@ import com.microsoft.graph.requests.extensions.OnlineMeetingCreateOrGetRequest;
 import com.microsoft.graph.models.extensions.ChatInfo;
 import com.microsoft.graph.models.extensions.MeetingParticipants;
 import com.microsoft.graph.models.extensions.OnlineMeeting;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
+import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -19,7 +18,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Online Meeting Create Or Get Request Builder.
  */
-public class OnlineMeetingCreateOrGetRequestBuilder extends BaseActionRequestBuilder {
+public class OnlineMeetingCreateOrGetRequestBuilder extends BaseActionRequestBuilder<OnlineMeeting> {
 
     /**
      * The request builder for this OnlineMeetingCreateOrGet

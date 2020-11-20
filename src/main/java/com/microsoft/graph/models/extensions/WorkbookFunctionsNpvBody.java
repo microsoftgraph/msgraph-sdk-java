@@ -65,7 +65,7 @@ public class WorkbookFunctionsNpvBody {
      * @return the serializer
      */
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

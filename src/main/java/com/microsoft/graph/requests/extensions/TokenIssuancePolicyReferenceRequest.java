@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Token Issuance Policy Reference Request.
  */
-public class TokenIssuancePolicyReferenceRequest extends BaseRequest {
+public class TokenIssuancePolicyReferenceRequest extends BaseReferenceRequest<TokenIssuancePolicy> {
 
     /**
      * The request for the TokenIssuancePolicy
@@ -36,15 +36,6 @@ public class TokenIssuancePolicyReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, TokenIssuancePolicy.class);
     }
 
-    public void delete(@Nonnull final ICallback<? super TokenIssuancePolicy> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    @Nullable
-    public TokenIssuancePolicy delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
-    }
-
     /**
      * Sets the select clause for the request
      *
@@ -53,8 +44,8 @@ public class TokenIssuancePolicyReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public TokenIssuancePolicyReferenceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (TokenIssuancePolicyReferenceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +56,8 @@ public class TokenIssuancePolicyReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public TokenIssuancePolicyReferenceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (TokenIssuancePolicyReferenceRequest)this;
+        addExpandOption(value);
+        return this;
     }
     /**
      * Puts the TokenIssuancePolicy

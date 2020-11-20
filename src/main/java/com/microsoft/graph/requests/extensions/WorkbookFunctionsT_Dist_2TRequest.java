@@ -21,7 +21,8 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions T_Dist_2TRequest.
  */
-public class WorkbookFunctionsT_Dist_2TRequest extends BaseRequest {
+public class WorkbookFunctionsT_Dist_2TRequest extends BaseRequest<WorkbookFunctionResult> {
+    /** The body for the method */
     protected final WorkbookFunctionsT_Dist_2TBody body;
 
     /**
@@ -36,10 +37,18 @@ public class WorkbookFunctionsT_Dist_2TRequest extends BaseRequest {
         body = new WorkbookFunctionsT_Dist_2TBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(@Nonnull final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     @Nullable
     public WorkbookFunctionResult post() throws ClientException {
         return send(HttpMethod.POST, body);
@@ -53,8 +62,8 @@ public class WorkbookFunctionsT_Dist_2TRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsT_Dist_2TRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsT_Dist_2TRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +74,8 @@ public class WorkbookFunctionsT_Dist_2TRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsT_Dist_2TRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsT_Dist_2TRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -77,8 +86,8 @@ public class WorkbookFunctionsT_Dist_2TRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsT_Dist_2TRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsT_Dist_2TRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

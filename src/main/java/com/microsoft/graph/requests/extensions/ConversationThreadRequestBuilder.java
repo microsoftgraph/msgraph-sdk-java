@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Conversation Thread Request Builder.
  */
-public class ConversationThreadRequestBuilder extends BaseRequestBuilder {
+public class ConversationThreadRequestBuilder extends BaseRequestBuilder<ConversationThread> {
 
     /**
      * The request builder for the ConversationThread
@@ -59,16 +59,32 @@ public class ConversationThreadRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the Post collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public PostCollectionRequestBuilder posts() {
         return new PostCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("posts"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Post item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public PostRequestBuilder posts(@Nonnull final String id) {
         return new PostRequestBuilder(getRequestUrlWithAdditionalSegment("posts") + "/" + id, getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param post the post
+     */
     @Nonnull
     public ConversationThreadReplyRequestBuilder reply(@Nullable final Post post) {
         return new ConversationThreadReplyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reply"), getClient(), null, post);

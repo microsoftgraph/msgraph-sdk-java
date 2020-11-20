@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Worksheet Protection Request Builder.
  */
-public class WorkbookWorksheetProtectionRequestBuilder extends BaseRequestBuilder {
+public class WorkbookWorksheetProtectionRequestBuilder extends BaseRequestBuilder<WorkbookWorksheetProtection> {
 
     /**
      * The request builder for the WorkbookWorksheetProtection
@@ -58,11 +58,20 @@ public class WorkbookWorksheetProtectionRequestBuilder extends BaseRequestBuilde
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param options the options
+     */
     @Nonnull
     public WorkbookWorksheetProtectionProtectRequestBuilder protect(@Nullable final WorkbookWorksheetProtectionOptions options) {
         return new WorkbookWorksheetProtectionProtectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.protect"), getClient(), null, options);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookWorksheetProtectionUnprotectRequestBuilder unprotect() {
         return new WorkbookWorksheetProtectionUnprotectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unprotect"), getClient(), null);

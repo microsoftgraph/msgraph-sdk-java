@@ -38,6 +38,7 @@ import com.google.gson.JsonParseException;
 import com.google.gson.JsonParser;
 import com.google.common.reflect.TypeToken;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.logger.ILogger;
 
@@ -49,6 +50,7 @@ import com.microsoft.graph.models.extensions.Attachment;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionResponse;
 
+/** Specialized serializer to handle collection pages */
 public class CollectionPageSerializer {
 
 	private static DefaultSerializer serializer;
@@ -77,7 +79,7 @@ public class CollectionPageSerializer {
      * @return       JsonElement of CollectionPage
      */
 	@Nullable
-	public static <T1, T2 extends IRequestBuilder> JsonElement serialize(@Nonnull final BaseCollectionPage<T1, T2> src, @Nonnull final ILogger logger) {
+	public static <T1, T2 extends BaseRequestBuilder<T1>> JsonElement serialize(@Nonnull final BaseCollectionPage<T1, T2> src, @Nonnull final ILogger logger) {
 		if(src == null) {
 			return null;
 		}
@@ -108,7 +110,7 @@ public class CollectionPageSerializer {
      */
 	@SuppressWarnings("unchecked")
 	@Nullable
-	public static <T1, T2 extends IRequestBuilder> BaseCollectionPage<T1, T2> deserialize(@Nonnull final JsonElement json, @Nonnull Type typeOfT, @Nonnull final ILogger logger) throws JsonParseException {
+	public static <T1, T2 extends BaseRequestBuilder<T1>> BaseCollectionPage<T1, T2> deserialize(@Nonnull final JsonElement json, @Nonnull final Type typeOfT, @Nonnull final ILogger logger) throws JsonParseException {
 		if (json == null || !json.isJsonArray() || !typeOfT.getClass().equals(Class.class)) {
 			return null;
 		}

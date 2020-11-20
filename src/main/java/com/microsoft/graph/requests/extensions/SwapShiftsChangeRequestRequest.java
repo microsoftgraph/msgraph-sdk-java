@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Swap Shifts Change Request Request.
  */
-public class SwapShiftsChangeRequestRequest extends BaseRequest {
+public class SwapShiftsChangeRequestRequest extends BaseRequest<SwapShiftsChangeRequest> {
 	
     /**
      * The request for the SwapShiftsChangeRequest
@@ -146,8 +146,8 @@ public class SwapShiftsChangeRequestRequest extends BaseRequest {
      */
      @Nonnull
      public SwapShiftsChangeRequestRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SwapShiftsChangeRequestRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class SwapShiftsChangeRequestRequest extends BaseRequest {
      */
      @Nonnull
      public SwapShiftsChangeRequestRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SwapShiftsChangeRequestRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

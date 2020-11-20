@@ -59,8 +59,9 @@ public class Windows10EnterpriseModernAppManagementConfiguration extends DeviceC
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

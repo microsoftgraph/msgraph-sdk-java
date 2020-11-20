@@ -5,8 +5,7 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.WorkbookRangeCellRequest;
 import com.microsoft.graph.models.extensions.WorkbookRange;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
+import com.microsoft.graph.http.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -17,7 +16,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Workbook Range Cell Request Builder.
  */
-public class WorkbookRangeCellRequestBuilder extends BaseFunctionRequestBuilder {
+public class WorkbookRangeCellRequestBuilder extends BaseFunctionRequestBuilder<WorkbookRange> {
 
     /**
      * The request builder for this WorkbookRangeCell

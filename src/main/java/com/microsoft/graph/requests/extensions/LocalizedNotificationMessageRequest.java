@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Localized Notification Message Request.
  */
-public class LocalizedNotificationMessageRequest extends BaseRequest {
+public class LocalizedNotificationMessageRequest extends BaseRequest<LocalizedNotificationMessage> {
 	
     /**
      * The request for the LocalizedNotificationMessage
@@ -146,8 +146,8 @@ public class LocalizedNotificationMessageRequest extends BaseRequest {
      */
      @Nonnull
      public LocalizedNotificationMessageRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (LocalizedNotificationMessageRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class LocalizedNotificationMessageRequest extends BaseRequest {
      */
      @Nonnull
      public LocalizedNotificationMessageRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (LocalizedNotificationMessageRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

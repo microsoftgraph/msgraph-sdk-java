@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Education Organization Request Builder.
  */
-public class EducationOrganizationRequestBuilder extends BaseRequestBuilder {
+public class EducationOrganizationRequestBuilder extends BaseRequestBuilder<EducationOrganization> {
 
     /**
      * The request builder for the EducationOrganization

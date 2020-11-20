@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Chart Data Labels Request Builder.
  */
-public class WorkbookChartDataLabelsRequestBuilder extends BaseRequestBuilder {
+public class WorkbookChartDataLabelsRequestBuilder extends BaseRequestBuilder<WorkbookChartDataLabels> {
 
     /**
      * The request builder for the WorkbookChartDataLabels

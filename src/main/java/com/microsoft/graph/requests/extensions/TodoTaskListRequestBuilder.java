@@ -24,7 +24,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Todo Task List Request Builder.
  */
-public class TodoTaskListRequestBuilder extends BaseRequestBuilder {
+public class TodoTaskListRequestBuilder extends BaseRequestBuilder<TodoTaskList> {
 
     /**
      * The request builder for the TodoTaskList
@@ -60,20 +60,42 @@ public class TodoTaskListRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the Extension collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ExtensionCollectionRequestBuilder extensions() {
         return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Extension item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ExtensionRequestBuilder extensions(@Nonnull final String id) {
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the TodoTask collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public TodoTaskCollectionRequestBuilder tasks() {
         return new TodoTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the TodoTask item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public TodoTaskRequestBuilder tasks(@Nonnull final String id) {
         return new TodoTaskRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);

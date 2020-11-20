@@ -29,7 +29,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -38,7 +38,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Site Reference Request.
  */
-public class SiteReferenceRequest extends BaseRequest {
+public class SiteReferenceRequest extends BaseReferenceRequest<Site> {
 
     /**
      * The request for the Site
@@ -51,15 +51,6 @@ public class SiteReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, Site.class);
     }
 
-    public void delete(@Nonnull final ICallback<? super Site> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    @Nullable
-    public Site delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
-    }
-
     /**
      * Sets the select clause for the request
      *
@@ -68,8 +59,8 @@ public class SiteReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public SiteReferenceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (SiteReferenceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -80,8 +71,8 @@ public class SiteReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public SiteReferenceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (SiteReferenceRequest)this;
+        addExpandOption(value);
+        return this;
     }
     /**
      * Puts the Site

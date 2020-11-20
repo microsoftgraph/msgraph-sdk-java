@@ -26,7 +26,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Section Group Request.
  */
-public class SectionGroupRequest extends BaseRequest {
+public class SectionGroupRequest extends BaseRequest<SectionGroup> {
 	
     /**
      * The request for the SectionGroup
@@ -151,8 +151,8 @@ public class SectionGroupRequest extends BaseRequest {
      */
      @Nonnull
      public SectionGroupRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SectionGroupRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -163,8 +163,8 @@ public class SectionGroupRequest extends BaseRequest {
      */
      @Nonnull
      public SectionGroupRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SectionGroupRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

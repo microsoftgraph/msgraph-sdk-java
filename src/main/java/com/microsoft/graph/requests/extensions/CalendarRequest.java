@@ -32,7 +32,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Calendar Request.
  */
-public class CalendarRequest extends BaseRequest {
+public class CalendarRequest extends BaseRequest<Calendar> {
 	
     /**
      * The request for the Calendar
@@ -157,8 +157,8 @@ public class CalendarRequest extends BaseRequest {
      */
      @Nonnull
      public CalendarRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (CalendarRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -169,8 +169,8 @@ public class CalendarRequest extends BaseRequest {
      */
      @Nonnull
      public CalendarRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CalendarRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

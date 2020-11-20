@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Ios Vpp EBook Request Builder.
  */
-public class IosVppEBookRequestBuilder extends BaseRequestBuilder {
+public class IosVppEBookRequestBuilder extends BaseRequestBuilder<IosVppEBook> {
 
     /**
      * The request builder for the IosVppEBook
@@ -56,20 +56,42 @@ public class IosVppEBookRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the ManagedEBookAssignment collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ManagedEBookAssignmentCollectionRequestBuilder assignments() {
         return new ManagedEBookAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ManagedEBookAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ManagedEBookAssignmentRequestBuilder assignments(@Nonnull final String id) {
         return new ManagedEBookAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the DeviceInstallState collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public DeviceInstallStateCollectionRequestBuilder deviceStates() {
         return new DeviceInstallStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DeviceInstallState item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public DeviceInstallStateRequestBuilder deviceStates(@Nonnull final String id) {
         return new DeviceInstallStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates") + "/" + id, getClient(), null);
@@ -84,11 +106,22 @@ public class IosVppEBookRequestBuilder extends BaseRequestBuilder {
     public EBookInstallSummaryRequestBuilder installSummary() {
         return new EBookInstallSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("installSummary"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the UserInstallStateSummary collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public UserInstallStateSummaryCollectionRequestBuilder userStateSummary() {
         return new UserInstallStateSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStateSummary"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the UserInstallStateSummary item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public UserInstallStateSummaryRequestBuilder userStateSummary(@Nonnull final String id) {
         return new UserInstallStateSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("userStateSummary") + "/" + id, getClient(), null);

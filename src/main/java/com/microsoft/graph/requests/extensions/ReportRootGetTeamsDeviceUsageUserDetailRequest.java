@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
+import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.requests.extensions.ReportRootGetTeamsDeviceUsageUserDetailRequest;
 
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Teams Device Usage User Detail Request.
  */
-public class ReportRootGetTeamsDeviceUsageUserDetailRequest extends BaseRequest {
+public class ReportRootGetTeamsDeviceUsageUserDetailRequest extends BaseRequest<Report> {
 
     /**
      * The request for this ReportRootGetTeamsDeviceUsageUserDetail
@@ -103,8 +104,8 @@ public class ReportRootGetTeamsDeviceUsageUserDetailRequest extends BaseRequest 
      */
     @Nonnull
     public ReportRootGetTeamsDeviceUsageUserDetailRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ReportRootGetTeamsDeviceUsageUserDetailRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +116,8 @@ public class ReportRootGetTeamsDeviceUsageUserDetailRequest extends BaseRequest 
      */
     @Nonnull
     public ReportRootGetTeamsDeviceUsageUserDetailRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ReportRootGetTeamsDeviceUsageUserDetailRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +128,8 @@ public class ReportRootGetTeamsDeviceUsageUserDetailRequest extends BaseRequest 
      */
     @Nonnull
     public ReportRootGetTeamsDeviceUsageUserDetailRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ReportRootGetTeamsDeviceUsageUserDetailRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +140,8 @@ public class ReportRootGetTeamsDeviceUsageUserDetailRequest extends BaseRequest 
      */
     @Nonnull
     public ReportRootGetTeamsDeviceUsageUserDetailRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ReportRootGetTeamsDeviceUsageUserDetailRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

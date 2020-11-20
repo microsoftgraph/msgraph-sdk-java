@@ -24,7 +24,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Domain Request Builder.
  */
-public class DomainRequestBuilder extends BaseRequestBuilder {
+public class DomainRequestBuilder extends BaseRequestBuilder<Domain> {
 
     /**
      * The request builder for the Domain
@@ -60,39 +60,81 @@ public class DomainRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the DirectoryObject collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public DirectoryObjectCollectionWithReferencesRequestBuilder domainNameReferences() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("domainNameReferences"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DirectoryObject item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public DirectoryObjectWithReferenceRequestBuilder domainNameReferences(@Nonnull final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("domainNameReferences") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the DomainDnsRecord collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public DomainDnsRecordCollectionRequestBuilder serviceConfigurationRecords() {
         return new DomainDnsRecordCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("serviceConfigurationRecords"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DomainDnsRecord item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public DomainDnsRecordRequestBuilder serviceConfigurationRecords(@Nonnull final String id) {
         return new DomainDnsRecordRequestBuilder(getRequestUrlWithAdditionalSegment("serviceConfigurationRecords") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the DomainDnsRecord collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public DomainDnsRecordCollectionRequestBuilder verificationDnsRecords() {
         return new DomainDnsRecordCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("verificationDnsRecords"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DomainDnsRecord item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public DomainDnsRecordRequestBuilder verificationDnsRecords(@Nonnull final String id) {
         return new DomainDnsRecordRequestBuilder(getRequestUrlWithAdditionalSegment("verificationDnsRecords") + "/" + id, getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param disableUserAccounts the disableUserAccounts
+     */
     @Nonnull
     public DomainForceDeleteRequestBuilder forceDelete(@Nullable final Boolean disableUserAccounts) {
         return new DomainForceDeleteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.forceDelete"), getClient(), null, disableUserAccounts);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public DomainVerifyRequestBuilder verify() {
         return new DomainVerifyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.verify"), getClient(), null);

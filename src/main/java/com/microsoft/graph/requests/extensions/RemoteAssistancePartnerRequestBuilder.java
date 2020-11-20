@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Remote Assistance Partner Request Builder.
  */
-public class RemoteAssistancePartnerRequestBuilder extends BaseRequestBuilder {
+public class RemoteAssistancePartnerRequestBuilder extends BaseRequestBuilder<RemoteAssistancePartner> {
 
     /**
      * The request builder for the RemoteAssistancePartner
@@ -57,11 +57,19 @@ public class RemoteAssistancePartnerRequestBuilder extends BaseRequestBuilder {
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public RemoteAssistancePartnerBeginOnboardingRequestBuilder beginOnboarding() {
         return new RemoteAssistancePartnerBeginOnboardingRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.beginOnboarding"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public RemoteAssistancePartnerDisconnectRequestBuilder disconnect() {
         return new RemoteAssistancePartnerDisconnectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.disconnect"), getClient(), null);

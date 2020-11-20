@@ -14,8 +14,8 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.AdministrativeUnitDeltaCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.AdministrativeUnitDeltaCollectionPage;
 import com.microsoft.graph.requests.extensions.AdministrativeUnitDeltaCollectionResponse;
+import com.microsoft.graph.models.extensions.AdministrativeUnit;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
@@ -26,7 +26,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Administrative Unit Delta Collection Request.
  */
-public class AdministrativeUnitDeltaCollectionRequest extends BaseCollectionRequest<AdministrativeUnitDeltaCollectionResponse, AdministrativeUnitDeltaCollectionPage> {
+public class AdministrativeUnitDeltaCollectionRequest extends BaseCollectionRequest<AdministrativeUnit, AdministrativeUnitDeltaCollectionResponse, AdministrativeUnitDeltaCollectionPage> {
 
 
     /**
@@ -37,43 +37,9 @@ public class AdministrativeUnitDeltaCollectionRequest extends BaseCollectionRequ
      * @param requestOptions the options for this request
      */
     public AdministrativeUnitDeltaCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, AdministrativeUnitDeltaCollectionResponse.class, AdministrativeUnitDeltaCollectionPage.class);
+        super(requestUrl, client, requestOptions, AdministrativeUnitDeltaCollectionResponse.class, AdministrativeUnitDeltaCollectionPage.class, AdministrativeUnitDeltaCollectionRequestBuilder.class);
     }
 
-
-    public void get(@Nonnull final ICallback<? super AdministrativeUnitDeltaCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    @Nullable
-    public AdministrativeUnitDeltaCollectionPage get() throws ClientException {
-        final AdministrativeUnitDeltaCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    @Nonnull
-    public AdministrativeUnitDeltaCollectionPage buildFromResponse(@Nonnull final AdministrativeUnitDeltaCollectionResponse response) {
-        final AdministrativeUnitDeltaCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new AdministrativeUnitDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final AdministrativeUnitDeltaCollectionPage page = new AdministrativeUnitDeltaCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
 
     /**
      * Sets the select clause for the request
@@ -83,8 +49,8 @@ public class AdministrativeUnitDeltaCollectionRequest extends BaseCollectionRequ
      */
     @Nonnull
     public AdministrativeUnitDeltaCollectionRequest select(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (AdministrativeUnitDeltaCollectionRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -95,8 +61,8 @@ public class AdministrativeUnitDeltaCollectionRequest extends BaseCollectionRequ
      */
     @Nonnull
     public AdministrativeUnitDeltaCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (AdministrativeUnitDeltaCollectionRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -107,8 +73,8 @@ public class AdministrativeUnitDeltaCollectionRequest extends BaseCollectionRequ
      */
     @Nonnull
     public AdministrativeUnitDeltaCollectionRequest expand(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (AdministrativeUnitDeltaCollectionRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -119,8 +85,8 @@ public class AdministrativeUnitDeltaCollectionRequest extends BaseCollectionRequ
      */
     @Nonnull
     public AdministrativeUnitDeltaCollectionRequest filter(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (AdministrativeUnitDeltaCollectionRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -131,8 +97,8 @@ public class AdministrativeUnitDeltaCollectionRequest extends BaseCollectionRequ
      */
     @Nonnull
     public AdministrativeUnitDeltaCollectionRequest orderBy(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (AdministrativeUnitDeltaCollectionRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

@@ -60,8 +60,9 @@ public class CloudAppSecuritySessionControl extends ConditionalAccessSessionCont
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

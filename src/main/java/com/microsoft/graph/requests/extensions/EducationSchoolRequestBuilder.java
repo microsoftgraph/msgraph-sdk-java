@@ -24,7 +24,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Education School Request Builder.
  */
-public class EducationSchoolRequestBuilder extends BaseRequestBuilder {
+public class EducationSchoolRequestBuilder extends BaseRequestBuilder<EducationSchool> {
 
     /**
      * The request builder for the EducationSchool
@@ -60,20 +60,42 @@ public class EducationSchoolRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the EducationClass collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public EducationClassCollectionWithReferencesRequestBuilder classes() {
         return new EducationClassCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("classes"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the EducationClass item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public EducationClassWithReferenceRequestBuilder classes(@Nonnull final String id) {
         return new EducationClassWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("classes") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the EducationUser collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public EducationUserCollectionWithReferencesRequestBuilder users() {
         return new EducationUserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("users"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the EducationUser item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public EducationUserWithReferenceRequestBuilder users(@Nonnull final String id) {
         return new EducationUserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("users") + "/" + id, getClient(), null);

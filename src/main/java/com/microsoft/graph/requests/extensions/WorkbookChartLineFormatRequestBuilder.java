@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Chart Line Format Request Builder.
  */
-public class WorkbookChartLineFormatRequestBuilder extends BaseRequestBuilder {
+public class WorkbookChartLineFormatRequestBuilder extends BaseRequestBuilder<WorkbookChartLineFormat> {
 
     /**
      * The request builder for the WorkbookChartLineFormat
@@ -57,6 +57,10 @@ public class WorkbookChartLineFormatRequestBuilder extends BaseRequestBuilder {
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookChartLineFormatClearRequestBuilder clear() {
         return new WorkbookChartLineFormatClearRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.clear"), getClient(), null);

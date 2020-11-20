@@ -92,7 +92,7 @@ public class DriveItemCreateLinkBody {
      * @return the serializer
      */
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

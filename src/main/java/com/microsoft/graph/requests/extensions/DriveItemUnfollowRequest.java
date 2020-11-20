@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.requests.extensions.DriveItemUnfollowRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Drive Item Unfollow Request.
  */
-public class DriveItemUnfollowRequest extends BaseRequest {
+public class DriveItemUnfollowRequest extends BaseRequest<Void> {
 
     /**
      * The request for this DriveItemUnfollow

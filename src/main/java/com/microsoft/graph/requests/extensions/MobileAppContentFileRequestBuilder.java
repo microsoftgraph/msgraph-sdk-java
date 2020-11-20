@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Mobile App Content File Request Builder.
  */
-public class MobileAppContentFileRequestBuilder extends BaseRequestBuilder {
+public class MobileAppContentFileRequestBuilder extends BaseRequestBuilder<MobileAppContentFile> {
 
     /**
      * The request builder for the MobileAppContentFile
@@ -58,11 +58,20 @@ public class MobileAppContentFileRequestBuilder extends BaseRequestBuilder {
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param fileEncryptionInfo the fileEncryptionInfo
+     */
     @Nonnull
     public MobileAppContentFileCommitRequestBuilder commit(@Nullable final FileEncryptionInfo fileEncryptionInfo) {
         return new MobileAppContentFileCommitRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.commit"), getClient(), null, fileEncryptionInfo);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public MobileAppContentFileRenewUploadRequestBuilder renewUpload() {
         return new MobileAppContentFileRenewUploadRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.renewUpload"), getClient(), null);

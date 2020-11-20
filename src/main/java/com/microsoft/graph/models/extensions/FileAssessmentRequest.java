@@ -68,8 +68,9 @@ public class FileAssessmentRequest extends ThreatAssessmentRequest implements IJ
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

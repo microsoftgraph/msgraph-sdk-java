@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Group Setting Template Request Builder.
  */
-public class GroupSettingTemplateRequestBuilder extends BaseRequestBuilder {
+public class GroupSettingTemplateRequestBuilder extends BaseRequestBuilder<GroupSettingTemplate> {
 
     /**
      * The request builder for the GroupSettingTemplate

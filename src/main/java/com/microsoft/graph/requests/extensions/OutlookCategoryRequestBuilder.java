@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Outlook Category Request Builder.
  */
-public class OutlookCategoryRequestBuilder extends BaseRequestBuilder {
+public class OutlookCategoryRequestBuilder extends BaseRequestBuilder<OutlookCategory> {
 
     /**
      * The request builder for the OutlookCategory

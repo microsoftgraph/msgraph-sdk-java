@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the File Attachment Request Builder.
  */
-public class FileAttachmentRequestBuilder extends BaseRequestBuilder {
+public class FileAttachmentRequestBuilder extends BaseRequestBuilder<FileAttachment> {
 
     /**
      * The request builder for the FileAttachment
@@ -57,6 +57,10 @@ public class FileAttachmentRequestBuilder extends BaseRequestBuilder {
 
 
 
+    /**
+     * Gets a request builder to get the binary value of the object
+     * @return the stream request builder
+     */
     @Nonnull
     public FileAttachmentStreamRequestBuilder content() {
         return new FileAttachmentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("$value"), getClient(), null);

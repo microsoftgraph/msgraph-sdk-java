@@ -96,8 +96,9 @@ public class DeviceComplianceUserStatus extends Entity implements IJsonBackedObj
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

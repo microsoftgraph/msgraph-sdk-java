@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Conversation Request Builder.
  */
-public class ConversationRequestBuilder extends BaseRequestBuilder {
+public class ConversationRequestBuilder extends BaseRequestBuilder<Conversation> {
 
     /**
      * The request builder for the Conversation
@@ -58,11 +58,22 @@ public class ConversationRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the ConversationThread collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ConversationThreadCollectionRequestBuilder threads() {
         return new ConversationThreadCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("threads"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ConversationThread item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ConversationThreadRequestBuilder threads(@Nonnull final String id) {
         return new ConversationThreadRequestBuilder(getRequestUrlWithAdditionalSegment("threads") + "/" + id, getClient(), null);

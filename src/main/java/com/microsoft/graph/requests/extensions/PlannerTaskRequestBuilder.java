@@ -24,7 +24,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Planner Task Request Builder.
  */
-public class PlannerTaskRequestBuilder extends BaseRequestBuilder {
+public class PlannerTaskRequestBuilder extends BaseRequestBuilder<PlannerTask> {
 
     /**
      * The request builder for the PlannerTask

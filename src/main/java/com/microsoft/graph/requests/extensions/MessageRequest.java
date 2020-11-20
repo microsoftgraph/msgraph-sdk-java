@@ -30,7 +30,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Message Request.
  */
-public class MessageRequest extends BaseRequest {
+public class MessageRequest extends BaseRequest<Message> {
 	
     /**
      * The request for the Message
@@ -170,8 +170,8 @@ public class MessageRequest extends BaseRequest {
      */
      @Nonnull
      public MessageRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MessageRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -182,8 +182,8 @@ public class MessageRequest extends BaseRequest {
      */
      @Nonnull
      public MessageRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MessageRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

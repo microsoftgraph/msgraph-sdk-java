@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -27,7 +27,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device Reference Request.
  */
-public class DeviceReferenceRequest extends BaseRequest {
+public class DeviceReferenceRequest extends BaseReferenceRequest<Device> {
 
     /**
      * The request for the Device
@@ -40,15 +40,6 @@ public class DeviceReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, Device.class);
     }
 
-    public void delete(@Nonnull final ICallback<? super Device> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    @Nullable
-    public Device delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
-    }
-
     /**
      * Sets the select clause for the request
      *
@@ -57,8 +48,8 @@ public class DeviceReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public DeviceReferenceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (DeviceReferenceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -69,8 +60,8 @@ public class DeviceReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public DeviceReferenceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DeviceReferenceRequest)this;
+        addExpandOption(value);
+        return this;
     }
     /**
      * Puts the Device

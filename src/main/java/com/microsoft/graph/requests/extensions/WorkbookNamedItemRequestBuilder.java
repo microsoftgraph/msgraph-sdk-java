@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Named Item Request Builder.
  */
-public class WorkbookNamedItemRequestBuilder extends BaseRequestBuilder {
+public class WorkbookNamedItemRequestBuilder extends BaseRequestBuilder<WorkbookNamedItem> {
 
     /**
      * The request builder for the WorkbookNamedItem
@@ -69,6 +69,10 @@ public class WorkbookNamedItemRequestBuilder extends BaseRequestBuilder {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookNamedItemRangeRequestBuilder range() {
         return new WorkbookNamedItemRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.range"), getClient(), null);

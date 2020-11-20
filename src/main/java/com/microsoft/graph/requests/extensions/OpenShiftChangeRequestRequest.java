@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Open Shift Change Request Request.
  */
-public class OpenShiftChangeRequestRequest extends BaseRequest {
+public class OpenShiftChangeRequestRequest extends BaseRequest<OpenShiftChangeRequest> {
 	
     /**
      * The request for the OpenShiftChangeRequest
@@ -146,8 +146,8 @@ public class OpenShiftChangeRequestRequest extends BaseRequest {
      */
      @Nonnull
      public OpenShiftChangeRequestRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OpenShiftChangeRequestRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class OpenShiftChangeRequestRequest extends BaseRequest {
      */
      @Nonnull
      public OpenShiftChangeRequestRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OpenShiftChangeRequestRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

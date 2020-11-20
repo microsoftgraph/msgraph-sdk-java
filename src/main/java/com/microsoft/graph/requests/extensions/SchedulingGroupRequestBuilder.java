@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Scheduling Group Request Builder.
  */
-public class SchedulingGroupRequestBuilder extends BaseRequestBuilder {
+public class SchedulingGroupRequestBuilder extends BaseRequestBuilder<SchedulingGroup> {
 
     /**
      * The request builder for the SchedulingGroup

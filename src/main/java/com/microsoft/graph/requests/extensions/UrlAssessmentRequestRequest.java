@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Url Assessment Request Request.
  */
-public class UrlAssessmentRequestRequest extends BaseRequest {
+public class UrlAssessmentRequestRequest extends BaseRequest<UrlAssessmentRequest> {
 	
     /**
      * The request for the UrlAssessmentRequest
@@ -146,8 +146,8 @@ public class UrlAssessmentRequestRequest extends BaseRequest {
      */
      @Nonnull
      public UrlAssessmentRequestRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (UrlAssessmentRequestRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class UrlAssessmentRequestRequest extends BaseRequest {
      */
      @Nonnull
      public UrlAssessmentRequestRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UrlAssessmentRequestRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

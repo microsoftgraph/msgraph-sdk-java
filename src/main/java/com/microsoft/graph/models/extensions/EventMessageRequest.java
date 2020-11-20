@@ -107,8 +107,9 @@ public class EventMessageRequest extends EventMessage implements IJsonBackedObje
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

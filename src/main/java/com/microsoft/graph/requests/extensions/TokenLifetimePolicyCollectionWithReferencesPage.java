@@ -36,7 +36,17 @@ public class TokenLifetimePolicyCollectionWithReferencesPage extends BaseCollect
      * @param response the serialized TokenLifetimePolicyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TokenLifetimePolicyCollectionWithReferencesPage(@Nonnull final TokenLifetimePolicyCollectionResponse response, @Nonnull  final TokenLifetimePolicyCollectionWithReferencesRequestBuilder builder) {
+    public TokenLifetimePolicyCollectionWithReferencesPage(@Nonnull final TokenLifetimePolicyCollectionResponse response, @Nullable final TokenLifetimePolicyCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
+    }
+
+    /**
+     * Creates the collection page for TokenLifetimePolicy
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public TokenLifetimePolicyCollectionWithReferencesPage(@Nonnull final java.util.List<TokenLifetimePolicy> pageContents, @Nullable final TokenLifetimePolicyCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
     }
 }

@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Enrollment Configuration Request Builder.
  */
-public class DeviceEnrollmentConfigurationRequestBuilder extends BaseRequestBuilder {
+public class DeviceEnrollmentConfigurationRequestBuilder extends BaseRequestBuilder<DeviceEnrollmentConfiguration> {
 
     /**
      * The request builder for the DeviceEnrollmentConfiguration
@@ -59,21 +59,42 @@ public class DeviceEnrollmentConfigurationRequestBuilder extends BaseRequestBuil
     }
 
 
+    /**
+     *  Gets a request builder for the EnrollmentConfigurationAssignment collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public EnrollmentConfigurationAssignmentCollectionRequestBuilder assignments() {
         return new EnrollmentConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the EnrollmentConfigurationAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public EnrollmentConfigurationAssignmentRequestBuilder assignments(@Nonnull final String id) {
         return new EnrollmentConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param enrollmentConfigurationAssignments the enrollmentConfigurationAssignments
+     */
     @Nonnull
     public DeviceEnrollmentConfigurationAssignRequestBuilder assign(@Nullable final java.util.List<EnrollmentConfigurationAssignment> enrollmentConfigurationAssignments) {
         return new DeviceEnrollmentConfigurationAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, enrollmentConfigurationAssignments);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param priority the priority
+     */
     @Nonnull
     public DeviceEnrollmentConfigurationSetPriorityRequestBuilder setPriority(@Nullable final Integer priority) {
         return new DeviceEnrollmentConfigurationSetPriorityRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setPriority"), getClient(), null, priority);

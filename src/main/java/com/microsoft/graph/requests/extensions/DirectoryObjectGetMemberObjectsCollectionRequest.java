@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetMemberObjectsCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectGetMemberObjectsCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetMemberObjectsCollectionResponse;
 import com.microsoft.graph.models.extensions.DirectoryObjectGetMemberObjectsBody;
 import com.microsoft.graph.options.QueryOption;
@@ -27,9 +26,10 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Directory Object Get Member Objects Collection Request.
  */
-public class DirectoryObjectGetMemberObjectsCollectionRequest extends BaseCollectionRequest<DirectoryObjectGetMemberObjectsCollectionResponse, DirectoryObjectGetMemberObjectsCollectionPage> {
+public class DirectoryObjectGetMemberObjectsCollectionRequest extends BaseCollectionRequest<String, DirectoryObjectGetMemberObjectsCollectionResponse, DirectoryObjectGetMemberObjectsCollectionPage> {
 
 
+    /** The body for the method */
     protected final DirectoryObjectGetMemberObjectsBody body;
 
 
@@ -41,11 +41,15 @@ public class DirectoryObjectGetMemberObjectsCollectionRequest extends BaseCollec
      * @param requestOptions the options for this request
      */
     public DirectoryObjectGetMemberObjectsCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DirectoryObjectGetMemberObjectsCollectionResponse.class, DirectoryObjectGetMemberObjectsCollectionPage.class);
+        super(requestUrl, client, requestOptions, DirectoryObjectGetMemberObjectsCollectionResponse.class, DirectoryObjectGetMemberObjectsCollectionPage.class, DirectoryObjectGetMemberObjectsCollectionRequestBuilder.class);
         body = new DirectoryObjectGetMemberObjectsBody();
     }
 
 
+    /**
+     * Invokes the method and calls the callback with the resulting collection of objects
+     * @param callback a callback to be invoked with the resulting collection of objects
+     */
     public void post(@Nonnull final ICallback<? super DirectoryObjectGetMemberObjectsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
@@ -60,25 +64,16 @@ public class DirectoryObjectGetMemberObjectsCollectionRequest extends BaseCollec
         });
     }
 
+    /**
+     * Invokes the method and returns the resulting collection of objects
+     * @return a collection of objects returned by the method
+     */
     @Nullable
     public DirectoryObjectGetMemberObjectsCollectionPage post() throws ClientException {
         final DirectoryObjectGetMemberObjectsCollectionResponse response = post(body);
         return buildFromResponse(response);
     }
 
-
-    @Nonnull
-    public DirectoryObjectGetMemberObjectsCollectionPage buildFromResponse(@Nonnull final DirectoryObjectGetMemberObjectsCollectionResponse response) {
-        final DirectoryObjectGetMemberObjectsCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DirectoryObjectGetMemberObjectsCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, (Boolean) null);
-        } else {
-            builder = null;
-        }
-        final DirectoryObjectGetMemberObjectsCollectionPage page = new DirectoryObjectGetMemberObjectsCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
 
     /**
      * Sets the select clause for the request
@@ -88,8 +83,8 @@ public class DirectoryObjectGetMemberObjectsCollectionRequest extends BaseCollec
      */
     @Nonnull
     public DirectoryObjectGetMemberObjectsCollectionRequest select(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (DirectoryObjectGetMemberObjectsCollectionRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -100,8 +95,8 @@ public class DirectoryObjectGetMemberObjectsCollectionRequest extends BaseCollec
      */
     @Nonnull
     public DirectoryObjectGetMemberObjectsCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (DirectoryObjectGetMemberObjectsCollectionRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -112,8 +107,8 @@ public class DirectoryObjectGetMemberObjectsCollectionRequest extends BaseCollec
      */
     @Nonnull
     public DirectoryObjectGetMemberObjectsCollectionRequest expand(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DirectoryObjectGetMemberObjectsCollectionRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -124,8 +119,8 @@ public class DirectoryObjectGetMemberObjectsCollectionRequest extends BaseCollec
      */
     @Nonnull
     public DirectoryObjectGetMemberObjectsCollectionRequest filter(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DirectoryObjectGetMemberObjectsCollectionRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -136,8 +131,8 @@ public class DirectoryObjectGetMemberObjectsCollectionRequest extends BaseCollec
      */
     @Nonnull
     public DirectoryObjectGetMemberObjectsCollectionRequest orderBy(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (DirectoryObjectGetMemberObjectsCollectionRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

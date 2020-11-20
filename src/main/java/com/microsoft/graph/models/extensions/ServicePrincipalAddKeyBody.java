@@ -75,7 +75,7 @@ public class ServicePrincipalAddKeyBody {
      * @return the serializer
      */
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

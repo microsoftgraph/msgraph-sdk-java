@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Planner Assigned To Task Board Task Format Request.
  */
-public class PlannerAssignedToTaskBoardTaskFormatRequest extends BaseRequest {
+public class PlannerAssignedToTaskBoardTaskFormatRequest extends BaseRequest<PlannerAssignedToTaskBoardTaskFormat> {
 	
     /**
      * The request for the PlannerAssignedToTaskBoardTaskFormat
@@ -146,8 +146,8 @@ public class PlannerAssignedToTaskBoardTaskFormatRequest extends BaseRequest {
      */
      @Nonnull
      public PlannerAssignedToTaskBoardTaskFormatRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PlannerAssignedToTaskBoardTaskFormatRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class PlannerAssignedToTaskBoardTaskFormatRequest extends BaseRequest {
      */
      @Nonnull
      public PlannerAssignedToTaskBoardTaskFormatRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PlannerAssignedToTaskBoardTaskFormatRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

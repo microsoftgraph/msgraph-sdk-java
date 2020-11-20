@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Thumbnail Request Builder.
  */
-public class ThumbnailRequestBuilder extends BaseRequestBuilder {
+public class ThumbnailRequestBuilder extends BaseRequestBuilder<Thumbnail> {
 
     /**
      * The request builder for the Thumbnail
@@ -57,6 +57,11 @@ public class ThumbnailRequestBuilder extends BaseRequestBuilder {
 
 
 
+    /**
+     * Gets the request builder for content
+     *
+     * @return the ThumbnailContentStreamRequestBuilder instance
+     */
     @Nonnull
     public ThumbnailContentStreamRequestBuilder content() {
         return new ThumbnailContentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);

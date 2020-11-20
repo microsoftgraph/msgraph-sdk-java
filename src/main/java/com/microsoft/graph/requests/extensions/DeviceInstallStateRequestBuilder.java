@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Install State Request Builder.
  */
-public class DeviceInstallStateRequestBuilder extends BaseRequestBuilder {
+public class DeviceInstallStateRequestBuilder extends BaseRequestBuilder<DeviceInstallState> {
 
     /**
      * The request builder for the DeviceInstallState

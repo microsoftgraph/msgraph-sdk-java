@@ -14,8 +14,8 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.ChatGetAllMessagesCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ChatGetAllMessagesCollectionPage;
 import com.microsoft.graph.requests.extensions.ChatGetAllMessagesCollectionResponse;
+import com.microsoft.graph.models.extensions.ChatMessage;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
@@ -26,7 +26,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Chat Get All Messages Collection Request.
  */
-public class ChatGetAllMessagesCollectionRequest extends BaseCollectionRequest<ChatGetAllMessagesCollectionResponse, ChatGetAllMessagesCollectionPage> {
+public class ChatGetAllMessagesCollectionRequest extends BaseCollectionRequest<ChatMessage, ChatGetAllMessagesCollectionResponse, ChatGetAllMessagesCollectionPage> {
 
 
     /**
@@ -37,43 +37,9 @@ public class ChatGetAllMessagesCollectionRequest extends BaseCollectionRequest<C
      * @param requestOptions the options for this request
      */
     public ChatGetAllMessagesCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ChatGetAllMessagesCollectionResponse.class, ChatGetAllMessagesCollectionPage.class);
+        super(requestUrl, client, requestOptions, ChatGetAllMessagesCollectionResponse.class, ChatGetAllMessagesCollectionPage.class, ChatGetAllMessagesCollectionRequestBuilder.class);
     }
 
-
-    public void get(@Nonnull final ICallback<? super ChatGetAllMessagesCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    @Nullable
-    public ChatGetAllMessagesCollectionPage get() throws ClientException {
-        final ChatGetAllMessagesCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    @Nonnull
-    public ChatGetAllMessagesCollectionPage buildFromResponse(@Nonnull final ChatGetAllMessagesCollectionResponse response) {
-        final ChatGetAllMessagesCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new ChatGetAllMessagesCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final ChatGetAllMessagesCollectionPage page = new ChatGetAllMessagesCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
 
     /**
      * Sets the select clause for the request
@@ -83,8 +49,8 @@ public class ChatGetAllMessagesCollectionRequest extends BaseCollectionRequest<C
      */
     @Nonnull
     public ChatGetAllMessagesCollectionRequest select(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ChatGetAllMessagesCollectionRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -95,8 +61,8 @@ public class ChatGetAllMessagesCollectionRequest extends BaseCollectionRequest<C
      */
     @Nonnull
     public ChatGetAllMessagesCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (ChatGetAllMessagesCollectionRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -107,8 +73,8 @@ public class ChatGetAllMessagesCollectionRequest extends BaseCollectionRequest<C
      */
     @Nonnull
     public ChatGetAllMessagesCollectionRequest expand(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ChatGetAllMessagesCollectionRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -119,8 +85,8 @@ public class ChatGetAllMessagesCollectionRequest extends BaseCollectionRequest<C
      */
     @Nonnull
     public ChatGetAllMessagesCollectionRequest filter(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ChatGetAllMessagesCollectionRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -131,8 +97,8 @@ public class ChatGetAllMessagesCollectionRequest extends BaseCollectionRequest<C
      */
     @Nonnull
     public ChatGetAllMessagesCollectionRequest orderBy(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ChatGetAllMessagesCollectionRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

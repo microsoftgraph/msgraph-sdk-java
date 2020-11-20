@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Managed Device Overview Request Builder.
  */
-public class ManagedDeviceOverviewRequestBuilder extends BaseRequestBuilder {
+public class ManagedDeviceOverviewRequestBuilder extends BaseRequestBuilder<ManagedDeviceOverview> {
 
     /**
      * The request builder for the ManagedDeviceOverview

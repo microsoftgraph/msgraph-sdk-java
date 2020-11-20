@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Url Assessment Request Request Builder.
  */
-public class UrlAssessmentRequestRequestBuilder extends BaseRequestBuilder {
+public class UrlAssessmentRequestRequestBuilder extends BaseRequestBuilder<UrlAssessmentRequest> {
 
     /**
      * The request builder for the UrlAssessmentRequest
@@ -56,11 +56,22 @@ public class UrlAssessmentRequestRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the ThreatAssessmentResult collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ThreatAssessmentResultCollectionRequestBuilder results() {
         return new ThreatAssessmentResultCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("results"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ThreatAssessmentResult item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ThreatAssessmentResultRequestBuilder results(@Nonnull final String id) {
         return new ThreatAssessmentResultRequestBuilder(getRequestUrlWithAdditionalSegment("results") + "/" + id, getClient(), null);

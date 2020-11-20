@@ -21,7 +21,8 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Participant Invite Request.
  */
-public class ParticipantInviteRequest extends BaseRequest {
+public class ParticipantInviteRequest extends BaseRequest<InviteParticipantsOperation> {
+    /** The body for the method */
     protected final ParticipantInviteBody body;
 
     /**
@@ -36,10 +37,18 @@ public class ParticipantInviteRequest extends BaseRequest {
         body = new ParticipantInviteBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(@Nonnull final ICallback<? super InviteParticipantsOperation> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     @Nullable
     public InviteParticipantsOperation post() throws ClientException {
         return send(HttpMethod.POST, body);
@@ -53,8 +62,8 @@ public class ParticipantInviteRequest extends BaseRequest {
      */
     @Nonnull
     public ParticipantInviteRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ParticipantInviteRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +74,8 @@ public class ParticipantInviteRequest extends BaseRequest {
      */
     @Nonnull
     public ParticipantInviteRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (ParticipantInviteRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -77,8 +86,8 @@ public class ParticipantInviteRequest extends BaseRequest {
      */
     @Nonnull
     public ParticipantInviteRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ParticipantInviteRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

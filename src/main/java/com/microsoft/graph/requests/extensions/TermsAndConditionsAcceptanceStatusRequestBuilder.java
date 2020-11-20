@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Terms And Conditions Acceptance Status Request Builder.
  */
-public class TermsAndConditionsAcceptanceStatusRequestBuilder extends BaseRequestBuilder {
+public class TermsAndConditionsAcceptanceStatusRequestBuilder extends BaseRequestBuilder<TermsAndConditionsAcceptanceStatus> {
 
     /**
      * The request builder for the TermsAndConditionsAcceptanceStatus

@@ -21,7 +21,8 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Service Principal Add Key Request.
  */
-public class ServicePrincipalAddKeyRequest extends BaseRequest {
+public class ServicePrincipalAddKeyRequest extends BaseRequest<KeyCredential> {
+    /** The body for the method */
     protected final ServicePrincipalAddKeyBody body;
 
     /**
@@ -36,10 +37,18 @@ public class ServicePrincipalAddKeyRequest extends BaseRequest {
         body = new ServicePrincipalAddKeyBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(@Nonnull final ICallback<? super KeyCredential> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     @Nullable
     public KeyCredential post() throws ClientException {
         return send(HttpMethod.POST, body);
@@ -53,8 +62,8 @@ public class ServicePrincipalAddKeyRequest extends BaseRequest {
      */
     @Nonnull
     public ServicePrincipalAddKeyRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ServicePrincipalAddKeyRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +74,8 @@ public class ServicePrincipalAddKeyRequest extends BaseRequest {
      */
     @Nonnull
     public ServicePrincipalAddKeyRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (ServicePrincipalAddKeyRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -77,8 +86,8 @@ public class ServicePrincipalAddKeyRequest extends BaseRequest {
      */
     @Nonnull
     public ServicePrincipalAddKeyRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ServicePrincipalAddKeyRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

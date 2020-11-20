@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Management Exchange Connector Request Builder.
  */
-public class DeviceManagementExchangeConnectorRequestBuilder extends BaseRequestBuilder {
+public class DeviceManagementExchangeConnectorRequestBuilder extends BaseRequestBuilder<DeviceManagementExchangeConnector> {
 
     /**
      * The request builder for the DeviceManagementExchangeConnector
@@ -58,6 +58,11 @@ public class DeviceManagementExchangeConnectorRequestBuilder extends BaseRequest
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param syncType the syncType
+     */
     @Nonnull
     public DeviceManagementExchangeConnectorSyncRequestBuilder sync(@Nullable final DeviceManagementExchangeConnectorSyncType syncType) {
         return new DeviceManagementExchangeConnectorSyncRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sync"), getClient(), null, syncType);

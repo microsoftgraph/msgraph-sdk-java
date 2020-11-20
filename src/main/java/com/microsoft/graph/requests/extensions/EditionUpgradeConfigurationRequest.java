@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Edition Upgrade Configuration Request.
  */
-public class EditionUpgradeConfigurationRequest extends BaseRequest {
+public class EditionUpgradeConfigurationRequest extends BaseRequest<EditionUpgradeConfiguration> {
 	
     /**
      * The request for the EditionUpgradeConfiguration
@@ -146,8 +146,8 @@ public class EditionUpgradeConfigurationRequest extends BaseRequest {
      */
      @Nonnull
      public EditionUpgradeConfigurationRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EditionUpgradeConfigurationRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class EditionUpgradeConfigurationRequest extends BaseRequest {
      */
      @Nonnull
      public EditionUpgradeConfigurationRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EditionUpgradeConfigurationRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

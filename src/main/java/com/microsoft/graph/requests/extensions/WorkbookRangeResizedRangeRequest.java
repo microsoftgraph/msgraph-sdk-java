@@ -20,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Resized Range Request.
  */
-public class WorkbookRangeResizedRangeRequest extends BaseRequest {
+public class WorkbookRangeResizedRangeRequest extends BaseRequest<WorkbookRange> {
 
     /**
      * The request for this WorkbookRangeResizedRange
@@ -103,8 +103,8 @@ public class WorkbookRangeResizedRangeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeResizedRangeRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookRangeResizedRangeRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +115,8 @@ public class WorkbookRangeResizedRangeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeResizedRangeRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookRangeResizedRangeRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +127,8 @@ public class WorkbookRangeResizedRangeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeResizedRangeRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookRangeResizedRangeRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +139,8 @@ public class WorkbookRangeResizedRangeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeResizedRangeRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookRangeResizedRangeRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

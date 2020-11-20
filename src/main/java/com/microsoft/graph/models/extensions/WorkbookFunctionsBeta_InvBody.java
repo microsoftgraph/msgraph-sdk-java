@@ -92,7 +92,7 @@ public class WorkbookFunctionsBeta_InvBody {
      * @return the serializer
      */
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

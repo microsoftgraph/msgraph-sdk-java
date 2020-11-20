@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
+import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsFalseRequest;
 
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Functions False Request.
  */
-public class WorkbookFunctionsFalseRequest extends BaseRequest {
+public class WorkbookFunctionsFalseRequest extends BaseRequest<WorkbookFunctionResult> {
 
     /**
      * The request for this WorkbookFunctionsFalse
@@ -61,8 +62,8 @@ public class WorkbookFunctionsFalseRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsFalseRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsFalseRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -73,8 +74,8 @@ public class WorkbookFunctionsFalseRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsFalseRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsFalseRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

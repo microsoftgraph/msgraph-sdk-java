@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -28,7 +28,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Terms And Conditions With Reference Request.
  */
-public class TermsAndConditionsWithReferenceRequest extends BaseRequest {
+public class TermsAndConditionsWithReferenceRequest extends BaseWithReferenceRequest<TermsAndConditions> {
 
     /**
      * The request for the TermsAndConditions
@@ -41,46 +41,6 @@ public class TermsAndConditionsWithReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, TermsAndConditions.class);
     }
 
-    public void post(@Nonnull final TermsAndConditions newTermsAndConditions, @Nullable final IJsonBackedObject payload, @Nonnull final ICallback<? super TermsAndConditions> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    @Nullable
-    public TermsAndConditions post(@Nonnull final TermsAndConditions newTermsAndConditions, @Nullable final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newTermsAndConditions;
-        }
-        return null;
-    }
-
-    public void get(@Nonnull final ICallback<? super TermsAndConditions> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    @Nullable
-    public TermsAndConditions get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(@Nonnull final ICallback<? super TermsAndConditions> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(@Nonnull final TermsAndConditions sourceTermsAndConditions, @Nonnull final ICallback<? super TermsAndConditions> callback) {
-		send(HttpMethod.PATCH, callback, sourceTermsAndConditions);
-	}
-
-    @Nullable
-	public TermsAndConditions patch(@Nonnull final TermsAndConditions sourceTermsAndConditions) throws ClientException {
-		return send(HttpMethod.PATCH, sourceTermsAndConditions);
-	}
-
-
     /**
      * Sets the select clause for the request
      *
@@ -89,8 +49,8 @@ public class TermsAndConditionsWithReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public TermsAndConditionsWithReferenceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (TermsAndConditionsWithReferenceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -101,7 +61,7 @@ public class TermsAndConditionsWithReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public TermsAndConditionsWithReferenceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (TermsAndConditionsWithReferenceRequest)this;
+        addExpandOption(value);
+        return this;
     }
 }

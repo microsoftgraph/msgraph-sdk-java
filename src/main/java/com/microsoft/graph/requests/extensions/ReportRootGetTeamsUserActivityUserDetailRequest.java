@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
+import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.requests.extensions.ReportRootGetTeamsUserActivityUserDetailRequest;
 
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Teams User Activity User Detail Request.
  */
-public class ReportRootGetTeamsUserActivityUserDetailRequest extends BaseRequest {
+public class ReportRootGetTeamsUserActivityUserDetailRequest extends BaseRequest<Report> {
 
     /**
      * The request for this ReportRootGetTeamsUserActivityUserDetail
@@ -103,8 +104,8 @@ public class ReportRootGetTeamsUserActivityUserDetailRequest extends BaseRequest
      */
     @Nonnull
     public ReportRootGetTeamsUserActivityUserDetailRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ReportRootGetTeamsUserActivityUserDetailRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +116,8 @@ public class ReportRootGetTeamsUserActivityUserDetailRequest extends BaseRequest
      */
     @Nonnull
     public ReportRootGetTeamsUserActivityUserDetailRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ReportRootGetTeamsUserActivityUserDetailRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +128,8 @@ public class ReportRootGetTeamsUserActivityUserDetailRequest extends BaseRequest
      */
     @Nonnull
     public ReportRootGetTeamsUserActivityUserDetailRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ReportRootGetTeamsUserActivityUserDetailRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +140,8 @@ public class ReportRootGetTeamsUserActivityUserDetailRequest extends BaseRequest
      */
     @Nonnull
     public ReportRootGetTeamsUserActivityUserDetailRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ReportRootGetTeamsUserActivityUserDetailRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Management Partner Request Builder.
  */
-public class DeviceManagementPartnerRequestBuilder extends BaseRequestBuilder {
+public class DeviceManagementPartnerRequestBuilder extends BaseRequestBuilder<DeviceManagementPartner> {
 
     /**
      * The request builder for the DeviceManagementPartner

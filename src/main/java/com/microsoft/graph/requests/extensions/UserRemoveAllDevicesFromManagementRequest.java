@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.requests.extensions.UserRemoveAllDevicesFromManagementRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the User Remove All Devices From Management Request.
  */
-public class UserRemoveAllDevicesFromManagementRequest extends BaseRequest {
+public class UserRemoveAllDevicesFromManagementRequest extends BaseRequest<Void> {
 
     /**
      * The request for this UserRemoveAllDevicesFromManagement

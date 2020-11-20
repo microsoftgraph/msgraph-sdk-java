@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Open Type Extension Request Builder.
  */
-public class OpenTypeExtensionRequestBuilder extends BaseRequestBuilder {
+public class OpenTypeExtensionRequestBuilder extends BaseRequestBuilder<OpenTypeExtension> {
 
     /**
      * The request builder for the OpenTypeExtension

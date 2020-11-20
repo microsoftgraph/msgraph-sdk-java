@@ -57,7 +57,7 @@ public class DriveItemCreateUploadSessionBody {
      * @return the serializer
      */
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

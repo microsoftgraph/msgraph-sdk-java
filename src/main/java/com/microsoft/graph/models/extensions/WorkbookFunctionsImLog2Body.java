@@ -56,7 +56,7 @@ public class WorkbookFunctionsImLog2Body {
      * @return the serializer
      */
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

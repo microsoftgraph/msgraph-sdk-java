@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Permission Grant Policy Request Builder.
  */
-public class PermissionGrantPolicyRequestBuilder extends BaseRequestBuilder {
+public class PermissionGrantPolicyRequestBuilder extends BaseRequestBuilder<PermissionGrantPolicy> {
 
     /**
      * The request builder for the PermissionGrantPolicy
@@ -58,20 +58,42 @@ public class PermissionGrantPolicyRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the PermissionGrantConditionSet collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public PermissionGrantConditionSetCollectionRequestBuilder excludes() {
         return new PermissionGrantConditionSetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("excludes"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the PermissionGrantConditionSet item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public PermissionGrantConditionSetRequestBuilder excludes(@Nonnull final String id) {
         return new PermissionGrantConditionSetRequestBuilder(getRequestUrlWithAdditionalSegment("excludes") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the PermissionGrantConditionSet collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public PermissionGrantConditionSetCollectionRequestBuilder includes() {
         return new PermissionGrantConditionSetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("includes"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the PermissionGrantConditionSet item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public PermissionGrantConditionSetRequestBuilder includes(@Nonnull final String id) {
         return new PermissionGrantConditionSetRequestBuilder(getRequestUrlWithAdditionalSegment("includes") + "/" + id, getClient(), null);

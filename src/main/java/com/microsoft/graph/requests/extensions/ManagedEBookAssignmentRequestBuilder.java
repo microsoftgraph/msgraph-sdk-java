@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Managed EBook Assignment Request Builder.
  */
-public class ManagedEBookAssignmentRequestBuilder extends BaseRequestBuilder {
+public class ManagedEBookAssignmentRequestBuilder extends BaseRequestBuilder<ManagedEBookAssignment> {
 
     /**
      * The request builder for the ManagedEBookAssignment

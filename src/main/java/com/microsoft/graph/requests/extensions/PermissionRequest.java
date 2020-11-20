@@ -22,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Permission Request.
  */
-public class PermissionRequest extends BaseRequest {
+public class PermissionRequest extends BaseRequest<Permission> {
 	
     /**
      * The request for the Permission
@@ -147,8 +147,8 @@ public class PermissionRequest extends BaseRequest {
      */
      @Nonnull
      public PermissionRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PermissionRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -159,8 +159,8 @@ public class PermissionRequest extends BaseRequest {
      */
      @Nonnull
      public PermissionRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PermissionRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -24,7 +24,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Token Issuance Policy With Reference Request.
  */
-public class TokenIssuancePolicyWithReferenceRequest extends BaseRequest {
+public class TokenIssuancePolicyWithReferenceRequest extends BaseWithReferenceRequest<TokenIssuancePolicy> {
 
     /**
      * The request for the TokenIssuancePolicy
@@ -37,46 +37,6 @@ public class TokenIssuancePolicyWithReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, TokenIssuancePolicy.class);
     }
 
-    public void post(@Nonnull final TokenIssuancePolicy newTokenIssuancePolicy, @Nullable final IJsonBackedObject payload, @Nonnull final ICallback<? super TokenIssuancePolicy> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    @Nullable
-    public TokenIssuancePolicy post(@Nonnull final TokenIssuancePolicy newTokenIssuancePolicy, @Nullable final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newTokenIssuancePolicy;
-        }
-        return null;
-    }
-
-    public void get(@Nonnull final ICallback<? super TokenIssuancePolicy> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    @Nullable
-    public TokenIssuancePolicy get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(@Nonnull final ICallback<? super TokenIssuancePolicy> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(@Nonnull final TokenIssuancePolicy sourceTokenIssuancePolicy, @Nonnull final ICallback<? super TokenIssuancePolicy> callback) {
-		send(HttpMethod.PATCH, callback, sourceTokenIssuancePolicy);
-	}
-
-    @Nullable
-	public TokenIssuancePolicy patch(@Nonnull final TokenIssuancePolicy sourceTokenIssuancePolicy) throws ClientException {
-		return send(HttpMethod.PATCH, sourceTokenIssuancePolicy);
-	}
-
-
     /**
      * Sets the select clause for the request
      *
@@ -85,8 +45,8 @@ public class TokenIssuancePolicyWithReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public TokenIssuancePolicyWithReferenceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (TokenIssuancePolicyWithReferenceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -97,7 +57,7 @@ public class TokenIssuancePolicyWithReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public TokenIssuancePolicyWithReferenceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (TokenIssuancePolicyWithReferenceRequest)this;
+        addExpandOption(value);
+        return this;
     }
 }

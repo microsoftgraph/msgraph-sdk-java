@@ -33,22 +33,53 @@ import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
 
-public class CustomRequest<T> extends BaseRequest {
-	
+/**
+ * Respresents a custom request to be executed against the service
+ * 
+ * @param <T> the entity or complex type
+ */
+public class CustomRequest<T> extends BaseRequest<T> {
+    
+    /**
+     * Instanciates a custom requests to be executed against the service
+     * 
+     * @param requestUrl the URL to send the request to
+     * @param client the client to use to send the request
+     * @param requestOptions the options to apply to the request
+     * @param responseClass the class for response deserialization
+     */
 	public CustomRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends Option> requestOptions, @Nonnull final Class<T> responseClass) {
 		super(requestUrl, client, requestOptions, responseClass);
     }
 	
-	@Nonnull
+    /**
+     * Creates a custom requests to be executed against the service
+     * 
+     * @param requestUrl the URL to send the request to
+     * @param client the client to use to send the request
+     * @param requestOptions the options to apply to the request
+     * @return the request to execute against the service
+     */
+    @Nonnull
     public static CustomRequest<JsonObject> create(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends Option> requestOptions) {
         return new CustomRequest<JsonObject>(requestUrl, client, requestOptions, JsonObject.class);
     }
 
+    /**
+     * Gets the resource and returns the deserialized resource
+     * 
+     * @return the deserialized resource
+     */
     @Nullable
     public T get() throws ClientException {
         return send(HttpMethod.GET, null);
     }
     
+    /**
+     * Gets the resource and calls the callback with the deserialized resource
+     * 
+     * @param callback callback to be invoked with the deserialized resource
+     */
     public void get(@Nonnull final ICallback<T> callback) {
     	send(HttpMethod.GET, callback, null);
     }
@@ -58,18 +89,20 @@ public class CustomRequest<T> extends BaseRequest {
      * 
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(@Nonnull final ICallback<Void> callback) {{
-        send(HttpMethod.DELETE, callback, null);
-    }}
+    @SuppressWarnings("unchecked")
+    public void delete(@Nonnull final ICallback<Void> callback) {
+        // the callback should called with the null object
+        send(HttpMethod.DELETE, (ICallback<T>) callback, null);
+    }
 
     /**
      * Delete this item from the service
      * 
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {{
+    public void delete() throws ClientException {
         send(HttpMethod.DELETE, null);
-    }}
+    }
 
     /**
      * Patches this item with a source

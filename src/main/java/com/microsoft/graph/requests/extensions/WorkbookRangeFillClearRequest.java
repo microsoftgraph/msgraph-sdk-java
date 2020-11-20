@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.WorkbookRangeFill;
 import com.microsoft.graph.requests.extensions.WorkbookRangeFillClearRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Fill Clear Request.
  */
-public class WorkbookRangeFillClearRequest extends BaseRequest {
+public class WorkbookRangeFillClearRequest extends BaseRequest<Void> {
 
     /**
      * The request for this WorkbookRangeFillClear

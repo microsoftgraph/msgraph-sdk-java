@@ -95,8 +95,9 @@ public class LocalizedNotificationMessage extends Entity implements IJsonBackedO
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

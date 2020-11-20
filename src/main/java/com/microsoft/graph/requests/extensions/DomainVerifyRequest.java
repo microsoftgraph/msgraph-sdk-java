@@ -20,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Domain Verify Request.
  */
-public class DomainVerifyRequest extends BaseRequest {
+public class DomainVerifyRequest extends BaseRequest<Domain> {
 
     /**
      * The request for this DomainVerify
@@ -61,8 +61,8 @@ public class DomainVerifyRequest extends BaseRequest {
      */
     @Nonnull
     public DomainVerifyRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (DomainVerifyRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -73,8 +73,8 @@ public class DomainVerifyRequest extends BaseRequest {
      */
     @Nonnull
     public DomainVerifyRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DomainVerifyRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

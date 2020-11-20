@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Table Row Request Builder.
  */
-public class WorkbookTableRowRequestBuilder extends BaseRequestBuilder {
+public class WorkbookTableRowRequestBuilder extends BaseRequestBuilder<WorkbookTableRow> {
 
     /**
      * The request builder for the WorkbookTableRow
@@ -58,6 +58,10 @@ public class WorkbookTableRowRequestBuilder extends BaseRequestBuilder {
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookTableRowRangeRequestBuilder range() {
         return new WorkbookTableRowRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.range"), getClient(), null);

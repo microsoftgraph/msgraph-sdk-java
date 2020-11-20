@@ -22,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed App Policy Request.
  */
-public class ManagedAppPolicyRequest extends BaseRequest {
+public class ManagedAppPolicyRequest extends BaseRequest<ManagedAppPolicy> {
 	
     /**
      * The request for the ManagedAppPolicy
@@ -162,8 +162,8 @@ public class ManagedAppPolicyRequest extends BaseRequest {
      */
      @Nonnull
      public ManagedAppPolicyRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ManagedAppPolicyRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -174,8 +174,8 @@ public class ManagedAppPolicyRequest extends BaseRequest {
      */
      @Nonnull
      public ManagedAppPolicyRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ManagedAppPolicyRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

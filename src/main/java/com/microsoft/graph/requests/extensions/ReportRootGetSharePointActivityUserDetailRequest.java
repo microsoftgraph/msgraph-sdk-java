@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
+import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.requests.extensions.ReportRootGetSharePointActivityUserDetailRequest;
 
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Share Point Activity User Detail Request.
  */
-public class ReportRootGetSharePointActivityUserDetailRequest extends BaseRequest {
+public class ReportRootGetSharePointActivityUserDetailRequest extends BaseRequest<Report> {
 
     /**
      * The request for this ReportRootGetSharePointActivityUserDetail
@@ -103,8 +104,8 @@ public class ReportRootGetSharePointActivityUserDetailRequest extends BaseReques
      */
     @Nonnull
     public ReportRootGetSharePointActivityUserDetailRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ReportRootGetSharePointActivityUserDetailRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +116,8 @@ public class ReportRootGetSharePointActivityUserDetailRequest extends BaseReques
      */
     @Nonnull
     public ReportRootGetSharePointActivityUserDetailRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ReportRootGetSharePointActivityUserDetailRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +128,8 @@ public class ReportRootGetSharePointActivityUserDetailRequest extends BaseReques
      */
     @Nonnull
     public ReportRootGetSharePointActivityUserDetailRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ReportRootGetSharePointActivityUserDetailRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +140,8 @@ public class ReportRootGetSharePointActivityUserDetailRequest extends BaseReques
      */
     @Nonnull
     public ReportRootGetSharePointActivityUserDetailRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ReportRootGetSharePointActivityUserDetailRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

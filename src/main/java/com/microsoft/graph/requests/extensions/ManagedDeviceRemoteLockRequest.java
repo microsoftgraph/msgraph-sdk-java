@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.requests.extensions.ManagedDeviceRemoteLockRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Device Remote Lock Request.
  */
-public class ManagedDeviceRemoteLockRequest extends BaseRequest {
+public class ManagedDeviceRemoteLockRequest extends BaseRequest<Void> {
 
     /**
      * The request for this ManagedDeviceRemoteLock

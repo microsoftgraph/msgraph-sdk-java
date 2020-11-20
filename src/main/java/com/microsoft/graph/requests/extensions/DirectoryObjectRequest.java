@@ -22,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Directory Object Request.
  */
-public class DirectoryObjectRequest extends BaseRequest {
+public class DirectoryObjectRequest extends BaseRequest<DirectoryObject> {
 	
     /**
      * The request for the DirectoryObject
@@ -162,8 +162,8 @@ public class DirectoryObjectRequest extends BaseRequest {
      */
      @Nonnull
      public DirectoryObjectRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DirectoryObjectRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -174,8 +174,8 @@ public class DirectoryObjectRequest extends BaseRequest {
      */
      @Nonnull
      public DirectoryObjectRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DirectoryObjectRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

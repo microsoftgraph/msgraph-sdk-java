@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Apple Push Notification Certificate Request Builder.
  */
-public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestBuilder {
+public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestBuilder<ApplePushNotificationCertificate> {
 
     /**
      * The request builder for the ApplePushNotificationCertificate
@@ -57,6 +57,10 @@ public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestB
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequestBuilder downloadApplePushNotificationCertificateSigningRequest() {
         return new ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.downloadApplePushNotificationCertificateSigningRequest"), getClient(), null);

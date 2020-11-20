@@ -24,7 +24,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Range Request Builder.
  */
-public class WorkbookRangeRequestBuilder extends BaseRequestBuilder {
+public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRange> {
 
     /**
      * The request builder for the WorkbookRange
@@ -91,141 +91,272 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param applyTo the applyTo
+     */
     @Nonnull
     public WorkbookRangeClearRequestBuilder clear(@Nullable final String applyTo) {
         return new WorkbookRangeClearRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.clear"), getClient(), null, applyTo);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param shift the shift
+     */
     @Nonnull
     public WorkbookRangeDeleteRequestBuilder delete(@Nullable final String shift) {
         return new WorkbookRangeDeleteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delete"), getClient(), null, shift);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param shift the shift
+     */
     @Nonnull
     public WorkbookRangeInsertRequestBuilder insert(@Nullable final String shift) {
         return new WorkbookRangeInsertRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.insert"), getClient(), null, shift);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param across the across
+     */
     @Nonnull
     public WorkbookRangeMergeRequestBuilder merge(@Nullable final Boolean across) {
         return new WorkbookRangeMergeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.merge"), getClient(), null, across);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookRangeUnmergeRequestBuilder unmerge() {
         return new WorkbookRangeUnmergeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unmerge"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param anotherRange the anotherRange
+     */
     @Nonnull
     public WorkbookRangeBoundingRectRequestBuilder boundingRect(@Nullable final String anotherRange) {
         return new WorkbookRangeBoundingRectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.boundingRect"), getClient(), null, anotherRange);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param row the row
+     * @param column the column
+     */
     @Nonnull
     public WorkbookRangeCellRequestBuilder cell(@Nullable final Integer row, @Nullable final Integer column) {
         return new WorkbookRangeCellRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cell"), getClient(), null, row, column);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param column the column
+     */
     @Nonnull
     public WorkbookRangeColumnRequestBuilder column(@Nullable final Integer column) {
         return new WorkbookRangeColumnRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.column"), getClient(), null, column);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookRangeColumnsAfterRequestBuilder columnsAfter() {
         return new WorkbookRangeColumnsAfterRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.columnsAfter"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param count the count
+     */
     @Nonnull
     public WorkbookRangeColumnsAfterRequestBuilder columnsAfter(@Nullable final Integer count) {
         return new WorkbookRangeColumnsAfterRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.columnsAfter"), getClient(), null, count);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookRangeColumnsBeforeRequestBuilder columnsBefore() {
         return new WorkbookRangeColumnsBeforeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.columnsBefore"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param count the count
+     */
     @Nonnull
     public WorkbookRangeColumnsBeforeRequestBuilder columnsBefore(@Nullable final Integer count) {
         return new WorkbookRangeColumnsBeforeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.columnsBefore"), getClient(), null, count);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookRangeEntireColumnRequestBuilder entireColumn() {
         return new WorkbookRangeEntireColumnRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.entireColumn"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookRangeEntireRowRequestBuilder entireRow() {
         return new WorkbookRangeEntireRowRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.entireRow"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param anotherRange the anotherRange
+     */
     @Nonnull
     public WorkbookRangeIntersectionRequestBuilder intersection(@Nullable final String anotherRange) {
         return new WorkbookRangeIntersectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.intersection"), getClient(), null, anotherRange);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookRangeLastCellRequestBuilder lastCell() {
         return new WorkbookRangeLastCellRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.lastCell"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookRangeLastColumnRequestBuilder lastColumn() {
         return new WorkbookRangeLastColumnRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.lastColumn"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookRangeLastRowRequestBuilder lastRow() {
         return new WorkbookRangeLastRowRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.lastRow"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param rowOffset the rowOffset
+     * @param columnOffset the columnOffset
+     */
     @Nonnull
     public WorkbookRangeOffsetRangeRequestBuilder offsetRange(@Nullable final Integer rowOffset, @Nullable final Integer columnOffset) {
         return new WorkbookRangeOffsetRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.offsetRange"), getClient(), null, rowOffset, columnOffset);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param deltaRows the deltaRows
+     * @param deltaColumns the deltaColumns
+     */
     @Nonnull
     public WorkbookRangeResizedRangeRequestBuilder resizedRange(@Nullable final Integer deltaRows, @Nullable final Integer deltaColumns) {
         return new WorkbookRangeResizedRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.resizedRange"), getClient(), null, deltaRows, deltaColumns);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param row the row
+     */
     @Nonnull
     public WorkbookRangeRowRequestBuilder row(@Nullable final Integer row) {
         return new WorkbookRangeRowRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.row"), getClient(), null, row);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookRangeRowsAboveRequestBuilder rowsAbove() {
         return new WorkbookRangeRowsAboveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rowsAbove"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param count the count
+     */
     @Nonnull
     public WorkbookRangeRowsAboveRequestBuilder rowsAbove(@Nullable final Integer count) {
         return new WorkbookRangeRowsAboveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rowsAbove"), getClient(), null, count);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookRangeRowsBelowRequestBuilder rowsBelow() {
         return new WorkbookRangeRowsBelowRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rowsBelow"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param count the count
+     */
     @Nonnull
     public WorkbookRangeRowsBelowRequestBuilder rowsBelow(@Nullable final Integer count) {
         return new WorkbookRangeRowsBelowRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rowsBelow"), getClient(), null, count);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookRangeUsedRangeRequestBuilder usedRange() {
         return new WorkbookRangeUsedRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.usedRange"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param valuesOnly the valuesOnly
+     */
     @Nonnull
     public WorkbookRangeUsedRangeRequestBuilder usedRange(@Nullable final Boolean valuesOnly) {
         return new WorkbookRangeUsedRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.usedRange"), getClient(), null, valuesOnly);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookRangeVisibleViewRequestBuilder visibleView() {
         return new WorkbookRangeVisibleViewRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.visibleView"), getClient(), null);

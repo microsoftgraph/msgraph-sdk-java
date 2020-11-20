@@ -20,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Border Item At Request.
  */
-public class WorkbookRangeBorderItemAtRequest extends BaseRequest {
+public class WorkbookRangeBorderItemAtRequest extends BaseRequest<WorkbookRangeBorder> {
 
     /**
      * The request for this WorkbookRangeBorderItemAt
@@ -103,8 +103,8 @@ public class WorkbookRangeBorderItemAtRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeBorderItemAtRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookRangeBorderItemAtRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +115,8 @@ public class WorkbookRangeBorderItemAtRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeBorderItemAtRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookRangeBorderItemAtRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +127,8 @@ public class WorkbookRangeBorderItemAtRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeBorderItemAtRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookRangeBorderItemAtRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +139,8 @@ public class WorkbookRangeBorderItemAtRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeBorderItemAtRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookRangeBorderItemAtRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

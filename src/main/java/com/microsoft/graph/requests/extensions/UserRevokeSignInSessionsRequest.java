@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.requests.extensions.UserRevokeSignInSessionsRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the User Revoke Sign In Sessions Request.
  */
-public class UserRevokeSignInSessionsRequest extends BaseRequest {
+public class UserRevokeSignInSessionsRequest extends BaseRequest<Boolean> {
 
     /**
      * The request for this UserRevokeSignInSessions
@@ -60,8 +61,8 @@ public class UserRevokeSignInSessionsRequest extends BaseRequest {
      */
     @Nonnull
     public UserRevokeSignInSessionsRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (UserRevokeSignInSessionsRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -72,8 +73,8 @@ public class UserRevokeSignInSessionsRequest extends BaseRequest {
      */
     @Nonnull
     public UserRevokeSignInSessionsRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (UserRevokeSignInSessionsRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

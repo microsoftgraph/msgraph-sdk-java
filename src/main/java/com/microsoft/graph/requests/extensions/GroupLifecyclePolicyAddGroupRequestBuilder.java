@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyAddGroupRequest;
+import com.microsoft.graph.models.extensions.GroupLifecyclePolicy;
 
-import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
+import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Group Lifecycle Policy Add Group Request Builder.
  */
-public class GroupLifecyclePolicyAddGroupRequestBuilder extends BaseActionRequestBuilder {
+public class GroupLifecyclePolicyAddGroupRequestBuilder extends BaseActionRequestBuilder<Boolean> {
 
     /**
      * The request builder for this GroupLifecyclePolicyAddGroup

@@ -21,7 +21,8 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Call Subscribe To Tone Request.
  */
-public class CallSubscribeToToneRequest extends BaseRequest {
+public class CallSubscribeToToneRequest extends BaseRequest<SubscribeToToneOperation> {
+    /** The body for the method */
     protected final CallSubscribeToToneBody body;
 
     /**
@@ -36,10 +37,18 @@ public class CallSubscribeToToneRequest extends BaseRequest {
         body = new CallSubscribeToToneBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(@Nonnull final ICallback<? super SubscribeToToneOperation> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     @Nullable
     public SubscribeToToneOperation post() throws ClientException {
         return send(HttpMethod.POST, body);
@@ -53,8 +62,8 @@ public class CallSubscribeToToneRequest extends BaseRequest {
      */
     @Nonnull
     public CallSubscribeToToneRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (CallSubscribeToToneRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +74,8 @@ public class CallSubscribeToToneRequest extends BaseRequest {
      */
     @Nonnull
     public CallSubscribeToToneRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (CallSubscribeToToneRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -77,8 +86,8 @@ public class CallSubscribeToToneRequest extends BaseRequest {
      */
     @Nonnull
     public CallSubscribeToToneRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (CallSubscribeToToneRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

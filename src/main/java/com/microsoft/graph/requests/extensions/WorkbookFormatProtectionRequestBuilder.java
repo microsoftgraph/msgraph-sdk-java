@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Format Protection Request Builder.
  */
-public class WorkbookFormatProtectionRequestBuilder extends BaseRequestBuilder {
+public class WorkbookFormatProtectionRequestBuilder extends BaseRequestBuilder<WorkbookFormatProtection> {
 
     /**
      * The request builder for the WorkbookFormatProtection

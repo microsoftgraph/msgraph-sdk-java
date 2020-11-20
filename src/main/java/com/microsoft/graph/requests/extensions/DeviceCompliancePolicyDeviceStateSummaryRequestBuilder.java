@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Compliance Policy Device State Summary Request Builder.
  */
-public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder extends BaseRequestBuilder {
+public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder extends BaseRequestBuilder<DeviceCompliancePolicyDeviceStateSummary> {
 
     /**
      * The request builder for the DeviceCompliancePolicyDeviceStateSummary

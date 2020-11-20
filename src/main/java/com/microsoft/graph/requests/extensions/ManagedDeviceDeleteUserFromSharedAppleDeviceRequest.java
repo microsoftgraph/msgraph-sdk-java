@@ -20,7 +20,8 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Managed Device Delete User From Shared Apple Device Request.
  */
-public class ManagedDeviceDeleteUserFromSharedAppleDeviceRequest extends BaseRequest {
+public class ManagedDeviceDeleteUserFromSharedAppleDeviceRequest extends BaseRequest<Void> {
+    /** The body for the method */
     protected final ManagedDeviceDeleteUserFromSharedAppleDeviceBody body;
 
     /**
@@ -35,10 +36,18 @@ public class ManagedDeviceDeleteUserFromSharedAppleDeviceRequest extends BaseReq
         body = new ManagedDeviceDeleteUserFromSharedAppleDeviceBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(@Nonnull final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     @Nullable
     public Void post() throws ClientException {
         return send(HttpMethod.POST, body);
@@ -52,8 +61,8 @@ public class ManagedDeviceDeleteUserFromSharedAppleDeviceRequest extends BaseReq
      */
     @Nonnull
     public ManagedDeviceDeleteUserFromSharedAppleDeviceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ManagedDeviceDeleteUserFromSharedAppleDeviceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -64,8 +73,8 @@ public class ManagedDeviceDeleteUserFromSharedAppleDeviceRequest extends BaseReq
      */
     @Nonnull
     public ManagedDeviceDeleteUserFromSharedAppleDeviceRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (ManagedDeviceDeleteUserFromSharedAppleDeviceRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -76,8 +85,8 @@ public class ManagedDeviceDeleteUserFromSharedAppleDeviceRequest extends BaseReq
      */
     @Nonnull
     public ManagedDeviceDeleteUserFromSharedAppleDeviceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ManagedDeviceDeleteUserFromSharedAppleDeviceRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

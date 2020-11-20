@@ -104,8 +104,9 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements IJsonBackedOb
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

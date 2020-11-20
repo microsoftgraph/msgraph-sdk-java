@@ -33,7 +33,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Request Builder.
  */
-public class WorkbookRequestBuilder extends BaseRequestBuilder {
+public class WorkbookRequestBuilder extends BaseRequestBuilder<Workbook> {
 
     /**
      * The request builder for the Workbook
@@ -79,11 +79,22 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder {
     public WorkbookApplicationRequestBuilder application() {
         return new WorkbookApplicationRequestBuilder(getRequestUrlWithAdditionalSegment("application"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the WorkbookComment collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public WorkbookCommentCollectionRequestBuilder comments() {
         return new WorkbookCommentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("comments"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the WorkbookComment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public WorkbookCommentRequestBuilder comments(@Nonnull final String id) {
         return new WorkbookCommentRequestBuilder(getRequestUrlWithAdditionalSegment("comments") + "/" + id, getClient(), null);
@@ -98,58 +109,120 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder {
     public WorkbookFunctionsRequestBuilder functions() {
         return new WorkbookFunctionsRequestBuilder(getRequestUrlWithAdditionalSegment("functions"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the WorkbookNamedItem collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public WorkbookNamedItemCollectionRequestBuilder names() {
         return new WorkbookNamedItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("names"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the WorkbookNamedItem item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public WorkbookNamedItemRequestBuilder names(@Nonnull final String id) {
         return new WorkbookNamedItemRequestBuilder(getRequestUrlWithAdditionalSegment("names") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the WorkbookOperation collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public WorkbookOperationCollectionRequestBuilder operations() {
         return new WorkbookOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the WorkbookOperation item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public WorkbookOperationRequestBuilder operations(@Nonnull final String id) {
         return new WorkbookOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the WorkbookTable collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public WorkbookTableCollectionRequestBuilder tables() {
         return new WorkbookTableCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tables"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the WorkbookTable item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public WorkbookTableRequestBuilder tables(@Nonnull final String id) {
         return new WorkbookTableRequestBuilder(getRequestUrlWithAdditionalSegment("tables") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the WorkbookWorksheet collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public WorkbookWorksheetCollectionRequestBuilder worksheets() {
         return new WorkbookWorksheetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("worksheets"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the WorkbookWorksheet item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public WorkbookWorksheetRequestBuilder worksheets(@Nonnull final String id) {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheets") + "/" + id, getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookCloseSessionRequestBuilder closeSession() {
         return new WorkbookCloseSessionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.closeSession"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param persistChanges the persistChanges
+     */
     @Nonnull
     public WorkbookCreateSessionRequestBuilder createSession(@Nullable final Boolean persistChanges) {
         return new WorkbookCreateSessionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createSession"), getClient(), null, persistChanges);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookRefreshSessionRequestBuilder refreshSession() {
         return new WorkbookRefreshSessionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.refreshSession"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param key the key
+     */
     @Nonnull
     public WorkbookSessionInfoResourceRequestBuilder sessionInfoResource(@Nullable final String key) {
         return new WorkbookSessionInfoResourceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sessionInfoResource"), getClient(), null, key);

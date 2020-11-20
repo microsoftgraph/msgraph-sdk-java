@@ -25,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed App Registration Request.
  */
-public class ManagedAppRegistrationRequest extends BaseRequest {
+public class ManagedAppRegistrationRequest extends BaseRequest<ManagedAppRegistration> {
 	
     /**
      * The request for the ManagedAppRegistration
@@ -165,8 +165,8 @@ public class ManagedAppRegistrationRequest extends BaseRequest {
      */
      @Nonnull
      public ManagedAppRegistrationRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ManagedAppRegistrationRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -177,8 +177,8 @@ public class ManagedAppRegistrationRequest extends BaseRequest {
      */
      @Nonnull
      public ManagedAppRegistrationRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ManagedAppRegistrationRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

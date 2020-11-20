@@ -27,7 +27,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Table Request Builder.
  */
-public class WorkbookTableRequestBuilder extends BaseRequestBuilder {
+public class WorkbookTableRequestBuilder extends BaseRequestBuilder<WorkbookTable> {
 
     /**
      * The request builder for the WorkbookTable
@@ -63,20 +63,42 @@ public class WorkbookTableRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the WorkbookTableColumn collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public WorkbookTableColumnCollectionRequestBuilder columns() {
         return new WorkbookTableColumnCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("columns"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the WorkbookTableColumn item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public WorkbookTableColumnRequestBuilder columns(@Nonnull final String id) {
         return new WorkbookTableColumnRequestBuilder(getRequestUrlWithAdditionalSegment("columns") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the WorkbookTableRow collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public WorkbookTableRowCollectionRequestBuilder rows() {
         return new WorkbookTableRowCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rows"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the WorkbookTableRow item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public WorkbookTableRowRequestBuilder rows(@Nonnull final String id) {
         return new WorkbookTableRowRequestBuilder(getRequestUrlWithAdditionalSegment("rows") + "/" + id, getClient(), null);
@@ -102,36 +124,64 @@ public class WorkbookTableRequestBuilder extends BaseRequestBuilder {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookTableClearFiltersRequestBuilder clearFilters() {
         return new WorkbookTableClearFiltersRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.clearFilters"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookTableConvertToRangeRequestBuilder convertToRange() {
         return new WorkbookTableConvertToRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.convertToRange"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookTableReapplyFiltersRequestBuilder reapplyFilters() {
         return new WorkbookTableReapplyFiltersRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reapplyFilters"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookTableDataBodyRangeRequestBuilder dataBodyRange() {
         return new WorkbookTableDataBodyRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dataBodyRange"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookTableHeaderRowRangeRequestBuilder headerRowRange() {
         return new WorkbookTableHeaderRowRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.headerRowRange"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookTableRangeRequestBuilder range() {
         return new WorkbookTableRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.range"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookTableTotalRowRangeRequestBuilder totalRowRange() {
         return new WorkbookTableTotalRowRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.totalRowRange"), getClient(), null);

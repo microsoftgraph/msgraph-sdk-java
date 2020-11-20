@@ -160,8 +160,9 @@ public class SharedPCConfiguration extends DeviceConfiguration implements IJsonB
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

@@ -34,7 +34,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Event Request.
  */
-public class EventRequest extends BaseRequest {
+public class EventRequest extends BaseRequest<Event> {
 	
     /**
      * The request for the Event
@@ -159,8 +159,8 @@ public class EventRequest extends BaseRequest {
      */
      @Nonnull
      public EventRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EventRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -171,8 +171,8 @@ public class EventRequest extends BaseRequest {
      */
      @Nonnull
      public EventRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EventRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Identity Provider Request.
  */
-public class IdentityProviderRequest extends BaseRequest {
+public class IdentityProviderRequest extends BaseRequest<IdentityProvider> {
 	
     /**
      * The request for the IdentityProvider
@@ -146,8 +146,8 @@ public class IdentityProviderRequest extends BaseRequest {
      */
      @Nonnull
      public IdentityProviderRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (IdentityProviderRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class IdentityProviderRequest extends BaseRequest {
      */
      @Nonnull
      public IdentityProviderRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IdentityProviderRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

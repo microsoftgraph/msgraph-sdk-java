@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Linked Resource Request Builder.
  */
-public class LinkedResourceRequestBuilder extends BaseRequestBuilder {
+public class LinkedResourceRequestBuilder extends BaseRequestBuilder<LinkedResource> {
 
     /**
      * The request builder for the LinkedResource

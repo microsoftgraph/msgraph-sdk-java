@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Planner Plan Request Builder.
  */
-public class PlannerPlanRequestBuilder extends BaseRequestBuilder {
+public class PlannerPlanRequestBuilder extends BaseRequestBuilder<PlannerPlan> {
 
     /**
      * The request builder for the PlannerPlan
@@ -61,11 +61,22 @@ public class PlannerPlanRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the PlannerBucket collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public PlannerBucketCollectionRequestBuilder buckets() {
         return new PlannerBucketCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("buckets"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the PlannerBucket item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public PlannerBucketRequestBuilder buckets(@Nonnull final String id) {
         return new PlannerBucketRequestBuilder(getRequestUrlWithAdditionalSegment("buckets") + "/" + id, getClient(), null);
@@ -80,11 +91,22 @@ public class PlannerPlanRequestBuilder extends BaseRequestBuilder {
     public PlannerPlanDetailsRequestBuilder details() {
         return new PlannerPlanDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("details"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the PlannerTask collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public PlannerTaskCollectionRequestBuilder tasks() {
         return new PlannerTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the PlannerTask item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public PlannerTaskRequestBuilder tasks(@Nonnull final String id) {
         return new PlannerTaskRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);

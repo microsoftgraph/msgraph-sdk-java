@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Subscribed Sku Request.
  */
-public class SubscribedSkuRequest extends BaseRequest {
+public class SubscribedSkuRequest extends BaseRequest<SubscribedSku> {
 	
     /**
      * The request for the SubscribedSku
@@ -146,8 +146,8 @@ public class SubscribedSkuRequest extends BaseRequest {
      */
      @Nonnull
      public SubscribedSkuRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SubscribedSkuRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class SubscribedSkuRequest extends BaseRequest {
      */
      @Nonnull
      public SubscribedSkuRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SubscribedSkuRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

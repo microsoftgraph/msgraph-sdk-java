@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Profile Photo Request.
  */
-public class ProfilePhotoRequest extends BaseRequest {
+public class ProfilePhotoRequest extends BaseRequest<ProfilePhoto> {
 	
     /**
      * The request for the ProfilePhoto
@@ -146,8 +146,8 @@ public class ProfilePhotoRequest extends BaseRequest {
      */
      @Nonnull
      public ProfilePhotoRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ProfilePhotoRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class ProfilePhotoRequest extends BaseRequest {
      */
      @Nonnull
      public ProfilePhotoRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ProfilePhotoRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

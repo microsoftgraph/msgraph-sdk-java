@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.WorkbookChartFill;
 import com.microsoft.graph.requests.extensions.WorkbookChartFillClearRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Fill Clear Request.
  */
-public class WorkbookChartFillClearRequest extends BaseRequest {
+public class WorkbookChartFillClearRequest extends BaseRequest<Void> {
 
     /**
      * The request for this WorkbookChartFillClear

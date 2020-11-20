@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the User Settings Request Builder.
  */
-public class UserSettingsRequestBuilder extends BaseRequestBuilder {
+public class UserSettingsRequestBuilder extends BaseRequestBuilder<UserSettings> {
 
     /**
      * The request builder for the UserSettings

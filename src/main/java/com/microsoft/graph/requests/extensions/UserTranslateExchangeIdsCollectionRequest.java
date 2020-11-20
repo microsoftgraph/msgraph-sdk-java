@@ -15,8 +15,8 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.UserTranslateExchangeIdsCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.UserTranslateExchangeIdsCollectionPage;
 import com.microsoft.graph.requests.extensions.UserTranslateExchangeIdsCollectionResponse;
+import com.microsoft.graph.models.extensions.ConvertIdResult;
 import com.microsoft.graph.models.extensions.UserTranslateExchangeIdsBody;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -28,9 +28,10 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the User Translate Exchange Ids Collection Request.
  */
-public class UserTranslateExchangeIdsCollectionRequest extends BaseCollectionRequest<UserTranslateExchangeIdsCollectionResponse, UserTranslateExchangeIdsCollectionPage> {
+public class UserTranslateExchangeIdsCollectionRequest extends BaseCollectionRequest<ConvertIdResult, UserTranslateExchangeIdsCollectionResponse, UserTranslateExchangeIdsCollectionPage> {
 
 
+    /** The body for the method */
     protected final UserTranslateExchangeIdsBody body;
 
 
@@ -42,11 +43,15 @@ public class UserTranslateExchangeIdsCollectionRequest extends BaseCollectionReq
      * @param requestOptions the options for this request
      */
     public UserTranslateExchangeIdsCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, UserTranslateExchangeIdsCollectionResponse.class, UserTranslateExchangeIdsCollectionPage.class);
+        super(requestUrl, client, requestOptions, UserTranslateExchangeIdsCollectionResponse.class, UserTranslateExchangeIdsCollectionPage.class, UserTranslateExchangeIdsCollectionRequestBuilder.class);
         body = new UserTranslateExchangeIdsBody();
     }
 
 
+    /**
+     * Invokes the method and calls the callback with the resulting collection of objects
+     * @param callback a callback to be invoked with the resulting collection of objects
+     */
     public void post(@Nonnull final ICallback<? super UserTranslateExchangeIdsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
@@ -61,25 +66,16 @@ public class UserTranslateExchangeIdsCollectionRequest extends BaseCollectionReq
         });
     }
 
+    /**
+     * Invokes the method and returns the resulting collection of objects
+     * @return a collection of objects returned by the method
+     */
     @Nullable
     public UserTranslateExchangeIdsCollectionPage post() throws ClientException {
         final UserTranslateExchangeIdsCollectionResponse response = post(body);
         return buildFromResponse(response);
     }
 
-
-    @Nonnull
-    public UserTranslateExchangeIdsCollectionPage buildFromResponse(@Nonnull final UserTranslateExchangeIdsCollectionResponse response) {
-        final UserTranslateExchangeIdsCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new UserTranslateExchangeIdsCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, (java.util.List<String>) null, (ExchangeIdFormat) null, (ExchangeIdFormat) null);
-        } else {
-            builder = null;
-        }
-        final UserTranslateExchangeIdsCollectionPage page = new UserTranslateExchangeIdsCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
 
     /**
      * Sets the select clause for the request
@@ -89,8 +85,8 @@ public class UserTranslateExchangeIdsCollectionRequest extends BaseCollectionReq
      */
     @Nonnull
     public UserTranslateExchangeIdsCollectionRequest select(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (UserTranslateExchangeIdsCollectionRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -101,8 +97,8 @@ public class UserTranslateExchangeIdsCollectionRequest extends BaseCollectionReq
      */
     @Nonnull
     public UserTranslateExchangeIdsCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (UserTranslateExchangeIdsCollectionRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -113,8 +109,8 @@ public class UserTranslateExchangeIdsCollectionRequest extends BaseCollectionReq
      */
     @Nonnull
     public UserTranslateExchangeIdsCollectionRequest expand(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (UserTranslateExchangeIdsCollectionRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -125,8 +121,8 @@ public class UserTranslateExchangeIdsCollectionRequest extends BaseCollectionReq
      */
     @Nonnull
     public UserTranslateExchangeIdsCollectionRequest filter(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (UserTranslateExchangeIdsCollectionRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -137,8 +133,8 @@ public class UserTranslateExchangeIdsCollectionRequest extends BaseCollectionReq
      */
     @Nonnull
     public UserTranslateExchangeIdsCollectionRequest orderBy(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (UserTranslateExchangeIdsCollectionRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

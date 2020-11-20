@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
+import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsPiRequest;
 
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Functions Pi Request.
  */
-public class WorkbookFunctionsPiRequest extends BaseRequest {
+public class WorkbookFunctionsPiRequest extends BaseRequest<WorkbookFunctionResult> {
 
     /**
      * The request for this WorkbookFunctionsPi
@@ -61,8 +62,8 @@ public class WorkbookFunctionsPiRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsPiRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsPiRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -73,8 +74,8 @@ public class WorkbookFunctionsPiRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsPiRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsPiRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

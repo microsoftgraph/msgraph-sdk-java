@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -22,6 +23,7 @@ import javax.annotation.Nonnull;
  */
 public class ConditionalAccessUsers implements IJsonBackedObject {
 
+    /** the OData type of the object as returned by the service */
     @SerializedName("@odata.type")
     @Expose
     @Nullable
@@ -115,8 +117,9 @@ public class ConditionalAccessUsers implements IJsonBackedObject {
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

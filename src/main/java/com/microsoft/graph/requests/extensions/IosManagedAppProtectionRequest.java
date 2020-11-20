@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Ios Managed App Protection Request.
  */
-public class IosManagedAppProtectionRequest extends BaseRequest {
+public class IosManagedAppProtectionRequest extends BaseRequest<IosManagedAppProtection> {
 	
     /**
      * The request for the IosManagedAppProtection
@@ -149,8 +149,8 @@ public class IosManagedAppProtectionRequest extends BaseRequest {
      */
      @Nonnull
      public IosManagedAppProtectionRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (IosManagedAppProtectionRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -161,8 +161,8 @@ public class IosManagedAppProtectionRequest extends BaseRequest {
      */
      @Nonnull
      public IosManagedAppProtectionRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IosManagedAppProtectionRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

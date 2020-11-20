@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.requests.extensions.DriveItemCheckoutRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Drive Item Checkout Request.
  */
-public class DriveItemCheckoutRequest extends BaseRequest {
+public class DriveItemCheckoutRequest extends BaseRequest<Void> {
 
     /**
      * The request for this DriveItemCheckout

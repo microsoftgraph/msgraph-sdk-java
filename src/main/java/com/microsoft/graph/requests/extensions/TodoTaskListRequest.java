@@ -25,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Todo Task List Request.
  */
-public class TodoTaskListRequest extends BaseRequest {
+public class TodoTaskListRequest extends BaseRequest<TodoTaskList> {
 	
     /**
      * The request for the TodoTaskList
@@ -150,8 +150,8 @@ public class TodoTaskListRequest extends BaseRequest {
      */
      @Nonnull
      public TodoTaskListRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TodoTaskListRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -162,8 +162,8 @@ public class TodoTaskListRequest extends BaseRequest {
      */
      @Nonnull
      public TodoTaskListRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TodoTaskListRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

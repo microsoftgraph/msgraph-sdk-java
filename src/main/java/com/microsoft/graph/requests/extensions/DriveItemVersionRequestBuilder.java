@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Drive Item Version Request Builder.
  */
-public class DriveItemVersionRequestBuilder extends BaseRequestBuilder {
+public class DriveItemVersionRequestBuilder extends BaseRequestBuilder<DriveItemVersion> {
 
     /**
      * The request builder for the DriveItemVersion
@@ -57,11 +57,20 @@ public class DriveItemVersionRequestBuilder extends BaseRequestBuilder {
 
 
 
+    /**
+     * Gets the request builder for content
+     *
+     * @return the DriveItemVersionContentStreamRequestBuilder instance
+     */
     @Nonnull
     public DriveItemVersionContentStreamRequestBuilder content() {
         return new DriveItemVersionContentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public DriveItemVersionRestoreVersionRequestBuilder restoreVersion() {
         return new DriveItemVersionRestoreVersionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.restoreVersion"), getClient(), null);

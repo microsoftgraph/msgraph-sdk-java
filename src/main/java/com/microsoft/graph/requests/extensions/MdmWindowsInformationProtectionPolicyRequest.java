@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mdm Windows Information Protection Policy Request.
  */
-public class MdmWindowsInformationProtectionPolicyRequest extends BaseRequest {
+public class MdmWindowsInformationProtectionPolicyRequest extends BaseRequest<MdmWindowsInformationProtectionPolicy> {
 	
     /**
      * The request for the MdmWindowsInformationProtectionPolicy
@@ -146,8 +146,8 @@ public class MdmWindowsInformationProtectionPolicyRequest extends BaseRequest {
      */
      @Nonnull
      public MdmWindowsInformationProtectionPolicyRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MdmWindowsInformationProtectionPolicyRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class MdmWindowsInformationProtectionPolicyRequest extends BaseRequest {
      */
      @Nonnull
      public MdmWindowsInformationProtectionPolicyRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MdmWindowsInformationProtectionPolicyRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

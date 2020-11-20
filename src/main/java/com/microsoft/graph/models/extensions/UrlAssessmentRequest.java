@@ -59,8 +59,9 @@ public class UrlAssessmentRequest extends ThreatAssessmentRequest implements IJs
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

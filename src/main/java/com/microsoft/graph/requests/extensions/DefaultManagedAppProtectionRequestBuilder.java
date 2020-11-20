@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Default Managed App Protection Request Builder.
  */
-public class DefaultManagedAppProtectionRequestBuilder extends BaseRequestBuilder {
+public class DefaultManagedAppProtectionRequestBuilder extends BaseRequestBuilder<DefaultManagedAppProtection> {
 
     /**
      * The request builder for the DefaultManagedAppProtection
@@ -59,11 +59,22 @@ public class DefaultManagedAppProtectionRequestBuilder extends BaseRequestBuilde
     }
 
 
+    /**
+     *  Gets a request builder for the ManagedMobileApp collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ManagedMobileAppCollectionRequestBuilder apps() {
         return new ManagedMobileAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("apps"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ManagedMobileApp item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ManagedMobileAppRequestBuilder apps(@Nonnull final String id) {
         return new ManagedMobileAppRequestBuilder(getRequestUrlWithAdditionalSegment("apps") + "/" + id, getClient(), null);

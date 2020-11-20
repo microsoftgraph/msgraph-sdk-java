@@ -144,12 +144,20 @@ public class DefaultExecutors implements IExecutors {
         });
     }
 
+    /**
+     * Gets the logger in use for executors
+     * 
+     * @return a logger
+     */
     @VisibleForTesting
     @Nullable
     public ILogger getLogger() {
         return logger;
     }
     
+    /**
+     * Shuts down the background executors
+     */
     public void shutdownBackgroundExecutors() {
     	this.backgroundExecutor.shutdown();
     }

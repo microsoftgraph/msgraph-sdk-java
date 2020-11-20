@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Table Column Request Builder.
  */
-public class WorkbookTableColumnRequestBuilder extends BaseRequestBuilder {
+public class WorkbookTableColumnRequestBuilder extends BaseRequestBuilder<WorkbookTableColumn> {
 
     /**
      * The request builder for the WorkbookTableColumn
@@ -69,21 +69,37 @@ public class WorkbookTableColumnRequestBuilder extends BaseRequestBuilder {
         return new WorkbookFilterRequestBuilder(getRequestUrlWithAdditionalSegment("filter"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookTableColumnDataBodyRangeRequestBuilder dataBodyRange() {
         return new WorkbookTableColumnDataBodyRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dataBodyRange"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookTableColumnHeaderRowRangeRequestBuilder headerRowRange() {
         return new WorkbookTableColumnHeaderRowRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.headerRowRange"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookTableColumnRangeRequestBuilder range() {
         return new WorkbookTableColumnRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.range"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookTableColumnTotalRowRangeRequestBuilder totalRowRange() {
         return new WorkbookTableColumnTotalRowRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.totalRowRange"), getClient(), null);

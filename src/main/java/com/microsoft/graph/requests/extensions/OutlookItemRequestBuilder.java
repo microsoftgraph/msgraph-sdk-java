@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Outlook Item Request Builder.
  */
-public class OutlookItemRequestBuilder extends BaseRequestBuilder {
+public class OutlookItemRequestBuilder extends BaseRequestBuilder<OutlookItem> {
 
     /**
      * The request builder for the OutlookItem

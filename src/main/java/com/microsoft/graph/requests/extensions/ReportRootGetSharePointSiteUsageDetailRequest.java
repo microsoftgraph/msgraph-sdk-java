@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
+import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.requests.extensions.ReportRootGetSharePointSiteUsageDetailRequest;
 
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Share Point Site Usage Detail Request.
  */
-public class ReportRootGetSharePointSiteUsageDetailRequest extends BaseRequest {
+public class ReportRootGetSharePointSiteUsageDetailRequest extends BaseRequest<Report> {
 
     /**
      * The request for this ReportRootGetSharePointSiteUsageDetail
@@ -103,8 +104,8 @@ public class ReportRootGetSharePointSiteUsageDetailRequest extends BaseRequest {
      */
     @Nonnull
     public ReportRootGetSharePointSiteUsageDetailRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ReportRootGetSharePointSiteUsageDetailRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +116,8 @@ public class ReportRootGetSharePointSiteUsageDetailRequest extends BaseRequest {
      */
     @Nonnull
     public ReportRootGetSharePointSiteUsageDetailRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ReportRootGetSharePointSiteUsageDetailRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +128,8 @@ public class ReportRootGetSharePointSiteUsageDetailRequest extends BaseRequest {
      */
     @Nonnull
     public ReportRootGetSharePointSiteUsageDetailRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ReportRootGetSharePointSiteUsageDetailRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +140,8 @@ public class ReportRootGetSharePointSiteUsageDetailRequest extends BaseRequest {
      */
     @Nonnull
     public ReportRootGetSharePointSiteUsageDetailRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ReportRootGetSharePointSiteUsageDetailRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

@@ -14,8 +14,8 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantDeltaCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantDeltaCollectionPage;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantDeltaCollectionResponse;
+import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
@@ -26,7 +26,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the OAuth2Permission Grant Delta Collection Request.
  */
-public class OAuth2PermissionGrantDeltaCollectionRequest extends BaseCollectionRequest<OAuth2PermissionGrantDeltaCollectionResponse, OAuth2PermissionGrantDeltaCollectionPage> {
+public class OAuth2PermissionGrantDeltaCollectionRequest extends BaseCollectionRequest<OAuth2PermissionGrant, OAuth2PermissionGrantDeltaCollectionResponse, OAuth2PermissionGrantDeltaCollectionPage> {
 
 
     /**
@@ -37,43 +37,9 @@ public class OAuth2PermissionGrantDeltaCollectionRequest extends BaseCollectionR
      * @param requestOptions the options for this request
      */
     public OAuth2PermissionGrantDeltaCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OAuth2PermissionGrantDeltaCollectionResponse.class, OAuth2PermissionGrantDeltaCollectionPage.class);
+        super(requestUrl, client, requestOptions, OAuth2PermissionGrantDeltaCollectionResponse.class, OAuth2PermissionGrantDeltaCollectionPage.class, OAuth2PermissionGrantDeltaCollectionRequestBuilder.class);
     }
 
-
-    public void get(@Nonnull final ICallback<? super OAuth2PermissionGrantDeltaCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    @Nullable
-    public OAuth2PermissionGrantDeltaCollectionPage get() throws ClientException {
-        final OAuth2PermissionGrantDeltaCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    @Nonnull
-    public OAuth2PermissionGrantDeltaCollectionPage buildFromResponse(@Nonnull final OAuth2PermissionGrantDeltaCollectionResponse response) {
-        final OAuth2PermissionGrantDeltaCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new OAuth2PermissionGrantDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final OAuth2PermissionGrantDeltaCollectionPage page = new OAuth2PermissionGrantDeltaCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
 
     /**
      * Sets the select clause for the request
@@ -83,8 +49,8 @@ public class OAuth2PermissionGrantDeltaCollectionRequest extends BaseCollectionR
      */
     @Nonnull
     public OAuth2PermissionGrantDeltaCollectionRequest select(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (OAuth2PermissionGrantDeltaCollectionRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -95,8 +61,8 @@ public class OAuth2PermissionGrantDeltaCollectionRequest extends BaseCollectionR
      */
     @Nonnull
     public OAuth2PermissionGrantDeltaCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (OAuth2PermissionGrantDeltaCollectionRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -107,8 +73,8 @@ public class OAuth2PermissionGrantDeltaCollectionRequest extends BaseCollectionR
      */
     @Nonnull
     public OAuth2PermissionGrantDeltaCollectionRequest expand(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (OAuth2PermissionGrantDeltaCollectionRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -119,8 +85,8 @@ public class OAuth2PermissionGrantDeltaCollectionRequest extends BaseCollectionR
      */
     @Nonnull
     public OAuth2PermissionGrantDeltaCollectionRequest filter(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (OAuth2PermissionGrantDeltaCollectionRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -131,8 +97,8 @@ public class OAuth2PermissionGrantDeltaCollectionRequest extends BaseCollectionR
      */
     @Nonnull
     public OAuth2PermissionGrantDeltaCollectionRequest orderBy(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (OAuth2PermissionGrantDeltaCollectionRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

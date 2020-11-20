@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.Workbook;
 import com.microsoft.graph.requests.extensions.WorkbookCloseSessionRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Close Session Request.
  */
-public class WorkbookCloseSessionRequest extends BaseRequest {
+public class WorkbookCloseSessionRequest extends BaseRequest<Void> {
 
     /**
      * The request for this WorkbookCloseSession

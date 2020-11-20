@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -24,7 +24,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Mobile App Category With Reference Request.
  */
-public class MobileAppCategoryWithReferenceRequest extends BaseRequest {
+public class MobileAppCategoryWithReferenceRequest extends BaseWithReferenceRequest<MobileAppCategory> {
 
     /**
      * The request for the MobileAppCategory
@@ -37,46 +37,6 @@ public class MobileAppCategoryWithReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, MobileAppCategory.class);
     }
 
-    public void post(@Nonnull final MobileAppCategory newMobileAppCategory, @Nullable final IJsonBackedObject payload, @Nonnull final ICallback<? super MobileAppCategory> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    @Nullable
-    public MobileAppCategory post(@Nonnull final MobileAppCategory newMobileAppCategory, @Nullable final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newMobileAppCategory;
-        }
-        return null;
-    }
-
-    public void get(@Nonnull final ICallback<? super MobileAppCategory> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    @Nullable
-    public MobileAppCategory get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(@Nonnull final ICallback<? super MobileAppCategory> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(@Nonnull final MobileAppCategory sourceMobileAppCategory, @Nonnull final ICallback<? super MobileAppCategory> callback) {
-		send(HttpMethod.PATCH, callback, sourceMobileAppCategory);
-	}
-
-    @Nullable
-	public MobileAppCategory patch(@Nonnull final MobileAppCategory sourceMobileAppCategory) throws ClientException {
-		return send(HttpMethod.PATCH, sourceMobileAppCategory);
-	}
-
-
     /**
      * Sets the select clause for the request
      *
@@ -85,8 +45,8 @@ public class MobileAppCategoryWithReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public MobileAppCategoryWithReferenceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (MobileAppCategoryWithReferenceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -97,7 +57,7 @@ public class MobileAppCategoryWithReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public MobileAppCategoryWithReferenceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (MobileAppCategoryWithReferenceRequest)this;
+        addExpandOption(value);
+        return this;
     }
 }

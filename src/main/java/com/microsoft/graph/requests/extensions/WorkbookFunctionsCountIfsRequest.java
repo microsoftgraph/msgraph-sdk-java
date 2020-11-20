@@ -21,7 +21,8 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Count Ifs Request.
  */
-public class WorkbookFunctionsCountIfsRequest extends BaseRequest {
+public class WorkbookFunctionsCountIfsRequest extends BaseRequest<WorkbookFunctionResult> {
+    /** The body for the method */
     protected final WorkbookFunctionsCountIfsBody body;
 
     /**
@@ -36,10 +37,18 @@ public class WorkbookFunctionsCountIfsRequest extends BaseRequest {
         body = new WorkbookFunctionsCountIfsBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(@Nonnull final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     @Nullable
     public WorkbookFunctionResult post() throws ClientException {
         return send(HttpMethod.POST, body);
@@ -53,8 +62,8 @@ public class WorkbookFunctionsCountIfsRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsCountIfsRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsCountIfsRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +74,8 @@ public class WorkbookFunctionsCountIfsRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsCountIfsRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsCountIfsRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -77,8 +86,8 @@ public class WorkbookFunctionsCountIfsRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsCountIfsRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsCountIfsRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

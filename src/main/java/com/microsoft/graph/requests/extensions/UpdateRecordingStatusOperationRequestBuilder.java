@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Update Recording Status Operation Request Builder.
  */
-public class UpdateRecordingStatusOperationRequestBuilder extends BaseRequestBuilder {
+public class UpdateRecordingStatusOperationRequestBuilder extends BaseRequestBuilder<UpdateRecordingStatusOperation> {
 
     /**
      * The request builder for the UpdateRecordingStatusOperation

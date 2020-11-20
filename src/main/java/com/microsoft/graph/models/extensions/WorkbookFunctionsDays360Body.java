@@ -74,7 +74,7 @@ public class WorkbookFunctionsDays360Body {
      * @return the serializer
      */
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

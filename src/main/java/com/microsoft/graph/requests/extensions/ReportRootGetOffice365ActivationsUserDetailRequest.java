@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
+import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.requests.extensions.ReportRootGetOffice365ActivationsUserDetailRequest;
 
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Office365Activations User Detail Request.
  */
-public class ReportRootGetOffice365ActivationsUserDetailRequest extends BaseRequest {
+public class ReportRootGetOffice365ActivationsUserDetailRequest extends BaseRequest<Report> {
 
     /**
      * The request for this ReportRootGetOffice365ActivationsUserDetail
@@ -103,8 +104,8 @@ public class ReportRootGetOffice365ActivationsUserDetailRequest extends BaseRequ
      */
     @Nonnull
     public ReportRootGetOffice365ActivationsUserDetailRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ReportRootGetOffice365ActivationsUserDetailRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +116,8 @@ public class ReportRootGetOffice365ActivationsUserDetailRequest extends BaseRequ
      */
     @Nonnull
     public ReportRootGetOffice365ActivationsUserDetailRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ReportRootGetOffice365ActivationsUserDetailRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +128,8 @@ public class ReportRootGetOffice365ActivationsUserDetailRequest extends BaseRequ
      */
     @Nonnull
     public ReportRootGetOffice365ActivationsUserDetailRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ReportRootGetOffice365ActivationsUserDetailRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +140,8 @@ public class ReportRootGetOffice365ActivationsUserDetailRequest extends BaseRequ
      */
     @Nonnull
     public ReportRootGetOffice365ActivationsUserDetailRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ReportRootGetOffice365ActivationsUserDetailRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

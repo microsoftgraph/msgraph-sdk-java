@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsCscRequest;
+import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
+import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Workbook Functions Csc Request Builder.
  */
-public class WorkbookFunctionsCscRequestBuilder extends BaseActionRequestBuilder {
+public class WorkbookFunctionsCscRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
     /**
      * The request builder for this WorkbookFunctionsCsc

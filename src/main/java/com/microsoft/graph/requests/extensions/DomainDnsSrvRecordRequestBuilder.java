@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Domain Dns Srv Record Request Builder.
  */
-public class DomainDnsSrvRecordRequestBuilder extends BaseRequestBuilder {
+public class DomainDnsSrvRecordRequestBuilder extends BaseRequestBuilder<DomainDnsSrvRecord> {
 
     /**
      * The request builder for the DomainDnsSrvRecord

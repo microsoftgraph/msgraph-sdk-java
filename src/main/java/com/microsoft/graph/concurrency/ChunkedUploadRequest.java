@@ -19,8 +19,9 @@ import com.microsoft.graph.options.Option;
 
 /**
  * The chunk upload request.
+ * @param <UploadType>    The upload item type.
  */
-public class ChunkedUploadRequest {
+public class ChunkedUploadRequest<UploadType> {
 
     /**
      * Content Range header name.
@@ -33,11 +34,6 @@ public class ChunkedUploadRequest {
     private static final String CONTENT_RANGE_FORMAT = "bytes %1$d-%2$d/%3$d";
 
     /**
-     * The seconds for retry delay.
-     */
-    private static final long RETRY_DELAY = 2000L; // 2 seconds
-
-    /**
      * The chunk data sent to the server.
      */
     private final byte[] data;
@@ -45,17 +41,7 @@ public class ChunkedUploadRequest {
     /**
      * The base request.
      */
-    private final BaseRequest baseRequest;
-
-    /**
-     * The max retry for a single request.
-     */
-    private final long maxRetry;
-
-    /**
-     * The retry counter.
-     */
-    private long retryCount;
+    private final BaseRequest<ChunkedUploadResult<UploadType>> baseRequest;
 
     /**
      * Construct the ChunkedUploadRequest
@@ -65,23 +51,20 @@ public class ChunkedUploadRequest {
      * @param options    The query options.
      * @param chunk      The chunk byte array.
      * @param chunkSize  The chunk array size.
-     * @param maxRetry   The limit on retry.
      * @param beginIndex The begin index of this chunk in the input stream.
      * @param totalLength The total length of the input stream.
      */
+    @SuppressWarnings("unchecked")
     public ChunkedUploadRequest(@Nonnull final String requestUrl,
                                 @Nonnull final IGraphServiceClient client,
                                 @Nullable final List<? extends Option> options,
                                 @Nonnull final byte[] chunk,
                                 final int chunkSize,
-                                final int maxRetry,
                                 final long beginIndex,
                                 final long totalLength) {
         this.data = new byte[chunkSize];
         System.arraycopy(chunk, 0, this.data, 0, chunkSize);
-        this.retryCount = 0L;
-        this.maxRetry = (long)maxRetry;
-        this.baseRequest = new BaseRequest(requestUrl, client, options, ChunkedUploadResult.class) {
+        this.baseRequest = new BaseRequest<ChunkedUploadResult<UploadType>>(requestUrl, client, options, (Class<? extends ChunkedUploadResult<UploadType>>)(new ChunkedUploadResult<UploadType>((UploadType)null)).getClass()) {
         };
         this.baseRequest.setHttpMethod(HttpMethod.PUT);
         this.baseRequest.addHeader(CONTENT_RANGE_HEADER_NAME,
@@ -96,12 +79,11 @@ public class ChunkedUploadRequest {
      * Upload a chunk with tries.
      *
      * @param responseHandler The handler to handle the HTTP response.
-     * @param <UploadType>    The upload item type.
      * @return The upload result.
      */
     @SuppressWarnings("unchecked")
-    @Nullable
-    public <UploadType> ChunkedUploadResult<UploadType> upload(
+    @Nonnull
+    public ChunkedUploadResult<UploadType> upload(
             @Nonnull final ChunkedUploadResponseHandler<UploadType> responseHandler) {
         ChunkedUploadResult<UploadType> result = null;
 

@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device And App Management Role Assignment Request.
  */
-public class DeviceAndAppManagementRoleAssignmentRequest extends BaseRequest {
+public class DeviceAndAppManagementRoleAssignmentRequest extends BaseRequest<DeviceAndAppManagementRoleAssignment> {
 	
     /**
      * The request for the DeviceAndAppManagementRoleAssignment
@@ -146,8 +146,8 @@ public class DeviceAndAppManagementRoleAssignmentRequest extends BaseRequest {
      */
      @Nonnull
      public DeviceAndAppManagementRoleAssignmentRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceAndAppManagementRoleAssignmentRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class DeviceAndAppManagementRoleAssignmentRequest extends BaseRequest {
      */
      @Nonnull
      public DeviceAndAppManagementRoleAssignmentRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceAndAppManagementRoleAssignmentRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

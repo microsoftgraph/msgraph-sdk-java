@@ -22,44 +22,49 @@
 
 package com.microsoft.graph.http;
 
-import com.google.gson.JsonObject;
-
-import com.microsoft.graph.serializer.IJsonBackedObject;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.core.IBaseClient;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.options.Option;
 
 import java.util.List;
 
 import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 /**
- * A page of results from a collection
+ * An HTTP request.
  * 
- * @param <T1> the type of the item contained within the collection
- * @param <T2> the type of the request builder for the next page in this collection
+ * @param <T> the response class
  */
-
-public interface IBaseCollectionPage<T1, T2 extends IRequestBuilder> extends IJsonBackedObject {
-
-    /**
-     * Gets the raw representation of this class
-     * 
-     * @return the raw representation of this class
-     */
-    @Nullable
-    JsonObject getRawObject();
+public abstract class BaseReferenceRequest<T> extends BaseRequest<T> {
 
     /**
-     * Gets the next page request builder
-     * 
-     * @return the next page request builder
+     * The request for reference
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param entityType     the class for the entity
      */
-    @Nullable
-    T2 getNextPage();
+    public BaseReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final Class<T> entityType) {
+        super(requestUrl, client, requestOptions, entityType);
+    }
 
     /**
-     * Gets the current page
-     * 
-     * @return the current page
+     * Deletes the entity and invokes the callback
+     * @param callback callback to be invoked once the entity is deleted
+     */
+    public void delete(@Nonnull final ICallback<? super T> callback) {
+        send(HttpMethod.DELETE, callback, null);
+    }
+
+    /**
+     * Deletes the entity
+     * @return the deleted entity 
      */
     @Nullable
-    List<T1> getCurrentPage();
+    public T delete() throws ClientException {
+       return send(HttpMethod.DELETE, null);
+    }
 }

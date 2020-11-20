@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Onenote Page Request Builder.
  */
-public class OnenotePageRequestBuilder extends BaseRequestBuilder {
+public class OnenotePageRequestBuilder extends BaseRequestBuilder<OnenotePage> {
 
     /**
      * The request builder for the OnenotePage
@@ -82,21 +82,43 @@ public class OnenotePageRequestBuilder extends BaseRequestBuilder {
         return new OnenoteSectionRequestBuilder(getRequestUrlWithAdditionalSegment("parentSection"), getClient(), null);
     }
 
+    /**
+     * Gets the request builder for content
+     *
+     * @return the OnenotePageContentStreamRequestBuilder instance
+     */
     @Nonnull
     public OnenotePageContentStreamRequestBuilder content() {
         return new OnenotePageContentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param id the id
+     * @param groupId the groupId
+     * @param siteCollectionId the siteCollectionId
+     * @param siteId the siteId
+     */
     @Nonnull
     public OnenotePageCopyToSectionRequestBuilder copyToSection(@Nullable final String id, @Nullable final String groupId, @Nullable final String siteCollectionId, @Nullable final String siteId) {
         return new OnenotePageCopyToSectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copyToSection"), getClient(), null, id, groupId, siteCollectionId, siteId);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param commands the commands
+     */
     @Nonnull
     public OnenotePageOnenotePatchContentRequestBuilder onenotePatchContent(@Nullable final java.util.List<OnenotePatchContentCommand> commands) {
         return new OnenotePageOnenotePatchContentRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.onenotePatchContent"), getClient(), null, commands);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public OnenotePagePreviewRequestBuilder preview() {
         return new OnenotePagePreviewRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.preview"), getClient(), null);

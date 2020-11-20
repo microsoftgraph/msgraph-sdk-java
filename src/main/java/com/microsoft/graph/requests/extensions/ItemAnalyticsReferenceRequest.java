@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -25,7 +25,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Item Analytics Reference Request.
  */
-public class ItemAnalyticsReferenceRequest extends BaseRequest {
+public class ItemAnalyticsReferenceRequest extends BaseReferenceRequest<ItemAnalytics> {
 
     /**
      * The request for the ItemAnalytics
@@ -38,15 +38,6 @@ public class ItemAnalyticsReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, ItemAnalytics.class);
     }
 
-    public void delete(@Nonnull final ICallback<? super ItemAnalytics> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    @Nullable
-    public ItemAnalytics delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
-    }
-
     /**
      * Sets the select clause for the request
      *
@@ -55,8 +46,8 @@ public class ItemAnalyticsReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public ItemAnalyticsReferenceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ItemAnalyticsReferenceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -67,8 +58,8 @@ public class ItemAnalyticsReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public ItemAnalyticsReferenceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ItemAnalyticsReferenceRequest)this;
+        addExpandOption(value);
+        return this;
     }
     /**
      * Puts the ItemAnalytics

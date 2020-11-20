@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Unmute Participant Operation Request Builder.
  */
-public class UnmuteParticipantOperationRequestBuilder extends BaseRequestBuilder {
+public class UnmuteParticipantOperationRequestBuilder extends BaseRequestBuilder<UnmuteParticipantOperation> {
 
     /**
      * The request builder for the UnmuteParticipantOperation

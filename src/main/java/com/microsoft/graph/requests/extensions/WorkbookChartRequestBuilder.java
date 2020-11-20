@@ -28,7 +28,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Chart Request Builder.
  */
-public class WorkbookChartRequestBuilder extends BaseRequestBuilder {
+public class WorkbookChartRequestBuilder extends BaseRequestBuilder<WorkbookChart> {
 
     /**
      * The request builder for the WorkbookChart
@@ -104,11 +104,22 @@ public class WorkbookChartRequestBuilder extends BaseRequestBuilder {
     public WorkbookChartLegendRequestBuilder legend() {
         return new WorkbookChartLegendRequestBuilder(getRequestUrlWithAdditionalSegment("legend"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the WorkbookChartSeries collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public WorkbookChartSeriesCollectionRequestBuilder series() {
         return new WorkbookChartSeriesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("series"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the WorkbookChartSeries item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public WorkbookChartSeriesRequestBuilder series(@Nonnull final String id) {
         return new WorkbookChartSeriesRequestBuilder(getRequestUrlWithAdditionalSegment("series") + "/" + id, getClient(), null);
@@ -134,31 +145,65 @@ public class WorkbookChartRequestBuilder extends BaseRequestBuilder {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param sourceData the sourceData
+     * @param seriesBy the seriesBy
+     */
     @Nonnull
     public WorkbookChartSetDataRequestBuilder setData(@Nullable final com.google.gson.JsonElement sourceData, @Nullable final String seriesBy) {
         return new WorkbookChartSetDataRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setData"), getClient(), null, sourceData, seriesBy);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param startCell the startCell
+     * @param endCell the endCell
+     */
     @Nonnull
     public WorkbookChartSetPositionRequestBuilder setPosition(@Nullable final com.google.gson.JsonElement startCell, @Nullable final com.google.gson.JsonElement endCell) {
         return new WorkbookChartSetPositionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setPosition"), getClient(), null, startCell, endCell);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookChartImageRequestBuilder image() {
         return new WorkbookChartImageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.image"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param width the width
+     */
     @Nonnull
     public WorkbookChartImageRequestBuilder image(@Nullable final Integer width) {
         return new WorkbookChartImageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.image"), getClient(), null, width);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param width the width
+     * @param height the height
+     */
     @Nonnull
     public WorkbookChartImageRequestBuilder image(@Nullable final Integer width, @Nullable final Integer height) {
         return new WorkbookChartImageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.image"), getClient(), null, width, height);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param width the width
+     * @param height the height
+     * @param fittingMode the fittingMode
+     */
     @Nonnull
     public WorkbookChartImageRequestBuilder image(@Nullable final Integer width, @Nullable final Integer height, @Nullable final String fittingMode) {
         return new WorkbookChartImageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.image"), getClient(), null, width, height, fittingMode);

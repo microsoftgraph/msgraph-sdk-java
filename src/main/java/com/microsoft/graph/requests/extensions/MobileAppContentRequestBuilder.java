@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Mobile App Content Request Builder.
  */
-public class MobileAppContentRequestBuilder extends BaseRequestBuilder {
+public class MobileAppContentRequestBuilder extends BaseRequestBuilder<MobileAppContent> {
 
     /**
      * The request builder for the MobileAppContent
@@ -58,11 +58,22 @@ public class MobileAppContentRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the MobileAppContentFile collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public MobileAppContentFileCollectionRequestBuilder files() {
         return new MobileAppContentFileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("files"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the MobileAppContentFile item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public MobileAppContentFileRequestBuilder files(@Nonnull final String id) {
         return new MobileAppContentFileRequestBuilder(getRequestUrlWithAdditionalSegment("files") + "/" + id, getClient(), null);

@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Ios Mobile App Configuration Request Builder.
  */
-public class IosMobileAppConfigurationRequestBuilder extends BaseRequestBuilder {
+public class IosMobileAppConfigurationRequestBuilder extends BaseRequestBuilder<IosMobileAppConfiguration> {
 
     /**
      * The request builder for the IosMobileAppConfiguration
@@ -56,20 +56,42 @@ public class IosMobileAppConfigurationRequestBuilder extends BaseRequestBuilder 
     }
 
 
+    /**
+     *  Gets a request builder for the ManagedDeviceMobileAppConfigurationAssignment collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder assignments() {
         return new ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ManagedDeviceMobileAppConfigurationAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder assignments(@Nonnull final String id) {
         return new ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the ManagedDeviceMobileAppConfigurationDeviceStatus collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses() {
         return new ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ManagedDeviceMobileAppConfigurationDeviceStatus item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder deviceStatuses(@Nonnull final String id) {
         return new ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
@@ -84,11 +106,22 @@ public class IosMobileAppConfigurationRequestBuilder extends BaseRequestBuilder 
     public ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder deviceStatusSummary() {
         return new ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatusSummary"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the ManagedDeviceMobileAppConfigurationUserStatus collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder userStatuses() {
         return new ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ManagedDeviceMobileAppConfigurationUserStatus item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder userStatuses(@Nonnull final String id) {
         return new ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);

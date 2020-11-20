@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Room List Request Builder.
  */
-public class RoomListRequestBuilder extends BaseRequestBuilder {
+public class RoomListRequestBuilder extends BaseRequestBuilder<RoomList> {
 
     /**
      * The request builder for the RoomList
@@ -58,11 +58,22 @@ public class RoomListRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the Room collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public RoomCollectionRequestBuilder rooms() {
         return new RoomCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rooms"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Room item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public RoomRequestBuilder rooms(@Nonnull final String id) {
         return new RoomRequestBuilder(getRequestUrlWithAdditionalSegment("rooms") + "/" + id, getClient(), null);

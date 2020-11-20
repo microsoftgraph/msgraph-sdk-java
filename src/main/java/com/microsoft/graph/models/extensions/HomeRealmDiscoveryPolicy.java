@@ -50,8 +50,9 @@ public class HomeRealmDiscoveryPolicy extends StsPolicy implements IJsonBackedOb
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

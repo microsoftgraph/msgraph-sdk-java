@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.OnenotePagePreview;
+import com.microsoft.graph.models.extensions.OnenotePage;
 import com.microsoft.graph.requests.extensions.OnenotePagePreviewRequest;
 
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Onenote Page Preview Request.
  */
-public class OnenotePagePreviewRequest extends BaseRequest {
+public class OnenotePagePreviewRequest extends BaseRequest<OnenotePagePreview> {
 
     /**
      * The request for this OnenotePagePreview
@@ -61,8 +62,8 @@ public class OnenotePagePreviewRequest extends BaseRequest {
      */
     @Nonnull
     public OnenotePagePreviewRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (OnenotePagePreviewRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -73,8 +74,8 @@ public class OnenotePagePreviewRequest extends BaseRequest {
      */
     @Nonnull
     public OnenotePagePreviewRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (OnenotePagePreviewRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -85,8 +86,8 @@ public class OnenotePagePreviewRequest extends BaseRequest {
      */
     @Nonnull
     public OnenotePagePreviewRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (OnenotePagePreviewRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -97,8 +98,8 @@ public class OnenotePagePreviewRequest extends BaseRequest {
      */
     @Nonnull
     public OnenotePagePreviewRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (OnenotePagePreviewRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

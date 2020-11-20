@@ -59,8 +59,9 @@ public class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAss
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

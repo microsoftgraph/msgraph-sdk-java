@@ -22,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Title Request.
  */
-public class WorkbookChartTitleRequest extends BaseRequest {
+public class WorkbookChartTitleRequest extends BaseRequest<WorkbookChartTitle> {
 	
     /**
      * The request for the WorkbookChartTitle
@@ -147,8 +147,8 @@ public class WorkbookChartTitleRequest extends BaseRequest {
      */
      @Nonnull
      public WorkbookChartTitleRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookChartTitleRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -159,8 +159,8 @@ public class WorkbookChartTitleRequest extends BaseRequest {
      */
      @Nonnull
      public WorkbookChartTitleRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookChartTitleRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

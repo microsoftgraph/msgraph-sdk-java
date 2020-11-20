@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ReportRootGetSkypeForBusinessActivityUserCountsRequest;
+import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.models.extensions.Report;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
+import com.microsoft.graph.http.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Report Root Get Skype For Business Activity User Counts Request Builder.
  */
-public class ReportRootGetSkypeForBusinessActivityUserCountsRequestBuilder extends BaseFunctionRequestBuilder {
+public class ReportRootGetSkypeForBusinessActivityUserCountsRequestBuilder extends BaseFunctionRequestBuilder<Report> {
 
     /**
      * The request builder for this ReportRootGetSkypeForBusinessActivityUserCounts

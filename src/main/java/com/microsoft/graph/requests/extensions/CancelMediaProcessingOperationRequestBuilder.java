@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Cancel Media Processing Operation Request Builder.
  */
-public class CancelMediaProcessingOperationRequestBuilder extends BaseRequestBuilder {
+public class CancelMediaProcessingOperationRequestBuilder extends BaseRequestBuilder<CancelMediaProcessingOperation> {
 
     /**
      * The request builder for the CancelMediaProcessingOperation

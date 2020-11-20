@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows10Compliance Policy Request.
  */
-public class Windows10CompliancePolicyRequest extends BaseRequest {
+public class Windows10CompliancePolicyRequest extends BaseRequest<Windows10CompliancePolicy> {
 	
     /**
      * The request for the Windows10CompliancePolicy
@@ -146,8 +146,8 @@ public class Windows10CompliancePolicyRequest extends BaseRequest {
      */
      @Nonnull
      public Windows10CompliancePolicyRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (Windows10CompliancePolicyRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class Windows10CompliancePolicyRequest extends BaseRequest {
      */
      @Nonnull
      public Windows10CompliancePolicyRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Windows10CompliancePolicyRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

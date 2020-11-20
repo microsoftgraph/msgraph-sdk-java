@@ -56,7 +56,7 @@ public class WorkbookFunctionsSumSqBody {
      * @return the serializer
      */
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

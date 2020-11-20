@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Range Format Request Builder.
  */
-public class WorkbookRangeFormatRequestBuilder extends BaseRequestBuilder {
+public class WorkbookRangeFormatRequestBuilder extends BaseRequestBuilder<WorkbookRangeFormat> {
 
     /**
      * The request builder for the WorkbookRangeFormat
@@ -61,11 +61,22 @@ public class WorkbookRangeFormatRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the WorkbookRangeBorder collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public WorkbookRangeBorderCollectionRequestBuilder borders() {
         return new WorkbookRangeBorderCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("borders"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the WorkbookRangeBorder item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public WorkbookRangeBorderRequestBuilder borders(@Nonnull final String id) {
         return new WorkbookRangeBorderRequestBuilder(getRequestUrlWithAdditionalSegment("borders") + "/" + id, getClient(), null);
@@ -101,11 +112,19 @@ public class WorkbookRangeFormatRequestBuilder extends BaseRequestBuilder {
         return new WorkbookFormatProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("protection"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookRangeFormatAutofitColumnsRequestBuilder autofitColumns() {
         return new WorkbookRangeFormatAutofitColumnsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.autofitColumns"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookRangeFormatAutofitRowsRequestBuilder autofitRows() {
         return new WorkbookRangeFormatAutofitRowsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.autofitRows"), getClient(), null);

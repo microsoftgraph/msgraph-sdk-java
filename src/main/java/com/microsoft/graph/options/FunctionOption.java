@@ -24,6 +24,7 @@ package com.microsoft.graph.options;
 
 import javax.annotation.Nonnull;
 
+/** Represents an option to use with OData methods */
 public class FunctionOption extends Option {
 
     /**

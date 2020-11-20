@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Org Contact Request Builder.
  */
-public class OrgContactRequestBuilder extends BaseRequestBuilder {
+public class OrgContactRequestBuilder extends BaseRequestBuilder<OrgContact> {
 
     /**
      * The request builder for the OrgContact
@@ -58,29 +58,62 @@ public class OrgContactRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the DirectoryObject collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public DirectoryObjectCollectionWithReferencesRequestBuilder directReports() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("directReports"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DirectoryObject item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public DirectoryObjectWithReferenceRequestBuilder directReports(@Nonnull final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("directReports") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the User collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public UserCollectionWithReferencesRequestBuilder directReportsAsUser() {
         return new UserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("directReports") + "/microsoft.graph.user", getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the User item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public UserWithReferenceRequestBuilder directReportsAsUser(@Nonnull final String id) {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("directReports") + "/" + id + "/microsoft.graph.user", getClient(), null);
     }
+    /**
+     *  Gets a request builder for the OrgContact collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public OrgContactCollectionWithReferencesRequestBuilder directReportsAsOrgContact() {
         return new OrgContactCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("directReports") + "/microsoft.graph.orgContact", getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the OrgContact item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public OrgContactWithReferenceRequestBuilder directReportsAsOrgContact(@Nonnull final String id) {
         return new OrgContactWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("directReports") + "/" + id + "/microsoft.graph.orgContact", getClient(), null);
@@ -95,128 +128,282 @@ public class OrgContactRequestBuilder extends BaseRequestBuilder {
     public DirectoryObjectWithReferenceRequestBuilder manager() {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("manager"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the DirectoryObject collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public DirectoryObjectCollectionWithReferencesRequestBuilder memberOf() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DirectoryObject item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public DirectoryObjectWithReferenceRequestBuilder memberOf(@Nonnull final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the User collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public UserCollectionWithReferencesRequestBuilder memberOfAsUser() {
         return new UserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/microsoft.graph.user", getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the User item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public UserWithReferenceRequestBuilder memberOfAsUser(@Nonnull final String id) {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.user", getClient(), null);
     }
+    /**
+     *  Gets a request builder for the Group collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public GroupCollectionWithReferencesRequestBuilder memberOfAsGroup() {
         return new GroupCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/microsoft.graph.group", getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Group item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public GroupWithReferenceRequestBuilder memberOfAsGroup(@Nonnull final String id) {
         return new GroupWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.group", getClient(), null);
     }
+    /**
+     *  Gets a request builder for the Application collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ApplicationCollectionWithReferencesRequestBuilder memberOfAsApplication() {
         return new ApplicationCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/microsoft.graph.application", getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Application item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ApplicationWithReferenceRequestBuilder memberOfAsApplication(@Nonnull final String id) {
         return new ApplicationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.application", getClient(), null);
     }
+    /**
+     *  Gets a request builder for the ServicePrincipal collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ServicePrincipalCollectionWithReferencesRequestBuilder memberOfAsServicePrincipal() {
         return new ServicePrincipalCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/microsoft.graph.servicePrincipal", getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ServicePrincipal item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ServicePrincipalWithReferenceRequestBuilder memberOfAsServicePrincipal(@Nonnull final String id) {
         return new ServicePrincipalWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.servicePrincipal", getClient(), null);
     }
+    /**
+     *  Gets a request builder for the Device collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public DeviceCollectionWithReferencesRequestBuilder memberOfAsDevice() {
         return new DeviceCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/microsoft.graph.device", getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Device item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public DeviceWithReferenceRequestBuilder memberOfAsDevice(@Nonnull final String id) {
         return new DeviceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.device", getClient(), null);
     }
+    /**
+     *  Gets a request builder for the OrgContact collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public OrgContactCollectionWithReferencesRequestBuilder memberOfAsOrgContact() {
         return new OrgContactCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/microsoft.graph.orgContact", getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the OrgContact item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public OrgContactWithReferenceRequestBuilder memberOfAsOrgContact(@Nonnull final String id) {
         return new OrgContactWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.orgContact", getClient(), null);
     }
+    /**
+     *  Gets a request builder for the DirectoryObject collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public DirectoryObjectCollectionWithReferencesRequestBuilder transitiveMemberOf() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DirectoryObject item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public DirectoryObjectWithReferenceRequestBuilder transitiveMemberOf(@Nonnull final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the User collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public UserCollectionWithReferencesRequestBuilder transitiveMemberOfAsUser() {
         return new UserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/microsoft.graph.user", getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the User item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public UserWithReferenceRequestBuilder transitiveMemberOfAsUser(@Nonnull final String id) {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.user", getClient(), null);
     }
+    /**
+     *  Gets a request builder for the Group collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public GroupCollectionWithReferencesRequestBuilder transitiveMemberOfAsGroup() {
         return new GroupCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/microsoft.graph.group", getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Group item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public GroupWithReferenceRequestBuilder transitiveMemberOfAsGroup(@Nonnull final String id) {
         return new GroupWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.group", getClient(), null);
     }
+    /**
+     *  Gets a request builder for the Application collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ApplicationCollectionWithReferencesRequestBuilder transitiveMemberOfAsApplication() {
         return new ApplicationCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/microsoft.graph.application", getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Application item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ApplicationWithReferenceRequestBuilder transitiveMemberOfAsApplication(@Nonnull final String id) {
         return new ApplicationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.application", getClient(), null);
     }
+    /**
+     *  Gets a request builder for the ServicePrincipal collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ServicePrincipalCollectionWithReferencesRequestBuilder transitiveMemberOfAsServicePrincipal() {
         return new ServicePrincipalCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/microsoft.graph.servicePrincipal", getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ServicePrincipal item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ServicePrincipalWithReferenceRequestBuilder transitiveMemberOfAsServicePrincipal(@Nonnull final String id) {
         return new ServicePrincipalWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.servicePrincipal", getClient(), null);
     }
+    /**
+     *  Gets a request builder for the Device collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public DeviceCollectionWithReferencesRequestBuilder transitiveMemberOfAsDevice() {
         return new DeviceCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/microsoft.graph.device", getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Device item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public DeviceWithReferenceRequestBuilder transitiveMemberOfAsDevice(@Nonnull final String id) {
         return new DeviceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.device", getClient(), null);
     }
+    /**
+     *  Gets a request builder for the OrgContact collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public OrgContactCollectionWithReferencesRequestBuilder transitiveMemberOfAsOrgContact() {
         return new OrgContactCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/microsoft.graph.orgContact", getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the OrgContact item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public OrgContactWithReferenceRequestBuilder transitiveMemberOfAsOrgContact(@Nonnull final String id) {
         return new OrgContactWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.orgContact", getClient(), null);

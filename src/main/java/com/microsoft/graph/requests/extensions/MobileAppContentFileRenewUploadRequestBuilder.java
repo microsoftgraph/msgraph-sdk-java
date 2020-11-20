@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.MobileAppContentFileRenewUploadRequest;
+import com.microsoft.graph.models.extensions.MobileAppContentFile;
 
-import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
+import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Mobile App Content File Renew Upload Request Builder.
  */
-public class MobileAppContentFileRenewUploadRequestBuilder extends BaseActionRequestBuilder {
+public class MobileAppContentFileRenewUploadRequestBuilder extends BaseActionRequestBuilder<MobileAppContentFile> {
 
     /**
      * The request builder for this MobileAppContentFileRenewUpload

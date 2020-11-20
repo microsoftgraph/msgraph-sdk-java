@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyScheduleActionsForRulesRequest;
+import com.microsoft.graph.models.extensions.DeviceCompliancePolicy;
 import com.microsoft.graph.models.extensions.DeviceComplianceScheduledActionForRule;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
+import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Device Compliance Policy Schedule Actions For Rules Request Builder.
  */
-public class DeviceCompliancePolicyScheduleActionsForRulesRequestBuilder extends BaseActionRequestBuilder {
+public class DeviceCompliancePolicyScheduleActionsForRulesRequestBuilder extends BaseActionRequestBuilder<DeviceCompliancePolicy> {
 
     /**
      * The request builder for this DeviceCompliancePolicyScheduleActionsForRules

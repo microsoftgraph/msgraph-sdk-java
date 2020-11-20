@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Invite Participants Operation Request.
  */
-public class InviteParticipantsOperationRequest extends BaseRequest {
+public class InviteParticipantsOperationRequest extends BaseRequest<InviteParticipantsOperation> {
 	
     /**
      * The request for the InviteParticipantsOperation
@@ -146,8 +146,8 @@ public class InviteParticipantsOperationRequest extends BaseRequest {
      */
      @Nonnull
      public InviteParticipantsOperationRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (InviteParticipantsOperationRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class InviteParticipantsOperationRequest extends BaseRequest {
      */
      @Nonnull
      public InviteParticipantsOperationRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (InviteParticipantsOperationRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Managed App Protection Request Builder.
  */
-public class ManagedAppProtectionRequestBuilder extends BaseRequestBuilder {
+public class ManagedAppProtectionRequestBuilder extends BaseRequestBuilder<ManagedAppProtection> {
 
     /**
      * The request builder for the ManagedAppProtection
@@ -58,6 +58,11 @@ public class ManagedAppProtectionRequestBuilder extends BaseRequestBuilder {
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param apps the apps
+     */
     @Nonnull
     public ManagedAppProtectionTargetAppsRequestBuilder targetApps(@Nullable final java.util.List<ManagedMobileApp> apps) {
         return new ManagedAppProtectionTargetAppsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.targetApps"), getClient(), null, apps);

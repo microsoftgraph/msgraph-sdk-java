@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Managed Device Mobile App Configuration Device Summary Request Builder.
  */
-public class ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder extends BaseRequestBuilder {
+public class ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder extends BaseRequestBuilder<ManagedDeviceMobileAppConfigurationDeviceSummary> {
 
     /**
      * The request builder for the ManagedDeviceMobileAppConfigurationDeviceSummary

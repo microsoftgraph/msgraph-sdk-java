@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.DriveItemVersion;
 import com.microsoft.graph.requests.extensions.DriveItemVersionRestoreVersionRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Drive Item Version Restore Version Request.
  */
-public class DriveItemVersionRestoreVersionRequest extends BaseRequest {
+public class DriveItemVersionRestoreVersionRequest extends BaseRequest<Void> {
 
     /**
      * The request for this DriveItemVersionRestoreVersion

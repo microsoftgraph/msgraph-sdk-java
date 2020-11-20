@@ -20,7 +20,8 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Windows Information Protection Assign Request.
  */
-public class WindowsInformationProtectionAssignRequest extends BaseRequest {
+public class WindowsInformationProtectionAssignRequest extends BaseRequest<Void> {
+    /** The body for the method */
     protected final WindowsInformationProtectionAssignBody body;
 
     /**
@@ -35,10 +36,18 @@ public class WindowsInformationProtectionAssignRequest extends BaseRequest {
         body = new WindowsInformationProtectionAssignBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(@Nonnull final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     @Nullable
     public Void post() throws ClientException {
         return send(HttpMethod.POST, body);
@@ -52,8 +61,8 @@ public class WindowsInformationProtectionAssignRequest extends BaseRequest {
      */
     @Nonnull
     public WindowsInformationProtectionAssignRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WindowsInformationProtectionAssignRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -64,8 +73,8 @@ public class WindowsInformationProtectionAssignRequest extends BaseRequest {
      */
     @Nonnull
     public WindowsInformationProtectionAssignRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WindowsInformationProtectionAssignRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -76,8 +85,8 @@ public class WindowsInformationProtectionAssignRequest extends BaseRequest {
      */
     @Nonnull
     public WindowsInformationProtectionAssignRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WindowsInformationProtectionAssignRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

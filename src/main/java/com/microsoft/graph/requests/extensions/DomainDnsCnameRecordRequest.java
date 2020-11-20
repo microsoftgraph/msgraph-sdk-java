@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Domain Dns Cname Record Request.
  */
-public class DomainDnsCnameRecordRequest extends BaseRequest {
+public class DomainDnsCnameRecordRequest extends BaseRequest<DomainDnsCnameRecord> {
 	
     /**
      * The request for the DomainDnsCnameRecord
@@ -146,8 +146,8 @@ public class DomainDnsCnameRecordRequest extends BaseRequest {
      */
      @Nonnull
      public DomainDnsCnameRecordRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DomainDnsCnameRecordRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class DomainDnsCnameRecordRequest extends BaseRequest {
      */
      @Nonnull
      public DomainDnsCnameRecordRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DomainDnsCnameRecordRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

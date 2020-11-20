@@ -25,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Chat Message Request.
  */
-public class ChatMessageRequest extends BaseRequest {
+public class ChatMessageRequest extends BaseRequest<ChatMessage> {
 	
     /**
      * The request for the ChatMessage
@@ -150,8 +150,8 @@ public class ChatMessageRequest extends BaseRequest {
      */
      @Nonnull
      public ChatMessageRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ChatMessageRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -162,8 +162,8 @@ public class ChatMessageRequest extends BaseRequest {
      */
      @Nonnull
      public ChatMessageRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ChatMessageRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -56,7 +56,7 @@ public class WorkbookFunctionsImSechBody {
      * @return the serializer
      */
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

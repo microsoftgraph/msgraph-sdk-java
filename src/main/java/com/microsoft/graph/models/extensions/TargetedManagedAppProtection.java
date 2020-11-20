@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
 import com.microsoft.graph.models.extensions.ManagedAppProtection;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentCollectionPage;
@@ -70,8 +71,9 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

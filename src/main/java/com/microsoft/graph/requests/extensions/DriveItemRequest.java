@@ -41,7 +41,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Drive Item Request.
  */
-public class DriveItemRequest extends BaseRequest {
+public class DriveItemRequest extends BaseRequest<DriveItem> {
 	
     /**
      * The request for the DriveItem
@@ -166,8 +166,8 @@ public class DriveItemRequest extends BaseRequest {
      */
      @Nonnull
      public DriveItemRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DriveItemRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -178,8 +178,8 @@ public class DriveItemRequest extends BaseRequest {
      */
      @Nonnull
      public DriveItemRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DriveItemRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

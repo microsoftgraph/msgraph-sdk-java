@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Teams App Request Builder.
  */
-public class TeamsAppRequestBuilder extends BaseRequestBuilder {
+public class TeamsAppRequestBuilder extends BaseRequestBuilder<TeamsApp> {
 
     /**
      * The request builder for the TeamsApp
@@ -58,11 +58,22 @@ public class TeamsAppRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the TeamsAppDefinition collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public TeamsAppDefinitionCollectionRequestBuilder appDefinitions() {
         return new TeamsAppDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appDefinitions"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the TeamsAppDefinition item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public TeamsAppDefinitionRequestBuilder appDefinitions(@Nonnull final String id) {
         return new TeamsAppDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("appDefinitions") + "/" + id, getClient(), null);

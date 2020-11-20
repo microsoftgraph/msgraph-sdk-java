@@ -65,7 +65,7 @@ public class WorkbookFunctionsDec2OctBody {
      * @return the serializer
      */
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

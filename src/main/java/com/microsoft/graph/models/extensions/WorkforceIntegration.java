@@ -106,8 +106,9 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements IJsonBa
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

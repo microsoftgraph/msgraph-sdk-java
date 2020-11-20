@@ -31,7 +31,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Post Request.
  */
-public class PostRequest extends BaseRequest {
+public class PostRequest extends BaseRequest<Post> {
 	
     /**
      * The request for the Post
@@ -156,8 +156,8 @@ public class PostRequest extends BaseRequest {
      */
      @Nonnull
      public PostRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PostRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -168,8 +168,8 @@ public class PostRequest extends BaseRequest {
      */
      @Nonnull
      public PostRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PostRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

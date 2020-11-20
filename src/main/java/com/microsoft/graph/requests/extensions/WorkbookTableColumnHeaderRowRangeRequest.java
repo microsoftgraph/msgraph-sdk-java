@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRange;
+import com.microsoft.graph.models.extensions.WorkbookTableColumn;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnHeaderRowRangeRequest;
 
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Column Header Row Range Request.
  */
-public class WorkbookTableColumnHeaderRowRangeRequest extends BaseRequest {
+public class WorkbookTableColumnHeaderRowRangeRequest extends BaseRequest<WorkbookRange> {
 
     /**
      * The request for this WorkbookTableColumnHeaderRowRange
@@ -103,8 +104,8 @@ public class WorkbookTableColumnHeaderRowRangeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookTableColumnHeaderRowRangeRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookTableColumnHeaderRowRangeRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +116,8 @@ public class WorkbookTableColumnHeaderRowRangeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookTableColumnHeaderRowRangeRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookTableColumnHeaderRowRangeRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +128,8 @@ public class WorkbookTableColumnHeaderRowRangeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookTableColumnHeaderRowRangeRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookTableColumnHeaderRowRangeRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +140,8 @@ public class WorkbookTableColumnHeaderRowRangeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookTableColumnHeaderRowRangeRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookTableColumnHeaderRowRangeRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

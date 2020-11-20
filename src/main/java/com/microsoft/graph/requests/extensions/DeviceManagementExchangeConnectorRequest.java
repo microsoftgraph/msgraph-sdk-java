@@ -22,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Management Exchange Connector Request.
  */
-public class DeviceManagementExchangeConnectorRequest extends BaseRequest {
+public class DeviceManagementExchangeConnectorRequest extends BaseRequest<DeviceManagementExchangeConnector> {
 	
     /**
      * The request for the DeviceManagementExchangeConnector
@@ -147,8 +147,8 @@ public class DeviceManagementExchangeConnectorRequest extends BaseRequest {
      */
      @Nonnull
      public DeviceManagementExchangeConnectorRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceManagementExchangeConnectorRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -159,8 +159,8 @@ public class DeviceManagementExchangeConnectorRequest extends BaseRequest {
      */
      @Nonnull
      public DeviceManagementExchangeConnectorRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementExchangeConnectorRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

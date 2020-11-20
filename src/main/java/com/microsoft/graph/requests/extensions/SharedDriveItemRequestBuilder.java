@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Shared Drive Item Request Builder.
  */
-public class SharedDriveItemRequestBuilder extends BaseRequestBuilder {
+public class SharedDriveItemRequestBuilder extends BaseRequestBuilder<SharedDriveItem> {
 
     /**
      * The request builder for the SharedDriveItem
@@ -92,11 +92,22 @@ public class SharedDriveItemRequestBuilder extends BaseRequestBuilder {
     public DriveItemRequestBuilder driveItem() {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("driveItem"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the DriveItem collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public DriveItemCollectionRequestBuilder items() {
         return new DriveItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DriveItem item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public DriveItemRequestBuilder items(@Nonnull final String id) {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("items") + "/" + id, getClient(), null);

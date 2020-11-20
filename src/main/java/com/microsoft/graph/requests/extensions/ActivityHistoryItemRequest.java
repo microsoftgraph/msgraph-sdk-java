@@ -22,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Activity History Item Request.
  */
-public class ActivityHistoryItemRequest extends BaseRequest {
+public class ActivityHistoryItemRequest extends BaseRequest<ActivityHistoryItem> {
 	
     /**
      * The request for the ActivityHistoryItem
@@ -147,8 +147,8 @@ public class ActivityHistoryItemRequest extends BaseRequest {
      */
      @Nonnull
      public ActivityHistoryItemRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ActivityHistoryItemRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -159,8 +159,8 @@ public class ActivityHistoryItemRequest extends BaseRequest {
      */
      @Nonnull
      public ActivityHistoryItemRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ActivityHistoryItemRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

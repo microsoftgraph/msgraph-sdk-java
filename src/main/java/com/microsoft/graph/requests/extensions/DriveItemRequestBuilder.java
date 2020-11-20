@@ -40,7 +40,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Drive Item Request Builder.
  */
-public class DriveItemRequestBuilder extends BaseRequestBuilder {
+public class DriveItemRequestBuilder extends BaseRequestBuilder<DriveItem> {
 
     /**
      * The request builder for the DriveItem
@@ -75,6 +75,11 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
         return new com.microsoft.graph.requests.extensions.DriveItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
+    /**
+     * Gets a request builder to the specific path on the drive
+     * @param path path to the query on the drive
+     * @return a request builder to the specified path
+     */
     @Nonnull
     public DriveItemRequestBuilder itemWithPath(@Nonnull final String path) {
         return new DriveItemRequestBuilder(getRequestUrl() + ":/" + path + ":", getClient(), null);
@@ -120,11 +125,22 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
     public ItemAnalyticsWithReferenceRequestBuilder analytics() {
         return new ItemAnalyticsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("analytics"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the DriveItem collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public DriveItemCollectionRequestBuilder children() {
         return new DriveItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("children"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DriveItem item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public DriveItemRequestBuilder children(@Nonnull final String id) {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("children") + "/" + id, getClient(), null);
@@ -139,123 +155,264 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
     public ListItemRequestBuilder listItem() {
         return new ListItemRequestBuilder(getRequestUrlWithAdditionalSegment("listItem"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the Permission collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public PermissionCollectionRequestBuilder permissions() {
         return new PermissionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("permissions"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Permission item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public PermissionRequestBuilder permissions(@Nonnull final String id) {
         return new PermissionRequestBuilder(getRequestUrlWithAdditionalSegment("permissions") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the Subscription collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public SubscriptionCollectionRequestBuilder subscriptions() {
         return new SubscriptionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("subscriptions"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Subscription item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public SubscriptionRequestBuilder subscriptions(@Nonnull final String id) {
         return new SubscriptionRequestBuilder(getRequestUrlWithAdditionalSegment("subscriptions") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the ThumbnailSet collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ThumbnailSetCollectionRequestBuilder thumbnails() {
         return new ThumbnailSetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("thumbnails"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ThumbnailSet item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ThumbnailSetRequestBuilder thumbnails(@Nonnull final String id) {
         return new ThumbnailSetRequestBuilder(getRequestUrlWithAdditionalSegment("thumbnails") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the DriveItemVersion collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public DriveItemVersionCollectionRequestBuilder versions() {
         return new DriveItemVersionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("versions"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DriveItemVersion item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public DriveItemVersionRequestBuilder versions(@Nonnull final String id) {
         return new DriveItemVersionRequestBuilder(getRequestUrlWithAdditionalSegment("versions") + "/" + id, getClient(), null);
     }
 
+    /**
+     * Gets the request builder for content
+     *
+     * @return the DriveItemContentStreamRequestBuilder instance
+     */
     @Nonnull
     public DriveItemContentStreamRequestBuilder content() {
         return new DriveItemContentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param parentReference the parentReference
+     * @param name the name
+     */
     @Nonnull
     public DriveItemRestoreRequestBuilder restore(@Nullable final ItemReference parentReference, @Nullable final String name) {
         return new DriveItemRestoreRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.restore"), getClient(), null, parentReference, name);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param name the name
+     * @param parentReference the parentReference
+     */
     @Nonnull
     public DriveItemCopyRequestBuilder copy(@Nullable final String name, @Nullable final ItemReference parentReference) {
         return new DriveItemCopyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copy"), getClient(), null, name, parentReference);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param item the item
+     */
     @Nonnull
     public DriveItemCreateUploadSessionRequestBuilder createUploadSession(@Nullable final DriveItemUploadableProperties item) {
         return new DriveItemCreateUploadSessionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createUploadSession"), getClient(), null, item);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param checkInAs the checkInAs
+     * @param comment the comment
+     */
     @Nonnull
     public DriveItemCheckinRequestBuilder checkin(@Nullable final String checkInAs, @Nullable final String comment) {
         return new DriveItemCheckinRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.checkin"), getClient(), null, checkInAs, comment);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public DriveItemCheckoutRequestBuilder checkout() {
         return new DriveItemCheckoutRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.checkout"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param type the type
+     * @param scope the scope
+     * @param expirationDateTime the expirationDateTime
+     * @param password the password
+     * @param message the message
+     */
     @Nonnull
     public DriveItemCreateLinkRequestBuilder createLink(@Nullable final String type, @Nullable final String scope, @Nullable final java.util.Calendar expirationDateTime, @Nullable final String password, @Nullable final String message) {
         return new DriveItemCreateLinkRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createLink"), getClient(), null, type, scope, expirationDateTime, password, message);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public DriveItemFollowRequestBuilder follow() {
         return new DriveItemFollowRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.follow"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param requireSignIn the requireSignIn
+     * @param roles the roles
+     * @param sendInvitation the sendInvitation
+     * @param message the message
+     * @param recipients the recipients
+     * @param expirationDateTime the expirationDateTime
+     * @param password the password
+     */
     @Nonnull
     public DriveItemInviteCollectionRequestBuilder invite(@Nullable final Boolean requireSignIn, @Nullable final java.util.List<String> roles, @Nullable final Boolean sendInvitation, @Nullable final String message, @Nullable final java.util.List<DriveRecipient> recipients, @Nullable final String expirationDateTime, @Nullable final String password) {
         return new DriveItemInviteCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.invite"), getClient(), null, requireSignIn, roles, sendInvitation, message, recipients, expirationDateTime, password);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param page the page
+     * @param zoom the zoom
+     */
     @Nonnull
     public DriveItemPreviewRequestBuilder preview(@Nullable final String page, @Nullable final Double zoom) {
         return new DriveItemPreviewRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.preview"), getClient(), null, page, zoom);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public DriveItemUnfollowRequestBuilder unfollow() {
         return new DriveItemUnfollowRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unfollow"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param challengeToken the challengeToken
+     * @param password the password
+     */
     @Nonnull
     public DriveItemValidatePermissionRequestBuilder validatePermission(@Nullable final String challengeToken, @Nullable final String password) {
         return new DriveItemValidatePermissionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.validatePermission"), getClient(), null, challengeToken, password);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
     @Nonnull
     public DriveItemDeltaCollectionRequestBuilder delta() {
         return new DriveItemDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param token the token
+     */
     @Nonnull
     public DriveItemDeltaCollectionRequestBuilder delta(@Nullable final String token) {
         return new DriveItemDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, token);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
     @Nonnull
     public DriveItemGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval() {
         return new DriveItemGetActivitiesByIntervalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getActivitiesByInterval"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param startDateTime the startDateTime
+     * @param endDateTime the endDateTime
+     * @param interval the interval
+     */
     @Nonnull
     public DriveItemGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval(@Nullable final String startDateTime, @Nullable final String endDateTime, @Nullable final String interval) {
         return new DriveItemGetActivitiesByIntervalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getActivitiesByInterval"), getClient(), null, startDateTime, endDateTime, interval);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param q the q
+     */
     @Nonnull
     public DriveItemSearchCollectionRequestBuilder search(@Nullable final String q) {
         return new DriveItemSearchCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.search"), getClient(), null, q);

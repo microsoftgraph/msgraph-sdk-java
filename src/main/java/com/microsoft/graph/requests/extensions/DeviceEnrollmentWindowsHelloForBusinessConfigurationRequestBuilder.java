@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Enrollment Windows Hello For Business Configuration Request Builder.
  */
-public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequestBuilder extends BaseRequestBuilder {
+public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequestBuilder extends BaseRequestBuilder<DeviceEnrollmentWindowsHelloForBusinessConfiguration> {
 
     /**
      * The request builder for the DeviceEnrollmentWindowsHelloForBusinessConfiguration
@@ -56,11 +56,22 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequestBuilder 
     }
 
 
+    /**
+     *  Gets a request builder for the EnrollmentConfigurationAssignment collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public EnrollmentConfigurationAssignmentCollectionRequestBuilder assignments() {
         return new EnrollmentConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the EnrollmentConfigurationAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public EnrollmentConfigurationAssignmentRequestBuilder assignments(@Nonnull final String id) {
         return new EnrollmentConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);

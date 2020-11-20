@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Shift Request.
  */
-public class ShiftRequest extends BaseRequest {
+public class ShiftRequest extends BaseRequest<Shift> {
 	
     /**
      * The request for the Shift
@@ -146,8 +146,8 @@ public class ShiftRequest extends BaseRequest {
      */
      @Nonnull
      public ShiftRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ShiftRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class ShiftRequest extends BaseRequest {
      */
      @Nonnull
      public ShiftRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ShiftRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

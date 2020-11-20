@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.ListItemVersion;
 import com.microsoft.graph.requests.extensions.ListItemVersionRestoreVersionRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the List Item Version Restore Version Request.
  */
-public class ListItemVersionRestoreVersionRequest extends BaseRequest {
+public class ListItemVersionRestoreVersionRequest extends BaseRequest<Void> {
 
     /**
      * The request for this ListItemVersionRestoreVersion

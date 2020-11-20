@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.TeamArchiveRequest;
+import com.microsoft.graph.models.extensions.Team;
 
-import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
+import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Team Archive Request Builder.
  */
-public class TeamArchiveRequestBuilder extends BaseActionRequestBuilder {
+public class TeamArchiveRequestBuilder extends BaseActionRequestBuilder<Team> {
 
     /**
      * The request builder for this TeamArchive

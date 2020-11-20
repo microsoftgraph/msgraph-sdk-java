@@ -60,8 +60,9 @@ public class WorkbookChartPointFormat extends Entity implements IJsonBackedObjec
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

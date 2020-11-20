@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Android Managed App Protection Request Builder.
  */
-public class AndroidManagedAppProtectionRequestBuilder extends BaseRequestBuilder {
+public class AndroidManagedAppProtectionRequestBuilder extends BaseRequestBuilder<AndroidManagedAppProtection> {
 
     /**
      * The request builder for the AndroidManagedAppProtection
@@ -59,20 +59,42 @@ public class AndroidManagedAppProtectionRequestBuilder extends BaseRequestBuilde
     }
 
 
+    /**
+     *  Gets a request builder for the TargetedManagedAppPolicyAssignment collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public TargetedManagedAppPolicyAssignmentCollectionRequestBuilder assignments() {
         return new TargetedManagedAppPolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the TargetedManagedAppPolicyAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public TargetedManagedAppPolicyAssignmentRequestBuilder assignments(@Nonnull final String id) {
         return new TargetedManagedAppPolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the ManagedMobileApp collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ManagedMobileAppCollectionRequestBuilder apps() {
         return new ManagedMobileAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("apps"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ManagedMobileApp item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ManagedMobileAppRequestBuilder apps(@Nonnull final String id) {
         return new ManagedMobileAppRequestBuilder(getRequestUrlWithAdditionalSegment("apps") + "/" + id, getClient(), null);

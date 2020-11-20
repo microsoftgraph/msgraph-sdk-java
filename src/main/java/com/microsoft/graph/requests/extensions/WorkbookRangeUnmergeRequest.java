@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.requests.extensions.WorkbookRangeUnmergeRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Unmerge Request.
  */
-public class WorkbookRangeUnmergeRequest extends BaseRequest {
+public class WorkbookRangeUnmergeRequest extends BaseRequest<Void> {
 
     /**
      * The request for this WorkbookRangeUnmerge

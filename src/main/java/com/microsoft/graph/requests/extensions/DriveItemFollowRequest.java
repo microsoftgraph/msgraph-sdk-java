@@ -20,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Drive Item Follow Request.
  */
-public class DriveItemFollowRequest extends BaseRequest {
+public class DriveItemFollowRequest extends BaseRequest<DriveItem> {
 
     /**
      * The request for this DriveItemFollow
@@ -61,8 +61,8 @@ public class DriveItemFollowRequest extends BaseRequest {
      */
     @Nonnull
     public DriveItemFollowRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (DriveItemFollowRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -73,8 +73,8 @@ public class DriveItemFollowRequest extends BaseRequest {
      */
     @Nonnull
     public DriveItemFollowRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DriveItemFollowRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

@@ -37,7 +37,17 @@ public class ManagedDeviceCollectionWithReferencesPage extends BaseCollectionPag
      * @param response the serialized ManagedDeviceCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ManagedDeviceCollectionWithReferencesPage(@Nonnull final ManagedDeviceCollectionResponse response, @Nonnull  final ManagedDeviceCollectionWithReferencesRequestBuilder builder) {
+    public ManagedDeviceCollectionWithReferencesPage(@Nonnull final ManagedDeviceCollectionResponse response, @Nullable final ManagedDeviceCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
+    }
+
+    /**
+     * Creates the collection page for ManagedDevice
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ManagedDeviceCollectionWithReferencesPage(@Nonnull final java.util.List<ManagedDevice> pageContents, @Nullable final ManagedDeviceCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
     }
 }

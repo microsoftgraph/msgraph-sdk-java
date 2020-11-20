@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -26,7 +26,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Role Definition With Reference Request.
  */
-public class RoleDefinitionWithReferenceRequest extends BaseRequest {
+public class RoleDefinitionWithReferenceRequest extends BaseWithReferenceRequest<RoleDefinition> {
 
     /**
      * The request for the RoleDefinition
@@ -39,46 +39,6 @@ public class RoleDefinitionWithReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, RoleDefinition.class);
     }
 
-    public void post(@Nonnull final RoleDefinition newRoleDefinition, @Nullable final IJsonBackedObject payload, @Nonnull final ICallback<? super RoleDefinition> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    @Nullable
-    public RoleDefinition post(@Nonnull final RoleDefinition newRoleDefinition, @Nullable final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newRoleDefinition;
-        }
-        return null;
-    }
-
-    public void get(@Nonnull final ICallback<? super RoleDefinition> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    @Nullable
-    public RoleDefinition get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(@Nonnull final ICallback<? super RoleDefinition> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(@Nonnull final RoleDefinition sourceRoleDefinition, @Nonnull final ICallback<? super RoleDefinition> callback) {
-		send(HttpMethod.PATCH, callback, sourceRoleDefinition);
-	}
-
-    @Nullable
-	public RoleDefinition patch(@Nonnull final RoleDefinition sourceRoleDefinition) throws ClientException {
-		return send(HttpMethod.PATCH, sourceRoleDefinition);
-	}
-
-
     /**
      * Sets the select clause for the request
      *
@@ -87,8 +47,8 @@ public class RoleDefinitionWithReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public RoleDefinitionWithReferenceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (RoleDefinitionWithReferenceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -99,7 +59,7 @@ public class RoleDefinitionWithReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public RoleDefinitionWithReferenceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (RoleDefinitionWithReferenceRequest)this;
+        addExpandOption(value);
+        return this;
     }
 }

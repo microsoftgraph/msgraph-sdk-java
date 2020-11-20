@@ -55,9 +55,11 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 /**
- * An HTTP request
+ * An HTTP request.
+ * 
+ * @param <T> the response class
  */
-public abstract class BaseRequest implements IHttpRequest {
+public abstract class BaseRequest<T> implements IHttpRequest {
 
     /**
      * The request stats header name
@@ -102,7 +104,7 @@ public abstract class BaseRequest implements IHttpRequest {
     /**
      * The class for the response
      */
-    private final Class<?> responseClass;
+    private final Class<? extends T> responseClass;
 
     /**
      * Value to pass to setUseCaches in connection
@@ -145,7 +147,7 @@ public abstract class BaseRequest implements IHttpRequest {
     public BaseRequest(@Nonnull final String requestUrl,
                        @Nonnull final IBaseClient client,
                        @Nullable final List<? extends Option> options,
-                       @Nonnull final Class<?> responseClass) {
+                       @Nonnull final Class<? extends T> responseClass) {
         this.requestUrl = requestUrl;
         this.client = client;
         this.responseClass = responseClass;
@@ -326,16 +328,14 @@ public abstract class BaseRequest implements IHttpRequest {
      * @param method           the HTTP method
      * @param callback         the callback when this request complements
      * @param serializedObject the object to serialize as the body
-     * @param <T1>             the type of the callback result
-     * @param <T2>             the type of the serialized body
+     * @param <T1>             the type of the serialized body
      */
-    @SuppressWarnings("unchecked")
     @Nullable
-    protected <T1, T2> void send(@Nonnull final HttpMethod method,
-                                 @Nonnull final ICallback<T1> callback,
-                                 @Nullable final T2 serializedObject) {
+    protected <T1> void send(@Nonnull final HttpMethod method,
+                                 @Nonnull final ICallback<? super T> callback,
+                                 @Nullable final T1 serializedObject) {
         this.method = method;
-        client.getHttpProvider().send(this, callback, (Class<T1>) responseClass, serializedObject);
+        client.getHttpProvider().send(this, callback, responseClass, serializedObject);
     }
 
     /**
@@ -343,17 +343,15 @@ public abstract class BaseRequest implements IHttpRequest {
      *
      * @param method           the HTTP method
      * @param serializedObject the object to serialize as the body
-     * @param <T1>             the type of the callback result
-     * @param <T2>             the type of the serialized body
+     * @param <T1>             the type of the serialized body
      * @return the response object
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    @SuppressWarnings("unchecked")
     @Nullable
-    protected <T1, T2> T1 send(@Nonnull final HttpMethod method,
-                               @Nullable final T2 serializedObject) throws ClientException {
+    protected <T1> T send(@Nullable final HttpMethod method,
+                               @Nullable final T1 serializedObject) throws ClientException {
         this.method = method;
-        return (T1) client.getHttpProvider().send(this, responseClass, serializedObject);
+        return client.getHttpProvider().send(this, responseClass, serializedObject);
     }
 
     /**
@@ -407,6 +405,69 @@ public abstract class BaseRequest implements IHttpRequest {
     public void addFunctionOption(@Nonnull final FunctionOption option) {
         getFunctionOptions().add(option);
     }
+    
+    /**
+     * Sets the expand clause for the request
+     *
+     * @param value the expand clause
+     */
+    protected void addExpandOption(@Nonnull final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     */
+    protected void addFilterOption(@Nonnull final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+    }
+
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     */
+    protected void addOrderByOption(@Nonnull final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+    }
+
+    /**
+     * Sets the select clause for the request
+     *
+     * @param value the select clause
+     */
+    protected void addSelectOption(@Nonnull final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
+    }
+
+    /**
+     * Sets the top value for the request
+     *
+     * @param value the max number of items to return
+     */
+    protected void addTopOption(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", String.valueOf(value)));
+    }
+
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     */
+    protected void addSkipOption(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", String.valueOf(value)));
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     */
+    protected void addSkipTokenOption(@Nonnull final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+    }
 
     /**
      * Sets the HTTP method
@@ -445,7 +506,7 @@ public abstract class BaseRequest implements IHttpRequest {
      * @return the response type
      */
     @Nullable
-	public Class<?> getResponseType() {
+    public Class<? extends T> getResponseType() {
         return responseClass;
     }
 	

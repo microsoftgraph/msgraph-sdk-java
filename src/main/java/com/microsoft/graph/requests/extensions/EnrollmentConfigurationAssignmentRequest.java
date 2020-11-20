@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Enrollment Configuration Assignment Request.
  */
-public class EnrollmentConfigurationAssignmentRequest extends BaseRequest {
+public class EnrollmentConfigurationAssignmentRequest extends BaseRequest<EnrollmentConfigurationAssignment> {
 	
     /**
      * The request for the EnrollmentConfigurationAssignment
@@ -146,8 +146,8 @@ public class EnrollmentConfigurationAssignmentRequest extends BaseRequest {
      */
      @Nonnull
      public EnrollmentConfigurationAssignmentRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EnrollmentConfigurationAssignmentRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class EnrollmentConfigurationAssignmentRequest extends BaseRequest {
      */
      @Nonnull
      public EnrollmentConfigurationAssignmentRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EnrollmentConfigurationAssignmentRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

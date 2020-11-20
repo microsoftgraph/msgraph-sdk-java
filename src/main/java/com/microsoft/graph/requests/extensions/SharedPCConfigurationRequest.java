@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Shared PCConfiguration Request.
  */
-public class SharedPCConfigurationRequest extends BaseRequest {
+public class SharedPCConfigurationRequest extends BaseRequest<SharedPCConfiguration> {
 	
     /**
      * The request for the SharedPCConfiguration
@@ -146,8 +146,8 @@ public class SharedPCConfigurationRequest extends BaseRequest {
      */
      @Nonnull
      public SharedPCConfigurationRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SharedPCConfigurationRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class SharedPCConfigurationRequest extends BaseRequest {
      */
      @Nonnull
      public SharedPCConfigurationRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SharedPCConfigurationRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

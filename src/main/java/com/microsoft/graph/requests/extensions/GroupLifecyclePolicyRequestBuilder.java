@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Group Lifecycle Policy Request Builder.
  */
-public class GroupLifecyclePolicyRequestBuilder extends BaseRequestBuilder {
+public class GroupLifecyclePolicyRequestBuilder extends BaseRequestBuilder<GroupLifecyclePolicy> {
 
     /**
      * The request builder for the GroupLifecyclePolicy
@@ -57,11 +57,21 @@ public class GroupLifecyclePolicyRequestBuilder extends BaseRequestBuilder {
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param groupId the groupId
+     */
     @Nonnull
     public GroupLifecyclePolicyAddGroupRequestBuilder addGroup(@Nullable final String groupId) {
         return new GroupLifecyclePolicyAddGroupRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.addGroup"), getClient(), null, groupId);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param groupId the groupId
+     */
     @Nonnull
     public GroupLifecyclePolicyRemoveGroupRequestBuilder removeGroup(@Nullable final String groupId) {
         return new GroupLifecyclePolicyRemoveGroupRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.removeGroup"), getClient(), null, groupId);

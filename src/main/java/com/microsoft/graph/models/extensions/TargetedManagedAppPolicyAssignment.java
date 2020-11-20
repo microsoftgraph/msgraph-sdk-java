@@ -60,8 +60,9 @@ public class TargetedManagedAppPolicyAssignment extends Entity implements IJsonB
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

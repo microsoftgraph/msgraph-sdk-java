@@ -5,8 +5,7 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.WorkbookChartItemRequest;
 import com.microsoft.graph.models.extensions.WorkbookChart;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
+import com.microsoft.graph.http.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -17,7 +16,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Workbook Chart Item Request Builder.
  */
-public class WorkbookChartItemRequestBuilder extends BaseFunctionRequestBuilder {
+public class WorkbookChartItemRequestBuilder extends BaseFunctionRequestBuilder<WorkbookChart> {
 
     /**
      * The request builder for this WorkbookChartItem
@@ -103,11 +102,22 @@ public class WorkbookChartItemRequestBuilder extends BaseFunctionRequestBuilder 
     public WorkbookChartLegendRequestBuilder legend() {
         return new WorkbookChartLegendRequestBuilder(getRequestUrlWithAdditionalSegment("legend"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the WorkbookChartSeries collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public WorkbookChartSeriesCollectionRequestBuilder series() {
         return new WorkbookChartSeriesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("series"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the WorkbookChartSeries item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public WorkbookChartSeriesRequestBuilder series(@Nonnull final String id) {
         return new WorkbookChartSeriesRequestBuilder(getRequestUrlWithAdditionalSegment("series") + "/" + id, getClient(), null);

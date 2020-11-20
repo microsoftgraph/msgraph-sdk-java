@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Delegated Permission Classification Request.
  */
-public class DelegatedPermissionClassificationRequest extends BaseRequest {
+public class DelegatedPermissionClassificationRequest extends BaseRequest<DelegatedPermissionClassification> {
 	
     /**
      * The request for the DelegatedPermissionClassification
@@ -146,8 +146,8 @@ public class DelegatedPermissionClassificationRequest extends BaseRequest {
      */
      @Nonnull
      public DelegatedPermissionClassificationRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DelegatedPermissionClassificationRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class DelegatedPermissionClassificationRequest extends BaseRequest {
      */
      @Nonnull
      public DelegatedPermissionClassificationRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DelegatedPermissionClassificationRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

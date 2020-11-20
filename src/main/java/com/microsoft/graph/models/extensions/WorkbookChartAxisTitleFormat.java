@@ -60,8 +60,9 @@ public class WorkbookChartAxisTitleFormat extends Entity implements IJsonBackedO
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

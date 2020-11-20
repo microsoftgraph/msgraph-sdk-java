@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -24,7 +24,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Teams Template With Reference Request.
  */
-public class TeamsTemplateWithReferenceRequest extends BaseRequest {
+public class TeamsTemplateWithReferenceRequest extends BaseWithReferenceRequest<TeamsTemplate> {
 
     /**
      * The request for the TeamsTemplate
@@ -37,46 +37,6 @@ public class TeamsTemplateWithReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, TeamsTemplate.class);
     }
 
-    public void post(@Nonnull final TeamsTemplate newTeamsTemplate, @Nullable final IJsonBackedObject payload, @Nonnull final ICallback<? super TeamsTemplate> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    @Nullable
-    public TeamsTemplate post(@Nonnull final TeamsTemplate newTeamsTemplate, @Nullable final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newTeamsTemplate;
-        }
-        return null;
-    }
-
-    public void get(@Nonnull final ICallback<? super TeamsTemplate> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    @Nullable
-    public TeamsTemplate get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(@Nonnull final ICallback<? super TeamsTemplate> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(@Nonnull final TeamsTemplate sourceTeamsTemplate, @Nonnull final ICallback<? super TeamsTemplate> callback) {
-		send(HttpMethod.PATCH, callback, sourceTeamsTemplate);
-	}
-
-    @Nullable
-	public TeamsTemplate patch(@Nonnull final TeamsTemplate sourceTeamsTemplate) throws ClientException {
-		return send(HttpMethod.PATCH, sourceTeamsTemplate);
-	}
-
-
     /**
      * Sets the select clause for the request
      *
@@ -85,8 +45,8 @@ public class TeamsTemplateWithReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public TeamsTemplateWithReferenceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (TeamsTemplateWithReferenceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -97,7 +57,7 @@ public class TeamsTemplateWithReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public TeamsTemplateWithReferenceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (TeamsTemplateWithReferenceRequest)this;
+        addExpandOption(value);
+        return this;
     }
 }

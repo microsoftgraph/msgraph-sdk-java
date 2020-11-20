@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberObjectsCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberObjectsCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberObjectsCollectionResponse;
 import com.microsoft.graph.models.extensions.DirectoryObjectCheckMemberObjectsBody;
 import com.microsoft.graph.options.QueryOption;
@@ -27,9 +26,10 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Directory Object Check Member Objects Collection Request.
  */
-public class DirectoryObjectCheckMemberObjectsCollectionRequest extends BaseCollectionRequest<DirectoryObjectCheckMemberObjectsCollectionResponse, DirectoryObjectCheckMemberObjectsCollectionPage> {
+public class DirectoryObjectCheckMemberObjectsCollectionRequest extends BaseCollectionRequest<String, DirectoryObjectCheckMemberObjectsCollectionResponse, DirectoryObjectCheckMemberObjectsCollectionPage> {
 
 
+    /** The body for the method */
     protected final DirectoryObjectCheckMemberObjectsBody body;
 
 
@@ -41,11 +41,15 @@ public class DirectoryObjectCheckMemberObjectsCollectionRequest extends BaseColl
      * @param requestOptions the options for this request
      */
     public DirectoryObjectCheckMemberObjectsCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DirectoryObjectCheckMemberObjectsCollectionResponse.class, DirectoryObjectCheckMemberObjectsCollectionPage.class);
+        super(requestUrl, client, requestOptions, DirectoryObjectCheckMemberObjectsCollectionResponse.class, DirectoryObjectCheckMemberObjectsCollectionPage.class, DirectoryObjectCheckMemberObjectsCollectionRequestBuilder.class);
         body = new DirectoryObjectCheckMemberObjectsBody();
     }
 
 
+    /**
+     * Invokes the method and calls the callback with the resulting collection of objects
+     * @param callback a callback to be invoked with the resulting collection of objects
+     */
     public void post(@Nonnull final ICallback<? super DirectoryObjectCheckMemberObjectsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
@@ -60,25 +64,16 @@ public class DirectoryObjectCheckMemberObjectsCollectionRequest extends BaseColl
         });
     }
 
+    /**
+     * Invokes the method and returns the resulting collection of objects
+     * @return a collection of objects returned by the method
+     */
     @Nullable
     public DirectoryObjectCheckMemberObjectsCollectionPage post() throws ClientException {
         final DirectoryObjectCheckMemberObjectsCollectionResponse response = post(body);
         return buildFromResponse(response);
     }
 
-
-    @Nonnull
-    public DirectoryObjectCheckMemberObjectsCollectionPage buildFromResponse(@Nonnull final DirectoryObjectCheckMemberObjectsCollectionResponse response) {
-        final DirectoryObjectCheckMemberObjectsCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DirectoryObjectCheckMemberObjectsCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, (java.util.List<String>) null);
-        } else {
-            builder = null;
-        }
-        final DirectoryObjectCheckMemberObjectsCollectionPage page = new DirectoryObjectCheckMemberObjectsCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
 
     /**
      * Sets the select clause for the request
@@ -88,8 +83,8 @@ public class DirectoryObjectCheckMemberObjectsCollectionRequest extends BaseColl
      */
     @Nonnull
     public DirectoryObjectCheckMemberObjectsCollectionRequest select(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (DirectoryObjectCheckMemberObjectsCollectionRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -100,8 +95,8 @@ public class DirectoryObjectCheckMemberObjectsCollectionRequest extends BaseColl
      */
     @Nonnull
     public DirectoryObjectCheckMemberObjectsCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (DirectoryObjectCheckMemberObjectsCollectionRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -112,8 +107,8 @@ public class DirectoryObjectCheckMemberObjectsCollectionRequest extends BaseColl
      */
     @Nonnull
     public DirectoryObjectCheckMemberObjectsCollectionRequest expand(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DirectoryObjectCheckMemberObjectsCollectionRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -124,8 +119,8 @@ public class DirectoryObjectCheckMemberObjectsCollectionRequest extends BaseColl
      */
     @Nonnull
     public DirectoryObjectCheckMemberObjectsCollectionRequest filter(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DirectoryObjectCheckMemberObjectsCollectionRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -136,8 +131,8 @@ public class DirectoryObjectCheckMemberObjectsCollectionRequest extends BaseColl
      */
     @Nonnull
     public DirectoryObjectCheckMemberObjectsCollectionRequest orderBy(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (DirectoryObjectCheckMemberObjectsCollectionRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

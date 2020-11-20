@@ -60,8 +60,9 @@ public class DeviceConfigurationAssignment extends Entity implements IJsonBacked
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

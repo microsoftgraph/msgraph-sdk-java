@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Phone81General Configuration Request.
  */
-public class WindowsPhone81GeneralConfigurationRequest extends BaseRequest {
+public class WindowsPhone81GeneralConfigurationRequest extends BaseRequest<WindowsPhone81GeneralConfiguration> {
 	
     /**
      * The request for the WindowsPhone81GeneralConfiguration
@@ -146,8 +146,8 @@ public class WindowsPhone81GeneralConfigurationRequest extends BaseRequest {
      */
      @Nonnull
      public WindowsPhone81GeneralConfigurationRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsPhone81GeneralConfigurationRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class WindowsPhone81GeneralConfigurationRequest extends BaseRequest {
      */
      @Nonnull
      public WindowsPhone81GeneralConfigurationRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsPhone81GeneralConfigurationRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

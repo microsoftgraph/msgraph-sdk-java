@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Localized Notification Message Request Builder.
  */
-public class LocalizedNotificationMessageRequestBuilder extends BaseRequestBuilder {
+public class LocalizedNotificationMessageRequestBuilder extends BaseRequestBuilder<LocalizedNotificationMessage> {
 
     /**
      * The request builder for the LocalizedNotificationMessage

@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Shared Insight Request Builder.
  */
-public class SharedInsightRequestBuilder extends BaseRequestBuilder {
+public class SharedInsightRequestBuilder extends BaseRequestBuilder<SharedInsight> {
 
     /**
      * The request builder for the SharedInsight

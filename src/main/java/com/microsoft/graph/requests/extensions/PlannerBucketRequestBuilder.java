@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Planner Bucket Request Builder.
  */
-public class PlannerBucketRequestBuilder extends BaseRequestBuilder {
+public class PlannerBucketRequestBuilder extends BaseRequestBuilder<PlannerBucket> {
 
     /**
      * The request builder for the PlannerBucket
@@ -58,11 +58,22 @@ public class PlannerBucketRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the PlannerTask collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public PlannerTaskCollectionRequestBuilder tasks() {
         return new PlannerTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the PlannerTask item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public PlannerTaskRequestBuilder tasks(@Nonnull final String id) {
         return new PlannerTaskRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);

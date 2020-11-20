@@ -20,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Entire Column Request.
  */
-public class WorkbookRangeEntireColumnRequest extends BaseRequest {
+public class WorkbookRangeEntireColumnRequest extends BaseRequest<WorkbookRange> {
 
     /**
      * The request for this WorkbookRangeEntireColumn
@@ -103,8 +103,8 @@ public class WorkbookRangeEntireColumnRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeEntireColumnRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookRangeEntireColumnRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +115,8 @@ public class WorkbookRangeEntireColumnRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeEntireColumnRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookRangeEntireColumnRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +127,8 @@ public class WorkbookRangeEntireColumnRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeEntireColumnRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookRangeEntireColumnRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +139,8 @@ public class WorkbookRangeEntireColumnRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeEntireColumnRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookRangeEntireColumnRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

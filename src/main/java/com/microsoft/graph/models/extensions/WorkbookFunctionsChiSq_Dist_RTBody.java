@@ -65,7 +65,7 @@ public class WorkbookFunctionsChiSq_Dist_RTBody {
      * @return the serializer
      */
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

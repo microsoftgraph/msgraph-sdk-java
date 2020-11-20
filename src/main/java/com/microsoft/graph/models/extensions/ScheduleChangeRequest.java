@@ -124,8 +124,9 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements IJsonB
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

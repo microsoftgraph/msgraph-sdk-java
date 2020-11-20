@@ -48,7 +48,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Group Request.
  */
-public class GroupRequest extends BaseRequest {
+public class GroupRequest extends BaseRequest<Group> {
 	
     /**
      * The request for the Group
@@ -173,8 +173,8 @@ public class GroupRequest extends BaseRequest {
      */
      @Nonnull
      public GroupRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (GroupRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -185,8 +185,8 @@ public class GroupRequest extends BaseRequest {
      */
      @Nonnull
      public GroupRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

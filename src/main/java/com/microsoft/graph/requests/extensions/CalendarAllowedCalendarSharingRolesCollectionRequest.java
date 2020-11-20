@@ -14,8 +14,8 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.CalendarAllowedCalendarSharingRolesCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.CalendarAllowedCalendarSharingRolesCollectionPage;
 import com.microsoft.graph.requests.extensions.CalendarAllowedCalendarSharingRolesCollectionResponse;
+import com.microsoft.graph.models.generated.CalendarRoleType;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
@@ -26,7 +26,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Calendar Allowed Calendar Sharing Roles Collection Request.
  */
-public class CalendarAllowedCalendarSharingRolesCollectionRequest extends BaseCollectionRequest<CalendarAllowedCalendarSharingRolesCollectionResponse, CalendarAllowedCalendarSharingRolesCollectionPage> {
+public class CalendarAllowedCalendarSharingRolesCollectionRequest extends BaseCollectionRequest<CalendarRoleType, CalendarAllowedCalendarSharingRolesCollectionResponse, CalendarAllowedCalendarSharingRolesCollectionPage> {
 
 
     /**
@@ -37,43 +37,9 @@ public class CalendarAllowedCalendarSharingRolesCollectionRequest extends BaseCo
      * @param requestOptions the options for this request
      */
     public CalendarAllowedCalendarSharingRolesCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, CalendarAllowedCalendarSharingRolesCollectionResponse.class, CalendarAllowedCalendarSharingRolesCollectionPage.class);
+        super(requestUrl, client, requestOptions, CalendarAllowedCalendarSharingRolesCollectionResponse.class, CalendarAllowedCalendarSharingRolesCollectionPage.class, CalendarAllowedCalendarSharingRolesCollectionRequestBuilder.class);
     }
 
-
-    public void get(@Nonnull final ICallback<? super CalendarAllowedCalendarSharingRolesCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    @Nullable
-    public CalendarAllowedCalendarSharingRolesCollectionPage get() throws ClientException {
-        final CalendarAllowedCalendarSharingRolesCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    @Nonnull
-    public CalendarAllowedCalendarSharingRolesCollectionPage buildFromResponse(@Nonnull final CalendarAllowedCalendarSharingRolesCollectionResponse response) {
-        final CalendarAllowedCalendarSharingRolesCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new CalendarAllowedCalendarSharingRolesCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, (String) null);
-        } else {
-            builder = null;
-        }
-        final CalendarAllowedCalendarSharingRolesCollectionPage page = new CalendarAllowedCalendarSharingRolesCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
 
     /**
      * Sets the select clause for the request
@@ -83,8 +49,8 @@ public class CalendarAllowedCalendarSharingRolesCollectionRequest extends BaseCo
      */
     @Nonnull
     public CalendarAllowedCalendarSharingRolesCollectionRequest select(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (CalendarAllowedCalendarSharingRolesCollectionRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -95,8 +61,8 @@ public class CalendarAllowedCalendarSharingRolesCollectionRequest extends BaseCo
      */
     @Nonnull
     public CalendarAllowedCalendarSharingRolesCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (CalendarAllowedCalendarSharingRolesCollectionRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -107,8 +73,8 @@ public class CalendarAllowedCalendarSharingRolesCollectionRequest extends BaseCo
      */
     @Nonnull
     public CalendarAllowedCalendarSharingRolesCollectionRequest expand(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (CalendarAllowedCalendarSharingRolesCollectionRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -119,8 +85,8 @@ public class CalendarAllowedCalendarSharingRolesCollectionRequest extends BaseCo
      */
     @Nonnull
     public CalendarAllowedCalendarSharingRolesCollectionRequest filter(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (CalendarAllowedCalendarSharingRolesCollectionRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -131,8 +97,8 @@ public class CalendarAllowedCalendarSharingRolesCollectionRequest extends BaseCo
      */
     @Nonnull
     public CalendarAllowedCalendarSharingRolesCollectionRequest orderBy(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (CalendarAllowedCalendarSharingRolesCollectionRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

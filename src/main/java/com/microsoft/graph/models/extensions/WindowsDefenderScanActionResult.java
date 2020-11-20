@@ -59,8 +59,9 @@ public class WindowsDefenderScanActionResult extends DeviceActionResult implemen
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

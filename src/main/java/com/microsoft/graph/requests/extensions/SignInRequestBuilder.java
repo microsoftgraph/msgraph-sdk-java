@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Sign In Request Builder.
  */
-public class SignInRequestBuilder extends BaseRequestBuilder {
+public class SignInRequestBuilder extends BaseRequestBuilder<SignIn> {
 
     /**
      * The request builder for the SignIn

@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the OAuth2Permission Grant Request Builder.
  */
-public class OAuth2PermissionGrantRequestBuilder extends BaseRequestBuilder {
+public class OAuth2PermissionGrantRequestBuilder extends BaseRequestBuilder<OAuth2PermissionGrant> {
 
     /**
      * The request builder for the OAuth2PermissionGrant

@@ -14,8 +14,8 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.SiteGetActivitiesByIntervalCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SiteGetActivitiesByIntervalCollectionPage;
 import com.microsoft.graph.requests.extensions.SiteGetActivitiesByIntervalCollectionResponse;
+import com.microsoft.graph.models.extensions.ItemActivityStat;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
@@ -26,7 +26,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Site Get Activities By Interval Collection Request.
  */
-public class SiteGetActivitiesByIntervalCollectionRequest extends BaseCollectionRequest<SiteGetActivitiesByIntervalCollectionResponse, SiteGetActivitiesByIntervalCollectionPage> {
+public class SiteGetActivitiesByIntervalCollectionRequest extends BaseCollectionRequest<ItemActivityStat, SiteGetActivitiesByIntervalCollectionResponse, SiteGetActivitiesByIntervalCollectionPage> {
 
 
     /**
@@ -37,43 +37,9 @@ public class SiteGetActivitiesByIntervalCollectionRequest extends BaseCollection
      * @param requestOptions the options for this request
      */
     public SiteGetActivitiesByIntervalCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SiteGetActivitiesByIntervalCollectionResponse.class, SiteGetActivitiesByIntervalCollectionPage.class);
+        super(requestUrl, client, requestOptions, SiteGetActivitiesByIntervalCollectionResponse.class, SiteGetActivitiesByIntervalCollectionPage.class, SiteGetActivitiesByIntervalCollectionRequestBuilder.class);
     }
 
-
-    public void get(@Nonnull final ICallback<? super SiteGetActivitiesByIntervalCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    @Nullable
-    public SiteGetActivitiesByIntervalCollectionPage get() throws ClientException {
-        final SiteGetActivitiesByIntervalCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    @Nonnull
-    public SiteGetActivitiesByIntervalCollectionPage buildFromResponse(@Nonnull final SiteGetActivitiesByIntervalCollectionResponse response) {
-        final SiteGetActivitiesByIntervalCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new SiteGetActivitiesByIntervalCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final SiteGetActivitiesByIntervalCollectionPage page = new SiteGetActivitiesByIntervalCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
 
     /**
      * Sets the select clause for the request
@@ -83,8 +49,8 @@ public class SiteGetActivitiesByIntervalCollectionRequest extends BaseCollection
      */
     @Nonnull
     public SiteGetActivitiesByIntervalCollectionRequest select(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (SiteGetActivitiesByIntervalCollectionRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -95,8 +61,8 @@ public class SiteGetActivitiesByIntervalCollectionRequest extends BaseCollection
      */
     @Nonnull
     public SiteGetActivitiesByIntervalCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (SiteGetActivitiesByIntervalCollectionRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -107,8 +73,8 @@ public class SiteGetActivitiesByIntervalCollectionRequest extends BaseCollection
      */
     @Nonnull
     public SiteGetActivitiesByIntervalCollectionRequest expand(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (SiteGetActivitiesByIntervalCollectionRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -119,8 +85,8 @@ public class SiteGetActivitiesByIntervalCollectionRequest extends BaseCollection
      */
     @Nonnull
     public SiteGetActivitiesByIntervalCollectionRequest filter(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (SiteGetActivitiesByIntervalCollectionRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -131,8 +97,8 @@ public class SiteGetActivitiesByIntervalCollectionRequest extends BaseCollection
      */
     @Nonnull
     public SiteGetActivitiesByIntervalCollectionRequest orderBy(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (SiteGetActivitiesByIntervalCollectionRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

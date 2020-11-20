@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.Call;
 import com.microsoft.graph.requests.extensions.CallKeepAliveRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Call Keep Alive Request.
  */
-public class CallKeepAliveRequest extends BaseRequest {
+public class CallKeepAliveRequest extends BaseRequest<Void> {
 
     /**
      * The request for this CallKeepAlive

@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRange;
+import com.microsoft.graph.models.extensions.WorkbookRangeView;
 import com.microsoft.graph.requests.extensions.WorkbookRangeViewRangeRequest;
 
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range View Range Request.
  */
-public class WorkbookRangeViewRangeRequest extends BaseRequest {
+public class WorkbookRangeViewRangeRequest extends BaseRequest<WorkbookRange> {
 
     /**
      * The request for this WorkbookRangeViewRange
@@ -103,8 +104,8 @@ public class WorkbookRangeViewRangeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeViewRangeRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookRangeViewRangeRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +116,8 @@ public class WorkbookRangeViewRangeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeViewRangeRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookRangeViewRangeRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +128,8 @@ public class WorkbookRangeViewRangeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeViewRangeRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookRangeViewRangeRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +140,8 @@ public class WorkbookRangeViewRangeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeViewRangeRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookRangeViewRangeRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

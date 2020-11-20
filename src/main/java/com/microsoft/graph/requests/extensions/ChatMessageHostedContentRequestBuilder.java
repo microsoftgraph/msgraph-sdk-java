@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Chat Message Hosted Content Request Builder.
  */
-public class ChatMessageHostedContentRequestBuilder extends BaseRequestBuilder {
+public class ChatMessageHostedContentRequestBuilder extends BaseRequestBuilder<ChatMessageHostedContent> {
 
     /**
      * The request builder for the ChatMessageHostedContent
@@ -57,6 +57,10 @@ public class ChatMessageHostedContentRequestBuilder extends BaseRequestBuilder {
 
 
 
+    /**
+     * Gets a request builder to get the binary value of the object
+     * @return the stream request builder
+     */
     @Nonnull
     public ChatMessageHostedContentStreamRequestBuilder content() {
         return new ChatMessageHostedContentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("$value"), getClient(), null);

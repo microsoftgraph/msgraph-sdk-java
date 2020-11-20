@@ -113,8 +113,9 @@ public class DeviceComplianceDeviceOverview extends Entity implements IJsonBacke
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

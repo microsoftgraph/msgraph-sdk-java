@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Content Type Request Builder.
  */
-public class ContentTypeRequestBuilder extends BaseRequestBuilder {
+public class ContentTypeRequestBuilder extends BaseRequestBuilder<ContentType> {
 
     /**
      * The request builder for the ContentType
@@ -58,11 +58,22 @@ public class ContentTypeRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the ColumnLink collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ColumnLinkCollectionRequestBuilder columnLinks() {
         return new ColumnLinkCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("columnLinks"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ColumnLink item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ColumnLinkRequestBuilder columnLinks(@Nonnull final String id) {
         return new ColumnLinkRequestBuilder(getRequestUrlWithAdditionalSegment("columnLinks") + "/" + id, getClient(), null);

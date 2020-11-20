@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -24,7 +24,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Teams App Definition With Reference Request.
  */
-public class TeamsAppDefinitionWithReferenceRequest extends BaseRequest {
+public class TeamsAppDefinitionWithReferenceRequest extends BaseWithReferenceRequest<TeamsAppDefinition> {
 
     /**
      * The request for the TeamsAppDefinition
@@ -37,46 +37,6 @@ public class TeamsAppDefinitionWithReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, TeamsAppDefinition.class);
     }
 
-    public void post(@Nonnull final TeamsAppDefinition newTeamsAppDefinition, @Nullable final IJsonBackedObject payload, @Nonnull final ICallback<? super TeamsAppDefinition> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    @Nullable
-    public TeamsAppDefinition post(@Nonnull final TeamsAppDefinition newTeamsAppDefinition, @Nullable final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newTeamsAppDefinition;
-        }
-        return null;
-    }
-
-    public void get(@Nonnull final ICallback<? super TeamsAppDefinition> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    @Nullable
-    public TeamsAppDefinition get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(@Nonnull final ICallback<? super TeamsAppDefinition> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(@Nonnull final TeamsAppDefinition sourceTeamsAppDefinition, @Nonnull final ICallback<? super TeamsAppDefinition> callback) {
-		send(HttpMethod.PATCH, callback, sourceTeamsAppDefinition);
-	}
-
-    @Nullable
-	public TeamsAppDefinition patch(@Nonnull final TeamsAppDefinition sourceTeamsAppDefinition) throws ClientException {
-		return send(HttpMethod.PATCH, sourceTeamsAppDefinition);
-	}
-
-
     /**
      * Sets the select clause for the request
      *
@@ -85,8 +45,8 @@ public class TeamsAppDefinitionWithReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public TeamsAppDefinitionWithReferenceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (TeamsAppDefinitionWithReferenceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -97,7 +57,7 @@ public class TeamsAppDefinitionWithReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public TeamsAppDefinitionWithReferenceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (TeamsAppDefinitionWithReferenceRequest)this;
+        addExpandOption(value);
+        return this;
     }
 }

@@ -22,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Legend Request.
  */
-public class WorkbookChartLegendRequest extends BaseRequest {
+public class WorkbookChartLegendRequest extends BaseRequest<WorkbookChartLegend> {
 	
     /**
      * The request for the WorkbookChartLegend
@@ -147,8 +147,8 @@ public class WorkbookChartLegendRequest extends BaseRequest {
      */
      @Nonnull
      public WorkbookChartLegendRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookChartLegendRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -159,8 +159,8 @@ public class WorkbookChartLegendRequest extends BaseRequest {
      */
      @Nonnull
      public WorkbookChartLegendRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookChartLegendRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

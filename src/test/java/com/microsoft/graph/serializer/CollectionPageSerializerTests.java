@@ -29,9 +29,9 @@ import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.models.extensions.ItemAttachment;
 import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.User;
-import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
 import com.microsoft.graph.requests.extensions.EventCollectionResponse;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionResponse;
+import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
 
 public class CollectionPageSerializerTests {
 	private MockLogger logger;

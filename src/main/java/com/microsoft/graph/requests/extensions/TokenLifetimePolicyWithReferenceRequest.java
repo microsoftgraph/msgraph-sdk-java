@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -24,7 +24,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Token Lifetime Policy With Reference Request.
  */
-public class TokenLifetimePolicyWithReferenceRequest extends BaseRequest {
+public class TokenLifetimePolicyWithReferenceRequest extends BaseWithReferenceRequest<TokenLifetimePolicy> {
 
     /**
      * The request for the TokenLifetimePolicy
@@ -37,46 +37,6 @@ public class TokenLifetimePolicyWithReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, TokenLifetimePolicy.class);
     }
 
-    public void post(@Nonnull final TokenLifetimePolicy newTokenLifetimePolicy, @Nullable final IJsonBackedObject payload, @Nonnull final ICallback<? super TokenLifetimePolicy> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    @Nullable
-    public TokenLifetimePolicy post(@Nonnull final TokenLifetimePolicy newTokenLifetimePolicy, @Nullable final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newTokenLifetimePolicy;
-        }
-        return null;
-    }
-
-    public void get(@Nonnull final ICallback<? super TokenLifetimePolicy> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    @Nullable
-    public TokenLifetimePolicy get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(@Nonnull final ICallback<? super TokenLifetimePolicy> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(@Nonnull final TokenLifetimePolicy sourceTokenLifetimePolicy, @Nonnull final ICallback<? super TokenLifetimePolicy> callback) {
-		send(HttpMethod.PATCH, callback, sourceTokenLifetimePolicy);
-	}
-
-    @Nullable
-	public TokenLifetimePolicy patch(@Nonnull final TokenLifetimePolicy sourceTokenLifetimePolicy) throws ClientException {
-		return send(HttpMethod.PATCH, sourceTokenLifetimePolicy);
-	}
-
-
     /**
      * Sets the select clause for the request
      *
@@ -85,8 +45,8 @@ public class TokenLifetimePolicyWithReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public TokenLifetimePolicyWithReferenceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (TokenLifetimePolicyWithReferenceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -97,7 +57,7 @@ public class TokenLifetimePolicyWithReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public TokenLifetimePolicyWithReferenceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (TokenLifetimePolicyWithReferenceRequest)this;
+        addExpandOption(value);
+        return this;
     }
 }

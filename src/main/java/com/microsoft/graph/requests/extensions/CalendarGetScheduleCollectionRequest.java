@@ -15,8 +15,8 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.CalendarGetScheduleCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.CalendarGetScheduleCollectionPage;
 import com.microsoft.graph.requests.extensions.CalendarGetScheduleCollectionResponse;
+import com.microsoft.graph.models.extensions.ScheduleInformation;
 import com.microsoft.graph.models.extensions.CalendarGetScheduleBody;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -28,9 +28,10 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Calendar Get Schedule Collection Request.
  */
-public class CalendarGetScheduleCollectionRequest extends BaseCollectionRequest<CalendarGetScheduleCollectionResponse, CalendarGetScheduleCollectionPage> {
+public class CalendarGetScheduleCollectionRequest extends BaseCollectionRequest<ScheduleInformation, CalendarGetScheduleCollectionResponse, CalendarGetScheduleCollectionPage> {
 
 
+    /** The body for the method */
     protected final CalendarGetScheduleBody body;
 
 
@@ -42,11 +43,15 @@ public class CalendarGetScheduleCollectionRequest extends BaseCollectionRequest<
      * @param requestOptions the options for this request
      */
     public CalendarGetScheduleCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, CalendarGetScheduleCollectionResponse.class, CalendarGetScheduleCollectionPage.class);
+        super(requestUrl, client, requestOptions, CalendarGetScheduleCollectionResponse.class, CalendarGetScheduleCollectionPage.class, CalendarGetScheduleCollectionRequestBuilder.class);
         body = new CalendarGetScheduleBody();
     }
 
 
+    /**
+     * Invokes the method and calls the callback with the resulting collection of objects
+     * @param callback a callback to be invoked with the resulting collection of objects
+     */
     public void post(@Nonnull final ICallback<? super CalendarGetScheduleCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
@@ -61,25 +66,16 @@ public class CalendarGetScheduleCollectionRequest extends BaseCollectionRequest<
         });
     }
 
+    /**
+     * Invokes the method and returns the resulting collection of objects
+     * @return a collection of objects returned by the method
+     */
     @Nullable
     public CalendarGetScheduleCollectionPage post() throws ClientException {
         final CalendarGetScheduleCollectionResponse response = post(body);
         return buildFromResponse(response);
     }
 
-
-    @Nonnull
-    public CalendarGetScheduleCollectionPage buildFromResponse(@Nonnull final CalendarGetScheduleCollectionResponse response) {
-        final CalendarGetScheduleCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new CalendarGetScheduleCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, (java.util.List<String>) null, (DateTimeTimeZone) null, (DateTimeTimeZone) null, (Integer) null);
-        } else {
-            builder = null;
-        }
-        final CalendarGetScheduleCollectionPage page = new CalendarGetScheduleCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
 
     /**
      * Sets the select clause for the request
@@ -89,8 +85,8 @@ public class CalendarGetScheduleCollectionRequest extends BaseCollectionRequest<
      */
     @Nonnull
     public CalendarGetScheduleCollectionRequest select(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (CalendarGetScheduleCollectionRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -101,8 +97,8 @@ public class CalendarGetScheduleCollectionRequest extends BaseCollectionRequest<
      */
     @Nonnull
     public CalendarGetScheduleCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (CalendarGetScheduleCollectionRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -113,8 +109,8 @@ public class CalendarGetScheduleCollectionRequest extends BaseCollectionRequest<
      */
     @Nonnull
     public CalendarGetScheduleCollectionRequest expand(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (CalendarGetScheduleCollectionRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -125,8 +121,8 @@ public class CalendarGetScheduleCollectionRequest extends BaseCollectionRequest<
      */
     @Nonnull
     public CalendarGetScheduleCollectionRequest filter(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (CalendarGetScheduleCollectionRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -137,8 +133,8 @@ public class CalendarGetScheduleCollectionRequest extends BaseCollectionRequest<
      */
     @Nonnull
     public CalendarGetScheduleCollectionRequest orderBy(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (CalendarGetScheduleCollectionRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

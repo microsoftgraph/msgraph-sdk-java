@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Conditional Access Policy Request Builder.
  */
-public class ConditionalAccessPolicyRequestBuilder extends BaseRequestBuilder {
+public class ConditionalAccessPolicyRequestBuilder extends BaseRequestBuilder<ConditionalAccessPolicy> {
 
     /**
      * The request builder for the ConditionalAccessPolicy

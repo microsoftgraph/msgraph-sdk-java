@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Thumbnail Set Request.
  */
-public class ThumbnailSetRequest extends BaseRequest {
+public class ThumbnailSetRequest extends BaseRequest<ThumbnailSet> {
 	
     /**
      * The request for the ThumbnailSet
@@ -146,8 +146,8 @@ public class ThumbnailSetRequest extends BaseRequest {
      */
      @Nonnull
      public ThumbnailSetRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ThumbnailSetRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class ThumbnailSetRequest extends BaseRequest {
      */
      @Nonnull
      public ThumbnailSetRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ThumbnailSetRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

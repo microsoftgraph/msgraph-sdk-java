@@ -14,8 +14,8 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DriveItemDeltaCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveItemDeltaCollectionPage;
 import com.microsoft.graph.requests.extensions.DriveItemDeltaCollectionResponse;
+import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
@@ -26,7 +26,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Drive Item Delta Collection Request.
  */
-public class DriveItemDeltaCollectionRequest extends BaseCollectionRequest<DriveItemDeltaCollectionResponse, DriveItemDeltaCollectionPage> {
+public class DriveItemDeltaCollectionRequest extends BaseCollectionRequest<DriveItem, DriveItemDeltaCollectionResponse, DriveItemDeltaCollectionPage> {
 
 
     /**
@@ -37,43 +37,9 @@ public class DriveItemDeltaCollectionRequest extends BaseCollectionRequest<Drive
      * @param requestOptions the options for this request
      */
     public DriveItemDeltaCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DriveItemDeltaCollectionResponse.class, DriveItemDeltaCollectionPage.class);
+        super(requestUrl, client, requestOptions, DriveItemDeltaCollectionResponse.class, DriveItemDeltaCollectionPage.class, DriveItemDeltaCollectionRequestBuilder.class);
     }
 
-
-    public void get(@Nonnull final ICallback<? super DriveItemDeltaCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    @Nullable
-    public DriveItemDeltaCollectionPage get() throws ClientException {
-        final DriveItemDeltaCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    @Nonnull
-    public DriveItemDeltaCollectionPage buildFromResponse(@Nonnull final DriveItemDeltaCollectionResponse response) {
-        final DriveItemDeltaCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DriveItemDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final DriveItemDeltaCollectionPage page = new DriveItemDeltaCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
 
     /**
      * Sets the select clause for the request
@@ -83,8 +49,8 @@ public class DriveItemDeltaCollectionRequest extends BaseCollectionRequest<Drive
      */
     @Nonnull
     public DriveItemDeltaCollectionRequest select(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (DriveItemDeltaCollectionRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -95,8 +61,8 @@ public class DriveItemDeltaCollectionRequest extends BaseCollectionRequest<Drive
      */
     @Nonnull
     public DriveItemDeltaCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (DriveItemDeltaCollectionRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -107,8 +73,8 @@ public class DriveItemDeltaCollectionRequest extends BaseCollectionRequest<Drive
      */
     @Nonnull
     public DriveItemDeltaCollectionRequest expand(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DriveItemDeltaCollectionRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -119,8 +85,8 @@ public class DriveItemDeltaCollectionRequest extends BaseCollectionRequest<Drive
      */
     @Nonnull
     public DriveItemDeltaCollectionRequest filter(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DriveItemDeltaCollectionRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -131,8 +97,8 @@ public class DriveItemDeltaCollectionRequest extends BaseCollectionRequest<Drive
      */
     @Nonnull
     public DriveItemDeltaCollectionRequest orderBy(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (DriveItemDeltaCollectionRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

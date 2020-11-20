@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Information Protection App Locker File Request.
  */
-public class WindowsInformationProtectionAppLockerFileRequest extends BaseRequest {
+public class WindowsInformationProtectionAppLockerFileRequest extends BaseRequest<WindowsInformationProtectionAppLockerFile> {
 	
     /**
      * The request for the WindowsInformationProtectionAppLockerFile
@@ -146,8 +146,8 @@ public class WindowsInformationProtectionAppLockerFileRequest extends BaseReques
      */
      @Nonnull
      public WindowsInformationProtectionAppLockerFileRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsInformationProtectionAppLockerFileRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class WindowsInformationProtectionAppLockerFileRequest extends BaseReques
      */
      @Nonnull
      public WindowsInformationProtectionAppLockerFileRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsInformationProtectionAppLockerFileRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

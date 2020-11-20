@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -28,7 +28,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Education School With Reference Request.
  */
-public class EducationSchoolWithReferenceRequest extends BaseRequest {
+public class EducationSchoolWithReferenceRequest extends BaseWithReferenceRequest<EducationSchool> {
 
     /**
      * The request for the EducationSchool
@@ -41,46 +41,6 @@ public class EducationSchoolWithReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, EducationSchool.class);
     }
 
-    public void post(@Nonnull final EducationSchool newEducationSchool, @Nullable final IJsonBackedObject payload, @Nonnull final ICallback<? super EducationSchool> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    @Nullable
-    public EducationSchool post(@Nonnull final EducationSchool newEducationSchool, @Nullable final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newEducationSchool;
-        }
-        return null;
-    }
-
-    public void get(@Nonnull final ICallback<? super EducationSchool> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    @Nullable
-    public EducationSchool get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(@Nonnull final ICallback<? super EducationSchool> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(@Nonnull final EducationSchool sourceEducationSchool, @Nonnull final ICallback<? super EducationSchool> callback) {
-		send(HttpMethod.PATCH, callback, sourceEducationSchool);
-	}
-
-    @Nullable
-	public EducationSchool patch(@Nonnull final EducationSchool sourceEducationSchool) throws ClientException {
-		return send(HttpMethod.PATCH, sourceEducationSchool);
-	}
-
-
     /**
      * Sets the select clause for the request
      *
@@ -89,8 +49,8 @@ public class EducationSchoolWithReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public EducationSchoolWithReferenceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (EducationSchoolWithReferenceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -101,7 +61,7 @@ public class EducationSchoolWithReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public EducationSchoolWithReferenceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (EducationSchoolWithReferenceRequest)this;
+        addExpandOption(value);
+        return this;
     }
 }

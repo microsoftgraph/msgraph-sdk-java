@@ -28,7 +28,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Contact Request.
  */
-public class ContactRequest extends BaseRequest {
+public class ContactRequest extends BaseRequest<Contact> {
 	
     /**
      * The request for the Contact
@@ -153,8 +153,8 @@ public class ContactRequest extends BaseRequest {
      */
      @Nonnull
      public ContactRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ContactRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,8 +165,8 @@ public class ContactRequest extends BaseRequest {
      */
      @Nonnull
      public ContactRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ContactRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

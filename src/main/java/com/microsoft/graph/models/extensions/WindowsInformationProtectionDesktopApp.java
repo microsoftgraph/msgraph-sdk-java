@@ -77,8 +77,9 @@ public class WindowsInformationProtectionDesktopApp extends WindowsInformationPr
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

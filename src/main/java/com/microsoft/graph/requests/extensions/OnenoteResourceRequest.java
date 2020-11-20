@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Onenote Resource Request.
  */
-public class OnenoteResourceRequest extends BaseRequest {
+public class OnenoteResourceRequest extends BaseRequest<OnenoteResource> {
 	
     /**
      * The request for the OnenoteResource
@@ -146,8 +146,8 @@ public class OnenoteResourceRequest extends BaseRequest {
      */
      @Nonnull
      public OnenoteResourceRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OnenoteResourceRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class OnenoteResourceRequest extends BaseRequest {
      */
      @Nonnull
      public OnenoteResourceRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OnenoteResourceRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

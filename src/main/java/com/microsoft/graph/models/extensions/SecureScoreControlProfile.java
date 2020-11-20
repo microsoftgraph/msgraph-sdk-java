@@ -7,6 +7,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.ComplianceInformation;
 import com.microsoft.graph.models.extensions.SecureScoreControlStateUpdate;
 import com.microsoft.graph.models.extensions.SecurityVendorInformation;
@@ -224,8 +225,9 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

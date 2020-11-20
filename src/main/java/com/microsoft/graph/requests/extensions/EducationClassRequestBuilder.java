@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Education Class Request Builder.
  */
-public class EducationClassRequestBuilder extends BaseRequestBuilder {
+public class EducationClassRequestBuilder extends BaseRequestBuilder<EducationClass> {
 
     /**
      * The request builder for the EducationClass
@@ -71,29 +71,62 @@ public class EducationClassRequestBuilder extends BaseRequestBuilder {
     public GroupWithReferenceRequestBuilder group() {
         return new GroupWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("group"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the EducationUser collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public EducationUserCollectionWithReferencesRequestBuilder members() {
         return new EducationUserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the EducationUser item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public EducationUserWithReferenceRequestBuilder members(@Nonnull final String id) {
         return new EducationUserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the EducationSchool collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public EducationSchoolCollectionWithReferencesRequestBuilder schools() {
         return new EducationSchoolCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("schools"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the EducationSchool item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public EducationSchoolWithReferenceRequestBuilder schools(@Nonnull final String id) {
         return new EducationSchoolWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("schools") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the EducationUser collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public EducationUserCollectionWithReferencesRequestBuilder teachers() {
         return new EducationUserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("teachers"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the EducationUser item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public EducationUserWithReferenceRequestBuilder teachers(@Nonnull final String id) {
         return new EducationUserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("teachers") + "/" + id, getClient(), null);

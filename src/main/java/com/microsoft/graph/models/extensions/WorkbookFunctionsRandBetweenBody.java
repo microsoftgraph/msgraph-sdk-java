@@ -65,7 +65,7 @@ public class WorkbookFunctionsRandBetweenBody {
      * @return the serializer
      */
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

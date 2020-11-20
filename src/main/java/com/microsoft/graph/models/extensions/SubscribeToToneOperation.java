@@ -51,8 +51,9 @@ public class SubscribeToToneOperation extends CommsOperation implements IJsonBac
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

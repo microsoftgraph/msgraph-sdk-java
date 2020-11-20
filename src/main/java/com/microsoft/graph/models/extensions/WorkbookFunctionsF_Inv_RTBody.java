@@ -74,7 +74,7 @@ public class WorkbookFunctionsF_Inv_RTBody {
      * @return the serializer
      */
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

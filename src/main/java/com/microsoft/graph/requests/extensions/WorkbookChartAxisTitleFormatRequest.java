@@ -22,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Axis Title Format Request.
  */
-public class WorkbookChartAxisTitleFormatRequest extends BaseRequest {
+public class WorkbookChartAxisTitleFormatRequest extends BaseRequest<WorkbookChartAxisTitleFormat> {
 	
     /**
      * The request for the WorkbookChartAxisTitleFormat
@@ -147,8 +147,8 @@ public class WorkbookChartAxisTitleFormatRequest extends BaseRequest {
      */
      @Nonnull
      public WorkbookChartAxisTitleFormatRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookChartAxisTitleFormatRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -159,8 +159,8 @@ public class WorkbookChartAxisTitleFormatRequest extends BaseRequest {
      */
      @Nonnull
      public WorkbookChartAxisTitleFormatRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookChartAxisTitleFormatRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

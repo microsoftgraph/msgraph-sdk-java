@@ -21,7 +21,8 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Functions Percentile_Inc Request.
  */
-public class WorkbookFunctionsPercentile_IncRequest extends BaseRequest {
+public class WorkbookFunctionsPercentile_IncRequest extends BaseRequest<WorkbookFunctionResult> {
+    /** The body for the method */
     protected final WorkbookFunctionsPercentile_IncBody body;
 
     /**
@@ -36,10 +37,18 @@ public class WorkbookFunctionsPercentile_IncRequest extends BaseRequest {
         body = new WorkbookFunctionsPercentile_IncBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(@Nonnull final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     @Nullable
     public WorkbookFunctionResult post() throws ClientException {
         return send(HttpMethod.POST, body);
@@ -53,8 +62,8 @@ public class WorkbookFunctionsPercentile_IncRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsPercentile_IncRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookFunctionsPercentile_IncRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +74,8 @@ public class WorkbookFunctionsPercentile_IncRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsPercentile_IncRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookFunctionsPercentile_IncRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -77,8 +86,8 @@ public class WorkbookFunctionsPercentile_IncRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookFunctionsPercentile_IncRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookFunctionsPercentile_IncRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

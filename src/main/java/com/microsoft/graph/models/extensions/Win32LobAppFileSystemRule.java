@@ -106,8 +106,9 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements IJsonB
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

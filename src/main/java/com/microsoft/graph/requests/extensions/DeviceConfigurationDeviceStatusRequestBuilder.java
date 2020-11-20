@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Configuration Device Status Request Builder.
  */
-public class DeviceConfigurationDeviceStatusRequestBuilder extends BaseRequestBuilder {
+public class DeviceConfigurationDeviceStatusRequestBuilder extends BaseRequestBuilder<DeviceConfigurationDeviceStatus> {
 
     /**
      * The request builder for the DeviceConfigurationDeviceStatus

@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Calendar Permission Request Builder.
  */
-public class CalendarPermissionRequestBuilder extends BaseRequestBuilder {
+public class CalendarPermissionRequestBuilder extends BaseRequestBuilder<CalendarPermission> {
 
     /**
      * The request builder for the CalendarPermission

@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Teamwork Request Builder.
  */
-public class TeamworkRequestBuilder extends BaseRequestBuilder {
+public class TeamworkRequestBuilder extends BaseRequestBuilder<Teamwork> {
 
     /**
      * The request builder for the Teamwork
@@ -58,11 +58,22 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the WorkforceIntegration collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public WorkforceIntegrationCollectionRequestBuilder workforceIntegrations() {
         return new WorkforceIntegrationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("workforceIntegrations"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the WorkforceIntegration item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public WorkforceIntegrationRequestBuilder workforceIntegrations(@Nonnull final String id) {
         return new WorkforceIntegrationRequestBuilder(getRequestUrlWithAdditionalSegment("workforceIntegrations") + "/" + id, getClient(), null);

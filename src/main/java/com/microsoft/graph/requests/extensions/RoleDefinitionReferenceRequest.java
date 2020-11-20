@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -25,7 +25,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Role Definition Reference Request.
  */
-public class RoleDefinitionReferenceRequest extends BaseRequest {
+public class RoleDefinitionReferenceRequest extends BaseReferenceRequest<RoleDefinition> {
 
     /**
      * The request for the RoleDefinition
@@ -38,15 +38,6 @@ public class RoleDefinitionReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, RoleDefinition.class);
     }
 
-    public void delete(@Nonnull final ICallback<? super RoleDefinition> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    @Nullable
-    public RoleDefinition delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
-    }
-
     /**
      * Sets the select clause for the request
      *
@@ -55,8 +46,8 @@ public class RoleDefinitionReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public RoleDefinitionReferenceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (RoleDefinitionReferenceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -67,8 +58,8 @@ public class RoleDefinitionReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public RoleDefinitionReferenceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (RoleDefinitionReferenceRequest)this;
+        addExpandOption(value);
+        return this;
     }
     /**
      * Puts the RoleDefinition

@@ -22,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Inference Classification Request Builder.
  */
-public class InferenceClassificationRequestBuilder extends BaseRequestBuilder {
+public class InferenceClassificationRequestBuilder extends BaseRequestBuilder<InferenceClassification> {
 
     /**
      * The request builder for the InferenceClassification
@@ -58,11 +58,22 @@ public class InferenceClassificationRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the InferenceClassificationOverride collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public InferenceClassificationOverrideCollectionRequestBuilder overrides() {
         return new InferenceClassificationOverrideCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("overrides"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the InferenceClassificationOverride item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public InferenceClassificationOverrideRequestBuilder overrides(@Nonnull final String id) {
         return new InferenceClassificationOverrideRequestBuilder(getRequestUrlWithAdditionalSegment("overrides") + "/" + id, getClient(), null);

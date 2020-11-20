@@ -59,8 +59,9 @@ public class OmaSettingBoolean extends OmaSetting implements IJsonBackedObject {
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Chart Point Request Builder.
  */
-public class WorkbookChartPointRequestBuilder extends BaseRequestBuilder {
+public class WorkbookChartPointRequestBuilder extends BaseRequestBuilder<WorkbookChartPoint> {
 
     /**
      * The request builder for the WorkbookChartPoint

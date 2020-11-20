@@ -34,7 +34,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Compliance Policy Request Builder.
  */
-public class DeviceCompliancePolicyRequestBuilder extends BaseRequestBuilder {
+public class DeviceCompliancePolicyRequestBuilder extends BaseRequestBuilder<DeviceCompliancePolicy> {
 
     /**
      * The request builder for the DeviceCompliancePolicy
@@ -70,29 +70,62 @@ public class DeviceCompliancePolicyRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the DeviceCompliancePolicyAssignment collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public DeviceCompliancePolicyAssignmentCollectionRequestBuilder assignments() {
         return new DeviceCompliancePolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DeviceCompliancePolicyAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public DeviceCompliancePolicyAssignmentRequestBuilder assignments(@Nonnull final String id) {
         return new DeviceCompliancePolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the SettingStateDeviceSummary collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public SettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
         return new SettingStateDeviceSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the SettingStateDeviceSummary item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public SettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(@Nonnull final String id) {
         return new SettingStateDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the DeviceComplianceDeviceStatus collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public DeviceComplianceDeviceStatusCollectionRequestBuilder deviceStatuses() {
         return new DeviceComplianceDeviceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DeviceComplianceDeviceStatus item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public DeviceComplianceDeviceStatusRequestBuilder deviceStatuses(@Nonnull final String id) {
         return new DeviceComplianceDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
@@ -107,20 +140,42 @@ public class DeviceCompliancePolicyRequestBuilder extends BaseRequestBuilder {
     public DeviceComplianceDeviceOverviewRequestBuilder deviceStatusOverview() {
         return new DeviceComplianceDeviceOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatusOverview"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the DeviceComplianceScheduledActionForRule collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public DeviceComplianceScheduledActionForRuleCollectionRequestBuilder scheduledActionsForRule() {
         return new DeviceComplianceScheduledActionForRuleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionsForRule"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DeviceComplianceScheduledActionForRule item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public DeviceComplianceScheduledActionForRuleRequestBuilder scheduledActionsForRule(@Nonnull final String id) {
         return new DeviceComplianceScheduledActionForRuleRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionsForRule") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the DeviceComplianceUserStatus collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public DeviceComplianceUserStatusCollectionRequestBuilder userStatuses() {
         return new DeviceComplianceUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the DeviceComplianceUserStatus item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public DeviceComplianceUserStatusRequestBuilder userStatuses(@Nonnull final String id) {
         return new DeviceComplianceUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
@@ -136,11 +191,21 @@ public class DeviceCompliancePolicyRequestBuilder extends BaseRequestBuilder {
         return new DeviceComplianceUserOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("userStatusOverview"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param assignments the assignments
+     */
     @Nonnull
     public DeviceCompliancePolicyAssignCollectionRequestBuilder assign(@Nullable final java.util.List<DeviceCompliancePolicyAssignment> assignments) {
         return new DeviceCompliancePolicyAssignCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, assignments);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param deviceComplianceScheduledActionForRules the deviceComplianceScheduledActionForRules
+     */
     @Nonnull
     public DeviceCompliancePolicyScheduleActionsForRulesRequestBuilder scheduleActionsForRules(@Nullable final java.util.List<DeviceComplianceScheduledActionForRule> deviceComplianceScheduledActionForRules) {
         return new DeviceCompliancePolicyScheduleActionsForRulesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.scheduleActionsForRules"), getClient(), null, deviceComplianceScheduledActionForRules);

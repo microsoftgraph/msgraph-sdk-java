@@ -83,7 +83,7 @@ public class WorkbookFunctionsNegBinom_DistBody {
      * @return the serializer
      */
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

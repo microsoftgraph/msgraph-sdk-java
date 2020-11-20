@@ -23,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Planner Bucket Request.
  */
-public class PlannerBucketRequest extends BaseRequest {
+public class PlannerBucketRequest extends BaseRequest<PlannerBucket> {
 	
     /**
      * The request for the PlannerBucket
@@ -148,8 +148,8 @@ public class PlannerBucketRequest extends BaseRequest {
      */
      @Nonnull
      public PlannerBucketRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PlannerBucketRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -160,8 +160,8 @@ public class PlannerBucketRequest extends BaseRequest {
      */
      @Nonnull
      public PlannerBucketRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PlannerBucketRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

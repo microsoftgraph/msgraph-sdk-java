@@ -56,7 +56,7 @@ public class WorkbookFunctionsUpperBody {
      * @return the serializer
      */
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

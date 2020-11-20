@@ -14,8 +14,8 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignCollectionResponse;
+import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignment;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignBody;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -27,9 +27,10 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Device Compliance Policy Assign Collection Request.
  */
-public class DeviceCompliancePolicyAssignCollectionRequest extends BaseCollectionRequest<DeviceCompliancePolicyAssignCollectionResponse, DeviceCompliancePolicyAssignCollectionPage> {
+public class DeviceCompliancePolicyAssignCollectionRequest extends BaseCollectionRequest<DeviceCompliancePolicyAssignment, DeviceCompliancePolicyAssignCollectionResponse, DeviceCompliancePolicyAssignCollectionPage> {
 
 
+    /** The body for the method */
     protected final DeviceCompliancePolicyAssignBody body;
 
 
@@ -41,11 +42,15 @@ public class DeviceCompliancePolicyAssignCollectionRequest extends BaseCollectio
      * @param requestOptions the options for this request
      */
     public DeviceCompliancePolicyAssignCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceCompliancePolicyAssignCollectionResponse.class, DeviceCompliancePolicyAssignCollectionPage.class);
+        super(requestUrl, client, requestOptions, DeviceCompliancePolicyAssignCollectionResponse.class, DeviceCompliancePolicyAssignCollectionPage.class, DeviceCompliancePolicyAssignCollectionRequestBuilder.class);
         body = new DeviceCompliancePolicyAssignBody();
     }
 
 
+    /**
+     * Invokes the method and calls the callback with the resulting collection of objects
+     * @param callback a callback to be invoked with the resulting collection of objects
+     */
     public void post(@Nonnull final ICallback<? super DeviceCompliancePolicyAssignCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
@@ -60,25 +65,16 @@ public class DeviceCompliancePolicyAssignCollectionRequest extends BaseCollectio
         });
     }
 
+    /**
+     * Invokes the method and returns the resulting collection of objects
+     * @return a collection of objects returned by the method
+     */
     @Nullable
     public DeviceCompliancePolicyAssignCollectionPage post() throws ClientException {
         final DeviceCompliancePolicyAssignCollectionResponse response = post(body);
         return buildFromResponse(response);
     }
 
-
-    @Nonnull
-    public DeviceCompliancePolicyAssignCollectionPage buildFromResponse(@Nonnull final DeviceCompliancePolicyAssignCollectionResponse response) {
-        final DeviceCompliancePolicyAssignCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DeviceCompliancePolicyAssignCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, (java.util.List<DeviceCompliancePolicyAssignment>) null);
-        } else {
-            builder = null;
-        }
-        final DeviceCompliancePolicyAssignCollectionPage page = new DeviceCompliancePolicyAssignCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
 
     /**
      * Sets the select clause for the request
@@ -88,8 +84,8 @@ public class DeviceCompliancePolicyAssignCollectionRequest extends BaseCollectio
      */
     @Nonnull
     public DeviceCompliancePolicyAssignCollectionRequest select(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (DeviceCompliancePolicyAssignCollectionRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -100,8 +96,8 @@ public class DeviceCompliancePolicyAssignCollectionRequest extends BaseCollectio
      */
     @Nonnull
     public DeviceCompliancePolicyAssignCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (DeviceCompliancePolicyAssignCollectionRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -112,8 +108,8 @@ public class DeviceCompliancePolicyAssignCollectionRequest extends BaseCollectio
      */
     @Nonnull
     public DeviceCompliancePolicyAssignCollectionRequest expand(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DeviceCompliancePolicyAssignCollectionRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -124,8 +120,8 @@ public class DeviceCompliancePolicyAssignCollectionRequest extends BaseCollectio
      */
     @Nonnull
     public DeviceCompliancePolicyAssignCollectionRequest filter(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DeviceCompliancePolicyAssignCollectionRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -136,8 +132,8 @@ public class DeviceCompliancePolicyAssignCollectionRequest extends BaseCollectio
      */
     @Nonnull
     public DeviceCompliancePolicyAssignCollectionRequest orderBy(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (DeviceCompliancePolicyAssignCollectionRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

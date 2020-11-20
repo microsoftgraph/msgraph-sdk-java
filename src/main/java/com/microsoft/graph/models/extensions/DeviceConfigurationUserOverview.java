@@ -113,8 +113,9 @@ public class DeviceConfigurationUserOverview extends Entity implements IJsonBack
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.GroupRenewRequest;
+import com.microsoft.graph.models.extensions.Group;
 
-import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
+import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Group Renew Request Builder.
  */
-public class GroupRenewRequestBuilder extends BaseActionRequestBuilder {
+public class GroupRenewRequestBuilder extends BaseActionRequestBuilder<Group> {
 
     /**
      * The request builder for this GroupRenew

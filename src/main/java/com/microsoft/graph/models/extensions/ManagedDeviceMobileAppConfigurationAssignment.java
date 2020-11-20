@@ -60,8 +60,9 @@ public class ManagedDeviceMobileAppConfigurationAssignment extends Entity implem
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

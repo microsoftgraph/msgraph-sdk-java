@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Teams Async Operation Request Builder.
  */
-public class TeamsAsyncOperationRequestBuilder extends BaseRequestBuilder {
+public class TeamsAsyncOperationRequestBuilder extends BaseRequestBuilder<TeamsAsyncOperation> {
 
     /**
      * The request builder for the TeamsAsyncOperation

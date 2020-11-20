@@ -14,8 +14,8 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectGetAvailableExtensionPropertiesCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetAvailableExtensionPropertiesCollectionResponse;
+import com.microsoft.graph.models.extensions.ExtensionProperty;
 import com.microsoft.graph.models.extensions.DirectoryObjectGetAvailableExtensionPropertiesBody;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -27,9 +27,10 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Directory Object Get Available Extension Properties Collection Request.
  */
-public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest extends BaseCollectionRequest<DirectoryObjectGetAvailableExtensionPropertiesCollectionResponse, DirectoryObjectGetAvailableExtensionPropertiesCollectionPage> {
+public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest extends BaseCollectionRequest<ExtensionProperty, DirectoryObjectGetAvailableExtensionPropertiesCollectionResponse, DirectoryObjectGetAvailableExtensionPropertiesCollectionPage> {
 
 
+    /** The body for the method */
     protected final DirectoryObjectGetAvailableExtensionPropertiesBody body;
 
 
@@ -41,11 +42,15 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest ext
      * @param requestOptions the options for this request
      */
     public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DirectoryObjectGetAvailableExtensionPropertiesCollectionResponse.class, DirectoryObjectGetAvailableExtensionPropertiesCollectionPage.class);
+        super(requestUrl, client, requestOptions, DirectoryObjectGetAvailableExtensionPropertiesCollectionResponse.class, DirectoryObjectGetAvailableExtensionPropertiesCollectionPage.class, DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder.class);
         body = new DirectoryObjectGetAvailableExtensionPropertiesBody();
     }
 
 
+    /**
+     * Invokes the method and calls the callback with the resulting collection of objects
+     * @param callback a callback to be invoked with the resulting collection of objects
+     */
     public void post(@Nonnull final ICallback<? super DirectoryObjectGetAvailableExtensionPropertiesCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
@@ -60,25 +65,16 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest ext
         });
     }
 
+    /**
+     * Invokes the method and returns the resulting collection of objects
+     * @return a collection of objects returned by the method
+     */
     @Nullable
     public DirectoryObjectGetAvailableExtensionPropertiesCollectionPage post() throws ClientException {
         final DirectoryObjectGetAvailableExtensionPropertiesCollectionResponse response = post(body);
         return buildFromResponse(response);
     }
 
-
-    @Nonnull
-    public DirectoryObjectGetAvailableExtensionPropertiesCollectionPage buildFromResponse(@Nonnull final DirectoryObjectGetAvailableExtensionPropertiesCollectionResponse response) {
-        final DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, (Boolean) null);
-        } else {
-            builder = null;
-        }
-        final DirectoryObjectGetAvailableExtensionPropertiesCollectionPage page = new DirectoryObjectGetAvailableExtensionPropertiesCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
 
     /**
      * Sets the select clause for the request
@@ -88,8 +84,8 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest ext
      */
     @Nonnull
     public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest select(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -100,8 +96,8 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest ext
      */
     @Nonnull
     public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -112,8 +108,8 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest ext
      */
     @Nonnull
     public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest expand(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -124,8 +120,8 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest ext
      */
     @Nonnull
     public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest filter(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -136,8 +132,8 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest ext
      */
     @Nonnull
     public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest orderBy(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

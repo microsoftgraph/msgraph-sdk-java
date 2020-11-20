@@ -51,8 +51,9 @@ public class UnmuteParticipantOperation extends CommsOperation implements IJsonB
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

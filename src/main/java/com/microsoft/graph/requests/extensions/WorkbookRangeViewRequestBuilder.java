@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Range View Request Builder.
  */
-public class WorkbookRangeViewRequestBuilder extends BaseRequestBuilder {
+public class WorkbookRangeViewRequestBuilder extends BaseRequestBuilder<WorkbookRangeView> {
 
     /**
      * The request builder for the WorkbookRangeView
@@ -59,16 +59,31 @@ public class WorkbookRangeViewRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the WorkbookRangeView collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public WorkbookRangeViewCollectionRequestBuilder rows() {
         return new WorkbookRangeViewCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rows"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the WorkbookRangeView item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public WorkbookRangeViewRequestBuilder rows(@Nonnull final String id) {
         return new WorkbookRangeViewRequestBuilder(getRequestUrlWithAdditionalSegment("rows") + "/" + id, getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookRangeViewRangeRequestBuilder range() {
         return new WorkbookRangeViewRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.range"), getClient(), null);

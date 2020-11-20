@@ -36,7 +36,17 @@ public class ManagedAppRegistrationCollectionWithReferencesPage extends BaseColl
      * @param response the serialized ManagedAppRegistrationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ManagedAppRegistrationCollectionWithReferencesPage(@Nonnull final ManagedAppRegistrationCollectionResponse response, @Nonnull  final ManagedAppRegistrationCollectionWithReferencesRequestBuilder builder) {
+    public ManagedAppRegistrationCollectionWithReferencesPage(@Nonnull final ManagedAppRegistrationCollectionResponse response, @Nullable final ManagedAppRegistrationCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
+    }
+
+    /**
+     * Creates the collection page for ManagedAppRegistration
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ManagedAppRegistrationCollectionWithReferencesPage(@Nonnull final java.util.List<ManagedAppRegistration> pageContents, @Nullable final ManagedAppRegistrationCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
     }
 }

@@ -21,7 +21,8 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Chart Add Request.
  */
-public class WorkbookChartAddRequest extends BaseRequest {
+public class WorkbookChartAddRequest extends BaseRequest<WorkbookChart> {
+    /** The body for the method */
     protected final WorkbookChartAddBody body;
 
     /**
@@ -36,10 +37,18 @@ public class WorkbookChartAddRequest extends BaseRequest {
         body = new WorkbookChartAddBody();
     }
 
+    /**
+     * Invokes the method and invokes the callback with the result
+     * @param callback callback to be invoked after executing the request
+     */
     public void post(@Nonnull final ICallback<? super WorkbookChart> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
+    /**
+     * Invokes the method and returns the result
+     * @return result of the method invocation
+     */
     @Nullable
     public WorkbookChart post() throws ClientException {
         return send(HttpMethod.POST, body);
@@ -53,8 +62,8 @@ public class WorkbookChartAddRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookChartAddRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookChartAddRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +74,8 @@ public class WorkbookChartAddRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookChartAddRequest top(final int value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (WorkbookChartAddRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -77,8 +86,8 @@ public class WorkbookChartAddRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookChartAddRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookChartAddRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

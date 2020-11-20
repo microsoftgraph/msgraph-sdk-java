@@ -27,7 +27,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Targeted Managed App Configuration Request Builder.
  */
-public class TargetedManagedAppConfigurationRequestBuilder extends BaseRequestBuilder {
+public class TargetedManagedAppConfigurationRequestBuilder extends BaseRequestBuilder<TargetedManagedAppConfiguration> {
 
     /**
      * The request builder for the TargetedManagedAppConfiguration
@@ -63,20 +63,42 @@ public class TargetedManagedAppConfigurationRequestBuilder extends BaseRequestBu
     }
 
 
+    /**
+     *  Gets a request builder for the ManagedMobileApp collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ManagedMobileAppCollectionRequestBuilder apps() {
         return new ManagedMobileAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("apps"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the ManagedMobileApp item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ManagedMobileAppRequestBuilder apps(@Nonnull final String id) {
         return new ManagedMobileAppRequestBuilder(getRequestUrlWithAdditionalSegment("apps") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the TargetedManagedAppPolicyAssignment collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public TargetedManagedAppPolicyAssignmentCollectionRequestBuilder assignments() {
         return new TargetedManagedAppPolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the TargetedManagedAppPolicyAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public TargetedManagedAppPolicyAssignmentRequestBuilder assignments(@Nonnull final String id) {
         return new TargetedManagedAppPolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
@@ -92,11 +114,21 @@ public class TargetedManagedAppConfigurationRequestBuilder extends BaseRequestBu
         return new ManagedAppPolicyDeploymentSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deploymentSummary"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param assignments the assignments
+     */
     @Nonnull
     public TargetedManagedAppConfigurationAssignRequestBuilder assign(@Nullable final java.util.List<TargetedManagedAppPolicyAssignment> assignments) {
         return new TargetedManagedAppConfigurationAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, assignments);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param apps the apps
+     */
     @Nonnull
     public TargetedManagedAppConfigurationTargetAppsRequestBuilder targetApps(@Nullable final java.util.List<ManagedMobileApp> apps) {
         return new TargetedManagedAppConfigurationTargetAppsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.targetApps"), getClient(), null, apps);

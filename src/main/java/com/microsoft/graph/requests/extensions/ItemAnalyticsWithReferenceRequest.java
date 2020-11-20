@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -26,7 +26,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Item Analytics With Reference Request.
  */
-public class ItemAnalyticsWithReferenceRequest extends BaseRequest {
+public class ItemAnalyticsWithReferenceRequest extends BaseWithReferenceRequest<ItemAnalytics> {
 
     /**
      * The request for the ItemAnalytics
@@ -39,46 +39,6 @@ public class ItemAnalyticsWithReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, ItemAnalytics.class);
     }
 
-    public void post(@Nonnull final ItemAnalytics newItemAnalytics, @Nullable final IJsonBackedObject payload, @Nonnull final ICallback<? super ItemAnalytics> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    @Nullable
-    public ItemAnalytics post(@Nonnull final ItemAnalytics newItemAnalytics, @Nullable final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newItemAnalytics;
-        }
-        return null;
-    }
-
-    public void get(@Nonnull final ICallback<? super ItemAnalytics> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    @Nullable
-    public ItemAnalytics get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(@Nonnull final ICallback<? super ItemAnalytics> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(@Nonnull final ItemAnalytics sourceItemAnalytics, @Nonnull final ICallback<? super ItemAnalytics> callback) {
-		send(HttpMethod.PATCH, callback, sourceItemAnalytics);
-	}
-
-    @Nullable
-	public ItemAnalytics patch(@Nonnull final ItemAnalytics sourceItemAnalytics) throws ClientException {
-		return send(HttpMethod.PATCH, sourceItemAnalytics);
-	}
-
-
     /**
      * Sets the select clause for the request
      *
@@ -87,8 +47,8 @@ public class ItemAnalyticsWithReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public ItemAnalyticsWithReferenceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ItemAnalyticsWithReferenceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -99,7 +59,7 @@ public class ItemAnalyticsWithReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public ItemAnalyticsWithReferenceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ItemAnalyticsWithReferenceRequest)this;
+        addExpandOption(value);
+        return this;
     }
 }

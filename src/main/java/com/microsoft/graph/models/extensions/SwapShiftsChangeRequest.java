@@ -59,8 +59,9 @@ public class SwapShiftsChangeRequest extends OfferShiftRequest implements IJsonB
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Place Request Builder.
  */
-public class PlaceRequestBuilder extends BaseRequestBuilder {
+public class PlaceRequestBuilder extends BaseRequestBuilder<Place> {
 
     /**
      * The request builder for the Place

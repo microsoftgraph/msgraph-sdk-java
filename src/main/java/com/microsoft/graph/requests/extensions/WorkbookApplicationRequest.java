@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Application Request.
  */
-public class WorkbookApplicationRequest extends BaseRequest {
+public class WorkbookApplicationRequest extends BaseRequest<WorkbookApplication> {
 	
     /**
      * The request for the WorkbookApplication
@@ -146,8 +146,8 @@ public class WorkbookApplicationRequest extends BaseRequest {
      */
      @Nonnull
      public WorkbookApplicationRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookApplicationRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class WorkbookApplicationRequest extends BaseRequest {
      */
      @Nonnull
      public WorkbookApplicationRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookApplicationRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationAssignRequest;
+import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfiguration;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationAssignment;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
+import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Managed Device Mobile App Configuration Assign Request Builder.
  */
-public class ManagedDeviceMobileAppConfigurationAssignRequestBuilder extends BaseActionRequestBuilder {
+public class ManagedDeviceMobileAppConfigurationAssignRequestBuilder extends BaseActionRequestBuilder<ManagedDeviceMobileAppConfiguration> {
 
     /**
      * The request builder for this ManagedDeviceMobileAppConfigurationAssign

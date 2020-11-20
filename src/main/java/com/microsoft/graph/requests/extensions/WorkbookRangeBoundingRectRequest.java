@@ -20,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Bounding Rect Request.
  */
-public class WorkbookRangeBoundingRectRequest extends BaseRequest {
+public class WorkbookRangeBoundingRectRequest extends BaseRequest<WorkbookRange> {
 
     /**
      * The request for this WorkbookRangeBoundingRect
@@ -103,8 +103,8 @@ public class WorkbookRangeBoundingRectRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeBoundingRectRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookRangeBoundingRectRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +115,8 @@ public class WorkbookRangeBoundingRectRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeBoundingRectRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookRangeBoundingRectRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +127,8 @@ public class WorkbookRangeBoundingRectRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeBoundingRectRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookRangeBoundingRectRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +139,8 @@ public class WorkbookRangeBoundingRectRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookRangeBoundingRectRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookRangeBoundingRectRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

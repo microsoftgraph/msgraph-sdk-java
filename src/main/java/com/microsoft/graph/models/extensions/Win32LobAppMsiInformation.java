@@ -23,6 +23,7 @@ import javax.annotation.Nonnull;
  */
 public class Win32LobAppMsiInformation implements IJsonBackedObject {
 
+    /** the OData type of the object as returned by the service */
     @SerializedName("@odata.type")
     @Expose
     @Nullable
@@ -125,8 +126,9 @@ public class Win32LobAppMsiInformation implements IJsonBackedObject {
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

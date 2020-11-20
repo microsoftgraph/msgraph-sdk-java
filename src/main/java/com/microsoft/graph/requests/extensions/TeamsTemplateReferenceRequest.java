@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Teams Template Reference Request.
  */
-public class TeamsTemplateReferenceRequest extends BaseRequest {
+public class TeamsTemplateReferenceRequest extends BaseReferenceRequest<TeamsTemplate> {
 
     /**
      * The request for the TeamsTemplate
@@ -36,15 +36,6 @@ public class TeamsTemplateReferenceRequest extends BaseRequest {
         super(requestUrl, client, requestOptions, TeamsTemplate.class);
     }
 
-    public void delete(@Nonnull final ICallback<? super TeamsTemplate> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    @Nullable
-    public TeamsTemplate delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
-    }
-
     /**
      * Sets the select clause for the request
      *
@@ -53,8 +44,8 @@ public class TeamsTemplateReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public TeamsTemplateReferenceRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (TeamsTemplateReferenceRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +56,8 @@ public class TeamsTemplateReferenceRequest extends BaseRequest {
      */
     @Nonnull
     public TeamsTemplateReferenceRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (TeamsTemplateReferenceRequest)this;
+        addExpandOption(value);
+        return this;
     }
     /**
      * Puts the TeamsTemplate

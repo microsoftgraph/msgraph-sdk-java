@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
+import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.requests.extensions.ReportRootGetSharePointSiteUsageSiteCountsRequest;
 
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Share Point Site Usage Site Counts Request.
  */
-public class ReportRootGetSharePointSiteUsageSiteCountsRequest extends BaseRequest {
+public class ReportRootGetSharePointSiteUsageSiteCountsRequest extends BaseRequest<Report> {
 
     /**
      * The request for this ReportRootGetSharePointSiteUsageSiteCounts
@@ -103,8 +104,8 @@ public class ReportRootGetSharePointSiteUsageSiteCountsRequest extends BaseReque
      */
     @Nonnull
     public ReportRootGetSharePointSiteUsageSiteCountsRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ReportRootGetSharePointSiteUsageSiteCountsRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -115,8 +116,8 @@ public class ReportRootGetSharePointSiteUsageSiteCountsRequest extends BaseReque
      */
     @Nonnull
     public ReportRootGetSharePointSiteUsageSiteCountsRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ReportRootGetSharePointSiteUsageSiteCountsRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -127,8 +128,8 @@ public class ReportRootGetSharePointSiteUsageSiteCountsRequest extends BaseReque
      */
     @Nonnull
     public ReportRootGetSharePointSiteUsageSiteCountsRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ReportRootGetSharePointSiteUsageSiteCountsRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -139,8 +140,8 @@ public class ReportRootGetSharePointSiteUsageSiteCountsRequest extends BaseReque
      */
     @Nonnull
     public ReportRootGetSharePointSiteUsageSiteCountsRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ReportRootGetSharePointSiteUsageSiteCountsRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

@@ -33,7 +33,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Event Request Builder.
  */
-public class EventRequestBuilder extends BaseRequestBuilder {
+public class EventRequestBuilder extends BaseRequestBuilder<Event> {
 
     /**
      * The request builder for the Event
@@ -69,11 +69,22 @@ public class EventRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the Attachment collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public AttachmentCollectionRequestBuilder attachments() {
         return new AttachmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attachments"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Attachment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public AttachmentRequestBuilder attachments(@Nonnull final String id) {
         return new AttachmentRequestBuilder(getRequestUrlWithAdditionalSegment("attachments") + "/" + id, getClient(), null);
@@ -88,73 +99,155 @@ public class EventRequestBuilder extends BaseRequestBuilder {
     public CalendarRequestBuilder calendar() {
         return new CalendarRequestBuilder(getRequestUrlWithAdditionalSegment("calendar"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the Extension collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ExtensionCollectionRequestBuilder extensions() {
         return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Extension item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ExtensionRequestBuilder extensions(@Nonnull final String id) {
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the Event collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public EventCollectionRequestBuilder instances() {
         return new EventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("instances"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Event item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public EventRequestBuilder instances(@Nonnull final String id) {
         return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("instances") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the MultiValueLegacyExtendedProperty collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public MultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties() {
         return new MultiValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the MultiValueLegacyExtendedProperty item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public MultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(@Nonnull final String id) {
         return new MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the SingleValueLegacyExtendedProperty collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public SingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
         return new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the SingleValueLegacyExtendedProperty item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public SingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(@Nonnull final String id) {
         return new SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param comment the comment
+     * @param sendResponse the sendResponse
+     */
     @Nonnull
     public EventAcceptRequestBuilder accept(@Nullable final String comment, @Nullable final Boolean sendResponse) {
         return new EventAcceptRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.accept"), getClient(), null, comment, sendResponse);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param comment the comment
+     */
     @Nonnull
     public EventCancelRequestBuilder cancel(@Nullable final String comment) {
         return new EventCancelRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cancel"), getClient(), null, comment);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param comment the comment
+     * @param sendResponse the sendResponse
+     */
     @Nonnull
     public EventDeclineRequestBuilder decline(@Nullable final String comment, @Nullable final Boolean sendResponse) {
         return new EventDeclineRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.decline"), getClient(), null, comment, sendResponse);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public EventDismissReminderRequestBuilder dismissReminder() {
         return new EventDismissReminderRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dismissReminder"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param toRecipients the toRecipients
+     * @param comment the comment
+     */
     @Nonnull
     public EventForwardRequestBuilder forward(@Nullable final java.util.List<Recipient> toRecipients, @Nullable final String comment) {
         return new EventForwardRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.forward"), getClient(), null, toRecipients, comment);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param newReminderTime the newReminderTime
+     */
     @Nonnull
     public EventSnoozeReminderRequestBuilder snoozeReminder(@Nullable final DateTimeTimeZone newReminderTime) {
         return new EventSnoozeReminderRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.snoozeReminder"), getClient(), null, newReminderTime);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param comment the comment
+     * @param sendResponse the sendResponse
+     */
     @Nonnull
     public EventTentativelyAcceptRequestBuilder tentativelyAccept(@Nullable final String comment, @Nullable final Boolean sendResponse) {
         return new EventTentativelyAcceptRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.tentativelyAccept"), getClient(), null, comment, sendResponse);

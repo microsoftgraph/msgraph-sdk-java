@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed IOSStore App Request.
  */
-public class ManagedIOSStoreAppRequest extends BaseRequest {
+public class ManagedIOSStoreAppRequest extends BaseRequest<ManagedIOSStoreApp> {
 	
     /**
      * The request for the ManagedIOSStoreApp
@@ -146,8 +146,8 @@ public class ManagedIOSStoreAppRequest extends BaseRequest {
      */
      @Nonnull
      public ManagedIOSStoreAppRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ManagedIOSStoreAppRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class ManagedIOSStoreAppRequest extends BaseRequest {
      */
      @Nonnull
      public ManagedIOSStoreAppRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ManagedIOSStoreAppRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

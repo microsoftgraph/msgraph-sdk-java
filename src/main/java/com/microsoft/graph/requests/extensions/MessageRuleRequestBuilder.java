@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Message Rule Request Builder.
  */
-public class MessageRuleRequestBuilder extends BaseRequestBuilder {
+public class MessageRuleRequestBuilder extends BaseRequestBuilder<MessageRule> {
 
     /**
      * The request builder for the MessageRule

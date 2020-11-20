@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the List Item Version Request Builder.
  */
-public class ListItemVersionRequestBuilder extends BaseRequestBuilder {
+public class ListItemVersionRequestBuilder extends BaseRequestBuilder<ListItemVersion> {
 
     /**
      * The request builder for the ListItemVersion
@@ -68,6 +68,10 @@ public class ListItemVersionRequestBuilder extends BaseRequestBuilder {
         return new FieldValueSetRequestBuilder(getRequestUrlWithAdditionalSegment("fields"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public ListItemVersionRestoreVersionRequestBuilder restoreVersion() {
         return new ListItemVersionRestoreVersionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.restoreVersion"), getClient(), null);

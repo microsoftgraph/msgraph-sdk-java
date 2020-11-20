@@ -23,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Org Contact Request.
  */
-public class OrgContactRequest extends BaseRequest {
+public class OrgContactRequest extends BaseRequest<OrgContact> {
 	
     /**
      * The request for the OrgContact
@@ -148,8 +148,8 @@ public class OrgContactRequest extends BaseRequest {
      */
      @Nonnull
      public OrgContactRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OrgContactRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -160,8 +160,8 @@ public class OrgContactRequest extends BaseRequest {
      */
      @Nonnull
      public OrgContactRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OrgContactRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Teams Async Operation Request.
  */
-public class TeamsAsyncOperationRequest extends BaseRequest {
+public class TeamsAsyncOperationRequest extends BaseRequest<TeamsAsyncOperation> {
 	
     /**
      * The request for the TeamsAsyncOperation
@@ -146,8 +146,8 @@ public class TeamsAsyncOperationRequest extends BaseRequest {
      */
      @Nonnull
      public TeamsAsyncOperationRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TeamsAsyncOperationRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class TeamsAsyncOperationRequest extends BaseRequest {
      */
      @Nonnull
      public TeamsAsyncOperationRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TeamsAsyncOperationRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

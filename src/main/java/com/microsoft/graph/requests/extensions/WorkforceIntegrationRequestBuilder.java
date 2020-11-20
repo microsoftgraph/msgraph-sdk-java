@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workforce Integration Request Builder.
  */
-public class WorkforceIntegrationRequestBuilder extends BaseRequestBuilder {
+public class WorkforceIntegrationRequestBuilder extends BaseRequestBuilder<WorkforceIntegration> {
 
     /**
      * The request builder for the WorkforceIntegration

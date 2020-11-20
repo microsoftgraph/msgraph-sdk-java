@@ -65,7 +65,7 @@ public class WorkbookFunctionsEcma_CeilingBody {
      * @return the serializer
      */
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

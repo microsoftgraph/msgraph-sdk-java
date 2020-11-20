@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.WorkbookTableRow;
 import com.microsoft.graph.requests.extensions.WorkbookTableRowCountRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Row Count Request.
  */
-public class WorkbookTableRowCountRequest extends BaseRequest {
+public class WorkbookTableRowCountRequest extends BaseRequest<Integer> {
 
     /**
      * The request for this WorkbookTableRowCount
@@ -60,8 +61,8 @@ public class WorkbookTableRowCountRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookTableRowCountRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookTableRowCountRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -72,8 +73,8 @@ public class WorkbookTableRowCountRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookTableRowCountRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookTableRowCountRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -84,8 +85,8 @@ public class WorkbookTableRowCountRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookTableRowCountRequest filter(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookTableRowCountRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -96,8 +97,8 @@ public class WorkbookTableRowCountRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookTableRowCountRequest orderBy(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookTableRowCountRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

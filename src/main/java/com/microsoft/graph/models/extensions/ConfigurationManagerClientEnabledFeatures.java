@@ -22,6 +22,7 @@ import javax.annotation.Nonnull;
  */
 public class ConfigurationManagerClientEnabledFeatures implements IJsonBackedObject {
 
+    /** the OData type of the object as returned by the service */
     @SerializedName("@odata.type")
     @Expose
     @Nullable
@@ -115,8 +116,9 @@ public class ConfigurationManagerClientEnabledFeatures implements IJsonBackedObj
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

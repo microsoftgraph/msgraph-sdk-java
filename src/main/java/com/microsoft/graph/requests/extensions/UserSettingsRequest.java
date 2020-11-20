@@ -22,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the User Settings Request.
  */
-public class UserSettingsRequest extends BaseRequest {
+public class UserSettingsRequest extends BaseRequest<UserSettings> {
 	
     /**
      * The request for the UserSettings
@@ -147,8 +147,8 @@ public class UserSettingsRequest extends BaseRequest {
      */
      @Nonnull
      public UserSettingsRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (UserSettingsRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -159,8 +159,8 @@ public class UserSettingsRequest extends BaseRequest {
      */
      @Nonnull
      public UserSettingsRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserSettingsRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

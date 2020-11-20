@@ -24,7 +24,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Organization Request Builder.
  */
-public class OrganizationRequestBuilder extends BaseRequestBuilder {
+public class OrganizationRequestBuilder extends BaseRequestBuilder<Organization> {
 
     /**
      * The request builder for the Organization
@@ -60,25 +60,51 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder {
     }
 
 
+    /**
+     *  Gets a request builder for the CertificateBasedAuthConfiguration collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder certificateBasedAuthConfiguration() {
         return new CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("certificateBasedAuthConfiguration"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the CertificateBasedAuthConfiguration item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public CertificateBasedAuthConfigurationWithReferenceRequestBuilder certificateBasedAuthConfiguration(@Nonnull final String id) {
         return new CertificateBasedAuthConfigurationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("certificateBasedAuthConfiguration") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the Extension collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public ExtensionCollectionRequestBuilder extensions() {
         return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the Extension item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public ExtensionRequestBuilder extensions(@Nonnull final String id) {
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public OrganizationSetMobileDeviceManagementAuthorityRequestBuilder setMobileDeviceManagementAuthority() {
         return new OrganizationSetMobileDeviceManagementAuthorityRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setMobileDeviceManagementAuthority"), getClient(), null);

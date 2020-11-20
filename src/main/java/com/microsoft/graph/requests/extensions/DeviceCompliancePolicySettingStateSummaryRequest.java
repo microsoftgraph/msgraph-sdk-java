@@ -23,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Compliance Policy Setting State Summary Request.
  */
-public class DeviceCompliancePolicySettingStateSummaryRequest extends BaseRequest {
+public class DeviceCompliancePolicySettingStateSummaryRequest extends BaseRequest<DeviceCompliancePolicySettingStateSummary> {
 	
     /**
      * The request for the DeviceCompliancePolicySettingStateSummary
@@ -148,8 +148,8 @@ public class DeviceCompliancePolicySettingStateSummaryRequest extends BaseReques
      */
      @Nonnull
      public DeviceCompliancePolicySettingStateSummaryRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceCompliancePolicySettingStateSummaryRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -160,8 +160,8 @@ public class DeviceCompliancePolicySettingStateSummaryRequest extends BaseReques
      */
      @Nonnull
      public DeviceCompliancePolicySettingStateSummaryRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceCompliancePolicySettingStateSummaryRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

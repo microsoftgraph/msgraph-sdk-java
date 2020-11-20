@@ -68,8 +68,9 @@ public class DomainDnsMxRecord extends DomainDnsRecord implements IJsonBackedObj
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

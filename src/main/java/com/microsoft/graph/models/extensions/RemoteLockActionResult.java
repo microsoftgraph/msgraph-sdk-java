@@ -59,8 +59,9 @@ public class RemoteLockActionResult extends DeviceActionResult implements IJsonB
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

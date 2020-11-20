@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Phone81Compliance Policy Request.
  */
-public class WindowsPhone81CompliancePolicyRequest extends BaseRequest {
+public class WindowsPhone81CompliancePolicyRequest extends BaseRequest<WindowsPhone81CompliancePolicy> {
 	
     /**
      * The request for the WindowsPhone81CompliancePolicy
@@ -146,8 +146,8 @@ public class WindowsPhone81CompliancePolicyRequest extends BaseRequest {
      */
      @Nonnull
      public WindowsPhone81CompliancePolicyRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsPhone81CompliancePolicyRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class WindowsPhone81CompliancePolicyRequest extends BaseRequest {
      */
      @Nonnull
      public WindowsPhone81CompliancePolicyRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsPhone81CompliancePolicyRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

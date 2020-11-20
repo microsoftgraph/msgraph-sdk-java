@@ -25,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Request.
  */
-public class DeviceRequest extends BaseRequest {
+public class DeviceRequest extends BaseRequest<Device> {
 	
     /**
      * The request for the Device
@@ -150,8 +150,8 @@ public class DeviceRequest extends BaseRequest {
      */
      @Nonnull
      public DeviceRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -162,8 +162,8 @@ public class DeviceRequest extends BaseRequest {
      */
      @Nonnull
      public DeviceRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

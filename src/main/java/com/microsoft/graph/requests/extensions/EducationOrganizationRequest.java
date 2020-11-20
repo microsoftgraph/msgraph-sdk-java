@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Education Organization Request.
  */
-public class EducationOrganizationRequest extends BaseRequest {
+public class EducationOrganizationRequest extends BaseRequest<EducationOrganization> {
 	
     /**
      * The request for the EducationOrganization
@@ -161,8 +161,8 @@ public class EducationOrganizationRequest extends BaseRequest {
      */
      @Nonnull
      public EducationOrganizationRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EducationOrganizationRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -173,8 +173,8 @@ public class EducationOrganizationRequest extends BaseRequest {
      */
      @Nonnull
      public EducationOrganizationRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EducationOrganizationRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

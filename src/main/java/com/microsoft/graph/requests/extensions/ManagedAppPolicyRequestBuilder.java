@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Managed App Policy Request Builder.
  */
-public class ManagedAppPolicyRequestBuilder extends BaseRequestBuilder {
+public class ManagedAppPolicyRequestBuilder extends BaseRequestBuilder<ManagedAppPolicy> {
 
     /**
      * The request builder for the ManagedAppPolicy
@@ -58,6 +58,11 @@ public class ManagedAppPolicyRequestBuilder extends BaseRequestBuilder {
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param apps the apps
+     */
     @Nonnull
     public ManagedAppPolicyTargetAppsRequestBuilder targetApps(@Nullable final java.util.List<ManagedMobileApp> apps) {
         return new ManagedAppPolicyTargetAppsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.targetApps"), getClient(), null, apps);

@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Section Group Request Builder.
  */
-public class SectionGroupRequestBuilder extends BaseRequestBuilder {
+public class SectionGroupRequestBuilder extends BaseRequestBuilder<SectionGroup> {
 
     /**
      * The request builder for the SectionGroup
@@ -81,20 +81,42 @@ public class SectionGroupRequestBuilder extends BaseRequestBuilder {
     public SectionGroupRequestBuilder parentSectionGroup() {
         return new SectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("parentSectionGroup"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the SectionGroup collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public SectionGroupCollectionRequestBuilder sectionGroups() {
         return new SectionGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sectionGroups"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the SectionGroup item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public SectionGroupRequestBuilder sectionGroups(@Nonnull final String id) {
         return new SectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("sectionGroups") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the OnenoteSection collection
+     *
+     * @return the collection request builder
+     */
     @Nonnull
     public OnenoteSectionCollectionRequestBuilder sections() {
         return new OnenoteSectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sections"), getClient(), null);
     }
 
+    /**
+     * Gets a request builder for the OnenoteSection item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
     @Nonnull
     public OnenoteSectionRequestBuilder sections(@Nonnull final String id) {
         return new OnenoteSectionRequestBuilder(getRequestUrlWithAdditionalSegment("sections") + "/" + id, getClient(), null);

@@ -14,8 +14,8 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.NotebookGetRecentNotebooksCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.NotebookGetRecentNotebooksCollectionPage;
 import com.microsoft.graph.requests.extensions.NotebookGetRecentNotebooksCollectionResponse;
+import com.microsoft.graph.models.extensions.RecentNotebook;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
@@ -26,7 +26,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Notebook Get Recent Notebooks Collection Request.
  */
-public class NotebookGetRecentNotebooksCollectionRequest extends BaseCollectionRequest<NotebookGetRecentNotebooksCollectionResponse, NotebookGetRecentNotebooksCollectionPage> {
+public class NotebookGetRecentNotebooksCollectionRequest extends BaseCollectionRequest<RecentNotebook, NotebookGetRecentNotebooksCollectionResponse, NotebookGetRecentNotebooksCollectionPage> {
 
 
     /**
@@ -37,43 +37,9 @@ public class NotebookGetRecentNotebooksCollectionRequest extends BaseCollectionR
      * @param requestOptions the options for this request
      */
     public NotebookGetRecentNotebooksCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, NotebookGetRecentNotebooksCollectionResponse.class, NotebookGetRecentNotebooksCollectionPage.class);
+        super(requestUrl, client, requestOptions, NotebookGetRecentNotebooksCollectionResponse.class, NotebookGetRecentNotebooksCollectionPage.class, NotebookGetRecentNotebooksCollectionRequestBuilder.class);
     }
 
-
-    public void get(@Nonnull final ICallback<? super NotebookGetRecentNotebooksCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    @Nullable
-    public NotebookGetRecentNotebooksCollectionPage get() throws ClientException {
-        final NotebookGetRecentNotebooksCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    @Nonnull
-    public NotebookGetRecentNotebooksCollectionPage buildFromResponse(@Nonnull final NotebookGetRecentNotebooksCollectionResponse response) {
-        final NotebookGetRecentNotebooksCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new NotebookGetRecentNotebooksCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, (Boolean) null);
-        } else {
-            builder = null;
-        }
-        final NotebookGetRecentNotebooksCollectionPage page = new NotebookGetRecentNotebooksCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
 
     /**
      * Sets the select clause for the request
@@ -83,8 +49,8 @@ public class NotebookGetRecentNotebooksCollectionRequest extends BaseCollectionR
      */
     @Nonnull
     public NotebookGetRecentNotebooksCollectionRequest select(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (NotebookGetRecentNotebooksCollectionRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -95,8 +61,8 @@ public class NotebookGetRecentNotebooksCollectionRequest extends BaseCollectionR
      */
     @Nonnull
     public NotebookGetRecentNotebooksCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (NotebookGetRecentNotebooksCollectionRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -107,8 +73,8 @@ public class NotebookGetRecentNotebooksCollectionRequest extends BaseCollectionR
      */
     @Nonnull
     public NotebookGetRecentNotebooksCollectionRequest expand(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (NotebookGetRecentNotebooksCollectionRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -119,8 +85,8 @@ public class NotebookGetRecentNotebooksCollectionRequest extends BaseCollectionR
      */
     @Nonnull
     public NotebookGetRecentNotebooksCollectionRequest filter(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (NotebookGetRecentNotebooksCollectionRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -131,8 +97,8 @@ public class NotebookGetRecentNotebooksCollectionRequest extends BaseCollectionR
      */
     @Nonnull
     public NotebookGetRecentNotebooksCollectionRequest orderBy(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (NotebookGetRecentNotebooksCollectionRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

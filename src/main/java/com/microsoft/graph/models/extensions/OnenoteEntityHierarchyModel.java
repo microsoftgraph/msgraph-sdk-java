@@ -87,8 +87,9 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

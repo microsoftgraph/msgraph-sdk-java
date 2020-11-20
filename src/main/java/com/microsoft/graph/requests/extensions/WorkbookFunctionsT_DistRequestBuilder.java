@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsT_DistRequest;
+import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
+import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Workbook Functions T_Dist Request Builder.
  */
-public class WorkbookFunctionsT_DistRequestBuilder extends BaseActionRequestBuilder {
+public class WorkbookFunctionsT_DistRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
     /**
      * The request builder for this WorkbookFunctionsT_Dist

@@ -23,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Series Format Request.
  */
-public class WorkbookChartSeriesFormatRequest extends BaseRequest {
+public class WorkbookChartSeriesFormatRequest extends BaseRequest<WorkbookChartSeriesFormat> {
 	
     /**
      * The request for the WorkbookChartSeriesFormat
@@ -148,8 +148,8 @@ public class WorkbookChartSeriesFormatRequest extends BaseRequest {
      */
      @Nonnull
      public WorkbookChartSeriesFormatRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookChartSeriesFormatRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -160,8 +160,8 @@ public class WorkbookChartSeriesFormatRequest extends BaseRequest {
      */
      @Nonnull
      public WorkbookChartSeriesFormatRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookChartSeriesFormatRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

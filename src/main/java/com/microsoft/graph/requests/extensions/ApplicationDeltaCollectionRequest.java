@@ -14,8 +14,8 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.ApplicationDeltaCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ApplicationDeltaCollectionPage;
 import com.microsoft.graph.requests.extensions.ApplicationDeltaCollectionResponse;
+import com.microsoft.graph.models.extensions.Application;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
@@ -26,7 +26,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Application Delta Collection Request.
  */
-public class ApplicationDeltaCollectionRequest extends BaseCollectionRequest<ApplicationDeltaCollectionResponse, ApplicationDeltaCollectionPage> {
+public class ApplicationDeltaCollectionRequest extends BaseCollectionRequest<Application, ApplicationDeltaCollectionResponse, ApplicationDeltaCollectionPage> {
 
 
     /**
@@ -37,43 +37,9 @@ public class ApplicationDeltaCollectionRequest extends BaseCollectionRequest<App
      * @param requestOptions the options for this request
      */
     public ApplicationDeltaCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ApplicationDeltaCollectionResponse.class, ApplicationDeltaCollectionPage.class);
+        super(requestUrl, client, requestOptions, ApplicationDeltaCollectionResponse.class, ApplicationDeltaCollectionPage.class, ApplicationDeltaCollectionRequestBuilder.class);
     }
 
-
-    public void get(@Nonnull final ICallback<? super ApplicationDeltaCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    @Nullable
-    public ApplicationDeltaCollectionPage get() throws ClientException {
-        final ApplicationDeltaCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    @Nonnull
-    public ApplicationDeltaCollectionPage buildFromResponse(@Nonnull final ApplicationDeltaCollectionResponse response) {
-        final ApplicationDeltaCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new ApplicationDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final ApplicationDeltaCollectionPage page = new ApplicationDeltaCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
 
     /**
      * Sets the select clause for the request
@@ -83,8 +49,8 @@ public class ApplicationDeltaCollectionRequest extends BaseCollectionRequest<App
      */
     @Nonnull
     public ApplicationDeltaCollectionRequest select(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ApplicationDeltaCollectionRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -95,8 +61,8 @@ public class ApplicationDeltaCollectionRequest extends BaseCollectionRequest<App
      */
     @Nonnull
     public ApplicationDeltaCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (ApplicationDeltaCollectionRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -107,8 +73,8 @@ public class ApplicationDeltaCollectionRequest extends BaseCollectionRequest<App
      */
     @Nonnull
     public ApplicationDeltaCollectionRequest expand(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ApplicationDeltaCollectionRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -119,8 +85,8 @@ public class ApplicationDeltaCollectionRequest extends BaseCollectionRequest<App
      */
     @Nonnull
     public ApplicationDeltaCollectionRequest filter(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ApplicationDeltaCollectionRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -131,8 +97,8 @@ public class ApplicationDeltaCollectionRequest extends BaseCollectionRequest<App
      */
     @Nonnull
     public ApplicationDeltaCollectionRequest orderBy(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ApplicationDeltaCollectionRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

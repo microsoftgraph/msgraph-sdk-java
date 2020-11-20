@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Chart Fill Request Builder.
  */
-public class WorkbookChartFillRequestBuilder extends BaseRequestBuilder {
+public class WorkbookChartFillRequestBuilder extends BaseRequestBuilder<WorkbookChartFill> {
 
     /**
      * The request builder for the WorkbookChartFill
@@ -57,11 +57,20 @@ public class WorkbookChartFillRequestBuilder extends BaseRequestBuilder {
 
 
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     */
     @Nonnull
     public WorkbookChartFillClearRequestBuilder clear() {
         return new WorkbookChartFillClearRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.clear"), getClient(), null);
     }
 
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder 
+     * @param color the color
+     */
     @Nonnull
     public WorkbookChartFillSetSolidColorRequestBuilder setSolidColor(@Nullable final String color) {
         return new WorkbookChartFillSetSolidColorRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setSolidColor"), getClient(), null, color);

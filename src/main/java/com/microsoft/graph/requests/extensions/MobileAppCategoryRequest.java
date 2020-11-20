@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mobile App Category Request.
  */
-public class MobileAppCategoryRequest extends BaseRequest {
+public class MobileAppCategoryRequest extends BaseRequest<MobileAppCategory> {
 	
     /**
      * The request for the MobileAppCategory
@@ -146,8 +146,8 @@ public class MobileAppCategoryRequest extends BaseRequest {
      */
      @Nonnull
      public MobileAppCategoryRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MobileAppCategoryRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class MobileAppCategoryRequest extends BaseRequest {
      */
      @Nonnull
      public MobileAppCategoryRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MobileAppCategoryRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

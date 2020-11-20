@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Alert Request.
  */
-public class AlertRequest extends BaseRequest {
+public class AlertRequest extends BaseRequest<Alert> {
 	
     /**
      * The request for the Alert
@@ -146,8 +146,8 @@ public class AlertRequest extends BaseRequest {
      */
      @Nonnull
      public AlertRequest select(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AlertRequest)this;
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,8 +158,8 @@ public class AlertRequest extends BaseRequest {
      */
      @Nonnull
      public AlertRequest expand(@Nonnull final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AlertRequest)this;
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -205,8 +205,9 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements IJs
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

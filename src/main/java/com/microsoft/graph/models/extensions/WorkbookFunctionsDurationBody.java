@@ -101,7 +101,7 @@ public class WorkbookFunctionsDurationBody {
      * @return the serializer
      */
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

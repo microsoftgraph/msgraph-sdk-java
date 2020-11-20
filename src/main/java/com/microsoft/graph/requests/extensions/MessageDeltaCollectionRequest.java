@@ -14,8 +14,8 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.MessageDeltaCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.MessageDeltaCollectionPage;
 import com.microsoft.graph.requests.extensions.MessageDeltaCollectionResponse;
+import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
@@ -26,7 +26,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Message Delta Collection Request.
  */
-public class MessageDeltaCollectionRequest extends BaseCollectionRequest<MessageDeltaCollectionResponse, MessageDeltaCollectionPage> {
+public class MessageDeltaCollectionRequest extends BaseCollectionRequest<Message, MessageDeltaCollectionResponse, MessageDeltaCollectionPage> {
 
 
     /**
@@ -37,43 +37,9 @@ public class MessageDeltaCollectionRequest extends BaseCollectionRequest<Message
      * @param requestOptions the options for this request
      */
     public MessageDeltaCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MessageDeltaCollectionResponse.class, MessageDeltaCollectionPage.class);
+        super(requestUrl, client, requestOptions, MessageDeltaCollectionResponse.class, MessageDeltaCollectionPage.class, MessageDeltaCollectionRequestBuilder.class);
     }
 
-
-    public void get(@Nonnull final ICallback<? super MessageDeltaCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    @Nullable
-    public MessageDeltaCollectionPage get() throws ClientException {
-        final MessageDeltaCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    @Nonnull
-    public MessageDeltaCollectionPage buildFromResponse(@Nonnull final MessageDeltaCollectionResponse response) {
-        final MessageDeltaCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new MessageDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final MessageDeltaCollectionPage page = new MessageDeltaCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
 
     /**
      * Sets the select clause for the request
@@ -83,8 +49,8 @@ public class MessageDeltaCollectionRequest extends BaseCollectionRequest<Message
      */
     @Nonnull
     public MessageDeltaCollectionRequest select(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (MessageDeltaCollectionRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -95,8 +61,8 @@ public class MessageDeltaCollectionRequest extends BaseCollectionRequest<Message
      */
     @Nonnull
     public MessageDeltaCollectionRequest top(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (MessageDeltaCollectionRequest)this;
+        addTopOption(value);
+        return this;
     }
 
     /**
@@ -107,8 +73,8 @@ public class MessageDeltaCollectionRequest extends BaseCollectionRequest<Message
      */
     @Nonnull
     public MessageDeltaCollectionRequest expand(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (MessageDeltaCollectionRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
     /**
@@ -119,8 +85,8 @@ public class MessageDeltaCollectionRequest extends BaseCollectionRequest<Message
      */
     @Nonnull
     public MessageDeltaCollectionRequest filter(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (MessageDeltaCollectionRequest)this;
+        addFilterOption(value);
+        return this;
     }
 
     /**
@@ -131,8 +97,8 @@ public class MessageDeltaCollectionRequest extends BaseCollectionRequest<Message
      */
     @Nonnull
     public MessageDeltaCollectionRequest orderBy(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (MessageDeltaCollectionRequest)this;
+        addOrderByOption(value);
+        return this;
     }
 
 }

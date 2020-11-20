@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetProtectionProtectRequest;
+import com.microsoft.graph.models.extensions.WorkbookWorksheetProtection;
 import com.microsoft.graph.models.extensions.WorkbookWorksheetProtectionOptions;
-import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
+import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Workbook Worksheet Protection Protect Request Builder.
  */
-public class WorkbookWorksheetProtectionProtectRequestBuilder extends BaseActionRequestBuilder {
+public class WorkbookWorksheetProtectionProtectRequestBuilder extends BaseActionRequestBuilder<WorkbookWorksheetProtection> {
 
     /**
      * The request builder for this WorkbookWorksheetProtectionProtect

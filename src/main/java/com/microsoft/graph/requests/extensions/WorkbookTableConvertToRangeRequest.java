@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRange;
+import com.microsoft.graph.models.extensions.WorkbookTable;
 import com.microsoft.graph.requests.extensions.WorkbookTableConvertToRangeRequest;
 
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Convert To Range Request.
  */
-public class WorkbookTableConvertToRangeRequest extends BaseRequest {
+public class WorkbookTableConvertToRangeRequest extends BaseRequest<WorkbookRange> {
 
     /**
      * The request for this WorkbookTableConvertToRange
@@ -61,8 +62,8 @@ public class WorkbookTableConvertToRangeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookTableConvertToRangeRequest select(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (WorkbookTableConvertToRangeRequest)this;
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -73,8 +74,8 @@ public class WorkbookTableConvertToRangeRequest extends BaseRequest {
      */
     @Nonnull
     public WorkbookTableConvertToRangeRequest expand(@Nonnull final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WorkbookTableConvertToRangeRequest)this;
+        addExpandOption(value);
+        return this;
     }
 
 }

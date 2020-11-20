@@ -69,8 +69,9 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
      *
      * @return the serializer
      */
+	@Override
     @Nullable
-    protected ISerializer getSerializer() {
+    public ISerializer getSerializer() {
         return serializer;
     }
 

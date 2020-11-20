@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ScheduleChangeRequestDeclineRequest;
+import com.microsoft.graph.models.extensions.ScheduleChangeRequest;
 
-import com.microsoft.graph.core.BaseActionRequestBuilder;
-import com.microsoft.graph.core.BaseFunctionRequestBuilder;
+import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Schedule Change Request Decline Request Builder.
  */
-public class ScheduleChangeRequestDeclineRequestBuilder extends BaseActionRequestBuilder {
+public class ScheduleChangeRequestDeclineRequestBuilder extends BaseActionRequestBuilder<ScheduleChangeRequest> {
 
     /**
      * The request builder for this ScheduleChangeRequestDecline

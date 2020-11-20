@@ -575,12 +575,21 @@ public class CoreHttpProvider implements IHttpProvider {
 		return false;
 	}
 
+	/**
+	 * Gets the logger in use
+	 * 
+	 * @return the logger
+	 */
 	@VisibleForTesting
 	@Nullable
 	public ILogger getLogger() {
 		return logger;
 	}
 
+	/**
+	 * Gets the executors in use
+	 * @return the executors
+	 */
 	@VisibleForTesting
 	@Nullable
 	public IExecutors getExecutors() {

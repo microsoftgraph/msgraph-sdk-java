@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.requests.extensions.ManagedDeviceBypassActivationLockRequest;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Device Bypass Activation Lock Request.
  */
-public class ManagedDeviceBypassActivationLockRequest extends BaseRequest {
+public class ManagedDeviceBypassActivationLockRequest extends BaseRequest<Void> {
 
     /**
      * The request for this ManagedDeviceBypassActivationLock
