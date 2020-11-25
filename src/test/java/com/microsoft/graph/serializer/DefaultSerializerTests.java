@@ -2,6 +2,7 @@ package com.microsoft.graph.serializer;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
@@ -13,6 +14,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import com.microsoft.graph.callrecords.models.extensions.MediaStream;
 import com.microsoft.graph.logger.DefaultLogger;
 import com.microsoft.graph.models.extensions.Attachment;
 import com.microsoft.graph.core.DateOnly;
@@ -175,6 +177,17 @@ public class DefaultSerializerTests {
         assertNotNull(result);
         assertNotNull(result.nextExpectedRanges);
         assertTrue(result.nextExpectedRanges.size() > 0);
+    }
+    @Test
+    public void testDoubleDeserialization() {
+		final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
+        final String source = " [{\"streamId\": \"12976\",\"startDateTime\": null,\"endDateTime\": null,\"streamDirection\": \"callerToCallee\",\"averageAudioDegradation\": null,\"averageJitter\": null,\"maxJitter\": null,\"averagePacketLossRate\": null,\"maxPacketLossRate\": null,\"averageRatioOfConcealedSamples\": null,\"maxRatioOfConcealedSamples\": null,\"averageRoundTripTime\": null,\"maxRoundTripTime\": null,\"packetUtilization\": 0,\"averageBandwidthEstimate\": null,\"wasMediaBypassed\": null,\"postForwardErrorCorrectionPacketLossRate\": null,\"averageVideoFrameLossPercentage\": null,\"averageReceivedFrameRate\": null,\"lowFrameRateRatio\": null,\"averageVideoPacketLossRate\": null,\"averageVideoFrameRate\": null,\"lowVideoProcessingCapabilityRatio\": null,\"averageAudioNetworkJitter\": null,\"maxAudioNetworkJitter\": null},{\"streamId\": \"3303\",\"startDateTime\": null,\"endDateTime\": null,\"streamDirection\": \"calleeToCaller\",\"averageAudioDegradation\": null,\"averageJitter\": \"PT0S\",\"maxJitter\": \"PT0S\",\"averagePacketLossRate\": 0,\"maxPacketLossRate\": 0,\"averageRatioOfConcealedSamples\": null,\"maxRatioOfConcealedSamples\": null,\"averageRoundTripTime\": \"PT0.02S\",\"maxRoundTripTime\": \"PT0.02S\",\"packetUtilization\": 1184,\"averageBandwidthEstimate\": null,\"wasMediaBypassed\": null,\"postForwardErrorCorrectionPacketLossRate\": 0,\"averageVideoFrameLossPercentage\": 0,\"averageReceivedFrameRate\": null,\"lowFrameRateRatio\": 0,\"averageVideoPacketLossRate\": null,\"averageVideoFrameRate\": 25.6,\"lowVideoProcessingCapabilityRatio\": null,\"averageAudioNetworkJitter\": null,\"maxAudioNetworkJitter\": null}]";
+        final MediaStream[] result = serializer.deserializeObject(source, MediaStream[].class);
+        assertNotNull(result);
+        assertNotNull(result[0]);
+        assertNotNull(result[1]);
+        assertNull(result[0].averagePacketLossRate);
+        assertEquals(0f, result[1].averagePacketLossRate, 0f);
     }
   
   public static final class HasVoidMember {
