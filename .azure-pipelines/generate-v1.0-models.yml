@@ -108,6 +108,14 @@ steps:
   enabled: true
 
 - task: PowerShell@2
+  displayName: 'Increment minor version number'
+  inputs:
+    targetType: filePath
+    filePath: '$(Build.SourcesDirectory)/msgraph-sdk-java/Scripts/incrementMinorVersion.ps1'
+    workingDirectory: '$(Build.SourcesDirectory)/msgraph-sdk-java/Scripts'
+  enabled: true
+
+- task: PowerShell@2
   displayName: 'Copy generated requests and models into the repo'
   inputs:
     targetType: inline
