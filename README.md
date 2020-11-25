@@ -19,7 +19,7 @@ repositories {
 
 dependencies {
     // Include the sdk as a dependency
-    implementation 'com.microsoft.graph:microsoft-graph:2.4.+'
+    implementation 'com.microsoft.graph:microsoft-graph:2.4.0'
 }
 ```
 
