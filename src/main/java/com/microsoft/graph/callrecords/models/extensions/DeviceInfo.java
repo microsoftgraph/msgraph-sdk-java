@@ -61,7 +61,7 @@ public class DeviceInfo implements IJsonBackedObject {
     @SerializedName(value = "captureNotFunctioningEventRatio", alternate = {"CaptureNotFunctioningEventRatio"})
     @Expose
 	@Nullable
-    public float captureNotFunctioningEventRatio;
+    public Float captureNotFunctioningEventRatio;
 
     /**
      * The Cpu Insufficent Event Ratio.
@@ -70,7 +70,7 @@ public class DeviceInfo implements IJsonBackedObject {
     @SerializedName(value = "cpuInsufficentEventRatio", alternate = {"CpuInsufficentEventRatio"})
     @Expose
 	@Nullable
-    public float cpuInsufficentEventRatio;
+    public Float cpuInsufficentEventRatio;
 
     /**
      * The Device Clipping Event Ratio.
@@ -79,7 +79,7 @@ public class DeviceInfo implements IJsonBackedObject {
     @SerializedName(value = "deviceClippingEventRatio", alternate = {"DeviceClippingEventRatio"})
     @Expose
 	@Nullable
-    public float deviceClippingEventRatio;
+    public Float deviceClippingEventRatio;
 
     /**
      * The Device Glitch Event Ratio.
@@ -88,7 +88,7 @@ public class DeviceInfo implements IJsonBackedObject {
     @SerializedName(value = "deviceGlitchEventRatio", alternate = {"DeviceGlitchEventRatio"})
     @Expose
 	@Nullable
-    public float deviceGlitchEventRatio;
+    public Float deviceGlitchEventRatio;
 
     /**
      * The Howling Event Count.
@@ -106,7 +106,7 @@ public class DeviceInfo implements IJsonBackedObject {
     @SerializedName(value = "initialSignalLevelRootMeanSquare", alternate = {"InitialSignalLevelRootMeanSquare"})
     @Expose
 	@Nullable
-    public float initialSignalLevelRootMeanSquare;
+    public Float initialSignalLevelRootMeanSquare;
 
     /**
      * The Low Speech Level Event Ratio.
@@ -115,7 +115,7 @@ public class DeviceInfo implements IJsonBackedObject {
     @SerializedName(value = "lowSpeechLevelEventRatio", alternate = {"LowSpeechLevelEventRatio"})
     @Expose
 	@Nullable
-    public float lowSpeechLevelEventRatio;
+    public Float lowSpeechLevelEventRatio;
 
     /**
      * The Low Speech To Noise Event Ratio.
@@ -124,7 +124,7 @@ public class DeviceInfo implements IJsonBackedObject {
     @SerializedName(value = "lowSpeechToNoiseEventRatio", alternate = {"LowSpeechToNoiseEventRatio"})
     @Expose
 	@Nullable
-    public float lowSpeechToNoiseEventRatio;
+    public Float lowSpeechToNoiseEventRatio;
 
     /**
      * The Mic Glitch Rate.
@@ -133,7 +133,7 @@ public class DeviceInfo implements IJsonBackedObject {
     @SerializedName(value = "micGlitchRate", alternate = {"MicGlitchRate"})
     @Expose
 	@Nullable
-    public float micGlitchRate;
+    public Float micGlitchRate;
 
     /**
      * The Received Noise Level.
@@ -178,7 +178,7 @@ public class DeviceInfo implements IJsonBackedObject {
     @SerializedName(value = "renderMuteEventRatio", alternate = {"RenderMuteEventRatio"})
     @Expose
 	@Nullable
-    public float renderMuteEventRatio;
+    public Float renderMuteEventRatio;
 
     /**
      * The Render Not Functioning Event Ratio.
@@ -187,7 +187,7 @@ public class DeviceInfo implements IJsonBackedObject {
     @SerializedName(value = "renderNotFunctioningEventRatio", alternate = {"RenderNotFunctioningEventRatio"})
     @Expose
 	@Nullable
-    public float renderNotFunctioningEventRatio;
+    public Float renderNotFunctioningEventRatio;
 
     /**
      * The Render Zero Volume Event Ratio.
@@ -196,7 +196,7 @@ public class DeviceInfo implements IJsonBackedObject {
     @SerializedName(value = "renderZeroVolumeEventRatio", alternate = {"RenderZeroVolumeEventRatio"})
     @Expose
 	@Nullable
-    public float renderZeroVolumeEventRatio;
+    public Float renderZeroVolumeEventRatio;
 
     /**
      * The Sent Noise Level.
@@ -223,7 +223,7 @@ public class DeviceInfo implements IJsonBackedObject {
     @SerializedName(value = "speakerGlitchRate", alternate = {"SpeakerGlitchRate"})
     @Expose
 	@Nullable
-    public float speakerGlitchRate;
+    public Float speakerGlitchRate;
 
 
     /**

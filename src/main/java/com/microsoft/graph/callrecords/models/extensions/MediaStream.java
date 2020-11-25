@@ -44,7 +44,7 @@ public class MediaStream implements IJsonBackedObject {
     @SerializedName(value = "averageAudioDegradation", alternate = {"AverageAudioDegradation"})
     @Expose
 	@Nullable
-    public float averageAudioDegradation;
+    public Float averageAudioDegradation;
 
     /**
      * The Average Audio Network Jitter.
@@ -80,7 +80,7 @@ public class MediaStream implements IJsonBackedObject {
     @SerializedName(value = "averagePacketLossRate", alternate = {"AveragePacketLossRate"})
     @Expose
 	@Nullable
-    public float averagePacketLossRate;
+    public Float averagePacketLossRate;
 
     /**
      * The Average Ratio Of Concealed Samples.
@@ -89,7 +89,7 @@ public class MediaStream implements IJsonBackedObject {
     @SerializedName(value = "averageRatioOfConcealedSamples", alternate = {"AverageRatioOfConcealedSamples"})
     @Expose
 	@Nullable
-    public float averageRatioOfConcealedSamples;
+    public Float averageRatioOfConcealedSamples;
 
     /**
      * The Average Received Frame Rate.
@@ -98,7 +98,7 @@ public class MediaStream implements IJsonBackedObject {
     @SerializedName(value = "averageReceivedFrameRate", alternate = {"AverageReceivedFrameRate"})
     @Expose
 	@Nullable
-    public float averageReceivedFrameRate;
+    public Float averageReceivedFrameRate;
 
     /**
      * The Average Round Trip Time.
@@ -116,7 +116,7 @@ public class MediaStream implements IJsonBackedObject {
     @SerializedName(value = "averageVideoFrameLossPercentage", alternate = {"AverageVideoFrameLossPercentage"})
     @Expose
 	@Nullable
-    public float averageVideoFrameLossPercentage;
+    public Float averageVideoFrameLossPercentage;
 
     /**
      * The Average Video Frame Rate.
@@ -125,7 +125,7 @@ public class MediaStream implements IJsonBackedObject {
     @SerializedName(value = "averageVideoFrameRate", alternate = {"AverageVideoFrameRate"})
     @Expose
 	@Nullable
-    public float averageVideoFrameRate;
+    public Float averageVideoFrameRate;
 
     /**
      * The Average Video Packet Loss Rate.
@@ -134,7 +134,7 @@ public class MediaStream implements IJsonBackedObject {
     @SerializedName(value = "averageVideoPacketLossRate", alternate = {"AverageVideoPacketLossRate"})
     @Expose
 	@Nullable
-    public float averageVideoPacketLossRate;
+    public Float averageVideoPacketLossRate;
 
     /**
      * The End Date Time.
@@ -152,7 +152,7 @@ public class MediaStream implements IJsonBackedObject {
     @SerializedName(value = "lowFrameRateRatio", alternate = {"LowFrameRateRatio"})
     @Expose
 	@Nullable
-    public float lowFrameRateRatio;
+    public Float lowFrameRateRatio;
 
     /**
      * The Low Video Processing Capability Ratio.
@@ -161,7 +161,7 @@ public class MediaStream implements IJsonBackedObject {
     @SerializedName(value = "lowVideoProcessingCapabilityRatio", alternate = {"LowVideoProcessingCapabilityRatio"})
     @Expose
 	@Nullable
-    public float lowVideoProcessingCapabilityRatio;
+    public Float lowVideoProcessingCapabilityRatio;
 
     /**
      * The Max Audio Network Jitter.
@@ -188,7 +188,7 @@ public class MediaStream implements IJsonBackedObject {
     @SerializedName(value = "maxPacketLossRate", alternate = {"MaxPacketLossRate"})
     @Expose
 	@Nullable
-    public float maxPacketLossRate;
+    public Float maxPacketLossRate;
 
     /**
      * The Max Ratio Of Concealed Samples.
@@ -197,7 +197,7 @@ public class MediaStream implements IJsonBackedObject {
     @SerializedName(value = "maxRatioOfConcealedSamples", alternate = {"MaxRatioOfConcealedSamples"})
     @Expose
 	@Nullable
-    public float maxRatioOfConcealedSamples;
+    public Float maxRatioOfConcealedSamples;
 
     /**
      * The Max Round Trip Time.
@@ -224,7 +224,7 @@ public class MediaStream implements IJsonBackedObject {
     @SerializedName(value = "postForwardErrorCorrectionPacketLossRate", alternate = {"PostForwardErrorCorrectionPacketLossRate"})
     @Expose
 	@Nullable
-    public float postForwardErrorCorrectionPacketLossRate;
+    public Float postForwardErrorCorrectionPacketLossRate;
 
     /**
      * The Start Date Time.

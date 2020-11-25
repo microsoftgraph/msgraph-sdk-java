@@ -46,7 +46,7 @@ public class NetworkInfo implements IJsonBackedObject {
     @SerializedName(value = "bandwidthLowEventRatio", alternate = {"BandwidthLowEventRatio"})
     @Expose
 	@Nullable
-    public float bandwidthLowEventRatio;
+    public Float bandwidthLowEventRatio;
 
     /**
      * The Basic Service Set Identifier.
@@ -73,7 +73,7 @@ public class NetworkInfo implements IJsonBackedObject {
     @SerializedName(value = "delayEventRatio", alternate = {"DelayEventRatio"})
     @Expose
 	@Nullable
-    public float delayEventRatio;
+    public Float delayEventRatio;
 
     /**
      * The Dns Suffix.
@@ -127,7 +127,7 @@ public class NetworkInfo implements IJsonBackedObject {
     @SerializedName(value = "receivedQualityEventRatio", alternate = {"ReceivedQualityEventRatio"})
     @Expose
 	@Nullable
-    public float receivedQualityEventRatio;
+    public Float receivedQualityEventRatio;
 
     /**
      * The Reflexive IPAddress.
@@ -163,7 +163,7 @@ public class NetworkInfo implements IJsonBackedObject {
     @SerializedName(value = "sentQualityEventRatio", alternate = {"SentQualityEventRatio"})
     @Expose
 	@Nullable
-    public float sentQualityEventRatio;
+    public Float sentQualityEventRatio;
 
     /**
      * The Subnet.
