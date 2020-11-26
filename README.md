@@ -20,6 +20,8 @@ repositories {
 dependencies {
     // Include the sdk as a dependency
     implementation 'com.microsoft.graph:microsoft-graph:2.3.+'
+    // Uncomment the line below if you are building an android application
+    //implementation 'com.google.guava:guava:29.0-android'
 }
 ```
 
