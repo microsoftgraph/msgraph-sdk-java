@@ -18,8 +18,6 @@ import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IGraphServiceClient;
 import com.microsoft.graph.core.GraphServiceClient;
-import com.microsoft.graph.core.DefaultConnectionConfig;
-import com.microsoft.graph.core.IConnectionConfig;
 import com.microsoft.graph.http.CoreHttpProvider;
 import com.microsoft.graph.http.IHttpProvider;
 import com.microsoft.graph.http.IHttpRequest;
@@ -216,34 +214,6 @@ public class GraphServiceClientTest {
         GraphServiceClient.builder().logger(null);
     }
     
-    @Test
-    public void connectionConfigTest() {
-        ILogger logger = createLogger();
-        IGraphServiceClient client = GraphServiceClient.builder()
-                .logger(logger)
-                .authenticationProvider(getAuthProvider())
-                .buildClient();
-        final CoreHttpProvider provider = (CoreHttpProvider)client.getHttpProvider();
-        assertEquals(30_000, provider.getConnectionConfigInternal().getConnectTimeout());
-        assertEquals(30_000, provider.getConnectionConfigInternal().getReadTimeout());
-    }
-    
-    @Test
-    public void connectionConfigValuesChangeTest() {
-        final IConnectionConfig connConfig = new DefaultConnectionConfig();
-        connConfig.setConnectTimeout(20_000);
-        connConfig.setReadTimeout(10_000);
-        ILogger logger = createLogger();
-        IGraphServiceClient client = GraphServiceClient.builder()
-                .logger(logger)
-                .authenticationProvider(getAuthProvider())
-                .connectionConfig(connConfig)
-                .buildClient();
-        final CoreHttpProvider provider = (CoreHttpProvider)client.getHttpProvider();
-        assertEquals(20_000, provider.getConnectionConfigInternal().getConnectTimeout());
-        assertEquals(10_000, provider.getConnectionConfigInternal().getReadTimeout());
-    }
-
     private static ILogger createLogger() {
         return new ILogger() {
 
