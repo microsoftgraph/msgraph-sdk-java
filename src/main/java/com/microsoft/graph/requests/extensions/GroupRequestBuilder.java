@@ -9,10 +9,13 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.models.extensions.AssignedLicense;
+import com.microsoft.graph.models.extensions.ResourceSpecificPermissionGrant;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.ResourceSpecificPermissionGrantCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ResourceSpecificPermissionGrantRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupSettingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupSettingRequestBuilder;
 import com.microsoft.graph.requests.extensions.EventCollectionRequestBuilder;
@@ -674,6 +677,26 @@ public class GroupRequestBuilder extends BaseRequestBuilder<Group> {
         return new OrgContactWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/" + id + "/microsoft.graph.orgContact", getClient(), null);
     }
     /**
+     *  Gets a request builder for the ResourceSpecificPermissionGrant collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ResourceSpecificPermissionGrantCollectionRequestBuilder permissionGrants() {
+        return new ResourceSpecificPermissionGrantCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("permissionGrants"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ResourceSpecificPermissionGrant item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ResourceSpecificPermissionGrantRequestBuilder permissionGrants(@Nonnull final String id) {
+        return new ResourceSpecificPermissionGrantRequestBuilder(getRequestUrlWithAdditionalSegment("permissionGrants") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the GroupSetting collection
      *
      * @return the collection request builder
@@ -1263,6 +1286,15 @@ public class GroupRequestBuilder extends BaseRequestBuilder<Group> {
     @Nonnull
     public GroupAssignLicenseRequestBuilder assignLicense(@Nullable final java.util.List<AssignedLicense> addLicenses, @Nullable final java.util.List<java.util.UUID> removeLicenses) {
         return new GroupAssignLicenseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assignLicense"), getClient(), null, addLicenses, removeLicenses);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public GroupCheckGrantedPermissionsForAppCollectionRequestBuilder checkGrantedPermissionsForApp() {
+        return new GroupCheckGrantedPermissionsForAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.checkGrantedPermissionsForApp"), getClient(), null);
     }
 
     /**

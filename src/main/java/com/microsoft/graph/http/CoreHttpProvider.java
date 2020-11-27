@@ -554,7 +554,10 @@ public class CoreHttpProvider implements IHttpProvider {
 		final String endOfFile = "\\A";
 		try (final Scanner scanner = new Scanner(input, httpStreamEncoding)) {
 			scanner.useDelimiter(endOfFile);
-			return scanner.next();
+			if (scanner.hasNext()) {
+				return scanner.next();
+			}
+			return "";
 		}
 	}
 

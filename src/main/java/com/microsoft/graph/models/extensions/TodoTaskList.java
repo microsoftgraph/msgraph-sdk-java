@@ -32,7 +32,7 @@ public class TodoTaskList extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The name of the task list.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -41,7 +41,7 @@ public class TodoTaskList extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Owner.
-     * 
+     * True if the user is owner of the given task list.
      */
     @SerializedName(value = "isOwner", alternate = {"IsOwner"})
     @Expose
@@ -50,7 +50,7 @@ public class TodoTaskList extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Shared.
-     * 
+     * True if the task list is shared with other users
      */
     @SerializedName(value = "isShared", alternate = {"IsShared"})
     @Expose
@@ -59,7 +59,7 @@ public class TodoTaskList extends Entity implements IJsonBackedObject {
 
     /**
      * The Wellknown List Name.
-     * 
+     * Property indicating the list name if the given list is a well-known list. Possible values are: none, defaultList, flaggedEmails, unknownFutureValue.
      */
     @SerializedName(value = "wellknownListName", alternate = {"WellknownListName"})
     @Expose
@@ -68,7 +68,7 @@ public class TodoTaskList extends Entity implements IJsonBackedObject {
 
     /**
      * The Extensions.
-     * 
+     * The collection of open extensions defined for the task list. Nullable.
      */
     @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
@@ -77,7 +77,7 @@ public class TodoTaskList extends Entity implements IJsonBackedObject {
 
     /**
      * The Tasks.
-     * 
+     * The tasks in this task list. Read-only. Nullable.
      */
     @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose

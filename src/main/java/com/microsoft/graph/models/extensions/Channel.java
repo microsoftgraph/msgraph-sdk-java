@@ -61,6 +61,15 @@ public class Channel extends Entity implements IJsonBackedObject {
     public String email;
 
     /**
+     * The Is Favorite By Default.
+     * Indicates whether the channel should automatically be marked 'favorite' for all members of the team. Can only be set programmatically with Create team. Default: false.
+     */
+    @SerializedName(value = "isFavoriteByDefault", alternate = {"IsFavoriteByDefault"})
+    @Expose
+	@Nullable
+    public Boolean isFavoriteByDefault;
+
+    /**
      * The Membership Type.
      * 
      */

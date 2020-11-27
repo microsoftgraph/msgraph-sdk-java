@@ -43,6 +43,8 @@ import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionRe
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantRequestBuilder;
 import com.microsoft.graph.requests.extensions.OrganizationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OrganizationRequestBuilder;
+import com.microsoft.graph.requests.extensions.ResourceSpecificPermissionGrantCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ResourceSpecificPermissionGrantRequestBuilder;
 import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ScopedRoleMembershipRequestBuilder;
 import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionRequestBuilder;
@@ -82,6 +84,7 @@ import com.microsoft.graph.requests.extensions.CloudCommunicationsRequestBuilder
 import com.microsoft.graph.requests.extensions.DeviceAppManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.ReportRootRequestBuilder;
+import com.microsoft.graph.requests.extensions.SearchEntityRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecurityRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppCatalogsRequestBuilder;
@@ -405,6 +408,23 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      */
     @Nonnull
     OrganizationRequestBuilder organization(@Nonnull final String id);
+
+    /**
+     * Gets the collection of PermissionGrants objects
+     *
+     * @return the request builder for the collection of PermissionGrants objects
+     */
+    @Nonnull
+    ResourceSpecificPermissionGrantCollectionRequestBuilder permissionGrants();
+
+    /**
+     * Gets a single PermissionGrants
+     *
+     * @param id the id of the PermissionGrants to retrieve
+     * @return the request builder for the PermissionGrants object
+     */
+    @Nonnull
+    ResourceSpecificPermissionGrantRequestBuilder permissionGrants(@Nonnull final String id);
 
     /**
      * Gets the collection of ScopedRoleMemberships objects
@@ -752,6 +772,14 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     /**
      * Gets the GraphServiceRequestBuilder
      *
+     * @return the SearchEntity
+     */
+    @Nonnull
+    SearchEntityRequestBuilder search();
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
      * @return the Planner
      */
     @Nonnull
@@ -763,7 +791,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @return the Security
      */
     @Nonnull
-    SecurityRequestBuilder Security();
+    SecurityRequestBuilder security();
 
     /**
      * Gets the GraphServiceRequestBuilder

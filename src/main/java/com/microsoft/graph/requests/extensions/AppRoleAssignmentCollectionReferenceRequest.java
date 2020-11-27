@@ -7,7 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.ServicePrincipal;
+import com.microsoft.graph.models.extensions.Device;
 import com.microsoft.graph.models.extensions.AppRoleAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -51,7 +51,7 @@ public class AppRoleAssignmentCollectionReferenceRequest extends BaseCollectionW
      */
     public void post(@Nonnull final AppRoleAssignment newAppRoleAssignment, @Nonnull final ICallback<? super AppRoleAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/me/ownersAsAppRoleAssignment/" + newAppRoleAssignment.id);
+        final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/me/registeredUsersAsAppRoleAssignment/" + newAppRoleAssignment.id);
         new AppRoleAssignmentWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newAppRoleAssignment, body, callback);
@@ -65,7 +65,7 @@ public class AppRoleAssignmentCollectionReferenceRequest extends BaseCollectionW
     @Nonnull
     public AppRoleAssignment post(@Nonnull final AppRoleAssignment newAppRoleAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/me/ownersAsAppRoleAssignment/" + newAppRoleAssignment.id);
+        final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/me/registeredUsersAsAppRoleAssignment/" + newAppRoleAssignment.id);
         return new AppRoleAssignmentWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
                 .buildRequest(getBaseRequest().getHeaders())
                 .post(newAppRoleAssignment, body);

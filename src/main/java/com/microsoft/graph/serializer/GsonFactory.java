@@ -205,7 +205,7 @@ final class GsonFactory {
                                        final Type typeOfT,
                                        final JsonDeserializationContext context) throws JsonParseException {
                 try {
-                    return DatatypeFactory.newInstance().newDuration(json.toString());
+                    return DatatypeFactory.newInstance().newDuration(json.getAsString());
                 } catch (Exception e) {
                     return null;
                 }

@@ -7,7 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.ServicePrincipal;
+import com.microsoft.graph.models.extensions.OrgContact;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.ExtensionProperty;
 import java.util.Arrays;
@@ -26,7 +26,7 @@ import com.microsoft.graph.core.IBaseClient;
 public class DirectoryObjectCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<DirectoryObject, DirectoryObjectWithReferenceRequest, DirectoryObjectReferenceRequestBuilder, DirectoryObjectWithReferenceRequestBuilder, DirectoryObjectCollectionResponse, DirectoryObjectCollectionWithReferencesPage, DirectoryObjectCollectionReferenceRequest, DirectoryObjectCollectionReferenceRequestBuilder> {
 
     /**
-     * The request builder for this collection of ServicePrincipal
+     * The request builder for this collection of OrgContact
      *
      * @param requestUrl     the request URL
      * @param client         the service client

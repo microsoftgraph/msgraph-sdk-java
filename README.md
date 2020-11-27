@@ -19,7 +19,7 @@ repositories {
 
 dependencies {
     // Include the sdk as a dependency
-    implementation 'com.microsoft.graph:microsoft-graph:2.3.+'
+    implementation 'com.microsoft.graph:microsoft-graph:2.4.1'
     // Uncomment the line below if you are building an android application
     //implementation 'com.google.guava:guava:29.0-android'
 }
@@ -33,7 +33,7 @@ Add the dependency in `dependencies` in pom.xml
 <dependency>
   <groupId>com.microsoft.graph</groupId>
   <artifactId>microsoft-graph</artifactId>
-  <version>2.3.2</version>
+  <version>2.4.1</version>
 </dependency>
 ```
 

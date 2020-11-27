@@ -29,7 +29,7 @@ public class Todo extends Entity implements IJsonBackedObject {
 
     /**
      * The Lists.
-     * 
+     * The task lists in the users mailbox.
      */
     @SerializedName(value = "lists", alternate = {"Lists"})
     @Expose

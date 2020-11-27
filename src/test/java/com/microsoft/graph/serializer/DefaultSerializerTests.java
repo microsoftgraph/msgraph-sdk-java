@@ -189,8 +189,15 @@ public class DefaultSerializerTests {
         assertNull(result[0].averagePacketLossRate);
         assertEquals(0f, result[1].averagePacketLossRate, 0f);
     }
-  
-  public static final class HasVoidMember {
+    @Test
+    public void testDurationDeserialization() {
+        final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
+        final String source = "{\"streamId\": \"2101\",\"startDateTime\": null,\"endDateTime\": null,\"streamDirection\": \"calleeToCaller\",\"averageAudioDegradation\": null,\"averageJitter\": \"PT0.004S\",\"maxJitter\": \"PT0.007S\",\"averagePacketLossRate\": 0,\"maxPacketLossRate\": 0,\"averageRatioOfConcealedSamples\": 0,\"maxRatioOfConcealedSamples\": null,\"averageRoundTripTime\": \"PT0.024S\",\"maxRoundTripTime\": \"PT0.05S\",\"packetUtilization\": 471,\"averageBandwidthEstimate\": 1174971,\"wasMediaBypassed\": null,\"postForwardErrorCorrectionPacketLossRate\": null,\"averageVideoFrameLossPercentage\": null,\"averageReceivedFrameRate\": null,\"lowFrameRateRatio\": null,\"averageVideoPacketLossRate\": null,\"averageVideoFrameRate\": null,\"lowVideoProcessingCapabilityRatio\": null,\"averageAudioNetworkJitter\": \"PT0.014S\",\"maxAudioNetworkJitter\": \"PT0.022S\"}";
+        final MediaStream result = serializer.deserializeObject(source, MediaStream.class);
+        assertNotNull(result);
+        assertNotNull(result.maxRoundTripTime);
+    }
+    public static final class HasVoidMember {
       @SerializedName("x")
       @Expose
       int x = 1;
