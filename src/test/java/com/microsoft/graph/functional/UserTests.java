@@ -167,7 +167,7 @@ public class UserTests {
 		final UsedInsightCollectionPage usedInsightCollectionPage = graphServiceClient.me().insights().used().buildRequest().get();
 		assertNotNull(usedInsightCollectionPage);
 	}
-	
+
 	@Test
 	public void mailFoldertest() {
 		//GET me/mailFolders
@@ -179,7 +179,7 @@ public class UserTests {
 			assertNotNull(messageCollectionPage);
 		}
 	}
-	
+
 	@Test
 	public void meMemberof() {
 		final DirectoryObjectCollectionWithReferencesPage page = graphServiceClient.me().memberOf().buildRequest().get();
@@ -218,7 +218,7 @@ public class UserTests {
                                             .buildRequest(options)
                                             .withHttpMethod(HttpMethod.POST)
                                             .getHttpRequest();
-		assertEquals(contentTypeValue, request.body().contentType().toString());					
+		assertEquals(contentTypeValue, request.body().contentType().toString());
 	}
 	@Test
 	public void castTest() {
@@ -249,6 +249,22 @@ public class UserTests {
 	@Test
 	public void getMeTransitiveReferences() {
 		DirectoryObjectCollectionWithReferencesPage page = graphServiceClient.me().transitiveMemberOf().references().buildRequest().get();
-		assertNotNull(page);
+        assertNotNull(page);
+    }
+    @Test
+	public void setMyBoss() {
+		final User me = graphServiceClient.me().buildRequest().select("id").get();
+		UserCollectionPage potentialManagers = graphServiceClient.users().buildRequest().top(1).get();
+		User manager = potentialManagers.getCurrentPage().get(0);
+		while(manager.id.equals(me.id) && potentialManagers.getNextPage() != null) {
+			potentialManagers = potentialManagers.getNextPage().buildRequest().get();
+			manager = potentialManagers.getCurrentPage().get(0);
+		}
+		if(!manager.id.equals(me.id)) {
+			graphServiceClient.me().manager().reference().buildRequest().put(manager);
+			assertEquals(true, true);
+		} else { // we don't have enough users on the tenant to run the test
+			assertEquals(true, false);
+		}
 	}
 }
