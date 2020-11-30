@@ -48,10 +48,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.Constants;
-import com.microsoft.graph.core.DefaultConnectionConfig;
-import com.microsoft.graph.core.IConnectionConfig;
 import com.microsoft.graph.httpcore.HttpClients;
-import com.microsoft.graph.httpcore.ICoreAuthenticationProvider;
 import com.microsoft.graph.httpcore.middlewareoption.RedirectOptions;
 import com.microsoft.graph.httpcore.middlewareoption.RetryOptions;
 import com.microsoft.graph.logger.ILogger;
@@ -62,7 +59,6 @@ import com.microsoft.graph.serializer.ISerializer;
 import okhttp3.Headers;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
-import okhttp3.Protocol;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
@@ -88,11 +84,6 @@ public class CoreHttpProvider implements IHttpProvider {
 	 * The logger
 	 */
 	private final ILogger logger;
-
-	/**
-	 * The connection config
-	 */
-	private IConnectionConfig connectionConfig = new DefaultConnectionConfig();
 
 	/**
 	 * The OkHttpClient that handles all requests
@@ -125,27 +116,6 @@ public class CoreHttpProvider implements IHttpProvider {
 			this.logger = logger;
 			this.corehttpClient = httpClient;
 		}
-	}
-
-	/**
-	 * Creates the CoreHttpProvider
-	 *
-	 * @param serializer             the serializer
-	 * @param executors              the executors
-	 * @param logger                 the logger for diagnostic information
-	 * @param httpClient             the http client to execute the requests with
-	 * @param connectionConfig       the connection configuration
-	 */
-	public CoreHttpProvider(@Nonnull final ISerializer serializer,
-			@Nonnull final IExecutors executors,
-			@Nonnull final ILogger logger,
-			@Nullable final OkHttpClient httpClient,
-			@Nonnull final IConnectionConfig connectionConfig) {
-		this(serializer, executors, logger, httpClient);
-		if(connectionConfig == null) {
-			throw new NullPointerException("connectionConfig");
-		}
-		this.connectionConfig = connectionConfig;
 	}
 
 	/**
@@ -262,17 +232,18 @@ public class CoreHttpProvider implements IHttpProvider {
 		logger.logDebug("Starting to send request, URL " + requestUrl.toString());
 
 		// Request level middleware options
-		final RedirectOptions redirectOptions = new RedirectOptions(request.getMaxRedirects() > 0? request.getMaxRedirects() : this.connectionConfig.getMaxRedirects(),
-				request.getShouldRedirect() != null? request.getShouldRedirect() : this.connectionConfig.getShouldRedirect());
-		final RetryOptions retryOptions = new RetryOptions(request.getShouldRetry() != null? request.getShouldRetry() : this.connectionConfig.getShouldRetry(),
-				request.getMaxRetries() > 0? request.getMaxRetries() : this.connectionConfig.getMaxRetries(),
-				request.getDelay() > 0? request.getDelay() : this.connectionConfig.getDelay());
+		final RedirectOptions redirectOptions = request.getMaxRedirects() <= 0 ? null : new RedirectOptions(request.getMaxRedirects(), request.getShouldRedirect());
+		final RetryOptions retryOptions = request.getShouldRetry() == null ? null : new RetryOptions(request.getShouldRetry(), request.getMaxRetries(), request.getDelay());
 
 		final Request coreHttpRequest = convertIHttpRequestToOkHttpRequest(request);
-		final Request.Builder corehttpRequestBuilder = coreHttpRequest
-				.newBuilder()
-				.tag(RedirectOptions.class, redirectOptions)
-				.tag(RetryOptions.class, retryOptions);
+		Request.Builder corehttpRequestBuilder = coreHttpRequest
+				.newBuilder();
+		if(redirectOptions != null) {
+			corehttpRequestBuilder = corehttpRequestBuilder.tag(RedirectOptions.class, redirectOptions);
+		}
+		if(retryOptions != null) {
+			corehttpRequestBuilder = corehttpRequestBuilder.tag(RetryOptions.class, retryOptions);
+		}
 		
 		String contenttype = null;
 
@@ -390,8 +361,8 @@ public class CoreHttpProvider implements IHttpProvider {
 					throws ClientException {
 
 		try {
-			Request coreHttpRequest = getHttpRequest(request, resultClass, serializable, progress);
-			Response response = corehttpClient.newCall(coreHttpRequest).execute();
+			final Request coreHttpRequest = getHttpRequest(request, resultClass, serializable, progress);
+			final Response response = corehttpClient.newCall(coreHttpRequest).execute();
 			InputStream in = null;
 			boolean isBinaryStreamInput = false;
 			try {
@@ -597,16 +568,5 @@ public class CoreHttpProvider implements IHttpProvider {
 	@Nullable
 	public IExecutors getExecutors() {
 		return executors;
-	}
-	
-	/**
-	 * INTERNAL METHOD, DO NOT USE
-	 * Get connection config for read and connect timeout in requests
-	 *
-	 * @return Connection configuration to be used for timeout values
-	 */
-	@Nullable
-	public IConnectionConfig getConnectionConfigInternal() {
-		return connectionConfig;
 	}
 }

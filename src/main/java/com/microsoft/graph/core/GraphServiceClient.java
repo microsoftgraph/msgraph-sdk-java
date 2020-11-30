@@ -8,8 +8,6 @@ import com.microsoft.graph.core.ClientException;
 
 import com.microsoft.graph.httpcore.HttpClients;
 import com.microsoft.graph.httpcore.ICoreAuthenticationProvider;
-import com.microsoft.graph.core.DefaultConnectionConfig;
-import com.microsoft.graph.core.IConnectionConfig;
 import com.microsoft.graph.concurrency.DefaultExecutors;
 import com.microsoft.graph.logger.*;
 import com.google.gson.JsonObject;
@@ -85,7 +83,6 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
 		private IExecutors executors;
 		private ILogger logger;
 		private httpClientType httpClient;
-		private IConnectionConfig connConfig;
 		private ICoreAuthenticationProvider auth;
 
 		private ICoreAuthenticationProvider getAuth() {
@@ -93,13 +90,6 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
 				throw new NullPointerException("auth"); // TODO initialize to default once moved to core
 			} else {
 				return auth;
-			}
-		}
-		private IConnectionConfig getConnectionConfig() {
-			if(connConfig == null) {
-				return new DefaultConnectionConfig() {};
-			} else {
-				return connConfig;
 			}
 		}
 		private ILogger getLogger() {
@@ -133,7 +123,7 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
 		}
 		private IHttpProvider getHttpProvider() {
 			if(httpProvider == null) {
-				return new CoreHttpProvider(getSerializer(), getExecutors(), getLogger(), (OkHttpClient)getHttpClient(), getConnectionConfig());
+				return new CoreHttpProvider(getSerializer(), getExecutors(), getLogger(), (OkHttpClient)getHttpClient());
 			} else {
 				return httpProvider;
 			}
@@ -209,19 +199,6 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
 			return this;
 		}
 
-		/**
-		 * Sets the connection configuration
-		 * 
-		 * @param config connection configuration
-		 * 
-		 * @return the instance of this builder
-		 */
-		@Nonnull
-		public Builder<httpClientType> connectionConfig(@Nonnull final IConnectionConfig config) {
-			checkNotNull(config, "config");
-			this.connConfig = config;
-			return this;
-		}
 		/**
 		 * Sets the authentication provider
 		 * 
