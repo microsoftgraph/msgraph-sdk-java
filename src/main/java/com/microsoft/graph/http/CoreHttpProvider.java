@@ -361,8 +361,8 @@ public class CoreHttpProvider implements IHttpProvider {
 					throws ClientException {
 
 		try {
-			Request coreHttpRequest = getHttpRequest(request, resultClass, serializable, progress);
-			Response response = corehttpClient.newCall(coreHttpRequest).execute();
+			final Request coreHttpRequest = getHttpRequest(request, resultClass, serializable, progress);
+			final Response response = corehttpClient.newCall(coreHttpRequest).execute();
 			InputStream in = null;
 			boolean isBinaryStreamInput = false;
 			try {
