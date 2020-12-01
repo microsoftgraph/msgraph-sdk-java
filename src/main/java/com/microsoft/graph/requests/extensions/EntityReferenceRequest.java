@@ -65,28 +65,4 @@ public class EntityReferenceRequest extends BaseRequest implements IEntityRefere
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (EntityReferenceRequest)this;
     }
-    /**
-     * Puts the Entity
-     *
-     * @param srcEntity the Entity reference to PUT
-     * @param callback the callback to be called after success or failure
-     */
-    public void put(Entity srcEntity, final ICallback<? super Entity> callback) {
-        final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/Entitys/" + srcEntity.id));
-        send(HttpMethod.PUT, callback, payload);
-    }
-
-    /**
-     * Puts the Entity
-     *
-     * @param srcEntity the Entity reference to PUT
-     * @return the Entity
-     * @throws ClientException an exception occurs if there was an error while the request was sent
-     */
-    public Entity put(Entity srcEntity) throws ClientException {
-        final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/Entitys/" + srcEntity.id));
-        return send(HttpMethod.PUT, payload);
-    }
 }

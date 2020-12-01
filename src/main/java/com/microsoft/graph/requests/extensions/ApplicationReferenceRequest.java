@@ -95,7 +95,7 @@ public class ApplicationReferenceRequest extends BaseRequest implements IApplica
      */
     public void put(Application srcApplication, final ICallback<? super Application> callback) {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/Applications/" + srcApplication.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/applications/" + srcApplication.id));
         send(HttpMethod.PUT, callback, payload);
     }
 
@@ -108,7 +108,7 @@ public class ApplicationReferenceRequest extends BaseRequest implements IApplica
      */
     public Application put(Application srcApplication) throws ClientException {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/Applications/" + srcApplication.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/applications/" + srcApplication.id));
         return send(HttpMethod.PUT, payload);
     }
 }

@@ -73,28 +73,4 @@ public class TermsAndConditionsReferenceRequest extends BaseRequest implements I
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (TermsAndConditionsReferenceRequest)this;
     }
-    /**
-     * Puts the TermsAndConditions
-     *
-     * @param srcTermsAndConditions the TermsAndConditions reference to PUT
-     * @param callback the callback to be called after success or failure
-     */
-    public void put(TermsAndConditions srcTermsAndConditions, final ICallback<? super TermsAndConditions> callback) {
-        final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/TermsAndConditionss/" + srcTermsAndConditions.id));
-        send(HttpMethod.PUT, callback, payload);
-    }
-
-    /**
-     * Puts the TermsAndConditions
-     *
-     * @param srcTermsAndConditions the TermsAndConditions reference to PUT
-     * @return the TermsAndConditions
-     * @throws ClientException an exception occurs if there was an error while the request was sent
-     */
-    public TermsAndConditions put(TermsAndConditions srcTermsAndConditions) throws ClientException {
-        final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/TermsAndConditionss/" + srcTermsAndConditions.id));
-        return send(HttpMethod.PUT, payload);
-    }
 }

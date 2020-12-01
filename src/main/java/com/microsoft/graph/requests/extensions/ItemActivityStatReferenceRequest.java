@@ -69,28 +69,4 @@ public class ItemActivityStatReferenceRequest extends BaseRequest implements IIt
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ItemActivityStatReferenceRequest)this;
     }
-    /**
-     * Puts the ItemActivityStat
-     *
-     * @param srcItemActivityStat the ItemActivityStat reference to PUT
-     * @param callback the callback to be called after success or failure
-     */
-    public void put(ItemActivityStat srcItemActivityStat, final ICallback<? super ItemActivityStat> callback) {
-        final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/ItemActivityStats/" + srcItemActivityStat.id));
-        send(HttpMethod.PUT, callback, payload);
-    }
-
-    /**
-     * Puts the ItemActivityStat
-     *
-     * @param srcItemActivityStat the ItemActivityStat reference to PUT
-     * @return the ItemActivityStat
-     * @throws ClientException an exception occurs if there was an error while the request was sent
-     */
-    public ItemActivityStat put(ItemActivityStat srcItemActivityStat) throws ClientException {
-        final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/ItemActivityStats/" + srcItemActivityStat.id));
-        return send(HttpMethod.PUT, payload);
-    }
 }

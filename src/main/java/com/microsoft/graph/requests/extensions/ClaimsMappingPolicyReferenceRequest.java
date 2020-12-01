@@ -73,7 +73,7 @@ public class ClaimsMappingPolicyReferenceRequest extends BaseRequest implements 
      */
     public void put(ClaimsMappingPolicy srcClaimsMappingPolicy, final ICallback<? super ClaimsMappingPolicy> callback) {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/ClaimsMappingPolicys/" + srcClaimsMappingPolicy.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/policies/claimsMappingPolicies/" + srcClaimsMappingPolicy.id));
         send(HttpMethod.PUT, callback, payload);
     }
 
@@ -86,7 +86,7 @@ public class ClaimsMappingPolicyReferenceRequest extends BaseRequest implements 
      */
     public ClaimsMappingPolicy put(ClaimsMappingPolicy srcClaimsMappingPolicy) throws ClientException {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/ClaimsMappingPolicys/" + srcClaimsMappingPolicy.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/policies/claimsMappingPolicies/" + srcClaimsMappingPolicy.id));
         return send(HttpMethod.PUT, payload);
     }
 }

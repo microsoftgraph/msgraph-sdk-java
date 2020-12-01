@@ -102,7 +102,7 @@ public class SiteReferenceRequest extends BaseRequest implements ISiteReferenceR
      */
     public void put(Site srcSite, final ICallback<? super Site> callback) {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/Sites/" + srcSite.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/sites/" + srcSite.id));
         send(HttpMethod.PUT, callback, payload);
     }
 
@@ -115,7 +115,7 @@ public class SiteReferenceRequest extends BaseRequest implements ISiteReferenceR
      */
     public Site put(Site srcSite) throws ClientException {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/Sites/" + srcSite.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/sites/" + srcSite.id));
         return send(HttpMethod.PUT, payload);
     }
 }

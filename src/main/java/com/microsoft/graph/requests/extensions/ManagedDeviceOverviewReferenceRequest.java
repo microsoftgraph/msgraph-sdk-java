@@ -65,28 +65,4 @@ public class ManagedDeviceOverviewReferenceRequest extends BaseRequest implement
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ManagedDeviceOverviewReferenceRequest)this;
     }
-    /**
-     * Puts the ManagedDeviceOverview
-     *
-     * @param srcManagedDeviceOverview the ManagedDeviceOverview reference to PUT
-     * @param callback the callback to be called after success or failure
-     */
-    public void put(ManagedDeviceOverview srcManagedDeviceOverview, final ICallback<? super ManagedDeviceOverview> callback) {
-        final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/ManagedDeviceOverviews/" + srcManagedDeviceOverview.id));
-        send(HttpMethod.PUT, callback, payload);
-    }
-
-    /**
-     * Puts the ManagedDeviceOverview
-     *
-     * @param srcManagedDeviceOverview the ManagedDeviceOverview reference to PUT
-     * @return the ManagedDeviceOverview
-     * @throws ClientException an exception occurs if there was an error while the request was sent
-     */
-    public ManagedDeviceOverview put(ManagedDeviceOverview srcManagedDeviceOverview) throws ClientException {
-        final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/ManagedDeviceOverviews/" + srcManagedDeviceOverview.id));
-        return send(HttpMethod.PUT, payload);
-    }
 }

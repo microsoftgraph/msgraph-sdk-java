@@ -81,7 +81,7 @@ public class ManagedAppRegistrationReferenceRequest extends BaseRequest implemen
      */
     public void put(ManagedAppRegistration srcManagedAppRegistration, final ICallback<? super ManagedAppRegistration> callback) {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/ManagedAppRegistrations/" + srcManagedAppRegistration.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/deviceAppManagement/managedAppRegistrations/" + srcManagedAppRegistration.id));
         send(HttpMethod.PUT, callback, payload);
     }
 
@@ -94,7 +94,7 @@ public class ManagedAppRegistrationReferenceRequest extends BaseRequest implemen
      */
     public ManagedAppRegistration put(ManagedAppRegistration srcManagedAppRegistration) throws ClientException {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/ManagedAppRegistrations/" + srcManagedAppRegistration.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/deviceAppManagement/managedAppRegistrations/" + srcManagedAppRegistration.id));
         return send(HttpMethod.PUT, payload);
     }
 }

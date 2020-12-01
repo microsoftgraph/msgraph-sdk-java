@@ -131,7 +131,7 @@ public class GroupReferenceRequest extends BaseRequest implements IGroupReferenc
      */
     public void put(Group srcGroup, final ICallback<? super Group> callback) {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/Groups/" + srcGroup.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/groups/" + srcGroup.id));
         send(HttpMethod.PUT, callback, payload);
     }
 
@@ -144,7 +144,7 @@ public class GroupReferenceRequest extends BaseRequest implements IGroupReferenc
      */
     public Group put(Group srcGroup) throws ClientException {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/Groups/" + srcGroup.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/groups/" + srcGroup.id));
         return send(HttpMethod.PUT, payload);
     }
 }

@@ -73,7 +73,7 @@ public class MobileAppCategoryReferenceRequest extends BaseRequest implements IM
      */
     public void put(MobileAppCategory srcMobileAppCategory, final ICallback<? super MobileAppCategory> callback) {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/MobileAppCategorys/" + srcMobileAppCategory.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/deviceAppManagement/mobileAppCategories/" + srcMobileAppCategory.id));
         send(HttpMethod.PUT, callback, payload);
     }
 
@@ -86,7 +86,7 @@ public class MobileAppCategoryReferenceRequest extends BaseRequest implements IM
      */
     public MobileAppCategory put(MobileAppCategory srcMobileAppCategory) throws ClientException {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/MobileAppCategorys/" + srcMobileAppCategory.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/deviceAppManagement/mobileAppCategories/" + srcMobileAppCategory.id));
         return send(HttpMethod.PUT, payload);
     }
 }

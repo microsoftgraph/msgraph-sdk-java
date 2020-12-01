@@ -73,7 +73,7 @@ public class TeamsTemplateReferenceRequest extends BaseRequest implements ITeams
      */
     public void put(TeamsTemplate srcTeamsTemplate, final ICallback<? super TeamsTemplate> callback) {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/TeamsTemplates/" + srcTeamsTemplate.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/teamsTemplates/" + srcTeamsTemplate.id));
         send(HttpMethod.PUT, callback, payload);
     }
 
@@ -86,7 +86,7 @@ public class TeamsTemplateReferenceRequest extends BaseRequest implements ITeams
      */
     public TeamsTemplate put(TeamsTemplate srcTeamsTemplate) throws ClientException {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/TeamsTemplates/" + srcTeamsTemplate.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/teamsTemplates/" + srcTeamsTemplate.id));
         return send(HttpMethod.PUT, payload);
     }
 }

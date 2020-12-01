@@ -65,28 +65,4 @@ public class EndpointReferenceRequest extends BaseRequest implements IEndpointRe
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (EndpointReferenceRequest)this;
     }
-    /**
-     * Puts the Endpoint
-     *
-     * @param srcEndpoint the Endpoint reference to PUT
-     * @param callback the callback to be called after success or failure
-     */
-    public void put(Endpoint srcEndpoint, final ICallback<? super Endpoint> callback) {
-        final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/Endpoints/" + srcEndpoint.id));
-        send(HttpMethod.PUT, callback, payload);
-    }
-
-    /**
-     * Puts the Endpoint
-     *
-     * @param srcEndpoint the Endpoint reference to PUT
-     * @return the Endpoint
-     * @throws ClientException an exception occurs if there was an error while the request was sent
-     */
-    public Endpoint put(Endpoint srcEndpoint) throws ClientException {
-        final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/Endpoints/" + srcEndpoint.id));
-        return send(HttpMethod.PUT, payload);
-    }
 }

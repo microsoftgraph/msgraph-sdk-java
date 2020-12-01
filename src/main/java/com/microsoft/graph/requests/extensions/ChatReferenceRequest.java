@@ -74,7 +74,7 @@ public class ChatReferenceRequest extends BaseRequest implements IChatReferenceR
      */
     public void put(Chat srcChat, final ICallback<? super Chat> callback) {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/Chats/" + srcChat.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/chats/" + srcChat.id));
         send(HttpMethod.PUT, callback, payload);
     }
 
@@ -87,7 +87,7 @@ public class ChatReferenceRequest extends BaseRequest implements IChatReferenceR
      */
     public Chat put(Chat srcChat) throws ClientException {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/Chats/" + srcChat.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/chats/" + srcChat.id));
         return send(HttpMethod.PUT, payload);
     }
 }

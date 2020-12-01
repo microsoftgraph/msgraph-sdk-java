@@ -69,28 +69,4 @@ public class UserActivityReferenceRequest extends BaseRequest implements IUserAc
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (UserActivityReferenceRequest)this;
     }
-    /**
-     * Puts the UserActivity
-     *
-     * @param srcUserActivity the UserActivity reference to PUT
-     * @param callback the callback to be called after success or failure
-     */
-    public void put(UserActivity srcUserActivity, final ICallback<? super UserActivity> callback) {
-        final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/UserActivitys/" + srcUserActivity.id));
-        send(HttpMethod.PUT, callback, payload);
-    }
-
-    /**
-     * Puts the UserActivity
-     *
-     * @param srcUserActivity the UserActivity reference to PUT
-     * @return the UserActivity
-     * @throws ClientException an exception occurs if there was an error while the request was sent
-     */
-    public UserActivity put(UserActivity srcUserActivity) throws ClientException {
-        final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/UserActivitys/" + srcUserActivity.id));
-        return send(HttpMethod.PUT, payload);
-    }
 }

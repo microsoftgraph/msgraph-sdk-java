@@ -195,7 +195,7 @@ public class UserReferenceRequest extends BaseRequest implements IUserReferenceR
      */
     public void put(User srcUser, final ICallback<? super User> callback) {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/Users/" + srcUser.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/users/" + srcUser.id));
         send(HttpMethod.PUT, callback, payload);
     }
 
@@ -208,7 +208,7 @@ public class UserReferenceRequest extends BaseRequest implements IUserReferenceR
      */
     public User put(User srcUser) throws ClientException {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/Users/" + srcUser.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/users/" + srcUser.id));
         return send(HttpMethod.PUT, payload);
     }
 }

@@ -73,7 +73,7 @@ public class TokenIssuancePolicyReferenceRequest extends BaseRequest implements 
      */
     public void put(TokenIssuancePolicy srcTokenIssuancePolicy, final ICallback<? super TokenIssuancePolicy> callback) {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/TokenIssuancePolicys/" + srcTokenIssuancePolicy.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/policies/tokenIssuancePolicies/" + srcTokenIssuancePolicy.id));
         send(HttpMethod.PUT, callback, payload);
     }
 
@@ -86,7 +86,7 @@ public class TokenIssuancePolicyReferenceRequest extends BaseRequest implements 
      */
     public TokenIssuancePolicy put(TokenIssuancePolicy srcTokenIssuancePolicy) throws ClientException {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/TokenIssuancePolicys/" + srcTokenIssuancePolicy.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/policies/tokenIssuancePolicies/" + srcTokenIssuancePolicy.id));
         return send(HttpMethod.PUT, payload);
     }
 }

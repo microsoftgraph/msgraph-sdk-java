@@ -69,28 +69,4 @@ public class RoleDefinitionReferenceRequest extends BaseRequest implements IRole
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (RoleDefinitionReferenceRequest)this;
     }
-    /**
-     * Puts the RoleDefinition
-     *
-     * @param srcRoleDefinition the RoleDefinition reference to PUT
-     * @param callback the callback to be called after success or failure
-     */
-    public void put(RoleDefinition srcRoleDefinition, final ICallback<? super RoleDefinition> callback) {
-        final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/RoleDefinitions/" + srcRoleDefinition.id));
-        send(HttpMethod.PUT, callback, payload);
-    }
-
-    /**
-     * Puts the RoleDefinition
-     *
-     * @param srcRoleDefinition the RoleDefinition reference to PUT
-     * @return the RoleDefinition
-     * @throws ClientException an exception occurs if there was an error while the request was sent
-     */
-    public RoleDefinition put(RoleDefinition srcRoleDefinition) throws ClientException {
-        final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/RoleDefinitions/" + srcRoleDefinition.id));
-        return send(HttpMethod.PUT, payload);
-    }
 }

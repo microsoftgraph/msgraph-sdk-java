@@ -65,28 +65,4 @@ public class AppRoleAssignmentReferenceRequest extends BaseRequest implements IA
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (AppRoleAssignmentReferenceRequest)this;
     }
-    /**
-     * Puts the AppRoleAssignment
-     *
-     * @param srcAppRoleAssignment the AppRoleAssignment reference to PUT
-     * @param callback the callback to be called after success or failure
-     */
-    public void put(AppRoleAssignment srcAppRoleAssignment, final ICallback<? super AppRoleAssignment> callback) {
-        final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/AppRoleAssignments/" + srcAppRoleAssignment.id));
-        send(HttpMethod.PUT, callback, payload);
-    }
-
-    /**
-     * Puts the AppRoleAssignment
-     *
-     * @param srcAppRoleAssignment the AppRoleAssignment reference to PUT
-     * @return the AppRoleAssignment
-     * @throws ClientException an exception occurs if there was an error while the request was sent
-     */
-    public AppRoleAssignment put(AppRoleAssignment srcAppRoleAssignment) throws ClientException {
-        final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/AppRoleAssignments/" + srcAppRoleAssignment.id));
-        return send(HttpMethod.PUT, payload);
-    }
 }

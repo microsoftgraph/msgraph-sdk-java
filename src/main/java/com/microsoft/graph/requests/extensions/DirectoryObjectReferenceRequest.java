@@ -74,7 +74,7 @@ public class DirectoryObjectReferenceRequest extends BaseRequest implements IDir
      */
     public void put(DirectoryObject srcDirectoryObject, final ICallback<? super DirectoryObject> callback) {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/DirectoryObjects/" + srcDirectoryObject.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/directoryObjects/" + srcDirectoryObject.id));
         send(HttpMethod.PUT, callback, payload);
     }
 
@@ -87,7 +87,7 @@ public class DirectoryObjectReferenceRequest extends BaseRequest implements IDir
      */
     public DirectoryObject put(DirectoryObject srcDirectoryObject) throws ClientException {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/DirectoryObjects/" + srcDirectoryObject.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/directoryObjects/" + srcDirectoryObject.id));
         return send(HttpMethod.PUT, payload);
     }
 }

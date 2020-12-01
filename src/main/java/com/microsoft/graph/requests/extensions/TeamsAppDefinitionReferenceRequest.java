@@ -65,28 +65,4 @@ public class TeamsAppDefinitionReferenceRequest extends BaseRequest implements I
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (TeamsAppDefinitionReferenceRequest)this;
     }
-    /**
-     * Puts the TeamsAppDefinition
-     *
-     * @param srcTeamsAppDefinition the TeamsAppDefinition reference to PUT
-     * @param callback the callback to be called after success or failure
-     */
-    public void put(TeamsAppDefinition srcTeamsAppDefinition, final ICallback<? super TeamsAppDefinition> callback) {
-        final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/TeamsAppDefinitions/" + srcTeamsAppDefinition.id));
-        send(HttpMethod.PUT, callback, payload);
-    }
-
-    /**
-     * Puts the TeamsAppDefinition
-     *
-     * @param srcTeamsAppDefinition the TeamsAppDefinition reference to PUT
-     * @return the TeamsAppDefinition
-     * @throws ClientException an exception occurs if there was an error while the request was sent
-     */
-    public TeamsAppDefinition put(TeamsAppDefinition srcTeamsAppDefinition) throws ClientException {
-        final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/TeamsAppDefinitions/" + srcTeamsAppDefinition.id));
-        return send(HttpMethod.PUT, payload);
-    }
 }

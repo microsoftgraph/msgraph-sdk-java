@@ -73,7 +73,7 @@ public class CertificateBasedAuthConfigurationReferenceRequest extends BaseReque
      */
     public void put(CertificateBasedAuthConfiguration srcCertificateBasedAuthConfiguration, final ICallback<? super CertificateBasedAuthConfiguration> callback) {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/CertificateBasedAuthConfigurations/" + srcCertificateBasedAuthConfiguration.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/certificateBasedAuthConfiguration/" + srcCertificateBasedAuthConfiguration.id));
         send(HttpMethod.PUT, callback, payload);
     }
 
@@ -86,7 +86,7 @@ public class CertificateBasedAuthConfigurationReferenceRequest extends BaseReque
      */
     public CertificateBasedAuthConfiguration put(CertificateBasedAuthConfiguration srcCertificateBasedAuthConfiguration) throws ClientException {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/CertificateBasedAuthConfigurations/" + srcCertificateBasedAuthConfiguration.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/certificateBasedAuthConfiguration/" + srcCertificateBasedAuthConfiguration.id));
         return send(HttpMethod.PUT, payload);
     }
 }

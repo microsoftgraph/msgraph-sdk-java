@@ -73,7 +73,7 @@ public class OAuth2PermissionGrantReferenceRequest extends BaseRequest implement
      */
     public void put(OAuth2PermissionGrant srcOAuth2PermissionGrant, final ICallback<? super OAuth2PermissionGrant> callback) {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/OAuth2PermissionGrants/" + srcOAuth2PermissionGrant.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/oauth2PermissionGrants/" + srcOAuth2PermissionGrant.id));
         send(HttpMethod.PUT, callback, payload);
     }
 
@@ -86,7 +86,7 @@ public class OAuth2PermissionGrantReferenceRequest extends BaseRequest implement
      */
     public OAuth2PermissionGrant put(OAuth2PermissionGrant srcOAuth2PermissionGrant) throws ClientException {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/OAuth2PermissionGrants/" + srcOAuth2PermissionGrant.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/oauth2PermissionGrants/" + srcOAuth2PermissionGrant.id));
         return send(HttpMethod.PUT, payload);
     }
 }

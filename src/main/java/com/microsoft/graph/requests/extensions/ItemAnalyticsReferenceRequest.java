@@ -69,28 +69,4 @@ public class ItemAnalyticsReferenceRequest extends BaseRequest implements IItemA
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ItemAnalyticsReferenceRequest)this;
     }
-    /**
-     * Puts the ItemAnalytics
-     *
-     * @param srcItemAnalytics the ItemAnalytics reference to PUT
-     * @param callback the callback to be called after success or failure
-     */
-    public void put(ItemAnalytics srcItemAnalytics, final ICallback<? super ItemAnalytics> callback) {
-        final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/ItemAnalyticss/" + srcItemAnalytics.id));
-        send(HttpMethod.PUT, callback, payload);
-    }
-
-    /**
-     * Puts the ItemAnalytics
-     *
-     * @param srcItemAnalytics the ItemAnalytics reference to PUT
-     * @return the ItemAnalytics
-     * @throws ClientException an exception occurs if there was an error while the request was sent
-     */
-    public ItemAnalytics put(ItemAnalytics srcItemAnalytics) throws ClientException {
-        final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/ItemAnalyticss/" + srcItemAnalytics.id));
-        return send(HttpMethod.PUT, payload);
-    }
 }

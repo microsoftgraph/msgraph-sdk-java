@@ -81,7 +81,7 @@ public class DeviceReferenceRequest extends BaseRequest implements IDeviceRefere
      */
     public void put(Device srcDevice, final ICallback<? super Device> callback) {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/Devices/" + srcDevice.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/devices/" + srcDevice.id));
         send(HttpMethod.PUT, callback, payload);
     }
 
@@ -94,7 +94,7 @@ public class DeviceReferenceRequest extends BaseRequest implements IDeviceRefere
      */
     public Device put(Device srcDevice) throws ClientException {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/Devices/" + srcDevice.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/devices/" + srcDevice.id));
         return send(HttpMethod.PUT, payload);
     }
 }

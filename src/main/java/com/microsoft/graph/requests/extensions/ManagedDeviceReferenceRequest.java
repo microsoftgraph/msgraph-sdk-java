@@ -84,7 +84,7 @@ public class ManagedDeviceReferenceRequest extends BaseRequest implements IManag
      */
     public void put(ManagedDevice srcManagedDevice, final ICallback<? super ManagedDevice> callback) {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/ManagedDevices/" + srcManagedDevice.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/deviceManagement/managedDevices/" + srcManagedDevice.id));
         send(HttpMethod.PUT, callback, payload);
     }
 
@@ -97,7 +97,7 @@ public class ManagedDeviceReferenceRequest extends BaseRequest implements IManag
      */
     public ManagedDevice put(ManagedDevice srcManagedDevice) throws ClientException {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/ManagedDevices/" + srcManagedDevice.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/deviceManagement/managedDevices/" + srcManagedDevice.id));
         return send(HttpMethod.PUT, payload);
     }
 }

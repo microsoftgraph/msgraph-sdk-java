@@ -73,7 +73,7 @@ public class HomeRealmDiscoveryPolicyReferenceRequest extends BaseRequest implem
      */
     public void put(HomeRealmDiscoveryPolicy srcHomeRealmDiscoveryPolicy, final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/HomeRealmDiscoveryPolicys/" + srcHomeRealmDiscoveryPolicy.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/policies/homeRealmDiscoveryPolicies/" + srcHomeRealmDiscoveryPolicy.id));
         send(HttpMethod.PUT, callback, payload);
     }
 
@@ -86,7 +86,7 @@ public class HomeRealmDiscoveryPolicyReferenceRequest extends BaseRequest implem
      */
     public HomeRealmDiscoveryPolicy put(HomeRealmDiscoveryPolicy srcHomeRealmDiscoveryPolicy) throws ClientException {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/HomeRealmDiscoveryPolicys/" + srcHomeRealmDiscoveryPolicy.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/policies/homeRealmDiscoveryPolicies/" + srcHomeRealmDiscoveryPolicy.id));
         return send(HttpMethod.PUT, payload);
     }
 }

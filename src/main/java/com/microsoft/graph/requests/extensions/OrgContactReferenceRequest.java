@@ -77,7 +77,7 @@ public class OrgContactReferenceRequest extends BaseRequest implements IOrgConta
      */
     public void put(OrgContact srcOrgContact, final ICallback<? super OrgContact> callback) {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/OrgContacts/" + srcOrgContact.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/contacts/" + srcOrgContact.id));
         send(HttpMethod.PUT, callback, payload);
     }
 
@@ -90,7 +90,7 @@ public class OrgContactReferenceRequest extends BaseRequest implements IOrgConta
      */
     public OrgContact put(OrgContact srcOrgContact) throws ClientException {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/OrgContacts/" + srcOrgContact.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/contacts/" + srcOrgContact.id));
         return send(HttpMethod.PUT, payload);
     }
 }

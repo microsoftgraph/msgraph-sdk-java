@@ -81,7 +81,7 @@ public class EducationSchoolReferenceRequest extends BaseRequest implements IEdu
      */
     public void put(EducationSchool srcEducationSchool, final ICallback<? super EducationSchool> callback) {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/EducationSchools/" + srcEducationSchool.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/education/schools/" + srcEducationSchool.id));
         send(HttpMethod.PUT, callback, payload);
     }
 
@@ -94,7 +94,7 @@ public class EducationSchoolReferenceRequest extends BaseRequest implements IEdu
      */
     public EducationSchool put(EducationSchool srcEducationSchool) throws ClientException {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/EducationSchools/" + srcEducationSchool.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/education/schools/" + srcEducationSchool.id));
         return send(HttpMethod.PUT, payload);
     }
 }

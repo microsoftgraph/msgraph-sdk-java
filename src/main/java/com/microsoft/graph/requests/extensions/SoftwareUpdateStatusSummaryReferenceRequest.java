@@ -65,28 +65,4 @@ public class SoftwareUpdateStatusSummaryReferenceRequest extends BaseRequest imp
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (SoftwareUpdateStatusSummaryReferenceRequest)this;
     }
-    /**
-     * Puts the SoftwareUpdateStatusSummary
-     *
-     * @param srcSoftwareUpdateStatusSummary the SoftwareUpdateStatusSummary reference to PUT
-     * @param callback the callback to be called after success or failure
-     */
-    public void put(SoftwareUpdateStatusSummary srcSoftwareUpdateStatusSummary, final ICallback<? super SoftwareUpdateStatusSummary> callback) {
-        final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/SoftwareUpdateStatusSummarys/" + srcSoftwareUpdateStatusSummary.id));
-        send(HttpMethod.PUT, callback, payload);
-    }
-
-    /**
-     * Puts the SoftwareUpdateStatusSummary
-     *
-     * @param srcSoftwareUpdateStatusSummary the SoftwareUpdateStatusSummary reference to PUT
-     * @return the SoftwareUpdateStatusSummary
-     * @throws ClientException an exception occurs if there was an error while the request was sent
-     */
-    public SoftwareUpdateStatusSummary put(SoftwareUpdateStatusSummary srcSoftwareUpdateStatusSummary) throws ClientException {
-        final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/SoftwareUpdateStatusSummarys/" + srcSoftwareUpdateStatusSummary.id));
-        return send(HttpMethod.PUT, payload);
-    }
 }

@@ -73,7 +73,7 @@ public class TokenLifetimePolicyReferenceRequest extends BaseRequest implements 
      */
     public void put(TokenLifetimePolicy srcTokenLifetimePolicy, final ICallback<? super TokenLifetimePolicy> callback) {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/TokenLifetimePolicys/" + srcTokenLifetimePolicy.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/policies/tokenLifetimePolicies/" + srcTokenLifetimePolicy.id));
         send(HttpMethod.PUT, callback, payload);
     }
 
@@ -86,7 +86,7 @@ public class TokenLifetimePolicyReferenceRequest extends BaseRequest implements 
      */
     public TokenLifetimePolicy put(TokenLifetimePolicy srcTokenLifetimePolicy) throws ClientException {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/TokenLifetimePolicys/" + srcTokenLifetimePolicy.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/policies/tokenLifetimePolicies/" + srcTokenLifetimePolicy.id));
         return send(HttpMethod.PUT, payload);
     }
 }

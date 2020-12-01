@@ -111,7 +111,7 @@ public class ServicePrincipalReferenceRequest extends BaseRequest implements ISe
      */
     public void put(ServicePrincipal srcServicePrincipal, final ICallback<? super ServicePrincipal> callback) {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/ServicePrincipals/" + srcServicePrincipal.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/servicePrincipals/" + srcServicePrincipal.id));
         send(HttpMethod.PUT, callback, payload);
     }
 
@@ -124,7 +124,7 @@ public class ServicePrincipalReferenceRequest extends BaseRequest implements ISe
      */
     public ServicePrincipal put(ServicePrincipal srcServicePrincipal) throws ClientException {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/ServicePrincipals/" + srcServicePrincipal.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/servicePrincipals/" + srcServicePrincipal.id));
         return send(HttpMethod.PUT, payload);
     }
 }
