@@ -35,15 +35,15 @@ import com.microsoft.graph.models.extensions.UsedInsight;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.options.HeaderOption;
 import com.microsoft.graph.options.Option;
-import com.microsoft.graph.requests.extensions.IContactCollectionPage;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesPage;
-import com.microsoft.graph.requests.extensions.IDriveItemCollectionPage;
-import com.microsoft.graph.requests.extensions.IGroupCollectionPage;
-import com.microsoft.graph.requests.extensions.IMailFolderCollectionPage;
-import com.microsoft.graph.requests.extensions.IMessageCollectionPage;
-import com.microsoft.graph.requests.extensions.IOrganizationCollectionPage;
-import com.microsoft.graph.requests.extensions.IUsedInsightCollectionPage;
-import com.microsoft.graph.requests.extensions.IUserCollectionPage;
+import com.microsoft.graph.requests.extensions.ContactCollectionPage;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.DriveItemCollectionPage;
+import com.microsoft.graph.requests.extensions.GroupCollectionPage;
+import com.microsoft.graph.requests.extensions.MailFolderCollectionPage;
+import com.microsoft.graph.requests.extensions.MessageCollectionPage;
+import com.microsoft.graph.requests.extensions.OrganizationCollectionPage;
+import com.microsoft.graph.requests.extensions.UsedInsightCollectionPage;
+import com.microsoft.graph.requests.extensions.UserCollectionPage;
 @Ignore
 public class UserTests {
 	IGraphServiceClient graphServiceClient = null;
