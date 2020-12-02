@@ -13,52 +13,37 @@
 
 #>
 
-function Update-ReadmeVersion([string]$readmeFilePath, [string]$version) {
+function Update-ReadmeVersion([string]$readmeFilePath, [version]$version) {
 	$readmeFileContent = Get-Content -Path $readmeFilePath -Raw
-	$readmeFileContent = $readmeFileContent -replace "\d{1,}\.\d{1,}\.\d{1,}", $version
+	$readmeFileContent = $readmeFileContent -replace "\d{1,}\.\d{1,}\.\d{1,}", $version.ToString()
 	Set-Content -Path $readmeFilePath $readmeFileContent
 }
 
-function Update-TelemetryVersion([string]$telemetryFilePath, [string]$version) {
+function Update-TelemetryVersion([string]$telemetryFilePath, [version]$version) {
 	$telemetryFileContent = Get-Content -Path $telemetryFilePath -Raw
-	$telemetryFileContent = $telemetryFileContent -replace "\d{1,}\.\d{1,}\.\d{1,}", $version
+	$telemetryFileContent = $telemetryFileContent -replace "\d{1,}\.\d{1,}\.\d{1,}", $version.ToString()
 	Set-Content -Path $telemetryFilePath $telemetryFileContent
 }
 
-function Update-PackageVersion([string]$propertiesFilePath, [string]$version) {
+function Update-PackageVersion([string]$propertiesFilePath, [version]$version) {
 	$propertiesFileContent = Get-Content -Path $propertiesFilePath -Raw
-	if($version -match "(\d{1,})\.(\d{1,})\.(\d{1,})") {
-		$patch = $Matches[3]
-		$minor = $Matches[2]
-		$major = $Matches[1]
-		$propertiesFileContent = $propertiesFileContent -replace "mavenMajorVersion\s+=\s+\d{1,}", "mavenMajorVersion = $major"
-		$propertiesFileContent = $propertiesFileContent -replace "mavenMinorVersion\s+=\s+\d{1,}", "mavenMinorVersion = $minor"
-		$propertiesFileContent = $propertiesFileContent -replace "mavenPatchVersion\s+=\s+\d{1,}", "mavenPatchVersion = $patch"
-		Set-Content -Path $propertiesFilePath $propertiesFileContent
-	} else {
-		Write-Error "Invalid version number format $version"
-	}
+	$propertiesFileContent = $propertiesFileContent -replace "mavenMajorVersion\s+=\s+\d{1,}", "mavenMajorVersion = $($version.Major)"
+	$propertiesFileContent = $propertiesFileContent -replace "mavenMinorVersion\s+=\s+\d{1,}", "mavenMinorVersion = $($version.Minor)"
+	$propertiesFileContent = $propertiesFileContent -replace "mavenPatchVersion\s+=\s+\d{1,}", "mavenPatchVersion = $($version.Build)"
+	Set-Content -Path $propertiesFilePath $propertiesFileContent
 }
 function Get-CurrentTelemetryVersion([string]$telemetryFilePath) {
 	$telemetryFileContent = Get-Content -Path $telemetryFilePath -Raw
 	if($telemetryFileContent -match "(\d{1,}\.\d{1,}\.\d{1,})") {
-		return $Matches[1]
+		return [version]::Parse($Matches[1])
 	} else {
 		Write-Error "Invalid version number format"
-		return ""
+		return $null;
 	}
 }
 
-function Update-MinorVersionNumber([string]$currentVersion) {
-	if($currentVersion -match "(\d{1,})\.(\d{1,})\.(\d{1,})") {
-		[int]$minor = [convert]::ToInt32($Matches[2])
-		$minor++;
-		$major = $Matches[1]
-		return "$major.$minor.0"
-	} else {
-		Write-Error "Invalid version number format $currentVersion"
-		return ""
-	}
+function Update-MinorVersionNumber([version]$currentVersion) {
+	return [version]::new($currentVersion.Major, $currentVersion.Minor + 1, 0);
 }
 
 function Update-MinorVersion() {
