@@ -9,21 +9,18 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.models.extensions.UpdateWindowsDeviceAccountActionParameter;
-import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCategoryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonPrimitive;
@@ -34,7 +31,7 @@ import com.google.gson.JsonObject;
 /**
  * The class for the Managed Device Reference Request.
  */
-public class ManagedDeviceReferenceRequest extends BaseRequest implements IManagedDeviceReferenceRequest {
+public class ManagedDeviceReferenceRequest extends BaseReferenceRequest<ManagedDevice> {
 
     /**
      * The request for the ManagedDevice
@@ -43,16 +40,8 @@ public class ManagedDeviceReferenceRequest extends BaseRequest implements IManag
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedDevice.class);
-    }
-
-    public void delete(final ICallback<? super ManagedDevice> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    public ManagedDevice delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
     }
 
     /**
@@ -61,9 +50,10 @@ public class ManagedDeviceReferenceRequest extends BaseRequest implements IManag
      * @param value the select clause
      * @return the updated request
      */
-    public IManagedDeviceReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ManagedDeviceReferenceRequest)this;
+    @Nonnull
+    public ManagedDeviceReferenceRequest select(@Nonnull final String value) {
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -72,9 +62,10 @@ public class ManagedDeviceReferenceRequest extends BaseRequest implements IManag
      * @param value the expand clause
      * @return the updated request
      */
-    public IManagedDeviceReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ManagedDeviceReferenceRequest)this;
+    @Nonnull
+    public ManagedDeviceReferenceRequest expand(@Nonnull final String value) {
+        addExpandOption(value);
+        return this;
     }
     /**
      * Puts the ManagedDevice
@@ -82,7 +73,7 @@ public class ManagedDeviceReferenceRequest extends BaseRequest implements IManag
      * @param srcManagedDevice the ManagedDevice reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(ManagedDevice srcManagedDevice, final ICallback<? super ManagedDevice> callback) {
+    public void put(@Nonnull final ManagedDevice srcManagedDevice, @Nonnull final ICallback<? super ManagedDevice> callback) {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/deviceManagement/managedDevices/" + srcManagedDevice.id));
         send(HttpMethod.PUT, callback, payload);
@@ -95,7 +86,8 @@ public class ManagedDeviceReferenceRequest extends BaseRequest implements IManag
      * @return the ManagedDevice
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    public ManagedDevice put(ManagedDevice srcManagedDevice) throws ClientException {
+    @Nullable
+    public ManagedDevice put(@Nonnull final ManagedDevice srcManagedDevice) throws ClientException {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/deviceManagement/managedDevices/" + srcManagedDevice.id));
         return send(HttpMethod.PUT, payload);

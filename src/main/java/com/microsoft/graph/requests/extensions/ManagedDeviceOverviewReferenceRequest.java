@@ -10,9 +10,11 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedDeviceOverview;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonPrimitive;
@@ -23,7 +25,7 @@ import com.google.gson.JsonObject;
 /**
  * The class for the Managed Device Overview Reference Request.
  */
-public class ManagedDeviceOverviewReferenceRequest extends BaseRequest implements IManagedDeviceOverviewReferenceRequest {
+public class ManagedDeviceOverviewReferenceRequest extends BaseReferenceRequest<ManagedDeviceOverview> {
 
     /**
      * The request for the ManagedDeviceOverview
@@ -32,16 +34,8 @@ public class ManagedDeviceOverviewReferenceRequest extends BaseRequest implement
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceOverviewReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceOverviewReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedDeviceOverview.class);
-    }
-
-    public void delete(final ICallback<? super ManagedDeviceOverview> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    public ManagedDeviceOverview delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
     }
 
     /**
@@ -50,9 +44,10 @@ public class ManagedDeviceOverviewReferenceRequest extends BaseRequest implement
      * @param value the select clause
      * @return the updated request
      */
-    public IManagedDeviceOverviewReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ManagedDeviceOverviewReferenceRequest)this;
+    @Nonnull
+    public ManagedDeviceOverviewReferenceRequest select(@Nonnull final String value) {
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -61,8 +56,9 @@ public class ManagedDeviceOverviewReferenceRequest extends BaseRequest implement
      * @param value the expand clause
      * @return the updated request
      */
-    public IManagedDeviceOverviewReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ManagedDeviceOverviewReferenceRequest)this;
+    @Nonnull
+    public ManagedDeviceOverviewReferenceRequest expand(@Nonnull final String value) {
+        addExpandOption(value);
+        return this;
     }
 }

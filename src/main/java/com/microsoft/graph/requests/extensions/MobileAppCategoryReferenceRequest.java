@@ -10,9 +10,11 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MobileAppCategory;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonPrimitive;
@@ -23,7 +25,7 @@ import com.google.gson.JsonObject;
 /**
  * The class for the Mobile App Category Reference Request.
  */
-public class MobileAppCategoryReferenceRequest extends BaseRequest implements IMobileAppCategoryReferenceRequest {
+public class MobileAppCategoryReferenceRequest extends BaseReferenceRequest<MobileAppCategory> {
 
     /**
      * The request for the MobileAppCategory
@@ -32,16 +34,8 @@ public class MobileAppCategoryReferenceRequest extends BaseRequest implements IM
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MobileAppCategoryReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppCategoryReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MobileAppCategory.class);
-    }
-
-    public void delete(final ICallback<? super MobileAppCategory> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    public MobileAppCategory delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
     }
 
     /**
@@ -50,9 +44,10 @@ public class MobileAppCategoryReferenceRequest extends BaseRequest implements IM
      * @param value the select clause
      * @return the updated request
      */
-    public IMobileAppCategoryReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (MobileAppCategoryReferenceRequest)this;
+    @Nonnull
+    public MobileAppCategoryReferenceRequest select(@Nonnull final String value) {
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -61,9 +56,10 @@ public class MobileAppCategoryReferenceRequest extends BaseRequest implements IM
      * @param value the expand clause
      * @return the updated request
      */
-    public IMobileAppCategoryReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (MobileAppCategoryReferenceRequest)this;
+    @Nonnull
+    public MobileAppCategoryReferenceRequest expand(@Nonnull final String value) {
+        addExpandOption(value);
+        return this;
     }
     /**
      * Puts the MobileAppCategory
@@ -71,7 +67,7 @@ public class MobileAppCategoryReferenceRequest extends BaseRequest implements IM
      * @param srcMobileAppCategory the MobileAppCategory reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(MobileAppCategory srcMobileAppCategory, final ICallback<? super MobileAppCategory> callback) {
+    public void put(@Nonnull final MobileAppCategory srcMobileAppCategory, @Nonnull final ICallback<? super MobileAppCategory> callback) {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/deviceAppManagement/mobileAppCategories/" + srcMobileAppCategory.id));
         send(HttpMethod.PUT, callback, payload);
@@ -84,7 +80,8 @@ public class MobileAppCategoryReferenceRequest extends BaseRequest implements IM
      * @return the MobileAppCategory
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    public MobileAppCategory put(MobileAppCategory srcMobileAppCategory) throws ClientException {
+    @Nullable
+    public MobileAppCategory put(@Nonnull final MobileAppCategory srcMobileAppCategory) throws ClientException {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/deviceAppManagement/mobileAppCategories/" + srcMobileAppCategory.id));
         return send(HttpMethod.PUT, payload);

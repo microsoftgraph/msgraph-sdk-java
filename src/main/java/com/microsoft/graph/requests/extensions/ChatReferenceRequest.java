@@ -11,9 +11,11 @@ import com.microsoft.graph.models.extensions.Chat;
 import com.microsoft.graph.models.extensions.ChatMessage;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonPrimitive;
@@ -24,7 +26,7 @@ import com.google.gson.JsonObject;
 /**
  * The class for the Chat Reference Request.
  */
-public class ChatReferenceRequest extends BaseRequest implements IChatReferenceRequest {
+public class ChatReferenceRequest extends BaseReferenceRequest<Chat> {
 
     /**
      * The request for the Chat
@@ -33,16 +35,8 @@ public class ChatReferenceRequest extends BaseRequest implements IChatReferenceR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ChatReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ChatReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Chat.class);
-    }
-
-    public void delete(final ICallback<? super Chat> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    public Chat delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
     }
 
     /**
@@ -51,9 +45,10 @@ public class ChatReferenceRequest extends BaseRequest implements IChatReferenceR
      * @param value the select clause
      * @return the updated request
      */
-    public IChatReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ChatReferenceRequest)this;
+    @Nonnull
+    public ChatReferenceRequest select(@Nonnull final String value) {
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -62,8 +57,9 @@ public class ChatReferenceRequest extends BaseRequest implements IChatReferenceR
      * @param value the expand clause
      * @return the updated request
      */
-    public IChatReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ChatReferenceRequest)this;
+    @Nonnull
+    public ChatReferenceRequest expand(@Nonnull final String value) {
+        addExpandOption(value);
+        return this;
     }
 }

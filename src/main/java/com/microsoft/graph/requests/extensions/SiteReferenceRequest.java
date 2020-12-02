@@ -9,39 +9,27 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
-import com.microsoft.graph.requests.extensions.IColumnDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IColumnDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ColumnDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ColumnDefinitionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContentTypeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContentTypeRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContentTypeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContentTypeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBaseItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBaseItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.BaseItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.BaseItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IListCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IListRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISiteCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISiteRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemAnalyticsRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemAnalyticsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonPrimitive;
@@ -52,7 +40,7 @@ import com.google.gson.JsonObject;
 /**
  * The class for the Site Reference Request.
  */
-public class SiteReferenceRequest extends BaseRequest implements ISiteReferenceRequest {
+public class SiteReferenceRequest extends BaseReferenceRequest<Site> {
 
     /**
      * The request for the Site
@@ -61,16 +49,8 @@ public class SiteReferenceRequest extends BaseRequest implements ISiteReferenceR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SiteReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SiteReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Site.class);
-    }
-
-    public void delete(final ICallback<? super Site> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    public Site delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
     }
 
     /**
@@ -79,9 +59,10 @@ public class SiteReferenceRequest extends BaseRequest implements ISiteReferenceR
      * @param value the select clause
      * @return the updated request
      */
-    public ISiteReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (SiteReferenceRequest)this;
+    @Nonnull
+    public SiteReferenceRequest select(@Nonnull final String value) {
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -90,9 +71,10 @@ public class SiteReferenceRequest extends BaseRequest implements ISiteReferenceR
      * @param value the expand clause
      * @return the updated request
      */
-    public ISiteReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (SiteReferenceRequest)this;
+    @Nonnull
+    public SiteReferenceRequest expand(@Nonnull final String value) {
+        addExpandOption(value);
+        return this;
     }
     /**
      * Puts the Site
@@ -100,7 +82,7 @@ public class SiteReferenceRequest extends BaseRequest implements ISiteReferenceR
      * @param srcSite the Site reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(Site srcSite, final ICallback<? super Site> callback) {
+    public void put(@Nonnull final Site srcSite, @Nonnull final ICallback<? super Site> callback) {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/sites/" + srcSite.id));
         send(HttpMethod.PUT, callback, payload);
@@ -113,7 +95,8 @@ public class SiteReferenceRequest extends BaseRequest implements ISiteReferenceR
      * @return the Site
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    public Site put(Site srcSite) throws ClientException {
+    @Nullable
+    public Site put(@Nonnull final Site srcSite) throws ClientException {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/sites/" + srcSite.id));
         return send(HttpMethod.PUT, payload);

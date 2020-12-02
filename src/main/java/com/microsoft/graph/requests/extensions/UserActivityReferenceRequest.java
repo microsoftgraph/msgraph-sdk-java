@@ -8,15 +8,15 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserActivity;
-import com.microsoft.graph.requests.extensions.IActivityHistoryItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IActivityHistoryItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.ActivityHistoryItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ActivityHistoryItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonPrimitive;
@@ -27,7 +27,7 @@ import com.google.gson.JsonObject;
 /**
  * The class for the User Activity Reference Request.
  */
-public class UserActivityReferenceRequest extends BaseRequest implements IUserActivityReferenceRequest {
+public class UserActivityReferenceRequest extends BaseReferenceRequest<UserActivity> {
 
     /**
      * The request for the UserActivity
@@ -36,16 +36,8 @@ public class UserActivityReferenceRequest extends BaseRequest implements IUserAc
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserActivityReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserActivityReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserActivity.class);
-    }
-
-    public void delete(final ICallback<? super UserActivity> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    public UserActivity delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
     }
 
     /**
@@ -54,9 +46,10 @@ public class UserActivityReferenceRequest extends BaseRequest implements IUserAc
      * @param value the select clause
      * @return the updated request
      */
-    public IUserActivityReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (UserActivityReferenceRequest)this;
+    @Nonnull
+    public UserActivityReferenceRequest select(@Nonnull final String value) {
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +58,9 @@ public class UserActivityReferenceRequest extends BaseRequest implements IUserAc
      * @param value the expand clause
      * @return the updated request
      */
-    public IUserActivityReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (UserActivityReferenceRequest)this;
+    @Nonnull
+    public UserActivityReferenceRequest expand(@Nonnull final String value) {
+        addExpandOption(value);
+        return this;
     }
 }

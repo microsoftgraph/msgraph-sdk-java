@@ -8,21 +8,18 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationUser;
-import com.microsoft.graph.requests.extensions.IEducationClassCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationClassRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationClassCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationClassRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSchoolCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSchoolRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSchoolCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSchoolRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonPrimitive;
@@ -33,7 +30,7 @@ import com.google.gson.JsonObject;
 /**
  * The class for the Education User Reference Request.
  */
-public class EducationUserReferenceRequest extends BaseRequest implements IEducationUserReferenceRequest {
+public class EducationUserReferenceRequest extends BaseReferenceRequest<EducationUser> {
 
     /**
      * The request for the EducationUser
@@ -42,16 +39,8 @@ public class EducationUserReferenceRequest extends BaseRequest implements IEduca
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationUserReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationUserReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EducationUser.class);
-    }
-
-    public void delete(final ICallback<? super EducationUser> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    public EducationUser delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
     }
 
     /**
@@ -60,9 +49,10 @@ public class EducationUserReferenceRequest extends BaseRequest implements IEduca
      * @param value the select clause
      * @return the updated request
      */
-    public IEducationUserReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (EducationUserReferenceRequest)this;
+    @Nonnull
+    public EducationUserReferenceRequest select(@Nonnull final String value) {
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -71,9 +61,10 @@ public class EducationUserReferenceRequest extends BaseRequest implements IEduca
      * @param value the expand clause
      * @return the updated request
      */
-    public IEducationUserReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (EducationUserReferenceRequest)this;
+    @Nonnull
+    public EducationUserReferenceRequest expand(@Nonnull final String value) {
+        addExpandOption(value);
+        return this;
     }
     /**
      * Puts the EducationUser
@@ -81,7 +72,7 @@ public class EducationUserReferenceRequest extends BaseRequest implements IEduca
      * @param srcEducationUser the EducationUser reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(EducationUser srcEducationUser, final ICallback<? super EducationUser> callback) {
+    public void put(@Nonnull final EducationUser srcEducationUser, @Nonnull final ICallback<? super EducationUser> callback) {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/education/users/" + srcEducationUser.id));
         send(HttpMethod.PUT, callback, payload);
@@ -94,7 +85,8 @@ public class EducationUserReferenceRequest extends BaseRequest implements IEduca
      * @return the EducationUser
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    public EducationUser put(EducationUser srcEducationUser) throws ClientException {
+    @Nullable
+    public EducationUser put(@Nonnull final EducationUser srcEducationUser) throws ClientException {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/education/users/" + srcEducationUser.id));
         return send(HttpMethod.PUT, payload);

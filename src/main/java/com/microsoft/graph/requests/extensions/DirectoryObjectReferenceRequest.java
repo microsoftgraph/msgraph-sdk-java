@@ -11,9 +11,11 @@ import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.ExtensionProperty;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonPrimitive;
@@ -24,7 +26,7 @@ import com.google.gson.JsonObject;
 /**
  * The class for the Directory Object Reference Request.
  */
-public class DirectoryObjectReferenceRequest extends BaseRequest implements IDirectoryObjectReferenceRequest {
+public class DirectoryObjectReferenceRequest extends BaseReferenceRequest<DirectoryObject> {
 
     /**
      * The request for the DirectoryObject
@@ -33,16 +35,8 @@ public class DirectoryObjectReferenceRequest extends BaseRequest implements IDir
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DirectoryObjectReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryObjectReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DirectoryObject.class);
-    }
-
-    public void delete(final ICallback<? super DirectoryObject> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    public DirectoryObject delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
     }
 
     /**
@@ -51,9 +45,10 @@ public class DirectoryObjectReferenceRequest extends BaseRequest implements IDir
      * @param value the select clause
      * @return the updated request
      */
-    public IDirectoryObjectReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (DirectoryObjectReferenceRequest)this;
+    @Nonnull
+    public DirectoryObjectReferenceRequest select(@Nonnull final String value) {
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -62,9 +57,10 @@ public class DirectoryObjectReferenceRequest extends BaseRequest implements IDir
      * @param value the expand clause
      * @return the updated request
      */
-    public IDirectoryObjectReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DirectoryObjectReferenceRequest)this;
+    @Nonnull
+    public DirectoryObjectReferenceRequest expand(@Nonnull final String value) {
+        addExpandOption(value);
+        return this;
     }
     /**
      * Puts the DirectoryObject
@@ -72,7 +68,7 @@ public class DirectoryObjectReferenceRequest extends BaseRequest implements IDir
      * @param srcDirectoryObject the DirectoryObject reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(DirectoryObject srcDirectoryObject, final ICallback<? super DirectoryObject> callback) {
+    public void put(@Nonnull final DirectoryObject srcDirectoryObject, @Nonnull final ICallback<? super DirectoryObject> callback) {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/directoryObjects/" + srcDirectoryObject.id));
         send(HttpMethod.PUT, callback, payload);
@@ -85,7 +81,8 @@ public class DirectoryObjectReferenceRequest extends BaseRequest implements IDir
      * @return the DirectoryObject
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    public DirectoryObject put(DirectoryObject srcDirectoryObject) throws ClientException {
+    @Nullable
+    public DirectoryObject put(@Nonnull final DirectoryObject srcDirectoryObject) throws ClientException {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/directoryObjects/" + srcDirectoryObject.id));
         return send(HttpMethod.PUT, payload);

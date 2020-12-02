@@ -8,19 +8,17 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TermsAndConditions;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsAcceptanceStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsAcceptanceStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonPrimitive;
@@ -31,7 +29,7 @@ import com.google.gson.JsonObject;
 /**
  * The class for the Terms And Conditions Reference Request.
  */
-public class TermsAndConditionsReferenceRequest extends BaseRequest implements ITermsAndConditionsReferenceRequest {
+public class TermsAndConditionsReferenceRequest extends BaseReferenceRequest<TermsAndConditions> {
 
     /**
      * The request for the TermsAndConditions
@@ -40,16 +38,8 @@ public class TermsAndConditionsReferenceRequest extends BaseRequest implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TermsAndConditionsReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TermsAndConditionsReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TermsAndConditions.class);
-    }
-
-    public void delete(final ICallback<? super TermsAndConditions> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    public TermsAndConditions delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
     }
 
     /**
@@ -58,9 +48,10 @@ public class TermsAndConditionsReferenceRequest extends BaseRequest implements I
      * @param value the select clause
      * @return the updated request
      */
-    public ITermsAndConditionsReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (TermsAndConditionsReferenceRequest)this;
+    @Nonnull
+    public TermsAndConditionsReferenceRequest select(@Nonnull final String value) {
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -69,8 +60,9 @@ public class TermsAndConditionsReferenceRequest extends BaseRequest implements I
      * @param value the expand clause
      * @return the updated request
      */
-    public ITermsAndConditionsReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (TermsAndConditionsReferenceRequest)this;
+    @Nonnull
+    public TermsAndConditionsReferenceRequest expand(@Nonnull final String value) {
+        addExpandOption(value);
+        return this;
     }
 }

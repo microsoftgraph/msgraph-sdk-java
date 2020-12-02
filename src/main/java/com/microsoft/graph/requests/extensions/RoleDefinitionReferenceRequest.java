@@ -8,15 +8,15 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RoleDefinition;
-import com.microsoft.graph.requests.extensions.IRoleAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoleAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonPrimitive;
@@ -27,7 +27,7 @@ import com.google.gson.JsonObject;
 /**
  * The class for the Role Definition Reference Request.
  */
-public class RoleDefinitionReferenceRequest extends BaseRequest implements IRoleDefinitionReferenceRequest {
+public class RoleDefinitionReferenceRequest extends BaseReferenceRequest<RoleDefinition> {
 
     /**
      * The request for the RoleDefinition
@@ -36,16 +36,8 @@ public class RoleDefinitionReferenceRequest extends BaseRequest implements IRole
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RoleDefinitionReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RoleDefinitionReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, RoleDefinition.class);
-    }
-
-    public void delete(final ICallback<? super RoleDefinition> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    public RoleDefinition delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
     }
 
     /**
@@ -54,9 +46,10 @@ public class RoleDefinitionReferenceRequest extends BaseRequest implements IRole
      * @param value the select clause
      * @return the updated request
      */
-    public IRoleDefinitionReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (RoleDefinitionReferenceRequest)this;
+    @Nonnull
+    public RoleDefinitionReferenceRequest select(@Nonnull final String value) {
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +58,9 @@ public class RoleDefinitionReferenceRequest extends BaseRequest implements IRole
      * @param value the expand clause
      * @return the updated request
      */
-    public IRoleDefinitionReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (RoleDefinitionReferenceRequest)this;
+    @Nonnull
+    public RoleDefinitionReferenceRequest expand(@Nonnull final String value) {
+        addExpandOption(value);
+        return this;
     }
 }

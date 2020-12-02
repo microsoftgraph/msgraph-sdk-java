@@ -8,15 +8,15 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
-import com.microsoft.graph.requests.extensions.IItemActivityCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemActivityRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemActivityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemActivityRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonPrimitive;
@@ -27,7 +27,7 @@ import com.google.gson.JsonObject;
 /**
  * The class for the Item Activity Stat Reference Request.
  */
-public class ItemActivityStatReferenceRequest extends BaseRequest implements IItemActivityStatReferenceRequest {
+public class ItemActivityStatReferenceRequest extends BaseReferenceRequest<ItemActivityStat> {
 
     /**
      * The request for the ItemActivityStat
@@ -36,16 +36,8 @@ public class ItemActivityStatReferenceRequest extends BaseRequest implements IIt
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ItemActivityStatReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ItemActivityStatReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ItemActivityStat.class);
-    }
-
-    public void delete(final ICallback<? super ItemActivityStat> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    public ItemActivityStat delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
     }
 
     /**
@@ -54,9 +46,10 @@ public class ItemActivityStatReferenceRequest extends BaseRequest implements IIt
      * @param value the select clause
      * @return the updated request
      */
-    public IItemActivityStatReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ItemActivityStatReferenceRequest)this;
+    @Nonnull
+    public ItemActivityStatReferenceRequest select(@Nonnull final String value) {
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -65,8 +58,9 @@ public class ItemActivityStatReferenceRequest extends BaseRequest implements IIt
      * @param value the expand clause
      * @return the updated request
      */
-    public IItemActivityStatReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ItemActivityStatReferenceRequest)this;
+    @Nonnull
+    public ItemActivityStatReferenceRequest expand(@Nonnull final String value) {
+        addExpandOption(value);
+        return this;
     }
 }

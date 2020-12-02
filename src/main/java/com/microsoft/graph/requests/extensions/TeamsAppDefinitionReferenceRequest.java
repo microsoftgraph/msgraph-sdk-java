@@ -10,9 +10,11 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TeamsAppDefinition;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonPrimitive;
@@ -23,7 +25,7 @@ import com.google.gson.JsonObject;
 /**
  * The class for the Teams App Definition Reference Request.
  */
-public class TeamsAppDefinitionReferenceRequest extends BaseRequest implements ITeamsAppDefinitionReferenceRequest {
+public class TeamsAppDefinitionReferenceRequest extends BaseReferenceRequest<TeamsAppDefinition> {
 
     /**
      * The request for the TeamsAppDefinition
@@ -32,16 +34,8 @@ public class TeamsAppDefinitionReferenceRequest extends BaseRequest implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamsAppDefinitionReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsAppDefinitionReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TeamsAppDefinition.class);
-    }
-
-    public void delete(final ICallback<? super TeamsAppDefinition> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    public TeamsAppDefinition delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
     }
 
     /**
@@ -50,9 +44,10 @@ public class TeamsAppDefinitionReferenceRequest extends BaseRequest implements I
      * @param value the select clause
      * @return the updated request
      */
-    public ITeamsAppDefinitionReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (TeamsAppDefinitionReferenceRequest)this;
+    @Nonnull
+    public TeamsAppDefinitionReferenceRequest select(@Nonnull final String value) {
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -61,8 +56,9 @@ public class TeamsAppDefinitionReferenceRequest extends BaseRequest implements I
      * @param value the expand clause
      * @return the updated request
      */
-    public ITeamsAppDefinitionReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (TeamsAppDefinitionReferenceRequest)this;
+    @Nonnull
+    public TeamsAppDefinitionReferenceRequest expand(@Nonnull final String value) {
+        addExpandOption(value);
+        return this;
     }
 }

@@ -10,9 +10,11 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonPrimitive;
@@ -23,7 +25,7 @@ import com.google.gson.JsonObject;
 /**
  * The class for the Token Lifetime Policy Reference Request.
  */
-public class TokenLifetimePolicyReferenceRequest extends BaseRequest implements ITokenLifetimePolicyReferenceRequest {
+public class TokenLifetimePolicyReferenceRequest extends BaseReferenceRequest<TokenLifetimePolicy> {
 
     /**
      * The request for the TokenLifetimePolicy
@@ -32,16 +34,8 @@ public class TokenLifetimePolicyReferenceRequest extends BaseRequest implements 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TokenLifetimePolicyReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TokenLifetimePolicyReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TokenLifetimePolicy.class);
-    }
-
-    public void delete(final ICallback<? super TokenLifetimePolicy> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    public TokenLifetimePolicy delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
     }
 
     /**
@@ -50,9 +44,10 @@ public class TokenLifetimePolicyReferenceRequest extends BaseRequest implements 
      * @param value the select clause
      * @return the updated request
      */
-    public ITokenLifetimePolicyReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (TokenLifetimePolicyReferenceRequest)this;
+    @Nonnull
+    public TokenLifetimePolicyReferenceRequest select(@Nonnull final String value) {
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -61,9 +56,10 @@ public class TokenLifetimePolicyReferenceRequest extends BaseRequest implements 
      * @param value the expand clause
      * @return the updated request
      */
-    public ITokenLifetimePolicyReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (TokenLifetimePolicyReferenceRequest)this;
+    @Nonnull
+    public TokenLifetimePolicyReferenceRequest expand(@Nonnull final String value) {
+        addExpandOption(value);
+        return this;
     }
     /**
      * Puts the TokenLifetimePolicy
@@ -71,7 +67,7 @@ public class TokenLifetimePolicyReferenceRequest extends BaseRequest implements 
      * @param srcTokenLifetimePolicy the TokenLifetimePolicy reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(TokenLifetimePolicy srcTokenLifetimePolicy, final ICallback<? super TokenLifetimePolicy> callback) {
+    public void put(@Nonnull final TokenLifetimePolicy srcTokenLifetimePolicy, @Nonnull final ICallback<? super TokenLifetimePolicy> callback) {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/policies/tokenLifetimePolicies/" + srcTokenLifetimePolicy.id));
         send(HttpMethod.PUT, callback, payload);
@@ -84,7 +80,8 @@ public class TokenLifetimePolicyReferenceRequest extends BaseRequest implements 
      * @return the TokenLifetimePolicy
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    public TokenLifetimePolicy put(TokenLifetimePolicy srcTokenLifetimePolicy) throws ClientException {
+    @Nullable
+    public TokenLifetimePolicy put(@Nonnull final TokenLifetimePolicy srcTokenLifetimePolicy) throws ClientException {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/policies/tokenLifetimePolicies/" + srcTokenLifetimePolicy.id));
         return send(HttpMethod.PUT, payload);

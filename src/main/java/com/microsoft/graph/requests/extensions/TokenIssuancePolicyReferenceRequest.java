@@ -10,9 +10,11 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonPrimitive;
@@ -23,7 +25,7 @@ import com.google.gson.JsonObject;
 /**
  * The class for the Token Issuance Policy Reference Request.
  */
-public class TokenIssuancePolicyReferenceRequest extends BaseRequest implements ITokenIssuancePolicyReferenceRequest {
+public class TokenIssuancePolicyReferenceRequest extends BaseReferenceRequest<TokenIssuancePolicy> {
 
     /**
      * The request for the TokenIssuancePolicy
@@ -32,16 +34,8 @@ public class TokenIssuancePolicyReferenceRequest extends BaseRequest implements 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TokenIssuancePolicyReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TokenIssuancePolicyReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TokenIssuancePolicy.class);
-    }
-
-    public void delete(final ICallback<? super TokenIssuancePolicy> callback) {
-        send(HttpMethod.DELETE, callback, null);
-    }
-
-    public TokenIssuancePolicy delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
     }
 
     /**
@@ -50,9 +44,10 @@ public class TokenIssuancePolicyReferenceRequest extends BaseRequest implements 
      * @param value the select clause
      * @return the updated request
      */
-    public ITokenIssuancePolicyReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (TokenIssuancePolicyReferenceRequest)this;
+    @Nonnull
+    public TokenIssuancePolicyReferenceRequest select(@Nonnull final String value) {
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -61,9 +56,10 @@ public class TokenIssuancePolicyReferenceRequest extends BaseRequest implements 
      * @param value the expand clause
      * @return the updated request
      */
-    public ITokenIssuancePolicyReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (TokenIssuancePolicyReferenceRequest)this;
+    @Nonnull
+    public TokenIssuancePolicyReferenceRequest expand(@Nonnull final String value) {
+        addExpandOption(value);
+        return this;
     }
     /**
      * Puts the TokenIssuancePolicy
@@ -71,7 +67,7 @@ public class TokenIssuancePolicyReferenceRequest extends BaseRequest implements 
      * @param srcTokenIssuancePolicy the TokenIssuancePolicy reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(TokenIssuancePolicy srcTokenIssuancePolicy, final ICallback<? super TokenIssuancePolicy> callback) {
+    public void put(@Nonnull final TokenIssuancePolicy srcTokenIssuancePolicy, @Nonnull final ICallback<? super TokenIssuancePolicy> callback) {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/policies/tokenIssuancePolicies/" + srcTokenIssuancePolicy.id));
         send(HttpMethod.PUT, callback, payload);
@@ -84,7 +80,8 @@ public class TokenIssuancePolicyReferenceRequest extends BaseRequest implements 
      * @return the TokenIssuancePolicy
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    public TokenIssuancePolicy put(TokenIssuancePolicy srcTokenIssuancePolicy) throws ClientException {
+    @Nullable
+    public TokenIssuancePolicy put(@Nonnull final TokenIssuancePolicy srcTokenIssuancePolicy) throws ClientException {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/policies/tokenIssuancePolicies/" + srcTokenIssuancePolicy.id));
         return send(HttpMethod.PUT, payload);
