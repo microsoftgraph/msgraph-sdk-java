@@ -65,28 +65,4 @@ public class TeamsTemplateReferenceRequest extends BaseRequest implements ITeams
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (TeamsTemplateReferenceRequest)this;
     }
-    /**
-     * Puts the TeamsTemplate
-     *
-     * @param srcTeamsTemplate the TeamsTemplate reference to PUT
-     * @param callback the callback to be called after success or failure
-     */
-    public void put(TeamsTemplate srcTeamsTemplate, final ICallback<? super TeamsTemplate> callback) {
-        final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/teamsTemplates/" + srcTeamsTemplate.id));
-        send(HttpMethod.PUT, callback, payload);
-    }
-
-    /**
-     * Puts the TeamsTemplate
-     *
-     * @param srcTeamsTemplate the TeamsTemplate reference to PUT
-     * @return the TeamsTemplate
-     * @throws ClientException an exception occurs if there was an error while the request was sent
-     */
-    public TeamsTemplate put(TeamsTemplate srcTeamsTemplate) throws ClientException {
-        final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/teamsTemplates/" + srcTeamsTemplate.id));
-        return send(HttpMethod.PUT, payload);
-    }
 }

@@ -187,28 +187,4 @@ public class UserReferenceRequest extends BaseRequest implements IUserReferenceR
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (UserReferenceRequest)this;
     }
-    /**
-     * Puts the User
-     *
-     * @param srcUser the User reference to PUT
-     * @param callback the callback to be called after success or failure
-     */
-    public void put(User srcUser, final ICallback<? super User> callback) {
-        final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/users/" + srcUser.id));
-        send(HttpMethod.PUT, callback, payload);
-    }
-
-    /**
-     * Puts the User
-     *
-     * @param srcUser the User reference to PUT
-     * @return the User
-     * @throws ClientException an exception occurs if there was an error while the request was sent
-     */
-    public User put(User srcUser) throws ClientException {
-        final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/users/" + srcUser.id));
-        return send(HttpMethod.PUT, payload);
-    }
 }

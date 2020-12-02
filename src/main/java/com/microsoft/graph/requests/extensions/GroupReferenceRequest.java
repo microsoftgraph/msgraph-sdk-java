@@ -123,28 +123,4 @@ public class GroupReferenceRequest extends BaseRequest implements IGroupReferenc
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (GroupReferenceRequest)this;
     }
-    /**
-     * Puts the Group
-     *
-     * @param srcGroup the Group reference to PUT
-     * @param callback the callback to be called after success or failure
-     */
-    public void put(Group srcGroup, final ICallback<? super Group> callback) {
-        final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/groups/" + srcGroup.id));
-        send(HttpMethod.PUT, callback, payload);
-    }
-
-    /**
-     * Puts the Group
-     *
-     * @param srcGroup the Group reference to PUT
-     * @return the Group
-     * @throws ClientException an exception occurs if there was an error while the request was sent
-     */
-    public Group put(Group srcGroup) throws ClientException {
-        final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/groups/" + srcGroup.id));
-        return send(HttpMethod.PUT, payload);
-    }
 }

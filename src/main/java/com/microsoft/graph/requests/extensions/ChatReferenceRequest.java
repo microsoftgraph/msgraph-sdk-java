@@ -66,28 +66,4 @@ public class ChatReferenceRequest extends BaseRequest implements IChatReferenceR
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ChatReferenceRequest)this;
     }
-    /**
-     * Puts the Chat
-     *
-     * @param srcChat the Chat reference to PUT
-     * @param callback the callback to be called after success or failure
-     */
-    public void put(Chat srcChat, final ICallback<? super Chat> callback) {
-        final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/chats/" + srcChat.id));
-        send(HttpMethod.PUT, callback, payload);
-    }
-
-    /**
-     * Puts the Chat
-     *
-     * @param srcChat the Chat reference to PUT
-     * @return the Chat
-     * @throws ClientException an exception occurs if there was an error while the request was sent
-     */
-    public Chat put(Chat srcChat) throws ClientException {
-        final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/chats/" + srcChat.id));
-        return send(HttpMethod.PUT, payload);
-    }
 }
