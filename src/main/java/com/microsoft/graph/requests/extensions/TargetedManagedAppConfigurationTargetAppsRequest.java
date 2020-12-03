@@ -78,6 +78,27 @@ public class TargetedManagedAppConfigurationTargetAppsRequest extends BaseReques
     }
 
     /**
+     * Sets the count value for the request
+     *
+     * @param value whether or not to return the count of objects with the request
+     * @return the updated request
+     */
+    @Nonnull
+    public TargetedManagedAppConfigurationTargetAppsRequest count(final boolean value) {
+        addCountOption(value);
+        return this;
+    }
+    /**
+     * Sets the count value to true for the request
+     *
+     * @return the updated request
+     */
+    @Nonnull
+    public TargetedManagedAppConfigurationTargetAppsRequest count() {
+        addCountOption(true);
+        return this;
+    }
+    /**
      * Sets the expand clause for the request
      *
      * @param value the expand clause

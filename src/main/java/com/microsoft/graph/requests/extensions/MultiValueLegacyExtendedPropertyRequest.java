@@ -162,5 +162,26 @@ public class MultiValueLegacyExtendedPropertyRequest extends BaseRequest<MultiVa
          return this;
      }
 
+    /**
+     * Sets the count value for the request
+     *
+     * @param value whether or not to return the count of objects with the request
+     * @return the updated request
+     */
+    @Nonnull
+    public MultiValueLegacyExtendedPropertyRequest count(final boolean value) {
+        addCountOption(value);
+        return this;
+    }
+    /**
+     * Sets the count value to true for the request
+     *
+     * @return the updated request
+     */
+    @Nonnull
+    public MultiValueLegacyExtendedPropertyRequest count() {
+        addCountOption(true);
+        return this;
+    }
 }
 

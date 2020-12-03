@@ -162,5 +162,26 @@ public class AndroidGeneralDeviceConfigurationRequest extends BaseRequest<Androi
          return this;
      }
 
+    /**
+     * Sets the count value for the request
+     *
+     * @param value whether or not to return the count of objects with the request
+     * @return the updated request
+     */
+    @Nonnull
+    public AndroidGeneralDeviceConfigurationRequest count(final boolean value) {
+        addCountOption(value);
+        return this;
+    }
+    /**
+     * Sets the count value to true for the request
+     *
+     * @return the updated request
+     */
+    @Nonnull
+    public AndroidGeneralDeviceConfigurationRequest count() {
+        addCountOption(true);
+        return this;
+    }
 }
 
