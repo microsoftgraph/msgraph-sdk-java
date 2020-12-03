@@ -517,7 +517,11 @@ public class CoreHttpProvider implements IHttpProvider {
 
         final String rawText = streamToString(in);
         if(clazz == Long.class) {
-            return (Result) Long.valueOf(rawText);
+            try {
+                return (Result) Long.valueOf(rawText);
+            } catch (NumberFormatException ex) {
+                return null;
+            }
         } else {
             return null;
         }
