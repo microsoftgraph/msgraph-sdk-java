@@ -244,7 +244,7 @@ public class CoreHttpProvider implements IHttpProvider {
 		if(retryOptions != null) {
 			corehttpRequestBuilder = corehttpRequestBuilder.tag(RetryOptions.class, retryOptions);
 		}
-		
+
 		String contenttype = null;
 
 		logger.logDebug("Request Method " + request.getHttpMethod().toString());
@@ -368,7 +368,7 @@ public class CoreHttpProvider implements IHttpProvider {
 			try {
 
 				// Call being executed
-				
+
 
 				if (handler != null) {
 					handler.configConnection(response);
@@ -392,7 +392,7 @@ public class CoreHttpProvider implements IHttpProvider {
 
 				if (response.code() == HttpResponseCode.HTTP_NOBODY
 						|| response.code() == HttpResponseCode.HTTP_NOT_MODIFIED) {
-					logger.logDebug("Handling response with no body");                  
+					logger.logDebug("Handling response with no body");
 					return handleEmptyResponse(responseHeadersHelper.getResponseHeadersAsMapOfStringList(response), resultClass);
 				}
 
@@ -409,7 +409,7 @@ public class CoreHttpProvider implements IHttpProvider {
 					return (Result) null;
 
 				final String contentType = headers.get(Constants.CONTENT_TYPE_HEADER_NAME);
-				if (contentType != null && resultClass != InputStream.class && 
+				if (contentType != null && resultClass != InputStream.class &&
 							contentType.contains(Constants.JSON_CONTENT_TYPE)) {
 					logger.logDebug("Response json");
 					return handleJsonResponse(in, responseHeadersHelper.getResponseHeadersAsMapOfStringList(response), resultClass);
@@ -417,6 +417,9 @@ public class CoreHttpProvider implements IHttpProvider {
 					logger.logDebug("Response binary");
 					isBinaryStreamInput = true;
 					return (Result) handleBinaryStream(in);
+				} else if (contentType != null && resultClass != InputStream.class &&
+                            contentType.contains(Constants.TEXT_CONTENT_TYPE)) {
+                    return handleRawResponse(in, resultClass);
 				} else {
 					return (Result) null;
 				}
@@ -497,16 +500,37 @@ public class CoreHttpProvider implements IHttpProvider {
 
 		final String rawJson = streamToString(in);
 		return getSerializer().deserializeObject(rawJson, clazz, responseHeaders);
+    }
+
+    /**
+	 * Handles the cause where the response is a Text object
+	 *
+	 * @param in              the input stream from the response
+	 * @param clazz           the class of the response object
+	 * @param <Result>        the type of the response object
+	 * @return                the Text object
+	 */
+    private <Result> Result handleRawResponse(final InputStream in, final Class<Result> clazz) {
+		if (clazz == null) {
+			return null;
+		}
+
+        final String rawText = streamToString(in);
+        if(clazz == Long.class) {
+            return (Result) Long.valueOf(rawText);
+        } else {
+            return null;
+        }
 	}
 
 	/**
 	 * Handles the case where the response body is empty
-	 * 
+	 *
 	 * @param responseHeaders the response headers
 	 * @param clazz           the type of the response object
 	 * @return                the JSON object
 	 */
-	private <Result> Result handleEmptyResponse(Map<String, List<String>> responseHeaders, final Class<Result> clazz) 
+	private <Result> Result handleEmptyResponse(Map<String, List<String>> responseHeaders, final Class<Result> clazz)
 			throws UnsupportedEncodingException{
 		//Create an empty object to attach the response headers to
 		InputStream in = new ByteArrayInputStream("{}".getBytes(Constants.JSON_ENCODING));
@@ -551,7 +575,7 @@ public class CoreHttpProvider implements IHttpProvider {
 
 	/**
 	 * Gets the logger in use
-	 * 
+	 *
 	 * @return the logger
 	 */
 	@VisibleForTesting
