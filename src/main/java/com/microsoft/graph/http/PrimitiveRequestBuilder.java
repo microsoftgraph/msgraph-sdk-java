@@ -1,5 +1,5 @@
 // ------------------------------------------------------------------------------
-// Copyright (c) 2017 Microsoft Corporation
+// Copyright (c) 2020 Microsoft Corporation
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -33,7 +33,8 @@ import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
 /**
- * The class for the Call Record Request Builder.
+ * The class for the Primitive Request Builder.
+ * @param <T> the primitive type to deserialize the response to
  */
 public class PrimitiveRequestBuilder<T> extends BaseRequestBuilder<T> {
 
@@ -55,7 +56,7 @@ public class PrimitiveRequestBuilder<T> extends BaseRequestBuilder<T> {
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the CallRecordRequest instance
+     * @return the PrimitiveRequest instance
      */
     @Nonnull
     public PrimitiveRequest<T> buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
@@ -66,7 +67,7 @@ public class PrimitiveRequestBuilder<T> extends BaseRequestBuilder<T> {
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the CallRecordRequest instance
+     * @return the PrimitiveRequest instance
      */
     @Nonnull
     public PrimitiveRequest<T> buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {

@@ -25,11 +25,6 @@ package com.microsoft.graph.http;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.callrecords.models.extensions.CallRecord;
-import com.microsoft.graph.callrecords.requests.extensions.SessionCollectionRequestBuilder;
-import com.microsoft.graph.callrecords.requests.extensions.SessionRequestBuilder;
-import java.util.Arrays;
-import java.util.EnumSet;
 import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
@@ -37,7 +32,8 @@ import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
 
 /**
- * The class for the Call Record Request.
+ * The class for the Primitive Request.
+ * @param <T> the primitive type to deserialize the response to
  */
 public class PrimitiveRequest<T> extends BaseRequest<T> {
 
