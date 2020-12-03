@@ -2,7 +2,7 @@
 
 [![Download](https://api.bintray.com/packages/microsoftgraph/Maven/microsoft-graph/images/download.svg)](https://bintray.com/microsoftgraph/Maven/microsoft-graph/_latestVersion)
 
-Get started with the Microsoft Graph SDK for Java by integrating the [Microsoft Graph API](https://graph.microsoft.io/en-us/getting-started) into your Java application!
+Get started with the Microsoft Graph SDK for Java by integrating the [Microsoft Graph API](https://developer.microsoft.com/en-us/graph/get-started/java) into your Java application!
 
 > **Note:** this SDK allows you to build applications using the [v1.0](https://docs.microsoft.com/en-us/graph/use-the-api#version) of Microsoft Graph. If you want to try the latest Microsoft Graph APIs under beta, use our [beta SDK](https://github.com/microsoftgraph/msgraph-beta-sdk-java) instead.
 
