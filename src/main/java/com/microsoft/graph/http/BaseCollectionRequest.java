@@ -1,16 +1,16 @@
 // ------------------------------------------------------------------------------
 // Copyright (c) 2017 Microsoft Corporation
-// 
+//
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
 // to use, copy, modify, merge, publish, distribute, sub-license, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -48,7 +48,7 @@ import okhttp3.Request;
 /**
  * A request against a collection
  *
- * @param <T> the type of the object in the collection 
+ * @param <T> the type of the object in the collection
  * @param <T2> the response collection type
  */
 public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>,
@@ -63,7 +63,7 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      * The class for the response collection
      */
     private final Class<T2> responseCollectionClass;
-    
+
     /**
      * The class for the collection page
      */
@@ -105,7 +105,7 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
         baseRequest.setHttpMethod(HttpMethod.GET);
         return baseRequest.getClient().getHttpProvider().send(this, responseCollectionClass, null);
     }
-    
+
     /**
      * Gets the collection of items
      * @param callback the callback to call once the response is received
@@ -124,9 +124,9 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
         });
     }
 
-    /** 
+    /**
      * Gets the collection of items
-     * 
+     *
      * @return the collection page
      */
     @Nullable
@@ -134,9 +134,9 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
         return buildFromResponse(send());
     }
 
-    /** 
-     * Deserializes the collection from the response object 
-     * 
+    /**
+     * Deserializes the collection from the response object
+     *
      * @param response the collection response
      * @return the collection page
      */
@@ -258,7 +258,7 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      * @param value the expand clause
      */
     protected void addExpandOption(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
+        addQueryOption(new QueryOption("$expand", value));
     }
 
     /**
@@ -267,7 +267,7 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      * @param value the filter clause
      */
     protected void addFilterOption(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        addQueryOption(new QueryOption("$filter", value));
     }
 
     /**
@@ -276,7 +276,7 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      * @param value the order by clause
      */
     protected void addOrderByOption(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        addQueryOption(new QueryOption("$orderby", value));
     }
 
     /**
@@ -285,7 +285,7 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      * @param value the select clause
      */
     protected void addSelectOption(@Nonnull final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
+        addQueryOption(new QueryOption("$select", value));
     }
 
     /**
@@ -294,7 +294,7 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      * @param value the max number of items to return
      */
     protected void addTopOption(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", String.valueOf(value)));
+        addQueryOption(new QueryOption("$top", String.valueOf(value)));
     }
 
     /**
@@ -303,7 +303,7 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      * @param value of the number of items to skip
      */
     protected void addSkipOption(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", String.valueOf(value)));
+        addQueryOption(new QueryOption("$skip", String.valueOf(value)));
     }
 
 
@@ -313,6 +313,14 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      */
     protected void addSkipTokenOption(@Nonnull final String skipToken) {
     	addQueryOption(new QueryOption("$skiptoken", skipToken));
+    }
+
+    /**
+     * Adds the count query string value for the request
+     * @param value - Wheter to return the count or not
+     */
+    protected void addCountOption(final boolean value) {
+        addQueryOption(new QueryOption("$count", String.valueOf(value)));
     }
 
     /**
@@ -343,93 +351,93 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
     public Class<T3> getCollectionPageClass() {
         return collectionPageClass;
     }
-    
+
     /**
      * Sets the max redirects
-     * 
+     *
      * @param maxRedirects Max redirects that a request can take
      */
     public void setMaxRedirects(int maxRedirects) {
     	baseRequest.setMaxRedirects(maxRedirects);
     }
-    
+
     /**
      * Gets the max redirects
-     * 
+     *
      * @return Max redirects that a request can take
      */
     public int getMaxRedirects() {
     	return baseRequest.getMaxRedirects();
     }
-    
+
     /**
      * Sets the should redirect callback
-     * 
+     *
      * @param shouldRedirect Callback called before doing a redirect
      */
     public void setShouldRedirect(@Nonnull IShouldRedirect shouldRedirect) {
     	baseRequest.setShouldRedirect(shouldRedirect);
     }
-    
+
     /**
      * Gets the should redirect callback
-     * 
+     *
      * @return Callback which is called before redirect
      */
     @Nullable
     public IShouldRedirect getShouldRedirect() {
     	return baseRequest.getShouldRedirect();
     }
-    
+
     /**
      * Sets the should retry callback
-     * 
+     *
      * @param shouldretry The callback called before retry
      */
     public void setShouldRetry(@Nonnull IShouldRetry shouldretry) {
     	baseRequest.setShouldRetry(shouldretry);
     }
-    
+
     /**
      * Gets the should retry callback
-     * 
+     *
      * @return Callback called before retry
      */
     @Nullable
     public IShouldRetry getShouldRetry() {
     	return baseRequest.getShouldRetry();
     }
-    
+
     /**
      * Sets the max retries
-     * 
+     *
      * @param maxRetries Max retries for a request
      */
     public void setMaxRetries(int maxRetries) {
     	baseRequest.setMaxRedirects(maxRetries);
     }
-    
+
     /**
-     * Gets max retries 
-     * 
+     * Gets max retries
+     *
      * @return Max retries for a request
      */
     public int getMaxRetries() {
     	return baseRequest.getMaxRetries();
     }
-    
+
     /**
      * Sets the delay in seconds between retires
-     * 
+     *
      * @param delay Delay in seconds between retries
      */
     public void setDelay(long delay) {
     	baseRequest.setDelay(delay);
     }
-    
+
     /**
      * Gets delay between retries
-     * 
+     *
      * @return Delay between retries in seconds
      */
     public long getDelay() {
