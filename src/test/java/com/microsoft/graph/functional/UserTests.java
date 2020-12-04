@@ -8,11 +8,13 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -56,7 +58,7 @@ public class UserTests {
 		graphServiceClient = testBase.graphClient;
 	}
 
-	@Test
+    @Test
 	public  void getMeTest() {
 		//GET me
 		User user = graphServiceClient.me().buildRequest().get();
@@ -64,7 +66,7 @@ public class UserTests {
 		assertNotNull(user.displayName);
 	}
 
-	@Test
+    @Test
 	public void getMePhoto() {
 		//GET me/photo/$value
 		User user = graphServiceClient.me().buildRequest().get();
@@ -75,14 +77,14 @@ public class UserTests {
 		}
 	}
 
-	@Test
+    @Test
 	public void meDriveTest() {
 		//GET me/drive/root/children
 		final DriveItemCollectionPage driveItemCollectionPage = graphServiceClient.me().drive().root().children().buildRequest().get();
 		assertNotNull(driveItemCollectionPage);
 	}
 
-	@Test
+    @Test
 	public void userKeyTest() {
 		//GET users('<<key>>')
 		final UserCollectionPage userCollectionPage = graphServiceClient.users().buildRequest().get();
@@ -95,21 +97,21 @@ public class UserTests {
 		}
 	}
 
-	@Test
+    @Test
 	public void meDriveRoot() {
 		//GET me/drive/root
 		final DriveItem driveItem = graphServiceClient.me().drive().root().buildRequest().get();
 		assertNotNull(driveItem);
 	}
 
-	@Test
+    @Test
 	public void meDrive() {
 		//GET me/drive
 		final Drive drive = graphServiceClient.me().drive().buildRequest().get();
 		assertNotNull(drive);
 	}
 
-	@Test
+    @Test
 	public void meDriveItems() {
 		//GET me/drive/items('<key>')
 		final DriveItemCollectionPage driveItemCollectionPage = graphServiceClient.me().drive().items().buildRequest().get();
@@ -120,21 +122,21 @@ public class UserTests {
 		}
 	}
 
-	@Test
+    @Test
 	public void meMessagesTest() {
 		//GET me/messages
 		final MessageCollectionPage messageCollectionPage = graphServiceClient.me().messages().buildRequest().get();
 		assertNotNull(messageCollectionPage);
 	}
 
-	@Test
+    @Test
 	public void meContactsTest() {
 		//GET me/contacts
 		final ContactCollectionPage contactCollectionPage = graphServiceClient.me().contacts().buildRequest().get();
 		assertNotNull(contactCollectionPage);
 	}
 
-	@Test
+    @Test
 	public void usersKeyPhotoValueTest() {
 		//GET users('<<key>>')/photo/$value
 		final UserCollectionPage userCollectionPage = graphServiceClient.users().buildRequest().get();
@@ -147,28 +149,28 @@ public class UserTests {
 		}
 	}
 
-	@Test
+    @Test
 	public void updateUserPhotoValueTest() throws Exception {
 		final File photo = new File("src/test/resources/hamilton.jpg");
 		final InputStream fileStream = new FileInputStream(photo);
 		graphServiceClient.me().photo().content().buildRequest().put(OutlookTests.getByteArray(fileStream));
 	}
 
-	@Test
+    @Test
 	public void getOrganization() {
 		//GET organization
 		final OrganizationCollectionPage organizationCollectionPage = graphServiceClient.organization().buildRequest().get();
 		assertNotNull(organizationCollectionPage);
 	}
 
-	@Test
+    @Test
 	public void meInsightsUsed() {
 		//GET me/insights/used
 		final UsedInsightCollectionPage usedInsightCollectionPage = graphServiceClient.me().insights().used().buildRequest().get();
 		assertNotNull(usedInsightCollectionPage);
 	}
-	
-	@Test
+
+    @Test
 	public void mailFoldertest() {
 		//GET me/mailFolders
 		final MailFolderCollectionPage mailFolderCollectionPage = graphServiceClient.me().mailFolders().buildRequest().get();
@@ -179,13 +181,13 @@ public class UserTests {
 			assertNotNull(messageCollectionPage);
 		}
 	}
-	
-	@Test
+
+    @Test
 	public void meMemberof() {
 		final DirectoryObjectCollectionWithReferencesPage page = graphServiceClient.me().memberOf().buildRequest().get();
 		assertNotNull(page);
 	}
-	@Test
+    @Test
 	public void getMeAndRetryOnThrottling() throws Exception {
 		ExecutorService exec = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors() * 2);
 		try {
@@ -207,7 +209,7 @@ public class UserTests {
 		}
 	}
 
-	@Test
+    @Test
 	public void emptyPostContentType() {
 		final String contentTypeValue = "application/json";
 		final HeaderOption ctype = new HeaderOption("Content-Type", contentTypeValue);
@@ -218,9 +220,9 @@ public class UserTests {
                                             .buildRequest(options)
                                             .withHttpMethod(HttpMethod.POST)
                                             .getHttpRequest();
-		assertEquals(contentTypeValue, request.body().contentType().toString());					
+		assertEquals(contentTypeValue, request.body().contentType().toString());
 	}
-	@Test
+    @Test
 	public void castTest() {
 		final GroupCollectionPage groups = graphServiceClient.groups().buildRequest().top(1).get();
 		final Group group = groups.getCurrentPage().get(0);
@@ -246,9 +248,22 @@ public class UserTests {
 		.get();
 		assertNotNull(user);
 	}
-	@Test
+    @Test
 	public void getMeTransitiveReferences() {
 		DirectoryObjectCollectionWithReferencesPage page = graphServiceClient.me().transitiveMemberOf().references().buildRequest().get();
 		assertNotNull(page);
-	}
+    }
+    @Test
+    public void getUsersRawCount() {
+        final List<Option> consistencyLevelOptions = Arrays.asList(new HeaderOption("ConsistencyLevel", "eventual"));
+        final Long usersCount = graphServiceClient.users().count().buildRequest(consistencyLevelOptions).get();
+        Assert.assertNotNull(usersCount);
+    }
+    @Test
+    public void getUsersWithCount() {
+        final List<Option> consistencyLevelOptions = Arrays.asList(new HeaderOption("ConsistencyLevel", "eventual"));
+        final UserCollectionPage usersWithCount = graphServiceClient.users().buildRequest(consistencyLevelOptions).count().get();
+        Assert.assertNotNull(usersWithCount);
+        Assert.assertNotNull(usersWithCount.getCount());
+    }
 }
