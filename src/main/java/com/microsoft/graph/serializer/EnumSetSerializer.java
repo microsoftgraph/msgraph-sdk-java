@@ -45,7 +45,7 @@ public class EnumSetSerializer {
     /**
      * Not available for instantiation
      */
-    public EnumSetSerializer(final ILogger logger) {
+    public EnumSetSerializer(@Nonnull final ILogger logger) {
          gson = new GsonBuilder().registerTypeAdapterFactory(new FallbackTypeAdapterFactory(logger)).create();
     }
 
