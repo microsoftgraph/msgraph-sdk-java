@@ -89,8 +89,8 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder<Adminis
      * @return the collection request builder
      */
     @Nonnull
-    public UserCollectionWithReferencesRequestBuilder membersAsUser() {
-        return new UserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/microsoft.graph.user", getClient(), null);
+    public UserCollectionRequestBuilder membersAsUser() {
+        return new UserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/microsoft.graph.user", getClient(), null);
     }
 
     /**
@@ -100,8 +100,8 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder<Adminis
      * @param id the item identifier
      */
     @Nonnull
-    public UserWithReferenceRequestBuilder membersAsUser(@Nonnull final String id) {
-        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id + "/microsoft.graph.user", getClient(), null);
+    public UserRequestBuilder membersAsUser(@Nonnull final String id) {
+        return new UserRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id + "/microsoft.graph.user", getClient(), null);
     }
     /**
      *  Gets a request builder for the Group collection
@@ -109,8 +109,8 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder<Adminis
      * @return the collection request builder
      */
     @Nonnull
-    public GroupCollectionWithReferencesRequestBuilder membersAsGroup() {
-        return new GroupCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/microsoft.graph.group", getClient(), null);
+    public GroupCollectionRequestBuilder membersAsGroup() {
+        return new GroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/microsoft.graph.group", getClient(), null);
     }
 
     /**
@@ -120,8 +120,8 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder<Adminis
      * @param id the item identifier
      */
     @Nonnull
-    public GroupWithReferenceRequestBuilder membersAsGroup(@Nonnull final String id) {
-        return new GroupWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id + "/microsoft.graph.group", getClient(), null);
+    public GroupRequestBuilder membersAsGroup(@Nonnull final String id) {
+        return new GroupRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id + "/microsoft.graph.group", getClient(), null);
     }
     /**
      *  Gets a request builder for the Application collection
@@ -129,8 +129,8 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder<Adminis
      * @return the collection request builder
      */
     @Nonnull
-    public ApplicationCollectionWithReferencesRequestBuilder membersAsApplication() {
-        return new ApplicationCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/microsoft.graph.application", getClient(), null);
+    public ApplicationCollectionRequestBuilder membersAsApplication() {
+        return new ApplicationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/microsoft.graph.application", getClient(), null);
     }
 
     /**
@@ -140,8 +140,8 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder<Adminis
      * @param id the item identifier
      */
     @Nonnull
-    public ApplicationWithReferenceRequestBuilder membersAsApplication(@Nonnull final String id) {
-        return new ApplicationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id + "/microsoft.graph.application", getClient(), null);
+    public ApplicationRequestBuilder membersAsApplication(@Nonnull final String id) {
+        return new ApplicationRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id + "/microsoft.graph.application", getClient(), null);
     }
     /**
      *  Gets a request builder for the ServicePrincipal collection
@@ -149,8 +149,8 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder<Adminis
      * @return the collection request builder
      */
     @Nonnull
-    public ServicePrincipalCollectionWithReferencesRequestBuilder membersAsServicePrincipal() {
-        return new ServicePrincipalCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/microsoft.graph.servicePrincipal", getClient(), null);
+    public ServicePrincipalCollectionRequestBuilder membersAsServicePrincipal() {
+        return new ServicePrincipalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/microsoft.graph.servicePrincipal", getClient(), null);
     }
 
     /**
@@ -160,8 +160,8 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder<Adminis
      * @param id the item identifier
      */
     @Nonnull
-    public ServicePrincipalWithReferenceRequestBuilder membersAsServicePrincipal(@Nonnull final String id) {
-        return new ServicePrincipalWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id + "/microsoft.graph.servicePrincipal", getClient(), null);
+    public ServicePrincipalRequestBuilder membersAsServicePrincipal(@Nonnull final String id) {
+        return new ServicePrincipalRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id + "/microsoft.graph.servicePrincipal", getClient(), null);
     }
     /**
      *  Gets a request builder for the Device collection
@@ -169,8 +169,8 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder<Adminis
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceCollectionWithReferencesRequestBuilder membersAsDevice() {
-        return new DeviceCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/microsoft.graph.device", getClient(), null);
+    public DeviceCollectionRequestBuilder membersAsDevice() {
+        return new DeviceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/microsoft.graph.device", getClient(), null);
     }
 
     /**
@@ -180,8 +180,8 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder<Adminis
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceWithReferenceRequestBuilder membersAsDevice(@Nonnull final String id) {
-        return new DeviceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id + "/microsoft.graph.device", getClient(), null);
+    public DeviceRequestBuilder membersAsDevice(@Nonnull final String id) {
+        return new DeviceRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id + "/microsoft.graph.device", getClient(), null);
     }
     /**
      *  Gets a request builder for the OrgContact collection
@@ -189,8 +189,8 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder<Adminis
      * @return the collection request builder
      */
     @Nonnull
-    public OrgContactCollectionWithReferencesRequestBuilder membersAsOrgContact() {
-        return new OrgContactCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/microsoft.graph.orgContact", getClient(), null);
+    public OrgContactCollectionRequestBuilder membersAsOrgContact() {
+        return new OrgContactCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/microsoft.graph.orgContact", getClient(), null);
     }
 
     /**
@@ -200,8 +200,8 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder<Adminis
      * @param id the item identifier
      */
     @Nonnull
-    public OrgContactWithReferenceRequestBuilder membersAsOrgContact(@Nonnull final String id) {
-        return new OrgContactWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id + "/microsoft.graph.orgContact", getClient(), null);
+    public OrgContactRequestBuilder membersAsOrgContact(@Nonnull final String id) {
+        return new OrgContactRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id + "/microsoft.graph.orgContact", getClient(), null);
     }
     /**
      *  Gets a request builder for the ScopedRoleMembership collection

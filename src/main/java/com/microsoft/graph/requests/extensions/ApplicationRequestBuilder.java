@@ -145,8 +145,8 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder<Application> {
      * @return the collection request builder
      */
     @Nonnull
-    public AppRoleAssignmentCollectionWithReferencesRequestBuilder ownersAsAppRoleAssignment() {
-        return new AppRoleAssignmentCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/microsoft.graph.appRoleAssignment", getClient(), null);
+    public AppRoleAssignmentCollectionRequestBuilder ownersAsAppRoleAssignment() {
+        return new AppRoleAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/microsoft.graph.appRoleAssignment", getClient(), null);
     }
 
     /**
@@ -156,8 +156,8 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder<Application> {
      * @param id the item identifier
      */
     @Nonnull
-    public AppRoleAssignmentWithReferenceRequestBuilder ownersAsAppRoleAssignment(@Nonnull final String id) {
-        return new AppRoleAssignmentWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/" + id + "/microsoft.graph.appRoleAssignment", getClient(), null);
+    public AppRoleAssignmentRequestBuilder ownersAsAppRoleAssignment(@Nonnull final String id) {
+        return new AppRoleAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/" + id + "/microsoft.graph.appRoleAssignment", getClient(), null);
     }
     /**
      *  Gets a request builder for the Endpoint collection
@@ -165,8 +165,8 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder<Application> {
      * @return the collection request builder
      */
     @Nonnull
-    public EndpointCollectionWithReferencesRequestBuilder ownersAsEndpoint() {
-        return new EndpointCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/microsoft.graph.endpoint", getClient(), null);
+    public EndpointCollectionRequestBuilder ownersAsEndpoint() {
+        return new EndpointCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/microsoft.graph.endpoint", getClient(), null);
     }
 
     /**
@@ -176,8 +176,8 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder<Application> {
      * @param id the item identifier
      */
     @Nonnull
-    public EndpointWithReferenceRequestBuilder ownersAsEndpoint(@Nonnull final String id) {
-        return new EndpointWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/" + id + "/microsoft.graph.endpoint", getClient(), null);
+    public EndpointRequestBuilder ownersAsEndpoint(@Nonnull final String id) {
+        return new EndpointRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/" + id + "/microsoft.graph.endpoint", getClient(), null);
     }
     /**
      *  Gets a request builder for the ServicePrincipal collection
@@ -185,8 +185,8 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder<Application> {
      * @return the collection request builder
      */
     @Nonnull
-    public ServicePrincipalCollectionWithReferencesRequestBuilder ownersAsServicePrincipal() {
-        return new ServicePrincipalCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/microsoft.graph.servicePrincipal", getClient(), null);
+    public ServicePrincipalCollectionRequestBuilder ownersAsServicePrincipal() {
+        return new ServicePrincipalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/microsoft.graph.servicePrincipal", getClient(), null);
     }
 
     /**
@@ -196,8 +196,8 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder<Application> {
      * @param id the item identifier
      */
     @Nonnull
-    public ServicePrincipalWithReferenceRequestBuilder ownersAsServicePrincipal(@Nonnull final String id) {
-        return new ServicePrincipalWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/" + id + "/microsoft.graph.servicePrincipal", getClient(), null);
+    public ServicePrincipalRequestBuilder ownersAsServicePrincipal(@Nonnull final String id) {
+        return new ServicePrincipalRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/" + id + "/microsoft.graph.servicePrincipal", getClient(), null);
     }
     /**
      *  Gets a request builder for the User collection
@@ -205,8 +205,8 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder<Application> {
      * @return the collection request builder
      */
     @Nonnull
-    public UserCollectionWithReferencesRequestBuilder ownersAsUser() {
-        return new UserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/microsoft.graph.user", getClient(), null);
+    public UserCollectionRequestBuilder ownersAsUser() {
+        return new UserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/microsoft.graph.user", getClient(), null);
     }
 
     /**
@@ -216,8 +216,8 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder<Application> {
      * @param id the item identifier
      */
     @Nonnull
-    public UserWithReferenceRequestBuilder ownersAsUser(@Nonnull final String id) {
-        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/" + id + "/microsoft.graph.user", getClient(), null);
+    public UserRequestBuilder ownersAsUser(@Nonnull final String id) {
+        return new UserRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/" + id + "/microsoft.graph.user", getClient(), null);
     }
     /**
      *  Gets a request builder for the TokenIssuancePolicy collection

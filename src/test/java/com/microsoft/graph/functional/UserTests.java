@@ -37,7 +37,7 @@ import com.microsoft.graph.models.extensions.UsedInsight;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.options.HeaderOption;
 import com.microsoft.graph.options.Option;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
+import com.microsoft.graph.requests.extensions.ContactCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.DriveItemCollectionPage;
 import com.microsoft.graph.requests.extensions.GroupCollectionPage;
@@ -46,8 +46,6 @@ import com.microsoft.graph.requests.extensions.MessageCollectionPage;
 import com.microsoft.graph.requests.extensions.OrganizationCollectionPage;
 import com.microsoft.graph.requests.extensions.UsedInsightCollectionPage;
 import com.microsoft.graph.requests.extensions.UserCollectionPage;
-import com.microsoft.graph.requests.extensions.UserCollectionWithReferencesPage;
-import com.microsoft.graph.requests.extensions.ContactCollectionPage;
 @Ignore
 public class UserTests {
 	IGraphServiceClient graphServiceClient = null;
@@ -170,7 +168,7 @@ public class UserTests {
 		assertNotNull(usedInsightCollectionPage);
 	}
 
-    @Test
+	@Test
 	public void mailFoldertest() {
 		//GET me/mailFolders
 		final MailFolderCollectionPage mailFolderCollectionPage = graphServiceClient.me().mailFolders().buildRequest().get();
@@ -182,7 +180,7 @@ public class UserTests {
 		}
 	}
 
-    @Test
+	@Test
 	public void meMemberof() {
 		final DirectoryObjectCollectionWithReferencesPage page = graphServiceClient.me().memberOf().buildRequest().get();
 		assertNotNull(page);
@@ -226,7 +224,7 @@ public class UserTests {
 	public void castTest() {
 		final GroupCollectionPage groups = graphServiceClient.groups().buildRequest().top(1).get();
 		final Group group = groups.getCurrentPage().get(0);
-		final UserCollectionWithReferencesPage usersPage = graphServiceClient
+		final UserCollectionPage usersPage = graphServiceClient
 		.groups(group.id)
 		.membersAsUser()
 		.buildRequest()
@@ -251,8 +249,24 @@ public class UserTests {
     @Test
 	public void getMeTransitiveReferences() {
 		DirectoryObjectCollectionWithReferencesPage page = graphServiceClient.me().transitiveMemberOf().references().buildRequest().get();
-		assertNotNull(page);
+        assertNotNull(page);
     }
+    @Test
+	public void setMyBoss() {
+		final User me = graphServiceClient.me().buildRequest().select("id").get();
+		UserCollectionPage potentialManagers = graphServiceClient.users().buildRequest().top(1).get();
+		User manager = potentialManagers.getCurrentPage().get(0);
+		while(manager.id.equals(me.id) && potentialManagers.getNextPage() != null) {
+			potentialManagers = potentialManagers.getNextPage().buildRequest().get();
+			manager = potentialManagers.getCurrentPage().get(0);
+		}
+		if(!manager.id.equals(me.id)) {
+			graphServiceClient.me().manager().reference().buildRequest().put(manager);
+			assertEquals(true, true);
+		} else { // we don't have enough users on the tenant to run the test
+			assertEquals(true, false);
+		}
+	}
     @Test
     public void getUsersRawCount() {
         final List<Option> consistencyLevelOptions = Arrays.asList(new HeaderOption("ConsistencyLevel", "eventual"));
