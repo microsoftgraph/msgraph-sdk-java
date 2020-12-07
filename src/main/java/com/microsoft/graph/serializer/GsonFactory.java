@@ -51,7 +51,7 @@ import javax.xml.datatype.Duration;
 final class GsonFactory {
 
 	private static String PARSING_MESSAGE = "Parsing issue on ";
-	
+
     /**
      * Default constructor
      */
@@ -163,6 +163,7 @@ final class GsonFactory {
                 }
             }
         };
+        final EnumSetSerializer eSetSerializer = new EnumSetSerializer(logger);
 
         final JsonSerializer<EnumSet<?>> enumSetJsonSerializer = new JsonSerializer<EnumSet<?>>() {
             @Override
@@ -173,7 +174,7 @@ final class GsonFactory {
                     return null;
                 }
 
-                return EnumSetSerializer.serialize(src);
+                return eSetSerializer.serialize(src);
             }
         };
 
@@ -186,7 +187,7 @@ final class GsonFactory {
                     return null;
                 }
 
-                return EnumSetSerializer.deserialize(typeOfT, json.getAsString());
+                return eSetSerializer.deserialize(typeOfT, json.getAsString());
             }
         };
 
@@ -211,7 +212,7 @@ final class GsonFactory {
                 }
             }
         };
-        
+
         final JsonSerializer<BaseCollectionPage<?,?>> collectionPageSerializer = new JsonSerializer<BaseCollectionPage<?,?>>() {
             @Override
             public JsonElement serialize(final BaseCollectionPage<?,?> src,
@@ -229,7 +230,7 @@ final class GsonFactory {
                 return CollectionPageSerializer.deserialize(json, typeOfT, logger);
             }
         };
-        
+
         final JsonDeserializer<TimeOfDay> timeOfDayJsonDeserializer = new JsonDeserializer<TimeOfDay>() {
             @Override
             public TimeOfDay deserialize(final JsonElement json,
