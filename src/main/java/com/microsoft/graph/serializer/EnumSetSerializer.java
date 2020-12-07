@@ -22,7 +22,9 @@
 package com.microsoft.graph.serializer;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.JsonPrimitive;
+import com.microsoft.graph.logger.ILogger;
 
 import java.lang.reflect.Type;
 import java.util.EnumSet;
@@ -39,41 +41,45 @@ import javax.annotation.Nonnull;
  */
 public class EnumSetSerializer {
 
+    private final Gson gson;
     /**
      * Not available for instantiation
      */
-    private EnumSetSerializer() {
+    public EnumSetSerializer(final ILogger logger) {
+         gson = new GsonBuilder().registerTypeAdapterFactory(new FallbackTypeAdapterFactory(logger)).create();
     }
 
     /**
      * Deserializes a comma-delimited string of enum values
-     * 
+     *
      * @param type                 the type
      * @param jsonStrToDeserialize the string to deserialize
      * @return                     EnumSet of values
      */
     @Nullable
     public static EnumSet<?> deserialize(@Nonnull final Type type, @Nonnull final String jsonStrToDeserialize) {
-            Gson gson = new Gson();
-            String arrayString = "[" + jsonStrToDeserialize + "]";
+            final String arrayString = "[" + jsonStrToDeserialize + "]";
             return jsonStrToDeserialize == null ? null : (EnumSet<?>) gson.fromJson(arrayString, type);
     }
 
     /**
      * Serializes an EnumSet into a comma-delimited string
-     * 
+     *
      * @param src the source EnumSet
      * @return    a comma-delimited string of enum values
      */
     @Nullable
     public static JsonPrimitive serialize(@Nonnull final EnumSet<?> src) {
-        String serializedString = "";
+        final StringBuilder serializedStringBuilder = new StringBuilder();
 
-        Iterator<?> i = src.iterator();
+        final Iterator<?> i = src.iterator();
         while (i.hasNext()) {
-            serializedString += i.next().toString() + ",";
+            final String jsonValue = gson.toJson(i.next());
+            serializedStringBuilder.append(jsonValue.substring(1, jsonValue.length() -1));
+            if(i.hasNext()) {
+                serializedStringBuilder.append(",");
+            }
         }
-        serializedString = serializedString.substring(0, serializedString.length()-1);
-        return new JsonPrimitive(serializedString);
+        return new JsonPrimitive(serializedStringBuilder.toString());
     }
 }

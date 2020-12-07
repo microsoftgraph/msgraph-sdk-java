@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.io.IOException;
+import java.util.EnumSet;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -22,10 +24,17 @@ import com.microsoft.graph.models.extensions.Drive;
 import com.microsoft.graph.models.extensions.FileAttachment;
 import com.microsoft.graph.models.extensions.RecurrenceRange;
 import com.microsoft.graph.models.extensions.User;
+import com.microsoft.graph.models.extensions.UserGetMailTipsBody;
+import com.microsoft.graph.models.generated.MailTipsType;
 import com.microsoft.graph.models.generated.RecurrenceRangeType;
 import com.microsoft.graph.requests.extensions.DriveItemDeltaCollectionResponse;
 import com.microsoft.graph.models.extensions.UploadSession;
+
+import org.junit.Assert;
 import org.junit.Test;
+
+import okhttp3.Request;
+import okio.Buffer;
 
 public class DefaultSerializerTests {
 
@@ -116,13 +125,13 @@ public class DefaultSerializerTests {
         assertNotNull(jsonOut);
         assertEquals(expected, jsonOut);
     }
-    
+
     public static Map<String, List<String>> getResponseHeaders() {
 		Map<String, List<String>> headers = new HashMap<String, List<String>>();
 		ArrayList<String> headerValues = new ArrayList<String>();
 		headerValues.add("value1");
 		headers.put("header1", headerValues);
-		
+
 		return headers;
 	}
 
@@ -130,13 +139,13 @@ public class DefaultSerializerTests {
 	public void testResponseHeaders() throws Exception {
 		final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
 		User user = serializer.deserializeObject("{\"id\":\"1\"}", User.class, getResponseHeaders());
-		
+
 		JsonElement responseHeaders = user.additionalDataManager().get("graphResponseHeaders");
 		assertNotNull(responseHeaders);
-		
+
 		JsonElement responseHeader = responseHeaders.getAsJsonObject().get("header1");
 		assertNotNull(responseHeader);
-		
+
 		assertEquals("value1", responseHeader.getAsJsonArray().get(0).getAsString());
 	}
 
@@ -145,25 +154,25 @@ public class DefaultSerializerTests {
 		final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
 		final String source = "{\"@odata.context\": \"/attachments/$entity\",\"@odata.type\": \"#microsoft.graph.fileAttachment\",\"id\": \"AAMkAGQ0MjBmNWVkLTYxZjUtNDRmYi05Y2NiLTBlYjIwNzJjNmM1NgBGAAAAAAC6ff7latYeQqu_gLrhSAIhBwCF7iGjpaOmRqVwbZc-xXzwAAAAAAEMAACF7iGjpaOmRqVwbZc-xXzwAABQStA0AAABEgAQAFbGmeisbjtLnQdp7kC_9Fk=\",\"lastModifiedDateTime\": \"2018-01-23T21:50:22Z\",\"name\": \"Test Book.xlsx\",\"contentType\": \"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\",\"size\": 8457,\"isInline\": false,\"contentId\": null,\"contentLocation\": null,\"contentBytes\": \"bytedata\"}";
 		final Attachment result = serializer.deserializeObject(source, Attachment.class);
-		
+
 		assert(result instanceof FileAttachment);
-		
+
 		final FileAttachment fileAttachment = (FileAttachment) result;
 		assertNotNull(fileAttachment.contentBytes);
 		final JsonObject o = fileAttachment.getRawObject();
 		assertNotNull(o);
 		assertEquals("#microsoft.graph.fileAttachment", o. get("@odata.type").getAsString());
 	}
-  
+
     @Test
     public void testSerializerCanSerializeVoidWithoutEmittingWarning() {
         // Unfortunately does not assert for existence of Java 9 illegal access warnings
-        // which seem to written to the console without use of System.err/System.out (so cannot be captured AFAIK). 
+        // which seem to written to the console without use of System.err/System.out (so cannot be captured AFAIK).
         // @davidmoten
         final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
         HasVoidMember t = new HasVoidMember();
         String json = serializer.serializeObject(t);
-        // this line will emit a warning from Java 9 about illegal access to the constructor of Void 
+        // this line will emit a warning from Java 9 about illegal access to the constructor of Void
         // if gson TypeAdapterFactory is not handling Void properly
         HasVoidMember t2 = serializer.deserializeObject(json, HasVoidMember.class);
         assertEquals(t.x, t2.x);
@@ -197,11 +206,28 @@ public class DefaultSerializerTests {
         assertNotNull(result);
         assertNotNull(result.maxRoundTripTime);
     }
-    public static final class HasVoidMember {
+    @Test
+    public void testEnumActionParameterDeserialization() throws IOException {
+        final ArrayList<String> users = new ArrayList<String>();
+        users.add("michael@chambele.onmicrosoft.com");
+        final EnumSet<MailTipsType> mailtips = EnumSet.of(MailTipsType.MAILBOX_FULL_STATUS, MailTipsType.MAX_MESSAGE_SIZE);
+        final UserGetMailTipsBody body = new UserGetMailTipsBody();
+        body.emailAddresses = users;
+        body.mailTipsOptions = mailtips;
+        final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
+        final String serialized = serializer.serializeObject(body);
+        Assert.assertTrue("result contains camelCasedValues", serialized.contains("mailboxFullStatus"));
+
+        final UserGetMailTipsBody deserialized = serializer.deserializeObject(serialized, UserGetMailTipsBody.class);
+
+        Assert.assertEquals(2, deserialized.mailTipsOptions.size());
+    }
+
+  public static final class HasVoidMember {
       @SerializedName("x")
       @Expose
       int x = 1;
-      
+
       @SerializedName("y")
       @Expose
       Void y;
