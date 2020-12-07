@@ -127,6 +127,27 @@ public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<Direc
     }
 
     /**
+     * Sets the count value for the request
+     *
+     * @param value whether or not to return the count of objects with the request
+     * @return the updated request
+     */
+    @Nonnull
+    public DirectoryAuditCollectionRequest count(final boolean value) {
+        addCountOption(value);
+        return this;
+    }
+    /**
+     * Sets the count value to true for the request
+     *
+     * @return the updated request
+     */
+    @Nonnull
+    public DirectoryAuditCollectionRequest count() {
+        addCountOption(true);
+        return this;
+    }
+    /**
      * Sets the skip value for the request
      *
      * @param value of the number of items to skip
@@ -150,3 +171,4 @@ public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<Direc
         return this;
     }
 }
+

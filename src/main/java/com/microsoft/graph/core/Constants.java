@@ -4,8 +4,6 @@ package com.microsoft.graph.core;
 public final class Constants {
 	private Constants() {
 	}
-	
-	public static final String APPROOT = "approot";
 	/**
 	 * The content type header
 	 */
@@ -17,14 +15,18 @@ public final class Constants {
 	/**
 	 * The content type for JSON responses
 	 */
-	public static final String JSON_CONTENT_TYPE = "application/json";
+    public static final String JSON_CONTENT_TYPE = "application/json";
+    /**
+	 * The content type for TEXT responses
+	 */
+	public static final String TEXT_CONTENT_TYPE = "text/plain";
 	/**
-	 * The binary content type header's value 
+	 * The binary content type header's value
 	 */
 	public static final String BINARY_CONTENT_TYPE = "application/octet-stream";
-		
+
 	// Constants for functional tests
-	// TO-DO: document how to register an application for functional 
+	// TO-DO: document how to register an application for functional
 	// testing purposes
 	/** The application ID to use for unit testing */
 	public static final String APPID = "app-id";
