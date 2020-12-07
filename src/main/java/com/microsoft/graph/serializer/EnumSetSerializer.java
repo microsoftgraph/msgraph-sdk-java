@@ -57,7 +57,7 @@ public class EnumSetSerializer {
      * @return                     EnumSet of values
      */
     @Nullable
-    public static EnumSet<?> deserialize(@Nonnull final Type type, @Nonnull final String jsonStrToDeserialize) {
+    public EnumSet<?> deserialize(@Nonnull final Type type, @Nonnull final String jsonStrToDeserialize) {
             final String arrayString = "[" + jsonStrToDeserialize + "]";
             return jsonStrToDeserialize == null ? null : (EnumSet<?>) gson.fromJson(arrayString, type);
     }
@@ -69,7 +69,7 @@ public class EnumSetSerializer {
      * @return    a comma-delimited string of enum values
      */
     @Nullable
-    public static JsonPrimitive serialize(@Nonnull final EnumSet<?> src) {
+    public JsonPrimitive serialize(@Nonnull final EnumSet<?> src) {
         final StringBuilder serializedStringBuilder = new StringBuilder();
 
         final Iterator<?> i = src.iterator();
