@@ -707,7 +707,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the Security
      */
-    ISecurityRequestBuilder security();
+    ISecurityRequestBuilder Security();
 
     /**
      * Gets the GraphServiceRequestBuilder
