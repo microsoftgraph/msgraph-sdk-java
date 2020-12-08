@@ -36,6 +36,9 @@ repositories {
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
     mavenCentral()
+    jcenter { //TODO remove when releasing
+        url 'http://oss.jfrog.org/artifactory/oss-snapshot-local'
+	}
 }
 
 apply from: "gradle/dependencies.gradle"
