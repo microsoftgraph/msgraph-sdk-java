@@ -5,9 +5,6 @@ buildscript {
 		maven {
 			url "https://plugins.gradle.org/m2/"
 		}
-        jcenter {//TODO remove when releasing
-            url 'http://oss.jfrog.org/artifactory/oss-snapshot-local'
-	    }
     }
 
     dependencies {
@@ -21,6 +18,9 @@ buildscript {
 repositories {
     google()
     gradlePluginPortal()
+    jcenter {//TODO remove when releasing
+        url 'http://oss.jfrog.org/artifactory/oss-snapshot-local'
+    }
 }
 
 apply plugin: "com.android.library"
