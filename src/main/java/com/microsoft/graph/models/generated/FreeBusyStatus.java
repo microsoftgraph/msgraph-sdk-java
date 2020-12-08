@@ -11,6 +11,10 @@ package com.microsoft.graph.models.generated;
 public enum FreeBusyStatus
 {
     /**
+    * unknown
+    */
+    UNKNOWN,
+    /**
     * free
     */
     FREE,
@@ -18,10 +22,6 @@ public enum FreeBusyStatus
     * tentative
     */
     TENTATIVE,
-    /**
-    * unknown
-    */
-    UNKNOWN,
     /**
     * busy
     */

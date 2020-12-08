@@ -126,6 +126,8 @@ import com.microsoft.graph.requests.extensions.IUserSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPresenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.PresenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserTeamworkRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserTeamworkRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITodoRequestBuilder;
@@ -634,6 +636,15 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
 
     public IOnlineMeetingRequestBuilder onlineMeetings(final String id) {
         return new OnlineMeetingRequestBuilder(getRequestUrlWithAdditionalSegment("onlineMeetings") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for Presence
+     *
+     * @return the IPresenceRequestBuilder instance
+     */
+    public IPresenceRequestBuilder presence() {
+        return new PresenceRequestBuilder(getRequestUrlWithAdditionalSegment("presence"), getClient(), null);
     }
     public ITeamCollectionRequestBuilder joinedTeams() {
         return new TeamCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("joinedTeams"), getClient(), null);

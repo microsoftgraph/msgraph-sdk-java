@@ -22,6 +22,7 @@ import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyCollectionReq
 import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuthorizationPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -52,6 +53,13 @@ public interface IPolicyRootRequestBuilder extends IRequestBuilder {
     IActivityBasedTimeoutPolicyCollectionRequestBuilder activityBasedTimeoutPolicies();
 
     IActivityBasedTimeoutPolicyRequestBuilder activityBasedTimeoutPolicies(final String id);
+
+    /**
+     * Gets the request builder for AuthorizationPolicy
+     *
+     * @return the IAuthorizationPolicyRequestBuilder instance
+     */
+    IAuthorizationPolicyRequestBuilder authorizationPolicy();
 
     IClaimsMappingPolicyCollectionRequestBuilder claimsMappingPolicies();
 

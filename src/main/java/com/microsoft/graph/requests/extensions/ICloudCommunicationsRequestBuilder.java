@@ -8,12 +8,15 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CloudCommunications;
+import com.microsoft.graph.models.extensions.Presence;
 import com.microsoft.graph.requests.extensions.ICallCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICallRequestBuilder;
 import com.microsoft.graph.callrecords.requests.extensions.ICallRecordCollectionRequestBuilder;
 import com.microsoft.graph.callrecords.requests.extensions.ICallRecordRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnlineMeetingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnlineMeetingRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPresenceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPresenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -51,5 +54,11 @@ public interface ICloudCommunicationsRequestBuilder extends IRequestBuilder {
     IOnlineMeetingCollectionRequestBuilder onlineMeetings();
 
     IOnlineMeetingRequestBuilder onlineMeetings(final String id);
+
+    IPresenceCollectionRequestBuilder presences();
+
+    IPresenceRequestBuilder presences(final String id);
+
+    ICloudCommunicationsGetPresencesByUserIdCollectionRequestBuilder getPresencesByUserId(final java.util.List<String> ids);
 
 }

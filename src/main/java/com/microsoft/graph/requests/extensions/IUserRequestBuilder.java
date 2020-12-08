@@ -74,6 +74,7 @@ import com.microsoft.graph.requests.extensions.IPlannerUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOfficeGraphInsightsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPresenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserTeamworkRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITodoRequestBuilder;
 import java.util.Arrays;
@@ -383,6 +384,13 @@ public interface IUserRequestBuilder extends IRequestBuilder {
     IOnlineMeetingCollectionRequestBuilder onlineMeetings();
 
     IOnlineMeetingRequestBuilder onlineMeetings(final String id);
+
+    /**
+     * Gets the request builder for Presence
+     *
+     * @return the IPresenceRequestBuilder instance
+     */
+    IPresenceRequestBuilder presence();
 
     ITeamCollectionRequestBuilder joinedTeams();
 

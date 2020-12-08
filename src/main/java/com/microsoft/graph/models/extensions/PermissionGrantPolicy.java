@@ -26,7 +26,7 @@ public class PermissionGrantPolicy extends PolicyBase implements IJsonBackedObje
 
     /**
      * The Excludes.
-     * 
+     * Condition sets which are excluded in this permission grant policy. Automatically expanded on GET.
      */
     @SerializedName(value = "excludes", alternate = {"Excludes"})
     @Expose
@@ -34,7 +34,7 @@ public class PermissionGrantPolicy extends PolicyBase implements IJsonBackedObje
 
     /**
      * The Includes.
-     * 
+     * Condition sets which are included in this permission grant policy. Automatically expanded on GET.
      */
     @SerializedName(value = "includes", alternate = {"Includes"})
     @Expose

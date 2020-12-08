@@ -518,16 +518,16 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder implemen
         return new WorkbookFunctionsErfRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.erf"), getClient(), null, lowerLimit, upperLimit);
     }
 
-    public IWorkbookFunctionsErf_PreciseRequestBuilder erf_Precise(final com.google.gson.JsonElement x) {
-        return new WorkbookFunctionsErf_PreciseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.erf_Precise"), getClient(), null, x);
-    }
-
     public IWorkbookFunctionsErfCRequestBuilder erfC(final com.google.gson.JsonElement x) {
         return new WorkbookFunctionsErfCRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.erfC"), getClient(), null, x);
     }
 
     public IWorkbookFunctionsErfC_PreciseRequestBuilder erfC_Precise(final com.google.gson.JsonElement x) {
         return new WorkbookFunctionsErfC_PreciseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.erfC_Precise"), getClient(), null, x);
+    }
+
+    public IWorkbookFunctionsErf_PreciseRequestBuilder erf_Precise(final com.google.gson.JsonElement x) {
+        return new WorkbookFunctionsErf_PreciseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.erf_Precise"), getClient(), null, x);
     }
 
     public IWorkbookFunctionsError_TypeRequestBuilder error_Type(final com.google.gson.JsonElement errorVal) {
@@ -548,22 +548,6 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder implemen
 
     public IWorkbookFunctionsExpon_DistRequestBuilder expon_Dist(final com.google.gson.JsonElement x, final com.google.gson.JsonElement lambda, final com.google.gson.JsonElement cumulative) {
         return new WorkbookFunctionsExpon_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.expon_Dist"), getClient(), null, x, lambda, cumulative);
-    }
-
-    public IWorkbookFunctionsF_DistRequestBuilder f_Dist(final com.google.gson.JsonElement x, final com.google.gson.JsonElement degFreedom1, final com.google.gson.JsonElement degFreedom2, final com.google.gson.JsonElement cumulative) {
-        return new WorkbookFunctionsF_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.f_Dist"), getClient(), null, x, degFreedom1, degFreedom2, cumulative);
-    }
-
-    public IWorkbookFunctionsF_Dist_RTRequestBuilder f_Dist_RT(final com.google.gson.JsonElement x, final com.google.gson.JsonElement degFreedom1, final com.google.gson.JsonElement degFreedom2) {
-        return new WorkbookFunctionsF_Dist_RTRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.f_Dist_RT"), getClient(), null, x, degFreedom1, degFreedom2);
-    }
-
-    public IWorkbookFunctionsF_InvRequestBuilder f_Inv(final com.google.gson.JsonElement probability, final com.google.gson.JsonElement degFreedom1, final com.google.gson.JsonElement degFreedom2) {
-        return new WorkbookFunctionsF_InvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.f_Inv"), getClient(), null, probability, degFreedom1, degFreedom2);
-    }
-
-    public IWorkbookFunctionsF_Inv_RTRequestBuilder f_Inv_RT(final com.google.gson.JsonElement probability, final com.google.gson.JsonElement degFreedom1, final com.google.gson.JsonElement degFreedom2) {
-        return new WorkbookFunctionsF_Inv_RTRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.f_Inv_RT"), getClient(), null, probability, degFreedom1, degFreedom2);
     }
 
     public IWorkbookFunctionsFactRequestBuilder fact(final com.google.gson.JsonElement number) {
@@ -614,16 +598,24 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder implemen
         return new WorkbookFunctionsFvscheduleRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.fvschedule"), getClient(), null, principal, schedule);
     }
 
+    public IWorkbookFunctionsF_DistRequestBuilder f_Dist(final com.google.gson.JsonElement x, final com.google.gson.JsonElement degFreedom1, final com.google.gson.JsonElement degFreedom2, final com.google.gson.JsonElement cumulative) {
+        return new WorkbookFunctionsF_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.f_Dist"), getClient(), null, x, degFreedom1, degFreedom2, cumulative);
+    }
+
+    public IWorkbookFunctionsF_Dist_RTRequestBuilder f_Dist_RT(final com.google.gson.JsonElement x, final com.google.gson.JsonElement degFreedom1, final com.google.gson.JsonElement degFreedom2) {
+        return new WorkbookFunctionsF_Dist_RTRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.f_Dist_RT"), getClient(), null, x, degFreedom1, degFreedom2);
+    }
+
+    public IWorkbookFunctionsF_InvRequestBuilder f_Inv(final com.google.gson.JsonElement probability, final com.google.gson.JsonElement degFreedom1, final com.google.gson.JsonElement degFreedom2) {
+        return new WorkbookFunctionsF_InvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.f_Inv"), getClient(), null, probability, degFreedom1, degFreedom2);
+    }
+
+    public IWorkbookFunctionsF_Inv_RTRequestBuilder f_Inv_RT(final com.google.gson.JsonElement probability, final com.google.gson.JsonElement degFreedom1, final com.google.gson.JsonElement degFreedom2) {
+        return new WorkbookFunctionsF_Inv_RTRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.f_Inv_RT"), getClient(), null, probability, degFreedom1, degFreedom2);
+    }
+
     public IWorkbookFunctionsGammaRequestBuilder gamma(final com.google.gson.JsonElement x) {
         return new WorkbookFunctionsGammaRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.gamma"), getClient(), null, x);
-    }
-
-    public IWorkbookFunctionsGamma_DistRequestBuilder gamma_Dist(final com.google.gson.JsonElement x, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement beta, final com.google.gson.JsonElement cumulative) {
-        return new WorkbookFunctionsGamma_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.gamma_Dist"), getClient(), null, x, alpha, beta, cumulative);
-    }
-
-    public IWorkbookFunctionsGamma_InvRequestBuilder gamma_Inv(final com.google.gson.JsonElement probability, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement beta) {
-        return new WorkbookFunctionsGamma_InvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.gamma_Inv"), getClient(), null, probability, alpha, beta);
     }
 
     public IWorkbookFunctionsGammaLnRequestBuilder gammaLn(final com.google.gson.JsonElement x) {
@@ -632,6 +624,14 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder implemen
 
     public IWorkbookFunctionsGammaLn_PreciseRequestBuilder gammaLn_Precise(final com.google.gson.JsonElement x) {
         return new WorkbookFunctionsGammaLn_PreciseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.gammaLn_Precise"), getClient(), null, x);
+    }
+
+    public IWorkbookFunctionsGamma_DistRequestBuilder gamma_Dist(final com.google.gson.JsonElement x, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement beta, final com.google.gson.JsonElement cumulative) {
+        return new WorkbookFunctionsGamma_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.gamma_Dist"), getClient(), null, x, alpha, beta, cumulative);
+    }
+
+    public IWorkbookFunctionsGamma_InvRequestBuilder gamma_Inv(final com.google.gson.JsonElement probability, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement beta) {
+        return new WorkbookFunctionsGamma_InvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.gamma_Inv"), getClient(), null, probability, alpha, beta);
     }
 
     public IWorkbookFunctionsGaussRequestBuilder gauss(final com.google.gson.JsonElement x) {
@@ -834,16 +834,16 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder implemen
         return new WorkbookFunctionsIsNumberRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isNumber"), getClient(), null, value);
     }
 
-    public IWorkbookFunctionsIso_CeilingRequestBuilder iso_Ceiling(final com.google.gson.JsonElement number, final com.google.gson.JsonElement significance) {
-        return new WorkbookFunctionsIso_CeilingRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.iso_Ceiling"), getClient(), null, number, significance);
-    }
-
     public IWorkbookFunctionsIsOddRequestBuilder isOdd(final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsIsOddRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isOdd"), getClient(), null, number);
     }
 
     public IWorkbookFunctionsIsoWeekNumRequestBuilder isoWeekNum(final com.google.gson.JsonElement date) {
         return new WorkbookFunctionsIsoWeekNumRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isoWeekNum"), getClient(), null, date);
+    }
+
+    public IWorkbookFunctionsIso_CeilingRequestBuilder iso_Ceiling(final com.google.gson.JsonElement number, final com.google.gson.JsonElement significance) {
+        return new WorkbookFunctionsIso_CeilingRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.iso_Ceiling"), getClient(), null, number, significance);
     }
 
     public IWorkbookFunctionsIspmtRequestBuilder ispmt(final com.google.gson.JsonElement rate, final com.google.gson.JsonElement per, final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pv) {
@@ -1294,20 +1294,20 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder implemen
         return new WorkbookFunctionsStandardizeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.standardize"), getClient(), null, x, mean, standardDev);
     }
 
-    public IWorkbookFunctionsStDev_PRequestBuilder stDev_P(final com.google.gson.JsonElement values) {
-        return new WorkbookFunctionsStDev_PRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stDev_P"), getClient(), null, values);
-    }
-
-    public IWorkbookFunctionsStDev_SRequestBuilder stDev_S(final com.google.gson.JsonElement values) {
-        return new WorkbookFunctionsStDev_SRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stDev_S"), getClient(), null, values);
-    }
-
     public IWorkbookFunctionsStDevARequestBuilder stDevA(final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsStDevARequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stDevA"), getClient(), null, values);
     }
 
     public IWorkbookFunctionsStDevPARequestBuilder stDevPA(final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsStDevPARequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stDevPA"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsStDev_PRequestBuilder stDev_P(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsStDev_PRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stDev_P"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsStDev_SRequestBuilder stDev_S(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsStDev_SRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stDev_S"), getClient(), null, values);
     }
 
     public IWorkbookFunctionsSubstituteRequestBuilder substitute(final com.google.gson.JsonElement text, final com.google.gson.JsonElement oldText, final com.google.gson.JsonElement newText, final com.google.gson.JsonElement instanceNum) {
@@ -1340,26 +1340,6 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder implemen
 
     public IWorkbookFunctionsTRequestBuilder t(final com.google.gson.JsonElement value) {
         return new WorkbookFunctionsTRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.t"), getClient(), null, value);
-    }
-
-    public IWorkbookFunctionsT_DistRequestBuilder t_Dist(final com.google.gson.JsonElement x, final com.google.gson.JsonElement degFreedom, final com.google.gson.JsonElement cumulative) {
-        return new WorkbookFunctionsT_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.t_Dist"), getClient(), null, x, degFreedom, cumulative);
-    }
-
-    public IWorkbookFunctionsT_Dist_2TRequestBuilder t_Dist_2T(final com.google.gson.JsonElement x, final com.google.gson.JsonElement degFreedom) {
-        return new WorkbookFunctionsT_Dist_2TRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.t_Dist_2T"), getClient(), null, x, degFreedom);
-    }
-
-    public IWorkbookFunctionsT_Dist_RTRequestBuilder t_Dist_RT(final com.google.gson.JsonElement x, final com.google.gson.JsonElement degFreedom) {
-        return new WorkbookFunctionsT_Dist_RTRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.t_Dist_RT"), getClient(), null, x, degFreedom);
-    }
-
-    public IWorkbookFunctionsT_InvRequestBuilder t_Inv(final com.google.gson.JsonElement probability, final com.google.gson.JsonElement degFreedom) {
-        return new WorkbookFunctionsT_InvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.t_Inv"), getClient(), null, probability, degFreedom);
-    }
-
-    public IWorkbookFunctionsT_Inv_2TRequestBuilder t_Inv_2T(final com.google.gson.JsonElement probability, final com.google.gson.JsonElement degFreedom) {
-        return new WorkbookFunctionsT_Inv_2TRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.t_Inv_2T"), getClient(), null, probability, degFreedom);
     }
 
     public IWorkbookFunctionsTanRequestBuilder tan(final com.google.gson.JsonElement number) {
@@ -1418,6 +1398,26 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder implemen
         return new WorkbookFunctionsTypeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.type"), getClient(), null, value);
     }
 
+    public IWorkbookFunctionsT_DistRequestBuilder t_Dist(final com.google.gson.JsonElement x, final com.google.gson.JsonElement degFreedom, final com.google.gson.JsonElement cumulative) {
+        return new WorkbookFunctionsT_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.t_Dist"), getClient(), null, x, degFreedom, cumulative);
+    }
+
+    public IWorkbookFunctionsT_Dist_2TRequestBuilder t_Dist_2T(final com.google.gson.JsonElement x, final com.google.gson.JsonElement degFreedom) {
+        return new WorkbookFunctionsT_Dist_2TRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.t_Dist_2T"), getClient(), null, x, degFreedom);
+    }
+
+    public IWorkbookFunctionsT_Dist_RTRequestBuilder t_Dist_RT(final com.google.gson.JsonElement x, final com.google.gson.JsonElement degFreedom) {
+        return new WorkbookFunctionsT_Dist_RTRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.t_Dist_RT"), getClient(), null, x, degFreedom);
+    }
+
+    public IWorkbookFunctionsT_InvRequestBuilder t_Inv(final com.google.gson.JsonElement probability, final com.google.gson.JsonElement degFreedom) {
+        return new WorkbookFunctionsT_InvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.t_Inv"), getClient(), null, probability, degFreedom);
+    }
+
+    public IWorkbookFunctionsT_Inv_2TRequestBuilder t_Inv_2T(final com.google.gson.JsonElement probability, final com.google.gson.JsonElement degFreedom) {
+        return new WorkbookFunctionsT_Inv_2TRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.t_Inv_2T"), getClient(), null, probability, degFreedom);
+    }
+
     public IWorkbookFunctionsUnicharRequestBuilder unichar(final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsUnicharRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unichar"), getClient(), null, number);
     }
@@ -1438,20 +1438,20 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder implemen
         return new WorkbookFunctionsValueRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.value"), getClient(), null, text);
     }
 
-    public IWorkbookFunctionsVar_PRequestBuilder var_P(final com.google.gson.JsonElement values) {
-        return new WorkbookFunctionsVar_PRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.var_P"), getClient(), null, values);
-    }
-
-    public IWorkbookFunctionsVar_SRequestBuilder var_S(final com.google.gson.JsonElement values) {
-        return new WorkbookFunctionsVar_SRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.var_S"), getClient(), null, values);
-    }
-
     public IWorkbookFunctionsVarARequestBuilder varA(final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsVarARequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.varA"), getClient(), null, values);
     }
 
     public IWorkbookFunctionsVarPARequestBuilder varPA(final com.google.gson.JsonElement values) {
         return new WorkbookFunctionsVarPARequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.varPA"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsVar_PRequestBuilder var_P(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsVar_PRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.var_P"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsVar_SRequestBuilder var_S(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsVar_SRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.var_S"), getClient(), null, values);
     }
 
     public IWorkbookFunctionsVdbRequestBuilder vdb(final com.google.gson.JsonElement cost, final com.google.gson.JsonElement salvage, final com.google.gson.JsonElement life, final com.google.gson.JsonElement startPeriod, final com.google.gson.JsonElement endPeriod, final com.google.gson.JsonElement factor, final com.google.gson.JsonElement noSwitch) {
