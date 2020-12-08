@@ -11,22 +11,6 @@ package com.microsoft.graph.models.generated;
 public enum IosUpdatesInstallStatus
 {
     /**
-    * success
-    */
-    SUCCESS,
-    /**
-    * available
-    */
-    AVAILABLE,
-    /**
-    * idle
-    */
-    IDLE,
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
     * device Os Higher Than Desired Os Version
     */
     DEVICE_OS_HIGHER_THAN_DESIRED_OS_VERSION,
@@ -82,6 +66,22 @@ public enum IosUpdatesInstallStatus
     * downloading
     */
     DOWNLOADING,
+    /**
+    * success
+    */
+    SUCCESS,
+    /**
+    * available
+    */
+    AVAILABLE,
+    /**
+    * idle
+    */
+    IDLE,
+    /**
+    * unknown
+    */
+    UNKNOWN,
     /**
     * For IosUpdatesInstallStatus values that were not expected from the service
     */

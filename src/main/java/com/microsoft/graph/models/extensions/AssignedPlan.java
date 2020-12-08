@@ -41,7 +41,7 @@ public class AssignedPlan implements IJsonBackedObject {
 
     /**
      * The Capability Status.
-     * For example, 'Enabled'.
+     * Condition of the capability assignment. The possible values are Enabled, Warning, Suspended, Deleted, LockedOut.
      */
     @SerializedName(value = "capabilityStatus", alternate = {"CapabilityStatus"})
     @Expose

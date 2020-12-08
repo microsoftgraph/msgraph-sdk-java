@@ -36,6 +36,8 @@ import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyCollectio
 import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuthorizationPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.AuthorizationPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
 import java.util.Arrays;

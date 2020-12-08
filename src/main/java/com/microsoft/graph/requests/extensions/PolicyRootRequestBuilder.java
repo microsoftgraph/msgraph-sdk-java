@@ -36,6 +36,8 @@ import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyCollectio
 import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuthorizationPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.AuthorizationPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
 import java.util.Arrays;
@@ -88,6 +90,15 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder implements IPol
 
     public IActivityBasedTimeoutPolicyRequestBuilder activityBasedTimeoutPolicies(final String id) {
         return new ActivityBasedTimeoutPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("activityBasedTimeoutPolicies") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for AuthorizationPolicy
+     *
+     * @return the IAuthorizationPolicyRequestBuilder instance
+     */
+    public IAuthorizationPolicyRequestBuilder authorizationPolicy() {
+        return new AuthorizationPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("authorizationPolicy"), getClient(), null);
     }
     public IClaimsMappingPolicyCollectionRequestBuilder claimsMappingPolicies() {
         return new ClaimsMappingPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("claimsMappingPolicies"), getClient(), null);

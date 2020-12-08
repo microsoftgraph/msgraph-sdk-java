@@ -11,6 +11,10 @@ package com.microsoft.graph.models.generated;
 public enum CalendarColor
 {
     /**
+    * auto
+    */
+    AUTO,
+    /**
     * light Blue
     */
     LIGHT_BLUE,
@@ -18,10 +22,6 @@ public enum CalendarColor
     * light Green
     */
     LIGHT_GREEN,
-    /**
-    * auto
-    */
-    AUTO,
     /**
     * light Orange
     */
