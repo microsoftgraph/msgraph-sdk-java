@@ -40,7 +40,7 @@ public class SearchHit implements IJsonBackedObject {
 
     /**
      * The Content Source.
-     * 
+     * The name of the content source which the externalItem is part of .
      */
     @SerializedName(value = "contentSource", alternate = {"ContentSource"})
     @Expose
@@ -49,7 +49,7 @@ public class SearchHit implements IJsonBackedObject {
 
     /**
      * The Hit Id.
-     * 
+     * The internal identifier for the item.
      */
     @SerializedName(value = "hitId", alternate = {"HitId"})
     @Expose
@@ -58,7 +58,7 @@ public class SearchHit implements IJsonBackedObject {
 
     /**
      * The Rank.
-     * 
+     * The rank or the order of the result.
      */
     @SerializedName(value = "rank", alternate = {"Rank"})
     @Expose
@@ -67,7 +67,7 @@ public class SearchHit implements IJsonBackedObject {
 
     /**
      * The Summary.
-     * 
+     * A summary of the result, if a summary is available.
      */
     @SerializedName(value = "summary", alternate = {"Summary"})
     @Expose

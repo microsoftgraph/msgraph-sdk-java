@@ -75,6 +75,7 @@ import com.microsoft.graph.requests.extensions.PlannerUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.OfficeGraphInsightsRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteRequestBuilder;
+import com.microsoft.graph.requests.extensions.PresenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserTeamworkRequestBuilder;
 import com.microsoft.graph.requests.extensions.TodoRequestBuilder;
 import java.util.Arrays;

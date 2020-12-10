@@ -7,36 +7,32 @@ package com.microsoft.graph.models.generated;
 
 
 /**
- * The Enum Free Busy Status.
+ * The Enum Allow Invites From.
 */
-public enum FreeBusyStatus
+public enum AllowInvitesFrom
 {
     /**
-    * unknown
+    * none
     */
-    UNKNOWN,
+    NONE,
     /**
-    * free
+    * admins And Guest Inviters
     */
-    FREE,
+    ADMINS_AND_GUEST_INVITERS,
     /**
-    * tentative
+    * admins Guest Inviters And All Members
     */
-    TENTATIVE,
+    ADMINS_GUEST_INVITERS_AND_ALL_MEMBERS,
     /**
-    * busy
+    * everyone
     */
-    BUSY,
+    EVERYONE,
     /**
-    * oof
+    * unknown Future Value
     */
-    OOF,
+    UNKNOWN_FUTURE_VALUE,
     /**
-    * working Elsewhere
-    */
-    WORKING_ELSEWHERE,
-    /**
-    * For FreeBusyStatus values that were not expected from the service
+    * For AllowInvitesFrom values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }

@@ -1,4 +1,4 @@
-﻿# Microsoft Graph SDK for Java
+# Microsoft Graph SDK for Java
 
 [![Download](https://api.bintray.com/packages/microsoftgraph/Maven/microsoft-graph/images/download.svg)](https://bintray.com/microsoftgraph/Maven/microsoft-graph/_latestVersion)
 
@@ -19,7 +19,7 @@ repositories {
 
 dependencies {
     // Include the sdk as a dependency
-    implementation 'com.microsoft.graph:microsoft-graph:2.4.1'
+    implementation 'com.microsoft.graph:microsoft-graph:2.5.0'
     // Uncomment the line below if you are building an android application
     //implementation 'com.google.guava:guava:29.0-android'
 }
@@ -33,7 +33,7 @@ Add the dependency in `dependencies` in pom.xml
 <dependency>
   <groupId>com.microsoft.graph</groupId>
   <artifactId>microsoft-graph</artifactId>
-  <version>2.4.1</version>
+  <version>2.5.0</version>
 </dependency>
 ```
 
@@ -121,3 +121,4 @@ Copyright (c) Microsoft Corporation. All Rights Reserved. Licensed under the [MI
 ## 9. Third-party notices
 
 [Third-party notices](THIRD%20PARTY%20NOTICES)
+

@@ -72,7 +72,7 @@ public class Channel extends Entity implements IJsonBackedObject {
 
     /**
      * The Membership Type.
-     * 
+     * The type of the channel. Can be set during creation and cannot be changed. Possible values are: standard - Channel inherits the list of members of the parent team; private - Channel can have members that are a subset of all the members on the parent team.
      */
     @SerializedName(value = "membershipType", alternate = {"MembershipType"})
     @Expose
@@ -99,7 +99,7 @@ public class Channel extends Entity implements IJsonBackedObject {
 
     /**
      * The Members.
-     * 
+     * A collection of membership records associated with the channel.
      */
     @SerializedName(value = "members", alternate = {"Members"})
     @Expose

@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.AssignedLicense;
 import com.microsoft.graph.models.extensions.AssignedPlan;
+import com.microsoft.graph.models.extensions.EmployeeOrgData;
 import com.microsoft.graph.models.extensions.ObjectIdentity;
 import com.microsoft.graph.models.extensions.LicenseAssignmentState;
 import com.microsoft.graph.models.extensions.OnPremisesExtensionAttributes;
@@ -46,6 +47,7 @@ import com.microsoft.graph.models.extensions.UserSettings;
 import com.microsoft.graph.models.extensions.Onenote;
 import com.microsoft.graph.models.extensions.UserActivity;
 import com.microsoft.graph.models.extensions.OnlineMeeting;
+import com.microsoft.graph.models.extensions.Presence;
 import com.microsoft.graph.models.extensions.Team;
 import com.microsoft.graph.models.extensions.UserTeamwork;
 import com.microsoft.graph.models.extensions.Todo;
@@ -206,6 +208,15 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     public String displayName;
 
     /**
+     * The Employee Hire Date.
+     * The date and time when the user was hired or will start work in case of a future hire. Returned only on $select. Supports $filter.
+     */
+    @SerializedName(value = "employeeHireDate", alternate = {"EmployeeHireDate"})
+    @Expose
+	@Nullable
+    public java.util.Calendar employeeHireDate;
+
+    /**
      * The Employee Id.
      * The employee identifier assigned to the user by the organization. Returned only on $select. Supports $filter.
      */
@@ -213,6 +224,24 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String employeeId;
+
+    /**
+     * The Employee Org Data.
+     * Represents organization data (e.g. division and costCenter) associated with a user. Returned only on $select.
+     */
+    @SerializedName(value = "employeeOrgData", alternate = {"EmployeeOrgData"})
+    @Expose
+	@Nullable
+    public EmployeeOrgData employeeOrgData;
+
+    /**
+     * The Employee Type.
+     * Captures enterprise worker type: Employee, Contractor, Consultant, Vendor, etc. Returned only on $select. Supports $filter.
+     */
+    @SerializedName(value = "employeeType", alternate = {"EmployeeType"})
+    @Expose
+	@Nullable
+    public String employeeType;
 
     /**
      * The External User State.
@@ -297,7 +326,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Legal Age Group Classification.
-     * Used by enterprise applications to determine the legal age group of the user. This property is read-only and calculated based on ageGroup and consentProvidedForMinor properties. Allowed values: null, minorWithOutParentalConsent, minorWithParentalConsent, minorNoParentalConsentRequired, notAdult and adult. Refer to the legal age group property definitions for further information.)
+     * Used by enterprise applications to determine the legal age group of the user. This property is read-only and calculated based on ageGroup and consentProvidedForMinor properties. Allowed values: null, minorWithOutParentalConsent, minorWithParentalConsent, minorNoParentalConsentRequired, notAdult and adult. Refer to the legal age group property definitions for further information.
      */
     @SerializedName(value = "legalAgeGroupClassification", alternate = {"LegalAgeGroupClassification"})
     @Expose
@@ -1012,6 +1041,15 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @Expose
 	@Nullable
     public OnlineMeetingCollectionPage onlineMeetings;
+
+    /**
+     * The Presence.
+     * 
+     */
+    @SerializedName(value = "presence", alternate = {"Presence"})
+    @Expose
+	@Nullable
+    public Presence presence;
 
     /**
      * The Joined Teams.

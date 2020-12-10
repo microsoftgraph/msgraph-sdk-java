@@ -12,6 +12,10 @@ package com.microsoft.graph.models.generated;
 public enum CategoryColor
 {
     /**
+    * none
+    */
+    NONE,
+    /**
     * preset0
     */
     PRESET0,
@@ -19,10 +23,6 @@ public enum CategoryColor
     * preset1
     */
     PRESET1,
-    /**
-    * none
-    */
-    NONE,
     /**
     * preset2
     */

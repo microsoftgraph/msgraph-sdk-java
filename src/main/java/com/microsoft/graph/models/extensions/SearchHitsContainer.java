@@ -41,7 +41,7 @@ public class SearchHitsContainer implements IJsonBackedObject {
 
     /**
      * The Hits.
-     * 
+     * A collection of the search results.
      */
     @SerializedName(value = "hits", alternate = {"Hits"})
     @Expose
@@ -50,7 +50,7 @@ public class SearchHitsContainer implements IJsonBackedObject {
 
     /**
      * The More Results Available.
-     * 
+     * Provides information if more results are available. Based on this information, you can adjust the from and size properties of the searchRequest accordingly.
      */
     @SerializedName(value = "moreResultsAvailable", alternate = {"MoreResultsAvailable"})
     @Expose
@@ -59,7 +59,7 @@ public class SearchHitsContainer implements IJsonBackedObject {
 
     /**
      * The Total.
-     * 
+     * The total number of results. Note this is not the number of results on the page, but the total number of results satisfying the query.
      */
     @SerializedName(value = "total", alternate = {"Total"})
     @Expose

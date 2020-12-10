@@ -208,7 +208,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * Sign-in status. Possible values include Success and Failure.
+     * Sign-in status. Includes the error code and description of the error (in case of a sign-in failure).
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

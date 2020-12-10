@@ -12,6 +12,10 @@ package com.microsoft.graph.models.generated;
 public enum OnenoteUserRole
 {
     /**
+    * None
+    */
+    NONE,
+    /**
     * Owner
     */
     OWNER,
@@ -19,10 +23,6 @@ public enum OnenoteUserRole
     * Contributor
     */
     CONTRIBUTOR,
-    /**
-    * None
-    */
-    NONE,
     /**
     * Reader
     */

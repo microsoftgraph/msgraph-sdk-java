@@ -9,12 +9,15 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CloudCommunications;
+import com.microsoft.graph.models.extensions.Presence;
 import com.microsoft.graph.requests.extensions.CallCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CallRequestBuilder;
 import com.microsoft.graph.callrecords.requests.extensions.CallRecordCollectionRequestBuilder;
 import com.microsoft.graph.callrecords.requests.extensions.CallRecordRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnlineMeetingRequestBuilder;
+import com.microsoft.graph.requests.extensions.PresenceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PresenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -122,5 +125,35 @@ public class CloudCommunicationsRequestBuilder extends BaseRequestBuilder<CloudC
     @Nonnull
     public OnlineMeetingRequestBuilder onlineMeetings(@Nonnull final String id) {
         return new OnlineMeetingRequestBuilder(getRequestUrlWithAdditionalSegment("onlineMeetings") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the Presence collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public PresenceCollectionRequestBuilder presences() {
+        return new PresenceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("presences"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the Presence item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public PresenceRequestBuilder presences(@Nonnull final String id) {
+        return new PresenceRequestBuilder(getRequestUrlWithAdditionalSegment("presences") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param ids the ids
+     */
+    @Nonnull
+    public CloudCommunicationsGetPresencesByUserIdCollectionRequestBuilder getPresencesByUserId(@Nullable final java.util.List<String> ids) {
+        return new CloudCommunicationsGetPresencesByUserIdCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getPresencesByUserId"), getClient(), null, ids);
     }
 }

@@ -12,10 +12,12 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.extensions.Call;
 import com.microsoft.graph.callrecords.models.extensions.CallRecord;
 import com.microsoft.graph.models.extensions.OnlineMeeting;
+import com.microsoft.graph.models.extensions.Presence;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.CallCollectionPage;
 import com.microsoft.graph.callrecords.requests.extensions.CallRecordCollectionPage;
 import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionPage;
+import com.microsoft.graph.requests.extensions.PresenceCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -58,6 +60,15 @@ public class CloudCommunications extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public OnlineMeetingCollectionPage onlineMeetings;
+
+    /**
+     * The Presences.
+     * 
+     */
+    @SerializedName(value = "presences", alternate = {"Presences"})
+    @Expose
+	@Nullable
+    public PresenceCollectionPage presences;
 
 
     /**
@@ -112,6 +123,10 @@ public class CloudCommunications extends Entity implements IJsonBackedObject {
 
         if (json.has("onlineMeetings")) {
             onlineMeetings = serializer.deserializeObject(json.get("onlineMeetings").toString(), OnlineMeetingCollectionPage.class);
+        }
+
+        if (json.has("presences")) {
+            presences = serializer.deserializeObject(json.get("presences").toString(), PresenceCollectionPage.class);
         }
     }
 }

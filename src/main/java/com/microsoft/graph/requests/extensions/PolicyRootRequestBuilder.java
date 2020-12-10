@@ -23,6 +23,7 @@ import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionRequ
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.AuthorizationPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -91,6 +92,16 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
     @Nonnull
     public ActivityBasedTimeoutPolicyRequestBuilder activityBasedTimeoutPolicies(@Nonnull final String id) {
         return new ActivityBasedTimeoutPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("activityBasedTimeoutPolicies") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for AuthorizationPolicy
+     *
+     * @return the AuthorizationPolicyRequestBuilder instance
+     */
+    @Nonnull
+    public AuthorizationPolicyRequestBuilder authorizationPolicy() {
+        return new AuthorizationPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("authorizationPolicy"), getClient(), null);
     }
     /**
      *  Gets a request builder for the ClaimsMappingPolicy collection

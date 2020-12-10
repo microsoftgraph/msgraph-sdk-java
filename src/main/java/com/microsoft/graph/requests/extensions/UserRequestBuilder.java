@@ -75,6 +75,7 @@ import com.microsoft.graph.requests.extensions.PlannerUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.OfficeGraphInsightsRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteRequestBuilder;
+import com.microsoft.graph.requests.extensions.PresenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserTeamworkRequestBuilder;
 import com.microsoft.graph.requests.extensions.TodoRequestBuilder;
 import java.util.Arrays;
@@ -1284,6 +1285,16 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     @Nonnull
     public OnlineMeetingRequestBuilder onlineMeetings(@Nonnull final String id) {
         return new OnlineMeetingRequestBuilder(getRequestUrlWithAdditionalSegment("onlineMeetings") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for Presence
+     *
+     * @return the PresenceRequestBuilder instance
+     */
+    @Nonnull
+    public PresenceRequestBuilder presence() {
+        return new PresenceRequestBuilder(getRequestUrlWithAdditionalSegment("presence"), getClient(), null);
     }
     /**
      *  Gets a request builder for the Team collection

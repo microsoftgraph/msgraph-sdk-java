@@ -9,12 +9,15 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.extensions.AlertDetection;
 import com.microsoft.graph.models.extensions.CloudAppSecurityState;
 import com.microsoft.graph.models.generated.AlertFeedback;
 import com.microsoft.graph.models.extensions.FileSecurityState;
 import com.microsoft.graph.models.extensions.AlertHistoryState;
 import com.microsoft.graph.models.extensions.HostSecurityState;
+import com.microsoft.graph.models.extensions.InvestigationSecurityState;
 import com.microsoft.graph.models.extensions.MalwareState;
+import com.microsoft.graph.models.extensions.MessageSecurityState;
 import com.microsoft.graph.models.extensions.NetworkConnection;
 import com.microsoft.graph.models.extensions.Process;
 import com.microsoft.graph.models.extensions.RegistryKeyState;
@@ -22,6 +25,7 @@ import com.microsoft.graph.models.extensions.SecurityResource;
 import com.microsoft.graph.models.generated.AlertSeverity;
 import com.microsoft.graph.models.generated.AlertStatus;
 import com.microsoft.graph.models.extensions.AlertTrigger;
+import com.microsoft.graph.models.extensions.UriClickSecurityState;
 import com.microsoft.graph.models.extensions.UserSecurityState;
 import com.microsoft.graph.models.extensions.SecurityVendorInformation;
 import com.microsoft.graph.models.extensions.VulnerabilityState;
@@ -50,6 +54,15 @@ public class Alert extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String activityGroupName;
+
+    /**
+     * The Alert Detections.
+     * 
+     */
+    @SerializedName(value = "alertDetections", alternate = {"AlertDetections"})
+    @Expose
+	@Nullable
+    public java.util.List<AlertDetection> alertDetections;
 
     /**
      * The Assigned To.
@@ -205,6 +218,24 @@ public class Alert extends Entity implements IJsonBackedObject {
     public java.util.List<String> incidentIds;
 
     /**
+     * The Investigation Security States.
+     * 
+     */
+    @SerializedName(value = "investigationSecurityStates", alternate = {"InvestigationSecurityStates"})
+    @Expose
+	@Nullable
+    public java.util.List<InvestigationSecurityState> investigationSecurityStates;
+
+    /**
+     * The Last Event Date Time.
+     * 
+     */
+    @SerializedName(value = "lastEventDateTime", alternate = {"LastEventDateTime"})
+    @Expose
+	@Nullable
+    public java.util.Calendar lastEventDateTime;
+
+    /**
      * The Last Modified Date Time.
      * Time at which the alert entity was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
      */
@@ -221,6 +252,15 @@ public class Alert extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.util.List<MalwareState> malwareStates;
+
+    /**
+     * The Message Security States.
+     * 
+     */
+    @SerializedName(value = "messageSecurityStates", alternate = {"MessageSecurityStates"})
+    @Expose
+	@Nullable
+    public java.util.List<MessageSecurityState> messageSecurityStates;
 
     /**
      * The Network Connections.
@@ -320,6 +360,15 @@ public class Alert extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.util.List<AlertTrigger> triggers;
+
+    /**
+     * The Uri Click Security States.
+     * 
+     */
+    @SerializedName(value = "uriClickSecurityStates", alternate = {"UriClickSecurityStates"})
+    @Expose
+	@Nullable
+    public java.util.List<UriClickSecurityState> uriClickSecurityStates;
 
     /**
      * The User States.

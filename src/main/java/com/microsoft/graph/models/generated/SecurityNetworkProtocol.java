@@ -12,6 +12,10 @@ package com.microsoft.graph.models.generated;
 public enum SecurityNetworkProtocol
 {
     /**
+    * unknown
+    */
+    UNKNOWN,
+    /**
     * ip
     */
     IP,
@@ -19,10 +23,6 @@ public enum SecurityNetworkProtocol
     * icmp
     */
     ICMP,
-    /**
-    * unknown
-    */
-    UNKNOWN,
     /**
     * igmp
     */

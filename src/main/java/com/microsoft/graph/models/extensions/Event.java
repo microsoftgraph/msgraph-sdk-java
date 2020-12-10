@@ -105,6 +105,15 @@ public class Event extends OutlookItem implements IJsonBackedObject {
     public Boolean hasAttachments;
 
     /**
+     * The Hide Attendees.
+     * 
+     */
+    @SerializedName(value = "hideAttendees", alternate = {"HideAttendees"})
+    @Expose
+	@Nullable
+    public Boolean hideAttendees;
+
+    /**
      * The ICal UId.
      * A unique identifier for an event across calendars. This ID is different for each occurrence in a recurring series. Read-only.
      */

@@ -204,7 +204,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Received Date Time.
-     * The date and time the message was received.
+     * The date and time the message was received.  The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
      */
     @SerializedName(value = "receivedDateTime", alternate = {"ReceivedDateTime"})
     @Expose
@@ -231,7 +231,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Sent Date Time.
-     * The date and time the message was sent.
+     * The date and time the message was sent.  The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
      */
     @SerializedName(value = "sentDateTime", alternate = {"SentDateTime"})
     @Expose
