@@ -67,13 +67,9 @@ public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> impleme
      * @param nextRequestBuilder the request builder for the next page
      */
     public BaseCollectionPage(final List<T1> pageContents, final T2 nextRequestBuilder) {
-        if(pageContents == null) {
-            this.pageContents = new ArrayList<T1>();
-        } else {
-            // CollectionPages are never directly modifiable, either 'update'/'delete' the specific child or 'add' the new
-            // object to the 'children' of the collection.
-            this.pageContents = Collections.unmodifiableList(pageContents);
-        }
+        // CollectionPages are never directly modifiable, either 'update'/'delete' the specific child or 'add' the new
+        // object to the 'children' of the collection.
+        this.pageContents = Collections.unmodifiableList(pageContents == null ? new ArrayList<T1>() : pageContents);
         requestBuilder = nextRequestBuilder;
     }
 
