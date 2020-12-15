@@ -1,16 +1,16 @@
 // ------------------------------------------------------------------------------
 // Copyright (c) 2017 Microsoft Corporation
-// 
+//
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
 // to use, copy, modify, merge, publish, distribute, sub-license, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -26,6 +26,7 @@ import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import com.microsoft.graph.serializer.ISerializer;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -68,7 +69,7 @@ public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> impleme
     public BaseCollectionPage(final List<T1> pageContents, final T2 nextRequestBuilder) {
         // CollectionPages are never directly modifiable, either 'update'/'delete' the specific child or 'add' the new
         // object to the 'children' of the collection.
-        this.pageContents = Collections.unmodifiableList(pageContents);
+        this.pageContents = Collections.unmodifiableList(pageContents == null ? new ArrayList<T1>() : pageContents);
         requestBuilder = nextRequestBuilder;
     }
 
