@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodCollectionRequestBuilder.java.tt
+// Template Source: BaseMethodCollectionRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -17,6 +17,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.ListItemGetActivitiesByIntervalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListItemGetActivitiesByIntervalCollectionRequest;
 import com.microsoft.graph.requests.extensions.ListItemGetActivitiesByIntervalCollectionResponse;
+import com.microsoft.graph.models.extensions.ListItemGetActivitiesByIntervalBody;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseFunctionCollectionRequestBuilder;
@@ -44,22 +45,12 @@ public class ListItemGetActivitiesByIntervalCollectionRequestBuilder extends Bas
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param startDateTime the startDateTime
-     * @param endDateTime the endDateTime
-     * @param interval the interval
+     * @param parameters     the parameters for the service method
      */
-    public ListItemGetActivitiesByIntervalCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final String startDateTime, @Nullable final String endDateTime, @Nullable final String interval) {
+    public ListItemGetActivitiesByIntervalCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ListItemGetActivitiesByIntervalBody parameters) {
         super(requestUrl, client, requestOptions, ListItemGetActivitiesByIntervalCollectionRequestBuilder.class, ListItemGetActivitiesByIntervalCollectionRequest.class);
-     	 if(startDateTime!=null){
-			functionOptions.add(new com.microsoft.graph.options.FunctionOption("startDateTime", startDateTime));
-		}
-       	 if(endDateTime!=null){
-			functionOptions.add(new com.microsoft.graph.options.FunctionOption("endDateTime", endDateTime));
-		}
-       	 if(interval!=null){
-			functionOptions.add(new com.microsoft.graph.options.FunctionOption("interval", interval));
-		}
-      }
+        functionOptions = parameters.getFunctionOptions();
+    }
     
     /**
      * Creates the request
@@ -71,11 +62,6 @@ public class ListItemGetActivitiesByIntervalCollectionRequestBuilder extends Bas
     @Nonnull
     public ListItemGetActivitiesByIntervalCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final ListItemGetActivitiesByIntervalCollectionRequest request = super.buildRequest(requestOptions);
-
-      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
-            request.addFunctionOption(option);
-      }
-
         return request;
     }
 }

@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.EventAcceptRequest;
 import com.microsoft.graph.models.extensions.Event;
 
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.EventAcceptBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,19 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class EventAcceptRequestBuilder extends BaseActionRequestBuilder<Event> {
 
+    private EventAcceptBody body;
     /**
      * The request builder for this EventAccept
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param comment the comment
-     * @param sendResponse the sendResponse
+     * @param parameters     the parameters for the service method
      */
-    public EventAcceptRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final String comment, @Nullable final Boolean sendResponse) {
+    public EventAcceptRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final EventAcceptBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("comment", comment);
-        bodyParams.put("sendResponse", sendResponse);
+        this.body = parameters;
     }
 
     /**
@@ -57,17 +57,10 @@ public class EventAcceptRequestBuilder extends BaseActionRequestBuilder<Event> {
         EventAcceptRequest request = new EventAcceptRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("comment")) {
-            request.body.comment = getParameter("comment");
-        }
-
-        if (hasParameter("sendResponse")) {
-            request.body.sendResponse = getParameter("sendResponse");
-        }
-
-        return request;
+            return request;
     }
 }

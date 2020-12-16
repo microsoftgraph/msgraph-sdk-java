@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsIsoWeekNumReques
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsIsoWeekNumBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,17 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsIsoWeekNumRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsIsoWeekNumBody body;
     /**
      * The request builder for this WorkbookFunctionsIsoWeekNum
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param date the date
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsIsoWeekNumRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement date) {
+    public WorkbookFunctionsIsoWeekNumRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsIsoWeekNumBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("date", date);
+        this.body = parameters;
     }
 
     /**
@@ -55,13 +57,10 @@ public class WorkbookFunctionsIsoWeekNumRequestBuilder extends BaseActionRequest
         WorkbookFunctionsIsoWeekNumRequest request = new WorkbookFunctionsIsoWeekNumRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("date")) {
-            request.body.date = getParameter("date");
-        }
-
-        return request;
+            return request;
     }
 }

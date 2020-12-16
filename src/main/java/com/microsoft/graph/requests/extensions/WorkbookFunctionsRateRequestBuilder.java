@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsRateRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsRateBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,27 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsRateRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsRateBody body;
     /**
      * The request builder for this WorkbookFunctionsRate
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param nper the nper
-     * @param pmt the pmt
-     * @param pv the pv
-     * @param fv the fv
-     * @param type the type
-     * @param guess the guess
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsRateRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement nper, @Nullable final com.google.gson.JsonElement pmt, @Nullable final com.google.gson.JsonElement pv, @Nullable final com.google.gson.JsonElement fv, @Nullable final com.google.gson.JsonElement type, @Nullable final com.google.gson.JsonElement guess) {
+    public WorkbookFunctionsRateRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsRateBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("nper", nper);
-        bodyParams.put("pmt", pmt);
-        bodyParams.put("pv", pv);
-        bodyParams.put("fv", fv);
-        bodyParams.put("type", type);
-        bodyParams.put("guess", guess);
+        this.body = parameters;
     }
 
     /**
@@ -65,33 +57,10 @@ public class WorkbookFunctionsRateRequestBuilder extends BaseActionRequestBuilde
         WorkbookFunctionsRateRequest request = new WorkbookFunctionsRateRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("nper")) {
-            request.body.nper = getParameter("nper");
-        }
-
-        if (hasParameter("pmt")) {
-            request.body.pmt = getParameter("pmt");
-        }
-
-        if (hasParameter("pv")) {
-            request.body.pv = getParameter("pv");
-        }
-
-        if (hasParameter("fv")) {
-            request.body.fv = getParameter("fv");
-        }
-
-        if (hasParameter("type")) {
-            request.body.type = getParameter("type");
-        }
-
-        if (hasParameter("guess")) {
-            request.body.guess = getParameter("guess");
-        }
-
-        return request;
+            return request;
     }
 }

@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodCollectionRequestBuilder.java.tt
+// Template Source: BaseMethodCollectionRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -17,6 +17,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignCollectionRequest;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignCollectionResponse;
+import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignBody;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
@@ -28,20 +29,19 @@ import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
  */
 public class DeviceCompliancePolicyAssignCollectionRequestBuilder extends BaseActionCollectionRequestBuilder<DeviceCompliancePolicyAssignment, DeviceCompliancePolicyAssignCollectionRequestBuilder, DeviceCompliancePolicyAssignCollectionResponse, DeviceCompliancePolicyAssignCollectionPage, DeviceCompliancePolicyAssignCollectionRequest> {
 
+    private DeviceCompliancePolicyAssignBody body;
     /**
      * The request builder for this collection of DeviceCompliancePolicy
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param assignments the assignments
+     * @param parameters     the parameters for the service method
      */
-    public DeviceCompliancePolicyAssignCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final java.util.List<DeviceCompliancePolicyAssignment> assignments) {
+    public DeviceCompliancePolicyAssignCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DeviceCompliancePolicyAssignBody parameters) {
         super(requestUrl, client, requestOptions, DeviceCompliancePolicyAssignCollectionRequestBuilder.class, DeviceCompliancePolicyAssignCollectionRequest.class);
-  	 if(assignments!=null){
-			bodyParams.put("assignments", assignments);
-		}
-      }
+        this.body = parameters;
+    }
     
     /**
      * Creates the request
@@ -53,11 +53,7 @@ public class DeviceCompliancePolicyAssignCollectionRequestBuilder extends BaseAc
     @Nonnull
     public DeviceCompliancePolicyAssignCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final DeviceCompliancePolicyAssignCollectionRequest request = super.buildRequest(requestOptions);
-
-        if (hasParameter("assignments")) {
-            request.body.assignments = getParameter("assignments");
-        }
-  
-        return request;
+            request.body = this.body;
+            return request;
     }
 }

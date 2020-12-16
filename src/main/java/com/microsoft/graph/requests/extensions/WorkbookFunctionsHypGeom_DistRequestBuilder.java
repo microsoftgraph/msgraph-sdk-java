@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsHypGeom_DistRequ
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsHypGeom_DistBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,25 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsHypGeom_DistRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsHypGeom_DistBody body;
     /**
      * The request builder for this WorkbookFunctionsHypGeom_Dist
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param sampleS the sampleS
-     * @param numberSample the numberSample
-     * @param populationS the populationS
-     * @param numberPop the numberPop
-     * @param cumulative the cumulative
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsHypGeom_DistRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement sampleS, @Nullable final com.google.gson.JsonElement numberSample, @Nullable final com.google.gson.JsonElement populationS, @Nullable final com.google.gson.JsonElement numberPop, @Nullable final com.google.gson.JsonElement cumulative) {
+    public WorkbookFunctionsHypGeom_DistRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsHypGeom_DistBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("sampleS", sampleS);
-        bodyParams.put("numberSample", numberSample);
-        bodyParams.put("populationS", populationS);
-        bodyParams.put("numberPop", numberPop);
-        bodyParams.put("cumulative", cumulative);
+        this.body = parameters;
     }
 
     /**
@@ -63,29 +57,10 @@ public class WorkbookFunctionsHypGeom_DistRequestBuilder extends BaseActionReque
         WorkbookFunctionsHypGeom_DistRequest request = new WorkbookFunctionsHypGeom_DistRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("sampleS")) {
-            request.body.sampleS = getParameter("sampleS");
-        }
-
-        if (hasParameter("numberSample")) {
-            request.body.numberSample = getParameter("numberSample");
-        }
-
-        if (hasParameter("populationS")) {
-            request.body.populationS = getParameter("populationS");
-        }
-
-        if (hasParameter("numberPop")) {
-            request.body.numberPop = getParameter("numberPop");
-        }
-
-        if (hasParameter("cumulative")) {
-            request.body.cumulative = getParameter("cumulative");
-        }
-
-        return request;
+            return request;
     }
 }

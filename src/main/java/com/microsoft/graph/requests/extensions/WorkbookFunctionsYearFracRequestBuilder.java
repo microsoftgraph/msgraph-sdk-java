@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsYearFracRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsYearFracBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,21 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsYearFracRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsYearFracBody body;
     /**
      * The request builder for this WorkbookFunctionsYearFrac
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param startDate the startDate
-     * @param endDate the endDate
-     * @param basis the basis
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsYearFracRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement startDate, @Nullable final com.google.gson.JsonElement endDate, @Nullable final com.google.gson.JsonElement basis) {
+    public WorkbookFunctionsYearFracRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsYearFracBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("startDate", startDate);
-        bodyParams.put("endDate", endDate);
-        bodyParams.put("basis", basis);
+        this.body = parameters;
     }
 
     /**
@@ -59,21 +57,10 @@ public class WorkbookFunctionsYearFracRequestBuilder extends BaseActionRequestBu
         WorkbookFunctionsYearFracRequest request = new WorkbookFunctionsYearFracRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("startDate")) {
-            request.body.startDate = getParameter("startDate");
-        }
-
-        if (hasParameter("endDate")) {
-            request.body.endDate = getParameter("endDate");
-        }
-
-        if (hasParameter("basis")) {
-            request.body.basis = getParameter("basis");
-        }
-
-        return request;
+            return request;
     }
 }

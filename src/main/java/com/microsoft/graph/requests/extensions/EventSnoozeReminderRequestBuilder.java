@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.EventSnoozeReminderRequest;
 import com.microsoft.graph.models.extensions.Event;
 import com.microsoft.graph.models.extensions.DateTimeTimeZone;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.EventSnoozeReminderBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,17 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class EventSnoozeReminderRequestBuilder extends BaseActionRequestBuilder<Event> {
 
+    private EventSnoozeReminderBody body;
     /**
      * The request builder for this EventSnoozeReminder
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param newReminderTime the newReminderTime
+     * @param parameters     the parameters for the service method
      */
-    public EventSnoozeReminderRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final DateTimeTimeZone newReminderTime) {
+    public EventSnoozeReminderRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final EventSnoozeReminderBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("newReminderTime", newReminderTime);
+        this.body = parameters;
     }
 
     /**
@@ -55,13 +57,10 @@ public class EventSnoozeReminderRequestBuilder extends BaseActionRequestBuilder<
         EventSnoozeReminderRequest request = new EventSnoozeReminderRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("newReminderTime")) {
-            request.body.newReminderTime = getParameter("newReminderTime");
-        }
-
-        return request;
+            return request;
     }
 }

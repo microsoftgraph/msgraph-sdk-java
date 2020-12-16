@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.CallRejectRequest;
 import com.microsoft.graph.models.extensions.Call;
 import com.microsoft.graph.models.generated.RejectReason;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.CallRejectBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,19 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class CallRejectRequestBuilder extends BaseActionRequestBuilder<Call> {
 
+    private CallRejectBody body;
     /**
      * The request builder for this CallReject
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param reason the reason
-     * @param callbackUri the callbackUri
+     * @param parameters     the parameters for the service method
      */
-    public CallRejectRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final RejectReason reason, @Nullable final String callbackUri) {
+    public CallRejectRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CallRejectBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("reason", reason);
-        bodyParams.put("callbackUri", callbackUri);
+        this.body = parameters;
     }
 
     /**
@@ -57,17 +57,10 @@ public class CallRejectRequestBuilder extends BaseActionRequestBuilder<Call> {
         CallRejectRequest request = new CallRejectRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("reason")) {
-            request.body.reason = getParameter("reason");
-        }
-
-        if (hasParameter("callbackUri")) {
-            request.body.callbackUri = getParameter("callbackUri");
-        }
-
-        return request;
+            return request;
     }
 }

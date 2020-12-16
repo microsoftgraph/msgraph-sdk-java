@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsDateRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDateBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,21 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsDateRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsDateBody body;
     /**
      * The request builder for this WorkbookFunctionsDate
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param year the year
-     * @param month the month
-     * @param day the day
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsDateRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement year, @Nullable final com.google.gson.JsonElement month, @Nullable final com.google.gson.JsonElement day) {
+    public WorkbookFunctionsDateRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsDateBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("year", year);
-        bodyParams.put("month", month);
-        bodyParams.put("day", day);
+        this.body = parameters;
     }
 
     /**
@@ -59,21 +57,10 @@ public class WorkbookFunctionsDateRequestBuilder extends BaseActionRequestBuilde
         WorkbookFunctionsDateRequest request = new WorkbookFunctionsDateRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("year")) {
-            request.body.year = getParameter("year");
-        }
-
-        if (hasParameter("month")) {
-            request.body.month = getParameter("month");
-        }
-
-        if (hasParameter("day")) {
-            request.body.day = getParameter("day");
-        }
-
-        return request;
+            return request;
     }
 }

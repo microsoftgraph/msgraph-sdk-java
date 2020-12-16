@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsTextRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsTextBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,19 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsTextRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsTextBody body;
     /**
      * The request builder for this WorkbookFunctionsText
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param value the value
-     * @param formatText the formatText
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsTextRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement value, @Nullable final com.google.gson.JsonElement formatText) {
+    public WorkbookFunctionsTextRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsTextBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("value", value);
-        bodyParams.put("formatText", formatText);
+        this.body = parameters;
     }
 
     /**
@@ -57,17 +57,10 @@ public class WorkbookFunctionsTextRequestBuilder extends BaseActionRequestBuilde
         WorkbookFunctionsTextRequest request = new WorkbookFunctionsTextRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("value")) {
-            request.body.value = getParameter("value");
-        }
-
-        if (hasParameter("formatText")) {
-            request.body.formatText = getParameter("formatText");
-        }
-
-        return request;
+            return request;
     }
 }

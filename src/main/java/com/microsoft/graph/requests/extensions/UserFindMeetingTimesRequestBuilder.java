@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -11,6 +11,7 @@ import com.microsoft.graph.models.extensions.LocationConstraint;
 import com.microsoft.graph.models.extensions.TimeConstraint;
 import com.microsoft.graph.models.extensions.MeetingTimeSuggestionsResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.UserFindMeetingTimesBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -23,31 +24,18 @@ import javax.annotation.Nonnull;
  */
 public class UserFindMeetingTimesRequestBuilder extends BaseActionRequestBuilder<MeetingTimeSuggestionsResult> {
 
+    private UserFindMeetingTimesBody body;
     /**
      * The request builder for this UserFindMeetingTimes
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param attendees the attendees
-     * @param locationConstraint the locationConstraint
-     * @param timeConstraint the timeConstraint
-     * @param meetingDuration the meetingDuration
-     * @param maxCandidates the maxCandidates
-     * @param isOrganizerOptional the isOrganizerOptional
-     * @param returnSuggestionReasons the returnSuggestionReasons
-     * @param minimumAttendeePercentage the minimumAttendeePercentage
+     * @param parameters     the parameters for the service method
      */
-    public UserFindMeetingTimesRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final java.util.List<AttendeeBase> attendees, @Nullable final LocationConstraint locationConstraint, @Nullable final TimeConstraint timeConstraint, @Nullable final javax.xml.datatype.Duration meetingDuration, @Nullable final Integer maxCandidates, @Nullable final Boolean isOrganizerOptional, @Nullable final Boolean returnSuggestionReasons, @Nullable final Double minimumAttendeePercentage) {
+    public UserFindMeetingTimesRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final UserFindMeetingTimesBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("attendees", attendees);
-        bodyParams.put("locationConstraint", locationConstraint);
-        bodyParams.put("timeConstraint", timeConstraint);
-        bodyParams.put("meetingDuration", meetingDuration);
-        bodyParams.put("maxCandidates", maxCandidates);
-        bodyParams.put("isOrganizerOptional", isOrganizerOptional);
-        bodyParams.put("returnSuggestionReasons", returnSuggestionReasons);
-        bodyParams.put("minimumAttendeePercentage", minimumAttendeePercentage);
+        this.body = parameters;
     }
 
     /**
@@ -72,41 +60,10 @@ public class UserFindMeetingTimesRequestBuilder extends BaseActionRequestBuilder
         UserFindMeetingTimesRequest request = new UserFindMeetingTimesRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("attendees")) {
-            request.body.attendees = getParameter("attendees");
-        }
-
-        if (hasParameter("locationConstraint")) {
-            request.body.locationConstraint = getParameter("locationConstraint");
-        }
-
-        if (hasParameter("timeConstraint")) {
-            request.body.timeConstraint = getParameter("timeConstraint");
-        }
-
-        if (hasParameter("meetingDuration")) {
-            request.body.meetingDuration = getParameter("meetingDuration");
-        }
-
-        if (hasParameter("maxCandidates")) {
-            request.body.maxCandidates = getParameter("maxCandidates");
-        }
-
-        if (hasParameter("isOrganizerOptional")) {
-            request.body.isOrganizerOptional = getParameter("isOrganizerOptional");
-        }
-
-        if (hasParameter("returnSuggestionReasons")) {
-            request.body.returnSuggestionReasons = getParameter("returnSuggestionReasons");
-        }
-
-        if (hasParameter("minimumAttendeePercentage")) {
-            request.body.minimumAttendeePercentage = getParameter("minimumAttendeePercentage");
-        }
-
-        return request;
+            return request;
     }
 }

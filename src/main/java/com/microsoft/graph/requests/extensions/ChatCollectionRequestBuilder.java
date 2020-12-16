@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseEntityCollectionRequestBuilder.java.tt
+// Template Source: BaseEntityCollectionRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -45,7 +45,7 @@ public class ChatCollectionRequestBuilder extends BaseCollectionRequestBuilder<C
     /**
      * Gets a builder to execute the method
      * @return the request builder collection
-     */
+          */
     @Nonnull
     public ChatGetAllMessagesCollectionRequestBuilder getAllMessages() {
         return new ChatGetAllMessagesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAllMessages"), getClient(), null);

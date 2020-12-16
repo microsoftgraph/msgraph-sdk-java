@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.UserExportPersonalDataRequest;
 import com.microsoft.graph.models.extensions.User;
 
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.UserExportPersonalDataBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,17 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class UserExportPersonalDataRequestBuilder extends BaseActionRequestBuilder<User> {
 
+    private UserExportPersonalDataBody body;
     /**
      * The request builder for this UserExportPersonalData
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param storageLocation the storageLocation
+     * @param parameters     the parameters for the service method
      */
-    public UserExportPersonalDataRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final String storageLocation) {
+    public UserExportPersonalDataRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final UserExportPersonalDataBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("storageLocation", storageLocation);
+        this.body = parameters;
     }
 
     /**
@@ -55,13 +57,10 @@ public class UserExportPersonalDataRequestBuilder extends BaseActionRequestBuild
         UserExportPersonalDataRequest request = new UserExportPersonalDataRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("storageLocation")) {
-            request.body.storageLocation = getParameter("storageLocation");
-        }
-
-        return request;
+            return request;
     }
 }

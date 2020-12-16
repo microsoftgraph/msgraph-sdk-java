@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsReplaceBRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsReplaceBBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,23 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsReplaceBRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsReplaceBBody body;
     /**
      * The request builder for this WorkbookFunctionsReplaceB
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param oldText the oldText
-     * @param startNum the startNum
-     * @param numBytes the numBytes
-     * @param newText the newText
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsReplaceBRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement oldText, @Nullable final com.google.gson.JsonElement startNum, @Nullable final com.google.gson.JsonElement numBytes, @Nullable final com.google.gson.JsonElement newText) {
+    public WorkbookFunctionsReplaceBRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsReplaceBBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("oldText", oldText);
-        bodyParams.put("startNum", startNum);
-        bodyParams.put("numBytes", numBytes);
-        bodyParams.put("newText", newText);
+        this.body = parameters;
     }
 
     /**
@@ -61,25 +57,10 @@ public class WorkbookFunctionsReplaceBRequestBuilder extends BaseActionRequestBu
         WorkbookFunctionsReplaceBRequest request = new WorkbookFunctionsReplaceBRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("oldText")) {
-            request.body.oldText = getParameter("oldText");
-        }
-
-        if (hasParameter("startNum")) {
-            request.body.startNum = getParameter("startNum");
-        }
-
-        if (hasParameter("numBytes")) {
-            request.body.numBytes = getParameter("numBytes");
-        }
-
-        if (hasParameter("newText")) {
-            request.body.newText = getParameter("newText");
-        }
-
-        return request;
+            return request;
     }
 }

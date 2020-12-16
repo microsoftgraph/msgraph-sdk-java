@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.ServicePrincipalRemovePasswordReq
 import com.microsoft.graph.models.extensions.ServicePrincipal;
 
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.ServicePrincipalRemovePasswordBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,17 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class ServicePrincipalRemovePasswordRequestBuilder extends BaseActionRequestBuilder<ServicePrincipal> {
 
+    private ServicePrincipalRemovePasswordBody body;
     /**
      * The request builder for this ServicePrincipalRemovePassword
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param keyId the keyId
+     * @param parameters     the parameters for the service method
      */
-    public ServicePrincipalRemovePasswordRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final java.util.UUID keyId) {
+    public ServicePrincipalRemovePasswordRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ServicePrincipalRemovePasswordBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("keyId", keyId);
+        this.body = parameters;
     }
 
     /**
@@ -55,13 +57,10 @@ public class ServicePrincipalRemovePasswordRequestBuilder extends BaseActionRequ
         ServicePrincipalRemovePasswordRequest request = new ServicePrincipalRemovePasswordRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("keyId")) {
-            request.body.keyId = getParameter("keyId");
-        }
-
-        return request;
+            return request;
     }
 }

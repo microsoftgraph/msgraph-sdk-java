@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsOddLPriceRequest
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsOddLPriceBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,31 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsOddLPriceRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsOddLPriceBody body;
     /**
      * The request builder for this WorkbookFunctionsOddLPrice
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param settlement the settlement
-     * @param maturity the maturity
-     * @param lastInterest the lastInterest
-     * @param rate the rate
-     * @param yld the yld
-     * @param redemption the redemption
-     * @param frequency the frequency
-     * @param basis the basis
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsOddLPriceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement settlement, @Nullable final com.google.gson.JsonElement maturity, @Nullable final com.google.gson.JsonElement lastInterest, @Nullable final com.google.gson.JsonElement rate, @Nullable final com.google.gson.JsonElement yld, @Nullable final com.google.gson.JsonElement redemption, @Nullable final com.google.gson.JsonElement frequency, @Nullable final com.google.gson.JsonElement basis) {
+    public WorkbookFunctionsOddLPriceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsOddLPriceBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("settlement", settlement);
-        bodyParams.put("maturity", maturity);
-        bodyParams.put("lastInterest", lastInterest);
-        bodyParams.put("rate", rate);
-        bodyParams.put("yld", yld);
-        bodyParams.put("redemption", redemption);
-        bodyParams.put("frequency", frequency);
-        bodyParams.put("basis", basis);
+        this.body = parameters;
     }
 
     /**
@@ -69,41 +57,10 @@ public class WorkbookFunctionsOddLPriceRequestBuilder extends BaseActionRequestB
         WorkbookFunctionsOddLPriceRequest request = new WorkbookFunctionsOddLPriceRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("settlement")) {
-            request.body.settlement = getParameter("settlement");
-        }
-
-        if (hasParameter("maturity")) {
-            request.body.maturity = getParameter("maturity");
-        }
-
-        if (hasParameter("lastInterest")) {
-            request.body.lastInterest = getParameter("lastInterest");
-        }
-
-        if (hasParameter("rate")) {
-            request.body.rate = getParameter("rate");
-        }
-
-        if (hasParameter("yld")) {
-            request.body.yld = getParameter("yld");
-        }
-
-        if (hasParameter("redemption")) {
-            request.body.redemption = getParameter("redemption");
-        }
-
-        if (hasParameter("frequency")) {
-            request.body.frequency = getParameter("frequency");
-        }
-
-        if (hasParameter("basis")) {
-            request.body.basis = getParameter("basis");
-        }
-
-        return request;
+            return request;
     }
 }

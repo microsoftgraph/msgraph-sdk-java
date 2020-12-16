@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsSumIfRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsSumIfBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,21 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsSumIfRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsSumIfBody body;
     /**
      * The request builder for this WorkbookFunctionsSumIf
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param range the range
-     * @param criteria the criteria
-     * @param sumRange the sumRange
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsSumIfRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement range, @Nullable final com.google.gson.JsonElement criteria, @Nullable final com.google.gson.JsonElement sumRange) {
+    public WorkbookFunctionsSumIfRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsSumIfBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("range", range);
-        bodyParams.put("criteria", criteria);
-        bodyParams.put("sumRange", sumRange);
+        this.body = parameters;
     }
 
     /**
@@ -59,21 +57,10 @@ public class WorkbookFunctionsSumIfRequestBuilder extends BaseActionRequestBuild
         WorkbookFunctionsSumIfRequest request = new WorkbookFunctionsSumIfRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("range")) {
-            request.body.range = getParameter("range");
-        }
-
-        if (hasParameter("criteria")) {
-            request.body.criteria = getParameter("criteria");
-        }
-
-        if (hasParameter("sumRange")) {
-            request.body.sumRange = getParameter("sumRange");
-        }
-
-        return request;
+            return request;
     }
 }

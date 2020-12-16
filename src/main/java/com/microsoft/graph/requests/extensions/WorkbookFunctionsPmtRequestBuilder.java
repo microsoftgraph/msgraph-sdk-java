@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsPmtRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsPmtBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,25 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsPmtRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsPmtBody body;
     /**
      * The request builder for this WorkbookFunctionsPmt
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param rate the rate
-     * @param nper the nper
-     * @param pv the pv
-     * @param fv the fv
-     * @param type the type
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsPmtRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement rate, @Nullable final com.google.gson.JsonElement nper, @Nullable final com.google.gson.JsonElement pv, @Nullable final com.google.gson.JsonElement fv, @Nullable final com.google.gson.JsonElement type) {
+    public WorkbookFunctionsPmtRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsPmtBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("rate", rate);
-        bodyParams.put("nper", nper);
-        bodyParams.put("pv", pv);
-        bodyParams.put("fv", fv);
-        bodyParams.put("type", type);
+        this.body = parameters;
     }
 
     /**
@@ -63,29 +57,10 @@ public class WorkbookFunctionsPmtRequestBuilder extends BaseActionRequestBuilder
         WorkbookFunctionsPmtRequest request = new WorkbookFunctionsPmtRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("rate")) {
-            request.body.rate = getParameter("rate");
-        }
-
-        if (hasParameter("nper")) {
-            request.body.nper = getParameter("nper");
-        }
-
-        if (hasParameter("pv")) {
-            request.body.pv = getParameter("pv");
-        }
-
-        if (hasParameter("fv")) {
-            request.body.fv = getParameter("fv");
-        }
-
-        if (hasParameter("type")) {
-            request.body.type = getParameter("type");
-        }
-
-        return request;
+            return request;
     }
 }

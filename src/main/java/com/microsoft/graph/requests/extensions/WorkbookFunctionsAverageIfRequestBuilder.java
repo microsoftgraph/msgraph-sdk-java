@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsAverageIfRequest
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsAverageIfBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,21 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsAverageIfRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsAverageIfBody body;
     /**
      * The request builder for this WorkbookFunctionsAverageIf
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param range the range
-     * @param criteria the criteria
-     * @param averageRange the averageRange
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsAverageIfRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement range, @Nullable final com.google.gson.JsonElement criteria, @Nullable final com.google.gson.JsonElement averageRange) {
+    public WorkbookFunctionsAverageIfRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsAverageIfBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("range", range);
-        bodyParams.put("criteria", criteria);
-        bodyParams.put("averageRange", averageRange);
+        this.body = parameters;
     }
 
     /**
@@ -59,21 +57,10 @@ public class WorkbookFunctionsAverageIfRequestBuilder extends BaseActionRequestB
         WorkbookFunctionsAverageIfRequest request = new WorkbookFunctionsAverageIfRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("range")) {
-            request.body.range = getParameter("range");
-        }
-
-        if (hasParameter("criteria")) {
-            request.body.criteria = getParameter("criteria");
-        }
-
-        if (hasParameter("averageRange")) {
-            request.body.averageRange = getParameter("averageRange");
-        }
-
-        return request;
+            return request;
     }
 }

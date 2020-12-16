@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodCollectionRequestBuilder.java.tt
+// Template Source: BaseMethodCollectionRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -17,6 +17,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberObjectsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberObjectsCollectionRequest;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberObjectsCollectionResponse;
+import com.microsoft.graph.models.extensions.DirectoryObjectCheckMemberObjectsBody;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
@@ -28,20 +29,19 @@ import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
  */
 public class DirectoryObjectCheckMemberObjectsCollectionRequestBuilder extends BaseActionCollectionRequestBuilder<String, DirectoryObjectCheckMemberObjectsCollectionRequestBuilder, DirectoryObjectCheckMemberObjectsCollectionResponse, DirectoryObjectCheckMemberObjectsCollectionPage, DirectoryObjectCheckMemberObjectsCollectionRequest> {
 
+    private DirectoryObjectCheckMemberObjectsBody body;
     /**
      * The request builder for this collection of DirectoryObject
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param ids the ids
+     * @param parameters     the parameters for the service method
      */
-    public DirectoryObjectCheckMemberObjectsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final java.util.List<String> ids) {
+    public DirectoryObjectCheckMemberObjectsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DirectoryObjectCheckMemberObjectsBody parameters) {
         super(requestUrl, client, requestOptions, DirectoryObjectCheckMemberObjectsCollectionRequestBuilder.class, DirectoryObjectCheckMemberObjectsCollectionRequest.class);
-  	 if(ids!=null){
-			bodyParams.put("ids", ids);
-		}
-      }
+        this.body = parameters;
+    }
     
     /**
      * Creates the request
@@ -53,11 +53,7 @@ public class DirectoryObjectCheckMemberObjectsCollectionRequestBuilder extends B
     @Nonnull
     public DirectoryObjectCheckMemberObjectsCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final DirectoryObjectCheckMemberObjectsCollectionRequest request = super.buildRequest(requestOptions);
-
-        if (hasParameter("ids")) {
-            request.body.ids = getParameter("ids");
-        }
-  
-        return request;
+            request.body = this.body;
+            return request;
     }
 }

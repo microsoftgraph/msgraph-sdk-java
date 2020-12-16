@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.DriveItemCreateLinkRequest;
 import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.Permission;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.DriveItemCreateLinkBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,25 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class DriveItemCreateLinkRequestBuilder extends BaseActionRequestBuilder<Permission> {
 
+    private DriveItemCreateLinkBody body;
     /**
      * The request builder for this DriveItemCreateLink
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param type the type
-     * @param scope the scope
-     * @param expirationDateTime the expirationDateTime
-     * @param password the password
-     * @param message the message
+     * @param parameters     the parameters for the service method
      */
-    public DriveItemCreateLinkRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final String type, @Nullable final String scope, @Nullable final java.util.Calendar expirationDateTime, @Nullable final String password, @Nullable final String message) {
+    public DriveItemCreateLinkRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DriveItemCreateLinkBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("type", type);
-        bodyParams.put("scope", scope);
-        bodyParams.put("expirationDateTime", expirationDateTime);
-        bodyParams.put("password", password);
-        bodyParams.put("message", message);
+        this.body = parameters;
     }
 
     /**
@@ -63,29 +57,10 @@ public class DriveItemCreateLinkRequestBuilder extends BaseActionRequestBuilder<
         DriveItemCreateLinkRequest request = new DriveItemCreateLinkRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("type")) {
-            request.body.type = getParameter("type");
-        }
-
-        if (hasParameter("scope")) {
-            request.body.scope = getParameter("scope");
-        }
-
-        if (hasParameter("expirationDateTime")) {
-            request.body.expirationDateTime = getParameter("expirationDateTime");
-        }
-
-        if (hasParameter("password")) {
-            request.body.password = getParameter("password");
-        }
-
-        if (hasParameter("message")) {
-            request.body.message = getParameter("message");
-        }
-
-        return request;
+            return request;
     }
 }

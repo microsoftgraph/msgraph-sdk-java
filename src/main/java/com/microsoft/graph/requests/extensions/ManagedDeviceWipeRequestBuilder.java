@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.ManagedDeviceWipeRequest;
 import com.microsoft.graph.models.extensions.ManagedDevice;
 
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.ManagedDeviceWipeBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,21 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class ManagedDeviceWipeRequestBuilder extends BaseActionRequestBuilder<ManagedDevice> {
 
+    private ManagedDeviceWipeBody body;
     /**
      * The request builder for this ManagedDeviceWipe
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param keepEnrollmentData the keepEnrollmentData
-     * @param keepUserData the keepUserData
-     * @param macOsUnlockCode the macOsUnlockCode
+     * @param parameters     the parameters for the service method
      */
-    public ManagedDeviceWipeRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final Boolean keepEnrollmentData, @Nullable final Boolean keepUserData, @Nullable final String macOsUnlockCode) {
+    public ManagedDeviceWipeRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ManagedDeviceWipeBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("keepEnrollmentData", keepEnrollmentData);
-        bodyParams.put("keepUserData", keepUserData);
-        bodyParams.put("macOsUnlockCode", macOsUnlockCode);
+        this.body = parameters;
     }
 
     /**
@@ -59,21 +57,10 @@ public class ManagedDeviceWipeRequestBuilder extends BaseActionRequestBuilder<Ma
         ManagedDeviceWipeRequest request = new ManagedDeviceWipeRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("keepEnrollmentData")) {
-            request.body.keepEnrollmentData = getParameter("keepEnrollmentData");
-        }
-
-        if (hasParameter("keepUserData")) {
-            request.body.keepUserData = getParameter("keepUserData");
-        }
-
-        if (hasParameter("macOsUnlockCode")) {
-            request.body.macOsUnlockCode = getParameter("macOsUnlockCode");
-        }
-
-        return request;
+            return request;
     }
 }

@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFilterApplyDynamicFilterR
 import com.microsoft.graph.models.extensions.WorkbookFilter;
 
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFilterApplyDynamicFilterBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,17 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFilterApplyDynamicFilterRequestBuilder extends BaseActionRequestBuilder<WorkbookFilter> {
 
+    private WorkbookFilterApplyDynamicFilterBody body;
     /**
      * The request builder for this WorkbookFilterApplyDynamicFilter
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param criteria the criteria
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFilterApplyDynamicFilterRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final String criteria) {
+    public WorkbookFilterApplyDynamicFilterRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFilterApplyDynamicFilterBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("criteria", criteria);
+        this.body = parameters;
     }
 
     /**
@@ -55,13 +57,10 @@ public class WorkbookFilterApplyDynamicFilterRequestBuilder extends BaseActionRe
         WorkbookFilterApplyDynamicFilterRequest request = new WorkbookFilterApplyDynamicFilterRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("criteria")) {
-            request.body.criteria = getParameter("criteria");
-        }
-
-        return request;
+            return request;
     }
 }

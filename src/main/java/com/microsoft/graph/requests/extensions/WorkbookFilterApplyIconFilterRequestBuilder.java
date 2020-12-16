@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFilterApplyIconFilterRequ
 import com.microsoft.graph.models.extensions.WorkbookFilter;
 import com.microsoft.graph.models.extensions.WorkbookIcon;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFilterApplyIconFilterBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,17 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFilterApplyIconFilterRequestBuilder extends BaseActionRequestBuilder<WorkbookFilter> {
 
+    private WorkbookFilterApplyIconFilterBody body;
     /**
      * The request builder for this WorkbookFilterApplyIconFilter
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param icon the icon
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFilterApplyIconFilterRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final WorkbookIcon icon) {
+    public WorkbookFilterApplyIconFilterRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFilterApplyIconFilterBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("icon", icon);
+        this.body = parameters;
     }
 
     /**
@@ -55,13 +57,10 @@ public class WorkbookFilterApplyIconFilterRequestBuilder extends BaseActionReque
         WorkbookFilterApplyIconFilterRequest request = new WorkbookFilterApplyIconFilterRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("icon")) {
-            request.body.icon = getParameter("icon");
-        }
-
-        return request;
+            return request;
     }
 }

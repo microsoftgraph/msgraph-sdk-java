@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodCollectionRequest.java.tt
+// Template Source: BaseMethodCollectionRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -31,7 +31,7 @@ public class DirectoryObjectGetMemberGroupsCollectionRequest extends BaseCollect
 
 
     /** The body for the method */
-    protected final DirectoryObjectGetMemberGroupsBody body;
+    protected DirectoryObjectGetMemberGroupsBody body;
 
 
     /**
@@ -40,10 +40,11 @@ public class DirectoryObjectGetMemberGroupsCollectionRequest extends BaseCollect
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
+     * @param parameters the parameters for the service method
      */
-    public DirectoryObjectGetMemberGroupsCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryObjectGetMemberGroupsCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DirectoryObjectGetMemberGroupsBody parameters) {
         super(requestUrl, client, requestOptions, DirectoryObjectGetMemberGroupsCollectionResponse.class, DirectoryObjectGetMemberGroupsCollectionPage.class, DirectoryObjectGetMemberGroupsCollectionRequestBuilder.class);
-        body = new DirectoryObjectGetMemberGroupsBody();
+        body = parameters;
     }
 
 

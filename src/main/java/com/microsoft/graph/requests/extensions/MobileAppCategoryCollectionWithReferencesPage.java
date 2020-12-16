@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseEntityCollectionWithReferencesPage.java.tt
+// Template Source: BaseEntityCollectionWithReferencesPage.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------

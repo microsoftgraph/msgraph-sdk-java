@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsYieldMatRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsYieldMatBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,27 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsYieldMatRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsYieldMatBody body;
     /**
      * The request builder for this WorkbookFunctionsYieldMat
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param settlement the settlement
-     * @param maturity the maturity
-     * @param issue the issue
-     * @param rate the rate
-     * @param pr the pr
-     * @param basis the basis
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsYieldMatRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement settlement, @Nullable final com.google.gson.JsonElement maturity, @Nullable final com.google.gson.JsonElement issue, @Nullable final com.google.gson.JsonElement rate, @Nullable final com.google.gson.JsonElement pr, @Nullable final com.google.gson.JsonElement basis) {
+    public WorkbookFunctionsYieldMatRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsYieldMatBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("settlement", settlement);
-        bodyParams.put("maturity", maturity);
-        bodyParams.put("issue", issue);
-        bodyParams.put("rate", rate);
-        bodyParams.put("pr", pr);
-        bodyParams.put("basis", basis);
+        this.body = parameters;
     }
 
     /**
@@ -65,33 +57,10 @@ public class WorkbookFunctionsYieldMatRequestBuilder extends BaseActionRequestBu
         WorkbookFunctionsYieldMatRequest request = new WorkbookFunctionsYieldMatRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("settlement")) {
-            request.body.settlement = getParameter("settlement");
-        }
-
-        if (hasParameter("maturity")) {
-            request.body.maturity = getParameter("maturity");
-        }
-
-        if (hasParameter("issue")) {
-            request.body.issue = getParameter("issue");
-        }
-
-        if (hasParameter("rate")) {
-            request.body.rate = getParameter("rate");
-        }
-
-        if (hasParameter("pr")) {
-            request.body.pr = getParameter("pr");
-        }
-
-        if (hasParameter("basis")) {
-            request.body.basis = getParameter("basis");
-        }
-
-        return request;
+            return request;
     }
 }

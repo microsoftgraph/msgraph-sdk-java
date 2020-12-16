@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsTimeRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsTimeBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,21 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsTimeRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsTimeBody body;
     /**
      * The request builder for this WorkbookFunctionsTime
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param hour the hour
-     * @param minute the minute
-     * @param second the second
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsTimeRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement hour, @Nullable final com.google.gson.JsonElement minute, @Nullable final com.google.gson.JsonElement second) {
+    public WorkbookFunctionsTimeRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsTimeBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("hour", hour);
-        bodyParams.put("minute", minute);
-        bodyParams.put("second", second);
+        this.body = parameters;
     }
 
     /**
@@ -59,21 +57,10 @@ public class WorkbookFunctionsTimeRequestBuilder extends BaseActionRequestBuilde
         WorkbookFunctionsTimeRequest request = new WorkbookFunctionsTimeRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("hour")) {
-            request.body.hour = getParameter("hour");
-        }
-
-        if (hasParameter("minute")) {
-            request.body.minute = getParameter("minute");
-        }
-
-        if (hasParameter("second")) {
-            request.body.second = getParameter("second");
-        }
-
-        return request;
+            return request;
     }
 }

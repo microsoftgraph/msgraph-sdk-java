@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.DriveItemValidatePermissionReques
 import com.microsoft.graph.models.extensions.DriveItem;
 
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.DriveItemValidatePermissionBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,19 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class DriveItemValidatePermissionRequestBuilder extends BaseActionRequestBuilder<DriveItem> {
 
+    private DriveItemValidatePermissionBody body;
     /**
      * The request builder for this DriveItemValidatePermission
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param challengeToken the challengeToken
-     * @param password the password
+     * @param parameters     the parameters for the service method
      */
-    public DriveItemValidatePermissionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final String challengeToken, @Nullable final String password) {
+    public DriveItemValidatePermissionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DriveItemValidatePermissionBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("challengeToken", challengeToken);
-        bodyParams.put("password", password);
+        this.body = parameters;
     }
 
     /**
@@ -57,17 +57,10 @@ public class DriveItemValidatePermissionRequestBuilder extends BaseActionRequest
         DriveItemValidatePermissionRequest request = new DriveItemValidatePermissionRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("challengeToken")) {
-            request.body.challengeToken = getParameter("challengeToken");
-        }
-
-        if (hasParameter("password")) {
-            request.body.password = getParameter("password");
-        }
-
-        return request;
+            return request;
     }
 }

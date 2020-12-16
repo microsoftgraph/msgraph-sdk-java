@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodCollectionRequestBuilder.java.tt
+// Template Source: BaseMethodCollectionRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -18,6 +18,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DriveItemInviteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemInviteCollectionRequest;
 import com.microsoft.graph.requests.extensions.DriveItemInviteCollectionResponse;
+import com.microsoft.graph.models.extensions.DriveItemInviteBody;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
@@ -29,44 +30,19 @@ import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
  */
 public class DriveItemInviteCollectionRequestBuilder extends BaseActionCollectionRequestBuilder<Permission, DriveItemInviteCollectionRequestBuilder, DriveItemInviteCollectionResponse, DriveItemInviteCollectionPage, DriveItemInviteCollectionRequest> {
 
+    private DriveItemInviteBody body;
     /**
      * The request builder for this collection of DriveItem
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param requireSignIn the requireSignIn
-     * @param roles the roles
-     * @param sendInvitation the sendInvitation
-     * @param message the message
-     * @param recipients the recipients
-     * @param expirationDateTime the expirationDateTime
-     * @param password the password
+     * @param parameters     the parameters for the service method
      */
-    public DriveItemInviteCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final Boolean requireSignIn, @Nullable final java.util.List<String> roles, @Nullable final Boolean sendInvitation, @Nullable final String message, @Nullable final java.util.List<DriveRecipient> recipients, @Nullable final String expirationDateTime, @Nullable final String password) {
+    public DriveItemInviteCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DriveItemInviteBody parameters) {
         super(requestUrl, client, requestOptions, DriveItemInviteCollectionRequestBuilder.class, DriveItemInviteCollectionRequest.class);
-  	 if(requireSignIn!=null){
-			bodyParams.put("requireSignIn", requireSignIn);
-		}
-    	 if(roles!=null){
-			bodyParams.put("roles", roles);
-		}
-    	 if(sendInvitation!=null){
-			bodyParams.put("sendInvitation", sendInvitation);
-		}
-    	 if(message!=null){
-			bodyParams.put("message", message);
-		}
-    	 if(recipients!=null){
-			bodyParams.put("recipients", recipients);
-		}
-    	 if(expirationDateTime!=null){
-			bodyParams.put("expirationDateTime", expirationDateTime);
-		}
-    	 if(password!=null){
-			bodyParams.put("password", password);
-		}
-      }
+        this.body = parameters;
+    }
     
     /**
      * Creates the request
@@ -78,29 +54,7 @@ public class DriveItemInviteCollectionRequestBuilder extends BaseActionCollectio
     @Nonnull
     public DriveItemInviteCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final DriveItemInviteCollectionRequest request = super.buildRequest(requestOptions);
-
-        if (hasParameter("requireSignIn")) {
-            request.body.requireSignIn = getParameter("requireSignIn");
-        }
-        if (hasParameter("roles")) {
-            request.body.roles = getParameter("roles");
-        }
-        if (hasParameter("sendInvitation")) {
-            request.body.sendInvitation = getParameter("sendInvitation");
-        }
-        if (hasParameter("message")) {
-            request.body.message = getParameter("message");
-        }
-        if (hasParameter("recipients")) {
-            request.body.recipients = getParameter("recipients");
-        }
-        if (hasParameter("expirationDateTime")) {
-            request.body.expirationDateTime = getParameter("expirationDateTime");
-        }
-        if (hasParameter("password")) {
-            request.body.password = getParameter("password");
-        }
-  
-        return request;
+            request.body = this.body;
+            return request;
     }
 }

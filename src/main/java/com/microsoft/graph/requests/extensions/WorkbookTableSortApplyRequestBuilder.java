@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookTableSortApplyRequest;
 import com.microsoft.graph.models.extensions.WorkbookTableSort;
 import com.microsoft.graph.models.extensions.WorkbookSortField;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookTableSortApplyBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,21 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookTableSortApplyRequestBuilder extends BaseActionRequestBuilder<WorkbookTableSort> {
 
+    private WorkbookTableSortApplyBody body;
     /**
      * The request builder for this WorkbookTableSortApply
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param fields the fields
-     * @param matchCase the matchCase
-     * @param method the method
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookTableSortApplyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final java.util.List<WorkbookSortField> fields, @Nullable final Boolean matchCase, @Nullable final String method) {
+    public WorkbookTableSortApplyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookTableSortApplyBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("fields", fields);
-        bodyParams.put("matchCase", matchCase);
-        bodyParams.put("method", method);
+        this.body = parameters;
     }
 
     /**
@@ -59,21 +57,10 @@ public class WorkbookTableSortApplyRequestBuilder extends BaseActionRequestBuild
         WorkbookTableSortApplyRequest request = new WorkbookTableSortApplyRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("fields")) {
-            request.body.fields = getParameter("fields");
-        }
-
-        if (hasParameter("matchCase")) {
-            request.body.matchCase = getParameter("matchCase");
-        }
-
-        if (hasParameter("method")) {
-            request.body.method = getParameter("method");
-        }
-
-        return request;
+            return request;
     }
 }

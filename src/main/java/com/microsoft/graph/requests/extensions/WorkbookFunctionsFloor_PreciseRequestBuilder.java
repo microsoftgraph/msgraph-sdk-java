@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsFloor_PreciseReq
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsFloor_PreciseBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,19 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsFloor_PreciseRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsFloor_PreciseBody body;
     /**
      * The request builder for this WorkbookFunctionsFloor_Precise
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param number the number
-     * @param significance the significance
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsFloor_PreciseRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement significance) {
+    public WorkbookFunctionsFloor_PreciseRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsFloor_PreciseBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("number", number);
-        bodyParams.put("significance", significance);
+        this.body = parameters;
     }
 
     /**
@@ -57,17 +57,10 @@ public class WorkbookFunctionsFloor_PreciseRequestBuilder extends BaseActionRequ
         WorkbookFunctionsFloor_PreciseRequest request = new WorkbookFunctionsFloor_PreciseRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("number")) {
-            request.body.number = getParameter("number");
-        }
-
-        if (hasParameter("significance")) {
-            request.body.significance = getParameter("significance");
-        }
-
-        return request;
+            return request;
     }
 }

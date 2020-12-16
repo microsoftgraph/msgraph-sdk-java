@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.CallChangeScreenSharingRoleReques
 import com.microsoft.graph.models.extensions.Call;
 import com.microsoft.graph.models.generated.ScreenSharingRole;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.CallChangeScreenSharingRoleBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,17 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class CallChangeScreenSharingRoleRequestBuilder extends BaseActionRequestBuilder<Call> {
 
+    private CallChangeScreenSharingRoleBody body;
     /**
      * The request builder for this CallChangeScreenSharingRole
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param role the role
+     * @param parameters     the parameters for the service method
      */
-    public CallChangeScreenSharingRoleRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final ScreenSharingRole role) {
+    public CallChangeScreenSharingRoleRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CallChangeScreenSharingRoleBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("role", role);
+        this.body = parameters;
     }
 
     /**
@@ -55,13 +57,10 @@ public class CallChangeScreenSharingRoleRequestBuilder extends BaseActionRequest
         CallChangeScreenSharingRoleRequest request = new CallChangeScreenSharingRoleRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("role")) {
-            request.body.role = getParameter("role");
-        }
-
-        return request;
+            return request;
     }
 }

@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsOddFPriceRequest
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsOddFPriceBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,33 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsOddFPriceRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsOddFPriceBody body;
     /**
      * The request builder for this WorkbookFunctionsOddFPrice
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param settlement the settlement
-     * @param maturity the maturity
-     * @param issue the issue
-     * @param firstCoupon the firstCoupon
-     * @param rate the rate
-     * @param yld the yld
-     * @param redemption the redemption
-     * @param frequency the frequency
-     * @param basis the basis
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsOddFPriceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement settlement, @Nullable final com.google.gson.JsonElement maturity, @Nullable final com.google.gson.JsonElement issue, @Nullable final com.google.gson.JsonElement firstCoupon, @Nullable final com.google.gson.JsonElement rate, @Nullable final com.google.gson.JsonElement yld, @Nullable final com.google.gson.JsonElement redemption, @Nullable final com.google.gson.JsonElement frequency, @Nullable final com.google.gson.JsonElement basis) {
+    public WorkbookFunctionsOddFPriceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsOddFPriceBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("settlement", settlement);
-        bodyParams.put("maturity", maturity);
-        bodyParams.put("issue", issue);
-        bodyParams.put("firstCoupon", firstCoupon);
-        bodyParams.put("rate", rate);
-        bodyParams.put("yld", yld);
-        bodyParams.put("redemption", redemption);
-        bodyParams.put("frequency", frequency);
-        bodyParams.put("basis", basis);
+        this.body = parameters;
     }
 
     /**
@@ -71,45 +57,10 @@ public class WorkbookFunctionsOddFPriceRequestBuilder extends BaseActionRequestB
         WorkbookFunctionsOddFPriceRequest request = new WorkbookFunctionsOddFPriceRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("settlement")) {
-            request.body.settlement = getParameter("settlement");
-        }
-
-        if (hasParameter("maturity")) {
-            request.body.maturity = getParameter("maturity");
-        }
-
-        if (hasParameter("issue")) {
-            request.body.issue = getParameter("issue");
-        }
-
-        if (hasParameter("firstCoupon")) {
-            request.body.firstCoupon = getParameter("firstCoupon");
-        }
-
-        if (hasParameter("rate")) {
-            request.body.rate = getParameter("rate");
-        }
-
-        if (hasParameter("yld")) {
-            request.body.yld = getParameter("yld");
-        }
-
-        if (hasParameter("redemption")) {
-            request.body.redemption = getParameter("redemption");
-        }
-
-        if (hasParameter("frequency")) {
-            request.body.frequency = getParameter("frequency");
-        }
-
-        if (hasParameter("basis")) {
-            request.body.basis = getParameter("basis");
-        }
-
-        return request;
+            return request;
     }
 }

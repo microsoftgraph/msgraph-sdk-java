@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsExpon_DistReques
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsExpon_DistBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,21 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsExpon_DistRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsExpon_DistBody body;
     /**
      * The request builder for this WorkbookFunctionsExpon_Dist
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param x the x
-     * @param lambda the lambda
-     * @param cumulative the cumulative
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsExpon_DistRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement x, @Nullable final com.google.gson.JsonElement lambda, @Nullable final com.google.gson.JsonElement cumulative) {
+    public WorkbookFunctionsExpon_DistRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsExpon_DistBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("x", x);
-        bodyParams.put("lambda", lambda);
-        bodyParams.put("cumulative", cumulative);
+        this.body = parameters;
     }
 
     /**
@@ -59,21 +57,10 @@ public class WorkbookFunctionsExpon_DistRequestBuilder extends BaseActionRequest
         WorkbookFunctionsExpon_DistRequest request = new WorkbookFunctionsExpon_DistRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("x")) {
-            request.body.x = getParameter("x");
-        }
-
-        if (hasParameter("lambda")) {
-            request.body.lambda = getParameter("lambda");
-        }
-
-        if (hasParameter("cumulative")) {
-            request.body.cumulative = getParameter("cumulative");
-        }
-
-        return request;
+            return request;
     }
 }

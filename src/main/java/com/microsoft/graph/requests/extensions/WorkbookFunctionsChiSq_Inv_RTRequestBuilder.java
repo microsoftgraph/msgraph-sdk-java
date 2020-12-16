@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsChiSq_Inv_RTRequ
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsChiSq_Inv_RTBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,19 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsChiSq_Inv_RTRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsChiSq_Inv_RTBody body;
     /**
      * The request builder for this WorkbookFunctionsChiSq_Inv_RT
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param probability the probability
-     * @param degFreedom the degFreedom
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsChiSq_Inv_RTRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement probability, @Nullable final com.google.gson.JsonElement degFreedom) {
+    public WorkbookFunctionsChiSq_Inv_RTRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsChiSq_Inv_RTBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("probability", probability);
-        bodyParams.put("degFreedom", degFreedom);
+        this.body = parameters;
     }
 
     /**
@@ -57,17 +57,10 @@ public class WorkbookFunctionsChiSq_Inv_RTRequestBuilder extends BaseActionReque
         WorkbookFunctionsChiSq_Inv_RTRequest request = new WorkbookFunctionsChiSq_Inv_RTRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("probability")) {
-            request.body.probability = getParameter("probability");
-        }
-
-        if (hasParameter("degFreedom")) {
-            request.body.degFreedom = getParameter("degFreedom");
-        }
-
-        return request;
+            return request;
     }
 }

@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseEntityRequestBuilder.java.tt
+// Template Source: BaseEntityRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -72,7 +72,7 @@ public class WorkbookNamedItemRequestBuilder extends BaseRequestBuilder<Workbook
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder 
+     * @return the request builder
      */
     @Nonnull
     public WorkbookNamedItemRangeRequestBuilder range() {

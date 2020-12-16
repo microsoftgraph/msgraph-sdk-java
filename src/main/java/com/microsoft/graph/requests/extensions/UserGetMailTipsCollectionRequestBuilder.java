@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodCollectionRequestBuilder.java.tt
+// Template Source: BaseMethodCollectionRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -19,6 +19,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.UserGetMailTipsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserGetMailTipsCollectionRequest;
 import com.microsoft.graph.requests.extensions.UserGetMailTipsCollectionResponse;
+import com.microsoft.graph.models.extensions.UserGetMailTipsBody;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
@@ -30,24 +31,19 @@ import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
  */
 public class UserGetMailTipsCollectionRequestBuilder extends BaseActionCollectionRequestBuilder<MailTips, UserGetMailTipsCollectionRequestBuilder, UserGetMailTipsCollectionResponse, UserGetMailTipsCollectionPage, UserGetMailTipsCollectionRequest> {
 
+    private UserGetMailTipsBody body;
     /**
      * The request builder for this collection of User
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param emailAddresses the emailAddresses
-     * @param mailTipsOptions the mailTipsOptions
+     * @param parameters     the parameters for the service method
      */
-    public UserGetMailTipsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final java.util.List<String> emailAddresses, @Nullable final EnumSet<MailTipsType> mailTipsOptions) {
+    public UserGetMailTipsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final UserGetMailTipsBody parameters) {
         super(requestUrl, client, requestOptions, UserGetMailTipsCollectionRequestBuilder.class, UserGetMailTipsCollectionRequest.class);
-  	 if(emailAddresses!=null){
-			bodyParams.put("emailAddresses", emailAddresses);
-		}
-    	 if(mailTipsOptions!=null){
-			bodyParams.put("mailTipsOptions", mailTipsOptions);
-		}
-      }
+        this.body = parameters;
+    }
     
     /**
      * Creates the request
@@ -59,14 +55,7 @@ public class UserGetMailTipsCollectionRequestBuilder extends BaseActionCollectio
     @Nonnull
     public UserGetMailTipsCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final UserGetMailTipsCollectionRequest request = super.buildRequest(requestOptions);
-
-        if (hasParameter("emailAddresses")) {
-            request.body.emailAddresses = getParameter("emailAddresses");
-        }
-        if (hasParameter("mailTipsOptions")) {
-            request.body.mailTipsOptions = getParameter("mailTipsOptions");
-        }
-  
-        return request;
+            request.body = this.body;
+            return request;
     }
 }

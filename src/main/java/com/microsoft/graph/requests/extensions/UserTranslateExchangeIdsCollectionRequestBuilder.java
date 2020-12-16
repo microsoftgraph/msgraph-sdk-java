@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodCollectionRequestBuilder.java.tt
+// Template Source: BaseMethodCollectionRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -18,6 +18,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.UserTranslateExchangeIdsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserTranslateExchangeIdsCollectionRequest;
 import com.microsoft.graph.requests.extensions.UserTranslateExchangeIdsCollectionResponse;
+import com.microsoft.graph.models.extensions.UserTranslateExchangeIdsBody;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
@@ -29,28 +30,19 @@ import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
  */
 public class UserTranslateExchangeIdsCollectionRequestBuilder extends BaseActionCollectionRequestBuilder<ConvertIdResult, UserTranslateExchangeIdsCollectionRequestBuilder, UserTranslateExchangeIdsCollectionResponse, UserTranslateExchangeIdsCollectionPage, UserTranslateExchangeIdsCollectionRequest> {
 
+    private UserTranslateExchangeIdsBody body;
     /**
      * The request builder for this collection of User
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param inputIds the inputIds
-     * @param targetIdType the targetIdType
-     * @param sourceIdType the sourceIdType
+     * @param parameters     the parameters for the service method
      */
-    public UserTranslateExchangeIdsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final java.util.List<String> inputIds, @Nullable final ExchangeIdFormat targetIdType, @Nullable final ExchangeIdFormat sourceIdType) {
+    public UserTranslateExchangeIdsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final UserTranslateExchangeIdsBody parameters) {
         super(requestUrl, client, requestOptions, UserTranslateExchangeIdsCollectionRequestBuilder.class, UserTranslateExchangeIdsCollectionRequest.class);
-  	 if(inputIds!=null){
-			bodyParams.put("inputIds", inputIds);
-		}
-    	 if(targetIdType!=null){
-			bodyParams.put("targetIdType", targetIdType);
-		}
-    	 if(sourceIdType!=null){
-			bodyParams.put("sourceIdType", sourceIdType);
-		}
-      }
+        this.body = parameters;
+    }
     
     /**
      * Creates the request
@@ -62,17 +54,7 @@ public class UserTranslateExchangeIdsCollectionRequestBuilder extends BaseAction
     @Nonnull
     public UserTranslateExchangeIdsCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final UserTranslateExchangeIdsCollectionRequest request = super.buildRequest(requestOptions);
-
-        if (hasParameter("inputIds")) {
-            request.body.inputIds = getParameter("inputIds");
-        }
-        if (hasParameter("targetIdType")) {
-            request.body.targetIdType = getParameter("targetIdType");
-        }
-        if (hasParameter("sourceIdType")) {
-            request.body.sourceIdType = getParameter("sourceIdType");
-        }
-  
-        return request;
+            request.body = this.body;
+            return request;
     }
 }

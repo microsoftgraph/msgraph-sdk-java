@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -9,6 +9,7 @@ import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.models.extensions.Recipient;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.MessageForwardBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,21 +22,18 @@ import javax.annotation.Nonnull;
  */
 public class MessageForwardRequestBuilder extends BaseActionRequestBuilder<Message> {
 
+    private MessageForwardBody body;
     /**
      * The request builder for this MessageForward
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param toRecipients the toRecipients
-     * @param message the message
-     * @param comment the comment
+     * @param parameters     the parameters for the service method
      */
-    public MessageForwardRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final java.util.List<Recipient> toRecipients, @Nullable final Message message, @Nullable final String comment) {
+    public MessageForwardRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final MessageForwardBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("toRecipients", toRecipients);
-        bodyParams.put("message", message);
-        bodyParams.put("comment", comment);
+        this.body = parameters;
     }
 
     /**
@@ -60,21 +58,10 @@ public class MessageForwardRequestBuilder extends BaseActionRequestBuilder<Messa
         MessageForwardRequest request = new MessageForwardRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("toRecipients")) {
-            request.body.toRecipients = getParameter("toRecipients");
-        }
-
-        if (hasParameter("message")) {
-            request.body.message = getParameter("message");
-        }
-
-        if (hasParameter("comment")) {
-            request.body.comment = getParameter("comment");
-        }
-
-        return request;
+            return request;
     }
 }

@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsBitorRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsBitorBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,19 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsBitorRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsBitorBody body;
     /**
      * The request builder for this WorkbookFunctionsBitor
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param number1 the number1
-     * @param number2 the number2
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsBitorRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement number1, @Nullable final com.google.gson.JsonElement number2) {
+    public WorkbookFunctionsBitorRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsBitorBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("number1", number1);
-        bodyParams.put("number2", number2);
+        this.body = parameters;
     }
 
     /**
@@ -57,17 +57,10 @@ public class WorkbookFunctionsBitorRequestBuilder extends BaseActionRequestBuild
         WorkbookFunctionsBitorRequest request = new WorkbookFunctionsBitorRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("number1")) {
-            request.body.number1 = getParameter("number1");
-        }
-
-        if (hasParameter("number2")) {
-            request.body.number2 = getParameter("number2");
-        }
-
-        return request;
+            return request;
     }
 }

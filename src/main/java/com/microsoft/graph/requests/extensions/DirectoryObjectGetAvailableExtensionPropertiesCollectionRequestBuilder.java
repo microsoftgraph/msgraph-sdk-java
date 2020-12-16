@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodCollectionRequestBuilder.java.tt
+// Template Source: BaseMethodCollectionRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -17,6 +17,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetAvailableExtensionPropertiesCollectionResponse;
+import com.microsoft.graph.models.extensions.DirectoryObjectGetAvailableExtensionPropertiesBody;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
@@ -28,20 +29,19 @@ import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
  */
 public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder extends BaseActionCollectionRequestBuilder<ExtensionProperty, DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder, DirectoryObjectGetAvailableExtensionPropertiesCollectionResponse, DirectoryObjectGetAvailableExtensionPropertiesCollectionPage, DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest> {
 
+    private DirectoryObjectGetAvailableExtensionPropertiesBody body;
     /**
      * The request builder for this collection of DirectoryObject
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param isSyncedFromOnPremises the isSyncedFromOnPremises
+     * @param parameters     the parameters for the service method
      */
-    public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final Boolean isSyncedFromOnPremises) {
+    public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DirectoryObjectGetAvailableExtensionPropertiesBody parameters) {
         super(requestUrl, client, requestOptions, DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder.class, DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest.class);
-  	 if(isSyncedFromOnPremises!=null){
-			bodyParams.put("isSyncedFromOnPremises", isSyncedFromOnPremises);
-		}
-      }
+        this.body = parameters;
+    }
     
     /**
      * Creates the request
@@ -53,11 +53,7 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuil
     @Nonnull
     public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest request = super.buildRequest(requestOptions);
-
-        if (hasParameter("isSyncedFromOnPremises")) {
-            request.body.isSyncedFromOnPremises = getParameter("isSyncedFromOnPremises");
-        }
-  
-        return request;
+            request.body = this.body;
+            return request;
     }
 }

@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFilterApplyCustomFilterRe
 import com.microsoft.graph.models.extensions.WorkbookFilter;
 
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFilterApplyCustomFilterBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,21 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFilterApplyCustomFilterRequestBuilder extends BaseActionRequestBuilder<WorkbookFilter> {
 
+    private WorkbookFilterApplyCustomFilterBody body;
     /**
      * The request builder for this WorkbookFilterApplyCustomFilter
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param criteria1 the criteria1
-     * @param criteria2 the criteria2
-     * @param oper the oper
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFilterApplyCustomFilterRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final String criteria1, @Nullable final String criteria2, @Nullable final String oper) {
+    public WorkbookFilterApplyCustomFilterRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFilterApplyCustomFilterBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("criteria1", criteria1);
-        bodyParams.put("criteria2", criteria2);
-        bodyParams.put("oper", oper);
+        this.body = parameters;
     }
 
     /**
@@ -59,21 +57,10 @@ public class WorkbookFilterApplyCustomFilterRequestBuilder extends BaseActionReq
         WorkbookFilterApplyCustomFilterRequest request = new WorkbookFilterApplyCustomFilterRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("criteria1")) {
-            request.body.criteria1 = getParameter("criteria1");
-        }
-
-        if (hasParameter("criteria2")) {
-            request.body.criteria2 = getParameter("criteria2");
-        }
-
-        if (hasParameter("oper")) {
-            request.body.oper = getParameter("oper");
-        }
-
-        return request;
+            return request;
     }
 }

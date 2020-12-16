@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -9,6 +9,7 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.PasswordCredential;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.ServicePrincipalAddKeyBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,21 +22,18 @@ import javax.annotation.Nonnull;
  */
 public class ServicePrincipalAddKeyRequestBuilder extends BaseActionRequestBuilder<KeyCredential> {
 
+    private ServicePrincipalAddKeyBody body;
     /**
      * The request builder for this ServicePrincipalAddKey
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param keyCredential the keyCredential
-     * @param passwordCredential the passwordCredential
-     * @param proof the proof
+     * @param parameters     the parameters for the service method
      */
-    public ServicePrincipalAddKeyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final KeyCredential keyCredential, @Nullable final PasswordCredential passwordCredential, @Nullable final String proof) {
+    public ServicePrincipalAddKeyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ServicePrincipalAddKeyBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("keyCredential", keyCredential);
-        bodyParams.put("passwordCredential", passwordCredential);
-        bodyParams.put("proof", proof);
+        this.body = parameters;
     }
 
     /**
@@ -60,21 +58,10 @@ public class ServicePrincipalAddKeyRequestBuilder extends BaseActionRequestBuild
         ServicePrincipalAddKeyRequest request = new ServicePrincipalAddKeyRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("keyCredential")) {
-            request.body.keyCredential = getParameter("keyCredential");
-        }
-
-        if (hasParameter("passwordCredential")) {
-            request.body.passwordCredential = getParameter("passwordCredential");
-        }
-
-        if (hasParameter("proof")) {
-            request.body.proof = getParameter("proof");
-        }
-
-        return request;
+            return request;
     }
 }

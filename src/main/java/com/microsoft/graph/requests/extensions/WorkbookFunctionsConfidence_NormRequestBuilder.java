@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsConfidence_NormR
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsConfidence_NormBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,21 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsConfidence_NormRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsConfidence_NormBody body;
     /**
      * The request builder for this WorkbookFunctionsConfidence_Norm
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param alpha the alpha
-     * @param standardDev the standardDev
-     * @param size the size
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsConfidence_NormRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement alpha, @Nullable final com.google.gson.JsonElement standardDev, @Nullable final com.google.gson.JsonElement size) {
+    public WorkbookFunctionsConfidence_NormRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsConfidence_NormBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("alpha", alpha);
-        bodyParams.put("standardDev", standardDev);
-        bodyParams.put("size", size);
+        this.body = parameters;
     }
 
     /**
@@ -59,21 +57,10 @@ public class WorkbookFunctionsConfidence_NormRequestBuilder extends BaseActionRe
         WorkbookFunctionsConfidence_NormRequest request = new WorkbookFunctionsConfidence_NormRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("alpha")) {
-            request.body.alpha = getParameter("alpha");
-        }
-
-        if (hasParameter("standardDev")) {
-            request.body.standardDev = getParameter("standardDev");
-        }
-
-        if (hasParameter("size")) {
-            request.body.size = getParameter("size");
-        }
-
-        return request;
+            return request;
     }
 }

@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -9,6 +9,7 @@ import com.microsoft.graph.models.extensions.Call;
 import com.microsoft.graph.models.extensions.Prompt;
 import com.microsoft.graph.models.extensions.PlayPromptOperation;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.CallPlayPromptBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,19 +22,18 @@ import javax.annotation.Nonnull;
  */
 public class CallPlayPromptRequestBuilder extends BaseActionRequestBuilder<PlayPromptOperation> {
 
+    private CallPlayPromptBody body;
     /**
      * The request builder for this CallPlayPrompt
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param prompts the prompts
-     * @param clientContext the clientContext
+     * @param parameters     the parameters for the service method
      */
-    public CallPlayPromptRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final java.util.List<Prompt> prompts, @Nullable final String clientContext) {
+    public CallPlayPromptRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CallPlayPromptBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("prompts", prompts);
-        bodyParams.put("clientContext", clientContext);
+        this.body = parameters;
     }
 
     /**
@@ -58,17 +58,10 @@ public class CallPlayPromptRequestBuilder extends BaseActionRequestBuilder<PlayP
         CallPlayPromptRequest request = new CallPlayPromptRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("prompts")) {
-            request.body.prompts = getParameter("prompts");
-        }
-
-        if (hasParameter("clientContext")) {
-            request.body.clientContext = getParameter("clientContext");
-        }
-
-        return request;
+            return request;
     }
 }

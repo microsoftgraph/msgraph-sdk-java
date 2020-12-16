@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.NotebookCopyNotebookRequest;
 import com.microsoft.graph.models.extensions.Notebook;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.NotebookCopyNotebookBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,25 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class NotebookCopyNotebookRequestBuilder extends BaseActionRequestBuilder<OnenoteOperation> {
 
+    private NotebookCopyNotebookBody body;
     /**
      * The request builder for this NotebookCopyNotebook
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param groupId the groupId
-     * @param renameAs the renameAs
-     * @param notebookFolder the notebookFolder
-     * @param siteCollectionId the siteCollectionId
-     * @param siteId the siteId
+     * @param parameters     the parameters for the service method
      */
-    public NotebookCopyNotebookRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final String groupId, @Nullable final String renameAs, @Nullable final String notebookFolder, @Nullable final String siteCollectionId, @Nullable final String siteId) {
+    public NotebookCopyNotebookRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final NotebookCopyNotebookBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("groupId", groupId);
-        bodyParams.put("renameAs", renameAs);
-        bodyParams.put("notebookFolder", notebookFolder);
-        bodyParams.put("siteCollectionId", siteCollectionId);
-        bodyParams.put("siteId", siteId);
+        this.body = parameters;
     }
 
     /**
@@ -63,29 +57,10 @@ public class NotebookCopyNotebookRequestBuilder extends BaseActionRequestBuilder
         NotebookCopyNotebookRequest request = new NotebookCopyNotebookRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("groupId")) {
-            request.body.groupId = getParameter("groupId");
-        }
-
-        if (hasParameter("renameAs")) {
-            request.body.renameAs = getParameter("renameAs");
-        }
-
-        if (hasParameter("notebookFolder")) {
-            request.body.notebookFolder = getParameter("notebookFolder");
-        }
-
-        if (hasParameter("siteCollectionId")) {
-            request.body.siteCollectionId = getParameter("siteCollectionId");
-        }
-
-        if (hasParameter("siteId")) {
-            request.body.siteId = getParameter("siteId");
-        }
-
-        return request;
+            return request;
     }
 }

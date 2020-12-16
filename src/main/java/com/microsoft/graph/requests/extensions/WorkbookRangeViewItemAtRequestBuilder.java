@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -7,6 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.WorkbookRangeViewItemAtRequest;
 import com.microsoft.graph.models.extensions.WorkbookRangeView;
 import com.microsoft.graph.http.BaseFunctionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookRangeViewItemAtBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -25,11 +26,11 @@ public class WorkbookRangeViewItemAtRequestBuilder extends BaseFunctionRequestBu
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param index the index
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookRangeViewItemAtRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final Integer index) {
+    public WorkbookRangeViewItemAtRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookRangeViewItemAtBody parameters) {
         super(requestUrl, client, requestOptions);
-        functionOptions.add(new com.microsoft.graph.options.FunctionOption("index", index));
+        functionOptions = parameters.getFunctionOptions();
     }
 
     /**
@@ -57,10 +58,9 @@ public class WorkbookRangeViewItemAtRequestBuilder extends BaseFunctionRequestBu
                 requestOptions
         );
 
-      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
-      }
-
+        }
         return request;
     }
     /**

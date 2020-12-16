@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsExactRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsExactBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,19 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsExactRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsExactBody body;
     /**
      * The request builder for this WorkbookFunctionsExact
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param text1 the text1
-     * @param text2 the text2
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsExactRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement text1, @Nullable final com.google.gson.JsonElement text2) {
+    public WorkbookFunctionsExactRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsExactBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("text1", text1);
-        bodyParams.put("text2", text2);
+        this.body = parameters;
     }
 
     /**
@@ -57,17 +57,10 @@ public class WorkbookFunctionsExactRequestBuilder extends BaseActionRequestBuild
         WorkbookFunctionsExactRequest request = new WorkbookFunctionsExactRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("text1")) {
-            request.body.text1 = getParameter("text1");
-        }
-
-        if (hasParameter("text2")) {
-            request.body.text2 = getParameter("text2");
-        }
-
-        return request;
+            return request;
     }
 }

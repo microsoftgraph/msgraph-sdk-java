@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsPriceDiscRequest
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsPriceDiscBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,25 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsPriceDiscRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsPriceDiscBody body;
     /**
      * The request builder for this WorkbookFunctionsPriceDisc
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param settlement the settlement
-     * @param maturity the maturity
-     * @param discount the discount
-     * @param redemption the redemption
-     * @param basis the basis
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsPriceDiscRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement settlement, @Nullable final com.google.gson.JsonElement maturity, @Nullable final com.google.gson.JsonElement discount, @Nullable final com.google.gson.JsonElement redemption, @Nullable final com.google.gson.JsonElement basis) {
+    public WorkbookFunctionsPriceDiscRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsPriceDiscBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("settlement", settlement);
-        bodyParams.put("maturity", maturity);
-        bodyParams.put("discount", discount);
-        bodyParams.put("redemption", redemption);
-        bodyParams.put("basis", basis);
+        this.body = parameters;
     }
 
     /**
@@ -63,29 +57,10 @@ public class WorkbookFunctionsPriceDiscRequestBuilder extends BaseActionRequestB
         WorkbookFunctionsPriceDiscRequest request = new WorkbookFunctionsPriceDiscRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("settlement")) {
-            request.body.settlement = getParameter("settlement");
-        }
-
-        if (hasParameter("maturity")) {
-            request.body.maturity = getParameter("maturity");
-        }
-
-        if (hasParameter("discount")) {
-            request.body.discount = getParameter("discount");
-        }
-
-        if (hasParameter("redemption")) {
-            request.body.redemption = getParameter("redemption");
-        }
-
-        if (hasParameter("basis")) {
-            request.body.basis = getParameter("basis");
-        }
-
-        return request;
+            return request;
     }
 }

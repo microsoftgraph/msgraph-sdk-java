@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodCollectionRequest.java.tt
+// Template Source: BaseMethodCollectionRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -32,7 +32,7 @@ public class SiteRemoveCollectionRequest extends BaseCollectionRequest<Site, Sit
 
 
     /** The body for the method */
-    protected final SiteRemoveBody body;
+    protected SiteRemoveBody body;
 
 
     /**
@@ -41,10 +41,11 @@ public class SiteRemoveCollectionRequest extends BaseCollectionRequest<Site, Sit
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
+     * @param parameters the parameters for the service method
      */
-    public SiteRemoveCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SiteRemoveCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final SiteRemoveBody parameters) {
         super(requestUrl, client, requestOptions, SiteRemoveCollectionResponse.class, SiteRemoveCollectionPage.class, SiteRemoveCollectionRequestBuilder.class);
-        body = new SiteRemoveBody();
+        body = parameters;
     }
 
 

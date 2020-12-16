@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodCollectionRequest.java.tt
+// Template Source: BaseMethodCollectionRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -32,7 +32,7 @@ public class DeviceCompliancePolicyAssignCollectionRequest extends BaseCollectio
 
 
     /** The body for the method */
-    protected final DeviceCompliancePolicyAssignBody body;
+    protected DeviceCompliancePolicyAssignBody body;
 
 
     /**
@@ -41,10 +41,11 @@ public class DeviceCompliancePolicyAssignCollectionRequest extends BaseCollectio
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
+     * @param parameters the parameters for the service method
      */
-    public DeviceCompliancePolicyAssignCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceCompliancePolicyAssignCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DeviceCompliancePolicyAssignBody parameters) {
         super(requestUrl, client, requestOptions, DeviceCompliancePolicyAssignCollectionResponse.class, DeviceCompliancePolicyAssignCollectionPage.class, DeviceCompliancePolicyAssignCollectionRequestBuilder.class);
-        body = new DeviceCompliancePolicyAssignBody();
+        body = parameters;
     }
 
 

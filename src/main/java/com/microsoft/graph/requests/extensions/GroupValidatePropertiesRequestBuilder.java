@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.GroupValidatePropertiesRequest;
 import com.microsoft.graph.models.extensions.Group;
 
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.GroupValidatePropertiesBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,21 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class GroupValidatePropertiesRequestBuilder extends BaseActionRequestBuilder<Group> {
 
+    private GroupValidatePropertiesBody body;
     /**
      * The request builder for this GroupValidateProperties
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param displayName the displayName
-     * @param mailNickname the mailNickname
-     * @param onBehalfOfUserId the onBehalfOfUserId
+     * @param parameters     the parameters for the service method
      */
-    public GroupValidatePropertiesRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final String displayName, @Nullable final String mailNickname, @Nullable final java.util.UUID onBehalfOfUserId) {
+    public GroupValidatePropertiesRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final GroupValidatePropertiesBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("displayName", displayName);
-        bodyParams.put("mailNickname", mailNickname);
-        bodyParams.put("onBehalfOfUserId", onBehalfOfUserId);
+        this.body = parameters;
     }
 
     /**
@@ -59,21 +57,10 @@ public class GroupValidatePropertiesRequestBuilder extends BaseActionRequestBuil
         GroupValidatePropertiesRequest request = new GroupValidatePropertiesRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("displayName")) {
-            request.body.displayName = getParameter("displayName");
-        }
-
-        if (hasParameter("mailNickname")) {
-            request.body.mailNickname = getParameter("mailNickname");
-        }
-
-        if (hasParameter("onBehalfOfUserId")) {
-            request.body.onBehalfOfUserId = getParameter("onBehalfOfUserId");
-        }
-
-        return request;
+            return request;
     }
 }

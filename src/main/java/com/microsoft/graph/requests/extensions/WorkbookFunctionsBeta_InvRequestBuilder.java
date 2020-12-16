@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsBeta_InvRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsBeta_InvBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,25 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsBeta_InvRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsBeta_InvBody body;
     /**
      * The request builder for this WorkbookFunctionsBeta_Inv
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param probability the probability
-     * @param alpha the alpha
-     * @param beta the beta
-     * @param a the a
-     * @param b the b
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsBeta_InvRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement probability, @Nullable final com.google.gson.JsonElement alpha, @Nullable final com.google.gson.JsonElement beta, @Nullable final com.google.gson.JsonElement a, @Nullable final com.google.gson.JsonElement b) {
+    public WorkbookFunctionsBeta_InvRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsBeta_InvBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("probability", probability);
-        bodyParams.put("alpha", alpha);
-        bodyParams.put("beta", beta);
-        bodyParams.put("a", a);
-        bodyParams.put("b", b);
+        this.body = parameters;
     }
 
     /**
@@ -63,29 +57,10 @@ public class WorkbookFunctionsBeta_InvRequestBuilder extends BaseActionRequestBu
         WorkbookFunctionsBeta_InvRequest request = new WorkbookFunctionsBeta_InvRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("probability")) {
-            request.body.probability = getParameter("probability");
-        }
-
-        if (hasParameter("alpha")) {
-            request.body.alpha = getParameter("alpha");
-        }
-
-        if (hasParameter("beta")) {
-            request.body.beta = getParameter("beta");
-        }
-
-        if (hasParameter("a")) {
-            request.body.a = getParameter("a");
-        }
-
-        if (hasParameter("b")) {
-            request.body.b = getParameter("b");
-        }
-
-        return request;
+            return request;
     }
 }

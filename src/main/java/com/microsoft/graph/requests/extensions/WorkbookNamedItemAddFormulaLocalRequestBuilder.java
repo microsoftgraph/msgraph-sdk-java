@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -7,6 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.WorkbookNamedItemAddFormulaLocalRequest;
 import com.microsoft.graph.models.extensions.WorkbookNamedItem;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookNamedItemAddFormulaLocalBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -19,21 +20,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookNamedItemAddFormulaLocalRequestBuilder extends BaseActionRequestBuilder<WorkbookNamedItem> {
 
+    private WorkbookNamedItemAddFormulaLocalBody body;
     /**
      * The request builder for this WorkbookNamedItemAddFormulaLocal
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param name the name
-     * @param formula the formula
-     * @param comment the comment
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookNamedItemAddFormulaLocalRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final String name, @Nullable final String formula, @Nullable final String comment) {
+    public WorkbookNamedItemAddFormulaLocalRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookNamedItemAddFormulaLocalBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("name", name);
-        bodyParams.put("formula", formula);
-        bodyParams.put("comment", comment);
+        this.body = parameters;
     }
 
     /**
@@ -58,21 +56,10 @@ public class WorkbookNamedItemAddFormulaLocalRequestBuilder extends BaseActionRe
         WorkbookNamedItemAddFormulaLocalRequest request = new WorkbookNamedItemAddFormulaLocalRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("name")) {
-            request.body.name = getParameter("name");
-        }
-
-        if (hasParameter("formula")) {
-            request.body.formula = getParameter("formula");
-        }
-
-        if (hasParameter("comment")) {
-            request.body.comment = getParameter("comment");
-        }
-
-        return request;
+            return request;
     }
 }

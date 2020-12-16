@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsNominalRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsNominalBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,19 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsNominalRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsNominalBody body;
     /**
      * The request builder for this WorkbookFunctionsNominal
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param effectRate the effectRate
-     * @param npery the npery
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsNominalRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement effectRate, @Nullable final com.google.gson.JsonElement npery) {
+    public WorkbookFunctionsNominalRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsNominalBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("effectRate", effectRate);
-        bodyParams.put("npery", npery);
+        this.body = parameters;
     }
 
     /**
@@ -57,17 +57,10 @@ public class WorkbookFunctionsNominalRequestBuilder extends BaseActionRequestBui
         WorkbookFunctionsNominalRequest request = new WorkbookFunctionsNominalRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("effectRate")) {
-            request.body.effectRate = getParameter("effectRate");
-        }
-
-        if (hasParameter("npery")) {
-            request.body.npery = getParameter("npery");
-        }
-
-        return request;
+            return request;
     }
 }

@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -9,6 +9,7 @@ import com.microsoft.graph.models.extensions.WorkbookWorksheet;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.http.BaseFunctionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookWorksheetUsedRangeBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -37,11 +38,11 @@ public class WorkbookWorksheetUsedRangeRequestBuilder extends BaseFunctionReques
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param valuesOnly the valuesOnly
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookWorksheetUsedRangeRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final Boolean valuesOnly) {
+    public WorkbookWorksheetUsedRangeRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookWorksheetUsedRangeBody parameters) {
         super(requestUrl, client, requestOptions);
-        functionOptions.add(new com.microsoft.graph.options.FunctionOption("valuesOnly", valuesOnly));
+        functionOptions = parameters.getFunctionOptions();
     }
 
     /**
@@ -68,10 +69,6 @@ public class WorkbookWorksheetUsedRangeRequestBuilder extends BaseFunctionReques
                 getClient(),
                 requestOptions
         );
-
-      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
-            request.addFunctionOption(option);
-      }
 
         return request;
     }

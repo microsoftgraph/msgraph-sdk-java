@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -7,6 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.MessageCopyRequest;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.MessageCopyBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -19,17 +20,18 @@ import javax.annotation.Nonnull;
  */
 public class MessageCopyRequestBuilder extends BaseActionRequestBuilder<Message> {
 
+    private MessageCopyBody body;
     /**
      * The request builder for this MessageCopy
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param destinationId the destinationId
+     * @param parameters     the parameters for the service method
      */
-    public MessageCopyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final String destinationId) {
+    public MessageCopyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final MessageCopyBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("destinationId", destinationId);
+        this.body = parameters;
     }
 
     /**
@@ -54,13 +56,10 @@ public class MessageCopyRequestBuilder extends BaseActionRequestBuilder<Message>
         MessageCopyRequest request = new MessageCopyRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("destinationId")) {
-            request.body.destinationId = getParameter("destinationId");
-        }
-
-        return request;
+            return request;
     }
 }

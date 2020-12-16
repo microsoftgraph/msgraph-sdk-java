@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodCollectionRequestBuilder.java.tt
+// Template Source: BaseMethodCollectionRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -18,6 +18,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.CalendarGetScheduleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CalendarGetScheduleCollectionRequest;
 import com.microsoft.graph.requests.extensions.CalendarGetScheduleCollectionResponse;
+import com.microsoft.graph.models.extensions.CalendarGetScheduleBody;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
@@ -29,32 +30,19 @@ import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
  */
 public class CalendarGetScheduleCollectionRequestBuilder extends BaseActionCollectionRequestBuilder<ScheduleInformation, CalendarGetScheduleCollectionRequestBuilder, CalendarGetScheduleCollectionResponse, CalendarGetScheduleCollectionPage, CalendarGetScheduleCollectionRequest> {
 
+    private CalendarGetScheduleBody body;
     /**
      * The request builder for this collection of Calendar
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param schedules the schedules
-     * @param endTime the endTime
-     * @param startTime the startTime
-     * @param availabilityViewInterval the availabilityViewInterval
+     * @param parameters     the parameters for the service method
      */
-    public CalendarGetScheduleCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final java.util.List<String> schedules, @Nullable final DateTimeTimeZone endTime, @Nullable final DateTimeTimeZone startTime, @Nullable final Integer availabilityViewInterval) {
+    public CalendarGetScheduleCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CalendarGetScheduleBody parameters) {
         super(requestUrl, client, requestOptions, CalendarGetScheduleCollectionRequestBuilder.class, CalendarGetScheduleCollectionRequest.class);
-  	 if(schedules!=null){
-			bodyParams.put("schedules", schedules);
-		}
-    	 if(endTime!=null){
-			bodyParams.put("endTime", endTime);
-		}
-    	 if(startTime!=null){
-			bodyParams.put("startTime", startTime);
-		}
-    	 if(availabilityViewInterval!=null){
-			bodyParams.put("availabilityViewInterval", availabilityViewInterval);
-		}
-      }
+        this.body = parameters;
+    }
     
     /**
      * Creates the request
@@ -66,20 +54,7 @@ public class CalendarGetScheduleCollectionRequestBuilder extends BaseActionColle
     @Nonnull
     public CalendarGetScheduleCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final CalendarGetScheduleCollectionRequest request = super.buildRequest(requestOptions);
-
-        if (hasParameter("schedules")) {
-            request.body.schedules = getParameter("schedules");
-        }
-        if (hasParameter("endTime")) {
-            request.body.endTime = getParameter("endTime");
-        }
-        if (hasParameter("startTime")) {
-            request.body.startTime = getParameter("startTime");
-        }
-        if (hasParameter("availabilityViewInterval")) {
-            request.body.availabilityViewInterval = getParameter("availabilityViewInterval");
-        }
-  
-        return request;
+            request.body = this.body;
+            return request;
     }
 }

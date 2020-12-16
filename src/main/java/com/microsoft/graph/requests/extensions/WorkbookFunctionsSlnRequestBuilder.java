@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsSlnRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsSlnBody;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,21 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsSlnRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsSlnBody body;
     /**
      * The request builder for this WorkbookFunctionsSln
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param cost the cost
-     * @param salvage the salvage
-     * @param life the life
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsSlnRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement cost, @Nullable final com.google.gson.JsonElement salvage, @Nullable final com.google.gson.JsonElement life) {
+    public WorkbookFunctionsSlnRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsSlnBody parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("cost", cost);
-        bodyParams.put("salvage", salvage);
-        bodyParams.put("life", life);
+        this.body = parameters;
     }
 
     /**
@@ -59,21 +57,10 @@ public class WorkbookFunctionsSlnRequestBuilder extends BaseActionRequestBuilder
         WorkbookFunctionsSlnRequest request = new WorkbookFunctionsSlnRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("cost")) {
-            request.body.cost = getParameter("cost");
-        }
-
-        if (hasParameter("salvage")) {
-            request.body.salvage = getParameter("salvage");
-        }
-
-        if (hasParameter("life")) {
-            request.body.life = getParameter("life");
-        }
-
-        return request;
+            return request;
     }
 }

@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseEntityCollectionRequestBuilder.java.tt
+// Template Source: BaseEntityCollectionRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -44,7 +44,7 @@ public class WorkbookPivotTableCollectionRequestBuilder extends BaseCollectionRe
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder 
+     * @return the request builder
      */
     @Nonnull
     public WorkbookPivotTableRefreshAllRequestBuilder refreshAll() {
