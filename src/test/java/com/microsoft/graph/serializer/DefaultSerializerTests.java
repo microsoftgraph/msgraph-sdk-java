@@ -211,9 +211,7 @@ public class DefaultSerializerTests {
         final ArrayList<String> users = new ArrayList<String>();
         users.add("michael@chambele.onmicrosoft.com");
         final EnumSet<MailTipsType> mailtips = EnumSet.of(MailTipsType.MAILBOX_FULL_STATUS, MailTipsType.MAX_MESSAGE_SIZE);
-        final UserGetMailTipsBody body = new UserGetMailTipsBody();
-        body.emailAddresses = users;
-        body.mailTipsOptions = mailtips;
+        final UserGetMailTipsBody body = UserGetMailTipsBody.newBuilder().withEmailAddresses(users).withMailTipsOptions(mailtips).build();
         final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
         final String serialized = serializer.serializeObject(body);
         Assert.assertTrue("result contains camelCasedValues", serialized.contains("mailboxFullStatus"));
