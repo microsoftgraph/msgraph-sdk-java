@@ -62,7 +62,7 @@ public class WorkbookFunctionsIrrBody {
     public static final class WorkbookFunctionsIrrBodyBuilder {
         private com.google.gson.JsonElement values;
         /**
-         * Sets the name Values
+         * Sets the Values
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsIrrBody {
         }
         private com.google.gson.JsonElement guess;
         /**
-         * Sets the name Guess
+         * Sets the Guess
          * @param val the value to set it to
          * @return the current builder object
          */

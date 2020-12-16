@@ -52,7 +52,7 @@ public class WorkbookFunctionsHourBody {
     public static final class WorkbookFunctionsHourBodyBuilder {
         private com.google.gson.JsonElement serialNumber;
         /**
-         * Sets the name SerialNumber
+         * Sets the SerialNumber
          * @param val the value to set it to
          * @return the current builder object
          */

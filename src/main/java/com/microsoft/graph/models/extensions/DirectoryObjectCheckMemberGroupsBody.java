@@ -52,7 +52,7 @@ public class DirectoryObjectCheckMemberGroupsBody {
     public static final class DirectoryObjectCheckMemberGroupsBodyBuilder {
         private java.util.List<String> groupIds;
         /**
-         * Sets the name GroupIds
+         * Sets the GroupIds
          * @param val the value to set it to
          * @return the current builder object
          */

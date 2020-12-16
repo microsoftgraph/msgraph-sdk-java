@@ -52,7 +52,7 @@ public class WorkbookRangeBoundingRectBody {
     public static final class WorkbookRangeBoundingRectBodyBuilder {
         private String anotherRange;
         /**
-         * Sets the name AnotherRange
+         * Sets the AnotherRange
          * @param val the value to set it to
          * @return the current builder object
          */

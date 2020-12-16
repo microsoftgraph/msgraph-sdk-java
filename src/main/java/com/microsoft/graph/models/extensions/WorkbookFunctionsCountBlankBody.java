@@ -52,7 +52,7 @@ public class WorkbookFunctionsCountBlankBody {
     public static final class WorkbookFunctionsCountBlankBodyBuilder {
         private com.google.gson.JsonElement range;
         /**
-         * Sets the name Range
+         * Sets the Range
          * @param val the value to set it to
          * @return the current builder object
          */

@@ -73,7 +73,7 @@ public class MessageCreateForwardBody {
     public static final class MessageCreateForwardBodyBuilder {
         private java.util.List<Recipient> toRecipients;
         /**
-         * Sets the name ToRecipients
+         * Sets the ToRecipients
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -84,7 +84,7 @@ public class MessageCreateForwardBody {
         }
         private Message message;
         /**
-         * Sets the name Message
+         * Sets the Message
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -95,7 +95,7 @@ public class MessageCreateForwardBody {
         }
         private String comment;
         /**
-         * Sets the name Comment
+         * Sets the Comment
          * @param val the value to set it to
          * @return the current builder object
          */

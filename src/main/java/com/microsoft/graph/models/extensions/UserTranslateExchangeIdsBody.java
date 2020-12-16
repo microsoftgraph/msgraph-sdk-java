@@ -73,7 +73,7 @@ public class UserTranslateExchangeIdsBody {
     public static final class UserTranslateExchangeIdsBodyBuilder {
         private java.util.List<String> inputIds;
         /**
-         * Sets the name InputIds
+         * Sets the InputIds
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -84,7 +84,7 @@ public class UserTranslateExchangeIdsBody {
         }
         private ExchangeIdFormat targetIdType;
         /**
-         * Sets the name TargetIdType
+         * Sets the TargetIdType
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -95,7 +95,7 @@ public class UserTranslateExchangeIdsBody {
         }
         private ExchangeIdFormat sourceIdType;
         /**
-         * Sets the name SourceIdType
+         * Sets the SourceIdType
          * @param val the value to set it to
          * @return the current builder object
          */

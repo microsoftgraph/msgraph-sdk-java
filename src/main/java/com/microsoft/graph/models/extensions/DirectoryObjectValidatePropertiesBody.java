@@ -82,7 +82,7 @@ public class DirectoryObjectValidatePropertiesBody {
     public static final class DirectoryObjectValidatePropertiesBodyBuilder {
         private String entityType;
         /**
-         * Sets the name EntityType
+         * Sets the EntityType
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -93,7 +93,7 @@ public class DirectoryObjectValidatePropertiesBody {
         }
         private String displayName;
         /**
-         * Sets the name DisplayName
+         * Sets the DisplayName
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -104,7 +104,7 @@ public class DirectoryObjectValidatePropertiesBody {
         }
         private String mailNickname;
         /**
-         * Sets the name MailNickname
+         * Sets the MailNickname
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -115,7 +115,7 @@ public class DirectoryObjectValidatePropertiesBody {
         }
         private java.util.UUID onBehalfOfUserId;
         /**
-         * Sets the name OnBehalfOfUserId
+         * Sets the OnBehalfOfUserId
          * @param val the value to set it to
          * @return the current builder object
          */

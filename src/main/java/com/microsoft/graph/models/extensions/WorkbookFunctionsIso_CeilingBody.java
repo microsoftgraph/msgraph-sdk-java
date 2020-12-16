@@ -62,7 +62,7 @@ public class WorkbookFunctionsIso_CeilingBody {
     public static final class WorkbookFunctionsIso_CeilingBodyBuilder {
         private com.google.gson.JsonElement number;
         /**
-         * Sets the name Number
+         * Sets the Number
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsIso_CeilingBody {
         }
         private com.google.gson.JsonElement significance;
         /**
-         * Sets the name Significance
+         * Sets the Significance
          * @param val the value to set it to
          * @return the current builder object
          */

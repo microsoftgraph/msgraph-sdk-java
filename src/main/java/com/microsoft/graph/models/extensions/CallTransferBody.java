@@ -52,7 +52,7 @@ public class CallTransferBody {
     public static final class CallTransferBodyBuilder {
         private InvitationParticipantInfo transferTarget;
         /**
-         * Sets the name TransferTarget
+         * Sets the TransferTarget
          * @param val the value to set it to
          * @return the current builder object
          */

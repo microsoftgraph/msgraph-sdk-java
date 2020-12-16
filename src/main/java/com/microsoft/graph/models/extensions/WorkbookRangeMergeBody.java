@@ -52,7 +52,7 @@ public class WorkbookRangeMergeBody {
     public static final class WorkbookRangeMergeBodyBuilder {
         private Boolean across;
         /**
-         * Sets the name Across
+         * Sets the Across
          * @param val the value to set it to
          * @return the current builder object
          */

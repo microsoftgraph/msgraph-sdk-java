@@ -52,7 +52,7 @@ public class WorkbookCreateSessionBody {
     public static final class WorkbookCreateSessionBodyBuilder {
         private Boolean persistChanges;
         /**
-         * Sets the name PersistChanges
+         * Sets the PersistChanges
          * @param val the value to set it to
          * @return the current builder object
          */

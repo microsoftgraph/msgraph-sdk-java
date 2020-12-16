@@ -52,7 +52,7 @@ public class WorkbookFunctionsNorm_S_InvBody {
     public static final class WorkbookFunctionsNorm_S_InvBodyBuilder {
         private com.google.gson.JsonElement probability;
         /**
-         * Sets the name Probability
+         * Sets the Probability
          * @param val the value to set it to
          * @return the current builder object
          */

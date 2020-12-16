@@ -72,7 +72,7 @@ public class ManagedDeviceWipeBody {
     public static final class ManagedDeviceWipeBodyBuilder {
         private Boolean keepEnrollmentData;
         /**
-         * Sets the name KeepEnrollmentData
+         * Sets the KeepEnrollmentData
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class ManagedDeviceWipeBody {
         }
         private Boolean keepUserData;
         /**
-         * Sets the name KeepUserData
+         * Sets the KeepUserData
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class ManagedDeviceWipeBody {
         }
         private String macOsUnlockCode;
         /**
-         * Sets the name MacOsUnlockCode
+         * Sets the MacOsUnlockCode
          * @param val the value to set it to
          * @return the current builder object
          */

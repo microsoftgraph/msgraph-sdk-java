@@ -72,7 +72,7 @@ public class WorkbookFunctionsLookupBody {
     public static final class WorkbookFunctionsLookupBodyBuilder {
         private com.google.gson.JsonElement lookupValue;
         /**
-         * Sets the name LookupValue
+         * Sets the LookupValue
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookFunctionsLookupBody {
         }
         private com.google.gson.JsonElement lookupVector;
         /**
-         * Sets the name LookupVector
+         * Sets the LookupVector
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookFunctionsLookupBody {
         }
         private com.google.gson.JsonElement resultVector;
         /**
-         * Sets the name ResultVector
+         * Sets the ResultVector
          * @param val the value to set it to
          * @return the current builder object
          */

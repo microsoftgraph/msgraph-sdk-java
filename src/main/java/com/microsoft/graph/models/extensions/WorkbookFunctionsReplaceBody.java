@@ -82,7 +82,7 @@ public class WorkbookFunctionsReplaceBody {
     public static final class WorkbookFunctionsReplaceBodyBuilder {
         private com.google.gson.JsonElement oldText;
         /**
-         * Sets the name OldText
+         * Sets the OldText
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -93,7 +93,7 @@ public class WorkbookFunctionsReplaceBody {
         }
         private com.google.gson.JsonElement startNum;
         /**
-         * Sets the name StartNum
+         * Sets the StartNum
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -104,7 +104,7 @@ public class WorkbookFunctionsReplaceBody {
         }
         private com.google.gson.JsonElement numChars;
         /**
-         * Sets the name NumChars
+         * Sets the NumChars
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -115,7 +115,7 @@ public class WorkbookFunctionsReplaceBody {
         }
         private com.google.gson.JsonElement newText;
         /**
-         * Sets the name NewText
+         * Sets the NewText
          * @param val the value to set it to
          * @return the current builder object
          */

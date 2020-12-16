@@ -72,7 +72,7 @@ public class WorkbookFunctionsStandardizeBody {
     public static final class WorkbookFunctionsStandardizeBodyBuilder {
         private com.google.gson.JsonElement x;
         /**
-         * Sets the name X
+         * Sets the X
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookFunctionsStandardizeBody {
         }
         private com.google.gson.JsonElement mean;
         /**
-         * Sets the name Mean
+         * Sets the Mean
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookFunctionsStandardizeBody {
         }
         private com.google.gson.JsonElement standardDev;
         /**
-         * Sets the name StandardDev
+         * Sets the StandardDev
          * @param val the value to set it to
          * @return the current builder object
          */

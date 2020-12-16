@@ -23,10 +23,16 @@ import java.util.ArrayList;
 public class ContactDeltaBody {
 
     /**
+     * The delta link.
+     */
+    @Nullable
+    public String deltaLink;
+    /**
      * Instiaciates a new ContactDeltaBody
      */
     public ContactDeltaBody() {}
     private ContactDeltaBody(@Nonnull final ContactDeltaBodyBuilder builder) {
+        this.deltaLink = builder.deltaLink;
     }
     /**
      * Gets a new builder for the body
@@ -40,6 +46,17 @@ public class ContactDeltaBody {
      * Fluent builder for the ContactDeltaBody
      */
     public static final class ContactDeltaBodyBuilder {
+        private String deltaLink;
+        /**
+         * Sets the deltaLink
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public ContactDeltaBodyBuilder withDeltaLink(@Nullable final String val) {
+            this.deltaLink = val;
+            return this;
+        }
         private ContactDeltaBodyBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
@@ -57,6 +74,9 @@ public class ContactDeltaBody {
     @Nonnull
     public java.util.List<com.microsoft.graph.options.FunctionOption> getFunctionOptions() {
         final ArrayList<com.microsoft.graph.options.FunctionOption> result = new ArrayList<>();
+        if(this.deltaLink != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("deltaLink", deltaLink));
+        }
         return result;
     }
     /**

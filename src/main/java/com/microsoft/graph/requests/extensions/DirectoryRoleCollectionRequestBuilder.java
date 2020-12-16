@@ -44,21 +44,19 @@ public class DirectoryRoleCollectionRequestBuilder extends BaseCollectionRequest
     /**
      * Gets a builder to execute the method
      * @return the request builder collection
-          */
+     */
     @Nonnull
     public DirectoryRoleDeltaCollectionRequestBuilder delta() {
         return new DirectoryRoleDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
-
     /**
-     * Gets the list of newly created, updated or deleted DirectoryRole
-     * 
-     * @return a request builder to get the changes
-     * @param deltaLink the link returned by the last delta request
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param parameters the parameters for the service method
      */
     @Nonnull
-	public DirectoryRoleDeltaCollectionRequestBuilder delta(@Nonnull final String deltaLink) {
-        return new DirectoryRoleDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
+    public DirectoryRoleDeltaCollectionRequestBuilder delta(@Nonnull final com.microsoft.graph.models.extensions.DirectoryRoleDeltaBody parameters) {
+        return new DirectoryRoleDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, parameters);
     }
 
     /**

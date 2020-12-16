@@ -62,7 +62,7 @@ public class WorkbookFunctionsLeftbBody {
     public static final class WorkbookFunctionsLeftbBodyBuilder {
         private com.google.gson.JsonElement text;
         /**
-         * Sets the name Text
+         * Sets the Text
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsLeftbBody {
         }
         private com.google.gson.JsonElement numBytes;
         /**
-         * Sets the name NumBytes
+         * Sets the NumBytes
          * @param val the value to set it to
          * @return the current builder object
          */

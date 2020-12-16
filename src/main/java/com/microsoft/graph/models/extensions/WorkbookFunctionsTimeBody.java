@@ -72,7 +72,7 @@ public class WorkbookFunctionsTimeBody {
     public static final class WorkbookFunctionsTimeBodyBuilder {
         private com.google.gson.JsonElement hour;
         /**
-         * Sets the name Hour
+         * Sets the Hour
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookFunctionsTimeBody {
         }
         private com.google.gson.JsonElement minute;
         /**
-         * Sets the name Minute
+         * Sets the Minute
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookFunctionsTimeBody {
         }
         private com.google.gson.JsonElement second;
         /**
-         * Sets the name Second
+         * Sets the Second
          * @param val the value to set it to
          * @return the current builder object
          */

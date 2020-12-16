@@ -72,7 +72,7 @@ public class WorkbookFunctionsT_DistBody {
     public static final class WorkbookFunctionsT_DistBodyBuilder {
         private com.google.gson.JsonElement x;
         /**
-         * Sets the name X
+         * Sets the X
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookFunctionsT_DistBody {
         }
         private com.google.gson.JsonElement degFreedom;
         /**
-         * Sets the name DegFreedom
+         * Sets the DegFreedom
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookFunctionsT_DistBody {
         }
         private com.google.gson.JsonElement cumulative;
         /**
-         * Sets the name Cumulative
+         * Sets the Cumulative
          * @param val the value to set it to
          * @return the current builder object
          */

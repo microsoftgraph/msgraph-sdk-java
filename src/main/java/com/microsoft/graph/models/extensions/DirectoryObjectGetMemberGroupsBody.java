@@ -52,7 +52,7 @@ public class DirectoryObjectGetMemberGroupsBody {
     public static final class DirectoryObjectGetMemberGroupsBodyBuilder {
         private Boolean securityEnabledOnly;
         /**
-         * Sets the name SecurityEnabledOnly
+         * Sets the SecurityEnabledOnly
          * @param val the value to set it to
          * @return the current builder object
          */

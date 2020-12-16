@@ -62,7 +62,7 @@ public class WorkbookFunctionsGeStepBody {
     public static final class WorkbookFunctionsGeStepBodyBuilder {
         private com.google.gson.JsonElement number;
         /**
-         * Sets the name Number
+         * Sets the Number
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsGeStepBody {
         }
         private com.google.gson.JsonElement step;
         /**
-         * Sets the name Step
+         * Sets the Step
          * @param val the value to set it to
          * @return the current builder object
          */

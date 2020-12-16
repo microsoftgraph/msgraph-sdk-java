@@ -52,7 +52,7 @@ public class WorkbookFilterApplyIconFilterBody {
     public static final class WorkbookFilterApplyIconFilterBodyBuilder {
         private WorkbookIcon icon;
         /**
-         * Sets the name Icon
+         * Sets the Icon
          * @param val the value to set it to
          * @return the current builder object
          */

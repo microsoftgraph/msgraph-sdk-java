@@ -52,7 +52,7 @@ public class DeviceEnrollmentConfigurationSetPriorityBody {
     public static final class DeviceEnrollmentConfigurationSetPriorityBodyBuilder {
         private Integer priority;
         /**
-         * Sets the name Priority
+         * Sets the Priority
          * @param val the value to set it to
          * @return the current builder object
          */

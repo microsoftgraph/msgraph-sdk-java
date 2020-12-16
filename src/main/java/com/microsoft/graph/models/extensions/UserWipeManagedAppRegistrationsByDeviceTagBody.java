@@ -52,7 +52,7 @@ public class UserWipeManagedAppRegistrationsByDeviceTagBody {
     public static final class UserWipeManagedAppRegistrationsByDeviceTagBodyBuilder {
         private String deviceTag;
         /**
-         * Sets the name DeviceTag
+         * Sets the DeviceTag
          * @param val the value to set it to
          * @return the current builder object
          */

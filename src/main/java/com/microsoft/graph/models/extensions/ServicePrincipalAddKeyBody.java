@@ -73,7 +73,7 @@ public class ServicePrincipalAddKeyBody {
     public static final class ServicePrincipalAddKeyBodyBuilder {
         private KeyCredential keyCredential;
         /**
-         * Sets the name KeyCredential
+         * Sets the KeyCredential
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -84,7 +84,7 @@ public class ServicePrincipalAddKeyBody {
         }
         private PasswordCredential passwordCredential;
         /**
-         * Sets the name PasswordCredential
+         * Sets the PasswordCredential
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -95,7 +95,7 @@ public class ServicePrincipalAddKeyBody {
         }
         private String proof;
         /**
-         * Sets the name Proof
+         * Sets the Proof
          * @param val the value to set it to
          * @return the current builder object
          */

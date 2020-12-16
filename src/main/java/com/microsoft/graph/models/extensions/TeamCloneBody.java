@@ -104,7 +104,7 @@ public class TeamCloneBody {
     public static final class TeamCloneBodyBuilder {
         private String displayName;
         /**
-         * Sets the name DisplayName
+         * Sets the DisplayName
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -115,7 +115,7 @@ public class TeamCloneBody {
         }
         private String description;
         /**
-         * Sets the name Description
+         * Sets the Description
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -126,7 +126,7 @@ public class TeamCloneBody {
         }
         private String mailNickname;
         /**
-         * Sets the name MailNickname
+         * Sets the MailNickname
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -137,7 +137,7 @@ public class TeamCloneBody {
         }
         private String classification;
         /**
-         * Sets the name Classification
+         * Sets the Classification
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -148,7 +148,7 @@ public class TeamCloneBody {
         }
         private TeamVisibilityType visibility;
         /**
-         * Sets the name Visibility
+         * Sets the Visibility
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -159,7 +159,7 @@ public class TeamCloneBody {
         }
         private EnumSet<ClonableTeamParts> partsToClone;
         /**
-         * Sets the name PartsToClone
+         * Sets the PartsToClone
          * @param val the value to set it to
          * @return the current builder object
          */

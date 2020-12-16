@@ -52,7 +52,7 @@ public class WorkbookFunctionsOrBody {
     public static final class WorkbookFunctionsOrBodyBuilder {
         private com.google.gson.JsonElement values;
         /**
-         * Sets the name Values
+         * Sets the Values
          * @param val the value to set it to
          * @return the current builder object
          */

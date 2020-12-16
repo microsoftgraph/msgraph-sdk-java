@@ -52,7 +52,7 @@ public class WorkbookFunctionsEvenBody {
     public static final class WorkbookFunctionsEvenBodyBuilder {
         private com.google.gson.JsonElement number;
         /**
-         * Sets the name Number
+         * Sets the Number
          * @param val the value to set it to
          * @return the current builder object
          */

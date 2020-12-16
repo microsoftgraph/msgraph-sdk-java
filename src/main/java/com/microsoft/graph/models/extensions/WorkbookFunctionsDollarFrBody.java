@@ -62,7 +62,7 @@ public class WorkbookFunctionsDollarFrBody {
     public static final class WorkbookFunctionsDollarFrBodyBuilder {
         private com.google.gson.JsonElement decimalDollar;
         /**
-         * Sets the name DecimalDollar
+         * Sets the DecimalDollar
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsDollarFrBody {
         }
         private com.google.gson.JsonElement fraction;
         /**
-         * Sets the name Fraction
+         * Sets the Fraction
          * @param val the value to set it to
          * @return the current builder object
          */

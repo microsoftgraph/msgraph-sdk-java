@@ -62,7 +62,7 @@ public class WorkbookFunctionsRomanBody {
     public static final class WorkbookFunctionsRomanBodyBuilder {
         private com.google.gson.JsonElement number;
         /**
-         * Sets the name Number
+         * Sets the Number
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsRomanBody {
         }
         private com.google.gson.JsonElement form;
         /**
-         * Sets the name Form
+         * Sets the Form
          * @param val the value to set it to
          * @return the current builder object
          */

@@ -52,7 +52,7 @@ public class WorkbookFilterApplyDynamicFilterBody {
     public static final class WorkbookFilterApplyDynamicFilterBodyBuilder {
         private String criteria;
         /**
-         * Sets the name Criteria
+         * Sets the Criteria
          * @param val the value to set it to
          * @return the current builder object
          */

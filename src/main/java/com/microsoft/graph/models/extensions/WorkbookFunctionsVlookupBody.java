@@ -82,7 +82,7 @@ public class WorkbookFunctionsVlookupBody {
     public static final class WorkbookFunctionsVlookupBodyBuilder {
         private com.google.gson.JsonElement lookupValue;
         /**
-         * Sets the name LookupValue
+         * Sets the LookupValue
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -93,7 +93,7 @@ public class WorkbookFunctionsVlookupBody {
         }
         private com.google.gson.JsonElement tableArray;
         /**
-         * Sets the name TableArray
+         * Sets the TableArray
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -104,7 +104,7 @@ public class WorkbookFunctionsVlookupBody {
         }
         private com.google.gson.JsonElement colIndexNum;
         /**
-         * Sets the name ColIndexNum
+         * Sets the ColIndexNum
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -115,7 +115,7 @@ public class WorkbookFunctionsVlookupBody {
         }
         private com.google.gson.JsonElement rangeLookup;
         /**
-         * Sets the name RangeLookup
+         * Sets the RangeLookup
          * @param val the value to set it to
          * @return the current builder object
          */

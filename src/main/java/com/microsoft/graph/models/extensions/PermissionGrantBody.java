@@ -63,7 +63,7 @@ public class PermissionGrantBody {
     public static final class PermissionGrantBodyBuilder {
         private java.util.List<String> roles;
         /**
-         * Sets the name Roles
+         * Sets the Roles
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -74,7 +74,7 @@ public class PermissionGrantBody {
         }
         private java.util.List<DriveRecipient> recipients;
         /**
-         * Sets the name Recipients
+         * Sets the Recipients
          * @param val the value to set it to
          * @return the current builder object
          */

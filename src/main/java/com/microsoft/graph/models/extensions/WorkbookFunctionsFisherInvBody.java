@@ -52,7 +52,7 @@ public class WorkbookFunctionsFisherInvBody {
     public static final class WorkbookFunctionsFisherInvBodyBuilder {
         private com.google.gson.JsonElement y;
         /**
-         * Sets the name Y
+         * Sets the Y
          * @param val the value to set it to
          * @return the current builder object
          */

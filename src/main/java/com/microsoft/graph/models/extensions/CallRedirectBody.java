@@ -72,7 +72,7 @@ public class CallRedirectBody {
     public static final class CallRedirectBodyBuilder {
         private java.util.List<InvitationParticipantInfo> targets;
         /**
-         * Sets the name Targets
+         * Sets the Targets
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class CallRedirectBody {
         }
         private Integer timeout;
         /**
-         * Sets the name Timeout
+         * Sets the Timeout
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class CallRedirectBody {
         }
         private String callbackUri;
         /**
-         * Sets the name CallbackUri
+         * Sets the CallbackUri
          * @param val the value to set it to
          * @return the current builder object
          */

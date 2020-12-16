@@ -62,7 +62,7 @@ public class EventForwardBody {
     public static final class EventForwardBodyBuilder {
         private java.util.List<Recipient> toRecipients;
         /**
-         * Sets the name ToRecipients
+         * Sets the ToRecipients
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class EventForwardBody {
         }
         private String comment;
         /**
-         * Sets the name Comment
+         * Sets the Comment
          * @param val the value to set it to
          * @return the current builder object
          */

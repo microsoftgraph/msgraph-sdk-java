@@ -72,7 +72,7 @@ public class WorkbookNamedItemAddFormulaLocalBody {
     public static final class WorkbookNamedItemAddFormulaLocalBodyBuilder {
         private String name;
         /**
-         * Sets the name Name
+         * Sets the Name
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookNamedItemAddFormulaLocalBody {
         }
         private String formula;
         /**
-         * Sets the name Formula
+         * Sets the Formula
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookNamedItemAddFormulaLocalBody {
         }
         private String comment;
         /**
-         * Sets the name Comment
+         * Sets the Comment
          * @param val the value to set it to
          * @return the current builder object
          */

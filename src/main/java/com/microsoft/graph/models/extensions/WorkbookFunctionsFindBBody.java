@@ -72,7 +72,7 @@ public class WorkbookFunctionsFindBBody {
     public static final class WorkbookFunctionsFindBBodyBuilder {
         private com.google.gson.JsonElement findText;
         /**
-         * Sets the name FindText
+         * Sets the FindText
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookFunctionsFindBBody {
         }
         private com.google.gson.JsonElement withinText;
         /**
-         * Sets the name WithinText
+         * Sets the WithinText
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookFunctionsFindBBody {
         }
         private com.google.gson.JsonElement startNum;
         /**
-         * Sets the name StartNum
+         * Sets the StartNum
          * @param val the value to set it to
          * @return the current builder object
          */

@@ -72,7 +72,7 @@ public class GroupValidatePropertiesBody {
     public static final class GroupValidatePropertiesBodyBuilder {
         private String displayName;
         /**
-         * Sets the name DisplayName
+         * Sets the DisplayName
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class GroupValidatePropertiesBody {
         }
         private String mailNickname;
         /**
-         * Sets the name MailNickname
+         * Sets the MailNickname
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class GroupValidatePropertiesBody {
         }
         private java.util.UUID onBehalfOfUserId;
         /**
-         * Sets the name OnBehalfOfUserId
+         * Sets the OnBehalfOfUserId
          * @param val the value to set it to
          * @return the current builder object
          */

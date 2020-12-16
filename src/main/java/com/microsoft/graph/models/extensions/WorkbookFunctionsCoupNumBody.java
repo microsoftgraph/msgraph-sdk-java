@@ -82,7 +82,7 @@ public class WorkbookFunctionsCoupNumBody {
     public static final class WorkbookFunctionsCoupNumBodyBuilder {
         private com.google.gson.JsonElement settlement;
         /**
-         * Sets the name Settlement
+         * Sets the Settlement
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -93,7 +93,7 @@ public class WorkbookFunctionsCoupNumBody {
         }
         private com.google.gson.JsonElement maturity;
         /**
-         * Sets the name Maturity
+         * Sets the Maturity
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -104,7 +104,7 @@ public class WorkbookFunctionsCoupNumBody {
         }
         private com.google.gson.JsonElement frequency;
         /**
-         * Sets the name Frequency
+         * Sets the Frequency
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -115,7 +115,7 @@ public class WorkbookFunctionsCoupNumBody {
         }
         private com.google.gson.JsonElement basis;
         /**
-         * Sets the name Basis
+         * Sets the Basis
          * @param val the value to set it to
          * @return the current builder object
          */

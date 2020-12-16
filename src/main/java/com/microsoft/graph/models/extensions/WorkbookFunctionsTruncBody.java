@@ -62,7 +62,7 @@ public class WorkbookFunctionsTruncBody {
     public static final class WorkbookFunctionsTruncBodyBuilder {
         private com.google.gson.JsonElement number;
         /**
-         * Sets the name Number
+         * Sets the Number
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsTruncBody {
         }
         private com.google.gson.JsonElement numDigits;
         /**
-         * Sets the name NumDigits
+         * Sets the NumDigits
          * @param val the value to set it to
          * @return the current builder object
          */

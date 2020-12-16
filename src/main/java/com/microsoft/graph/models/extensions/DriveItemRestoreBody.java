@@ -63,7 +63,7 @@ public class DriveItemRestoreBody {
     public static final class DriveItemRestoreBodyBuilder {
         private ItemReference parentReference;
         /**
-         * Sets the name ParentReference
+         * Sets the ParentReference
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -74,7 +74,7 @@ public class DriveItemRestoreBody {
         }
         private String name;
         /**
-         * Sets the name Name
+         * Sets the Name
          * @param val the value to set it to
          * @return the current builder object
          */

@@ -82,7 +82,7 @@ public class WorkbookFunctionsSydBody {
     public static final class WorkbookFunctionsSydBodyBuilder {
         private com.google.gson.JsonElement cost;
         /**
-         * Sets the name Cost
+         * Sets the Cost
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -93,7 +93,7 @@ public class WorkbookFunctionsSydBody {
         }
         private com.google.gson.JsonElement salvage;
         /**
-         * Sets the name Salvage
+         * Sets the Salvage
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -104,7 +104,7 @@ public class WorkbookFunctionsSydBody {
         }
         private com.google.gson.JsonElement life;
         /**
-         * Sets the name Life
+         * Sets the Life
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -115,7 +115,7 @@ public class WorkbookFunctionsSydBody {
         }
         private com.google.gson.JsonElement per;
         /**
-         * Sets the name Per
+         * Sets the Per
          * @param val the value to set it to
          * @return the current builder object
          */

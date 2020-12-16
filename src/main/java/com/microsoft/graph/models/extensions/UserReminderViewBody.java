@@ -62,7 +62,7 @@ public class UserReminderViewBody {
     public static final class UserReminderViewBodyBuilder {
         private String startDateTime;
         /**
-         * Sets the name StartDateTime
+         * Sets the StartDateTime
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class UserReminderViewBody {
         }
         private String endDateTime;
         /**
-         * Sets the name EndDateTime
+         * Sets the EndDateTime
          * @param val the value to set it to
          * @return the current builder object
          */

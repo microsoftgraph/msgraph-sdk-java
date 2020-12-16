@@ -72,7 +72,7 @@ public class WorkbookFunctionsRriBody {
     public static final class WorkbookFunctionsRriBodyBuilder {
         private com.google.gson.JsonElement nper;
         /**
-         * Sets the name Nper
+         * Sets the Nper
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookFunctionsRriBody {
         }
         private com.google.gson.JsonElement pv;
         /**
-         * Sets the name Pv
+         * Sets the Pv
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookFunctionsRriBody {
         }
         private com.google.gson.JsonElement fv;
         /**
-         * Sets the name Fv
+         * Sets the Fv
          * @param val the value to set it to
          * @return the current builder object
          */

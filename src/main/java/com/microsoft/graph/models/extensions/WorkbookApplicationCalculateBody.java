@@ -52,7 +52,7 @@ public class WorkbookApplicationCalculateBody {
     public static final class WorkbookApplicationCalculateBodyBuilder {
         private String calculationType;
         /**
-         * Sets the name CalculationType
+         * Sets the CalculationType
          * @param val the value to set it to
          * @return the current builder object
          */

@@ -92,7 +92,7 @@ public class WorkbookFunctionsBeta_InvBody {
     public static final class WorkbookFunctionsBeta_InvBodyBuilder {
         private com.google.gson.JsonElement probability;
         /**
-         * Sets the name Probability
+         * Sets the Probability
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -103,7 +103,7 @@ public class WorkbookFunctionsBeta_InvBody {
         }
         private com.google.gson.JsonElement alpha;
         /**
-         * Sets the name Alpha
+         * Sets the Alpha
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -114,7 +114,7 @@ public class WorkbookFunctionsBeta_InvBody {
         }
         private com.google.gson.JsonElement beta;
         /**
-         * Sets the name Beta
+         * Sets the Beta
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -125,7 +125,7 @@ public class WorkbookFunctionsBeta_InvBody {
         }
         private com.google.gson.JsonElement a;
         /**
-         * Sets the name A
+         * Sets the A
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -136,7 +136,7 @@ public class WorkbookFunctionsBeta_InvBody {
         }
         private com.google.gson.JsonElement b;
         /**
-         * Sets the name B
+         * Sets the B
          * @param val the value to set it to
          * @return the current builder object
          */

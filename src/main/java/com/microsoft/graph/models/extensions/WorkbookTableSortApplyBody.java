@@ -72,7 +72,7 @@ public class WorkbookTableSortApplyBody {
     public static final class WorkbookTableSortApplyBodyBuilder {
         private java.util.List<WorkbookSortField> fields;
         /**
-         * Sets the name Fields
+         * Sets the Fields
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookTableSortApplyBody {
         }
         private Boolean matchCase;
         /**
-         * Sets the name MatchCase
+         * Sets the MatchCase
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookTableSortApplyBody {
         }
         private String method;
         /**
-         * Sets the name Method
+         * Sets the Method
          * @param val the value to set it to
          * @return the current builder object
          */

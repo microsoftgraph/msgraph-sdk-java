@@ -52,7 +52,7 @@ public class WorkbookFunctionsGammaBody {
     public static final class WorkbookFunctionsGammaBodyBuilder {
         private com.google.gson.JsonElement x;
         /**
-         * Sets the name X
+         * Sets the X
          * @param val the value to set it to
          * @return the current builder object
          */

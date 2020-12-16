@@ -112,7 +112,7 @@ public class WorkbookFunctionsVdbBody {
     public static final class WorkbookFunctionsVdbBodyBuilder {
         private com.google.gson.JsonElement cost;
         /**
-         * Sets the name Cost
+         * Sets the Cost
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -123,7 +123,7 @@ public class WorkbookFunctionsVdbBody {
         }
         private com.google.gson.JsonElement salvage;
         /**
-         * Sets the name Salvage
+         * Sets the Salvage
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -134,7 +134,7 @@ public class WorkbookFunctionsVdbBody {
         }
         private com.google.gson.JsonElement life;
         /**
-         * Sets the name Life
+         * Sets the Life
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -145,7 +145,7 @@ public class WorkbookFunctionsVdbBody {
         }
         private com.google.gson.JsonElement startPeriod;
         /**
-         * Sets the name StartPeriod
+         * Sets the StartPeriod
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -156,7 +156,7 @@ public class WorkbookFunctionsVdbBody {
         }
         private com.google.gson.JsonElement endPeriod;
         /**
-         * Sets the name EndPeriod
+         * Sets the EndPeriod
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -167,7 +167,7 @@ public class WorkbookFunctionsVdbBody {
         }
         private com.google.gson.JsonElement factor;
         /**
-         * Sets the name Factor
+         * Sets the Factor
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -178,7 +178,7 @@ public class WorkbookFunctionsVdbBody {
         }
         private com.google.gson.JsonElement noSwitch;
         /**
-         * Sets the name NoSwitch
+         * Sets the NoSwitch
          * @param val the value to set it to
          * @return the current builder object
          */

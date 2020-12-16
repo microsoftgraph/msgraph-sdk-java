@@ -62,7 +62,7 @@ public class UserSendMailBody {
     public static final class UserSendMailBodyBuilder {
         private Message message;
         /**
-         * Sets the name Message
+         * Sets the Message
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class UserSendMailBody {
         }
         private Boolean saveToSentItems;
         /**
-         * Sets the name SaveToSentItems
+         * Sets the SaveToSentItems
          * @param val the value to set it to
          * @return the current builder object
          */

@@ -52,7 +52,7 @@ public class WorkbookFunctionsIsNonTextBody {
     public static final class WorkbookFunctionsIsNonTextBodyBuilder {
         private com.google.gson.JsonElement value;
         /**
-         * Sets the name Value
+         * Sets the Value
          * @param val the value to set it to
          * @return the current builder object
          */

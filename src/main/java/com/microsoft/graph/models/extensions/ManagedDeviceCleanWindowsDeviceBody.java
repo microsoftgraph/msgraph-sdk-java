@@ -52,7 +52,7 @@ public class ManagedDeviceCleanWindowsDeviceBody {
     public static final class ManagedDeviceCleanWindowsDeviceBodyBuilder {
         private Boolean keepUserData;
         /**
-         * Sets the name KeepUserData
+         * Sets the KeepUserData
          * @param val the value to set it to
          * @return the current builder object
          */

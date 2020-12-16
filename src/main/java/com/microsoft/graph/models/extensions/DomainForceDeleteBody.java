@@ -52,7 +52,7 @@ public class DomainForceDeleteBody {
     public static final class DomainForceDeleteBodyBuilder {
         private Boolean disableUserAccounts;
         /**
-         * Sets the name DisableUserAccounts
+         * Sets the DisableUserAccounts
          * @param val the value to set it to
          * @return the current builder object
          */

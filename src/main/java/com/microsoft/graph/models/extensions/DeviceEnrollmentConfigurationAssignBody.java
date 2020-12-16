@@ -52,7 +52,7 @@ public class DeviceEnrollmentConfigurationAssignBody {
     public static final class DeviceEnrollmentConfigurationAssignBodyBuilder {
         private java.util.List<EnrollmentConfigurationAssignment> enrollmentConfigurationAssignments;
         /**
-         * Sets the name EnrollmentConfigurationAssignments
+         * Sets the EnrollmentConfigurationAssignments
          * @param val the value to set it to
          * @return the current builder object
          */

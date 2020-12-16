@@ -72,7 +72,7 @@ public class WorkbookFunctionsNumberValueBody {
     public static final class WorkbookFunctionsNumberValueBodyBuilder {
         private com.google.gson.JsonElement text;
         /**
-         * Sets the name Text
+         * Sets the Text
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookFunctionsNumberValueBody {
         }
         private com.google.gson.JsonElement decimalSeparator;
         /**
-         * Sets the name DecimalSeparator
+         * Sets the DecimalSeparator
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookFunctionsNumberValueBody {
         }
         private com.google.gson.JsonElement groupSeparator;
         /**
-         * Sets the name GroupSeparator
+         * Sets the GroupSeparator
          * @param val the value to set it to
          * @return the current builder object
          */

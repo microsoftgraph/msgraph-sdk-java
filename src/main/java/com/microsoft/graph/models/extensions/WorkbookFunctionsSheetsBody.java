@@ -52,7 +52,7 @@ public class WorkbookFunctionsSheetsBody {
     public static final class WorkbookFunctionsSheetsBodyBuilder {
         private com.google.gson.JsonElement reference;
         /**
-         * Sets the name Reference
+         * Sets the Reference
          * @param val the value to set it to
          * @return the current builder object
          */

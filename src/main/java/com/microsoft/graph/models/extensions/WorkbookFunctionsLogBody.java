@@ -62,7 +62,7 @@ public class WorkbookFunctionsLogBody {
     public static final class WorkbookFunctionsLogBodyBuilder {
         private com.google.gson.JsonElement number;
         /**
-         * Sets the name Number
+         * Sets the Number
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsLogBody {
         }
         private com.google.gson.JsonElement base;
         /**
-         * Sets the name Base
+         * Sets the Base
          * @param val the value to set it to
          * @return the current builder object
          */

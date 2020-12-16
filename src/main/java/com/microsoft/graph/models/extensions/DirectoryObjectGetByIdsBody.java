@@ -62,7 +62,7 @@ public class DirectoryObjectGetByIdsBody {
     public static final class DirectoryObjectGetByIdsBodyBuilder {
         private java.util.List<String> ids;
         /**
-         * Sets the name Ids
+         * Sets the Ids
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class DirectoryObjectGetByIdsBody {
         }
         private java.util.List<String> types;
         /**
-         * Sets the name Types
+         * Sets the Types
          * @param val the value to set it to
          * @return the current builder object
          */

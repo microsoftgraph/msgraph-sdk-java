@@ -62,7 +62,7 @@ public class WorkbookFunctionsDec2BinBody {
     public static final class WorkbookFunctionsDec2BinBodyBuilder {
         private com.google.gson.JsonElement number;
         /**
-         * Sets the name Number
+         * Sets the Number
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsDec2BinBody {
         }
         private com.google.gson.JsonElement places;
         /**
-         * Sets the name Places
+         * Sets the Places
          * @param val the value to set it to
          * @return the current builder object
          */

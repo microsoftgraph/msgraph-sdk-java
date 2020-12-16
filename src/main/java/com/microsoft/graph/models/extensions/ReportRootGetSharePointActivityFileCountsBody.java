@@ -52,7 +52,7 @@ public class ReportRootGetSharePointActivityFileCountsBody {
     public static final class ReportRootGetSharePointActivityFileCountsBodyBuilder {
         private String period;
         /**
-         * Sets the name Period
+         * Sets the Period
          * @param val the value to set it to
          * @return the current builder object
          */

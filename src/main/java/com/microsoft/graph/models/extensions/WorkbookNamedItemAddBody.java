@@ -72,7 +72,7 @@ public class WorkbookNamedItemAddBody {
     public static final class WorkbookNamedItemAddBodyBuilder {
         private String name;
         /**
-         * Sets the name Name
+         * Sets the Name
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookNamedItemAddBody {
         }
         private com.google.gson.JsonElement reference;
         /**
-         * Sets the name Reference
+         * Sets the Reference
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookNamedItemAddBody {
         }
         private String comment;
         /**
-         * Sets the name Comment
+         * Sets the Comment
          * @param val the value to set it to
          * @return the current builder object
          */

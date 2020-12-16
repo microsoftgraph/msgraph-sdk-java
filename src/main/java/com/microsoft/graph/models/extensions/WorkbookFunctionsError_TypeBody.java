@@ -52,7 +52,7 @@ public class WorkbookFunctionsError_TypeBody {
     public static final class WorkbookFunctionsError_TypeBodyBuilder {
         private com.google.gson.JsonElement errorVal;
         /**
-         * Sets the name ErrorVal
+         * Sets the ErrorVal
          * @param val the value to set it to
          * @return the current builder object
          */

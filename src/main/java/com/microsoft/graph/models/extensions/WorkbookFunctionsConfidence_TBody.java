@@ -72,7 +72,7 @@ public class WorkbookFunctionsConfidence_TBody {
     public static final class WorkbookFunctionsConfidence_TBodyBuilder {
         private com.google.gson.JsonElement alpha;
         /**
-         * Sets the name Alpha
+         * Sets the Alpha
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookFunctionsConfidence_TBody {
         }
         private com.google.gson.JsonElement standardDev;
         /**
-         * Sets the name StandardDev
+         * Sets the StandardDev
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookFunctionsConfidence_TBody {
         }
         private com.google.gson.JsonElement size;
         /**
-         * Sets the name Size
+         * Sets the Size
          * @param val the value to set it to
          * @return the current builder object
          */

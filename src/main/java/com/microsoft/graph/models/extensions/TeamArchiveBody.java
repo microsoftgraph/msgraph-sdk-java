@@ -52,7 +52,7 @@ public class TeamArchiveBody {
     public static final class TeamArchiveBodyBuilder {
         private Boolean shouldSetSpoSiteReadOnlyForMembers;
         /**
-         * Sets the name ShouldSetSpoSiteReadOnlyForMembers
+         * Sets the ShouldSetSpoSiteReadOnlyForMembers
          * @param val the value to set it to
          * @return the current builder object
          */

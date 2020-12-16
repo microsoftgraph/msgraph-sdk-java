@@ -72,7 +72,7 @@ public class WorkbookFunctionsF_InvBody {
     public static final class WorkbookFunctionsF_InvBodyBuilder {
         private com.google.gson.JsonElement probability;
         /**
-         * Sets the name Probability
+         * Sets the Probability
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookFunctionsF_InvBody {
         }
         private com.google.gson.JsonElement degFreedom1;
         /**
-         * Sets the name DegFreedom1
+         * Sets the DegFreedom1
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookFunctionsF_InvBody {
         }
         private com.google.gson.JsonElement degFreedom2;
         /**
-         * Sets the name DegFreedom2
+         * Sets the DegFreedom2
          * @param val the value to set it to
          * @return the current builder object
          */

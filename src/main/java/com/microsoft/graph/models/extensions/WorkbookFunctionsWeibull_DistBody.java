@@ -82,7 +82,7 @@ public class WorkbookFunctionsWeibull_DistBody {
     public static final class WorkbookFunctionsWeibull_DistBodyBuilder {
         private com.google.gson.JsonElement x;
         /**
-         * Sets the name X
+         * Sets the X
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -93,7 +93,7 @@ public class WorkbookFunctionsWeibull_DistBody {
         }
         private com.google.gson.JsonElement alpha;
         /**
-         * Sets the name Alpha
+         * Sets the Alpha
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -104,7 +104,7 @@ public class WorkbookFunctionsWeibull_DistBody {
         }
         private com.google.gson.JsonElement beta;
         /**
-         * Sets the name Beta
+         * Sets the Beta
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -115,7 +115,7 @@ public class WorkbookFunctionsWeibull_DistBody {
         }
         private com.google.gson.JsonElement cumulative;
         /**
-         * Sets the name Cumulative
+         * Sets the Cumulative
          * @param val the value to set it to
          * @return the current builder object
          */

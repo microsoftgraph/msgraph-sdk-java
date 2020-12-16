@@ -23,10 +23,16 @@ import java.util.ArrayList;
 public class DriveItemDeltaBody {
 
     /**
+     * The delta link.
+     */
+    @Nullable
+    public String deltaLink;
+    /**
      * Instiaciates a new DriveItemDeltaBody
      */
     public DriveItemDeltaBody() {}
     private DriveItemDeltaBody(@Nonnull final DriveItemDeltaBodyBuilder builder) {
+        this.deltaLink = builder.deltaLink;
     }
     /**
      * Gets a new builder for the body
@@ -40,6 +46,17 @@ public class DriveItemDeltaBody {
      * Fluent builder for the DriveItemDeltaBody
      */
     public static final class DriveItemDeltaBodyBuilder {
+        private String deltaLink;
+        /**
+         * Sets the deltaLink
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public DriveItemDeltaBodyBuilder withDeltaLink(@Nullable final String val) {
+            this.deltaLink = val;
+            return this;
+        }
         private DriveItemDeltaBodyBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
@@ -57,6 +74,9 @@ public class DriveItemDeltaBody {
     @Nonnull
     public java.util.List<com.microsoft.graph.options.FunctionOption> getFunctionOptions() {
         final ArrayList<com.microsoft.graph.options.FunctionOption> result = new ArrayList<>();
+        if(this.deltaLink != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("deltaLink", deltaLink));
+        }
         return result;
     }
     /**

@@ -62,7 +62,7 @@ public class WorkbookFunctionsExactBody {
     public static final class WorkbookFunctionsExactBodyBuilder {
         private com.google.gson.JsonElement text1;
         /**
-         * Sets the name Text1
+         * Sets the Text1
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsExactBody {
         }
         private com.google.gson.JsonElement text2;
         /**
-         * Sets the name Text2
+         * Sets the Text2
          * @param val the value to set it to
          * @return the current builder object
          */

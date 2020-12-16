@@ -52,7 +52,7 @@ public class ReportRootGetOffice365ActiveUserDetailBody {
     public static final class ReportRootGetOffice365ActiveUserDetailBodyBuilder {
         private com.microsoft.graph.core.DateOnly date;
         /**
-         * Sets the name Date
+         * Sets the Date
          * @param val the value to set it to
          * @return the current builder object
          */

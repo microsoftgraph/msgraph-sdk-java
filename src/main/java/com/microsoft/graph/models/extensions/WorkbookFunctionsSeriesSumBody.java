@@ -82,7 +82,7 @@ public class WorkbookFunctionsSeriesSumBody {
     public static final class WorkbookFunctionsSeriesSumBodyBuilder {
         private com.google.gson.JsonElement x;
         /**
-         * Sets the name X
+         * Sets the X
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -93,7 +93,7 @@ public class WorkbookFunctionsSeriesSumBody {
         }
         private com.google.gson.JsonElement n;
         /**
-         * Sets the name N
+         * Sets the N
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -104,7 +104,7 @@ public class WorkbookFunctionsSeriesSumBody {
         }
         private com.google.gson.JsonElement m;
         /**
-         * Sets the name M
+         * Sets the M
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -115,7 +115,7 @@ public class WorkbookFunctionsSeriesSumBody {
         }
         private com.google.gson.JsonElement coefficients;
         /**
-         * Sets the name Coefficients
+         * Sets the Coefficients
          * @param val the value to set it to
          * @return the current builder object
          */

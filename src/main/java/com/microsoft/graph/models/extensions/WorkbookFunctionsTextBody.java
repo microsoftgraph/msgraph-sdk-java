@@ -62,7 +62,7 @@ public class WorkbookFunctionsTextBody {
     public static final class WorkbookFunctionsTextBodyBuilder {
         private com.google.gson.JsonElement value;
         /**
-         * Sets the name Value
+         * Sets the Value
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsTextBody {
         }
         private com.google.gson.JsonElement formatText;
         /**
-         * Sets the name FormatText
+         * Sets the FormatText
          * @param val the value to set it to
          * @return the current builder object
          */

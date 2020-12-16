@@ -72,7 +72,7 @@ public class WorkbookFunctionsComplexBody {
     public static final class WorkbookFunctionsComplexBodyBuilder {
         private com.google.gson.JsonElement realNum;
         /**
-         * Sets the name RealNum
+         * Sets the RealNum
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookFunctionsComplexBody {
         }
         private com.google.gson.JsonElement iNum;
         /**
-         * Sets the name INum
+         * Sets the INum
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookFunctionsComplexBody {
         }
         private com.google.gson.JsonElement suffix;
         /**
-         * Sets the name Suffix
+         * Sets the Suffix
          * @param val the value to set it to
          * @return the current builder object
          */

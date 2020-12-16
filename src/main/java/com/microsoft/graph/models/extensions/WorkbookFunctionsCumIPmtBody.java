@@ -102,7 +102,7 @@ public class WorkbookFunctionsCumIPmtBody {
     public static final class WorkbookFunctionsCumIPmtBodyBuilder {
         private com.google.gson.JsonElement rate;
         /**
-         * Sets the name Rate
+         * Sets the Rate
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -113,7 +113,7 @@ public class WorkbookFunctionsCumIPmtBody {
         }
         private com.google.gson.JsonElement nper;
         /**
-         * Sets the name Nper
+         * Sets the Nper
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -124,7 +124,7 @@ public class WorkbookFunctionsCumIPmtBody {
         }
         private com.google.gson.JsonElement pv;
         /**
-         * Sets the name Pv
+         * Sets the Pv
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -135,7 +135,7 @@ public class WorkbookFunctionsCumIPmtBody {
         }
         private com.google.gson.JsonElement startPeriod;
         /**
-         * Sets the name StartPeriod
+         * Sets the StartPeriod
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -146,7 +146,7 @@ public class WorkbookFunctionsCumIPmtBody {
         }
         private com.google.gson.JsonElement endPeriod;
         /**
-         * Sets the name EndPeriod
+         * Sets the EndPeriod
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -157,7 +157,7 @@ public class WorkbookFunctionsCumIPmtBody {
         }
         private com.google.gson.JsonElement type;
         /**
-         * Sets the name Type
+         * Sets the Type
          * @param val the value to set it to
          * @return the current builder object
          */

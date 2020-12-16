@@ -72,7 +72,7 @@ public class ScheduleShareBody {
     public static final class ScheduleShareBodyBuilder {
         private Boolean notifyTeam;
         /**
-         * Sets the name NotifyTeam
+         * Sets the NotifyTeam
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class ScheduleShareBody {
         }
         private java.util.Calendar startDateTime;
         /**
-         * Sets the name StartDateTime
+         * Sets the StartDateTime
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class ScheduleShareBody {
         }
         private java.util.Calendar endDateTime;
         /**
-         * Sets the name EndDateTime
+         * Sets the EndDateTime
          * @param val the value to set it to
          * @return the current builder object
          */

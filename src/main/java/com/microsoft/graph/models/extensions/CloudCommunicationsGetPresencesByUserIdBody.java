@@ -52,7 +52,7 @@ public class CloudCommunicationsGetPresencesByUserIdBody {
     public static final class CloudCommunicationsGetPresencesByUserIdBodyBuilder {
         private java.util.List<String> ids;
         /**
-         * Sets the name Ids
+         * Sets the Ids
          * @param val the value to set it to
          * @return the current builder object
          */

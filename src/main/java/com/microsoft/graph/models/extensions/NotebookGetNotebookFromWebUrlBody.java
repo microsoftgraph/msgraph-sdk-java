@@ -52,7 +52,7 @@ public class NotebookGetNotebookFromWebUrlBody {
     public static final class NotebookGetNotebookFromWebUrlBodyBuilder {
         private String webUrl;
         /**
-         * Sets the name WebUrl
+         * Sets the WebUrl
          * @param val the value to set it to
          * @return the current builder object
          */

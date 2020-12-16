@@ -62,7 +62,7 @@ public class WorkbookFunctionsSubtotalBody {
     public static final class WorkbookFunctionsSubtotalBodyBuilder {
         private com.google.gson.JsonElement functionNum;
         /**
-         * Sets the name FunctionNum
+         * Sets the FunctionNum
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsSubtotalBody {
         }
         private com.google.gson.JsonElement values;
         /**
-         * Sets the name Values
+         * Sets the Values
          * @param val the value to set it to
          * @return the current builder object
          */

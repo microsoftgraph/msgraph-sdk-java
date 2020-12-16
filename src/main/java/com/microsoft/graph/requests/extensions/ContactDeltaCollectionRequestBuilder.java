@@ -38,6 +38,20 @@ public class ContactDeltaCollectionRequestBuilder extends BaseFunctionCollection
     public ContactDeltaCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ContactDeltaCollectionRequestBuilder.class, ContactDeltaCollectionRequest.class);
     }
+    /**
+     * The request builder for this collection of Contact
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param parameters     the parameters for the service method
+     */
+    public ContactDeltaCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final com.microsoft.graph.models.extensions.ContactDeltaBody parameters) {
+        super(requestUrl, client, requestOptions, ContactDeltaCollectionRequestBuilder.class, ContactDeltaCollectionRequest.class);
+        if(parameters != null) {
+            functionOptions = parameters.getFunctionOptions();
+        }
+    }
     
     /**
      * Creates the request

@@ -52,7 +52,7 @@ public class ManagedDeviceMobileAppConfigurationAssignBody {
     public static final class ManagedDeviceMobileAppConfigurationAssignBodyBuilder {
         private java.util.List<ManagedDeviceMobileAppConfigurationAssignment> assignments;
         /**
-         * Sets the name Assignments
+         * Sets the Assignments
          * @param val the value to set it to
          * @return the current builder object
          */

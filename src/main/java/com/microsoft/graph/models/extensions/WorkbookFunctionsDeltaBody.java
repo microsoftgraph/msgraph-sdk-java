@@ -41,10 +41,16 @@ public class WorkbookFunctionsDeltaBody {
 
 
     /**
+     * The delta link.
+     */
+    @Nullable
+    public String deltaLink;
+    /**
      * Instiaciates a new WorkbookFunctionsDeltaBody
      */
     public WorkbookFunctionsDeltaBody() {}
     private WorkbookFunctionsDeltaBody(@Nonnull final WorkbookFunctionsDeltaBodyBuilder builder) {
+        this.deltaLink = builder.deltaLink;
         this.number1 = builder.number1;
         this.number2 = builder.number2;
     }
@@ -60,9 +66,20 @@ public class WorkbookFunctionsDeltaBody {
      * Fluent builder for the WorkbookFunctionsDeltaBody
      */
     public static final class WorkbookFunctionsDeltaBodyBuilder {
+        private String deltaLink;
+        /**
+         * Sets the deltaLink
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public WorkbookFunctionsDeltaBodyBuilder withDeltaLink(@Nullable final String val) {
+            this.deltaLink = val;
+            return this;
+        }
         private com.google.gson.JsonElement number1;
         /**
-         * Sets the name Number1
+         * Sets the Number1
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +90,7 @@ public class WorkbookFunctionsDeltaBody {
         }
         private com.google.gson.JsonElement number2;
         /**
-         * Sets the name Number2
+         * Sets the Number2
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -99,6 +116,9 @@ public class WorkbookFunctionsDeltaBody {
     @Nonnull
     public java.util.List<com.microsoft.graph.options.FunctionOption> getFunctionOptions() {
         final ArrayList<com.microsoft.graph.options.FunctionOption> result = new ArrayList<>();
+        if(this.deltaLink != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("deltaLink", deltaLink));
+        }
         if(this.number1 != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("number1", number1));
         }

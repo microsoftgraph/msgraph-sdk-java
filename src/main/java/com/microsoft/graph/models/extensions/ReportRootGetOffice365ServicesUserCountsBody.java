@@ -52,7 +52,7 @@ public class ReportRootGetOffice365ServicesUserCountsBody {
     public static final class ReportRootGetOffice365ServicesUserCountsBodyBuilder {
         private String period;
         /**
-         * Sets the name Period
+         * Sets the Period
          * @param val the value to set it to
          * @return the current builder object
          */

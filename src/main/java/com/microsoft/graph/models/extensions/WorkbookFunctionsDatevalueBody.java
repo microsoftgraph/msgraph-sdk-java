@@ -52,7 +52,7 @@ public class WorkbookFunctionsDatevalueBody {
     public static final class WorkbookFunctionsDatevalueBodyBuilder {
         private com.google.gson.JsonElement dateText;
         /**
-         * Sets the name DateText
+         * Sets the DateText
          * @param val the value to set it to
          * @return the current builder object
          */

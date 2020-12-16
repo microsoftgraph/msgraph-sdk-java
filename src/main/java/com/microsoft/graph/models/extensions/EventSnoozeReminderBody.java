@@ -52,7 +52,7 @@ public class EventSnoozeReminderBody {
     public static final class EventSnoozeReminderBodyBuilder {
         private DateTimeTimeZone newReminderTime;
         /**
-         * Sets the name NewReminderTime
+         * Sets the NewReminderTime
          * @param val the value to set it to
          * @return the current builder object
          */

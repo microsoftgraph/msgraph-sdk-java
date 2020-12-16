@@ -102,7 +102,7 @@ public class WorkbookFunctionsMdurationBody {
     public static final class WorkbookFunctionsMdurationBodyBuilder {
         private com.google.gson.JsonElement settlement;
         /**
-         * Sets the name Settlement
+         * Sets the Settlement
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -113,7 +113,7 @@ public class WorkbookFunctionsMdurationBody {
         }
         private com.google.gson.JsonElement maturity;
         /**
-         * Sets the name Maturity
+         * Sets the Maturity
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -124,7 +124,7 @@ public class WorkbookFunctionsMdurationBody {
         }
         private com.google.gson.JsonElement coupon;
         /**
-         * Sets the name Coupon
+         * Sets the Coupon
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -135,7 +135,7 @@ public class WorkbookFunctionsMdurationBody {
         }
         private com.google.gson.JsonElement yld;
         /**
-         * Sets the name Yld
+         * Sets the Yld
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -146,7 +146,7 @@ public class WorkbookFunctionsMdurationBody {
         }
         private com.google.gson.JsonElement frequency;
         /**
-         * Sets the name Frequency
+         * Sets the Frequency
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -157,7 +157,7 @@ public class WorkbookFunctionsMdurationBody {
         }
         private com.google.gson.JsonElement basis;
         /**
-         * Sets the name Basis
+         * Sets the Basis
          * @param val the value to set it to
          * @return the current builder object
          */

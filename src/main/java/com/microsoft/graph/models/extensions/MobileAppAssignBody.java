@@ -52,7 +52,7 @@ public class MobileAppAssignBody {
     public static final class MobileAppAssignBodyBuilder {
         private java.util.List<MobileAppAssignment> mobileAppAssignments;
         /**
-         * Sets the name MobileAppAssignments
+         * Sets the MobileAppAssignments
          * @param val the value to set it to
          * @return the current builder object
          */

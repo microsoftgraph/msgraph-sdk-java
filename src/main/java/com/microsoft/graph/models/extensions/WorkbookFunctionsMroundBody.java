@@ -62,7 +62,7 @@ public class WorkbookFunctionsMroundBody {
     public static final class WorkbookFunctionsMroundBodyBuilder {
         private com.google.gson.JsonElement number;
         /**
-         * Sets the name Number
+         * Sets the Number
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsMroundBody {
         }
         private com.google.gson.JsonElement multiple;
         /**
-         * Sets the name Multiple
+         * Sets the Multiple
          * @param val the value to set it to
          * @return the current builder object
          */

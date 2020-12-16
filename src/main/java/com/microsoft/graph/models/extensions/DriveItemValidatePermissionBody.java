@@ -62,7 +62,7 @@ public class DriveItemValidatePermissionBody {
     public static final class DriveItemValidatePermissionBodyBuilder {
         private String challengeToken;
         /**
-         * Sets the name ChallengeToken
+         * Sets the ChallengeToken
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class DriveItemValidatePermissionBody {
         }
         private String password;
         /**
-         * Sets the name Password
+         * Sets the Password
          * @param val the value to set it to
          * @return the current builder object
          */

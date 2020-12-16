@@ -72,7 +72,7 @@ public class WorkbookFunctionsTbillPriceBody {
     public static final class WorkbookFunctionsTbillPriceBodyBuilder {
         private com.google.gson.JsonElement settlement;
         /**
-         * Sets the name Settlement
+         * Sets the Settlement
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookFunctionsTbillPriceBody {
         }
         private com.google.gson.JsonElement maturity;
         /**
-         * Sets the name Maturity
+         * Sets the Maturity
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookFunctionsTbillPriceBody {
         }
         private com.google.gson.JsonElement discount;
         /**
-         * Sets the name Discount
+         * Sets the Discount
          * @param val the value to set it to
          * @return the current builder object
          */

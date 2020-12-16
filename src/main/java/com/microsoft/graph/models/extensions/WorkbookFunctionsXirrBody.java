@@ -72,7 +72,7 @@ public class WorkbookFunctionsXirrBody {
     public static final class WorkbookFunctionsXirrBodyBuilder {
         private com.google.gson.JsonElement values;
         /**
-         * Sets the name Values
+         * Sets the Values
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookFunctionsXirrBody {
         }
         private com.google.gson.JsonElement dates;
         /**
-         * Sets the name Dates
+         * Sets the Dates
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookFunctionsXirrBody {
         }
         private com.google.gson.JsonElement guess;
         /**
-         * Sets the name Guess
+         * Sets the Guess
          * @param val the value to set it to
          * @return the current builder object
          */

@@ -62,7 +62,7 @@ public class WorkbookFunctionsChooseBody {
     public static final class WorkbookFunctionsChooseBodyBuilder {
         private com.google.gson.JsonElement indexNum;
         /**
-         * Sets the name IndexNum
+         * Sets the IndexNum
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsChooseBody {
         }
         private com.google.gson.JsonElement values;
         /**
-         * Sets the name Values
+         * Sets the Values
          * @param val the value to set it to
          * @return the current builder object
          */

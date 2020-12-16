@@ -72,7 +72,7 @@ public class WorkbookFunctionsMirrBody {
     public static final class WorkbookFunctionsMirrBodyBuilder {
         private com.google.gson.JsonElement values;
         /**
-         * Sets the name Values
+         * Sets the Values
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookFunctionsMirrBody {
         }
         private com.google.gson.JsonElement financeRate;
         /**
-         * Sets the name FinanceRate
+         * Sets the FinanceRate
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookFunctionsMirrBody {
         }
         private com.google.gson.JsonElement reinvestRate;
         /**
-         * Sets the name ReinvestRate
+         * Sets the ReinvestRate
          * @param val the value to set it to
          * @return the current builder object
          */

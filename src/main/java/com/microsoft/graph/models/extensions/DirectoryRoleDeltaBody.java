@@ -23,10 +23,16 @@ import java.util.ArrayList;
 public class DirectoryRoleDeltaBody {
 
     /**
+     * The delta link.
+     */
+    @Nullable
+    public String deltaLink;
+    /**
      * Instiaciates a new DirectoryRoleDeltaBody
      */
     public DirectoryRoleDeltaBody() {}
     private DirectoryRoleDeltaBody(@Nonnull final DirectoryRoleDeltaBodyBuilder builder) {
+        this.deltaLink = builder.deltaLink;
     }
     /**
      * Gets a new builder for the body
@@ -40,6 +46,17 @@ public class DirectoryRoleDeltaBody {
      * Fluent builder for the DirectoryRoleDeltaBody
      */
     public static final class DirectoryRoleDeltaBodyBuilder {
+        private String deltaLink;
+        /**
+         * Sets the deltaLink
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public DirectoryRoleDeltaBodyBuilder withDeltaLink(@Nullable final String val) {
+            this.deltaLink = val;
+            return this;
+        }
         private DirectoryRoleDeltaBodyBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
@@ -57,6 +74,9 @@ public class DirectoryRoleDeltaBody {
     @Nonnull
     public java.util.List<com.microsoft.graph.options.FunctionOption> getFunctionOptions() {
         final ArrayList<com.microsoft.graph.options.FunctionOption> result = new ArrayList<>();
+        if(this.deltaLink != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("deltaLink", deltaLink));
+        }
         return result;
     }
     /**

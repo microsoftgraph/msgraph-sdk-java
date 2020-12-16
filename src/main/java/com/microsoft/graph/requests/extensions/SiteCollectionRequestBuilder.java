@@ -50,8 +50,8 @@ public class SiteCollectionRequestBuilder extends BaseCollectionRequestBuilder<S
     /**
      * Gets a builder to execute the method
      * @return the request builder collection
-          * @param parameters the parameters for the service method
-          */
+     * @param parameters the parameters for the service method
+     */
     @Nonnull
     public SiteAddCollectionRequestBuilder add(@Nonnull final SiteAddBody parameters) {
         return new SiteAddCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.add"), getClient(), null, parameters);
@@ -60,8 +60,8 @@ public class SiteCollectionRequestBuilder extends BaseCollectionRequestBuilder<S
     /**
      * Gets a builder to execute the method
      * @return the request builder collection
-          * @param parameters the parameters for the service method
-          */
+     * @param parameters the parameters for the service method
+     */
     @Nonnull
     public SiteRemoveCollectionRequestBuilder remove(@Nonnull final SiteRemoveBody parameters) {
         return new SiteRemoveCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.remove"), getClient(), null, parameters);

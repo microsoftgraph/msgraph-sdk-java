@@ -64,8 +64,8 @@ public class DirectoryObjectCollectionRequestBuilder extends BaseCollectionReque
     /**
      * Gets a builder to execute the method
      * @return the request builder collection
-          * @param parameters the parameters for the service method
-          */
+     * @param parameters the parameters for the service method
+     */
     @Nonnull
     public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder getAvailableExtensionProperties(@Nonnull final DirectoryObjectGetAvailableExtensionPropertiesBody parameters) {
         return new DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAvailableExtensionProperties"), getClient(), null, parameters);
@@ -74,8 +74,8 @@ public class DirectoryObjectCollectionRequestBuilder extends BaseCollectionReque
     /**
      * Gets a builder to execute the method
      * @return the request builder collection
-          * @param parameters the parameters for the service method
-          */
+     * @param parameters the parameters for the service method
+     */
     @Nonnull
     public DirectoryObjectGetByIdsCollectionRequestBuilder getByIds(@Nonnull final DirectoryObjectGetByIdsBody parameters) {
         return new DirectoryObjectGetByIdsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getByIds"), getClient(), null, parameters);

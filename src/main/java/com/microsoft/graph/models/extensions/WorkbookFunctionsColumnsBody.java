@@ -52,7 +52,7 @@ public class WorkbookFunctionsColumnsBody {
     public static final class WorkbookFunctionsColumnsBodyBuilder {
         private com.google.gson.JsonElement array;
         /**
-         * Sets the name Array
+         * Sets the Array
          * @param val the value to set it to
          * @return the current builder object
          */

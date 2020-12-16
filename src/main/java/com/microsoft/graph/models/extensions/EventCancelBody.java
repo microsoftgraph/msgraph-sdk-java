@@ -52,7 +52,7 @@ public class EventCancelBody {
     public static final class EventCancelBodyBuilder {
         private String comment;
         /**
-         * Sets the name Comment
+         * Sets the Comment
          * @param val the value to set it to
          * @return the current builder object
          */

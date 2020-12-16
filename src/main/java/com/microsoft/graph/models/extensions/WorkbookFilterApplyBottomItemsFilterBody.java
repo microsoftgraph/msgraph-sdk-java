@@ -52,7 +52,7 @@ public class WorkbookFilterApplyBottomItemsFilterBody {
     public static final class WorkbookFilterApplyBottomItemsFilterBodyBuilder {
         private Integer count;
         /**
-         * Sets the name Count
+         * Sets the Count
          * @param val the value to set it to
          * @return the current builder object
          */

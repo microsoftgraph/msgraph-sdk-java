@@ -52,7 +52,7 @@ public class DeviceCompliancePolicyAssignBody {
     public static final class DeviceCompliancePolicyAssignBodyBuilder {
         private java.util.List<DeviceCompliancePolicyAssignment> assignments;
         /**
-         * Sets the name Assignments
+         * Sets the Assignments
          * @param val the value to set it to
          * @return the current builder object
          */

@@ -62,7 +62,7 @@ public class WorkbookFunctionsQuotientBody {
     public static final class WorkbookFunctionsQuotientBodyBuilder {
         private com.google.gson.JsonElement numerator;
         /**
-         * Sets the name Numerator
+         * Sets the Numerator
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsQuotientBody {
         }
         private com.google.gson.JsonElement denominator;
         /**
-         * Sets the name Denominator
+         * Sets the Denominator
          * @param val the value to set it to
          * @return the current builder object
          */

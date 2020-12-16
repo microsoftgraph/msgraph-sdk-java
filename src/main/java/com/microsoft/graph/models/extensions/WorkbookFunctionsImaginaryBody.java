@@ -52,7 +52,7 @@ public class WorkbookFunctionsImaginaryBody {
     public static final class WorkbookFunctionsImaginaryBodyBuilder {
         private com.google.gson.JsonElement inumber;
         /**
-         * Sets the name Inumber
+         * Sets the Inumber
          * @param val the value to set it to
          * @return the current builder object
          */

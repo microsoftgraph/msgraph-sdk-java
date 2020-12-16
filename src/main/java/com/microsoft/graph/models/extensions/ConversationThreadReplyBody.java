@@ -52,7 +52,7 @@ public class ConversationThreadReplyBody {
     public static final class ConversationThreadReplyBodyBuilder {
         private Post post;
         /**
-         * Sets the name Post
+         * Sets the Post
          * @param val the value to set it to
          * @return the current builder object
          */

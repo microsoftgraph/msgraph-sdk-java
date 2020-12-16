@@ -52,7 +52,7 @@ public class CallChangeScreenSharingRoleBody {
     public static final class CallChangeScreenSharingRoleBodyBuilder {
         private ScreenSharingRole role;
         /**
-         * Sets the name Role
+         * Sets the Role
          * @param val the value to set it to
          * @return the current builder object
          */

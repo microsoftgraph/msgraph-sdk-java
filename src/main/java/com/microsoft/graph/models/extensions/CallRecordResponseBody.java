@@ -123,7 +123,7 @@ public class CallRecordResponseBody {
     public static final class CallRecordResponseBodyBuilder {
         private java.util.List<Prompt> prompts;
         /**
-         * Sets the name Prompts
+         * Sets the Prompts
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -134,7 +134,7 @@ public class CallRecordResponseBody {
         }
         private Boolean bargeInAllowed;
         /**
-         * Sets the name BargeInAllowed
+         * Sets the BargeInAllowed
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -145,7 +145,7 @@ public class CallRecordResponseBody {
         }
         private Integer initialSilenceTimeoutInSeconds;
         /**
-         * Sets the name InitialSilenceTimeoutInSeconds
+         * Sets the InitialSilenceTimeoutInSeconds
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -156,7 +156,7 @@ public class CallRecordResponseBody {
         }
         private Integer maxSilenceTimeoutInSeconds;
         /**
-         * Sets the name MaxSilenceTimeoutInSeconds
+         * Sets the MaxSilenceTimeoutInSeconds
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -167,7 +167,7 @@ public class CallRecordResponseBody {
         }
         private Integer maxRecordDurationInSeconds;
         /**
-         * Sets the name MaxRecordDurationInSeconds
+         * Sets the MaxRecordDurationInSeconds
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -178,7 +178,7 @@ public class CallRecordResponseBody {
         }
         private Boolean playBeep;
         /**
-         * Sets the name PlayBeep
+         * Sets the PlayBeep
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -189,7 +189,7 @@ public class CallRecordResponseBody {
         }
         private java.util.List<String> stopTones;
         /**
-         * Sets the name StopTones
+         * Sets the StopTones
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -200,7 +200,7 @@ public class CallRecordResponseBody {
         }
         private String clientContext;
         /**
-         * Sets the name ClientContext
+         * Sets the ClientContext
          * @param val the value to set it to
          * @return the current builder object
          */

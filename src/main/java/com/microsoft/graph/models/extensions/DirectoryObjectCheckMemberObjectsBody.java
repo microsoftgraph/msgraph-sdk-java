@@ -52,7 +52,7 @@ public class DirectoryObjectCheckMemberObjectsBody {
     public static final class DirectoryObjectCheckMemberObjectsBodyBuilder {
         private java.util.List<String> ids;
         /**
-         * Sets the name Ids
+         * Sets the Ids
          * @param val the value to set it to
          * @return the current builder object
          */

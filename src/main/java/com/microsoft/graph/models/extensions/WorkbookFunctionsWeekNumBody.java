@@ -62,7 +62,7 @@ public class WorkbookFunctionsWeekNumBody {
     public static final class WorkbookFunctionsWeekNumBodyBuilder {
         private com.google.gson.JsonElement serialNumber;
         /**
-         * Sets the name SerialNumber
+         * Sets the SerialNumber
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsWeekNumBody {
         }
         private com.google.gson.JsonElement returnType;
         /**
-         * Sets the name ReturnType
+         * Sets the ReturnType
          * @param val the value to set it to
          * @return the current builder object
          */

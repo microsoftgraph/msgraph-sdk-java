@@ -62,7 +62,7 @@ public class WorkbookRangeCellBody {
     public static final class WorkbookRangeCellBodyBuilder {
         private Integer row;
         /**
-         * Sets the name Row
+         * Sets the Row
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookRangeCellBody {
         }
         private Integer column;
         /**
-         * Sets the name Column
+         * Sets the Column
          * @param val the value to set it to
          * @return the current builder object
          */

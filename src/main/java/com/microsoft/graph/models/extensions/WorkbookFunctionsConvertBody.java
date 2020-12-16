@@ -72,7 +72,7 @@ public class WorkbookFunctionsConvertBody {
     public static final class WorkbookFunctionsConvertBodyBuilder {
         private com.google.gson.JsonElement number;
         /**
-         * Sets the name Number
+         * Sets the Number
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookFunctionsConvertBody {
         }
         private com.google.gson.JsonElement fromUnit;
         /**
-         * Sets the name FromUnit
+         * Sets the FromUnit
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookFunctionsConvertBody {
         }
         private com.google.gson.JsonElement toUnit;
         /**
-         * Sets the name ToUnit
+         * Sets the ToUnit
          * @param val the value to set it to
          * @return the current builder object
          */

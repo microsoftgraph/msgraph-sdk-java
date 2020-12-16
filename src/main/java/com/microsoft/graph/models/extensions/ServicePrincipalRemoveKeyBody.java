@@ -62,7 +62,7 @@ public class ServicePrincipalRemoveKeyBody {
     public static final class ServicePrincipalRemoveKeyBodyBuilder {
         private java.util.UUID keyId;
         /**
-         * Sets the name KeyId
+         * Sets the KeyId
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class ServicePrincipalRemoveKeyBody {
         }
         private String proof;
         /**
-         * Sets the name Proof
+         * Sets the Proof
          * @param val the value to set it to
          * @return the current builder object
          */

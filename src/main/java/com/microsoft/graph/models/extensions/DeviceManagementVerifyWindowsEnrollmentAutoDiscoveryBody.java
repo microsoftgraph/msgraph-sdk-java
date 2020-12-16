@@ -52,7 +52,7 @@ public class DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryBody {
     public static final class DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryBodyBuilder {
         private String domainName;
         /**
-         * Sets the name DomainName
+         * Sets the DomainName
          * @param val the value to set it to
          * @return the current builder object
          */

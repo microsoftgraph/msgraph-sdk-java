@@ -53,7 +53,7 @@ public class SearchEntityQueryBody {
     public static final class SearchEntityQueryBodyBuilder {
         private java.util.List<SearchRequest> requests;
         /**
-         * Sets the name Requests
+         * Sets the Requests
          * @param val the value to set it to
          * @return the current builder object
          */

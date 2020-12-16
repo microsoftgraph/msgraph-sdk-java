@@ -62,7 +62,7 @@ public class WorkbookFunctionsNorm_S_DistBody {
     public static final class WorkbookFunctionsNorm_S_DistBodyBuilder {
         private com.google.gson.JsonElement z;
         /**
-         * Sets the name Z
+         * Sets the Z
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsNorm_S_DistBody {
         }
         private com.google.gson.JsonElement cumulative;
         /**
-         * Sets the name Cumulative
+         * Sets the Cumulative
          * @param val the value to set it to
          * @return the current builder object
          */

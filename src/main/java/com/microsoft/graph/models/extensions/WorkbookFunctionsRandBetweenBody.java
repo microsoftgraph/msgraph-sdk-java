@@ -62,7 +62,7 @@ public class WorkbookFunctionsRandBetweenBody {
     public static final class WorkbookFunctionsRandBetweenBodyBuilder {
         private com.google.gson.JsonElement bottom;
         /**
-         * Sets the name Bottom
+         * Sets the Bottom
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsRandBetweenBody {
         }
         private com.google.gson.JsonElement top;
         /**
-         * Sets the name Top
+         * Sets the Top
          * @param val the value to set it to
          * @return the current builder object
          */

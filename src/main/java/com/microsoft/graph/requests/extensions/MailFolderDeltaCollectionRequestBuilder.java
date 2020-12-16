@@ -38,6 +38,20 @@ public class MailFolderDeltaCollectionRequestBuilder extends BaseFunctionCollect
     public MailFolderDeltaCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MailFolderDeltaCollectionRequestBuilder.class, MailFolderDeltaCollectionRequest.class);
     }
+    /**
+     * The request builder for this collection of MailFolder
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param parameters     the parameters for the service method
+     */
+    public MailFolderDeltaCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final com.microsoft.graph.models.extensions.MailFolderDeltaBody parameters) {
+        super(requestUrl, client, requestOptions, MailFolderDeltaCollectionRequestBuilder.class, MailFolderDeltaCollectionRequest.class);
+        if(parameters != null) {
+            functionOptions = parameters.getFunctionOptions();
+        }
+    }
     
     /**
      * Creates the request

@@ -53,7 +53,7 @@ public class DriveItemCreateUploadSessionBody {
     public static final class DriveItemCreateUploadSessionBodyBuilder {
         private DriveItemUploadableProperties item;
         /**
-         * Sets the name Item
+         * Sets the Item
          * @param val the value to set it to
          * @return the current builder object
          */

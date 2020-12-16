@@ -72,7 +72,7 @@ public class WorkbookFunctionsRank_AvgBody {
     public static final class WorkbookFunctionsRank_AvgBodyBuilder {
         private com.google.gson.JsonElement number;
         /**
-         * Sets the name Number
+         * Sets the Number
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookFunctionsRank_AvgBody {
         }
         private com.google.gson.JsonElement ref;
         /**
-         * Sets the name Ref
+         * Sets the Ref
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookFunctionsRank_AvgBody {
         }
         private com.google.gson.JsonElement order;
         /**
-         * Sets the name Order
+         * Sets the Order
          * @param val the value to set it to
          * @return the current builder object
          */

@@ -52,7 +52,7 @@ public class WorkbookFunctionsIsoWeekNumBody {
     public static final class WorkbookFunctionsIsoWeekNumBodyBuilder {
         private com.google.gson.JsonElement date;
         /**
-         * Sets the name Date
+         * Sets the Date
          * @param val the value to set it to
          * @return the current builder object
          */

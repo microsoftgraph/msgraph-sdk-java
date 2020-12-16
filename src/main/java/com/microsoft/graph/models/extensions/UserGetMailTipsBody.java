@@ -64,7 +64,7 @@ public class UserGetMailTipsBody {
     public static final class UserGetMailTipsBodyBuilder {
         private java.util.List<String> emailAddresses;
         /**
-         * Sets the name EmailAddresses
+         * Sets the EmailAddresses
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -75,7 +75,7 @@ public class UserGetMailTipsBody {
         }
         private EnumSet<MailTipsType> mailTipsOptions;
         /**
-         * Sets the name MailTipsOptions
+         * Sets the MailTipsOptions
          * @param val the value to set it to
          * @return the current builder object
          */

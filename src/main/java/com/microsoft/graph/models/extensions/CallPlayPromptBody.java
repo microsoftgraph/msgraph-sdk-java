@@ -63,7 +63,7 @@ public class CallPlayPromptBody {
     public static final class CallPlayPromptBodyBuilder {
         private java.util.List<Prompt> prompts;
         /**
-         * Sets the name Prompts
+         * Sets the Prompts
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -74,7 +74,7 @@ public class CallPlayPromptBody {
         }
         private String clientContext;
         /**
-         * Sets the name ClientContext
+         * Sets the ClientContext
          * @param val the value to set it to
          * @return the current builder object
          */

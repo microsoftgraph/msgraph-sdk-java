@@ -72,7 +72,7 @@ public class WorkbookFunctionsBaseBody {
     public static final class WorkbookFunctionsBaseBodyBuilder {
         private com.google.gson.JsonElement number;
         /**
-         * Sets the name Number
+         * Sets the Number
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookFunctionsBaseBody {
         }
         private com.google.gson.JsonElement radix;
         /**
-         * Sets the name Radix
+         * Sets the Radix
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookFunctionsBaseBody {
         }
         private com.google.gson.JsonElement minLength;
         /**
-         * Sets the name MinLength
+         * Sets the MinLength
          * @param val the value to set it to
          * @return the current builder object
          */

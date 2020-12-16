@@ -72,7 +72,7 @@ public class WorkbookFilterApplyCustomFilterBody {
     public static final class WorkbookFilterApplyCustomFilterBodyBuilder {
         private String criteria1;
         /**
-         * Sets the name Criteria1
+         * Sets the Criteria1
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookFilterApplyCustomFilterBody {
         }
         private String criteria2;
         /**
-         * Sets the name Criteria2
+         * Sets the Criteria2
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookFilterApplyCustomFilterBody {
         }
         private String oper;
         /**
-         * Sets the name Oper
+         * Sets the Oper
          * @param val the value to set it to
          * @return the current builder object
          */

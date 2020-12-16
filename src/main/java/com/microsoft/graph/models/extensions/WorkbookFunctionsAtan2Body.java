@@ -62,7 +62,7 @@ public class WorkbookFunctionsAtan2Body {
     public static final class WorkbookFunctionsAtan2BodyBuilder {
         private com.google.gson.JsonElement xNum;
         /**
-         * Sets the name XNum
+         * Sets the XNum
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsAtan2Body {
         }
         private com.google.gson.JsonElement yNum;
         /**
-         * Sets the name YNum
+         * Sets the YNum
          * @param val the value to set it to
          * @return the current builder object
          */

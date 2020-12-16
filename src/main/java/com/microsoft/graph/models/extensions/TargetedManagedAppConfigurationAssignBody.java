@@ -52,7 +52,7 @@ public class TargetedManagedAppConfigurationAssignBody {
     public static final class TargetedManagedAppConfigurationAssignBodyBuilder {
         private java.util.List<TargetedManagedAppPolicyAssignment> assignments;
         /**
-         * Sets the name Assignments
+         * Sets the Assignments
          * @param val the value to set it to
          * @return the current builder object
          */

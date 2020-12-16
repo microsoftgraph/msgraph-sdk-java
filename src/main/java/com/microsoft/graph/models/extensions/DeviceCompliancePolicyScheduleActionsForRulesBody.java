@@ -52,7 +52,7 @@ public class DeviceCompliancePolicyScheduleActionsForRulesBody {
     public static final class DeviceCompliancePolicyScheduleActionsForRulesBodyBuilder {
         private java.util.List<DeviceComplianceScheduledActionForRule> deviceComplianceScheduledActionForRules;
         /**
-         * Sets the name DeviceComplianceScheduledActionForRules
+         * Sets the DeviceComplianceScheduledActionForRules
          * @param val the value to set it to
          * @return the current builder object
          */

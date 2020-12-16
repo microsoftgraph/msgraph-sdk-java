@@ -125,7 +125,7 @@ public class UserFindMeetingTimesBody {
     public static final class UserFindMeetingTimesBodyBuilder {
         private java.util.List<AttendeeBase> attendees;
         /**
-         * Sets the name Attendees
+         * Sets the Attendees
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -136,7 +136,7 @@ public class UserFindMeetingTimesBody {
         }
         private LocationConstraint locationConstraint;
         /**
-         * Sets the name LocationConstraint
+         * Sets the LocationConstraint
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -147,7 +147,7 @@ public class UserFindMeetingTimesBody {
         }
         private TimeConstraint timeConstraint;
         /**
-         * Sets the name TimeConstraint
+         * Sets the TimeConstraint
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -158,7 +158,7 @@ public class UserFindMeetingTimesBody {
         }
         private javax.xml.datatype.Duration meetingDuration;
         /**
-         * Sets the name MeetingDuration
+         * Sets the MeetingDuration
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -169,7 +169,7 @@ public class UserFindMeetingTimesBody {
         }
         private Integer maxCandidates;
         /**
-         * Sets the name MaxCandidates
+         * Sets the MaxCandidates
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -180,7 +180,7 @@ public class UserFindMeetingTimesBody {
         }
         private Boolean isOrganizerOptional;
         /**
-         * Sets the name IsOrganizerOptional
+         * Sets the IsOrganizerOptional
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -191,7 +191,7 @@ public class UserFindMeetingTimesBody {
         }
         private Boolean returnSuggestionReasons;
         /**
-         * Sets the name ReturnSuggestionReasons
+         * Sets the ReturnSuggestionReasons
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -202,7 +202,7 @@ public class UserFindMeetingTimesBody {
         }
         private Double minimumAttendeePercentage;
         /**
-         * Sets the name MinimumAttendeePercentage
+         * Sets the MinimumAttendeePercentage
          * @param val the value to set it to
          * @return the current builder object
          */

@@ -104,7 +104,7 @@ public class OnlineMeetingCreateOrGetBody {
     public static final class OnlineMeetingCreateOrGetBodyBuilder {
         private ChatInfo chatInfo;
         /**
-         * Sets the name ChatInfo
+         * Sets the ChatInfo
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -115,7 +115,7 @@ public class OnlineMeetingCreateOrGetBody {
         }
         private java.util.Calendar endDateTime;
         /**
-         * Sets the name EndDateTime
+         * Sets the EndDateTime
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -126,7 +126,7 @@ public class OnlineMeetingCreateOrGetBody {
         }
         private String externalId;
         /**
-         * Sets the name ExternalId
+         * Sets the ExternalId
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -137,7 +137,7 @@ public class OnlineMeetingCreateOrGetBody {
         }
         private MeetingParticipants participants;
         /**
-         * Sets the name Participants
+         * Sets the Participants
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -148,7 +148,7 @@ public class OnlineMeetingCreateOrGetBody {
         }
         private java.util.Calendar startDateTime;
         /**
-         * Sets the name StartDateTime
+         * Sets the StartDateTime
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -159,7 +159,7 @@ public class OnlineMeetingCreateOrGetBody {
         }
         private String subject;
         /**
-         * Sets the name Subject
+         * Sets the Subject
          * @param val the value to set it to
          * @return the current builder object
          */

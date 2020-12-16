@@ -72,7 +72,7 @@ public class WorkbookFunctionsNorm_InvBody {
     public static final class WorkbookFunctionsNorm_InvBodyBuilder {
         private com.google.gson.JsonElement probability;
         /**
-         * Sets the name Probability
+         * Sets the Probability
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookFunctionsNorm_InvBody {
         }
         private com.google.gson.JsonElement mean;
         /**
-         * Sets the name Mean
+         * Sets the Mean
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookFunctionsNorm_InvBody {
         }
         private com.google.gson.JsonElement standardDev;
         /**
-         * Sets the name StandardDev
+         * Sets the StandardDev
          * @param val the value to set it to
          * @return the current builder object
          */

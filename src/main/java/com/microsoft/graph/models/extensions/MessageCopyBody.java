@@ -52,7 +52,7 @@ public class MessageCopyBody {
     public static final class MessageCopyBodyBuilder {
         private String destinationId;
         /**
-         * Sets the name DestinationId
+         * Sets the DestinationId
          * @param val the value to set it to
          * @return the current builder object
          */

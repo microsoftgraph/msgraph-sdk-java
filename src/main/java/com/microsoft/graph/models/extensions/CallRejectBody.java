@@ -62,7 +62,7 @@ public class CallRejectBody {
     public static final class CallRejectBodyBuilder {
         private RejectReason reason;
         /**
-         * Sets the name Reason
+         * Sets the Reason
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class CallRejectBody {
         }
         private String callbackUri;
         /**
-         * Sets the name CallbackUri
+         * Sets the CallbackUri
          * @param val the value to set it to
          * @return the current builder object
          */

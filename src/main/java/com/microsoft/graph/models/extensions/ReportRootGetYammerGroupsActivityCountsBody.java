@@ -52,7 +52,7 @@ public class ReportRootGetYammerGroupsActivityCountsBody {
     public static final class ReportRootGetYammerGroupsActivityCountsBodyBuilder {
         private String period;
         /**
-         * Sets the name Period
+         * Sets the Period
          * @param val the value to set it to
          * @return the current builder object
          */

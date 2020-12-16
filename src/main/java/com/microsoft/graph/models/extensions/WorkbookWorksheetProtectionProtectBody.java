@@ -52,7 +52,7 @@ public class WorkbookWorksheetProtectionProtectBody {
     public static final class WorkbookWorksheetProtectionProtectBodyBuilder {
         private WorkbookWorksheetProtectionOptions options;
         /**
-         * Sets the name Options
+         * Sets the Options
          * @param val the value to set it to
          * @return the current builder object
          */

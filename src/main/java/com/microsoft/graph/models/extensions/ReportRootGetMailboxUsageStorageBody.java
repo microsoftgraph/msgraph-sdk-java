@@ -52,7 +52,7 @@ public class ReportRootGetMailboxUsageStorageBody {
     public static final class ReportRootGetMailboxUsageStorageBodyBuilder {
         private String period;
         /**
-         * Sets the name Period
+         * Sets the Period
          * @param val the value to set it to
          * @return the current builder object
          */

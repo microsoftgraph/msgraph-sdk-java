@@ -52,7 +52,7 @@ public class WorkbookFunctionsNotBody {
     public static final class WorkbookFunctionsNotBodyBuilder {
         private com.google.gson.JsonElement logical;
         /**
-         * Sets the name Logical
+         * Sets the Logical
          * @param val the value to set it to
          * @return the current builder object
          */

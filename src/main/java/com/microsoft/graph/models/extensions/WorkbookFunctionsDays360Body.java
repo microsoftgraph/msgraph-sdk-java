@@ -72,7 +72,7 @@ public class WorkbookFunctionsDays360Body {
     public static final class WorkbookFunctionsDays360BodyBuilder {
         private com.google.gson.JsonElement startDate;
         /**
-         * Sets the name StartDate
+         * Sets the StartDate
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookFunctionsDays360Body {
         }
         private com.google.gson.JsonElement endDate;
         /**
-         * Sets the name EndDate
+         * Sets the EndDate
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookFunctionsDays360Body {
         }
         private com.google.gson.JsonElement method;
         /**
-         * Sets the name Method
+         * Sets the Method
          * @param val the value to set it to
          * @return the current builder object
          */

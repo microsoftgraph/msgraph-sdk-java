@@ -62,7 +62,7 @@ public class WorkbookFunctionsBesselJBody {
     public static final class WorkbookFunctionsBesselJBodyBuilder {
         private com.google.gson.JsonElement x;
         /**
-         * Sets the name X
+         * Sets the X
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsBesselJBody {
         }
         private com.google.gson.JsonElement n;
         /**
-         * Sets the name N
+         * Sets the N
          * @param val the value to set it to
          * @return the current builder object
          */

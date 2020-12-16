@@ -62,7 +62,7 @@ public class WorkbookFunctionsSmallBody {
     public static final class WorkbookFunctionsSmallBodyBuilder {
         private com.google.gson.JsonElement array;
         /**
-         * Sets the name Array
+         * Sets the Array
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsSmallBody {
         }
         private com.google.gson.JsonElement k;
         /**
-         * Sets the name K
+         * Sets the K
          * @param val the value to set it to
          * @return the current builder object
          */

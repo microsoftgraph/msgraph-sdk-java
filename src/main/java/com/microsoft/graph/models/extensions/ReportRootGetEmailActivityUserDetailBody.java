@@ -52,7 +52,7 @@ public class ReportRootGetEmailActivityUserDetailBody {
     public static final class ReportRootGetEmailActivityUserDetailBodyBuilder {
         private com.microsoft.graph.core.DateOnly date;
         /**
-         * Sets the name Date
+         * Sets the Date
          * @param val the value to set it to
          * @return the current builder object
          */

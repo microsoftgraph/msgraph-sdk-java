@@ -62,7 +62,7 @@ public class WorkbookFunctionsT_Inv_2TBody {
     public static final class WorkbookFunctionsT_Inv_2TBodyBuilder {
         private com.google.gson.JsonElement probability;
         /**
-         * Sets the name Probability
+         * Sets the Probability
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsT_Inv_2TBody {
         }
         private com.google.gson.JsonElement degFreedom;
         /**
-         * Sets the name DegFreedom
+         * Sets the DegFreedom
          * @param val the value to set it to
          * @return the current builder object
          */

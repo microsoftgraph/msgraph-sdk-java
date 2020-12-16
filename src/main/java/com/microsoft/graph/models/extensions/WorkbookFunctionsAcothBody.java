@@ -52,7 +52,7 @@ public class WorkbookFunctionsAcothBody {
     public static final class WorkbookFunctionsAcothBodyBuilder {
         private com.google.gson.JsonElement number;
         /**
-         * Sets the name Number
+         * Sets the Number
          * @param val the value to set it to
          * @return the current builder object
          */

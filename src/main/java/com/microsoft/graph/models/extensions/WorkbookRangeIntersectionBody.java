@@ -52,7 +52,7 @@ public class WorkbookRangeIntersectionBody {
     public static final class WorkbookRangeIntersectionBodyBuilder {
         private String anotherRange;
         /**
-         * Sets the name AnotherRange
+         * Sets the AnotherRange
          * @param val the value to set it to
          * @return the current builder object
          */

@@ -92,7 +92,7 @@ public class DriveItemCreateLinkBody {
     public static final class DriveItemCreateLinkBodyBuilder {
         private String type;
         /**
-         * Sets the name Type
+         * Sets the Type
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -103,7 +103,7 @@ public class DriveItemCreateLinkBody {
         }
         private String scope;
         /**
-         * Sets the name Scope
+         * Sets the Scope
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -114,7 +114,7 @@ public class DriveItemCreateLinkBody {
         }
         private java.util.Calendar expirationDateTime;
         /**
-         * Sets the name ExpirationDateTime
+         * Sets the ExpirationDateTime
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -125,7 +125,7 @@ public class DriveItemCreateLinkBody {
         }
         private String password;
         /**
-         * Sets the name Password
+         * Sets the Password
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -136,7 +136,7 @@ public class DriveItemCreateLinkBody {
         }
         private String message;
         /**
-         * Sets the name Message
+         * Sets the Message
          * @param val the value to set it to
          * @return the current builder object
          */

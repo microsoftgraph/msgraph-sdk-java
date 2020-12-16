@@ -72,7 +72,7 @@ public class WorkbookFunctionsMidBody {
     public static final class WorkbookFunctionsMidBodyBuilder {
         private com.google.gson.JsonElement text;
         /**
-         * Sets the name Text
+         * Sets the Text
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookFunctionsMidBody {
         }
         private com.google.gson.JsonElement startNum;
         /**
-         * Sets the name StartNum
+         * Sets the StartNum
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookFunctionsMidBody {
         }
         private com.google.gson.JsonElement numChars;
         /**
-         * Sets the name NumChars
+         * Sets the NumChars
          * @param val the value to set it to
          * @return the current builder object
          */

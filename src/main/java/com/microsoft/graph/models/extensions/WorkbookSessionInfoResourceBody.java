@@ -52,7 +52,7 @@ public class WorkbookSessionInfoResourceBody {
     public static final class WorkbookSessionInfoResourceBodyBuilder {
         private String key;
         /**
-         * Sets the name Key
+         * Sets the Key
          * @param val the value to set it to
          * @return the current builder object
          */

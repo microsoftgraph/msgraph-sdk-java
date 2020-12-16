@@ -62,7 +62,7 @@ public class WorkbookFunctionsFvscheduleBody {
     public static final class WorkbookFunctionsFvscheduleBodyBuilder {
         private com.google.gson.JsonElement principal;
         /**
-         * Sets the name Principal
+         * Sets the Principal
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsFvscheduleBody {
         }
         private com.google.gson.JsonElement schedule;
         /**
-         * Sets the name Schedule
+         * Sets the Schedule
          * @param val the value to set it to
          * @return the current builder object
          */

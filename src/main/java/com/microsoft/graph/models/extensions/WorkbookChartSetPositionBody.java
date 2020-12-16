@@ -62,7 +62,7 @@ public class WorkbookChartSetPositionBody {
     public static final class WorkbookChartSetPositionBodyBuilder {
         private com.google.gson.JsonElement startCell;
         /**
-         * Sets the name StartCell
+         * Sets the StartCell
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookChartSetPositionBody {
         }
         private com.google.gson.JsonElement endCell;
         /**
-         * Sets the name EndCell
+         * Sets the EndCell
          * @param val the value to set it to
          * @return the current builder object
          */

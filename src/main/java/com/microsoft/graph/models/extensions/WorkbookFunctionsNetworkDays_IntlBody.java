@@ -82,7 +82,7 @@ public class WorkbookFunctionsNetworkDays_IntlBody {
     public static final class WorkbookFunctionsNetworkDays_IntlBodyBuilder {
         private com.google.gson.JsonElement startDate;
         /**
-         * Sets the name StartDate
+         * Sets the StartDate
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -93,7 +93,7 @@ public class WorkbookFunctionsNetworkDays_IntlBody {
         }
         private com.google.gson.JsonElement endDate;
         /**
-         * Sets the name EndDate
+         * Sets the EndDate
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -104,7 +104,7 @@ public class WorkbookFunctionsNetworkDays_IntlBody {
         }
         private com.google.gson.JsonElement weekend;
         /**
-         * Sets the name Weekend
+         * Sets the Weekend
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -115,7 +115,7 @@ public class WorkbookFunctionsNetworkDays_IntlBody {
         }
         private com.google.gson.JsonElement holidays;
         /**
-         * Sets the name Holidays
+         * Sets the Holidays
          * @param val the value to set it to
          * @return the current builder object
          */

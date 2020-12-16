@@ -62,7 +62,7 @@ public class UserChangePasswordBody {
     public static final class UserChangePasswordBodyBuilder {
         private String currentPassword;
         /**
-         * Sets the name CurrentPassword
+         * Sets the CurrentPassword
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class UserChangePasswordBody {
         }
         private String newPassword;
         /**
-         * Sets the name NewPassword
+         * Sets the NewPassword
          * @param val the value to set it to
          * @return the current builder object
          */

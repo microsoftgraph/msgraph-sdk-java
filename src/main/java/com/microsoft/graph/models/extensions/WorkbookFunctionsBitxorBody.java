@@ -62,7 +62,7 @@ public class WorkbookFunctionsBitxorBody {
     public static final class WorkbookFunctionsBitxorBodyBuilder {
         private com.google.gson.JsonElement number1;
         /**
-         * Sets the name Number1
+         * Sets the Number1
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsBitxorBody {
         }
         private com.google.gson.JsonElement number2;
         /**
-         * Sets the name Number2
+         * Sets the Number2
          * @param val the value to set it to
          * @return the current builder object
          */

@@ -62,7 +62,7 @@ public class WorkbookFunctionsTrimMeanBody {
     public static final class WorkbookFunctionsTrimMeanBodyBuilder {
         private com.google.gson.JsonElement array;
         /**
-         * Sets the name Array
+         * Sets the Array
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsTrimMeanBody {
         }
         private com.google.gson.JsonElement percent;
         /**
-         * Sets the name Percent
+         * Sets the Percent
          * @param val the value to set it to
          * @return the current builder object
          */

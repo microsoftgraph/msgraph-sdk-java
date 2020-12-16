@@ -72,7 +72,7 @@ public class WorkbookFunctionsZ_TestBody {
     public static final class WorkbookFunctionsZ_TestBodyBuilder {
         private com.google.gson.JsonElement array;
         /**
-         * Sets the name Array
+         * Sets the Array
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookFunctionsZ_TestBody {
         }
         private com.google.gson.JsonElement x;
         /**
-         * Sets the name X
+         * Sets the X
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookFunctionsZ_TestBody {
         }
         private com.google.gson.JsonElement sigma;
         /**
-         * Sets the name Sigma
+         * Sets the Sigma
          * @param val the value to set it to
          * @return the current builder object
          */

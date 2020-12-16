@@ -52,7 +52,7 @@ public class ManagedDeviceUpdateWindowsDeviceAccountBody {
     public static final class ManagedDeviceUpdateWindowsDeviceAccountBodyBuilder {
         private UpdateWindowsDeviceAccountActionParameter updateWindowsDeviceAccountActionParameter;
         /**
-         * Sets the name UpdateWindowsDeviceAccountActionParameter
+         * Sets the UpdateWindowsDeviceAccountActionParameter
          * @param val the value to set it to
          * @return the current builder object
          */

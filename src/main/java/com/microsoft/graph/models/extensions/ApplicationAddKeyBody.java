@@ -73,7 +73,7 @@ public class ApplicationAddKeyBody {
     public static final class ApplicationAddKeyBodyBuilder {
         private KeyCredential keyCredential;
         /**
-         * Sets the name KeyCredential
+         * Sets the KeyCredential
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -84,7 +84,7 @@ public class ApplicationAddKeyBody {
         }
         private PasswordCredential passwordCredential;
         /**
-         * Sets the name PasswordCredential
+         * Sets the PasswordCredential
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -95,7 +95,7 @@ public class ApplicationAddKeyBody {
         }
         private String proof;
         /**
-         * Sets the name Proof
+         * Sets the Proof
          * @param val the value to set it to
          * @return the current builder object
          */

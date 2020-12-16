@@ -52,7 +52,7 @@ public class WorkbookChartItemBody {
     public static final class WorkbookChartItemBodyBuilder {
         private String name;
         /**
-         * Sets the name Name
+         * Sets the Name
          * @param val the value to set it to
          * @return the current builder object
          */

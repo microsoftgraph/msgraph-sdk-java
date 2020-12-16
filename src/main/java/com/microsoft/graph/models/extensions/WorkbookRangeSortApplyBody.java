@@ -92,7 +92,7 @@ public class WorkbookRangeSortApplyBody {
     public static final class WorkbookRangeSortApplyBodyBuilder {
         private java.util.List<WorkbookSortField> fields;
         /**
-         * Sets the name Fields
+         * Sets the Fields
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -103,7 +103,7 @@ public class WorkbookRangeSortApplyBody {
         }
         private Boolean matchCase;
         /**
-         * Sets the name MatchCase
+         * Sets the MatchCase
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -114,7 +114,7 @@ public class WorkbookRangeSortApplyBody {
         }
         private Boolean hasHeaders;
         /**
-         * Sets the name HasHeaders
+         * Sets the HasHeaders
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -125,7 +125,7 @@ public class WorkbookRangeSortApplyBody {
         }
         private String orientation;
         /**
-         * Sets the name Orientation
+         * Sets the Orientation
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -136,7 +136,7 @@ public class WorkbookRangeSortApplyBody {
         }
         private String method;
         /**
-         * Sets the name Method
+         * Sets the Method
          * @param val the value to set it to
          * @return the current builder object
          */

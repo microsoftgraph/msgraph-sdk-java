@@ -52,7 +52,7 @@ public class ManagedEBookAssignBody {
     public static final class ManagedEBookAssignBodyBuilder {
         private java.util.List<ManagedEBookAssignment> managedEBookAssignments;
         /**
-         * Sets the name ManagedEBookAssignments
+         * Sets the ManagedEBookAssignments
          * @param val the value to set it to
          * @return the current builder object
          */

@@ -52,7 +52,7 @@ public class ManagedDeviceWindowsDefenderScanBody {
     public static final class ManagedDeviceWindowsDefenderScanBodyBuilder {
         private Boolean quickScan;
         /**
-         * Sets the name QuickScan
+         * Sets the QuickScan
          * @param val the value to set it to
          * @return the current builder object
          */

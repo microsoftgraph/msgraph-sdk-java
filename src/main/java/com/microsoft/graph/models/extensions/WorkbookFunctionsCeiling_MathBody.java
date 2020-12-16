@@ -72,7 +72,7 @@ public class WorkbookFunctionsCeiling_MathBody {
     public static final class WorkbookFunctionsCeiling_MathBodyBuilder {
         private com.google.gson.JsonElement number;
         /**
-         * Sets the name Number
+         * Sets the Number
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookFunctionsCeiling_MathBody {
         }
         private com.google.gson.JsonElement significance;
         /**
-         * Sets the name Significance
+         * Sets the Significance
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookFunctionsCeiling_MathBody {
         }
         private com.google.gson.JsonElement mode;
         /**
-         * Sets the name Mode
+         * Sets the Mode
          * @param val the value to set it to
          * @return the current builder object
          */

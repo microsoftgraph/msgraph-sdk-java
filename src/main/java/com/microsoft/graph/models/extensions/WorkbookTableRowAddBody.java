@@ -62,7 +62,7 @@ public class WorkbookTableRowAddBody {
     public static final class WorkbookTableRowAddBodyBuilder {
         private Integer index;
         /**
-         * Sets the name Index
+         * Sets the Index
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookTableRowAddBody {
         }
         private com.google.gson.JsonElement values;
         /**
-         * Sets the name Values
+         * Sets the Values
          * @param val the value to set it to
          * @return the current builder object
          */

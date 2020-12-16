@@ -72,7 +72,7 @@ public class WorkbookFunctionsPercentRank_IncBody {
     public static final class WorkbookFunctionsPercentRank_IncBodyBuilder {
         private com.google.gson.JsonElement array;
         /**
-         * Sets the name Array
+         * Sets the Array
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookFunctionsPercentRank_IncBody {
         }
         private com.google.gson.JsonElement x;
         /**
-         * Sets the name X
+         * Sets the X
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookFunctionsPercentRank_IncBody {
         }
         private com.google.gson.JsonElement significance;
         /**
-         * Sets the name Significance
+         * Sets the Significance
          * @param val the value to set it to
          * @return the current builder object
          */

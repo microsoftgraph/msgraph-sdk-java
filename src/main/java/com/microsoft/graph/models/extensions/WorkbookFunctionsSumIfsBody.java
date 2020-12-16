@@ -62,7 +62,7 @@ public class WorkbookFunctionsSumIfsBody {
     public static final class WorkbookFunctionsSumIfsBodyBuilder {
         private com.google.gson.JsonElement sumRange;
         /**
-         * Sets the name SumRange
+         * Sets the SumRange
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsSumIfsBody {
         }
         private com.google.gson.JsonElement values;
         /**
-         * Sets the name Values
+         * Sets the Values
          * @param val the value to set it to
          * @return the current builder object
          */

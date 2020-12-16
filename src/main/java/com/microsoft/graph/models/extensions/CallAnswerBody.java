@@ -73,7 +73,7 @@ public class CallAnswerBody {
     public static final class CallAnswerBodyBuilder {
         private String callbackUri;
         /**
-         * Sets the name CallbackUri
+         * Sets the CallbackUri
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -84,7 +84,7 @@ public class CallAnswerBody {
         }
         private MediaConfig mediaConfig;
         /**
-         * Sets the name MediaConfig
+         * Sets the MediaConfig
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -95,7 +95,7 @@ public class CallAnswerBody {
         }
         private java.util.List<Modality> acceptedModalities;
         /**
-         * Sets the name AcceptedModalities
+         * Sets the AcceptedModalities
          * @param val the value to set it to
          * @return the current builder object
          */

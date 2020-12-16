@@ -52,7 +52,7 @@ public class SiteGetByPathBody {
     public static final class SiteGetByPathBodyBuilder {
         private String path;
         /**
-         * Sets the name Path
+         * Sets the Path
          * @param val the value to set it to
          * @return the current builder object
          */

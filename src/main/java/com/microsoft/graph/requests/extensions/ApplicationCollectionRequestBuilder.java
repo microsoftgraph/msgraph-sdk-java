@@ -50,21 +50,19 @@ public class ApplicationCollectionRequestBuilder extends BaseCollectionRequestBu
     /**
      * Gets a builder to execute the method
      * @return the request builder collection
-          */
+     */
     @Nonnull
     public ApplicationDeltaCollectionRequestBuilder delta() {
         return new ApplicationDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
-
     /**
-     * Gets the list of newly created, updated or deleted Application
-     * 
-     * @return a request builder to get the changes
-     * @param deltaLink the link returned by the last delta request
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param parameters the parameters for the service method
      */
     @Nonnull
-	public ApplicationDeltaCollectionRequestBuilder delta(@Nonnull final String deltaLink) {
-        return new ApplicationDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
+    public ApplicationDeltaCollectionRequestBuilder delta(@Nonnull final com.microsoft.graph.models.extensions.ApplicationDeltaBody parameters) {
+        return new ApplicationDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, parameters);
     }
 
     /**

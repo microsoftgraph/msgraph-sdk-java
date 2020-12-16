@@ -62,7 +62,7 @@ public class WorkbookFunctionsOct2HexBody {
     public static final class WorkbookFunctionsOct2HexBodyBuilder {
         private com.google.gson.JsonElement number;
         /**
-         * Sets the name Number
+         * Sets the Number
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsOct2HexBody {
         }
         private com.google.gson.JsonElement places;
         /**
-         * Sets the name Places
+         * Sets the Places
          * @param val the value to set it to
          * @return the current builder object
          */

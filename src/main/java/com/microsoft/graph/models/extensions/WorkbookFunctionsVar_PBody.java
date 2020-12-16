@@ -52,7 +52,7 @@ public class WorkbookFunctionsVar_PBody {
     public static final class WorkbookFunctionsVar_PBodyBuilder {
         private com.google.gson.JsonElement values;
         /**
-         * Sets the name Values
+         * Sets the Values
          * @param val the value to set it to
          * @return the current builder object
          */

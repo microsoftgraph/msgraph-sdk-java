@@ -52,7 +52,7 @@ public class WorkbookFunctionsRowsBody {
     public static final class WorkbookFunctionsRowsBodyBuilder {
         private com.google.gson.JsonElement array;
         /**
-         * Sets the name Array
+         * Sets the Array
          * @param val the value to set it to
          * @return the current builder object
          */

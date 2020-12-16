@@ -62,7 +62,7 @@ public class WorkbookFunctionsQuartile_ExcBody {
     public static final class WorkbookFunctionsQuartile_ExcBodyBuilder {
         private com.google.gson.JsonElement array;
         /**
-         * Sets the name Array
+         * Sets the Array
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsQuartile_ExcBody {
         }
         private com.google.gson.JsonElement quart;
         /**
-         * Sets the name Quart
+         * Sets the Quart
          * @param val the value to set it to
          * @return the current builder object
          */

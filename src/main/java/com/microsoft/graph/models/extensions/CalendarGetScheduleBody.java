@@ -83,7 +83,7 @@ public class CalendarGetScheduleBody {
     public static final class CalendarGetScheduleBodyBuilder {
         private java.util.List<String> schedules;
         /**
-         * Sets the name Schedules
+         * Sets the Schedules
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class CalendarGetScheduleBody {
         }
         private DateTimeTimeZone endTime;
         /**
-         * Sets the name EndTime
+         * Sets the EndTime
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -105,7 +105,7 @@ public class CalendarGetScheduleBody {
         }
         private DateTimeTimeZone startTime;
         /**
-         * Sets the name StartTime
+         * Sets the StartTime
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -116,7 +116,7 @@ public class CalendarGetScheduleBody {
         }
         private Integer availabilityViewInterval;
         /**
-         * Sets the name AvailabilityViewInterval
+         * Sets the AvailabilityViewInterval
          * @param val the value to set it to
          * @return the current builder object
          */

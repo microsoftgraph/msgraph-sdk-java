@@ -52,7 +52,7 @@ public class WorkbookRangeInsertBody {
     public static final class WorkbookRangeInsertBodyBuilder {
         private String shift;
         /**
-         * Sets the name Shift
+         * Sets the Shift
          * @param val the value to set it to
          * @return the current builder object
          */

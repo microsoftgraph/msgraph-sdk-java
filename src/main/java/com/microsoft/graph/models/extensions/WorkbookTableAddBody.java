@@ -62,7 +62,7 @@ public class WorkbookTableAddBody {
     public static final class WorkbookTableAddBodyBuilder {
         private String address;
         /**
-         * Sets the name Address
+         * Sets the Address
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookTableAddBody {
         }
         private Boolean hasHeaders;
         /**
-         * Sets the name HasHeaders
+         * Sets the HasHeaders
          * @param val the value to set it to
          * @return the current builder object
          */

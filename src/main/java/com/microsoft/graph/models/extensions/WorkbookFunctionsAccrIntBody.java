@@ -122,7 +122,7 @@ public class WorkbookFunctionsAccrIntBody {
     public static final class WorkbookFunctionsAccrIntBodyBuilder {
         private com.google.gson.JsonElement issue;
         /**
-         * Sets the name Issue
+         * Sets the Issue
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -133,7 +133,7 @@ public class WorkbookFunctionsAccrIntBody {
         }
         private com.google.gson.JsonElement firstInterest;
         /**
-         * Sets the name FirstInterest
+         * Sets the FirstInterest
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -144,7 +144,7 @@ public class WorkbookFunctionsAccrIntBody {
         }
         private com.google.gson.JsonElement settlement;
         /**
-         * Sets the name Settlement
+         * Sets the Settlement
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -155,7 +155,7 @@ public class WorkbookFunctionsAccrIntBody {
         }
         private com.google.gson.JsonElement rate;
         /**
-         * Sets the name Rate
+         * Sets the Rate
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -166,7 +166,7 @@ public class WorkbookFunctionsAccrIntBody {
         }
         private com.google.gson.JsonElement par;
         /**
-         * Sets the name Par
+         * Sets the Par
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -177,7 +177,7 @@ public class WorkbookFunctionsAccrIntBody {
         }
         private com.google.gson.JsonElement frequency;
         /**
-         * Sets the name Frequency
+         * Sets the Frequency
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -188,7 +188,7 @@ public class WorkbookFunctionsAccrIntBody {
         }
         private com.google.gson.JsonElement basis;
         /**
-         * Sets the name Basis
+         * Sets the Basis
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -199,7 +199,7 @@ public class WorkbookFunctionsAccrIntBody {
         }
         private com.google.gson.JsonElement calcMethod;
         /**
-         * Sets the name CalcMethod
+         * Sets the CalcMethod
          * @param val the value to set it to
          * @return the current builder object
          */

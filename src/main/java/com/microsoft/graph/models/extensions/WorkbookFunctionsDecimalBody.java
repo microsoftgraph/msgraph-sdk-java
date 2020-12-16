@@ -62,7 +62,7 @@ public class WorkbookFunctionsDecimalBody {
     public static final class WorkbookFunctionsDecimalBodyBuilder {
         private com.google.gson.JsonElement number;
         /**
-         * Sets the name Number
+         * Sets the Number
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsDecimalBody {
         }
         private com.google.gson.JsonElement radix;
         /**
-         * Sets the name Radix
+         * Sets the Radix
          * @param val the value to set it to
          * @return the current builder object
          */

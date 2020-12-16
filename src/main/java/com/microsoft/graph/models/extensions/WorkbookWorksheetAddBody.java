@@ -52,7 +52,7 @@ public class WorkbookWorksheetAddBody {
     public static final class WorkbookWorksheetAddBodyBuilder {
         private String name;
         /**
-         * Sets the name Name
+         * Sets the Name
          * @param val the value to set it to
          * @return the current builder object
          */

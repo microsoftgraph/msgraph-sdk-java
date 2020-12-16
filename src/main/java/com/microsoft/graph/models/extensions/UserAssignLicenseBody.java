@@ -63,7 +63,7 @@ public class UserAssignLicenseBody {
     public static final class UserAssignLicenseBodyBuilder {
         private java.util.List<AssignedLicense> addLicenses;
         /**
-         * Sets the name AddLicenses
+         * Sets the AddLicenses
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -74,7 +74,7 @@ public class UserAssignLicenseBody {
         }
         private java.util.List<java.util.UUID> removeLicenses;
         /**
-         * Sets the name RemoveLicenses
+         * Sets the RemoveLicenses
          * @param val the value to set it to
          * @return the current builder object
          */

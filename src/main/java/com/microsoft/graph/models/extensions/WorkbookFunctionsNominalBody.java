@@ -62,7 +62,7 @@ public class WorkbookFunctionsNominalBody {
     public static final class WorkbookFunctionsNominalBodyBuilder {
         private com.google.gson.JsonElement effectRate;
         /**
-         * Sets the name EffectRate
+         * Sets the EffectRate
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsNominalBody {
         }
         private com.google.gson.JsonElement npery;
         /**
-         * Sets the name Npery
+         * Sets the Npery
          * @param val the value to set it to
          * @return the current builder object
          */

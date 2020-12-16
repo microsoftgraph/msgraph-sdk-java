@@ -52,7 +52,7 @@ public class NotebookGetRecentNotebooksBody {
     public static final class NotebookGetRecentNotebooksBodyBuilder {
         private Boolean includePersonalNotebooks;
         /**
-         * Sets the name IncludePersonalNotebooks
+         * Sets the IncludePersonalNotebooks
          * @param val the value to set it to
          * @return the current builder object
          */

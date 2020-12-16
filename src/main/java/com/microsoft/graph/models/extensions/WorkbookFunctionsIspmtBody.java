@@ -82,7 +82,7 @@ public class WorkbookFunctionsIspmtBody {
     public static final class WorkbookFunctionsIspmtBodyBuilder {
         private com.google.gson.JsonElement rate;
         /**
-         * Sets the name Rate
+         * Sets the Rate
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -93,7 +93,7 @@ public class WorkbookFunctionsIspmtBody {
         }
         private com.google.gson.JsonElement per;
         /**
-         * Sets the name Per
+         * Sets the Per
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -104,7 +104,7 @@ public class WorkbookFunctionsIspmtBody {
         }
         private com.google.gson.JsonElement nper;
         /**
-         * Sets the name Nper
+         * Sets the Nper
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -115,7 +115,7 @@ public class WorkbookFunctionsIspmtBody {
         }
         private com.google.gson.JsonElement pv;
         /**
-         * Sets the name Pv
+         * Sets the Pv
          * @param val the value to set it to
          * @return the current builder object
          */

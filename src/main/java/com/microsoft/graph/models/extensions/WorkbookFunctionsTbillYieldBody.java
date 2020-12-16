@@ -72,7 +72,7 @@ public class WorkbookFunctionsTbillYieldBody {
     public static final class WorkbookFunctionsTbillYieldBodyBuilder {
         private com.google.gson.JsonElement settlement;
         /**
-         * Sets the name Settlement
+         * Sets the Settlement
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookFunctionsTbillYieldBody {
         }
         private com.google.gson.JsonElement maturity;
         /**
-         * Sets the name Maturity
+         * Sets the Maturity
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookFunctionsTbillYieldBody {
         }
         private com.google.gson.JsonElement pr;
         /**
-         * Sets the name Pr
+         * Sets the Pr
          * @param val the value to set it to
          * @return the current builder object
          */

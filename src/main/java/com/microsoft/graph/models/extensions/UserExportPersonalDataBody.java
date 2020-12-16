@@ -52,7 +52,7 @@ public class UserExportPersonalDataBody {
     public static final class UserExportPersonalDataBodyBuilder {
         private String storageLocation;
         /**
-         * Sets the name StorageLocation
+         * Sets the StorageLocation
          * @param val the value to set it to
          * @return the current builder object
          */

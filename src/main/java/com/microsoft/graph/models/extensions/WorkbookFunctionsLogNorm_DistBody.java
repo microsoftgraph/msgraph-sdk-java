@@ -82,7 +82,7 @@ public class WorkbookFunctionsLogNorm_DistBody {
     public static final class WorkbookFunctionsLogNorm_DistBodyBuilder {
         private com.google.gson.JsonElement x;
         /**
-         * Sets the name X
+         * Sets the X
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -93,7 +93,7 @@ public class WorkbookFunctionsLogNorm_DistBody {
         }
         private com.google.gson.JsonElement mean;
         /**
-         * Sets the name Mean
+         * Sets the Mean
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -104,7 +104,7 @@ public class WorkbookFunctionsLogNorm_DistBody {
         }
         private com.google.gson.JsonElement standardDev;
         /**
-         * Sets the name StandardDev
+         * Sets the StandardDev
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -115,7 +115,7 @@ public class WorkbookFunctionsLogNorm_DistBody {
         }
         private com.google.gson.JsonElement cumulative;
         /**
-         * Sets the name Cumulative
+         * Sets the Cumulative
          * @param val the value to set it to
          * @return the current builder object
          */

@@ -62,7 +62,7 @@ public class WorkbookFunctionsT_Dist_RTBody {
     public static final class WorkbookFunctionsT_Dist_RTBodyBuilder {
         private com.google.gson.JsonElement x;
         /**
-         * Sets the name X
+         * Sets the X
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsT_Dist_RTBody {
         }
         private com.google.gson.JsonElement degFreedom;
         /**
-         * Sets the name DegFreedom
+         * Sets the DegFreedom
          * @param val the value to set it to
          * @return the current builder object
          */

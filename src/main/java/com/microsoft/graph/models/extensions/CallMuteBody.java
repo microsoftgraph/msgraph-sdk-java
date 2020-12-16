@@ -52,7 +52,7 @@ public class CallMuteBody {
     public static final class CallMuteBodyBuilder {
         private String clientContext;
         /**
-         * Sets the name ClientContext
+         * Sets the ClientContext
          * @param val the value to set it to
          * @return the current builder object
          */

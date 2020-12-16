@@ -52,7 +52,7 @@ public class DeviceConfigurationAssignBody {
     public static final class DeviceConfigurationAssignBodyBuilder {
         private java.util.List<DeviceConfigurationAssignment> assignments;
         /**
-         * Sets the name Assignments
+         * Sets the Assignments
          * @param val the value to set it to
          * @return the current builder object
          */

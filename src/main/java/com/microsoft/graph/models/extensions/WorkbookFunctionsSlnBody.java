@@ -72,7 +72,7 @@ public class WorkbookFunctionsSlnBody {
     public static final class WorkbookFunctionsSlnBodyBuilder {
         private com.google.gson.JsonElement cost;
         /**
-         * Sets the name Cost
+         * Sets the Cost
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookFunctionsSlnBody {
         }
         private com.google.gson.JsonElement salvage;
         /**
-         * Sets the name Salvage
+         * Sets the Salvage
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookFunctionsSlnBody {
         }
         private com.google.gson.JsonElement life;
         /**
-         * Sets the name Life
+         * Sets the Life
          * @param val the value to set it to
          * @return the current builder object
          */

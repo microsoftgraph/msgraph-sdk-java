@@ -45,21 +45,19 @@ public class TodoTaskListCollectionRequestBuilder extends BaseCollectionRequestB
     /**
      * Gets a builder to execute the method
      * @return the request builder collection
-          */
+     */
     @Nonnull
     public TodoTaskListDeltaCollectionRequestBuilder delta() {
         return new TodoTaskListDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
-
     /**
-     * Gets the list of newly created, updated or deleted TodoTaskList
-     * 
-     * @return a request builder to get the changes
-     * @param deltaLink the link returned by the last delta request
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param parameters the parameters for the service method
      */
     @Nonnull
-	public TodoTaskListDeltaCollectionRequestBuilder delta(@Nonnull final String deltaLink) {
-        return new TodoTaskListDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
+    public TodoTaskListDeltaCollectionRequestBuilder delta(@Nonnull final com.microsoft.graph.models.extensions.TodoTaskListDeltaBody parameters) {
+        return new TodoTaskListDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, parameters);
     }
 
     /**

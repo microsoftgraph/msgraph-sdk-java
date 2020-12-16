@@ -82,7 +82,7 @@ public class OnenotePageCopyToSectionBody {
     public static final class OnenotePageCopyToSectionBodyBuilder {
         private String id;
         /**
-         * Sets the name Id
+         * Sets the Id
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -93,7 +93,7 @@ public class OnenotePageCopyToSectionBody {
         }
         private String groupId;
         /**
-         * Sets the name GroupId
+         * Sets the GroupId
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -104,7 +104,7 @@ public class OnenotePageCopyToSectionBody {
         }
         private String siteCollectionId;
         /**
-         * Sets the name SiteCollectionId
+         * Sets the SiteCollectionId
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -115,7 +115,7 @@ public class OnenotePageCopyToSectionBody {
         }
         private String siteId;
         /**
-         * Sets the name SiteId
+         * Sets the SiteId
          * @param val the value to set it to
          * @return the current builder object
          */

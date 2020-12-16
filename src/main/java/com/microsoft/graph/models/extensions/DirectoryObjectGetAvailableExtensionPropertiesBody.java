@@ -52,7 +52,7 @@ public class DirectoryObjectGetAvailableExtensionPropertiesBody {
     public static final class DirectoryObjectGetAvailableExtensionPropertiesBodyBuilder {
         private Boolean isSyncedFromOnPremises;
         /**
-         * Sets the name IsSyncedFromOnPremises
+         * Sets the IsSyncedFromOnPremises
          * @param val the value to set it to
          * @return the current builder object
          */

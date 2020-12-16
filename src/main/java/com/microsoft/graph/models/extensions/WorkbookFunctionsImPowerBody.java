@@ -62,7 +62,7 @@ public class WorkbookFunctionsImPowerBody {
     public static final class WorkbookFunctionsImPowerBodyBuilder {
         private com.google.gson.JsonElement inumber;
         /**
-         * Sets the name Inumber
+         * Sets the Inumber
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsImPowerBody {
         }
         private com.google.gson.JsonElement number;
         /**
-         * Sets the name Number
+         * Sets the Number
          * @param val the value to set it to
          * @return the current builder object
          */

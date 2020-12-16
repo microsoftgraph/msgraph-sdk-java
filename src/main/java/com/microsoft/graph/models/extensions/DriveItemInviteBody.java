@@ -113,7 +113,7 @@ public class DriveItemInviteBody {
     public static final class DriveItemInviteBodyBuilder {
         private Boolean requireSignIn;
         /**
-         * Sets the name RequireSignIn
+         * Sets the RequireSignIn
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -124,7 +124,7 @@ public class DriveItemInviteBody {
         }
         private java.util.List<String> roles;
         /**
-         * Sets the name Roles
+         * Sets the Roles
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -135,7 +135,7 @@ public class DriveItemInviteBody {
         }
         private Boolean sendInvitation;
         /**
-         * Sets the name SendInvitation
+         * Sets the SendInvitation
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -146,7 +146,7 @@ public class DriveItemInviteBody {
         }
         private String message;
         /**
-         * Sets the name Message
+         * Sets the Message
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -157,7 +157,7 @@ public class DriveItemInviteBody {
         }
         private java.util.List<DriveRecipient> recipients;
         /**
-         * Sets the name Recipients
+         * Sets the Recipients
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -168,7 +168,7 @@ public class DriveItemInviteBody {
         }
         private String expirationDateTime;
         /**
-         * Sets the name ExpirationDateTime
+         * Sets the ExpirationDateTime
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -179,7 +179,7 @@ public class DriveItemInviteBody {
         }
         private String password;
         /**
-         * Sets the name Password
+         * Sets the Password
          * @param val the value to set it to
          * @return the current builder object
          */

@@ -52,7 +52,7 @@ public class WorkbookFilterApplyFontColorFilterBody {
     public static final class WorkbookFilterApplyFontColorFilterBodyBuilder {
         private String color;
         /**
-         * Sets the name Color
+         * Sets the Color
          * @param val the value to set it to
          * @return the current builder object
          */

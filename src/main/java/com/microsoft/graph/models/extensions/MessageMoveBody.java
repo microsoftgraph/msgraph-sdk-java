@@ -52,7 +52,7 @@ public class MessageMoveBody {
     public static final class MessageMoveBodyBuilder {
         private String destinationId;
         /**
-         * Sets the name DestinationId
+         * Sets the DestinationId
          * @param val the value to set it to
          * @return the current builder object
          */

@@ -52,7 +52,7 @@ public class GroupLifecyclePolicyRemoveGroupBody {
     public static final class GroupLifecyclePolicyRemoveGroupBodyBuilder {
         private String groupId;
         /**
-         * Sets the name GroupId
+         * Sets the GroupId
          * @param val the value to set it to
          * @return the current builder object
          */

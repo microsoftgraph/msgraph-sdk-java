@@ -62,7 +62,7 @@ public class DriveItemPreviewBody {
     public static final class DriveItemPreviewBodyBuilder {
         private String page;
         /**
-         * Sets the name Page
+         * Sets the Page
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class DriveItemPreviewBody {
         }
         private Double zoom;
         /**
-         * Sets the name Zoom
+         * Sets the Zoom
          * @param val the value to set it to
          * @return the current builder object
          */

@@ -52,7 +52,7 @@ public class WorkbookFunctionsAverageABody {
     public static final class WorkbookFunctionsAverageABodyBuilder {
         private com.google.gson.JsonElement values;
         /**
-         * Sets the name Values
+         * Sets the Values
          * @param val the value to set it to
          * @return the current builder object
          */

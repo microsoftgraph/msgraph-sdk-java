@@ -62,7 +62,7 @@ public class WorkbookFunctionsDaysBody {
     public static final class WorkbookFunctionsDaysBodyBuilder {
         private com.google.gson.JsonElement endDate;
         /**
-         * Sets the name EndDate
+         * Sets the EndDate
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsDaysBody {
         }
         private com.google.gson.JsonElement startDate;
         /**
-         * Sets the name StartDate
+         * Sets the StartDate
          * @param val the value to set it to
          * @return the current builder object
          */

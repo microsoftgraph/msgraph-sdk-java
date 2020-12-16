@@ -44,21 +44,19 @@ public class OAuth2PermissionGrantCollectionRequestBuilder extends BaseCollectio
     /**
      * Gets a builder to execute the method
      * @return the request builder collection
-          */
+     */
     @Nonnull
     public OAuth2PermissionGrantDeltaCollectionRequestBuilder delta() {
         return new OAuth2PermissionGrantDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
-
     /**
-     * Gets the list of newly created, updated or deleted OAuth2PermissionGrant
-     * 
-     * @return a request builder to get the changes
-     * @param deltaLink the link returned by the last delta request
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param parameters the parameters for the service method
      */
     @Nonnull
-	public OAuth2PermissionGrantDeltaCollectionRequestBuilder delta(@Nonnull final String deltaLink) {
-        return new OAuth2PermissionGrantDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
+    public OAuth2PermissionGrantDeltaCollectionRequestBuilder delta(@Nonnull final com.microsoft.graph.models.extensions.OAuth2PermissionGrantDeltaBody parameters) {
+        return new OAuth2PermissionGrantDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, parameters);
     }
 
     /**

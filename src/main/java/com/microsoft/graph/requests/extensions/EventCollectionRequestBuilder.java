@@ -53,21 +53,19 @@ public class EventCollectionRequestBuilder extends BaseCollectionRequestBuilder<
     /**
      * Gets a builder to execute the method
      * @return the request builder collection
-          */
+     */
     @Nonnull
     public EventDeltaCollectionRequestBuilder delta() {
         return new EventDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
-
     /**
-     * Gets the list of newly created, updated or deleted Event
-     * 
-     * @return a request builder to get the changes
-     * @param deltaLink the link returned by the last delta request
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param parameters the parameters for the service method
      */
     @Nonnull
-	public EventDeltaCollectionRequestBuilder delta(@Nonnull final String deltaLink) {
-        return new EventDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
+    public EventDeltaCollectionRequestBuilder delta(@Nonnull final com.microsoft.graph.models.extensions.EventDeltaBody parameters) {
+        return new EventDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, parameters);
     }
 
     /**

@@ -82,7 +82,7 @@ public class WorkbookFunctionsBinom_Dist_RangeBody {
     public static final class WorkbookFunctionsBinom_Dist_RangeBodyBuilder {
         private com.google.gson.JsonElement trials;
         /**
-         * Sets the name Trials
+         * Sets the Trials
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -93,7 +93,7 @@ public class WorkbookFunctionsBinom_Dist_RangeBody {
         }
         private com.google.gson.JsonElement probabilityS;
         /**
-         * Sets the name ProbabilityS
+         * Sets the ProbabilityS
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -104,7 +104,7 @@ public class WorkbookFunctionsBinom_Dist_RangeBody {
         }
         private com.google.gson.JsonElement numberS;
         /**
-         * Sets the name NumberS
+         * Sets the NumberS
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -115,7 +115,7 @@ public class WorkbookFunctionsBinom_Dist_RangeBody {
         }
         private com.google.gson.JsonElement numberS2;
         /**
-         * Sets the name NumberS2
+         * Sets the NumberS2
          * @param val the value to set it to
          * @return the current builder object
          */

@@ -72,7 +72,7 @@ public class WorkbookFunctionsBinom_InvBody {
     public static final class WorkbookFunctionsBinom_InvBodyBuilder {
         private com.google.gson.JsonElement trials;
         /**
-         * Sets the name Trials
+         * Sets the Trials
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookFunctionsBinom_InvBody {
         }
         private com.google.gson.JsonElement probabilityS;
         /**
-         * Sets the name ProbabilityS
+         * Sets the ProbabilityS
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookFunctionsBinom_InvBody {
         }
         private com.google.gson.JsonElement alpha;
         /**
-         * Sets the name Alpha
+         * Sets the Alpha
          * @param val the value to set it to
          * @return the current builder object
          */

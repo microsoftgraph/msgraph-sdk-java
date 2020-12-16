@@ -53,7 +53,7 @@ public class AttachmentCreateUploadSessionBody {
     public static final class AttachmentCreateUploadSessionBodyBuilder {
         private AttachmentItem attachmentItem;
         /**
-         * Sets the name AttachmentItem
+         * Sets the AttachmentItem
          * @param val the value to set it to
          * @return the current builder object
          */

@@ -52,7 +52,7 @@ public class WorkbookFunctionsTrimBody {
     public static final class WorkbookFunctionsTrimBodyBuilder {
         private com.google.gson.JsonElement text;
         /**
-         * Sets the name Text
+         * Sets the Text
          * @param val the value to set it to
          * @return the current builder object
          */

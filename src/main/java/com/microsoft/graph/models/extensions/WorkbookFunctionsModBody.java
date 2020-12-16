@@ -62,7 +62,7 @@ public class WorkbookFunctionsModBody {
     public static final class WorkbookFunctionsModBodyBuilder {
         private com.google.gson.JsonElement number;
         /**
-         * Sets the name Number
+         * Sets the Number
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsModBody {
         }
         private com.google.gson.JsonElement divisor;
         /**
-         * Sets the name Divisor
+         * Sets the Divisor
          * @param val the value to set it to
          * @return the current builder object
          */

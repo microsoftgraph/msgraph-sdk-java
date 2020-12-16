@@ -48,21 +48,19 @@ public class GroupCollectionRequestBuilder extends BaseCollectionRequestBuilder<
     /**
      * Gets a builder to execute the method
      * @return the request builder collection
-          */
+     */
     @Nonnull
     public GroupDeltaCollectionRequestBuilder delta() {
         return new GroupDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
-
     /**
-     * Gets the list of newly created, updated or deleted Group
-     * 
-     * @return a request builder to get the changes
-     * @param deltaLink the link returned by the last delta request
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param parameters the parameters for the service method
      */
     @Nonnull
-	public GroupDeltaCollectionRequestBuilder delta(@Nonnull final String deltaLink) {
-        return new GroupDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
+    public GroupDeltaCollectionRequestBuilder delta(@Nonnull final com.microsoft.graph.models.extensions.GroupDeltaBody parameters) {
+        return new GroupDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, parameters);
     }
 
     /**

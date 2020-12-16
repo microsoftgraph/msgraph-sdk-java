@@ -62,7 +62,7 @@ public class WorkbookFunctionsBitrshiftBody {
     public static final class WorkbookFunctionsBitrshiftBodyBuilder {
         private com.google.gson.JsonElement number;
         /**
-         * Sets the name Number
+         * Sets the Number
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsBitrshiftBody {
         }
         private com.google.gson.JsonElement shiftAmount;
         /**
-         * Sets the name ShiftAmount
+         * Sets the ShiftAmount
          * @param val the value to set it to
          * @return the current builder object
          */

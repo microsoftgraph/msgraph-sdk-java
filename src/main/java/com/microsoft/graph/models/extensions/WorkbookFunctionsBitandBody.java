@@ -62,7 +62,7 @@ public class WorkbookFunctionsBitandBody {
     public static final class WorkbookFunctionsBitandBodyBuilder {
         private com.google.gson.JsonElement number1;
         /**
-         * Sets the name Number1
+         * Sets the Number1
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsBitandBody {
         }
         private com.google.gson.JsonElement number2;
         /**
-         * Sets the name Number2
+         * Sets the Number2
          * @param val the value to set it to
          * @return the current builder object
          */

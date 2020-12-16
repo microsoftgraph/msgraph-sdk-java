@@ -63,7 +63,7 @@ public class ParticipantInviteBody {
     public static final class ParticipantInviteBodyBuilder {
         private java.util.List<InvitationParticipantInfo> participants;
         /**
-         * Sets the name Participants
+         * Sets the Participants
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -74,7 +74,7 @@ public class ParticipantInviteBody {
         }
         private String clientContext;
         /**
-         * Sets the name ClientContext
+         * Sets the ClientContext
          * @param val the value to set it to
          * @return the current builder object
          */

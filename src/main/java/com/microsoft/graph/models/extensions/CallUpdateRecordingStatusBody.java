@@ -63,7 +63,7 @@ public class CallUpdateRecordingStatusBody {
     public static final class CallUpdateRecordingStatusBodyBuilder {
         private RecordingStatus status;
         /**
-         * Sets the name Status
+         * Sets the Status
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -74,7 +74,7 @@ public class CallUpdateRecordingStatusBody {
         }
         private String clientContext;
         /**
-         * Sets the name ClientContext
+         * Sets the ClientContext
          * @param val the value to set it to
          * @return the current builder object
          */

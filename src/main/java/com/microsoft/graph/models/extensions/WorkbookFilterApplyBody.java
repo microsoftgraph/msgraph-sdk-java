@@ -52,7 +52,7 @@ public class WorkbookFilterApplyBody {
     public static final class WorkbookFilterApplyBodyBuilder {
         private WorkbookFilterCriteria criteria;
         /**
-         * Sets the name Criteria
+         * Sets the Criteria
          * @param val the value to set it to
          * @return the current builder object
          */

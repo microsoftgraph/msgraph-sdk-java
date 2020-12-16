@@ -62,7 +62,7 @@ public class MessageCreateReplyAllBody {
     public static final class MessageCreateReplyAllBodyBuilder {
         private Message message;
         /**
-         * Sets the name Message
+         * Sets the Message
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class MessageCreateReplyAllBody {
         }
         private String comment;
         /**
-         * Sets the name Comment
+         * Sets the Comment
          * @param val the value to set it to
          * @return the current builder object
          */

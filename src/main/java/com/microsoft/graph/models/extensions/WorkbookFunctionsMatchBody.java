@@ -72,7 +72,7 @@ public class WorkbookFunctionsMatchBody {
     public static final class WorkbookFunctionsMatchBodyBuilder {
         private com.google.gson.JsonElement lookupValue;
         /**
-         * Sets the name LookupValue
+         * Sets the LookupValue
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookFunctionsMatchBody {
         }
         private com.google.gson.JsonElement lookupArray;
         /**
-         * Sets the name LookupArray
+         * Sets the LookupArray
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookFunctionsMatchBody {
         }
         private com.google.gson.JsonElement matchType;
         /**
-         * Sets the name MatchType
+         * Sets the MatchType
          * @param val the value to set it to
          * @return the current builder object
          */

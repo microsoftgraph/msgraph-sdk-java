@@ -50,7 +50,7 @@ public class TeamCollectionRequestBuilder extends BaseCollectionRequestBuilder<T
     /**
      * Gets a builder to execute the method
      * @return the request builder collection
-          */
+     */
     @Nonnull
     public TeamGetAllMessagesCollectionRequestBuilder getAllMessages() {
         return new TeamGetAllMessagesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAllMessages"), getClient(), null);

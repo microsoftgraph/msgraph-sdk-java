@@ -52,7 +52,7 @@ public class WorkbookChartFillSetSolidColorBody {
     public static final class WorkbookChartFillSetSolidColorBodyBuilder {
         private String color;
         /**
-         * Sets the name Color
+         * Sets the Color
          * @param val the value to set it to
          * @return the current builder object
          */

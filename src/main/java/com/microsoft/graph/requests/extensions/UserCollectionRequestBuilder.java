@@ -67,21 +67,19 @@ public class UserCollectionRequestBuilder extends BaseCollectionRequestBuilder<U
     /**
      * Gets a builder to execute the method
      * @return the request builder collection
-          */
+     */
     @Nonnull
     public UserDeltaCollectionRequestBuilder delta() {
         return new UserDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
-
     /**
-     * Gets the list of newly created, updated or deleted User
-     * 
-     * @return a request builder to get the changes
-     * @param deltaLink the link returned by the last delta request
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param parameters the parameters for the service method
      */
     @Nonnull
-	public UserDeltaCollectionRequestBuilder delta(@Nonnull final String deltaLink) {
-        return new UserDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
+    public UserDeltaCollectionRequestBuilder delta(@Nonnull final com.microsoft.graph.models.extensions.UserDeltaBody parameters) {
+        return new UserDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, parameters);
     }
 
     /**

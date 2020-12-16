@@ -92,7 +92,7 @@ public class WorkbookFunctionsAccrIntMBody {
     public static final class WorkbookFunctionsAccrIntMBodyBuilder {
         private com.google.gson.JsonElement issue;
         /**
-         * Sets the name Issue
+         * Sets the Issue
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -103,7 +103,7 @@ public class WorkbookFunctionsAccrIntMBody {
         }
         private com.google.gson.JsonElement settlement;
         /**
-         * Sets the name Settlement
+         * Sets the Settlement
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -114,7 +114,7 @@ public class WorkbookFunctionsAccrIntMBody {
         }
         private com.google.gson.JsonElement rate;
         /**
-         * Sets the name Rate
+         * Sets the Rate
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -125,7 +125,7 @@ public class WorkbookFunctionsAccrIntMBody {
         }
         private com.google.gson.JsonElement par;
         /**
-         * Sets the name Par
+         * Sets the Par
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -136,7 +136,7 @@ public class WorkbookFunctionsAccrIntMBody {
         }
         private com.google.gson.JsonElement basis;
         /**
-         * Sets the name Basis
+         * Sets the Basis
          * @param val the value to set it to
          * @return the current builder object
          */

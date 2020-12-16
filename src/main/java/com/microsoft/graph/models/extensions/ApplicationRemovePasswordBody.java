@@ -52,7 +52,7 @@ public class ApplicationRemovePasswordBody {
     public static final class ApplicationRemovePasswordBodyBuilder {
         private java.util.UUID keyId;
         /**
-         * Sets the name KeyId
+         * Sets the KeyId
          * @param val the value to set it to
          * @return the current builder object
          */

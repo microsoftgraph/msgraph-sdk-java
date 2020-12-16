@@ -52,7 +52,7 @@ public class ApplicationAddPasswordBody {
     public static final class ApplicationAddPasswordBodyBuilder {
         private PasswordCredential passwordCredential;
         /**
-         * Sets the name PasswordCredential
+         * Sets the PasswordCredential
          * @param val the value to set it to
          * @return the current builder object
          */

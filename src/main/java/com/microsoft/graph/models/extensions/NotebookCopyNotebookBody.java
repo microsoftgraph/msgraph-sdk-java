@@ -92,7 +92,7 @@ public class NotebookCopyNotebookBody {
     public static final class NotebookCopyNotebookBodyBuilder {
         private String groupId;
         /**
-         * Sets the name GroupId
+         * Sets the GroupId
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -103,7 +103,7 @@ public class NotebookCopyNotebookBody {
         }
         private String renameAs;
         /**
-         * Sets the name RenameAs
+         * Sets the RenameAs
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -114,7 +114,7 @@ public class NotebookCopyNotebookBody {
         }
         private String notebookFolder;
         /**
-         * Sets the name NotebookFolder
+         * Sets the NotebookFolder
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -125,7 +125,7 @@ public class NotebookCopyNotebookBody {
         }
         private String siteCollectionId;
         /**
-         * Sets the name SiteCollectionId
+         * Sets the SiteCollectionId
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -136,7 +136,7 @@ public class NotebookCopyNotebookBody {
         }
         private String siteId;
         /**
-         * Sets the name SiteId
+         * Sets the SiteId
          * @param val the value to set it to
          * @return the current builder object
          */

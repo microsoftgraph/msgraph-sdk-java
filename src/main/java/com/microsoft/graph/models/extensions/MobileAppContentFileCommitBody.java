@@ -52,7 +52,7 @@ public class MobileAppContentFileCommitBody {
     public static final class MobileAppContentFileCommitBodyBuilder {
         private FileEncryptionInfo fileEncryptionInfo;
         /**
-         * Sets the name FileEncryptionInfo
+         * Sets the FileEncryptionInfo
          * @param val the value to set it to
          * @return the current builder object
          */

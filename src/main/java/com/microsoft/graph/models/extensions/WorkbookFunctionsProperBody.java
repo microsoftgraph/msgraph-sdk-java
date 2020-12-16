@@ -52,7 +52,7 @@ public class WorkbookFunctionsProperBody {
     public static final class WorkbookFunctionsProperBodyBuilder {
         private com.google.gson.JsonElement text;
         /**
-         * Sets the name Text
+         * Sets the Text
          * @param val the value to set it to
          * @return the current builder object
          */

@@ -52,7 +52,7 @@ public class ManagedDeviceDeleteUserFromSharedAppleDeviceBody {
     public static final class ManagedDeviceDeleteUserFromSharedAppleDeviceBodyBuilder {
         private String userPrincipalName;
         /**
-         * Sets the name UserPrincipalName
+         * Sets the UserPrincipalName
          * @param val the value to set it to
          * @return the current builder object
          */

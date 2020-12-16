@@ -52,7 +52,7 @@ public class WorkbookRangeDeleteBody {
     public static final class WorkbookRangeDeleteBodyBuilder {
         private String shift;
         /**
-         * Sets the name Shift
+         * Sets the Shift
          * @param val the value to set it to
          * @return the current builder object
          */

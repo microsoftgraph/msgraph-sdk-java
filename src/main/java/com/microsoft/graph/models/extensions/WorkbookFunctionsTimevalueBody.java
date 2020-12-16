@@ -52,7 +52,7 @@ public class WorkbookFunctionsTimevalueBody {
     public static final class WorkbookFunctionsTimevalueBodyBuilder {
         private com.google.gson.JsonElement timeText;
         /**
-         * Sets the name TimeText
+         * Sets the TimeText
          * @param val the value to set it to
          * @return the current builder object
          */

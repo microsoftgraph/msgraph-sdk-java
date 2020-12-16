@@ -72,7 +72,7 @@ public class WorkbookFunctionsConfidence_NormBody {
     public static final class WorkbookFunctionsConfidence_NormBodyBuilder {
         private com.google.gson.JsonElement alpha;
         /**
-         * Sets the name Alpha
+         * Sets the Alpha
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookFunctionsConfidence_NormBody {
         }
         private com.google.gson.JsonElement standardDev;
         /**
-         * Sets the name StandardDev
+         * Sets the StandardDev
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookFunctionsConfidence_NormBody {
         }
         private com.google.gson.JsonElement size;
         /**
-         * Sets the name Size
+         * Sets the Size
          * @param val the value to set it to
          * @return the current builder object
          */

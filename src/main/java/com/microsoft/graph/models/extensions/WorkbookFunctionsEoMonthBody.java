@@ -62,7 +62,7 @@ public class WorkbookFunctionsEoMonthBody {
     public static final class WorkbookFunctionsEoMonthBodyBuilder {
         private com.google.gson.JsonElement startDate;
         /**
-         * Sets the name StartDate
+         * Sets the StartDate
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsEoMonthBody {
         }
         private com.google.gson.JsonElement months;
         /**
-         * Sets the name Months
+         * Sets the Months
          * @param val the value to set it to
          * @return the current builder object
          */

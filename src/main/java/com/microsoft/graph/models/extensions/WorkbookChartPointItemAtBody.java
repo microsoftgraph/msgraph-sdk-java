@@ -52,7 +52,7 @@ public class WorkbookChartPointItemAtBody {
     public static final class WorkbookChartPointItemAtBodyBuilder {
         private Integer index;
         /**
-         * Sets the name Index
+         * Sets the Index
          * @param val the value to set it to
          * @return the current builder object
          */

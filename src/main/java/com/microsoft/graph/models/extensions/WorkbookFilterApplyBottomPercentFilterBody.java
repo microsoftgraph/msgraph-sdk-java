@@ -52,7 +52,7 @@ public class WorkbookFilterApplyBottomPercentFilterBody {
     public static final class WorkbookFilterApplyBottomPercentFilterBodyBuilder {
         private Integer percent;
         /**
-         * Sets the name Percent
+         * Sets the Percent
          * @param val the value to set it to
          * @return the current builder object
          */

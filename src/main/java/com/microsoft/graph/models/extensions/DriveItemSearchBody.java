@@ -52,7 +52,7 @@ public class DriveItemSearchBody {
     public static final class DriveItemSearchBodyBuilder {
         private String q;
         /**
-         * Sets the name Q
+         * Sets the Q
          * @param val the value to set it to
          * @return the current builder object
          */

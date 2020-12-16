@@ -62,7 +62,7 @@ public class WorkbookRangeOffsetRangeBody {
     public static final class WorkbookRangeOffsetRangeBodyBuilder {
         private Integer rowOffset;
         /**
-         * Sets the name RowOffset
+         * Sets the RowOffset
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookRangeOffsetRangeBody {
         }
         private Integer columnOffset;
         /**
-         * Sets the name ColumnOffset
+         * Sets the ColumnOffset
          * @param val the value to set it to
          * @return the current builder object
          */

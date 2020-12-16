@@ -52,7 +52,7 @@ public class WorkbookFunctionsSqrtBody {
     public static final class WorkbookFunctionsSqrtBodyBuilder {
         private com.google.gson.JsonElement number;
         /**
-         * Sets the name Number
+         * Sets the Number
          * @param val the value to set it to
          * @return the current builder object
          */

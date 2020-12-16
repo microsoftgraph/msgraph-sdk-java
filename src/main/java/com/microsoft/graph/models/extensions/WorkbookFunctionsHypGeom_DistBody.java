@@ -92,7 +92,7 @@ public class WorkbookFunctionsHypGeom_DistBody {
     public static final class WorkbookFunctionsHypGeom_DistBodyBuilder {
         private com.google.gson.JsonElement sampleS;
         /**
-         * Sets the name SampleS
+         * Sets the SampleS
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -103,7 +103,7 @@ public class WorkbookFunctionsHypGeom_DistBody {
         }
         private com.google.gson.JsonElement numberSample;
         /**
-         * Sets the name NumberSample
+         * Sets the NumberSample
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -114,7 +114,7 @@ public class WorkbookFunctionsHypGeom_DistBody {
         }
         private com.google.gson.JsonElement populationS;
         /**
-         * Sets the name PopulationS
+         * Sets the PopulationS
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -125,7 +125,7 @@ public class WorkbookFunctionsHypGeom_DistBody {
         }
         private com.google.gson.JsonElement numberPop;
         /**
-         * Sets the name NumberPop
+         * Sets the NumberPop
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -136,7 +136,7 @@ public class WorkbookFunctionsHypGeom_DistBody {
         }
         private com.google.gson.JsonElement cumulative;
         /**
-         * Sets the name Cumulative
+         * Sets the Cumulative
          * @param val the value to set it to
          * @return the current builder object
          */

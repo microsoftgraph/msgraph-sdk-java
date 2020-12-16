@@ -102,7 +102,7 @@ public class WorkbookFunctionsRateBody {
     public static final class WorkbookFunctionsRateBodyBuilder {
         private com.google.gson.JsonElement nper;
         /**
-         * Sets the name Nper
+         * Sets the Nper
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -113,7 +113,7 @@ public class WorkbookFunctionsRateBody {
         }
         private com.google.gson.JsonElement pmt;
         /**
-         * Sets the name Pmt
+         * Sets the Pmt
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -124,7 +124,7 @@ public class WorkbookFunctionsRateBody {
         }
         private com.google.gson.JsonElement pv;
         /**
-         * Sets the name Pv
+         * Sets the Pv
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -135,7 +135,7 @@ public class WorkbookFunctionsRateBody {
         }
         private com.google.gson.JsonElement fv;
         /**
-         * Sets the name Fv
+         * Sets the Fv
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -146,7 +146,7 @@ public class WorkbookFunctionsRateBody {
         }
         private com.google.gson.JsonElement type;
         /**
-         * Sets the name Type
+         * Sets the Type
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -157,7 +157,7 @@ public class WorkbookFunctionsRateBody {
         }
         private com.google.gson.JsonElement guess;
         /**
-         * Sets the name Guess
+         * Sets the Guess
          * @param val the value to set it to
          * @return the current builder object
          */

@@ -62,7 +62,7 @@ public class DriveItemCheckinBody {
     public static final class DriveItemCheckinBodyBuilder {
         private String checkInAs;
         /**
-         * Sets the name CheckInAs
+         * Sets the CheckInAs
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class DriveItemCheckinBody {
         }
         private String comment;
         /**
-         * Sets the name Comment
+         * Sets the Comment
          * @param val the value to set it to
          * @return the current builder object
          */

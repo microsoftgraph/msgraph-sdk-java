@@ -72,7 +72,7 @@ public class WorkbookChartAddBody {
     public static final class WorkbookChartAddBodyBuilder {
         private String type;
         /**
-         * Sets the name Type
+         * Sets the Type
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookChartAddBody {
         }
         private com.google.gson.JsonElement sourceData;
         /**
-         * Sets the name SourceData
+         * Sets the SourceData
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookChartAddBody {
         }
         private String seriesBy;
         /**
-         * Sets the name SeriesBy
+         * Sets the SeriesBy
          * @param val the value to set it to
          * @return the current builder object
          */

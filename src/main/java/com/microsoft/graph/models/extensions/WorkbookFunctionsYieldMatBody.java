@@ -102,7 +102,7 @@ public class WorkbookFunctionsYieldMatBody {
     public static final class WorkbookFunctionsYieldMatBodyBuilder {
         private com.google.gson.JsonElement settlement;
         /**
-         * Sets the name Settlement
+         * Sets the Settlement
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -113,7 +113,7 @@ public class WorkbookFunctionsYieldMatBody {
         }
         private com.google.gson.JsonElement maturity;
         /**
-         * Sets the name Maturity
+         * Sets the Maturity
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -124,7 +124,7 @@ public class WorkbookFunctionsYieldMatBody {
         }
         private com.google.gson.JsonElement issue;
         /**
-         * Sets the name Issue
+         * Sets the Issue
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -135,7 +135,7 @@ public class WorkbookFunctionsYieldMatBody {
         }
         private com.google.gson.JsonElement rate;
         /**
-         * Sets the name Rate
+         * Sets the Rate
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -146,7 +146,7 @@ public class WorkbookFunctionsYieldMatBody {
         }
         private com.google.gson.JsonElement pr;
         /**
-         * Sets the name Pr
+         * Sets the Pr
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -157,7 +157,7 @@ public class WorkbookFunctionsYieldMatBody {
         }
         private com.google.gson.JsonElement basis;
         /**
-         * Sets the name Basis
+         * Sets the Basis
          * @param val the value to set it to
          * @return the current builder object
          */

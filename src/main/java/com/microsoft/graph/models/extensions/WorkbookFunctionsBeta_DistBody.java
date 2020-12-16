@@ -102,7 +102,7 @@ public class WorkbookFunctionsBeta_DistBody {
     public static final class WorkbookFunctionsBeta_DistBodyBuilder {
         private com.google.gson.JsonElement x;
         /**
-         * Sets the name X
+         * Sets the X
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -113,7 +113,7 @@ public class WorkbookFunctionsBeta_DistBody {
         }
         private com.google.gson.JsonElement alpha;
         /**
-         * Sets the name Alpha
+         * Sets the Alpha
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -124,7 +124,7 @@ public class WorkbookFunctionsBeta_DistBody {
         }
         private com.google.gson.JsonElement beta;
         /**
-         * Sets the name Beta
+         * Sets the Beta
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -135,7 +135,7 @@ public class WorkbookFunctionsBeta_DistBody {
         }
         private com.google.gson.JsonElement cumulative;
         /**
-         * Sets the name Cumulative
+         * Sets the Cumulative
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -146,7 +146,7 @@ public class WorkbookFunctionsBeta_DistBody {
         }
         private com.google.gson.JsonElement a;
         /**
-         * Sets the name A
+         * Sets the A
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -157,7 +157,7 @@ public class WorkbookFunctionsBeta_DistBody {
         }
         private com.google.gson.JsonElement b;
         /**
-         * Sets the name B
+         * Sets the B
          * @param val the value to set it to
          * @return the current builder object
          */

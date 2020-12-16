@@ -52,7 +52,7 @@ public class PostReplyBody {
     public static final class PostReplyBodyBuilder {
         private Post post;
         /**
-         * Sets the name Post
+         * Sets the Post
          * @param val the value to set it to
          * @return the current builder object
          */

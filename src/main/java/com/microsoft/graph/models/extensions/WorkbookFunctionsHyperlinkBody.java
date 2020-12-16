@@ -62,7 +62,7 @@ public class WorkbookFunctionsHyperlinkBody {
     public static final class WorkbookFunctionsHyperlinkBodyBuilder {
         private com.google.gson.JsonElement linkLocation;
         /**
-         * Sets the name LinkLocation
+         * Sets the LinkLocation
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsHyperlinkBody {
         }
         private com.google.gson.JsonElement friendlyName;
         /**
-         * Sets the name FriendlyName
+         * Sets the FriendlyName
          * @param val the value to set it to
          * @return the current builder object
          */

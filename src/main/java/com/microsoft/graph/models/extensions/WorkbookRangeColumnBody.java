@@ -52,7 +52,7 @@ public class WorkbookRangeColumnBody {
     public static final class WorkbookRangeColumnBodyBuilder {
         private Integer column;
         /**
-         * Sets the name Column
+         * Sets the Column
          * @param val the value to set it to
          * @return the current builder object
          */

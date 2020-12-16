@@ -62,7 +62,7 @@ public class WorkbookFunctionsReptBody {
     public static final class WorkbookFunctionsReptBodyBuilder {
         private com.google.gson.JsonElement text;
         /**
-         * Sets the name Text
+         * Sets the Text
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsReptBody {
         }
         private com.google.gson.JsonElement numberTimes;
         /**
-         * Sets the name NumberTimes
+         * Sets the NumberTimes
          * @param val the value to set it to
          * @return the current builder object
          */

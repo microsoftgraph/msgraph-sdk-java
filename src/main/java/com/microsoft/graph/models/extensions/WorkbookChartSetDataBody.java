@@ -62,7 +62,7 @@ public class WorkbookChartSetDataBody {
     public static final class WorkbookChartSetDataBodyBuilder {
         private com.google.gson.JsonElement sourceData;
         /**
-         * Sets the name SourceData
+         * Sets the SourceData
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookChartSetDataBody {
         }
         private String seriesBy;
         /**
-         * Sets the name SeriesBy
+         * Sets the SeriesBy
          * @param val the value to set it to
          * @return the current builder object
          */

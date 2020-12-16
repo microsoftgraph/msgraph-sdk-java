@@ -52,7 +52,7 @@ public class GroupLifecyclePolicyAddGroupBody {
     public static final class GroupLifecyclePolicyAddGroupBodyBuilder {
         private String groupId;
         /**
-         * Sets the name GroupId
+         * Sets the GroupId
          * @param val the value to set it to
          * @return the current builder object
          */

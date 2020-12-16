@@ -112,7 +112,7 @@ public class WorkbookFunctionsAmorLincBody {
     public static final class WorkbookFunctionsAmorLincBodyBuilder {
         private com.google.gson.JsonElement cost;
         /**
-         * Sets the name Cost
+         * Sets the Cost
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -123,7 +123,7 @@ public class WorkbookFunctionsAmorLincBody {
         }
         private com.google.gson.JsonElement datePurchased;
         /**
-         * Sets the name DatePurchased
+         * Sets the DatePurchased
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -134,7 +134,7 @@ public class WorkbookFunctionsAmorLincBody {
         }
         private com.google.gson.JsonElement firstPeriod;
         /**
-         * Sets the name FirstPeriod
+         * Sets the FirstPeriod
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -145,7 +145,7 @@ public class WorkbookFunctionsAmorLincBody {
         }
         private com.google.gson.JsonElement salvage;
         /**
-         * Sets the name Salvage
+         * Sets the Salvage
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -156,7 +156,7 @@ public class WorkbookFunctionsAmorLincBody {
         }
         private com.google.gson.JsonElement period;
         /**
-         * Sets the name Period
+         * Sets the Period
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -167,7 +167,7 @@ public class WorkbookFunctionsAmorLincBody {
         }
         private com.google.gson.JsonElement rate;
         /**
-         * Sets the name Rate
+         * Sets the Rate
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -178,7 +178,7 @@ public class WorkbookFunctionsAmorLincBody {
         }
         private com.google.gson.JsonElement basis;
         /**
-         * Sets the name Basis
+         * Sets the Basis
          * @param val the value to set it to
          * @return the current builder object
          */

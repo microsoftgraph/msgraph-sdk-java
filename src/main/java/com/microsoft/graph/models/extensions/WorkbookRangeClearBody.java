@@ -52,7 +52,7 @@ public class WorkbookRangeClearBody {
     public static final class WorkbookRangeClearBodyBuilder {
         private String applyTo;
         /**
-         * Sets the name ApplyTo
+         * Sets the ApplyTo
          * @param val the value to set it to
          * @return the current builder object
          */

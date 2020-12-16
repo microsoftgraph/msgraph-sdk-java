@@ -52,7 +52,7 @@ public class CalendarAllowedCalendarSharingRolesBody {
     public static final class CalendarAllowedCalendarSharingRolesBodyBuilder {
         private String user;
         /**
-         * Sets the name User
+         * Sets the User
          * @param val the value to set it to
          * @return the current builder object
          */

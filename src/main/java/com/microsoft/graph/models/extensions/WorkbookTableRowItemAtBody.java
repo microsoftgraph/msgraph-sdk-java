@@ -52,7 +52,7 @@ public class WorkbookTableRowItemAtBody {
     public static final class WorkbookTableRowItemAtBodyBuilder {
         private Integer index;
         /**
-         * Sets the name Index
+         * Sets the Index
          * @param val the value to set it to
          * @return the current builder object
          */

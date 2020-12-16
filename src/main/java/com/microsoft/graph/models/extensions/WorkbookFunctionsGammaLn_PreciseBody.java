@@ -52,7 +52,7 @@ public class WorkbookFunctionsGammaLn_PreciseBody {
     public static final class WorkbookFunctionsGammaLn_PreciseBodyBuilder {
         private com.google.gson.JsonElement x;
         /**
-         * Sets the name X
+         * Sets the X
          * @param val the value to set it to
          * @return the current builder object
          */

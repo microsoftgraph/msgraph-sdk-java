@@ -62,7 +62,7 @@ public class WorkbookFunctionsPermutationaBody {
     public static final class WorkbookFunctionsPermutationaBodyBuilder {
         private com.google.gson.JsonElement number;
         /**
-         * Sets the name Number
+         * Sets the Number
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsPermutationaBody {
         }
         private com.google.gson.JsonElement numberChosen;
         /**
-         * Sets the name NumberChosen
+         * Sets the NumberChosen
          * @param val the value to set it to
          * @return the current builder object
          */

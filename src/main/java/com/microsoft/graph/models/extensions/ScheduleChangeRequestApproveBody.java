@@ -52,7 +52,7 @@ public class ScheduleChangeRequestApproveBody {
     public static final class ScheduleChangeRequestApproveBodyBuilder {
         private String message;
         /**
-         * Sets the name Message
+         * Sets the Message
          * @param val the value to set it to
          * @return the current builder object
          */

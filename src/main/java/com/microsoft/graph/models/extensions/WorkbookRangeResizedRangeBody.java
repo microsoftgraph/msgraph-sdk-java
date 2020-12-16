@@ -62,7 +62,7 @@ public class WorkbookRangeResizedRangeBody {
     public static final class WorkbookRangeResizedRangeBodyBuilder {
         private Integer deltaRows;
         /**
-         * Sets the name DeltaRows
+         * Sets the DeltaRows
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookRangeResizedRangeBody {
         }
         private Integer deltaColumns;
         /**
-         * Sets the name DeltaColumns
+         * Sets the DeltaColumns
          * @param val the value to set it to
          * @return the current builder object
          */

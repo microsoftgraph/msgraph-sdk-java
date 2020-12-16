@@ -52,7 +52,7 @@ public class WorkbookFunctionsRadiansBody {
     public static final class WorkbookFunctionsRadiansBodyBuilder {
         private com.google.gson.JsonElement angle;
         /**
-         * Sets the name Angle
+         * Sets the Angle
          * @param val the value to set it to
          * @return the current builder object
          */

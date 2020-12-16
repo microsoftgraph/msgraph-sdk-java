@@ -52,7 +52,7 @@ public class CallLogTeleconferenceDeviceQualityBody {
     public static final class CallLogTeleconferenceDeviceQualityBodyBuilder {
         private TeleconferenceDeviceQuality quality;
         /**
-         * Sets the name Quality
+         * Sets the Quality
          * @param val the value to set it to
          * @return the current builder object
          */

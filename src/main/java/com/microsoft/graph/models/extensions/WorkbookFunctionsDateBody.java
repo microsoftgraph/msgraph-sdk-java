@@ -72,7 +72,7 @@ public class WorkbookFunctionsDateBody {
     public static final class WorkbookFunctionsDateBodyBuilder {
         private com.google.gson.JsonElement year;
         /**
-         * Sets the name Year
+         * Sets the Year
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookFunctionsDateBody {
         }
         private com.google.gson.JsonElement month;
         /**
-         * Sets the name Month
+         * Sets the Month
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookFunctionsDateBody {
         }
         private com.google.gson.JsonElement day;
         /**
-         * Sets the name Day
+         * Sets the Day
          * @param val the value to set it to
          * @return the current builder object
          */

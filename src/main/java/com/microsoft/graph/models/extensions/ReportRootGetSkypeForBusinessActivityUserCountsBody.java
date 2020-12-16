@@ -52,7 +52,7 @@ public class ReportRootGetSkypeForBusinessActivityUserCountsBody {
     public static final class ReportRootGetSkypeForBusinessActivityUserCountsBodyBuilder {
         private String period;
         /**
-         * Sets the name Period
+         * Sets the Period
          * @param val the value to set it to
          * @return the current builder object
          */

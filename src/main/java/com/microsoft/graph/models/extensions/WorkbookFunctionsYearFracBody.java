@@ -72,7 +72,7 @@ public class WorkbookFunctionsYearFracBody {
     public static final class WorkbookFunctionsYearFracBodyBuilder {
         private com.google.gson.JsonElement startDate;
         /**
-         * Sets the name StartDate
+         * Sets the StartDate
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookFunctionsYearFracBody {
         }
         private com.google.gson.JsonElement endDate;
         /**
-         * Sets the name EndDate
+         * Sets the EndDate
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookFunctionsYearFracBody {
         }
         private com.google.gson.JsonElement basis;
         /**
-         * Sets the name Basis
+         * Sets the Basis
          * @param val the value to set it to
          * @return the current builder object
          */

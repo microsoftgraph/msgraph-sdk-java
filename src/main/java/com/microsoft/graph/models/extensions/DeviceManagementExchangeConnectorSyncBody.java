@@ -52,7 +52,7 @@ public class DeviceManagementExchangeConnectorSyncBody {
     public static final class DeviceManagementExchangeConnectorSyncBodyBuilder {
         private DeviceManagementExchangeConnectorSyncType syncType;
         /**
-         * Sets the name SyncType
+         * Sets the SyncType
          * @param val the value to set it to
          * @return the current builder object
          */

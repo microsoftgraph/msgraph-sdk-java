@@ -54,21 +54,19 @@ public class MessageCollectionRequestBuilder extends BaseCollectionRequestBuilde
     /**
      * Gets a builder to execute the method
      * @return the request builder collection
-          */
+     */
     @Nonnull
     public MessageDeltaCollectionRequestBuilder delta() {
         return new MessageDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
-
     /**
-     * Gets the list of newly created, updated or deleted Message
-     * 
-     * @return a request builder to get the changes
-     * @param deltaLink the link returned by the last delta request
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param parameters the parameters for the service method
      */
     @Nonnull
-	public MessageDeltaCollectionRequestBuilder delta(@Nonnull final String deltaLink) {
-        return new MessageDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
+    public MessageDeltaCollectionRequestBuilder delta(@Nonnull final com.microsoft.graph.models.extensions.MessageDeltaBody parameters) {
+        return new MessageDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, parameters);
     }
 
     /**

@@ -62,7 +62,7 @@ public class WorkbookFunctionsRightBody {
     public static final class WorkbookFunctionsRightBodyBuilder {
         private com.google.gson.JsonElement text;
         /**
-         * Sets the name Text
+         * Sets the Text
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsRightBody {
         }
         private com.google.gson.JsonElement numChars;
         /**
-         * Sets the name NumChars
+         * Sets the NumChars
          * @param val the value to set it to
          * @return the current builder object
          */

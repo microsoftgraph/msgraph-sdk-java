@@ -62,7 +62,7 @@ public class WorkbookFunctionsErfBody {
     public static final class WorkbookFunctionsErfBodyBuilder {
         private com.google.gson.JsonElement lowerLimit;
         /**
-         * Sets the name LowerLimit
+         * Sets the LowerLimit
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsErfBody {
         }
         private com.google.gson.JsonElement upperLimit;
         /**
-         * Sets the name UpperLimit
+         * Sets the UpperLimit
          * @param val the value to set it to
          * @return the current builder object
          */

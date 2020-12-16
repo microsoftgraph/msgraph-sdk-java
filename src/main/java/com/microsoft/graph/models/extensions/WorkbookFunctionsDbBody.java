@@ -92,7 +92,7 @@ public class WorkbookFunctionsDbBody {
     public static final class WorkbookFunctionsDbBodyBuilder {
         private com.google.gson.JsonElement cost;
         /**
-         * Sets the name Cost
+         * Sets the Cost
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -103,7 +103,7 @@ public class WorkbookFunctionsDbBody {
         }
         private com.google.gson.JsonElement salvage;
         /**
-         * Sets the name Salvage
+         * Sets the Salvage
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -114,7 +114,7 @@ public class WorkbookFunctionsDbBody {
         }
         private com.google.gson.JsonElement life;
         /**
-         * Sets the name Life
+         * Sets the Life
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -125,7 +125,7 @@ public class WorkbookFunctionsDbBody {
         }
         private com.google.gson.JsonElement period;
         /**
-         * Sets the name Period
+         * Sets the Period
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -136,7 +136,7 @@ public class WorkbookFunctionsDbBody {
         }
         private com.google.gson.JsonElement month;
         /**
-         * Sets the name Month
+         * Sets the Month
          * @param val the value to set it to
          * @return the current builder object
          */

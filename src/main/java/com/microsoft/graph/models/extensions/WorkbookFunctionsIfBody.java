@@ -72,7 +72,7 @@ public class WorkbookFunctionsIfBody {
     public static final class WorkbookFunctionsIfBodyBuilder {
         private com.google.gson.JsonElement logicalTest;
         /**
-         * Sets the name LogicalTest
+         * Sets the LogicalTest
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookFunctionsIfBody {
         }
         private com.google.gson.JsonElement valueIfTrue;
         /**
-         * Sets the name ValueIfTrue
+         * Sets the ValueIfTrue
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookFunctionsIfBody {
         }
         private com.google.gson.JsonElement valueIfFalse;
         /**
-         * Sets the name ValueIfFalse
+         * Sets the ValueIfFalse
          * @param val the value to set it to
          * @return the current builder object
          */

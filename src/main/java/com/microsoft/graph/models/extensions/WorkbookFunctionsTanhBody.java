@@ -52,7 +52,7 @@ public class WorkbookFunctionsTanhBody {
     public static final class WorkbookFunctionsTanhBodyBuilder {
         private com.google.gson.JsonElement number;
         /**
-         * Sets the name Number
+         * Sets the Number
          * @param val the value to set it to
          * @return the current builder object
          */

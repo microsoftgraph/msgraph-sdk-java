@@ -72,7 +72,7 @@ public class WorkbookFunctionsAverageIfBody {
     public static final class WorkbookFunctionsAverageIfBodyBuilder {
         private com.google.gson.JsonElement range;
         /**
-         * Sets the name Range
+         * Sets the Range
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookFunctionsAverageIfBody {
         }
         private com.google.gson.JsonElement criteria;
         /**
-         * Sets the name Criteria
+         * Sets the Criteria
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookFunctionsAverageIfBody {
         }
         private com.google.gson.JsonElement averageRange;
         /**
-         * Sets the name AverageRange
+         * Sets the AverageRange
          * @param val the value to set it to
          * @return the current builder object
          */

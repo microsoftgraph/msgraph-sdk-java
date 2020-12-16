@@ -72,7 +72,7 @@ public class WorkbookFunctionsXnpvBody {
     public static final class WorkbookFunctionsXnpvBodyBuilder {
         private com.google.gson.JsonElement rate;
         /**
-         * Sets the name Rate
+         * Sets the Rate
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookFunctionsXnpvBody {
         }
         private com.google.gson.JsonElement values;
         /**
-         * Sets the name Values
+         * Sets the Values
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookFunctionsXnpvBody {
         }
         private com.google.gson.JsonElement dates;
         /**
-         * Sets the name Dates
+         * Sets the Dates
          * @param val the value to set it to
          * @return the current builder object
          */

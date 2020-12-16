@@ -82,7 +82,7 @@ public class WorkbookFunctionsNegBinom_DistBody {
     public static final class WorkbookFunctionsNegBinom_DistBodyBuilder {
         private com.google.gson.JsonElement numberF;
         /**
-         * Sets the name NumberF
+         * Sets the NumberF
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -93,7 +93,7 @@ public class WorkbookFunctionsNegBinom_DistBody {
         }
         private com.google.gson.JsonElement numberS;
         /**
-         * Sets the name NumberS
+         * Sets the NumberS
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -104,7 +104,7 @@ public class WorkbookFunctionsNegBinom_DistBody {
         }
         private com.google.gson.JsonElement probabilityS;
         /**
-         * Sets the name ProbabilityS
+         * Sets the ProbabilityS
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -115,7 +115,7 @@ public class WorkbookFunctionsNegBinom_DistBody {
         }
         private com.google.gson.JsonElement cumulative;
         /**
-         * Sets the name Cumulative
+         * Sets the Cumulative
          * @param val the value to set it to
          * @return the current builder object
          */

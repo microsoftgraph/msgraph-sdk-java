@@ -52,7 +52,7 @@ public class WorkbookFunctionsSecondBody {
     public static final class WorkbookFunctionsSecondBodyBuilder {
         private com.google.gson.JsonElement serialNumber;
         /**
-         * Sets the name SerialNumber
+         * Sets the SerialNumber
          * @param val the value to set it to
          * @return the current builder object
          */

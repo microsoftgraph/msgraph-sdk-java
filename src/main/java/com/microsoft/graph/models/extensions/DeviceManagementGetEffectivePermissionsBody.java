@@ -52,7 +52,7 @@ public class DeviceManagementGetEffectivePermissionsBody {
     public static final class DeviceManagementGetEffectivePermissionsBodyBuilder {
         private String scope;
         /**
-         * Sets the name Scope
+         * Sets the Scope
          * @param val the value to set it to
          * @return the current builder object
          */

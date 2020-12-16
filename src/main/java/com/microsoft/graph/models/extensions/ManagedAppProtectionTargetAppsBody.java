@@ -52,7 +52,7 @@ public class ManagedAppProtectionTargetAppsBody {
     public static final class ManagedAppProtectionTargetAppsBodyBuilder {
         private java.util.List<ManagedMobileApp> apps;
         /**
-         * Sets the name Apps
+         * Sets the Apps
          * @param val the value to set it to
          * @return the current builder object
          */

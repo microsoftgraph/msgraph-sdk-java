@@ -72,7 +72,7 @@ public class WorkbookFunctionsDcountABody {
     public static final class WorkbookFunctionsDcountABodyBuilder {
         private com.google.gson.JsonElement database;
         /**
-         * Sets the name Database
+         * Sets the Database
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -83,7 +83,7 @@ public class WorkbookFunctionsDcountABody {
         }
         private com.google.gson.JsonElement field;
         /**
-         * Sets the name Field
+         * Sets the Field
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -94,7 +94,7 @@ public class WorkbookFunctionsDcountABody {
         }
         private com.google.gson.JsonElement criteria;
         /**
-         * Sets the name Criteria
+         * Sets the Criteria
          * @param val the value to set it to
          * @return the current builder object
          */

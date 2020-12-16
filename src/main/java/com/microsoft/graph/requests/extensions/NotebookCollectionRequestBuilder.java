@@ -62,8 +62,8 @@ public class NotebookCollectionRequestBuilder extends BaseCollectionRequestBuild
     /**
      * Gets a builder to execute the method
      * @return the request builder collection
-          * @param parameters the parameters for the service method
-          */
+     * @param parameters the parameters for the service method
+     */
     @Nonnull
     public NotebookGetRecentNotebooksCollectionRequestBuilder getRecentNotebooks(@Nonnull final NotebookGetRecentNotebooksBody parameters) {
         return new NotebookGetRecentNotebooksCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getRecentNotebooks"), getClient(), null, parameters);

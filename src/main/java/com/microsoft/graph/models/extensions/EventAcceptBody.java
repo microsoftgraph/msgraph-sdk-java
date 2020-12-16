@@ -62,7 +62,7 @@ public class EventAcceptBody {
     public static final class EventAcceptBodyBuilder {
         private String comment;
         /**
-         * Sets the name Comment
+         * Sets the Comment
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class EventAcceptBody {
         }
         private Boolean sendResponse;
         /**
-         * Sets the name SendResponse
+         * Sets the SendResponse
          * @param val the value to set it to
          * @return the current builder object
          */

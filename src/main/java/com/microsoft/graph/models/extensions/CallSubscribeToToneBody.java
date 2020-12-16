@@ -52,7 +52,7 @@ public class CallSubscribeToToneBody {
     public static final class CallSubscribeToToneBodyBuilder {
         private String clientContext;
         /**
-         * Sets the name ClientContext
+         * Sets the ClientContext
          * @param val the value to set it to
          * @return the current builder object
          */

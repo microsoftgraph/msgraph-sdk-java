@@ -52,7 +52,7 @@ public class OnenotePageOnenotePatchContentBody {
     public static final class OnenotePageOnenotePatchContentBodyBuilder {
         private java.util.List<OnenotePatchContentCommand> commands;
         /**
-         * Sets the name Commands
+         * Sets the Commands
          * @param val the value to set it to
          * @return the current builder object
          */

@@ -62,7 +62,7 @@ public class WorkbookFunctionsImDivBody {
     public static final class WorkbookFunctionsImDivBodyBuilder {
         private com.google.gson.JsonElement inumber1;
         /**
-         * Sets the name Inumber1
+         * Sets the Inumber1
          * @param val the value to set it to
          * @return the current builder object
          */
@@ -73,7 +73,7 @@ public class WorkbookFunctionsImDivBody {
         }
         private com.google.gson.JsonElement inumber2;
         /**
-         * Sets the name Inumber2
+         * Sets the Inumber2
          * @param val the value to set it to
          * @return the current builder object
          */
